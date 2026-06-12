@@ -1,6 +1,6 @@
-package org.supertuxkart.stk_dbg;
+package com.motorica.games.stk;
 
-import org.supertuxkart.stk_dbg.STKEditText;
+import com.motorica.games.stk.STKEditText;
 import org.libsdl.app.SDLActivity;
 import org.libsdl.app.SDL;
 
@@ -9,9 +9,11 @@ import android.animation.AnimatorListenerAdapter;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.content.res.Configuration;
@@ -25,7 +27,10 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.IBinder;
 import android.os.Process;
+import android.os.RemoteException;
+import android.os.SystemClock;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Display;
@@ -54,6 +59,10 @@ import java.io.InputStream;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.Set;
 
+import com.motorica.gamecontrol.GameControlSnapshot;
+import com.motorica.gamecontrol.IGameControlCallback;
+import com.motorica.gamecontrol.IGameControlService;
+
 import org.minidns.hla.DnssecResolverApi;
 import org.minidns.hla.ResolverResult;
 import org.minidns.record.SRV;
@@ -61,7 +70,14 @@ import org.minidns.record.TXT;
 
 public class SuperTuxKartActivity extends SDLActivity
 {
+    private static final String MOTORICA_START_PACKAGE = "com.bailout.stickk";
+    private static final String MOTORICA_GAME_CONTROL_ACTION =
+        "com.motorica.gamecontrol.BIND";
+    private static final long MOTORICA_STALE_TIMEOUT_MS = 500L;
+
     private AlertDialog m_progress_dialog;
+    private AlertDialog m_connection_lost_dialog;
+    private AlertDialog m_motorica_required_dialog;
     private ProgressBar m_progress_bar;
     private ImageView m_splash_screen;
     private STKEditText m_stk_edittext;
@@ -73,6 +89,10 @@ public class SuperTuxKartActivity extends SDLActivity
     private float m_right_padding;
     private AtomicInteger m_keyboard_height;
     private AtomicInteger m_moved_height;
+    private Handler m_motorica_handler;
+    private IGameControlService m_game_control_service;
+    private boolean m_game_control_bound;
+    private long m_last_game_control_elapsed;
     // ------------------------------------------------------------------------
     public native static void debugMsg(String msg);
     // ------------------------------------------------------------------------
@@ -85,6 +105,214 @@ public class SuperTuxKartActivity extends SDLActivity
     private native static void addDNSSrvRecords(String name, int weight);
     // ------------------------------------------------------------------------
     private native static void pauseRenderingJNI();
+    // ------------------------------------------------------------------------
+    private native static void onMotoricaGameControl(int open_level,
+                                                     int close_level,
+                                                     boolean connected,
+                                                     long timestamp_ms,
+                                                     long seq);
+    // ------------------------------------------------------------------------
+    private final IGameControlCallback m_game_control_callback =
+        new IGameControlCallback.Stub()
+        {
+            @Override
+            public void onGameControlSnapshot(GameControlSnapshot snapshot)
+            {
+                handleGameControlSnapshot(snapshot);
+            }
+        };
+    // ------------------------------------------------------------------------
+    private final ServiceConnection m_game_control_connection =
+        new ServiceConnection()
+        {
+            @Override
+            public void onServiceConnected(ComponentName name, IBinder service)
+            {
+                m_game_control_service =
+                    IGameControlService.Stub.asInterface(service);
+                m_game_control_bound = true;
+                try
+                {
+                    m_game_control_service.registerCallback(
+                        m_game_control_callback);
+                    handleGameControlSnapshot(
+                        m_game_control_service.getLatestSnapshot());
+                }
+                catch (RemoteException e)
+                {
+                    showConnectionLostDialog();
+                }
+            }
+
+            @Override
+            public void onServiceDisconnected(ComponentName name)
+            {
+                m_game_control_service = null;
+                m_game_control_bound = false;
+                onMotoricaGameControl(0, 0, false,
+                    SystemClock.elapsedRealtime(), 0);
+                showConnectionLostDialog();
+            }
+        };
+    // ------------------------------------------------------------------------
+    private final Runnable m_motorica_watchdog = new Runnable()
+    {
+        @Override
+        public void run()
+        {
+            long now = SystemClock.elapsedRealtime();
+            if (m_game_control_bound &&
+                now - m_last_game_control_elapsed > MOTORICA_STALE_TIMEOUT_MS)
+            {
+                onMotoricaGameControl(0, 0, false, now, 0);
+                showConnectionLostDialog();
+            }
+            if (m_motorica_handler != null)
+                m_motorica_handler.postDelayed(this, 250L);
+        }
+    };
+    // ------------------------------------------------------------------------
+    private void handleGameControlSnapshot(final GameControlSnapshot snapshot)
+    {
+        if (snapshot == null)
+            return;
+        m_last_game_control_elapsed = SystemClock.elapsedRealtime();
+        onMotoricaGameControl(snapshot.openLevel, snapshot.closeLevel,
+            snapshot.connected, snapshot.timestampMs, snapshot.seq);
+        if (snapshot.connected)
+            dismissConnectionLostDialog();
+        else
+            showConnectionLostDialog();
+    }
+    // ------------------------------------------------------------------------
+    private void bindGameControlService()
+    {
+        if (m_game_control_bound)
+            return;
+        Intent intent = new Intent(MOTORICA_GAME_CONTROL_ACTION);
+        intent.setPackage(MOTORICA_START_PACKAGE);
+        m_last_game_control_elapsed = SystemClock.elapsedRealtime();
+        try
+        {
+            boolean bound = bindService(intent, m_game_control_connection,
+                Context.BIND_AUTO_CREATE);
+            if (!bound)
+                showMotoricaRequiredDialog();
+        }
+        catch (SecurityException e)
+        {
+            showMotoricaRequiredDialog();
+        }
+    }
+    // ------------------------------------------------------------------------
+    private void unbindGameControlService()
+    {
+        if (m_game_control_service != null)
+        {
+            try
+            {
+                m_game_control_service.unregisterCallback(
+                    m_game_control_callback);
+            }
+            catch (RemoteException e) {}
+        }
+        if (m_game_control_bound)
+        {
+            unbindService(m_game_control_connection);
+            m_game_control_bound = false;
+        }
+        m_game_control_service = null;
+    }
+    // ------------------------------------------------------------------------
+    private void showConnectionLostDialog()
+    {
+        runOnUiThread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                if (isFinishing() || m_connection_lost_dialog != null)
+                    return;
+                m_connection_lost_dialog = new AlertDialog.Builder(
+                    SuperTuxKartActivity.this)
+                    .setTitle("Связь потеряна")
+                    .setMessage("Обрыв связи с протезом. Игра продолжится автоматически после восстановления связи.")
+                    .setCancelable(false)
+                    .setPositiveButton("Выйти из игры", null)
+                    .show();
+                m_connection_lost_dialog.getButton(AlertDialog.BUTTON_POSITIVE)
+                    .setVisibility(View.GONE);
+                if (m_motorica_handler != null)
+                {
+                    m_motorica_handler.postDelayed(new Runnable()
+                    {
+                        @Override
+                        public void run()
+                        {
+                            if (m_connection_lost_dialog == null)
+                                return;
+                            m_connection_lost_dialog.getButton(
+                                AlertDialog.BUTTON_POSITIVE).setVisibility(
+                                    View.VISIBLE);
+                            m_connection_lost_dialog.getButton(
+                                AlertDialog.BUTTON_POSITIVE).setOnClickListener(
+                                new View.OnClickListener()
+                                {
+                                    @Override
+                                    public void onClick(View v)
+                                    {
+                                        finish();
+                                    }
+                                });
+                        }
+                    }, 5000L);
+                }
+            }
+        });
+    }
+    // ------------------------------------------------------------------------
+    private void dismissConnectionLostDialog()
+    {
+        runOnUiThread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                if (m_connection_lost_dialog == null)
+                    return;
+                m_connection_lost_dialog.dismiss();
+                m_connection_lost_dialog = null;
+            }
+        });
+    }
+    // ------------------------------------------------------------------------
+    private void showMotoricaRequiredDialog()
+    {
+        runOnUiThread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                if (isFinishing() || m_motorica_required_dialog != null)
+                    return;
+                m_motorica_required_dialog = new AlertDialog.Builder(
+                    SuperTuxKartActivity.this)
+                    .setTitle("Motorica Start")
+                    .setMessage("Игру можно запускать только из приложения Motorica Start.")
+                    .setCancelable(false)
+                    .setPositiveButton("Закрыть",
+                        new DialogInterface.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which)
+                            {
+                                finish();
+                            }
+                        })
+                    .show();
+            }
+        });
+    }
     // ------------------------------------------------------------------------
     private void showExtractProgressPrivate()
     {
@@ -191,6 +419,7 @@ public class SuperTuxKartActivity extends SDLActivity
     public void onCreate(Bundle instance)
     {
         super.onCreate(instance);
+        m_motorica_handler = new Handler();
         m_keyboard_height = new AtomicInteger();
         m_moved_height = new AtomicInteger();
         m_progress_dialog = null;
@@ -278,6 +507,9 @@ public class SuperTuxKartActivity extends SDLActivity
         super.onStart();
         m_keyboard_height.set(0);
         m_moved_height.set(0);
+        bindGameControlService();
+        m_motorica_handler.removeCallbacks(m_motorica_watchdog);
+        m_motorica_handler.postDelayed(m_motorica_watchdog, 250L);
     }
     // ------------------------------------------------------------------------
     @Override
@@ -287,6 +519,16 @@ public class SuperTuxKartActivity extends SDLActivity
         hideKeyboardNative(false/*clear_text*/);
         if (SDLActivity.mSDLThread != null)
             pauseRenderingJNI();
+    }
+    // ------------------------------------------------------------------------
+    @Override
+    public void onDestroy()
+    {
+        if (m_motorica_handler != null)
+            m_motorica_handler.removeCallbacks(m_motorica_watchdog);
+        unbindGameControlService();
+        dismissConnectionLostDialog();
+        super.onDestroy();
     }
     // ------------------------------------------------------------------------
     /* SDL manually dlopen main to allow unload after main thread exit. */

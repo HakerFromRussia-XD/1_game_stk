@@ -40,6 +40,22 @@
         </div>
 
         <div width="75%" layout="horizontal-row" proportion="1">
+            <label proportion="1" align="center" text_align="right" I18N="In the multitouch settings screen" text="Motorica EMG steering"/>
+            <div proportion="1" align="center" height="fit" layout="horizontal-row" >
+                <spacer width="40" height="10" />
+                <checkbox id="motorica_emg_steering"/>
+            </div>
+        </div>
+
+        <div width="75%" layout="horizontal-row" proportion="1">
+            <label proportion="1" align="center" text_align="right" I18N="In the multitouch settings screen" text="Invert EMG steering"/>
+            <div proportion="1" align="center" height="fit" layout="horizontal-row" >
+                <spacer width="40" height="10" />
+                <checkbox id="motorica_emg_inverted"/>
+            </div>
+        </div>
+
+        <div width="75%" layout="horizontal-row" proportion="1">
             <label proportion="1" align="center" text_align="right" I18N="In the multitouch settings screen" text="Accelerometer"/>
             <div proportion="1" align="center" height="fit" layout="horizontal-row" >
                 <spacer width="40" height="10" />

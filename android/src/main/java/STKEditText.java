@@ -1,7 +1,7 @@
-package org.supertuxkart.stk_dbg;
+package com.motorica.games.stk;
 
 import org.libsdl.app.SDLActivity;
-import org.supertuxkart.stk_dbg.STKInputConnection;
+import com.motorica.games.stk.STKInputConnection;
 
 import android.content.Context;
 import android.text.InputType;

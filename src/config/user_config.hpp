@@ -554,6 +554,16 @@ namespace UserConfigParams
             &m_multitouch_group,
             "Auto acceleration for multitouch controls.") );
 
+    PARAM_PREFIX BoolUserConfigParam         m_motorica_emg_steering
+            PARAM_DEFAULT( BoolUserConfigParam(true, "motorica_emg_steering",
+            &m_multitouch_group,
+            "Use Motorica EMG signals for steering.") );
+
+    PARAM_PREFIX BoolUserConfigParam         m_motorica_emg_inverted
+            PARAM_DEFAULT( BoolUserConfigParam(false, "motorica_emg_inverted",
+            &m_multitouch_group,
+            "Invert Motorica EMG steering.") );
+
     PARAM_PREFIX IntUserConfigParam         m_multitouch_controls
             PARAM_DEFAULT( IntUserConfigParam(0, "multitouch_controls",
             &m_multitouch_group,

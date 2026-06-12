@@ -120,6 +120,14 @@ GUIEngine::EventPropagation MultitouchSettingsDialog::processEvent(
         assert(buttons_inv != NULL);
         UserConfigParams::m_multitouch_inverted = buttons_inv->getState();
 
+        CheckBoxWidget* emg_steering = getWidget<CheckBoxWidget>("motorica_emg_steering");
+        assert(emg_steering != NULL);
+        UserConfigParams::m_motorica_emg_steering = emg_steering->getState();
+
+        CheckBoxWidget* emg_inverted = getWidget<CheckBoxWidget>("motorica_emg_inverted");
+        assert(emg_inverted != NULL);
+        UserConfigParams::m_motorica_emg_inverted = emg_inverted->getState();
+
         CheckBoxWidget* accelerometer = getWidget<CheckBoxWidget>("accelerometer");
         assert(accelerometer != NULL);
 
@@ -167,6 +175,8 @@ GUIEngine::EventPropagation MultitouchSettingsDialog::processEvent(
         UserConfigParams::m_multitouch_controls.revertToDefaults();
         UserConfigParams::m_multitouch_scale.revertToDefaults();
         UserConfigParams::m_multitouch_sensitivity_x.revertToDefaults();
+        UserConfigParams::m_motorica_emg_steering.revertToDefaults();
+        UserConfigParams::m_motorica_emg_inverted.revertToDefaults();
     
         if (StateManager::get()->getGameState() != GUIEngine::INGAME_MENU)
         {
@@ -229,6 +239,14 @@ void MultitouchSettingsDialog::updateValues()
     CheckBoxWidget* buttons_inv = getWidget<CheckBoxWidget>("buttons_inverted");
     assert(buttons_inv != NULL);
     buttons_inv->setState(UserConfigParams::m_multitouch_inverted);
+
+    CheckBoxWidget* emg_steering = getWidget<CheckBoxWidget>("motorica_emg_steering");
+    assert(emg_steering != NULL);
+    emg_steering->setState(UserConfigParams::m_motorica_emg_steering);
+
+    CheckBoxWidget* emg_inverted = getWidget<CheckBoxWidget>("motorica_emg_inverted");
+    assert(emg_inverted != NULL);
+    emg_inverted->setState(UserConfigParams::m_motorica_emg_inverted);
 
     CheckBoxWidget* accelerometer = getWidget<CheckBoxWidget>("accelerometer");
     assert(accelerometer != NULL);

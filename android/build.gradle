@@ -46,6 +46,10 @@ android
     {
         jniLibs.useLegacyPackaging = true
     }
+    buildFeatures
+    {
+        aidl true
+    }
 
     defaultConfig
     {

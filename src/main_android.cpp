@@ -19,6 +19,7 @@
 
 #include "config/user_config.hpp"
 #include "graphics/irr_driver.hpp"
+#include "input/motorica_game_control.hpp"
 #include "utils/log.hpp"
 #include "utils/string_utils.hpp"
 
@@ -35,6 +36,7 @@ extern "C" JNIEXPORT void JNICALL debugMsg(JNIEnv* env, jclass cls, jstring msg)
 extern "C" JNIEXPORT void JNICALL handlePadding(JNIEnv* env, jclass cls, jboolean val);
 extern "C" JNIEXPORT void JNICALL addDNSSrvRecords(JNIEnv* env, jclass cls, jstring name, jint weight);
 extern "C" JNIEXPORT void JNICALL pauseRenderingJNI(JNIEnv* env, jclass cls);
+extern "C" JNIEXPORT void JNICALL onMotoricaGameControlJNI(JNIEnv* env, jclass cls, jint open_level, jint close_level, jboolean connected, jlong timestamp_ms, jlong seq);
 
 extern "C" JNIEXPORT void JNICALL editText2STKEditbox(JNIEnv* env, jclass cls, jint widget_id, jstring text, jint start, jint end, jint composing_start, jint composing_end);
 extern "C" JNIEXPORT void JNICALL handleActionNext(JNIEnv* env, jclass cls, jint widget_id);
@@ -51,7 +53,8 @@ void registering_natives()
         { "debugMsg",           "(Ljava/lang/String;)V", (void*)&debugMsg },
         { "handlePadding",      "(Z)V", (void*)&handlePadding },
         { "addDNSSrvRecords",   "(Ljava/lang/String;I)V", (void*)&addDNSSrvRecords },
-        { "pauseRenderingJNI",   "()V", (void*)&pauseRenderingJNI }
+        { "pauseRenderingJNI",   "()V", (void*)&pauseRenderingJNI },
+        { "onMotoricaGameControl", "(IIZJJ)V", (void*)&onMotoricaGameControlJNI }
     };
     JNIEnv* env = (JNIEnv*)SDL_AndroidGetJNIEnv();
     assert(env);
@@ -90,6 +93,17 @@ void registering_natives()
         Log::error("MainAndroid", "Failed to register methods of %s.",
             stkeditbox_class);
     }
+}
+
+extern "C" JNIEXPORT void JNICALL onMotoricaGameControlJNI(
+    JNIEnv* env, jclass cls, jint open_level, jint close_level,
+    jboolean connected, jlong timestamp_ms, jlong seq)
+{
+    (void)env;
+    (void)cls;
+    MotoricaGameControl::get()->updateSnapshot((int)open_level,
+        (int)close_level, connected == JNI_TRUE, (uint64_t)timestamp_ms,
+        (uint64_t)seq);
 }
 
 void override_default_params_for_mobile();

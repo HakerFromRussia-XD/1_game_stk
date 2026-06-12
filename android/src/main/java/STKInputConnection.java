@@ -1,6 +1,6 @@
-package org.supertuxkart.stk_dbg;
+package com.motorica.games.stk;
 
-import org.supertuxkart.stk_dbg.STKEditText;
+import com.motorica.games.stk.STKEditText;
 
 import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputConnectionWrapper;

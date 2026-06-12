@@ -19,13 +19,9 @@
                   android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|uiMode|layoutDirection|grammaticalGender|fontWeightAdjustment|smallestScreenSize"
                   android:screenOrientation="sensorLandscape"
                   android:preferMinimalPostProcessing="true"
+                  android:permission="com.motorica.gamecontrol.permission.CONTROL_GAME"
                   android:exported="true">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
-            </intent-filter>
             <!-- Let Android know that we can handle some USB devices and should receive this event -->
             <intent-filter>
                 <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
@@ -67,4 +63,12 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <!-- Allow access to the vibrator -->
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.motorica.gamecontrol.permission.CONTROL_GAME" />
+
+    <queries>
+        <package android:name="com.bailout.stickk" />
+        <intent>
+            <action android:name="com.motorica.gamecontrol.BIND" />
+        </intent>
+    </queries>
 </manifest>

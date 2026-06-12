@@ -29,6 +29,7 @@ using namespace irr;
 #include "graphics/material.hpp"
 #include "guiengine/scalable_font.hpp"
 #include "input/device_manager.hpp"
+#include "input/motorica_game_control.hpp"
 #include "input/multitouch_device.hpp"
 #include "items/powerup.hpp"
 #include "karts/abstract_kart.hpp"
@@ -52,6 +53,7 @@ RaceGUIMultitouch::RaceGUIMultitouch(RaceGUIBase* race_gui)
     m_steering_wheel_tex_mask_down = NULL;
     m_accelerator_tex = NULL;
     m_accelerator_handle_tex = NULL;
+    m_accelerator_icon_tex = NULL;
     m_pause_tex = NULL;
     m_nitro_tex = NULL;
     m_nitro_empty_tex = NULL;
@@ -141,6 +143,8 @@ void RaceGUIMultitouch::init()
                                                "android/accelerator.png");
     m_accelerator_handle_tex = irr_driver->getTexture(FileManager::GUI_ICON,
                                                "android/accelerator_handle.png");
+    m_accelerator_icon_tex = irr_driver->getTexture(FileManager::GUI_ICON,
+                                               "android/accelerator_icon.png");
     m_pause_tex = irr_driver->getTexture(FileManager::GUI_ICON, "android/pause.png");
     m_nitro_tex = irr_driver->getTexture(FileManager::GUI_ICON, "android/nitro.png");
     m_nitro_empty_tex = irr_driver->getTexture(FileManager::GUI_ICON,
@@ -235,7 +239,7 @@ void RaceGUIMultitouch::createRaceGUI()
         steering_accel_x = w - btn2_size / 2 - steering_accel_margin;
     }
 
-    m_height = (unsigned int)(2 * col_size + margin / 2);
+    m_height = (unsigned int)(3 * col_size + margin / 2);
     
     if (UserConfigParams::m_multitouch_controls == MULTITOUCH_CONTROLS_ACCELEROMETER ||
         UserConfigParams::m_multitouch_controls == MULTITOUCH_CONTROLS_GYROSCOPE)
@@ -257,6 +261,9 @@ void RaceGUIMultitouch::createRaceGUI()
     m_device->addButton(BUTTON_RESCUE,
                         int(margin_top + col_small_size), int(margin_small),
                         int(btn_small_size), int(btn_small_size));
+    m_device->addButton(BUTTON_UP,
+                        int(second_column_x), int(h - 3 * col_size),
+                        int(btn_size), int(btn_size));
     m_device->addButton(BUTTON_NITRO,
                         int(second_column_x), int(h - 2 * col_size),
                         int(btn_size), int(btn_size));
@@ -398,6 +405,36 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
                 draw2DImageRotationColor(m_steering_wheel_tex_mask_down, btn_pos, mask_coords, NULL,
                     (button->axis_y >= 0 ? -1 : 1) * button->axis_x, color);
             }
+
+            MotoricaGameControl* emg = MotoricaGameControl::get();
+            const int alpha = emg->isConnected() ? 190 : 85;
+            const int bar_width = std::max(6, (int)(button->width * 0.08f));
+            const int bar_height = std::max(24, (int)(button->height * 0.56f));
+            const int gap = std::max(4, (int)(button->width * 0.03f));
+            const int bar_top = button->y + (button->height - bar_height) / 2;
+            const int screen_width = irr_driver->getActualScreenSize().Width;
+            const int left_x = core::clamp(button->x - gap - bar_width, 0,
+                                           std::max(0, screen_width - bar_width));
+            const int right_x = core::clamp(button->x + button->width + gap, 0,
+                                            std::max(0, screen_width - bar_width));
+            const int left_fill = core::clamp((emg->getOpenLevel() * bar_height) / 255,
+                                              0, bar_height);
+            const int right_fill = core::clamp((emg->getCloseLevel() * bar_height) / 255,
+                                               0, bar_height);
+            core::rect<s32> left_bg(left_x, bar_top, left_x + bar_width,
+                                    bar_top + bar_height);
+            core::rect<s32> right_bg(right_x, bar_top, right_x + bar_width,
+                                     bar_top + bar_height);
+            GL32_draw2DRectangle(video::SColor(alpha, 10, 18, 28), left_bg);
+            GL32_draw2DRectangle(video::SColor(alpha, 10, 18, 28), right_bg);
+            core::rect<s32> left_value(left_x, bar_top + bar_height - left_fill,
+                                       left_x + bar_width,
+                                       bar_top + bar_height);
+            core::rect<s32> right_value(right_x, bar_top + bar_height - right_fill,
+                                        right_x + bar_width,
+                                        bar_top + bar_height);
+            GL32_draw2DRectangle(video::SColor(alpha, 0, 186, 255), left_value);
+            GL32_draw2DRectangle(video::SColor(alpha, 255, 192, 0), right_value);
             // float x = (float)(button->x) + (float)(button->width) / 2.0f *
             //                                          (button->axis_x + 1.0f);
             // float y = (float)(button->y) + (float)(button->height) / 2.0f *
@@ -487,6 +524,9 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
                 break;
             case MultitouchButtonType::BUTTON_SKIDDING:
                 btn_texture = m_drift_tex;
+                break;
+            case MultitouchButtonType::BUTTON_UP:
+                btn_texture = m_accelerator_icon_tex;
                 break;
             case MultitouchButtonType::BUTTON_CUSTOM:
                 if (button->id == 1)
