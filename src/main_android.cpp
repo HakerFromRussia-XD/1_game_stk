@@ -72,6 +72,19 @@ void registering_natives()
         Log::error("MainAndroid", "Failed to register methods of %s.",
             stkactivity_class);
     }
+    else
+    {
+        jmethodID native_ready = env->GetStaticMethodID(
+            clazz, "onMotoricaNativeReady", "()V");
+        if (native_ready != NULL)
+            env->CallStaticVoidMethod(clazz, native_ready);
+        else
+        {
+            env->ExceptionClear();
+            Log::warn("MainAndroid",
+                "Failed to find SuperTuxKartActivity.onMotoricaNativeReady.");
+        }
+    }
 
     JNINativeMethod stkeditbox_tab[] =
     {
@@ -101,6 +114,13 @@ extern "C" JNIEXPORT void JNICALL onMotoricaGameControlJNI(
 {
     (void)env;
     (void)cls;
+    if (connected != JNI_TRUE || seq <= 3 || seq % 30 == 0)
+    {
+        Log::info("MotoricaGameControl",
+            "[BLE stk-game debug] jni seq=%llu open=%d close=%d connected=%d timestamp=%llu",
+            (unsigned long long)seq, (int)open_level, (int)close_level,
+            connected == JNI_TRUE ? 1 : 0, (unsigned long long)timestamp_ms);
+    }
     MotoricaGameControl::get()->updateSnapshot((int)open_level,
         (int)close_level, connected == JNI_TRUE, (uint64_t)timestamp_ms,
         (uint64_t)seq);

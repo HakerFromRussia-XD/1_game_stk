@@ -20,7 +20,6 @@
 #include <algorithm>
 
 #include "config/user_config.hpp"
-#include "input/motorica_game_control.hpp"
 #include "input/multitouch_device.hpp"
 #include "karts/abstract_kart.hpp"
 #include "karts/controller/controller.hpp"
@@ -678,7 +677,6 @@ void MultitouchDevice::updateController()
     }
 
     m_controller = pk->getController();
-    MotoricaGameControl::get()->apply(m_controller);
 }
 
 // ----------------------------------------------------------------------------

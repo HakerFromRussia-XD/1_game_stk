@@ -31,6 +31,8 @@ public:
 
     int getOpenLevel() const;
     int getCloseLevel() const;
+    uint64_t getSeq() const;
+    float getSteeringAxis() const;
     bool isConnected() const;
 };
 

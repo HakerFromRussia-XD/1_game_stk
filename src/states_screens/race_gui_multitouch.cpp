@@ -36,6 +36,7 @@ using namespace irr;
 #include "karts/controller/kart_control.hpp"
 #include "network/protocols/client_lobby.hpp"
 #include "states_screens/race_gui_base.hpp"
+#include "utils/log.hpp"
 
 #include <IrrlichtDevice.h>
 
@@ -385,11 +386,18 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
 
         if (button->type == MultitouchButtonType::BUTTON_STEERING)
         {
+            MotoricaGameControl* emg = MotoricaGameControl::get();
+            const bool emg_connected = emg->isConnected();
+            float steering_axis = button->axis_x;
+            if (!button->pressed && emg_connected &&
+                UserConfigParams::m_motorica_emg_steering)
+                steering_axis = emg->getSteeringAxis();
+
             video::SColor color((unsigned)-1);
             video::ITexture* btn_texture = m_steering_wheel_tex;
             core::rect<s32> coords(pos_zero, btn_texture->getSize());
             draw2DImageRotationColor(btn_texture, btn_pos, coords, NULL,
-                (button->axis_y >= 0 ? -1 : 1) * button->axis_x, color);
+                (button->axis_y >= 0 ? -1 : 1) * steering_axis, color);
             AbstractKart* k = NULL;
             Camera* c = Camera::getActiveCamera();
             if (c)
@@ -400,14 +408,13 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
                 core::rect<s32> mask_coords(pos_zero, m_steering_wheel_tex_mask_up->getSize());
                 color.setAlpha(core::clamp((int)(accel >= 0.0f ? accel * 128.0f : 0), 0, 255));
                 draw2DImageRotationColor(m_steering_wheel_tex_mask_up, btn_pos, mask_coords, NULL,
-                    (button->axis_y >= 0 ? -1 : 1) * button->axis_x, color);
+                    (button->axis_y >= 0 ? -1 : 1) * steering_axis, color);
                 color.setAlpha(k->getControls().getBrake() ? 128 : 0);
                 draw2DImageRotationColor(m_steering_wheel_tex_mask_down, btn_pos, mask_coords, NULL,
-                    (button->axis_y >= 0 ? -1 : 1) * button->axis_x, color);
+                    (button->axis_y >= 0 ? -1 : 1) * steering_axis, color);
             }
 
-            MotoricaGameControl* emg = MotoricaGameControl::get();
-            const int alpha = emg->isConnected() ? 190 : 85;
+            const int alpha = emg_connected ? 190 : 85;
             const int bar_width = std::max(6, (int)(button->width * 0.08f));
             const int bar_height = std::max(24, (int)(button->height * 0.56f));
             const int gap = std::max(4, (int)(button->width * 0.03f));
@@ -417,10 +424,23 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
                                            std::max(0, screen_width - bar_width));
             const int right_x = core::clamp(button->x + button->width + gap, 0,
                                             std::max(0, screen_width - bar_width));
-            const int left_fill = core::clamp((emg->getOpenLevel() * bar_height) / 255,
+            const int open_level = emg->getOpenLevel();
+            const int close_level = emg->getCloseLevel();
+            const uint64_t emg_seq = emg->getSeq();
+            const int left_fill = core::clamp((open_level * bar_height) / 255,
                                               0, bar_height);
-            const int right_fill = core::clamp((emg->getCloseLevel() * bar_height) / 255,
+            const int right_fill = core::clamp((close_level * bar_height) / 255,
                                                0, bar_height);
+            static uint64_t last_logged_emg_seq = (uint64_t)-1;
+            if (emg_seq != last_logged_emg_seq &&
+                (!emg_connected || emg_seq <= 3 || emg_seq % 30 == 0))
+            {
+                last_logged_emg_seq = emg_seq;
+                Log::info("MotoricaGameControl",
+                    "[BLE stk-game debug] gui seq=%llu open=%d close=%d connected=%d fill=%d/%d",
+                    (unsigned long long)emg_seq, open_level, close_level,
+                    emg_connected ? 1 : 0, left_fill, right_fill);
+            }
             core::rect<s32> left_bg(left_x, bar_top, left_x + bar_width,
                                     bar_top + bar_height);
             core::rect<s32> right_bg(right_x, bar_top, right_x + bar_width,

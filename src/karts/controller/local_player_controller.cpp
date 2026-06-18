@@ -29,6 +29,7 @@
 #include "graphics/particle_emitter.hpp"
 #include "graphics/particle_kind.hpp"
 #include "input/input_manager.hpp"
+#include "input/motorica_game_control.hpp"
 #include "items/attachment.hpp"
 #include "items/item.hpp"
 #include "items/powerup.hpp"
@@ -254,6 +255,7 @@ void LocalPlayerController::update(int ticks)
         Log::debug("LocalPlayerController", "irr_driver", "-------------------------------------");
     }
 
+    MotoricaGameControl::get()->apply(this);
     PlayerController::update(ticks);
 
     // look backward when the player requests or

@@ -54,8 +54,10 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.util.DisplayMetrics;
+import android.util.Log;
 
 import java.io.InputStream;
+import java.lang.ref.WeakReference;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.Set;
 
@@ -70,10 +72,14 @@ import org.minidns.record.TXT;
 
 public class SuperTuxKartActivity extends SDLActivity
 {
+    private static final String TAG = "MotoricaSTK";
+    private static final String LOG_PREFIX = "[BLE stk-game debug] ";
     private static final String MOTORICA_START_PACKAGE = "com.bailout.stickk";
     private static final String MOTORICA_GAME_CONTROL_ACTION =
         "com.motorica.gamecontrol.BIND";
     private static final long MOTORICA_STALE_TIMEOUT_MS = 500L;
+    private static volatile boolean s_motorica_natives_ready;
+    private static WeakReference<SuperTuxKartActivity> s_current_activity;
 
     private AlertDialog m_progress_dialog;
     private AlertDialog m_connection_lost_dialog;
@@ -93,6 +99,11 @@ public class SuperTuxKartActivity extends SDLActivity
     private IGameControlService m_game_control_service;
     private boolean m_game_control_bound;
     private long m_last_game_control_elapsed;
+    private GameControlSnapshot m_pending_game_control_snapshot;
+    private boolean m_seen_game_control_connected;
+    private boolean m_game_control_stale_reported;
+    private long m_last_logged_game_control_callback_seq = Long.MIN_VALUE;
+    private long m_last_logged_game_control_native_seq = Long.MIN_VALUE;
     // ------------------------------------------------------------------------
     public native static void debugMsg(String msg);
     // ------------------------------------------------------------------------
@@ -128,6 +139,7 @@ public class SuperTuxKartActivity extends SDLActivity
             @Override
             public void onServiceConnected(ComponentName name, IBinder service)
             {
+                Log.d(TAG, LOG_PREFIX + "Game control service connected");
                 m_game_control_service =
                     IGameControlService.Stub.asInterface(service);
                 m_game_control_bound = true;
@@ -135,23 +147,29 @@ public class SuperTuxKartActivity extends SDLActivity
                 {
                     m_game_control_service.registerCallback(
                         m_game_control_callback);
-                    handleGameControlSnapshot(
-                        m_game_control_service.getLatestSnapshot());
+                    GameControlSnapshot latest =
+                        m_game_control_service.getLatestSnapshot();
+                    logGameControlSnapshot("latest", latest);
+                    handleGameControlSnapshot(latest);
                 }
                 catch (RemoteException e)
                 {
-                    showConnectionLostDialog();
+                    Log.w(TAG, LOG_PREFIX + "Failed to read game control snapshot", e);
+                    if (m_seen_game_control_connected)
+                        showConnectionLostDialog();
                 }
             }
 
             @Override
             public void onServiceDisconnected(ComponentName name)
             {
+                Log.w(TAG, LOG_PREFIX + "Game control service disconnected");
                 m_game_control_service = null;
                 m_game_control_bound = false;
-                onMotoricaGameControl(0, 0, false,
-                    SystemClock.elapsedRealtime(), 0);
-                showConnectionLostDialog();
+                sendGameControlSnapshotToNative(createDisconnectedSnapshot(
+                    SystemClock.elapsedRealtime()));
+                if (m_seen_game_control_connected)
+                    showConnectionLostDialog();
             }
         };
     // ------------------------------------------------------------------------
@@ -162,10 +180,14 @@ public class SuperTuxKartActivity extends SDLActivity
         {
             long now = SystemClock.elapsedRealtime();
             if (m_game_control_bound &&
+                m_seen_game_control_connected &&
+                !m_game_control_stale_reported &&
                 now - m_last_game_control_elapsed > MOTORICA_STALE_TIMEOUT_MS)
             {
-                onMotoricaGameControl(0, 0, false, now, 0);
+                Log.w(TAG, LOG_PREFIX + "Game control snapshot is stale");
+                sendGameControlSnapshotToNative(createDisconnectedSnapshot(now));
                 showConnectionLostDialog();
+                m_game_control_stale_reported = true;
             }
             if (m_motorica_handler != null)
                 m_motorica_handler.postDelayed(this, 250L);
@@ -177,12 +199,80 @@ public class SuperTuxKartActivity extends SDLActivity
         if (snapshot == null)
             return;
         m_last_game_control_elapsed = SystemClock.elapsedRealtime();
-        onMotoricaGameControl(snapshot.openLevel, snapshot.closeLevel,
-            snapshot.connected, snapshot.timestampMs, snapshot.seq);
+        if (shouldLogGameControlSnapshot(snapshot,
+            m_last_logged_game_control_callback_seq))
+        {
+            m_last_logged_game_control_callback_seq = snapshot.seq;
+            logGameControlSnapshot("callback", snapshot);
+        }
+        sendGameControlSnapshotToNative(snapshot);
         if (snapshot.connected)
+        {
+            if (!m_seen_game_control_connected)
+                Log.d(TAG, LOG_PREFIX + "First connected game control snapshot received");
+            m_seen_game_control_connected = true;
+            m_game_control_stale_reported = false;
             dismissConnectionLostDialog();
-        else
+        }
+        else if (m_seen_game_control_connected)
+        {
             showConnectionLostDialog();
+        }
+    }
+    // ------------------------------------------------------------------------
+    private GameControlSnapshot createDisconnectedSnapshot(long timestamp_ms)
+    {
+        return new GameControlSnapshot(1, 0L, timestamp_ms, 0, 0, false);
+    }
+    // ------------------------------------------------------------------------
+    private void sendGameControlSnapshotToNative(GameControlSnapshot snapshot)
+    {
+        if (snapshot == null)
+            return;
+        if (!s_motorica_natives_ready)
+        {
+            m_pending_game_control_snapshot = snapshot;
+            logGameControlSnapshot("native pending", snapshot);
+            return;
+        }
+        try
+        {
+            if (shouldLogGameControlSnapshot(snapshot,
+                m_last_logged_game_control_native_seq))
+            {
+                m_last_logged_game_control_native_seq = snapshot.seq;
+                logGameControlSnapshot("native send", snapshot);
+            }
+            onMotoricaGameControl(snapshot.openLevel, snapshot.closeLevel,
+                snapshot.connected, snapshot.timestampMs, snapshot.seq);
+        }
+        catch (UnsatisfiedLinkError e)
+        {
+            s_motorica_natives_ready = false;
+            m_pending_game_control_snapshot = snapshot;
+            Log.w(TAG, LOG_PREFIX + "Native game control method is not ready yet", e);
+        }
+    }
+    // ------------------------------------------------------------------------
+    private void flushPendingGameControlSnapshot()
+    {
+        GameControlSnapshot snapshot = m_pending_game_control_snapshot;
+        m_pending_game_control_snapshot = null;
+        if (snapshot != null)
+        {
+            logGameControlSnapshot("native flush", snapshot);
+            sendGameControlSnapshotToNative(snapshot);
+        }
+    }
+    // ------------------------------------------------------------------------
+    private static void onMotoricaNativeReady()
+    {
+        s_motorica_natives_ready = true;
+        Log.d(TAG, LOG_PREFIX + "Motorica native bridge is ready");
+        SuperTuxKartActivity activity =
+            s_current_activity == null ? null : s_current_activity.get();
+        if (activity != null)
+            activity.flushPendingGameControlSnapshot();
     }
     // ------------------------------------------------------------------------
     private void bindGameControlService()
@@ -192,17 +282,48 @@ public class SuperTuxKartActivity extends SDLActivity
         Intent intent = new Intent(MOTORICA_GAME_CONTROL_ACTION);
         intent.setPackage(MOTORICA_START_PACKAGE);
         m_last_game_control_elapsed = SystemClock.elapsedRealtime();
+        Log.d(TAG, LOG_PREFIX + "Binding game control service action=" +
+            MOTORICA_GAME_CONTROL_ACTION + " package=" + MOTORICA_START_PACKAGE);
         try
         {
             boolean bound = bindService(intent, m_game_control_connection,
                 Context.BIND_AUTO_CREATE);
             if (!bound)
+            {
+                Log.w(TAG, LOG_PREFIX + "Game control service bind returned false");
                 showMotoricaRequiredDialog();
+            }
         }
         catch (SecurityException e)
         {
+            Log.w(TAG, LOG_PREFIX + "Game control service bind rejected", e);
             showMotoricaRequiredDialog();
         }
+    }
+    // ------------------------------------------------------------------------
+    private boolean shouldLogGameControlSnapshot(GameControlSnapshot snapshot,
+                                                 long last_logged_seq)
+    {
+        if (snapshot == null)
+            return false;
+        if (!snapshot.connected)
+            return snapshot.seq != last_logged_seq;
+        return snapshot.seq <= 3 || snapshot.seq % 30L == 0L;
+    }
+    // ------------------------------------------------------------------------
+    private void logGameControlSnapshot(String stage, GameControlSnapshot snapshot)
+    {
+        if (snapshot == null)
+        {
+            Log.d(TAG, LOG_PREFIX + stage + " snapshot=null");
+            return;
+        }
+        long age_ms = SystemClock.elapsedRealtime() - snapshot.timestampMs;
+        Log.d(TAG, LOG_PREFIX + stage + " seq=" + snapshot.seq +
+            " open=" + snapshot.openLevel +
+            " close=" + snapshot.closeLevel +
+            " connected=" + snapshot.connected +
+            " ageMs=" + age_ms);
     }
     // ------------------------------------------------------------------------
     private void unbindGameControlService()
@@ -224,6 +345,12 @@ public class SuperTuxKartActivity extends SDLActivity
         m_game_control_service = null;
     }
     // ------------------------------------------------------------------------
+    private boolean isActivityDead()
+    {
+        return isFinishing() || (Build.VERSION.SDK_INT >=
+            Build.VERSION_CODES.JELLY_BEAN_MR1 && isDestroyed());
+    }
+    // ------------------------------------------------------------------------
     private void showConnectionLostDialog()
     {
         runOnUiThread(new Runnable()
@@ -231,15 +358,23 @@ public class SuperTuxKartActivity extends SDLActivity
             @Override
             public void run()
             {
-                if (isFinishing() || m_connection_lost_dialog != null)
+                if (isActivityDead() || m_connection_lost_dialog != null)
                     return;
-                m_connection_lost_dialog = new AlertDialog.Builder(
-                    SuperTuxKartActivity.this)
-                    .setTitle("Связь потеряна")
-                    .setMessage("Обрыв связи с протезом. Игра продолжится автоматически после восстановления связи.")
-                    .setCancelable(false)
-                    .setPositiveButton("Выйти из игры", null)
-                    .show();
+                try
+                {
+                    m_connection_lost_dialog = new AlertDialog.Builder(
+                        SuperTuxKartActivity.this)
+                        .setTitle("Связь потеряна")
+                        .setMessage("Обрыв связи с протезом. Игра продолжится автоматически после восстановления связи.")
+                        .setCancelable(false)
+                        .setPositiveButton("Выйти из игры", null)
+                        .show();
+                }
+                catch (RuntimeException e)
+                {
+                    Log.w(TAG, LOG_PREFIX + "Failed to show connection lost dialog", e);
+                    return;
+                }
                 m_connection_lost_dialog.getButton(AlertDialog.BUTTON_POSITIVE)
                     .setVisibility(View.GONE);
                 if (m_motorica_handler != null)
@@ -249,7 +384,8 @@ public class SuperTuxKartActivity extends SDLActivity
                         @Override
                         public void run()
                         {
-                            if (m_connection_lost_dialog == null)
+                            if (isActivityDead() ||
+                                m_connection_lost_dialog == null)
                                 return;
                             m_connection_lost_dialog.getButton(
                                 AlertDialog.BUTTON_POSITIVE).setVisibility(
@@ -280,7 +416,14 @@ public class SuperTuxKartActivity extends SDLActivity
             {
                 if (m_connection_lost_dialog == null)
                     return;
-                m_connection_lost_dialog.dismiss();
+                try
+                {
+                    m_connection_lost_dialog.dismiss();
+                }
+                catch (RuntimeException e)
+                {
+                    Log.w(TAG, LOG_PREFIX + "Failed to dismiss connection lost dialog", e);
+                }
                 m_connection_lost_dialog = null;
             }
         });
@@ -293,23 +436,31 @@ public class SuperTuxKartActivity extends SDLActivity
             @Override
             public void run()
             {
-                if (isFinishing() || m_motorica_required_dialog != null)
+                if (isActivityDead() || m_motorica_required_dialog != null)
                     return;
-                m_motorica_required_dialog = new AlertDialog.Builder(
-                    SuperTuxKartActivity.this)
-                    .setTitle("Motorica Start")
-                    .setMessage("Игру можно запускать только из приложения Motorica Start.")
-                    .setCancelable(false)
-                    .setPositiveButton("Закрыть",
-                        new DialogInterface.OnClickListener()
-                        {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which)
+                try
+                {
+                    m_motorica_required_dialog = new AlertDialog.Builder(
+                        SuperTuxKartActivity.this)
+                        .setTitle("Motorica Start")
+                        .setMessage("Игру можно запускать только из приложения Motorica Start.")
+                        .setCancelable(false)
+                        .setPositiveButton("Закрыть",
+                            new DialogInterface.OnClickListener()
                             {
-                                finish();
-                            }
-                        })
-                    .show();
+                                @Override
+                                public void onClick(DialogInterface dialog,
+                                                    int which)
+                                {
+                                    finish();
+                                }
+                            })
+                        .show();
+                }
+                catch (RuntimeException e)
+                {
+                    Log.w(TAG, LOG_PREFIX + "Failed to show Motorica required dialog", e);
+                }
             }
         });
     }
@@ -419,6 +570,7 @@ public class SuperTuxKartActivity extends SDLActivity
     public void onCreate(Bundle instance)
     {
         super.onCreate(instance);
+        s_current_activity = new WeakReference<SuperTuxKartActivity>(this);
         m_motorica_handler = new Handler();
         m_keyboard_height = new AtomicInteger();
         m_moved_height = new AtomicInteger();
@@ -525,9 +677,25 @@ public class SuperTuxKartActivity extends SDLActivity
     public void onDestroy()
     {
         if (m_motorica_handler != null)
-            m_motorica_handler.removeCallbacks(m_motorica_watchdog);
+            m_motorica_handler.removeCallbacksAndMessages(null);
         unbindGameControlService();
         dismissConnectionLostDialog();
+        if (m_motorica_required_dialog != null)
+        {
+            try
+            {
+                m_motorica_required_dialog.dismiss();
+            }
+            catch (RuntimeException e)
+            {
+                Log.w(TAG, LOG_PREFIX + "Failed to dismiss Motorica required dialog", e);
+            }
+            m_motorica_required_dialog = null;
+        }
+        m_pending_game_control_snapshot = null;
+        if (s_current_activity != null &&
+            s_current_activity.get() == this)
+            s_current_activity = null;
         super.onDestroy();
     }
     // ------------------------------------------------------------------------

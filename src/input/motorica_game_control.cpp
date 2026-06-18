@@ -11,6 +11,7 @@
 #include "karts/controller/controller.hpp"
 #include "states_screens/state_manager.hpp"
 #include "utils/time.hpp"
+#include "utils/log.hpp"
 
 namespace
 {
@@ -42,6 +43,13 @@ void MotoricaGameControl::updateSnapshot(int open_level, int close_level,
     m_connected.store(connected);
     m_receive_time_ms.store(StkTime::getMonoTimeMs());
     m_seq.store(seq);
+    if (!connected || seq <= 3 || seq % 30 == 0)
+    {
+        Log::info("MotoricaGameControl",
+            "[BLE stk-game debug] native update seq=%llu open=%d close=%d connected=%d",
+            (unsigned long long)seq, m_open_level.load(),
+            m_close_level.load(), connected ? 1 : 0);
+    }
     if (connected)
         m_loss_handled.store(false);
 }
@@ -60,16 +68,36 @@ void MotoricaGameControl::apply(Controller* controller)
         return;
 
     if (!UserConfigParams::m_motorica_emg_steering)
+    {
+        static bool logged_disabled = false;
+        if (!logged_disabled)
+        {
+            Log::info("MotoricaGameControl",
+                "[BLE stk-game debug] apply disabled motorica_emg_steering=0");
+            logged_disabled = true;
+        }
         return;
+    }
 
     const uint64_t now = StkTime::getMonoTimeMs();
     const uint64_t received = m_receive_time_ms.load();
     const bool active = m_connected.load() &&
         received > 0 && now - received <= STALE_TIMEOUT_MS;
+    const uint64_t seq = m_seq.load();
+    static uint64_t last_logged_apply_seq = (uint64_t)-1;
 
     if (!active)
     {
         releaseSteering(controller);
+        if (seq != last_logged_apply_seq &&
+            (seq <= 3 || seq % 30 == 0 || m_was_active))
+        {
+            last_logged_apply_seq = seq;
+            Log::info("MotoricaGameControl",
+                "[BLE stk-game debug] apply inactive seq=%llu connected=%d ageMs=%llu",
+                (unsigned long long)seq, m_connected.load() ? 1 : 0,
+                (unsigned long long)(received > 0 ? now - received : 0));
+        }
         if (m_was_active && !m_loss_handled.load() &&
             StateManager::get()->getGameState() == GUIEngine::GAME)
         {
@@ -87,6 +115,15 @@ void MotoricaGameControl::apply(Controller* controller)
     if (std::abs(diff) <= DEADZONE)
     {
         releaseSteering(controller);
+        if (seq != last_logged_apply_seq &&
+            (seq <= 3 || seq % 30 == 0))
+        {
+            last_logged_apply_seq = seq;
+            Log::info("MotoricaGameControl",
+                "[BLE stk-game debug] apply deadzone seq=%llu diff=%d open=%d close=%d",
+                (unsigned long long)seq, diff, m_open_level.load(),
+                m_close_level.load());
+        }
     }
     else if (diff < 0)
     {
@@ -94,6 +131,15 @@ void MotoricaGameControl::apply(Controller* controller)
             (std::abs(diff) * ACTION_MAX_VALUE) / 255);
         controller->action(PA_STEER_RIGHT, 0);
         controller->action(PA_STEER_LEFT, value);
+        if (seq != last_logged_apply_seq &&
+            (seq <= 3 || seq % 30 == 0))
+        {
+            last_logged_apply_seq = seq;
+            Log::info("MotoricaGameControl",
+                "[BLE stk-game debug] apply left seq=%llu diff=%d value=%d open=%d close=%d",
+                (unsigned long long)seq, diff, value, m_open_level.load(),
+                m_close_level.load());
+        }
     }
     else
     {
@@ -101,6 +147,15 @@ void MotoricaGameControl::apply(Controller* controller)
             (diff * ACTION_MAX_VALUE) / 255);
         controller->action(PA_STEER_LEFT, 0);
         controller->action(PA_STEER_RIGHT, value);
+        if (seq != last_logged_apply_seq &&
+            (seq <= 3 || seq % 30 == 0))
+        {
+            last_logged_apply_seq = seq;
+            Log::info("MotoricaGameControl",
+                "[BLE stk-game debug] apply right seq=%llu diff=%d value=%d open=%d close=%d",
+                (unsigned long long)seq, diff, value, m_open_level.load(),
+                m_close_level.load());
+        }
     }
 
     m_was_active = true;
@@ -115,6 +170,21 @@ int MotoricaGameControl::getOpenLevel() const
 int MotoricaGameControl::getCloseLevel() const
 {
     return m_close_level.load();
+}
+
+uint64_t MotoricaGameControl::getSeq() const
+{
+    return m_seq.load();
+}
+
+float MotoricaGameControl::getSteeringAxis() const
+{
+    int diff = m_close_level.load() - m_open_level.load();
+    if (UserConfigParams::m_motorica_emg_inverted)
+        diff = -diff;
+    if (std::abs(diff) <= DEADZONE)
+        return 0.0f;
+    return std::max(-1.0f, std::min(1.0f, (float)diff / 255.0f));
 }
 
 bool MotoricaGameControl::isConnected() const
