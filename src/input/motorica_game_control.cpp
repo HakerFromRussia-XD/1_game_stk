@@ -129,8 +129,8 @@ void MotoricaGameControl::apply(Controller* controller)
     {
         const int value = std::min(ACTION_MAX_VALUE,
             (std::abs(diff) * ACTION_MAX_VALUE) / 255);
-        controller->action(PA_STEER_RIGHT, 0);
-        controller->action(PA_STEER_LEFT, value);
+        controller->action(PA_STEER_LEFT, 0);
+        controller->action(PA_STEER_RIGHT, value);
         if (seq != last_logged_apply_seq &&
             (seq <= 3 || seq % 30 == 0))
         {
@@ -145,8 +145,8 @@ void MotoricaGameControl::apply(Controller* controller)
     {
         const int value = std::min(ACTION_MAX_VALUE,
             (diff * ACTION_MAX_VALUE) / 255);
-        controller->action(PA_STEER_LEFT, 0);
-        controller->action(PA_STEER_RIGHT, value);
+        controller->action(PA_STEER_RIGHT, 0);
+        controller->action(PA_STEER_LEFT, value);
         if (seq != last_logged_apply_seq &&
             (seq <= 3 || seq % 30 == 0))
         {

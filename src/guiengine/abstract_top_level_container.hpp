@@ -87,6 +87,8 @@ namespace GUIEngine
                 T*           getWidget(const char* name)
         {
             Widget* out = getWidget(name);
+            if (out == NULL)
+                return NULL;
             T* outCasted = dynamic_cast<T*>( out );
             if (out != NULL && outCasted == NULL)
                 Log::fatal("Screen::getWidget", "Widget '%s' of type '%s'"

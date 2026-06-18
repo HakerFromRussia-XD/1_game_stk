@@ -26,6 +26,7 @@
 #include "input/multitouch_device.hpp"
 #include "modes/world.hpp"
 #include "states_screens/race_gui_multitouch.hpp"
+#include "utils/log.hpp"
 #include "utils/translation.hpp"
 
 #include <IrrlichtDevice.h>
@@ -35,6 +36,21 @@ using namespace GUIEngine;
 using namespace irr;
 using namespace irr::core;
 using namespace irr::gui;
+
+namespace
+{
+    CheckBoxWidget* getOptionalCheckbox(MultitouchSettingsDialog* dialog,
+                                        const char* id)
+    {
+        CheckBoxWidget* widget = dialog->getWidget<CheckBoxWidget>(id);
+        if (widget == NULL)
+        {
+            Log::warn("MultitouchSettingsDialog",
+                      "Optional checkbox '%s' is missing.", id);
+        }
+        return widget;
+    }
+}
 
 // -----------------------------------------------------------------------------
 
@@ -120,13 +136,17 @@ GUIEngine::EventPropagation MultitouchSettingsDialog::processEvent(
         assert(buttons_inv != NULL);
         UserConfigParams::m_multitouch_inverted = buttons_inv->getState();
 
-        CheckBoxWidget* emg_steering = getWidget<CheckBoxWidget>("motorica_emg_steering");
-        assert(emg_steering != NULL);
-        UserConfigParams::m_motorica_emg_steering = emg_steering->getState();
+        CheckBoxWidget* emg_steering =
+            getOptionalCheckbox(this, "motorica_emg_steering");
+        if (emg_steering != NULL)
+            UserConfigParams::m_motorica_emg_steering =
+                emg_steering->getState();
 
-        CheckBoxWidget* emg_inverted = getWidget<CheckBoxWidget>("motorica_emg_inverted");
-        assert(emg_inverted != NULL);
-        UserConfigParams::m_motorica_emg_inverted = emg_inverted->getState();
+        CheckBoxWidget* emg_inverted =
+            getOptionalCheckbox(this, "motorica_emg_inverted");
+        if (emg_inverted != NULL)
+            UserConfigParams::m_motorica_emg_inverted =
+                emg_inverted->getState();
 
         CheckBoxWidget* accelerometer = getWidget<CheckBoxWidget>("accelerometer");
         assert(accelerometer != NULL);
@@ -240,13 +260,15 @@ void MultitouchSettingsDialog::updateValues()
     assert(buttons_inv != NULL);
     buttons_inv->setState(UserConfigParams::m_multitouch_inverted);
 
-    CheckBoxWidget* emg_steering = getWidget<CheckBoxWidget>("motorica_emg_steering");
-    assert(emg_steering != NULL);
-    emg_steering->setState(UserConfigParams::m_motorica_emg_steering);
+    CheckBoxWidget* emg_steering =
+        getOptionalCheckbox(this, "motorica_emg_steering");
+    if (emg_steering != NULL)
+        emg_steering->setState(UserConfigParams::m_motorica_emg_steering);
 
-    CheckBoxWidget* emg_inverted = getWidget<CheckBoxWidget>("motorica_emg_inverted");
-    assert(emg_inverted != NULL);
-    emg_inverted->setState(UserConfigParams::m_motorica_emg_inverted);
+    CheckBoxWidget* emg_inverted =
+        getOptionalCheckbox(this, "motorica_emg_inverted");
+    if (emg_inverted != NULL)
+        emg_inverted->setState(UserConfigParams::m_motorica_emg_inverted);
 
     CheckBoxWidget* accelerometer = getWidget<CheckBoxWidget>("accelerometer");
     assert(accelerometer != NULL);

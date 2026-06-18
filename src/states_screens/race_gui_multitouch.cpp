@@ -453,8 +453,8 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
             core::rect<s32> right_value(right_x, bar_top + bar_height - right_fill,
                                         right_x + bar_width,
                                         bar_top + bar_height);
-            GL32_draw2DRectangle(video::SColor(alpha, 0, 186, 255), left_value);
-            GL32_draw2DRectangle(video::SColor(alpha, 255, 192, 0), right_value);
+            GL32_draw2DRectangle(video::SColor(alpha, 255, 192, 0), left_value);
+            GL32_draw2DRectangle(video::SColor(alpha, 0, 186, 255), right_value);
             // float x = (float)(button->x) + (float)(button->width) / 2.0f *
             //                                          (button->axis_x + 1.0f);
             // float y = (float)(button->y) + (float)(button->height) / 2.0f *

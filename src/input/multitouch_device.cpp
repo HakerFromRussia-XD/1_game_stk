@@ -460,14 +460,14 @@ void MultitouchDevice::updateAxisX(float value)
     if (value < -m_deadzone)
     {
         float factor = getSteeringFactor(std::abs(value), m_sensitivity_x);
-        m_controller->action(PA_STEER_RIGHT, 0);
-        m_controller->action(PA_STEER_LEFT, int(factor * Input::MAX_VALUE));
+        m_controller->action(PA_STEER_LEFT, 0);
+        m_controller->action(PA_STEER_RIGHT, int(factor * Input::MAX_VALUE));
     }
     else if (value > m_deadzone)
     {
         float factor = getSteeringFactor(std::abs(value), m_sensitivity_x);
-        m_controller->action(PA_STEER_LEFT, 0);
-        m_controller->action(PA_STEER_RIGHT, int(factor * Input::MAX_VALUE));
+        m_controller->action(PA_STEER_RIGHT, 0);
+        m_controller->action(PA_STEER_LEFT, int(factor * Input::MAX_VALUE));
     }
     else
     {
