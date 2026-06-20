@@ -78,6 +78,7 @@ public class SuperTuxKartActivity extends SDLActivity
     private static final String MOTORICA_GAME_CONTROL_ACTION =
         "com.motorica.gamecontrol.BIND";
     private static final long MOTORICA_STALE_TIMEOUT_MS = 500L;
+
     private static volatile boolean s_motorica_natives_ready;
     private static WeakReference<SuperTuxKartActivity> s_current_activity;
 

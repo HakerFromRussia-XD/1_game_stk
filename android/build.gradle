@@ -54,7 +54,9 @@ android
     defaultConfig
     {
         versionCode project.getProperty('version_code').toInteger()
-        versionName project.getProperty('version_name')
+        versionName project.hasProperty('android_version_name') ?
+            project.getProperty('android_version_name') :
+            project.getProperty('version_name')
         minSdkVersion min_sdk_version.toInteger()
         compileSdkVersion compile_sdk_version.toInteger()
         targetSdkVersion target_sdk_version.toInteger()
