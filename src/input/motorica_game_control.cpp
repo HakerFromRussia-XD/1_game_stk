@@ -7,11 +7,15 @@
 
 #include "config/user_config.hpp"
 #include "guiengine/engine.hpp"
+#include "guiengine/modaldialog.hpp"
 #include "input/input.hpp"
 #include "karts/controller/controller.hpp"
 #include "states_screens/state_manager.hpp"
 #include "utils/time.hpp"
 #include "utils/log.hpp"
+#ifdef IOS_STK
+#include "input/motorica_game_control_ios.hpp"
+#endif
 
 namespace
 {
@@ -50,8 +54,6 @@ void MotoricaGameControl::updateSnapshot(int open_level, int close_level,
             (unsigned long long)seq, m_open_level.load(),
             m_close_level.load(), connected ? 1 : 0);
     }
-    if (connected)
-        m_loss_handled.store(false);
 }
 
 void MotoricaGameControl::releaseSteering(Controller* controller)
@@ -102,10 +104,23 @@ void MotoricaGameControl::apply(Controller* controller)
             StateManager::get()->getGameState() == GUIEngine::GAME)
         {
             StateManager::get()->escapePressed();
+#ifdef IOS_STK
+            showMotoricaConnectionLostDialogIOS();
+#endif
             m_loss_handled.store(true);
         }
         m_was_active = false;
         return;
+    }
+
+    if (m_loss_handled.load())
+    {
+#ifdef IOS_STK
+        dismissMotoricaConnectionLostDialogIOS();
+        if (GUIEngine::ModalDialog::isADialogActive())
+            GUIEngine::ModalDialog::dismiss();
+#endif
+        m_loss_handled.store(false);
     }
 
     int diff = m_close_level.load() - m_open_level.load();
@@ -159,7 +174,6 @@ void MotoricaGameControl::apply(Controller* controller)
     }
 
     m_was_active = true;
-    m_loss_handled.store(false);
 }
 
 int MotoricaGameControl::getOpenLevel() const

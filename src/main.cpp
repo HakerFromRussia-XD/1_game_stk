@@ -229,6 +229,9 @@ extern "C" {
 #include "input/device_manager.hpp"
 #include "input/input_manager.hpp"
 #include "input/keyboard_device.hpp"
+#ifdef IOS_STK
+#include "input/motorica_game_control_ios.hpp"
+#endif
 #include "input/wiimote_manager.hpp"
 #include "io/file_manager.hpp"
 #include "items/attachment_manager.hpp"
@@ -2216,6 +2219,11 @@ int ios_main(int argc, char *argv[])
 int main(int argc, char *argv[])
 #endif
 {
+#ifdef IOS_STK
+    writeMotoricaGameVersionIOS();
+    startMotoricaGameControlIOS();
+#endif
+
 #ifdef __SWITCH__
     constexpr devoptab_t dotab_stdout = {
         .name    = "con",
