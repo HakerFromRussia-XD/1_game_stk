@@ -547,6 +547,14 @@ endif()
 # Provides list of source and header files (STK_SOURCES and STK_HEADERS)
 include(sources.cmake)
 
+if (IOS)
+    set(STK_SOURCES
+        ${STK_SOURCES}
+        src/input/motorica_game_control_ios.mm)
+    set_source_files_properties(src/input/motorica_game_control_ios.mm
+        PROPERTIES COMPILE_FLAGS "-x objective-c++" LANGUAGE CXX)
+endif()
+
 if (USE_APPLE_NETWORK_LIBRARIES)
     add_definitions(-DAPPLE_NETWORK_LIBRARIES)
     set(STK_SOURCES
@@ -628,6 +636,7 @@ else()
             XCODE_ATTRIBUTE_IPHONEOS_DEPLOYMENT_TARGET 13.0
             XCODE_ATTRIBUTE_INSTALL_PATH /Applications
             XCODE_ATTRIBUTE_SKIP_INSTALL No
+            XCODE_ATTRIBUTE_CODE_SIGN_ENTITLEMENTS ${PROJECT_SOURCE_DIR}/data/SuperTuxKart-iOS.entitlements
             XCODE_ATTRIBUTE_ASSETCATALOG_COMPILER_APPICON_NAME "AppIcon")
         if(CMAKE_GENERATOR MATCHES "Xcode")
             get_all_targets(supertuxkart_targets ${CMAKE_CURRENT_LIST_DIR})

@@ -12,7 +12,7 @@
 
 namespace
 {
-    NSString* const kAppGroup = @"group.com.motorica.gamecontrol";
+    NSString* const kAppGroup = @"group.com.motorica.start.gamecontrol";
     NSString* const kSnapshotKey = @"snapshot";
     NSString* const kInstalledGameKey = @"installedGame.stk";
     NSString* const kSeqKey = @"seq";
