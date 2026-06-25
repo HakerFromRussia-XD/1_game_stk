@@ -639,6 +639,9 @@ else()
             XCODE_ATTRIBUTE_CODE_SIGN_ENTITLEMENTS ${PROJECT_SOURCE_DIR}/data/SuperTuxKart-iOS.entitlements
             XCODE_ATTRIBUTE_ASSETCATALOG_COMPILER_APPICON_NAME "AppIcon")
         if(CMAKE_GENERATOR MATCHES "Xcode")
+            add_custom_command(TARGET supertuxkart POST_BUILD
+                COMMAND /bin/sh ${PROJECT_SOURCE_DIR}/cmake/CopyIosDsymToArchive.sh
+                COMMENT "Copy supertuxkart dSYM into Xcode archive")
             get_all_targets(supertuxkart_targets ${CMAKE_CURRENT_LIST_DIR})
             foreach(target IN LISTS supertuxkart_targets)
                 if (NOT target MATCHES "supertuxkart")
