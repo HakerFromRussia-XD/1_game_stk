@@ -77,6 +77,8 @@ public class SuperTuxKartActivity extends SDLActivity
     private static final String MOTORICA_START_PACKAGE = "com.bailout.stickk";
     private static final String MOTORICA_GAME_CONTROL_ACTION =
         "com.motorica.gamecontrol.BIND";
+    private static final String RUSTORE_LAUNCHER_ACTIVITY =
+        "com.motorica.games.stk.RuStoreLauncherActivity";
     private static final long MOTORICA_STALE_TIMEOUT_MS = 500L;
 
     private static volatile boolean s_motorica_natives_ready;
@@ -571,6 +573,7 @@ public class SuperTuxKartActivity extends SDLActivity
     public void onCreate(Bundle instance)
     {
         super.onCreate(instance);
+        disableRuStoreLauncherActivity();
         s_current_activity = new WeakReference<SuperTuxKartActivity>(this);
         m_motorica_handler = new Handler();
         m_keyboard_height = new AtomicInteger();
@@ -652,6 +655,16 @@ public class SuperTuxKartActivity extends SDLActivity
             }
             catch(Exception e) {}
         }
+    }
+    // ------------------------------------------------------------------------
+    private void disableRuStoreLauncherActivity()
+    {
+        ComponentName launcher_activity =
+            new ComponentName(this, RUSTORE_LAUNCHER_ACTIVITY);
+        getPackageManager().setComponentEnabledSetting(
+            launcher_activity,
+            PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+            PackageManager.DONT_KILL_APP);
     }
     // ------------------------------------------------------------------------
     @Override

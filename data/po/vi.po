@@ -6841,3 +6841,13 @@ msgstr ""
 #: net.supertuxkart.SuperTuxKart.metainfo.xml:45
 msgid "SuperTuxKart Team"
 msgstr ""
+
+#. I18N: Motorica EMG control connection-lost dialog on iOS.
+#: src/input/motorica_game_control_ios.mm
+msgid "Connection lost"
+msgstr "Mất kết nối"
+
+#. I18N: Motorica EMG control connection-lost dialog on iOS.
+#: src/input/motorica_game_control_ios.mm
+msgid "Control data is not coming from the Motorica Start app. The game will continue automatically after the connection is restored."
+msgstr "Dữ liệu điều khiển không đến từ ứng dụng Motorica Start. Trò chơi sẽ tự động tiếp tục sau khi kết nối được khôi phục."

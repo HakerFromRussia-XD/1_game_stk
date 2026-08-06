@@ -6484,3 +6484,13 @@ msgstr "Nam bu toigh leat tionndadh nas seasmhaiche dheth, beachdaich air an tio
 #: supertuxkart.appdata.xml:44
 msgid "SuperTuxKart Team"
 msgstr "Sgioba SuperTuxKart"
+
+#. I18N: Motorica EMG control connection-lost dialog on iOS.
+#: src/input/motorica_game_control_ios.mm
+msgid "Connection lost"
+msgstr "Chaidh an ceangal a chall"
+
+#. I18N: Motorica EMG control connection-lost dialog on iOS.
+#: src/input/motorica_game_control_ios.mm
+msgid "Control data is not coming from the Motorica Start app. The game will continue automatically after the connection is restored."
+msgstr "Chan eil dàta smachd a’ tighinn bhon aplacaid Motorica Start. Leanaidh an geama air adhart gu fèin-obrachail nuair a thèid an ceangal ath-stèidheachadh."

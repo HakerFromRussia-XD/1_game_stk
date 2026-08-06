@@ -164,8 +164,16 @@ void InputManager::addJoystick()
 // -----------------------------------------------------------------------------
 #ifndef SERVER_ONLY
 // For CIrrDeviceSDL
+#ifdef ANDROID
+extern "C" bool handle_motorica_game_control_event(SDL_Event& event);
+#endif
+
 extern "C" void handle_joystick(SDL_Event& event)
 {
+#ifdef ANDROID
+    if (handle_motorica_game_control_event(event))
+        return;
+#endif
     if (input_manager)
         input_manager->handleJoystick(event);
 }   // handle_joystick
@@ -1474,4 +1482,3 @@ void InputManager::setMode(InputDriverMode new_mode)
             assert(false);
     }
 }
-

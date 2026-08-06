@@ -8,6 +8,7 @@ void writeMotoricaGameVersionIOS();
 void startMotoricaGameControlIOS();
 void showMotoricaConnectionLostDialogIOS();
 void dismissMotoricaConnectionLostDialogIOS();
+void flushMotoricaConnectionRestoreUiIOS();
 #endif
 
 #endif

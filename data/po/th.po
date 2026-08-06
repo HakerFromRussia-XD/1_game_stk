@@ -6461,3 +6461,13 @@ msgstr "หากคุณต้องการความเสถียรม
 #: supertuxkart.appdata.xml:44
 msgid "SuperTuxKart Team"
 msgstr "SuperTuxKart Team"
+
+#. I18N: Motorica EMG control connection-lost dialog on iOS.
+#: src/input/motorica_game_control_ios.mm
+msgid "Connection lost"
+msgstr "การเชื่อมต่อขาดหาย"
+
+#. I18N: Motorica EMG control connection-lost dialog on iOS.
+#: src/input/motorica_game_control_ios.mm
+msgid "Control data is not coming from the Motorica Start app. The game will continue automatically after the connection is restored."
+msgstr "ไม่มีข้อมูลควบคุมมาจากแอป Motorica Start เกมจะดำเนินต่อโดยอัตโนมัติหลังจากการเชื่อมต่อกลับมา"

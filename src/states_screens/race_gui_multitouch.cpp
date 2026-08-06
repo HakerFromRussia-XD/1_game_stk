@@ -387,6 +387,8 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
         if (button->type == MultitouchButtonType::BUTTON_STEERING)
         {
             MotoricaGameControl* emg = MotoricaGameControl::get();
+            emg->flushConnectionRestoreUi();
+            emg->flushConnectionLossUi();
             const bool emg_connected = emg->isConnected();
             float steering_axis = button->axis_x;
             if (!button->pressed && emg_connected &&

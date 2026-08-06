@@ -9,10 +9,12 @@
 #include "input/motorica_game_control.hpp"
 #include "main_loop.hpp"
 #include "utils/log.hpp"
+#include "utils/string_utils.hpp"
+#include "utils/translation.hpp"
 
 namespace
 {
-    NSString* const kAppGroup = @"group.com.motorica.start.gamecontrol";
+    NSString* const kAppGroup = @"group.com.motorica.start.gamecontrolll";
     NSString* const kSnapshotKey = @"snapshot";
     NSString* const kInstalledGameKey = @"installedGame.stk";
     NSString* const kSeqKey = @"seq";
@@ -38,6 +40,15 @@ namespace
         if (value > 255)
             return 255;
         return (int)value;
+    }
+
+    NSString* localizedNSString(const char* fallback)
+    {
+        std::string utf8 = fallback;
+        if (translations != nullptr)
+            utf8 = StringUtils::wideToUtf8(translations->w_gettext(fallback));
+
+        return [NSString stringWithUTF8String:utf8.c_str()];
     }
 
     UIViewController* getRootViewController()
@@ -90,7 +101,7 @@ void writeMotoricaGameVersionIOS()
     NSDictionary* info = NSBundle.mainBundle.infoDictionary;
     NSString* bundle_id = NSBundle.mainBundle.bundleIdentifier;
     if (bundle_id == nil || bundle_id.length == 0)
-        bundle_id = @"com.motorica.games.stk";
+        bundle_id = @"com.motorica.games.stkttt";
 
     NSString* version_name = info[@"CFBundleShortVersionString"];
     if (version_name == nil)
@@ -132,11 +143,11 @@ void showMotoricaConnectionLostDialogIOS()
         }
 
         UIAlertController* alert = [UIAlertController
-            alertControllerWithTitle:@"Связь потеряна"
-            message:@"Данные управления не поступают из приложения Motorica Start. Игра продолжится автоматически после восстановления связи."
+            alertControllerWithTitle:localizedNSString(N_("Connection lost"))
+            message:localizedNSString(N_("Control data is not coming from the Motorica Start app. The game will continue automatically after the connection is restored."))
             preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction* exit_action = [UIAlertAction
-            actionWithTitle:@"Выйти из игры"
+            actionWithTitle:localizedNSString(N_("Exit game"))
             style:UIAlertActionStyleDestructive
             handler:^(__unused UIAlertAction* action) {
                 if (main_loop != nullptr)
@@ -163,13 +174,20 @@ void dismissMotoricaConnectionLostDialogIOS()
     });
 }
 
+void flushMotoricaConnectionRestoreUiIOS()
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        MotoricaGameControl::get()->flushConnectionRestoreUi();
+    });
+}
+
 void startMotoricaGameControlIOS()
 {
     if (g_poll_timer != nil)
         return;
 
     dispatch_queue_t queue = dispatch_queue_create(
-        "com.motorica.games.stk.gamecontrol", DISPATCH_QUEUE_SERIAL);
+        "com.motorica.games.stkttt.gamecontrol", DISPATCH_QUEUE_SERIAL);
     g_poll_timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,
                                           queue);
     dispatch_source_set_timer(g_poll_timer, dispatch_time(DISPATCH_TIME_NOW, 0),
@@ -194,6 +212,7 @@ void startMotoricaGameControlIOS()
             NSDictionary* snapshot = [defaults dictionaryForKey:kSnapshotKey];
             if (snapshot == nil)
             {
+                MotoricaGameControl::get()->checkConnectionTimeout();
                 if (!g_logged_waiting_snapshot)
                 {
                     g_logged_waiting_snapshot = true;
@@ -208,7 +227,10 @@ void startMotoricaGameControlIOS()
                 return;
             uint64_t seq = [seq_number unsignedLongLongValue];
             if (seq == g_last_seq)
+            {
+                MotoricaGameControl::get()->checkConnectionTimeout();
                 return;
+            }
             g_last_seq = seq;
 
             int open_level = clampLevel([snapshot[kOpenLevelKey] integerValue]);
@@ -227,6 +249,7 @@ void startMotoricaGameControlIOS()
 
             MotoricaGameControl::get()->updateSnapshot(open_level, close_level,
                 connected, timestamp_ms, seq);
+            MotoricaGameControl::get()->checkConnectionTimeout();
         }
     });
     dispatch_resume(g_poll_timer);

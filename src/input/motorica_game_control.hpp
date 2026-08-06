@@ -17,16 +17,23 @@ private:
     std::atomic<uint64_t> m_receive_time_ms;
     std::atomic<uint64_t> m_seq;
     std::atomic<bool> m_loss_handled;
+    std::atomic<bool> m_pause_pending;
+    std::atomic<bool> m_restore_pending;
     bool m_was_active;
 
     MotoricaGameControl();
     void releaseSteering(Controller* controller);
+    void handleConnectionLost(uint64_t seq, uint64_t age_ms,
+                              const char* reason, bool pause_game);
 
 public:
     static MotoricaGameControl* get();
 
     void updateSnapshot(int open_level, int close_level, bool connected,
                         uint64_t timestamp_ms, uint64_t seq);
+    void checkConnectionTimeout();
+    void flushConnectionLossUi();
+    void flushConnectionRestoreUi();
     void apply(Controller* controller);
 
     int getOpenLevel() const;
