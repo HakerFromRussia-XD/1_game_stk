@@ -72,7 +72,11 @@ android
                 arguments app_platform, 'APP_STL=c++_static', cpu_core,
                     package_name_arg, package_class_name_arg, app_dir_name_arg,
                     project_version_arg
-                if (project.getProperty('compile_arch') == 'all')
+                if (project.getProperty('compile_arch') == 'arm')
+                {
+                    abiFilters 'armeabi-v7a', 'arm64-v8a'
+                }
+                else if (project.getProperty('compile_arch') == 'all')
                 {
                     abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
                 }
@@ -94,10 +98,13 @@ android
     {
         release
         {
-            storeFile file(keystore)
-            storePassword storepass
-            keyAlias alias
-            keyPassword storepass
+            storeFile file(project.findProperty('motoricaReleaseStoreFile') ?:
+                keystore)
+            storePassword project.findProperty('motoricaReleaseStorePassword') ?:
+                storepass
+            keyAlias project.findProperty('motoricaReleaseKeyAlias') ?: alias
+            keyPassword project.findProperty('motoricaReleaseKeyPassword') ?:
+                storepass
         }
     }
 
@@ -121,7 +128,11 @@ android
             }
             ndk
             {
-                if (project.getProperty('compile_arch') == 'all')
+                if (project.getProperty('compile_arch') == 'arm')
+                {
+                    abiFilters 'armeabi-v7a', 'arm64-v8a'
+                }
+                else if (project.getProperty('compile_arch') == 'all')
                 {
                     abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
                 }
@@ -145,7 +156,11 @@ android
             signingConfig signingConfigs.release
             ndk
             {
-                if (project.getProperty('compile_arch') == 'all')
+                if (project.getProperty('compile_arch') == 'arm')
+                {
+                    abiFilters 'armeabi-v7a', 'arm64-v8a'
+                }
+                else if (project.getProperty('compile_arch') == 'all')
                 {
                     abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
                 }
@@ -165,6 +180,7 @@ android
             res.srcDirs = ['res']
             assets.srcDirs = ['assets']
             if (project.getProperty('compile_arch') == 'all' ||
+                project.getProperty('compile_arch') == 'arm' ||
                 project.getProperty('compile_arch') == 'arm64-v8a')
             {
                 jniLibs.srcDirs = ['mesa']

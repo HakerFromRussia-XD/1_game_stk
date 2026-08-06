@@ -193,6 +193,12 @@ void MotoricaGameControl::apply(Controller* controller)
     if (!controller)
         return;
 
+#ifdef ANDROID
+    // RUSTORE_STANDALONE_TEMP: let the standard touch, accelerometer or
+    // gyroscope controller own steering while Motorica Start is optional.
+    return;
+#endif
+
     if (!UserConfigParams::m_motorica_emg_steering)
     {
         static bool logged_disabled = false;

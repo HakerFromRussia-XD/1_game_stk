@@ -485,7 +485,10 @@ EOF
     fi
 }
 
-if [ -z "$COMPILE_ARCH" ] || [ "$COMPILE_ARCH" = "all" ]; then
+if [ "$COMPILE_ARCH" = "arm" ]; then
+    build_deps armv7
+    build_deps aarch64
+elif [ -z "$COMPILE_ARCH" ] || [ "$COMPILE_ARCH" = "all" ]; then
     build_deps armv7
     build_deps aarch64
     build_deps x86

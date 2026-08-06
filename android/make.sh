@@ -78,14 +78,16 @@ if [ -z "$COMPILE_ARCH" ]; then
     COMPILE_ARCH="all"
 fi
 
-if [ "$COMPILE_ARCH" = "armv7" ]; then
+if [ "$COMPILE_ARCH" = "arm" ]; then
+    COMPILE_ARCH="arm"
+elif [ "$COMPILE_ARCH" = "armv7" ]; then
     COMPILE_ARCH="armeabi-v7a"
 elif [ "$COMPILE_ARCH" = "aarch64" ]; then
     COMPILE_ARCH="arm64-v8a"
 elif [ "$COMPILE_ARCH" != "x86" ] && [ "$COMPILE_ARCH" != "x86_64" ] && \
-     [ "$COMPILE_ARCH" != "all" ]; then
+     [ "$COMPILE_ARCH" != "all" ] && [ "$COMPILE_ARCH" != "arm" ]; then
     echo "Unknown COMPILE_ARCH: $COMPILE_ARCH. Possible values are:" \
-         "all, armv7, aarch64, x86, x86_64"
+         "all, arm, armv7, aarch64, x86, x86_64"
     exit
 fi
 

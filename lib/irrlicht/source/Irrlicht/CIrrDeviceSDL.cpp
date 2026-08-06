@@ -471,6 +471,9 @@ bool CIrrDeviceSDL::createWindow()
 		tryCreateOpenGLContext(flags);
 		if (!Window || !Context)
 		{
+		#ifdef ANDROID
+			os::Printer::log(SDL_GetError(), ELL_ERROR);
+		#endif
 			os::Printer::log( "Could not initialize display!" );
 			return false;
 		}

@@ -456,6 +456,12 @@ void MultitouchDevice::updateAxisX(float value)
 {
     if (m_controller == NULL)
         return;
+
+#ifdef ANDROID
+    // RUSTORE_STANDALONE_TEMP: Android touch and motion steering currently
+    // arrive with the opposite sign in the Motorica build.
+    value = -value;
+#endif
         
     if (value < -m_deadzone)
     {
