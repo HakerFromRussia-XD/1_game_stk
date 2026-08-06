@@ -10,8 +10,10 @@
 #include "guiengine/modaldialog.hpp"
 #include "input/input.hpp"
 #include "karts/controller/controller.hpp"
-#ifdef ANDROID
+#if defined(ANDROID) || defined(IOS_STK)
 #include "SDL_events.h"
+#endif
+#ifdef ANDROID
 #include "states_screens/dialogs/race_paused_dialog.hpp"
 #endif
 #include "states_screens/state_manager.hpp"
@@ -56,15 +58,26 @@ namespace
 #endif
 }
 
-#ifdef ANDROID
+#if defined(ANDROID) || defined(IOS_STK)
 extern "C" bool handle_motorica_game_control_event(SDL_Event& event)
 {
+#ifdef ANDROID
     const Uint32 event_type = getMotoricaConnectionRestoreEventType();
     if (event_type == (Uint32)-1 || event.type != event_type)
         return false;
 
     MotoricaGameControl::get()->flushConnectionRestoreUi();
     return true;
+#else
+    if (event.type != SDL_DROPFILE || event.drop.file == nullptr)
+        return false;
+
+    const bool handled =
+        enableMotoricaGameControlForLaunchURLIOS(event.drop.file);
+    if (handled)
+        SDL_free(event.drop.file);
+    return handled;
+#endif
 }
 #endif
 
@@ -194,9 +207,15 @@ void MotoricaGameControl::apply(Controller* controller)
         return;
 
 #ifdef ANDROID
-    // RUSTORE_STANDALONE_TEMP: let the standard touch, accelerometer or
+    // STORE_STANDALONE_TEMP: let the standard touch, accelerometer or
     // gyroscope controller own steering while Motorica Start is optional.
     return;
+#elif defined(IOS_STK)
+    // APP_STORE_STANDALONE_TEMP: direct icon launches use standard touch,
+    // accelerometer or gyroscope steering. A motorica-stk:// launch enables
+    // the existing Motorica Start control, connection dialog and pause flow.
+    if (!isMotoricaGameControlEnabledIOS())
+        return;
 #endif
 
     if (!UserConfigParams::m_motorica_emg_steering)

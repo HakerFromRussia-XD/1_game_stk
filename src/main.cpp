@@ -2221,7 +2221,10 @@ int main(int argc, char *argv[])
 {
 #ifdef IOS_STK
     writeMotoricaGameVersionIOS();
-    startMotoricaGameControlIOS();
+    enableMotoricaGameControlForFreshSnapshotIOS();
+    // APP_STORE_STANDALONE_TEMP: the Motorica poller is started only after SDL
+    // delivers a motorica-stk:// launch URL or a snapshot freshly written by
+    // Motorica Start is present. A normal icon launch remains standalone.
 #endif
 
 #ifdef __SWITCH__

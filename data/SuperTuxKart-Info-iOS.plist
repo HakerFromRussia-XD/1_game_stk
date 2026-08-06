@@ -16,13 +16,15 @@
   <string>APPL</string>
   <key>CFBundleShortVersionString</key>
   <string>${IOS_MARKETING_VERSION}</string>
+  <key>MotoricaGameControlAppGroup</key>
+  <string>$(MOTORICA_GAME_CONTROL_APP_GROUP)</string>
   <key>CFBundleVersion</key>
   <string>${IOS_BUILD_VERSION}</string>
   <key>CFBundleURLTypes</key>
   <array>
     <dict>
       <key>CFBundleURLName</key>
-      <string>com.motorica.games.stkttt</string>
+      <string>com.motorica.games.stktt</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>motorica-stk</string>

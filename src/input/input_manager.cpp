@@ -164,13 +164,13 @@ void InputManager::addJoystick()
 // -----------------------------------------------------------------------------
 #ifndef SERVER_ONLY
 // For CIrrDeviceSDL
-#ifdef ANDROID
+#if defined(ANDROID) || defined(IOS_STK)
 extern "C" bool handle_motorica_game_control_event(SDL_Event& event);
 #endif
 
 extern "C" void handle_joystick(SDL_Event& event)
 {
-#ifdef ANDROID
+#if defined(ANDROID) || defined(IOS_STK)
     if (handle_motorica_game_control_event(event))
         return;
 #endif

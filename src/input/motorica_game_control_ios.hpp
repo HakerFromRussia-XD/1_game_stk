@@ -6,6 +6,9 @@
 #ifdef IOS_STK
 void writeMotoricaGameVersionIOS();
 void startMotoricaGameControlIOS();
+bool enableMotoricaGameControlForFreshSnapshotIOS();
+bool enableMotoricaGameControlForLaunchURLIOS(const char* url);
+bool isMotoricaGameControlEnabledIOS();
 void showMotoricaConnectionLostDialogIOS();
 void dismissMotoricaConnectionLostDialogIOS();
 void flushMotoricaConnectionRestoreUiIOS();

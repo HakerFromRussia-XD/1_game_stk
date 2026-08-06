@@ -21,6 +21,9 @@
 
 #include "config/user_config.hpp"
 #include "input/multitouch_device.hpp"
+#ifdef IOS_STK
+#include "input/motorica_game_control_ios.hpp"
+#endif
 #include "karts/abstract_kart.hpp"
 #include "karts/controller/controller.hpp"
 #include "graphics/irr_driver.hpp"
@@ -461,6 +464,12 @@ void MultitouchDevice::updateAxisX(float value)
     // RUSTORE_STANDALONE_TEMP: Android touch and motion steering currently
     // arrive with the opposite sign in the Motorica build.
     value = -value;
+#elif defined(IOS_STK)
+    // APP_STORE_STANDALONE_TEMP: direct iOS launches currently receive the
+    // touch-wheel, accelerometer and gyroscope steering axis with the opposite
+    // sign. Preserve the existing axis in Motorica Start launch mode.
+    if (!isMotoricaGameControlEnabledIOS())
+        value = -value;
 #endif
         
     if (value < -m_deadzone)

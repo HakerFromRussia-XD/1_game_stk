@@ -7,6 +7,8 @@
 #import <dispatch/dispatch.h>
 
 #include "input/motorica_game_control.hpp"
+#include "input/motorica_game_control_ios.hpp"
+#include <atomic>
 #include "main_loop.hpp"
 #include "utils/log.hpp"
 #include "utils/string_utils.hpp"
@@ -14,7 +16,6 @@
 
 namespace
 {
-    NSString* const kAppGroup = @"group.com.motorica.start.gamecontrolll";
     NSString* const kSnapshotKey = @"snapshot";
     NSString* const kInstalledGameKey = @"installedGame.stk";
     NSString* const kSeqKey = @"seq";
@@ -28,10 +29,24 @@ namespace
     NSString* const kUpdatedAtMsKey = @"updatedAtMs";
 
     dispatch_source_t g_poll_timer = nil;
+    std::atomic<bool> g_motorica_launch(false);
     uint64_t g_last_seq = 0;
     bool g_logged_app_group_error = false;
     bool g_logged_waiting_snapshot = false;
     UIAlertController* g_connection_lost_alert = nil;
+
+    NSString* motoricaAppGroup()
+    {
+        id value = [NSBundle.mainBundle objectForInfoDictionaryKey:
+            @"MotoricaGameControlAppGroup"];
+        if (![value isKindOfClass:NSString.class] ||
+            [(NSString*)value length] == 0 ||
+            [(NSString*)value containsString:@"$("])
+        {
+            return nil;
+        }
+        return (NSString*)value;
+    }
 
     int clampLevel(NSInteger value)
     {
@@ -86,22 +101,89 @@ namespace
     }
 }
 
+bool enableMotoricaGameControlForFreshSnapshotIOS()
+{
+    NSString* app_group = motoricaAppGroup();
+    if (app_group == nil)
+    {
+        Log::error("MotoricaGameControl",
+            "[BLE stk-game debug] ios expected exactly one signed app group");
+        return false;
+    }
+    NSUserDefaults* defaults = [[NSUserDefaults alloc]
+        initWithSuiteName:app_group];
+    NSDictionary* snapshot = [defaults dictionaryForKey:kSnapshotKey];
+    NSNumber* timestamp = snapshot[kTimestampKey];
+    if (timestamp == nil)
+        return false;
+
+    const long long now_ms =
+        (long long)(NSDate.date.timeIntervalSince1970 * 1000.0);
+    const long long timestamp_ms = [timestamp longLongValue];
+    const long long age_ms = now_ms >= timestamp_ms ?
+        now_ms - timestamp_ms : timestamp_ms - now_ms;
+    if (age_ms > 2000)
+        return false;
+
+    g_motorica_launch.store(true);
+    startMotoricaGameControlIOS();
+    Log::info("MotoricaGameControl",
+        "[BLE stk-game debug] ios fresh Motorica Start snapshot accepted ageMs=%lld",
+        age_ms);
+    return true;
+}
+
+bool enableMotoricaGameControlForLaunchURLIOS(const char* url)
+{
+    if (url == nullptr)
+        return false;
+
+    NSString* launch_url = [NSString stringWithUTF8String:url];
+    NSURLComponents* components = [NSURLComponents
+        componentsWithString:launch_url];
+    if (components.scheme == nil ||
+        [components.scheme caseInsensitiveCompare:@"motorica-stk"] !=
+            NSOrderedSame)
+    {
+        return false;
+    }
+
+    g_motorica_launch.store(true);
+    startMotoricaGameControlIOS();
+    Log::info("MotoricaGameControl",
+        "[BLE stk-game debug] ios Motorica Start launch URL accepted: %s",
+        url);
+    return true;
+}
+
+bool isMotoricaGameControlEnabledIOS()
+{
+    return g_motorica_launch.load();
+}
+
 void writeMotoricaGameVersionIOS()
 {
+    NSString* app_group = motoricaAppGroup();
+    if (app_group == nil)
+    {
+        Log::error("MotoricaGameControl",
+            "[BLE stk-game debug] ios expected exactly one signed app group while writing game version");
+        return;
+    }
     NSUserDefaults* defaults = [[NSUserDefaults alloc]
-        initWithSuiteName:kAppGroup];
+        initWithSuiteName:app_group];
     if (defaults == nil)
     {
         Log::warn("MotoricaGameControl",
             "[BLE stk-game debug] ios app group unavailable while writing game version: %s",
-            [kAppGroup UTF8String]);
+            [app_group UTF8String]);
         return;
     }
 
     NSDictionary* info = NSBundle.mainBundle.infoDictionary;
     NSString* bundle_id = NSBundle.mainBundle.bundleIdentifier;
     if (bundle_id == nil || bundle_id.length == 0)
-        bundle_id = @"com.motorica.games.stkttt";
+        bundle_id = @"com.motorica.games.stktt";
 
     NSString* version_name = info[@"CFBundleShortVersionString"];
     if (version_name == nil)
@@ -187,7 +269,7 @@ void startMotoricaGameControlIOS()
         return;
 
     dispatch_queue_t queue = dispatch_queue_create(
-        "com.motorica.games.stkttt.gamecontrol", DISPATCH_QUEUE_SERIAL);
+        "com.motorica.games.stktt.gamecontrol", DISPATCH_QUEUE_SERIAL);
     g_poll_timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,
                                           queue);
     dispatch_source_set_timer(g_poll_timer, dispatch_time(DISPATCH_TIME_NOW, 0),
@@ -196,7 +278,7 @@ void startMotoricaGameControlIOS()
         @autoreleasepool
         {
             NSUserDefaults* defaults = [[NSUserDefaults alloc]
-                initWithSuiteName:kAppGroup];
+                initWithSuiteName:motoricaAppGroup()];
             if (defaults == nil)
             {
                 if (!g_logged_app_group_error)
@@ -204,7 +286,7 @@ void startMotoricaGameControlIOS()
                     g_logged_app_group_error = true;
                     Log::warn("MotoricaGameControl",
                         "[BLE stk-game debug] ios app group unavailable: %s",
-                        [kAppGroup UTF8String]);
+                        [motoricaAppGroup() UTF8String]);
                 }
                 return;
             }
