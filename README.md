@@ -29,11 +29,11 @@ link supplied by Motorica Start.
 | --- | --- |
 | Product | SuperTuxKart for Motorica |
 | Maintainer | MOTORICA RESEARCH LLC |
-| Marketing version | 1.0.15 |
+| Marketing version | 1.0.16 |
 | Bundle identifier | `com.motorica.games.stkttt` |
 | Apple team | `R7M384QD5A` |
 | Motorica Start integration | local App Group and `motorica-stk` URL scheme |
-| Corresponding source | tag `ios-appstore-1.0.15` |
+| Corresponding source | tag `ios-appstore-1.0.16` |
 
 The App Group identifier is intentionally documented without treating it as a
 secret. It does not grant access by itself; access is controlled by Apple's
@@ -42,7 +42,7 @@ signed entitlements and provisioning profiles.
 ## Source and release correspondence
 
 The preferred source for the App Store version is the immutable
-[`ios-appstore-1.0.15`](https://github.com/HakerFromRussia-XD/1_game_stk/tree/ios-appstore-1.0.15)
+[`ios-appstore-1.0.16`](https://github.com/HakerFromRussia-XD/1_game_stk/tree/ios-appstore-1.0.16)
 tag. The `main` branch may contain later development.
 
 - [Motorica modifications](MODIFICATIONS.md)

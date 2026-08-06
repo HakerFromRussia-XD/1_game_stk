@@ -7,8 +7,8 @@
 # You can also use -DCMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM=xxxxxxxxxx to specify team
 
 # Increase every upload to App store
-SET(IOS_MARKETING_VERSION 1.0.15)
-SET(IOS_BUILD_VERSION 26)
+SET(IOS_MARKETING_VERSION 1.0.16)
+SET(IOS_BUILD_VERSION 27)
 
 # Keep every generated Xcode configuration on the App Store application ID
 # and Apple Developer team selected for Motorica STK.
@@ -121,8 +121,8 @@ set(USE_SQLITE3 FALSE CACHE BOOL "")
 set(USE_CRYPTO_OPENSSL FALSE CACHE BOOL "")
 set(IOS_LAUNCHSCREEN ${DEPS_PATH}/ios-icon/launch_screen.storyboard)
 set(IOS_IMAGES_XCASSETS ${DEPS_PATH}/ios-icon/Images.xcassets)
-set(SDK_NAME_VERSION_FLAGS "-miphoneos-version-min=13.0")
-set(CMAKE_OSX_DEPLOYMENT_TARGET 13.0 CACHE STRING "Set CMake deployment target" FORCE)
+set(SDK_NAME_VERSION_FLAGS "-miphoneos-version-min=15.0")
+set(CMAKE_OSX_DEPLOYMENT_TARGET 15.0 CACHE STRING "Set CMake deployment target" FORCE)
 
 set(CMAKE_XCODE_ATTRIBUTE_ARCHS[sdk=iphoneos*] "arm64")
 set(CMAKE_XCODE_ATTRIBUTE_VALID_ARCHS[sdk=iphoneos*] "arm64")

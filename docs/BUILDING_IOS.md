@@ -6,7 +6,7 @@ archives are required.
 
 ## Release identity
 
-- marketing version: `1.0.15`
+- marketing version: `1.0.16`
 - bundle identifier: `com.motorica.games.stkttt`
 - Apple Developer team: `R7M384QD5A`
 - App Group build setting:
@@ -21,7 +21,7 @@ the entitlements or Objective-C++ runtime code.
 1. Clone the corresponding release source:
 
    ```sh
-   git clone --branch ios-appstore-1.0.15 \
+   git clone --branch ios-appstore-1.0.16 \
      https://github.com/HakerFromRussia-XD/1_game_stk.git
    cd 1_game_stk
    ```
