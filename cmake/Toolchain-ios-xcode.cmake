@@ -7,8 +7,17 @@
 # You can also use -DCMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM=xxxxxxxxxx to specify team
 
 # Increase every upload to App store
-SET(IOS_MARKETING_VERSION 1.0.11)
+SET(IOS_MARKETING_VERSION 1.0.15)
 SET(IOS_BUILD_VERSION 26)
+
+# Keep every generated Xcode configuration on the App Store application ID
+# and Apple Developer team selected for Motorica STK.
+set(CMAKE_XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER
+    com.motorica.games.stkttt CACHE STRING "" FORCE)
+set(CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM
+    R7M384QD5A CACHE STRING "" FORCE)
+set(CMAKE_XCODE_ATTRIBUTE_MOTORICA_GAME_CONTROL_APP_GROUP
+    group.com.motorica.start.gamecontrolll CACHE STRING "" FORCE)
 
 # Get SDK path
 execute_process(COMMAND xcodebuild -version -sdk iphoneos Path

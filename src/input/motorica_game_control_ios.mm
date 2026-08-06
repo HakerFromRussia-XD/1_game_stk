@@ -183,7 +183,7 @@ void writeMotoricaGameVersionIOS()
     NSDictionary* info = NSBundle.mainBundle.infoDictionary;
     NSString* bundle_id = NSBundle.mainBundle.bundleIdentifier;
     if (bundle_id == nil || bundle_id.length == 0)
-        bundle_id = @"com.motorica.games.stktt";
+        bundle_id = @"com.motorica.games.stkttt";
 
     NSString* version_name = info[@"CFBundleShortVersionString"];
     if (version_name == nil)
@@ -269,7 +269,7 @@ void startMotoricaGameControlIOS()
         return;
 
     dispatch_queue_t queue = dispatch_queue_create(
-        "com.motorica.games.stktt.gamecontrol", DISPATCH_QUEUE_SERIAL);
+        "com.motorica.games.stkttt.gamecontrol", DISPATCH_QUEUE_SERIAL);
     g_poll_timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,
                                           queue);
     dispatch_source_set_timer(g_poll_timer, dispatch_time(DISPATCH_TIME_NOW, 0),
