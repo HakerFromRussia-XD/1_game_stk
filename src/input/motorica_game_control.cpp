@@ -21,6 +21,10 @@
 #include "utils/log.hpp"
 #ifdef IOS_STK
 #include "input/motorica_game_control_ios.hpp"
+#include "race/race_manager.hpp"
+#include "states_screens/dialogs/download_assets.hpp"
+#include "states_screens/main_menu_screen.hpp"
+#include "utils/extract_mobile_assets.hpp"
 #endif
 
 namespace
@@ -75,7 +79,24 @@ extern "C" bool handle_motorica_game_control_event(SDL_Event& event)
     const bool handled =
         enableMotoricaGameControlForLaunchURLIOS(event.drop.file);
     if (handled)
+    {
         SDL_free(event.drop.file);
+        if (GUIEngine::ModalDialog::isADialogActive())
+            GUIEngine::ModalDialog::dismiss();
+        if (StateManager::get()->getGameState() == GUIEngine::GAME)
+            RaceManager::get()->exitRace();
+
+        if (ExtractMobileAssets::isFullAssetsInstalled())
+        {
+            ExtractMobileAssets::reinit();
+            StateManager::get()->resetAndGoToScreen(
+                MainMenuScreen::getInstance());
+        }
+        else
+        {
+            new DownloadAssets();
+        }
+    }
     return handled;
 #endif
 }

@@ -22,6 +22,7 @@
   * Extract a zip.
   * \ingroup addonsgroup
   */
-bool extract_zip(const std::string &from, const std::string &to, bool recursive = false);
+bool extract_zip(const std::string &from, const std::string &to,
+                 bool recursive = false, bool data_only = false);
 
 #endif

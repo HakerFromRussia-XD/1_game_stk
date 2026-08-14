@@ -29,7 +29,8 @@ namespace
     NSString* const kUpdatedAtMsKey = @"updatedAtMs";
 
     dispatch_source_t g_poll_timer = nil;
-    std::atomic<bool> g_motorica_launch(false);
+    std::atomic<MotoricaLaunchModeIOS> g_launch_mode(
+        MotoricaLaunchModeIOS::Standalone);
     uint64_t g_last_seq = 0;
     bool g_logged_app_group_error = false;
     bool g_logged_waiting_snapshot = false;
@@ -101,38 +102,6 @@ namespace
     }
 }
 
-bool enableMotoricaGameControlForFreshSnapshotIOS()
-{
-    NSString* app_group = motoricaAppGroup();
-    if (app_group == nil)
-    {
-        Log::error("MotoricaGameControl",
-            "[BLE stk-game debug] ios expected exactly one signed app group");
-        return false;
-    }
-    NSUserDefaults* defaults = [[NSUserDefaults alloc]
-        initWithSuiteName:app_group];
-    NSDictionary* snapshot = [defaults dictionaryForKey:kSnapshotKey];
-    NSNumber* timestamp = snapshot[kTimestampKey];
-    if (timestamp == nil)
-        return false;
-
-    const long long now_ms =
-        (long long)(NSDate.date.timeIntervalSince1970 * 1000.0);
-    const long long timestamp_ms = [timestamp longLongValue];
-    const long long age_ms = now_ms >= timestamp_ms ?
-        now_ms - timestamp_ms : timestamp_ms - now_ms;
-    if (age_ms > 2000)
-        return false;
-
-    g_motorica_launch.store(true);
-    startMotoricaGameControlIOS();
-    Log::info("MotoricaGameControl",
-        "[BLE stk-game debug] ios fresh Motorica Start snapshot accepted ageMs=%lld",
-        age_ms);
-    return true;
-}
-
 bool enableMotoricaGameControlForLaunchURLIOS(const char* url)
 {
     if (url == nullptr)
@@ -148,7 +117,7 @@ bool enableMotoricaGameControlForLaunchURLIOS(const char* url)
         return false;
     }
 
-    g_motorica_launch.store(true);
+    g_launch_mode.store(MotoricaLaunchModeIOS::MotoricaStart);
     startMotoricaGameControlIOS();
     Log::info("MotoricaGameControl",
         "[BLE stk-game debug] ios Motorica Start launch URL accepted: %s",
@@ -158,7 +127,17 @@ bool enableMotoricaGameControlForLaunchURLIOS(const char* url)
 
 bool isMotoricaGameControlEnabledIOS()
 {
-    return g_motorica_launch.load();
+    return getMotoricaLaunchModeIOS() == MotoricaLaunchModeIOS::MotoricaStart;
+}
+
+bool isMotoricaStandaloneModeIOS()
+{
+    return getMotoricaLaunchModeIOS() == MotoricaLaunchModeIOS::Standalone;
+}
+
+MotoricaLaunchModeIOS getMotoricaLaunchModeIOS()
+{
+    return g_launch_mode.load();
 }
 
 void writeMotoricaGameVersionIOS()

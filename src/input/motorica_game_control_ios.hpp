@@ -4,11 +4,18 @@
 #define HEADER_MOTORICA_GAME_CONTROL_IOS_HPP
 
 #ifdef IOS_STK
+enum class MotoricaLaunchModeIOS
+{
+    Standalone,
+    MotoricaStart
+};
+
 void writeMotoricaGameVersionIOS();
 void startMotoricaGameControlIOS();
-bool enableMotoricaGameControlForFreshSnapshotIOS();
 bool enableMotoricaGameControlForLaunchURLIOS(const char* url);
 bool isMotoricaGameControlEnabledIOS();
+bool isMotoricaStandaloneModeIOS();
+MotoricaLaunchModeIOS getMotoricaLaunchModeIOS();
 void showMotoricaConnectionLostDialogIOS();
 void dismissMotoricaConnectionLostDialogIOS();
 void flushMotoricaConnectionRestoreUiIOS();

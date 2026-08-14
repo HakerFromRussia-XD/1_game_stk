@@ -7,8 +7,8 @@
 # You can also use -DCMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM=xxxxxxxxxx to specify team
 
 # Increase every upload to App store
-SET(IOS_MARKETING_VERSION 1.0.16)
-SET(IOS_BUILD_VERSION 27)
+SET(IOS_MARKETING_VERSION 1.0)
+SET(IOS_BUILD_VERSION 28)
 
 # Keep every generated Xcode configuration on the App Store application ID
 # and Apple Developer team selected for Motorica STK.
@@ -127,11 +127,7 @@ set(CMAKE_OSX_DEPLOYMENT_TARGET 15.0 CACHE STRING "Set CMake deployment target" 
 set(CMAKE_XCODE_ATTRIBUTE_ARCHS[sdk=iphoneos*] "arm64")
 set(CMAKE_XCODE_ATTRIBUTE_VALID_ARCHS[sdk=iphoneos*] "arm64")
 
-set(CMAKE_XCODE_ATTRIBUTE_ARCHS[sdk=iphonesimulator*] "x86_64")
-set(CMAKE_XCODE_ATTRIBUTE_VALID_ARCHS[sdk=iphonesimulator*] "x86_64")
+set(CMAKE_XCODE_ATTRIBUTE_ARCHS[sdk=iphonesimulator*] "arm64")
+set(CMAKE_XCODE_ATTRIBUTE_VALID_ARCHS[sdk=iphonesimulator*] "arm64")
 
 set(CMAKE_XCODE_ATTRIBUTE_DEBUG_INFORMATION_FORMAT "dwarf-with-dsym" CACHE INTERNAL "")
-
-# Replace the above two with these if you use an apple silicon
-#set(CMAKE_XCODE_ATTRIBUTE_ARCHS[sdk=iphonesimulator*] "arm64")
-#set(CMAKE_XCODE_ATTRIBUTE_VALID_ARCHS[sdk=iphonesimulator*] "arm64")

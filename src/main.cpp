@@ -275,6 +275,9 @@ extern "C" {
 #include "replay/replay_play.hpp"
 #include "replay/replay_recorder.hpp"
 #include "states_screens/main_menu_screen.hpp"
+#ifdef IOS_STK
+#include "states_screens/motorica_hub_screen.hpp"
+#endif
 #include "states_screens/online/networking_lobby.hpp"
 #include "states_screens/online/register_screen.hpp"
 #include "states_screens/state_manager.hpp"
@@ -2221,10 +2224,8 @@ int main(int argc, char *argv[])
 {
 #ifdef IOS_STK
     writeMotoricaGameVersionIOS();
-    enableMotoricaGameControlForFreshSnapshotIOS();
-    // APP_STORE_STANDALONE_TEMP: the Motorica poller is started only after SDL
-    // delivers a motorica-stk:// launch URL or a snapshot freshly written by
-    // Motorica Start is present. A normal icon launch remains standalone.
+    // A snapshot in the shared App Group must never change launch mode. The
+    // Motorica Start mode is enabled only after SDL delivers motorica-stk://.
 #endif
 
 #ifdef __SWITCH__
@@ -2577,6 +2578,14 @@ int main(int argc, char *argv[])
             // so we immediately start the main menu (unless it was requested
             // to always show the login screen). Otherwise show the login
             // screen first.
+            #ifdef IOS_STK
+            if (isMotoricaStandaloneModeIOS())
+            {
+                PlayerManager::get()->enforceCurrentPlayer();
+                MotoricaHubScreen::getInstance()->push();
+            }
+            else
+            #endif
             if(PlayerManager::getCurrentPlayer() && !
                 UserConfigParams::m_always_show_login_screen)
             {

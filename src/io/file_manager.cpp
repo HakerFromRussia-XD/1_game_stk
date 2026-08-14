@@ -295,6 +295,7 @@ void FileManager::resetSubdir()
     m_subdir_name[TEXTURE    ] = "textures";
     m_subdir_name[TTF        ] = "ttf";
     m_subdir_name[TRANSLATION] = "po";
+    m_subdir_name[PACKAGED_SCRIPT] = "packaged-scripts";
 }   // resetSubdir
 
 // ----------------------------------------------------------------------------
@@ -338,8 +339,10 @@ void FileManager::discoverPaths()
     }
 
     bool has_full_assets = ExtractMobileAssets::hasFullAssets();
+    bool full_assets_installed =
+        ExtractMobileAssets::isFullAssetsInstalled();
     // Clear previous assets version to free space
-    if (!has_full_assets && fileExists(m_stk_assets_download_dir))
+    if (!full_assets_installed && fileExists(m_stk_assets_download_dir))
         removeDirectory(m_stk_assets_download_dir);
 
     // Use stk-assets-full for karts, tracks, textures..., otherwise in data/

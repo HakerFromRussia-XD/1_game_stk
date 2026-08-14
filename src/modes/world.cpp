@@ -189,6 +189,14 @@ void World::init()
         }
 
         std::string script_path = track->getTrackFile("scripting.as");
+        if (!file_manager->fileExists(script_path))
+        {
+            // Downloaded iOS content contains data only.  Its reviewed
+            // AngelScript counterpart is shipped in the application bundle.
+            script_path = file_manager->getAsset(
+                FileManager::PACKAGED_SCRIPT,
+                "tracks/" + track->getIdent() + "/scripting.as");
+        }
         Scripting::ScriptEngine::getInstance()->loadScript(script_path, true);
     }
     main_loop->renderGUI(1200);

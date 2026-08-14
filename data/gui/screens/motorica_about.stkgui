@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stkgui>
+    <icon-button id="back" x="1%" y="1%" height="9%" icon="gui/icons/back.png"/>
+    <div x="6%" y="7%" width="88%" height="88%" layout="vertical-row">
+        <header width="100%" height="fit" align="center"
+                raw_text="Motorica Kart"/>
+        <spacer width="10" height="4%"/>
+        <label width="100%" height="fit" align="center" text_align="center"
+               word_wrap="true"
+               raw_text="Motorica Kart — постоянный игровой модуль для тренировки управления. При запуске из Motorica Start он принимает сигналы совместимого устройства. Проект основан на открытом исходном коде SuperTuxKart; лицензии и авторство исходного проекта сохранены."/>
+        <spacer width="10" height="8%"/>
+        <button id="source" width="72%" height="11%" align="center"
+                raw_text="Исходный код проекта"/>
+        <spacer width="10" height="3%"/>
+        <button id="credits" width="72%" height="11%" align="center"
+                raw_text="Лицензии и авторы"/>
+        <spacer width="10" height="10%"/>
+    </div>
+</stkgui>

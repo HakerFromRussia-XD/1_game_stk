@@ -37,6 +37,9 @@
 #include "states_screens/race_gui_overworld.hpp"
 #include "tracks/track.hpp"
 #include "tracks/track_object_manager.hpp"
+#ifdef IOS_STK
+#include "input/motorica_game_control_ios.hpp"
+#endif
 
 #ifdef ANDROID
 #include <SDL_system.h>
@@ -68,9 +71,20 @@ void OverWorld::enterOverWorld()
     RaceManager::get()->setMajorMode (RaceManager::MAJOR_MODE_SINGLE);
     RaceManager::get()->setMinorMode (RaceManager::MINOR_MODE_OVERWORLD);
     RaceManager::get()->setNumKarts( 1 );
-    RaceManager::get()->setTrack( "overworld" );
+    const bool motorica_standalone =
+#ifdef IOS_STK
+        isMotoricaStandaloneModeIOS();
+#else
+        false;
+#endif
+    RaceManager::get()->setTrack(motorica_standalone ?
+        "motorica_night_island" : "overworld");
 
-    if (PlayerManager::getCurrentPlayer()->isLocked("difficulty_best"))
+    if (motorica_standalone)
+    {
+        RaceManager::get()->setDifficulty(RaceManager::DIFFICULTY_MEDIUM);
+    }
+    else if (PlayerManager::getCurrentPlayer()->isLocked("difficulty_best"))
     {
         RaceManager::get()->setDifficulty(RaceManager::DIFFICULTY_HARD);
     }
@@ -86,15 +100,18 @@ void OverWorld::enterOverWorld()
     StateManager::get()->createActivePlayer(PlayerManager::getCurrentPlayer(),
                                             device);
 
-    if (!kart_properties_manager->getKart(UserConfigParams::m_default_kart))
+    std::string kart_ident = UserConfigParams::m_default_kart;
+    if (motorica_standalone)
+        kart_ident = "motorica_kiki";
+    if (!kart_properties_manager->getKart(kart_ident))
     {
         Log::warn("[overworld]", "cannot find kart '%s', "
                   "will revert to default",
-                  UserConfigParams::m_default_kart.c_str());
+                  kart_ident.c_str());
 
         UserConfigParams::m_default_kart.revertToDefaults();
     }
-    RaceManager::get()->setPlayerKart(0, UserConfigParams::m_default_kart);
+    RaceManager::get()->setPlayerKart(0, kart_ident);
 
     // ASSIGN should make sure that only input from assigned devices
     // is read.
@@ -168,6 +185,12 @@ void OverWorld::update(int ticks)
     if (m_return_to_garage)
     {
         m_return_to_garage = false;
+#ifdef IOS_STK
+        // Standalone always uses Motorica Kiki.  There is no kart selection
+        // surface in this product mode, including from the pause dialog.
+        if (isMotoricaStandaloneModeIOS())
+            return;
+#endif
         RaceManager::get()->exitRace();
         KartSelectionScreen* s = OfflineKartSelectionScreen::getInstance();
         s->setMultiplayer(false);

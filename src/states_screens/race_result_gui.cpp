@@ -65,6 +65,10 @@
 #include "states_screens/cutscene_general.hpp"
 #include "states_screens/feature_unlocked.hpp"
 #include "states_screens/main_menu_screen.hpp"
+#ifdef IOS_STK
+#include "input/motorica_game_control_ios.hpp"
+#include "states_screens/motorica_hub_screen.hpp"
+#endif
 #include "states_screens/online/networking_lobby.hpp"
 #include "states_screens/options/options_screen_video.hpp"
 #include "states_screens/race_setup_screen.hpp"
@@ -78,6 +82,32 @@
 #include "main_loop.hpp"
 
 #include <algorithm>
+
+namespace
+{
+bool isMotoricaStandaloneRace()
+{
+#ifdef IOS_STK
+    return isMotoricaStandaloneModeIOS() &&
+           RaceManager::get()->getTrackName() == "motorica_signal_circuit";
+#else
+    return false;
+#endif
+}
+
+void resetToMotoricaRoot()
+{
+#ifdef IOS_STK
+    if (isMotoricaStandaloneModeIOS())
+    {
+        StateManager::get()->resetAndGoToScreen(
+            MotoricaHubScreen::getInstance());
+        return;
+    }
+#endif
+    StateManager::get()->resetAndGoToScreen(MainMenuScreen::getInstance());
+}
+}
 
 /** Constructor, initialises internal data structures.
  */
@@ -348,6 +378,23 @@ void RaceResultGUI::enableAllButtons()
         return;
     }
 
+    // The permanent standalone product has a deliberately small race loop:
+    // replay the Motorica circuit or return to the night island.  Never expose
+    // the upstream race setup/menu from this result screen.
+    if (isMotoricaStandaloneRace())
+    {
+        middle->setVisible(false);
+        middle->setFocusable(false);
+        right->setLabel(_("Replay"));
+        right->setImage("gui/icons/restart.png");
+        right->setVisible(true);
+        left->setLabel(_("Return to the island"));
+        left->setImage("gui/icons/back.png");
+        left->setVisible(true);
+        operations->select("right", PLAYER_ID_GAME_MASTER);
+        return;
+    }
+
     // If something was unlocked
     // -------------------------
 
@@ -504,7 +551,8 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
 
         // Note: Only returns greater than 0 for regular races, despite GPs
         // showing feature unlocked cutscene.  GPs have their own logic.
-        int n = (int)player->getRecentlyCompletedChallenges().size();
+        int n = isMotoricaStandaloneRace() ? 0 :
+            (int)player->getRecentlyCompletedChallenges().size();
 
         if (n > 0 &&
              (RaceManager::get()->getMajorMode() != RaceManager::MAJOR_MODE_GRAND_PRIX ||
@@ -641,7 +689,7 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
 
                 // We first go the main menu in both situations, because the back button
                 // in the settings will not work as expected otherwise.
-                StateManager::get()->resetAndGoToScreen(MainMenuScreen::getInstance());
+                resetToMotoricaRoot();
                 // If the video settings is requested, we then immediately go there
                 if (action == "right")
                     OptionsScreenVideo::getInstance()->push();
@@ -705,7 +753,7 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
 
             RaceManager::get()->exitRace();
             RaceManager::get()->setAIKartOverride("");
-            StateManager::get()->resetAndGoToScreen(MainMenuScreen::getInstance());
+            resetToMotoricaRoot();
 
             if (RaceManager::get()->raceWasStartedFromOverworld())
             {

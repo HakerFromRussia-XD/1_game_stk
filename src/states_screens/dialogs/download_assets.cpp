@@ -27,12 +27,19 @@
 #include "guiengine/widgets/ribbon_widget.hpp"
 #include "io/file_manager.hpp"
 #include "online/http_request.hpp"
+#include "online/request_manager.hpp"
 #include "states_screens/dialogs/message_dialog.hpp"
 #include "states_screens/state_manager.hpp"
 #include "utils/extract_mobile_assets.hpp"
 #include "utils/download_assets_size.hpp"
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
+#ifdef IOS_STK
+#include "input/motorica_game_control_ios.hpp"
+#include "states_screens/main_menu_screen.hpp"
+#include "utils/motorica_assets_manifest.hpp"
+#include <sys/statvfs.h>
+#endif
 
 #include <SDL_system.h>
 
@@ -56,13 +63,23 @@ private:
     }
 public:
     DownloadAssetsRequest()
-    : HTTPRequest("stk-assets.zip", /*priority*/5)
+    : HTTPRequest(
+#ifdef IOS_STK
+        "motorica-stk-full-assets-1.zip",
+#else
+        "stk-assets.zip",
+#endif
+        /*priority*/5)
     {
         m_extraction_error = true;
+#ifdef IOS_STK
+        setURL(MotoricaAssetsManifest::ARCHIVE_URL);
+#else
         std::string download_url = stk_config->m_assets_download_url;
         download_url += STK_VERSION;
         download_url += "/stk-assets.zip";
         setURL(download_url);
+#endif
         setDownloadAssetsRequest(true);
     }
     ~DownloadAssetsRequest()
@@ -75,18 +92,46 @@ public:
                 file_manager->removeFile(zip);
             if (file_manager->fileExists(zip_part))
                 file_manager->removeFile(zip_part);
+#ifndef IOS_STK
             file_manager->removeDirectory(
                 file_manager->getSTKAssetsDownloadDir());
+#endif
         }
     }
     bool hadError() const { return hadDownloadError() || m_extraction_error; }
 };   // DownloadAssetsRequest
+
+#ifdef IOS_STK
+// ----------------------------------------------------------------------------
+static bool hasEnoughSpaceForMotoricaAssets()
+{
+    const std::string probe = file_manager->getAddonsFile(
+        "motorica-stk-full-assets-1.zip");
+    const std::string directory = StringUtils::getPath(probe);
+    struct statvfs storage;
+    if (statvfs(directory.c_str(), &storage) != 0)
+        return false;
+    const uint64_t available = (uint64_t)storage.f_bavail * storage.f_frsize;
+    // Keep room for the ZIP, its unpacked data and an existing package until
+    // the new one has passed validation and is atomically activated.
+    // The pinned package currently expands to roughly 1.6x its ZIP size.
+    // Five ZIP sizes cover the archive, temporary extraction, previous
+    // installed package and filesystem overhead without relying on a remote
+    // uncompressed-size declaration.
+    const uint64_t required = MotoricaAssetsManifest::SIZE_BYTES * 5ull +
+                              64ull * 1024ull * 1024ull;
+    return available >= required;
+}
+#endif
 
 // ----------------------------------------------------------------------------
 /** Creates a modal dialog with given percentage of screen width and height
 */
 DownloadAssets::DownloadAssets()
               : ModalDialog(0.8f, 0.8f)
+#ifdef IOS_STK
+              , m_download_paused(false)
+#endif
 {
     loadFromFile("addons_loading.stkgui");
     m_install_button   = getWidget<IconButtonWidget> ("install" );
@@ -110,10 +155,18 @@ DownloadAssets::DownloadAssets()
     getWidget<LabelWidget>("size")->setText(size, false);
 
     // I18N: In download assets dialog
-    core::stringw msg = _("SuperTuxKart will download full assets "
+    core::stringw msg;
+#ifdef IOS_STK
+    msg = _("Motorica Kart will download the optional full SuperTuxKart "
+        "content catalog (including high quality textures and music) for "
+        "Motorica Start mode. The download contains game resources only and "
+        "may use mobile data if Wi-Fi is unavailable.");
+#else
+    msg = _("SuperTuxKart will download full assets "
         "(including high quality textures and music) for better "
         "gaming experience, this will use your mobile data if you don't have "
         "a wifi connection.");
+#endif
 #ifdef ANDROID
     if (SDL_IsAndroidTV())
     {
@@ -129,6 +182,10 @@ DownloadAssets::DownloadAssets()
 // ----------------------------------------------------------------------------
 DownloadAssets::~DownloadAssets()
 {
+#ifdef IOS_STK
+    if (RequestManager::isRunning())
+        RequestManager::get()->setPaused(false);
+#endif
     stopDownload();
 }   // ~DownloadAssets
 
@@ -168,6 +225,14 @@ GUIEngine::EventPropagation DownloadAssets::processEvent(const std::string& even
         }
         else if (selection == "install")
         {
+#ifdef IOS_STK
+            if (!hasEnoughSpaceForMotoricaAssets())
+            {
+                new MessageDialog(_("Not enough free space to safely install "
+                    "the full Motorica Start content catalog."));
+                return GUIEngine::EVENT_BLOCK;
+            }
+#endif
             m_progress->setValue(0);
             m_progress->setVisible(true);
 
@@ -184,8 +249,26 @@ GUIEngine::EventPropagation DownloadAssets::processEvent(const std::string& even
             icon->setLabel(_("Cancel"));
 
             startDownload();
+#ifdef IOS_STK
+            IconButtonWidget* pause =
+                getWidget<IconButtonWidget>("uninstall");
+            pause->setLabel(_("Pause"));
+            pause->setImage(file_manager->getAsset(FileManager::GUI_ICON,
+                "package-update.png"), IconButtonWidget::ICON_PATH_TYPE_ABSOLUTE);
+            pause->setVisible(true);
+#endif
             return GUIEngine::EVENT_BLOCK;
         }
+#ifdef IOS_STK
+        else if (selection == "uninstall" && m_download_request)
+        {
+            m_download_paused = !m_download_paused;
+            RequestManager::get()->setPaused(m_download_paused);
+            getWidget<IconButtonWidget>("uninstall")->setLabel(
+                m_download_paused ? _("Resume") : _("Pause"));
+            return GUIEngine::EVENT_BLOCK;
+        }
+#endif
     }
     return GUIEngine::EVENT_LET;
 }   // processEvent
@@ -232,6 +315,11 @@ void DownloadAssets::startDownload()
  **/
 void DownloadAssets::stopDownload()
 {
+#ifdef IOS_STK
+    m_download_paused = false;
+    if (RequestManager::isRunning())
+        RequestManager::get()->setPaused(false);
+#endif
     // Cancel a download only if we are installing/upgrading one
     // (and not uninstalling an installed one):
     if (m_download_request)
@@ -247,6 +335,11 @@ void DownloadAssets::stopDownload()
  */
 void DownloadAssets::doInstall()
 {
+#ifdef IOS_STK
+    m_download_paused = false;
+    if (RequestManager::isRunning())
+        RequestManager::get()->setPaused(false);
+#endif
     core::stringw msg;
     if (m_download_request->hadError())
     {
@@ -274,6 +367,13 @@ void DownloadAssets::doInstall()
     {
         dismiss();
         ExtractMobileAssets::reinit();
+#ifdef IOS_STK
+        if (isMotoricaGameControlEnabledIOS())
+        {
+            StateManager::get()->resetAndGoToScreen(
+                MainMenuScreen::getInstance());
+        }
+#endif
     }
 }   // doInstall
 
