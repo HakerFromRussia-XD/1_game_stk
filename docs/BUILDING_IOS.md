@@ -8,10 +8,10 @@ archives are required.
 
 - App Store version: `1.0`
 - build number: `28`
-- bundle identifier: `com.motorica.games.stkttt`
-- Apple Developer team: `R7M384QD5A`
+- bundle identifier: `com.motorica.games.stktt`
+- Apple Developer team: `WWLXR9V94H`
 - App Group build setting:
-  `MOTORICA_GAME_CONTROL_APP_GROUP=group.com.motorica.start.gamecontrolll`
+  `MOTORICA_GAME_CONTROL_APP_GROUP=group.com.motorica.start.gamecontroll`
 
 The App Group has a single source of truth in
 `cmake/Toolchain-ios-xcode.cmake`. Do not place a second literal identifier in
@@ -65,15 +65,14 @@ Open:
 build-ios/SuperTuxKart.xcodeproj
 ```
 
-Select the `supertuxkart` scheme and an iOS device. Signing requires access to
-the MOTORICA RESEARCH LLC Apple Developer team and a provisioning profile that
-contains both the bundle identifier and App Group listed above.
+Select the `supertuxkart` scheme and an iOS device. Signing uses the Denis
+Oskhin Personal Team and requires a provisioning profile that contains both
+the bundle identifier and App Group listed above.
 
-For local device testing, Automatic Signing may create a development-signed
-archive. Before upload, use Organizer → Distribute App → App Store Connect and
-let Xcode re-sign the exported build with the MOTORICA RESEARCH LLC App Store
-distribution identity and provisioning profile. Do not upload the
-development-signed product directly.
+Automatic Signing may create a development-signed product for device testing.
+Do not upload a development-signed product directly; the final distribution
+operation must use a compatible App Store distribution identity and profile
+with the same Bundle ID and App Group.
 
 ## Command-line verification
 

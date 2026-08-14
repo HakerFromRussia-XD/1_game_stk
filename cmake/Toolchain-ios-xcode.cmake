@@ -13,11 +13,11 @@ SET(IOS_BUILD_VERSION 28)
 # Keep every generated Xcode configuration on the App Store application ID
 # and Apple Developer team selected for Motorica STK.
 set(CMAKE_XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER
-    com.motorica.games.stkttt CACHE STRING "" FORCE)
+    com.motorica.games.stktt CACHE STRING "" FORCE)
 set(CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM
-    R7M384QD5A CACHE STRING "" FORCE)
+    WWLXR9V94H CACHE STRING "" FORCE)
 set(CMAKE_XCODE_ATTRIBUTE_MOTORICA_GAME_CONTROL_APP_GROUP
-    group.com.motorica.start.gamecontrolll CACHE STRING "" FORCE)
+    group.com.motorica.start.gamecontroll CACHE STRING "" FORCE)
 
 # Get SDK path
 execute_process(COMMAND xcodebuild -version -sdk iphoneos Path

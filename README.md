@@ -33,8 +33,8 @@ catalog and work offline without Motorica Start or a Motorica device.
 | Product | Motorica Kart |
 | Maintainer | MOTORICA RESEARCH LLC |
 | App Store version | 1.0 (build 28) |
-| Bundle identifier | `com.motorica.games.stkttt` |
-| Apple team | `R7M384QD5A` |
+| Bundle identifier | `com.motorica.games.stktt` |
+| Apple team | `WWLXR9V94H` |
 | Motorica Start integration | local App Group and `motorica-stk` URL scheme |
 | Full asset package | tag `ios-assets-1.0-build28` |
 

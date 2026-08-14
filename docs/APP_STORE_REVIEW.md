@@ -60,8 +60,8 @@ Full data package release: `ios-assets-1.0-build28`
 ## Binary/data boundary
 
 - App Store version: `1.0`; build: `28`.
-- Bundle ID: `com.motorica.games.stkttt`.
-- Team: `R7M384QD5A`.
+- Bundle ID: `com.motorica.games.stktt`.
+- Team: `WWLXR9V94H`.
 - App Group is resolved from the single Xcode build setting
   `MOTORICA_GAME_CONTROL_APP_GROUP`.
 - Asset URL is pinned to `ios-assets-1.0-build28`, not `/latest/`.
