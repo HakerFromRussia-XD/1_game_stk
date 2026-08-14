@@ -30,6 +30,20 @@ void MotoricaHubScreen::loadedFromFile()
 void MotoricaHubScreen::init()
 {
     Screen::init();
+
+    // Irrlicht's wide XML reader treats a UTF-8 .stkgui without a BOM as
+    // single-byte text.  Keep the layout ASCII-only and convert product copy
+    // explicitly so Cyrillic is rendered consistently on iOS.
+    getWidget("hub_subtitle")->setText(StringUtils::utf8ToWide(
+        "Тренируйте точность управления в игровой форме"));
+    getWidget("play")->setText(StringUtils::utf8ToWide("Играть"));
+    getWidget("controls")->setText(StringUtils::utf8ToWide("Управление"));
+    getWidget("motorica_start")->setText(StringUtils::utf8ToWide(
+        "Как использовать с Motorica Start"));
+    getWidget("settings")->setText(StringUtils::utf8ToWide("Настройки"));
+    getWidget("about")->setText(StringUtils::utf8ToWide(
+        "Об игре и Open Source"));
+
     getWidget<ButtonWidget>("play")->setFocusForPlayer(
         PLAYER_ID_GAME_MASTER);
 }

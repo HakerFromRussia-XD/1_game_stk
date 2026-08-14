@@ -5,6 +5,7 @@
 #include "online/link_helper.hpp"
 #include "states_screens/credits.hpp"
 #include "states_screens/state_manager.hpp"
+#include "utils/string_utils.hpp"
 
 using namespace GUIEngine;
 
@@ -26,6 +27,17 @@ void MotoricaAboutScreen::loadedFromFile()
 void MotoricaAboutScreen::init()
 {
     Screen::init();
+
+    getWidget("about_description")->setText(StringUtils::utf8ToWide(
+        "Motorica Kart — постоянный игровой модуль для тренировки управления. "
+        "При запуске из Motorica Start он принимает сигналы совместимого "
+        "устройства. Проект основан на открытом исходном коде SuperTuxKart; "
+        "лицензии и авторство исходного проекта сохранены."));
+    getWidget("source")->setText(StringUtils::utf8ToWide(
+        "Исходный код проекта"));
+    getWidget("credits")->setText(StringUtils::utf8ToWide(
+        "Лицензии и авторы"));
+
     getWidget("source")->setFocusForPlayer(PLAYER_ID_GAME_MASTER);
 }
 

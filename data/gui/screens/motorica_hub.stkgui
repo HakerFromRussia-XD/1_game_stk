@@ -2,25 +2,25 @@
 <stkgui>
     <div x="0" y="0" width="100%" height="100%" layout="vertical-row">
         <spacer width="10" height="8%"/>
-        <header width="92%" height="fit" align="center"
+        <header id="hub_title" width="92%" height="fit" align="center"
                 raw_text="Motorica Training Hub"/>
-        <label width="88%" height="fit" align="center" text_align="center"
-               raw_text="Тренируйте точность управления в игровой форме"/>
+        <label id="hub_subtitle" width="88%" height="fit" align="center"
+               text_align="center" raw_text="Motorica training"/>
         <spacer width="10" height="6%"/>
         <button id="play" width="64%" height="10%" align="center"
-                raw_text="Играть"/>
+                raw_text="Play"/>
         <spacer width="10" height="2%"/>
         <button id="controls" width="64%" height="9%" align="center"
-                raw_text="Управление"/>
+                raw_text="Controls"/>
         <spacer width="10" height="2%"/>
         <button id="motorica_start" width="64%" height="9%" align="center"
-                raw_text="Как использовать с Motorica Start"/>
+                raw_text="Motorica Start"/>
         <spacer width="10" height="2%"/>
         <button id="settings" width="64%" height="9%" align="center"
-                raw_text="Настройки"/>
+                raw_text="Settings"/>
         <spacer width="10" height="2%"/>
         <button id="about" width="64%" height="9%" align="center"
-                raw_text="Об игре и Open Source"/>
+                raw_text="About and Open Source"/>
         <spacer width="10" height="8%"/>
     </div>
 </stkgui>

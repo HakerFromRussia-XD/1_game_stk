@@ -709,6 +709,22 @@ def build_base_assets(mobile_base: Path, output: Path, source: Path) -> None:
         directory.mkdir(parents=True)
     copy_overlay(output)
 
+    # These screens live with the reviewed application source rather than the
+    # upstream stk-assets checkout. Always inject them into the generated
+    # minimal IPA tree; otherwise the native Hub screen exists in the binary
+    # but fatally fails when GUIEngine tries to load its layout on first launch.
+    motorica_screens = ["motorica_hub.stkgui", "motorica_about.stkgui"]
+    screen_directory = output / "gui" / "screens"
+    screen_directory.mkdir(parents=True, exist_ok=True)
+    for name in motorica_screens:
+        source_screen = REPO_ROOT / "data" / "gui" / "screens" / name
+        if not source_screen.is_file():
+            fail(f"Motorica GUI screen is missing: {source_screen}")
+        shutil.copy2(source_screen, screen_directory / name)
+    for name in motorica_screens:
+        if not (screen_directory / name).is_file():
+            fail(f"Generated IPA assets are missing Motorica GUI screen: {name}")
+
     for relative in [
         Path("karts/motorica_kiki/licenses.txt"),
         Path("tracks/motorica_night_island/licenses.txt"),
