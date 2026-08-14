@@ -35,7 +35,9 @@ private:
     void updateSolvedIcon(const ChallengeStatus* c, RaceManager::Difficulty diff,
                           const char* widget_name, const char* path);
 public:
-    
+    static bool startRace(std::string challenge_id,
+                          bool dismiss_dialog);
+
     SelectChallengeDialog(const float percentWidth, const float percentHeight,
                           std::string challenge_id);
     virtual ~SelectChallengeDialog();
@@ -45,4 +47,3 @@ public:
 };
 
 #endif
-

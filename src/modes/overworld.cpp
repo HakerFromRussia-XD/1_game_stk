@@ -51,6 +51,11 @@ OverWorld::OverWorld() : World()
     m_return_to_garage            = false;
     m_stop_music_when_dialog_open = false;
     m_play_track_intro_sound      = false;
+#ifdef IOS_STK
+    m_motorica_challenge_armed =
+        !RaceManager::get()->haveKartLastPositionOnOverworld();
+    m_motorica_challenge_count_logged = false;
+#endif
 }   // Overworld
 
 //-----------------------------------------------------------------------------
@@ -161,6 +166,63 @@ void OverWorld::update(int ticks)
     {
         m_karts[n]->setEnergy(100.0f);
     }
+
+#ifdef IOS_STK
+    if (isMotoricaStandaloneModeIOS())
+    {
+        const std::vector<OverworldChallenge>& challenges =
+            Track::getCurrentTrack()->getChallengeList();
+        const Vec3 kart_xyz = getKart(0)->getXYZ();
+        bool close_to_motorica_challenge = false;
+        unsigned int motorica_challenge_count = 0;
+
+        for (unsigned int n = 0; n < challenges.size(); n++)
+        {
+            if (challenges[n].m_challenge_id != "motorica_signal_circuit")
+                continue;
+
+            motorica_challenge_count++;
+            const Vec3 challenge_xyz(challenges[n].m_position);
+            const bool close =
+                (kart_xyz - challenge_xyz).length2_2d() < 100.0f &&
+                fabsf(kart_xyz[1] - challenges[n].m_position.Y) < 8.0f;
+            if (!close)
+                continue;
+
+            close_to_motorica_challenge = true;
+            if (!m_motorica_challenge_armed ||
+                dynamic_cast<RescueAnimation*>(
+                    getKart(0)->getKartAnimation()) != NULL)
+            {
+                continue;
+            }
+
+            m_motorica_challenge_armed = false;
+            RaceManager::get()->setKartLastPositionOnOverworld(kart_xyz);
+            Log::info("MotoricaHub",
+                      "Point %u entered at %.2f %.2f %.2f; starting %s",
+                      motorica_challenge_count, kart_xyz[0], kart_xyz[1],
+                      kart_xyz[2],
+                      challenges[n].m_challenge_id.c_str());
+            if (SelectChallengeDialog::startRace(
+                    challenges[n].m_challenge_id, false))
+            {
+                throw AbortWorldUpdateException();
+            }
+            m_motorica_challenge_armed = true;
+        }
+
+        if (!m_motorica_challenge_count_logged)
+        {
+            Log::info("MotoricaHub", "Registered %u signal points",
+                      motorica_challenge_count);
+            m_motorica_challenge_count_logged = true;
+        }
+
+        if (!close_to_motorica_challenge)
+            m_motorica_challenge_armed = true;
+    }
+#endif
 
     /*
     TrackObjectManager* tom = getTrack()->getTrackObjectManager();
