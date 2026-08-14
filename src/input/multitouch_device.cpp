@@ -460,11 +460,7 @@ void MultitouchDevice::updateAxisX(float value)
     if (m_controller == NULL)
         return;
 
-#ifdef ANDROID
-    // RUSTORE_STANDALONE_TEMP: Android touch and motion steering currently
-    // arrive with the opposite sign in the Motorica build.
-    value = -value;
-#elif defined(IOS_STK)
+#ifdef IOS_STK
     // APP_STORE_STANDALONE_TEMP: direct iOS launches currently receive the
     // touch-wheel, accelerometer and gyroscope steering axis with the opposite
     // sign. Preserve the existing axis in Motorica Start launch mode.

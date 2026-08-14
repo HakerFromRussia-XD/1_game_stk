@@ -206,11 +206,7 @@ void MotoricaGameControl::apply(Controller* controller)
     if (!controller)
         return;
 
-#ifdef ANDROID
-    // STORE_STANDALONE_TEMP: let the standard touch, accelerometer or
-    // gyroscope controller own steering while Motorica Start is optional.
-    return;
-#elif defined(IOS_STK)
+#ifdef IOS_STK
     // APP_STORE_STANDALONE_TEMP: direct icon launches use standard touch,
     // accelerometer or gyroscope steering. A motorica-stk:// launch enables
     // the existing Motorica Start control, connection dialog and pause flow.
