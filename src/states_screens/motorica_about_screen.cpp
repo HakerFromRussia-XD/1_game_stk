@@ -3,7 +3,6 @@
 #include "states_screens/motorica_about_screen.hpp"
 
 #include "online/link_helper.hpp"
-#include "states_screens/credits.hpp"
 #include "states_screens/state_manager.hpp"
 #include "utils/string_utils.hpp"
 
@@ -35,8 +34,6 @@ void MotoricaAboutScreen::init()
         "лицензии и авторство исходного проекта сохранены."));
     getWidget("source")->setText(StringUtils::utf8ToWide(
         "Исходный код проекта"));
-    getWidget("credits")->setText(StringUtils::utf8ToWide(
-        "Лицензии и авторы"));
 
     getWidget("source")->setFocusForPlayer(PLAYER_ID_GAME_MASTER);
 }
@@ -51,10 +48,5 @@ void MotoricaAboutScreen::eventCallback(Widget*, const std::string& name,
     else if (name == "source")
     {
         Online::LinkHelper::openURL(MOTORICA_SOURCE_URL);
-    }
-    else if (name == "credits")
-    {
-        CreditsScreen::getInstance()->reset();
-        CreditsScreen::getInstance()->push();
     }
 }

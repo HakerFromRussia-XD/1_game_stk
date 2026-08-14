@@ -8,12 +8,9 @@
         <label id="about_description" width="100%" height="fit" align="center" text_align="center"
                word_wrap="true"
                raw_text="Motorica Kart open-source information"/>
-        <spacer width="10" height="8%"/>
+        <spacer width="10" height="12%"/>
         <button id="source" width="72%" height="11%" align="center"
                 raw_text="Source code"/>
-        <spacer width="10" height="3%"/>
-        <button id="credits" width="72%" height="11%" align="center"
-                raw_text="Licenses and credits"/>
-        <spacer width="10" height="10%"/>
+        <spacer width="10" height="15%"/>
     </div>
 </stkgui>
