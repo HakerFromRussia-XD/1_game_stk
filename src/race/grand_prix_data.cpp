@@ -122,12 +122,21 @@ void GrandPrixData::changeTrackNumber(const unsigned int number_of_tracks,
     {
         track_indices = track_manager->getTracksInGroup(track_group);
     }
-    assert(number_of_tracks <= track_indices.size() + m_tracks.size());
+    const unsigned int available_tracks =
+        (unsigned int)(track_indices.size() + m_tracks.size());
+    const unsigned int target_tracks =
+        std::min(number_of_tracks, available_tracks);
+    if (target_tracks != number_of_tracks)
+    {
+        Log::warn("GrandPrixData",
+            "Requested %u random tracks from group '%s', but only %u are available.",
+            number_of_tracks, track_group.c_str(), available_tracks);
+    }
 
     // add or remove the right number of tracks
-    if (m_tracks.size() < number_of_tracks)
+    if (m_tracks.size() < target_tracks)
     {
-        while (m_tracks.size() < number_of_tracks)
+        while (m_tracks.size() < target_tracks)
         {
             int index       = rand() % track_indices.size();
             int track_index = track_indices[index];
@@ -158,9 +167,9 @@ void GrandPrixData::changeTrackNumber(const unsigned int number_of_tracks,
             track_indices.erase(track_indices.begin()+index);
         }
     }
-    else if (m_tracks.size() > number_of_tracks)
+    else if (m_tracks.size() > target_tracks)
     {
-        while (m_tracks.size() > number_of_tracks)
+        while (m_tracks.size() > target_tracks)
         {
             m_tracks.pop_back();
             m_laps.pop_back();

@@ -28,6 +28,10 @@
 #include "guiengine/screen_keyboard.hpp"
 #include "input/input_device.hpp"
 #include "input/input_manager.hpp"
+#ifdef IOS_STK
+#include "input/motorica_game_control_ios.hpp"
+#include "states_screens/motorica_hub_screen.hpp"
+#endif
 #include "main_loop.hpp"
 #include "modes/world.hpp"
 #include "modes/profile_world.hpp"
@@ -39,6 +43,14 @@
 using namespace GUIEngine;
 
 static StateManager* state_manager_singleton[PT_COUNT];
+
+#ifdef IOS_STK
+static bool shouldRouteToMotoricaHub(GUIEngine::Screen* screen)
+{
+    return screen != NULL && isMotoricaStandaloneModeIOS() &&
+           screen->getName() == "main_menu.stkgui";
+}
+#endif
 
 StateManager* StateManager::get()
 {
@@ -150,6 +162,43 @@ void StateManager::resetActivePlayers()
     }
     m_active_players.clearAndDeleteAll();
 }   // resetActivePlayers
+
+// ----------------------------------------------------------------------------
+
+void StateManager::pushScreen(GUIEngine::Screen* screen)
+{
+#ifdef IOS_STK
+    if (shouldRouteToMotoricaHub(screen))
+        screen = MotoricaHubScreen::getInstance();
+#endif
+    AbstractStateManager::pushScreen(screen);
+}
+
+// ----------------------------------------------------------------------------
+
+void StateManager::resetAndGoToScreen(GUIEngine::Screen* screen)
+{
+#ifdef IOS_STK
+    if (shouldRouteToMotoricaHub(screen))
+        screen = MotoricaHubScreen::getInstance();
+#endif
+    AbstractStateManager::resetAndGoToScreen(screen);
+}
+
+// ----------------------------------------------------------------------------
+
+void StateManager::resetAndSetStack(GUIEngine::Screen* screens[])
+{
+#ifdef IOS_STK
+    if (screens != NULL && shouldRouteToMotoricaHub(screens[0]))
+    {
+        AbstractStateManager::resetAndGoToScreen(
+            MotoricaHubScreen::getInstance());
+        return;
+    }
+#endif
+    AbstractStateManager::resetAndSetStack(screens);
+}
 
 // ----------------------------------------------------------------------------
 

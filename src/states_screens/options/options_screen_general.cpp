@@ -27,6 +27,9 @@
 #include "states_screens/dialogs/message_dialog.hpp"
 #include "states_screens/main_menu_screen.hpp"
 #include "utils/extract_mobile_assets.hpp"
+#ifdef IOS_STK
+#include "input/motorica_game_control_ios.hpp"
+#endif
 
 #include <IrrlichtDevice.h>
 
@@ -77,6 +80,16 @@ void OptionsScreenGeneral::init()
     OptionsCommon::setTabStatus();
 
 #ifdef MOBILE_STK
+#ifdef IOS_STK
+    if (isMotoricaStandaloneModeIOS())
+    {
+        // The full catalog belongs to Motorica Start mode.  Direct launches
+        // must neither expose nor mutate an already installed catalog.
+        getWidget("assets_settings")->setVisible(false);
+    }
+    else
+#endif
+    {
     if (ExtractMobileAssets::hasFullAssets())
     {
         // I18N: For mobile version for STK, uninstall the downloaded assets
@@ -93,6 +106,7 @@ void OptionsScreenGeneral::init()
         getWidget("assets_settings")->setActive(false);
     else
         getWidget("assets_settings")->setActive(true);
+    }
 #else
     getWidget("assets_settings")->setVisible(false);
 #endif

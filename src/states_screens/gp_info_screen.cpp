@@ -118,7 +118,13 @@ void GPInfoScreen::setGP(const std::string &gp_ident)
     {
         // Doesn't matter what kind of GP we create, it just gets the
         // right id ("random").
-        m_gp.createRandomGP(1, "standard",
+        // A minimal standalone package intentionally has no "standard"
+        // tracks. Fall back to all available race tracks instead of passing
+        // an empty group to GrandPrixData.
+        const std::string group =
+            track_manager->getTracksInGroup("standard").empty() ?
+            "all" : "standard";
+        m_gp.createRandomGP(1, group,
                             m_reverse_spinner ? getReverse()
                                               : GrandPrixData::GP_NO_REVERSE);
     }

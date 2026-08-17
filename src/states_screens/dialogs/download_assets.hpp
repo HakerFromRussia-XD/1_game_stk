@@ -34,6 +34,9 @@ class DownloadAssets : public GUIEngine::ModalDialog
 private:
     GUIEngine::ProgressBarWidget *m_progress;
     GUIEngine::IconButtonWidget  *m_install_button;
+#ifdef IOS_STK
+    bool m_download_paused;
+#endif
 
     void startDownload();
     void stopDownload();

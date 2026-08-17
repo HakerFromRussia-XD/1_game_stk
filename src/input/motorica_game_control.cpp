@@ -21,6 +21,10 @@
 #include "utils/log.hpp"
 #ifdef IOS_STK
 #include "input/motorica_game_control_ios.hpp"
+#include "race/race_manager.hpp"
+#include "states_screens/dialogs/download_assets.hpp"
+#include "states_screens/main_menu_screen.hpp"
+#include "utils/extract_mobile_assets.hpp"
 #endif
 
 namespace
@@ -75,7 +79,29 @@ extern "C" bool handle_motorica_game_control_event(SDL_Event& event)
     const bool handled =
         enableMotoricaGameControlForLaunchURLIOS(event.drop.file);
     if (handled)
+    {
         SDL_free(event.drop.file);
+        if (GUIEngine::ModalDialog::isADialogActive())
+            GUIEngine::ModalDialog::dismiss();
+        if (StateManager::get()->getGameState() == GUIEngine::GAME)
+            RaceManager::get()->exitRace();
+
+        if (ExtractMobileAssets::isFullAssetsInstalled())
+        {
+            ExtractMobileAssets::reinit();
+            StateManager::get()->resetAndGoToScreen(
+                MainMenuScreen::getInstance());
+        }
+        else
+        {
+            // Replace the currently visible standalone screen before showing
+            // the download gate. This is important for warm launches from
+            // Motorica Start while Motorica Kart is already running.
+            StateManager::get()->resetAndGoToScreen(
+                MainMenuScreen::getInstance());
+            new DownloadAssets();
+        }
+    }
     return handled;
 #endif
 }
@@ -206,11 +232,7 @@ void MotoricaGameControl::apply(Controller* controller)
     if (!controller)
         return;
 
-#ifdef ANDROID
-    // STORE_STANDALONE_TEMP: let the standard touch, accelerometer or
-    // gyroscope controller own steering while Motorica Start is optional.
-    return;
-#elif defined(IOS_STK)
+#ifdef IOS_STK
     // APP_STORE_STANDALONE_TEMP: direct icon launches use standard touch,
     // accelerometer or gyroscope steering. A motorica-stk:// launch enables
     // the existing Motorica Start control, connection dialog and pause flow.

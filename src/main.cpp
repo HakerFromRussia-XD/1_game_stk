@@ -275,6 +275,11 @@ extern "C" {
 #include "replay/replay_play.hpp"
 #include "replay/replay_recorder.hpp"
 #include "states_screens/main_menu_screen.hpp"
+#ifdef IOS_STK
+#include "states_screens/dialogs/download_assets.hpp"
+#include "states_screens/motorica_hub_screen.hpp"
+#include "utils/extract_mobile_assets.hpp"
+#endif
 #include "states_screens/online/networking_lobby.hpp"
 #include "states_screens/online/register_screen.hpp"
 #include "states_screens/state_manager.hpp"
@@ -2220,11 +2225,12 @@ int main(int argc, char *argv[])
 #endif
 {
 #ifdef IOS_STK
+    // SDL does not surface a custom URL delivered in cold launch options until
+    // after native startup. Motorica Start therefore writes a five-second,
+    // one-shot URL lease immediately before opening motorica-stk://. It is
+    // consumed and deleted here; snapshots never change launch mode.
+    consumeMotoricaStartLaunchRequestIOS();
     writeMotoricaGameVersionIOS();
-    enableMotoricaGameControlForFreshSnapshotIOS();
-    // APP_STORE_STANDALONE_TEMP: the Motorica poller is started only after SDL
-    // delivers a motorica-stk:// launch URL or a snapshot freshly written by
-    // Motorica Start is present. A normal icon launch remains standalone.
 #endif
 
 #ifdef __SWITCH__
@@ -2577,6 +2583,24 @@ int main(int argc, char *argv[])
             // so we immediately start the main menu (unless it was requested
             // to always show the login screen). Otherwise show the login
             // screen first.
+            #ifdef IOS_STK
+            if (isMotoricaStandaloneModeIOS())
+            {
+                PlayerManager::get()->enforceCurrentPlayer();
+                MotoricaHubScreen::getInstance()->push();
+            }
+            else if (!ExtractMobileAssets::isFullAssetsInstalled())
+            {
+                // Motorica Start mode is gated by the verified full catalog.
+                // Use the original menu only as a non-interactive host for the
+                // modal download dialog: the standalone hub/island must never
+                // be entered on this launch path.
+                PlayerManager::get()->enforceCurrentPlayer();
+                MainMenuScreen::getInstance()->push();
+                new DownloadAssets();
+            }
+            else
+            #endif
             if(PlayerManager::getCurrentPlayer() && !
                 UserConfigParams::m_always_show_login_screen)
             {

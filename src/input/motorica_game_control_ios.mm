@@ -27,9 +27,13 @@ namespace
     NSString* const kVersionNameKey = @"versionName";
     NSString* const kVersionCodeKey = @"versionCode";
     NSString* const kUpdatedAtMsKey = @"updatedAtMs";
-
+    NSString* const kLaunchRequestKey = @"launchRequest.stk.v1";
+    NSString* const kLaunchRequestVersionKey = @"version";
+    NSString* const kLaunchRequestTokenKey = @"token";
+    NSString* const kLaunchRequestSchemeKey = @"scheme";
     dispatch_source_t g_poll_timer = nil;
-    std::atomic<bool> g_motorica_launch(false);
+    std::atomic<MotoricaLaunchModeIOS> g_launch_mode(
+        MotoricaLaunchModeIOS::Standalone);
     uint64_t g_last_seq = 0;
     bool g_logged_app_group_error = false;
     bool g_logged_waiting_snapshot = false;
@@ -99,37 +103,70 @@ namespace
             root = root.presentedViewController;
         return root;
     }
+
+    void clearMotoricaStartLaunchRequest(NSUserDefaults* defaults)
+    {
+        if (defaults == nil)
+            return;
+        [defaults removeObjectForKey:kLaunchRequestKey];
+        [defaults synchronize];
+    }
+
+    void activateMotoricaStartMode(const char* source)
+    {
+        g_launch_mode.store(MotoricaLaunchModeIOS::MotoricaStart);
+        startMotoricaGameControlIOS();
+        Log::info("MotoricaGameControl",
+            "[BLE stk-game debug] ios Motorica Start mode activated source=%s",
+            source);
+    }
 }
 
-bool enableMotoricaGameControlForFreshSnapshotIOS()
+bool consumeMotoricaStartLaunchRequestIOS()
 {
     NSString* app_group = motoricaAppGroup();
     if (app_group == nil)
-    {
-        Log::error("MotoricaGameControl",
-            "[BLE stk-game debug] ios expected exactly one signed app group");
         return false;
-    }
+
     NSUserDefaults* defaults = [[NSUserDefaults alloc]
         initWithSuiteName:app_group];
-    NSDictionary* snapshot = [defaults dictionaryForKey:kSnapshotKey];
-    NSNumber* timestamp = snapshot[kTimestampKey];
-    if (timestamp == nil)
+    NSDictionary* request = [defaults dictionaryForKey:kLaunchRequestKey];
+    if (request == nil)
         return false;
+
+    // Always consume first. Even malformed, expired or interrupted requests
+    // can therefore affect at most this single process start.
+    clearMotoricaStartLaunchRequest(defaults);
+
+    NSNumber* version = request[kLaunchRequestVersionKey];
+    NSNumber* timestamp = request[kTimestampKey];
+    NSString* token = request[kLaunchRequestTokenKey];
+    NSString* scheme = request[kLaunchRequestSchemeKey];
+    if ([version integerValue] != 1 || timestamp == nil || token.length == 0 ||
+        [scheme caseInsensitiveCompare:@"motorica-stk"] != NSOrderedSame)
+    {
+        Log::warn("MotoricaGameControl",
+            "[BLE stk-game debug] ios rejected invalid Motorica Start launch lease");
+        return false;
+    }
 
     const long long now_ms =
         (long long)(NSDate.date.timeIntervalSince1970 * 1000.0);
     const long long timestamp_ms = [timestamp longLongValue];
     const long long age_ms = now_ms >= timestamp_ms ?
         now_ms - timestamp_ms : timestamp_ms - now_ms;
-    if (age_ms > 2000)
+    if (age_ms > 5000)
+    {
+        Log::warn("MotoricaGameControl",
+            "[BLE stk-game debug] ios rejected expired Motorica Start launch lease ageMs=%lld",
+            age_ms);
         return false;
+    }
 
-    g_motorica_launch.store(true);
-    startMotoricaGameControlIOS();
+    activateMotoricaStartMode("app-group-url-lease");
     Log::info("MotoricaGameControl",
-        "[BLE stk-game debug] ios fresh Motorica Start snapshot accepted ageMs=%lld",
-        age_ms);
+        "[BLE stk-game debug] ios consumed Motorica Start launch lease token=%s ageMs=%lld",
+        [token UTF8String], age_ms);
     return true;
 }
 
@@ -148,8 +185,10 @@ bool enableMotoricaGameControlForLaunchURLIOS(const char* url)
         return false;
     }
 
-    g_motorica_launch.store(true);
-    startMotoricaGameControlIOS();
+    NSUserDefaults* defaults = [[NSUserDefaults alloc]
+        initWithSuiteName:motoricaAppGroup()];
+    clearMotoricaStartLaunchRequest(defaults);
+    activateMotoricaStartMode("custom-url");
     Log::info("MotoricaGameControl",
         "[BLE stk-game debug] ios Motorica Start launch URL accepted: %s",
         url);
@@ -158,7 +197,17 @@ bool enableMotoricaGameControlForLaunchURLIOS(const char* url)
 
 bool isMotoricaGameControlEnabledIOS()
 {
-    return g_motorica_launch.load();
+    return getMotoricaLaunchModeIOS() == MotoricaLaunchModeIOS::MotoricaStart;
+}
+
+bool isMotoricaStandaloneModeIOS()
+{
+    return getMotoricaLaunchModeIOS() == MotoricaLaunchModeIOS::Standalone;
+}
+
+MotoricaLaunchModeIOS getMotoricaLaunchModeIOS()
+{
+    return g_launch_mode.load();
 }
 
 void writeMotoricaGameVersionIOS()
@@ -183,7 +232,7 @@ void writeMotoricaGameVersionIOS()
     NSDictionary* info = NSBundle.mainBundle.infoDictionary;
     NSString* bundle_id = NSBundle.mainBundle.bundleIdentifier;
     if (bundle_id == nil || bundle_id.length == 0)
-        bundle_id = @"com.motorica.games.stkttt";
+        bundle_id = @"com.motorica.games.stktt";
 
     NSString* version_name = info[@"CFBundleShortVersionString"];
     if (version_name == nil)
@@ -269,7 +318,7 @@ void startMotoricaGameControlIOS()
         return;
 
     dispatch_queue_t queue = dispatch_queue_create(
-        "com.motorica.games.stkttt.gamecontrol", DISPATCH_QUEUE_SERIAL);
+        "com.motorica.games.stktt.gamecontrol", DISPATCH_QUEUE_SERIAL);
     g_poll_timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,
                                           queue);
     dispatch_source_set_timer(g_poll_timer, dispatch_time(DISPATCH_TIME_NOW, 0),

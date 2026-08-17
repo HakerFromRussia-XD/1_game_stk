@@ -7,17 +7,17 @@
 # You can also use -DCMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM=xxxxxxxxxx to specify team
 
 # Increase every upload to App store
-SET(IOS_MARKETING_VERSION 1.0.16)
-SET(IOS_BUILD_VERSION 27)
+SET(IOS_MARKETING_VERSION 1.0)
+SET(IOS_BUILD_VERSION 28)
 
 # Keep every generated Xcode configuration on the App Store application ID
 # and Apple Developer team selected for Motorica STK.
 set(CMAKE_XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER
-    com.motorica.games.stkttt CACHE STRING "" FORCE)
+    com.motorica.games.stktt CACHE STRING "" FORCE)
 set(CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM
-    R7M384QD5A CACHE STRING "" FORCE)
+    WWLXR9V94H CACHE STRING "" FORCE)
 set(CMAKE_XCODE_ATTRIBUTE_MOTORICA_GAME_CONTROL_APP_GROUP
-    group.com.motorica.start.gamecontrolll CACHE STRING "" FORCE)
+    group.com.motorica.start.gamecontroll CACHE STRING "" FORCE)
 
 # Get SDK path
 execute_process(COMMAND xcodebuild -version -sdk iphoneos Path
@@ -127,11 +127,7 @@ set(CMAKE_OSX_DEPLOYMENT_TARGET 15.0 CACHE STRING "Set CMake deployment target" 
 set(CMAKE_XCODE_ATTRIBUTE_ARCHS[sdk=iphoneos*] "arm64")
 set(CMAKE_XCODE_ATTRIBUTE_VALID_ARCHS[sdk=iphoneos*] "arm64")
 
-set(CMAKE_XCODE_ATTRIBUTE_ARCHS[sdk=iphonesimulator*] "x86_64")
-set(CMAKE_XCODE_ATTRIBUTE_VALID_ARCHS[sdk=iphonesimulator*] "x86_64")
+set(CMAKE_XCODE_ATTRIBUTE_ARCHS[sdk=iphonesimulator*] "arm64")
+set(CMAKE_XCODE_ATTRIBUTE_VALID_ARCHS[sdk=iphonesimulator*] "arm64")
 
 set(CMAKE_XCODE_ATTRIBUTE_DEBUG_INFORMATION_FORMAT "dwarf-with-dsym" CACHE INTERNAL "")
-
-# Replace the above two with these if you use an apple silicon
-#set(CMAKE_XCODE_ATTRIBUTE_ARCHS[sdk=iphonesimulator*] "arm64")
-#set(CMAKE_XCODE_ATTRIBUTE_VALID_ARCHS[sdk=iphonesimulator*] "arm64")

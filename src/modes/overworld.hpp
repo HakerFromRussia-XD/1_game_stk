@@ -40,6 +40,13 @@ protected:
 
     bool m_return_to_garage;
 
+#ifdef IOS_STK
+    /** Prevents the same Motorica point from retriggering immediately after
+     *  returning from its race. It is armed again after leaving the point. */
+    bool m_motorica_challenge_armed;
+    bool m_motorica_challenge_count_logged;
+#endif
+
 public:
                   OverWorld();
     virtual      ~OverWorld();

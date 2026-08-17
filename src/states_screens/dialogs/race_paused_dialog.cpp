@@ -50,6 +50,9 @@
 #include "states_screens/state_manager.hpp"
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
+#ifdef IOS_STK
+#include "input/motorica_game_control_ios.hpp"
+#endif
 
 #include <IrrlichtDevice.h>
 
@@ -453,6 +456,15 @@ void RacePausedDialog::beforeAddingWidgets()
     int index = choice_ribbon->findItemNamed("newrace");
     if (index != -1)
         choice_ribbon->setItemVisible(index, !showSetupNewRace);
+
+#ifdef IOS_STK
+    if (isMotoricaStandaloneModeIOS() && m_from_overworld)
+    {
+        index = choice_ribbon->findItemNamed("selectkart");
+        if (index != -1)
+            choice_ribbon->setItemVisible(index, false);
+    }
+#endif
 
     // Disable in game menu to avoid timer desync if not racing in network
     // game

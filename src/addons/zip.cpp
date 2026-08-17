@@ -16,8 +16,13 @@
 //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include <string.h>
+#include <algorithm>
+#include <cctype>
+#include <cstdint>
 #include <iostream>
 #include <fstream>
+#include <set>
+#include <vector>
 
 #include "graphics/irr_driver.hpp"
 #include "io/file_manager.hpp"
@@ -58,8 +63,153 @@ s32 IFileSystem_copyFileToFile(IWriteFile* dst, IReadFile* src)
  *  \param to The destination directory.
  *  \return True if successful.
  */
-bool extract_zip(const std::string &from, const std::string &to, bool recursive)
+static bool isSafeArchivePath(std::string path, bool data_only)
 {
+    std::replace(path.begin(), path.end(), '\\', '/');
+    if (path.empty() || path[0] == '/' || path.find(':') != std::string::npos)
+        return false;
+
+    size_t begin = 0;
+    while (begin <= path.size())
+    {
+        size_t end = path.find('/', begin);
+        std::string component = path.substr(begin, end - begin);
+        if (component == "..")
+            return false;
+        if (end == std::string::npos)
+            break;
+        begin = end + 1;
+    }
+
+    if (!data_only)
+        return true;
+
+    size_t dot = path.find_last_of('.');
+    if (dot == std::string::npos)
+        return false;
+    std::string extension = path.substr(dot);
+    std::transform(extension.begin(), extension.end(), extension.begin(),
+        [](unsigned char c) { return (char)std::tolower(c); });
+    static const std::set<std::string> allowed = {
+        ".jpg", ".jpeg", ".music", ".ogg", ".png", ".spm",
+        ".txt", ".xml"
+    };
+    return allowed.find(extension) != allowed.end();
+}
+
+// Irrlicht intentionally exposes ZIP contents as ordinary files and does not
+// expose the creator-system or Unix mode stored in the central directory. Read
+// that small metadata table ourselves so a data package containing a symlink is
+// rejected before Irrlicht gets a chance to extract anything.
+static uint16_t readLE16(const unsigned char* data)
+{
+    return (uint16_t)data[0] | ((uint16_t)data[1] << 8);
+}
+
+static uint32_t readLE32(const unsigned char* data)
+{
+    return (uint32_t)data[0] | ((uint32_t)data[1] << 8) |
+           ((uint32_t)data[2] << 16) | ((uint32_t)data[3] << 24);
+}
+
+static bool hasSafeZipEntryTypes(const std::string& archive_path)
+{
+    std::ifstream archive(archive_path.c_str(), std::ios::binary);
+    if (!archive)
+        return false;
+
+    archive.seekg(0, std::ios::end);
+    const std::streamoff archive_size = archive.tellg();
+    if (archive_size < 22)
+        return false;
+
+    const std::streamoff tail_size =
+        std::min<std::streamoff>(archive_size, 65557);
+    std::vector<unsigned char> tail((size_t)tail_size);
+    archive.seekg(archive_size - tail_size, std::ios::beg);
+    archive.read(reinterpret_cast<char*>(tail.data()), tail_size);
+    if (!archive)
+        return false;
+
+    size_t eocd = tail.size();
+    for (size_t cursor = tail.size() - 22; ; cursor--)
+    {
+        if (readLE32(&tail[cursor]) == 0x06054b50)
+        {
+            const uint16_t comment_length = readLE16(&tail[cursor + 20]);
+            if (cursor + 22 + comment_length == tail.size())
+            {
+                eocd = cursor;
+                break;
+            }
+        }
+        if (cursor == 0)
+            break;
+    }
+    if (eocd == tail.size())
+        return false;
+
+    const uint16_t disk = readLE16(&tail[eocd + 4]);
+    const uint16_t central_disk = readLE16(&tail[eocd + 6]);
+    const uint16_t disk_entries = readLE16(&tail[eocd + 8]);
+    const uint16_t total_entries = readLE16(&tail[eocd + 10]);
+    const uint32_t central_size = readLE32(&tail[eocd + 12]);
+    const uint32_t central_offset = readLE32(&tail[eocd + 16]);
+    if (disk != 0 || central_disk != 0 || disk_entries != total_entries ||
+        total_entries == 0xffff || central_size == 0xffffffff ||
+        central_offset == 0xffffffff ||
+        (uint64_t)central_offset + central_size > (uint64_t)archive_size)
+    {
+        // Multi-disk and ZIP64 packages are unnecessary for the pinned
+        // Motorica catalog and are rejected to keep this validator strict.
+        return false;
+    }
+
+    archive.clear();
+    archive.seekg(central_offset, std::ios::beg);
+    uint32_t consumed = 0;
+    for (uint16_t entry = 0; entry < total_entries; entry++)
+    {
+        unsigned char header[46];
+        archive.read(reinterpret_cast<char*>(header), sizeof(header));
+        if (!archive || readLE32(header) != 0x02014b50)
+            return false;
+
+        const uint16_t version_made_by = readLE16(&header[4]);
+        const uint16_t name_length = readLE16(&header[28]);
+        const uint16_t extra_length = readLE16(&header[30]);
+        const uint16_t comment_length = readLE16(&header[32]);
+        const uint32_t external_attributes = readLE32(&header[38]);
+        const uint8_t creator_system = (uint8_t)(version_made_by >> 8);
+        const uint32_t unix_type = (external_attributes >> 16) & 0170000;
+        if ((creator_system == 3 || creator_system == 19) &&
+            unix_type == 0120000)
+        {
+            Log::error("addons", "ZIP contains a symbolic-link entry.");
+            return false;
+        }
+
+        const uint32_t variable_size =
+            (uint32_t)name_length + extra_length + comment_length;
+        consumed += (uint32_t)sizeof(header) + variable_size;
+        if (consumed > central_size)
+            return false;
+        archive.seekg(variable_size, std::ios::cur);
+        if (!archive)
+            return false;
+    }
+    return consumed == central_size;
+}
+
+bool extract_zip(const std::string &from, const std::string &to,
+                 bool recursive, bool data_only)
+{
+    if (data_only && !hasSafeZipEntryTypes(from))
+    {
+        Log::error("addons", "ZIP entry type validation failed.");
+        return false;
+    }
+
     //Add the zip to the file system
     IFileSystem *file_system = irr_driver->getDevice()->getFileSystem();
     if(!file_system->addFileArchive(from.c_str(),
@@ -74,6 +224,35 @@ bool extract_zip(const std::string &from, const std::string &to, bool recursive)
     io::IFileArchive *zip_archive =
         file_system->getFileArchive(file_system->getFileArchiveCount()-1);
     const io::IFileList *zip_file_list = zip_archive->getFileList();
+
+    // Validate the complete archive before writing the first byte. This
+    // blocks traversal/absolute paths and, for Motorica's remote package,
+    // rejects anything other than the reviewed data formats.
+    uint64_t uncompressed_size = 0;
+    for (unsigned int i = 0; i < zip_file_list->getFileCount(); i++)
+    {
+        if (zip_file_list->isDirectory(i))
+            continue;
+        const std::string path =
+            zip_file_list->getFullFileName(i).c_str();
+        if (!isSafeArchivePath(path, data_only))
+        {
+            Log::error("addons", "Unsafe or unsupported ZIP entry '%s'.",
+                       path.c_str());
+            file_system->removeFileArchive(
+                file_system->getAbsolutePath(from.c_str()));
+            return false;
+        }
+        uncompressed_size += (uint64_t)zip_file_list->getFileSize(i);
+        if (uncompressed_size > 1024ull * 1024ull * 1024ull)
+        {
+            Log::error("addons", "ZIP expands beyond the 1 GiB safety limit.");
+            file_system->removeFileArchive(
+                file_system->getAbsolutePath(from.c_str()));
+            return false;
+        }
+    }
+
     // Copy all files from the zip archive to the destination
     bool error = false;
     for(unsigned int i=0; i<zip_file_list->getFileCount(); i++)

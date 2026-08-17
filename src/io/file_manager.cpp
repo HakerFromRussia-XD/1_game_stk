@@ -295,6 +295,7 @@ void FileManager::resetSubdir()
     m_subdir_name[TEXTURE    ] = "textures";
     m_subdir_name[TTF        ] = "ttf";
     m_subdir_name[TRANSLATION] = "po";
+    m_subdir_name[PACKAGED_SCRIPT] = "packaged-scripts";
 }   // resetSubdir
 
 // ----------------------------------------------------------------------------
@@ -328,8 +329,20 @@ void FileManager::discoverPaths()
     dir_found.resize(ASSET_COUNT, false);
 #ifdef MOBILE_STK
     assert(!m_root_dirs.empty());
+    bool has_full_assets = ExtractMobileAssets::hasFullAssets();
+    bool full_assets_installed =
+        ExtractMobileAssets::isFullAssetsInstalled();
     for (unsigned j = ASSET_MIN; j <= BUILTIN_ASSETS; j++)
     {
+#ifdef IOS_STK
+        // The standalone IPA contains only Motorica progression. Original
+        // challenge, Grand Prix and replay metadata is stored separately in
+        // the reviewed bundle and must only become visible in Motorica Start
+        // mode after the full data package has been validated.
+        if (has_full_assets &&
+            (j == CHALLENGE || j == GRANDPRIX || j == REPLAY))
+            continue;
+#endif
         if (!dir_found[j] && fileExists(m_root_dirs[0] + m_subdir_name[j]))
         {
             dir_found[j] = true;
@@ -337,9 +350,26 @@ void FileManager::discoverPaths()
         }
     }
 
-    bool has_full_assets = ExtractMobileAssets::hasFullAssets();
+#ifdef IOS_STK
+    if (has_full_assets)
+    {
+        const std::string catalog_root =
+            m_root_dirs[0] + "motorica-start-full/";
+        const AssetType catalog_types[] = { CHALLENGE, GRANDPRIX, REPLAY };
+        for (AssetType type : catalog_types)
+        {
+            const std::string directory =
+                catalog_root + m_subdir_name[type] + "/";
+            if (fileExists(directory))
+            {
+                dir_found[type] = true;
+                m_subdir_name[type] = directory;
+            }
+        }
+    }
+#endif
     // Clear previous assets version to free space
-    if (!has_full_assets && fileExists(m_stk_assets_download_dir))
+    if (!full_assets_installed && fileExists(m_stk_assets_download_dir))
         removeDirectory(m_stk_assets_download_dir);
 
     // Use stk-assets-full for karts, tracks, textures..., otherwise in data/

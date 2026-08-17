@@ -63,7 +63,8 @@ public:
     enum AssetType {ASSET_MIN,
                     CHALLENGE=ASSET_MIN,
                     GFX, GRANDPRIX, GUI_ICON, GUI_SCREEN, GUI_DIALOG,
-                    REPLAY, SHADER, SKIN,  TTF, TRANSLATION, BUILTIN_ASSETS=TRANSLATION,
+                    REPLAY, SHADER, SKIN, TTF, TRANSLATION, PACKAGED_SCRIPT,
+                    BUILTIN_ASSETS=PACKAGED_SCRIPT,
                     LIBRARY, MODEL, MUSIC, SFX, TEXTURE, SCRIPT, ASSET_MAX = SCRIPT,
                     ASSET_COUNT};
 

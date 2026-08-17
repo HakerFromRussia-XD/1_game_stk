@@ -27,6 +27,10 @@
 #include "config/user_config.hpp"
 #include "io/utf_writer.hpp"
 #include "io/xml_node.hpp"
+#ifdef IOS_STK
+#include "input/motorica_game_control_ios.hpp"
+#include "utils/extract_mobile_assets.hpp"
+#endif
 
 //-----------------------------------------------------------------------------
 StoryModeStatus::StoryModeStatus(const XMLNode *node)
@@ -92,8 +96,24 @@ void StoryModeStatus::addStatus(ChallengeStatus *cs)
 }   // addStatus
 
 //-----------------------------------------------------------------------------
+bool StoryModeStatus::hasChallenge(const std::string& challenge_id) const
+{
+    return m_challenges_state.find(challenge_id) != m_challenges_state.end();
+}   // hasChallenge
+
+//-----------------------------------------------------------------------------
 bool StoryModeStatus::isLocked(const std::string& feature)
 {
+#ifdef IOS_STK
+    // The Motorica Start product mode exposes the complete downloaded STK
+    // catalog. Do not let progress saved by the deliberately small standalone
+    // catalog turn full-mode karts, tracks or difficulties into question marks.
+    // This is deliberately evaluated at runtime and never persisted, so a
+    // subsequent direct icon launch keeps its independent progression.
+    if (isMotoricaGameControlEnabledIOS() &&
+        ExtractMobileAssets::hasFullAssets())
+        return false;
+#endif
     if (UserConfigParams::m_unlock_everything > 0)
         return false;
 

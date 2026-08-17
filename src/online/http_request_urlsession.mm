@@ -80,73 +80,109 @@ void Online::HTTPRequest::operation()
 
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     config.timeoutIntervalForRequest = 20.0;
-    config.timeoutIntervalForResource = 60.0;
+    config.timeoutIntervalForResource = m_download_assets_request ? 3600.0 : 60.0;
 
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
     std::atomic_bool completed(false);
     __block std::atomic_bool* completed_ptr = &completed;
 
-    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
-                                 completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
+    NSURLSessionTask *task = nil;
+    if (blockFilename)
     {
-        if (error)
+        task = [session downloadTaskWithRequest:request
+            completionHandler:^(NSURL *location, NSURLResponse *response,
+                                NSError *error)
         {
-            blockSelf->m_result_code = [error code];
-            blockSelf->m_error_string = [[error localizedDescription] UTF8String];
-        }
-        else
-        {
-            blockSelf->m_result_code = 0;
-            if (blockFilename)
+            if (error)
             {
-                // Save to file
-                BOOL success = [data writeToFile:blockFilename atomically:YES];
-                if (success)
-                {
-                    if (UserConfigParams::logAddons())
-                        Log::info("HTTPRequest", "Download %s successfully.", m_filename.c_str());
-
-                    // Remove existing file and rename
-                    NSString *finalFilename = [NSString stringWithUTF8String:blockSelf->m_filename.c_str()];
-                    NSFileManager *fileManager = [NSFileManager defaultManager];
-
-                    NSError *removeError;
-                    [fileManager removeItemAtPath:finalFilename error:&removeError];
-
-                    NSError *moveError;
-                    success = [fileManager moveItemAtPath:blockFilename toPath:finalFilename error:&moveError];
-                    if (!success)
-                    {
-                        blockSelf->m_error_string = "Could not rename downloaded file: ";
-                        blockSelf->m_error_string += [[moveError localizedDescription] UTF8String];
-                        blockSelf->m_result_code = kCFHostErrorUnknown;
-                    }
-                }
-                else
-                {
-                    blockSelf->m_error_string = "Could not write to file: " + temp_file;
-                    blockSelf->m_result_code = kCFHostErrorUnknown;
-                }
+                blockSelf->m_result_code = [error code];
+                blockSelf->m_error_string =
+                    [[error localizedDescription] UTF8String];
             }
             else
             {
-                // Save to string buffer
-                if (data)
+                blockSelf->m_result_code = 0;
+                NSHTTPURLResponse *http = (NSHTTPURLResponse *)response;
+                if ([http isKindOfClass:[NSHTTPURLResponse class]] &&
+                    (http.statusCode < 200 || http.statusCode >= 300))
                 {
-                    const char *bytes = (const char*)[data bytes];
-                    NSUInteger length = [data length];
-                    blockSelf->m_string_buffer = std::string(bytes, length);
+                    blockSelf->m_result_code = http.statusCode;
+                    blockSelf->m_error_string = "HTTP status " +
+                        std::to_string(http.statusCode);
+                }
+                else
+                {
+                    NSFileManager *fileManager = [NSFileManager defaultManager];
+                    NSError *removeError = nil;
+                    [fileManager removeItemAtPath:blockFilename
+                                            error:&removeError];
+                    NSError *moveError = nil;
+                    BOOL success = [fileManager moveItemAtURL:location
+                                                       toURL:[NSURL fileURLWithPath:blockFilename]
+                                                       error:&moveError];
+                    if (success)
+                    {
+                        NSString *finalFilename = [NSString stringWithUTF8String:
+                            blockSelf->m_filename.c_str()];
+                        [fileManager removeItemAtPath:finalFilename
+                                                error:&removeError];
+                        success = [fileManager moveItemAtPath:blockFilename
+                                                       toPath:finalFilename
+                                                        error:&moveError];
+                    }
+                    if (!success)
+                    {
+                        blockSelf->m_error_string =
+                            "Could not move downloaded file: ";
+                        blockSelf->m_error_string +=
+                            [[moveError localizedDescription] UTF8String];
+                        blockSelf->m_result_code = kCFHostErrorUnknown;
+                    }
                 }
             }
-        }
-        [session finishTasksAndInvalidate];
-        completed_ptr->store(true);
-    }];
+            [session finishTasksAndInvalidate];
+            completed_ptr->store(true);
+        }];
+    }
+    else
+    {
+        task = [session dataTaskWithRequest:request
+            completionHandler:^(NSData *data, NSURLResponse *response,
+                                NSError *error)
+        {
+            if (error)
+            {
+                blockSelf->m_result_code = [error code];
+                blockSelf->m_error_string =
+                    [[error localizedDescription] UTF8String];
+            }
+            else
+            {
+                blockSelf->m_result_code = 0;
+                NSHTTPURLResponse *http = (NSHTTPURLResponse *)response;
+                if ([http isKindOfClass:[NSHTTPURLResponse class]] &&
+                    (http.statusCode < 200 || http.statusCode >= 300))
+                {
+                    blockSelf->m_result_code = http.statusCode;
+                    blockSelf->m_error_string = "HTTP status " +
+                        std::to_string(http.statusCode);
+                }
+                else if (data)
+                {
+                    const char *bytes = (const char*)[data bytes];
+                    blockSelf->m_string_buffer.assign(bytes, [data length]);
+                }
+            }
+            [session finishTasksAndInvalidate];
+            completed_ptr->store(true);
+        }];
+    }
 
     [task resume];
 
     // Wait for completion (synchronous operation)
     bool cancelled = false;
+    bool suspended = false;
     while (!completed.load())
     {
         if (!cancelled && task.state == NSURLSessionTaskStateRunning)
@@ -170,9 +206,24 @@ void Online::HTTPRequest::operation()
                 setProgress(unknownProgress);
             }
         }
-        if (!cancelled && RequestManager::isRunning() &&
-            (RequestManager::get()->getAbort() ||
-            RequestManager::get()->getPaused() || isCancelled()) &&
+        const bool manager_running = RequestManager::isRunning();
+        const bool manager_paused = manager_running &&
+            RequestManager::get()->getPaused();
+        if (!cancelled && m_download_assets_request && isAbortable())
+        {
+            if (manager_paused && !suspended)
+            {
+                [task suspend];
+                suspended = true;
+            }
+            else if (!manager_paused && suspended)
+            {
+                [task resume];
+                suspended = false;
+            }
+        }
+        if (!cancelled && manager_running &&
+            (RequestManager::get()->getAbort() || isCancelled()) &&
             isAbortable())
         {
             [task cancel];

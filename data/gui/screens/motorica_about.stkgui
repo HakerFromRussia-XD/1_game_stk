@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stkgui>
+    <icon-button id="back" x="1%" y="1%" height="9%" icon="gui/icons/back.png"/>
+    <div x="6%" y="7%" width="88%" height="88%" layout="vertical-row">
+        <header id="about_title" width="100%" height="fit" align="center"
+                raw_text="Motorica Kart"/>
+        <spacer width="10" height="4%"/>
+        <label id="about_description" width="100%" height="fit" align="center" text_align="center"
+               word_wrap="true"
+               raw_text="Motorica Kart open-source information"/>
+        <spacer width="10" height="12%"/>
+        <button id="source" width="72%" height="11%" align="center"
+                raw_text="Source code"/>
+        <spacer width="10" height="15%"/>
+    </div>
+</stkgui>

@@ -25,6 +25,7 @@
 namespace ExtractMobileAssets
 {
 bool hasFullAssets();
+bool isFullAssetsInstalled();
 bool extract(const std::string& zip_file, const std::string& dst);
 void reinit();
 void uninstall();

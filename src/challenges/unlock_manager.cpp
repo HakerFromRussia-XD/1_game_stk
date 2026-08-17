@@ -63,7 +63,7 @@ UnlockManager::UnlockManager()
                                         i != result.end()  ; i++)
     {
         if (StringUtils::hasSuffix(*i, ".challenge"))
-            addChallenge(file_manager->getAsset("challenges/"+*i));
+            addChallenge(challenge_dir + *i);
     }   // for i
 
     // Read challenges from .../data/tracks/*
@@ -144,6 +144,14 @@ void UnlockManager::addOrFreeChallenge(ChallengeData *c)
 {
     if(isSupportedVersion(*c))
     {
+        // Reloading after a standalone -> Motorica Start transition must not
+        // replace ChallengeData objects already referenced by player status.
+        if (m_all_challenges.find(c->getChallengeId()) !=
+            m_all_challenges.end())
+        {
+            delete c;
+            return;
+        }
         m_all_challenges[c->getChallengeId()]=c;
         if (c->isUnlockList())
             addListChallenge(c);
@@ -226,6 +234,42 @@ StoryModeStatus* UnlockManager::createStoryModeStatus(const XMLNode *node)
     status->computeActive(/* first call*/ true);
     return status;
 }   // createStoryModeStatus
+
+//-----------------------------------------------------------------------------
+/** Merge the catalog selected by FileManager after an in-process asset-mode
+ *  switch and attach status objects for newly discovered challenges to every
+ *  existing local profile. Existing ChallengeData and progress stay intact.
+ */
+void UnlockManager::reloadChallengesAndStatuses()
+{
+    std::set<std::string> result;
+    const std::string challenge_dir =
+        file_manager->getAsset(FileManager::CHALLENGE, "");
+    file_manager->listFiles(result, challenge_dir);
+    for (const std::string& file : result)
+    {
+        if (StringUtils::hasSuffix(file, ".challenge"))
+            addChallenge(challenge_dir + file);
+    }
+
+    readAllChallengesInDirs(track_manager->getAllTrackDirs());
+    readAllChallengesInDirs(kart_properties_manager->getAllKartDirs());
+
+    for (unsigned int player_index = 0;
+         player_index < PlayerManager::get()->getNumPlayers(); player_index++)
+    {
+        StoryModeStatus* status =
+            PlayerManager::get()->getPlayer(player_index)->getStoryModeStatus();
+        if (!status)
+            continue;
+        for (const auto& challenge : m_all_challenges)
+        {
+            if (!status->hasChallenge(challenge.first))
+                status->addStatus(new ChallengeStatus(challenge.second));
+        }
+        status->computeActive();
+    }
+}   // reloadChallengesAndStatuses
 
 //-----------------------------------------------------------------------------
 void UnlockManager::playLockSound() const

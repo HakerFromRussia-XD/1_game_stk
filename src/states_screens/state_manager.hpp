@@ -188,6 +188,12 @@ public:
     unsigned int activePlayerCount();
     void resetActivePlayers();
 
+    /** Route every attempt to expose the stock main menu through the
+     *  permanent Motorica product root while iOS is in standalone mode. */
+    void pushScreen(GUIEngine::Screen* screen);
+    void resetAndGoToScreen(GUIEngine::Screen* screen);
+    void resetAndSetStack(GUIEngine::Screen* screens[]);
+
     /** \brief implementing callback from base class AbstractStateManager */
     void escapePressed();
 

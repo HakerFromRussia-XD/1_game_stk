@@ -14,6 +14,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
@@ -73,12 +74,11 @@ public class SuperTuxKartActivity extends SDLActivity
 {
     private static final String TAG = "MotoricaSTK";
     private static final String LOG_PREFIX = "[BLE stk-game debug] ";
-    // Temporary RuStore moderation mode. Remove together with the matching
-    // RUSTORE_STANDALONE_TEMP block in motorica_game_control.cpp.
-    private static final boolean RUSTORE_STANDALONE_MODE = true;
     private static final String MOTORICA_START_PACKAGE = "com.bailout.stickk";
     private static final String MOTORICA_GAME_CONTROL_ACTION =
         "com.motorica.gamecontrol.BIND";
+    private static final String RUSTORE_LAUNCHER_ACTIVITY =
+        "com.motorica.games.stk.RuStoreLauncherActivity";
     private static final long MOTORICA_STALE_TIMEOUT_MS = 500L;
 
     private static volatile boolean s_motorica_natives_ready;
@@ -573,6 +573,7 @@ public class SuperTuxKartActivity extends SDLActivity
     public void onCreate(Bundle instance)
     {
         super.onCreate(instance);
+        disableRuStoreLauncherActivity();
         s_current_activity = new WeakReference<SuperTuxKartActivity>(this);
         m_motorica_handler = new Handler();
         m_keyboard_height = new AtomicInteger();
@@ -656,18 +657,25 @@ public class SuperTuxKartActivity extends SDLActivity
         }
     }
     // ------------------------------------------------------------------------
+    private void disableRuStoreLauncherActivity()
+    {
+        ComponentName launcher_activity =
+            new ComponentName(this, RUSTORE_LAUNCHER_ACTIVITY);
+        getPackageManager().setComponentEnabledSetting(
+            launcher_activity,
+            PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+            PackageManager.DONT_KILL_APP);
+    }
+    // ------------------------------------------------------------------------
     @Override
     public void onStart()
     {
         super.onStart();
         m_keyboard_height.set(0);
         m_moved_height.set(0);
-        if (!RUSTORE_STANDALONE_MODE)
-        {
-            bindGameControlService();
-            m_motorica_handler.removeCallbacks(m_motorica_watchdog);
-            m_motorica_handler.postDelayed(m_motorica_watchdog, 250L);
-        }
+        bindGameControlService();
+        m_motorica_handler.removeCallbacks(m_motorica_watchdog);
+        m_motorica_handler.postDelayed(m_motorica_watchdog, 250L);
     }
     // ------------------------------------------------------------------------
     @Override

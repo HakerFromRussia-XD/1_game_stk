@@ -37,6 +37,9 @@
 #include "states_screens/race_gui_overworld.hpp"
 #include "tracks/track.hpp"
 #include "tracks/track_object_manager.hpp"
+#ifdef IOS_STK
+#include "input/motorica_game_control_ios.hpp"
+#endif
 
 #ifdef ANDROID
 #include <SDL_system.h>
@@ -48,6 +51,11 @@ OverWorld::OverWorld() : World()
     m_return_to_garage            = false;
     m_stop_music_when_dialog_open = false;
     m_play_track_intro_sound      = false;
+#ifdef IOS_STK
+    m_motorica_challenge_armed =
+        !RaceManager::get()->haveKartLastPositionOnOverworld();
+    m_motorica_challenge_count_logged = false;
+#endif
 }   // Overworld
 
 //-----------------------------------------------------------------------------
@@ -68,9 +76,20 @@ void OverWorld::enterOverWorld()
     RaceManager::get()->setMajorMode (RaceManager::MAJOR_MODE_SINGLE);
     RaceManager::get()->setMinorMode (RaceManager::MINOR_MODE_OVERWORLD);
     RaceManager::get()->setNumKarts( 1 );
-    RaceManager::get()->setTrack( "overworld" );
+    const bool motorica_standalone =
+#ifdef IOS_STK
+        isMotoricaStandaloneModeIOS();
+#else
+        false;
+#endif
+    RaceManager::get()->setTrack(motorica_standalone ?
+        "motorica_night_island" : "overworld");
 
-    if (PlayerManager::getCurrentPlayer()->isLocked("difficulty_best"))
+    if (motorica_standalone)
+    {
+        RaceManager::get()->setDifficulty(RaceManager::DIFFICULTY_MEDIUM);
+    }
+    else if (PlayerManager::getCurrentPlayer()->isLocked("difficulty_best"))
     {
         RaceManager::get()->setDifficulty(RaceManager::DIFFICULTY_HARD);
     }
@@ -86,15 +105,19 @@ void OverWorld::enterOverWorld()
     StateManager::get()->createActivePlayer(PlayerManager::getCurrentPlayer(),
                                             device);
 
-    if (!kart_properties_manager->getKart(UserConfigParams::m_default_kart))
+    std::string kart_ident = UserConfigParams::m_default_kart;
+    if (motorica_standalone)
+        kart_ident = "motorica_kiki";
+    if (!kart_properties_manager->getKart(kart_ident))
     {
         Log::warn("[overworld]", "cannot find kart '%s', "
                   "will revert to default",
-                  UserConfigParams::m_default_kart.c_str());
+                  kart_ident.c_str());
 
         UserConfigParams::m_default_kart.revertToDefaults();
+        kart_ident = UserConfigParams::m_default_kart;
     }
-    RaceManager::get()->setPlayerKart(0, UserConfigParams::m_default_kart);
+    RaceManager::get()->setPlayerKart(0, kart_ident);
 
     // ASSIGN should make sure that only input from assigned devices
     // is read.
@@ -145,6 +168,63 @@ void OverWorld::update(int ticks)
         m_karts[n]->setEnergy(100.0f);
     }
 
+#ifdef IOS_STK
+    if (isMotoricaStandaloneModeIOS())
+    {
+        const std::vector<OverworldChallenge>& challenges =
+            Track::getCurrentTrack()->getChallengeList();
+        const Vec3 kart_xyz = getKart(0)->getXYZ();
+        bool close_to_motorica_challenge = false;
+        unsigned int motorica_challenge_count = 0;
+
+        for (unsigned int n = 0; n < challenges.size(); n++)
+        {
+            if (challenges[n].m_challenge_id != "motorica_signal_circuit")
+                continue;
+
+            motorica_challenge_count++;
+            const Vec3 challenge_xyz(challenges[n].m_position);
+            const bool close =
+                (kart_xyz - challenge_xyz).length2_2d() < 100.0f &&
+                fabsf(kart_xyz[1] - challenges[n].m_position.Y) < 8.0f;
+            if (!close)
+                continue;
+
+            close_to_motorica_challenge = true;
+            if (!m_motorica_challenge_armed ||
+                dynamic_cast<RescueAnimation*>(
+                    getKart(0)->getKartAnimation()) != NULL)
+            {
+                continue;
+            }
+
+            m_motorica_challenge_armed = false;
+            RaceManager::get()->setKartLastPositionOnOverworld(kart_xyz);
+            Log::info("MotoricaHub",
+                      "Point %u entered at %.2f %.2f %.2f; starting %s",
+                      motorica_challenge_count, kart_xyz[0], kart_xyz[1],
+                      kart_xyz[2],
+                      challenges[n].m_challenge_id.c_str());
+            if (SelectChallengeDialog::startRace(
+                    challenges[n].m_challenge_id, false))
+            {
+                throw AbortWorldUpdateException();
+            }
+            m_motorica_challenge_armed = true;
+        }
+
+        if (!m_motorica_challenge_count_logged)
+        {
+            Log::info("MotoricaHub", "Registered %u signal points",
+                      motorica_challenge_count);
+            m_motorica_challenge_count_logged = true;
+        }
+
+        if (!close_to_motorica_challenge)
+            m_motorica_challenge_armed = true;
+    }
+#endif
+
     /*
     TrackObjectManager* tom = getTrack()->getTrackObjectManager();
     PtrVector<TrackObject>& objects = tom->getObjects();
@@ -168,6 +248,12 @@ void OverWorld::update(int ticks)
     if (m_return_to_garage)
     {
         m_return_to_garage = false;
+#ifdef IOS_STK
+        // Standalone always uses Motorica Kiki.  There is no kart selection
+        // surface in this product mode, including from the pause dialog.
+        if (isMotoricaStandaloneModeIOS())
+            return;
+#endif
         RaceManager::get()->exitRace();
         KartSelectionScreen* s = OfflineKartSelectionScreen::getInstance();
         s->setMultiplayer(false);

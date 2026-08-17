@@ -115,6 +115,99 @@ core::stringw getLabel(RaceManager::Difficulty difficulty, const ChallengeData* 
 // ----------------------------------------------------------------------------
 // ----------------------------------------------------------------------------
 
+bool SelectChallengeDialog::startRace(std::string challenge_id,
+                                      bool dismiss_dialog)
+{
+    const ChallengeData* c_data =
+        unlock_manager->getChallengeData(challenge_id);
+    if (c_data == NULL)
+    {
+        Log::error("SelectChallenge", "Cannot find challenge <%s>\n",
+                   challenge_id.c_str());
+        return false;
+    }
+
+    PlayerManager::getCurrentPlayer()->setCurrentChallenge(challenge_id);
+
+    if (dismiss_dialog)
+        ModalDialog::dismiss();
+
+    RaceManager::get()->exitRace();
+
+    // Keep the device and active player already assigned in the overworld.
+#ifdef DEBUG
+    InputDevice* device =
+        input_manager->getDeviceManager()->getLatestUsedDevice();
+    assert(device != NULL);
+#endif
+    RaceManager::get()->setNumPlayers(1);
+
+    const bool motorica_signal_circuit =
+        challenge_id == "motorica_signal_circuit";
+    std::string player_kart = UserConfigParams::m_default_kart;
+    if (motorica_signal_circuit)
+        player_kart = "motorica_kiki";
+    RaceManager::get()->setPlayerKart(0, player_kart);
+
+    input_manager->getDeviceManager()->setSinglePlayer(
+        StateManager::get()->getActivePlayer(0));
+    input_manager->getDeviceManager()->setAssignMode(ASSIGN);
+
+    StateManager::get()->enterGameState();
+
+    if (motorica_signal_circuit)
+    {
+        c_data->setRace(RaceManager::DIFFICULTY_MEDIUM);
+    }
+    else switch (UserConfigParams::m_difficulty)
+    {
+        case 0:
+            c_data->setRace(RaceManager::DIFFICULTY_EASY);
+            break;
+        case 1:
+            c_data->setRace(RaceManager::DIFFICULTY_MEDIUM);
+            break;
+        case 2:
+            c_data->setRace(RaceManager::DIFFICULTY_HARD);
+            break;
+        case 3:
+            if (UserConfigParams::m_difficulty ==
+                    RaceManager::DIFFICULTY_BEST &&
+                PlayerManager::getCurrentPlayer()->isLocked(
+                    "difficulty_best"))
+            {
+                c_data->setRace(RaceManager::DIFFICULTY_HARD);
+            }
+            else
+            {
+                c_data->setRace(RaceManager::DIFFICULTY_BEST);
+            }
+            break;
+    }
+
+    if (motorica_signal_circuit)
+    {
+        // The standalone IPA intentionally contains only Motorica Kiki.
+        // Do not ask the generic random-kart selector to fill these slots:
+        // it first looks for standard karts (for example Tux) before applying
+        // the challenge override, which leaves the transition half-finished.
+        const int ai_count = RaceManager::get()->getNumberOfKarts() - 1;
+        RaceManager::get()->setAIKartList(
+            std::vector<std::string>(ai_count, "motorica_kiki"));
+        Log::info("MotoricaHub", "Prepared %d Motorica Kiki AI karts",
+                  ai_count);
+    }
+    else
+    {
+        RaceManager::get()->setupPlayerKartInfo();
+    }
+    RaceManager::get()->startNew(true);
+    irr_driver->hidePointer();
+    return true;
+}
+
+// ----------------------------------------------------------------------------
+
 SelectChallengeDialog::SelectChallengeDialog(const float percentWidth,
                                              const float percentHeight,
                                              std::string challenge_id) :
@@ -127,6 +220,15 @@ SelectChallengeDialog::SelectChallengeDialog(const float percentWidth,
     
     GUIEngine::RibbonWidget* difficulty =
         getWidget<GUIEngine::RibbonWidget>("difficulty");
+
+    const bool motorica_signal_circuit =
+        m_challenge_id == "motorica_signal_circuit";
+    if (motorica_signal_circuit)
+    {
+        difficulty->setSelection(RaceManager::DIFFICULTY_MEDIUM,
+                                 PLAYER_ID_GAME_MASTER);
+        difficulty->setVisible(false);
+    }
     
     if (UserConfigParams::m_difficulty == RaceManager::DIFFICULTY_BEST &&
         PlayerManager::getCurrentPlayer()->isLocked("difficulty_best"))
@@ -142,7 +244,11 @@ SelectChallengeDialog::SelectChallengeDialog(const float percentWidth,
                              ->getChallengeStatus(challenge_id);
     LabelWidget* challenge_info = getWidget<LabelWidget>("challenge_info");
     
-    switch (UserConfigParams::m_difficulty)
+    const RaceManager::Difficulty displayed_difficulty =
+        motorica_signal_circuit ? RaceManager::DIFFICULTY_MEDIUM
+                                : static_cast<RaceManager::Difficulty>(
+                                      (int)UserConfigParams::m_difficulty);
+    switch (displayed_difficulty)
     {
         case 0:
             challenge_info->setText(getLabel(RaceManager::DIFFICULTY_EASY,   c->getData()), false );
@@ -163,6 +269,11 @@ SelectChallengeDialog::SelectChallengeDialog(const float percentWidth,
             {
                 challenge_info->setText(getLabel(RaceManager::DIFFICULTY_BEST,   c->getData()), false );
             }
+            break;
+        default:
+            challenge_info->setText(
+                getLabel(RaceManager::DIFFICULTY_MEDIUM, c->getData()),
+                false);
             break;
     }
     
@@ -244,8 +355,6 @@ GUIEngine::EventPropagation SelectChallengeDialog::processEvent(const std::strin
     
     LabelWidget* challenge_info = getWidget<LabelWidget>("challenge_info");
     
-    const ChallengeData* c_data = unlock_manager->getChallengeData(m_challenge_id);
-    
     const ChallengeStatus* c_stat = PlayerManager::getCurrentPlayer()
                              ->getChallengeStatus(m_challenge_id);
     
@@ -261,76 +370,8 @@ GUIEngine::EventPropagation SelectChallengeDialog::processEvent(const std::strin
         }
         else if(action == "start")
         {
-            if (c_data == NULL)
-            {
-                Log::error("SelectChallenge", "Cannot find challenge <%s>\n",
-                           m_challenge_id.c_str());
-                return GUIEngine::EVENT_LET;
-            }
-
-            PlayerManager::getCurrentPlayer()->setCurrentChallenge(m_challenge_id);
-
-            ModalDialog::dismiss();
-
-            core::rect<s32> pos(15,
-                                10,
-                                15 + UserConfigParams::m_width/2,
-                                10 + GUIEngine::getTitleFontHeight());
-
-            RaceManager::get()->exitRace();
-            //StateManager::get()->resetActivePlayers();
-
-            // Use latest used device
-#ifdef DEBUG
-            InputDevice* device = input_manager->getDeviceManager()->getLatestUsedDevice();
-            assert(device != NULL);
-#endif
-            // Set up race manager appropriately
-            RaceManager::get()->setNumPlayers(1);
-            RaceManager::get()->setPlayerKart(0, UserConfigParams::m_default_kart);
-
-            //int id = StateManager::get()->createActivePlayer( unlock_manager->getCurrentPlayer(), device );
-            input_manager->getDeviceManager()->setSinglePlayer( StateManager::get()->getActivePlayer(0) );
-
-            // ASSIGN should make sure that only input from assigned devices is read.
-            input_manager->getDeviceManager()->setAssignMode(ASSIGN);
-
-            // Go straight to the race
-            StateManager::get()->enterGameState();
-
-            // Initialise global data - necessary even in local games to avoid
-            // many if tests in other places (e.g. if network_game call
-            // network_manager else call race_manager).
-            // network_manager->initCharacterDataStructures();
-            switch (UserConfigParams::m_difficulty)
-            {
-                case 0:
-                    c_data->setRace(RaceManager::DIFFICULTY_EASY);
-                    break;
-                case 1:
-                    c_data->setRace(RaceManager::DIFFICULTY_MEDIUM);
-                    break;
-                case 2:
-                    c_data->setRace(RaceManager::DIFFICULTY_HARD);
-                    break;
-                case 3:
-                    if (UserConfigParams::m_difficulty == RaceManager::DIFFICULTY_BEST &&
-                        PlayerManager::getCurrentPlayer()->isLocked("difficulty_best"))
-                    {
-                        c_data->setRace(RaceManager::DIFFICULTY_HARD);
-                    }
-                    else
-                    {
-                        c_data->setRace(RaceManager::DIFFICULTY_BEST);
-                    }
-                    break;
-            }
-            RaceManager::get()->setupPlayerKartInfo();
-            RaceManager::get()->startNew(true);
-
-            irr_driver->hidePointer();
-
-            return GUIEngine::EVENT_BLOCK;
+            return startRace(m_challenge_id, true)
+                ? GUIEngine::EVENT_BLOCK : GUIEngine::EVENT_LET;
         }
         else
         {
@@ -343,6 +384,9 @@ GUIEngine::EventPropagation SelectChallengeDialog::processEvent(const std::strin
 
     if (eventSource == "difficulty")
     {
+        if (m_challenge_id == "motorica_signal_circuit")
+            return GUIEngine::EVENT_BLOCK;
+
         const std::string& selected =
             difficulty->getSelectionIDString(PLAYER_ID_GAME_MASTER);
         
