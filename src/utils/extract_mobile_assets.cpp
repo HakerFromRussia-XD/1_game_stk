@@ -19,6 +19,7 @@
 
 #include "utils/extract_mobile_assets.hpp"
 #include "addons/zip.hpp"
+#include "challenges/unlock_manager.hpp"
 #include "io/file_manager.hpp"
 #include "graphics/irr_driver.hpp"
 #include "race/grand_prix_manager.hpp"
@@ -31,10 +32,10 @@
 #include "input/motorica_game_control_ios.hpp"
 #include "utils/motorica_assets_manifest.hpp"
 #include <mbedtls/sha256.h>
-#include <array>
 #include <iomanip>
 #include <sstream>
 #include <sys/stat.h>
+#include <vector>
 #endif
 
 // ----------------------------------------------------------------------------
@@ -67,6 +68,7 @@ bool ExtractMobileAssets::isFullAssetsInstalled()
 // ----------------------------------------------------------------------------
 static bool verifyMotoricaArchive(const std::string& zip_file)
 {
+    Log::info("ExtractMobileAssets", "Verifying Motorica archive size.");
     struct stat file_stat;
     if (FileUtils::statU8Path(zip_file, &file_stat) != 0 ||
         (uint64_t)file_stat.st_size != MotoricaAssetsManifest::SIZE_BYTES)
@@ -82,7 +84,11 @@ static bool verifyMotoricaArchive(const std::string& zip_file)
     mbedtls_sha256_context context;
     mbedtls_sha256_init(&context);
     bool ok = mbedtls_sha256_starts(&context, 0) == 0;
-    std::array<unsigned char, 1024 * 1024> buffer;
+    // RequestManager's worker thread has a 544 KiB stack on iOS. Keeping the
+    // old 1 MiB SHA buffer as a local std::array overflowed that stack as soon
+    // as the download completed (___chkstk_darwin / SIGBUS). Allocate the
+    // buffer on the heap so verification is independent of thread stack size.
+    std::vector<unsigned char> buffer(1024 * 1024);
     while (ok)
     {
         size_t count = fread(buffer.data(), 1, buffer.size(), stream);
@@ -114,6 +120,7 @@ static bool verifyMotoricaArchive(const std::string& zip_file)
         Log::error("ExtractMobileAssets", "Downloaded asset SHA-256 mismatch.");
         return false;
     }
+    Log::info("ExtractMobileAssets", "Motorica archive SHA-256 is valid.");
     return true;
 }
 
@@ -139,6 +146,8 @@ bool ExtractMobileAssets::extract(const std::string& zip_file,
         file_manager->removeFile(zip_file);
         return false;
     }
+
+    Log::info("ExtractMobileAssets", "Extracting Motorica asset package.");
 
     const std::string target = withoutTrailingSlash(dst);
     const std::string temporary = target + ".installing";
@@ -193,6 +202,10 @@ bool ExtractMobileAssets::extract(const std::string& zip_file,
     if (!succeed)
         file_manager->removeDirectory(temporary);
 
+    if (succeed)
+        Log::info("ExtractMobileAssets",
+            "Motorica asset package was activated successfully.");
+
     file_manager->removeFile(zip_file);
     return succeed;
 #else
@@ -232,6 +245,8 @@ void ExtractMobileAssets::reinit()
     delete grand_prix_manager;
     grand_prix_manager = new GrandPrixManager();
     grand_prix_manager->checkConsistency();
+    if (unlock_manager)
+        unlock_manager->reloadChallengesAndStatuses();
 }   // reinit
 
 // ----------------------------------------------------------------------------

@@ -709,6 +709,19 @@ def build_base_assets(mobile_base: Path, output: Path, source: Path) -> None:
         directory.mkdir(parents=True)
     copy_overlay(output)
 
+    # The downloaded package intentionally contains no executable code and
+    # the minimal standalone catalog intentionally contains no upstream story
+    # progression.  Keep the original declarative challenge/GP/replay catalog
+    # in a separate, reviewed IPA directory. FileManager exposes this directory
+    # only while the app is in Motorica Start mode with a validated full asset
+    # package; a direct icon launch continues to see only the Motorica catalog.
+    full_catalog = output / "motorica-start-full"
+    for name in ["challenges", "grandprix", "replay"]:
+        source_directory = REPO_ROOT / "data" / name
+        if not source_directory.is_dir():
+            fail(f"Full catalog source is missing: {source_directory}")
+        shutil.copytree(source_directory, full_catalog / name)
+
     # These screens live with the reviewed application source rather than the
     # upstream stk-assets checkout. Always inject them into the generated
     # minimal IPA tree; otherwise the native Hub screen exists in the binary
@@ -744,6 +757,20 @@ def build_base_assets(mobile_base: Path, output: Path, source: Path) -> None:
         script_count += 1
     if script_count != 24:
         fail(f"Expected 24 packaged AngelScript files, found {script_count}")
+
+    # Track-local GPU shaders are executable source too. They must never come
+    # from the downloaded ZIP. Package them in the reviewed application and
+    # let SPShaderManager resolve them through the same pinned registry.
+    shader_count = 0
+    for shader_suffix in ["*.frag", "*.vert"]:
+        for shader in sorted(source.rglob(shader_suffix)):
+            relative = shader.relative_to(source)
+            target = packaged / relative
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(shader, target)
+            shader_count += 1
+    if shader_count == 0:
+        fail("Expected at least one packaged track-local shader")
 
     motorica_script = packaged / "tracks" / "motorica_night_island" / "scripting.as"
     motorica_script.parent.mkdir(parents=True, exist_ok=True)

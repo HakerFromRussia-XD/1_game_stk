@@ -370,6 +370,22 @@ std::string SPShaderManager::getShaderFullPath(const std::string& name)
     {
         return cur_location;
     }
+#ifdef IOS_STK
+    // Downloaded tracks contain only data. Resolve any track-local shader
+    // from its reviewed copy in data/packaged-scripts/tracks/<track-id>/.
+    // This keeps executable GPU source out of the remote asset archive.
+    const std::string tracks_component = "/tracks/";
+    const size_t tracks_position = m_shader_directory.rfind(tracks_component);
+    if (tracks_position != std::string::npos)
+    {
+        const std::string relative = m_shader_directory.substr(
+            tracks_position + 1) + name;
+        cur_location = file_manager->getAsset(
+            FileManager::PACKAGED_SCRIPT, relative);
+        if (file_manager->fileExists(cur_location))
+            return cur_location;
+    }
+#endif
     cur_location = file_manager->getAssetChecked(FileManager::SHADER, name);
     if (cur_location.empty())
     {

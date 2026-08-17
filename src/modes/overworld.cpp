@@ -115,6 +115,7 @@ void OverWorld::enterOverWorld()
                   kart_ident.c_str());
 
         UserConfigParams::m_default_kart.revertToDefaults();
+        kart_ident = UserConfigParams::m_default_kart;
     }
     RaceManager::get()->setPlayerKart(0, kart_ident);
 

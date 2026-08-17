@@ -276,7 +276,9 @@ extern "C" {
 #include "replay/replay_recorder.hpp"
 #include "states_screens/main_menu_screen.hpp"
 #ifdef IOS_STK
+#include "states_screens/dialogs/download_assets.hpp"
 #include "states_screens/motorica_hub_screen.hpp"
+#include "utils/extract_mobile_assets.hpp"
 #endif
 #include "states_screens/online/networking_lobby.hpp"
 #include "states_screens/online/register_screen.hpp"
@@ -2223,9 +2225,12 @@ int main(int argc, char *argv[])
 #endif
 {
 #ifdef IOS_STK
+    // SDL does not surface a custom URL delivered in cold launch options until
+    // after native startup. Motorica Start therefore writes a five-second,
+    // one-shot URL lease immediately before opening motorica-stk://. It is
+    // consumed and deleted here; snapshots never change launch mode.
+    consumeMotoricaStartLaunchRequestIOS();
     writeMotoricaGameVersionIOS();
-    // A snapshot in the shared App Group must never change launch mode. The
-    // Motorica Start mode is enabled only after SDL delivers motorica-stk://.
 #endif
 
 #ifdef __SWITCH__
@@ -2583,6 +2588,16 @@ int main(int argc, char *argv[])
             {
                 PlayerManager::get()->enforceCurrentPlayer();
                 MotoricaHubScreen::getInstance()->push();
+            }
+            else if (!ExtractMobileAssets::isFullAssetsInstalled())
+            {
+                // Motorica Start mode is gated by the verified full catalog.
+                // Use the original menu only as a non-interactive host for the
+                // modal download dialog: the standalone hub/island must never
+                // be entered on this launch path.
+                PlayerManager::get()->enforceCurrentPlayer();
+                MainMenuScreen::getInstance()->push();
+                new DownloadAssets();
             }
             else
             #endif

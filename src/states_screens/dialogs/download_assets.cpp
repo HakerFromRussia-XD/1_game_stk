@@ -32,11 +32,13 @@
 #include "states_screens/state_manager.hpp"
 #include "utils/extract_mobile_assets.hpp"
 #include "utils/download_assets_size.hpp"
+#include "utils/log.hpp"
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
 #ifdef IOS_STK
 #include "input/motorica_game_control_ios.hpp"
 #include "states_screens/main_menu_screen.hpp"
+#include "states_screens/motorica_hub_screen.hpp"
 #include "utils/motorica_assets_manifest.hpp"
 #include <sys/statvfs.h>
 #endif
@@ -52,17 +54,49 @@ class DownloadAssetsRequest : public HTTPRequest
 {
 private:
     bool m_extraction_error;
-    virtual void afterOperation()
+#ifdef IOS_STK
+    bool m_reuse_existing_archive;
+
+    virtual void operation() OVERRIDE
+    {
+        if (m_reuse_existing_archive)
+        {
+            // A previous run may have finished the download and then stopped
+            // before extraction (for example after an application crash).
+            // Keep all validation in ExtractMobileAssets; this only avoids
+            // downloading the same immutable, pinned archive again.
+            setProgress(1.0f);
+            Log::info("DownloadAssets",
+                "Reusing the previously downloaded Motorica asset archive.");
+            return;
+        }
+        Online::HTTPRequest::operation();
+    }
+#endif
+
+    virtual void afterOperation() OVERRIDE
     {
         Online::HTTPRequest::afterOperation();
         if (isCancelled())
             return;
+#ifdef IOS_STK
+        Log::info("DownloadAssets",
+            "Verifying and extracting the Motorica asset archive.");
+#endif
         m_extraction_error =
             !ExtractMobileAssets::extract(getFileName(),
             file_manager->getSTKAssetsDownloadDir());
+#ifdef IOS_STK
+        Log::info("DownloadAssets", "Motorica asset extraction %s.",
+            m_extraction_error ? "failed" : "completed");
+#endif
     }
 public:
-    DownloadAssetsRequest()
+    DownloadAssetsRequest(
+#ifdef IOS_STK
+        bool reuse_existing_archive = false
+#endif
+        )
     : HTTPRequest(
 #ifdef IOS_STK
         "motorica-stk-full-assets-1.zip",
@@ -70,6 +104,9 @@ public:
         "stk-assets.zip",
 #endif
         /*priority*/5)
+#ifdef IOS_STK
+      , m_reuse_existing_archive(reuse_existing_archive)
+#endif
     {
         m_extraction_error = true;
 #ifdef IOS_STK
@@ -205,6 +242,14 @@ void DownloadAssets::init()
 bool DownloadAssets::onEscapePressed()
 {
     ModalDialog::dismiss();
+#ifdef IOS_STK
+    if (isMotoricaGameControlEnabledIOS() &&
+        !ExtractMobileAssets::isFullAssetsInstalled())
+    {
+        StateManager::get()->resetAndGoToScreen(
+            MotoricaHubScreen::getInstance());
+    }
+#endif
     return true;
 }   // onEscapePressed
 
@@ -221,6 +266,14 @@ GUIEngine::EventPropagation DownloadAssets::processEvent(const std::string& even
         if (selection == "back")
         {
             dismiss();
+#ifdef IOS_STK
+            if (isMotoricaGameControlEnabledIOS() &&
+                !ExtractMobileAssets::isFullAssetsInstalled())
+            {
+                StateManager::get()->resetAndGoToScreen(
+                    MotoricaHubScreen::getInstance());
+            }
+#endif
             return GUIEngine::EVENT_BLOCK;
         }
         else if (selection == "install")
@@ -305,7 +358,15 @@ void DownloadAssets::onUpdate(float delta)
  **/
 void DownloadAssets::startDownload()
 {
+#ifdef IOS_STK
+    const std::string archive = file_manager->getAddonsFile(
+        "motorica-stk-full-assets-1.zip");
+    const bool reuse_existing_archive = file_manager->fileExists(archive);
+    m_download_request = std::make_shared<DownloadAssetsRequest>(
+        reuse_existing_archive);
+#else
     m_download_request = std::make_shared<DownloadAssetsRequest>();
+#endif
     m_download_request->queue();
 }   // startDownload
 

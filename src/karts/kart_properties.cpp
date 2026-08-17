@@ -325,8 +325,16 @@ void KartProperties::load(const std::string &filename, const std::string &node)
     }
     else
     {   // check the skin folder for icons first if official karts
-        m_icon_file = GUIEngine::getSkin()->getThemedIcon(std::string("karts/")
-                                                          +m_ident+"/"+m_icon_file);
+        const std::string relative_icon = m_icon_file;
+        m_icon_file = GUIEngine::getSkin()->getThemedIcon(
+            std::string("karts/") + m_ident + "/" + relative_icon);
+        // Motorica Start keeps the full kart catalogue in the downloaded
+        // assets directory, which is deliberately not a global data root in
+        // Standalone mode.  A themed lookup therefore cannot use
+        // FileManager::getAsset() as its fallback for those karts.  Resolve
+        // the icon beside kart.xml when no themed/bundled icon was found.
+        if (m_icon_file.empty() || !file_manager->fileExists(m_icon_file))
+            m_icon_file = m_root + relative_icon;
     }
 
     // Make permanent is important, since otherwise icons can get deleted
@@ -346,8 +354,14 @@ void KartProperties::load(const std::string &filename, const std::string &node)
         }
         else
         {
-            m_minimap_icon_file = GUIEngine::getSkin()->getThemedIcon(std::string("karts/")
-                                                                      +m_ident+"/"+m_minimap_icon_file);
+            const std::string relative_minimap_icon = m_minimap_icon_file;
+            m_minimap_icon_file = GUIEngine::getSkin()->getThemedIcon(
+                std::string("karts/") + m_ident + "/" + relative_minimap_icon);
+            if (m_minimap_icon_file.empty() ||
+                !file_manager->fileExists(m_minimap_icon_file))
+            {
+                m_minimap_icon_file = m_root + relative_minimap_icon;
+            }
         }
         m_minimap_icon = STKTexManager::getInstance()->getTexture(m_minimap_icon_file);
     }
@@ -1405,4 +1419,3 @@ bool KartProperties::getSkidEnabled() const
 
 
 /* <characteristics-end kpgetter> */
-

@@ -12,6 +12,7 @@ enum class MotoricaLaunchModeIOS
 
 void writeMotoricaGameVersionIOS();
 void startMotoricaGameControlIOS();
+bool consumeMotoricaStartLaunchRequestIOS();
 bool enableMotoricaGameControlForLaunchURLIOS(const char* url);
 bool isMotoricaGameControlEnabledIOS();
 bool isMotoricaStandaloneModeIOS();

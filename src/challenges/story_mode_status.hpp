@@ -99,6 +99,7 @@ public:
     void       grandPrixFinished ();
     void       save              (UTFWriter &out, bool current_player=false);
     void       addStatus(ChallengeStatus *cs);
+    bool       hasChallenge(const std::string& challenge_id) const;
     void       setCurrentChallenge(const std::string &challenge_id);
 
     // ----------------------------------------------------------------------------------------
