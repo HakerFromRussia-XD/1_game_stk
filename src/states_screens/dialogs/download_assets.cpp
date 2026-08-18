@@ -194,7 +194,7 @@ DownloadAssets::DownloadAssets()
     // I18N: In download assets dialog
     core::stringw msg;
 #ifdef IOS_STK
-    msg = _("Motorica Kart will download the optional full SuperTuxKart "
+    msg = _("Motorica Signal LAB will download the optional full SuperTuxKart "
         "content catalog (including high quality textures and music) for "
         "Motorica Start mode. The download contains game resources only and "
         "may use mobile data if Wi-Fi is unavailable.");

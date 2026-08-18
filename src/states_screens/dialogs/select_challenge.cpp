@@ -167,7 +167,7 @@ bool SelectChallengeDialog::startRace(std::string challenge_id,
     // The standalone Hub is a regular menu, not an overworld.  Consequently
     // it has no ActivePlayer yet, while the original challenge path assumes
     // that the overworld already created one.  Create the missing local
-    // player only for Motorica Signal Lab; the Motorica Start/full-STK path
+    // player only for Motorica Signal LAB; the Motorica Start/full-STK path
     // keeps the original player lifecycle unchanged.
     if (motorica_training && StateManager::get()->activePlayerCount() == 0)
     {

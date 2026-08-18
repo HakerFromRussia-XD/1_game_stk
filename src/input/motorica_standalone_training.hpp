@@ -1,4 +1,4 @@
-//  Motorica Signal Lab standalone training state.
+//  Motorica Signal LAB standalone training state.
 //  This module is intentionally independent from MotoricaGameControl and
 //  never reads the shared App Group used by Motorica Start.
 

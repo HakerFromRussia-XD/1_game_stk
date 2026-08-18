@@ -1,4 +1,4 @@
-//  Motorica Kart product and open-source information
+//  Motorica Signal LAB product and open-source information
 
 #ifndef HEADER_MOTORICA_ABOUT_SCREEN_HPP
 #define HEADER_MOTORICA_ABOUT_SCREEN_HPP

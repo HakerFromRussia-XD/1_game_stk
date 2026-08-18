@@ -1,4 +1,4 @@
-//  Motorica Kart product and open-source information
+//  Motorica Signal LAB product and open-source information
 
 #include "states_screens/motorica_about_screen.hpp"
 
@@ -45,11 +45,11 @@ void MotoricaAboutScreen::init()
     Screen::init();
 
     getWidget("about_description")->setText(localized(
-        "Motorica Signal Lab — самостоятельный тренажёр точности, реакции "
-        "и удержания сигнала. Motorica Kart основан на открытом исходном "
+        "Motorica Signal LAB — самостоятельный тренажёр точности, реакции "
+        "и удержания сигнала. Motorica Signal LAB основан на открытом исходном "
         "коде SuperTuxKart; лицензии и авторство исходного проекта сохранены.",
-        "Motorica Signal Lab is a standalone trainer for precision, reaction "
-        "and signal holding. Motorica Kart is based on the open-source "
+        "Motorica Signal LAB is a standalone trainer for precision, reaction "
+        "and signal holding. Motorica Signal LAB is based on the open-source "
         "SuperTuxKart project; its licenses and attribution are preserved."));
     getWidget("source")->setText(localized(
         "Открыть исходный код проекта", "Open Project Source Code"));

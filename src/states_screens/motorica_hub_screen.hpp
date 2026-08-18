@@ -1,4 +1,4 @@
-//  Motorica Kart standalone product hub
+//  Motorica Signal LAB standalone product hub
 
 #ifndef HEADER_MOTORICA_HUB_SCREEN_HPP
 #define HEADER_MOTORICA_HUB_SCREEN_HPP

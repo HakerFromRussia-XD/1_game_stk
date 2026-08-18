@@ -96,7 +96,7 @@ extern "C" bool handle_motorica_game_control_event(SDL_Event& event)
         {
             // Replace the currently visible standalone screen before showing
             // the download gate. This is important for warm launches from
-            // Motorica Start while Motorica Kart is already running.
+            // Motorica Start while Motorica Signal LAB is already running.
             StateManager::get()->resetAndGoToScreen(
                 MainMenuScreen::getInstance());
             new DownloadAssets();

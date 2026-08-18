@@ -1,4 +1,4 @@
-//  Motorica Signal Lab standalone product screens
+//  Motorica Signal LAB standalone product screens
 
 #include "states_screens/motorica_hub_screen.hpp"
 
@@ -125,12 +125,12 @@ void MotoricaHubScreen::init()
 {
     Screen::init();
 
-    setText(this, "hub_title", "Motorica Signal Lab", "Motorica Signal Lab");
+    setText(this, "hub_title", "Motorica Signal LAB", "Motorica Signal LAB");
     setText(this, "hub_subtitle", "Тренировка сигналов", "Signal training");
     setText(this, "full_game_notice",
-        "Motorica Signal Lab работает самостоятельно. Дополнительные игровые "
+        "Motorica Signal LAB работает самостоятельно. Дополнительные игровые "
         "режимы с управлением устройством доступны через Motorica Start.",
-        "Motorica Signal Lab works independently. Additional device-controlled "
+        "Motorica Signal LAB works independently. Additional device-controlled "
         "game modes are available through Motorica Start.");
     setText(this, "device_notice", "Устройство не подключено",
         "No device connected");
