@@ -8,10 +8,10 @@ archives are required.
 
 - App Store version: `1.0`
 - build number: `28`
-- bundle identifier: `com.motorica.games.stktt`
-- Apple Developer team: `WWLXR9V94H`
+- bundle identifier: `com.motorica.games.stkttt`
+- Apple Developer team: `R7M384QD5A`
 - App Group build setting:
-  `MOTORICA_GAME_CONTROL_APP_GROUP=group.com.motorica.start.gamecontroll`
+  `MOTORICA_GAME_CONTROL_APP_GROUP=group.com.motorica.start.gamecontrolll`
 
 The App Group has a single source of truth in
 `cmake/Toolchain-ios-xcode.cmake`. Do not place a second literal identifier in
@@ -65,9 +65,9 @@ Open:
 build-ios/SuperTuxKart.xcodeproj
 ```
 
-Select the `supertuxkart` scheme and an iOS device. Signing uses the Denis
-Oskhin Personal Team and requires a provisioning profile that contains both
-the bundle identifier and App Group listed above.
+Select the `supertuxkart` scheme and an iOS device. Signing uses MOTORICA
+RESEARCH LLC and requires a provisioning profile that contains both the bundle
+identifier and App Group listed above.
 
 Automatic Signing may create a development-signed product for device testing.
 Do not upload a development-signed product directly; the final distribution
@@ -92,7 +92,7 @@ Also compare `dwarfdump --uuid` for the application executable and
 `dSYMs/supertuxkart.app.dSYM/Contents/Resources/DWARF/supertuxkart` inside the
 archive; the UUIDs must be identical.
 
-Also confirm that the IPA contains only `motorica_night_island`,
-`motorica_signal_circuit`, and `motorica_kiki`; that all 24 upstream
-AngelScript files are under `data/packaged-scripts`; and that the remote ZIP
-contains no executable or script files.
+Also confirm that the IPA contains only the standalone `motorica_signal_lab`
+track, `motorica_signal_pilot` kart and the three Motorica exercise challenges;
+that all required upstream AngelScript files are under `data/packaged-scripts`;
+and that the remote ZIP contains no executable or script files.

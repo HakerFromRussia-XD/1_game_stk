@@ -128,10 +128,10 @@ void MotoricaHubScreen::init()
     setText(this, "hub_title", "Motorica Signal Lab", "Motorica Signal Lab");
     setText(this, "hub_subtitle", "Тренировка сигналов", "Signal training");
     setText(this, "full_game_notice",
-        "Для запуска полной версии игры откройте Motorica Kart через "
-        "приложение Motorica Start.",
-        "To launch the full version of the game, open Motorica Kart through "
-        "the Motorica Start app.");
+        "Motorica Signal Lab работает самостоятельно. Дополнительные игровые "
+        "режимы с управлением устройством доступны через Motorica Start.",
+        "Motorica Signal Lab works independently. Additional device-controlled "
+        "game modes are available through Motorica Start.");
     setText(this, "device_notice", "Устройство не подключено",
         "No device connected");
     getWidget<LabelWidget>("hub_subtitle")->setColor(
