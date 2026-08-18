@@ -30,6 +30,9 @@
 #include "graphics/particle_kind.hpp"
 #include "input/input_manager.hpp"
 #include "input/motorica_game_control.hpp"
+#ifdef IOS_STK
+#include "input/motorica_standalone_training.hpp"
+#endif
 #include "items/attachment.hpp"
 #include "items/item.hpp"
 #include "items/powerup.hpp"
@@ -255,8 +258,20 @@ void LocalPlayerController::update(int ticks)
         Log::debug("LocalPlayerController", "irr_driver", "-------------------------------------");
     }
 
+#ifdef IOS_STK
+    if (MotoricaStandaloneTraining::get()->isActive())
+        MotoricaStandaloneTraining::get()->apply(
+            this, World::getWorld()->getTime());
+#endif
     MotoricaGameControl::get()->apply(this);
     PlayerController::update(ticks);
+#ifdef IOS_STK
+    if (MotoricaStandaloneTraining::get()->isActive())
+        MotoricaStandaloneTraining::get()->observe(
+            m_controls->getSteer(), stk_config->ticks2Time(ticks),
+            World::getWorld()->getTime(), m_kart->getXYZ().getX(),
+            m_kart->getXYZ().getZ());
+#endif
 
     // look backward when the player requests or
     // if automatic reverse camera is active
@@ -373,6 +388,9 @@ void LocalPlayerController::setPosition(int p)
  d*/
 void LocalPlayerController::finishedRace(float time)
 {
+#ifdef IOS_STK
+    MotoricaStandaloneTraining::get()->finish(time);
+#endif
     // This will implicitly trigger setting the first end camera to be active
     if (!GUIEngine::isNoGraphics())
         Camera::changeCamera(m_camera_index, Camera::CM_TYPE_END);
@@ -513,11 +531,19 @@ void LocalPlayerController::rumble(float strength_low, float strength_high, uint
 void LocalPlayerController::crashed(const AbstractKart* k) {
     doCrashHaptics();
 
+#ifdef IOS_STK
+    MotoricaStandaloneTraining::get()->recordCollision();
+#endif
+
     PlayerController::crashed(k);
 }
 
 void LocalPlayerController::crashed(const Material *m) {
     doCrashHaptics();
+
+#ifdef IOS_STK
+    MotoricaStandaloneTraining::get()->recordCollision();
+#endif
 
     PlayerController::crashed(m);
 }

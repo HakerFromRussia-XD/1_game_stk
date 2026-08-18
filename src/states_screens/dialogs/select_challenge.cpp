@@ -28,6 +28,10 @@
 #include "guiengine/widgets/ribbon_widget.hpp"
 #include "input/device_manager.hpp"
 #include "input/input_manager.hpp"
+#include "input/keyboard_device.hpp"
+#ifdef IOS_STK
+#include "input/motorica_standalone_training.hpp"
+#endif
 #include "io/file_manager.hpp"
 #include "modes/world.hpp"
 #include "race/grand_prix_manager.hpp"
@@ -39,6 +43,21 @@
 #include "utils/translation.hpp"
 
 using namespace GUIEngine;
+
+namespace
+{
+bool isMotoricaTrainingChallenge(const std::string& challenge_id)
+{
+#ifdef IOS_STK
+    return challenge_id == "motorica_precision" ||
+           challenge_id == "motorica_reaction" ||
+           challenge_id == "motorica_signal_hold";
+#else
+    (void)challenge_id;
+    return false;
+#endif
+}
+}
 
 // ----------------------------------------------------------------------------
 
@@ -134,19 +153,40 @@ bool SelectChallengeDialog::startRace(std::string challenge_id,
 
     RaceManager::get()->exitRace();
 
+    const bool motorica_training =
+        isMotoricaTrainingChallenge(challenge_id);
+
     // Keep the device and active player already assigned in the overworld.
-#ifdef DEBUG
     InputDevice* device =
         input_manager->getDeviceManager()->getLatestUsedDevice();
-    assert(device != NULL);
+#ifdef DEBUG
+    if (!motorica_training)
+        assert(device != NULL);
 #endif
+
+    // The standalone Hub is a regular menu, not an overworld.  Consequently
+    // it has no ActivePlayer yet, while the original challenge path assumes
+    // that the overworld already created one.  Create the missing local
+    // player only for Motorica Signal Lab; the Motorica Start/full-STK path
+    // keeps the original player lifecycle unchanged.
+    if (motorica_training && StateManager::get()->activePlayerCount() == 0)
+    {
+        if (device == NULL)
+            device = input_manager->getDeviceManager()->getKeyboard(0);
+        if (device == NULL)
+        {
+            Log::error("MotoricaHub",
+                       "Cannot start training without an input device");
+            return false;
+        }
+        StateManager::get()->createActivePlayer(
+            PlayerManager::getCurrentPlayer(), device);
+    }
     RaceManager::get()->setNumPlayers(1);
 
-    const bool motorica_signal_circuit =
-        challenge_id == "motorica_signal_circuit";
     std::string player_kart = UserConfigParams::m_default_kart;
-    if (motorica_signal_circuit)
-        player_kart = "motorica_kiki";
+    if (motorica_training)
+        player_kart = "motorica_signal_pilot";
     RaceManager::get()->setPlayerKart(0, player_kart);
 
     input_manager->getDeviceManager()->setSinglePlayer(
@@ -155,7 +195,7 @@ bool SelectChallengeDialog::startRace(std::string challenge_id,
 
     StateManager::get()->enterGameState();
 
-    if (motorica_signal_circuit)
+    if (motorica_training)
     {
         c_data->setRace(RaceManager::DIFFICULTY_MEDIUM);
     }
@@ -185,22 +225,23 @@ bool SelectChallengeDialog::startRace(std::string challenge_id,
             break;
     }
 
-    if (motorica_signal_circuit)
+    if (motorica_training)
     {
-        // The standalone IPA intentionally contains only Motorica Kiki.
-        // Do not ask the generic random-kart selector to fill these slots:
-        // it first looks for standard karts (for example Tux) before applying
-        // the challenge override, which leaves the transition half-finished.
-        const int ai_count = RaceManager::get()->getNumberOfKarts() - 1;
-        RaceManager::get()->setAIKartList(
-            std::vector<std::string>(ai_count, "motorica_kiki"));
-        Log::info("MotoricaHub", "Prepared %d Motorica Kiki AI karts",
-                  ai_count);
+        // Signal Lab exercises are individual training sessions.  Keeping
+        // the AI list empty also prevents the standalone package from
+        // resolving any kart from the full Motorica Start asset catalogue.
+        RaceManager::get()->setAIKartList(std::vector<std::string>());
+#ifdef IOS_STK
+        MotoricaStandaloneTraining::get()->beginRace();
+#endif
+        Log::info("MotoricaHub", "Prepared standalone Signal Lab exercise");
     }
-    else
-    {
-        RaceManager::get()->setupPlayerKartInfo();
-    }
+
+    // Use the normal RaceManager lifecycle for every race, including Signal
+    // Lab. With one configured kart this adds no AI, but it guarantees that
+    // RemoteKartInfo and the subsequent KartStatus entry are constructed in
+    // exactly the same way as in the upstream single-player flow.
+    RaceManager::get()->setupPlayerKartInfo();
     RaceManager::get()->startNew(true);
     irr_driver->hidePointer();
     return true;
@@ -221,9 +262,9 @@ SelectChallengeDialog::SelectChallengeDialog(const float percentWidth,
     GUIEngine::RibbonWidget* difficulty =
         getWidget<GUIEngine::RibbonWidget>("difficulty");
 
-    const bool motorica_signal_circuit =
-        m_challenge_id == "motorica_signal_circuit";
-    if (motorica_signal_circuit)
+    const bool motorica_training =
+        isMotoricaTrainingChallenge(m_challenge_id);
+    if (motorica_training)
     {
         difficulty->setSelection(RaceManager::DIFFICULTY_MEDIUM,
                                  PLAYER_ID_GAME_MASTER);
@@ -245,7 +286,7 @@ SelectChallengeDialog::SelectChallengeDialog(const float percentWidth,
     LabelWidget* challenge_info = getWidget<LabelWidget>("challenge_info");
     
     const RaceManager::Difficulty displayed_difficulty =
-        motorica_signal_circuit ? RaceManager::DIFFICULTY_MEDIUM
+        motorica_training ? RaceManager::DIFFICULTY_MEDIUM
                                 : static_cast<RaceManager::Difficulty>(
                                       (int)UserConfigParams::m_difficulty);
     switch (displayed_difficulty)
@@ -384,7 +425,7 @@ GUIEngine::EventPropagation SelectChallengeDialog::processEvent(const std::strin
 
     if (eventSource == "difficulty")
     {
-        if (m_challenge_id == "motorica_signal_circuit")
+        if (isMotoricaTrainingChallenge(m_challenge_id))
             return GUIEngine::EVENT_BLOCK;
 
         const std::string& selected =

@@ -24,10 +24,30 @@ std::string irr::CIrrDeviceiOS::getSystemLanguageCode()
 }
 void irr::CIrrDeviceiOS::openURLiOS(const char* url)
 {
-    UIApplication* application = [UIApplication sharedApplication];
-    NSString* url_nsstring = [NSString stringWithCString:url encoding:NSUTF8StringEncoding];
-    NSURL* nsurl_val = [NSURL URLWithString:url_nsstring];
-    [application openURL:nsurl_val];
+    if (url == nullptr)
+        return;
+
+    NSString* url_string = [NSString stringWithUTF8String:url];
+    NSURL* value = [NSURL URLWithString:url_string];
+    if (value == nil)
+    {
+        NSLog(@"Motorica: rejected invalid URL: %@", url_string);
+        return;
+    }
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIApplication* application = UIApplication.sharedApplication;
+        if (![application canOpenURL:value])
+        {
+            NSLog(@"Motorica: no application can open URL: %@", value);
+            return;
+        }
+        [application openURL:value options:@{}
+            completionHandler:^(BOOL success) {
+                if (!success)
+                    NSLog(@"Motorica: failed to open URL: %@", value);
+            }];
+    });
 }
 void irr::CIrrDeviceiOS::debugPrint(const char* line)
 {

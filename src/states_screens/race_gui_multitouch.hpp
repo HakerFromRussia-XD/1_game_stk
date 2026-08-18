@@ -69,6 +69,8 @@ private:
     void createSpectatorGUI();
     void close();
     static void onCustomButtonPress(unsigned int button_id, bool pressed);
+    static void onMotoricaSignalButtonPress(unsigned int button_id,
+                                            bool pressed);
 
 public:
      RaceGUIMultitouch(RaceGUIBase* race_gui);

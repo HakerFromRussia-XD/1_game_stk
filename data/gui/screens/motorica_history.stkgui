@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stkgui>
+    <icon-button id="back" x="1%" y="1%" height="9%" icon="gui/icons/back.png"/>
+    <div x="7%" y="5%" width="86%" height="90%" layout="vertical-row">
+        <header id="history_title" width="100%" height="fit" align="center"
+                raw_text="Training History"/>
+        <spacer width="10" height="3%"/>
+        <list id="history_list" width="100%" height="82%"/>
+    </div>
+</stkgui>

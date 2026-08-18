@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scene>
+  <track model="signal_lab_track.spm" x="0" y="0" z="0">
+    <static-object id="signal_gate_1" model="signal_gate.spm" xyz="0.00 0.08 62.00" hpr="0.0 -114.34 0.0" scale="1 1 1" interaction="ghost" skeletal-animation="false" />
+    <static-object id="signal_gate_2" model="signal_gate.spm" xyz="-42.00 0.08 43.00" hpr="0.0 -166.37 0.0" scale="1 1 1" interaction="ghost" skeletal-animation="false" />
+    <static-object id="signal_gate_3" model="signal_gate.spm" xyz="-50.00 0.08 10.00" hpr="0.0 -161.03 0.0" scale="1 1 1" interaction="ghost" skeletal-animation="false" />
+    <static-object id="signal_gate_4" model="signal_gate.spm" xyz="-61.00 0.08 -22.00" hpr="0.0 135.00 0.0" scale="1 1 1" interaction="ghost" skeletal-animation="false" />
+    <static-object id="signal_gate_5" model="signal_gate.spm" xyz="-34.00 0.08 -49.00" hpr="0.0 88.32 0.0" scale="1 1 1" interaction="ghost" skeletal-animation="false" />
+    <static-object id="signal_gate_6" model="signal_gate.spm" xyz="0.00 0.08 -48.00" hpr="0.0 68.20 0.0" scale="1 1 1" interaction="ghost" skeletal-animation="false" />
+    <static-object id="signal_gate_7" model="signal_gate.spm" xyz="25.00 0.08 -38.00" hpr="0.0 72.12 0.0" scale="1 1 1" interaction="ghost" skeletal-animation="false" />
+    <static-object id="signal_gate_8" model="signal_gate.spm" xyz="56.00 0.08 -28.00" hpr="0.0 -3.18 0.0" scale="1 1 1" interaction="ghost" skeletal-animation="false" />
+    <static-object id="signal_gate_9" model="signal_gate.spm" xyz="54.00 0.08 8.00" hpr="0.0 17.74 0.0" scale="1 1 1" interaction="ghost" skeletal-animation="false" />
+    <static-object id="signal_gate_10" model="signal_gate.spm" xyz="62.00 0.08 33.00" hpr="0.0 -54.64 0.0" scale="1 1 1" interaction="ghost" skeletal-animation="false" />
+    <static-object id="signal_gate_11" model="signal_gate.spm" xyz="31.00 0.08 55.00" hpr="0.0 -62.24 0.0" scale="1 1 1" interaction="ghost" skeletal-animation="false" />
+    <static-object id="signal_gate_12" model="signal_gate.spm" xyz="12.00 0.08 65.00" hpr="0.0 -104.04 0.0" scale="1 1 1" interaction="ghost" skeletal-animation="false" />
+    <static-object id="exercise_panel_1" model="signal_panel.spm" xyz="-22.00 0.26 2.00" hpr="0.0 90.00 0.0" scale="1 1 1" interaction="ghost" skeletal-animation="false" />
+    <static-object id="exercise_panel_2" model="signal_panel.spm" xyz="8.00 0.26 3.00" hpr="0.0 90.00 0.0" scale="1 1 1" interaction="ghost" skeletal-animation="false" />
+    <static-object id="exercise_panel_3" model="signal_panel.spm" xyz="38.00 0.26 5.00" hpr="0.0 90.00 0.0" scale="1 1 1" interaction="ghost" skeletal-animation="false" />
+  </track>
+  <sun fog="true" fog-color="5 8 26" fog-max="0.72" fog-start="75" fog-end="330" xyz="-80 210 160" sun-diffuse="54 72 130" ambient="38 46 92" />
+  <sky-color rgb="4 6 20" />
+  <camera far="500" />
+  <checks>
+    <check-lap kind="lap" same-group="0" other-ids="1" />
+    <check-line kind="activate" other-ids="2" p1="-54.238 -20.272" p2="-67.762 -23.728" min-height="-1.000" same-group="1" />
+    <check-line kind="activate" other-ids="3" p1="23.289 -32.857" p2="26.711 -43.143" min-height="-1.000" same-group="2" />
+    <check-line kind="activate" other-ids="0" p1="56.435 30.267" p2="67.565 35.733" min-height="-1.000" same-group="3" />
+  </checks>
+  <default-start karts-per-row="2" forwards-distance="1.50" sidewards-distance="3.00" upwards-distance="0.10" />
+  <start x="5.433" y="0.180" z="63.138" h="-121.72" />
+  <start x="3.907" y="0.180" z="66.398" h="-121.72" />
+  <start x="7.813" y="0.180" z="64.225" h="-108.14" />
+  <start x="6.637" y="0.180" z="67.628" h="-108.14" />
+  <start x="9.060" y="0.180" z="63.745" h="-69.13" />
+  <start x="9.362" y="0.180" z="67.333" h="-69.13" />
+  <start x="11.403" y="0.180" z="62.624" h="-68.16" />
+  <start x="12.281" y="0.180" z="66.116" h="-68.16" />
+  <object id="motorica_route_left_0" type="animation" xyz="2.281 0.180 56.235" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_right_0" type="animation" xyz="-2.281 0.180 67.765" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_left_6" type="animation" xyz="-29.918 0.180 42.943" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_right_6" type="animation" xyz="-36.457 0.180 55.276" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_left_12" type="animation" xyz="-42.547 0.180 26.744" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_right_12" type="animation" xyz="-53.328 0.180 27.881" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_left_18" type="animation" xyz="-47.878 0.180 -0.949" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_right_18" type="animation" xyz="-58.981 0.180 4.574" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_left_24" type="animation" xyz="-54.238 0.180 -20.272" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_right_24" type="animation" xyz="-67.762 0.180 -23.728" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_left_30" type="animation" xyz="-39.018 0.180 -39.899" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_right_30" type="animation" xyz="-45.247 0.180 -48.772" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_left_36" type="animation" xyz="-17.430 0.180 -44.637" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_right_36" type="animation" xyz="-16.320 0.180 -56.988" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_left_42" type="animation" xyz="4.360 0.180 -39.572" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_right_42" type="animation" xyz="9.124 0.180 -52.693" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_left_48" type="animation" xyz="23.289 0.180 -32.857" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_right_48" type="animation" xyz="26.711 0.180 -43.143" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_left_54" type="animation" xyz="47.919 0.180 -26.659" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_right_54" type="animation" xyz="52.941 0.180 -37.997" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_left_60" type="animation" xyz="49.562 0.180 -12.137" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_right_60" type="animation" xyz="63.313 0.180 -9.738" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_left_66" type="animation" xyz="51.326 0.180 17.443" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_right_66" type="animation" xyz="61.096 0.180 12.745" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_left_72" type="animation" xyz="56.435 0.180 30.267" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_right_72" type="animation" xyz="67.565 0.180 35.733" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_left_78" type="animation" xyz="35.356 0.180 44.355" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_right_78" type="animation" xyz="42.284 0.180 56.473" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_left_84" type="animation" xyz="17.702 0.180 56.812" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_right_84" type="animation" xyz="22.923 0.180 66.313" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_left_90" type="animation" xyz="8.691 0.180 59.361" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <object id="motorica_route_right_90" type="animation" xyz="9.731 0.180 71.717" hpr="0.0 0.0 0.0" scale="0.42 0.42 0.42" interaction="ghost" model="signal_marker.spm" skeletal-animation="false" />
+  <default-start karts-per-row="1" forwards-distance="2.0" sidewards-distance="3.0" upwards-distance="0.2" />
+  <start x="0.0" y="0.30" z="56.0" h="-115.0" />
+</scene>

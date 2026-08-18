@@ -62,6 +62,9 @@
 #include "guiengine/screen_keyboard.hpp"
 #include "guiengine/skin.hpp"
 #include "io/file_manager.hpp"
+#ifdef IOS_STK
+#include "input/motorica_game_control_ios.hpp"
+#endif
 #include "items/item_manager.hpp"
 #include "items/powerup_manager.hpp"
 #include "items/attachment_manager.hpp"
@@ -1213,8 +1216,16 @@ void IrrDriver::commonInit()
     GUIEngine::addLoadingIcon(irr_driver->getTexture(FileManager::GUI_ICON, "banana.png"));
 
     kart_properties_manager->loadAllKarts();
+    std::string startup_kart = UserConfigParams::m_default_kart;
+#ifdef IOS_STK
+    // The standalone bundle intentionally has no STK kart catalogue.  Do not
+    // mutate the saved default kart: a later motorica-stk:// launch must see
+    // exactly the same preference and full-catalogue behaviour as before.
+    if (isMotoricaStandaloneModeIOS())
+        startup_kart = "motorica_signal_pilot";
+#endif
     kart_properties_manager->onDemandLoadKartTextures(
-        { UserConfigParams::m_default_kart }, false/*unload_unused*/);
+        { startup_kart }, false/*unload_unused*/);
     kart_properties_manager->setHatMeshName();
 }   // commonInit
 

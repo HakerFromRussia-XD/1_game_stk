@@ -67,6 +67,7 @@
 #include "states_screens/main_menu_screen.hpp"
 #ifdef IOS_STK
 #include "input/motorica_game_control_ios.hpp"
+#include "input/motorica_standalone_training.hpp"
 #include "states_screens/motorica_hub_screen.hpp"
 #endif
 #include "states_screens/online/networking_lobby.hpp"
@@ -82,14 +83,70 @@
 #include "main_loop.hpp"
 
 #include <algorithm>
+#include <sstream>
 
 namespace
 {
+#ifdef IOS_STK
+bool useRussianMotoricaResult()
+{
+    if (translations == nullptr)
+        return false;
+    const std::string code = translations->getCurrentLanguageNameCode();
+    return code == "ru" || code.find("ru_") == 0 ||
+           code.find("ru-") == 0;
+}
+
+std::string metricValue(const std::string& metrics, const std::string& key)
+{
+    const std::string prefix = key + "=";
+    const size_t start = metrics.find(prefix);
+    if (start == std::string::npos)
+        return "0";
+    const size_t value_start = start + prefix.size();
+    const size_t end = metrics.find(';', value_start);
+    return metrics.substr(value_start, end == std::string::npos ?
+        std::string::npos : end - value_start);
+}
+
+core::stringw trainingMetricsText(const StandaloneTrainingResult& result)
+{
+    std::ostringstream output;
+    const bool russian = useRussianMotoricaResult();
+    if (result.exercise_id == "precision")
+    {
+        output << (russian ? "Ворота: " : "Gates: ")
+               << metricValue(result.metrics, "gates") << "/12   "
+               << (russian ? "Пропуски: " : "Missed: ")
+               << metricValue(result.metrics, "missed") << "   "
+               << (russian ? "Столкновения: " : "Collisions: ")
+               << metricValue(result.metrics, "collisions");
+    }
+    else if (result.exercise_id == "reaction")
+    {
+        output << (russian ? "Верно: " : "Correct: ")
+               << metricValue(result.metrics, "correct") << "/20   "
+               << (russian ? "Ошибки: " : "Errors: ")
+               << metricValue(result.metrics, "errors") << "   "
+               << (russian ? "Медиана: " : "Median: ")
+               << metricValue(result.metrics, "median_ms") << " ms";
+    }
+    else
+    {
+        output << (russian ? "Удержание: " : "Hold: ")
+               << metricValue(result.metrics, "hold_ms") << " ms   "
+               << (russian ? "Вне диапазона: " : "Outside range: ")
+               << metricValue(result.metrics, "overshoot_ms") << " ms";
+    }
+    return StringUtils::utf8ToWide(output.str());
+}
+#endif
+
 bool isMotoricaStandaloneRace()
 {
 #ifdef IOS_STK
     return isMotoricaStandaloneModeIOS() &&
-           RaceManager::get()->getTrackName() == "motorica_signal_circuit";
+           RaceManager::get()->getTrackName() == "motorica_signal_lab";
 #else
     return false;
 #endif
@@ -243,7 +300,20 @@ void RaceResultGUI::init()
         m_icon_bank->addTextureAsSprite(prop->getIconMaterial()->getTexture());
     }
 
-    const KartProperties* prop = kart_properties_manager->getKart("tux");
+    const KartProperties* prop = nullptr;
+    if (isMotoricaStandaloneRace() && World::getWorld()->getNumKarts() > 0)
+    {
+        // Signal Lab has a real registered player kart but intentionally does
+        // not package Tux. Use that registered kart as the default result icon
+        // instead of asking the minimal standalone catalogue for an asset that
+        // does not exist.
+        prop = World::getWorld()->getKart(0)->getKartProperties();
+    }
+    else
+    {
+        prop = kart_properties_manager->getKart("tux");
+    }
+    assert(prop != nullptr);
     m_icon_default_kart = m_icon_bank->addTextureAsSprite(prop->getIconMaterial()->getTexture());
 
     // 128 is the height of the image file
@@ -379,16 +449,17 @@ void RaceResultGUI::enableAllButtons()
     }
 
     // The permanent standalone product has a deliberately small race loop:
-    // replay the Motorica circuit or return to the night island.  Never expose
+    // repeat the exercise or return to Motorica Hub. Never expose
     // the upstream race setup/menu from this result screen.
     if (isMotoricaStandaloneRace())
     {
         middle->setVisible(false);
         middle->setFocusable(false);
-        right->setLabel(_("Replay"));
+        right->setLabel(StringUtils::utf8ToWide(
+            useRussianMotoricaResult() ? "Повторить" : "Repeat"));
         right->setImage("gui/icons/restart.png");
         right->setVisible(true);
-        left->setLabel(_("Return to the island"));
+        left->setLabel(StringUtils::utf8ToWide("Motorica Hub"));
         left->setImage("gui/icons/back.png");
         left->setVisible(true);
         operations->select("right", PLAYER_ID_GAME_MASTER);
@@ -697,9 +768,14 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
             return;
         }
 
+        const bool motorica_training = isMotoricaStandaloneRace();
         StateManager::get()->popMenu();
         if (action == "right")        // Restart
         {
+#ifdef IOS_STK
+            if (motorica_training)
+                MotoricaStandaloneTraining::get()->prepareRepeat();
+#endif
             RaceManager::get()->rerunRace();
         }
         else if (action == "middle")                 // Setup new race
@@ -753,7 +829,19 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
 
             RaceManager::get()->exitRace();
             RaceManager::get()->setAIKartOverride("");
+#ifdef IOS_STK
+            if (motorica_training)
+                MotoricaStandaloneTraining::get()->stop();
+#endif
             resetToMotoricaRoot();
+
+#ifdef IOS_STK
+            // A standalone training always ends at the Motorica Hub. The
+            // challenge API marks it as overworld-originated for normal STK
+            // bookkeeping, which must not reopen an STK world here.
+            if (motorica_training)
+                return;
+#endif
 
             if (RaceManager::get()->raceWasStartedFromOverworld())
             {
@@ -1416,6 +1504,32 @@ void RaceResultGUI::renderGlobal(float dt)
     {
         displayPostRaceInfo();
     }
+
+#ifdef IOS_STK
+    if (isMotoricaStandaloneRace())
+    {
+        const StandaloneTrainingResult& result =
+            MotoricaStandaloneTraining::get()->getLastResult();
+        const int width = UserConfigParams::m_width;
+        const int height = UserConfigParams::m_height;
+        const core::rect<s32> panel(width / 8, height * 62 / 100,
+                                    width * 7 / 8, height * 76 / 100);
+        GL32_draw2DRectangle(video::SColor(225, 7, 16, 34), panel);
+        std::ostringstream score;
+        score << (useRussianMotoricaResult() ? "РЕЗУЛЬТАТ  " : "TRAINING SCORE  ")
+              << result.score << " / 1000";
+        core::rect<s32> score_rect(panel.UpperLeftCorner.X,
+            panel.UpperLeftCorner.Y + 4, panel.LowerRightCorner.X,
+            panel.UpperLeftCorner.Y + panel.getHeight() / 2);
+        GUIEngine::getTitleFont()->draw(StringUtils::utf8ToWide(score.str()),
+            score_rect, video::SColor(255, 193, 255, 56), true, true);
+        core::rect<s32> details_rect(panel.UpperLeftCorner.X,
+            panel.UpperLeftCorner.Y + panel.getHeight() / 2,
+            panel.LowerRightCorner.X, panel.LowerRightCorner.Y - 4);
+        GUIEngine::getSmallFont()->draw(trainingMetricsText(result),
+            details_rect, video::SColor(255, 235, 241, 255), true, true);
+    }
+#endif
 }   // renderGlobal
 
 //-----------------------------------------------------------------------------

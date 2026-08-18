@@ -30,15 +30,58 @@ using namespace irr;
 #include "guiengine/scalable_font.hpp"
 #include "input/device_manager.hpp"
 #include "input/motorica_game_control.hpp"
+#ifdef IOS_STK
+#include "input/motorica_standalone_training.hpp"
+#endif
 #include "input/multitouch_device.hpp"
 #include "items/powerup.hpp"
 #include "karts/abstract_kart.hpp"
 #include "karts/controller/kart_control.hpp"
+#include "modes/world.hpp"
 #include "network/protocols/client_lobby.hpp"
 #include "states_screens/race_gui_base.hpp"
 #include "utils/log.hpp"
+#include "utils/string_utils.hpp"
+#include "utils/translation.hpp"
 
 #include <IrrlichtDevice.h>
+
+#ifdef IOS_STK
+namespace
+{
+bool motoricaUseRussian()
+{
+    if (translations == nullptr)
+        return false;
+    const std::string code = translations->getCurrentLanguageNameCode();
+    return code == "ru" || code.find("ru_") == 0 ||
+           code.find("ru-") == 0;
+}
+
+std::string motoricaExerciseLabel(StandaloneExerciseID exercise,
+                                  bool russian)
+{
+    if (exercise == StandaloneExerciseID::Precision)
+        return russian ? "ТОЧНОСТЬ" : "PRECISION";
+    if (exercise == StandaloneExerciseID::Reaction)
+        return russian ? "РЕАКЦИЯ" : "REACTION";
+    return russian ? "УДЕРЖАНИЕ" : "SIGNAL HOLD";
+}
+
+std::string motoricaPhaseLabel(const std::string& phase, bool russian)
+{
+    if (phase == "disconnected") return russian ? "НЕТ СИГНАЛА" : "NO SIGNAL";
+    if (phase == "calibration_rest") return russian ? "КАЛИБРОВКА: ПОКОЙ" : "CALIBRATION: REST";
+    if (phase == "calibration_open") return russian ? "КАЛИБРОВКА: ОТКРЫТИЕ" : "CALIBRATION: OPEN";
+    if (phase == "calibration_close") return russian ? "КАЛИБРОВКА: ЗАКРЫТИЕ" : "CALIBRATION: CLOSE";
+    if (phase == "control") return russian ? "УПРАВЛЕНИЕ" : "CONTROL";
+    if (phase == "signal_lost") return russian ? "ПОТЕРЯ СИГНАЛА — ПАУЗА" : "SIGNAL LOST — PAUSED";
+    if (phase == "restored") return russian ? "СИГНАЛ ВОССТАНОВЛЕН" : "SIGNAL RESTORED";
+    if (phase == "manual") return russian ? "РУЧНЫЕ СИГНАЛЫ" : "MANUAL SIGNALS";
+    return russian ? "ЭКРАН / ГИРОСКОП" : "TOUCH / GYROSCOPE";
+}
+}
+#endif
 
 //-----------------------------------------------------------------------------
 /** The multitouch GUI constructor
@@ -188,6 +231,28 @@ void RaceGUIMultitouch::createRaceGUI()
 {
     if (m_device == NULL)
         return;
+
+#ifdef IOS_STK
+    if (MotoricaStandaloneTraining::get()->usesSimulatedSignals())
+    {
+        const int width = irr_driver->getActualScreenSize().Width;
+        const int height = irr_driver->getActualScreenSize().Height;
+        const int size = std::max(62, (int)(height * 0.13f));
+        const int gap = std::max(16, (int)(height * 0.035f));
+        const int total = size * 4 + gap * 3;
+        const int start_x = (width - total) / 2;
+        const int y = height - size - gap;
+        m_device->addButton(BUTTON_ESCAPE, gap, gap, size, size);
+        for (int index = 0; index < 4; index++)
+        {
+            m_device->addButton(BUTTON_CUSTOM,
+                start_x + index * (size + gap), y, size, size,
+                onMotoricaSignalButtonPress);
+        }
+        m_height = size + gap * 2;
+        return;
+    }
+#endif
         
     if (UserConfigParams::m_multitouch_controls == MULTITOUCH_CONTROLS_ACCELEROMETER)
     {
@@ -354,6 +419,37 @@ void RaceGUIMultitouch::onCustomButtonPress(unsigned int button_id,
                                  Input::IT_KEYBOARD);
         break;
     }
+}
+
+//-----------------------------------------------------------------------------
+void RaceGUIMultitouch::onMotoricaSignalButtonPress(unsigned int button_id,
+                                                    bool pressed)
+{
+#ifdef IOS_STK
+    MotoricaStandaloneTraining* training = MotoricaStandaloneTraining::get();
+    switch (button_id)
+    {
+    case 1:
+        training->setManualSignal(true, pressed);
+        break;
+    case 2:
+        training->setManualSignal(false, pressed);
+        break;
+    case 3:
+        if (pressed)
+            training->toggleConnection();
+        break;
+    case 4:
+        if (pressed)
+            training->toggleScript();
+        break;
+    default:
+        break;
+    }
+#else
+    (void)button_id;
+    (void)pressed;
+#endif
 }
 
 //-----------------------------------------------------------------------------
@@ -584,6 +680,26 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
                 draw2DImage(btn_texture, btn_pos, coords, NULL, NULL, true);
             }
 
+#ifdef IOS_STK
+            if (button->type == MultitouchButtonType::BUTTON_CUSTOM &&
+                MotoricaStandaloneTraining::get()->usesSimulatedSignals())
+            {
+                const bool russian = motoricaUseRussian();
+                const char* label = button->id == 1 ?
+                    (russian ? "ОТКР" : "OPEN") : button->id == 2 ?
+                    (russian ? "ЗАКР" : "CLOSE") : button->id == 3 ?
+                    (russian ? "СВЯЗЬ" : "LINK") :
+                    (russian ? "АВТО" : "AUTO");
+                core::rect<s32> label_rect(button->x - button->width / 3,
+                    button->y + button->height * 3 / 4,
+                    button->x + button->width * 4 / 3,
+                    button->y + button->height * 5 / 4);
+                GUIEngine::getSmallFont()->draw(
+                    StringUtils::utf8ToWide(label), label_rect,
+                    video::SColor(255, 235, 241, 255), true, true);
+            }
+#endif
+
             if (button->type == MultitouchButtonType::BUTTON_NITRO &&
                 m_race_gui != NULL)
             {
@@ -614,5 +730,100 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
             }
         }
     }
+
+#ifdef IOS_STK
+    MotoricaStandaloneTraining* training = MotoricaStandaloneTraining::get();
+    if (training->isActive())
+    {
+        const int width = irr_driver->getActualScreenSize().Width;
+        const int height = irr_driver->getActualScreenSize().Height;
+        const float world_time = World::getWorld()->getTime();
+        const float demo_elapsed = training->getDemoElapsed(world_time);
+        const float exercise_elapsed = training->getExerciseElapsed(world_time);
+        const SimulatedSignalFrame& signal = training->getSignal();
+        core::rect<s32> panel(width / 2 - width / 4, height / 35,
+                              width / 2 + width / 4, height / 5);
+        GL32_draw2DRectangle(video::SColor(205, 8, 16, 35), panel);
+
+        const bool russian = motoricaUseRussian();
+        std::string title = "SIGNAL LAB | " + motoricaExerciseLabel(
+            training->getExercise(), russian);
+        if (training->usesSimulatedSignals())
+        {
+            title += " | ";
+            title += motoricaPhaseLabel(training->getPhaseName(demo_elapsed),
+                                        russian);
+        }
+        title += " | " + StringUtils::toString(
+            training->getProgressCount(exercise_elapsed)) + "/" +
+            StringUtils::toString(training->getProgressTotal());
+        gui::ScalableFont* font = GUIEngine::getSmallFont();
+        core::rect<s32> title_rect(panel.UpperLeftCorner.X,
+            panel.UpperLeftCorner.Y + 4, panel.LowerRightCorner.X,
+            panel.UpperLeftCorner.Y + height / 18);
+        font->draw(StringUtils::utf8ToWide(title), title_rect,
+            video::SColor(255, 193, 255, 56), true, true);
+
+        if (training->usesSimulatedSignals())
+        {
+            const int bar_y = panel.UpperLeftCorner.Y + height / 16;
+            const int bar_height = std::max(8, height / 70);
+            const int bar_width = panel.getWidth() / 3;
+            const int gap = panel.getWidth() / 12;
+            core::rect<s32> open_bg(panel.UpperLeftCorner.X + gap, bar_y,
+                panel.UpperLeftCorner.X + gap + bar_width, bar_y + bar_height);
+            core::rect<s32> close_bg(panel.LowerRightCorner.X - gap - bar_width,
+                bar_y, panel.LowerRightCorner.X - gap, bar_y + bar_height);
+            GL32_draw2DRectangle(video::SColor(255, 30, 38, 62), open_bg);
+            GL32_draw2DRectangle(video::SColor(255, 30, 38, 62), close_bg);
+            open_bg.LowerRightCorner.X = open_bg.UpperLeftCorner.X +
+                (int)(bar_width * signal.open_level / 255.0f);
+            close_bg.LowerRightCorner.X = close_bg.UpperLeftCorner.X +
+                (int)(bar_width * signal.close_level / 255.0f);
+            GL32_draw2DRectangle(video::SColor(255, 190, 66, 255), open_bg);
+            GL32_draw2DRectangle(video::SColor(255, 0, 222, 255), close_bg);
+        }
+
+        std::string direction_line;
+        if (training->usesSimulatedSignals())
+        {
+            const float calculated = training->getCalculatedAxis();
+            const char* direction = calculated < -0.15f ? "◀" :
+                                    calculated > 0.15f ? "▶" : "●";
+            direction_line = (russian ? "СИГНАЛ: " : "SIGNAL: ") +
+                             std::string(direction);
+        }
+        if (training->getExercise() != StandaloneExerciseID::Precision)
+        {
+            const float target = training->getTargetAxis(exercise_elapsed);
+            const char* target_direction = target < -0.15f ? "◀" :
+                                           target > 0.15f ? "▶" : "●";
+            if (!direction_line.empty())
+                direction_line += "    ";
+            direction_line += (russian ? "ЦЕЛЬ: " : "TARGET: ") +
+                              std::string(target_direction);
+        }
+        if (!direction_line.empty())
+        {
+            core::rect<s32> target_rect(panel.UpperLeftCorner.X,
+                panel.UpperLeftCorner.Y + height / 10,
+                panel.LowerRightCorner.X, panel.LowerRightCorner.Y);
+            font->draw(StringUtils::utf8ToWide(direction_line), target_rect,
+                video::SColor(255, 0, 222, 255), true, true);
+        }
+
+        if (training->isTrainingPaused(world_time))
+        {
+            const core::rect<s32> pause_panel(width / 2 - width / 5,
+                panel.LowerRightCorner.Y + height / 60,
+                width / 2 + width / 5,
+                panel.LowerRightCorner.Y + height / 11);
+            GL32_draw2DRectangle(video::SColor(228, 92, 12, 28), pause_panel);
+            font->draw(StringUtils::utf8ToWide(russian ?
+                "ТРЕНИРОВКА НА ПАУЗЕ" : "TRAINING PAUSED"), pause_panel,
+                video::SColor(255, 255, 255, 255), true, true);
+        }
+    }
+#endif
 #endif
 } // draw

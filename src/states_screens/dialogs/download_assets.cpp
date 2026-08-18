@@ -285,6 +285,27 @@ GUIEngine::EventPropagation DownloadAssets::processEvent(const std::string& even
                     "the full Motorica Start content catalog."));
                 return GUIEngine::EVENT_BLOCK;
             }
+
+            // This button is the explicit user consent to download the
+            // optional Motorica Start content package. A fresh standalone
+            // installation can still have STK's global internet permission
+            // set to IPERM_NOT_ALLOWED; in that state RequestManager silently
+            // rejects the request before libcurl is ever started. Enable and
+            // persist network access only here, after the user has chosen to
+            // install the package in Motorica Start mode.
+            if (isMotoricaGameControlEnabledIOS() &&
+                UserConfigParams::m_internet_status !=
+                    RequestManager::IPERM_ALLOWED)
+            {
+                UserConfigParams::m_internet_status =
+                    RequestManager::IPERM_ALLOWED;
+                user_config->saveConfig();
+                if (!RequestManager::isRunning())
+                    RequestManager::get()->startNetworkThread();
+                Log::info("DownloadAssets",
+                    "Network access enabled by explicit Motorica asset "
+                    "download consent.");
+            }
 #endif
             m_progress->setValue(0);
             m_progress->setVisible(true);
@@ -364,6 +385,8 @@ void DownloadAssets::startDownload()
     const bool reuse_existing_archive = file_manager->fileExists(archive);
     m_download_request = std::make_shared<DownloadAssetsRequest>(
         reuse_existing_archive);
+    Log::info("DownloadAssets", "Queueing pinned Motorica asset archive: %s",
+        MotoricaAssetsManifest::ARCHIVE_URL);
 #else
     m_download_request = std::make_shared<DownloadAssetsRequest>();
 #endif

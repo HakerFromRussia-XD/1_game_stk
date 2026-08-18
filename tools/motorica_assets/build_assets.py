@@ -14,8 +14,11 @@ import math
 import os
 from pathlib import Path, PurePosixPath
 import shutil
+import struct
+import subprocess
 import sys
 import tempfile
+import wave
 import xml.etree.ElementTree as ET
 import zipfile
 
@@ -252,19 +255,13 @@ def configure_track_xml(path: Path, name: str, designer: str, *, internal: bool)
 
 def build_signal_route() -> list[tuple[tuple[float, float, float],
                                        tuple[float, float, float]]]:
-    """Create a Motorica-only circuit on the open soccer-field surface.
-
-    The field supplies only the licensed collision floor and perimeter.  The
-    route, spline sampling, variable-width cross sections, quads and graph are
-    generated here and do not reuse another STK race's driveline.
-    """
+    """Create the original Signal Lab waveform route from control points."""
     controls = [
-        (0.0, 45.0), (-24.0, 40.0), (-35.0, 20.0), (-21.0, -2.0),
-        (-35.0, -29.0), (-18.0, -49.0), (5.0, -43.0),
-        (29.0, -50.0), (36.0, -25.0), (21.0, -4.0),
-        (36.0, 19.0), (24.0, 41.0),
+        (0.0, 62.0), (-42.0, 43.0), (-50.0, 10.0), (-61.0, -22.0),
+        (-34.0, -49.0), (0.0, -48.0), (25.0, -38.0), (56.0, -28.0),
+        (54.0, 8.0), (62.0, 33.0), (31.0, 55.0), (12.0, 65.0),
     ]
-    samples_per_segment = 6
+    samples_per_segment = 8
     centers: list[tuple[float, float]] = []
     count = len(controls)
     for index in range(count):
@@ -395,7 +392,7 @@ def append_signal_race_nodes(scene: ET.Element,
                 "hpr": "0.0 0.0 0.0",
                 "scale": "0.42 0.42 0.42",
                 "interaction": "ghost",
-                "model": "crystal_ball.spm",
+                "model": "signal_marker.spm",
                 "skeletal-animation": "false",
             })
 
@@ -623,6 +620,366 @@ def build_signal_circuit(source: Path, overlay: Path) -> None:
         output.write((overworld / "licenses.txt").read_text(encoding="utf-8"))
 
 
+def write_spm(path: Path, materials: list[str],
+              buffers: list[tuple[int, list[tuple[float, float, float, float, float]],
+                                  list[int]]]) -> None:
+    """Write a small static SPM v1 mesh accepted by STK's native loader."""
+    all_vertices = [vertex for _, vertices, _ in buffers for vertex in vertices]
+    if not all_vertices:
+        fail(f"Cannot write empty SPM: {path}")
+    xs = [vertex[0] for vertex in all_vertices]
+    ys = [vertex[1] for vertex in all_vertices]
+    zs = [vertex[2] for vertex in all_vertices]
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("wb") as output:
+        output.write(b"SP")
+        output.write(struct.pack("<B", (1 << 3) | 2))  # version 1, SPMN
+        output.write(struct.pack("<B", 0))  # implicit up normal, white color
+        output.write(struct.pack("<6f", min(xs), min(ys), min(zs),
+                                 max(xs), max(ys), max(zs)))
+        output.write(struct.pack("<H", len(materials)))
+        for material in materials:
+            encoded = material.encode("utf-8")
+            if len(encoded) > 255:
+                fail(f"SPM material name too long: {material}")
+            output.write(struct.pack("<B", len(encoded)))
+            output.write(encoded)
+            output.write(b"\x00")  # no second UV texture
+        output.write(struct.pack("<H", 1))  # one mesh sector
+        output.write(struct.pack("<H", len(buffers)))
+        for material_id, vertices, indices in buffers:
+            output.write(struct.pack("<IIH", len(vertices), len(indices),
+                                     material_id))
+            for x, y, z, u, v in vertices:
+                output.write(struct.pack("<3f", x, y, z))
+                output.write(struct.pack("<ee", u, v))
+            index_format = "B" if len(vertices) <= 255 else "H"
+            output.write(struct.pack("<" + index_format * len(indices),
+                                     *indices))
+
+
+def add_box(vertices: list[tuple[float, float, float, float, float]],
+            indices: list[int], center: tuple[float, float, float],
+            size: tuple[float, float, float]) -> None:
+    cx, cy, cz = center
+    sx, sy, sz = (value / 2.0 for value in size)
+    start = len(vertices)
+    vertices.extend([
+        (cx - sx, cy - sy, cz - sz, 0.0, 0.0),
+        (cx + sx, cy - sy, cz - sz, 1.0, 0.0),
+        (cx + sx, cy + sy, cz - sz, 1.0, 1.0),
+        (cx - sx, cy + sy, cz - sz, 0.0, 1.0),
+        (cx - sx, cy - sy, cz + sz, 0.0, 0.0),
+        (cx + sx, cy - sy, cz + sz, 1.0, 0.0),
+        (cx + sx, cy + sy, cz + sz, 1.0, 1.0),
+        (cx - sx, cy + sy, cz + sz, 0.0, 1.0),
+    ])
+    faces = [
+        (0, 2, 1, 0, 3, 2), (4, 5, 6, 4, 6, 7),
+        (0, 1, 5, 0, 5, 4), (3, 7, 6, 3, 6, 2),
+        (1, 2, 6, 1, 6, 5), (0, 4, 7, 0, 7, 3),
+    ]
+    for face in faces:
+        indices.extend(start + index for index in face)
+
+
+def build_signal_lab_track(overlay: Path) -> None:
+    destination = overlay / "tracks" / "motorica_signal_lab"
+    destination.mkdir(parents=True, exist_ok=True)
+    sections = build_signal_route()
+
+    road_vertices: list[tuple[float, float, float, float, float]] = []
+    road_indices: list[int] = []
+    for index, (left, right) in enumerate(sections):
+        road_vertices.extend([
+            (left[0], 0.06, left[2], 0.0, index / 8.0),
+            (right[0], 0.06, right[2], 1.0, index / 8.0),
+        ])
+    for index in range(len(sections)):
+        following = (index + 1) % len(sections)
+        road_indices.extend([
+            index * 2, following * 2, index * 2 + 1,
+            index * 2 + 1, following * 2, following * 2 + 1,
+        ])
+
+    floor_vertices = [
+        (-90.0, -0.12, -78.0, 0.0, 0.0),
+        (90.0, -0.12, -78.0, 8.0, 0.0),
+        (90.0, -0.12, 78.0, 8.0, 8.0),
+        (-90.0, -0.12, 78.0, 0.0, 8.0),
+    ]
+    floor_indices = [0, 2, 1, 0, 3, 2]
+    zone_vertices: list[tuple[float, float, float, float, float]] = []
+    zone_indices: list[int] = []
+    for center, size in [((-22.0, 0.08, 2.0), (20.0, 0.35, 15.0)),
+                         ((8.0, 0.08, 3.0), (20.0, 0.35, 15.0)),
+                         ((38.0, 0.08, 5.0), (20.0, 0.35, 15.0))]:
+        add_box(zone_vertices, zone_indices, center, size)
+    write_spm(destination / "signal_lab_track.spm",
+              ["signal_road.png", "signal_floor.png", "signal_zone.png"],
+              [(0, road_vertices, road_indices),
+               (1, floor_vertices, floor_indices),
+               (2, zone_vertices, zone_indices)])
+
+    gate_vertices: list[tuple[float, float, float, float, float]] = []
+    gate_indices: list[int] = []
+    add_box(gate_vertices, gate_indices, (-6.6, 2.5, 0.0), (0.6, 5.0, 0.7))
+    add_box(gate_vertices, gate_indices, (6.6, 2.5, 0.0), (0.6, 5.0, 0.7))
+    add_box(gate_vertices, gate_indices, (0.0, 5.0, 0.0), (13.8, 0.6, 0.7))
+    write_spm(destination / "signal_gate.spm", ["signal_neon.png"],
+              [(0, gate_vertices, gate_indices)])
+
+    panel_vertices: list[tuple[float, float, float, float, float]] = []
+    panel_indices: list[int] = []
+    add_box(panel_vertices, panel_indices, (0.0, 1.6, 0.0), (5.5, 3.2, 0.45))
+    add_box(panel_vertices, panel_indices, (-3.0, 0.5, 0.0), (0.35, 1.0, 0.7))
+    add_box(panel_vertices, panel_indices, (3.0, 0.5, 0.0), (0.35, 1.0, 0.7))
+    write_spm(destination / "signal_panel.spm", ["signal_panel.png"],
+              [(0, panel_vertices, panel_indices)])
+
+    marker_vertices: list[tuple[float, float, float, float, float]] = []
+    marker_indices: list[int] = []
+    add_box(marker_vertices, marker_indices, (0.0, 0.55, 0.0),
+            (0.34, 1.10, 0.34))
+    add_box(marker_vertices, marker_indices, (0.0, 1.20, 0.0),
+            (0.80, 0.20, 0.80))
+    write_spm(destination / "signal_marker.spm", ["signal_neon.png"],
+              [(0, marker_vertices, marker_indices)])
+
+    write_signal_quads(destination, sections)
+    scene = ET.Element("scene")
+    track = ET.SubElement(scene, "track", {
+        "model": "signal_lab_track.spm", "x": "0", "y": "0", "z": "0"
+    })
+    gate_points = [
+        (0.0, 62.0), (-42.0, 43.0), (-50.0, 10.0), (-61.0, -22.0),
+        (-34.0, -49.0), (0.0, -48.0), (25.0, -38.0), (56.0, -28.0),
+        (54.0, 8.0), (62.0, 33.0), (31.0, 55.0), (12.0, 65.0),
+    ]
+    for index, (x, z) in enumerate(gate_points):
+        next_x, next_z = gate_points[(index + 1) % len(gate_points)]
+        heading = math.degrees(math.atan2(next_x - x, next_z - z))
+        ET.SubElement(track, "static-object", {
+            "id": f"signal_gate_{index + 1}", "model": "signal_gate.spm",
+            "xyz": f"{x:.2f} 0.08 {z:.2f}",
+            "hpr": f"0.0 {heading:.2f} 0.0", "scale": "1 1 1",
+            "interaction": "ghost", "skeletal-animation": "false",
+        })
+    for index, (x, z, heading) in enumerate([
+            (-22.0, 2.0, 90.0), (8.0, 3.0, 90.0), (38.0, 5.0, 90.0)]):
+        ET.SubElement(track, "static-object", {
+            "id": f"exercise_panel_{index + 1}", "model": "signal_panel.spm",
+            "xyz": f"{x:.2f} 0.26 {z:.2f}",
+            "hpr": f"0.0 {heading:.2f} 0.0", "scale": "1 1 1",
+            "interaction": "ghost", "skeletal-animation": "false",
+        })
+    ET.SubElement(scene, "sun", {
+        "fog": "true", "fog-color": "5 8 26", "fog-max": "0.72",
+        "fog-start": "75", "fog-end": "330", "xyz": "-80 210 160",
+        "sun-diffuse": "54 72 130", "ambient": "38 46 92",
+    })
+    ET.SubElement(scene, "sky-color", {"rgb": "4 6 20"})
+    ET.SubElement(scene, "camera", {"far": "500"})
+    # A lap group plus ordered activation lines prevents shortcut completion
+    # and keeps STK's track-sector/ranking logic well-defined.
+    append_signal_race_nodes(scene, sections)
+    ET.SubElement(scene, "default-start", {
+        "karts-per-row": "1", "forwards-distance": "2.0",
+        "sidewards-distance": "3.0", "upwards-distance": "0.2"
+    })
+    ET.SubElement(scene, "start", {
+        "x": "0.0", "y": "0.30", "z": "56.0", "h": "-115.0"
+    })
+    write_xml(ET.ElementTree(scene), destination / "scene.xml")
+
+    write_xml(ET.ElementTree(ET.Element("track", {
+        "name": "Motorica Signal Lab", "version": "7", "groups": "motorica",
+        "designer": "MOTORICA RESEARCH LLC",
+        "music": "motorica_signal_lab.music",
+        "screenshot": "screenshot.jpg", "smooth-normals": "false",
+        "default-number-of-laps": "3", "reverse": "N", "clouds": "N",
+        "is-during-day": "N", "shadows": "Y",
+    })), destination / "track.xml")
+    (destination / "materials.xml").write_text(
+        '<?xml version="1.0"?>\n<materials>\n'
+        '  <material name="signal_neon.png" shader="unlit" ignore="Y"/>\n'
+        '  <material name="signal_panel.png" shader="unlit" ignore="Y"/>\n'
+        '  <material name="signal_floor.png"/>\n'
+        '  <material name="signal_road.png"/>\n'
+        '  <material name="signal_zone.png" shader="unlit"/>\n'
+        '</materials>\n', encoding="utf-8")
+
+    def texture(name: str, base: tuple[int, int, int],
+                accent: tuple[int, int, int]) -> None:
+        image = Image.new("RGB", (256, 256), base)
+        draw = ImageDraw.Draw(image)
+        for step in range(0, 256, 32):
+            draw.line((step, 0, step, 255), fill=accent, width=3)
+            draw.line((0, step, 255, step), fill=accent, width=3)
+        image.save(destination / name)
+    texture("signal_road.png", (16, 22, 42), (52, 73, 122))
+    texture("signal_floor.png", (5, 8, 20), (14, 21, 42))
+    texture("signal_zone.png", (28, 12, 48), (190, 66, 255))
+    texture("signal_neon.png", (25, 12, 42), (193, 255, 56))
+    texture("signal_panel.png", (7, 29, 46), (0, 222, 255))
+    create_signal_preview(destination / "screenshot.jpg", sections)
+    preview = Image.open(destination / "screenshot.jpg").resize((512, 288))
+    preview.save(destination / "minimap.png")
+    (destination / "scripting.as").write_text(
+        "// Signal Lab uses only engine-native declarative race data.\n",
+        encoding="utf-8")
+    (destination / "licenses.txt").write_text(
+        "Motorica Signal Lab geometry, route, textures, preview and layout: "
+        "MOTORICA RESEARCH LLC, 2026. CC BY-SA 4.0.\n"
+        "Motorica Signal Lab soundtrack: MOTORICA RESEARCH LLC, 2026. "
+        "CC BY-SA 4.0.\n",
+        encoding="utf-8")
+
+
+def build_signal_lab_soundtrack(overlay: Path) -> None:
+    """Generate an original deterministic ambient loop for Signal Lab."""
+    destination = overlay / "music"
+    destination.mkdir(parents=True, exist_ok=True)
+    oggenc = shutil.which("oggenc")
+    ffmpeg = shutil.which("ffmpeg")
+    if oggenc is None and ffmpeg is None:
+        fail("oggenc or ffmpeg is required to generate the Signal Lab soundtrack")
+
+    sample_rate = 44100
+    duration_seconds = 40
+    with tempfile.TemporaryDirectory(prefix="motorica-signal-audio-") as temp:
+        wav_path = Path(temp) / "motorica_signal_lab.wav"
+        with wave.open(str(wav_path), "wb") as output:
+            output.setnchannels(2)
+            output.setsampwidth(2)
+            output.setframerate(sample_rate)
+            block = bytearray()
+            for index in range(sample_rate * duration_seconds):
+                time = index / sample_rate
+                pulse_time = time % 4.0
+                pulse = math.exp(-pulse_time * 5.0) * math.sin(
+                    2.0 * math.pi * 440.0 * time)
+                sweep = math.sin(2.0 * math.pi *
+                    (70.0 + 18.0 * math.sin(time * math.pi / 10.0)) * time)
+                carrier = math.sin(2.0 * math.pi * 110.0 * time)
+                shimmer = math.sin(2.0 * math.pi * 220.0 * time +
+                                   0.8 * math.sin(time * 0.7))
+                value = 0.12 * carrier + 0.07 * sweep + 0.045 * shimmer + \
+                        0.08 * pulse
+                pan = 0.15 * math.sin(time * 0.45)
+                left = max(-1.0, min(1.0, value * (1.0 - pan)))
+                right = max(-1.0, min(1.0, value * (1.0 + pan)))
+                block.extend(struct.pack("<hh", int(left * 32767),
+                                         int(right * 32767)))
+                if len(block) >= 16384:
+                    output.writeframesraw(block)
+                    block.clear()
+            if block:
+                output.writeframesraw(block)
+        ogg_path = destination / "motorica_signal_lab.ogg"
+        if oggenc is not None:
+            subprocess.run([
+                oggenc, "-Q", "-q", "4", "-o", str(ogg_path),
+                str(wav_path),
+            ], check=True)
+        else:
+            subprocess.run([
+                ffmpeg, "-y", "-loglevel", "error", "-i", str(wav_path),
+                "-c:a", "libvorbis", "-q:a", "4", str(ogg_path),
+            ], check=True)
+
+    (destination / "motorica_signal_lab.music").write_text(
+        '<?xml version="1.0"?>\n'
+        '<music title="Motorica Signal Lab"\n'
+        '       composer="MOTORICA RESEARCH LLC"\n'
+        '       gain="0.78"\n'
+        '       file="motorica_signal_lab.ogg"/>\n',
+        encoding="utf-8")
+    (destination / "motorica_signal_lab_license.txt").write_text(
+        "Motorica Signal Lab soundtrack: MOTORICA RESEARCH LLC, 2026. "
+        "CC BY-SA 4.0.\n", encoding="utf-8")
+
+
+def build_signal_pilot(overlay: Path) -> None:
+    destination = overlay / "karts" / "motorica_signal_pilot"
+    destination.mkdir(parents=True, exist_ok=True)
+    body_vertices: list[tuple[float, float, float, float, float]] = []
+    body_indices: list[int] = []
+    # Wide centre fuselage plus four separated hover modules make a silhouette
+    # that cannot be confused with a wheeled upstream kart.
+    add_box(body_vertices, body_indices, (0.0, 0.34, 0.0), (1.15, 0.38, 1.75))
+    add_box(body_vertices, body_indices, (0.0, 0.58, 0.28), (0.82, 0.30, 0.72))
+    add_box(body_vertices, body_indices, (-0.92, 0.22, 0.18), (0.46, 0.32, 1.42))
+    add_box(body_vertices, body_indices, (0.92, 0.22, 0.18), (0.46, 0.32, 1.42))
+    add_box(body_vertices, body_indices, (-0.72, 0.28, -0.72), (0.34, 0.25, 0.55))
+    add_box(body_vertices, body_indices, (0.72, 0.28, -0.72), (0.34, 0.25, 0.55))
+    add_box(body_vertices, body_indices, (0.0, 0.91, -0.05), (0.62, 0.55, 0.52))
+    add_box(body_vertices, body_indices, (0.0, 0.94, 0.24), (0.56, 0.20, 0.08))
+    write_spm(destination / "signal_pilot.spm", ["signal_pilot.png"],
+              [(0, body_vertices, body_indices)])
+    (destination / "kart.xml").write_text(
+        '<?xml version="1.0"?>\n'
+        '<kart name="Signal Pilot" version="3" model-file="signal_pilot.spm"\n'
+        '      icon-file="signal_pilot_icon.png"\n'
+        '      minimap-icon-file="signal_pilot_icon.png"\n'
+        '      shadow-file="signal_pilot_shadow.png" type="medium"\n'
+        '      groups="motorica" rgb="0.18 0.88 1.00">\n'
+        '  <sounds engine="small"/>\n'
+        '  <animations left="0" straight="0" right="0"/>\n'
+        '  <nitro-emitter>\n'
+        '    <nitro-emitter-a position="-0.72 0.28 -1.02"/>\n'
+        '    <nitro-emitter-b position="0.72 0.28 -1.02"/>\n'
+        '  </nitro-emitter>\n'
+        '</kart>\n', encoding="utf-8")
+    texture = Image.new("RGB", (256, 256), (7, 16, 32))
+    draw = ImageDraw.Draw(texture)
+    draw.rounded_rectangle((16, 20, 240, 236), 28, fill=(26, 49, 82),
+                           outline=(0, 222, 255), width=12)
+    draw.polygon([(128, 34), (222, 206), (128, 165), (34, 206)],
+                 fill=(190, 66, 255), outline=(193, 255, 56))
+    texture.save(destination / "signal_pilot.png")
+    icon = Image.new("RGBA", (256, 256), (4, 8, 20, 255))
+    draw = ImageDraw.Draw(icon)
+    draw.rounded_rectangle((20, 82, 236, 178), 36, fill=(22, 46, 78),
+                           outline=(0, 222, 255), width=8)
+    draw.rounded_rectangle((2, 98, 64, 204), 24, fill=(190, 66, 255),
+                           outline=(193, 255, 56), width=6)
+    draw.rounded_rectangle((192, 98, 254, 204), 24, fill=(190, 66, 255),
+                           outline=(193, 255, 56), width=6)
+    draw.polygon([(128, 42), (174, 132), (82, 132)], fill=(193, 255, 56))
+    icon.save(destination / "signal_pilot_icon.png")
+    shadow = Image.new("RGBA", (256, 256), (0, 0, 0, 0))
+    ImageDraw.Draw(shadow).ellipse((18, 70, 238, 205), fill=(0, 0, 0, 150))
+    shadow.save(destination / "signal_pilot_shadow.png")
+    (destination / "licenses.txt").write_text(
+        "Signal Pilot model, hover silhouette, textures, icon and shadow: "
+        "MOTORICA RESEARCH LLC, 2026. CC BY-SA 4.0.\n",
+        encoding="utf-8")
+
+
+def write_training_challenges(overlay: Path) -> None:
+    challenge_dir = overlay / "challenges"
+    challenge_dir.mkdir(parents=True, exist_ok=True)
+    for challenge_id, laps in [
+            ("motorica_precision", 1),
+            ("motorica_reaction", 3),
+            ("motorica_signal_hold", 2)]:
+        challenge = f'''<?xml version="1.0"?>
+<challenge version="3">
+  <unlock_list list="false"/>
+  <track id="motorica_signal_lab" laps="{laps}" reverse="false"/>
+  <mode major="single" minor="quickrace"/>
+  <requirements trophies="0"/>
+  <best><karts number="1"/><requirements position="1"/></best>
+  <hard><karts number="1"/><requirements position="1"/></hard>
+  <medium><karts number="1"/><requirements position="1"/></medium>
+  <easy><karts number="1"/><requirements position="1"/></easy>
+</challenge>
+'''
+        (challenge_dir / f"{challenge_id}.challenge").write_text(
+            challenge, encoding="utf-8")
+
+
 def write_challenge(overlay: Path) -> None:
     challenge_dir = overlay / "challenges"
     challenge_dir.mkdir(parents=True, exist_ok=True)
@@ -649,11 +1006,13 @@ This directory is the tracked source of the permanent Motorica Training Hub
 gameplay content. It is derived from the compatible `stk-assets` checkout and
 keeps each upstream `licenses.txt` file next to the reused assets.
 
-- `motorica_kiki`: separate kart ID and derived palette; original Kiki remains untouched.
-- `motorica_night_island`: standalone overworld with a Motorica-only challenge ID.
-- `motorica_signal_circuit`: generated 72-section closed route with custom
-  driveline, quads, checkpoints, starts, night styling and UFO decorations;
-  it is the fixed three-lap race used by all six island points.
+- `motorica_signal_pilot`: original static hover vehicle geometry with four
+  outboard hover modules, a visor pilot and Motorica-only materials.
+- `motorica_signal_lab`: original generated track mesh, waveform route,
+  driveline, quads, checkpoints, twelve neon gates and three exercise zones.
+- `motorica_signal_lab.music/.ogg`: original deterministic ambient soundtrack.
+- `motorica_precision`, `motorica_reaction`, `motorica_signal_hold`: three
+  independent training definitions sharing only the purpose-built Lab.
 
 Regenerate intentionally with `tools/motorica_assets/build_assets.py overlay`.
 Never edit `build-ios-assets` as a source of truth.
@@ -666,28 +1025,34 @@ def build_overlay(source: Path) -> None:
     if OVERLAY_ROOT.exists():
         shutil.rmtree(OVERLAY_ROOT)
     OVERLAY_ROOT.mkdir(parents=True)
-    build_motorica_kiki(source, OVERLAY_ROOT)
-    build_night_island(source, OVERLAY_ROOT)
-    build_signal_circuit(source, OVERLAY_ROOT)
-    write_challenge(OVERLAY_ROOT)
+    build_signal_pilot(OVERLAY_ROOT)
+    build_signal_lab_track(OVERLAY_ROOT)
+    build_signal_lab_soundtrack(OVERLAY_ROOT)
+    write_training_challenges(OVERLAY_ROOT)
     write_overlay_notes(OVERLAY_ROOT)
 
 
 def copy_overlay(base_data: Path) -> None:
     for relative in [
-        Path("karts/motorica_kiki"),
-        Path("tracks/motorica_night_island"),
-        Path("tracks/motorica_signal_circuit"),
+        Path("karts/motorica_signal_pilot"),
+        Path("tracks/motorica_signal_lab"),
     ]:
         destination = base_data / relative
         if destination.exists():
             shutil.rmtree(destination)
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copytree(OVERLAY_ROOT / relative, destination)
-    shutil.copy2(
-        OVERLAY_ROOT / "challenges" / "motorica_signal_circuit.challenge",
-        base_data / "challenges" / "motorica_signal_circuit.challenge",
-    )
+    for filename in ["motorica_signal_lab.music", "motorica_signal_lab.ogg",
+                     "motorica_signal_lab_license.txt"]:
+        destination = base_data / "music" / filename
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(OVERLAY_ROOT / "music" / filename, destination)
+    for challenge in ["motorica_precision", "motorica_reaction",
+                      "motorica_signal_hold"]:
+        shutil.copy2(
+            OVERLAY_ROOT / "challenges" / f"{challenge}.challenge",
+            base_data / "challenges" / f"{challenge}.challenge",
+        )
 
 
 def build_base_assets(mobile_base: Path, output: Path, source: Path) -> None:
@@ -726,7 +1091,10 @@ def build_base_assets(mobile_base: Path, output: Path, source: Path) -> None:
     # upstream stk-assets checkout. Always inject them into the generated
     # minimal IPA tree; otherwise the native Hub screen exists in the binary
     # but fatally fails when GUIEngine tries to load its layout on first launch.
-    motorica_screens = ["motorica_hub.stkgui", "motorica_about.stkgui"]
+    motorica_screens = [
+        "motorica_hub.stkgui", "motorica_exercise.stkgui",
+        "motorica_history.stkgui", "motorica_about.stkgui",
+    ]
     screen_directory = output / "gui" / "screens"
     screen_directory.mkdir(parents=True, exist_ok=True)
     for name in motorica_screens:
@@ -739,9 +1107,9 @@ def build_base_assets(mobile_base: Path, output: Path, source: Path) -> None:
             fail(f"Generated IPA assets are missing Motorica GUI screen: {name}")
 
     for relative in [
-        Path("karts/motorica_kiki/licenses.txt"),
-        Path("tracks/motorica_night_island/licenses.txt"),
-        Path("tracks/motorica_signal_circuit/licenses.txt"),
+        Path("karts/motorica_signal_pilot/licenses.txt"),
+        Path("tracks/motorica_signal_lab/licenses.txt"),
+        Path("music/motorica_signal_lab_license.txt"),
     ]:
         if not (output / relative).is_file():
             fail(f"Motorica asset is missing its license inventory: {relative}")
@@ -772,10 +1140,10 @@ def build_base_assets(mobile_base: Path, output: Path, source: Path) -> None:
     if shader_count == 0:
         fail("Expected at least one packaged track-local shader")
 
-    motorica_script = packaged / "tracks" / "motorica_night_island" / "scripting.as"
+    motorica_script = packaged / "tracks" / "motorica_signal_lab" / "scripting.as"
     motorica_script.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(
-        OVERLAY_ROOT / "tracks" / "motorica_night_island" / "scripting.as",
+        OVERLAY_ROOT / "tracks" / "motorica_signal_lab" / "scripting.as",
         motorica_script,
     )
 
@@ -783,9 +1151,9 @@ def build_base_assets(mobile_base: Path, output: Path, source: Path) -> None:
     # or kart search paths, even when a full package remains installed.
     tracks = sorted(path.name for path in (output / "tracks").iterdir())
     karts = sorted(path.name for path in (output / "karts").iterdir())
-    if tracks != ["motorica_night_island", "motorica_signal_circuit"]:
+    if tracks != ["motorica_signal_lab"]:
         fail(f"Unexpected base tracks: {tracks}")
-    if karts != ["motorica_kiki"]:
+    if karts != ["motorica_signal_pilot"]:
         fail(f"Unexpected base karts: {karts}")
 
 
@@ -898,7 +1266,7 @@ inline unsigned long long getDownloadAssetsSize()
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("command", choices=["overlay", "package", "all"])
+    parser.add_argument("command", choices=["overlay", "base", "package", "all"])
     parser.add_argument("--source-assets", type=Path, default=DEFAULT_SOURCE)
     parser.add_argument("--mobile-base", type=Path, default=DEFAULT_MOBILE_BASE)
     parser.add_argument("--base-output", type=Path, default=DEFAULT_BASE_OUTPUT)
@@ -910,13 +1278,14 @@ def main() -> int:
     if args.command in {"overlay", "all"}:
         build_overlay(source)
         print(f"Overlay: {OVERLAY_ROOT.parent}")
-    if args.command in {"package", "all"}:
+    if args.command in {"base", "package", "all"}:
         if not OVERLAY_ROOT.is_dir():
             fail("Generate the tracked overlay before packaging")
         build_base_assets(args.mobile_base.resolve(), args.base_output.resolve(), source)
+        print(f"Base assets: {args.base_output.resolve()}")
+    if args.command in {"package", "all"}:
         archive, size, digest, files = build_full_archive(source, args.dist.resolve())
         write_manifest(args.dist.resolve(), size, digest, files)
-        print(f"Base assets: {args.base_output.resolve()}")
         print(f"Archive: {archive} ({size} bytes)")
         print(f"SHA-256: {digest}")
         print(f"Remote files: {len(files)}")

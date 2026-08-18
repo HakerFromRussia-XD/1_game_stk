@@ -11,6 +11,9 @@
         <spacer width="10" height="12%"/>
         <button id="source" width="72%" height="11%" align="center"
                 raw_text="Source code"/>
-        <spacer width="10" height="15%"/>
+        <spacer width="10" height="3%"/>
+        <button id="copy_source" width="72%" height="11%" align="center"
+                raw_text="Copy source URL"/>
+        <spacer width="10" height="8%"/>
     </div>
 </stkgui>

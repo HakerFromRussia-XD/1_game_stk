@@ -83,7 +83,7 @@ void OverWorld::enterOverWorld()
         false;
 #endif
     RaceManager::get()->setTrack(motorica_standalone ?
-        "motorica_night_island" : "overworld");
+        "motorica_signal_lab" : "overworld");
 
     if (motorica_standalone)
     {
@@ -107,7 +107,7 @@ void OverWorld::enterOverWorld()
 
     std::string kart_ident = UserConfigParams::m_default_kart;
     if (motorica_standalone)
-        kart_ident = "motorica_kiki";
+        kart_ident = "motorica_signal_pilot";
     if (!kart_properties_manager->getKart(kart_ident))
     {
         Log::warn("[overworld]", "cannot find kart '%s', "
@@ -179,7 +179,9 @@ void OverWorld::update(int ticks)
 
         for (unsigned int n = 0; n < challenges.size(); n++)
         {
-            if (challenges[n].m_challenge_id != "motorica_signal_circuit")
+            if (challenges[n].m_challenge_id != "motorica_precision" &&
+                challenges[n].m_challenge_id != "motorica_reaction" &&
+                challenges[n].m_challenge_id != "motorica_signal_hold")
                 continue;
 
             motorica_challenge_count++;

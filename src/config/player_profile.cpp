@@ -187,8 +187,19 @@ void PlayerProfile::addIcon()
     if (m_icon_filename.size() > 0 || isGuestAccount())
         return;
 
-    int n = (m_unique_id + kart_properties_manager->getKartId("tux") - 1)
-          % kart_properties_manager->getNumberOfKarts();
+    const int kart_count = kart_properties_manager->getNumberOfKarts();
+    if (kart_count <= 0)
+        return;
+
+    // Full STK installations retain the original Tux-anchored selection.
+    // Minimal standalone catalogues can legitimately omit Tux, so use the
+    // first available kart as the deterministic anchor instead of throwing.
+    const KartProperties* tux = kart_properties_manager->getKart("tux");
+    const int anchor = tux == nullptr ? 0 :
+        kart_properties_manager->getKartId("tux");
+    int n = (m_unique_id + anchor - 1) % kart_count;
+    if (n < 0)
+        n += kart_count;
 
     std::string source = kart_properties_manager->getKartById(n)
                                                 ->getAbsoluteIconFile();
@@ -323,4 +334,3 @@ bool PlayerProfile::operator<(const PlayerProfile &other)
 }   // operator<
 
 // -----------------------------------------------------------------------------
-

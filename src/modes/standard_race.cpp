@@ -22,6 +22,9 @@
 #include "karts/abstract_kart.hpp"
 #include "karts/controller/controller.hpp"
 #include "karts/controller/ghost_controller.hpp"
+#ifdef IOS_STK
+#include "input/motorica_standalone_training.hpp"
+#endif
 #include "network/network_config.hpp"
 
 //-----------------------------------------------------------------------------
@@ -29,6 +32,38 @@ StandardRace::StandardRace() : LinearWorld()
 {
     WorldStatus::setClockMode(CLOCK_CHRONO);
 }   // StandardRace
+
+//-----------------------------------------------------------------------------
+/** Updates a standard race. Signal Lab exercises have a time/task based
+ *  finish rather than a lap based finish. This check deliberately runs after
+ *  LinearWorld has finished updating every kart controller: Kart::finishedRace
+ *  replaces the player's controller with an EndController and must never be
+ *  called from inside the controller's own update method.
+ */
+void StandardRace::update(int ticks)
+{
+    LinearWorld::update(ticks);
+
+#ifdef IOS_STK
+    MotoricaStandaloneTraining* training =
+        MotoricaStandaloneTraining::get();
+    if (!training->shouldFinish(getTime()))
+        return;
+
+    for (unsigned int i = 0; i < getNumKarts(); i++)
+    {
+        AbstractKart* kart = getKart(i);
+        if (kart->hasFinishedRace() ||
+            !kart->getController()->isPlayerController())
+            continue;
+
+        // The normal STK finish lifecycle records the standalone result,
+        // switches to EndController and opens the race result screen.
+        kart->finishedRace(getTime());
+        break;
+    }
+#endif
+}   // update
 
 //-----------------------------------------------------------------------------
 /** Returns true if the race is finished, i.e. all player karts are finished.

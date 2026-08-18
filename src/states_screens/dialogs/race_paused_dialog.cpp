@@ -52,6 +52,7 @@
 #include "utils/translation.hpp"
 #ifdef IOS_STK
 #include "input/motorica_game_control_ios.hpp"
+#include "input/motorica_standalone_training.hpp"
 #endif
 
 #include <IrrlichtDevice.h>
@@ -336,6 +337,11 @@ GUIEngine::EventPropagation
         if (selection == "exit")
         {
             bool from_overworld = m_from_overworld;
+#ifdef IOS_STK
+            const bool motorica_training =
+                isMotoricaStandaloneModeIOS() &&
+                RaceManager::get()->getTrackName() == "motorica_signal_lab";
+#endif
             ModalDialog::dismiss();
             if (STKHost::existHost())
             {
@@ -357,6 +363,14 @@ GUIEngine::EventPropagation
             else
             {
                 StateManager::get()->resetAndGoToScreen(MainMenuScreen::getInstance());
+
+#ifdef IOS_STK
+                if (motorica_training)
+                {
+                    MotoricaStandaloneTraining::get()->stop();
+                    return GUIEngine::EVENT_BLOCK;
+                }
+#endif
 
                 // Pause story mode timer when quitting story mode
                 if (from_overworld)
@@ -399,6 +413,11 @@ GUIEngine::EventPropagation
         {
             ModalDialog::dismiss();
             World::getWorld()->scheduleUnpause();
+#ifdef IOS_STK
+            if (isMotoricaStandaloneModeIOS() &&
+                RaceManager::get()->getTrackName() == "motorica_signal_lab")
+                MotoricaStandaloneTraining::get()->prepareRepeat();
+#endif
             RaceManager::get()->rerunRace();
             return GUIEngine::EVENT_BLOCK;
         }
@@ -453,6 +472,13 @@ void RacePausedDialog::beforeAddingWidgets()
         getWidget<GUIEngine::RibbonWidget>("choiceribbon");
 
     bool showSetupNewRace = RaceManager::get()->raceWasStartedFromOverworld();
+#ifdef IOS_STK
+    // Signal Lab owns its complete exercise loop. The upstream race selector
+    // would expose content that does not belong to direct-launch standalone.
+    if (isMotoricaStandaloneModeIOS() &&
+        RaceManager::get()->getTrackName() == "motorica_signal_lab")
+        showSetupNewRace = true;
+#endif
     int index = choice_ribbon->findItemNamed("newrace");
     if (index != -1)
         choice_ribbon->setItemVisible(index, !showSetupNewRace);
