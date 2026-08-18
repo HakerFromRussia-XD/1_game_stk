@@ -633,6 +633,7 @@ else()
         add_executable(supertuxkart ${STK_SOURCES} ${STK_RESOURCES} ${STK_HEADERS} ${IOS_ASSETS_FILES})
         set_target_properties(supertuxkart PROPERTIES
             OUTPUT_NAME "Motorica Signal LAB"
+            XCODE_GENERATE_SCHEME TRUE
             MACOSX_BUNDLE_INFO_PLIST ${PROJECT_SOURCE_DIR}/data/SuperTuxKart-Info-iOS.plist
             XCODE_ATTRIBUTE_IPHONEOS_DEPLOYMENT_TARGET 15.0
             XCODE_ATTRIBUTE_INSTALL_PATH /Applications
@@ -644,6 +645,13 @@ else()
             XCODE_ATTRIBUTE_DEBUG_INFORMATION_FORMAT "dwarf-with-dsym"
             XCODE_ATTRIBUTE_ASSETCATALOG_COMPILER_APPICON_NAME "AppIcon")
         if(CMAKE_GENERATOR MATCHES "Xcode")
+            set(MOTORICA_IOS_SCHEME_DIR
+                "${CMAKE_BINARY_DIR}/${PROJECT_NAME}.xcodeproj/xcshareddata/xcschemes")
+            file(MAKE_DIRECTORY "${MOTORICA_IOS_SCHEME_DIR}")
+            configure_file(
+                "${PROJECT_SOURCE_DIR}/cmake/MotoricaSignalLAB.xcscheme"
+                "${MOTORICA_IOS_SCHEME_DIR}/Motorica Signal LAB.xcscheme"
+                COPYONLY)
             add_custom_command(TARGET supertuxkart POST_BUILD
                 COMMAND /bin/sh ${PROJECT_SOURCE_DIR}/cmake/CopyIosDsymToArchive.sh
                 COMMENT "Copy supertuxkart dSYM into Xcode archive")
