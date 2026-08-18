@@ -632,6 +632,7 @@ else()
         set_source_files_properties(${IOS_ASSETS_FILES} PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
         add_executable(supertuxkart ${STK_SOURCES} ${STK_RESOURCES} ${STK_HEADERS} ${IOS_ASSETS_FILES})
         set_target_properties(supertuxkart PROPERTIES
+            OUTPUT_NAME "Motorica Kart"
             MACOSX_BUNDLE_INFO_PLIST ${PROJECT_SOURCE_DIR}/data/SuperTuxKart-Info-iOS.plist
             XCODE_ATTRIBUTE_IPHONEOS_DEPLOYMENT_TARGET 15.0
             XCODE_ATTRIBUTE_INSTALL_PATH /Applications
