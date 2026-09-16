@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stkgui>
+    <div x="0" y="0" width="100%" height="100%" layout="vertical-row">
+        <spacer width="10" height="5%"/>
+        <label width="74%" height="fit" align="center" text_align="center"
+               raw_text="FLUXARA DRIFT"/>
+        <spacer width="10" height="1%"/>
+        <header width="74%" height="fit" align="center" text_align="center"
+                raw_text="RACE SETTINGS"/>
+        <spacer width="10" height="2%"/>
+        <label id="track-name" width="74%" height="fit" align="center"
+               text_align="center"/>
+        <spacer width="10" height="3%"/>
+        <icon-button id="track-preview" width="74%" height="28%" align="center"
+                     custom_ratio="1.77778"/>
+        <spacer width="10" height="3%"/>
+        <label width="74%" height="fit" align="center" text_align="center"
+               raw_text="Choose your pace"/>
+        <spacer width="10" height="2%"/>
+        <div width="74%" height="24%" align="center" layout="horizontal-row">
+            <button id="novice" width="31%" height="100%" align="center"
+                    raw_text="Novice"/>
+            <spacer width="3%" height="10"/>
+            <button id="standard" width="31%" height="100%" align="center"
+                    raw_text="Standard"/>
+            <spacer width="3%" height="10"/>
+            <button id="expert" width="31%" height="100%" align="center"
+                    raw_text="Expert"/>
+        </div>
+        <spacer width="10" height="3%"/>
+        <button id="back" width="42%" height="12%" align="center"
+                raw_text="Back"/>
+        <spacer width="10" height="4%"/>
+    </div>
+</stkgui>

@@ -547,6 +547,11 @@ endif()
 # Provides list of source and header files (STK_SOURCES and STK_HEADERS)
 include(sources.cmake)
 
+# The Fluxara public-flow controllers belong solely to the iPhone product.
+# Keep them out of the shared source list so Android does not compile or ship
+# this UI path at all.
+list(FILTER STK_SOURCES EXCLUDE REGEX "^src/states_screens/fluxara_.*_screen\\.cpp$")
+
 if (IOS)
     set(STK_SOURCES
         ${STK_SOURCES}
@@ -633,10 +638,18 @@ else()
         # The iOS asset bundle is a curated snapshot. Keep the public entry
         # screen and visual design system iOS-only, so Android assets and UI
         # remain unchanged.
-        set(FLUXARA_IOS_HOME_SCREEN
-            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_home.stkgui)
-        set_source_files_properties(${FLUXARA_IOS_HOME_SCREEN} PROPERTIES
+        set(FLUXARA_IOS_SCREENS
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_home.stkgui
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_campaign.stkgui
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_race_setup.stkgui
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_kart.stkgui)
+        set_source_files_properties(${FLUXARA_IOS_SCREENS} PROPERTIES
             MACOSX_PACKAGE_LOCATION Resources/data/gui/screens)
+        set(FLUXARA_IOS_SOURCES
+            ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_home_screen.cpp
+            ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_campaign_screen.cpp
+            ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_race_setup_screen.cpp
+            ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_kart_screen.cpp)
         set(FLUXARA_IOS_SKIN
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/stkskin.xml
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/background.png
@@ -644,7 +657,8 @@ else()
         set_source_files_properties(${FLUXARA_IOS_SKIN} PROPERTIES
             MACOSX_PACKAGE_LOCATION Resources/data/skins/fluxara)
         add_executable(supertuxkart ${STK_SOURCES} ${STK_RESOURCES} ${STK_HEADERS}
-            ${IOS_ASSETS_FILES} ${FLUXARA_IOS_HOME_SCREEN} ${FLUXARA_IOS_SKIN})
+            ${IOS_ASSETS_FILES} ${FLUXARA_IOS_SOURCES} ${FLUXARA_IOS_SCREENS}
+            ${FLUXARA_IOS_SKIN})
         set_target_properties(supertuxkart PROPERTIES
             OUTPUT_NAME "Fluxara Drift"
             XCODE_GENERATE_SCHEME TRUE

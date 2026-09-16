@@ -4,9 +4,9 @@
 
 #include "config/player_manager.hpp"
 #include "guiengine/widgets/button_widget.hpp"
+#include "states_screens/fluxara_campaign_screen.hpp"
 #include "states_screens/options/options_screen_general.hpp"
 #include "states_screens/state_manager.hpp"
-#include "states_screens/tracks_and_gp_screen.hpp"
 
 using namespace GUIEngine;
 
@@ -30,7 +30,7 @@ void FluxaraHomeScreen::eventCallback(Widget*, const std::string& name,
                                       const int)
 {
     if (name == "campaign")
-        TracksAndGPScreen::getInstance()->push();
+        FluxaraCampaignScreen::getInstance()->push();
     else if (name == "settings")
         OptionsScreenGeneral::getInstance()->push();
 }
