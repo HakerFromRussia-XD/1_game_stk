@@ -655,6 +655,7 @@ else()
         set(FLUXARA_IOS_SKIN
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/stkskin.xml
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/background.png
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/background-v2.png
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/action_card.png)
         set_source_files_properties(${FLUXARA_IOS_SKIN} PROPERTIES
             MACOSX_PACKAGE_LOCATION Resources/data/skins/fluxara)
