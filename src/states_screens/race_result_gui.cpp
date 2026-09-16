@@ -68,6 +68,7 @@
 #ifdef IOS_STK
 #include "input/motorica_game_control_ios.hpp"
 #include "input/motorica_standalone_training.hpp"
+#include "states_screens/fluxara_campaign_screen.hpp"
 #include "states_screens/motorica_hub_screen.hpp"
 #endif
 #include "states_screens/online/networking_lobby.hpp"
@@ -147,6 +148,15 @@ bool isMotoricaStandaloneRace()
 #ifdef IOS_STK
     return isMotoricaStandaloneModeIOS() &&
            RaceManager::get()->getTrackName() == "motorica_signal_lab";
+#else
+    return false;
+#endif
+}
+
+bool isFluxaraRace()
+{
+#ifdef IOS_STK
+    return RaceManager::get()->getTrackName() == "fluxara-circuit";
 #else
     return false;
 #endif
@@ -461,6 +471,23 @@ void RaceResultGUI::enableAllButtons()
         return;
     }
 
+    // Fluxara currently ships one curated circuit. Keep the result loop
+    // truthful: repeat it or return to Fluxara's circuit card, never to the
+    // upstream STK race setup.
+    if (isFluxaraRace())
+    {
+        middle->setVisible(false);
+        middle->setFocusable(false);
+        right->setLabel(StringUtils::utf8ToWide("Race again"));
+        right->setImage("gui/icons/restart.png");
+        right->setVisible(true);
+        left->setLabel(StringUtils::utf8ToWide("Circuits"));
+        left->setImage("gui/icons/back.png");
+        left->setVisible(true);
+        operations->select("right", PLAYER_ID_GAME_MASTER);
+        return;
+    }
+
     // If something was unlocked
     // -------------------------
 
@@ -764,6 +791,7 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
         }
 
         const bool motorica_training = isMotoricaStandaloneRace();
+        const bool fluxara_race = isFluxaraRace();
         StateManager::get()->popMenu();
         if (action == "right")        // Restart
         {
@@ -827,6 +855,12 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
 #ifdef IOS_STK
             if (motorica_training)
                 MotoricaStandaloneTraining::get()->stop();
+            if (fluxara_race)
+            {
+                StateManager::get()->resetAndGoToScreen(
+                    FluxaraCampaignScreen::getInstance());
+                return;
+            }
 #endif
             resetToMotoricaRoot();
 
