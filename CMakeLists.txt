@@ -675,6 +675,13 @@ else()
             ${IOS_ASSETS_FILES} ${FLUXARA_IOS_SOURCES} ${FLUXARA_IOS_SCREENS}
             ${FLUXARA_IOS_SKIN} ${FLUXARA_IOS_KART} ${FLUXARA_IOS_TRACK}
             ${FLUXARA_IOS_NOTICES})
+        # The generated mobile asset snapshot may contain the retired
+        # Motorica-only content. Fluxara ships its curated content instead.
+        add_custom_command(TARGET supertuxkart POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E rm -rf
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/tracks/motorica_signal_lab"
+            COMMAND ${CMAKE_COMMAND} -E rm -rf
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/karts/motorica_signal_pilot")
         set_target_properties(supertuxkart PROPERTIES
             OUTPUT_NAME "Fluxara Drift"
             XCODE_GENERATE_SCHEME TRUE
