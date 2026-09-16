@@ -300,18 +300,13 @@ void RaceResultGUI::init()
         m_icon_bank->addTextureAsSprite(prop->getIconMaterial()->getTexture());
     }
 
-    const KartProperties* prop = nullptr;
-    if (isMotoricaStandaloneRace() && World::getWorld()->getNumKarts() > 0)
+    const KartProperties* prop = kart_properties_manager->getKart("tux");
+    if ((isMotoricaStandaloneRace() || prop == nullptr) &&
+        World::getWorld()->getNumKarts() > 0)
     {
-        // Signal Lab has a real registered player kart but intentionally does
-        // not package Tux. Use that registered kart as the default result icon
-        // instead of asking the minimal standalone catalogue for an asset that
-        // does not exist.
+        // A curated mobile bundle may not carry the engine's default kart.
+        // The completed race always has a registered kart we can use instead.
         prop = World::getWorld()->getKart(0)->getKartProperties();
-    }
-    else
-    {
-        prop = kart_properties_manager->getKart("tux");
     }
     assert(prop != nullptr);
     m_icon_default_kart = m_icon_bank->addTextureAsSprite(prop->getIconMaterial()->getTexture());
