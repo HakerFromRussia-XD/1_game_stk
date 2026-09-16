@@ -580,6 +580,12 @@ X##_yflip.LowerRightCorner.Y =  y1;}
 Skin::Skin(IGUISkin* fallback_skin)
 {
     std::string skin_id = UserConfigParams::m_skin_file;
+#ifdef IOS_STK
+    // The public iPhone product ships one controlled design system. Resolve
+    // it here, at the sole skin-loading boundary, so a saved legacy setting
+    // cannot bring back the inherited SuperTuxKart presentation.
+    skin_id = "fluxara";
+#endif
 
     try
     {

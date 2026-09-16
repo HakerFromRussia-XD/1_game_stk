@@ -4,7 +4,6 @@
 
 #include "config/player_manager.hpp"
 #include "guiengine/widgets/button_widget.hpp"
-#include "states_screens/credits.hpp"
 #include "states_screens/options/options_screen_general.hpp"
 #include "states_screens/state_manager.hpp"
 #include "states_screens/tracks_and_gp_screen.hpp"
@@ -34,8 +33,6 @@ void FluxaraHomeScreen::eventCallback(Widget*, const std::string& name,
         TracksAndGPScreen::getInstance()->push();
     else if (name == "settings")
         OptionsScreenGeneral::getInstance()->push();
-    else if (name == "legal")
-        CreditsScreen::getInstance()->push();
 }
 
 bool FluxaraHomeScreen::onEscapePressed()

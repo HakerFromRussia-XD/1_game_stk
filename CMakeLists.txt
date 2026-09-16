@@ -631,13 +631,20 @@ else()
         file(GLOB IOS_ASSETS_FILES ${IOS_ASSETS} ${IOS_LAUNCHSCREEN} ${IOS_IMAGES_XCASSETS})
         set_source_files_properties(${IOS_ASSETS_FILES} PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
         # The iOS asset bundle is a curated snapshot. Keep the public entry
-        # screen sourced from this checkout so it is always shipped with it.
+        # screen and visual design system iOS-only, so Android assets and UI
+        # remain unchanged.
         set(FLUXARA_IOS_HOME_SCREEN
-            ${PROJECT_SOURCE_DIR}/data/gui/screens/fluxara_home.stkgui)
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_home.stkgui)
         set_source_files_properties(${FLUXARA_IOS_HOME_SCREEN} PROPERTIES
             MACOSX_PACKAGE_LOCATION Resources/data/gui/screens)
+        set(FLUXARA_IOS_SKIN
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/stkskin.xml
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/background.png
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/action_card.png)
+        set_source_files_properties(${FLUXARA_IOS_SKIN} PROPERTIES
+            MACOSX_PACKAGE_LOCATION Resources/data/skins/fluxara)
         add_executable(supertuxkart ${STK_SOURCES} ${STK_RESOURCES} ${STK_HEADERS}
-            ${IOS_ASSETS_FILES} ${FLUXARA_IOS_HOME_SCREEN})
+            ${IOS_ASSETS_FILES} ${FLUXARA_IOS_HOME_SCREEN} ${FLUXARA_IOS_SKIN})
         set_target_properties(supertuxkart PROPERTIES
             OUTPUT_NAME "Fluxara Drift"
             XCODE_GENERATE_SCHEME TRUE
