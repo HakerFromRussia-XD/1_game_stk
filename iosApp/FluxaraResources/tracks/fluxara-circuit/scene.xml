@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scene>
+  <track model="circuit-board_track.spm" x="0" y="0" z="0">
+    <static-object  model="InvisiblePlane.spm" xyz="22.63 -77.71 0.23" hpr="0.0 -0.0 0.0" scale="132.35 132.35 132.35" interaction="physics-only"/>
+  </track>
+  <sky-box texture="black.jpg black.jpg black.jpg black.jpg black.jpg black.jpg" />
+  <camera far="1000.0"/>
+  <checks>
+    <check-lap kind="lap" same-group="0" other-ids="1" />
+    <check-line kind="activate" other-ids="2" p1="-3.00 -0.08 29.21" p2="26.21 -0.08 20.42"
+                same-group="1"/>
+    <check-line kind="activate" other-ids="0" p1="30.53 -0.08 -74.12" p2="53.04 -0.08 -94.72"
+                same-group="2"/>
+  </checks>
+  <item id="ITEM" x="25.03" y="1.33" z="71.60" />
+  <item id="ITEM.001" x="21.54" y="1.33" z="71.60" />
+  <item id="ITEM.002" x="18.06" y="1.33" z="71.60" />
+  <item id="ITEM.003" x="48.65" y="1.33" z="49.02" />
+  <item id="ITEM.004" x="45.17" y="1.33" z="49.02" />
+  <item id="ITEM.005" x="41.68" y="1.33" z="49.02" />
+  <item id="ITEM.006" x="-12.03" y="1.33" z="5.01" />
+  <item id="ITEM.007" x="-15.52" y="1.33" z="5.01" />
+  <item id="ITEM.008" x="-19.00" y="1.33" z="5.01" />
+  <item id="ITEM.009" x="20.74" y="1.33" z="-16.90" />
+  <item id="ITEM.010" x="17.25" y="1.33" z="-16.90" />
+  <item id="ITEM.011" x="13.77" y="1.33" z="-16.90" />
+  <item id="ITEM.012" x="27.26" y="1.33" z="-90.88" h="-90.00" />
+  <item id="ITEM.013" x="27.26" y="1.33" z="-87.40" h="-90.00" />
+  <item id="ITEM.014" x="27.26" y="1.33" z="-83.91" h="-90.00" />
+  <item id="ITEM.015" x="35.07" y="1.33" z="-45.06" h="-90.00" />
+  <item id="ITEM.016" x="35.07" y="1.33" z="-41.58" h="-90.00" />
+  <item id="ITEM.017" x="35.07" y="1.33" z="-38.09" h="-90.00" />
+  <item id="ITEM.018" x="15.48" y="1.33" z="18.32" h="-90.00" />
+  <item id="ITEM.019" x="15.48" y="1.33" z="21.80" h="-90.00" />
+  <item id="ITEM.020" x="15.48" y="1.33" z="25.29" h="-90.00" />
+  <small-nitro id="NitroSmall" x="50.58" y="1.34" z="92.92" />
+  <small-nitro id="NitroSmall.001" x="46.58" y="1.34" z="92.92" />
+  <small-nitro id="NitroSmall.002" x="42.58" y="1.34" z="92.92" />
+  <small-nitro id="NitroSmall.003" x="38.58" y="1.34" z="92.92" />
+  <small-nitro id="NitroSmall.004" x="34.58" y="1.34" z="92.92" />
+  <small-nitro id="NitroSmall.005" x="30.58" y="1.34" z="92.92" />
+  <small-nitro id="NitroSmall.006" x="0.60" y="1.34" z="19.44" />
+  <small-nitro id="NitroSmall.007" x="-3.41" y="1.34" z="19.44" />
+  <small-nitro id="NitroSmall.008" x="-7.41" y="1.34" z="19.44" />
+  <small-nitro id="NitroSmall.009" x="-11.41" y="1.34" z="19.44" />
+  <small-nitro id="NitroSmall.010" x="54.46" y="1.34" z="43.15" h="-90.00" />
+  <small-nitro id="NitroSmall.011" x="54.46" y="1.34" z="47.15" h="-90.00" />
+  <small-nitro id="NitroSmall.012" x="54.46" y="1.34" z="51.15" h="-90.00" />
+  <small-nitro id="NitroSmall.013" x="54.46" y="1.34" z="55.16" h="-90.00" />
+  <small-nitro id="NitroSmall.014" x="46.45" y="1.34" z="-64.51" h="-90.00" />
+  <small-nitro id="NitroSmall.015" x="46.45" y="1.34" z="-60.51" h="-90.00" />
+  <small-nitro id="NitroSmall.016" x="46.45" y="1.34" z="-56.51" h="-90.00" />
+  <small-nitro id="NitroSmall.017" x="46.45" y="1.34" z="-52.51" h="-90.00" />
+  <item id="ITEM.021" x="-0.30" y="10.57" z="-47.72" />
+  <item id="ITEM.022" x="-0.30" y="14.05" z="-47.72" />
+  <item id="ITEM.023" x="-0.30" y="17.54" z="-47.72" />
+  <banana id="Banane" x="23.25" y="1.02" z="-61.09" />
+  <banana id="Banane.001" x="46.47" y="1.02" z="-36.99" />
+  <banana id="Banane.002" x="38.94" y="1.02" z="-82.13" />
+  <banana id="Banane.003" x="19.43" y="1.02" z="-27.35" />
+  <banana id="Banane.004" x="15.90" y="1.02" z="-7.59" />
+  <banana id="Banane.005" x="-19.37" y="1.02" z="-7.83" />
+  <banana id="Banane.006" x="32.71" y="1.02" z="47.54" />
+  <banana id="Banane.007" x="31.30" y="1.02" z="44.37" />
+  <banana id="Banane.008" x="29.77" y="1.02" z="47.07" />
+  <banana id="Banane.009" x="16.02" y="1.02" z="87.51" />
+  <banana id="Banane.010" x="26.36" y="1.02" z="79.64" />
+  <banana id="Banane.011" x="27.30" y="1.02" z="64.47" />
+  <banana id="Banane.012" x="16.60" y="1.02" z="57.77" />
+  <default-start karts-per-row     ="3"
+                 forwards-distance ="1.50"
+                 sidewards-distance="1.80"
+                 upwards-distance  ="1.10"/>
+</scene>

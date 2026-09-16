@@ -659,9 +659,22 @@ else()
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/action_card.png)
         set_source_files_properties(${FLUXARA_IOS_SKIN} PROPERTIES
             MACOSX_PACKAGE_LOCATION Resources/data/skins/fluxara)
+        file(GLOB FLUXARA_IOS_KART
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/karts/fluxara-halo/*)
+        set_source_files_properties(${FLUXARA_IOS_KART} PROPERTIES
+            MACOSX_PACKAGE_LOCATION Resources/data/karts/fluxara-halo)
+        file(GLOB FLUXARA_IOS_TRACK
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/tracks/fluxara-circuit/*)
+        set_source_files_properties(${FLUXARA_IOS_TRACK} PROPERTIES
+            MACOSX_PACKAGE_LOCATION Resources/data/tracks/fluxara-circuit)
+        set(FLUXARA_IOS_NOTICES
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/NOTICE-THIRD-PARTY.txt)
+        set_source_files_properties(${FLUXARA_IOS_NOTICES} PROPERTIES
+            MACOSX_PACKAGE_LOCATION Resources)
         add_executable(supertuxkart ${STK_SOURCES} ${STK_RESOURCES} ${STK_HEADERS}
             ${IOS_ASSETS_FILES} ${FLUXARA_IOS_SOURCES} ${FLUXARA_IOS_SCREENS}
-            ${FLUXARA_IOS_SKIN})
+            ${FLUXARA_IOS_SKIN} ${FLUXARA_IOS_KART} ${FLUXARA_IOS_TRACK}
+            ${FLUXARA_IOS_NOTICES})
         set_target_properties(supertuxkart PROPERTIES
             OUTPUT_NAME "Fluxara Drift"
             XCODE_GENERATE_SCHEME TRUE

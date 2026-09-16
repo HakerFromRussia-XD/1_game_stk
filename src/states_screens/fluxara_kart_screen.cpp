@@ -43,7 +43,15 @@ void FluxaraKartScreen::init()
 {
     Screen::init();
 
-    m_karts = kart_properties_manager->getAllAvailableKarts();
+    const std::vector<std::string> available_karts =
+        kart_properties_manager->getAllAvailableKarts();
+    m_karts.clear();
+    for (const std::string& ident : available_karts)
+    {
+        const KartProperties* props = kart_properties_manager->getKart(ident);
+        if (props && props->isInGroup("Fluxara"))
+            m_karts.push_back(ident);
+    }
     if (m_karts.empty())
     {
         getWidget<LabelWidget>("kart-name")->setText("No drive available", false);
@@ -128,11 +136,6 @@ void FluxaraKartScreen::startRace()
     const std::string& kart = m_karts[m_selected_kart];
     UserConfigParams::m_default_kart = kart;
 
-    RaceManager::get()->setNumPlayers(1);
-    RaceManager::get()->setNumKarts(std::max(1, m_num_karts));
-    RaceManager::get()->setPlayerKart(0, kart);
-    RaceManager::get()->setReverseTrack(false);
-
     if (StateManager::get()->activePlayerCount() == 0)
     {
         InputDevice* device = input_manager->getDeviceManager()
@@ -140,6 +143,12 @@ void FluxaraKartScreen::startRace()
         StateManager::get()->createActivePlayer(PlayerManager::getCurrentPlayer(),
                                                 device);
     }
+
+    RaceManager::get()->setNumPlayers(1);
+    RaceManager::get()->setNumKarts(std::max(1, m_num_karts));
+    RaceManager::get()->setPlayerKart(0, kart);
+    RaceManager::get()->setAIKartOverride("fluxara-halo");
+    RaceManager::get()->setReverseTrack(false);
 
     input_manager->getDeviceManager()->setAssignMode(ASSIGN);
     input_manager->getDeviceManager()->setSinglePlayer(

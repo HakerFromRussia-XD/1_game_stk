@@ -30,7 +30,8 @@ void FluxaraCampaignScreen::init()
     for (int i = 0; i < (int)track_manager->getNumberOfTracks(); ++i)
     {
         Track* track = track_manager->getTrack(i);
-        if (track->isArena() || track->isSoccer() || track->isInternal())
+        if (track->isArena() || track->isSoccer() || track->isInternal() ||
+            !track->isInGroup("Fluxara"))
             continue;
 
         m_tracks.push_back(track->getIdent());
