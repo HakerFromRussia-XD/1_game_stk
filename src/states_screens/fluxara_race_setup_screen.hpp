@@ -17,6 +17,10 @@ private:
     FluxaraRaceSetupScreen();
 
     Track* m_track = NULL;
+    int m_laps = 3;
+    int m_ai_karts = 3;
+
+    void updateRaceDetails();
 
 public:
     void loadedFromFile() OVERRIDE;

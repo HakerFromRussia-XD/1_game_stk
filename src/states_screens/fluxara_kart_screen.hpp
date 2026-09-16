@@ -20,6 +20,7 @@ private:
 
     Track* m_track = NULL;
     int m_laps = 3;
+    int m_num_karts = 4;
     std::vector<std::string> m_karts;
     unsigned m_selected_kart = 0;
 
@@ -33,7 +34,7 @@ public:
                        const int player_id) OVERRIDE;
     bool onEscapePressed() OVERRIDE;
 
-    void setRace(Track* track, int laps);
+    void setRace(Track* track, int laps, int karts);
 };
 
 #endif

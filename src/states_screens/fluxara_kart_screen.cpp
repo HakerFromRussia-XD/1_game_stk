@@ -32,10 +32,11 @@ void FluxaraKartScreen::loadedFromFile()
 {
 }
 
-void FluxaraKartScreen::setRace(Track* track, int laps)
+void FluxaraKartScreen::setRace(Track* track, int laps, int karts)
 {
     m_track = track;
     m_laps = laps;
+    m_num_karts = karts;
 }
 
 void FluxaraKartScreen::init()
@@ -128,9 +129,7 @@ void FluxaraKartScreen::startRace()
     UserConfigParams::m_default_kart = kart;
 
     RaceManager::get()->setNumPlayers(1);
-    RaceManager::get()->setNumKarts(std::max(1, int(
-        UserConfigParams::m_num_karts_per_gamemode[
-            RaceManager::MINOR_MODE_NORMAL_RACE])));
+    RaceManager::get()->setNumKarts(std::max(1, m_num_karts));
     RaceManager::get()->setPlayerKart(0, kart);
     RaceManager::get()->setReverseTrack(false);
 

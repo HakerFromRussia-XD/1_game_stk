@@ -13,6 +13,9 @@
 #include "states_screens/state_manager.hpp"
 #include "tracks/track.hpp"
 
+#include <algorithm>
+#include <sstream>
+
 using namespace GUIEngine;
 
 FluxaraRaceSetupScreen::FluxaraRaceSetupScreen()
@@ -47,8 +50,30 @@ void FluxaraRaceSetupScreen::init()
     preview->setFocusable(false);
     preview->m_tab_stop = false;
 
+    RaceManager::get()->setMajorMode(RaceManager::MAJOR_MODE_SINGLE);
+    RaceManager::get()->setMinorMode(RaceManager::MINOR_MODE_NORMAL_RACE);
+
+    m_laps = std::max(1, std::min(9, m_track->getActualNumberOfLap()));
+    const int saved_ai = int(UserConfigParams::m_num_karts_per_gamemode[
+        RaceManager::MINOR_MODE_NORMAL_RACE]) - 1;
+    m_ai_karts = std::max(1, std::min(7, saved_ai));
+    updateRaceDetails();
+
     getWidget<ButtonWidget>("novice")->setFocusForPlayer(
         PLAYER_ID_GAME_MASTER);
+}
+
+void FluxaraRaceSetupScreen::updateRaceDetails()
+{
+    std::ostringstream laps;
+    laps << "Laps: " << m_laps;
+    getWidget<ButtonWidget>("laps")->setText(
+        core::stringw(laps.str().c_str()));
+
+    std::ostringstream opponents;
+    opponents << "Opponents: " << m_ai_karts;
+    getWidget<ButtonWidget>("opponents")->setText(
+        core::stringw(opponents.str().c_str()));
 }
 
 void FluxaraRaceSetupScreen::eventCallback(Widget*, const std::string& name,
@@ -57,6 +82,20 @@ void FluxaraRaceSetupScreen::eventCallback(Widget*, const std::string& name,
     if (name == "back")
     {
         StateManager::get()->escapePressed();
+        return;
+    }
+
+    if (name == "laps")
+    {
+        m_laps = m_laps >= 9 ? 1 : m_laps + 1;
+        updateRaceDetails();
+        return;
+    }
+
+    if (name == "opponents")
+    {
+        m_ai_karts = m_ai_karts >= 7 ? 1 : m_ai_karts + 1;
+        updateRaceDetails();
         return;
     }
 
@@ -74,9 +113,14 @@ void FluxaraRaceSetupScreen::eventCallback(Widget*, const std::string& name,
     RaceManager::get()->setMinorMode(RaceManager::MINOR_MODE_NORMAL_RACE);
     RaceManager::get()->setDifficulty(difficulty);
     UserConfigParams::m_difficulty = difficulty;
+    RaceManager::get()->setNumLaps(m_laps);
+    RaceManager::get()->setNumKarts(m_ai_karts + 1);
+    UserConfigParams::m_num_laps = m_laps;
+    UserConfigParams::m_num_karts_per_gamemode[
+        RaceManager::MINOR_MODE_NORMAL_RACE] = m_ai_karts + 1;
 
-    FluxaraKartScreen::getInstance()->setRace(m_track,
-                                               m_track->getActualNumberOfLap());
+    FluxaraKartScreen::getInstance()->setRace(m_track, m_laps,
+                                               m_ai_karts + 1);
     FluxaraKartScreen::getInstance()->push();
 }
 
