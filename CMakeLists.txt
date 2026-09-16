@@ -642,14 +642,16 @@ else()
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_home.stkgui
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_campaign.stkgui
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_race_setup.stkgui
-            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_kart.stkgui)
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_kart.stkgui
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_settings.stkgui)
         set_source_files_properties(${FLUXARA_IOS_SCREENS} PROPERTIES
             MACOSX_PACKAGE_LOCATION Resources/data/gui/screens)
         set(FLUXARA_IOS_SOURCES
             ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_home_screen.cpp
             ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_campaign_screen.cpp
             ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_race_setup_screen.cpp
-            ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_kart_screen.cpp)
+            ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_kart_screen.cpp
+            ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_settings_screen.cpp)
         set(FLUXARA_IOS_SKIN
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/stkskin.xml
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/background.png

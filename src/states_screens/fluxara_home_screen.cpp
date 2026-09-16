@@ -5,7 +5,7 @@
 #include "config/player_manager.hpp"
 #include "guiengine/widgets/button_widget.hpp"
 #include "states_screens/fluxara_campaign_screen.hpp"
-#include "states_screens/options/options_screen_general.hpp"
+#include "states_screens/fluxara_settings_screen.hpp"
 #include "states_screens/state_manager.hpp"
 
 using namespace GUIEngine;
@@ -32,7 +32,7 @@ void FluxaraHomeScreen::eventCallback(Widget*, const std::string& name,
     if (name == "campaign")
         FluxaraCampaignScreen::getInstance()->push();
     else if (name == "settings")
-        OptionsScreenGeneral::getInstance()->push();
+        FluxaraSettingsScreen::getInstance()->push();
 }
 
 bool FluxaraHomeScreen::onEscapePressed()
