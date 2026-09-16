@@ -73,21 +73,6 @@ void FluxaraCampaignScreen::eventCallback(Widget* widget,
         return;
     }
 
-    if (name == "previous" && !m_tracks.empty())
-    {
-        m_selected_track = m_selected_track == 0 ?
-            unsigned(m_tracks.size() - 1) : m_selected_track - 1;
-        updateTrackCard();
-        return;
-    }
-
-    if (name == "next" && !m_tracks.empty())
-    {
-        m_selected_track = (m_selected_track + 1) % unsigned(m_tracks.size());
-        updateTrackCard();
-        return;
-    }
-
     if (name != "choose" || m_tracks.empty())
         return;
 

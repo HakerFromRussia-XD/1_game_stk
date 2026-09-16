@@ -9,25 +9,20 @@
                 raw_text="CAMPAIGN"/>
         <spacer width="10" height="2%"/>
         <label width="74%" height="fit" align="center" text_align="center"
-               raw_text="Choose a circuit"/>
+               raw_text="YOUR CIRCUIT"/>
         <spacer width="10" height="3%"/>
-        <!-- One touch card at a time replaces the legacy ribbon control. -->
+        <!-- The campaign contains one curated circuit, presented as a card. -->
         <icon-button id="track-preview" width="74%" height="39%" align="center"
                      custom_ratio="1.77778"/>
         <spacer width="10" height="2%"/>
         <header id="track-name" width="74%" height="fit" align="center"
                 text_align="center"/>
         <spacer width="10" height="2%"/>
-        <div width="74%" height="13%" align="center" layout="horizontal-row">
-            <button id="previous" width="30%" height="100%" align="center"
-                    raw_text="Previous"/>
-            <spacer width="4%" height="10"/>
-            <button id="next" width="30%" height="100%" align="center"
-                    raw_text="Next"/>
-            <spacer width="4%" height="10"/>
-            <button id="choose" width="32%" height="100%" align="center"
-                    raw_text="Choose"/>
-        </div>
+        <label width="74%" height="fit" align="center" text_align="center"
+               raw_text="Ready when you are."/>
+        <spacer width="10" height="2%"/>
+        <button id="choose" width="54%" height="13%" align="center"
+                raw_text="Race setup"/>
         <spacer width="10" height="3%"/>
         <button id="back" width="42%" height="11%" align="center"
                 raw_text="Back"/>
