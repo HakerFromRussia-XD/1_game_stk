@@ -29,8 +29,7 @@
 #include "input/input_device.hpp"
 #include "input/input_manager.hpp"
 #ifdef IOS_STK
-#include "input/motorica_game_control_ios.hpp"
-#include "states_screens/motorica_hub_screen.hpp"
+#include "states_screens/fluxara_home_screen.hpp"
 #endif
 #include "main_loop.hpp"
 #include "modes/world.hpp"
@@ -45,10 +44,9 @@ using namespace GUIEngine;
 static StateManager* state_manager_singleton[PT_COUNT];
 
 #ifdef IOS_STK
-static bool shouldRouteToMotoricaHub(GUIEngine::Screen* screen)
+static bool shouldRouteToFluxaraHome(GUIEngine::Screen* screen)
 {
-    return screen != NULL && isMotoricaStandaloneModeIOS() &&
-           screen->getName() == "main_menu.stkgui";
+    return screen != NULL && screen->getName() == "main_menu.stkgui";
 }
 #endif
 
@@ -168,8 +166,8 @@ void StateManager::resetActivePlayers()
 void StateManager::pushScreen(GUIEngine::Screen* screen)
 {
 #ifdef IOS_STK
-    if (shouldRouteToMotoricaHub(screen))
-        screen = MotoricaHubScreen::getInstance();
+    if (shouldRouteToFluxaraHome(screen))
+        screen = FluxaraHomeScreen::getInstance();
 #endif
     AbstractStateManager::pushScreen(screen);
 }
@@ -179,8 +177,8 @@ void StateManager::pushScreen(GUIEngine::Screen* screen)
 void StateManager::resetAndGoToScreen(GUIEngine::Screen* screen)
 {
 #ifdef IOS_STK
-    if (shouldRouteToMotoricaHub(screen))
-        screen = MotoricaHubScreen::getInstance();
+    if (shouldRouteToFluxaraHome(screen))
+        screen = FluxaraHomeScreen::getInstance();
 #endif
     AbstractStateManager::resetAndGoToScreen(screen);
 }
@@ -190,10 +188,10 @@ void StateManager::resetAndGoToScreen(GUIEngine::Screen* screen)
 void StateManager::resetAndSetStack(GUIEngine::Screen* screens[])
 {
 #ifdef IOS_STK
-    if (screens != NULL && shouldRouteToMotoricaHub(screens[0]))
+    if (screens != NULL && shouldRouteToFluxaraHome(screens[0]))
     {
         AbstractStateManager::resetAndGoToScreen(
-            MotoricaHubScreen::getInstance());
+            FluxaraHomeScreen::getInstance());
         return;
     }
 #endif

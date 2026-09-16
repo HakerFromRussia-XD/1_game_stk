@@ -276,9 +276,7 @@ extern "C" {
 #include "replay/replay_recorder.hpp"
 #include "states_screens/main_menu_screen.hpp"
 #ifdef IOS_STK
-#include "states_screens/dialogs/download_assets.hpp"
-#include "states_screens/motorica_hub_screen.hpp"
-#include "utils/extract_mobile_assets.hpp"
+#include "states_screens/fluxara_home_screen.hpp"
 #endif
 #include "states_screens/online/networking_lobby.hpp"
 #include "states_screens/online/register_screen.hpp"
@@ -1915,6 +1913,12 @@ void initUserConfig()
     file_manager = new FileManager();
     user_config  = new UserConfig();     // needs file_manager
     user_config->loadConfig();
+#ifdef IOS_STK
+    // Fluxara Drift ships as an offline racing game. Keep online services and
+    // their first-run consent prompt out of the iPhone product altogether.
+    UserConfigParams::m_internet_status =
+        Online::RequestManager::IPERM_NOT_ALLOWED;
+#endif
     // Some parts of the file manager needs user config (paths for models
     // depend on artist debug flag). So init the rest of the file manager
     // after reading the user config file.
@@ -2487,6 +2491,13 @@ int main(int argc, char *argv[])
             #ifdef MOBILE_STK
             if (UserConfigParams::m_multitouch_controls == MULTITOUCH_CONTROLS_UNDEFINED)
             {
+#ifdef IOS_STK
+                // Fluxara starts into its own campaign shell on iPhone. Use
+                // the familiar touch wheel by default; the Fluxara Drive
+                // bridge continues to replace steering with its own source.
+                UserConfigParams::m_multitouch_controls =
+                    MULTITOUCH_CONTROLS_STEERING_WHEEL;
+#else
                 bool android_tv = false;
 #ifdef ANDROID
                 // For some android tv sdl returns a touch screen device even it
@@ -2499,6 +2510,7 @@ int main(int argc, char *argv[])
                                                                     0.8f, 0.8f);
                     GUIEngine::DialogQueue::get()->pushDialog(init_android);
                 }
+#endif
             }
             #endif
 
@@ -2584,23 +2596,11 @@ int main(int argc, char *argv[])
             // to always show the login screen). Otherwise show the login
             // screen first.
             #ifdef IOS_STK
-            if (isMotoricaStandaloneModeIOS())
-            {
-                PlayerManager::get()->enforceCurrentPlayer();
-                MotoricaHubScreen::getInstance()->push();
-            }
-            else if (!ExtractMobileAssets::isFullAssetsInstalled())
-            {
-                // Motorica Start mode is gated by the verified full catalog.
-                // Use the original menu only as a non-interactive host for the
-                // modal download dialog: the standalone hub/island must never
-                // be entered on this launch path.
-                PlayerManager::get()->enforceCurrentPlayer();
-                MainMenuScreen::getInstance()->push();
-                new DownloadAssets();
-            }
-            else
-            #endif
+            // Both direct launches and Fluxara Drive launches share one
+            // offline campaign. Their only difference is the control source.
+            PlayerManager::get()->enforceCurrentPlayer();
+            FluxaraHomeScreen::getInstance()->push();
+            #else
             if(PlayerManager::getCurrentPlayer() && !
                 UserConfigParams::m_always_show_login_screen)
             {
@@ -2618,6 +2618,7 @@ int main(int argc, char *argv[])
                     RegisterScreen::getInstance()->setParent(UserScreen::getInstance());
                 }
             }
+            #endif
 #endif // ifndef SERVER_ONLY
 #ifdef ENABLE_WIIUSE
             // Show a dialog to allow connection of wiimotes. */

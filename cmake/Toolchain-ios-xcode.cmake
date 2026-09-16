@@ -8,16 +8,16 @@
 
 # Increase every upload to App store
 SET(IOS_MARKETING_VERSION 1.0)
-SET(IOS_BUILD_VERSION 28)
+SET(IOS_BUILD_VERSION 1)
 
-# Keep every generated Xcode configuration on the App Store application ID
-# and Apple Developer team selected for Motorica STK.
+# Keep every generated Xcode configuration on the Fluxara Drift application
+# ID and its Apple Developer team.
 set(CMAKE_XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER
-    com.motorica.games.stkttt CACHE STRING "" FORCE)
+    io.fluxara.drift CACHE STRING "" FORCE)
 set(CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM
     R7M384QD5A CACHE STRING "" FORCE)
-set(CMAKE_XCODE_ATTRIBUTE_MOTORICA_GAME_CONTROL_APP_GROUP
-    group.com.motorica.start.gamecontrolll CACHE STRING "" FORCE)
+set(CMAKE_XCODE_ATTRIBUTE_FLUXARA_INPUT_BRIDGE_APP_GROUP
+    group.io.fluxara.drift.inputbridge CACHE STRING "" FORCE)
 
 # Get SDK path
 execute_process(COMMAND xcodebuild -version -sdk iphoneos Path

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
   <key>CFBundleDisplayName</key>
-  <string>Motorica Signal LAB</string>
+  <string>Fluxara Drift</string>
   <key>CFBundleExecutable</key>
   <string>$(EXECUTABLE_NAME)</string>
   <key>CFBundleIdentifier</key>
@@ -11,23 +11,23 @@
   <key>CFBundleInfoDictionaryVersion</key>
   <string>6.0</string>
   <key>CFBundleName</key>
-  <string>Motorica Signal LAB</string>
+  <string>Fluxara Drift</string>
   <key>CFBundlePackageType</key>
   <string>APPL</string>
   <key>CFBundleShortVersionString</key>
   <string>${IOS_MARKETING_VERSION}</string>
-  <key>MotoricaGameControlAppGroup</key>
-  <string>$(MOTORICA_GAME_CONTROL_APP_GROUP)</string>
+  <key>FluxaraInputBridgeAppGroup</key>
+  <string>$(FLUXARA_INPUT_BRIDGE_APP_GROUP)</string>
   <key>CFBundleVersion</key>
   <string>${IOS_BUILD_VERSION}</string>
   <key>CFBundleURLTypes</key>
   <array>
     <dict>
       <key>CFBundleURLName</key>
-      <string>com.motorica.games.stkttt</string>
+      <string>io.fluxara.drift</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>motorica-stk</string>
+        <string>fluxara-drive</string>
       </array>
     </dict>
   </array>

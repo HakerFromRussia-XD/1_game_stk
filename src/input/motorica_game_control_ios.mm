@@ -42,7 +42,7 @@ namespace
     NSString* motoricaAppGroup()
     {
         id value = [NSBundle.mainBundle objectForInfoDictionaryKey:
-            @"MotoricaGameControlAppGroup"];
+            @"FluxaraInputBridgeAppGroup"];
         if (![value isKindOfClass:NSString.class] ||
             [(NSString*)value length] == 0 ||
             [(NSString*)value containsString:@"$("])
@@ -143,7 +143,7 @@ bool consumeMotoricaStartLaunchRequestIOS()
     NSString* token = request[kLaunchRequestTokenKey];
     NSString* scheme = request[kLaunchRequestSchemeKey];
     if ([version integerValue] != 1 || timestamp == nil || token.length == 0 ||
-        [scheme caseInsensitiveCompare:@"motorica-stk"] != NSOrderedSame)
+        [scheme caseInsensitiveCompare:@"fluxara-drive"] != NSOrderedSame)
     {
         Log::warn("MotoricaGameControl",
             "[BLE stk-game debug] ios rejected invalid Motorica Start launch lease");
@@ -179,7 +179,7 @@ bool enableMotoricaGameControlForLaunchURLIOS(const char* url)
     NSURLComponents* components = [NSURLComponents
         componentsWithString:launch_url];
     if (components.scheme == nil ||
-        [components.scheme caseInsensitiveCompare:@"motorica-stk"] !=
+        [components.scheme caseInsensitiveCompare:@"fluxara-drive"] !=
             NSOrderedSame)
     {
         return false;
@@ -232,7 +232,7 @@ void writeMotoricaGameVersionIOS()
     NSDictionary* info = NSBundle.mainBundle.infoDictionary;
     NSString* bundle_id = NSBundle.mainBundle.bundleIdentifier;
     if (bundle_id == nil || bundle_id.length == 0)
-        bundle_id = @"com.motorica.games.stkttt";
+        bundle_id = @"io.fluxara.drift";
 
     NSString* version_name = info[@"CFBundleShortVersionString"];
     if (version_name == nil)
@@ -318,7 +318,7 @@ void startMotoricaGameControlIOS()
         return;
 
     dispatch_queue_t queue = dispatch_queue_create(
-        "com.motorica.games.stkttt.gamecontrol", DISPATCH_QUEUE_SERIAL);
+        "io.fluxara.drift.inputbridge", DISPATCH_QUEUE_SERIAL);
     g_poll_timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,
                                           queue);
     dispatch_source_set_timer(g_poll_timer, dispatch_time(DISPATCH_TIME_NOW, 0),

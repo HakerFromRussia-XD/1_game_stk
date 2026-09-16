@@ -630,9 +630,16 @@ else()
     if (IOS)
         file(GLOB IOS_ASSETS_FILES ${IOS_ASSETS} ${IOS_LAUNCHSCREEN} ${IOS_IMAGES_XCASSETS})
         set_source_files_properties(${IOS_ASSETS_FILES} PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
-        add_executable(supertuxkart ${STK_SOURCES} ${STK_RESOURCES} ${STK_HEADERS} ${IOS_ASSETS_FILES})
+        # The iOS asset bundle is a curated snapshot. Keep the public entry
+        # screen sourced from this checkout so it is always shipped with it.
+        set(FLUXARA_IOS_HOME_SCREEN
+            ${PROJECT_SOURCE_DIR}/data/gui/screens/fluxara_home.stkgui)
+        set_source_files_properties(${FLUXARA_IOS_HOME_SCREEN} PROPERTIES
+            MACOSX_PACKAGE_LOCATION Resources/data/gui/screens)
+        add_executable(supertuxkart ${STK_SOURCES} ${STK_RESOURCES} ${STK_HEADERS}
+            ${IOS_ASSETS_FILES} ${FLUXARA_IOS_HOME_SCREEN})
         set_target_properties(supertuxkart PROPERTIES
-            OUTPUT_NAME "Motorica Signal LAB"
+            OUTPUT_NAME "Fluxara Drift"
             XCODE_GENERATE_SCHEME TRUE
             MACOSX_BUNDLE_INFO_PLIST ${PROJECT_SOURCE_DIR}/data/SuperTuxKart-Info-iOS.plist
             XCODE_ATTRIBUTE_IPHONEOS_DEPLOYMENT_TARGET 15.0
@@ -640,7 +647,7 @@ else()
             XCODE_ATTRIBUTE_SKIP_INSTALL No
             XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER ${CMAKE_XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER}
             XCODE_ATTRIBUTE_DEVELOPMENT_TEAM ${CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM}
-            XCODE_ATTRIBUTE_MOTORICA_GAME_CONTROL_APP_GROUP ${CMAKE_XCODE_ATTRIBUTE_MOTORICA_GAME_CONTROL_APP_GROUP}
+            XCODE_ATTRIBUTE_FLUXARA_INPUT_BRIDGE_APP_GROUP ${CMAKE_XCODE_ATTRIBUTE_FLUXARA_INPUT_BRIDGE_APP_GROUP}
             XCODE_ATTRIBUTE_CODE_SIGN_ENTITLEMENTS ${PROJECT_SOURCE_DIR}/data/SuperTuxKart-iOS.entitlements
             XCODE_ATTRIBUTE_DEBUG_INFORMATION_FORMAT "dwarf-with-dsym"
             XCODE_ATTRIBUTE_ASSETCATALOG_COMPILER_APPICON_NAME "AppIcon")
@@ -648,9 +655,10 @@ else()
             set(MOTORICA_IOS_SCHEME_DIR
                 "${CMAKE_BINARY_DIR}/${PROJECT_NAME}.xcodeproj/xcshareddata/xcschemes")
             file(MAKE_DIRECTORY "${MOTORICA_IOS_SCHEME_DIR}")
+            file(REMOVE "${MOTORICA_IOS_SCHEME_DIR}/Motorica Signal LAB.xcscheme")
             configure_file(
-                "${PROJECT_SOURCE_DIR}/cmake/MotoricaSignalLAB.xcscheme"
-                "${MOTORICA_IOS_SCHEME_DIR}/Motorica Signal LAB.xcscheme"
+                "${PROJECT_SOURCE_DIR}/cmake/FluxaraDrift.xcscheme"
+                "${MOTORICA_IOS_SCHEME_DIR}/Fluxara Drift.xcscheme"
                 COPYONLY)
             add_custom_command(TARGET supertuxkart POST_BUILD
                 COMMAND /bin/sh ${PROJECT_SOURCE_DIR}/cmake/CopyIosDsymToArchive.sh

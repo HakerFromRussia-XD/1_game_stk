@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stkgui>
+    <div x="0" y="0" width="100%" height="100%" layout="vertical-row">
+        <spacer width="10" height="7%"/>
+        <header width="94%" height="fit" align="center" text_align="center"
+                raw_text="Fluxara Drift"/>
+        <spacer width="10" height="2%"/>
+        <label width="94%" height="fit" align="center" text_align="center"
+               raw_text="ARCADE RACING CAMPAIGN"/>
+        <spacer width="10" height="7%"/>
+        <roundedbox width="76%" height="31%" align="center">
+            <div x="8%" y="11%" width="84%" height="78%" layout="vertical-row">
+                <label width="100%" height="32%" align="center" text_align="center"
+                       raw_text="CHOOSE A CIRCUIT"/>
+                <spacer width="10" height="9%"/>
+                <button id="campaign" width="100%" height="59%" align="center"
+                        raw_text="Campaign"/>
+            </div>
+        </roundedbox>
+        <spacer width="10" height="3%"/>
+        <div width="76%" height="16%" align="center" layout="horizontal-row">
+            <button id="settings" proportion="1" height="100%" raw_text="Settings"/>
+            <spacer width="4%" height="10"/>
+            <button id="legal" proportion="1" height="100%" raw_text="Legal"/>
+        </div>
+        <spacer width="10" height="4%"/>
+        <label width="86%" height="fit" align="center" text_align="center"
+               word_wrap="true"
+               raw_text="Race offline. Your local results stay on this device."/>
+        <spacer width="10" height="4%"/>
+    </div>
+</stkgui>

@@ -189,7 +189,7 @@ public:
     void resetActivePlayers();
 
     /** Route every attempt to expose the stock main menu through the
-     *  permanent Motorica product root while iOS is in standalone mode. */
+     *  Fluxara Drift campaign home on iOS. */
     void pushScreen(GUIEngine::Screen* screen);
     void resetAndGoToScreen(GUIEngine::Screen* screen);
     void resetAndSetStack(GUIEngine::Screen* screens[]);
