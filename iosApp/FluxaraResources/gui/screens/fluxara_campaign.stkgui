@@ -10,13 +10,26 @@
         <spacer width="10" height="2%"/>
         <label width="74%" height="fit" align="center" text_align="center"
                raw_text="Choose a circuit"/>
-        <spacer width="10" height="4%"/>
-        <!-- Runtime cards use only the track screenshot and name. -->
-        <ribbon_grid id="tracks" width="78%" height="62%" align="center"
-                     square_items="false" label_location="bottom"
-                     child_width="360" child_height="188" />
-        <spacer width="10" height="4%"/>
-        <button id="back" width="42%" height="15%" align="center"
+        <spacer width="10" height="3%"/>
+        <!-- One touch card at a time replaces the legacy ribbon control. -->
+        <icon-button id="track-preview" width="74%" height="39%" align="center"
+                     custom_ratio="1.77778"/>
+        <spacer width="10" height="2%"/>
+        <header id="track-name" width="74%" height="fit" align="center"
+                text_align="center"/>
+        <spacer width="10" height="2%"/>
+        <div width="74%" height="13%" align="center" layout="horizontal-row">
+            <button id="previous" width="30%" height="100%" align="center"
+                    raw_text="Previous"/>
+            <spacer width="4%" height="10"/>
+            <button id="next" width="30%" height="100%" align="center"
+                    raw_text="Next"/>
+            <spacer width="4%" height="10"/>
+            <button id="choose" width="32%" height="100%" align="center"
+                    raw_text="Choose"/>
+        </div>
+        <spacer width="10" height="3%"/>
+        <button id="back" width="42%" height="11%" align="center"
                 raw_text="Back"/>
         <spacer width="10" height="4%"/>
     </div>

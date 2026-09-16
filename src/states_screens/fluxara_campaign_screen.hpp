@@ -5,6 +5,9 @@
 
 #include "guiengine/screen.hpp"
 
+#include <string>
+#include <vector>
+
 namespace GUIEngine { class Widget; }
 
 class FluxaraCampaignScreen : public GUIEngine::Screen,
@@ -13,6 +16,11 @@ class FluxaraCampaignScreen : public GUIEngine::Screen,
 private:
     friend class GUIEngine::ScreenSingleton<FluxaraCampaignScreen>;
     FluxaraCampaignScreen();
+
+    std::vector<std::string> m_tracks;
+    unsigned m_selected_track = 0;
+
+    void updateTrackCard();
 
 public:
     void loadedFromFile() OVERRIDE;

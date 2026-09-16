@@ -2,8 +2,9 @@
 
 #include "states_screens/fluxara_campaign_screen.hpp"
 
-#include "guiengine/widgets/dynamic_ribbon_widget.hpp"
 #include "guiengine/widgets/icon_button_widget.hpp"
+#include "guiengine/widgets/label_widget.hpp"
+#include "graphics/stk_tex_manager.hpp"
 #include "states_screens/fluxara_race_setup_screen.hpp"
 #include "states_screens/state_manager.hpp"
 #include "tracks/track.hpp"
@@ -24,8 +25,7 @@ void FluxaraCampaignScreen::init()
 {
     Screen::init();
 
-    DynamicRibbonWidget* cards = getWidget<DynamicRibbonWidget>("tracks");
-    cards->clearItems();
+    m_tracks.clear();
 
     for (int i = 0; i < (int)track_manager->getNumberOfTracks(); ++i)
     {
@@ -33,12 +33,33 @@ void FluxaraCampaignScreen::init()
         if (track->isArena() || track->isSoccer() || track->isInternal())
             continue;
 
-        cards->addItem(track->getName(), track->getIdent(),
-                       track->getScreenshotFile(), 0,
-                       IconButtonWidget::ICON_PATH_TYPE_ABSOLUTE);
+        m_tracks.push_back(track->getIdent());
     }
 
-    cards->updateItemDisplay();
+    m_selected_track = 0;
+    updateTrackCard();
+}
+
+void FluxaraCampaignScreen::updateTrackCard()
+{
+    if (m_tracks.empty())
+    {
+        getWidget<LabelWidget>("track-name")->setText("No circuit available",
+                                                        false);
+        return;
+    }
+
+    Track* track = track_manager->getTrack(m_tracks[m_selected_track]);
+    if (!track)
+        return;
+
+    getWidget<LabelWidget>("track-name")->setText(track->getName(), false);
+    IconButtonWidget* preview = getWidget<IconButtonWidget>("track-preview");
+    preview->setImage(STKTexManager::getInstance()->getTexture(
+        track->getScreenshotFile(), "While loading Fluxara track card:",
+        track->getFilename()));
+    preview->setFocusable(false);
+    preview->m_tab_stop = false;
 }
 
 void FluxaraCampaignScreen::eventCallback(Widget* widget,
@@ -51,19 +72,25 @@ void FluxaraCampaignScreen::eventCallback(Widget* widget,
         return;
     }
 
-    if (name != "tracks")
+    if (name == "previous" && !m_tracks.empty())
+    {
+        m_selected_track = m_selected_track == 0 ?
+            unsigned(m_tracks.size() - 1) : m_selected_track - 1;
+        updateTrackCard();
+        return;
+    }
+
+    if (name == "next" && !m_tracks.empty())
+    {
+        m_selected_track = (m_selected_track + 1) % unsigned(m_tracks.size());
+        updateTrackCard();
+        return;
+    }
+
+    if (name != "choose" || m_tracks.empty())
         return;
 
-    DynamicRibbonWidget* cards = dynamic_cast<DynamicRibbonWidget*>(widget);
-    if (!cards)
-        return;
-
-    const std::string selection =
-        cards->getSelectionIDString(PLAYER_ID_GAME_MASTER);
-    if (selection == RibbonWidget::NO_ITEM_ID)
-        return;
-
-    Track* track = track_manager->getTrack(selection);
+    Track* track = track_manager->getTrack(m_tracks[m_selected_track]);
     if (!track)
         return;
 
