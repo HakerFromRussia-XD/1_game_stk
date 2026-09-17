@@ -8,7 +8,7 @@
 
 # Increase every upload to App store
 SET(IOS_MARKETING_VERSION 1.0)
-SET(IOS_BUILD_VERSION 10)
+SET(IOS_BUILD_VERSION 1)
 
 # Keep every generated Xcode configuration on the Fluxara Drift application
 # ID and its Apple Developer team.

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<kart name="Fluxara Halo" version="2" model-file="adiumy.b3d" icon-file="adiumyicon.png" minimap-icon-file="adiumyicon.png" shadow-file="adiumyshadow.png" groups="Fluxara" rgb="0 0.7 0" revision="1">
+<kart name="Fluxara Halo" type="light" version="2" model-file="adiumy.b3d" icon-file="adiumyicon.png" minimap-icon-file="adiumyicon.png" shadow-file="adiumyshadow.png" groups="Fluxara" rgb="0 0.7 0" revision="1">
     <animations left="0" straight="20" right="40" start-winning="78" end-winning="199" start-losing="244" start-losing-loop="308" end-losing="314"/>
     <wheels>
         <front-left position="-0.397559 0.161885 0.255742" model="wheel-front-left.b3d"/>
