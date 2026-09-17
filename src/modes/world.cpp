@@ -312,11 +312,28 @@ void World::init()
 
     if (Camera::getNumCameras() == 0)
     {
+#ifdef IOS_STK
+        // LocalPlayerController normally creates this camera itself. The
+        // hidden --test-ai=-1 path deliberately uses an AI controller for
+        // that slot, so provide the same camera before the renderer loads.
+        if (AIBaseController::getTestAI() < 0)
+        {
+            for (const auto& kart : m_karts)
+            {
+                if (kart->getController()->isLocalPlayerController())
+                {
+                    Camera::createCamera(kart.get(), 0);
+                    break;
+                }
+            }
+        }
+#endif
         auto cl = LobbyProtocol::get<ClientLobby>();
-        if ((NetworkConfig::get()->isServer() &&
-            !GUIEngine::isNoGraphics()) ||
-            RaceManager::get()->isWatchingReplay() ||
-            (cl && cl->isSpectator()))
+        if (Camera::getNumCameras() == 0 &&
+            ((NetworkConfig::get()->isServer() &&
+              !GUIEngine::isNoGraphics()) ||
+             RaceManager::get()->isWatchingReplay() ||
+             (cl && cl->isSpectator())))
         {
             // In case that the server is running with gui, watching replay or
             // spectating the game, create a camera and attach it to the first

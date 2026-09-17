@@ -1456,6 +1456,91 @@ void RaceResultGUI::renderGlobal(float dt)
         break;
     }   // switch
 
+#ifdef IOS_STK
+    // Fluxara is a curated single-circuit experience, not an STK score board.
+    // Render its result card as a self-contained iPhone view so neither the
+    // world behind it nor generic highscores leak into the presentation.
+    if (isFluxaraRace())
+    {
+        const int width = UserConfigParams::m_width;
+        const int height = UserConfigParams::m_height;
+        GL32_draw2DRectangle(video::SColor(255, 5, 12, 26),
+            core::rect<s32>(0, 0, width, height));
+
+        const int card_left = width * 10 / 100;
+        const int card_right = width * 90 / 100;
+        const int card_top = height * 22 / 100;
+        const int card_bottom = height * 67 / 100;
+        GL32_draw2DRectangle(video::SColor(255, 12, 32, 57),
+            core::rect<s32>(card_left, card_top, card_right, card_bottom));
+        GL32_draw2DRectangle(video::SColor(255, 79, 214, 255),
+            core::rect<s32>(card_left, card_top, card_left + 8, card_bottom));
+
+        GUIEngine::getTitleFont()->draw(L"RACE COMPLETE",
+            core::rect<s32>(card_left, height * 7 / 100, card_right,
+                            height * 15 / 100),
+            video::SColor(255, 157, 230, 255), true, true);
+        GUIEngine::getFont()->draw(L"Fluxara Circuit  ·  Run saved",
+            core::rect<s32>(card_left, height * 16 / 100, card_right,
+                            height * 21 / 100),
+            video::SColor(255, 224, 242, 255), true, true);
+
+        const int row_height = (card_bottom - card_top) /
+            std::max(4u, (unsigned int)m_all_row_infos.size() + 2);
+        for (unsigned int i = 0; i < m_all_row_infos.size(); i++)
+        {
+            const RowInfo& row = m_all_row_infos[i];
+            const int y = card_top + row_height * (i + 1);
+            if (row.m_is_player_kart)
+            {
+                GL32_draw2DRectangle(video::SColor(255, 19, 64, 94),
+                    core::rect<s32>(card_left + 20, y - row_height / 6,
+                                    card_right - 20, y + row_height * 2 / 3));
+            }
+            core::stringw rank = core::stringw("#") + core::stringw((int)i + 1);
+            GUIEngine::getFont()->draw(rank,
+                core::rect<s32>(card_left + 42, y, card_left + 110,
+                                y + row_height),
+                video::SColor(255, 79, 214, 255), false, true);
+            GUIEngine::getFont()->draw(row.m_kart_name,
+                core::rect<s32>(card_left + 125, y, card_right - 250,
+                                y + row_height),
+                row.m_is_player_kart ? video::SColor(255, 255, 255, 255)
+                                     : video::SColor(255, 184, 205, 224),
+                false, true);
+            GUIEngine::getFont()->draw(row.m_finish_time_string,
+                core::rect<s32>(card_right - 235, y, card_right - 42,
+                                y + row_height),
+                video::SColor(255, 255, 255, 255), true, true);
+        }
+        GUIEngine::getSmallFont()->draw(L"1 LAP  ·  OPEN RUN",
+            core::rect<s32>(card_left + 42, card_bottom - row_height,
+                            card_right - 42, card_bottom - 8),
+            video::SColor(255, 125, 174, 205), false, true);
+
+        const int button_top = height * 75 / 100;
+        const int button_bottom = height * 86 / 100;
+        const int button_width = width * 28 / 100;
+        const int left_button = width * 20 / 100;
+        const int right_button = width - left_button - button_width;
+        GL32_draw2DRectangle(video::SColor(255, 20, 53, 81),
+            core::rect<s32>(left_button, button_top,
+                            left_button + button_width, button_bottom));
+        GL32_draw2DRectangle(video::SColor(255, 31, 118, 157),
+            core::rect<s32>(right_button, button_top,
+                            right_button + button_width, button_bottom));
+        GUIEngine::getFont()->draw(L"CIRCUITS",
+            core::rect<s32>(left_button, button_top, left_button + button_width,
+                            button_bottom), video::SColor(255, 224, 242, 255),
+            true, true);
+        GUIEngine::getFont()->draw(L"RACE AGAIN",
+            core::rect<s32>(right_button, button_top, right_button + button_width,
+                            button_bottom), video::SColor(255, 255, 255, 255),
+            true, true);
+        return;
+    }
+#endif
+
     // Second phase: update X and Y positions for the various animations
     // =================================================================
     float v = 0.9f*UserConfigParams::m_width / m_time_single_scroll;

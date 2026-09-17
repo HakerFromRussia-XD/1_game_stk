@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Fluxara's iPhone result shell. The result table is populated by
-     RaceResultGUI; this file only supplies the mobile presentation. -->
+<!-- Fluxara's iPhone result shell. RaceResultGUI draws the result card;
+     this layout keeps only the native action bar reachable. -->
 <stkgui>
     <div x="0" y="0" width="100%" height="100%" layout="vertical-row">
-        <spacer width="10" height="6%"/>
-        <header width="82%" height="fit" align="center" text_align="center"
-                raw_text="RACE COMPLETE"/>
-        <spacer width="10" height="2%"/>
-        <label width="72%" height="fit" align="center" text_align="center"
-               raw_text="Your run is recorded."/>
-        <spacer width="10" height="4%"/>
-        <div id="result-table" width="86%" height="61%" align="center">
-            <!-- Populated programmatically by RaceResultGUI. -->
-        </div>
-        <spacer width="10" height="2%"/>
-        <buttonbar id="operations" width="74%" height="18%" align="center">
+        <div id="result-table" width="100%" height="74%" align="center"/>
+        <buttonbar id="operations" width="68%" height="20%" align="center">
             <icon-button id="left" icon="gui/icons/back.png" width="fit"
                          height="100" raw_text="Circuits" word_wrap="true"/>
             <icon-button id="middle" icon="gui/icons/green_check.png" width="fit"
@@ -22,6 +12,6 @@
             <icon-button id="right" icon="gui/icons/restart.png" width="fit"
                          height="100" raw_text="Race again" word_wrap="true"/>
         </buttonbar>
-        <spacer width="10" height="3%"/>
+        <spacer width="10" height="6%"/>
     </div>
 </stkgui>
