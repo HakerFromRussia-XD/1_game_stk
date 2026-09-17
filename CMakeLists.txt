@@ -692,7 +692,13 @@ else()
             COMMAND ${CMAKE_COMMAND} -E rm -f
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/motorica_history.stkgui"
             COMMAND ${CMAKE_COMMAND} -E rm -f
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/motorica_about.stkgui")
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/motorica_about.stkgui"
+            COMMAND ${CMAKE_COMMAND} -E rm -f
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/challenges/motorica_precision.challenge"
+            COMMAND ${CMAKE_COMMAND} -E rm -f
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/challenges/motorica_reaction.challenge"
+            COMMAND ${CMAKE_COMMAND} -E rm -f
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/challenges/motorica_signal_hold.challenge")
         set_target_properties(supertuxkart PROPERTIES
             OUTPUT_NAME "Fluxara Drift"
             XCODE_GENERATE_SCHEME TRUE
