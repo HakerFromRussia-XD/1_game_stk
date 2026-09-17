@@ -178,7 +178,12 @@ void resetToMotoricaRoot()
 
 /** Constructor, initialises internal data structures.
  */
-RaceResultGUI::RaceResultGUI() : Screen("race_result.stkgui",
+RaceResultGUI::RaceResultGUI() : Screen(
+#ifdef IOS_STK
+    "fluxara_race_result.stkgui",
+#else
+    "race_result.stkgui",
+#endif
     /*pause race*/ false)
 {
 }   // RaceResultGUI

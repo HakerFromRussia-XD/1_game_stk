@@ -643,6 +643,7 @@ else()
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_campaign.stkgui
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_race_setup.stkgui
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_kart.stkgui
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_race_result.stkgui
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_settings.stkgui)
         set_source_files_properties(${FLUXARA_IOS_SCREENS} PROPERTIES
             MACOSX_PACKAGE_LOCATION Resources/data/gui/screens)
