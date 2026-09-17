@@ -89,6 +89,22 @@
 
 World* World::m_world[PT_COUNT];
 
+#ifdef IOS_STK
+namespace
+{
+/** An internal device-validation controller. It drives with the regular
+ *  Skidding AI while remaining a local player for camera, HUD and result
+ *  lifecycle setup. It is selected only by --test-ai=-1. */
+class FluxaraValidationAI final : public SkiddingAI
+{
+public:
+    explicit FluxaraValidationAI(AbstractKart* kart) : SkiddingAI(kart) {}
+    virtual bool isPlayerController() const OVERRIDE { return true; }
+    virtual bool isLocalPlayerController() const OVERRIDE { return true; }
+};
+}
+#endif
+
 /** The main world class is used to handle the track and the karts.
  *  The end of the race is detected in two phases: first the (abstract)
  *  function isRaceOver, which must be implemented by all game modes,
@@ -517,35 +533,48 @@ std::shared_ptr<AbstractKart> World::createKart
     {
     case RaceManager::KT_PLAYER:
     {
-        int local_player_count = 99999;
-        if (NetworkConfig::get()->isNetworking() &&
-            NetworkConfig::get()->isClient())
+#ifdef IOS_STK
+        // --test-ai=-1 is an iPhone-only validation route. It retains a real
+        // player slot (so the race HUD and result flow are exercised) while
+        // handing that slot to the normal Skidding AI. It is never reachable
+        // from the public Fluxara UI.
+        if (AIBaseController::getTestAI() < 0)
         {
-            local_player_count =
-                (int)NetworkConfig::get()->getNetworkPlayers().size();
-        }
-        // local_player_id >= local_player_count for fixed AI defined in create
-        // server screen
-        if (NetworkConfig::get()->isNetworkAIInstance() ||
-            local_player_id >= local_player_count)
-        {
-            AIBaseController* ai = NULL;
-            if (RaceManager::get()->isBattleMode())
-                ai = new BattleAI(new_kart.get());
-            else
-                ai = new SkiddingAI(new_kart.get());
-            controller = new NetworkAIController(new_kart.get(),
-                local_player_id, ai);
+            controller = new FluxaraValidationAI(new_kart.get());
         }
         else
+#endif
         {
-            controller = new LocalPlayerController(new_kart.get(),
-                local_player_id, handicap);
-            const PlayerProfile* p = StateManager::get()
-                ->getActivePlayer(local_player_id)->getConstProfile();
-            if (p && p->getDefaultKartColor() > 0.0f)
+            int local_player_count = 99999;
+            if (NetworkConfig::get()->isNetworking() &&
+                NetworkConfig::get()->isClient())
             {
-                ri->setHue(p->getDefaultKartColor());
+                local_player_count =
+                    (int)NetworkConfig::get()->getNetworkPlayers().size();
+            }
+        // local_player_id >= local_player_count for fixed AI defined in create
+        // server screen
+            if (NetworkConfig::get()->isNetworkAIInstance() ||
+                local_player_id >= local_player_count)
+            {
+                AIBaseController* ai = NULL;
+                if (RaceManager::get()->isBattleMode())
+                    ai = new BattleAI(new_kart.get());
+                else
+                    ai = new SkiddingAI(new_kart.get());
+                controller = new NetworkAIController(new_kart.get(),
+                    local_player_id, ai);
+            }
+            else
+            {
+                controller = new LocalPlayerController(new_kart.get(),
+                    local_player_id, handicap);
+                const PlayerProfile* p = StateManager::get()
+                    ->getActivePlayer(local_player_id)->getConstProfile();
+                if (p && p->getDefaultKartColor() > 0.0f)
+                {
+                    ri->setHue(p->getDefaultKartColor());
+                }
             }
         }
         m_num_players ++;
