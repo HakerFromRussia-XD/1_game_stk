@@ -10,6 +10,9 @@
 #include "tracks/track.hpp"
 #include "tracks/track_manager.hpp"
 
+#include <sstream>
+#include <algorithm>
+
 using namespace GUIEngine;
 
 FluxaraCampaignScreen::FluxaraCampaignScreen()
@@ -37,7 +40,17 @@ void FluxaraCampaignScreen::init()
         m_tracks.push_back(track->getIdent());
     }
 
-    m_selected_track = 0;
+    if (!m_next_after.empty())
+    {
+        const std::vector<std::string>::iterator current = std::find(
+            m_tracks.begin(), m_tracks.end(), m_next_after);
+        if (current != m_tracks.end())
+            m_selected_track = unsigned((current - m_tracks.begin() + 1) %
+                m_tracks.size());
+        m_next_after.clear();
+    }
+    else if (m_selected_track >= m_tracks.size())
+        m_selected_track = 0;
     updateTrackCard();
 }
 
@@ -55,6 +68,10 @@ void FluxaraCampaignScreen::updateTrackCard()
         return;
 
     getWidget<LabelWidget>("track-name")->setText(track->getName(), false);
+    std::ostringstream position;
+    position << (m_selected_track + 1) << " / " << m_tracks.size();
+    getWidget<LabelWidget>("track-position")->setText(
+        core::stringw(position.str().c_str()), false);
     IconButtonWidget* preview = getWidget<IconButtonWidget>("track-preview");
     preview->setImage(STKTexManager::getInstance()->getTexture(
         track->getScreenshotFile(), "While loading Fluxara track card:",
@@ -73,7 +90,23 @@ void FluxaraCampaignScreen::eventCallback(Widget* widget,
         return;
     }
 
-    if (name != "choose" || m_tracks.empty())
+    if (m_tracks.empty())
+        return;
+
+    if (name == "previous")
+    {
+        m_selected_track = m_selected_track == 0 ?
+            unsigned(m_tracks.size() - 1) : m_selected_track - 1;
+        updateTrackCard();
+        return;
+    }
+    if (name == "next")
+    {
+        m_selected_track = (m_selected_track + 1) % unsigned(m_tracks.size());
+        updateTrackCard();
+        return;
+    }
+    if (name != "choose")
         return;
 
     Track* track = track_manager->getTrack(m_tracks[m_selected_track]);
@@ -88,4 +121,9 @@ bool FluxaraCampaignScreen::onEscapePressed()
 {
     StateManager::get()->escapePressed();
     return true;
+}
+
+void FluxaraCampaignScreen::showNextAfter(const std::string& track_ident)
+{
+    m_next_after = track_ident;
 }

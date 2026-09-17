@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<scene>
+  <lod>
+   <group name="treeMod1">
+    <static-object lod_distance="160" lod_group="treeMod1" model="treeMod1_LOD80.spm" xyz="-194.13 4.32 58.75" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" skeletal-animation="false"/>
+    <static-object lod_distance="300" lod_group="treeMod1" model="treeMod1_LOD170.spm" xyz="-194.13 4.32 48.75" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" skeletal-animation="false"/>
+   </group>
+  </lod>
+  <track model="ancient-summits_track.spm" x="0" y="0" z="0">
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="45.62 28.56 -87.29" hpr="0.0 -43.3 0.0" scale="2.38 2.38 2.38"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="32.64 30.22 -76.22" hpr="0.0 78.4 0.0" scale="1.31 1.31 1.31"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="44.35 31.83 -101.41" hpr="0.0 78.4 -20.9" scale="1.44 1.44 1.44"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="42.28 35.02 -120.20" hpr="0.0 -0.0 0.0" scale="1.30 1.30 1.30"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="36.47 35.37 -133.29" hpr="-0.0 67.4 -0.0" scale="1.00 1.00 1.00"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="46.87 34.90 -131.25" hpr="0.0 169.8 0.0" scale="1.00 1.00 1.00"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="51.37 35.29 -145.60" hpr="0.0 169.8 0.0" scale="1.33 1.33 1.33"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="72.84 35.86 -152.23" hpr="-0.0 -147.4 0.0" scale="1.11 1.11 1.11"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="87.76 35.86 -156.40" hpr="0.0 131.9 0.0" scale="1.63 1.63 1.63"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="99.71 35.72 -155.01" hpr="-0.0 -91.9 0.0" scale="1.05 1.05 1.05"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="116.29 35.72 -157.48" hpr="-0.0 -155.4 0.0" scale="1.14 1.14 1.14"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="140.38 35.72 -155.80" hpr="-0.0 -133.7 0.0" scale="1.38 1.38 1.38"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="154.27 35.72 -159.61" hpr="0.0 -66.4 -0.0" scale="1.11 1.11 1.11"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="172.34 35.72 -156.17" hpr="-0.0 -47.9 -1.6" scale="1.60 1.60 1.60"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="40.19 28.68 -62.52" hpr="-0.0 11.4 -0.0" scale="1.30 1.30 1.30"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="36.88 28.68 -55.13" hpr="-0.0 32.2 -0.0" scale="0.95 0.95 0.95"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="36.97 28.78 -41.77" hpr="-0.0 -136.2 -0.0" scale="1.23 1.23 1.23"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-65.17 -1.71 153.11" hpr="0.0 -43.3 0.0" scale="2.38 2.38 2.38"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-42.17 -0.35 141.54" hpr="0.0 -10.0 0.0" scale="1.80 1.80 1.80"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-16.18 -0.85 146.70" hpr="0.0 -0.4 0.0" scale="2.37 2.37 2.37"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="49.16 -0.85 188.03" hpr="0.0 -0.4 0.0" scale="2.37 2.37 2.37"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="34.14 -0.85 201.54" hpr="-0.0 61.2 -0.0" scale="2.37 2.37 2.37"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="16.09 -0.85 219.59" hpr="-0.0 35.4 -0.0" scale="1.37 1.37 1.37"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="36.22 -0.84 229.55" hpr="-0.0 35.4 -0.0" scale="1.54 1.54 1.54"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="6.63 -0.85 247.97" hpr="-0.0 35.4 -0.0" scale="1.81 1.81 1.81"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-129.97 -0.85 96.68" hpr="-0.0 -173.0 0.0" scale="2.37 2.37 2.37"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-103.53 -0.35 98.47" hpr="0.0 177.3 0.0" scale="1.80 1.80 1.80"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-82.20 -1.71 84.04" hpr="0.0 144.1 0.0" scale="2.38 2.38 2.38"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-205.81 4.18 -103.52" hpr="0.0 144.1 0.0" scale="2.38 2.38 2.38"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-201.14 3.13 -32.48" hpr="0.0 -164.2 -6.9" scale="1.34 1.34 1.34"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-173.35 3.12 -191.83" hpr="-13.2 165.4 -15.6" scale="1.34 1.34 1.34"/>
+    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-163.22 2.61 -198.27" hpr="-13.2 165.4 -15.6" scale="1.57 1.57 1.57"/>
+  </track>
+  <object id="Balloon" type="animation" xyz="-39.99 116.20 -180.02" hpr="-63.4 89.6 3.0" scale="7.33 7.33 7.33" interaction="none" model="Balloon.spm" skeletal-animation="false">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="0.172 -40.000" h1="-51.067 -40.000" h2="51.412 -40.000"/>
+      <p c="169.894 99.158" h1="103.758 99.158" h2="310.133 99.158"/>
+      <p c="529.782 -151.640" h1="389.314 -151.640" h2="588.448 -151.640"/>
+      <p c="680.088 -40.000" h1="632.980 -40.000" h2="727.196 -40.000"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="0.896 -180.019" h1="-131.535 -180.008" h2="103.519 -180.027"/>
+      <p c="340.106 98.386" h1="207.675 98.386" h2="472.816 98.386"/>
+      <p c="680.029 -179.989" h1="578.468 -179.987" h2="812.522 -179.992"/>
+    </curve>
+    <curve channel="RotX" interpolation="bezier" extend="cyclic">
+      <p c="0.422 -66.375" h1="-175.490 -66.375" h2="176.334 -66.375"/>
+      <p c="451.004 -66.334" h1="275.091 -66.334" h2="626.916 -66.334"/>
+    </curve>
+    <curve channel="RotZ" interpolation="bezier" extend="cyclic">
+      <p c="0.762 0.023" h1="-142.680 0.023" h2="144.205 0.023"/>
+      <p c="368.177 0.065" h1="224.734 0.065" h2="511.620 0.065"/>
+    </curve>
+    <curve channel="RotY" interpolation="linear" extend="cyclic">
+      <p c="0.013 90.084"/>
+      <p c="679.984 -269.997"/>
+    </curve>
+  </object>
+  <object type="movable" id="Ice.005" xyz="12.08 29.31 8.10" hpr="0.0 -0.0 0.0" scale="0.20 0.20 0.20"
+          shape="box" mass="11.0" model="iceCube.spm" friction="0.1" skeletal-animation="false"/>
+  <object type="movable" id="Ice.006" xyz="8.68 29.31 8.13" hpr="0.0 -0.0 0.0" scale="0.20 0.20 0.20"
+          shape="box" mass="11.0" model="iceCube.spm" friction="0.1" skeletal-animation="false"/>
+  <object type="movable" id="Ice.007" xyz="5.42 29.31 7.99" hpr="0.0 -0.0 0.0" scale="0.20 0.20 0.20"
+          shape="box" mass="11.0" model="iceCube.spm" friction="0.1" skeletal-animation="false"/>
+  <object id="Icosphere" type="animation" xyz="-43.19 45.06 -121.74" hpr="0.0 -0.0 0.0" scale="2.00 2.00 2.00" interaction="explode" shape="sphere" model="fallRock.spm" explode="y" skeletal-animation="false">
+    <curve channel="LocX" interpolation="bezier" extend="const">
+      <p c="1.000 -43.190" h1="-96.212 -43.190" h2="98.212 -43.190"/>
+      <p c="250.000 -43.190" h1="191.438 -43.190" h2="261.712 -43.190"/>
+      <p c="280.000 -45.899" h1="268.288 -44.805" h2="291.712 -46.994"/>
+      <p c="310.000 -48.796" h1="298.288 -47.819" h2="325.226 -50.067"/>
+      <p c="349.000 -51.539" h1="333.774 -50.535" h2="364.616 -52.568"/>
+      <p c="389.000 -53.999" h1="373.384 -52.714" h2="401.103 -54.996"/>
+      <p c="420.000 -57.198" h1="407.897 -55.595" h2="431.712 -58.749"/>
+      <p c="450.000 -62.049" h1="438.288 -59.890" h2="461.712 -64.208"/>
+      <p c="480.000 -68.257" h1="468.288 -65.313" h2="491.712 -71.201"/>
+      <p c="510.000 -77.132" h1="498.288 -72.434" h2="521.712 -81.830"/>
+      <p c="540.000 -92.323" h1="528.288 -86.616" h2="551.712 -98.030"/>
+      <p c="570.000 -106.368" h1="558.288 -101.772" h2="581.712 -110.965"/>
+      <p c="600.000 -115.872" h1="588.288 -112.984" h2="611.712 -118.759"/>
+      <p c="630.000 -121.161" h1="618.288 -119.422" h2="641.712 -122.900"/>
+      <p c="660.000 -124.780" h1="648.288 -123.757" h2="671.712 -125.804"/>
+      <p c="690.000 -126.405" h1="678.288 -126.405" h2="701.712 -126.405"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="const">
+      <p c="1.000 -121.735" h1="-96.212 -121.735" h2="98.212 -121.735"/>
+      <p c="250.000 -121.735" h1="191.438 -121.735" h2="261.712 -121.735"/>
+      <p c="280.000 -126.591" h1="268.288 -124.857" h2="291.712 -128.324"/>
+      <p c="310.000 -130.615" h1="298.288 -129.243" h2="325.226 -132.397"/>
+      <p c="349.000 -134.516" h1="333.774 -132.600" h2="364.616 -136.482"/>
+      <p c="389.000 -140.585" h1="373.384 -137.894" h2="401.103 -142.671"/>
+      <p c="420.000 -146.565" h1="407.897 -144.929" h2="431.712 -148.149"/>
+      <p c="450.000 -148.890" h1="438.288 -147.876" h2="461.712 -149.904"/>
+      <p c="480.000 -151.760" h1="468.288 -150.528" h2="491.712 -152.992"/>
+      <p c="510.000 -155.202" h1="498.288 -153.443" h2="521.712 -156.960"/>
+      <p c="540.000 -160.769" h1="528.288 -159.326" h2="551.712 -162.212"/>
+      <p c="570.000 -162.593" h1="558.288 -161.895" h2="581.712 -163.291"/>
+      <p c="600.000 -164.344" h1="588.288 -163.311" h2="611.712 -165.378"/>
+      <p c="630.000 -167.888" h1="618.288 -166.423" h2="641.712 -169.353"/>
+      <p c="660.000 -171.848" h1="648.288 -169.640" h2="671.712 -174.057"/>
+      <p c="690.000 -179.201" h1="678.288 -179.201" h2="701.712 -179.201"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="const">
+      <p c="1.000 45.061" h1="-96.212 45.061" h2="98.212 45.061"/>
+      <p c="250.000 45.061" h1="191.438 45.061" h2="261.712 45.061"/>
+      <p c="280.000 44.369" h1="268.288 44.883" h2="291.712 43.855"/>
+      <p c="310.000 42.429" h1="298.288 43.291" h2="325.226 41.309"/>
+      <p c="349.000 39.214" h1="333.774 41.708" h2="364.616 36.656"/>
+      <p c="389.000 29.409" h1="373.384 34.286" h2="401.103 25.630"/>
+      <p c="420.000 17.648" h1="407.897 17.809" h2="431.712 17.492"/>
+      <p c="450.000 17.492" h1="438.288 17.648" h2="461.712 17.336"/>
+      <p c="480.000 13.997" h1="468.288 15.268" h2="491.712 12.726"/>
+      <p c="510.000 10.980" h1="498.288 12.234" h2="521.712 9.726"/>
+      <p c="540.000 7.572" h1="528.288 8.474" h2="551.712 6.670"/>
+      <p c="570.000 6.359" h1="558.288 6.359" h2="581.712 6.359"/>
+      <p c="600.000 6.359" h1="588.288 6.359" h2="611.712 6.359"/>
+      <p c="630.000 3.713" h1="618.288 6.359" h2="641.712 1.067"/>
+      <p c="660.000 -9.928" h1="648.288 -6.621" h2="671.712 -13.235"/>
+      <p c="690.000 -13.235" h1="678.288 -13.235" h2="701.712 -13.235"/>
+    </curve>
+    <curve channel="RotX" interpolation="bezier" extend="const">
+      <p c="1.000 -0.000" h1="-96.212 -0.000" h2="98.212 -0.000"/>
+      <p c="250.000 -0.000" h1="191.438 -0.000" h2="261.712 -0.000"/>
+      <p c="280.000 -62.129" h1="268.288 -35.753" h2="291.712 -88.505"/>
+      <p c="310.000 -135.119" h1="298.288 -113.887" h2="325.226 -162.720"/>
+      <p c="349.000 -181.629" h1="333.774 -168.523" h2="364.616 -195.072"/>
+      <p c="389.000 -202.789" h1="373.384 -189.839" h2="401.103 -212.826"/>
+      <p c="420.000 -237.805" h1="407.897 -224.257" h2="431.712 -250.916"/>
+      <p c="450.000 -271.085" h1="438.288 -256.773" h2="461.712 -285.396"/>
+      <p c="480.000 -311.119" h1="468.288 -284.982" h2="491.712 -337.256"/>
+      <p c="510.000 -404.979" h1="498.288 -357.901" h2="521.712 -452.056"/>
+      <p c="540.000 -552.289" h1="528.288 -501.932" h2="551.712 -602.646"/>
+      <p c="570.000 -662.947" h1="558.288 -618.093" h2="581.712 -707.801"/>
+      <p c="600.000 -782.066" h1="588.288 -749.518" h2="611.712 -814.613"/>
+      <p c="630.000 -829.681" h1="618.288 -829.681" h2="641.712 -829.681"/>
+      <p c="660.000 -829.681" h1="648.288 -829.681" h2="671.712 -829.681"/>
+      <p c="690.000 -859.236" h1="678.288 -859.236" h2="701.712 -859.236"/>
+    </curve>
+    <curve channel="RotZ" interpolation="bezier" extend="const">
+      <p c="1.000 -0.000" h1="-96.212 -0.000" h2="98.212 -0.000"/>
+      <p c="250.000 -0.000" h1="191.438 -0.000" h2="261.712 -0.000"/>
+      <p c="280.000 35.556" h1="268.288 35.556" h2="291.712 35.556"/>
+      <p c="310.000 32.869" h1="298.288 34.449" h2="325.226 30.815"/>
+      <p c="349.000 25.841" h1="333.774 29.738" h2="364.616 21.844"/>
+      <p c="389.000 12.573" h1="373.384 18.048" h2="401.103 8.329"/>
+      <p c="420.000 1.116" h1="407.897 2.568" h2="431.712 -0.289"/>
+      <p c="450.000 -0.289" h1="438.288 -0.289" h2="461.712 -0.289"/>
+      <p c="480.000 5.646" h1="468.288 -0.289" h2="491.712 11.581"/>
+      <p c="510.000 35.844" h1="498.288 25.567" h2="521.712 46.122"/>
+      <p c="540.000 58.295" h1="528.288 58.295" h2="551.712 58.295"/>
+      <p c="570.000 -25.479" h1="558.288 -2.470" h2="581.712 -48.489"/>
+      <p c="600.000 -59.579" h1="588.288 -59.579" h2="611.712 -59.579"/>
+      <p c="630.000 -28.761" h1="618.288 -28.761" h2="641.712 -28.761"/>
+      <p c="660.000 -28.761" h1="648.288 -28.761" h2="671.712 -28.761"/>
+      <p c="690.000 -25.861" h1="678.288 -25.861" h2="701.712 -25.861"/>
+    </curve>
+    <curve channel="RotY" interpolation="bezier" extend="const">
+      <p c="1.000 -0.000" h1="-96.212 -0.000" h2="98.212 -0.000"/>
+      <p c="250.000 -0.000" h1="191.438 -0.000" h2="261.712 -0.000"/>
+      <p c="280.000 -0.000" h1="268.288 -0.000" h2="291.712 -0.000"/>
+      <p c="310.000 35.637" h1="298.288 26.217" h2="325.226 47.883"/>
+      <p c="349.000 52.043" h1="333.774 52.043" h2="364.616 52.043"/>
+      <p c="389.000 49.339" h1="373.384 50.169" h2="401.103 48.695"/>
+      <p c="420.000 48.137" h1="407.897 48.137" h2="431.712 48.137"/>
+      <p c="450.000 53.481" h1="438.288 53.481" h2="461.712 53.481"/>
+      <p c="480.000 48.582" h1="468.288 53.481" h2="491.712 43.684"/>
+      <p c="510.000 8.841" h1="498.288 8.841" h2="521.712 8.841"/>
+      <p c="540.000 109.251" h1="528.288 109.251" h2="551.712 109.251"/>
+      <p c="570.000 106.908" h1="558.288 109.251" h2="581.712 104.565"/>
+      <p c="600.000 43.990" h1="588.288 64.714" h2="611.712 23.265"/>
+      <p c="630.000 0.741" h1="618.288 0.741" h2="641.712 0.741"/>
+      <p c="660.000 0.741" h1="648.288 0.741" h2="671.712 0.741"/>
+      <p c="690.000 -13.066" h1="678.288 -13.066" h2="701.712 -13.066"/>
+    </curve>
+  </object>
+  <sun  fog="true" fog-color="78 78 78" fog-max="1.0" fog-start="50.00" fog-end="300.00" xyz="-10.92 179.92 -37.87" sun-diffuse="110 110 110" ambient="98 105 115"/>
+  <sky-box texture="snowsky_t.jpg snowsky_b.jpg snowsky_e.jpg snowsky_w.jpg snowsky_s.jpg snowsky_n.jpg" sh-texture="snowsky_t.jpg snowsky_b.jpg snowsky_e.jpg snowsky_w.jpg snowsky_s.jpg snowsky_n.jpg"/>
+  <camera far="1000.0"/>
+  <checks>
+    <check-lap kind="lap" same-group="0" other-ids="1 2 3" />
+    <check-line kind="activate" other-ids="4 5 6" p1="-211.10 10.57" p2="-110.99 7.40"
+                min-height="1.48" same-group="1 2 3"/>
+    <check-line kind="activate" other-ids="4 5 6" p1="-211.10 10.57" p2="-110.99 7.40"
+                min-height="5.48" same-group="1 2 3"/>
+    <check-line kind="activate" other-ids="4 5 6" p1="-211.10 10.57" p2="-110.99 7.40"
+                min-height="9.48" same-group="1 2 3"/>
+    <check-line kind="activate" other-ids="7 8 9" p1="-74.14 -225.41" p2="-71.85 -125.29"
+                min-height="9.84" same-group="4 5 6"/>
+    <check-line kind="activate" other-ids="7 8 9" p1="-74.14 -225.41" p2="-71.85 -125.29"
+                min-height="13.84" same-group="4 5 6"/>
+    <check-line kind="activate" other-ids="7 8 9" p1="-74.14 -225.41" p2="-71.85 -125.29"
+                min-height="17.84" same-group="4 5 6"/>
+    <check-line kind="activate" other-ids="10 11 12" p1="-8.74 -115.31" p2="-40.61 -78.66"
+                min-height="37.63" same-group="7 8 9"/>
+    <check-line kind="activate" other-ids="10 11 12" p1="-8.74 -115.31" p2="-40.61 -78.66"
+                min-height="41.63" same-group="7 8 9"/>
+    <check-line kind="activate" other-ids="10 11 12" p1="-8.74 -115.31" p2="-40.61 -78.66"
+                min-height="45.63" same-group="7 8 9"/>
+    <check-line kind="activate" other-ids="13 14 15 16 17 18 19" p1="-58.73 -26.40" p2="-60.92 28.68"
+                min-height="42.39" same-group="10 11 12"/>
+    <check-line kind="activate" other-ids="13 14 15 16 17 18 19" p1="-58.73 -26.40" p2="-60.92 28.68"
+                min-height="46.39" same-group="10 11 12"/>
+    <check-line kind="activate" other-ids="13 14 15 16 17 18 19" p1="-58.73 -26.40" p2="-60.92 28.68"
+                min-height="50.39" same-group="10 11 12"/>
+    <check-line kind="activate" other-ids="0" p1="148.74 -114.23" p2="149.05 -77.08"
+                min-height="21.60" same-group="13 14 15 16 17 18 19"/>
+    <check-line kind="activate" other-ids="0" p1="148.74 -114.23" p2="149.05 -77.08"
+                min-height="25.60" same-group="13 14 15 16 17 18 19"/>
+    <check-line kind="activate" other-ids="0" p1="148.74 -114.23" p2="149.05 -77.08"
+                min-height="29.60" same-group="13 14 15 16 17 18 19"/>
+    <check-line kind="activate" other-ids="0" p1="148.74 -114.23" p2="149.05 -77.08"
+                min-height="33.60" same-group="13 14 15 16 17 18 19"/>
+    <check-line kind="activate" other-ids="0" p1="-41.42 -129.47" p2="-19.62 -99.38"
+                min-height="3.56" same-group="13 14 15 16 17 18 19"/>
+    <check-line kind="activate" other-ids="0" p1="-41.42 -129.47" p2="-19.62 -99.38"
+                min-height="7.56" same-group="13 14 15 16 17 18 19"/>
+    <check-line kind="activate" other-ids="0" p1="-41.42 -129.47" p2="-19.62 -99.38"
+                min-height="11.56" same-group="13 14 15 16 17 18 19"/>
+  </checks>
+  <banana id="Empty" x="-1.05" y="0.90" z="30.08" />
+  <item id="Empty.001" x="-44.12" y="9.32" z="29.48" drop="false" />
+  <item id="Empty.002" x="-44.12" y="9.32" z="33.57" drop="false" />
+  <item id="Empty.003" x="-44.12" y="9.32" z="37.72" drop="false" />
+  <item id="Empty.004" x="-44.12" y="9.32" z="41.52" drop="false" />
+  <small-nitro id="Empty.005" x="-65.66" y="9.12" z="39.09" drop="false" />
+  <small-nitro id="Empty.006" x="-65.66" y="9.12" z="42.74" drop="false" />
+  <small-nitro id="Empty.007" x="-65.66" y="9.12" z="46.23" drop="false" />
+  <small-nitro id="Empty.008" x="-65.66" y="9.12" z="50.31" drop="false" />
+  <small-nitro id="Empty.009" x="-146.05" y="1.44" z="-47.57" />
+  <small-nitro id="Empty.010" x="-142.07" y="1.44" z="-47.57" />
+  <small-nitro id="Empty.011" x="-137.98" y="1.44" z="-47.57" />
+  <item id="Empty.012" x="-150.78" y="10.05" z="-47.26" drop="false" />
+  <item id="Empty.013" x="-154.98" y="10.05" z="-47.26" drop="false" />
+  <item id="Empty.014" x="-158.60" y="10.05" z="-47.26" drop="false" />
+  <banana id="Empty.015" x="-131.62" y="9.30" z="-47.01" drop="false" />
+  <banana id="Empty.016" x="-123.72" y="9.30" z="-47.01" drop="false" />
+  <banana id="Empty.017" x="-80.77" y="8.17" z="-147.61" />
+  <item id="Empty.018" x="-44.34" y="22.36" z="-158.05" />
+  <item id="Empty.019" x="-44.34" y="22.36" z="-152.71" />
+  <item id="Empty.020" x="-44.34" y="22.36" z="-147.70" />
+  <item id="Empty.021" x="-40.40" y="22.99" z="-150.00" />
+  <item id="Empty.022" x="-40.47" y="24.11" z="-155.18" />
+  <banana id="Empty.023" x="-3.12" y="39.25" z="-89.21" />
+  <small-nitro id="Empty.024" x="20.85" y="33.04" z="-111.67" />
+  <small-nitro id="Empty.025" x="25.10" y="35.12" z="-109.60" />
+  <big-nitro id="Empty.026" x="29.10" y="37.11" z="-107.48" />
+  <item id="Empty.027" x="-91.84" y="43.62" z="-56.68" />
+  <item id="Empty.028" x="-102.99" y="46.49" z="-56.08" />
+  <small-nitro id="Empty.029" x="-94.91" y="44.41" z="-56.68" />
+  <small-nitro id="Empty.030" x="-99.85" y="45.68" z="-56.28" />
+  <banana id="Empty.031" x="57.01" y="29.00" z="-62.74" />
+  <banana id="Empty.032" x="53.43" y="29.00" z="-63.05" />
+  <small-nitro id="Empty.033" x="121.74" y="30.85" z="-101.15" />
+  <small-nitro id="Empty.034" x="121.74" y="30.85" z="-96.15" />
+  <small-nitro id="Empty.035" x="121.74" y="30.85" z="-91.15" />
+  <item id="Empty.036" x="124.90" y="7.75" z="-125.16" />
+  <item id="Empty.037" x="124.90" y="7.75" z="-129.16" />
+  <item id="Empty.038" x="124.90" y="7.75" z="-133.16" />
+  <item id="Empty.039" x="124.90" y="7.75" z="-137.16" />
+  <item id="Empty.040" x="-13.06" y="10.12" z="-47.51" />
+  <item id="Empty.041" x="-13.21" y="9.52" z="-52.27" />
+  <item id="Empty.042" x="-11.15" y="9.50" z="-56.13" />
+  <item id="Empty.043" x="-6.29" y="9.88" z="-58.46" />
+  <big-nitro id="Empty.044" x="23.41" y="5.60" z="-142.32" />
+  <big-nitro id="Empty.045" x="19.85" y="4.77" z="-143.81" />
+  <big-nitro id="Empty.046" x="17.72" y="5.10" z="-146.88" />
+  <big-nitro id="Empty.047" x="15.31" y="5.35" z="-149.20" />
+  <banana id="Empty.048" x="-39.62" y="4.68" z="-112.06" />
+  <banana id="Empty.049" x="-12.45" y="3.99" z="-121.05" />
+  <lightshaft xyz="-315.96 285.13 55.92" id="Sun" opacity="0.60" color="185 185 185"/>
+  <default-start karts-per-row     ="3"
+                 forwards-distance ="1.50"
+                 sidewards-distance="1.80"
+                 upwards-distance  ="1.10"/>
+</scene>

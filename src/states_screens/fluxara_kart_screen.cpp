@@ -147,7 +147,10 @@ void FluxaraKartScreen::startRace()
     RaceManager::get()->setNumPlayers(1);
     RaceManager::get()->setNumKarts(std::max(1, m_num_karts));
     RaceManager::get()->setPlayerKart(0, kart);
-    RaceManager::get()->setAIKartOverride("fluxara-halo");
+    // Keep rivals inside the curated Fluxara roster while allowing the player
+    // to drive either bundled kart.
+    RaceManager::get()->setAIKartOverride(
+        m_karts[(m_selected_kart + 1) % m_karts.size()]);
     RaceManager::get()->setReverseTrack(false);
 
     input_manager->getDeviceManager()->setAssignMode(ASSIGN);

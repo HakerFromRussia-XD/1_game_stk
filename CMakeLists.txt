@@ -660,14 +660,37 @@ else()
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/action_card.png)
         set_source_files_properties(${FLUXARA_IOS_SKIN} PROPERTIES
             MACOSX_PACKAGE_LOCATION Resources/data/skins/fluxara)
-        file(GLOB FLUXARA_IOS_KART
-            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/karts/fluxara-halo/*)
-        set_source_files_properties(${FLUXARA_IOS_KART} PROPERTIES
-            MACOSX_PACKAGE_LOCATION Resources/data/karts/fluxara-halo)
-        file(GLOB FLUXARA_IOS_TRACK
-            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/tracks/fluxara-circuit/*)
-        set_source_files_properties(${FLUXARA_IOS_TRACK} PROPERTIES
-            MACOSX_PACKAGE_LOCATION Resources/data/tracks/fluxara-circuit)
+        # Each Fluxara package stays self-contained in the source tree and is
+        # mirrored under the same identifier inside the iOS data bundle.
+        # This keeps adding a reviewed circuit or drive from touching Android.
+        file(GLOB FLUXARA_IOS_KART_DIRS LIST_DIRECTORIES true
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/karts/*)
+        set(FLUXARA_IOS_KART)
+        foreach(FLUXARA_IOS_KART_DIR IN LISTS FLUXARA_IOS_KART_DIRS)
+            if(IS_DIRECTORY ${FLUXARA_IOS_KART_DIR})
+                get_filename_component(FLUXARA_IOS_KART_IDENT
+                    ${FLUXARA_IOS_KART_DIR} NAME)
+                file(GLOB FLUXARA_IOS_KART_FILES ${FLUXARA_IOS_KART_DIR}/*)
+                set_source_files_properties(${FLUXARA_IOS_KART_FILES} PROPERTIES
+                    MACOSX_PACKAGE_LOCATION
+                    Resources/data/karts/${FLUXARA_IOS_KART_IDENT})
+                list(APPEND FLUXARA_IOS_KART ${FLUXARA_IOS_KART_FILES})
+            endif()
+        endforeach()
+        file(GLOB FLUXARA_IOS_TRACK_DIRS LIST_DIRECTORIES true
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/tracks/*)
+        set(FLUXARA_IOS_TRACK)
+        foreach(FLUXARA_IOS_TRACK_DIR IN LISTS FLUXARA_IOS_TRACK_DIRS)
+            if(IS_DIRECTORY ${FLUXARA_IOS_TRACK_DIR})
+                get_filename_component(FLUXARA_IOS_TRACK_IDENT
+                    ${FLUXARA_IOS_TRACK_DIR} NAME)
+                file(GLOB FLUXARA_IOS_TRACK_FILES ${FLUXARA_IOS_TRACK_DIR}/*)
+                set_source_files_properties(${FLUXARA_IOS_TRACK_FILES} PROPERTIES
+                    MACOSX_PACKAGE_LOCATION
+                    Resources/data/tracks/${FLUXARA_IOS_TRACK_IDENT})
+                list(APPEND FLUXARA_IOS_TRACK ${FLUXARA_IOS_TRACK_FILES})
+            endif()
+        endforeach()
         set(FLUXARA_IOS_NOTICES
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/NOTICE-THIRD-PARTY.txt)
         set_source_files_properties(${FLUXARA_IOS_NOTICES} PROPERTIES

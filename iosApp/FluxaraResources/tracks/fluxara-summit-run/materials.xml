@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<materials>
+  <material name="blueZipper.png" shader="alphatest" mirror-axis="V" has-gravity="Y">
+    <zipper duration="1.0" max-speed-increase="15.0" fade-out-time="0.5" speed-gain="9.0" min-speed="-1.0"/>
+  </material>
+  <material name="grassded.png" slowdown-time="2.00" max-speed="0.89"/>
+  <material name="ice.png" gloss-map="icemap.png"/>
+  <material name="Ice_001_COLOR.png" shader="alphablend"/>
+  <material name="rock_brown.jpg" slowdown-time="1.30" max-speed="0.35"/>
+  <material name="rock_grey.jpg" has-gravity="Y"/>
+  <material name="stk_generic_ice_alpha_custom.png" has-gravity="Y"/>
+  <material name="stk_generic_snow_a.png" slowdown-time="2.40" max-speed="0.65"/>
+  <material name="transparence.png" shader="alphatest" falling-effect="Y"/>
+  <material name="tree_1.png" shader="alphatest"/>
+  <material name="Water_001_COLOR.png" falling-effect="Y" shader="displace"/>
+</materials>

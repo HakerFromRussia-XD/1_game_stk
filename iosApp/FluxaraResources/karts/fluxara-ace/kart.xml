@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<kart name="Fluxara Ace" version="3" model-file="ace y11-h4w.spm" icon-file="icon.png" minimap-icon-file="icon.png" shadow-file="y11-h4w_shadow.png" type="heavy" center-shift="-0.05" groups="Fluxara" rgb="1.00 1.00 1.00" revision="3">
+    <sounds engine="large">
+        <skid name="default"/>
+    </sounds>
+    <animations right="0" straight="16" left="34" backpedal-right="51" backpedal="67" backpedal-left="85" start-jump="106" end-jump="137" start-winning="155" start-winning-loop="163" end-winning="237" end-winning-straight="244" start-losing="257" start-losing-loop="271" end-losing="415" end-losing-straight="427" selection-start="457" selection-end="676"/>
+    <nitro-emitter>
+        <nitro-emitter-a position="0.031892 0.271517 -0.592158"/>
+        <nitro-emitter-b position="-0.031892 0.271517 -0.592158"/>
+    </nitro-emitter>
+</kart>

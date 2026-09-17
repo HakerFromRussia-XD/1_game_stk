@@ -156,7 +156,8 @@ bool isMotoricaStandaloneRace()
 bool isFluxaraRace()
 {
 #ifdef IOS_STK
-    return RaceManager::get()->getTrackName() == "fluxara-circuit";
+    Track* track = track_manager->getTrack(RaceManager::get()->getTrackName());
+    return track != NULL && track->isInGroup("Fluxara");
 #else
     return false;
 #endif
@@ -481,8 +482,9 @@ void RaceResultGUI::enableAllButtons()
     // upstream STK race setup.
     if (isFluxaraRace())
     {
-        middle->setVisible(false);
-        middle->setFocusable(false);
+        middle->setLabel(StringUtils::utf8ToWide("Next circuit"));
+        middle->setImage("gui/icons/green_check.png");
+        middle->setVisible(true);
         right->setLabel(StringUtils::utf8ToWide("Race again"));
         right->setImage("gui/icons/restart.png");
         right->setVisible(true);
@@ -798,6 +800,18 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
         const bool motorica_training = isMotoricaStandaloneRace();
         const bool fluxara_race = isFluxaraRace();
         StateManager::get()->popMenu();
+        if (fluxara_race && action == "middle")
+        {
+            const std::string current_track = RaceManager::get()->getTrackName();
+            RaceManager::get()->exitRace();
+            RaceManager::get()->setAIKartOverride("");
+#ifdef IOS_STK
+            FluxaraCampaignScreen::getInstance()->showNextAfter(current_track);
+            StateManager::get()->resetAndGoToScreen(
+                FluxaraCampaignScreen::getInstance());
+#endif
+            return;
+        }
         if (action == "right")        // Restart
         {
 #ifdef IOS_STK
@@ -1480,7 +1494,12 @@ void RaceResultGUI::renderGlobal(float dt)
             core::rect<s32>(card_left, height * 7 / 100, card_right,
                             height * 15 / 100),
             video::SColor(255, 157, 230, 255), true, true);
-        GUIEngine::getFont()->draw(L"Fluxara Circuit  ·  Run saved",
+        Track* fluxara_track = track_manager->getTrack(
+            RaceManager::get()->getTrackName());
+        core::stringw fluxara_subtitle = fluxara_track ?
+            fluxara_track->getName() : core::stringw(L"Fluxara Drift");
+        fluxara_subtitle += L"  ·  Run saved";
+        GUIEngine::getFont()->draw(fluxara_subtitle,
             core::rect<s32>(card_left, height * 16 / 100, card_right,
                             height * 21 / 100),
             video::SColor(255, 224, 242, 255), true, true);
@@ -1520,19 +1539,27 @@ void RaceResultGUI::renderGlobal(float dt)
 
         const int button_top = height * 75 / 100;
         const int button_bottom = height * 86 / 100;
-        const int button_width = width * 28 / 100;
-        const int left_button = width * 20 / 100;
-        const int right_button = width - left_button - button_width;
+        const int button_width = width * 20 / 100;
+        const int left_button = width * 15 / 100;
+        const int middle_button = width * 40 / 100;
+        const int right_button = width * 65 / 100;
         GL32_draw2DRectangle(video::SColor(255, 20, 53, 81),
             core::rect<s32>(left_button, button_top,
                             left_button + button_width, button_bottom));
         GL32_draw2DRectangle(video::SColor(255, 31, 118, 157),
             core::rect<s32>(right_button, button_top,
                             right_button + button_width, button_bottom));
+        GL32_draw2DRectangle(video::SColor(255, 23, 80, 112),
+            core::rect<s32>(middle_button, button_top,
+                            middle_button + button_width, button_bottom));
         GUIEngine::getFont()->draw(L"CIRCUITS",
             core::rect<s32>(left_button, button_top, left_button + button_width,
                             button_bottom), video::SColor(255, 224, 242, 255),
             true, true);
+        GUIEngine::getFont()->draw(L"NEXT",
+            core::rect<s32>(middle_button, button_top,
+                            middle_button + button_width, button_bottom),
+            video::SColor(255, 224, 242, 255), true, true);
         GUIEngine::getFont()->draw(L"RACE AGAIN",
             core::rect<s32>(right_button, button_top, right_button + button_width,
                             button_bottom), video::SColor(255, 255, 255, 255),

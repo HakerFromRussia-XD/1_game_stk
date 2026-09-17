@@ -19,6 +19,7 @@ private:
 
     std::vector<std::string> m_tracks;
     unsigned m_selected_track = 0;
+    std::string m_next_after;
 
     void updateTrackCard();
 
@@ -28,6 +29,7 @@ public:
     void eventCallback(GUIEngine::Widget* widget, const std::string& name,
                        const int player_id) OVERRIDE;
     bool onEscapePressed() OVERRIDE;
+    void showNextAfter(const std::string& track_ident);
 };
 
 #endif
