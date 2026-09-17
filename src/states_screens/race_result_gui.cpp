@@ -69,7 +69,6 @@
 #include "input/motorica_game_control_ios.hpp"
 #include "input/motorica_standalone_training.hpp"
 #include "states_screens/fluxara_campaign_screen.hpp"
-#include "states_screens/motorica_hub_screen.hpp"
 #endif
 #include "states_screens/online/networking_lobby.hpp"
 #include "states_screens/options/options_screen_video.hpp"
@@ -145,12 +144,7 @@ core::stringw trainingMetricsText(const StandaloneTrainingResult& result)
 
 bool isMotoricaStandaloneRace()
 {
-#ifdef IOS_STK
-    return isMotoricaStandaloneModeIOS() &&
-           RaceManager::get()->getTrackName() == "motorica_signal_lab";
-#else
     return false;
-#endif
 }
 
 bool isFluxaraRace()
@@ -165,14 +159,6 @@ bool isFluxaraRace()
 
 void resetToMotoricaRoot()
 {
-#ifdef IOS_STK
-    if (isMotoricaStandaloneModeIOS())
-    {
-        StateManager::get()->resetAndGoToScreen(
-            MotoricaHubScreen::getInstance());
-        return;
-    }
-#endif
     StateManager::get()->resetAndGoToScreen(MainMenuScreen::getInstance());
 }
 }

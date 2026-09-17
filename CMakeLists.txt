@@ -553,6 +553,10 @@ include(sources.cmake)
 list(FILTER STK_SOURCES EXCLUDE REGEX "^src/states_screens/fluxara_.*_screen\\.cpp$")
 
 if (IOS)
+    # The retired Motorica hub/about screens are neither reachable nor part of
+    # Fluxara Drift.  Keep their legacy product text out of the iOS binary.
+    list(FILTER STK_SOURCES EXCLUDE REGEX
+        "^src/states_screens/motorica_(hub|about)_screen\\.cpp$")
     set(STK_SOURCES
         ${STK_SOURCES}
         src/input/motorica_game_control_ios.mm)
