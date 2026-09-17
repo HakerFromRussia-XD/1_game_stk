@@ -709,6 +709,10 @@ else()
             COMMAND ${CMAKE_COMMAND} -E rm -rf
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/motorica-start-full"
             COMMAND ${CMAKE_COMMAND} -E rm -f
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/music/motorica_signal_lab.music"
+            COMMAND ${CMAKE_COMMAND} -E rm -f
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/music/motorica_signal_lab_license.txt"
+            COMMAND ${CMAKE_COMMAND} -E rm -f
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/motorica_hub.stkgui"
             COMMAND ${CMAKE_COMMAND} -E rm -f
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/motorica_exercise.stkgui"
