@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<materials>
+  <material name="container001-grey.png" />
+  <material name="container002-grey.png" />
+  <material name="container004-grey.png" />
+  <material name="racetrack_asphalt.jpg" high-adhesion="Y" has-gravity="Y" />
+  <material name="stk_corrugMetal_a.png" high-adhesion="Y" has-gravity="Y" />
+  <material name="stk_generic_borderBluePinkA.png" high-adhesion="Y" has-gravity="Y" slowdown-time="3.00" max-speed="0.50" />
+  <material name="stk_glassPanel_a.png" shader="alphablend" />
+  <material name="stkflag_jumpRamp_a.png" mirror-axis="V" />
+  <material name="stkflag_redBooster_a.png" shader="alphatest" mirror-axis="V" />
+  <material name="stkflag_stkVertical_a.png" shader="alphablend" />
+  <material name="tarmac.jpg" high-adhesion="Y" />
+<material name="stk_generic_plasticFabric_a.png" shader="alphablend" /><material name="stk_lightGrayMetal_a.png" shader="alphablend" /><material name="stk_metalRustedBlue_a.png" shader="alphablend" /><material name="stkflag_cupcakeAirwayLogo_a.png" shader="alphablend" /><material name="stkflag_monoTubeAd_a.png" shader="alphablend" /><material name="fluxara_canyon_atlas.png" shader="solid" ignore="Y" /><material name="fluxara_water_flow.png" shader="solid" ignore="Y" /><material name="fluxara_sandstone_cliffs.png" shader="solid" ignore="Y" /><material name="fluxara_approved_logo.png" shader="solid" ignore="Y" /></materials>

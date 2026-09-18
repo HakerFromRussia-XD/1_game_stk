@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scene>
+  <track model="highinsky_track.spm" x="0" y="0" z="0">
+    <static-object model="limit.spm" xyz="35.43 0.56 -92.89" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="physics-only" />
+    <animated-texture name="stkflag_jumpRamp_a.png" dy="1.00000" />
+    <animated-texture name="stkflag_redBooster_a.png" dy="1.00000" />
+    <animated-texture name="stkflag_redBooster_a.png" dy="1.00000" />
+    <animated-texture name="stkflag_redBooster_a.png" dy="1.00000" />
+    <animated-texture name="stkflag_redBooster_a.png" dy="1.00000" />
+    <animated-texture name="stkflag_redBooster_a.png" dy="1.00000" />
+    <animated-texture name="stkflag_jumpRamp_a.png" dy="1.00000" />
+  </track>
+  <object id="TurbineLeft" type="animation" xyz="100.91 19.94 328.14" hpr="-90.0 -0.0 0.0" scale="18.00 18.00 18.00" interaction="ghost" model="Turbine.spm" skeletal-animation="false">
+    <curve channel="RotX" interpolation="bezier" extend="cyclic">
+      <p c="1.000 -90.000" h1="-10.712 -90.000" h2="12.712 -90.000" />
+      <p c="31.000 -90.000" h1="19.288 -90.000" h2="42.712 -90.000" />
+      <p c="61.000 -90.000" h1="49.288 -90.000" h2="72.712 -90.000" />
+      <p c="91.000 -90.000" h1="79.288 -90.000" h2="102.712 -90.000" />
+      <p c="121.000 -90.000" h1="109.288 -90.000" h2="132.712 -90.000" />
+    </curve>
+    <curve channel="RotZ" interpolation="bezier" extend="cyclic">
+      <p c="1.000 0.000" h1="-10.712 35.137" h2="12.712 -35.137" />
+      <p c="31.000 -90.000" h1="19.288 -54.863" h2="42.712 -125.137" />
+      <p c="61.000 -180.000" h1="49.288 -144.863" h2="72.712 -215.137" />
+      <p c="91.000 -270.000" h1="79.288 -234.863" h2="102.712 -305.137" />
+      <p c="121.000 -360.000" h1="109.288 -324.863" h2="132.712 -395.137" />
+    </curve>
+    <curve channel="RotY" interpolation="bezier" extend="cyclic">
+      <p c="1.000 -0.000" h1="-10.712 -0.000" h2="12.712 -0.000" />
+      <p c="31.000 -0.000" h1="19.288 -0.000" h2="42.712 -0.000" />
+      <p c="61.000 0.000" h1="49.288 0.000" h2="72.712 0.000" />
+      <p c="91.000 -0.000" h1="79.288 -0.000" h2="102.712 -0.000" />
+      <p c="121.000 -0.000" h1="109.288 -0.000" h2="132.712 -0.000" />
+    </curve>
+  </object>
+  <object id="TurbineRight" type="animation" xyz="-35.99 19.92 328.14" hpr="-90.0 -0.0 0.0" scale="18.00 18.00 18.00" interaction="ghost" model="Turbine.spm" skeletal-animation="false">
+    <curve channel="RotX" interpolation="bezier" extend="cyclic">
+      <p c="1.000 -90.000" h1="-10.712 -90.000" h2="12.712 -90.000" />
+      <p c="31.000 -90.000" h1="19.288 -90.000" h2="42.712 -90.000" />
+      <p c="61.000 -90.000" h1="49.288 -90.000" h2="72.712 -90.000" />
+      <p c="91.000 -90.000" h1="79.288 -90.000" h2="102.712 -90.000" />
+      <p c="121.000 -90.000" h1="109.288 -90.000" h2="132.712 -90.000" />
+    </curve>
+    <curve channel="RotZ" interpolation="bezier" extend="cyclic">
+      <p c="1.000 0.000" h1="-10.712 35.137" h2="12.712 -35.137" />
+      <p c="31.000 -90.000" h1="19.288 -54.863" h2="42.712 -125.137" />
+      <p c="61.000 -180.000" h1="49.288 -144.863" h2="72.712 -215.137" />
+      <p c="91.000 -270.000" h1="79.288 -234.863" h2="102.712 -305.137" />
+      <p c="121.000 -360.000" h1="109.288 -324.863" h2="132.712 -395.137" />
+    </curve>
+    <curve channel="RotY" interpolation="bezier" extend="cyclic">
+      <p c="1.000 -0.000" h1="-10.712 -0.000" h2="12.712 -0.000" />
+      <p c="31.000 -0.000" h1="19.288 -0.000" h2="42.712 -0.000" />
+      <p c="61.000 0.000" h1="49.288 0.000" h2="72.712 0.000" />
+      <p c="91.000 -0.000" h1="79.288 -0.000" h2="102.712 -0.000" />
+      <p c="121.000 -0.000" h1="109.288 -0.000" h2="132.712 -0.000" />
+    </curve>
+  </object>
+  <sky-box texture="genericskybox_top.jpg genericskybox_bottom.jpg genericskybox_east.jpg genericskybox_west.jpg genericskybox_south.jpg genericskybox_north.jpg" />
+  <camera far="1000.0" />
+  <checks>
+    <check-lap kind="lap" same-group="0" other-ids="1" />
+    <check-line kind="activate" other-ids="2" p1="38.98 289.82" p2="38.84 262.35" min-height="13.94" same-group="1" />
+    <check-line kind="activate" other-ids="3" p1="92.89 -17.93" p2="60.04 -18.15" min-height="-2.34" same-group="2" />
+    <check-line kind="activate" other-ids="0" p1="1.59 -141.44" p2="1.09 -113.39" min-height="-2.34" same-group="3" />
+    <cannon p1="-15.08 0.91 98.61" p2="-3.01 0.91 98.22" target-p1="-13.70 32.16 133.66" target-p2="-1.63 32.16 133.28">
+    <curve channel="LocXYZ" speed="25.00" interpolation="bezier" extend="const">
+      <point c="-9.023546 0.913303 98.666855" h1="-9.023546 -0.086697 97.666855" h2="-9.023546 2.396214 100.149773" />
+      <point c="-7.724701 33.163303 133.218903" h1="-7.724701 31.680386 131.735992" h2="-7.724701 34.223961 134.279556" />
+    </curve>
+    </cannon>
+  </checks>
+  <banana id="BANA.001" x="21.55" y="22.66" z="262.30" h="-150.33" />
+  <banana id="BANA.002" x="17.40" y="22.66" z="268.89" h="-150.33" />
+  <banana id="BANA.003" x="40.84" y="-2.34" z="99.16" />
+  <banana id="BANA.004" x="69.17" y="-2.34" z="23.82" h="-67.93" />
+  <banana id="BANA.005" x="66.65" y="-2.34" z="22.78" h="-67.93" />
+  <banana id="BANA.006" x="36.20" y="-2.34" z="1.50" h="-95.62" />
+  <banana id="BANA.007" x="13.33" y="-2.34" z="-68.29" h="-85.10" />
+  <banana id="BANA.008" x="10.31" y="-2.34" z="-68.40" h="-85.10" />
+  <banana id="BANA.009" x="-14.30" y="-2.34" z="-77.12" h="-90.00" />
+  <banana id="BANA.010" x="-17.30" y="-2.34" z="-77.12" h="-90.00" />
+  <banana id="BANA.011" x="79.07" y="13.66" z="-57.28" />
+  <banana id="BANA.012" x="81.72" y="9.66" z="-84.71" />
+  <item id="BBOX" x="-13.24" y="-2.34" z="79.14" />
+  <item id="BBOX.001" x="-9.67" y="-2.34" z="79.07" />
+  <item id="BBOX.002" x="-6.19" y="-2.34" z="78.99" />
+  <item id="BBOX.003" x="70.31" y="5.66" z="248.14" />
+  <item id="BBOX.004" x="73.42" y="5.66" z="250.34" />
+  <item id="BBOX.005" x="76.22" y="5.66" z="252.38" />
+  <item id="BBOX.006" x="57.27" y="-2.34" z="47.11" />
+  <item id="BBOX.007" x="60.99" y="-2.34" z="48.31" />
+  <item id="BBOX.008" x="64.89" y="-2.34" z="49.69" />
+  <item id="BBOX.009" x="36.11" y="-2.34" z="41.62" />
+  <item id="BBOX.010" x="40.02" y="-2.34" z="41.62" />
+  <item id="BBOX.011" x="43.73" y="-2.34" z="41.52" />
+  <item id="BBOX.012" x="-16.29" y="-2.34" z="-110.11" />
+  <item id="BBOX.013" x="-12.63" y="-2.34" z="-109.59" />
+  <item id="BBOX.014" x="-9.15" y="-2.34" z="-109.06" />
+  <item id="BBOX.015" x="54.64" y="-1.89" z="-126.55" h="77.00" />
+  <item id="BBOX.016" x="53.84" y="-1.89" z="-121.99" h="77.00" />
+  <item id="BBOX.017" x="14.86" y="8.16" z="-58.91" h="91.00" />
+  <item id="BBOX.018" x="10.04" y="8.16" z="-58.96" h="86.00" />
+  <small-nitro id="COIN" x="-7.40" y="33.66" z="150.51" />
+  <small-nitro id="COIN.001" x="59.03" y="-2.34" z="164.57" />
+  <small-nitro id="COIN.002" x="53.88" y="-2.34" z="-53.23" />
+  <small-nitro id="COIN.003" x="17.19" y="-2.34" z="-68.29" />
+  <small-nitro id="COIN.004" x="77.07" y="-0.84" z="-77.28" />
+  <small-nitro id="COIN.005" x="28.31" y="-2.34" z="126.40" />
+  <small-nitro id="COIN.006" x="35.96" y="-2.34" z="126.40" />
+  <big-nitro id="GOLD" x="32.12" y="-2.34" z="126.40" />
+  <big-nitro id="GOLD.001" x="80.39" y="11.66" z="-71.00" />
+  <banana id="BANA" x="42.46" y="-2.34" z="150.71" />
+  <light xyz="-14.34 9.06 12.35" id="PointBack" distance="5.00" energy="1.00" color="252 255 204">
+  </light>
+  <light xyz="-10.34 9.06 12.35" id="PointBack.001" distance="5.00" energy="1.00" color="252 255 204">
+  </light>
+  <light xyz="-12.29 33.06 102.42" id="PointDownardsArrow" distance="10.00" energy="1.00" color="252 255 204">
+  </light>
+  <light xyz="-6.29 33.06 102.28" id="PointDownwardsArrow" distance="10.00" energy="1.00" color="252 255 204">
+  </light>
+  <light xyz="-14.34 9.06 5.69" id="PointFront" distance="5.00" energy="1.00" color="252 255 204">
+  </light>
+  <light xyz="-10.34 9.06 5.69" id="PointFront.001" distance="5.00" energy="1.00" color="252 255 204">
+  </light>
+  <light xyz="-12.36 12.69 128.69" id="PointUpwardsArrow" distance="10.00" energy="1.00" color="252 255 204">
+  </light>
+  <light xyz="-3.37 12.69 128.20" id="PointUpwardsArrow.001" distance="10.00" energy="1.00" color="252 255 204">
+  </light>
+  <default-start karts-per-row="3" forwards-distance="1.50" sidewards-distance="1.80" upwards-distance="1.10" />
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy" xyz="52.61 -2.94 -119.05" hpr="0.0 -70.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.001" xyz="39.34 -2.34 136.24" hpr="0.0 93.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.002" xyz="38.79 -2.34 123.35" hpr="0.0 89.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.003" xyz="39.21 -2.34 110.40" hpr="0.0 85.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.004" xyz="39.78 -2.34 140.53" hpr="0.0 100.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.005" xyz="39.09 -2.34 131.93" hpr="0.0 93.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.006" xyz="38.89 -2.34 127.65" hpr="0.0 93.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.007" xyz="38.84 -2.34 119.00" hpr="0.0 89.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.008" xyz="38.94 -2.34 114.64" hpr="0.0 89.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.009" xyz="6.04 -2.94 208.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.010" xyz="6.04 -2.94 212.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.011" xyz="77.25 -2.94 -59.15" hpr="0.0 -70.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.012" xyz="75.89 -2.94 -62.91" hpr="0.0 -70.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.013" xyz="-17.22 -2.94 87.33" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.014" xyz="-21.22 -2.94 87.33" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.015" xyz="-25.22 -2.94 87.33" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.016" xyz="53.57 -2.94 -128.58" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.017" xyz="57.57 -2.94 -128.58" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.018" xyz="86.07 -2.94 -69.01" hpr="-0.0 -145.0 -0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.019" xyz="0.27 -2.94 130.18" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.020" xyz="6.04 -2.94 216.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.021" xyz="6.04 -2.94 220.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.022" xyz="6.04 -2.94 228.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.023" xyz="6.04 -2.94 224.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.024" xyz="6.04 -2.94 232.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.025" xyz="6.04 -2.94 236.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <object id="FluxaraCanyonDecor" type="static" model="fluxara_canyon_decor.spm" xyz="0 0 0" hpr="0 0 0" scale="1 1 1" interaction="ghost"><animated-texture name="fluxara_water_flow.png" dy="0.18" /></object><sun id="FluxaraCanyonSun" xyz="-80 180 -80" ambient="160 170 180" sun-diffuse="255 242 225" sun-specular="220 230 240" /><object id="FluxaraBrandSign" type="static" model="fluxara_brand_sign.spm" xyz="0 0 0" hpr="0 0 0" scale="1 1 1" interaction="ghost" /></scene>
