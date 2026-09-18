@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<kart name="earthglider" version="3" model-file="earthglider.spm" icon-file="icon.png" minimap-icon-file="icon.png" shadow-file="genericshadow.png" type="heavy" groups="Fluxara" rgb="1.00 1.00 1.00" revision="1">
+    <sounds engine="small"/>
+    <wheels>
+        <front-right position="0.000000 0.354540 0.542282" model="wheel-front-right.spm"/>
+    </wheels>
+    <exhaust file="kart_exhaust.xml"/>
+</kart>

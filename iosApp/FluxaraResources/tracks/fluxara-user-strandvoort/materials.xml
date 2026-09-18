@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<materials>
+  <material name="asalt.png" gloss-map="ROADgloss.png"/>
+  <material name="tr-asphalt.png" gloss-map="ROADgloss.png"/>
+  <material name="tr-asphalt-p_nmm.png" gloss-map="ROADgloss.png"/>
+  <material name="tr-b-asphalt.png" gloss-map="ROADgloss.png"/>
+  <material name="BannerTex6.png" shader="alphatest"/>
+  <material name="BannerTex13.png" shader="alphatest"/>
+  <material name="BannerTex9.png" shader="alphatest"/>
+  <material name="BannerTex15.png" shader="alphatest"/>
+  <material name="BannerTex14.png" shader="alphatest"/>
+  <material name="BannerTex16.png" shader="alphatest"/>
+  <material name="BannerTex10.png" shader="alphatest"/>
+  <material name="BannerTex1.png" shader="alphatest"/>  
+  <material name="publicogradas_n.png" shader="alphatest"/>
+  <material name="publicogradas2_n.png" shader="alphatest"/>
+  <material name="publicogradas3_n.png" shader="alphatest"/>
+  <material name="publicogradas4_n.png" shader="alphatest"/>
+  <material name="tribu.png" shader="alphatest"/>
+  <material name="tr-curb-r.png">
+    <sfx filename="kerb.ogg" min_speed="1.00" max_speed="25.00" min_pitch="0.80" max_pitch="0.85" positional="true" rolloff="0.10"/>
+  </material>
+  <material name="tr-grass6.png" slowdown-time="0.50" max-speed="0.70">
+    <particles base="smoke_brown.xml" condition="skid"/>
+  </material>
+  <material name="tr-sand.png" slowdown-time="0.40" max-speed="0.40">
+    <sfx filename="sand.ogg" min_speed="1.00" max_speed="25.00" min_pitch="1.00" max_pitch="1.40" positional="true" rolloff="0.10"/>
+    <particles base="smoke_yellow.xml" condition="skid drive"/>
+  </material>
+  <material name="superzipper.png" mirror-axis="U">
+    <particles base="greenzipper_fire.xml" condition="skid drive"/>
+    <zipper duration="20.0" max-speed-increase="10.0" fade-out-time="0.5" speed-gain="10.5" min-speed="-1.0"/>
+  </material>
+  </materials>

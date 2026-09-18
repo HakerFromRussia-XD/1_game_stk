@@ -30,6 +30,7 @@
 #include "input/input_manager.hpp"
 #ifdef IOS_STK
 #include "states_screens/fluxara_home_screen.hpp"
+#include "utils/fluxara_orientation_ios.hpp"
 #endif
 #include "main_loop.hpp"
 #include "modes/world.hpp"
@@ -243,6 +244,11 @@ void StateManager::onGameStateChange(GameState new_state)
 {
     if (GUIEngine::isNoGraphics())
         return;
+
+#ifdef IOS_STK
+    // Keep gameplay and pause menus landscape; standalone menus are portrait.
+    fluxaraRequestPortraitMenu(new_state == MENU);
+#endif
 
     if (new_state == GAME)
     {

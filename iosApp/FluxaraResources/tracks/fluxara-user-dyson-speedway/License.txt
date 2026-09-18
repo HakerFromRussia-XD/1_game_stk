@@ -1,0 +1,495 @@
+--------------------------------------------------------------------------------
+-- World  : Dyson Speedway
+-- Author : RX1
+-- Email  : rx1@posteo.de
+-- Version: 3
+-- Source : https://online.supertuxkart.net/addons.php?type=tracks
+-- License: CC-BY-SA 4.0 - https://creativecommons.org/licenses/by-sa/4.0/
+-- Date   : 2023-05-13
+--------------------------------------------------------------------------------
+
+This track was created with Blender v2.79b and the scripts from "blender_26" folder of the 
+SuperTuxKart Media Repository (Revision 18272). It was tested with SuperTuxKart v1.2 and v1.3.
+
+Files that are listed under headers with the suffix "(source archive)" are not required to play this track 
+and are included in the revision 3 source archive of this track only. The source archive only contains 
+these additional files. All other files (listed below) required to build this track can be taken from 
+the revision 3 track archive.
+--------------------------------------------------------------------------------
+
+STK Add-Ons version / revision: 3
+Internal version: 1.000
+--------------------------------------------------------------------------------
+
+Following files were taken from SuperTuxKart media repository Revision 18272 (https://sourceforge.net/p/supertuxkart/code/HEAD/tree/):
+
+Particle specifications:
+	fire.xml
+	smoke.xml
+	sparks.xml
+
+Sounds:
+	bzzt.ogg
+	grab_collectable.ogg
+	goal_scored.ogg
+
+Textures:
+	explode.png
+	flaring-star.png
+	gfx_electricArc_a_gloss.png
+	gfx_electricArc_a.png
+	startrack-sky_bottom.png
+	startrack-sky_east.png
+	startrack-sky_north.png
+	startrack-sky_top.png
+	startrack-sky_west.png
+	stktex_blueNebula_a.png
+
+Licenses: See https://github.com/supertuxkart/stk-code
+--------------------------------------------------------------------------------
+
+Following files were taken from SuperTuxKart media repository Revision 18272 (https://sourceforge.net/p/supertuxkart/code/HEAD/tree/) 
+and have been modified by RX1:
+
+Textures:
+	startrack-sky_south_RX.png
+		- Modification: I removed some of the visible artifacts, which were probably left over 
+		  from previous image manipulations.
+
+Export scripts (source archive):
+	_modified_scripts/stk_material_parameters.xml
+		- Modification: The script has been modified to make faster zipper speeds possible 
+		  by increasing the values of the "max" parameter in the lines 187-190.
+
+Sounds:
+	bubble_bzzt.ogg
+		- Original file: bzzt.ogg
+		- Modification: added phaser and reverb echo effects with Audacity v2.2.1
+
+	bzzt_rx_s.ogg
+		- Original file: bzzt.ogg
+		- Modifications, done with with Audacity v2.2.1:
+			- made it louder
+			- made it longer by copying and reversing the sound
+			- made it longer by copying parts of the sound
+
+	tractor_beam_rx_L.ogg
+		- Original file: tractor_beam.ogg
+		- Modifications, done with with Audacity v2.2.1:
+			- made it mono, to use it as positional sound
+			- made it louder
+			- reduced bass
+			- added some noise
+
+	forcefield_boing.ogg
+		- Original file: forcefield.ogg
+		- Modification: added a phaser effect
+
+Particle specifications:
+	fire_rx.xml
+		- Original file: fire.xml
+		- Modification: more, bigger, longer lasting, wider spreading particles
+
+Licenses: Same as the original files (see https://github.com/supertuxkart/stk-code)
+--------------------------------------------------------------------------------
+
+Following files have been created by RX1 and are released under CC-BY-SA 4.0:
+
+Blender file (source archive):
+	DysonSpeedway.blend
+
+Angel Script file:
+	scripting.as
+
+Texture:
+	DS_scr.png
+	Fog_blue001.jpg
+	Fog_blue001_dc.jpg
+	Fog_blue001_effect02-t.png
+	Fog_blue001_low.jpg
+	Fog_blue001_t_add.png
+	Fog_blue001_withClouds-t_s.png
+	Fog_darkBlue001.jpg
+	Fog_darkBlue002.jpg
+	Fog_Double_blue-purple001.jpg
+	Fog_Double_blue-purple001_clouds2.png
+	Fog_green001_low.jpg
+	Fog_green001.jpg
+	Fog_green001_t_add.png
+	Fog_green001_t.png
+	Fog_mix001.jpg
+	Fog_orange001.jpg
+	Fog_orange001_t_add.png
+	Fog_purple001_addT.png
+	IsoGrid_black3_co_t.png
+	IsoGrid_black4.png
+	IsoGrid_black5_addT.png
+	IsoGrid_black5.png
+	IsoGrid_black5_t-.png
+	IsoGrid_black6_t.png
+	IsoGrid_black-orange5_t-.png
+	IsoGrid_cyan4_t++.png
+	IsoGrid_orange4_t++3.png
+	IsoGrid_t++.png
+	Mask_GateWindow.png
+	PBR_Fog_low_s.png
+	PBR_Fog_med_s.png
+	PBR_Fog_more_s.png
+	PBR_Fog.png
+	PBR_ForceField.png
+	PBR_Glow_low.png
+	PBR_Glow_max.png
+	PBR_Glow_med.png
+	PBR_Glow_med2.png
+	PBR_Glow_min.png
+	PBR_Glow_more.png
+	PBR_Hexagons_Glass_low.png
+	PBR_Hexagons_Glass.png
+	PBR_IsoGrid.png
+	PBR_IsoGrid_t-.png
+	PBR_Metal_low.png
+	PBR_Metal_max.png
+	PBR_Metal_med.png
+	PBR_Metal_min.png
+	PBR_Metal_more.png
+	PBR_Raster003_glow.png
+	PBR_Reflect_low-med.png
+	PBR_Reflect_low.png
+	PBR_Reflect_max.png
+	PBR_Reflect_med.png
+	PBR_Reflect_min.png
+	PBR_Reflect_more.png
+	PBR_Reflect_more2.png
+	PBR_SNL_003_red_r90.png
+	PBR_SNL_003_red_r90_l.png
+	PBR_StopperLine4ABlue_low.jpg
+	PBR_Wall_RX002_more.png
+	PBR_Wall_RX002.png
+	PBR_Wall_RX003.png
+	PBR_ZipperLine3_combined_b_less.jpg
+	PBR_ZipperLine3_combined_b_low.jpg
+	Plasma001_t_s.png
+	Raster001_black2.png
+	Raster001_black2_noGravity.png
+	Raster001_hotGlow2.png
+	Raster001_hotGlow2_yellow-.png
+	Raster001_hotGlow2_yellow.png
+	Raster001_hotGlow.png
+	Raster001_hotGlow_red.png
+	Raster001_PBR_low.png
+	Raster001_PBR_max.png
+	Raster001_PBR_med.png
+	Raster001_PBR_min.png
+	Raster001_PBR_more.png
+	Raster006_black3_iced.png
+	Raster006_black3.png
+	Raster006_blue1.png
+	Raster006_cyan1_iced.png
+	Raster006_cyan1.png
+	Raster006_green1.png
+	Raster006_green2.png
+	Raster006_purple1.png
+	Raster006_red1.png
+	Raster006_yellow1.png
+	SN_001_black_mod01_xs.png
+	SN_001_cyan3_C1x.png
+	SN_001_purple_C3x.png
+	SNL_001_blue2_C2x_addT.png
+	SNL_001_blue2_C2x_-t.png
+	SNL_001_cyan3_C1x_addT.png
+	SNL_001_cyan3_C1x-t.png
+	SNL_001_orange_C2x.png
+	SNL_001_purple_C3x_addT.png
+	SNL_001_purple_C3x.png
+	SNL_001_purple_C3x_-t.png
+	SNL_001_red2_C2x_addT.png
+	SNL_001_red2_C2x.png
+	SNL_001_red2_C2x-t.png
+	SNL_002_cyan3_r90.png
+	SNL_002_cyan4_r90.png
+	SNL_002_cyan4_r90_glow.png
+	SNL_002_green_r90.png
+	SNL_002_purple3_r90.png
+	SNL_002_purple4_r90_glow_l.png
+	SNL_002_red3_r90_tAdd.png
+	SNL_002_red3_r90.png
+	SNL_002_yellow_r90.png
+	SNL_multi_2.png
+	SNL_multi.png
+	StartSignText4.png
+    StopperLine5ABlue_s.png
+	Surface_RX002.png
+	Surface_RX003_s.png
+	Surface_RX005_cyan-blue2.png
+	Surface_RX005_lime.png
+	Surface_RX005_lime_t.png
+	Surface_RX005_purple-magenta_t.png
+	Surface_RX007.png
+	texture_Hexagons_Glass_new_t_yellow.png
+	texture_Hexagons_Glass_t+.png
+	texture_Hexagons_Glass_t+_red3_masked.png
+	texture_solid_black_gravity.png
+	texture_solid_black_invisible_burn.png
+	texture_solid_black_invisible_FFEffect.png
+	texture_solid_black_invisible_hexTP_snd.png
+	texture_solid_black_invisible_reset.png
+	texture_solid_black_invisible_reset_grv.png
+	texture_solid_grey.png
+	texture_solid_grey_gravity.png
+	texture_solid_red_gravity.png
+	texture_solid_white_gravity.png
+	texture_solid_yellow2_gravity.png
+	texture_transparent_blue4.png
+	texture_transparent_blue4_gravity.png
+	texture_transparent_blue_FF_gravity.png
+	texture_transparent_blue_ForceField.png
+	texture_transparent_blue_no_boost.png
+	texture_transparent_blue_pipeBoost.png
+	texture_transparent_blue_pipeBoost_snd.png
+	texture_transparent_blue_slower_snd.png
+	texture_transparent_blueSphereNoise.png
+	texture_transparent_blueSphereShock.png
+	texture_transparent_cyan2.png
+	texture_transparent_cyan_addT_gravity.png
+	texture_transparent_cyan_addT.png
+	texture_transparent_cyan_snd.png
+	texture_transparent_cyan2_snd.png
+	texture_transparent_dark-blue.png
+	texture_transparent_gravity.png
+	texture_transparent_gravity_blueBoost.png
+	texture_transparent_gravity_greenBoost.png
+	texture_transparent_gravity_redBoost.png
+	texture_transparent_gravity_yellowBoost.png
+	texture_transparent_green_addT.png
+	texture_transparent_grey.png
+	texture_transparent_grey_noGravity.png
+	texture_transparent_grey2.png
+	texture_transparent_lightBlue2.png
+	texture_transparent_lightblue_pipeBoost.png
+	texture_transparent_lightblue_pipeBoost_snd.png
+	texture_transparent_lightblue_slower_snd.png
+	texture_transparent_lime_addT.png
+	texture_transparent_orange_addT.png
+	texture_transparent_orange.png
+	texture_transparent_orangeSphereNoise.png
+	texture_transparent_purple_addT.png
+	texture_transparent_purple_addT_gravity.png
+	texture_transparent_purple_addT_gravity_snd.png
+	texture_transparent_purple_noBoost.png
+	texture_transparent_purple_noBoost_snd.png
+	texture_transparent_purple_pipeBoost.png
+	texture_transparent_purple_pipeBoost_snd.png
+	texture_transparent_purple_slower.png
+	texture_transparent_purple_slower_snd.png
+	texture_transparent_purple_st_slower.png
+	texture_transparent_red2_addT.png
+	texture_transparent_red2_addT_snd.png
+	texture_transparent_red_addT.png
+	texture_transparent_red_CG.png
+	texture_transparent_red.png
+	texture_transparent_yellow_addT.png
+	texture_transparent_yellow.png
+	transparent_dots_cyan.png
+	transparent_ice3.png
+	transparent_ice3_white_s.png
+	transparent_purple_zipper_text.png
+	transparent_wall_arrow_blue.png
+	transparent_wall_arrow_purple2.png
+	Wall_RX001_2_s.png
+	Wall_RX001_eeBlue_s.png
+	Wall_RX001_eeOrange_s.png
+	Wall_RX001_eePurple_s.png
+	Wall_RX001_s.png
+	Wall_RX002_BlPMed.png
+	Wall_RX002_BlPMed_t_s.png
+	Wall_RX002_glow7_+black-cyan.png
+	Wall_RX004_glow4_+black-grey.png
+	Wall_RX004_metal2.png
+	Wall_RX006_dark.png
+	Wall_RX006_glow.png
+	WarningForcefieldText.png
+	WarningHyperTubeText.png
+	WarningSlopeText.png
+	WireGrid002_red_t-_mod5.png
+	ZipperLine3_combined_blue_b_s.png
+	ZipperLine3_combined_orange_b_s.png
+	Zipper_RX_blue.png
+	Zipper_RX_cyan.png
+	Zipper_RX_green.png
+	Zipper_RX_orange.png
+	Zipper_RX_purple.png
+	Zipper_RX_red.png
+	Zipper_RX_Raster006_blue-black3.png
+	Zipper_RX_Raster006_green-black3.png
+	Zipper_RX_Raster006_orange-black3.png
+	Zipper_RX_white.png
+--------------------------------------------------------------------------------
+
+Following files have been created by RX1 & RuJo and are released under CC-BY-SA 4.0:
+
+Textures:
+	texture_solid_black_invisible.png
+	texture_solid_black_invisible_noGravity.png
+	texture_solid_black.png
+	texture_solid_blue.png
+	texture_solid_red_gravity.png
+--------------------------------------------------------------------------------
+
+Following font sets were made by Harald Koenigsperger and have been downloaded 
+from http://www.dxx-rebirth.com/download-misc/ (external source):
+	descent-ttf/DESCLOGO.TTF
+	descent-ttf/DESCMENU.TTF
+	descent-ttf/DESCSCOR.TTF
+	- Note: These font sets were used for the text of the textures StartSignText4.png, WarningForcefieldText, 
+	  WarningHyperTubeText.png, WarningSlopeText.png. The folder "descent-ttf" contains the license files of 
+	  these font sets. The non-commercial distribution of these fonts is explicitly granted in the 
+	  descent-ttf/README.TXT file.
+	  The true type font sets (.ttf files) itself can not be included in this archive because they are 
+	  automatically deleted by the STK Add-ons site during upload. 
+	  However, they still can be downloaded from http://www.dxx-rebirth.com/download-misc/.
+--------------------------------------------------------------------------------
+
+The sound tracks "Level 2" and "Level 3" were taken from the "Retro Game Music Pack" 
+created by Juhani Junkala, downloaded from https://opengameart.org .
+
+License: CC0 1.0 - https://creativecommons.org/publicdomain/zero/1.0/
+Source: https://opengameart.org/content/5-chiptunes-action
+Author: SubspaceAudio - https://opengameart.org/users/subspaceaudio
+
+These sound tracks were modified by RX1 in following ways:
+	- conversion to ogg format
+	- "Level 3" is played twice, followed by "Level 2"
+	- a fade in effect was added to the first playback of "Level 3"
+After the first playback of "Level 3", in SuperTuxKart "Level 3" and "Level 2" are looped continuously.
+
+Files:
+	Juhani_Junkala_-_Retro_Game_Music_Pack_Level_3_and_2_LQ.ogg
+
+License of the modification: CC0 1.0 - https://creativecommons.org/publicdomain/zero/1.0/
+--------------------------------------------------------------------------------
+
+Following sound files were created by RX1 modifying sounds from https://freesound.org with Audacity v2.2.1:
+
+Sounds:
+	boing_generator1_32.ogg
+		- original sound file: Spring Boing.wav
+			- source: https://freesound.org/people/-Hero_of_the_Winds-/sounds/221875/
+			- author: -Hero_of_the_Winds- - https://freesound.org/people/-Hero_of_the_Winds-
+			- license: CC-BY 3.0 - https://creativecommons.org/licenses/by/3.0/
+			- modifications:
+				- cut in length
+				- made it loopable
+				- applied phaser effect
+				- increased loudness with compressor tool
+				- exported in .ogg format
+		- license of the modification: CC-BY 3.0 - https://creativecommons.org/licenses/by/3.0/
+		
+	constant_fire_looped_louder_LQ.ogg
+		- original sound (name): Fire constant, strong (synthetized) by Nakhas
+			- source: https://freesound.org/people/Nakhas/sounds/569253/
+			- author: Nakhas - https://freesound.org/people/Nakhas
+			- license: CC0 1.0 - https://creativecommons.org/publicdomain/zero/1.0/
+			- modifications:
+				- cut in length
+				- made it loopable
+				- increased loudness
+				- exported in .ogg format
+		- license of the modification: CC0 1.0 - https://creativecommons.org/publicdomain/zero/1.0/
+
+	hex_tube_purple.ogg
+		- original sound file: 44024__aarongnp__isolation-tank.wav
+			- source: https://www.freesound.org/s/44024/
+			- author: AaronGNP - https://www.freesound.org/people/AaronGNP
+			- license: CC-BY 3.0 - https://creativecommons.org/licenses/by/3.0/
+			- modifications:
+				- split stereo channels and used the right channel only
+				- cut in length with new fade in/out
+				- exported in .ogg format
+				- made it loopable
+		- license of the modification: CC-BY 3.0 - https://creativecommons.org/licenses/by/3.0/
+
+	highVoltage1a_LQ.ogg
+		- original sound file: highVoltage.wav
+			- source: https://freesound.org/people/yasser/sounds/104548/
+			- author: yasser - https://freesound.org/people/yasser
+			- license: CC0 1.0 - https://creativecommons.org/publicdomain/zero/1.0/
+			- modifications:
+				- cut in length
+				- made it loopable
+				- increased loudness
+				- exported in .ogg format
+		- license of the modification: CC0 1.0 - https://creativecommons.org/publicdomain/zero/1.0/
+
+	highVoltage_beam2_LQ.ogg
+		- original sound file: highVoltage.wav
+			- source: https://freesound.org/people/yasser/sounds/104548/
+			- author: yasser - https://freesound.org/people/yasser
+			- license: CC0 1.0 - https://creativecommons.org/publicdomain/zero/1.0/
+			- modifications:
+				- see highVoltage1a_LQ.ogg
+					- used only a small part from that sound
+					- mirrored it
+					- increaded speed and tone hight
+					- added a phaser effect
+					- exported in .ogg format
+		- license of the modification: CC0 1.0 - https://creativecommons.org/publicdomain/zero/1.0/
+
+	space_energy_generator_looped_loud_LQ.ogg
+		- original sound file: space energy generator.wav
+			- source: https://freesound.org/people/reacthor/sounds/352410/
+			- author: reacthor - https://freesound.org/reacthor
+			- license: CC0 1.0 - https://creativecommons.org/publicdomain/zero/1.0/
+			- modifications:
+				- mixed stereo channels to mono to use it as positional sound
+				- made it loopable
+				- exported in .ogg format
+		- license of the modification: CC0 1.0 - https://creativecommons.org/publicdomain/zero/1.0/
+
+	tube1.ogg
+		- original sound file: 44030__AaronGNP__Space_Vapors.wav
+			- source: https://www.freesound.org/s/44030/
+			- author: AaronGNP - https://freesound.org/people/AaronGNP/
+			- license: CC-BY 3.0 - https://creativecommons.org/licenses/by/3.0/
+			- modifications:
+				- mixed stereo channels to mono to use it as positional sound
+				- cut in length
+				- exported in .ogg format
+		- license of the modification: CC-BY 3.0 - https://creativecommons.org/licenses/by/3.0/
+--------------------------------------------------------------------------------
+
+Following sound file was created by RX1 mixing sounds from 
+https://freesound.org and https://opengameart.org with Audacity v2.2.1:
+
+tube2_4.ogg
+	- original sound files:
+		- 44024__aarongnp__isolation-tank.wav
+			- source: https://www.freesound.org/s/44024/
+			- author: AaronGNP - https://www.freesound.org/people/AaronGNP/
+			- license: CC-BY 3.0 - https://creativecommons.org/licenses/by/3.0/
+			- modifications:
+				- split stereo channels and used the right channel only
+				- cut in length
+				- lowered tone height
+				- reduced noise
+		- sfx_sounds_negative1.wav
+			- source: https://opengameart.org/content/512-sound-effects-8-bit-style
+			- author: SubspaceAudio - https://opengameart.org/users/subspaceaudio
+			- license: CC0 1.0 - https://creativecommons.org/publicdomain/zero/1.0/
+			- modifications:
+				- added reverd echo
+				- applied noise reduction
+		- 44017__aarongnp__bagpipe-chorus.wav
+			- source: https://www.freesound.org/s/44017/
+			- author: AaronGNP - https://www.freesound.org/people/AaronGNP/
+			- license: CC-BY 3.0 - https://creativecommons.org/licenses/by/3.0/
+			- modifications:
+				- split stereo channels and used the right channel only
+				- cut in length
+				- gradually changed tone height
+				- applied directed distortion
+				- lowered tone height
+	- the sounds were mixed together and the result was exported in .ogg format
+	- license of the new sound: CC-BY-SA 4.0 - https://creativecommons.org/licenses/by-sa/4.0/
+--------------------------------------------------------------------------------
+
+All other contents of the track are released under CC-BY-SA 4.0.

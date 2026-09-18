@@ -1,53 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <stkgui>
-    <div x="0" y="0" width="100%" height="100%" layout="vertical-row">
-        <spacer width="10" height="5%"/>
-        <label width="74%" height="fit" align="center" text_align="center"
-               raw_text="FLUXARA DRIFT"/>
-        <spacer width="10" height="1%"/>
-        <header width="74%" height="fit" align="center" text_align="center"
-                raw_text="RACE SETTINGS"/>
-        <spacer width="10" height="2%"/>
-        <label id="track-name" width="74%" height="fit" align="center"
-               text_align="center"/>
-        <spacer width="10" height="2%"/>
-        <icon-button id="track-preview" width="74%" height="24%" align="center"
-                     custom_ratio="1.77778"/>
-        <spacer width="10" height="2%"/>
-        <div width="74%" height="13%" align="center" layout="horizontal-row">
-            <button id="laps" width="31%" height="100%" align="center"
-                    raw_text="Laps"/>
-            <spacer width="3%" height="10"/>
-            <button id="opponents" width="31%" height="100%" align="center"
-                    raw_text="Opponents"/>
-            <spacer width="3%" height="10"/>
-            <div width="31%" height="100%" align="center" layout="vertical-row">
-                <spacer width="10" height="20%"/>
-                <label width="100%" height="fit" align="center" text_align="center"
-                       raw_text="Circuit race"/>
-                <spacer width="10" height="8%"/>
-                <label width="100%" height="fit" align="center" text_align="center"
-                       raw_text="Items enabled"/>
-                <spacer width="10" height="20%"/>
-            </div>
-        </div>
-        <spacer width="10" height="2%"/>
-        <label width="74%" height="fit" align="center" text_align="center"
-               raw_text="Choose your pace"/>
-        <spacer width="10" height="2%"/>
-        <div width="74%" height="18%" align="center" layout="horizontal-row">
-            <button id="novice" width="31%" height="100%" align="center"
-                    raw_text="Novice"/>
-            <spacer width="3%" height="10"/>
-            <button id="standard" width="31%" height="100%" align="center"
-                    raw_text="Standard"/>
-            <spacer width="3%" height="10"/>
-            <button id="expert" width="31%" height="100%" align="center"
-                    raw_text="Expert"/>
-        </div>
-        <spacer width="10" height="2%"/>
-        <button id="back" width="42%" height="9%" align="center"
-                raw_text="Back"/>
-        <spacer width="10" height="2%"/>
-    </div>
+    <button id="back" x="6%" y="3%" width="14%" height="7%" raw_text="Back"/>
+    <button id="laps-minus" x="50%" y="53%" width="13%" height="6%" raw_text="-"/>
+    <button id="laps-plus" x="78%" y="53%" width="13%" height="6%" raw_text="+"/>
+    <button id="opponents" x="7%" y="62%" width="86%" height="7%" raw_text="Opponents"/>
+    <button id="novice" x="7%" y="72%" width="28%" height="8%" raw_text="Novice"/>
+    <button id="standard" x="36%" y="72%" width="28%" height="8%" raw_text="Standard"/>
+    <button id="expert" x="66%" y="72%" width="28%" height="8%" raw_text="Expert"/>
+    <button id="start" x="8%" y="83%" width="84%" height="14%" raw_text="Start Race"/>
 </stkgui>

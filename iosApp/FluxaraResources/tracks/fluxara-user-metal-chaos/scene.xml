@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<scene>
+  <track model="metal-chaos_track.spm" x="0" y="0" z="0"/>
+  <object id="Squash" type="animation" xyz="23.29 20.00 -23.29" hpr="0.0 -0.0 0.0" scale="1.35 1.35 1.35" interaction="flatten" shape="box" model="squash.spm" flatten="y" skeletal-animation="false">
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="1.000 20.000" h1="-92.308 20.000" h2="94.308 20.000"/>
+      <p c="240.000 20.000" h1="181.438 20.000" h2="251.712 20.000"/>
+      <p c="270.000 1.500" h1="267.564 3.478" h2="281.712 1.500"/>
+      <p c="300.000 1.500" h1="288.288 1.500" h2="339.041 1.500"/>
+      <p c="400.000 20.000" h1="360.959 20.000" h2="439.041 20.000"/>
+    </curve>
+  </object>
+  <object id="Squash.001" type="animation" xyz="23.29 20.00 23.29" hpr="0.0 -0.0 0.0" scale="1.35 1.35 1.35" interaction="flatten" shape="box" model="squash.spm" flatten="y" skeletal-animation="false">
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="1.000 20.000" h1="-100.117 20.000" h2="102.117 20.000"/>
+      <p c="260.000 20.000" h1="201.438 20.000" h2="271.712 20.000"/>
+      <p c="290.000 1.500" h1="287.952 2.795" h2="301.712 1.500"/>
+      <p c="320.000 1.500" h1="308.288 1.500" h2="359.041 1.500"/>
+      <p c="420.000 20.000" h1="380.959 20.000" h2="459.041 20.000"/>
+    </curve>
+  </object>
+  <object id="Squash.002" type="animation" xyz="-23.29 20.00 23.29" hpr="0.0 -0.0 0.0" scale="1.35 1.35 1.35" interaction="flatten" shape="box" model="squash.spm" flatten="y" skeletal-animation="false">
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="1.000 20.000" h1="-107.925 20.000" h2="109.925 20.000"/>
+      <p c="280.000 20.000" h1="221.438 20.000" h2="291.712 20.000"/>
+      <p c="310.000 1.500" h1="307.797 2.875" h2="321.712 1.500"/>
+      <p c="340.000 1.500" h1="328.288 1.500" h2="379.041 1.500"/>
+      <p c="440.000 20.000" h1="400.959 20.000" h2="479.041 20.000"/>
+    </curve>
+  </object>
+  <object id="Squash.003" type="animation" xyz="-23.29 20.00 -23.29" hpr="0.0 -0.0 0.0" scale="1.35 1.35 1.35" interaction="flatten" shape="box" model="squash.spm" flatten="y" skeletal-animation="false">
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="1.000 20.000" h1="-115.733 20.000" h2="117.733 20.000"/>
+      <p c="300.000 20.000" h1="241.438 20.000" h2="311.712 20.000"/>
+      <p c="330.000 1.500" h1="328.278 3.214" h2="341.712 1.500"/>
+      <p c="360.000 1.500" h1="348.288 1.500" h2="399.041 1.500"/>
+      <p c="460.000 20.000" h1="420.959 20.000" h2="499.041 20.000"/>
+    </curve>
+  </object>
+  <sun  fog="true" fog-color="39 52 92" fog-max="0.15000000596046448" fog-start="50.00" fog-end="300.00" xyz="0.00 100.00 -100.00" sun-specular="62 113 167" sun-diffuse="61 108 190" ambient="158 158 158"/>
+  <sky-box texture="vz_techno_up.png vz_techno_down.png vz_techno_front.png vz_techno_back.png vz_techno_right.png vz_techno_left.png" sh-texture="vz_techno_up.png vz_techno_down.png vz_techno_front.png vz_techno_back.png vz_techno_right.png vz_techno_left.png"/>
+  <camera far="1000.0"/>
+  <object type="sfx-emitter" id="Empty.052" sound="piston.ogg" rolloff="0.020" volume="0.8999999761581421" max_dist="350.0" xyz="0.00 11.82 -6.42" hpr="0.0 -0.0 0.0" scale="10.59 10.59 10.59">
+  </object>
+  <banana id="Empty" x="18.90" y="1.35" z="0.00" ctf="false"/>
+  <banana id="Empty.001" x="-18.90" y="1.35" z="0.00" ctf="false"/>
+  <banana id="Empty.002" x="0.00" y="10.80" z="66.15" ctf="false"/>
+  <item id="Empty.003" x="51.98" y="6.08" z="51.98" ctf="false"/>
+  <small-nitro id="Empty.004" x="61.43" y="6.08" z="42.53" ctf="false"/>
+  <small-nitro id="Empty.005" x="42.53" y="6.08" z="61.42" ctf="false"/>
+  <small-nitro id="Empty.006" x="-42.53" y="-3.38" z="-61.43" ctf="false"/>
+  <small-nitro id="Empty.007" x="-61.42" y="-3.38" z="-42.53" ctf="false"/>
+  <item id="Empty.008" x="-51.98" y="-3.38" z="-51.98" ctf="false"/>
+  <small-nitro id="Empty.009" x="42.53" y="-3.38" z="-61.43" ctf="false"/>
+  <small-nitro id="Empty.010" x="61.43" y="-3.38" z="-42.53" ctf="false"/>
+  <item id="Empty.011" x="51.98" y="-3.38" z="-51.98" ctf="false"/>
+  <big-nitro id="Empty.012" x="42.53" y="-3.38" z="-42.53" ctf="false"/>
+  <small-nitro id="Empty.013" x="-61.42" y="6.08" z="42.53" ctf="false"/>
+  <item id="Empty.014" x="-51.98" y="6.08" z="51.98" ctf="false"/>
+  <small-nitro id="Empty.015" x="-42.53" y="6.08" z="61.42" ctf="false"/>
+  <big-nitro id="Empty.016" x="-61.42" y="6.08" z="61.42" ctf="false"/>
+  <item id="Empty.017" x="18.90" y="10.80" z="56.70" ctf="false"/>
+  <item id="Empty.018" x="-18.90" y="10.80" z="56.70" ctf="false"/>
+  <item id="Empty.019" x="-56.70" y="1.35" z="0.00" ctf="false"/>
+  <item id="Empty.020" x="56.70" y="1.35" z="-23.62" ctf="false"/>
+  <item id="Empty.021" x="56.70" y="1.35" z="18.90" ctf="false"/>
+  <item id="Empty.022" x="0.00" y="-8.10" z="-80.33" ctf="false"/>
+  <item id="Empty.023" x="14.18" y="-8.10" z="-51.98" ctf="false"/>
+  <item id="Empty.024" x="-14.18" y="-8.10" z="-51.98" ctf="false"/>
+  <big-nitro id="Empty.025" x="0.00" y="1.35" z="23.62" ctf="false"/>
+  <big-nitro id="Empty.026" x="0.00" y="1.35" z="23.62" ctf="true"/>
+  <item id="Empty.027" x="-14.18" y="-8.10" z="-51.98" ctf="true"/>
+  <item id="Empty.028" x="14.18" y="-8.10" z="-51.98" ctf="true"/>
+  <item id="Empty.029" x="0.00" y="-8.10" z="-80.33" ctf="true"/>
+  <item id="Empty.030" x="56.70" y="1.35" z="18.90" ctf="true"/>
+  <item id="Empty.031" x="56.70" y="1.35" z="-23.62" ctf="true"/>
+  <item id="Empty.032" x="-56.70" y="1.35" z="0.00" ctf="true"/>
+  <item id="Empty.033" x="-18.90" y="10.80" z="56.70" ctf="true"/>
+  <item id="Empty.034" x="18.90" y="10.80" z="56.70" ctf="true"/>
+  <big-nitro id="Empty.035" x="-61.42" y="6.08" z="61.42" ctf="true"/>
+  <small-nitro id="Empty.036" x="-42.53" y="6.08" z="61.42" ctf="true"/>
+  <item id="Empty.037" x="-51.98" y="6.08" z="51.98" ctf="true"/>
+  <small-nitro id="Empty.038" x="-61.42" y="6.08" z="42.53" ctf="true"/>
+  <big-nitro id="Empty.039" x="42.53" y="-3.38" z="-42.53" ctf="true"/>
+  <item id="Empty.040" x="51.98" y="-3.38" z="-51.98" ctf="true"/>
+  <small-nitro id="Empty.041" x="61.43" y="-3.38" z="-42.53" ctf="true"/>
+  <small-nitro id="Empty.042" x="42.53" y="-3.38" z="-61.43" ctf="true"/>
+  <item id="Empty.043" x="-51.98" y="-3.38" z="-51.98" ctf="true"/>
+  <small-nitro id="Empty.044" x="-61.42" y="-3.38" z="-42.53" ctf="true"/>
+  <small-nitro id="Empty.045" x="-42.53" y="-3.38" z="-61.43" ctf="true"/>
+  <small-nitro id="Empty.046" x="42.53" y="6.08" z="61.42" ctf="true"/>
+  <small-nitro id="Empty.047" x="61.43" y="6.08" z="42.53" ctf="true"/>
+  <item id="Empty.048" x="51.98" y="6.08" z="51.98" ctf="true"/>
+  <banana id="Empty.049" x="0.00" y="10.80" z="66.15" ctf="true"/>
+  <banana id="Empty.050" x="-18.90" y="1.35" z="0.00" ctf="true"/>
+  <banana id="Empty.051" x="18.90" y="1.35" z="0.00" ctf="true"/>
+  <default-start karts-per-row     ="3"
+                 forwards-distance ="1.50"
+                 sidewards-distance="1.80"
+                 upwards-distance  ="1.10"/>
+  <start x="14.18" y="-8.78" z="-99.22" h="-90.00"/>
+  <start x="-61.42" y="0.68" z="18.90" h="90.00"/>
+  <start x="61.42" y="0.68" z="0.00" h="-90.00"/>
+  <start x="-51.98" y="-4.05" z="-61.43" h="90.00"/>
+  <start x="42.53" y="5.40" z="42.53" h="45.00"/>
+  <start x="-14.18" y="-8.78" z="-99.22" h="90.00"/>
+  <start x="-61.42" y="0.68" z="-18.90" h="90.00"/>
+  <start x="61.43" y="-4.05" z="-61.43" h="-45.00"/>
+  <start x="-42.53" y="5.40" z="42.53" h="-45.00"/>
+  <start x="-61.42" y="-4.05" z="-51.98" h="-0.00"/>
+  <start x="0.00" y="-8.78" z="-99.22" h="-0.00"/>
+  <start x="0.00" y="10.12" z="47.25" h="-180.00"/>
+  <start x="-23.62" y="-8.78" z="-61.42" h="-0.00"/>
+  <start x="18.90" y="10.12" z="66.15" h="-180.00"/>
+  <start x="23.62" y="-8.78" z="-61.42" h="-0.00"/>
+  <start x="-18.90" y="10.12" z="66.15" h="-180.00"/>
+  <ctf-start x="-14.18" y="-8.78" z="-99.22" h="90.00"/>
+  <ctf-start x="61.42" y="0.68" z="0.00" h="-90.00"/>
+  <ctf-start x="-61.42" y="0.68" z="18.90" h="90.00"/>
+  <ctf-start x="14.18" y="-8.78" z="-99.22" h="-90.00"/>
+  <ctf-start x="-51.98" y="-4.05" z="-61.43" h="90.00"/>
+  <ctf-start x="-42.53" y="5.40" z="42.53" h="-45.00"/>
+  <ctf-start x="-61.42" y="0.68" z="-18.90" h="90.00"/>
+  <ctf-start x="61.43" y="-4.05" z="-61.43" h="-45.00"/>
+  <ctf-start x="-61.42" y="-4.05" z="-51.98" h="-0.00"/>
+  <ctf-start x="42.53" y="5.40" z="42.53" h="45.00"/>
+  <ctf-start x="0.00" y="-8.78" z="-99.22" h="-0.00"/>
+  <ctf-start x="0.00" y="10.12" z="47.25" h="-180.00"/>
+  <ctf-start x="-23.62" y="-8.78" z="-61.42" h="-0.00"/>
+  <ctf-start x="18.90" y="10.12" z="66.15" h="-180.00"/>
+  <ctf-start x="23.62" y="-8.78" z="-61.42" h="-0.00"/>
+  <ctf-start x="-18.90" y="10.12" z="66.15" h="-180.00"/>
+  <red-flag x="66.15" y="2.03" z="66.15" h="-0.00"/>
+  <blue-flag x="-37.80" y="-4.05" z="-37.80" h="-0.00"/>
+  <library name="stklib_airConditioner_a" id="stklib_airConditioner_a_main_proxy" xyz="21.74 -4.53 -86.74" hpr="0.0 -0.0 0.0" scale="3.00 3.00 -3.00">
+  </library>
+  <library name="stklib_bigAirBlower_a" id="stklib_bigAirBlower_a_main_proxy" xyz="5.42 -3.77 -129.36" hpr="0.0 -0.0 0.0" scale="3.00 3.00 3.00">
+  </library>
+  <library name="stklib_bigBlueFutureLight_a" id="stklib_bigBlueFutureLight_a_main_proxy" xyz="44.66 -1.90 -33.15" hpr="90.0 -0.0 -90.0" scale="0.51 0.51 0.51">
+  </library>
+  <library name="stklib_bigBlueFutureLight_a" id="stklib_bigBlueFutureLight_a_main_proxy.001" xyz="-44.66 -1.82 -33.15" hpr="90.0 -0.0 -90.0" scale="0.51 0.51 0.51">
+  </library>
+  <library name="stklib_bigBlueFutureLight_a" id="stklib_bigBlueFutureLight_a_main_proxy.002" xyz="45.36 2.84 32.93" hpr="90.0 -0.0 -90.0" scale="0.51 0.51 0.51">
+  </library>
+  <library name="stklib_bigBlueFutureLight_a" id="stklib_bigBlueFutureLight_a_main_proxy.003" xyz="63.55 4.88 71.02" hpr="90.0 -0.0 -90.0" scale="0.51 0.51 0.51">
+  </library>
+  <library name="stklib_bigBlueFutureLight_a" id="stklib_bigBlueFutureLight_a_main_proxy.004" xyz="0.00 11.96 70.79" hpr="90.0 -0.0 -90.0" scale="0.51 0.51 0.51">
+  </library>
+  <library name="stklib_bigBlueFutureLight_a" id="stklib_bigBlueFutureLight_a_main_proxy.005" xyz="33.06 -6.88 -45.68" hpr="0.0 -0.0 -90.0" scale="0.51 0.51 0.51">
+  </library>
+  <library name="stklib_bigBlueFutureLight_a" id="stklib_bigBlueFutureLight_a_main_proxy.006" xyz="-45.36 2.84 32.93" hpr="90.0 -0.0 -90.0" scale="0.51 0.51 0.51">
+  </library>
+  <library name="stklib_bigBlueFutureLight_a" id="stklib_bigBlueFutureLight_a_main_proxy.007" xyz="-33.06 -6.88 -45.68" hpr="-180.0 0.0 -90.0" scale="0.51 0.51 0.51">
+  </library>
+  <library name="stklib_bigBlueFutureLight_a" id="stklib_bigBlueFutureLight_a_main_proxy.008" xyz="0.00 -6.88 -108.63" hpr="-90.0 0.0 -90.0" scale="0.51 0.51 0.51">
+  </library>
+  <library name="stklib_blueRadioTower_a" id="stklib_blueRadioTower_a_main_proxy" xyz="-49.00 11.25 91.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_computer_a" id="stklib_computer_a_main_proxy" xyz="-98.00 0.00 -49.00" hpr="0.0 -0.0 0.0" scale="3.00 3.00 3.00">
+  </library>
+  <library name="stklib_computer_a" id="stklib_computer_a_main_proxy.001" xyz="98.00 4.66 -21.00" hpr="-0.0 180.0 -0.0" scale="3.00 3.00 3.00">
+  </library>
+  <library name="stklib_computer_a" id="stklib_computer_a_main_proxy.002" xyz="98.00 4.66 -17.60" hpr="-0.0 180.0 -0.0" scale="3.00 3.00 3.00">
+  </library>
+  <library name="stklib_computerScreenMail_a" id="stklib_computerScreenMail_a_main_proxy" xyz="-98.00 0.77 -56.00" hpr="-0.0 -90.0 0.0" scale="3.00 3.00 3.00">
+  </library>
+  <library name="stklib_electricalBox_a" id="stklib_electricalBox_a_main_proxy" xyz="98.00 5.00 0.00" hpr="0.0 -0.0 0.0" scale="3.00 3.00 3.00">
+  </library>
+  <library name="stklib_electricalBox_a" id="stklib_electricalBox_a_main_proxy.001" xyz="-70.00 0.00 -70.00" hpr="0.0 -0.0 0.0" scale="3.00 3.00 3.00">
+  </library>
+  <library name="stklib_electricalFence_a" id="stklib_electricalFence_a_main_proxy" xyz="0.00 8.02 0.00" hpr="-0.0 90.0 0.0" scale="7.50 7.50 7.50">
+  </library>
+  <library name="stklib_electricalFence_a" id="stklib_electricalFence_a_main_proxy.001" xyz="-49.00 1.35 -91.00" hpr="0.0 -0.0 0.0" scale="3.00 3.00 3.00">
+  </library>
+  <library name="stklib_electricalFence_a" id="stklib_electricalFence_a_main_proxy.002" xyz="84.00 10.57 42.00" hpr="-0.0 180.0 -0.0" scale="3.00 3.00 3.00">
+  </library>
+  <library name="stklib_entranceGuardianMale_a" id="stklib_entranceGuardianMale_a_main_proxy" xyz="0.18 14.45 57.41" hpr="-0.0 180.0 -0.0" scale="0.75 0.75 0.75">
+  </library>
+  <library name="stklib_greenRadioTower_a" id="stklib_greenRadioTower_a_main_proxy" xyz="49.00 11.20 91.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_industrialLamp_a" id="stklib_industrialLamp_a_main_proxy" xyz="33.08 10.20 33.08" hpr="0.0 -0.0 0.0" scale="1.00 1.00 0.55">
+  </library>
+  <library name="stklib_industrialLamp_a" id="stklib_industrialLamp_a_main_proxy.001" xyz="-33.08 10.20 33.08" hpr="0.0 -0.0 0.0" scale="1.00 1.00 0.55">
+  </library>
+  <library name="stklib_industrialLamp_a" id="stklib_industrialLamp_a_main_proxy.002" xyz="-33.08 5.50 -33.08" hpr="0.0 -0.0 0.0" scale="1.00 1.00 0.55">
+  </library>
+  <library name="stklib_industrialLamp_a" id="stklib_industrialLamp_a_main_proxy.003" xyz="33.08 5.50 -33.08" hpr="0.0 -0.0 0.0" scale="1.00 1.00 0.55">
+  </library>
+  <library name="stklib_loudspeaker_a" id="stklib_loudspeaker_a_main_proxy" xyz="-91.00 6.03 -0.00" hpr="0.0 -0.0 0.0" scale="3.00 3.00 3.00">
+  </library>
+  <library name="stklib_loudspeaker_a" id="stklib_loudspeaker_a_main_proxy.001" xyz="0.00 14.60 91.00" hpr="-0.0 90.0 0.0" scale="3.00 3.00 3.00">
+  </library>
+  <library name="stklib_pallet_a" id="stklib_pallet_a_main_proxy" xyz="-12.96 -3.81 -76.19" hpr="0.0 -0.0 0.0" scale="3.00 3.00 3.00">
+  </library>
+  <library name="stklib_pallet_a" id="stklib_pallet_a_main_proxy.001" xyz="-84.00 5.64 -21.00" hpr="0.0 -0.0 0.0" scale="3.00 3.00 3.00">
+  </library>
+  <library name="stklib_pallet_a" id="stklib_pallet_a_main_proxy.002" xyz="14.00 15.09 84.00" hpr="0.0 -0.0 0.0" scale="3.00 3.00 3.00">
+  </library>
+  <library name="stklib_runwayBeacon_a" id="stklib_runwayBeacon_a_main_proxy" xyz="91.00 0.85 -49.00" hpr="0.0 -0.0 0.0" scale="3.00 3.00 3.00">
+  </library>
+  <library name="stklib_watertower_a" id="stklib_watertower_a_main_proxy" xyz="81.00 7.03 84.00" hpr="0.0 -0.0 0.0" scale="2.00 2.00 2.00">
+  </library>
+  <library name="stklib_watertower_a" id="stklib_watertower_a_main_proxy.001" xyz="-91.00 11.79 49.00" hpr="0.0 -0.0 0.0" scale="2.00 2.00 2.00">
+  </library>
+  <library name="stklib_watertower_a" id="stklib_watertower_a_main_proxy.002" xyz="56.00 1.94 -91.00" hpr="0.0 -0.0 0.0" scale="2.00 2.00 2.00">
+  </library>
+</scene>

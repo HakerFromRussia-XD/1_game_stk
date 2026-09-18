@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<scene>
+  <track model="classic-pool_track.spm" x="0" y="0" z="0"/>
+  <object type="movable" id="Pool_int_0.001" xyz="-19.71 0.28 3.28" hpr="0.0 -0.0 0.0" scale="3.00 3.00 3.00"
+          shape="box" mass="25.0" model="knockable-chair.spm" skeletal-animation="false"/>
+  <object type="movable" id="Pool_int_0.002" xyz="-2.19 0.28 -24.12" hpr="0.0 90.0 0.0" scale="3.00 3.00 3.00"
+          shape="box" mass="25.0" model="knockable-chair.spm" skeletal-animation="false"/>
+  <sun  fog="true" ffog-color="9 5 24" fog-max="1.0" fog-start="50.00" fog-end="300.00"/>
+  <sky-box texture="top.png bottom.png sidepixel.png sidepixel.png sidepixel.png sidepixel.png" sh-texture="summersky_t.jpg summersky_b.jpg summersky_e.jpg summersky_w.jpg summersky_s.jpg summersky_n.jpg" />
+  <camera far="1000.0"/>
+  <item id="battlegift" x="0.14" y="1.17" z="48.01" ctf="false"/>
+  <item id="battlegift.001" x="20.14" y="1.17" z="6.15" ctf="false"/>
+  <item id="battlegift.002" x="-19.86" y="1.17" z="6.15" ctf="false"/>
+  <item id="battlegift.003" x="34.64" y="1.17" z="9.73" ctf="false"/>
+  <item id="battlegift.004" x="-34.21" y="1.17" z="9.73" ctf="false"/>
+  <item id="battlegift.005" x="-34.21" y="1.17" z="-9.95" ctf="false"/>
+  <item id="battlegift.006" x="34.64" y="1.17" z="-9.95" ctf="false"/>
+  <item id="battlegift.001" x="20.14" y="1.17" z="6.15" ctf="true"/>
+  <item id="battlegift.002" x="-19.86" y="1.17" z="6.15" ctf="true"/>
+  <item id="ctfgift" x="0.14" y="1.17" z="28.65" ctf="true"/>
+  <item id="ctfgift.001" x="0.14" y="1.17" z="-16.35" ctf="true"/>
+  <item id="ctfgift.002" x="55.00" y="4.17" z="-34.00" ctf="true"/>
+  <item id="ctfgift.003" x="-54.05" y="4.17" z="-34.00" ctf="true"/>
+  <item id="ctfgift.004" x="0.14" y="1.17" z="48.01" ctf="true"/>
+  <small-nitro id="giftsmallnitro" x="3.14" y="1.17" z="27.07" ctf="false"/>
+  <small-nitro id="giftsmallnitro.001" x="3.14" y="1.17" z="27.07" ctf="false"/>
+  <small-nitro id="giftsmallnitroctf" x="3.14" y="1.17" z="27.07" ctf="true"/>
+  <small-nitro id="giftsmallnitroctf.001" x="3.14" y="1.17" z="27.07" ctf="true"/>
+  <big-nitro id="giftnitro" x="18.14" y="1.17" z="-52.20" ctf="false"/>
+  <big-nitro id="giftnitro.001" x="18.14" y="1.17" z="-52.20" ctf="false"/>
+  <big-nitro id="giftnitro.002" x="18.14" y="1.17" z="-52.20" ctf="false"/>
+  <big-nitro id="giftnitroctf" x="18.14" y="1.17" z="-52.20" ctf="true"/>
+  <big-nitro id="giftnitroctf.001" x="18.14" y="1.17" z="-52.20" ctf="true"/>
+  <big-nitro id="giftnitroctf.002" x="18.14" y="1.17" z="-52.20" ctf="true"/>
+  <default-start karts-per-row     ="3"
+                 forwards-distance ="1.50"
+                 sidewards-distance="1.80"
+                 upwards-distance  ="1.10"/>
+  <start x="-49.39" y="-0.28" z="18.39" h="-0.00"/>
+  <start x="58.92" y="-0.28" z="18.39" h="-0.00"/>
+  <start x="-57.30" y="-0.28" z="-13.42" h="180.00"/>
+  <start x="58.92" y="-0.28" z="-13.42" h="180.00"/>
+  <start x="-57.30" y="-0.28" z="18.39" h="-0.00"/>
+  <start x="51.08" y="-0.28" z="18.39" h="-0.00"/>
+  <start x="-49.39" y="-0.28" z="-13.42" h="180.00"/>
+  <start x="51.08" y="-0.28" z="-13.42" h="180.00"/>
+  <start x="-26.86" y="-0.28" z="44.24" h="-0.00"/>
+  <start x="27.14" y="-0.28" z="44.24" h="-0.00"/>
+  <start x="-34.20" y="-0.28" z="-34.05" h="14.00"/>
+  <start x="33.52" y="-0.28" z="-34.05" h="-15.00"/>
+  <start x="-54.05" y="-0.28" z="51.53" h="145.00"/>
+  <start x="55.49" y="-0.28" z="51.53" h="-145.00"/>
+  <ctf-start x="-49.39" y="-0.28" z="18.39" h="-0.00"/>
+  <ctf-start x="58.92" y="-0.28" z="18.39" h="-0.00"/>
+  <ctf-start x="-57.30" y="-0.28" z="-13.42" h="180.00"/>
+  <ctf-start x="58.92" y="-0.28" z="-13.42" h="180.00"/>
+  <ctf-start x="-57.30" y="-0.28" z="18.39" h="-0.00"/>
+  <ctf-start x="51.08" y="-0.28" z="18.39" h="-0.00"/>
+  <ctf-start x="-49.39" y="-0.28" z="-13.42" h="180.00"/>
+  <ctf-start x="51.08" y="-0.28" z="-13.42" h="180.00"/>
+  <ctf-start x="-26.86" y="-0.28" z="44.24" h="-0.00"/>
+  <ctf-start x="27.14" y="-0.28" z="44.24" h="-0.00"/>
+  <ctf-start x="-34.20" y="-0.28" z="-34.05" h="14.00"/>
+  <ctf-start x="33.52" y="-0.28" z="-34.05" h="-15.00"/>
+  <ctf-start x="-54.05" y="-0.28" z="51.53" h="90.00"/>
+  <ctf-start x="55.49" y="-0.28" z="51.53" h="-90.00"/>
+  <ctf-start x="-31.86" y="-0.28" z="44.24" h="-0.00"/>
+  <ctf-start x="32.14" y="-0.28" z="44.24" h="-0.00"/>
+  <red-flag x="55.00" y="-0.28" z="0.02" h="-0.00"/>
+  <blue-flag x="-54.05" y="-0.28" z="0.02" h="-0.00"/>
+</scene>

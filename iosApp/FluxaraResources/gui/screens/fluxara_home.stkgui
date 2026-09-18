@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <stkgui>
-    <div x="0" y="0" width="100%" height="100%" layout="vertical-row">
-        <spacer width="10" height="7%"/>
-        <label width="82%" height="fit" align="center" text_align="center"
-               raw_text="Fluxara Drift"/>
-        <spacer width="10" height="2%"/>
-        <header width="82%" height="fit" align="center" text_align="center"
-                raw_text="YOUR NEXT RACE"/>
-        <spacer width="10" height="2%"/>
-        <label width="68%" height="fit" align="center" text_align="center"
-               raw_text="Choose a circuit, pace and drive."/>
-        <spacer width="10" height="7%"/>
-        <button id="campaign" width="68%" height="27%" align="center"
-                raw_text="Campaign"/>
-        <spacer width="10" height="5%"/>
-        <label width="68%" height="fit" align="center" text_align="center"
-               raw_text="Built for focused local racing."/>
-        <spacer width="10" height="4%"/>
-        <button id="settings" width="44%" height="13%" align="center"
-                raw_text="Settings"/>
-        <spacer width="10" height="10%"/>
-    </div>
+    <!-- Native hit targets; the approved raster layers are drawn separately. -->
+    <button id="campaign" x="8%" y="72%" width="84%" height="12%" raw_text="Play"/>
+    <button id="garage" x="23%" y="84%" width="30%" height="14%" raw_text="Garage"/>
+    <button id="settings" x="53%" y="83%" width="30%" height="14%" raw_text="Settings"/>
 </stkgui>

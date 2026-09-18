@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<materials>
+  <material name="Battle_for_Wesnoth.png" shader="alphatest"/>
+  <material name="blackrock.jpg" normal-map="blackrock-nm.png" has-gravity="Y"/>
+  <material name="blackrock_lava.jpg" gloss-map="blackrock_lava_glossy.jpg" has-gravity="Y"/>
+  <material name="castelwall.jpg" normal-map="castlewall_nm.jpg"/>
+  <material name="chain.png" shader="alphatest"/>
+  <material name="dynamiclight.png" ignore="Y" shader="displace"/>
+  <material name="gfx_snowStormAnimated_a.png" shader="alphablend"/>
+  <material name="halo.png" shader="additive" ignore="Y"/>
+  <material name="lava.png" gloss-map="lava_glossy.png" normal-map="lava_normal.png"/>
+  <material name="Lava_004_COLOR.jpg" gloss-map="Lava_004_glossy.jpg" normal-map="Lava_004_NORM.jpg"/>
+  <material name="lava_1.png" gloss-map="lava_1-gloss.png"/>
+  <material name="lava_2k_diffuse.jpg" gloss-map="lava_2k_glossy.jpg" normal-map="lava_2k_nm.jpg"/>
+  <material name="mansion_windows.png" shader="alphablend"/>
+  <material name="Rock13_col.jpg" gloss-map="Rock13_glossy.jpg" normal-map="Rock13_nrm.jpg"/>
+  <material name="smoke_huricane.png" normal-map="smoke_huricane-nm.png"/>
+  <material name="smoke_huricane_transp.png" shader="alphatest"/>
+  <material name="stk_generic_gravalSnow_a.png" collision-detect="Y" collision-reaction="reset"/>
+  <material name="stk_generic_gridA.png" shader="alphatest" has-gravity="Y"/>
+  <material name="stk_generic_gridA.png" shader="alphatest" has-gravity="Y"/>
+  <material name="stk_mudpot_a.png" gloss-map="stk_mudpot_a_gloss.png"/>
+  <material name="stkflag_blackBooster_a.png" shader="alphatest" gloss-map="stkflag_blackBooster_a-gloss.png" mirror-axis="V">
+    <zipper duration="3.5" max-speed-increase="15.0" fade-out-time="3.0" speed-gain="10.0" min-speed="-1.0"/>
+  </material>
+  <material name="stkflag_blackBooster_b.png" shader="alphatest" gloss-map="stkflag_blackBooster_a-gloss.png" mirror-axis="V" has-gravity="Y">
+    <zipper duration="3.5" max-speed-increase="15.0" fade-out-time="3.0" speed-gain="2.0" min-speed="-1.0"/>
+  </material>
+  <material name="stkflag_orangeBooster_a.png" shader="alphatest" gloss-map="stkflag_orangeBooster_a-gloss.png">
+    <zipper duration="3.5" max-speed-increase="15.0" fade-out-time="3.0" speed-gain="10.0" min-speed="-1.0"/>
+  </material>
+  <material name="stktex_animatedFire_a.png" shader="additive"/>
+  <material name="stktex_generic_lavaA.png" gloss-map="stktex_generic_lava_gloss.png" normal-map="stktex_generic_lavaA_nm.png"/>
+  <material name="sunFlare2.png" shader="additive" ignore="Y"/>
+  <material name="torch.png" shader="alphatest"/>
+  <material name="track01.png" has-gravity="Y"/>
+  <material name="transparence.png" shader="alphatest" collision-detect="Y" falling-effect="Y" collision-reaction="reset"/>
+</materials>

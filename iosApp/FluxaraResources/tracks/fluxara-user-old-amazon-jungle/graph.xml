@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 7732 -->
+<graph>
+  <!-- First define all nodes of the graph, and what quads they represent -->
+  <node-list from-quad="0" to-quad="232"/>  <!-- map each quad to a node  -->
+  <!-- Define the main loop -->
+  <edge-loop from="0" to="166"/>
+  <!-- Shortcut a.003 -->
+  <edge from="85" to="167"/>
+  <edge-line from="167" to="232"/>
+  <edge from="232" to="158"/>
+</graph>

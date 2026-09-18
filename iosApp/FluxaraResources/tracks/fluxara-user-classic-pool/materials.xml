@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<materials>
+  <material name="pool_stena_1.png" gloss-map="stenaGloss.png"/>
+  <material name="pool_stena_2.png" gloss-map="stenaGloss.png"/>
+  <material name="pool_stena_1b.png" gloss-map="stenaGlossB.png"/>
+  <material name="pool_stena_2b.png" gloss-map="stenaGlossB.png"/>
+  <material name="pool_water.png" falling-effect="Y" reset="Y"/>
+  <material name="pool_water_top.png" shader="displace" ignore="Y" surface="Y" water-splash="Y"/>
+</materials>

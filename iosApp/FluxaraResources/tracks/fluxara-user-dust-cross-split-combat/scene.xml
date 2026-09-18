@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<scene>
+  <track model="dust-cross-split-combat_track.spm" x="0" y="0" z="0"/>
+  <sun  fog="true" fog-color="3 23 28" fog-max="0.699999988079071" fog-start="5.00" fog-end="700.00" xyz="-72.58 85.38 77.01" sun-specular="255 227 68" sun-diffuse="255 227 68" ambient="85 85 85"/>
+  <sky-box texture="blue_sky_top.jpg blue_sky_top.jpg blue_sky_east.jpg blue_sky_west.jpg blue_sky_south.jpg blue_sky_north.jpg" sh-texture="sky2.jpg sky2.jpg sky2.jpg sky2.jpg sky2.jpg sky2.jpg"/>
+  <camera far="1750.0"/>
+  <item id="Empty.000" x="-32.71" y="40.05" z="-94.49" h="-180.00" />
+  <item id="Empty.001" x="-108.70" y="40.05" z="-40.26" h="-180.00" />
+  <item id="Empty.002" x="-8.65" y="40.05" z="6.20" h="-180.00" />
+  <item id="Empty.003" x="1.86" y="40.05" z="6.03" h="-180.00" />
+  <item id="Empty.004" x="-2.31" y="40.05" z="-3.00" h="-180.00" />
+  <item id="Empty.005" x="75.21" y="40.05" z="15.33" />
+  <item id="Empty.006" x="25.24" y="17.75" z="91.39" drop="false" />
+  <item id="Empty.007" x="-1.55" y="40.05" z="44.10" />
+  <item id="Empty.008" x="13.36" y="40.05" z="116.27" />
+  <item id="Empty.009" x="-2.06" y="40.05" z="-139.95" h="-180.00" />
+  <item id="Empty.010" x="-56.53" y="40.05" z="-121.95" h="-180.00" />
+  <item id="Empty.011" x="-90.29" y="40.05" z="-96.59" h="-180.00" />
+  <item id="Empty.012" x="-88.47" y="40.05" z="21.39" h="-180.00" />
+  <item id="Empty.013" x="-57.94" y="40.05" z="57.76" h="-180.00" />
+  <item id="Empty.014" x="-45.34" y="40.05" z="128.88" h="-180.00" />
+  <item id="Empty.015" x="13.36" y="40.05" z="137.71" h="-180.00" />
+  <item id="Empty.016" x="45.78" y="40.05" z="121.14" h="-180.00" />
+  <item id="Empty.017" x="80.89" y="40.05" z="92.69" h="-180.00" />
+  <item id="Empty.018" x="114.56" y="40.05" z="60.10" h="-180.00" />
+  <item id="Empty.019" x="109.16" y="40.05" z="14.36" h="-180.00" />
+  <item id="Empty.020" x="-117.98" y="40.05" z="-61.61" h="-180.00" />
+  <item id="Empty.021" x="84.79" y="40.05" z="-22.20" h="-180.00" />
+  <item id="Empty.022" x="67.38" y="40.05" z="-55.96" h="-180.00" />
+  <item id="Empty.023" x="71.34" y="40.05" z="-100.26" h="-180.00" />
+  <item id="Empty.273" x="-37.14" y="40.21" z="98.51" />
+  <item id="Empty.274" x="-33.28" y="40.21" z="99.02" />
+  <small-nitro id="Empty.275" x="-33.67" y="40.23" z="107.60" />
+  <small-nitro id="Empty.276" x="-37.33" y="40.23" z="107.35" />
+  <banana id="Empty.277" x="-2.45" y="38.94" z="120.91" />
+  <item id="Empty.278" x="54.63" y="40.05" z="58.36" />
+  <item id="Empty.279" x="96.59" y="40.05" z="58.35" />
+  <item id="Empty.280" x="58.40" y="40.05" z="54.46" />
+  <banana id="Empty.281" x="91.51" y="40.14" z="29.27" />
+  <banana id="Empty.282" x="94.49" y="40.14" z="26.47" />
+  <small-nitro id="Empty.283" x="17.01" y="39.93" z="13.26" />
+  <small-nitro id="Empty.284" x="18.27" y="39.93" z="11.33" />
+  <small-nitro id="Empty.285" x="19.49" y="39.93" z="9.51" />
+  <big-nitro id="Empty.286" x="-4.03" y="38.85" z="18.34" />
+  <big-nitro id="Empty.287" x="-3.61" y="38.85" z="-15.86" />
+  <big-nitro id="Empty.288" x="-1.53" y="38.85" z="19.04" h="-180.00" />
+  <big-nitro id="Empty.289" x="-1.11" y="38.85" z="-15.16" h="-180.00" />
+  <small-nitro id="Empty.290" x="-24.63" y="39.93" z="-6.33" h="-180.00" />
+  <small-nitro id="Empty.291" x="-23.41" y="39.93" z="-8.15" h="-180.00" />
+  <small-nitro id="Empty.292" x="-22.14" y="39.93" z="-10.08" h="-180.00" />
+  <banana id="Empty.293" x="-99.63" y="40.14" z="-23.29" h="-180.00" />
+  <banana id="Empty.294" x="-96.64" y="40.14" z="-26.09" h="-180.00" />
+  <item id="Empty.295" x="-64.20" y="40.05" z="-49.53" h="-180.00" />
+  <item id="Empty.296" x="-5.20" y="40.05" z="-31.03" h="-180.00" />
+  <item id="Empty.297" x="-60.55" y="40.05" z="-54.39" h="-180.00" />
+  <banana id="Empty.298" x="-2.69" y="38.94" z="-117.73" h="-180.00" />
+  <small-nitro id="Empty.299" x="32.19" y="40.23" z="-104.17" h="-180.00" />
+  <small-nitro id="Empty.300" x="28.54" y="40.23" z="-104.42" h="-180.00" />
+  <item id="Empty.301" x="25.22" y="40.21" z="-95.63" h="-180.00" />
+  <item id="Empty.302" x="30.44" y="40.21" z="-95.65" h="-180.00" />
+  <lightshaft xyz="-116.26 107.84 127.29" id="Sun" opacity="0.5" color="255 227 68"/>
+  <default-start karts-per-row     ="8"
+                 forwards-distance ="0.56"
+                 sidewards-distance="1.50"
+                 upwards-distance  ="1.10"/>
+  <start x="-0.29" y="9.52" z="55.88" h="-0.00"/>
+  <start x="-35.46" y="10.20" z="118.29" h="-0.00"/>
+  <start x="24.54" y="11.10" z="107.43" h="180.60"/>
+  <start x="65.59" y="10.67" z="62.83" h="58.09"/>
+  <start x="62.71" y="10.67" z="17.60" h="-76.45"/>
+  <start x="9.60" y="10.51" z="15.15" h="-137.90"/>
+  <start x="3.34" y="10.51" z="18.36" h="-166.72"/>
+  <start x="-11.12" y="10.51" z="16.67" h="-214.45"/>
+  <start x="-18.03" y="10.51" z="9.64" h="-247.42"/>
+  <start x="-21.51" y="10.51" z="0.73" h="-256.63"/>
+  <start x="15.10" y="10.51" z="3.08" h="-76.63"/>
+  <start x="11.62" y="10.51" z="-5.83" h="-67.42"/>
+  <start x="4.70" y="10.51" z="-12.86" h="-34.45"/>
+  <start x="-9.75" y="10.51" z="-14.55" h="13.28"/>
+  <start x="-16.01" y="10.51" z="-11.34" h="42.10"/>
+  <start x="-69.12" y="10.67" z="-13.79" h="103.55"/>
+  <start x="-72.00" y="10.67" z="-59.02" h="238.09"/>
+  <start x="-30.95" y="9.77" z="-103.62" h="360.60"/>
+  <start x="29.05" y="10.20" z="-114.48" h="180.00"/>
+  <start x="-6.12" y="10.92" z="-52.07" h="180.00"/>
+  <library name="gfx_fireworkTube_a" id="gfx_fireworkTube_a_main_proxy" xyz="-7.28 11.62 100.57" hpr="0.0 -0.0 0.0" scale="1.50 1.50 1.50">
+  </library>
+  <library name="gfx_fireworkTube_a" id="gfx_fireworkTube_a_main_proxy.001" xyz="76.45 11.62 42.35" hpr="0.0 -0.0 0.0" scale="1.50 1.50 1.50">
+  </library>
+  <library name="gfx_fireworkTube_a" id="gfx_fireworkTube_a_main_proxy.002" xyz="0.28 9.33 -96.10" hpr="0.0 -0.0 0.0" scale="1.50 1.50 1.50">
+  </library>
+  <library name="gfx_fireworkTube_a" id="gfx_fireworkTube_a_main_proxy.003" xyz="-80.82 10.36 -37.85" hpr="0.0 -0.0 0.0" scale="1.50 1.50 1.50">
+  </library>
+  <library name="stklib_blueRadioTower_a" id="stklib_blueRadioTower_a_main_proxy" xyz="-37.63 11.29 9.10" hpr="0.0 -0.0 0.0" scale="0.75 0.75 0.75">
+  </library>
+  <library name="stklib_greenRadioTower_a" id="stklib_greenRadioTower_a_main_proxy" xyz="35.56 11.30 -3.22" hpr="0.0 -0.0 0.0" scale="0.75 0.75 0.75">
+  </library>
+</scene>

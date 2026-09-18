@@ -69,6 +69,8 @@
 #include "input/motorica_game_control_ios.hpp"
 #include "input/motorica_standalone_training.hpp"
 #include "states_screens/fluxara_campaign_screen.hpp"
+#include "utils/fluxara_orientation_ios.hpp"
+#include "states_screens/fluxara_race_result_screen.hpp"
 #endif
 #include "states_screens/online/networking_lobby.hpp"
 #include "states_screens/options/options_screen_video.hpp"
@@ -183,6 +185,19 @@ RaceResultGUI::RaceResultGUI() : Screen(
 void RaceResultGUI::init()
 {
     Screen::init();
+#ifdef IOS_STK
+    if (isFluxaraRace())
+    {
+        fluxaraRequestPortraitMenu(true);
+        FluxaraResults::init(this);
+    }
+    else
+    {
+        for (const char* id : {"fluxara-again", "fluxara-next", "fluxara-list"})
+            getWidget(id)->setVisible(false);
+        getWidget("operations")->setVisible(true);
+    }
+#endif
     determineTableLayout();
     m_animation_state = RR_INIT;
 
@@ -567,6 +582,36 @@ void RaceResultGUI::enableAllButtons()
 void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
     const std::string& name, const int playerID)
 {
+#ifdef IOS_STK
+    if (isFluxaraRace() && name.compare(0,8,"fluxara-") == 0)
+    {
+        if (name == "fluxara-again")
+        {
+            StateManager::get()->popMenu();
+            RaceManager::get()->rerunRace();
+            return;
+        }
+        if (name == "fluxara-next" || name == "fluxara-list")
+        {
+            const std::string current_track = RaceManager::get()->getTrackName();
+            if (name == "fluxara-next" &&
+                RaceManager::get()->getMajorMode() == RaceManager::MAJOR_MODE_GRAND_PRIX)
+            {
+                cleanupGPProgress();
+                StateManager::get()->popMenu();
+                RaceManager::get()->next();
+                return;
+            }
+            StateManager::get()->popMenu();
+            RaceManager::get()->exitRace();
+            RaceManager::get()->setAIKartOverride("");
+            if (name == "fluxara-next")
+                FluxaraCampaignScreen::getInstance()->showNextAfter(current_track);
+            StateManager::get()->resetAndGoToScreen(FluxaraCampaignScreen::getInstance());
+            return;
+        }
+    }
+#endif
     int n_tracks = RaceManager::get()->getGrandPrix().getNumberOfTracks();
     if (name == "up_button")
     {
@@ -1272,6 +1317,13 @@ void RaceResultGUI::nextPhase()
  */
 bool RaceResultGUI::onEscapePressed()
 {
+#ifdef IOS_STK
+    if (isFluxaraRace())
+    {
+        eventCallback(nullptr,"fluxara-list",PLAYER_ID_GAME_MASTER);
+        return false;
+    }
+#endif
     nextPhase();
     return false;   // indicates 'do not close'
 }   // onEscapePressed
@@ -1284,6 +1336,9 @@ bool RaceResultGUI::onEscapePressed()
 GUIEngine::EventPropagation RaceResultGUI::filterActions(PlayerAction action,
     int deviceID, const unsigned int value, Input::InputType type, int playerId)
 {
+#ifdef IOS_STK
+    if (isFluxaraRace()) return GUIEngine::EVENT_LET;
+#endif
     if (action != PA_FIRE) return GUIEngine::EVENT_LET;
 
     // If the buttons are already visible, let the event go through since
@@ -1324,6 +1379,13 @@ void RaceResultGUI::onUpdate(float dt)
  */
 void RaceResultGUI::onDraw(float dt)
 {
+#ifdef IOS_STK
+    if (isFluxaraRace())
+    {
+        FluxaraResults::draw(this);
+        return;
+    }
+#endif
     renderGlobal(dt);
 }   // onDraw
 
@@ -1456,103 +1518,6 @@ void RaceResultGUI::renderGlobal(float dt)
         break;
     }   // switch
 
-#ifdef IOS_STK
-    // Fluxara is a curated single-circuit experience, not an STK score board.
-    // Render its result card as a self-contained iPhone view so neither the
-    // world behind it nor generic highscores leak into the presentation.
-    if (isFluxaraRace())
-    {
-        const int width = UserConfigParams::m_width;
-        const int height = UserConfigParams::m_height;
-        GL32_draw2DRectangle(video::SColor(255, 5, 12, 26),
-            core::rect<s32>(0, 0, width, height));
-
-        const int card_left = width * 10 / 100;
-        const int card_right = width * 90 / 100;
-        const int card_top = height * 22 / 100;
-        const int card_bottom = height * 67 / 100;
-        GL32_draw2DRectangle(video::SColor(255, 12, 32, 57),
-            core::rect<s32>(card_left, card_top, card_right, card_bottom));
-        GL32_draw2DRectangle(video::SColor(255, 79, 214, 255),
-            core::rect<s32>(card_left, card_top, card_left + 8, card_bottom));
-
-        GUIEngine::getTitleFont()->draw(L"RACE COMPLETE",
-            core::rect<s32>(card_left, height * 7 / 100, card_right,
-                            height * 15 / 100),
-            video::SColor(255, 157, 230, 255), true, true);
-        Track* fluxara_track = track_manager->getTrack(
-            RaceManager::get()->getTrackName());
-        core::stringw fluxara_subtitle = fluxara_track ?
-            fluxara_track->getName() : core::stringw(L"Fluxara Drift");
-        fluxara_subtitle += L"  ·  Run saved";
-        GUIEngine::getFont()->draw(fluxara_subtitle,
-            core::rect<s32>(card_left, height * 16 / 100, card_right,
-                            height * 21 / 100),
-            video::SColor(255, 224, 242, 255), true, true);
-
-        const int row_height = (card_bottom - card_top) /
-            std::max(4u, (unsigned int)m_all_row_infos.size() + 2);
-        for (unsigned int i = 0; i < m_all_row_infos.size(); i++)
-        {
-            const RowInfo& row = m_all_row_infos[i];
-            const int y = card_top + row_height * (i + 1);
-            if (row.m_is_player_kart)
-            {
-                GL32_draw2DRectangle(video::SColor(255, 19, 64, 94),
-                    core::rect<s32>(card_left + 20, y - row_height / 6,
-                                    card_right - 20, y + row_height * 2 / 3));
-            }
-            core::stringw rank = core::stringw("#") + core::stringw((int)i + 1);
-            GUIEngine::getFont()->draw(rank,
-                core::rect<s32>(card_left + 42, y, card_left + 110,
-                                y + row_height),
-                video::SColor(255, 79, 214, 255), false, true);
-            GUIEngine::getFont()->draw(row.m_kart_name,
-                core::rect<s32>(card_left + 125, y, card_right - 250,
-                                y + row_height),
-                row.m_is_player_kart ? video::SColor(255, 255, 255, 255)
-                                     : video::SColor(255, 184, 205, 224),
-                false, true);
-            GUIEngine::getFont()->draw(row.m_finish_time_string,
-                core::rect<s32>(card_right - 235, y, card_right - 42,
-                                y + row_height),
-                video::SColor(255, 255, 255, 255), true, true);
-        }
-        GUIEngine::getSmallFont()->draw(L"1 LAP  ·  OPEN RUN",
-            core::rect<s32>(card_left + 42, card_bottom - row_height,
-                            card_right - 42, card_bottom - 8),
-            video::SColor(255, 125, 174, 205), false, true);
-
-        const int button_top = height * 75 / 100;
-        const int button_bottom = height * 86 / 100;
-        const int button_width = width * 20 / 100;
-        const int left_button = width * 15 / 100;
-        const int middle_button = width * 40 / 100;
-        const int right_button = width * 65 / 100;
-        GL32_draw2DRectangle(video::SColor(255, 20, 53, 81),
-            core::rect<s32>(left_button, button_top,
-                            left_button + button_width, button_bottom));
-        GL32_draw2DRectangle(video::SColor(255, 31, 118, 157),
-            core::rect<s32>(right_button, button_top,
-                            right_button + button_width, button_bottom));
-        GL32_draw2DRectangle(video::SColor(255, 23, 80, 112),
-            core::rect<s32>(middle_button, button_top,
-                            middle_button + button_width, button_bottom));
-        GUIEngine::getFont()->draw(L"CIRCUITS",
-            core::rect<s32>(left_button, button_top, left_button + button_width,
-                            button_bottom), video::SColor(255, 224, 242, 255),
-            true, true);
-        GUIEngine::getFont()->draw(L"NEXT",
-            core::rect<s32>(middle_button, button_top,
-                            middle_button + button_width, button_bottom),
-            video::SColor(255, 224, 242, 255), true, true);
-        GUIEngine::getFont()->draw(L"RACE AGAIN",
-            core::rect<s32>(right_button, button_top, right_button + button_width,
-                            button_bottom), video::SColor(255, 255, 255, 255),
-            true, true);
-        return;
-    }
-#endif
 
     // Second phase: update X and Y positions for the various animations
     // =================================================================
@@ -2808,6 +2773,9 @@ int RaceResultGUI::getFontHeight() const
 void RaceResultGUI::onResize()
 {
     Screen::onResize();
+#ifdef IOS_STK
+    if (isFluxaraRace()) FluxaraResults::layout(this);
+#endif
     if (!m_gp_progress_widgets.empty())
         enableGPProgress();
 } // onResize

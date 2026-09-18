@@ -94,6 +94,10 @@ CIrrDeviceSDL::CIrrDeviceSDL(const SIrrlichtCreationParameters& param)
 #ifdef ANDROID
 	SDL_SetHint(SDL_HINT_ORIENTATIONS, "LandscapeLeft LandscapeRight");
 #endif
+#ifdef IOS_STK
+	// Fluxara menus are portrait; the game state requests landscape for races.
+	SDL_SetHint(SDL_HINT_ORIENTATIONS, "Portrait");
+#endif
 
 #ifndef MOBILE_STK
 	// Prevent fullscreen minimizes when losing focus

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<scene>
+  <track model="rt7-retro_track.spm" x="0" y="0" z="0">
+    <static-object  model="collisions.spm" xyz="45.38 -5.50 24.45" hpr="90.0 -0.0 -0.0" scale="1.00 1.00 1.00" interaction="physics-only"/>
+  </track>
+  <object id="barrier" type="animation" xyz="0.00 0.00 0.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 5.00" interaction="ghost" model="barrier-facecull.spm" skeletal-animation="false">
+  </object>
+  <sky-box texture="genericskybox_top.jpg genericskybox_bottom.jpg genericskybox_east.jpg genericskybox_west.jpg genericskybox_south.jpg genericskybox_north.jpg" />
+  <camera far="1000.0"/>
+  <checks>
+    <check-lap kind="lap" same-group="0" other-ids="1" />
+    <check-line kind="activate" other-ids="2" p1="46.13 25.11" p2="85.13 21.18"
+                min-height="-7.49" same-group="1"/>
+    <check-line kind="activate" other-ids="3" p1="-12.58 -28.43" p2="-11.06 -44.94"
+                min-height="-7.49" same-group="2"/>
+    <check-line kind="activate" other-ids="5" p1="-50.44 -23.30" p2="-65.44 -23.16"
+                min-height="-7.49" same-group="3"/>
+    <check-line kind="activate" other-ids="0" p1="-50.38 20.25" p2="-84.92 20.18"
+                min-height="-7.49" same-group="4"/>
+    <check-line kind="activate" other-ids="4" p1="-1.67 17.53" p2="-16.65 18.14"
+                min-height="0.01" same-group="5"/>
+  </checks>
+  <small-nitro id="Empty" x="40.53" y="10.00" z="37.01" h="-90.00" />
+  <item id="Empty.001" x="40.53" y="10.00" z="34.01" h="-90.00" />
+  <small-nitro id="Empty.002" x="40.53" y="10.00" z="31.01" h="-90.00" />
+  <item id="Empty.003" x="30.30" y="10.00" z="-6.92" h="-180.00" />
+  <small-nitro id="Empty.004" x="33.30" y="10.00" z="-6.92" h="-180.00" />
+  <item id="Empty.005" x="36.30" y="10.00" z="-6.92" h="-180.00" />
+  <item id="Empty.006" x="-4.35" y="10.00" z="-16.99" h="-156.35" />
+  <item id="Empty.007" x="-7.10" y="10.00" z="-18.19" h="-156.35" />
+  <small-nitro id="Empty.008" x="-9.85" y="10.00" z="-19.39" h="-156.35" />
+  <item id="Empty.009" x="-40.96" y="10.00" z="-23.67" />
+  <item id="Empty.010" x="-43.96" y="10.00" z="-23.67" />
+  <small-nitro id="Empty.011" x="-46.96" y="10.00" z="-23.67" />
+  <item id="Empty.012" x="-60.91" y="10.00" z="-1.88" />
+  <item id="Empty.013" x="-57.91" y="10.00" z="-1.88" />
+  <item id="Empty.014" x="-54.91" y="10.00" z="-1.88" />
+  <small-nitro id="Empty.015" x="-33.69" y="10.00" z="30.97" h="-90.00" />
+  <banana id="Empty.016" x="-33.69" y="10.00" z="33.97" h="-90.00" />
+  <small-nitro id="Empty.017" x="-33.69" y="10.00" z="36.97" h="-90.00" />
+  <small-nitro id="Empty.018" x="-33.69" y="10.00" z="7.16" h="-90.00" />
+  <banana id="Empty.019" x="-33.69" y="10.00" z="4.16" h="-90.00" />
+  <small-nitro id="Empty.020" x="-33.69" y="10.00" z="1.16" h="-90.00" />
+  <banana id="Empty.021" x="10.46" y="10.00" z="-1.12" h="-180.00" />
+  <banana id="Empty.022" x="-12.48" y="10.00" z="-29.40" h="-180.00" />
+  <banana id="Empty.023" x="-35.00" y="10.00" z="-17.26" h="-180.00" />
+  <banana id="Empty.024" x="47.29" y="10.00" z="25.16" h="-180.00" />
+  <item id="Empty.025" x="-45.68" y="-3.03" z="31.01" h="-90.00" />
+  <item id="Empty.026" x="-45.68" y="-3.03" z="34.01" h="-90.00" />
+  <item id="Empty.027" x="-45.68" y="-3.03" z="37.01" h="-90.00" />
+  <default-start karts-per-row     ="1"
+                 forwards-distance ="1.50"
+                 sidewards-distance="7.50"
+                 upwards-distance  ="1.10"/>
+</scene>

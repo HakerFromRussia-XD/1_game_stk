@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<materials>
+  <material name="goal.png" shader="alphablend"/>
+  <material name="puck.png" gloss-map="puck_gloss.png"/>
+  <material name="city_checker.png" ignore="Y"/>
+  <material name="ice.png" gloss-map="ice_gloss.png" normal-map="icenormal.png"/>
+  <material name="field.png" gloss-map="ice_gloss.png"/>
+  <material name="floodlights.png" gloss-map="floodlight_Emissive.png"/>
+  <material name="side_blue.png" gloss-map="side_gloss.png"/>
+  <material name="side_red.png" gloss-map="side_gloss.png"/>
+  <material name="chattershenanigans.png" gloss-map="ad_gloss.png"/>
+  <material name="luffahwiki.png" gloss-map="ad_gloss.png"/>
+  <material name="stkdiscord.png" gloss-map="ad_gloss.png"/>
+  <material name="tuxtroubleforthebois.png" gloss-map="ad_gloss.png"/>
+  <material name="hacienda_ground.jpg" ignore="Y"/>
+</materials>

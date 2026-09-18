@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<kart name="Automated Knight" version="3" model-file="automated knight.spm" icon-file="icon.png" minimap-icon-file="icon.png" shadow-file="kittgobrrr" type="medium" groups="Fluxara" rgb="1.00 0.00 0.00" revision="1">
+    <sounds engine="custom" file="tesla.ogg" rolloff="0.2" max_dist="300" volume="0.6"/>
+    <wheels>
+        <front-right position="0.287592 0.112912 0.444732" model="wheel-front-right.spm"/>
+        <front-left position="-0.295507 0.112912 0.444732" model="wheel-front-left.spm"/>
+        <rear-right position="0.287592 0.112912 -0.432573" model="wheel-rear-right.spm"/>
+        <rear-left position="-0.297151 0.112912 -0.432573" model="wheel-rear-left.spm"/>
+    </wheels>
+    <nitro-emitter>
+        <nitro-emitter-a position="0.000000 -900.000000 -0.747129"/>
+        <nitro-emitter-b position="0.000000 -900.000000 -0.747129"/>
+    </nitro-emitter>
+    <headlights>
+        <object position="0.000000 0.208459 0.698797" rotation="0.000000 -0.000000 0.000000" scale="0.001000 0.001000 0.001000" color="255 0 0" model="Cube.spm"/>
+    </headlights>
+    <lean max="0"/>
+</kart>

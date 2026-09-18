@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<scene>
+  <track model="the-court_track.spm" x="0" y="0" z="0">
+    <static-object  model="barrier.spm" xyz="0.00 0.00 0.00" hpr="0.0 -0.0 0.0" scale="1.14 1.00 1.00" interaction="physics-only"/>
+    <static-object  model="scoreArea.spm" xyz="0.00 -5.00 60.03" hpr="0.0 -0.0 0.0" scale="31.21 31.21 31.21" interaction="physics-only"/>
+  </track>
+  <object type="movable" id="ball" xyz="0.00 3.50 0.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00"
+          shape="sphere" mass="20.0" model="basketball.spm" soccer_ball="true" restitution="0.6" skeletal-animation="false"/>
+  <object id="Cube" type="animation" xyz="0.00 0.00 44.10" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="box" model="pusherBlue.spm" skeletal-animation="false">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 0.000" h1="-1.000 0.000" h2="1.000 0.000"/>
+      <p c="30.000 0.000" h1="18.288 0.000" h2="41.712 0.000"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 44.100" h1="-1.000 44.100" h2="1.000 44.100"/>
+      <p c="30.000 79.100" h1="18.288 79.100" h2="41.712 79.100"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 0.000" h1="-1.000 0.000" h2="1.000 0.000"/>
+      <p c="30.000 0.000" h1="18.288 0.000" h2="41.712 0.000"/>
+    </curve>
+    <curve channel="RotX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -0.000" h1="-11.712 -0.000" h2="11.712 -0.000"/>
+      <p c="30.000 -0.000" h1="18.288 -0.000" h2="41.712 -0.000"/>
+    </curve>
+    <curve channel="RotZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -0.000" h1="-11.712 -0.000" h2="11.712 -0.000"/>
+      <p c="30.000 -0.000" h1="18.288 -0.000" h2="41.712 -0.000"/>
+    </curve>
+    <curve channel="RotY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -0.000" h1="-11.712 -0.000" h2="11.712 -0.000"/>
+      <p c="30.000 -0.000" h1="18.288 -0.000" h2="41.712 -0.000"/>
+    </curve>
+    <curve channel="ScaleX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 1.000" h1="-11.712 1.000" h2="11.712 1.000"/>
+      <p c="30.000 1.000" h1="18.288 1.000" h2="41.712 1.000"/>
+    </curve>
+    <curve channel="ScaleZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 1.000" h1="-11.712 1.000" h2="11.712 1.000"/>
+      <p c="30.000 1.000" h1="18.288 1.000" h2="41.712 1.000"/>
+    </curve>
+    <curve channel="ScaleY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 1.000" h1="-11.712 1.000" h2="11.712 1.000"/>
+      <p c="30.000 1.000" h1="18.288 1.000" h2="41.712 1.000"/>
+    </curve>
+  </object>
+  <object id="Cube.001" type="animation" xyz="0.00 0.00 -44.10" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="box" model="pusherRed.spm" skeletal-animation="false">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 0.000" h1="-1.000 0.000" h2="1.000 0.000"/>
+      <p c="30.000 0.000" h1="18.288 0.000" h2="41.712 0.000"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -44.100" h1="-1.000 -44.100" h2="1.000 -44.100"/>
+      <p c="30.000 -79.100" h1="18.288 -79.100" h2="41.712 -79.100"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 0.000" h1="-1.000 0.000" h2="1.000 0.000"/>
+      <p c="30.000 0.000" h1="18.288 0.000" h2="41.712 0.000"/>
+    </curve>
+    <curve channel="RotX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -0.000" h1="-11.712 -0.000" h2="11.712 -0.000"/>
+      <p c="30.000 -0.000" h1="18.288 -0.000" h2="41.712 -0.000"/>
+    </curve>
+    <curve channel="RotZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -0.000" h1="-11.712 -0.000" h2="11.712 -0.000"/>
+      <p c="30.000 -0.000" h1="18.288 -0.000" h2="41.712 -0.000"/>
+    </curve>
+    <curve channel="RotY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -0.000" h1="-11.712 -0.000" h2="11.712 -0.000"/>
+      <p c="30.000 -0.000" h1="18.288 -0.000" h2="41.712 -0.000"/>
+    </curve>
+    <curve channel="ScaleX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 1.000" h1="-11.712 1.000" h2="11.712 1.000"/>
+      <p c="30.000 1.000" h1="18.288 1.000" h2="41.712 1.000"/>
+    </curve>
+    <curve channel="ScaleZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 1.000" h1="-11.712 1.000" h2="11.712 1.000"/>
+      <p c="30.000 1.000" h1="18.288 1.000" h2="41.712 1.000"/>
+    </curve>
+    <curve channel="ScaleY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 1.000" h1="-11.712 1.000" h2="11.712 1.000"/>
+      <p c="30.000 1.000" h1="18.288 1.000" h2="41.712 1.000"/>
+    </curve>
+  </object>
+  <object id="field_lining" type="animation" xyz="0.00 0.00 0.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="lining.spm" skeletal-animation="false">
+  </object>
+  <object id="ground.001" type="animation" xyz="0.00 0.00 0.00" hpr="0.0 -0.0 0.0" scale="1.14 1.00 1.00" interaction="ghost" model="groundHole.spm" skeletal-animation="false">
+  </object>
+  <object id="holes" type="animation" xyz="0.00 0.00 0.00" hpr="0.0 -0.0 0.0" scale="31.21 31.21 31.21" interaction="ghost" model="hoopHole.spm" skeletal-animation="false">
+  </object>
+  <object id="Plane" type="animation" xyz="0.00 -0.08 0.00" hpr="0.0 -0.0 0.0" scale="100.00 100.00 100.00" interaction="ghost" model="background.spm" skeletal-animation="false">
+  </object>
+  <sky-box texture="generic_lightblue_skybox_top.png generic_lightblue_skybox_bottom.png generic_lightblue_skybox_east.png generic_lightblue_skybox_west.png generic_lightblue_skybox_south.png generic_lightblue_skybox_north.png" sh-texture="generic_lightblue_skybox_top.png generic_lightblue_skybox_bottom.png generic_lightblue_skybox_east.png generic_lightblue_skybox_west.png generic_lightblue_skybox_south.png generic_lightblue_skybox_north.png"/>
+  <camera far="1000.0"/>
+  <checks>
+    <check-line kind="lap" p1="-1.00 0.00" p2="1.00 0.00"
+                min-height="0.00"  />
+    <goal p1="12.65 -5.11 67.06" p2="-12.65 -5.11 67.06"  first_goal="true" />
+    <goal p1="-12.65 -5.11 -67.06" p2="12.65 -5.11 -67.06" />
+  </checks>
+  <big-nitro id="gift_1" x="0.00" y="0.15" z="-23.67" h="-30.00" />
+  <big-nitro id="gift_1.001" x="0.00" y="0.15" z="23.33" h="-210.00" />
+  <item id="gift_1.002" x="0.00" y="5.00" z="-36.96" h="-30.00" />
+  <item id="gift_1.003" x="0.00" y="5.00" z="36.96" h="-30.00" />
+  <item id="item_2.002" x="36.99" y="0.15" z="-23.67" h="30.00" />
+  <item id="item_2.003" x="36.99" y="0.15" z="23.67" h="30.00" />
+  <item id="item_2.004" x="-36.99" y="0.15" z="-23.67" h="210.00" />
+  <item id="item_2.005" x="-36.99" y="0.15" z="23.67" h="210.00" />
+  <default-start karts-per-row     ="3"
+                 forwards-distance ="1.50"
+                 sidewards-distance="1.80"
+                 upwards-distance  ="1.10"/>
+  <start x="-37.05" y="0.10" z="32.18" h="180.00"/>
+  <start x="36.99" y="0.10" z="-33.06" h="0.00"/>
+  <start x="-32.23" y="0.10" z="32.18" h="180.00"/>
+  <start x="32.62" y="0.10" z="-33.18" h="0.00"/>
+  <start x="-34.09" y="0.10" z="35.14" h="180.00"/>
+  <start x="34.63" y="0.10" z="-36.06" h="0.00"/>
+  <start x="-38.91" y="0.10" z="35.07" h="180.00"/>
+  <start x="38.75" y="0.10" z="-36.06" h="0.00"/>
+  <start x="-41.68" y="0.10" z="32.18" h="180.00"/>
+  <start x="41.12" y="0.10" z="-33.06" h="0.00"/>
+  <start x="-43.54" y="0.10" z="35.07" h="180.00"/>
+  <start x="42.39" y="0.10" z="-36.06" h="0.00"/>
+  <start x="-30.38" y="0.10" z="35.14" h="180.00"/>
+  <start x="30.26" y="0.10" z="-36.04" h="0.00"/>
+</scene>

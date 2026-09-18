@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scene>
+  <track model="moriasracesoccer_track.spm" x="0" y="0" z="0">
+    <static-object  model="Light_Stand.spm" xyz="-29.98 -1.94 11.19" hpr="-0.0 -109.8 -0.0" scale="1.00 1.00 1.00"/>
+    <static-object  model="Light_Stand.spm" xyz="-31.66 -1.94 19.82" hpr="-0.0 -91.7 -0.0" scale="1.00 1.00 1.00"/>
+    <static-object  model="Light_Stand.spm" xyz="31.63 -1.94 19.91" hpr="-0.0 93.7 -0.0" scale="1.00 1.00 1.00"/>
+    <static-object  model="Light_Stand.spm" xyz="29.78 -1.94 11.28" hpr="-0.0 111.0 -0.0" scale="1.00 1.00 1.00"/>
+    <static-object  model="Light_Stand.spm" xyz="29.86 -1.94 -12.66" hpr="0.0 70.2 0.0" scale="1.00 1.00 1.00"/>
+    <static-object  model="Light_Stand.spm" xyz="31.55 -1.94 -21.30" hpr="0.0 88.3 0.0" scale="1.00 1.00 1.00"/>
+    <static-object  model="Light_Stand.spm" xyz="-31.74 -1.94 -21.38" hpr="-0.0 -86.3 0.0" scale="1.00 1.00 1.00"/>
+    <static-object  model="Light_Stand.spm" xyz="-29.90 -1.94 -12.75" hpr="0.0 -69.0 0.0" scale="1.00 1.00 1.00"/>
+  </track>
+  <object id="Palm.001" type="animation" xyz="29.38 -3.44 0.03" hpr="0.0 -37.7 0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Tree.040" type="animation" xyz="30.36 0.50 -47.67" hpr="-0.0 39.2 -0.0" scale="0.69 0.69 0.69" interaction="ghost" model="Tree.spm" skeletal-animation="false">
+  </object>
+  <object type="movable" id="Cube" xyz="0.00 61.90 0.00" hpr="0.0 -0.0 0.0" scale="0.74 0.74 0.74"
+          shape="sphere" mass="10.0" model="Ball.spm" forcedbloom="true" soccer_ball="true" skeletal-animation="false"/>
+  <object id="Tree.001" type="animation" xyz="11.33 0.50 -52.85" hpr="0.0 -27.6 0.0" scale="0.69 0.69 0.69" interaction="ghost" model="Tree.spm" skeletal-animation="false">
+  </object>
+  <object id="Tree.002" type="animation" xyz="-9.64 0.50 -54.38" hpr="-0.0 -101.1 -0.0" scale="0.69 0.69 0.69" interaction="ghost" model="Tree.spm" skeletal-animation="false">
+  </object>
+  <object id="Tree.003" type="animation" xyz="-31.27 0.50 -47.87" hpr="-0.0 -112.9 -0.0" scale="0.69 0.69 0.69" interaction="ghost" model="Tree.spm" skeletal-animation="false">
+  </object>
+  <object id="Tree.004" type="animation" xyz="-32.01 0.50 44.38" hpr="-0.0 -112.9 -0.0" scale="0.69 0.69 0.69" interaction="ghost" model="Tree.spm" skeletal-animation="false">
+  </object>
+  <object id="Tree.005" type="animation" xyz="-13.15 0.50 56.10" hpr="-0.0 -176.6 -0.0" scale="0.69 0.69 0.69" interaction="ghost" model="Tree.spm" skeletal-animation="false">
+  </object>
+  <object id="Tree.006" type="animation" xyz="13.20 0.50 56.83" hpr="-0.0 -176.6 -0.0" scale="0.69 0.69 0.69" interaction="ghost" model="Tree.spm" skeletal-animation="false">
+  </object>
+  <object id="Tree.007" type="animation" xyz="32.35 0.50 46.98" hpr="-0.0 111.7 -0.0" scale="0.69 0.69 0.69" interaction="ghost" model="Tree.spm" skeletal-animation="false">
+  </object>
+  <object id="Palm.002" type="animation" xyz="32.13 -3.44 6.92" hpr="0.0 -37.7 0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Palm.003" type="animation" xyz="34.57 -3.44 13.59" hpr="0.0 -37.7 0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Palm.004" type="animation" xyz="35.41 -3.44 21.01" hpr="0.0 -37.7 0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Palm.005" type="animation" xyz="35.63 -3.44 28.74" hpr="0.0 -37.7 0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Palm.006" type="animation" xyz="32.87 -3.44 -7.17" hpr="0.0 -37.7 0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Palm.007" type="animation" xyz="34.36 -3.44 -16.60" hpr="0.0 -37.7 0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Palm.008" type="animation" xyz="35.94 -3.44 -26.34" hpr="0.0 -37.7 0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Palm.009" type="animation" xyz="35.31 -3.44 -34.92" hpr="0.0 -37.7 0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Palm.010" type="animation" xyz="-28.19 -3.44 -2.32" hpr="-0.0 139.0 -0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Palm.011" type="animation" xyz="-30.55 -3.44 -9.35" hpr="-0.0 139.0 -0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Palm.012" type="animation" xyz="-32.60 -3.44 -16.15" hpr="-0.0 139.0 -0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Palm.013" type="animation" xyz="-33.03 -3.44 -23.60" hpr="-0.0 139.0 -0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Palm.014" type="animation" xyz="-32.81 -3.44 -31.33" hpr="-0.0 139.0 -0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Palm.015" type="animation" xyz="-32.09 -3.44 4.68" hpr="-0.0 139.0 -0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Palm.016" type="animation" xyz="-34.10 -3.44 14.01" hpr="-0.0 139.0 -0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Palm.017" type="animation" xyz="-36.24 -3.44 23.65" hpr="-0.0 139.0 -0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Palm.018" type="animation" xyz="-36.09 -3.44 32.25" hpr="-0.0 139.0 -0.0" scale="3.08 3.08 3.08" interaction="ghost" model="Palm.spm" skeletal-animation="false">
+  </object>
+  <object id="Plane.001" type="animation" xyz="0.00 0.00 0.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="physicsonly" shape="exact" model="hitbox.spm" shadow-pass="false" skeletal-animation="false">
+  </object>
+  <weather particles="rain.xml" lightning="true"/>
+  <sky-box texture="skybox_black.png skybox_black.png skybox_black.png skybox_black.png skybox_black.png skybox_racetrack.png" />
+  <camera far="1000.0"/>
+  <checks>
+    <check-line kind="lap" p1="-1.00 0.00" p2="1.00 0.00"
+                min-height="0.00"  />
+    <goal p1="8.07 -2.82 24.89" p2="-8.15 -2.82 24.89"  first_goal="true" />
+    <goal p1="8.11 -2.82 -25.00" p2="-8.11 -2.82 -25.00" />
+  </checks>
+  <big-nitro id="Nitro_Big.001" x="23.47" y="-3.44" z="-26.78" />
+  <small-nitro id="Nitro_Small" x="-29.16" y="-3.44" z="-33.47" />
+  <item id="Gift.001" x="19.97" y="-3.44" z="-31.49" />
+  <big-nitro id="Nitro_Big.002" x="-24.28" y="-3.44" z="-26.78" />
+  <big-nitro id="Nitro_Big.003" x="23.47" y="-3.44" z="26.67" />
+  <big-nitro id="Nitro_Big.004" x="-24.28" y="-3.44" z="26.67" />
+  <item id="Gift.002" x="14.96" y="-3.44" z="-33.53" />
+  <item id="Gift.003" x="9.95" y="-3.44" z="-33.65" />
+  <item id="Gift.004" x="4.94" y="-3.44" z="-33.47" />
+  <item id="Gift.005" x="-0.07" y="-3.44" z="-33.65" />
+  <item id="Gift.006" x="-5.01" y="-3.44" z="-33.71" />
+  <item id="Gift.007" x="-10.03" y="-3.44" z="-33.83" />
+  <item id="Gift.008" x="-14.97" y="-3.44" z="-33.71" />
+  <item id="Gift.009" x="-20.05" y="-3.44" z="-31.67" />
+  <item id="Gift.010" x="-19.98" y="-3.44" z="32.06" />
+  <item id="Gift.011" x="-15.04" y="-3.44" z="34.22" />
+  <item id="Gift.012" x="-10.03" y="-3.44" z="34.22" />
+  <item id="Gift.013" x="-5.01" y="-3.44" z="34.34" />
+  <item id="Gift.014" x="0.07" y="-3.44" z="34.40" />
+  <item id="Gift.015" x="4.94" y="-3.44" z="34.34" />
+  <item id="Gift.016" x="9.95" y="-3.44" z="34.40" />
+  <item id="Gift.017" x="14.89" y="-3.44" z="34.34" />
+  <item id="Gift.018" x="19.97" y="-3.44" z="32.12" />
+  <small-nitro id="Nitro_Small.001" x="-21.17" y="-3.44" z="-44.12" />
+  <small-nitro id="Nitro_Small.002" x="-1.32" y="-3.44" z="-46.10" />
+  <small-nitro id="Nitro_Small.003" x="19.64" y="-3.44" z="-45.50" />
+  <small-nitro id="Nitro_Small.004" x="29.26" y="-3.44" z="-33.56" />
+  <small-nitro id="Nitro_Small.005" x="29.41" y="-3.44" z="32.66" />
+  <small-nitro id="Nitro_Small.006" x="24.26" y="-3.44" z="42.47" />
+  <small-nitro id="Nitro_Small.007" x="1.92" y="-3.44" z="45.76" />
+  <small-nitro id="Nitro_Small.008" x="-22.64" y="-3.44" z="43.33" />
+  <small-nitro id="Nitro_Small.009" x="-29.44" y="-3.44" z="31.23" />
+  <default-start karts-per-row     ="3"
+                 forwards-distance ="1.50"
+                 sidewards-distance="1.80"
+                 upwards-distance  ="1.10"/>
+  <start x="0.00" y="-1.89" z="42.38" h="180.00"/>
+  <start x="0.00" y="-1.89" z="-42.08" h="0.00"/>
+  <start x="5.00" y="-1.89" z="42.38" h="180.00"/>
+  <start x="5.00" y="-1.89" z="-42.08" h="0.00"/>
+  <start x="-5.00" y="-1.89" z="42.38" h="180.00"/>
+  <start x="-5.00" y="-1.89" z="-42.08" h="0.00"/>
+  <start x="10.00" y="-1.89" z="42.38" h="180.00"/>
+  <start x="10.00" y="-1.89" z="-42.08" h="0.00"/>
+  <start x="-10.00" y="-1.89" z="42.38" h="180.00"/>
+  <start x="-10.00" y="-1.89" z="-42.08" h="0.00"/>
+  <start x="15.00" y="-1.89" z="42.38" h="180.00"/>
+  <start x="15.00" y="-1.89" z="-42.08" h="0.00"/>
+  <start x="-15.00" y="-1.89" z="42.38" h="180.00"/>
+  <start x="-15.00" y="-1.89" z="-42.08" h="0.00"/>
+  <start x="20.00" y="-1.89" z="39.78" h="180.00"/>
+  <start x="20.00" y="-1.89" z="-39.48" h="0.00"/>
+  <start x="-20.00" y="-1.89" z="39.78" h="180.00"/>
+  <start x="-20.00" y="-1.89" z="-39.48" h="0.00"/>
+</scene>

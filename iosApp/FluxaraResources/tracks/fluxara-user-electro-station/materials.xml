@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<materials>
+  <material name="170.jpg" normal-map="170_norm.jpg"/>
+  <material name="173.jpg" normal-map="173_norm.jpg"/>
+  <material name="173b.jpg" normal-map="173_norm.jpg"/>
+  <material name="grass.jpg" has-gravity="Y"/>
+  <material name="rock_grey.jpg" has-gravity="Y"/>
+  <material name="stk_generic_grassA.png" has-gravity="Y" slowdown-time="6.50" max-speed="0.65"/>
+  <material name="stk_generic_grassB.png" normal-map="stk_generic_grassB_Normal.png" slowdown-time="3.50" max-speed="0.65"/>
+  <material name="stk_generic_rock_b.png" has-gravity="Y"/>
+  <material name="stk_generic_runway_a.png" has-gravity="Y"/>
+  <material name="stk_generic_sand_a.png" has-gravity="Y"/>
+  <material name="stk_generic_sand_b.png" falling-effect="Y" water-splash="Y"/>
+  <material name="stk_generic_snow_a.png" gloss-map="stk_generic_snow_a_gloss.png" normal-map="stk_generic_snow_a_Normal.png" has-gravity="Y"/>
+  <material name="stklama_road_a.png" has-gravity="Y"/>
+  <material name="stktex_generic_lavaA.png" gloss-map="stktex_generic_lava_gloss.png" normal-map="stktex_generic_lavaA_Normal.png" falling-effect="Y"/>
+  <material name="stktex_generic_rockA.png" gloss-map="stktex_generic_rockA_gloss.png" normal-map="stktex_generic_rockA_Normal.png" has-gravity="Y"/>
+  <material name="waterLC.png" surface="Y" shader="displace"/>
+</materials>

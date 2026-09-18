@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<scene>
+  <track model="ski-dash_track.spm" x="0" y="0" z="0"/>
+  <object id="aurora" type="animation" xyz="-30.88 65.80 -556.61" hpr="0.0 -0.0 0.0" scale="1.07 1.07 1.07" interaction="ghost" model="aurora.spm" skeletal-animation="false">
+    <animated-texture name="aurora.png" dx="0.20000"  dy="-0.10000" />
+    <curve channel="LocX" interpolation="linear" extend="cyclic">
+      <p c="1.000 -30.885"/>
+      <p c="400.000 -30.885"/>
+    </curve>
+    <curve channel="LocZ" interpolation="linear" extend="cyclic">
+      <p c="1.000 -556.609"/>
+      <p c="2196.000 730.597"/>
+    </curve>
+  </object>
+  <sun  fog="true" fog-color="2 3 7" fog-max="0.30000001192092896" fog-start="10.00" fog-end="100.00" xyz="84.27 154.08 -99.81" sun-specular="67 50 141" sun-diffuse="33 50 70" ambient="85 85 85"/>
+  <weather particles="snow.xml"/>
+  <sky-box texture="winter_sky_6.jpg winter_sky_5.jpg winter_sky_2.jpg winter_sky_4.jpg winter_sky_3.jpg winter_sky_1.jpg" sh-texture="winter_sky_6_top.jpg winter_sky_ibl_bot.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg"/>
+  <camera far="1500.0"/>
+  <item id="Empty" x="-128.16" y="49.99" z="108.11" />
+  <item id="Empty.001" x="-137.02" y="5.67" z="-38.80" />
+  <item id="Empty.002" x="-142.86" y="5.67" z="6.16" />
+  <item id="Empty.003" x="-81.89" y="6.68" z="-104.98" />
+  <item id="Empty.004" x="20.69" y="6.68" z="-95.06" />
+  <item id="Empty.005" x="-0.36" y="6.68" z="73.81" />
+  <item id="Empty.006" x="50.20" y="6.68" z="81.55" />
+  <item id="Empty.007" x="114.08" y="6.68" z="67.28" />
+  <item id="Empty.008" x="97.62" y="6.68" z="-36.03" />
+  <item id="Empty.009" x="-25.76" y="6.91" z="157.76" />
+  <item id="Empty.010" x="32.30" y="6.91" z="137.20" />
+  <item id="Empty.153" x="-43.80" y="55.97" z="106.41" />
+  <item id="Empty.154" x="-64.37" y="61.16" z="119.20" />
+  <item id="Empty.155" x="-69.09" y="55.97" z="74.55" />
+  <small-nitro id="Empty.156" x="-84.60" y="53.27" z="91.75" />
+  <small-nitro id="Empty.157" x="-87.05" y="53.27" z="90.27" />
+  <small-nitro id="Empty.158" x="-89.67" y="53.27" z="88.83" />
+  <small-nitro id="Empty.159" x="-92.25" y="53.27" z="87.47" />
+  <banana id="Empty.160" x="-130.80" y="54.00" z="94.58" />
+  <banana id="Empty.161" x="-132.99" y="54.00" z="82.74" />
+  <banana id="Empty.162" x="-120.71" y="54.00" z="79.85" />
+  <banana id="Empty.163" x="-69.85" y="40.75" z="13.20" />
+  <item id="Empty.164" x="-65.54" y="41.25" z="14.01" />
+  <item id="Empty.165" x="-85.64" y="41.25" z="-6.16" />
+  <banana id="Empty.166" x="-80.24" y="41.25" z="-6.16" />
+  <item id="Empty.167" x="-60.53" y="41.25" z="-26.27" />
+  <banana id="Empty.168" x="-65.93" y="41.25" z="-26.27" />
+  <small-nitro id="Empty.169" x="-35.07" y="53.27" z="-92.82" h="57.15" />
+  <small-nitro id="Empty.170" x="-34.80" y="53.27" z="-89.92" h="57.15" />
+  <small-nitro id="Empty.171" x="-34.59" y="53.27" z="-86.94" h="57.15" />
+  <small-nitro id="Empty.172" x="-34.50" y="53.27" z="-84.07" h="57.15" />
+  <item id="Empty.173" x="31.83" y="6.46" z="-36.95" />
+  <item id="Empty.174" x="47.00" y="6.46" z="-3.97" />
+  <item id="Empty.175" x="25.61" y="6.46" z="-13.09" />
+  <big-nitro id="Empty.176" x="57.18" y="5.00" z="-26.25" />
+  <lightshaft xyz="183.55 162.42 -200.57" id="Sun" opacity="0.40" color="60 130 255"/>
+  <default-start karts-per-row     ="8"
+                 forwards-distance ="0.56"
+                 sidewards-distance="1.50"
+                 upwards-distance  ="1.10"/>
+  <start x="-68.52" y="59.68" z="96.15" h="-0.00"/>
+  <start x="-63.69" y="59.77" z="97.14" h="-30.93"/>
+  <start x="-100.89" y="49.69" z="55.14" h="126.63"/>
+  <start x="-95.88" y="49.04" z="59.34" h="151.66"/>
+  <start x="-60.94" y="6.29" z="-72.18" h="-25.42"/>
+  <start x="29.55" y="5.87" z="-42.60" h="23.53"/>
+  <start x="17.49" y="5.87" z="-44.70" h="23.53"/>
+  <start x="36.60" y="5.87" z="-51.81" h="23.53"/>
+  <start x="49.49" y="5.87" z="1.95" h="-158.99"/>
+  <start x="41.23" y="5.87" z="11.51" h="-158.99"/>
+  <start x="61.07" y="5.87" z="5.77" h="-158.99"/>
+  <start x="-4.47" y="6.64" z="118.32" h="-285.55"/>
+  <start x="-32.28" y="6.38" z="146.64" h="-333.62"/>
+  <start x="-128.79" y="6.38" z="-7.18" h="-467.34"/>
+  <start x="-125.98" y="6.38" z="-38.16" h="-450.78"/>
+  <start x="-137.81" y="6.52" z="26.40" h="-457.22"/>
+  <library name="stklib_old_house_a" id="stklib_old_house_a_main_proxy" xyz="82.95 5.90 36.06" hpr="0.0 -76.1 0.0" scale="2.25 2.25 2.25">
+  </library>
+  <library name="stklib_old_house_a" id="stklib_old_house_a_main_proxy.001" xyz="82.03 5.90 65.73" hpr="-0.0 -96.2 -0.0" scale="2.25 2.25 2.25">
+  </library>
+  <library name="stklib_old_house_a" id="stklib_old_house_a_main_proxy.002" xyz="72.37 5.90 96.78" hpr="-0.0 -116.3 -0.0" scale="2.25 2.25 2.25">
+  </library>
+  <library name="stklib_old_house_a" id="stklib_old_house_a_main_proxy.003" xyz="42.70 5.90 46.18" hpr="0.0 85.9 0.0" scale="2.25 2.25 2.25">
+  </library>
+  <library name="stklib_old_house_a" id="stklib_old_house_a_main_proxy.004" xyz="22.69 5.90 72.63" hpr="0.0 61.2 0.0" scale="2.25 2.25 2.25">
+  </library>
+  <library name="stklib_old_house_a" id="stklib_old_house_a_main_proxy.005" xyz="24.76 5.90 102.76" hpr="0.0 67.5 0.0" scale="2.25 2.25 2.25">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy" xyz="16.35 5.66 20.68" hpr="0.0 -0.0 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.001" xyz="-4.05 5.66 -36.88" hpr="-0.0 72.8 -0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.002" xyz="29.33 5.66 -65.63" hpr="0.0 -48.9 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.003" xyz="71.14 5.66 -42.11" hpr="-0.0 -158.3 -0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.004" xyz="86.05 5.66 6.88" hpr="0.0 -27.3 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.005" xyz="47.31 5.66 71.41" hpr="-0.0 69.7 -0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.006" xyz="58.28 5.66 112.60" hpr="0.0 -62.3 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.007" xyz="10.60 5.66 123.90" hpr="-0.0 -174.9 -0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.008" xyz="-44.03 5.66 162.81" hpr="0.0 -89.4 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.009" xyz="100.24 5.66 81.73" hpr="0.0 -89.4 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.010" xyz="125.77 5.66 51.51" hpr="-0.0 -130.3 -0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.011" xyz="65.61 5.66 -91.91" hpr="0.0 -62.1 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.012" xyz="-29.94 5.66 -116.56" hpr="-0.0 -173.0 -0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_b" id="stklib_pinetree_b_main_proxy" xyz="-48.38 49.28 24.10" hpr="0.0 -0.0 0.0" scale="1.80 1.80 1.80">
+  </library>
+  <library name="stklib_pinetree_b" id="stklib_pinetree_b_main_proxy.001" xyz="-59.56 51.31 55.25" hpr="-0.0 70.0 -0.0" scale="1.80 1.80 1.80">
+  </library>
+  <library name="stklib_pinetree_b" id="stklib_pinetree_b_main_proxy.002" xyz="-40.08 51.41 57.96" hpr="-0.0 70.0 -0.0" scale="1.80 1.80 1.80">
+  </library>
+  <library name="stklib_pinetree_b" id="stklib_pinetree_b_main_proxy.003" xyz="-108.28 55.44 89.75" hpr="-0.0 70.0 -0.0" scale="1.80 1.80 1.80">
+  </library>
+  <library name="stklib_pinetree_b" id="stklib_pinetree_b_main_proxy.004" xyz="-54.92 57.63 104.01" hpr="0.0 149.5 0.0" scale="1.80 1.80 1.80">
+  </library>
+  <library name="stklib_pinetree_b" id="stklib_pinetree_b_main_proxy.005" xyz="-108.74 58.45 127.01" hpr="0.0 149.5 0.0" scale="1.80 1.80 1.80">
+  </library>
+  <library name="stklib_pinetree_b" id="stklib_pinetree_b_main_proxy.006" xyz="-89.42 58.82 125.57" hpr="-0.0 38.5 -0.0" scale="1.80 1.80 1.80">
+  </library>
+  <library name="stklib_pinetree_b" id="stklib_pinetree_b_main_proxy.007" xyz="-72.49 60.67 132.60" hpr="0.0 149.5 0.0" scale="1.80 1.80 1.80">
+  </library>
+  <library name="stklib_pinetree_b" id="stklib_pinetree_b_main_proxy.008" xyz="-49.12 52.57 47.46" hpr="-0.0 38.5 -0.0" scale="1.80 1.80 1.80">
+  </library>
+  <library name="stklib_woodLodge_a" id="stklib_woodLodge_a_main_proxy" xyz="65.58 5.78 -53.19" hpr="-0.0 -157.7 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_woodLodge_a" id="stklib_woodLodge_a_main_proxy.001" xyz="75.35 5.78 -30.38" hpr="-0.0 -157.7 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_woodLodge_a" id="stklib_woodLodge_a_main_proxy.002" xyz="83.79 5.78 -9.68" hpr="-0.0 -157.7 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_woodLodge_a" id="stklib_woodLodge_a_main_proxy.003" xyz="-2.33 5.78 -23.48" hpr="-0.0 23.7 -0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_woodLodge_a" id="stklib_woodLodge_a_main_proxy.004" xyz="10.13 5.78 7.57" hpr="-0.0 23.7 -0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_woodLodge_a" id="stklib_woodLodge_a_main_proxy.005" xyz="40.93 5.78 -70.59" hpr="0.0 -66.5 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_woodLodge_a" id="stklib_woodLodge_a_main_proxy.006" xyz="3.59 5.78 -54.79" hpr="0.0 -66.5 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_woodLodge_a" id="stklib_woodLodge_a_main_proxy.007" xyz="25.56 5.78 33.86" hpr="-0.0 69.5 -0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_woodLodge_a" id="stklib_woodLodge_a_main_proxy.008" xyz="47.39 5.78 29.73" hpr="0.0 114.0 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_woodLodge_a" id="stklib_woodLodge_a_main_proxy.009" xyz="71.88 5.78 16.56" hpr="0.0 114.0 0.0" scale="0.90 0.90 0.90">
+  </library>
+</scene>

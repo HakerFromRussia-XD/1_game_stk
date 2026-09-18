@@ -6,6 +6,7 @@
 #include "guiengine/screen.hpp"
 
 namespace GUIEngine { class Widget; }
+namespace irr { namespace video { class ITexture; } }
 class Track;
 
 class FluxaraRaceSetupScreen
@@ -19,17 +20,25 @@ private:
     Track* m_track = NULL;
     int m_laps = 3;
     int m_ai_karts = 3;
+    int m_difficulty = 1;
+    std::string m_mode = "normal";
+    irr::core::stringw m_unavailable_reason;
+    irr::video::ITexture* m_art[10] = {};
+    irr::video::ITexture* m_preview = nullptr;
+    void layoutControls();
 
     void updateRaceDetails();
 
 public:
     void loadedFromFile() OVERRIDE;
     void init() OVERRIDE;
+    void onDraw(float dt) OVERRIDE;
+    void onResize() OVERRIDE;
     void eventCallback(GUIEngine::Widget* widget, const std::string& name,
                        const int player_id) OVERRIDE;
     bool onEscapePressed() OVERRIDE;
 
-    void setTrack(Track* track);
+    void setTrack(Track* track, const std::string& mode = "normal");
 };
 
 #endif

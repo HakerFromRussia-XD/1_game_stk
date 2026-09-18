@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<materials>
+  <material name="diffus-subsea.png" ignore="Y" shader="alphatest"/>
+  <material name="DragonsBed-subsea.png" shader="alphatest"/>
+  <material name="eggs-subsea.png" shader="alphablend"/>
+  <material name="fish-filet-subsea.png" ignore="Y" shader="alphatest"/>
+  <material name="flaque-subsea.png" disable-z-write="Y" ignore="Y" shader="alphablend"/>
+  <material name="Flower-subsea.png" ignore="Y" shader="alphatest"/>
+  <material name="Grate-subsea.png" shader="alphatest"/>
+  <material name="light3-subsea.png" clampu="Y" disable-z-write="Y" ignore="Y" shader="additive"/>
+  <material name="LilySmall-subsea.png" ignore="Y" shader="alphatest"/>
+  <material name="organic_out-subsea.png" ignore="Y" shader="alphablend"/>
+  <material name="Paving_stones_2-subsea.jpg">
+    <particles base="smoke.xml" condition="skid"/>
+  </material>
+  <material name="Paving_stones_3-subsea.jpg">
+    <particles base="smoke.xml" condition="skid"/>
+  </material>
+  <material name="Rubis-subsea.png" shader="alphablend"/>
+  <material name="sand-subsea.jpg" falling-effect="Y" reset="Y" collision-detect="Y" collision-reaction="reset"/>
+  <material name="tex-subsea.jpg" shader="alphatest"/>
+  <material name="Transparent-Broken-1-subsea.png" disable-z-write="Y" shader="alphablend">
+    <particles base="smoke.xml" condition="skid"/>
+  </material>
+  <material name="Transparent-Broken-2-subsea.png" disable-z-write="Y" shader="alphablend">
+    <particles base="smoke.xml" condition="skid"/>
+  </material>
+  <material name="Transparent-door-subsea.png" disable-z-write="Y" ignore="Y" shader="alphablend">
+    <particles base="smoke.xml" condition="skid"/>
+  </material>
+  <material name="Transparent-Particles-subsea.png" disable-z-write="Y" shader="alphablend"/>
+  <material name="Transparent-subsea.png" disable-z-write="Y" shader="alphablend">
+    <particles base="smoke.xml" condition="skid"/>
+  </material>
+  <material name="treasuremap-subsea.png" disable-z-write="Y" shader="alphatest"/>
+  <material name="TunnelStructure.png" shader="alphatest"/>
+  <material name="water_dark-subsea.jpg" ignore="Y"/>
+  <material name="water_dark-transp-subsea.png" disable-z-write="Y" collision-detect="Y" collision-reaction="reset" collision-particles="splash.xml" shader="alphablend"/>
+  <material name="waterparticles0-subsea.png" ignore="Y" shader="alphablend"/>
+  <material name="zipper-inverted-subsea.png" disable-z-write="Y" shader="alphablend">
+    <zipper duration="3.5" max-speed-increase="15.0" fade-out-time="3.0" speed-gain="4.5" min-speed="-1.0"/>
+  </material>
+</materials>

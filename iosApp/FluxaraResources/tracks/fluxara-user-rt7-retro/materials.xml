@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<materials>
+  <material name="grass.png" slowdown-time="1.50" max-speed="0.35"/>
+  <material name="kerb.png">
+    <sfx filename="kerb.ogg" min_speed="5.00" max_speed="15.00" min_pitch="0.80" max_pitch="0.85" positional="true" rolloff="0.10"/>
+    <particles base="smoke.xml" condition="skid"/>
+  </material>
+  <material name="tree.png" shader="alphatest" ignore="Y"/>
+  <material name="treeline.png" shader="alphatest" ignore="Y"/>
+  <material name="bush.png" shader="alphatest" ignore="Y"/>
+  <material name="logo.png" shader="alphatest" ignore="Y"/>
+</materials>

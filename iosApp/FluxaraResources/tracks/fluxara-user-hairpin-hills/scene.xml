@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<scene>
+  <track model="hairpin-hills_track.spm" x="0" y="0" z="0"/>
+  <object id="Plane.024" type="animation" xyz="-21.98 121.81 49.59" hpr="0.0 -0.0 0.0" scale="0.48 0.48 0.48" interaction="ghost" model="dynamicSky.spm" skeletal-animation="false">
+    <animated-texture name="dynamic_clouds.png" dx="0.05000"  dy="0.01000" />
+  </object>
+  <sun  fog="true" fog-color="27 57 100" fog-max="0.5" fog-start="20.00" fog-end="160.00" xyz="-161.28 104.69 -130.41" sun-specular="71 74 117" sun-diffuse="71 74 117" ambient="71 74 117"/>
+  <weather particles="rain.xml" sound="rain"/>
+  <sky-box texture="sky_top.jpg sky.jpg sky.jpg sky.jpg sky-m.jpg sky-m.jpg" sh-texture="sky_ibl.jpg sky_ibl.jpg sky_ibl.jpg sky_ibl.jpg sky_ibl.jpg sky_ibl.jpg"/>
+  <camera far="1500.0"/>
+  <banana id="Empty.177" x="-116.44" y="1.84" z="-138.53" />
+  <banana id="Empty.178" x="-116.44" y="1.84" z="-142.13" />
+  <banana id="Empty.179" x="-116.44" y="1.84" z="-145.73" />
+  <small-nitro id="Empty.180" x="-84.42" y="10.80" z="-65.85" />
+  <small-nitro id="Empty.181" x="-80.82" y="10.80" z="-65.85" />
+  <small-nitro id="Empty.182" x="-77.22" y="10.80" z="-65.85" />
+  <item id="Empty.183" x="-42.81" y="22.89" z="-61.73" />
+  <item id="Empty.184" x="24.93" y="22.89" z="-89.99" />
+  <item id="Empty.185" x="0.00" y="23.61" z="0.00" />
+  <item id="Empty.186" x="27.60" y="22.89" z="-37.89" />
+  <item id="Empty.187" x="-20.03" y="21.85" z="26.30" />
+  <item id="Empty.188" x="-103.12" y="21.85" z="40.52" />
+  <item id="Empty.189" x="-92.67" y="21.85" z="-3.23" />
+  <item id="Empty.190" x="6.52" y="42.73" z="51.98" />
+  <item id="Empty.191" x="-78.46" y="3.83" z="-70.83" />
+  <item id="Empty.192" x="-82.50" y="9.40" z="-123.43" />
+  <item id="Empty.193" x="-164.72" y="9.40" z="-108.73" />
+  <item id="Empty.194" x="-127.91" y="9.40" z="-55.29" />
+  <small-nitro id="Empty.195" x="-69.92" y="17.95" z="38.58" />
+  <small-nitro id="Empty.196" x="-69.92" y="17.95" z="42.18" />
+  <small-nitro id="Empty.197" x="-69.92" y="17.95" z="45.78" />
+  <item id="Empty.198" x="61.01" y="16.34" z="-68.43" />
+  <item id="Empty.199" x="-65.17" y="36.13" z="-23.88" />
+  <item id="Empty.200" x="-43.78" y="2.97" z="-110.00" />
+  <item id="Empty.201" x="17.78" y="8.14" z="-138.16" />
+  <big-nitro id="Empty.202" x="5.45" y="4.58" z="-108.88" />
+  <big-nitro id="Empty.203" x="5.45" y="4.58" z="-112.48" />
+  <big-nitro id="Empty.204" x="5.45" y="4.58" z="-116.08" />
+  <big-nitro id="Empty.205" x="-2.47" y="10.91" z="-37.72" />
+  <big-nitro id="Empty.206" x="-2.47" y="10.91" z="-41.32" />
+  <big-nitro id="Empty.207" x="-2.47" y="10.91" z="-44.92" />
+  <small-nitro id="Empty.208" x="59.90" y="12.53" z="-85.42" />
+  <small-nitro id="Empty.209" x="63.50" y="12.53" z="-85.42" />
+  <small-nitro id="Empty.210" x="67.10" y="12.53" z="-85.42" />
+  <item id="Empty.211" x="42.98" y="20.06" z="54.57" />
+  <item id="Empty.212" x="85.72" y="22.60" z="92.52" />
+  <item id="Empty.213" x="104.07" y="26.20" z="0.49" />
+  <item id="Empty.214" x="59.73" y="20.06" z="18.00" />
+  <small-nitro id="Empty.215" x="24.33" y="22.28" z="73.66" />
+  <small-nitro id="Empty.216" x="26.74" y="22.28" z="70.92" />
+  <small-nitro id="Empty.217" x="29.39" y="22.28" z="68.49" />
+  <default-start karts-per-row     ="8"
+                 forwards-distance ="0.56"
+                 sidewards-distance="1.50"
+                 upwards-distance  ="1.10"/>
+  <start x="-142.81" y="0.82" z="-138.95" h="111.89"/>
+  <start x="-104.30" y="7.88" z="-61.25" h="111.89"/>
+  <start x="29.29" y="22.73" z="-9.79" h="111.89"/>
+  <start x="-56.87" y="20.55" z="7.42" h="71.00"/>
+  <start x="-80.21" y="9.79" z="-75.78" h="-3.78"/>
+  <start x="-14.81" y="5.46" z="-131.71" h="99.81"/>
+  <start x="-33.81" y="10.34" z="-41.30" h="232.69"/>
+  <start x="52.38" y="24.32" z="91.86" h="56.89"/>
+  <start x="15.86" y="37.17" z="34.84" h="-3.86"/>
+  <start x="65.28" y="11.07" z="-99.81" h="-3.86"/>
+  <start x="-0.16" y="9.28" z="-72.02" h="66.41"/>
+  <start x="70.78" y="10.86" z="64.96" h="-105.56"/>
+  <start x="-55.86" y="22.31" z="42.88" h="-95.98"/>
+  <start x="100.00" y="23.15" z="34.38" h="-254.00"/>
+  <start x="-129.08" y="8.33" z="-74.25" h="-346.17"/>
+  <start x="73.16" y="20.44" z="33.54" h="-486.45"/>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.013" xyz="109.99 18.67 68.97" hpr="-0.0 -173.0 -0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.014" xyz="101.87 17.96 93.47" hpr="-0.0 -173.0 -0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.015" xyz="48.68 23.87 100.87" hpr="0.0 72.8 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.016" xyz="33.87 22.54 91.53" hpr="-0.0 -171.2 -0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.017" xyz="-5.94 19.57 90.43" hpr="0.0 67.9 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.018" xyz="-53.09 18.88 26.41" hpr="0.0 67.9 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.019" xyz="-26.70 17.33 3.84" hpr="-0.0 -123.7 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.020" xyz="-101.52 4.95 -74.47" hpr="0.0 173.7 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.021" xyz="-117.94 4.95 -84.01" hpr="0.0 173.7 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.022" xyz="-57.49 0.95 -105.23" hpr="-0.0 -157.0 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.023" xyz="-11.01 3.40 -122.42" hpr="-0.0 56.9 -0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.024" xyz="-25.49 2.98 -121.04" hpr="0.0 159.6 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.025" xyz="6.24 10.83 -56.86" hpr="-0.0 56.9 -0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.026" xyz="46.14 8.62 -89.71" hpr="0.0 -45.2 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="stklib_pinetree_a" id="stklib_pinetree_a_main_proxy.027" xyz="80.38 10.38 -108.02" hpr="-0.0 -116.0 -0.0" scale="0.90 0.90 0.90">
+  </library>
+</scene>

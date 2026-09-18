@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<kart name="cz45-Desert Buggy" version="3" model-file="cz45-dbuggy.spm" icon-file="icon.png" minimap-icon-file="icon.png" shadow-file="genericshadow.png" type="medium" groups="Fluxara" rgb="1.00 1.00 1.00" revision="2">
+    <sounds engine="large">
+        <skid name="default"/>
+    </sounds>
+    <wheels>
+        <front-right position="0.296363 0.160551 0.562179" model="wheel-front-right.spm"/>
+        <rear-right position="0.389755 0.200070 -0.398137" model="wheel-rear-right.spm"/>
+        <rear-left position="-0.388285 0.200070 -0.398137" model="wheel-rear-left.spm"/>
+        <front-left position="-0.295514 0.160551 0.562179" model="wheel-front-left.spm"/>
+    </wheels>
+    <headlights>
+        <object position="-0.143812 0.204210 0.796733" rotation="0.000000 -0.000000 0.000000" scale="1.000000 1.000000 1.000000" model="Plane.spm"/>
+        <object position="0.144839 0.204210 0.796733" rotation="0.000000 -0.000000 0.000000" scale="1.000000 1.000000 1.000000" model="Plane.spm"/>
+        <object position="0.000000 0.116722 0.791482" rotation="0.000000 -0.000000 0.000000" scale="1.000000 1.000000 1.000000" model="Plane.spm"/>
+    </headlights>
+    <lean max="45"/>
+    <exhaust file="kart_exhaust.xml"/>
+</kart>

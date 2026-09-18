@@ -1,0 +1,2048 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<scene>
+  <track model="the-valley-of-liquorice_track.spm" x="0" y="0" z="0"/>
+  <object id="ArrowsBlueF" type="animation" xyz="53.41 11.55 -1.17" hpr="-0.0 -117.0 -0.0" scale="2.00 2.00 2.00" interaction="static" shape="exact" model="ArrowsBlueF.spm" shadow-pass="false" skeletal-animation="false" if="isTrackForward">
+  </object>
+  <object id="ArrowsBlueR" type="animation" xyz="71.75 10.24 26.60" hpr="-0.0 -117.0 -0.0" scale="2.00 2.00 2.00" interaction="static" shape="exact" model="ArrowsBlueR.spm" shadow-pass="false" skeletal-animation="false" if="isTrackReverse">
+  </object>
+  <object id="ArrowsCyanF" type="animation" xyz="53.41 11.55 -1.17" hpr="-0.0 -117.0 -0.0" scale="2.00 2.00 2.00" interaction="static" shape="exact" model="ArrowsCyanF.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ArrowsCyanR" type="animation" xyz="71.75 10.24 26.60" hpr="-0.0 -117.0 -0.0" scale="2.00 2.00 2.00" interaction="static" shape="exact" model="ArrowsCyanR.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ArrowsGreenF" type="animation" xyz="53.41 11.55 -1.17" hpr="-0.0 -117.0 -0.0" scale="2.00 2.00 2.00" interaction="static" shape="exact" model="ArrowsGreenF.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ArrowsGreenR" type="animation" xyz="71.74 10.24 26.60" hpr="-0.0 -117.0 -0.0" scale="2.00 2.00 2.00" interaction="static" shape="exact" model="ArrowsGreenR.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ArrowsPurpleF" type="animation" xyz="53.41 11.55 -1.17" hpr="-0.0 -117.0 -0.0" scale="2.00 2.00 2.00" interaction="static" shape="exact" model="ArrowsPurpleF.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ArrowsPurpleR" type="animation" xyz="71.75 10.24 26.60" hpr="-0.0 -117.0 -0.0" scale="2.00 2.00 2.00" interaction="static" shape="exact" model="ArrowsPurpleR.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ArrowsRedF" type="animation" xyz="53.41 11.55 -1.17" hpr="-0.0 -117.0 -0.0" scale="2.00 2.00 2.00" interaction="static" shape="exact" model="ArrowsRedF.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ArrowsRedR" type="animation" xyz="71.75 10.24 26.60" hpr="-0.0 -117.0 -0.0" scale="2.00 2.00 2.00" interaction="static" shape="exact" model="ArrowsRedR.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ArrowsWhiteF" type="animation" xyz="53.41 11.55 -1.17" hpr="-0.0 -117.0 -0.0" scale="2.00 2.00 2.00" interaction="static" shape="exact" model="ArrowsWhiteF.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ArrowsWhiteR" type="animation" xyz="71.75 10.24 26.60" hpr="-0.0 -117.0 -0.0" scale="2.00 2.00 2.00" interaction="static" shape="exact" model="ArrowsWhiteR.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ArrowsYellowF" type="animation" xyz="53.41 11.55 -1.17" hpr="-0.0 -117.0 -0.0" scale="2.00 2.00 2.00" interaction="static" shape="exact" model="ArrowsYellowF.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ArrowsYellowR" type="animation" xyz="71.66 10.14 25.42" hpr="-0.0 -117.0 -0.0" scale="2.00 2.00 2.00" interaction="static" shape="exact" model="ArrowsYellowR.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="BananaPlaneF" type="animation" xyz="30.02 301.95 -87.72" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="BananaPlaneF.spm" skeletal-animation="false" if="isTrackForward">
+  </object>
+  <object id="BananaPlaneR" type="animation" xyz="81.89 303.48 -106.96" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="BananaPlaneR.spm" skeletal-animation="false" if="isTrackReverse">
+  </object>
+  <object id="BarrierBlue" type="animation" xyz="0.00 0.11 -0.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="BarrierBlue.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="BarrierCyan" type="animation" xyz="0.00 0.11 -0.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="BarrierCyan.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="BarrierGreen" type="animation" xyz="0.00 0.11 -0.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="BarrierGreen.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="BarrierPurple" type="animation" xyz="0.00 0.11 -0.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="BarrierPurple.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="BarrierRed" type="animation" xyz="0.00 0.11 -0.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="BarrierRed.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="BarrierWhite" type="animation" xyz="0.00 0.11 -0.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="BarrierWhite.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="BarrierYellow" type="animation" xyz="0.00 0.11 -0.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="BarrierYellow.spm" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="CrystalCollider" type="animation" xyz="-174.47 20.94 35.66" hpr="0.0 -0.0 0.0" scale="0.94 1.00 0.94" interaction="physicsonly" shape="exact" model="CrystalCollider.spm" shadow-pass="false" skeletal-animation="false">
+  </object>
+  <object id="CrystalCollider2" type="animation" xyz="-185.88 22.55 65.61" hpr="0.0 -17.0 0.0" scale="1.78 2.63 1.67" interaction="physicsonly" shape="exact" model="CrystalCollider.spm" shadow-pass="false" skeletal-animation="false">
+  </object>
+  <object id="CrystalsCave2Blue" type="animation" xyz="-180.23 22.52 51.34" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="CrystalsCave2Blue.spm" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="CrystalsCave2Cyan" type="animation" xyz="-180.23 22.52 51.34" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="CrystalsCave2Cyan.spm" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="CrystalsCave2Green" type="animation" xyz="-180.23 22.52 51.34" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="CrystalsCave2Green.spm" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="CrystalsCave2Purple" type="animation" xyz="-180.23 22.52 51.34" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="CrystalsCave2Purple.spm" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="CrystalsCave2Red" type="animation" xyz="-180.23 22.52 51.34" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="CrystalsCave2Red.spm" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="CrystalsCave2White" type="animation" xyz="-180.23 22.52 51.34" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="CrystalsCave2White.spm" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="CrystalsCave2Yellow" type="animation" xyz="-180.23 22.52 51.34" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="CrystalsCave2Yellow.spm" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="CrystalsEdgesCave2Blue" type="animation" xyz="-180.23 22.52 51.34" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="CrystalsEdgesCave2Blue.spm" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="CrystalsEdgesCave2Cyan" type="animation" xyz="-180.23 22.52 51.34" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="CrystalsEdgesCave2Cyan.spm" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="CrystalsEdgesCave2Green" type="animation" xyz="-180.23 22.52 51.34" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="CrystalsEdgesCave2Green.spm" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="CrystalsEdgesCave2Purple" type="animation" xyz="-180.23 22.52 51.34" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="CrystalsEdgesCave2Purple.spm" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="CrystalsEdgesCave2Red" type="animation" xyz="-180.23 22.52 51.34" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="CrystalsEdgesCave2Red.spm" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="CrystalsEdgesCave2White" type="animation" xyz="-180.23 22.52 51.34" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="CrystalsEdgesCave2White.spm" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="CrystalsEdgesCave2Yellow" type="animation" xyz="-180.23 22.52 51.34" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="CrystalsEdgesCave2Yellow.spm" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="IceBlue" type="animation" xyz="-144.71 19.50 -32.63" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="IceBlue.spm" driveable="true" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="IceCyan" type="animation" xyz="-141.97 19.43 -34.68" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="IceCyan.spm" driveable="true" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="IceGreen" type="animation" xyz="-142.86 19.48 -32.79" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="IceGreen.spm" driveable="true" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="IcePurple" type="animation" xyz="-136.31 19.32 -36.50" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="IcePurple.spm" driveable="true" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="IceRed" type="animation" xyz="-136.74 19.35 -36.13" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="IceRed.spm" driveable="true" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="IceWhite" type="animation" xyz="-139.18 19.39 -36.47" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="IceWhite.spm" driveable="true" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="IceYellow" type="animation" xyz="-141.54 19.45 -34.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="IceYellow.spm" driveable="true" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ValleyRampF" type="animation" xyz="53.59 2.96 -92.70" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ValleyRampF.spm" skeletal-animation="false" if="isTrackForward">
+  </object>
+  <object id="ValleyRampR" type="animation" xyz="46.50 -1.65 -93.87" hpr="8.6 176.9 -21.8" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ValleyRampR.spm" skeletal-animation="false" if="isTrackReverse">
+  </object>
+  <object id="ZipperCyan" type="animation" xyz="193.49 -18.45 -56.93" hpr="0.0 -51.2 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZipperCyan.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZipperGreen" type="animation" xyz="191.36 -21.19 -63.68" hpr="0.0 -51.2 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZipperGreen.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZipperPurple" type="animation" xyz="205.52 -18.26 -72.01" hpr="0.0 -51.2 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZipperPurple.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZipperRed" type="animation" xyz="190.58 -21.21 -52.02" hpr="0.0 -51.2 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZipperRed.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZippersBlueF" type="animation" xyz="26.38 7.75 5.02" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersBlueF.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZippersBlueFNetw" type="animation" xyz="26.38 7.75 5.02" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersBlueFNetw.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="isNetworkingF">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 26.384" h1="-280.706 26.384" h2="280.706 26.384"/>
+      <p c="719.000 26.384" h1="717.048 26.384" h2="719.390 26.384"/>
+      <p c="720.000 26.384" h1="719.610 26.384" h2="721.952 26.384"/>
+      <p c="10079.000 26.384" h1="10077.048 26.384" h2="10079.391 26.384"/>
+      <p c="10080.000 26.384" h1="10079.609 26.384" h2="10081.952 26.384"/>
+      <p c="10800.000 26.384" h1="10798.048 26.384" h2="10800.391 26.384"/>
+      <p c="10801.000 26.384" h1="10800.609 26.384" h2="10802.952 26.384"/>
+      <p c="14399.000 26.384" h1="14397.048 26.384" h2="14399.391 26.384"/>
+      <p c="14400.000 26.384" h1="14399.609 26.384" h2="14400.391 26.384"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 5.016" h1="-280.706 5.016" h2="280.706 5.016"/>
+      <p c="719.000 5.016" h1="717.048 5.016" h2="719.390 5.016"/>
+      <p c="720.000 5.016" h1="719.610 5.016" h2="721.952 5.016"/>
+      <p c="10079.000 5.016" h1="10077.048 5.016" h2="10079.391 5.016"/>
+      <p c="10080.000 5.016" h1="10079.609 5.016" h2="10081.952 5.016"/>
+      <p c="10800.000 5.016" h1="10798.048 5.016" h2="10800.391 5.016"/>
+      <p c="10801.000 5.016" h1="10800.609 5.016" h2="10802.952 5.016"/>
+      <p c="14399.000 5.016" h1="14397.048 5.016" h2="14399.391 5.016"/>
+      <p c="14400.000 5.016" h1="14399.609 5.016" h2="14400.391 5.016"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 7.749" h1="-280.706 7.749" h2="280.706 7.749"/>
+      <p c="719.000 7.749" h1="717.048 7.749" h2="719.390 7.749"/>
+      <p c="720.000 -1000.000" h1="719.610 -1000.000" h2="721.952 -1000.000"/>
+      <p c="10079.000 -1000.000" h1="10077.048 -1000.000" h2="10079.391 -1000.000"/>
+      <p c="10080.000 7.749" h1="10079.609 7.749" h2="10081.952 7.749"/>
+      <p c="10800.000 7.749" h1="10798.048 7.749" h2="10800.391 7.749"/>
+      <p c="10801.000 -1000.000" h1="10800.609 -1000.000" h2="10802.952 -1000.000"/>
+      <p c="14399.000 -1000.000" h1="14397.048 -1000.000" h2="14399.391 -1000.000"/>
+      <p c="14400.000 7.749" h1="14399.609 7.749" h2="14400.391 7.749"/>
+    </curve>
+  </object>
+  <object id="ZippersBlueR" type="animation" xyz="26.38 7.75 -8.47" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersBlueR.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZippersBlueRNetw" type="animation" xyz="26.38 7.75 -8.47" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersBlueRNetw.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="isNetworkingR">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 26.384" h1="-280.706 26.384" h2="280.706 26.384"/>
+      <p c="719.000 26.384" h1="717.048 26.384" h2="719.390 26.384"/>
+      <p c="720.000 26.384" h1="719.610 26.384" h2="721.952 26.384"/>
+      <p c="10079.000 26.384" h1="10077.048 26.384" h2="10079.391 26.384"/>
+      <p c="10080.000 26.384" h1="10079.609 26.384" h2="10081.952 26.384"/>
+      <p c="10800.000 26.384" h1="10798.048 26.384" h2="10800.391 26.384"/>
+      <p c="10801.000 26.384" h1="10800.609 26.384" h2="10802.952 26.384"/>
+      <p c="14399.000 26.384" h1="14397.048 26.384" h2="14399.391 26.384"/>
+      <p c="14400.000 26.384" h1="14399.609 26.384" h2="14400.391 26.384"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -8.471" h1="-280.706 -8.471" h2="280.706 -8.471"/>
+      <p c="719.000 -8.471" h1="717.048 -8.471" h2="719.390 -8.471"/>
+      <p c="720.000 -8.471" h1="719.610 -8.471" h2="721.952 -8.471"/>
+      <p c="10079.000 -8.471" h1="10077.048 -8.471" h2="10079.391 -8.471"/>
+      <p c="10080.000 -8.471" h1="10079.609 -8.471" h2="10081.952 -8.471"/>
+      <p c="10800.000 -8.471" h1="10798.048 -8.471" h2="10800.391 -8.471"/>
+      <p c="10801.000 -8.471" h1="10800.609 -8.471" h2="10802.952 -8.471"/>
+      <p c="14399.000 -8.471" h1="14397.048 -8.471" h2="14399.391 -8.471"/>
+      <p c="14400.000 -8.471" h1="14399.609 -8.471" h2="14400.391 -8.471"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 7.749" h1="-280.706 7.749" h2="280.706 7.749"/>
+      <p c="719.000 7.749" h1="717.048 7.749" h2="719.390 7.749"/>
+      <p c="720.000 -1000.000" h1="719.610 -1000.000" h2="721.952 -1000.000"/>
+      <p c="10079.000 -1000.000" h1="10077.048 -1000.000" h2="10079.391 -1000.000"/>
+      <p c="10080.000 7.749" h1="10079.609 7.749" h2="10081.952 7.749"/>
+      <p c="10800.000 7.749" h1="10798.048 7.749" h2="10800.391 7.749"/>
+      <p c="10801.000 -1000.000" h1="10800.609 -1000.000" h2="10802.952 -1000.000"/>
+      <p c="14399.000 -1000.000" h1="14397.048 -1000.000" h2="14399.391 -1000.000"/>
+      <p c="14400.000 7.749" h1="14399.609 7.749" h2="14400.391 7.749"/>
+    </curve>
+  </object>
+  <object id="ZippersCyanF" type="animation" xyz="26.38 7.75 5.02" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersCyanF.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZippersCyanFNetw" type="animation" xyz="26.38 -1000.00 5.02" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersCyanFNetw.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="isNetworkingF">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 26.384" h1="-842.898 26.384" h2="842.898 26.384"/>
+      <p c="2159.000 26.384" h1="2157.048 26.384" h2="2159.390 26.384"/>
+      <p c="2160.000 26.384" h1="2159.610 26.384" h2="2161.952 26.384"/>
+      <p c="2880.000 26.384" h1="2878.048 26.384" h2="2880.390 26.384"/>
+      <p c="2881.000 26.384" h1="2880.610 26.384" h2="2882.952 26.384"/>
+      <p c="9359.000 26.384" h1="9357.048 26.384" h2="9359.391 26.384"/>
+      <p c="9360.000 26.384" h1="9359.609 26.384" h2="9361.952 26.384"/>
+      <p c="10080.000 26.384" h1="10078.048 26.384" h2="10080.391 26.384"/>
+      <p c="10081.000 26.384" h1="10080.609 26.384" h2="10082.952 26.384"/>
+      <p c="14400.000 26.384" h1="12713.812 26.384" h2="16086.188 26.384"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 5.016" h1="-842.898 5.016" h2="842.898 5.016"/>
+      <p c="2159.000 5.016" h1="2157.048 5.016" h2="2159.390 5.016"/>
+      <p c="2160.000 5.016" h1="2159.610 5.016" h2="2161.952 5.016"/>
+      <p c="2880.000 5.016" h1="2878.048 5.016" h2="2880.390 5.016"/>
+      <p c="2881.000 5.016" h1="2880.610 5.016" h2="2882.952 5.016"/>
+      <p c="9359.000 5.016" h1="9357.048 5.016" h2="9359.391 5.016"/>
+      <p c="9360.000 5.016" h1="9359.609 5.016" h2="9361.952 5.016"/>
+      <p c="10080.000 5.016" h1="10078.048 5.016" h2="10080.391 5.016"/>
+      <p c="10081.000 5.016" h1="10080.609 5.016" h2="10082.952 5.016"/>
+      <p c="14400.000 5.016" h1="12713.812 5.016" h2="16086.188 5.016"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -1000.000" h1="-842.898 -1000.000" h2="842.898 -1000.000"/>
+      <p c="2159.000 -1000.000" h1="2157.048 -1000.000" h2="2159.390 -1000.000"/>
+      <p c="2160.000 7.749" h1="2159.610 7.749" h2="2161.952 7.749"/>
+      <p c="2880.000 7.749" h1="2878.048 7.749" h2="2880.390 7.749"/>
+      <p c="2881.000 -1000.000" h1="2880.610 -1000.000" h2="2882.952 -1000.000"/>
+      <p c="9359.000 -1000.000" h1="9357.048 -1000.000" h2="9359.391 -1000.000"/>
+      <p c="9360.000 7.749" h1="9359.609 7.749" h2="9361.952 7.749"/>
+      <p c="10080.000 7.749" h1="10078.048 7.749" h2="10080.391 7.749"/>
+      <p c="10081.000 -1000.000" h1="10080.609 -1000.000" h2="10082.952 -1000.000"/>
+      <p c="14400.000 -1000.000" h1="12713.812 -1000.000" h2="16086.188 -1000.000"/>
+    </curve>
+  </object>
+  <object id="ZippersCyanR" type="animation" xyz="26.38 7.75 -8.47" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersCyanR.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZippersCyanRNetw" type="animation" xyz="26.38 -1000.00 -8.47" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersCyanRNetw.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="isNetworkingR">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 26.384" h1="-842.898 26.384" h2="842.898 26.384"/>
+      <p c="2159.000 26.384" h1="2157.048 26.384" h2="2159.390 26.384"/>
+      <p c="2160.000 26.384" h1="2159.610 26.384" h2="2161.952 26.384"/>
+      <p c="2880.000 26.384" h1="2878.048 26.384" h2="2880.390 26.384"/>
+      <p c="2881.000 26.384" h1="2880.610 26.384" h2="2882.952 26.384"/>
+      <p c="9359.000 26.384" h1="9357.048 26.384" h2="9359.391 26.384"/>
+      <p c="9360.000 26.384" h1="9359.609 26.384" h2="9361.952 26.384"/>
+      <p c="10080.000 26.384" h1="10078.048 26.384" h2="10080.391 26.384"/>
+      <p c="10081.000 26.384" h1="10080.609 26.384" h2="10082.952 26.384"/>
+      <p c="14400.000 26.384" h1="12713.812 26.384" h2="16086.188 26.384"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -8.471" h1="-842.898 -8.471" h2="842.898 -8.471"/>
+      <p c="2159.000 -8.471" h1="2157.048 -8.471" h2="2159.390 -8.471"/>
+      <p c="2160.000 -8.471" h1="2159.610 -8.471" h2="2161.952 -8.471"/>
+      <p c="2880.000 -8.471" h1="2878.048 -8.471" h2="2880.390 -8.471"/>
+      <p c="2881.000 -8.471" h1="2880.610 -8.471" h2="2882.952 -8.471"/>
+      <p c="9359.000 -8.471" h1="9357.048 -8.471" h2="9359.391 -8.471"/>
+      <p c="9360.000 -8.471" h1="9359.609 -8.471" h2="9361.952 -8.471"/>
+      <p c="10080.000 -8.471" h1="10078.048 -8.471" h2="10080.391 -8.471"/>
+      <p c="10081.000 -8.471" h1="10080.609 -8.471" h2="10082.952 -8.471"/>
+      <p c="14400.000 -8.471" h1="12713.812 -8.471" h2="16086.188 -8.471"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -1000.000" h1="-842.898 -1000.000" h2="842.898 -1000.000"/>
+      <p c="2159.000 -1000.000" h1="2157.048 -1000.000" h2="2159.390 -1000.000"/>
+      <p c="2160.000 7.749" h1="2159.610 7.749" h2="2161.952 7.749"/>
+      <p c="2880.000 7.749" h1="2878.048 7.749" h2="2880.390 7.749"/>
+      <p c="2881.000 -1000.000" h1="2880.610 -1000.000" h2="2882.952 -1000.000"/>
+      <p c="9359.000 -1000.000" h1="9357.048 -1000.000" h2="9359.391 -1000.000"/>
+      <p c="9360.000 7.749" h1="9359.609 7.749" h2="9361.952 7.749"/>
+      <p c="10080.000 7.749" h1="10078.048 7.749" h2="10080.391 7.749"/>
+      <p c="10081.000 -1000.000" h1="10080.609 -1000.000" h2="10082.952 -1000.000"/>
+      <p c="14400.000 -1000.000" h1="12713.812 -1000.000" h2="16086.188 -1000.000"/>
+    </curve>
+  </object>
+  <object id="ZippersGreenF" type="animation" xyz="26.38 7.75 5.02" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersGreenF.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZippersGreenFNetw" type="animation" xyz="26.38 -1000.00 5.02" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersGreenFNetw.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="isNetworkingF">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 26.384" h1="-280.706 26.384" h2="280.706 26.384"/>
+      <p c="719.000 26.384" h1="717.048 26.384" h2="719.390 26.384"/>
+      <p c="720.000 26.384" h1="719.610 26.384" h2="721.952 26.384"/>
+      <p c="1440.000 26.384" h1="1438.048 26.384" h2="1440.390 26.384"/>
+      <p c="1441.000 26.384" h1="1440.610 26.384" h2="1442.952 26.384"/>
+      <p c="8639.000 26.384" h1="8637.048 26.384" h2="8639.391 26.384"/>
+      <p c="8640.000 26.384" h1="8639.609 26.384" h2="8641.952 26.384"/>
+      <p c="9360.000 26.384" h1="9358.048 26.384" h2="9360.391 26.384"/>
+      <p c="9361.000 26.384" h1="9360.609 26.384" h2="9362.952 26.384"/>
+      <p c="14400.000 26.384" h1="12432.717 26.384" h2="16367.283 26.384"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 5.016" h1="-280.706 5.016" h2="280.706 5.016"/>
+      <p c="719.000 5.016" h1="717.048 5.016" h2="719.390 5.016"/>
+      <p c="720.000 5.016" h1="719.610 5.016" h2="721.952 5.016"/>
+      <p c="1440.000 5.016" h1="1438.048 5.016" h2="1440.390 5.016"/>
+      <p c="1441.000 5.016" h1="1440.610 5.016" h2="1442.952 5.016"/>
+      <p c="8639.000 5.016" h1="8637.048 5.016" h2="8639.391 5.016"/>
+      <p c="8640.000 5.016" h1="8639.609 5.016" h2="8641.952 5.016"/>
+      <p c="9360.000 5.016" h1="9358.048 5.016" h2="9360.391 5.016"/>
+      <p c="9361.000 5.016" h1="9360.609 5.016" h2="9362.952 5.016"/>
+      <p c="14400.000 5.016" h1="12432.717 5.016" h2="16367.283 5.016"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -1000.000" h1="-280.706 -1000.000" h2="280.706 -1000.000"/>
+      <p c="719.000 -1000.000" h1="717.048 -1000.000" h2="719.390 -1000.000"/>
+      <p c="720.000 7.749" h1="719.610 7.749" h2="721.952 7.749"/>
+      <p c="1440.000 7.749" h1="1438.048 7.749" h2="1440.390 7.749"/>
+      <p c="1441.000 -1000.000" h1="1440.610 -1000.000" h2="1442.952 -1000.000"/>
+      <p c="8639.000 -1000.000" h1="8637.048 -1000.000" h2="8639.391 -1000.000"/>
+      <p c="8640.000 7.749" h1="8639.609 7.749" h2="8641.952 7.749"/>
+      <p c="9360.000 7.749" h1="9358.048 7.749" h2="9360.391 7.749"/>
+      <p c="9361.000 -1000.000" h1="9360.609 -1000.000" h2="9362.952 -1000.000"/>
+      <p c="14400.000 -1000.000" h1="12432.717 -1000.000" h2="16367.283 -1000.000"/>
+    </curve>
+  </object>
+  <object id="ZippersGreenR" type="animation" xyz="26.38 7.75 -8.47" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersGreenR.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZippersGreenRNetw" type="animation" xyz="26.38 -1000.00 -8.47" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersGreenRNetw.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="isNetworkingR">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 26.384" h1="-280.706 26.384" h2="280.706 26.384"/>
+      <p c="719.000 26.384" h1="717.048 26.384" h2="719.390 26.384"/>
+      <p c="720.000 26.384" h1="719.610 26.384" h2="721.952 26.384"/>
+      <p c="1440.000 26.384" h1="1438.048 26.384" h2="1440.390 26.384"/>
+      <p c="1441.000 26.384" h1="1440.610 26.384" h2="1442.952 26.384"/>
+      <p c="8639.000 26.384" h1="8637.048 26.384" h2="8639.391 26.384"/>
+      <p c="8640.000 26.384" h1="8639.609 26.384" h2="8641.952 26.384"/>
+      <p c="9360.000 26.384" h1="9358.048 26.384" h2="9360.391 26.384"/>
+      <p c="9361.000 26.384" h1="9360.609 26.384" h2="9362.952 26.384"/>
+      <p c="14400.000 26.384" h1="12432.717 26.384" h2="16367.283 26.384"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -8.471" h1="-280.706 -8.471" h2="280.706 -8.471"/>
+      <p c="719.000 -8.471" h1="717.048 -8.471" h2="719.390 -8.471"/>
+      <p c="720.000 -8.471" h1="719.610 -8.471" h2="721.952 -8.471"/>
+      <p c="1440.000 -8.471" h1="1438.048 -8.471" h2="1440.390 -8.471"/>
+      <p c="1441.000 -8.471" h1="1440.610 -8.471" h2="1442.952 -8.471"/>
+      <p c="8639.000 -8.471" h1="8637.048 -8.471" h2="8639.391 -8.471"/>
+      <p c="8640.000 -8.471" h1="8639.609 -8.471" h2="8641.952 -8.471"/>
+      <p c="9360.000 -8.471" h1="9358.048 -8.471" h2="9360.391 -8.471"/>
+      <p c="9361.000 -8.471" h1="9360.609 -8.471" h2="9362.952 -8.471"/>
+      <p c="14400.000 -8.471" h1="12432.717 -8.471" h2="16367.283 -8.471"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -1000.000" h1="-280.706 -1000.000" h2="280.706 -1000.000"/>
+      <p c="719.000 -1000.000" h1="717.048 -1000.000" h2="719.390 -1000.000"/>
+      <p c="720.000 7.749" h1="719.610 7.749" h2="721.952 7.749"/>
+      <p c="1440.000 7.749" h1="1438.048 7.749" h2="1440.390 7.749"/>
+      <p c="1441.000 -1000.000" h1="1440.610 -1000.000" h2="1442.952 -1000.000"/>
+      <p c="8639.000 -1000.000" h1="8637.048 -1000.000" h2="8639.391 -1000.000"/>
+      <p c="8640.000 7.749" h1="8639.609 7.749" h2="8641.952 7.749"/>
+      <p c="9360.000 7.749" h1="9358.048 7.749" h2="9360.391 7.749"/>
+      <p c="9361.000 -1000.000" h1="9360.609 -1000.000" h2="9362.952 -1000.000"/>
+      <p c="14400.000 -1000.000" h1="12432.717 -1000.000" h2="16367.283 -1000.000"/>
+    </curve>
+  </object>
+  <object id="ZippersPurpleF" type="animation" xyz="26.38 7.75 5.02" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersPurpleF.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZippersPurpleFNetw" type="animation" xyz="26.38 -1000.00 5.02" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersPurpleFNetw.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="isNetworkingF">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 26.384" h1="-1686.187 26.384" h2="1686.187 26.384"/>
+      <p c="4319.000 26.384" h1="4317.048 26.384" h2="4319.391 26.384"/>
+      <p c="4320.000 26.384" h1="4319.609 26.384" h2="4321.952 26.384"/>
+      <p c="5760.000 26.384" h1="5758.048 26.384" h2="5760.391 26.384"/>
+      <p c="5761.000 26.384" h1="5760.609 26.384" h2="5762.952 26.384"/>
+      <p c="7199.000 26.384" h1="7197.048 26.384" h2="7199.391 26.384"/>
+      <p c="7200.000 26.384" h1="7199.609 26.384" h2="7201.952 26.384"/>
+      <p c="7920.000 26.384" h1="7918.048 26.384" h2="7920.391 26.384"/>
+      <p c="7921.000 26.384" h1="7920.609 26.384" h2="7922.952 26.384"/>
+      <p c="10799.000 26.384" h1="10797.048 26.384" h2="10799.391 26.384"/>
+      <p c="10800.000 26.384" h1="10799.609 26.384" h2="10801.952 26.384"/>
+      <p c="11520.000 26.384" h1="11518.048 26.384" h2="11520.391 26.384"/>
+      <p c="11521.000 26.384" h1="11520.609 26.384" h2="11522.952 26.384"/>
+      <p c="12959.000 26.384" h1="12957.048 26.384" h2="12959.391 26.384"/>
+      <p c="12960.000 26.384" h1="12959.609 26.384" h2="12961.952 26.384"/>
+      <p c="14399.000 26.384" h1="14397.048 26.384" h2="14399.391 26.384"/>
+      <p c="14400.000 26.384" h1="14399.609 26.384" h2="14400.391 26.384"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 5.016" h1="-1686.187 5.016" h2="1686.187 5.016"/>
+      <p c="4319.000 5.016" h1="4317.048 5.016" h2="4319.391 5.016"/>
+      <p c="4320.000 5.016" h1="4319.609 5.016" h2="4321.952 5.016"/>
+      <p c="5760.000 5.016" h1="5758.048 5.016" h2="5760.391 5.016"/>
+      <p c="5761.000 5.016" h1="5760.609 5.016" h2="5762.952 5.016"/>
+      <p c="7199.000 5.016" h1="7197.048 5.016" h2="7199.391 5.016"/>
+      <p c="7200.000 5.016" h1="7199.609 5.016" h2="7201.952 5.016"/>
+      <p c="7920.000 5.016" h1="7918.048 5.016" h2="7920.391 5.016"/>
+      <p c="7921.000 5.016" h1="7920.609 5.016" h2="7922.952 5.016"/>
+      <p c="10799.000 5.016" h1="10797.048 5.016" h2="10799.391 5.016"/>
+      <p c="10800.000 5.016" h1="10799.609 5.016" h2="10801.952 5.016"/>
+      <p c="11520.000 5.016" h1="11518.048 5.016" h2="11520.391 5.016"/>
+      <p c="11521.000 5.016" h1="11520.609 5.016" h2="11522.952 5.016"/>
+      <p c="12959.000 5.016" h1="12957.048 5.016" h2="12959.391 5.016"/>
+      <p c="12960.000 5.016" h1="12959.609 5.016" h2="12961.952 5.016"/>
+      <p c="14399.000 5.016" h1="14397.048 5.016" h2="14399.391 5.016"/>
+      <p c="14400.000 5.016" h1="14399.609 5.016" h2="14400.391 5.016"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -1000.000" h1="-1686.187 -1000.000" h2="1686.187 -1000.000"/>
+      <p c="4319.000 -1000.000" h1="4317.048 -1000.000" h2="4319.391 -1000.000"/>
+      <p c="4320.000 7.749" h1="4319.609 7.749" h2="4321.952 7.749"/>
+      <p c="5760.000 7.749" h1="5758.048 7.749" h2="5760.391 7.749"/>
+      <p c="5761.000 -1000.000" h1="5760.609 -1000.000" h2="5762.952 -1000.000"/>
+      <p c="7199.000 -1000.000" h1="7197.048 -1000.000" h2="7199.391 -1000.000"/>
+      <p c="7200.000 7.749" h1="7199.609 7.749" h2="7201.952 7.749"/>
+      <p c="7920.000 7.749" h1="7918.048 7.749" h2="7920.391 7.749"/>
+      <p c="7921.000 -1000.000" h1="7920.609 -1000.000" h2="7922.952 -1000.000"/>
+      <p c="10799.000 -1000.000" h1="10797.048 -1000.000" h2="10799.391 -1000.000"/>
+      <p c="10800.000 7.749" h1="10799.609 7.749" h2="10801.952 7.749"/>
+      <p c="11520.000 7.749" h1="11518.048 7.749" h2="11520.391 7.749"/>
+      <p c="11521.000 -1000.000" h1="11520.609 -1000.000" h2="11522.952 -1000.000"/>
+      <p c="12959.000 -1000.000" h1="12957.048 -1000.000" h2="12959.391 -1000.000"/>
+      <p c="12960.000 7.749" h1="12959.609 7.749" h2="12961.952 7.749"/>
+      <p c="14399.000 7.749" h1="14397.048 7.749" h2="14399.391 7.749"/>
+      <p c="14400.000 -1000.000" h1="14399.609 -1000.000" h2="14400.391 -1000.000"/>
+    </curve>
+  </object>
+  <object id="ZippersPurpleR" type="animation" xyz="26.38 7.75 -8.47" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersPurpleR.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZippersPurpleRNetw" type="animation" xyz="26.38 -1000.00 -8.47" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersPurpleRNetw.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="isNetworkingR">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 26.384" h1="-1686.187 26.384" h2="1686.187 26.384"/>
+      <p c="4319.000 26.384" h1="4317.048 26.384" h2="4319.391 26.384"/>
+      <p c="4320.000 26.384" h1="4319.609 26.384" h2="4321.952 26.384"/>
+      <p c="5760.000 26.384" h1="5758.048 26.384" h2="5760.391 26.384"/>
+      <p c="5761.000 26.384" h1="5760.609 26.384" h2="5762.952 26.384"/>
+      <p c="7199.000 26.384" h1="7197.048 26.384" h2="7199.391 26.384"/>
+      <p c="7200.000 26.384" h1="7199.609 26.384" h2="7201.952 26.384"/>
+      <p c="7920.000 26.384" h1="7918.048 26.384" h2="7920.391 26.384"/>
+      <p c="7921.000 26.384" h1="7920.609 26.384" h2="7922.952 26.384"/>
+      <p c="10799.000 26.384" h1="10797.048 26.384" h2="10799.391 26.384"/>
+      <p c="10800.000 26.384" h1="10799.609 26.384" h2="10801.952 26.384"/>
+      <p c="11520.000 26.384" h1="11518.048 26.384" h2="11520.391 26.384"/>
+      <p c="11521.000 26.384" h1="11520.609 26.384" h2="11522.952 26.384"/>
+      <p c="12959.000 26.384" h1="12957.048 26.384" h2="12959.391 26.384"/>
+      <p c="12960.000 26.384" h1="12959.609 26.384" h2="12961.952 26.384"/>
+      <p c="14399.000 26.384" h1="14397.048 26.384" h2="14399.391 26.384"/>
+      <p c="14400.000 26.384" h1="14399.609 26.384" h2="14400.391 26.384"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -8.471" h1="-1686.187 -8.471" h2="1686.187 -8.471"/>
+      <p c="4319.000 -8.471" h1="4317.048 -8.471" h2="4319.391 -8.471"/>
+      <p c="4320.000 -8.471" h1="4319.609 -8.471" h2="4321.952 -8.471"/>
+      <p c="5760.000 -8.471" h1="5758.048 -8.471" h2="5760.391 -8.471"/>
+      <p c="5761.000 -8.471" h1="5760.609 -8.471" h2="5762.952 -8.471"/>
+      <p c="7199.000 -8.471" h1="7197.048 -8.471" h2="7199.391 -8.471"/>
+      <p c="7200.000 -8.471" h1="7199.609 -8.471" h2="7201.952 -8.471"/>
+      <p c="7920.000 -8.471" h1="7918.048 -8.471" h2="7920.391 -8.471"/>
+      <p c="7921.000 -8.471" h1="7920.609 -8.471" h2="7922.952 -8.471"/>
+      <p c="10799.000 -8.471" h1="10797.048 -8.471" h2="10799.391 -8.471"/>
+      <p c="10800.000 -8.471" h1="10799.609 -8.471" h2="10801.952 -8.471"/>
+      <p c="11520.000 -8.471" h1="11518.048 -8.471" h2="11520.391 -8.471"/>
+      <p c="11521.000 -8.471" h1="11520.609 -8.471" h2="11522.952 -8.471"/>
+      <p c="12959.000 -8.471" h1="12957.048 -8.471" h2="12959.391 -8.471"/>
+      <p c="12960.000 -8.471" h1="12959.609 -8.471" h2="12961.952 -8.471"/>
+      <p c="14399.000 -8.471" h1="14397.048 -8.471" h2="14399.391 -8.471"/>
+      <p c="14400.000 -8.471" h1="14399.609 -8.471" h2="14400.391 -8.471"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -1000.000" h1="-1686.187 -1000.000" h2="1686.187 -1000.000"/>
+      <p c="4319.000 -1000.000" h1="4317.048 -1000.000" h2="4319.391 -1000.000"/>
+      <p c="4320.000 7.749" h1="4319.609 7.749" h2="4321.952 7.749"/>
+      <p c="5760.000 7.749" h1="5758.048 7.749" h2="5760.391 7.749"/>
+      <p c="5761.000 -1000.000" h1="5760.609 -1000.000" h2="5762.952 -1000.000"/>
+      <p c="7199.000 -1000.000" h1="7197.048 -1000.000" h2="7199.391 -1000.000"/>
+      <p c="7200.000 7.749" h1="7199.609 7.749" h2="7201.952 7.749"/>
+      <p c="7920.000 7.749" h1="7918.048 7.749" h2="7920.391 7.749"/>
+      <p c="7921.000 -1000.000" h1="7920.609 -1000.000" h2="7922.952 -1000.000"/>
+      <p c="10799.000 -1000.000" h1="10797.048 -1000.000" h2="10799.391 -1000.000"/>
+      <p c="10800.000 7.749" h1="10799.609 7.749" h2="10801.952 7.749"/>
+      <p c="11520.000 7.749" h1="11518.048 7.749" h2="11520.391 7.749"/>
+      <p c="11521.000 -1000.000" h1="11520.609 -1000.000" h2="11522.952 -1000.000"/>
+      <p c="12959.000 -1000.000" h1="12957.048 -1000.000" h2="12959.391 -1000.000"/>
+      <p c="12960.000 7.749" h1="12959.609 7.749" h2="12961.952 7.749"/>
+      <p c="14399.000 7.749" h1="14397.048 7.749" h2="14399.391 7.749"/>
+      <p c="14400.000 -1000.000" h1="14399.609 -1000.000" h2="14400.391 -1000.000"/>
+    </curve>
+  </object>
+  <object id="ZippersRedF" type="animation" xyz="26.38 7.75 5.02" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersRedF.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZippersRedFNetw" type="animation" xyz="26.38 -1000.00 5.02" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersRedFNetw.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="isNetworkingF">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 26.384" h1="-1405.091 26.384" h2="1405.091 26.384"/>
+      <p c="3599.000 26.384" h1="3597.048 26.384" h2="3599.390 26.384"/>
+      <p c="3600.000 26.384" h1="3599.610 26.384" h2="3601.952 26.384"/>
+      <p c="4320.000 26.384" h1="4318.048 26.384" h2="4320.391 26.384"/>
+      <p c="4321.000 26.384" h1="4320.609 26.384" h2="4322.952 26.384"/>
+      <p c="6479.000 26.384" h1="6477.048 26.384" h2="6479.391 26.384"/>
+      <p c="6480.000 26.384" h1="6479.609 26.384" h2="6481.952 26.384"/>
+      <p c="7200.000 26.384" h1="7198.048 26.384" h2="7200.391 26.384"/>
+      <p c="7201.000 26.384" h1="7200.609 26.384" h2="7202.952 26.384"/>
+      <p c="11519.000 26.384" h1="11517.048 26.384" h2="11519.391 26.384"/>
+      <p c="11520.000 26.384" h1="11519.609 26.384" h2="11521.952 26.384"/>
+      <p c="12240.000 26.384" h1="12238.048 26.384" h2="12240.391 26.384"/>
+      <p c="12241.000 26.384" h1="12240.609 26.384" h2="12242.952 26.384"/>
+      <p c="14400.000 26.384" h1="13557.102 26.384" h2="15242.898 26.384"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 5.016" h1="-1405.091 5.016" h2="1405.091 5.016"/>
+      <p c="3599.000 5.016" h1="3597.048 5.016" h2="3599.390 5.016"/>
+      <p c="3600.000 5.016" h1="3599.610 5.016" h2="3601.952 5.016"/>
+      <p c="4320.000 5.016" h1="4318.048 5.016" h2="4320.391 5.016"/>
+      <p c="4321.000 5.016" h1="4320.609 5.016" h2="4322.952 5.016"/>
+      <p c="6479.000 5.016" h1="6477.048 5.016" h2="6479.391 5.016"/>
+      <p c="6480.000 5.016" h1="6479.609 5.016" h2="6481.952 5.016"/>
+      <p c="7200.000 5.016" h1="7198.048 5.016" h2="7200.391 5.016"/>
+      <p c="7201.000 5.016" h1="7200.609 5.016" h2="7202.952 5.016"/>
+      <p c="11519.000 5.016" h1="11517.048 5.016" h2="11519.391 5.016"/>
+      <p c="11520.000 5.016" h1="11519.609 5.016" h2="11521.952 5.016"/>
+      <p c="12240.000 5.016" h1="12238.048 5.016" h2="12240.391 5.016"/>
+      <p c="12241.000 5.016" h1="12240.609 5.016" h2="12242.952 5.016"/>
+      <p c="14400.000 5.016" h1="13557.102 5.016" h2="15242.898 5.016"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -1000.000" h1="-1405.091 -1000.000" h2="1405.091 -1000.000"/>
+      <p c="3599.000 -1000.000" h1="3597.048 -1000.000" h2="3599.390 -1000.000"/>
+      <p c="3600.000 7.749" h1="3599.610 7.749" h2="3601.952 7.749"/>
+      <p c="4320.000 7.749" h1="4318.048 7.749" h2="4320.391 7.749"/>
+      <p c="4321.000 -1000.000" h1="4320.609 -1000.000" h2="4322.952 -1000.000"/>
+      <p c="6479.000 -1000.000" h1="6477.048 -1000.000" h2="6479.391 -1000.000"/>
+      <p c="6480.000 7.749" h1="6479.609 7.749" h2="6481.952 7.749"/>
+      <p c="7200.000 7.749" h1="7198.048 7.749" h2="7200.391 7.749"/>
+      <p c="7201.000 -1000.000" h1="7200.609 -1000.000" h2="7202.952 -1000.000"/>
+      <p c="11519.000 -1000.000" h1="11517.048 -1000.000" h2="11519.391 -1000.000"/>
+      <p c="11520.000 7.749" h1="11519.609 7.749" h2="11521.952 7.749"/>
+      <p c="12240.000 7.749" h1="12238.048 7.749" h2="12240.391 7.749"/>
+      <p c="12241.000 -1000.000" h1="12240.609 -1000.000" h2="12242.952 -1000.000"/>
+      <p c="14400.000 -1000.000" h1="13557.102 -1000.000" h2="15242.898 -1000.000"/>
+    </curve>
+  </object>
+  <object id="ZippersRedR" type="animation" xyz="26.38 7.75 -8.47" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersRedR.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZippersRedRNetw" type="animation" xyz="26.38 -1000.00 -8.47" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersRedRNetw.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="isNetworkingR">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 26.384" h1="-1405.091 26.384" h2="1405.091 26.384"/>
+      <p c="3599.000 26.384" h1="3597.048 26.384" h2="3599.390 26.384"/>
+      <p c="3600.000 26.384" h1="3599.610 26.384" h2="3601.952 26.384"/>
+      <p c="4320.000 26.384" h1="4318.048 26.384" h2="4320.391 26.384"/>
+      <p c="4321.000 26.384" h1="4320.609 26.384" h2="4322.952 26.384"/>
+      <p c="6479.000 26.384" h1="6477.048 26.384" h2="6479.391 26.384"/>
+      <p c="6480.000 26.384" h1="6479.609 26.384" h2="6481.952 26.384"/>
+      <p c="7200.000 26.384" h1="7198.048 26.384" h2="7200.391 26.384"/>
+      <p c="7201.000 26.384" h1="7200.609 26.384" h2="7202.952 26.384"/>
+      <p c="11519.000 26.384" h1="11517.048 26.384" h2="11519.391 26.384"/>
+      <p c="11520.000 26.384" h1="11519.609 26.384" h2="11521.952 26.384"/>
+      <p c="12240.000 26.384" h1="12238.048 26.384" h2="12240.391 26.384"/>
+      <p c="12241.000 26.384" h1="12240.609 26.384" h2="12242.952 26.384"/>
+      <p c="14400.000 26.384" h1="13557.102 26.384" h2="15242.898 26.384"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -8.471" h1="-1405.091 -8.471" h2="1405.091 -8.471"/>
+      <p c="3599.000 -8.471" h1="3597.048 -8.471" h2="3599.390 -8.471"/>
+      <p c="3600.000 -8.471" h1="3599.610 -8.471" h2="3601.952 -8.471"/>
+      <p c="4320.000 -8.471" h1="4318.048 -8.471" h2="4320.391 -8.471"/>
+      <p c="4321.000 -8.471" h1="4320.609 -8.471" h2="4322.952 -8.471"/>
+      <p c="6479.000 -8.471" h1="6477.048 -8.471" h2="6479.391 -8.471"/>
+      <p c="6480.000 -8.471" h1="6479.609 -8.471" h2="6481.952 -8.471"/>
+      <p c="7200.000 -8.471" h1="7198.048 -8.471" h2="7200.391 -8.471"/>
+      <p c="7201.000 -8.471" h1="7200.609 -8.471" h2="7202.952 -8.471"/>
+      <p c="11519.000 -8.471" h1="11517.048 -8.471" h2="11519.391 -8.471"/>
+      <p c="11520.000 -8.471" h1="11519.609 -8.471" h2="11521.952 -8.471"/>
+      <p c="12240.000 -8.471" h1="12238.048 -8.471" h2="12240.391 -8.471"/>
+      <p c="12241.000 -8.471" h1="12240.609 -8.471" h2="12242.952 -8.471"/>
+      <p c="14400.000 -8.471" h1="13557.102 -8.471" h2="15242.898 -8.471"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -1000.000" h1="-1405.091 -1000.000" h2="1405.091 -1000.000"/>
+      <p c="3599.000 -1000.000" h1="3597.048 -1000.000" h2="3599.390 -1000.000"/>
+      <p c="3600.000 7.749" h1="3599.610 7.749" h2="3601.952 7.749"/>
+      <p c="4320.000 7.749" h1="4318.048 7.749" h2="4320.391 7.749"/>
+      <p c="4321.000 -1000.000" h1="4320.609 -1000.000" h2="4322.952 -1000.000"/>
+      <p c="6479.000 -1000.000" h1="6477.048 -1000.000" h2="6479.391 -1000.000"/>
+      <p c="6480.000 7.749" h1="6479.609 7.749" h2="6481.952 7.749"/>
+      <p c="7200.000 7.749" h1="7198.048 7.749" h2="7200.391 7.749"/>
+      <p c="7201.000 -1000.000" h1="7200.609 -1000.000" h2="7202.952 -1000.000"/>
+      <p c="11519.000 -1000.000" h1="11517.048 -1000.000" h2="11519.391 -1000.000"/>
+      <p c="11520.000 7.749" h1="11519.609 7.749" h2="11521.952 7.749"/>
+      <p c="12240.000 7.749" h1="12238.048 7.749" h2="12240.391 7.749"/>
+      <p c="12241.000 -1000.000" h1="12240.609 -1000.000" h2="12242.952 -1000.000"/>
+      <p c="14400.000 -1000.000" h1="13557.102 -1000.000" h2="15242.898 -1000.000"/>
+    </curve>
+  </object>
+  <object id="ZippersWhiteF" type="animation" xyz="26.38 7.75 5.02" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersWhiteF.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZippersWhiteFNetw" type="animation" xyz="26.38 -1000.00 5.02" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersWhiteFNetw.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="isNetworkingF">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 26.384" h1="-1123.995 26.384" h2="1123.995 26.384"/>
+      <p c="2879.000 26.384" h1="2877.048 26.384" h2="2879.390 26.384"/>
+      <p c="2880.000 26.384" h1="2879.610 26.384" h2="2881.952 26.384"/>
+      <p c="3600.000 26.384" h1="3598.048 26.384" h2="3600.390 26.384"/>
+      <p c="3601.000 26.384" h1="3600.610 26.384" h2="3602.952 26.384"/>
+      <p c="7919.000 26.384" h1="7917.048 26.384" h2="7919.391 26.384"/>
+      <p c="7920.000 26.384" h1="7919.609 26.384" h2="7921.952 26.384"/>
+      <p c="8640.000 26.384" h1="8638.048 26.384" h2="8640.391 26.384"/>
+      <p c="8641.000 26.384" h1="8640.609 26.384" h2="8642.952 26.384"/>
+      <p c="14400.000 26.384" h1="12151.620 26.384" h2="16648.379 26.384"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 5.016" h1="-1123.995 5.016" h2="1123.995 5.016"/>
+      <p c="2879.000 5.016" h1="2877.048 5.016" h2="2879.390 5.016"/>
+      <p c="2880.000 5.016" h1="2879.610 5.016" h2="2881.952 5.016"/>
+      <p c="3600.000 5.016" h1="3598.048 5.016" h2="3600.390 5.016"/>
+      <p c="3601.000 5.016" h1="3600.610 5.016" h2="3602.952 5.016"/>
+      <p c="7919.000 5.016" h1="7917.048 5.016" h2="7919.391 5.016"/>
+      <p c="7920.000 5.016" h1="7919.609 5.016" h2="7921.952 5.016"/>
+      <p c="8640.000 5.016" h1="8638.048 5.016" h2="8640.391 5.016"/>
+      <p c="8641.000 5.016" h1="8640.609 5.016" h2="8642.952 5.016"/>
+      <p c="14400.000 5.016" h1="12151.620 5.016" h2="16648.379 5.016"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -1000.000" h1="-1123.995 -1000.000" h2="1123.995 -1000.000"/>
+      <p c="2879.000 -1000.000" h1="2877.048 -1000.000" h2="2879.390 -1000.000"/>
+      <p c="2880.000 7.749" h1="2879.610 7.749" h2="2881.952 7.749"/>
+      <p c="3600.000 7.749" h1="3598.048 7.749" h2="3600.390 7.749"/>
+      <p c="3601.000 -1000.000" h1="3600.610 -1000.000" h2="3602.952 -1000.000"/>
+      <p c="7919.000 -1000.000" h1="7917.048 -1000.000" h2="7919.391 -1000.000"/>
+      <p c="7920.000 7.749" h1="7919.609 7.749" h2="7921.952 7.749"/>
+      <p c="8640.000 7.749" h1="8638.048 7.749" h2="8640.391 7.749"/>
+      <p c="8641.000 -1000.000" h1="8640.609 -1000.000" h2="8642.952 -1000.000"/>
+      <p c="14400.000 -1000.000" h1="12151.620 -1000.000" h2="16648.379 -1000.000"/>
+    </curve>
+  </object>
+  <object id="ZippersWhiteR" type="animation" xyz="26.38 7.75 -8.47" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersWhiteR.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZippersWhiteRNetw" type="animation" xyz="26.38 -1000.00 -8.47" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersWhiteRNetw.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="isNetworkingR">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 26.384" h1="-1123.995 26.384" h2="1123.995 26.384"/>
+      <p c="2879.000 26.384" h1="2877.048 26.384" h2="2879.390 26.384"/>
+      <p c="2880.000 26.384" h1="2879.610 26.384" h2="2881.952 26.384"/>
+      <p c="3600.000 26.384" h1="3598.048 26.384" h2="3600.390 26.384"/>
+      <p c="3601.000 26.384" h1="3600.610 26.384" h2="3602.952 26.384"/>
+      <p c="7919.000 26.384" h1="7917.048 26.384" h2="7919.391 26.384"/>
+      <p c="7920.000 26.384" h1="7919.609 26.384" h2="7921.952 26.384"/>
+      <p c="8640.000 26.384" h1="8638.048 26.384" h2="8640.391 26.384"/>
+      <p c="8641.000 26.384" h1="8640.609 26.384" h2="8642.952 26.384"/>
+      <p c="14400.000 26.384" h1="12151.620 26.384" h2="16648.379 26.384"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -8.471" h1="-1123.995 -8.471" h2="1123.995 -8.471"/>
+      <p c="2879.000 -8.471" h1="2877.048 -8.471" h2="2879.390 -8.471"/>
+      <p c="2880.000 -8.471" h1="2879.610 -8.471" h2="2881.952 -8.471"/>
+      <p c="3600.000 -8.471" h1="3598.048 -8.471" h2="3600.390 -8.471"/>
+      <p c="3601.000 -8.471" h1="3600.610 -8.471" h2="3602.952 -8.471"/>
+      <p c="7919.000 -8.471" h1="7917.048 -8.471" h2="7919.391 -8.471"/>
+      <p c="7920.000 -8.471" h1="7919.609 -8.471" h2="7921.952 -8.471"/>
+      <p c="8640.000 -8.471" h1="8638.048 -8.471" h2="8640.391 -8.471"/>
+      <p c="8641.000 -8.471" h1="8640.609 -8.471" h2="8642.952 -8.471"/>
+      <p c="14400.000 -8.471" h1="12151.620 -8.471" h2="16648.379 -8.471"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -1000.000" h1="-1123.995 -1000.000" h2="1123.995 -1000.000"/>
+      <p c="2879.000 -1000.000" h1="2877.048 -1000.000" h2="2879.390 -1000.000"/>
+      <p c="2880.000 7.749" h1="2879.610 7.749" h2="2881.952 7.749"/>
+      <p c="3600.000 7.749" h1="3598.048 7.749" h2="3600.390 7.749"/>
+      <p c="3601.000 -1000.000" h1="3600.610 -1000.000" h2="3602.952 -1000.000"/>
+      <p c="7919.000 -1000.000" h1="7917.048 -1000.000" h2="7919.391 -1000.000"/>
+      <p c="7920.000 7.749" h1="7919.609 7.749" h2="7921.952 7.749"/>
+      <p c="8640.000 7.749" h1="8638.048 7.749" h2="8640.391 7.749"/>
+      <p c="8641.000 -1000.000" h1="8640.609 -1000.000" h2="8642.952 -1000.000"/>
+      <p c="14400.000 -1000.000" h1="12151.620 -1000.000" h2="16648.379 -1000.000"/>
+    </curve>
+  </object>
+  <object id="ZippersYellowF" type="animation" xyz="26.38 7.75 5.02" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersYellowF.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZippersYellowFNetw" type="animation" xyz="26.38 -1000.00 5.02" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersYellowFNetw.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="isNetworkingF">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 26.384" h1="-561.802 26.384" h2="561.802 26.384"/>
+      <p c="1439.000 26.384" h1="1437.048 26.384" h2="1439.390 26.384"/>
+      <p c="1440.000 26.384" h1="1439.610 26.384" h2="1441.952 26.384"/>
+      <p c="2160.000 26.384" h1="2158.048 26.384" h2="2160.390 26.384"/>
+      <p c="2161.000 26.384" h1="2160.610 26.384" h2="2162.952 26.384"/>
+      <p c="5759.000 26.384" h1="5757.048 26.384" h2="5759.391 26.384"/>
+      <p c="5760.000 26.384" h1="5759.609 26.384" h2="5761.952 26.384"/>
+      <p c="6480.000 26.384" h1="6478.048 26.384" h2="6480.391 26.384"/>
+      <p c="6481.000 26.384" h1="6480.609 26.384" h2="6482.952 26.384"/>
+      <p c="12239.000 26.384" h1="12237.048 26.384" h2="12239.391 26.384"/>
+      <p c="12240.000 26.384" h1="12239.609 26.384" h2="12241.952 26.384"/>
+      <p c="12960.000 26.384" h1="12958.048 26.384" h2="12960.391 26.384"/>
+      <p c="12961.000 26.384" h1="12960.609 26.384" h2="12962.952 26.384"/>
+      <p c="14400.000 26.384" h1="13838.198 26.384" h2="14961.802 26.384"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 5.016" h1="-561.802 5.016" h2="561.802 5.016"/>
+      <p c="1439.000 5.016" h1="1437.048 5.016" h2="1439.390 5.016"/>
+      <p c="1440.000 5.016" h1="1439.610 5.016" h2="1441.952 5.016"/>
+      <p c="2160.000 5.016" h1="2158.048 5.016" h2="2160.390 5.016"/>
+      <p c="2161.000 5.016" h1="2160.610 5.016" h2="2162.952 5.016"/>
+      <p c="5759.000 5.016" h1="5757.048 5.016" h2="5759.391 5.016"/>
+      <p c="5760.000 5.016" h1="5759.609 5.016" h2="5761.952 5.016"/>
+      <p c="6480.000 5.016" h1="6478.048 5.016" h2="6480.391 5.016"/>
+      <p c="6481.000 5.016" h1="6480.609 5.016" h2="6482.952 5.016"/>
+      <p c="12239.000 5.016" h1="12237.048 5.016" h2="12239.391 5.016"/>
+      <p c="12240.000 5.016" h1="12239.609 5.016" h2="12241.952 5.016"/>
+      <p c="12960.000 5.016" h1="12958.048 5.016" h2="12960.391 5.016"/>
+      <p c="12961.000 5.016" h1="12960.609 5.016" h2="12962.952 5.016"/>
+      <p c="14400.000 5.016" h1="13838.198 5.016" h2="14961.802 5.016"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -1000.000" h1="-561.802 -1000.000" h2="561.802 -1000.000"/>
+      <p c="1439.000 -1000.000" h1="1437.048 -1000.000" h2="1439.390 -1000.000"/>
+      <p c="1440.000 7.749" h1="1439.610 7.749" h2="1441.952 7.749"/>
+      <p c="2160.000 7.749" h1="2158.048 7.749" h2="2160.390 7.749"/>
+      <p c="2161.000 -1000.000" h1="2160.610 -1000.000" h2="2162.952 -1000.000"/>
+      <p c="5759.000 -1000.000" h1="5757.048 -1000.000" h2="5759.391 -1000.000"/>
+      <p c="5760.000 7.749" h1="5759.609 7.749" h2="5761.952 7.749"/>
+      <p c="6480.000 7.749" h1="6478.048 7.749" h2="6480.391 7.749"/>
+      <p c="6481.000 -1000.000" h1="6480.609 -1000.000" h2="6482.952 -1000.000"/>
+      <p c="12239.000 -1000.000" h1="12237.048 -1000.000" h2="12239.391 -1000.000"/>
+      <p c="12240.000 7.749" h1="12239.609 7.749" h2="12241.952 7.749"/>
+      <p c="12960.000 7.749" h1="12958.048 7.749" h2="12960.391 7.749"/>
+      <p c="12961.000 -1000.000" h1="12960.609 -1000.000" h2="12962.952 -1000.000"/>
+      <p c="14400.000 -1000.000" h1="13838.198 -1000.000" h2="14961.802 -1000.000"/>
+    </curve>
+  </object>
+  <object id="ZippersYellowR" type="animation" xyz="26.38 7.75 -8.47" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersYellowR.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZippersYellowRNetw" type="animation" xyz="26.38 -1000.00 -8.47" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZippersYellowRNetw.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="isNetworkingR">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="0.000 26.384" h1="-561.802 26.384" h2="561.802 26.384"/>
+      <p c="1439.000 26.384" h1="1437.048 26.384" h2="1439.390 26.384"/>
+      <p c="1440.000 26.384" h1="1439.610 26.384" h2="1441.952 26.384"/>
+      <p c="2160.000 26.384" h1="2158.048 26.384" h2="2160.390 26.384"/>
+      <p c="2161.000 26.384" h1="2160.610 26.384" h2="2162.952 26.384"/>
+      <p c="5759.000 26.384" h1="5757.048 26.384" h2="5759.391 26.384"/>
+      <p c="5760.000 26.384" h1="5759.609 26.384" h2="5761.952 26.384"/>
+      <p c="6480.000 26.384" h1="6478.048 26.384" h2="6480.391 26.384"/>
+      <p c="6481.000 26.384" h1="6480.609 26.384" h2="6482.952 26.384"/>
+      <p c="12239.000 26.384" h1="12237.048 26.384" h2="12239.391 26.384"/>
+      <p c="12240.000 26.384" h1="12239.609 26.384" h2="12241.952 26.384"/>
+      <p c="12960.000 26.384" h1="12958.048 26.384" h2="12960.391 26.384"/>
+      <p c="12961.000 26.384" h1="12960.609 26.384" h2="12962.952 26.384"/>
+      <p c="14400.000 26.384" h1="13838.198 26.384" h2="14961.802 26.384"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -8.471" h1="-561.802 -8.471" h2="561.802 -8.471"/>
+      <p c="1439.000 -8.471" h1="1437.048 -8.471" h2="1439.390 -8.471"/>
+      <p c="1440.000 -8.471" h1="1439.610 -8.471" h2="1441.952 -8.471"/>
+      <p c="2160.000 -8.471" h1="2158.048 -8.471" h2="2160.390 -8.471"/>
+      <p c="2161.000 -8.471" h1="2160.610 -8.471" h2="2162.952 -8.471"/>
+      <p c="5759.000 -8.471" h1="5757.048 -8.471" h2="5759.391 -8.471"/>
+      <p c="5760.000 -8.471" h1="5759.609 -8.471" h2="5761.952 -8.471"/>
+      <p c="6480.000 -8.471" h1="6478.048 -8.471" h2="6480.391 -8.471"/>
+      <p c="6481.000 -8.471" h1="6480.609 -8.471" h2="6482.952 -8.471"/>
+      <p c="12239.000 -8.471" h1="12237.048 -8.471" h2="12239.391 -8.471"/>
+      <p c="12240.000 -8.471" h1="12239.609 -8.471" h2="12241.952 -8.471"/>
+      <p c="12960.000 -8.471" h1="12958.048 -8.471" h2="12960.391 -8.471"/>
+      <p c="12961.000 -8.471" h1="12960.609 -8.471" h2="12962.952 -8.471"/>
+      <p c="14400.000 -8.471" h1="13838.198 -8.471" h2="14961.802 -8.471"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="0.000 -1000.000" h1="-561.802 -1000.000" h2="561.802 -1000.000"/>
+      <p c="1439.000 -1000.000" h1="1437.048 -1000.000" h2="1439.390 -1000.000"/>
+      <p c="1440.000 7.749" h1="1439.610 7.749" h2="1441.952 7.749"/>
+      <p c="2160.000 7.749" h1="2158.048 7.749" h2="2160.390 7.749"/>
+      <p c="2161.000 -1000.000" h1="2160.610 -1000.000" h2="2162.952 -1000.000"/>
+      <p c="5759.000 -1000.000" h1="5757.048 -1000.000" h2="5759.391 -1000.000"/>
+      <p c="5760.000 7.749" h1="5759.609 7.749" h2="5761.952 7.749"/>
+      <p c="6480.000 7.749" h1="6478.048 7.749" h2="6480.391 7.749"/>
+      <p c="6481.000 -1000.000" h1="6480.609 -1000.000" h2="6482.952 -1000.000"/>
+      <p c="12239.000 -1000.000" h1="12237.048 -1000.000" h2="12239.391 -1000.000"/>
+      <p c="12240.000 7.749" h1="12239.609 7.749" h2="12241.952 7.749"/>
+      <p c="12960.000 7.749" h1="12958.048 7.749" h2="12960.391 7.749"/>
+      <p c="12961.000 -1000.000" h1="12960.609 -1000.000" h2="12962.952 -1000.000"/>
+      <p c="14400.000 -1000.000" h1="13838.198 -1000.000" h2="14961.802 -1000.000"/>
+    </curve>
+  </object>
+  <object id="ZipperWhite" type="animation" xyz="197.95 -22.03 -60.82" hpr="0.0 -51.2 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZipperWhite.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <object id="ZipperYellow" type="animation" xyz="199.48 -18.35 -63.76" hpr="0.0 -51.2 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ZipperYellow.spm" driveable="true" shadow-pass="false" skeletal-animation="false" if="maybeLater">
+  </object>
+  <sun  xyz="-11.45 113.81 -92.46" sun-specular="11 0 69" sun-diffuse="11 0 69" ambient="35 35 35"/>
+  <sky-color rgb="3 0 33"/>
+  <weather particles="sparks_mod.xml"/>
+  <camera far="2000.0"/>
+  <checks>
+    <check-lap kind="lap" same-group="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39" other-ids="1 2 3" />
+    <check-line kind="activate" other-ids="4 5 6 7 8 9 10 11" p1="246.40 -4.69" p2="222.92 -4.69"
+                min-height="-4.96" same-group="1 2 3"/>
+    <check-line kind="activate" other-ids="4 5 6 7 8 9 10 11" p1="246.40 -4.69" p2="222.92 -4.69"
+                min-height="-0.96" same-group="1 2 3"/>
+    <check-line kind="activate" other-ids="4 5 6 7 8 9 10 11" p1="246.40 -4.69" p2="222.92 -4.69"
+                min-height="3.04" same-group="1 2 3"/>
+    <check-line kind="activate" other-ids="13 14 15 16 17 18 19 20 21" p1="105.90 45.53" p2="129.56 36.65"
+                min-height="-3.20" same-group="4 5 6 7 8 9 10 11"/>
+    <check-line kind="activate" other-ids="13 14 15 16 17 18 19 20 21" p1="105.90 45.53" p2="129.56 36.65"
+                min-height="0.80" same-group="4 5 6 7 8 9 10 11"/>
+    <check-line kind="activate" other-ids="13 14 15 16 17 18 19 20 21" p1="105.90 45.53" p2="129.56 36.65"
+                min-height="4.80" same-group="4 5 6 7 8 9 10 11"/>
+    <check-line kind="activate" other-ids="13 14 15 16 17 18 19 20 21" p1="105.90 45.53" p2="129.56 36.65"
+                min-height="8.80" same-group="4 5 6 7 8 9 10 11"/>
+    <check-line kind="activate" other-ids="13 14 15 16 17 18 19 20 21" p1="105.90 45.53" p2="129.56 36.65"
+                min-height="12.80" same-group="4 5 6 7 8 9 10 11"/>
+    <check-line kind="activate" other-ids="13 14 15 16 17 18 19 20 21" p1="105.90 45.53" p2="129.56 36.65"
+                min-height="16.80" same-group="4 5 6 7 8 9 10 11"/>
+    <check-line kind="activate" other-ids="13 14 15 16 17 18 19 20 21" p1="105.90 45.53" p2="129.56 36.65"
+                min-height="20.80" same-group="4 5 6 7 8 9 10 11"/>
+    <check-line kind="activate" other-ids="13 14 15 16 17 18 19 20 21" p1="105.90 45.53" p2="129.56 36.65"
+                min-height="24.80" same-group="4 5 6 7 8 9 10 11"/>
+    <check-line kind="activate" other-ids="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39" p1="-148.04 42.33" p2="-149.68 70.24"
+                min-height="18.94" same-group="12 22 23 24 25"/>
+    <check-line kind="activate" other-ids="12 22 23 24 25" p1="-49.58 100.28" p2="-29.15 119.37"
+                min-height="15.22" same-group="13 14 15 16 17 18 19 20 21"/>
+    <check-line kind="activate" other-ids="12 22 23 24 25" p1="-49.58 100.28" p2="-29.15 119.37"
+                min-height="19.22" same-group="13 14 15 16 17 18 19 20 21"/>
+    <check-line kind="activate" other-ids="12 22 23 24 25" p1="-49.58 100.28" p2="-29.15 119.37"
+                min-height="27.22" same-group="13 14 15 16 17 18 19 20 21"/>
+    <check-line kind="activate" other-ids="12 22 23 24 25" p1="-49.58 100.28" p2="-29.15 119.37"
+                min-height="23.22" same-group="13 14 15 16 17 18 19 20 21"/>
+    <check-line kind="activate" other-ids="12 22 23 24 25" p1="-49.58 100.28" p2="-29.15 119.37"
+                min-height="31.22" same-group="13 14 15 16 17 18 19 20 21"/>
+    <check-line kind="activate" other-ids="12 22 23 24 25" p1="-49.58 100.28" p2="-29.15 119.37"
+                min-height="35.22" same-group="13 14 15 16 17 18 19 20 21"/>
+    <check-line kind="activate" other-ids="12 22 23 24 25" p1="-49.58 100.28" p2="-29.15 119.37"
+                min-height="43.22" same-group="13 14 15 16 17 18 19 20 21"/>
+    <check-line kind="activate" other-ids="12 22 23 24 25" p1="-49.58 100.28" p2="-29.15 119.37"
+                min-height="47.22" same-group="13 14 15 16 17 18 19 20 21"/>
+    <check-line kind="activate" other-ids="12 22 23 24 25" p1="-49.58 100.28" p2="-29.15 119.37"
+                min-height="39.22" same-group="13 14 15 16 17 18 19 20 21"/>
+    <check-line kind="activate" other-ids="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39" p1="-148.04 42.33" p2="-149.68 70.24"
+                min-height="22.94" same-group="12 22 23 24 25"/>
+    <check-line kind="activate" other-ids="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39" p1="-148.04 42.33" p2="-149.68 70.24"
+                min-height="26.94" same-group="12 22 23 24 25"/>
+    <check-line kind="activate" other-ids="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39" p1="-148.04 42.33" p2="-149.68 70.24"
+                min-height="34.94" same-group="12 22 23 24 25"/>
+    <check-line kind="activate" other-ids="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39" p1="-148.04 42.33" p2="-149.68 70.24"
+                min-height="30.94" same-group="12 22 23 24 25"/>
+    <check-line kind="lap" other-ids="1 2 3" p1="141.21 -138.68" p2="146.96 -61.37"
+                min-height="-7.00" same-group="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39"/>
+    <check-line kind="lap" other-ids="1 2 3" p1="141.21 -138.68" p2="146.96 -61.37"
+                min-height="25.00" same-group="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39"/>
+    <check-line kind="lap" other-ids="1 2 3" p1="141.21 -138.68" p2="146.96 -61.37"
+                min-height="29.00" same-group="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39"/>
+    <check-line kind="lap" other-ids="1 2 3" p1="141.21 -138.68" p2="146.96 -61.37"
+                min-height="45.00" same-group="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39"/>
+    <check-line kind="lap" other-ids="1 2 3" p1="141.21 -138.68" p2="146.96 -61.37"
+                min-height="41.00" same-group="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39"/>
+    <check-line kind="lap" other-ids="1 2 3" p1="141.21 -138.68" p2="146.96 -61.37"
+                min-height="33.00" same-group="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39"/>
+    <check-line kind="lap" other-ids="1 2 3" p1="141.21 -138.68" p2="146.96 -61.37"
+                min-height="37.00" same-group="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39"/>
+    <check-line kind="lap" other-ids="1 2 3" p1="141.21 -138.68" p2="146.96 -61.37"
+                min-height="-3.00" same-group="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39"/>
+    <check-line kind="lap" other-ids="1 2 3" p1="141.21 -138.68" p2="146.96 -61.37"
+                min-height="1.00" same-group="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39"/>
+    <check-line kind="lap" other-ids="1 2 3" p1="141.21 -138.68" p2="146.96 -61.37"
+                min-height="5.00" same-group="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39"/>
+    <check-line kind="lap" other-ids="1 2 3" p1="141.21 -138.68" p2="146.96 -61.37"
+                min-height="9.00" same-group="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39"/>
+    <check-line kind="lap" other-ids="1 2 3" p1="141.21 -138.68" p2="146.96 -61.37"
+                min-height="21.00" same-group="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39"/>
+    <check-line kind="lap" other-ids="1 2 3" p1="141.21 -138.68" p2="146.96 -61.37"
+                min-height="17.00" same-group="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39"/>
+    <check-line kind="lap" other-ids="1 2 3" p1="141.21 -138.68" p2="146.96 -61.37"
+                min-height="13.00" same-group="0 26 27 28 29 30 31 32 33 34 35 36 37 38 39"/>
+  </checks>
+  <object type="sfx-emitter" id="alarm_emitter" sound="alarm.ogg" rolloff="0.001" volume="1.0" max_dist="5000.0" xyz="145.57 71.24 -92.36" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" play-when-near="true" distance="1.0">
+  </object>
+  <object type="sfx-emitter" id="alarm_emitter2" sound="alarm_x2.ogg" rolloff="0.001" volume="1.0" max_dist="5000.0" xyz="145.57 71.24 -92.36" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" play-when-near="true" distance="1.0">
+  </object>
+  <object type="sfx-emitter" id="alarm_emitter3" sound="alarm_x3.ogg" rolloff="0.001" volume="1.0" max_dist="5000.0" xyz="145.57 71.24 -92.36" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" play-when-near="true" distance="1.0">
+  </object>
+  <object type="action-trigger" trigger-type="point" id="LapTrigger" action="speedUp" distance="60.0" reenable-timeout="22.5" triggered-object="" xyz="148.71 13.58 -128.11" hpr="0.0 -0.0 0.0" scale="60.00 60.00 60.00"/>
+  <object type="action-trigger" trigger-type="point" id="NetwPhaseChangeDetector" action="checkSpeedUpNetw" distance="500.0" reenable-timeout="10.0" triggered-object="" xyz="148.71 13.58 -128.11" hpr="0.0 -0.0 0.0" scale="500.00 500.00 500.00"/>
+  <item id="Empty" x="173.23" y="-3.64" z="-52.57" h="136.82" />
+  <item id="Empty.001" x="170.47" y="-3.64" z="-55.51" h="136.82" />
+  <item id="Empty.002" x="167.71" y="-3.64" z="-58.45" h="136.82" />
+  <small-nitro id="Empty.003" x="223.56" y="-3.60" z="-29.95" h="270.00" />
+  <big-nitro id="Empty.004" x="186.33" y="-5.25" z="-16.83" h="270.00" />
+  <small-nitro id="Empty.005" x="239.42" y="-3.60" z="-16.93" h="270.00" />
+  <item id="Empty.006" x="115.75" y="-0.02" z="51.13" h="159.66" />
+  <item id="Empty.007" x="127.82" y="0.10" z="47.08" h="159.66" />
+  <small-nitro id="Empty.008" x="64.67" y="4.19" z="98.50" h="270.00" />
+  <small-nitro id="Empty.009" x="67.45" y="3.68" z="90.84" h="270.00" />
+  <small-nitro id="Empty.010" x="150.80" y="-1.72" z="76.92" h="270.00" />
+  <small-nitro id="Empty.011" x="51.49" y="4.99" z="92.08" h="270.00" />
+  <big-nitro id="Empty.012" x="151.83" y="-1.72" z="92.45" h="270.00" />
+  <small-nitro id="Empty.013" x="144.54" y="-1.72" z="65.63" h="270.00" />
+  <small-nitro id="Empty.014" x="166.11" y="1.50" z="-9.93" h="270.00" />
+  <banana id="Empty.015" x="231.06" y="-2.21" z="34.94" h="301.70" />
+  <banana id="Empty.016" x="242.36" y="-2.21" z="34.70" h="331.70" />
+  <item id="Empty.017" x="31.10" y="6.84" z="-104.71" h="155.46" />
+  <big-nitro id="Empty.018" x="178.91" y="1.62" z="50.01" h="270.00" />
+  <small-nitro id="Empty.019" x="191.64" y="0.68" z="25.58" h="270.00" />
+  <small-nitro id="Empty.020" x="40.34" y="6.52" z="86.29" h="270.00" />
+  <small-nitro id="Empty.021" x="26.51" y="8.35" z="76.46" h="270.00" />
+  <small-nitro id="Empty.022" x="122.39" y="1.50" z="-12.11" h="270.00" />
+  <banana id="Empty.023" x="232.86" y="-1.16" z="67.26" h="316.70" />
+  <banana id="Empty.024" x="203.83" y="-4.60" z="-106.49" h="621.62" />
+  <banana id="Empty.025" x="243.12" y="-1.66" z="56.53" h="331.70" />
+  <banana id="Empty.026" x="228.23" y="-1.66" z="55.12" h="301.70" />
+  <item id="Empty.027" x="225.94" y="-2.16" z="29.33" h="87.68" />
+  <banana id="Empty.028" x="196.03" y="-4.60" z="-103.43" h="600.66" />
+  <banana id="Empty.029" x="27.10" y="302.88" z="-97.41" />
+  <item id="Empty.030" x="235.45" y="-2.65" z="13.55" h="87.68" />
+  <item id="Empty.031" x="246.21" y="-2.16" z="28.51" h="87.68" />
+  <big-nitro id="Empty.032" x="26.51" y="8.30" z="92.71" h="270.00" />
+  <small-nitro id="Empty.033" x="-113.03" y="20.98" z="113.45" h="270.00" />
+  <small-nitro id="Empty.034" x="-109.53" y="20.98" z="124.89" h="270.00" />
+  <small-nitro id="Empty.035" x="-102.18" y="20.98" z="135.44" h="270.00" />
+  <small-nitro id="Empty.036" x="-91.83" y="20.98" z="143.05" h="270.00" />
+  <small-nitro id="Empty.037" x="-80.39" y="20.98" z="147.00" h="270.00" />
+  <item id="Empty.038" x="-88.70" y="21.81" z="86.03" h="119.96" />
+  <item id="Empty.039" x="-83.35" y="21.81" z="89.11" h="119.96" />
+  <item id="Empty.040" x="-78.01" y="21.81" z="92.19" h="119.96" />
+  <item id="Empty.041" x="-74.53" y="21.81" z="77.62" h="89.96" />
+  <item id="Empty.042" x="-80.70" y="21.81" z="77.63" h="89.96" />
+  <item id="Empty.043" x="-86.87" y="21.81" z="77.63" h="89.96" />
+  <item id="Empty.044" x="-89.48" y="21.81" z="69.45" h="59.96" />
+  <item id="Empty.045" x="-84.14" y="21.81" z="66.36" h="59.96" />
+  <item id="Empty.046" x="-78.80" y="21.81" z="63.27" h="59.96" />
+  <item id="Empty.047" x="-89.67" y="21.81" z="52.97" h="29.96" />
+  <item id="Empty.048" x="-92.75" y="21.81" z="58.32" h="29.96" />
+  <item id="Empty.049" x="-95.83" y="21.81" z="63.66" h="29.96" />
+  <item id="Empty.050" x="-104.23" y="21.81" z="61.83" h="-0.04" />
+  <item id="Empty.051" x="-104.23" y="21.81" z="55.66" h="-0.04" />
+  <item id="Empty.052" x="-104.23" y="21.81" z="49.49" h="-0.04" />
+  <item id="Empty.053" x="-159.77" y="22.07" z="-10.54" h="151.47" />
+  <item id="Empty.054" x="-161.96" y="22.07" z="-14.55" h="151.47" />
+  <item id="Empty.055" x="-164.14" y="22.07" z="-18.56" h="151.47" />
+  <item id="Empty.056" x="-170.73" y="22.07" z="-30.66" h="151.47" />
+  <item id="Empty.057" x="-168.55" y="22.07" z="-26.65" h="151.47" />
+  <item id="Empty.058" x="-166.37" y="22.07" z="-22.64" h="151.47" />
+  <big-nitro id="Empty.061" x="-199.41" y="20.54" z="-14.40" h="270.00" />
+  <banana id="Empty.062" x="30.45" y="303.01" z="-89.74" />
+  <banana id="Empty.063" x="33.86" y="302.83" z="-83.16" />
+  <item id="Empty.066" x="35.67" y="6.84" z="-94.76" h="155.46" />
+  <item id="Empty.067" x="40.29" y="6.84" z="-84.84" h="155.46" />
+  <item id="Empty.068" x="44.46" y="6.84" z="-76.16" h="155.46" />
+  <banana id="Empty.069" x="-162.11" y="20.95" z="-34.98" h="600.66" />
+  <banana id="Empty.070" x="-151.31" y="20.95" z="-18.98" h="600.66" />
+  <banana id="Empty.071" x="-19.70" y="19.88" z="-80.71" h="612.09" />
+  <banana id="Empty.072" x="-19.35" y="20.03" z="-73.91" h="600.66" />
+  <banana id="Empty.073" x="-20.54" y="18.89" z="-87.56" h="621.62" />
+  <banana id="Empty.074" x="-16.58" y="20.95" z="-61.84" h="621.62" />
+  <banana id="Empty.075" x="-12.39" y="21.23" z="-49.94" h="600.66" />
+  <banana id="Empty.076" x="-14.53" y="21.03" z="-55.68" h="612.09" />
+  <banana id="Empty.077" x="69.29" y="302.82" z="-113.98" h="283.52" />
+  <banana id="Empty.078" x="72.07" y="302.82" z="-108.30" h="283.52" />
+  <banana id="Empty.079" x="74.85" y="302.82" z="-102.62" h="283.52" />
+  <banana id="Empty.080" x="77.62" y="302.82" z="-96.94" h="283.52" />
+  <banana id="Empty.081" x="80.40" y="302.82" z="-91.26" h="283.52" />
+  <banana id="Empty.082" x="83.92" y="303.15" z="-96.50" h="283.52" />
+  <banana id="Empty.083" x="81.15" y="303.15" z="-102.18" h="283.52" />
+  <banana id="Empty.084" x="78.37" y="303.15" z="-107.86" h="283.52" />
+  <banana id="Empty.085" x="75.59" y="303.15" z="-113.54" h="283.52" />
+  <banana id="Empty.086" x="81.89" y="303.48" z="-113.10" h="283.52" />
+  <banana id="Empty.087" x="84.67" y="303.48" z="-107.42" h="283.52" />
+  <banana id="Empty.088" x="87.45" y="303.48" z="-101.74" h="283.52" />
+  <banana id="Empty.089" x="90.97" y="303.81" z="-106.98" h="283.52" />
+  <banana id="Empty.090" x="88.19" y="303.81" z="-112.66" h="283.52" />
+  <banana id="Empty.091" x="94.49" y="304.14" z="-112.23" h="283.52" />
+  <banana id="Empty.092" x="-179.02" y="21.43" z="47.43" h="294.55" />
+  <banana id="Empty.096" x="-181.50" y="21.43" z="54.84" h="294.55" />
+  <small-nitro id="Empty.098" x="-56.83" y="21.03" z="-67.24" h="270.00" />
+  <small-nitro id="Empty.099" x="-58.68" y="21.03" z="-60.47" h="270.00" />
+  <small-nitro id="Empty.100" x="-60.53" y="21.03" z="-53.69" h="270.00" />
+  <small-nitro id="Empty.101" x="52.78" y="4.74" z="88.30" h="270.00" />
+  <small-nitro id="Empty.102" x="29.06" y="7.89" z="75.42" h="270.00" />
+  <banana id="Empty.103" x="36.52" y="302.94" z="-76.66" />
+  <banana id="Empty.104" x="25.72" y="303.62" z="-92.12" />
+  <banana id="Empty.105" x="28.94" y="303.63" z="-84.72" />
+  <banana id="Empty.106" x="31.91" y="303.58" z="-78.26" />
+  <banana id="Empty.107" x="24.17" y="304.13" z="-86.63" />
+  <banana id="Empty.108" x="27.54" y="304.11" z="-80.00" />
+  <banana id="Empty.109" x="22.83" y="304.52" z="-81.70" />
+  <light xyz="198.13 -1.26 -123.82" id="LightBlue.000" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="201.50 -1.26 -121.60" id="LightBlue.001" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="194.78 -1.30 -126.03" id="LightBlue.002" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="165.23 -1.41 -31.73" id="LightBlue.003" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="162.87 -1.47 -35.07" id="LightBlue.004" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="160.62 -1.40 -38.28" id="LightBlue.005" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="231.65 1.07 -29.64" id="LightBlue.006" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="234.42 1.14 -26.86" id="LightBlue.007" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="237.31 1.07 -23.97" id="LightBlue.008" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="242.68 2.37 69.88" id="LightBlue.009" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="244.93 2.43 66.47" id="LightBlue.010" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="247.07 2.37 63.19" id="LightBlue.011" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="180.33 4.64 70.31" id="LightBlue.012" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="182.54 4.66 73.66" id="LightBlue.013" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="143.94 2.43 104.09" id="LightBlue.014" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="147.18 2.49 101.59" id="LightBlue.015" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="150.28 2.43 99.19" id="LightBlue.016" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-68.70 24.96 60.45" id="LightBlue.017" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-70.92 24.90 57.22" id="LightBlue.018" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-73.23 24.96 53.85" id="LightBlue.019" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-185.99 25.57 66.08" id="LightBlue.020" distance="100.00" energy="40.00" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="234.77 2.93 53.07" id="LightBlue.021" distance="75.00" energy="50.00" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="218.68 2.89 79.19" id="LightBlue.022" distance="75.00" energy="50.00" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="192.14 8.76 74.26" id="LightBlue.023" distance="75.00" energy="25.00" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-174.06 26.57 34.64" id="LightBlue.024" distance="100.00" energy="40.00" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-118.04 34.72 86.42" id="LightBlue.025" distance="100.00" energy="50.00" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-95.18 32.36 126.95" id="LightBlue.026" distance="100.00" energy="50.00" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-67.60 24.42 112.87" id="LightBlue.027" distance="75.00" energy="15.00" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="175.83 -1.17 -84.81" id="LightBlue.028" distance="25.00" energy="10.00" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="170.02 -1.87 -93.68" id="LightBlue.029" distance="25.00" energy="10.00" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="235.58 3.42 30.12" id="LightBlue.030" distance="75.00" energy="50.00" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="165.61 -1.87 -100.33" id="LightBlue.031" distance="25.00" energy="10.00" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="200.71 -1.55 -52.58" id="LightBlueF.000" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="204.75 -1.60 -52.96" id="LightBlueF.001" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="185.45 -1.47 -13.14" id="LightBlueF.002" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-40.57 20.18 101.12" id="LightBlueF.003" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-41.52 25.20 142.38" id="LightBlueF.004" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-45.43 25.27 142.66" id="LightBlueF.005" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-49.50 25.21 142.96" id="LightBlueF.006" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-110.75 24.83 76.51" id="LightBlueF.007" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-146.04 24.98 43.11" id="LightBlueF.008" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-197.66 24.84 57.12" id="LightBlueF.009" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-197.97 24.91 53.21" id="LightBlueF.010" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-198.30 24.84 49.14" id="LightBlueF.011" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="124.13 -1.92 -98.70" id="LightBlueF.012" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="124.52 -1.90 -102.69" id="LightBlueF.013" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="120.26 -2.12 -140.04" id="LightBlueF.014" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="118.41 -2.06 -143.68" id="LightBlueF.015" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="116.64 -2.12 -147.18" id="LightBlueF.016" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="103.79 3.71 -1.18" id="LightBlueF.017" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="103.55 3.65 2.81" id="LightBlueF.018" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="103.28 3.71 6.77" id="LightBlueF.019" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="214.36 -1.37 -79.17" id="LightBlueR.000" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="215.38 -1.31 -75.39" id="LightBlueR.001" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="216.45 -1.37 -71.44" id="LightBlueR.002" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="162.15 -1.37 -65.30" id="LightBlueR.003" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="159.20 -1.43 -62.71" id="LightBlueR.004" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="156.13 -1.37 -60.01" id="LightBlueR.005" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-144.80 24.64 -4.27" id="LightBlueR.006" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="180.93 -1.44 -17.13" id="LightBlueR.007" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="129.66 4.96 -18.87" id="LightBlueR.008" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="125.70 4.95 -18.75" id="LightBlueR.009" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="121.76 4.97 -18.68" id="LightBlueR.010" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="158.40 2.26 83.35" id="LightBlueR.011" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-35.92 18.79 85.37" id="LightBlueR.012" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-37.97 24.65 138.12" id="LightBlueR.013" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-37.82 24.71 134.03" id="LightBlueR.014" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-37.68 24.64 130.11" id="LightBlueR.015" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-121.55 24.90 126.21" id="LightBlueR.016" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-122.00 24.97 122.31" id="LightBlueR.017" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-122.48 24.91 118.25" id="LightBlueR.018" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-115.94 24.87 70.68" id="LightBlueR.019" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-170.52 24.22 -51.21" id="LightBlueR.020" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-170.30 24.22 -47.29" id="LightBlueR.021" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-141.41 24.69 -2.26" id="LightBlueR.022" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-86.03 24.55 150.25" id="LightBlueR.023" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-81.96 24.61 150.54" id="LightBlueR.024" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-78.04 24.54 150.82" id="LightBlueR.025" distance="66.00" energy="2.50" color="2 0 255" if="maybeLater">
+  </light>
+  <light xyz="-73.23 24.96 53.85" id="LightCyan.000" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-70.92 24.90 57.22" id="LightCyan.001" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-68.70 24.96 60.45" id="LightCyan.002" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="150.28 2.43 99.19" id="LightCyan.003" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="147.18 2.49 101.59" id="LightCyan.004" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="143.94 2.43 104.09" id="LightCyan.005" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="182.54 4.66 73.66" id="LightCyan.006" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="180.33 4.64 70.31" id="LightCyan.007" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="247.07 2.37 63.19" id="LightCyan.008" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="244.93 2.43 66.47" id="LightCyan.009" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="237.31 1.07 -23.97" id="LightCyan.010" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="242.68 2.37 69.88" id="LightCyan.011" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="234.42 1.14 -26.86" id="LightCyan.012" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="231.65 1.07 -29.64" id="LightCyan.013" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="160.62 -1.40 -38.28" id="LightCyan.014" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="162.87 -1.47 -35.07" id="LightCyan.015" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="165.23 -1.41 -31.73" id="LightCyan.016" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="194.78 -1.30 -126.03" id="LightCyan.017" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="201.50 -1.26 -121.60" id="LightCyan.018" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="198.13 -1.26 -123.82" id="LightCyan.019" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="234.77 2.93 53.07" id="LightCyan.020" distance="75.00" energy="25.00" color="0 207 255" if="maybeLater">
+  </light>
+  <light xyz="218.68 2.89 79.19" id="LightCyan.021" distance="75.00" energy="25.00" color="0 207 255" if="maybeLater">
+  </light>
+  <light xyz="192.14 8.76 74.26" id="LightCyan.022" distance="75.00" energy="13.00" color="0 207 255" if="maybeLater">
+  </light>
+  <light xyz="-174.06 26.57 34.64" id="LightCyan.023" distance="100.00" energy="20.00" color="0 207 255" if="maybeLater">
+  </light>
+  <light xyz="-185.99 25.57 66.08" id="LightCyan.024" distance="100.00" energy="20.00" color="0 207 255" if="maybeLater">
+  </light>
+  <light xyz="-118.04 34.72 86.42" id="LightCyan.025" distance="100.00" energy="25.00" color="0 207 255" if="maybeLater">
+  </light>
+  <light xyz="-95.18 32.36 126.95" id="LightCyan.026" distance="100.00" energy="25.00" color="0 207 255" if="maybeLater">
+  </light>
+  <light xyz="-67.60 24.42 112.87" id="LightCyan.027" distance="75.00" energy="10.00" color="0 207 255" if="maybeLater">
+  </light>
+  <light xyz="235.58 3.42 30.12" id="LightCyan.028" distance="75.00" energy="25.00" color="0 207 255" if="maybeLater">
+  </light>
+  <light xyz="175.83 -1.17 -84.81" id="LightCyan.029" distance="25.00" energy="5.00" color="0 207 255" if="maybeLater">
+  </light>
+  <light xyz="170.02 -1.87 -93.68" id="LightCyan.030" distance="25.00" energy="5.00" color="0 207 255" if="maybeLater">
+  </light>
+  <light xyz="165.61 -1.87 -100.33" id="LightCyan.031" distance="25.00" energy="5.00" color="0 207 255" if="maybeLater">
+  </light>
+  <light xyz="-40.57 20.18 101.12" id="LightCyanF.000" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="204.75 -1.60 -52.96" id="LightCyanF.001" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="200.71 -1.55 -52.58" id="LightCyanF.002" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-110.75 24.83 76.51" id="LightCyanF.003" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-146.04 24.98 43.11" id="LightCyanF.004" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="124.52 -1.90 -102.69" id="LightCyanF.005" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="124.13 -1.92 -98.70" id="LightCyanF.006" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="120.26 -2.12 -140.04" id="LightCyanF.007" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="118.41 -2.06 -143.68" id="LightCyanF.008" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="116.64 -2.12 -147.18" id="LightCyanF.009" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-197.66 24.84 57.12" id="LightCyanF.010" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-197.97 24.91 53.21" id="LightCyanF.011" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-198.30 24.84 49.14" id="LightCyanF.012" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-49.50 25.21 142.96" id="LightCyanF.013" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-45.43 25.27 142.66" id="LightCyanF.014" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-41.52 25.20 142.38" id="LightCyanF.015" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="185.45 -1.47 -13.14" id="LightCyanF.016" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="103.28 3.71 6.77" id="LightCyanF.017" distance="66.00" energy="2.00" color="0 207 255" if="maybeLater">
+  </light>
+  <light xyz="103.55 3.65 2.81" id="LightCyanF.018" distance="66.00" energy="2.00" color="0 207 255" if="maybeLater">
+  </light>
+  <light xyz="103.79 3.71 -1.18" id="LightCyanF.019" distance="66.00" energy="2.00" color="0 207 255" if="maybeLater">
+  </light>
+  <light xyz="121.76 4.97 -18.68" id="LightCyanR.000" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="125.70 4.95 -18.75" id="LightCyanR.001" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="129.66 4.96 -18.87" id="LightCyanR.002" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-144.80 24.64 -4.27" id="LightCyanR.003" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-141.41 24.69 -2.26" id="LightCyanR.004" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-170.52 24.22 -51.21" id="LightCyanR.005" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-170.30 24.22 -47.29" id="LightCyanR.006" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-115.94 24.87 70.68" id="LightCyanR.007" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-121.55 24.90 126.21" id="LightCyanR.008" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-122.00 24.97 122.31" id="LightCyanR.009" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-122.48 24.91 118.25" id="LightCyanR.010" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-35.92 18.79 85.37" id="LightCyanR.011" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-37.68 24.64 130.11" id="LightCyanR.012" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-37.82 24.71 134.03" id="LightCyanR.013" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-37.97 24.65 138.12" id="LightCyanR.014" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="180.93 -1.44 -17.13" id="LightCyanR.015" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="158.40 2.26 83.35" id="LightCyanR.016" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="156.13 -1.37 -60.01" id="LightCyanR.017" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="159.20 -1.43 -62.71" id="LightCyanR.018" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="162.15 -1.37 -65.30" id="LightCyanR.019" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="214.36 -1.37 -79.17" id="LightCyanR.020" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="215.38 -1.31 -75.39" id="LightCyanR.021" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="216.45 -1.37 -71.44" id="LightCyanR.022" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-86.03 24.54 150.25" id="LightCyanR.023" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-81.95 24.60 150.54" id="LightCyanR.024" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-78.04 24.54 150.82" id="LightCyanR.025" distance="66.00" energy="2.00" color="0 208 255" if="maybeLater">
+  </light>
+  <light xyz="-73.23 24.96 53.85" id="LightGreen.000" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-70.92 24.90 57.22" id="LightGreen.001" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-68.70 24.96 60.45" id="LightGreen.002" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="150.28 2.43 99.19" id="LightGreen.003" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="147.18 2.49 101.59" id="LightGreen.004" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="143.94 2.43 104.09" id="LightGreen.005" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="182.54 4.66 73.66" id="LightGreen.006" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="180.33 4.64 70.31" id="LightGreen.007" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="247.07 2.37 63.19" id="LightGreen.008" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="244.93 2.43 66.47" id="LightGreen.009" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="242.68 2.37 69.88" id="LightGreen.010" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="237.31 1.07 -23.97" id="LightGreen.011" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="234.42 1.14 -26.86" id="LightGreen.012" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="231.65 1.07 -29.64" id="LightGreen.013" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="160.62 -1.40 -38.28" id="LightGreen.014" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="162.87 -1.47 -35.07" id="LightGreen.015" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="165.23 -1.41 -31.73" id="LightGreen.016" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="194.78 -1.30 -126.03" id="LightGreen.017" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="201.50 -1.26 -121.60" id="LightGreen.018" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="198.13 -1.26 -123.82" id="LightGreen.019" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="234.77 2.93 53.07" id="LightGreen.020" distance="75.00" energy="18.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="218.68 2.89 79.19" id="LightGreen.021" distance="75.00" energy="18.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="192.14 8.76 74.26" id="LightGreen.022" distance="75.00" energy="10.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-174.06 26.57 34.64" id="LightGreen.023" distance="100.00" energy="15.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-185.99 25.57 66.08" id="LightGreen.024" distance="100.00" energy="15.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-118.04 34.72 86.42" id="LightGreen.025" distance="100.00" energy="18.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-95.18 32.36 126.95" id="LightGreen.026" distance="100.00" energy="18.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-67.60 24.42 112.87" id="LightGreen.027" distance="75.00" energy="8.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="235.58 3.42 30.12" id="LightGreen.028" distance="75.00" energy="18.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="175.83 -1.17 -84.81" id="LightGreen.029" distance="25.00" energy="4.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="170.02 -1.87 -93.68" id="LightGreen.030" distance="25.00" energy="4.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="165.61 -1.87 -100.33" id="LightGreen.031" distance="25.00" energy="4.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="185.45 -1.47 -13.14" id="LightGreenF.000" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="204.75 -1.60 -52.96" id="LightGreenF.001" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="200.71 -1.55 -52.58" id="LightGreenF.002" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-110.75 24.83 76.51" id="LightGreenF.003" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-146.04 24.98 43.11" id="LightGreenF.004" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="124.52 -1.90 -102.69" id="LightGreenF.005" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="124.13 -1.92 -98.70" id="LightGreenF.006" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="120.26 -2.12 -140.04" id="LightGreenF.007" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="118.41 -2.06 -143.68" id="LightGreenF.008" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="116.64 -2.12 -147.18" id="LightGreenF.009" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-197.66 24.84 57.12" id="LightGreenF.010" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-197.97 24.91 53.21" id="LightGreenF.011" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-198.30 24.84 49.14" id="LightGreenF.012" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-40.55 20.18 101.14" id="LightGreenF.013" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-49.50 25.21 142.96" id="LightGreenF.014" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-45.43 25.27 142.66" id="LightGreenF.015" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-41.52 25.20 142.38" id="LightGreenF.016" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="103.79 3.71 -1.18" id="LightGreenF.017" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="103.55 3.65 2.81" id="LightGreenF.018" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="103.28 3.71 6.77" id="LightGreenF.019" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="125.70 4.95 -18.75" id="LightGreenR.001" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="129.66 4.96 -18.87" id="LightGreenR.002" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-144.80 24.64 -4.27" id="LightGreenR.003" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-141.41 24.69 -2.26" id="LightGreenR.004" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-170.52 24.22 -51.21" id="LightGreenR.005" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-170.30 24.22 -47.29" id="LightGreenR.006" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-115.94 24.87 70.68" id="LightGreenR.007" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-121.55 24.90 126.21" id="LightGreenR.008" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-122.00 24.97 122.31" id="LightGreenR.009" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-35.92 18.79 85.37" id="LightGreenR.010" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-122.48 24.91 118.25" id="LightGreenR.011" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-37.68 24.64 130.11" id="LightGreenR.012" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-37.82 24.71 134.03" id="LightGreenR.013" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="121.76 4.97 -18.68" id="LightGreenR.014" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="180.93 -1.44 -17.13" id="LightGreenR.000" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-37.97 24.65 138.12" id="LightGreenR.015" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="158.40 2.26 83.35" id="LightGreenR.016" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="156.13 -1.37 -60.01" id="LightGreenR.017" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="159.20 -1.43 -62.71" id="LightGreenR.018" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="162.15 -1.37 -65.30" id="LightGreenR.019" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="214.36 -1.37 -79.17" id="LightGreenR.020" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="215.38 -1.31 -75.39" id="LightGreenR.021" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="216.45 -1.37 -71.44" id="LightGreenR.022" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-86.03 24.54 150.25" id="LightGreenR.023" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-81.95 24.60 150.54" id="LightGreenR.024" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-78.04 24.54 150.82" id="LightGreenR.025" distance="66.00" energy="1.00" color="0 255 0" if="maybeLater">
+  </light>
+  <light xyz="-73.23 24.96 53.85" id="LightPurple.000" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-70.92 24.90 57.22" id="LightPurple.001" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-68.70 24.96 60.45" id="LightPurple.002" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="150.28 2.43 99.19" id="LightPurple.003" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="147.18 2.49 101.59" id="LightPurple.004" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="143.94 2.43 104.09" id="LightPurple.005" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="182.54 4.66 73.66" id="LightPurple.006" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="180.33 4.64 70.31" id="LightPurple.007" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="247.07 2.37 63.19" id="LightPurple.008" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="244.93 2.43 66.47" id="LightPurple.009" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="242.68 2.37 69.88" id="LightPurple.010" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="237.31 1.07 -23.97" id="LightPurple.011" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="234.42 1.14 -26.86" id="LightPurple.012" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="231.65 1.07 -29.64" id="LightPurple.013" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="160.62 -1.40 -38.28" id="LightPurple.014" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="162.87 -1.47 -35.07" id="LightPurple.015" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="165.23 -1.41 -31.73" id="LightPurple.016" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="194.78 -1.30 -126.03" id="LightPurple.017" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="201.50 -1.26 -121.60" id="LightPurple.018" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="198.13 -1.26 -123.82" id="LightPurple.019" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="234.77 2.93 53.07" id="LightPurple.020" distance="75.00" energy="50.00" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="218.68 2.89 79.19" id="LightPurple.021" distance="75.00" energy="50.00" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="192.14 8.76 74.26" id="LightPurple.022" distance="75.00" energy="25.00" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-174.06 26.57 34.64" id="LightPurple.023" distance="100.00" energy="40.00" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-185.99 25.57 66.08" id="LightPurple.024" distance="100.00" energy="40.00" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-118.04 34.72 86.42" id="LightPurple.025" distance="100.00" energy="50.00" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-95.18 32.36 126.95" id="LightPurple.026" distance="100.00" energy="50.00" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-67.60 24.42 112.87" id="LightPurple.027" distance="75.00" energy="15.00" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="235.58 3.42 30.12" id="LightPurple.028" distance="75.00" energy="50.00" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="175.83 -1.17 -84.81" id="LightPurple.029" distance="25.00" energy="10.00" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="170.02 -1.87 -93.68" id="LightPurple.030" distance="25.00" energy="10.00" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="165.61 -1.87 -100.33" id="LightPurple.031" distance="25.00" energy="10.00" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-40.57 20.18 101.13" id="LightPurpleF.000" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="204.75 -1.60 -52.96" id="LightPurpleF.001" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="200.71 -1.55 -52.58" id="LightPurpleF.002" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-110.75 24.83 76.51" id="LightPurpleF.003" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-146.04 24.98 43.11" id="LightPurpleF.004" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="124.52 -1.90 -102.69" id="LightPurpleF.005" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="124.13 -1.92 -98.70" id="LightPurpleF.006" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="120.26 -2.12 -140.04" id="LightPurpleF.007" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="118.41 -2.06 -143.68" id="LightPurpleF.008" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="116.64 -2.12 -147.18" id="LightPurpleF.009" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-197.66 24.84 57.12" id="LightPurpleF.010" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-197.97 24.91 53.21" id="LightPurpleF.011" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-198.30 24.84 49.14" id="LightPurpleF.012" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-49.50 25.21 142.96" id="LightPurpleF.013" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-45.43 25.27 142.66" id="LightPurpleF.014" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-41.52 25.20 142.38" id="LightPurpleF.015" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="185.45 -1.47 -13.14" id="LightPurpleF.016" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="103.79 3.71 -1.18" id="LightPurpleF.017" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="103.55 3.65 2.81" id="LightPurpleF.018" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="103.28 3.71 6.77" id="LightPurpleF.019" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="121.76 4.97 -18.68" id="LightPurpleR.000" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="125.70 4.95 -18.75" id="LightPurpleR.001" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="129.66 4.96 -18.87" id="LightPurpleR.002" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-144.80 24.64 -4.27" id="LightPurpleR.003" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-141.41 24.69 -2.26" id="LightPurpleR.004" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-170.52 24.22 -51.21" id="LightPurpleR.005" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-170.30 24.22 -47.29" id="LightPurpleR.006" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-115.94 24.87 70.68" id="LightPurpleR.007" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-121.55 24.90 126.21" id="LightPurpleR.008" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-122.00 24.97 122.31" id="LightPurpleR.009" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-122.48 24.91 118.25" id="LightPurpleR.010" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-35.92 18.79 85.37" id="LightPurpleR.011" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-37.68 24.64 130.11" id="LightPurpleR.012" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-37.82 24.71 134.03" id="LightPurpleR.013" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-37.97 24.65 138.12" id="LightPurpleR.014" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="180.93 -1.44 -17.13" id="LightPurpleR.015" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="158.40 2.26 83.35" id="LightPurpleR.016" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="156.13 -1.37 -60.01" id="LightPurpleR.017" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="159.20 -1.43 -62.71" id="LightPurpleR.018" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="162.15 -1.37 -65.30" id="LightPurpleR.019" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="214.36 -1.37 -79.17" id="LightPurpleR.020" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="215.38 -1.31 -75.39" id="LightPurpleR.021" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="216.45 -1.37 -71.44" id="LightPurpleR.022" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-86.03 24.54 150.25" id="LightPurpleR.023" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-81.95 24.60 150.54" id="LightPurpleR.024" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-78.04 24.54 150.82" id="LightPurpleR.025" distance="66.00" energy="2.50" color="38 0 255" if="maybeLater">
+  </light>
+  <light xyz="-73.23 24.96 53.85" id="LightRed.000" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-70.92 24.90 57.22" id="LightRed.001" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-68.70 24.96 60.45" id="LightRed.002" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="150.28 2.43 99.19" id="LightRed.003" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="147.18 2.49 101.59" id="LightRed.004" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="143.94 2.43 104.09" id="LightRed.005" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="182.54 4.66 73.66" id="LightRed.006" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="180.33 4.64 70.31" id="LightRed.007" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="247.07 2.37 63.19" id="LightRed.008" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="244.93 2.43 66.47" id="LightRed.009" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="242.68 2.37 69.88" id="LightRed.010" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="237.31 1.07 -23.97" id="LightRed.011" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="234.42 1.14 -26.86" id="LightRed.012" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="231.65 1.07 -29.64" id="LightRed.013" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="160.62 -1.40 -38.28" id="LightRed.014" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="162.87 -1.47 -35.07" id="LightRed.015" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="165.23 -1.41 -31.73" id="LightRed.016" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="194.78 -1.30 -126.03" id="LightRed.017" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="201.50 -1.26 -121.60" id="LightRed.018" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="198.13 -1.26 -123.82" id="LightRed.019" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="234.77 2.93 53.07" id="LightRed.020" distance="75.00" energy="35.00" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="218.68 2.89 79.19" id="LightRed.021" distance="75.00" energy="35.00" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="192.14 8.76 74.26" id="LightRed.022" distance="75.00" energy="20.00" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-174.06 26.57 34.64" id="LightRed.023" distance="100.00" energy="29.00" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-185.99 25.57 66.08" id="LightRed.024" distance="100.00" energy="29.00" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-118.04 34.72 86.42" id="LightRed.025" distance="100.00" energy="35.00" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-95.18 32.36 126.95" id="LightRed.026" distance="100.00" energy="35.00" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-67.60 24.42 112.87" id="LightRed.027" distance="75.00" energy="12.00" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="235.58 3.42 30.12" id="LightRed.028" distance="75.00" energy="35.00" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="175.83 -1.17 -84.81" id="LightRed.029" distance="25.00" energy="6.00" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="170.02 -1.87 -93.68" id="LightRed.030" distance="25.00" energy="6.00" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="165.61 -1.87 -100.33" id="LightRed.031" distance="25.00" energy="6.00" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-40.57 20.15 101.12" id="LightRedF.000" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="204.75 -1.60 -52.96" id="LightRedF.001" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="200.71 -1.55 -52.58" id="LightRedF.002" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-110.75 24.83 76.51" id="LightRedF.003" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-146.04 24.98 43.11" id="LightRedF.004" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="124.52 -1.90 -102.69" id="LightRedF.005" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="124.13 -1.92 -98.70" id="LightRedF.006" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="120.26 -2.12 -140.04" id="LightRedF.007" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="118.41 -2.06 -143.68" id="LightRedF.008" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="116.64 -2.12 -147.18" id="LightRedF.009" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-197.66 24.84 57.12" id="LightRedF.010" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-197.97 24.91 53.21" id="LightRedF.011" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-198.30 24.84 49.14" id="LightRedF.012" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-49.50 25.21 142.96" id="LightRedF.013" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-45.43 25.27 142.66" id="LightRedF.014" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-41.52 25.20 142.38" id="LightRedF.015" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="185.45 -1.47 -13.14" id="LightRedF.016" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="103.79 3.71 -1.18" id="LightRedF.017" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="103.55 3.65 2.81" id="LightRedF.018" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="103.28 3.71 6.77" id="LightRedF.019" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="121.76 4.97 -18.68" id="LightRedR.000" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="125.70 4.95 -18.75" id="LightRedR.001" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="129.66 4.96 -18.87" id="LightRedR.002" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-144.80 24.64 -4.27" id="LightRedR.003" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-141.41 24.69 -2.26" id="LightRedR.004" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-170.52 24.22 -51.21" id="LightRedR.005" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-170.30 24.22 -47.29" id="LightRedR.006" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-115.94 24.87 70.68" id="LightRedR.007" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-121.55 24.90 126.21" id="LightRedR.008" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-122.00 24.97 122.31" id="LightRedR.009" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-122.48 24.91 118.25" id="LightRedR.010" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-35.92 18.79 85.37" id="LightRedR.011" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-37.68 24.64 130.11" id="LightRedR.012" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-37.82 24.71 134.03" id="LightRedR.013" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-37.97 24.65 138.12" id="LightRedR.014" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="180.93 -1.44 -17.13" id="LightRedR.015" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="158.40 2.26 83.35" id="LightRedR.016" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="156.13 -1.37 -60.01" id="LightRedR.017" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="159.20 -1.43 -62.71" id="LightRedR.018" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="162.15 -1.37 -65.30" id="LightRedR.019" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="214.36 -1.37 -79.17" id="LightRedR.020" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="215.38 -1.31 -75.39" id="LightRedR.021" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="216.45 -1.37 -71.44" id="LightRedR.022" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-86.03 24.54 150.25" id="LightRedR.023" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-81.95 24.60 150.54" id="LightRedR.024" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-78.04 24.54 150.82" id="LightRedR.025" distance="66.00" energy="2.25" color="255 0 0" if="maybeLater">
+  </light>
+  <light xyz="-73.23 24.96 53.85" id="LightWhite.000" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-70.92 24.90 57.22" id="LightWhite.001" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-68.70 24.96 60.45" id="LightWhite.002" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="150.28 2.43 99.19" id="LightWhite.003" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="147.18 2.49 101.59" id="LightWhite.004" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="143.94 2.43 104.09" id="LightWhite.005" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="182.54 4.66 73.66" id="LightWhite.006" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="180.33 4.64 70.31" id="LightWhite.007" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="247.07 2.37 63.19" id="LightWhite.008" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="244.93 2.43 66.47" id="LightWhite.009" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="242.68 2.37 69.88" id="LightWhite.010" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="237.31 1.07 -23.97" id="LightWhite.011" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="234.42 1.14 -26.86" id="LightWhite.012" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="231.65 1.07 -29.64" id="LightWhite.013" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="160.62 -1.40 -38.28" id="LightWhite.014" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="162.87 -1.47 -35.07" id="LightWhite.015" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="165.23 -1.41 -31.73" id="LightWhite.016" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="194.78 -1.30 -126.03" id="LightWhite.017" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="201.50 -1.26 -121.60" id="LightWhite.018" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="198.13 -1.26 -123.82" id="LightWhite.019" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="234.77 2.93 53.07" id="LightWhite.020" distance="75.00" energy="20.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="218.68 2.89 79.19" id="LightWhite.021" distance="75.00" energy="20.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="192.14 8.76 74.26" id="LightWhite.022" distance="75.00" energy="10.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-174.06 26.57 34.64" id="LightWhite.023" distance="100.00" energy="15.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-185.99 25.57 66.08" id="LightWhite.024" distance="100.00" energy="15.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-118.04 34.72 86.42" id="LightWhite.025" distance="100.00" energy="20.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-95.18 32.36 126.95" id="LightWhite.026" distance="100.00" energy="20.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-67.60 24.42 112.87" id="LightWhite.027" distance="75.00" energy="7.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="235.58 3.42 30.12" id="LightWhite.028" distance="75.00" energy="20.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="175.83 -1.17 -84.81" id="LightWhite.029" distance="25.00" energy="5.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="170.02 -1.87 -93.68" id="LightWhite.030" distance="25.00" energy="5.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="165.61 -1.87 -100.33" id="LightWhite.031" distance="25.00" energy="5.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-40.57 20.17 101.13" id="LightWhiteF.000" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="204.75 -1.60 -52.96" id="LightWhiteF.001" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="200.71 -1.55 -52.58" id="LightWhiteF.002" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-110.75 24.83 76.51" id="LightWhiteF.003" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-146.04 24.98 43.11" id="LightWhiteF.004" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="124.52 -1.90 -102.69" id="LightWhiteF.005" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="124.13 -1.92 -98.70" id="LightWhiteF.006" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="120.26 -2.12 -140.04" id="LightWhiteF.007" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="118.41 -2.06 -143.68" id="LightWhiteF.008" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="116.64 -2.12 -147.18" id="LightWhiteF.009" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-197.66 24.84 57.12" id="LightWhiteF.010" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-197.97 24.91 53.21" id="LightWhiteF.011" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-198.30 24.84 49.14" id="LightWhiteF.012" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-49.50 25.21 142.96" id="LightWhiteF.013" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-45.43 25.27 142.66" id="LightWhiteF.014" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-41.52 25.20 142.38" id="LightWhiteF.015" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="185.45 -1.47 -13.14" id="LightWhiteF.016" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="103.79 3.71 -1.18" id="LightWhiteF.017" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="103.55 3.65 2.81" id="LightWhiteF.018" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="103.28 3.71 6.77" id="LightWhiteF.019" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="121.76 4.97 -18.68" id="LightWhiteR.000" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="125.70 4.95 -18.75" id="LightWhiteR.001" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="129.66 4.96 -18.87" id="LightWhiteR.002" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-144.80 24.64 -4.27" id="LightWhiteR.003" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-141.41 24.69 -2.26" id="LightWhiteR.004" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-170.52 24.22 -51.21" id="LightWhiteR.005" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-170.30 24.22 -47.29" id="LightWhiteR.006" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-115.94 24.87 70.68" id="LightWhiteR.007" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-121.55 24.90 126.21" id="LightWhiteR.008" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-122.00 24.97 122.31" id="LightWhiteR.009" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-122.48 24.91 118.25" id="LightWhiteR.010" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-35.92 18.79 85.37" id="LightWhiteR.011" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-37.68 24.64 130.11" id="LightWhiteR.012" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-37.82 24.71 134.03" id="LightWhiteR.013" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-37.97 24.65 138.12" id="LightWhiteR.014" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="180.93 -1.44 -17.13" id="LightWhiteR.015" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="158.40 2.26 83.35" id="LightWhiteR.016" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="156.13 -1.37 -60.01" id="LightWhiteR.017" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="159.20 -1.43 -62.71" id="LightWhiteR.018" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="162.15 -1.37 -65.30" id="LightWhiteR.019" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="214.36 -1.37 -79.17" id="LightWhiteR.020" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="215.38 -1.31 -75.39" id="LightWhiteR.021" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="216.45 -1.37 -71.44" id="LightWhiteR.022" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-86.03 24.54 150.25" id="LightWhiteR.023" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-81.95 24.60 150.54" id="LightWhiteR.024" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-78.04 24.54 150.82" id="LightWhiteR.025" distance="66.00" energy="1.00" color="239 243 255" if="maybeLater">
+  </light>
+  <light xyz="-73.23 24.96 53.85" id="LightYellow.000" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-70.92 24.90 57.22" id="LightYellow.001" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-68.70 24.97 60.45" id="LightYellow.002" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="150.28 2.43 99.19" id="LightYellow.003" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="147.18 2.50 101.59" id="LightYellow.004" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="143.94 2.44 104.09" id="LightYellow.005" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="182.54 4.66 73.66" id="LightYellow.006" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="180.33 4.64 70.32" id="LightYellow.007" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="247.07 2.37 63.19" id="LightYellow.008" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="244.93 2.44 66.47" id="LightYellow.009" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="242.69 2.37 69.89" id="LightYellow.010" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="237.31 1.08 -23.97" id="LightYellow.011" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="234.42 1.14 -26.86" id="LightYellow.012" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="231.65 1.07 -29.64" id="LightYellow.013" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="160.62 -1.40 -38.28" id="LightYellow.014" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="162.87 -1.47 -35.07" id="LightYellow.015" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="165.23 -1.40 -31.73" id="LightYellow.016" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="194.78 -1.29 -126.02" id="LightYellow.017" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="201.50 -1.26 -121.60" id="LightYellow.018" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="198.13 -1.25 -123.82" id="LightYellow.019" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="234.77 2.93 53.07" id="LightYellow.020" distance="75.00" energy="26.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="218.68 2.89 79.19" id="LightYellow.021" distance="75.00" energy="26.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="192.14 8.76 74.26" id="LightYellow.022" distance="75.00" energy="15.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-174.06 26.57 34.64" id="LightYellow.023" distance="100.00" energy="22.50" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-185.99 25.57 66.08" id="LightYellow.024" distance="100.00" energy="22.50" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-118.04 34.72 86.42" id="LightYellow.025" distance="100.00" energy="26.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-95.18 32.36 126.95" id="LightYellow.026" distance="100.00" energy="26.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-67.60 24.42 112.87" id="LightYellow.027" distance="75.00" energy="10.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="235.58 3.42 30.12" id="LightYellow.028" distance="75.00" energy="26.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="175.83 -1.17 -84.81" id="LightYellow.029" distance="25.00" energy="5.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="170.02 -1.87 -93.68" id="LightYellow.030" distance="25.00" energy="5.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="165.61 -1.87 -100.33" id="LightYellow.031" distance="25.00" energy="5.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-40.57 20.17 101.13" id="LightYellowF.000" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="204.75 -1.60 -52.96" id="LightYellowF.001" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="200.71 -1.55 -52.58" id="LightYellowF.002" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-110.75 24.84 76.51" id="LightYellowF.003" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-146.04 24.99 43.11" id="LightYellowF.004" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="124.52 -1.89 -102.69" id="LightYellowF.005" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="124.13 -1.91 -98.70" id="LightYellowF.006" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="120.26 -2.11 -140.03" id="LightYellowF.007" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="118.41 -2.05 -143.68" id="LightYellowF.008" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="116.64 -2.12 -147.18" id="LightYellowF.009" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-197.66 24.84 57.12" id="LightYellowF.010" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-197.97 24.91 53.21" id="LightYellowF.011" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-198.30 24.85 49.14" id="LightYellowF.012" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-49.50 25.21 142.96" id="LightYellowF.013" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-45.43 25.27 142.67" id="LightYellowF.014" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-41.52 25.21 142.38" id="LightYellowF.015" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="185.45 -1.47 -13.14" id="LightYellowF.016" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="103.79 3.71 -1.18" id="LightYellowF.017" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="103.55 3.65 2.81" id="LightYellowF.018" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="103.28 3.71 6.77" id="LightYellowF.019" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="216.45 -1.37 -71.44" id="LightYellowR.000" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="121.76 4.98 -18.68" id="LightYellowR.001" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="125.70 4.95 -18.75" id="LightYellowR.002" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="129.66 4.96 -18.87" id="LightYellowR.003" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-144.80 24.64 -4.27" id="LightYellowR.004" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-141.41 24.69 -2.26" id="LightYellowR.005" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-170.52 24.22 -51.21" id="LightYellowR.006" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-170.30 24.22 -47.29" id="LightYellowR.007" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-115.94 24.88 70.69" id="LightYellowR.008" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-121.55 24.90 126.21" id="LightYellowR.009" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-122.00 24.97 122.31" id="LightYellowR.010" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-122.48 24.91 118.25" id="LightYellowR.011" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-35.92 18.80 85.37" id="LightYellowR.012" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-37.68 24.65 130.12" id="LightYellowR.013" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-37.82 24.71 134.04" id="LightYellowR.014" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-37.97 24.65 138.12" id="LightYellowR.015" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="180.93 -1.43 -17.13" id="LightYellowR.016" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="158.40 2.27 83.35" id="LightYellowR.017" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="156.13 -1.37 -60.01" id="LightYellowR.018" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="159.20 -1.43 -62.71" id="LightYellowR.019" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="162.15 -1.36 -65.30" id="LightYellowR.020" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="214.36 -1.37 -79.17" id="LightYellowR.021" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="215.38 -1.30 -75.39" id="LightYellowR.022" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-86.03 24.55 150.25" id="LightYellowR.023" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-81.96 24.61 150.54" id="LightYellowR.024" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <light xyz="-78.04 24.54 150.82" id="LightYellowR.025" distance="66.00" energy="2.00" color="255 155 0" if="maybeLater">
+  </light>
+  <default-start karts-per-row     ="2"
+                 forwards-distance ="1.50"
+                 sidewards-distance="1.75"
+                 upwards-distance  ="1.10"/>
+</scene>

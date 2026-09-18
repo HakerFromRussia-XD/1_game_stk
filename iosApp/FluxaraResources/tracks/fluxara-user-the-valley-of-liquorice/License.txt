@@ -1,0 +1,139 @@
+--------------------------------------------------------------------------------
+-- World  : The Valley of Liquorice
+-- Authors : Modanung & RX1
+-- Version: 5
+-- Source : https://online.supertuxkart.net/dl/179878091967a62d4976085.zip
+-- Licenses: CC-BY-SA 4.0 - https://creativecommons.org/licenses/by-sa/4.0/, CC-BY-SA, CC0
+-- Date   : 2025-01-19
+--------------------------------------------------------------------------------
+
+The Valley of Liquorice is a modification of "The Valley of Ice" by Frode 魔大农 Lindeijer / Modanung. 
+
+Original license for "The Valley of Ice": CC-BY-SA
+
+------------------------------------------
+Changes done by RX1 (rx1@posteo.de):
+- textures were modified
+- replaced music
+- new objects with new textures and gloss maps
+	- track borders
+	- speed boost zipper arrows
+	- direction pointers
+	- new ice surface, with new cracks and water effects
+- scripting functions and triggers were implemented / added 
+	- to increase or randomize the racing speed each lap / phase
+	- to play sounds and write messages
+	- for direction and phase-specific track alterations
+- new lights
+- modifications of existing lights
+- minor landscape modifications
+- scene-XML file modification: custom ("snow") particles
+- reverse ramp
+- new drivelines
+- corrections of existing drivelines
+- transparent crystals in different colors
+
+------------------------------------------
+Music:
+
+Sky Vibe - High Frequency
+
+Author: by Speedsound
+License: see STK media repository (https://sourceforge.net/p/supertuxkart)
+
+------------------------------------------
+Original snow texture by Rob Tuytel
+
+snow_diff.jpg
+
+License: CC0
+Source: https://polyhaven.com/a/snow_02
+
+Snow texture modification by RX1
+License: CC0
+
+-----------------------------------------
+
+Following files have been created by RX1 and are released under CC-BY-SA 4.0:
+
+Angel Script file:
+	scripting.as
+
+Textures:
+	PBR_Glow_low.png
+	PBR_Glow_max.png
+	PBR_Glow_med2.png
+	PBR_Glow_med.png
+	PBR_Glow_min.png
+	PBR_Glow_more2.png
+	PBR_Glow_more.png
+	PBR_Reflect_max.png
+	SNL_001_blue3_C2x.png
+	SNL_001_cyan4_C1x.png
+	SNL_001_green4_C1x.png
+	SNL_001_purple2_C3x.png
+	SNL_001_red3_C2x.png
+	SNL_001_white2_C1x.png
+	SNL_001_yellow3_C2x.png
+	SNL_002_purple-blue_noT2.png
+	SNL_002_purple-cyan_noT2.png
+	SNL_002_purple-green3_noT2.png
+	SNL_002_purple-orange4_noT2.png
+	SNL_002_purple-purple_noT.png
+	SNL_002_purple-red2_noT2.png
+	SNL_002_purple-white_noT2.png
+	solid_black.png
+	Surface_RX005_blue-cyan2.png
+	Surface_RX005_cyan-blue2.png
+	Surface_RX005_green2.png
+	Surface_RX005_orange2.png
+	Surface_RX005_purple-magenta2.png
+	Surface_RX005_red2.png
+	Surface_RX005_white.png
+	texture_solid_black_invisible_reset.png
+	texture_solid_black_invisible.png
+	texture_solid_black_invisible_FFEffect.png
+	texture_transparent_blue_ForceField.png
+	texture_transparent_blue5.png
+	texture_transparent_cyan3.png
+	texture_transparent_green2.png
+	texture_transparent_orange2.png
+	texture_transparent_purple2.png
+	texture_transparent_red3.png
+	texture_transparent_white.png
+	transparent_Ice001_purpleBlue2.png
+	Zipper_RX_blue.png
+	Zipper_RX_cyan.png
+	Zipper_RX_green.png
+	Zipper_RX_orange.png
+	Zipper_RX_purple.png
+	Zipper_RX_red.png
+	Zipper_RX_white.png
+
+-----------------------------------------
+
+sparks_mod.xml is a modification of sparks.xml from STK media repository
+
+License: same as the original file; see STK media repository (https://sourceforge.net/p/supertuxkart)
+
+-----------------------------------------
+
+Sounds:
+
+alarm.ogg
+
+Author: yd
+Source: https://opengameart.org/users/yd
+License: CC0
+
+Modifications by RX1:
+	alarm_x2.ogg
+		- double playback
+	alarm_x3.ogg
+		- triple playback
+License: CC0
+
+-----------------------------------------
+
+
+License for all other contents (of the track modification): CC-BY-SA

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<materials>
+  <material name="curb_NEW.png">
+    <sfx filename="kerb.ogg" min_speed="1.00" max_speed="25.00" min_pitch="0.80" max_pitch="0.85" positional="true" rolloff="0.10"/>
+  </material>
+  <material name="top2.png" gloss-map="ROADgloss.png">
+      <particles base="smoke.xml" condition="skid"/>
+  </material>
+  <material name="light.png" shader="alphatest"/>
+  <material name="horizont.png" shader="alphatest"/>
+  <material name="fence.png" shader="alphatest"/>
+  <material name="trees.png" shader="alphatest" ignore="Y"/>
+  <material name="trees_new.png" shader="alphatest" ignore="Y"/>
+  <material name="stk_generic_grassB.png">
+    <particles base="smoke_brown.xml" condition="skid"/>
+  </material>
+</materials>

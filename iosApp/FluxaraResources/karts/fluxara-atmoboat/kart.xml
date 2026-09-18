@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<kart name="Atmoboat" version="2" model-file="atmoboat.b3d" icon-file="icon.png" minimap-icon-file="icon.png" shadow-file="atmoboat_shadow.png" type="medium" groups="Fluxara" rgb="1.00 1.00 1.00" revision="2">
+    <sounds engine="large"/>
+    <animations left="0" straight="9" right="19" start-winning="39" start-winning-loop="49" end-winning="69" start-losing="79" start-losing-loop="89" end-losing="109" start-jump="119" end-jump="139" start-speed-weighted="149" end-speed-weighted="159"/>
+    <nitro-emitter>
+        <nitro-emitter-a position="-0.200000 0.246352 -0.501604"/>
+        <nitro-emitter-b position="0.200000 0.246352 -0.501604"/>
+    </nitro-emitter>
+    <hat offset="0.0 0.1 0.0"/>
+</kart>

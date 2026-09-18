@@ -1,0 +1,2248 @@
+{
+  "status": "review_candidates_not_imported",
+  "target_count": 50,
+  "selected_count": 50,
+  "original_campaign_count": 21,
+  "original_count_gate": "50 >= 21 original unique campaign tracks. Reproduce with original_campaign_inventory.py; challenge files match archived original app.",
+  "taxonomy_evidence": [
+    "src/tracks/track.cpp:573-577",
+    "src/race/race_manager.hpp:114-121",
+    "src/addons/addon.hpp:43"
+  ],
+  "mode_balance_pending": "25/25 withdrawn: two modes described only story challenges, not all original game modes. Full mode coverage requires linear/battle/soccer/CTF/egg content; see campaign-port-plan.md. This50list is a linear-source pool, not the final campaign.",
+  "taxonomy": {
+    "race": 471,
+    "soccer": 81
+  },
+  "balance": "All50entries form a LINEAR SOURCE POOL ONLY, not the final mode-balanced campaign. Include battle/soccer/CTF/egg-hunt in final selection; game modes outnumber story challenge modes.",
+  "selection": "Source manifest approved flag required (AddonStatus AS_APPROVED=1), license file with recognizable label, version6/7, graph/quads/scene parse. Existing canyon and summit first, then descending catalog rating, size as tie-breaker. Static candidate queue; not visual approval or rights clearance.",
+  "candidates": [
+    {
+      "id": "high-in-the-sky",
+      "name": "High in the Sky",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/high-in-the-sky/track.xml",
+      "preview_source": "iosApp/FluxaraResources/tracks/fluxara-canyon/sshot-highinsky.png",
+      "preview_sha256": "86107f9efe5b6d73edaa5bca5d6979cd4d375b17702ab27ac99ddd9d25cffec8",
+      "source_url": "https://online.supertuxkart.net/dl/18456751405e59d4cabf049.zip",
+      "author": "Richard Qian and TuxThePenguin",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/high-in-the-sky/LICENSE.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 7858382,
+      "rating": 2.398,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 1,
+      "current_runtime_id": "fluxara-canyon",
+      "preview_note": "Package preview is still old High in the Sky artwork; must replace with approved canyon gameplay capture before campaign use."
+    },
+    {
+      "id": "ancient-summits",
+      "name": "Ancient Summits",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/ancient-summits/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/ancient-summits/screenshot.png",
+      "preview_sha256": "8468110bd0bddca17173a3cb947531390b17f7a2b90f6e46f2e7e84a56b57006",
+      "source_url": "https://online.supertuxkart.net/dl/133522274266d9fdd151ac1.zip",
+      "author": "skindoormimiz",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/ancient-summits/license.txt"
+      ],
+      "license_labels": [
+        "CC-BY",
+        "CC0"
+      ],
+      "version": 7,
+      "bytes": 15715816,
+      "rating": 2.512,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 2,
+      "current_runtime_id": "fluxara-summit-run"
+    },
+    {
+      "id": "spell-lab",
+      "name": "Spell Lab",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/spell-lab/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/spell-lab/SL_shot.png",
+      "preview_sha256": "49d1786fc448c2fd41de757461e3079fd8bf7795c80f2ad587d4b603851c5205",
+      "source_url": "https://online.supertuxkart.net/dl/76504027968c07288003a1.zip",
+      "author": "skindoormimiz",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/spell-lab/license.txt"
+      ],
+      "license_labels": [
+        "CC-BY"
+      ],
+      "version": 7,
+      "bytes": 34136051,
+      "rating": 2.917,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 3,
+      "current_runtime_id": null
+    },
+    {
+      "id": "dp-motorsports-land-ii",
+      "name": "DP Motorsports Land II",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/dp-motorsports-land-ii/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/dp-motorsports-land-ii/screenshot.jpg",
+      "preview_sha256": "d1ed7d2da05298991ebb7bea1bd59d1463df25a49cb34c7b3b8635f5104eb58e",
+      "source_url": "https://online.supertuxkart.net/dl/87338416464b48387b17c8.zip",
+      "author": "CrystalDaEevee",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/dp-motorsports-land-ii/license.txt"
+      ],
+      "license_labels": [
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 26271101,
+      "rating": 2.9,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 4,
+      "current_runtime_id": null
+    },
+    {
+      "id": "strandvoort",
+      "name": "Strandvoort",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/strandvoort/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/strandvoort/screenshot.jpg",
+      "preview_sha256": "b107dd552c2a30c49c0027c35ba5d1918aa4d7a1cea246325b6afd54d38c13f5",
+      "source_url": "https://online.supertuxkart.net/dl/11657172636421bcaf47a87.zip",
+      "author": "CrystalDaEevee (ported from Speed Dreams)",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/strandvoort/license.txt"
+      ],
+      "license_labels": [
+        "GPL",
+        "Free Art"
+      ],
+      "version": 7,
+      "bytes": 10967579,
+      "rating": 2.889,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 5,
+      "current_runtime_id": null
+    },
+    {
+      "id": "rt6-finny-splashdown",
+      "name": "RT6 Finny Splashdown",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rt6-finny-splashdown/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rt6-finny-splashdown/screenshot.jpg",
+      "preview_sha256": "68703ffea11ead38b8ac1d35026dd9452911f637297da7c7dc93e869188f6527",
+      "source_url": "https://online.supertuxkart.net/dl/153210636364eb44a4e01c6.zip",
+      "author": "CrystalDaEevee",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rt6-finny-splashdown/license.txt"
+      ],
+      "license_labels": [
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 20183469,
+      "rating": 2.879,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 6,
+      "current_runtime_id": null
+    },
+    {
+      "id": "maple-overpass",
+      "name": "Maple Overpass",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/maple-overpass/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/maple-overpass/screenshot.jpg",
+      "preview_sha256": "597da40486381b797b77ae303322903c9435a115ac51f384c3b9be673b9b0ad3",
+      "source_url": "https://online.supertuxkart.net/dl/1391493895642dc1e91e49a.zip",
+      "author": "CrystalDaEevee",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/maple-overpass/license.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 35516489,
+      "rating": 2.808,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 7,
+      "current_runtime_id": null
+    },
+    {
+      "id": "green-valley",
+      "name": "Green Valley",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/green-valley/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/green-valley/sshot.jpg",
+      "preview_sha256": "cc408790cec7c4dab07e0f221c236574076480c8df947819ee8fb71ce71816db",
+      "source_url": "https://online.supertuxkart.net/dl/2880105386aab0db453002.zip",
+      "author": "Wolfs",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/green-valley/License.txt",
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/green-valley/licenses.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "CC0"
+      ],
+      "version": 7,
+      "bytes": 7562113,
+      "rating": 2.767,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 8,
+      "current_runtime_id": null
+    },
+    {
+      "id": "lap-catch",
+      "name": "Lap Catch",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/lap-catch/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/lap-catch/screenshot.png",
+      "preview_sha256": "cd561d78fdbb1677dfce1cf847a12ddd8ca0ef8e9cfb495242c9889ba5b0ccbf",
+      "source_url": "https://online.supertuxkart.net/dl/1062540516175acb00fe38.zip",
+      "author": "skindoormimiz",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/lap-catch/license.txt"
+      ],
+      "license_labels": [
+        "CC-BY",
+        "CC0",
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 14527547,
+      "rating": 2.75,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 9,
+      "current_runtime_id": null
+    },
+    {
+      "id": "rt8-waterfall-gardens",
+      "name": "RT8 Waterfall Gardens",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rt8-waterfall-gardens/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rt8-waterfall-gardens/screenshot.png",
+      "preview_sha256": "4d9864c27f204745621653a3ea69df0f255bf06728204748fac7157ceec3d025",
+      "source_url": "https://online.supertuxkart.net/dl/179040610268c075eaebd2f.zip",
+      "author": "skindoormimiz",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rt8-waterfall-gardens/license.txt"
+      ],
+      "license_labels": [
+        "CC-BY",
+        "CC0"
+      ],
+      "version": 7,
+      "bytes": 32471789,
+      "rating": 2.75,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 10,
+      "current_runtime_id": null
+    },
+    {
+      "id": "toy-block-raceway",
+      "name": "Toy Block Raceway",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/toy-block-raceway/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/toy-block-raceway/screenshot.png",
+      "preview_sha256": "336db047350c3e3192da02db989deea5f3cc6fd5359c5a7bf954587acb6dbf0a",
+      "source_url": "https://online.supertuxkart.net/dl/6773918895f70cfb18373c.zip",
+      "author": "RX1 & RuJo",
+      "revision": "3",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/toy-block-raceway/Pixabay_License.txt",
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/toy-block-raceway/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA"
+      ],
+      "version": 7,
+      "bytes": 26493402,
+      "rating": 2.741,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 11,
+      "current_runtime_id": null
+    },
+    {
+      "id": "canyon-42",
+      "name": "Canyon 42",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/canyon-42/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/canyon-42/screenshot.png",
+      "preview_sha256": "a8a09de65cf5fdef558248064599972c155b55f3a6af96b64765e3a0c9a0aed2",
+      "source_url": "https://online.supertuxkart.net/dl/456041203688e098c7e6fe.zip",
+      "author": "rubberduck",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/canyon-42/license.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "CC-BY",
+        "CC0",
+        "GPL",
+        "BSD"
+      ],
+      "version": 7,
+      "bytes": 28754895,
+      "rating": 2.724,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 12,
+      "current_runtime_id": null
+    },
+    {
+      "id": "the-valley-of-liquorice",
+      "name": "The Valley of Liquorice",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/the-valley-of-liquorice/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/the-valley-of-liquorice/screenshot.png",
+      "preview_sha256": "d290884962b4d9cf2c4716f0b8e40a68109357b96a03a5a587e170b868a3dbe9",
+      "source_url": "https://online.supertuxkart.net/dl/58563392667a62f2eecd0a.zip",
+      "author": "Modanung & RX1",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/the-valley-of-liquorice/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "CC0"
+      ],
+      "version": 7,
+      "bytes": 10691967,
+      "rating": 2.722,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 13,
+      "current_runtime_id": null
+    },
+    {
+      "id": "maple-overpass---short",
+      "name": "Maple Overpass - Short",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/maple-overpass---short/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/maple-overpass---short/screenshot.jpg",
+      "preview_sha256": "1ba5e82c3fbb8b3196bd6b8da5aa202d15e86d7dfb86c6c49db1dfaa14a3c672",
+      "source_url": "https://online.supertuxkart.net/dl/261244849642dc9a54bedb.zip",
+      "author": "CrystalDaEevee",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/maple-overpass---short/license.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 35311478,
+      "rating": 2.708,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 14,
+      "current_runtime_id": null
+    },
+    {
+      "id": "subsea",
+      "name": "Subsea",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/subsea/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/subsea/subsea-sshot.jpg",
+      "preview_sha256": "a297fe8489ba0e25000f5458afb506dd742ba0f72f99163934dd4e72cdfc39ad",
+      "source_url": "https://online.supertuxkart.net/dl/13654448075eb0a6cc92242.zip",
+      "author": "R.Phelippeau",
+      "revision": "3",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/subsea/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "CC0",
+        "GPL"
+      ],
+      "version": 6,
+      "bytes": 4041204,
+      "rating": 2.704,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 15,
+      "current_runtime_id": null
+    },
+    {
+      "id": "carnaval-del-cacao",
+      "name": "Carnaval del cacao",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/carnaval-del-cacao/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/carnaval-del-cacao/test_track_postcard.png",
+      "preview_sha256": "e923a0fc88346798983ad7ca52683b2c6348dfbeea3b3d62bdaee666ddb6c604",
+      "source_url": "https://online.supertuxkart.net/dl/73017542562188f16708b.zip",
+      "author": "jean-manuel cl\u00e9men\u00e7on",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/carnaval-del-cacao/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA"
+      ],
+      "version": 6,
+      "bytes": 20963181,
+      "rating": 2.702,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 16,
+      "current_runtime_id": null
+    },
+    {
+      "id": "motorsport-land",
+      "name": "Motorsport Land",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/motorsport-land/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/motorsport-land/screenshot.jpg",
+      "preview_sha256": "b9a4a2ea191eafbf64603c83cf66f6375051a62f4c9a93a60b593a81a49be79f",
+      "source_url": "https://online.supertuxkart.net/dl/1519848119642c252b3d5cc.zip",
+      "author": "CrystalDaEevee",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/motorsport-land/license.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 20840259,
+      "rating": 2.7,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 17,
+      "current_runtime_id": null
+    },
+    {
+      "id": "paradise-peaks",
+      "name": "Paradise Peaks",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/paradise-peaks/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/paradise-peaks/screenshot.png",
+      "preview_sha256": "710e0791a5b4ea0ca54c08f144fd8d4ad0f7c441a7ad4b300878351b70876c8b",
+      "source_url": "https://online.supertuxkart.net/dl/386550558609817492e3e1.zip",
+      "author": "Admin Track Anon",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/paradise-peaks/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "CC-BY"
+      ],
+      "version": 6,
+      "bytes": 12860771,
+      "rating": 2.692,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 18,
+      "current_runtime_id": null
+    },
+    {
+      "id": "blooming-start",
+      "name": "Blooming Start",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/blooming-start/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/blooming-start/screenshot.png",
+      "preview_sha256": "87d6aa35130083651243d61d0c9c7058c0a2386f9a68cdc4ae65b991c9cfaf94",
+      "source_url": "https://online.supertuxkart.net/dl/14428743296395e5776851c.zip",
+      "author": "skindoormimiz",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/blooming-start/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "CC-BY"
+      ],
+      "version": 7,
+      "bytes": 18077940,
+      "rating": 2.671,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 19,
+      "current_runtime_id": null
+    },
+    {
+      "id": "icy-racing-maze",
+      "name": "Icy Racing Maze",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/icy-racing-maze/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/icy-racing-maze/screenshot.png",
+      "preview_sha256": "25e2a20262a9933cde207092193ad5f6d24465fa5c6e06735c048b694ccacdfb",
+      "source_url": "https://online.supertuxkart.net/dl/28240419268c0752b33036.zip",
+      "author": "skindoormimiz",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/icy-racing-maze/license.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA"
+      ],
+      "version": 7,
+      "bytes": 2342486,
+      "rating": 2.667,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 20,
+      "current_runtime_id": null
+    },
+    {
+      "id": "dyson-speedway",
+      "name": "Dyson Speedway",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/dyson-speedway/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/dyson-speedway/DS_scr.png",
+      "preview_sha256": "0c5219d7149f0c268ae6790500acc187dc89c102a564fd057817d43b91461192",
+      "source_url": "https://online.supertuxkart.net/dl/315995088646013139320e.zip",
+      "author": "RX1",
+      "revision": "3",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/dyson-speedway/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "CC-BY",
+        "CC0"
+      ],
+      "version": 7,
+      "bytes": 40964021,
+      "rating": 2.664,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 21,
+      "current_runtime_id": null
+    },
+    {
+      "id": "supertux-raceway",
+      "name": "Supertux Raceway",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/supertux-raceway/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/supertux-raceway/screenshot.png",
+      "preview_sha256": "c7816e53f81a40b7887850be44c2f23e683794c59b3d7352f3a02b358d4e3232",
+      "source_url": "https://online.supertuxkart.net/dl/17902044515fdbe253bad9e.zip",
+      "author": "skindoormimiz",
+      "revision": "3",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/supertux-raceway/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY",
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 11902838,
+      "rating": 2.653,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 22,
+      "current_runtime_id": null
+    },
+    {
+      "id": "green-hill_1",
+      "name": "Green Hill",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/green-hill_1/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/green-hill_1/trackshot.png",
+      "preview_sha256": "425a221b65b827c6b8101779e50b4072444d3a61e3cb209003a148173f0e578d",
+      "source_url": "https://online.supertuxkart.net/dl/914147806aaad603eb064.zip",
+      "author": "CinusMinus",
+      "revision": "3",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/green-hill_1/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "CC0"
+      ],
+      "version": 7,
+      "bytes": 8120189,
+      "rating": 2.645,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 23,
+      "current_runtime_id": null
+    },
+    {
+      "id": "lost-chasm",
+      "name": "Lost Chasm",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/lost-chasm/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/lost-chasm/track-image.png",
+      "preview_sha256": "a37bbeb8e0243bba328852795eac05c1e2869c2867653cfeb76245d26cfcda2d",
+      "source_url": "https://online.supertuxkart.net/dl/78608524575b8640d8605.zip",
+      "author": "rubberduck (ported by MTres19)",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/lost-chasm/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "CC-BY",
+        "CC0",
+        "GPL"
+      ],
+      "version": 6,
+      "bytes": 16220433,
+      "rating": 2.634,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 24,
+      "current_runtime_id": null
+    },
+    {
+      "id": "old-amazon-jungle",
+      "name": "Old Amazon Jungle",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/old-amazon-jungle/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/old-amazon-jungle/sshot-jungle.jpg",
+      "preview_sha256": "3ff7ccac744de1486bc135156beecf9d5ab87b959224614dd29b2e518a4ad28c",
+      "source_url": "https://online.supertuxkart.net/dl/66964811364d8feaf4f22b.zip",
+      "author": "Marianne Gagnon",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/old-amazon-jungle/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "GPL"
+      ],
+      "version": 6,
+      "bytes": 5744678,
+      "rating": 2.625,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 25,
+      "current_runtime_id": null
+    },
+    {
+      "id": "volcan-island",
+      "name": "Volcan Island",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/volcan-island/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/volcan-island/screenshot.png",
+      "preview_sha256": "586866753422a41df659a0ff3e6410009f23cf7b18d9b8f4f6c0a3088da5778c",
+      "source_url": "https://online.supertuxkart.net/dl/157223053573c93f8060ee.zip",
+      "author": "Fabio Ponzi",
+      "revision": "5",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/volcan-island/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "CC-BY",
+        "GPL"
+      ],
+      "version": 6,
+      "bytes": 16527425,
+      "rating": 2.625,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 26,
+      "current_runtime_id": null
+    },
+    {
+      "id": "volcano-remake",
+      "name": "Volcano Remake",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/volcano-remake/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/volcano-remake/screenshot.jpg",
+      "preview_sha256": "2c488347d1f1a22e0df736171c480e84bae07dc4c72797e5a2c9c207c47245ac",
+      "source_url": "https://online.supertuxkart.net/dl/155757451600ef9132e9cb.zip",
+      "author": "Ingo Ruhnke & Typhon306",
+      "revision": "4",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/volcano-remake/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "CC0",
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 30660771,
+      "rating": 2.625,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 27,
+      "current_runtime_id": null
+    },
+    {
+      "id": "rt7-retro",
+      "name": "RT7 ReTro",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rt7-retro/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rt7-retro/screenshot.jpg",
+      "preview_sha256": "d97291e97fa08e01f9075e389bf22b6c971843eabd18fbf524e9bea7adbf065f",
+      "source_url": "https://online.supertuxkart.net/dl/170862992665e37843b9d45.zip",
+      "author": "CrystalDaEevee",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rt7-retro/license.txt"
+      ],
+      "license_labels": [
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 3320126,
+      "rating": 2.611,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 28,
+      "current_runtime_id": null
+    },
+    {
+      "id": "shifting-sands-rework",
+      "name": "Shifting Sands Rework",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/shifting-sands-rework/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/shifting-sands-rework/sshot.jpg",
+      "preview_sha256": "4faa6f0521bcbfe3577d8c5a5445dba47b854d60351b02e10c60d6b9aca02065",
+      "source_url": "https://online.supertuxkart.net/dl/148929195763d012729282b.zip",
+      "author": "ctdabomb & Sven",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/shifting-sands-rework/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "CC-BY",
+        "CC0",
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 8100546,
+      "rating": 2.611,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 29,
+      "current_runtime_id": null
+    },
+    {
+      "id": "clash-o-8",
+      "name": "Clash-o-8",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/clash-o-8/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/clash-o-8/screenshot.jpg",
+      "preview_sha256": "7d47a98e1ab11bed560dc581c6af7189900941ad9c39d6dcbb4ffd7c820504ff",
+      "source_url": "https://online.supertuxkart.net/dl/12179255856740fa5be2c7d.zip",
+      "author": "CrystalDaEevee",
+      "revision": "3",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/clash-o-8/license.txt"
+      ],
+      "license_labels": [
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 8172925,
+      "rating": 2.609,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 30,
+      "current_runtime_id": null
+    },
+    {
+      "id": "sao-paulo",
+      "name": "Sao Paulo",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/sao-paulo/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/sao-paulo/screenshot.jpg",
+      "preview_sha256": "59d16a645d1090392a8561080dfb3a47106cd5e8ccc71f18c8b356c80177466a",
+      "source_url": "https://online.supertuxkart.net/dl/1894503227631cedc5b6c12.zip",
+      "author": "CrystalDaEevee (ported from Speed Dreams)",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/sao-paulo/license.txt"
+      ],
+      "license_labels": [
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 15937605,
+      "rating": 2.607,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 31,
+      "current_runtime_id": null
+    },
+    {
+      "id": "old-star-track",
+      "name": "Star Track",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/old-star-track/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/old-star-track/screenshot-startrack.png",
+      "preview_sha256": "6761e2bb28d337b759d9dd3ba45042fee7bc0f9ecba0244c32da8720b259871c",
+      "source_url": "https://online.supertuxkart.net/dl/21738433163989ff288f32.zip",
+      "author": "Ingo Ruhnke, modified by A. Billing",
+      "revision": "3",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/old-star-track/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "GPL"
+      ],
+      "version": 6,
+      "bytes": 5335749,
+      "rating": 2.605,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 32,
+      "current_runtime_id": null
+    },
+    {
+      "id": "tux-tollway",
+      "name": "Tux Tollway",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/tux-tollway/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/tux-tollway/sshot-tuxtrack.jpg",
+      "preview_sha256": "23cf005451ed4441cb53ad47669ef27d3e5121c597925b82b18bd8f1fe402aaf",
+      "source_url": "https://online.supertuxkart.net/dl/878255342620d28540c62c.zip",
+      "author": "Ivar ten Cate",
+      "revision": "4",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/tux-tollway/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA"
+      ],
+      "version": 6,
+      "bytes": 9342351,
+      "rating": 2.603,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 33,
+      "current_runtime_id": null
+    },
+    {
+      "id": "color-road",
+      "name": "Color Road",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/color-road/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/color-road/screenshot.png",
+      "preview_sha256": "eaed4f7a04b37b4d49c6e2b19d99eb041be26a5eb009c7f755a57fa7877b1b86",
+      "source_url": "https://online.supertuxkart.net/dl/30944824168c0777a44262.zip",
+      "author": "skindoormimiz",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/color-road/license.txt"
+      ],
+      "license_labels": [
+        "CC-BY"
+      ],
+      "version": 7,
+      "bytes": 4228182,
+      "rating": 2.6,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 34,
+      "current_runtime_id": null
+    },
+    {
+      "id": "golem-bight",
+      "name": "Golem Bight",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/golem-bight/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/golem-bight/screenshot.png",
+      "preview_sha256": "16037c04c1233a0d23ff1dd02331bc66fd7e1d093d8e1096e46378c44a5478c0",
+      "source_url": "https://online.supertuxkart.net/dl/45783458268c0737fed209.zip",
+      "author": "skindoormimiz",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/golem-bight/license.txt"
+      ],
+      "license_labels": [
+        "CC-BY",
+        "CC0"
+      ],
+      "version": 7,
+      "bytes": 23982523,
+      "rating": 2.6,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 35,
+      "current_runtime_id": null
+    },
+    {
+      "id": "beam-runner_1",
+      "name": "Beam Runner",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/beam-runner_1/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/beam-runner_1/screenshot.jpg",
+      "preview_sha256": "2a7dc171423449294bbc1425b193f9c9a3c6567341a5c473135470ff8aed6c8b",
+      "source_url": "https://online.supertuxkart.net/dl/1439551452632d105c01c58.zip",
+      "author": "turnpike101",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/beam-runner_1/LICENSE(original_model).txt",
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/beam-runner_1/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY",
+        "CC0"
+      ],
+      "version": 7,
+      "bytes": 16397071,
+      "rating": 2.597,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 36,
+      "current_runtime_id": null
+    },
+    {
+      "id": "rt5-lime-windland",
+      "name": "RT5 Lime Windland",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rt5-lime-windland/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rt5-lime-windland/screenshot.png",
+      "preview_sha256": "8e296e83f339b0a32e107a3fa148c796876bcea939e55fdb1fb3fd426033aeeb",
+      "source_url": "https://online.supertuxkart.net/dl/144122034463012feb0342d.zip",
+      "author": "skindoormimiz",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rt5-lime-windland/license.txt"
+      ],
+      "license_labels": [
+        "CC-BY"
+      ],
+      "version": 7,
+      "bytes": 14655834,
+      "rating": 2.591,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 37,
+      "current_runtime_id": null
+    },
+    {
+      "id": "rv-into-the-cargo-plane",
+      "name": "Into The Cargo Plane",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rv-into-the-cargo-plane/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rv-into-the-cargo-plane/screenshot.jpg",
+      "preview_sha256": "163c158cdfcd7caec73bbb547dac0acad74cb8bb4e7522e4dcfd6227baa37771",
+      "source_url": "https://online.supertuxkart.net/dl/9027192896929a3221df01.zip",
+      "author": "Paperman (Ported by CrystalDaEevee)",
+      "revision": "3",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rv-into-the-cargo-plane/license.txt"
+      ],
+      "license_labels": [
+        "CC0"
+      ],
+      "version": 7,
+      "bytes": 10194261,
+      "rating": 2.583,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 38,
+      "current_runtime_id": null
+    },
+    {
+      "id": "milky-five-speedway",
+      "name": "Milky Five Speedway",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/milky-five-speedway/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/milky-five-speedway/screenshot.jpg",
+      "preview_sha256": "0a5ca75ee8c98caa25243937d144683d9d70c9ed9223f0bc3dbe0e7a6dea33ab",
+      "source_url": "https://online.supertuxkart.net/dl/306490517631cfbdeb6a3d.zip",
+      "author": "CrystalDaEevee (ported from Speed Dreams)",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/milky-five-speedway/license.txt"
+      ],
+      "license_labels": [
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 16917201,
+      "rating": 2.583,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 39,
+      "current_runtime_id": null
+    },
+    {
+      "id": "inuksuk--alpine-",
+      "name": "Inuksuk (Alpine)",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/inuksuk--alpine-/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/inuksuk--alpine-/screenshot.jpg",
+      "preview_sha256": "978c53c3fa51cd92093bb69140d8e72e4667855c4d1659b62844bf487fd3407e",
+      "source_url": "https://online.supertuxkart.net/dl/15587467856266e59996011.zip",
+      "author": "CrystalDaEevee (re-ported from Speed Dreams)",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/inuksuk--alpine-/license.txt"
+      ],
+      "license_labels": [
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 24323842,
+      "rating": 2.579,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 40,
+      "current_runtime_id": null
+    },
+    {
+      "id": "boomyeet-circuit",
+      "name": "BoomYeet Circuit",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/boomyeet-circuit/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/boomyeet-circuit/screenshot.jpg",
+      "preview_sha256": "4c019bb58342a360b924e34a2347402e74ff48b6bc304f05b68a97617b473371",
+      "source_url": "https://online.supertuxkart.net/dl/187361157264249abb7bb61.zip",
+      "author": "CrystalDaEevee & RowdyJoe",
+      "revision": "3",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/boomyeet-circuit/license.txt"
+      ],
+      "license_labels": [
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 8450440,
+      "rating": 2.569,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 41,
+      "current_runtime_id": null
+    },
+    {
+      "id": "amazonian-journey",
+      "name": "Amazonian Journey",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/amazonian-journey/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/amazonian-journey/sshot-jungle.jpg",
+      "preview_sha256": "bdf6ecfd15b7e69f47bc0836b94000d8ffb4c0a137b6be3cc829dcf0064c8132",
+      "source_url": "https://online.supertuxkart.net/dl/1486612266552dac0faadef.zip",
+      "author": "Marianne Gagnon & Jean-Manuel Cl\u00e9men\u00e7on",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/amazonian-journey/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "GPL"
+      ],
+      "version": 6,
+      "bytes": 7485367,
+      "rating": 2.563,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 42,
+      "current_runtime_id": null
+    },
+    {
+      "id": "syncopia---race-track",
+      "name": "Syncopia - Race Track",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/syncopia---race-track/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/syncopia---race-track/screenshot.jpg",
+      "preview_sha256": "8816864e4a4f546f0b342a4eb931319edd68c17c37cce44d7184df2954cc4817",
+      "source_url": "https://online.supertuxkart.net/dl/1612354608615dd36fa352a.zip",
+      "author": "CrystalDaEevee",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/syncopia---race-track/license.txt"
+      ],
+      "license_labels": [
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 14586764,
+      "rating": 2.56,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 43,
+      "current_runtime_id": null
+    },
+    {
+      "id": "lunar-astrocharge",
+      "name": "Lunar Astrocharge",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/lunar-astrocharge/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/lunar-astrocharge/screenshot.png",
+      "preview_sha256": "827f054db1b04ae62ca7d0f3b2d56892ca58bd8259691cd9fe3587cdaba1367a",
+      "source_url": "https://online.supertuxkart.net/dl/65501652463c68b617ef5e.zip",
+      "author": "skindoormimiz and CrystalDaEevee",
+      "revision": "4",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/lunar-astrocharge/license.txt"
+      ],
+      "license_labels": [
+        "CC-BY",
+        "CC0"
+      ],
+      "version": 7,
+      "bytes": 29472818,
+      "rating": 2.56,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 44,
+      "current_runtime_id": null
+    },
+    {
+      "id": "garguree",
+      "name": "Garguree",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/garguree/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/garguree/screenshot.jpg",
+      "preview_sha256": "af3dcd2231b6b97f1bf0c0e9065febcf9425ac3467a3880549fda941888e54c8",
+      "source_url": "https://online.supertuxkart.net/dl/39397414461c8d0431ebdf.zip",
+      "author": "CrystalDaEevee (ported from Speed Dreams)",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/garguree/license.txt"
+      ],
+      "license_labels": [
+        "Free Art"
+      ],
+      "version": 7,
+      "bytes": 20705575,
+      "rating": 2.559,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 45,
+      "current_runtime_id": null
+    },
+    {
+      "id": "brondehach",
+      "name": "Brondehach",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/brondehach/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/brondehach/screenshot.jpg",
+      "preview_sha256": "c5d8addd0566cd22fa775e2e49203cefe793d40b177212819a6ee9686a0ef2bd",
+      "source_url": "https://online.supertuxkart.net/dl/9793220336255ee2abc1d9.zip",
+      "author": "CrystalDaEevee (ported from Speed Dreams)",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/brondehach/license.txt"
+      ],
+      "license_labels": [
+        "GPL"
+      ],
+      "version": 7,
+      "bytes": 18681911,
+      "rating": 2.558,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 46,
+      "current_runtime_id": null
+    },
+    {
+      "id": "rv-cardboard-castle",
+      "name": "Cardboard Castle",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rv-cardboard-castle/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rv-cardboard-castle/screenshot.jpg",
+      "preview_sha256": "35ec8098529154301ce40e582253a64750c98908968904993334e894b3a1d786",
+      "source_url": "https://online.supertuxkart.net/dl/593535224692771bee45b8.zip",
+      "author": "Paperman, EstebanMz, NotDaijoubu (Ported by CrystalDaEevee)",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rv-cardboard-castle/license.txt"
+      ],
+      "license_labels": [
+        "CC0"
+      ],
+      "version": 7,
+      "bytes": 18065920,
+      "rating": 2.556,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 47,
+      "current_runtime_id": null
+    },
+    {
+      "id": "casino-city",
+      "name": "Casino City",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/casino-city/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/casino-city/screenshot.jpg",
+      "preview_sha256": "9800e21dad07f6fca3dd20e3f890f945646ce61c6868d806fca6595b5863be1a",
+      "source_url": "https://online.supertuxkart.net/dl/177922767168c860102ee3c.zip",
+      "author": "TwoEyedMike",
+      "revision": "1",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/casino-city/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY-SA",
+        "CC-BY",
+        "CC0"
+      ],
+      "version": 7,
+      "bytes": 28978576,
+      "rating": 2.556,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 48,
+      "current_runtime_id": null
+    },
+    {
+      "id": "dirty-stunts",
+      "name": "Dirty Stunts",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/dirty-stunts/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/dirty-stunts/screenshot.png",
+      "preview_sha256": "fff0ea222aff7797622dd978cf9f7a94d370642234a46cc0be18071dcbe03161",
+      "source_url": "https://online.supertuxkart.net/dl/17657460375f4a7537ab8d1.zip",
+      "author": "skindoormimiz",
+      "revision": "2",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/dirty-stunts/License.txt"
+      ],
+      "license_labels": [
+        "CC-BY"
+      ],
+      "version": 7,
+      "bytes": 8803888,
+      "rating": 2.555,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 49,
+      "current_runtime_id": null
+    },
+    {
+      "id": "pipe-track",
+      "name": "Pipe Track",
+      "type": "race",
+      "descriptor": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/pipe-track/track.xml",
+      "preview_source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/pipe-track/screenshot.png",
+      "preview_sha256": "3ccb39f3381fe7bc76ba2a0dbe4acfa394bb74fddedcf5c116ac077e089b7a1f",
+      "source_url": "https://online.supertuxkart.net/dl/808920085fd7ed5e626bf.zip",
+      "author": "skindoormimiz",
+      "revision": "3",
+      "license_files": [
+        ".codex-downloads/fluxara-addon-catalog/extracted/tracks/pipe-track/license.txt"
+      ],
+      "license_labels": [
+        "CC-BY"
+      ],
+      "version": 7,
+      "bytes": 18750985,
+      "rating": 2.552,
+      "source_approved_flag": true,
+      "compatibility": "format and required-file checks only; runtime, dependencies, visual approval pending",
+      "campaign_slot": 50,
+      "current_runtime_id": null
+    }
+  ],
+  "excluded": [
+    {
+      "id": "---3d-",
+      "reason": "graph.xml XML parse error; scene.xml XML parse error"
+    },
+    {
+      "id": "a-secret--soccer-",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "a-tunnel_1",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "abandoned-city",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "abyss--soccer-",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "advanced-course",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "air-hockey",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "along-a-rainbow",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "ampfing",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "another-soccer-field",
+      "reason": "soccer; missing graph/quads/scene; scene.xml XML parse error"
+    },
+    {
+      "id": "antarticy",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "around-the-abandoned-house_1",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "asteroid-soccer",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "autumn-road",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "autumn-road-2",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "babyfball",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "baseball-field",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "battery-jumpscare",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "bayhem",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "bbr-01",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "bbr-04",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "bbr-04-rock-stadium",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "beyond-the-lighthouse",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "black-forest",
+      "reason": "scene.xml XML parse error"
+    },
+    {
+      "id": "bloontonium-mines",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "box",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "bridge-on-the-sea",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "calm-luminous-lagoon",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "car-park",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "cartoon-track--error-",
+      "reason": "not approved in source addon manifest; license terms unclassified"
+    },
+    {
+      "id": "centre-vandoeuvre",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "christoph---s-living-room",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "cinema",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "circuit-board",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "classic-race_1",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "cocoa-temple--light-",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "cosmic",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "cosmic-ii---vermillion-core",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "cube_1",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "cz45-dustyrally",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "cz45-hillside",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "cz45-skhaiway",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "dani-s-race-karting",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "database",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "database--basketball-",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "deep-dish-9--soccer-",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "doing-the-dishes",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "doomspire-brickrace",
+      "reason": "not approved in source addon manifest"
+    },
+    {
+      "id": "double-8-track",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "drawing-hacienda_1",
+      "reason": "not approved in source addon manifest"
+    },
+    {
+      "id": "e-zone",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "egypt_1",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "emerald-arena",
+      "reason": "soccer; graph.xml XML parse error; scene.xml XML parse error"
+    },
+    {
+      "id": "emule-track",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "ernu--circuit",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "exp-plane---basketball-x",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "experimental-plane---field-1",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "experimental-plane---field-2",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "experimental-plane---field-3",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "experimental-plane---field-4_1",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "experimental-plane---rl",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "fan",
+      "reason": "soccer; missing graph/quads/scene; scene.xml XML parse error"
+    },
+    {
+      "id": "finny-splashdown-pool",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "flower-tower-valley",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "foggy-bridge",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "forest-road",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "forest_1",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "fort",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "fort-magma-soocer_1",
+      "reason": "soccer; unsupported track version; missing graph/quads/scene; not approved in source addon manifest"
+    },
+    {
+      "id": "forza-moderna",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "frozen-valley",
+      "reason": "license terms unclassified; graph.xml XML parse error"
+    },
+    {
+      "id": "grand-coastia--not-complete--",
+      "reason": "graph.xml XML parse error; scene.xml XML parse error"
+    },
+    {
+      "id": "gravel-slide",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "green-field",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "happy-birthday",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "hill-valley",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "hillside",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "hillside-soccer",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "hole-drop",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "holiday4way1",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "huge",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "ice-rink_1",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "igneous-playground",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "in-the-lair-of-the-volcano",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "indoor-soccer",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "industry",
+      "reason": "scene.xml XML parse error"
+    },
+    {
+      "id": "insanity",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "interplanetary",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "island-soccer",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "israel-ramat-gan",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "japanese-garden",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "jungle-trance",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "jungle_1",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "jungle_2",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "kart-corner",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "kart-track",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "kristi-s-park",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "lacer-trac",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "le-tour-de-l-antarctique",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "life-in-arctic",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "linux-mint-soccer",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "ljubljana",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "llsp01_1",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "llsp02",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "llsp03",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "llsp04",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "llsp05",
+      "reason": "license terms unclassified; graph.xml XML parse error"
+    },
+    {
+      "id": "llsp06",
+      "reason": "license terms unclassified; graph.xml XML parse error"
+    },
+    {
+      "id": "lost-bamboo-thicket",
+      "reason": "not approved in source addon manifest; graph.xml XML parse error"
+    },
+    {
+      "id": "lumaretal",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "marble-stage",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "marcel-circuit",
+      "reason": "not approved in source addon manifest; license terms unclassified"
+    },
+    {
+      "id": "mashed-angel-peak",
+      "reason": "not approved in source addon manifest; license terms unclassified"
+    },
+    {
+      "id": "math-class",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "mega-puck",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "mesa-canyon",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "metal-island",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "metal-island-2",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "mlungkermlungker",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "mobius-strip",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "monandgo",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "months",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "moria-s-race-city",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "moria-s-race-home",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "moria-s-race-racetrack",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "moria-s-race-soccer",
+      "reason": "soccer; graph.xml XML parse error"
+    },
+    {
+      "id": "mount-lago",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "nature-rock_2",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "nexus-void",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "night-megapolis",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "nitro-soccer-field",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "nitro-soccer-field--alt-",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "northern-village",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "oem-cage",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "old-blackhill-mansion",
+      "reason": "unsupported track version"
+    },
+    {
+      "id": "old-egypt",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "old-zen-garden-0-8-x",
+      "reason": "unsupported track version"
+    },
+    {
+      "id": "oliver-up-class",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "orbital-simulation---soccer",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "original-zen-garden",
+      "reason": "unsupported track version; scene.xml XML parse error"
+    },
+    {
+      "id": "palm-mountain",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "palm-valley",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "papillon_1",
+      "reason": "license terms unclassified; graph.xml XML parse error"
+    },
+    {
+      "id": "party-in-the-lake_1",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "pipe-field",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "quadruple-disk",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "race-the-halls",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "racer_1",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "rainbow-in-a-prison",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "rainbow-star",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "rainy-swamp",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "rally-fantasy",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "rammer-s-playground",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "red-bovine-ring",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "red-bovine-ring---south-track",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "restful-river-ring",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "revublik-track",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "ribble-raceway",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "roadraces",
+      "reason": "license terms unclassified; graph.xml XML parse error"
+    },
+    {
+      "id": "roadraces-starry-night",
+      "reason": "license terms unclassified; graph.xml XML parse error"
+    },
+    {
+      "id": "rocky-polygon",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "rocky-splash-effect",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "rosalyn-s-basement",
+      "reason": "not approved in source addon manifest; license terms unclassified"
+    },
+    {
+      "id": "rt1-ernu-circuit",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "rt4-crowded-stadium",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "rt7-new-racetrack_1",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "rv-airport-1",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "rv-botanical-garden",
+      "reason": "not approved in source addon manifest"
+    },
+    {
+      "id": "rv-crystal-caves",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "rv-game-room-1",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "rv-home-2",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "rv-museum-2",
+      "reason": "not approved in source addon manifest"
+    },
+    {
+      "id": "rv-office-1",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "rv-rc-stadium-1",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "rv-school-s-out-2",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "rv-splat-",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "rv-supermarket-2",
+      "reason": "not approved in source addon manifest"
+    },
+    {
+      "id": "rv-toys-in-the-hood-1",
+      "reason": "not approved in source addon manifest"
+    },
+    {
+      "id": "sand-land",
+      "reason": "not approved in source addon manifest; license terms unclassified"
+    },
+    {
+      "id": "sand-playground",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "sandfort",
+      "reason": "not approved in source addon manifest"
+    },
+    {
+      "id": "scrap-grounds",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "scrupt",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "sewer",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "sewer-soccer",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "sewer-stadium",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "shrooms-mine",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "simplified-chess-field",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "skyline--soccer-",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "smash-dark",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "snooker-table",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "snow-peak-rework",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "soccer-arena-x",
+      "reason": "soccer; missing graph/quads/scene; scene.xml XML parse error"
+    },
+    {
+      "id": "stadium-spinning-top-soccer",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "stadium-v",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "stk-algarve",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "stk-hungaroring_1",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "stk-imola",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "subsea-2021-upgrade",
+      "reason": "not approved in source addon manifest; scene.xml XML parse error"
+    },
+    {
+      "id": "subway",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "sunshine-raceway",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "supertournament-field",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "swamp-danger",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "sweet-mountain",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "syncopia--virtual----knockout",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "syncopia-hoops",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "syncopia-stadium",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "tall-8",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "teknofest-parkur",
+      "reason": "license terms unclassified; graph.xml XML parse error"
+    },
+    {
+      "id": "terabite-space-race",
+      "reason": "scene.xml XML parse error"
+    },
+    {
+      "id": "thanato--soccer-",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "the-court",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "the-dark-chaos",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "the-farm",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "the-lair-of-the-volcano",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "the-savanna-of-africa",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "tiny",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "tournament-field",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "tournament-field--snowy-",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "tournament-hoops_1",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "trackeditortrack",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "tragedry-island",
+      "reason": "not approved in source addon manifest"
+    },
+    {
+      "id": "tux-island",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "tux-island-soccer",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "tux-racer",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "tux-s-christmas",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "tux-stadium",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "uss-demolition",
+      "reason": "not approved in source addon manifest; license terms unclassified"
+    },
+    {
+      "id": "villimounrock",
+      "reason": "license terms unclassified; graph.xml XML parse error"
+    },
+    {
+      "id": "vivid-vacuum",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "volcan-island--2020-upgrade-",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "volcan-island--2020-upgrade-_1",
+      "reason": "not approved in source addon manifest"
+    },
+    {
+      "id": "warehouse_1",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "warpseye",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "wet-pipes",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "wide-view-mugello",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "wildlife-jungle-ruins",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "wildlife-jungle-ruins-2",
+      "reason": "graph.xml XML parse error"
+    },
+    {
+      "id": "wood-ramp-soccer_1",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "wood-warbler-soccer",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "wreckboor",
+      "reason": "license terms unclassified"
+    },
+    {
+      "id": "xr-4r3n4--basketball-",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "xr-4r3n4_1",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "zen",
+      "reason": "soccer; missing graph/quads/scene"
+    },
+    {
+      "id": "zenith-race_1",
+      "reason": "graph.xml XML parse error"
+    }
+  ]
+}

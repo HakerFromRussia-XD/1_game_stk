@@ -6,6 +6,7 @@
 #include "guiengine/screen.hpp"
 
 namespace GUIEngine { class Widget; }
+namespace irr { namespace video { class ITexture; } }
 
 class FluxaraHomeScreen : public GUIEngine::Screen,
                          public GUIEngine::ScreenSingleton<FluxaraHomeScreen>
@@ -13,10 +14,14 @@ class FluxaraHomeScreen : public GUIEngine::Screen,
 private:
     friend class GUIEngine::ScreenSingleton<FluxaraHomeScreen>;
     FluxaraHomeScreen();
+    irr::video::ITexture* m_art[8] = {};
+    void layoutControls();
 
 public:
     void loadedFromFile() OVERRIDE;
     void init() OVERRIDE;
+    void onDraw(float dt) OVERRIDE;
+    void onResize() OVERRIDE;
     void eventCallback(GUIEngine::Widget* widget, const std::string& name,
                        const int player_id) OVERRIDE;
     bool onEscapePressed() OVERRIDE;

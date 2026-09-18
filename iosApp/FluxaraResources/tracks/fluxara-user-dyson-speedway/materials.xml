@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<materials>
+  <material name="Fog_blue001.jpg" gloss-map="PBR_Fog.png"/>
+  <material name="Fog_blue001_dc.jpg" gloss-map="PBR_Fog_low_s.png" ignore="Y"/>
+  <material name="Fog_blue001_effect02-t.png" shader="additive"/>
+  <material name="Fog_blue001_low.jpg" gloss-map="PBR_Glow_low.png"/>
+  <material name="Fog_blue001_t_add.png" shader="additive"/>
+  <material name="Fog_blue001_withClouds-t_s.png" shader="additive"/>
+  <material name="Fog_darkBlue001.jpg" gloss-map="PBR_Fog_low_s.png" ignore="Y"/>
+  <material name="Fog_darkBlue002.jpg" gloss-map="PBR_Fog_more_s.png" ignore="Y"/>
+  <material name="Fog_Double_blue-purple001.jpg" gloss-map="PBR_Fog.png"/>
+  <material name="Fog_Double_blue-purple001_clouds2.png" shader="additive"/>
+  <material name="Fog_green001.jpg" gloss-map="PBR_Fog.png"/>
+  <material name="Fog_green001_low.jpg" gloss-map="PBR_Glow_low.png"/>
+  <material name="Fog_green001_t.png" shader="alphablend"/>
+  <material name="Fog_green001_t_add.png" shader="additive"/>
+  <material name="Fog_mix001.jpg" gloss-map="PBR_Fog.png"/>
+  <material name="Fog_orange001.jpg" gloss-map="PBR_Fog.png"/>
+  <material name="Fog_orange001_t_add.png" shader="additive"/>
+  <material name="Fog_purple001_addT.png" shader="additive"/>
+  <material name="gfx_electricArc_a.png" shader="alphatest" gloss-map="gfx_electricArc_a_gloss.png"/>
+  <material name="IsoGrid_black-orange5_t-.png" shader="alphablend" has-gravity="Y" mask="PBR_IsoGrid_t-.png"/>
+  <material name="IsoGrid_black3_co_t.png" shader="alphatest" has-gravity="Y"/>
+  <material name="IsoGrid_black4.png" gloss-map="PBR_Reflect_max.png" high-adhesion="Y" has-gravity="Y"/>
+  <material name="IsoGrid_black5.png" gloss-map="PBR_Reflect_max.png" has-gravity="Y"/>
+  <material name="IsoGrid_black5_addT.png" shader="additive" has-gravity="Y"/>
+  <material name="IsoGrid_black5_t-.png" shader="alphablend" has-gravity="Y"/>
+  <material name="IsoGrid_black6_t.png" shader="alphablend" has-gravity="Y"/>
+  <material name="IsoGrid_cyan4_t++.png" shader="alphablend" has-gravity="Y"/>
+  <material name="IsoGrid_orange4_t++3.png" shader="alphablend" has-gravity="Y"/>
+  <material name="IsoGrid_t++.png" shader="alphablend" has-gravity="Y"/>
+  <material name="Plasma001_t_s.png" shader="additive"/>
+  <material name="Raster001_black2.png" gloss-map="Raster001_PBR_max.png" has-gravity="Y"/>
+  <material name="Raster001_black2_noGravity.png" gloss-map="Raster001_PBR_max.png"/>
+  <material name="Raster001_hotGlow.png" gloss-map="Raster001_PBR_max.png" high-adhesion="Y" has-gravity="Y">
+    <particles base="smoke.xml" condition="skid drive"/>
+  </material>
+  <material name="Raster001_hotGlow2.png" gloss-map="Raster001_PBR_max.png" high-adhesion="Y" has-gravity="Y">
+    <particles base="smoke.xml" condition="drive skid"/>
+  </material>
+  <material name="Raster001_hotGlow2_yellow-.png" gloss-map="Raster001_PBR_med.png" has-gravity="Y"/>
+  <material name="Raster001_hotGlow2_yellow.png" gloss-map="Raster001_PBR_more.png" has-gravity="Y">
+    <particles base="smoke.xml" condition="skid drive"/>
+  </material>
+  <material name="Raster001_hotGlow_red.png" gloss-map="Raster001_PBR_max.png" high-adhesion="Y" has-gravity="Y">
+    <particles base="smoke.xml" condition="skid drive"/>
+  </material>
+  <material name="Raster006_black3.png" gloss-map="Raster001_PBR_max.png" has-gravity="Y"/>
+  <material name="Raster006_black3_iced.png" gloss-map="Raster001_PBR_more.png" has-gravity="Y"/>
+  <material name="Raster006_blue1.png" gloss-map="Raster001_PBR_max.png" has-gravity="Y"/>
+  <material name="Raster006_cyan1.png" gloss-map="Raster001_PBR_med.png" has-gravity="Y"/>
+  <material name="Raster006_cyan1_iced.png" gloss-map="Raster001_PBR_med.png" has-gravity="Y"/>
+  <material name="Raster006_green1.png" gloss-map="Raster001_PBR_med.png" has-gravity="Y"/>
+  <material name="Raster006_green2.png" gloss-map="Raster001_PBR_med.png" has-gravity="Y"/>
+  <material name="Raster006_purple1.png" gloss-map="Raster001_PBR_more.png" has-gravity="Y"/>
+  <material name="Raster006_red1.png" gloss-map="Raster001_PBR_max.png" has-gravity="Y"/>
+  <material name="Raster006_yellow1.png" gloss-map="PBR_Glow_more.png" has-gravity="Y"/>
+  <material name="SN_001_black_mod01_xs.png" shader="additive"/>
+  <material name="SN_001_cyan3_C1x.png" shader="alphablend" gloss-map="PBR_Glow_more.png"/>
+  <material name="SN_001_purple_C3x.png" shader="alphablend" gloss-map="PBR_Glow_more.png"/>
+  <material name="SNL_001_blue2_C2x_-t.png" gloss-map="PBR_Glow_med2.png"/>
+  <material name="SNL_001_blue2_C2x_addT.png" shader="additive"/>
+  <material name="SNL_001_blue2_C2x_addT_gravity.png" shader="additive" has-gravity="Y"/>
+  <material name="SNL_001_cyan3_C1x-t.png" gloss-map="PBR_Glow_med2.png"/>
+  <material name="SNL_001_cyan3_C1x_addT.png" shader="additive"/>
+  <material name="SNL_001_orange_C2x.png" shader="alphatest" gloss-map="PBR_Glow_med2.png"/>
+  <material name="SNL_001_purple_C3x.png" shader="additive"/>
+  <material name="SNL_001_purple_C3x_-t.png" gloss-map="PBR_Glow_more.png"/>
+  <material name="SNL_001_purple_C3x_addT.png" shader="additive" high-adhesion="Y" has-gravity="Y"/>
+  <material name="SNL_001_red2_C2x-t.png" gloss-map="PBR_Glow_med2.png"/>
+  <material name="SNL_001_red2_C2x.png" shader="alphablend"/>
+  <material name="SNL_001_red2_C2x_addT.png" shader="additive"/>
+  <material name="SNL_002_cyan3_r90.png" shader="additive" gloss-map="PBR_SNL_003_red_r90.png" ignore="Y"/>
+  <material name="SNL_002_cyan4_r90.png" shader="additive" ignore="Y"/>
+  <material name="SNL_002_cyan4_r90_glow.png" shader="alphatest" gloss-map="PBR_SNL_003_red_r90.png"/>
+  <material name="SNL_002_green_r90.png" shader="additive" ignore="Y"/>
+  <material name="SNL_002_purple3_r90.png" shader="additive" gloss-map="SNL_002_red3_r90.png" ignore="Y"/>
+  <material name="SNL_002_purple4_r90_glow_l.png" shader="alphatest" gloss-map="PBR_SNL_003_red_r90_l.png"/>
+  <material name="SNL_002_red3_r90.png" gloss-map="PBR_SNL_003_red_r90.png"/>
+  <material name="SNL_002_red3_r90_tAdd.png" shader="additive" ignore="Y"/>
+  <material name="SNL_002_yellow_r90.png" shader="additive" ignore="Y"/>
+  <material name="SNL_multi.png" shader="additive"/>
+  <material name="SNL_multi_2.png" shader="additive"/>
+  <material name="StartSignText4.png" shader="additive"/>
+  <material name="stktex_blueNebula_a.png" shader="alphablend" ignore="Y"/>
+  <material name="StopperLine5ABlue_s.png" shader="alphatest" gloss-map="PBR_StopperLine4ABlue_low.jpg" has-gravity="Y">
+    <sfx filename="tube1.ogg" min_speed="0.00" max_speed="100.00" min_pitch="0.60" max_pitch="2.24" positional="true" rolloff="0.05"/>
+  </material>
+  <material name="Surface_RX002.png" shader="alphablend" mirror-axis="V" has-gravity="Y"/>
+  <material name="Surface_RX003_s.png" shader="alphablend" has-gravity="Y">
+    <zipper duration="2.0" max-speed-increase="12.0" fade-out-time="3.0" speed-gain="5.0" min-speed="-1.0"/>
+  </material>
+  <material name="Surface_RX005_cyan-blue2.png" gloss-map="PBR_Glow_max.png"/>
+  <material name="Surface_RX005_lime.png" gloss-map="PBR_Glow_med.png" has-gravity="Y"/>
+  <material name="Surface_RX005_lime_t.png" shader="alphablend"/>
+  <material name="Surface_RX005_purple-magenta_t.png" shader="alphablend"/>
+  <material name="texture_Hexagons_Glass_new_t_yellow.png" shader="alphablend" has-gravity="Y" mask="PBR_Hexagons_Glass.png"/>
+  <material name="texture_Hexagons_Glass_t+.png" shader="alphablend" has-gravity="Y" mask="PBR_Hexagons_Glass_low.png"/>
+  <material name="texture_Hexagons_Glass_t+_red3_masked.png" shader="alphablend" has-gravity="Y" mask="PBR_Hexagons_Glass.png"/>
+  <material name="texture_solid_black.png" gloss-map="PBR_Reflect_max.png"/>
+  <material name="texture_solid_black_gravity.png" gloss-map="PBR_Reflect_max.png" has-gravity="Y"/>
+  <material name="texture_solid_black_invisible.png" shader="alphablend" has-gravity="Y"/>
+  <material name="texture_solid_black_invisible_burn.png" shader="alphablend" collision-detect="Y" has-gravity="Y" collision-particles="fire_rx.xml">
+    <sfx filename="constant_fire_looped_louder_LQ.ogg" min_speed="0.00" max_speed="100.00" min_pitch="0.80" max_pitch="1.20" positional="true" rolloff="0.05"/>
+    <particles base="fire_rx.xml" condition="skid drive"/>
+  </material>
+  <material name="texture_solid_black_invisible_FFEffect.png" ignore="Y" shader="displace"/>
+  <material name="texture_solid_black_invisible_hexTP_snd.png" shader="alphablend" high-adhesion="Y" has-gravity="Y">
+    <sfx filename="hex_tube_purple.ogg" min_speed="0.00" max_speed="100.00" min_pitch="1.00" max_pitch="1.00" positional="true" rolloff="0.05"/>
+  </material>
+  <material name="texture_solid_black_invisible_noGravity.png" shader="alphablend"/>
+  <material name="texture_solid_black_invisible_reset.png" shader="alphablend" reset="Y"/>
+  <material name="texture_solid_black_invisible_reset_grv.png" shader="alphablend" has-gravity="Y" reset="Y"/>
+  <material name="texture_solid_blue.png" gloss-map="PBR_Glow_min.png"/>
+  <material name="texture_solid_grey.png" gloss-map="PBR_Glow_low.png"/>
+  <material name="texture_solid_grey_gravity.png" gloss-map="PBR_Glow_med.png" has-gravity="Y"/>
+  <material name="texture_solid_red_gravity.png" gloss-map="PBR_Glow_low.png" has-gravity="Y"/>
+  <material name="texture_solid_white_gravity.png" gloss-map="PBR_Reflect_max.png" has-gravity="Y"/>
+  <material name="texture_solid_yellow2_gravity.png" gloss-map="PBR_Glow_low.png" has-gravity="Y"/>
+  <material name="texture_transparent_blue4.png" shader="additive"/>
+  <material name="texture_transparent_blue4_gravity.png" shader="additive" has-gravity="Y"/>
+  <material name="texture_transparent_blue_FF_gravity.png" shader="alphablend" high-adhesion="Y" has-gravity="Y" mask="Mask_GateWindow.png"/>
+  <material name="texture_transparent_blue_ForceField.png" shader="alphablend" mask="PBR_ForceField.png">
+    <sfx filename="tractor_beam_rx_L.ogg" min_speed="0.01" max_speed="100.00" min_pitch="0.50" max_pitch="2.90" positional="true" rolloff="0.03"/>
+    <particles base="sparks.xml" condition="skid drive"/>
+  </material>
+  <material name="texture_transparent_blue_no_boost.png" shader="alphablend"/>
+  <material name="texture_transparent_blue_pipeBoost.png" shader="additive" high-adhesion="Y" has-gravity="Y">
+    <zipper duration="3.5" max-speed-increase="15.0" fade-out-time="3.0" speed-gain="4.5" min-speed="-1.0"/>
+  </material>
+  <material name="texture_transparent_blue_pipeBoost_snd.png" shader="additive" high-adhesion="Y" has-gravity="Y">
+    <sfx filename="tube2_4.ogg" min_speed="0.00" max_speed="100.00" min_pitch="0.30" max_pitch="2.30" positional="true" rolloff="0.05"/>
+    <zipper duration="3.5" max-speed-increase="15.0" fade-out-time="3.0" speed-gain="4.5" min-speed="-1.0"/>
+  </material>
+  <material name="texture_transparent_blue_slower_snd.png" shader="additive" high-adhesion="Y" has-gravity="Y">
+    <sfx filename="tube2_4.ogg" min_speed="0.00" max_speed="100.00" min_pitch="0.30" max_pitch="2.30" positional="true" rolloff="0.05"/>
+    <zipper duration="0.75" max-speed-increase="21.0" fade-out-time="2.0" speed-gain="2.25" min-speed="-1.0"/>
+  </material>
+  <material name="texture_transparent_blueSphereNoise.png" shader="alphablend" has-gravity="Y">
+    <sfx filename="bzzt_rx_s.ogg" min_speed="0.00" max_speed="100.00" min_pitch="1.00" max_pitch="1.20" positional="true" rolloff="0.05"/>
+  </material>
+  <material name="texture_transparent_blueSphereShock.png" shader="alphablend" collision-detect="Y" collision-reaction="push" collision-particles="sparks.xml"/>
+  <material name="texture_transparent_cyan2.png" shader="alphablend"/>
+  <material name="texture_transparent_cyan2_snd.png" shader="alphablend">
+    <sfx filename="hex_tube_purple.ogg" min_speed="0.00" max_speed="100.00" min_pitch="1.45" max_pitch="1.45" positional="true" rolloff="0.05"/>
+  </material>
+  <material name="texture_transparent_cyan_addT.png" shader="additive"/>
+  <material name="texture_transparent_cyan_addT_gravity.png" shader="additive" has-gravity="Y"/>
+  <material name="texture_transparent_cyan_snd.png" shader="alphablend">
+    <sfx filename="hex_tube_purple.ogg" min_speed="0.00" max_speed="100.00" min_pitch="1.40" max_pitch="1.40" positional="true" rolloff="0.05"/>
+  </material>
+  <material name="texture_transparent_dark-blue.png" shader="alphablend"/>
+  <material name="texture_transparent_gravity.png" shader="alphablend" has-gravity="Y"/>
+  <material name="texture_transparent_gravity_blueBoost.png" shader="alphablend" has-gravity="Y">
+    <zipper duration="10.0" max-speed-increase="18.0" fade-out-time="8.0" speed-gain="7.5" min-speed="-1.0"/>
+  </material>
+  <material name="texture_transparent_gravity_greenBoost.png" shader="alphablend" has-gravity="Y">
+    <zipper duration="2.75" max-speed-increase="23.0" fade-out-time="6.0" speed-gain="5.5" min-speed="-1.0"/>
+  </material>
+  <material name="texture_transparent_gravity_redBoost.png" shader="alphablend" has-gravity="Y">
+    <zipper duration="1.75" max-speed-increase="42.0" fade-out-time="5.0" speed-gain="10.0" min-speed="-1.0"/>
+  </material>
+  <material name="texture_transparent_gravity_yellowBoost.png" shader="alphablend" has-gravity="Y">
+    <zipper duration="3.0" max-speed-increase="25.0" fade-out-time="6.0" speed-gain="6.5" min-speed="-1.0"/>
+  </material>
+  <material name="texture_transparent_green_addT.png" shader="additive" has-gravity="Y"/>
+  <material name="texture_transparent_green_CG.png" shader="additive" ignore="Y"/>
+  <material name="texture_transparent_grey.png" shader="alphablend" has-gravity="Y"/>
+  <material name="texture_transparent_grey2.png" shader="alphablend" has-gravity="Y"/>
+  <material name="texture_transparent_grey_noGravity.png" shader="additive"/>
+  <material name="texture_transparent_lightBlue2.png" shader="alphablend"/>
+  <material name="texture_transparent_lightblue_pipeBoost.png" shader="additive" high-adhesion="Y" has-gravity="Y">
+    <zipper duration="1.5" max-speed-increase="30.0" fade-out-time="3.0" speed-gain="10.0" min-speed="-1.0"/>
+  </material>
+  <material name="texture_transparent_lightblue_pipeBoost_snd.png" shader="additive" high-adhesion="Y" has-gravity="Y">
+    <sfx filename="tube2_4.ogg" min_speed="0.00" max_speed="100.00" min_pitch="0.30" max_pitch="2.30" positional="true" rolloff="0.05"/>
+    <zipper duration="1.5" max-speed-increase="30.0" fade-out-time="3.0" speed-gain="10.0" min-speed="-1.0"/>
+  </material>
+  <material name="texture_transparent_lightblue_slower_snd.png" shader="additive" high-adhesion="Y" has-gravity="Y">
+    <sfx filename="tube2_4.ogg" min_speed="0.00" max_speed="100.00" min_pitch="0.30" max_pitch="2.30" positional="true" rolloff="0.05"/>
+    <zipper duration="0.75" max-speed-increase="21.0" fade-out-time="2.0" speed-gain="2.25" min-speed="-1.0"/>
+  </material>
+  <material name="texture_transparent_lime_addT.png" shader="additive"/>
+  <material name="texture_transparent_orange.png" shader="alphablend" has-gravity="Y"/>
+  <material name="texture_transparent_orange_addT.png" shader="additive" has-gravity="Y"/>
+  <material name="texture_transparent_orange_addT_snd.png" shader="additive" has-gravity="Y">
+    <sfx filename="tube1.ogg" min_speed="0.00" max_speed="100.00" min_pitch="0.60" max_pitch="2.24" positional="true" rolloff="0.05"/>
+  </material>
+  <material name="texture_transparent_orangeSphereNoise.png" shader="alphablend"/>
+  <material name="texture_transparent_purple_addT.png" shader="additive"/>
+  <material name="texture_transparent_purple_addT_gravity.png" shader="additive" high-adhesion="Y" has-gravity="Y"/>
+  <material name="texture_transparent_purple_addT_gravity_snd.png" shader="additive" high-adhesion="Y" has-gravity="Y">
+    <sfx filename="hex_tube_purple.ogg" min_speed="0.00" max_speed="100.00" min_pitch="1.00" max_pitch="1.00" positional="true" rolloff="0.05"/>
+  </material>
+  <material name="texture_transparent_purple_noBoost.png" shader="alphablend" high-adhesion="Y" has-gravity="Y"/>
+  <material name="texture_transparent_purple_noBoost_snd.png" shader="alphablend" high-adhesion="Y" has-gravity="Y">
+    <sfx filename="hex_tube_purple.ogg" min_speed="0.00" max_speed="100.00" min_pitch="1.00" max_pitch="1.00" positional="true" rolloff="0.05"/>
+  </material>
+  <material name="texture_transparent_purple_pipeBoost.png" shader="additive" high-adhesion="Y" has-gravity="Y">
+    <zipper duration="1.5" max-speed-increase="30.0" fade-out-time="3.0" speed-gain="10.0" min-speed="-1.0"/>
+  </material>
+  <material name="texture_transparent_purple_pipeBoost_snd.png" shader="additive" high-adhesion="Y" has-gravity="Y">
+    <sfx filename="tube2_4.ogg" min_speed="0.00" max_speed="100.00" min_pitch="0.30" max_pitch="2.30" positional="true" rolloff="0.05"/>
+    <zipper duration="3.5" max-speed-increase="15.0" fade-out-time="1.5" speed-gain="4.5" min-speed="-1.0"/>
+  </material>
+  <material name="texture_transparent_purple_slower.png" shader="additive" high-adhesion="Y" has-gravity="Y">
+    <zipper duration="0.75" max-speed-increase="21.0" fade-out-time="2.0" speed-gain="2.25" min-speed="-1.0"/>
+  </material>
+  <material name="texture_transparent_purple_slower_snd.png" shader="additive" high-adhesion="Y" has-gravity="Y">
+    <sfx filename="tube2_4.ogg" min_speed="0.00" max_speed="100.00" min_pitch="0.30" max_pitch="2.30" positional="true" rolloff="0.05"/>
+    <zipper duration="0.75" max-speed-increase="21.0" fade-out-time="2.0" speed-gain="2.25" min-speed="-1.0"/>
+  </material>
+  <material name="texture_transparent_purple_st_slower.png" shader="alphablend" has-gravity="Y">
+    <zipper duration="0.75" max-speed-increase="21.0" fade-out-time="2.0" speed-gain="2.25" min-speed="-1.0"/>
+  </material>
+  <material name="texture_transparent_red.png" shader="alphablend" high-adhesion="Y" has-gravity="Y"/>
+  <material name="texture_transparent_red2_addT.png" shader="additive" has-gravity="Y"/>
+  <material name="texture_transparent_red2_addT_snd.png" shader="additive" has-gravity="Y">
+    <sfx filename="tube1.ogg" min_speed="0.00" max_speed="100.00" min_pitch="0.60" max_pitch="2.24" positional="true" rolloff="0.05"/>
+  </material>
+  <material name="texture_transparent_red_addT.png" shader="additive" has-gravity="Y"/>
+  <material name="texture_transparent_red_CG.png" shader="additive"/>
+  <material name="texture_transparent_yellow.png" shader="alphablend" has-gravity="Y"/>
+  <material name="texture_transparent_yellow_addT.png" shader="additive"/>
+  <material name="transparent_dots_cyan.png" shader="additive"/>
+  <material name="transparent_ice3.png" shader="additive"/>
+  <material name="transparent_ice3_white_s.png" shader="additive" ignore="Y"/>
+  <material name="transparent_purple_zipper_text.png" shader="alphablend" has-gravity="Y"/>
+  <material name="transparent_wall_arrow_blue.png" shader="additive" mirror-axis="U"/>
+  <material name="transparent_wall_arrow_purple2.png" shader="alphablend"/>
+  <material name="Wall_RX001_2_s.png" gloss-map="PBR_Glow_med.png"/>
+  <material name="Wall_RX001_eeBlue_s.png" gloss-map="PBR_Glow_more2.png"/>
+  <material name="Wall_RX001_eeOrange_s.png" gloss-map="PBR_Glow_more2.png"/>
+  <material name="Wall_RX001_eePurple_s.png" gloss-map="PBR_Glow_max.png"/>
+  <material name="Wall_RX001_s.png" gloss-map="PBR_Glow_low.png"/>
+  <material name="Wall_RX002_BlPMed.png" gloss-map="PBR_Glow_more.png" has-gravity="Y" reset="Y"/>
+  <material name="Wall_RX002_BlPMed_t_s.png" shader="additive"/>
+  <material name="Wall_RX002_glow7_+black-cyan.png" gloss-map="PBR_Glow_more.png" has-gravity="Y" reset="Y"/>
+  <material name="Wall_RX004_glow4_+black-grey.png" gloss-map="PBR_Glow_more.png" has-gravity="Y" reset="Y"/>
+  <material name="Wall_RX004_glow4_+black-grey.png" gloss-map="PBR_Glow_more.png" has-gravity="Y" reset="Y"/>
+  <material name="Wall_RX004_glow4_+black-grey.png" gloss-map="PBR_Glow_more.png" has-gravity="Y" reset="Y"/>
+  <material name="Wall_RX004_metal2.png" has-gravity="Y"/>
+  <material name="Wall_RX006_dark.png" gloss-map="PBR_Glow_low.png" mirror-axis="U" has-gravity="Y"/>
+  <material name="Wall_RX006_glow.png" gloss-map="PBR_Wall_RX003.png" mirror-axis="U" has-gravity="Y"/>
+  <material name="WarningForcefieldText.png" shader="alphatest" gloss-map="PBR_Glow_med.png"/>
+  <material name="WarningHyperTubeText.png" shader="alphatest" gloss-map="PBR_Glow_med.png"/>
+  <material name="WarningSlopeText.png" shader="alphablend"/>
+  <material name="WireGrid002_red_t-_mod5.png" shader="additive"/>
+  <material name="Zipper_RX_blue.png" shader="alphatest" gloss-map="PBR_Glow_max.png" mirror-axis="V" has-gravity="Y">
+    <zipper duration="10.0" max-speed-increase="18.0" fade-out-time="8.0" speed-gain="7.5" min-speed="-1.0"/>
+  </material>
+  <material name="Zipper_RX_cyan.png" shader="alphatest" gloss-map="PBR_Glow_med.png" mirror-axis="V" has-gravity="Y">
+    <zipper duration="3.5" max-speed-increase="33.0" fade-out-time="8.0" speed-gain="9.0" min-speed="-1.0"/>
+  </material>
+  <material name="Zipper_RX_green.png" shader="alphatest" gloss-map="PBR_Glow_med.png" mirror-axis="V" has-gravity="Y">
+    <zipper duration="2.75" max-speed-increase="23.0" fade-out-time="6.0" speed-gain="5.5" min-speed="-1.0"/>
+  </material>
+  <material name="Zipper_RX_orange.png" shader="alphatest" gloss-map="PBR_Glow_med.png" mirror-axis="V" has-gravity="Y">
+    <zipper duration="3.0" max-speed-increase="25.0" fade-out-time="6.0" speed-gain="6.5" min-speed="-1.0"/>
+  </material>
+  <material name="Zipper_RX_purple.png" shader="alphatest" gloss-map="PBR_Glow_med.png" has-gravity="Y">
+    <zipper duration="2.5" max-speed-increase="66.0" fade-out-time="1.5" speed-gain="16.0" min-speed="-1.0"/>
+  </material>
+  <material name="Zipper_RX_Raster006_blue-black3.png" gloss-map="PBR_Glow_max.png" mirror-axis="V" has-gravity="Y">
+    <zipper duration="10.0" max-speed-increase="18.0" fade-out-time="8.0" speed-gain="7.5" min-speed="-1.0"/>
+  </material>
+  <material name="Zipper_RX_Raster006_green-black3.png" gloss-map="PBR_Glow_med.png" mirror-axis="V" has-gravity="Y">
+    <zipper duration="2.75" max-speed-increase="23.0" fade-out-time="6.0" speed-gain="5.5" min-speed="-1.0"/>
+  </material>
+  <material name="Zipper_RX_Raster006_orange-black3.png" gloss-map="PBR_Glow_med.png" mirror-axis="V" has-gravity="Y">
+    <zipper duration="3.0" max-speed-increase="25.0" fade-out-time="6.0" speed-gain="6.5" min-speed="-1.0"/>
+  </material>
+  <material name="Zipper_RX_red.png" shader="alphatest" gloss-map="PBR_Glow_med.png" mirror-axis="V" has-gravity="Y">
+    <zipper duration="1.75" max-speed-increase="42.0" fade-out-time="5.0" speed-gain="10.0" min-speed="-1.0"/>
+  </material>
+  <material name="Zipper_RX_white.png" shader="alphatest" gloss-map="PBR_Glow_med.png" mirror-axis="V" has-gravity="Y">
+    <zipper duration="2.5" max-speed-increase="40.0" fade-out-time="3.75" speed-gain="9.5" min-speed="-1.0"/>
+  </material>
+  <material name="ZipperLine3_combined_blue_b_s.png" gloss-map="PBR_ZipperLine3_combined_b_low.jpg" mirror-axis="V" has-gravity="Y">
+    <sfx filename="tube1.ogg" min_speed="0.00" max_speed="100.00" min_pitch="0.60" max_pitch="2.24" positional="true" rolloff="0.05"/>
+    <zipper duration="1.0" max-speed-increase="3.5" fade-out-time="1.0" speed-gain="1.5" min-speed="-1.0"/>
+  </material>
+  <material name="ZipperLine3_combined_orange_b_s.png" gloss-map="PBR_ZipperLine3_combined_b_less.jpg" mirror-axis="V" has-gravity="Y">
+    <sfx filename="tube1.ogg" min_speed="0.00" max_speed="100.00" min_pitch="0.60" max_pitch="2.25" positional="true" rolloff="0.05"/>
+    <zipper duration="1.0" max-speed-increase="10.0" fade-out-time="1.0" speed-gain="5.0" min-speed="-1.0"/>
+  </material>
+</materials>

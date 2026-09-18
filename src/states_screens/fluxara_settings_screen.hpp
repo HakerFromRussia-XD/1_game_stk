@@ -6,6 +6,7 @@
 #include "guiengine/screen.hpp"
 
 namespace GUIEngine { class Widget; }
+namespace irr { namespace video { class ITexture; } }
 
 class FluxaraSettingsScreen
     : public GUIEngine::Screen,
@@ -16,11 +17,15 @@ private:
     FluxaraSettingsScreen();
 
     void refreshLabels();
+    void layoutControls();
+    irr::video::ITexture* m_art[9] = {};
 
 public:
     void loadedFromFile() OVERRIDE;
     void init() OVERRIDE;
     void tearDown() OVERRIDE;
+    void onResize() OVERRIDE;
+    void onDraw(float dt) OVERRIDE;
     void eventCallback(GUIEngine::Widget* widget, const std::string& name,
                        const int player_id) OVERRIDE;
     bool onEscapePressed() OVERRIDE;

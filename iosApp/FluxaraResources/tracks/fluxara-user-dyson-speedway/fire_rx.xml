@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<particles emitter="point">
+
+    <spreading angle="50"      />
+    
+    <velocity  x="0.000"
+               y="0.000"
+               z="0.010"         />
+    
+    <material  file="explode.png"  />
+    
+    <!-- Amount of particles emitted per second -->
+    <rate      min="15"
+               max="33"         />
+    
+    <!-- Minimal and maximal lifetime of a particle, in milliseconds. -->
+    <lifetime  min="500"
+               max="1500"         />
+    
+    <!-- Size of the particles -->
+    <size      min="0.50"
+               max="3.00"        />
+    
+    <color     min="255 255 255"
+               max="255 255 255" />
+
+</particles>

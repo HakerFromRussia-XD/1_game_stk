@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<campaign version="1" id="fluxara-main">
+  <event id="main-capture_the_flag-classic-pool" mode="capture_the_flag" track="fluxara-user-classic-pool" requires-offline-ctf="true" />
+  <event id="main-capture_the_flag-electro-station" mode="capture_the_flag" track="fluxara-user-electro-station" requires-offline-ctf="true" />
+  <event id="main-capture_the_flag-the-savanna-of-africa" mode="capture_the_flag" track="fluxara-user-the-savanna-of-africa" requires-offline-ctf="true" />
+  <event id="main-capture_the_flag-toy-block-raceway" mode="capture_the_flag" track="fluxara-user-toy-block-raceway" requires-offline-ctf="true" />
+  <event id="main-capture_the_flag-metal-chaos" mode="capture_the_flag" track="fluxara-user-metal-chaos" requires-offline-ctf="true" />
+  <event id="main-free_for_all-ski-dash" mode="free_for_all" track="fluxara-user-ski-dash" />
+  <event id="main-free_for_all-hairpin-hills" mode="free_for_all" track="fluxara-user-hairpin-hills" />
+  <event id="main-free_for_all-stukroche-bay" mode="free_for_all" track="fluxara-user-stukroche-bay" />
+  <event id="main-free_for_all-enterprise-ffa" mode="free_for_all" track="fluxara-user-enterprise-ffa" />
+  <event id="main-free_for_all-skid-grounds" mode="free_for_all" track="fluxara-user-skid-grounds" />
+  <event id="main-three_strikes-dust-cross-split-combat" mode="three_strikes" track="fluxara-user-dust-cross-split-combat" />
+  <event id="main-three_strikes-battle-island--redesign-" mode="three_strikes" track="fluxara-user-battle-island--redesign-" />
+  <event id="main-three_strikes-lava-claws" mode="three_strikes" track="fluxara-user-lava-claws" />
+  <event id="main-three_strikes-oceanic-outskirt" mode="three_strikes" track="fluxara-user-oceanic-outskirt" />
+  <event id="main-three_strikes-garden-maze" mode="three_strikes" track="fluxara-user-garden-maze" />
+  <event id="main-egg_hunt-spell-lab" mode="egg_hunt" track="fluxara-user-spell-lab" />
+  <event id="main-egg_hunt-rt8-waterfall-gardens" mode="egg_hunt" track="fluxara-user-rt8-waterfall-gardens" />
+  <event id="main-egg_hunt-canyon-42" mode="egg_hunt" track="fluxara-user-canyon-42" />
+  <event id="main-egg_hunt-blooming-start" mode="egg_hunt" track="fluxara-user-blooming-start" />
+  <event id="main-egg_hunt-dyson-speedway" mode="egg_hunt" track="fluxara-user-dyson-speedway" />
+  <event id="main-soccer-orbital-simulation---soccer" mode="soccer" track="fluxara-user-orbital-simulation---soccer" />
+  <event id="main-soccer-moria-s-race-soccer" mode="soccer" track="fluxara-user-moria-s-race-soccer" />
+  <event id="main-soccer-the-court" mode="soccer" track="fluxara-user-the-court" />
+  <event id="main-soccer-a-secret--soccer-" mode="soccer" track="fluxara-user-a-secret--soccer-" />
+  <event id="main-soccer-tournament-field" mode="soccer" track="fluxara-user-tournament-field" />
+  <event id="main-follow_leader-dp-motorsports-land-ii" mode="follow_leader" track="fluxara-user-dp-motorsports-land-ii" />
+  <event id="main-follow_leader-strandvoort" mode="follow_leader" track="fluxara-user-strandvoort" />
+  <event id="main-follow_leader-rt6-finny-splashdown" mode="follow_leader" track="fluxara-user-rt6-finny-splashdown" />
+  <event id="main-follow_leader-maple-overpass" mode="follow_leader" track="fluxara-user-maple-overpass" />
+  <event id="main-follow_leader-green-valley" mode="follow_leader" track="fluxara-user-green-valley" />
+  <event id="main-ghost_geometry-lap-catch" mode="ghost_geometry" track="fluxara-user-lap-catch" requires-replay="true" />
+  <event id="main-ghost_geometry-the-valley-of-liquorice" mode="ghost_geometry" track="fluxara-user-the-valley-of-liquorice" requires-replay="true" />
+  <event id="main-ghost_geometry-maple-overpass---short" mode="ghost_geometry" track="fluxara-user-maple-overpass---short" requires-replay="true" />
+  <event id="main-ghost_geometry-subsea" mode="ghost_geometry" track="fluxara-user-subsea" requires-replay="true" />
+  <event id="main-ghost_geometry-carnaval-del-cacao" mode="ghost_geometry" track="fluxara-user-carnaval-del-cacao" requires-replay="true" />
+  <event id="main-lap_trial-motorsport-land" mode="lap_trial" track="fluxara-user-motorsport-land" />
+  <event id="main-lap_trial-paradise-peaks" mode="lap_trial" track="fluxara-user-paradise-peaks" />
+  <event id="main-lap_trial-icy-racing-maze" mode="lap_trial" track="fluxara-user-icy-racing-maze" />
+  <event id="main-lap_trial-supertux-raceway" mode="lap_trial" track="fluxara-user-supertux-raceway" />
+  <event id="main-lap_trial-green-hill_1" mode="lap_trial" track="fluxara-user-green-hill_1" />
+  <event id="main-normal-ancient-summits" mode="normal" track="fluxara-summit-run" />
+  <event id="main-normal-high-in-the-sky" mode="normal" track="fluxara-canyon" />
+  <event id="main-normal-lost-chasm" mode="normal" track="fluxara-user-lost-chasm" />
+  <event id="main-normal-old-amazon-jungle" mode="normal" track="fluxara-user-old-amazon-jungle" />
+  <event id="main-normal-volcan-island" mode="normal" track="fluxara-user-volcan-island" />
+  <event id="main-time_trial-volcano-remake" mode="time_trial" track="fluxara-user-volcano-remake" />
+  <event id="main-time_trial-rt7-retro" mode="time_trial" track="fluxara-user-rt7-retro" />
+  <event id="main-time_trial-shifting-sands-rework" mode="time_trial" track="fluxara-user-shifting-sands-rework" />
+  <event id="main-time_trial-clash-o-8" mode="time_trial" track="fluxara-user-clash-o-8" />
+  <event id="main-time_trial-sao-paulo" mode="time_trial" track="fluxara-user-sao-paulo" />
+</campaign>

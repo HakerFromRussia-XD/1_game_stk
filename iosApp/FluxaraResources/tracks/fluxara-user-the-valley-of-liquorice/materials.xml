@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<materials>
+  <material name="SNL_001_blue3_C2x.png" shader="additive" ignore="Y"/>
+  <material name="SNL_001_cyan4_C1x.png" shader="additive" ignore="Y"/>
+  <material name="SNL_001_green4_C1x.png" shader="additive" ignore="Y"/>
+  <material name="SNL_001_purple2_C3x.png" shader="additive" ignore="Y"/>
+  <material name="SNL_001_red3_C2x.png" shader="additive" ignore="Y"/>
+  <material name="SNL_001_white2_C1x.png" shader="additive" ignore="Y"/>
+  <material name="SNL_001_yellow3_C2x.png" shader="additive" ignore="Y"/>
+  <material name="SNL_002_purple-blue_noT2.png" shader="additive" ignore="Y"/>
+  <material name="SNL_002_purple-cyan_noT2.png" shader="additive" ignore="Y"/>
+  <material name="SNL_002_purple-green3_noT2.png" shader="additive" ignore="Y"/>
+  <material name="SNL_002_purple-orange4_noT2.png" shader="additive" ignore="Y"/>
+  <material name="SNL_002_purple-purple_noT.png" shader="additive" ignore="Y"/>
+  <material name="SNL_002_purple-red2_noT2.png" shader="additive" ignore="Y"/>
+  <material name="SNL_002_purple-white_noT2.png" shader="additive" ignore="Y"/>
+  <material name="snow_diff.jpg" gloss-map="PBR_Glow_min.png" normal-map="snow_normal.png"/>
+  <material name="solid_black.png" gloss-map="PBR_Reflect_max.png"/>
+  <material name="Surface_RX005_blue-cyan2.png" gloss-map="PBR_Glow_med.png"/>
+  <material name="Surface_RX005_cyan-blue2.png" gloss-map="PBR_Glow_low.png"/>
+  <material name="Surface_RX005_green2.png" gloss-map="PBR_Glow_low.png"/>
+  <material name="Surface_RX005_orange2.png" gloss-map="PBR_Glow_low.png"/>
+  <material name="Surface_RX005_purple-magenta2.png" gloss-map="PBR_Glow_med.png"/>
+  <material name="Surface_RX005_red2.png" gloss-map="PBR_Glow_low.png"/>
+  <material name="Surface_RX005_white.png" gloss-map="PBR_Glow_low.png"/>
+  <material name="texture_solid_black_invisible.png" shader="alphatest"/>
+  <material name="texture_solid_black_invisible_FFEffect.png" ignore="Y" shader="displace"/>
+  <material name="texture_solid_black_invisible_reset.png" shader="alphatest" reset="Y"/>
+  <material name="texture_transparent_blue5.png" shader="additive"/>
+  <material name="texture_transparent_blue_ForceField.png" shader="alphablend" ignore="Y"/>
+  <material name="texture_transparent_cyan3.png" shader="additive"/>
+  <material name="texture_transparent_green2.png" shader="additive"/>
+  <material name="texture_transparent_orange2.png" shader="additive"/>
+  <material name="texture_transparent_purple2.png" shader="additive"/>
+  <material name="texture_transparent_red3.png" shader="additive"/>
+  <material name="texture_transparent_white.png" shader="additive"/>
+  <material name="transparent_Ice001_purpleBlue2.png" shader="alphablend"/>
+  <material name="Zipper_RX_blue.png" shader="alphatest" gloss-map="PBR_Glow_max.png" high-adhesion="Y" has-gravity="Y">
+    <zipper duration="3.0" max-speed-increase="10.0" fade-out-time="3.0" speed-gain="2.5" min-speed="-1.0"/>
+  </material>
+  <material name="Zipper_RX_cyan.png" shader="alphatest" gloss-map="PBR_Glow_med.png" high-adhesion="Y" has-gravity="Y">
+    <zipper duration="3.0" max-speed-increase="19.5" fade-out-time="3.0" speed-gain="8.0" min-speed="-1.0"/>
+  </material>
+  <material name="Zipper_RX_green.png" shader="alphatest" gloss-map="PBR_Glow_med.png" high-adhesion="Y" has-gravity="Y">
+    <zipper duration="3.0" max-speed-increase="13.0" fade-out-time="3.0" speed-gain="4.0" min-speed="-1.0"/>
+  </material>
+  <material name="Zipper_RX_orange.png" shader="alphatest" gloss-map="PBR_Glow_med.png" high-adhesion="Y" has-gravity="Y">
+    <zipper duration="3.0" max-speed-increase="16.0" fade-out-time="3.0" speed-gain="6.0" min-speed="-1.0"/>
+  </material>
+  <material name="Zipper_RX_purple.png" shader="alphatest" gloss-map="PBR_Glow_med.png" high-adhesion="Y" has-gravity="Y">
+    <zipper duration="3.0" max-speed-increase="30.0" fade-out-time="3.0" speed-gain="15.0" min-speed="-1.0"/>
+  </material>
+  <material name="Zipper_RX_red.png" shader="alphatest" gloss-map="PBR_Glow_med.png" high-adhesion="Y" has-gravity="Y">
+    <zipper duration="3.0" max-speed-increase="26.0" fade-out-time="3.0" speed-gain="12.5" min-speed="-1.0"/>
+  </material>
+  <material name="Zipper_RX_white.png" shader="alphatest" gloss-map="PBR_Glow_med.png" high-adhesion="Y" has-gravity="Y">
+    <zipper duration="3.0" max-speed-increase="23.0" fade-out-time="3.0" speed-gain="10.0" min-speed="-1.0"/>
+  </material>
+</materials>

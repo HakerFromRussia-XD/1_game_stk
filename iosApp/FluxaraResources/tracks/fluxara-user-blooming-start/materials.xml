@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<materials>
+  <material name="array.png" shader="alphatest" mirror-axis="V" surface="Y"/>
+  <material name="blue-dust.png" shader="alphablend"/>
+  <material name="DirtSandIB.png" normal-map="DirtSandIB_N.png"/>
+  <material name="grassBS.png" slowdown-time="2.00" max-speed="0.32"/>
+  <material name="grassIB.png" normal-map="grassIB_N.png" slowdown-time="1.50" max-speed="0.64"/>
+  <material name="green-dust.png" shader="alphablend"/>
+  <material name="red-dust.png" shader="alphablend"/>
+  <material name="sandBS.png" falling-effect="Y" water-splash="Y"/>
+  <material name="stktex_generic_WoodH.png" has-gravity="Y"/>
+  <material name="tree_1.png" shader="grass" grass-speed="1.50"/>
+  <material name="waterBS.png" surface="Y" shader="displace"/>
+  <material name="zipperBS.png" shader="alphatest" gloss-map="emiMP.png" mirror-axis="V">
+    <zipper duration="1.7000000476837158" max-speed-increase="11.0" fade-out-time="1.2999999523162842" speed-gain="7.0" min-speed="-1.0"/>
+  </material>
+</materials>

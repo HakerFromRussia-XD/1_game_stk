@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<materials>
+  <material name="cutInconvenience.png" shader="alphatest" reset="Y"/>
+  <material name="gfx_whiteBeam_a.png" shader="additive" ignore="Y"/>
+  <material name="ground_rocks.png" normal-map="ground_rocks_norm.png" slowdown-time="0.50" max-speed="0.70"/>
+  <material name="pattern_camo_alpha.png" shader="alphatest"/>
+  <material name="road.png" shader="alphatest" has-gravity="Y"/>
+  <material name="rock_mesh.png" normal-map="rock_mesh_norm.png"/>
+  <material name="stk_generic_rockStrata_b_edit.png" normal-map="stk_generic_rockStrata_b_edit_norm.png" slowdown-time="0.50" max-speed="0.70"/>
+  <material name="tank_1_diff.png" normal-map="tank_1_norm_edit.jpg"/>
+  <material name="terminal_graphic.png" shader="alphatest"/>
+  <material name="transp.png" shader="alphatest" reset="Y"/>
+  <material name="window.png" shader="alphablend"/>
+  <material name="window_tent.png" shader="alphablend"/>
+</materials>

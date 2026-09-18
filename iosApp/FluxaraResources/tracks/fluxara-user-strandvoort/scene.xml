@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<scene>
+  <track model="strandvoort_track.spm" x="0" y="0" z="0"/>
+  <sun  fog="true" fog-color="2 5 8" fog-max="0.5" fog-start="5.00" fog-end="300.00" xyz="-204.24 90.63 0.00" sun-diffuse="255 240 54" ambient="85 85 85"/>
+  <sky-box texture="generic_lightblue_skybox_top.png generic_lightblue_skybox_bottom.png generic_lightblue_skybox_east.png generic_lightblue_skybox_west.png generic_lightblue_skybox_south.png generic_lightblue_skybox_north.png" sh-texture="generic_lightblue_skybox_west.png generic_lightblue_skybox_west.png generic_lightblue_skybox_west.png generic_lightblue_skybox_west.png generic_lightblue_skybox_west.png generic_lightblue_skybox_west.png"/>
+  <camera far="1000.0"/>
+  <checks>
+    <check-lap kind="lap" same-group="0" other-ids="2 4" />
+    <check-line kind="activate" other-ids="0" p1="44.74 -655.71" p2="44.74 -605.72"
+                min-height="2.28" same-group="1 5"/>
+    <check-line kind="activate" other-ids="3" p1="-248.19 -565.51" p2="-209.34 -534.05"
+                min-height="-1.00" same-group="2 4"/>
+    <check-line kind="activate" other-ids="1 5" p1="-416.66 -31.31" p2="-463.84 -47.82"
+                min-height="2.35" same-group="3"/>
+    <check-line kind="activate" other-ids="3" p1="-248.19 -565.51" p2="-209.34 -534.05"
+                min-height="2.00" same-group="2 4"/>
+    <check-line kind="activate" other-ids="0" p1="44.74 -655.71" p2="44.74 -605.72"
+                min-height="5.28" same-group="1 5"/>
+  </checks>
+  <small-nitro id="Empty.001" x="-662.40" y="50.00" z="-592.46" />
+  <small-nitro id="Empty.002" x="-659.40" y="50.00" z="-592.46" />
+  <item id="Empty.003" x="-656.40" y="50.00" z="-592.46" />
+  <item id="Empty.005" x="-653.40" y="50.00" z="-592.46" />
+  <big-nitro id="Empty.006" x="-222.58" y="50.00" z="-550.36" h="38.65" />
+  <big-nitro id="Empty.007" x="-224.93" y="50.00" z="-552.23" h="38.65" />
+  <big-nitro id="Empty.008" x="-227.27" y="50.00" z="-554.11" h="38.65" />
+  <big-nitro id="Empty.009" x="-229.61" y="50.00" z="-555.98" h="38.65" />
+  <item id="Empty.010" x="-309.09" y="50.00" z="-555.77" h="41.91" />
+  <item id="Empty.011" x="-311.32" y="50.00" z="-557.77" h="41.91" />
+  <item id="Empty.012" x="-313.56" y="50.00" z="-559.78" h="41.91" />
+  <item id="Empty.013" x="-315.79" y="50.00" z="-561.78" h="41.91" />
+  <small-nitro id="Empty.014" x="-359.34" y="50.00" z="-334.01" h="5.23" />
+  <item id="Empty.015" x="-362.33" y="50.00" z="-334.29" h="5.23" />
+  <item id="Empty.016" x="-365.31" y="50.00" z="-334.56" h="5.23" />
+  <small-nitro id="Empty.017" x="-368.30" y="50.00" z="-334.83" h="5.23" />
+  <item id="Empty.018" x="-494.11" y="50.00" z="171.51" h="-88.65" />
+  <item id="Empty.019" x="-494.18" y="50.00" z="174.51" h="-88.65" />
+  <item id="Empty.020" x="-494.25" y="50.00" z="177.51" h="-88.65" />
+  <small-nitro id="Empty.021" x="-494.32" y="50.00" z="180.51" h="-88.65" />
+  <small-nitro id="Empty.022" x="-206.01" y="50.00" z="9.87" h="-1.06" />
+  <item id="Empty.023" x="-209.00" y="50.00" z="9.92" h="-1.06" />
+  <item id="Empty.024" x="-212.00" y="50.00" z="9.98" h="-1.06" />
+  <small-nitro id="Empty.025" x="-215.00" y="50.00" z="10.03" h="-1.06" />
+  <big-nitro id="Empty.026" x="-437.59" y="50.00" z="-33.46" h="18.00" />
+  <big-nitro id="Empty.027" x="-440.45" y="50.00" z="-34.39" h="18.00" />
+  <big-nitro id="Empty.028" x="-443.30" y="50.00" z="-35.31" h="18.00" />
+  <big-nitro id="Empty.029" x="-446.15" y="50.00" z="-36.24" h="18.00" />
+  <item id="Empty.030" x="-367.22" y="50.00" z="43.62" h="-142.95" />
+  <item id="Empty.031" x="-364.83" y="50.00" z="45.43" h="-142.95" />
+  <item id="Empty.032" x="-362.44" y="50.00" z="47.24" h="-142.95" />
+  <item id="Empty.033" x="-360.04" y="50.00" z="49.05" h="-142.95" />
+  <small-nitro id="Empty.034" x="-329.82" y="50.00" z="-241.08" h="34.22" />
+  <item id="Empty.035" x="-332.30" y="50.00" z="-242.76" h="34.22" />
+  <item id="Empty.036" x="-334.78" y="50.00" z="-244.45" h="34.22" />
+  <small-nitro id="Empty.037" x="-337.26" y="50.00" z="-246.14" h="34.22" />
+  <item id="Empty.038" x="-181.58" y="50.00" z="-432.06" h="-30.97" />
+  <item id="Empty.039" x="-184.16" y="50.00" z="-430.51" h="-30.97" />
+  <item id="Empty.040" x="-186.73" y="50.00" z="-428.97" h="-30.97" />
+  <small-nitro id="Empty.041" x="-189.30" y="50.00" z="-427.43" h="-30.97" />
+  <item id="Empty.042" x="60.25" y="50.00" z="-353.49" h="-54.47" />
+  <item id="Empty.043" x="58.51" y="50.00" z="-351.05" h="-54.47" />
+  <small-nitro id="Empty.044" x="56.76" y="50.00" z="-348.61" h="-54.47" />
+  <small-nitro id="Empty.045" x="55.02" y="50.00" z="-346.17" h="-54.47" />
+  <item id="Empty.046" x="181.83" y="50.00" z="-540.95" h="-17.59" />
+  <item id="Empty.047" x="178.97" y="50.00" z="-540.04" h="-17.59" />
+  <item id="Empty.048" x="176.11" y="50.00" z="-539.13" h="-17.59" />
+  <item id="Empty.049" x="173.25" y="50.00" z="-538.23" h="-17.59" />
+  <big-nitro id="Empty.050" x="49.82" y="50.00" z="-626.21" h="-90.06" />
+  <big-nitro id="Empty.051" x="49.82" y="50.00" z="-629.21" h="-90.06" />
+  <big-nitro id="Empty.052" x="49.82" y="50.00" z="-632.21" h="-90.06" />
+  <big-nitro id="Empty.053" x="49.81" y="50.00" z="-635.21" h="-90.06" />
+  <small-nitro id="Empty.054" x="-217.66" y="50.00" z="-635.22" h="-90.00" />
+  <item id="Empty.055" x="-217.66" y="50.00" z="-632.22" h="-90.00" />
+  <item id="Empty.056" x="-217.66" y="50.00" z="-629.22" h="-90.00" />
+  <small-nitro id="Empty.057" x="-217.66" y="50.00" z="-626.22" h="-90.00" />
+  <big-nitro id="Empty.058" x="49.81" y="50.00" z="-635.21" h="-90.06" />
+  <big-nitro id="Empty.059" x="49.82" y="50.00" z="-632.21" h="-90.06" />
+  <big-nitro id="Empty.060" x="49.82" y="50.00" z="-629.21" h="-90.06" />
+  <big-nitro id="Empty.061" x="49.82" y="50.00" z="-626.21" h="-90.06" />
+  <big-nitro id="Empty.062" x="-229.61" y="50.00" z="-555.98" h="38.65" />
+  <big-nitro id="Empty.063" x="-227.27" y="50.00" z="-554.11" h="38.65" />
+  <big-nitro id="Empty.064" x="-224.93" y="50.00" z="-552.23" h="38.65" />
+  <big-nitro id="Empty.065" x="-222.58" y="50.00" z="-550.36" h="38.65" />
+  <small-nitro id="Empty.066" x="-659.40" y="50.00" z="-592.46" />
+  <small-nitro id="Empty.067" x="-662.40" y="50.00" z="-592.46" />
+  <small-nitro id="Empty.068" x="-368.30" y="50.00" z="-334.83" h="5.23" />
+  <small-nitro id="Empty.069" x="-359.34" y="50.00" z="-334.01" h="5.23" />
+  <small-nitro id="Empty.070" x="-494.32" y="50.00" z="180.51" h="-88.65" />
+  <small-nitro id="Empty.071" x="-215.00" y="50.00" z="10.03" h="-1.06" />
+  <small-nitro id="Empty.072" x="-206.01" y="50.00" z="9.87" h="-1.06" />
+  <big-nitro id="Empty.073" x="-446.15" y="50.00" z="-36.24" h="18.00" />
+  <big-nitro id="Empty.074" x="-443.30" y="50.00" z="-35.31" h="18.00" />
+  <big-nitro id="Empty.075" x="-440.45" y="50.00" z="-34.39" h="18.00" />
+  <big-nitro id="Empty.076" x="-437.59" y="50.00" z="-33.46" h="18.00" />
+  <small-nitro id="Empty.077" x="-337.26" y="50.00" z="-246.14" h="34.22" />
+  <small-nitro id="Empty.078" x="-329.82" y="50.00" z="-241.08" h="34.22" />
+  <small-nitro id="Empty.079" x="-189.30" y="50.00" z="-427.43" h="-30.97" />
+  <small-nitro id="Empty.080" x="55.02" y="50.00" z="-346.17" h="-54.47" />
+  <small-nitro id="Empty.081" x="56.76" y="50.00" z="-348.61" h="-54.47" />
+  <item id="Empty.082" x="-523.85" y="50.00" z="-89.51" h="21.21" />
+  <item id="Empty.083" x="-526.64" y="50.00" z="-90.60" h="21.21" />
+  <item id="Empty.084" x="-529.44" y="50.00" z="-91.68" h="21.21" />
+  <item id="Empty.085" x="-532.24" y="50.00" z="-92.77" h="21.21" />
+  <item id="Empty.086" x="-270.60" y="50.00" z="144.33" h="-93.10" />
+  <item id="Empty.087" x="-270.44" y="50.00" z="147.33" h="-93.10" />
+  <item id="Empty.088" x="-270.28" y="50.00" z="150.33" h="-93.10" />
+  <small-nitro id="Empty.089" x="-270.12" y="50.00" z="153.32" h="-93.10" />
+  <small-nitro id="Empty.090" x="-270.12" y="50.00" z="153.32" h="-93.10" />
+  <default-start karts-per-row     ="1"
+                 forwards-distance ="2"
+                 sidewards-distance="7.5"
+                 upwards-distance  ="1.10"/>
+</scene>

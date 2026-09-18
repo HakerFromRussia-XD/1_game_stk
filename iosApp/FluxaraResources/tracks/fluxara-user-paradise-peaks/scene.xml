@@ -1,0 +1,2870 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<scene>
+  <track model="paradise_track.b3d" x="0" y="0" z="0">
+    <animated-texture name="zipper.png" dy="0.500" />
+    <animated-texture name="zipper.png" dy="0.500" />
+  </track>
+  <sun  xyz="250.00 50.00 75.00" sun-specular="203 184 160" sun-diffuse="203 184 160" ambient="98 75 87"/>
+  <sky-box texture="sky0001.png sky0002.png sky0003.png sky0004.png sky0006.png sky0005.png"/>
+  <camera far="1500.0"/>
+  <checks>
+    <check-lap kind="lap" same-group="0" other-ids="1" />
+    <check-line kind="activate" other-ids="2" p1="178.97 92.60" p2="187.94 131.58"
+                min-height="73.35" same-group="1"/>
+    <check-line kind="activate" other-ids="3" p1="-12.31 137.00" p2="-3.34 175.98"
+                min-height="81.34" same-group="2"/>
+    <check-line kind="activate" other-ids="0" p1="41.18 -132.97" p2="36.70 -93.22"
+                min-height="50.21" same-group="3"/>
+    <cannon p1="150.47 76.38 124.81" p2="148.23 76.38 115.07" target-p1="12.79 84.20 156.88" target-p2="10.54 84.20 147.13">
+    <curve channel="LocXYZ" speed="40.00" curvetype="bezier" extend="const">
+      <point c="149.347275 76.381363 119.938797" h1="150.000610 76.157242 119.787399" h2="111.032333 89.525093 128.817337" />
+      <point c="11.665024 84.199425 152.005997" h1="55.425858 95.435211 141.865234" h2="10.719940 83.956772 152.225006" />
+    </curve>
+    </cannon>
+  </checks>
+  <item x="141.69" y="71.01" z="-43.13" />
+  <big-nitro x="144.17" y="71.01" z="-43.43" />
+  <banana x="176.51" y="70.48" z="30.79" />
+  <item x="65.52" y="49.94" z="-108.11" />
+  <item x="65.66" y="49.94" z="-110.10" />
+  <item x="65.81" y="49.94" z="-112.10" />
+  <item x="65.95" y="49.94" z="-114.09" />
+  <banana x="177.15" y="70.48" z="35.75" />
+  <small-nitro x="223.36" y="74.53" z="96.40" />
+  <small-nitro x="226.33" y="74.53" z="96.00" />
+  <banana x="158.51" y="44.80" z="-101.93" />
+  <banana x="158.87" y="44.80" z="-106.92" />
+  <small-nitro x="162.01" y="44.61" z="-104.19" />
+  <big-nitro x="162.22" y="44.61" z="-107.18" />
+  <big-nitro x="161.79" y="44.61" z="-101.20" />
+  <big-nitro x="229.31" y="74.53" z="95.60" />
+  <item x="139.21" y="71.01" z="-42.83" />
+  <banana x="-15.65" y="82.51" z="158.34" />
+  <item x="-14.95" y="82.51" z="160.74" />
+  <item x="-16.35" y="82.51" z="155.94" />
+  <banana x="-35.34" y="82.51" z="165.07" />
+  <banana x="-31.73" y="82.51" z="168.54" />
+  <item x="-33.53" y="82.51" z="166.80" />
+  <item x="176.83" y="70.48" z="33.27" />
+  <item x="-168.94" y="72.42" z="71.46" />
+  <small-nitro x="-171.43" y="72.42" z="71.73" />
+  <item x="-173.91" y="72.42" z="72.01" />
+  <banana x="-185.10" y="65.07" z="-62.68" />
+  <big-nitro x="-188.09" y="65.03" z="-64.15" />
+  <small-nitro x="-183.95" y="65.07" z="-64.91" />
+  <small-nitro x="-186.24" y="65.07" z="-60.46" />
+  <item x="-156.10" y="59.80" z="-142.54" />
+  <item x="-156.19" y="59.80" z="-144.54" />
+  <item x="-156.28" y="59.80" z="-146.54" />
+  <item x="-156.37" y="59.80" z="-148.54" />
+  <small-nitro x="-54.62" y="53.84" z="-178.21" />
+  <small-nitro x="-54.04" y="53.84" z="-180.64" />
+  <small-nitro x="-53.46" y="53.84" z="-183.07" />
+  <object type="billboard" texture="clouds.png" xyz="4.32 -19.44 -27.46" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-2.10 -40.83 -184.37" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-9.31 -19.98 -228.25" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-7.08 -20.82 -256.44" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="7.57 -2.89 -274.01" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="8.67 0.22 -317.44" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="1.89 -23.35 -352.56" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-4.68 -32.74 -367.35" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="8.44 -20.37 -411.54" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-3.93 -48.10 -437.34" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="9.43 4.60 -465.05" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="39.92 1.66 8.45" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="70.67 -33.62 6.93" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="88.19 -43.78 -2.54" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="304.29 -14.58 -3.50" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="339.94 -35.30 9.00" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="379.35 -36.80 -6.83" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="406.47 -6.93 -5.35" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="435.99 -41.67 -3.94" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="463.76 -17.66 -1.82" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="2.94 9.45 226.57" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="8.48 -17.76 250.44" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-9.66 -21.63 284.18" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="5.17 5.59 318.04" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="7.60 -1.97 334.19" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-9.44 -33.89 377.10" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-1.49 -31.78 411.63" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="2.44 -49.46 427.70" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-8.00 -37.52 467.41" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-222.36 -32.94 -5.07" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-259.85 2.17 5.24" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-277.55 -48.73 9.41" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-318.36 1.17 -5.83" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-337.88 -31.00 3.89" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-375.51 -5.84 9.84" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-410.33 -26.39 -3.47" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-441.42 -32.12 7.45" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-468.37 -27.73 -1.48" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-26.30 -38.81 -219.37" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-39.39 -37.82 -255.10" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-27.99 -30.17 -271.79" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-38.15 1.45 -314.55" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-36.68 -44.14 -335.79" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-24.41 -13.29 -370.41" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-33.56 -22.99 -398.84" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-31.93 9.67 -441.58" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-28.37 -27.76 -476.27" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-60.85 -45.01 -210.35" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-68.73 -14.34 -247.05" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-69.35 -27.93 -274.38" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-61.15 -32.44 -312.16" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-71.69 4.59 -350.16" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-59.07 -40.17 -373.36" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-68.65 -39.65 -396.99" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-57.32 -7.13 -430.27" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-59.67 -6.34 -467.81" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-87.25 -36.86 -219.30" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-98.17 -41.94 -245.78" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-96.13 -49.49 -272.11" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-242.82 -11.29 -507.56" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-213.08 -6.03 -508.02" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-186.68 -32.20 -505.98" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-162.64 -42.31 -500.20" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-119.69 5.15 -501.72" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-94.53 -47.15 -495.51" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-57.79 1.60 -503.76" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-34.75 -47.34 -509.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-2.07 -22.78 -491.57" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="26.57 -40.23 -509.12" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-84.02 -14.76 -320.23" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="62.82 7.28 -490.87" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="95.97 -7.70 -497.75" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="126.73 -26.70 -509.00" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="164.46 -2.64 -501.12" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="184.10 -24.70 -506.63" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="228.74 -8.02 -492.54" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="250.54 2.03 -508.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="272.45 -5.29 -504.00" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="305.29 -28.76 -496.63" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="349.32 -32.46 -494.24" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-93.35 -31.87 -340.19" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="373.30 -18.81 -504.21" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="408.16 -2.47 -509.29" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="432.63 -15.10 -499.48" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="472.31 -36.06 -494.80" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="502.37 -32.09 -478.59" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="499.07 -41.45 -428.76" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="495.54 -8.71 -405.09" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="498.17 -6.31 -376.66" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="504.82 -24.67 -350.90" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="495.82 -47.22 -314.10" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-86.80 -41.70 -366.80" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="492.05 -40.62 -279.63" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="509.33 -21.60 -252.76" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="497.38 -13.71 -228.26" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="506.38 3.61 -196.09" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="509.24 -45.29 -151.80" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="498.31 -3.57 -133.02" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="505.59 -24.79 -89.78" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="499.72 6.69 -54.48" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="493.78 -23.33 -25.61" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="492.54 -2.04 8.24" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-86.97 -12.81 -403.48" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="507.63 -21.97 33.45" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="490.65 -12.20 64.85" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="503.47 9.20 86.78" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="492.55 -0.20 120.74" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="495.09 1.59 147.56" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="505.82 -14.82 185.27" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="505.16 -5.18 228.56" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="492.98 8.12 253.12" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="491.69 -47.64 288.63" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="490.71 -34.59 305.47" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-95.81 -36.78 -444.58" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="499.97 -37.88 347.15" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="509.66 -25.65 367.97" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="490.84 -37.05 415.21" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="491.28 -7.88 444.77" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="501.70 -24.62 472.34" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="460.07 -5.01 491.69" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="436.03 -5.91 496.04" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="404.54 4.52 491.99" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="370.87 -35.62 499.56" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="348.12 -12.77 496.77" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-97.13 -38.70 -466.85" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="315.30 -17.72 497.45" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="290.18 4.59 508.77" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="250.42 -29.18 503.02" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="210.75 -26.20 507.08" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="177.55 -18.30 506.45" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="158.91 -6.47 491.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="132.68 -31.28 499.89" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="96.99 -23.28 490.94" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="57.29 -27.28 502.75" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="33.92 -7.06 502.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-3.28 -33.15 490.91" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-29.87 -31.31 500.17" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-58.98 -29.46 506.91" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-99.76 -6.10 497.17" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-129.80 -11.18 494.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-147.03 -42.57 493.70" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-196.97 -13.62 502.70" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-212.43 -41.22 492.01" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-250.27 0.70 502.60" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-272.25 -22.97 501.59" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-304.04 -26.52 500.81" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-341.49 -21.41 503.13" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-372.94 -23.30 501.75" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-406.09 -43.46 508.66" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-430.09 -15.95 493.82" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-464.36 -0.51 497.98" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-497.78 8.00 -491.74" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="506.20 -31.39 -491.96" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-498.33 -19.72 508.16" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="506.89 -24.77 505.16" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-127.96 -47.38 -220.53" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-132.62 -15.09 -247.79" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-124.31 -2.79 -279.11" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-132.57 -47.04 -319.04" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-134.84 1.29 -350.99" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-124.89 -19.33 -384.18" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-120.59 -11.09 -402.91" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-120.20 -0.69 -432.44" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-124.26 -27.77 -462.81" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-159.52 -36.78 -212.62" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-149.76 -21.31 -257.51" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-147.32 -6.06 -271.84" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-163.78 -29.33 -307.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-159.01 -47.26 -338.17" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-158.28 -16.08 -367.04" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-158.08 -22.74 -410.51" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-160.52 -0.43 -429.64" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-160.26 -37.77 -476.59" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-192.62 -42.02 -197.15" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-187.77 -28.49 -209.89" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-182.07 4.12 -258.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-187.25 -38.60 -280.93" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-188.19 -32.70 -310.24" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-182.62 -30.12 -334.71" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-181.72 -19.07 -382.63" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-187.28 -11.57 -401.95" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-184.58 -25.66 -442.83" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-187.89 -39.01 -460.37" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-216.40 -48.34 -196.77" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-227.41 -1.86 -221.81" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-220.59 7.35 -254.64" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-226.50 -40.17 -288.24" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-228.40 -0.99 -308.44" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-209.38 -25.39 -344.29" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-226.40 4.77 -373.08" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-210.38 -47.86 -410.38" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-227.68 -29.85 -431.18" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-212.91 -43.03 -458.79" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-247.83 5.13 -22.01" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-257.40 2.49 -65.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-254.68 -37.78 -100.68" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-245.43 -46.18 -126.61" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-253.46 -15.51 -164.70" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-251.69 -29.15 -182.44" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-252.34 -0.35 -210.12" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-252.29 1.63 -258.08" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-242.91 -43.98 -281.75" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-241.38 5.72 -306.38" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-254.43 2.59 -334.62" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-253.44 -19.55 -375.44" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-253.69 -14.72 -409.89" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-255.04 -10.11 -447.00" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-248.07 5.60 -478.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-283.82 6.30 -31.31" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-274.59 -40.82 -70.25" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-273.66 1.82 -94.51" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-272.60 7.73 -119.36" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-275.98 -49.77 -165.70" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-275.05 -33.74 -192.66" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-284.79 9.24 -226.46" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-290.15 -40.30 -253.90" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-289.37 2.48 -287.68" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-284.03 -15.02 -310.45" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-277.20 -10.94 -342.00" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-278.66 -49.88 -365.89" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-286.98 -6.10 -412.32" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-278.19 -24.63 -428.33" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-276.33 0.28 -466.31" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-321.24 -28.99 -29.84" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-313.95 -49.37 -53.91" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-303.92 -11.67 -85.33" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-316.38 -38.49 -131.98" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-315.78 -25.20 -164.87" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-317.41 -10.07 -190.77" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-306.88 1.74 -220.26" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-305.96 -23.61 -246.73" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-303.27 -25.05 -282.30" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-322.43 -39.40 -316.84" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-314.43 -26.59 -342.01" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-310.22 -43.11 -369.21" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-316.86 -45.59 -400.91" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-321.00 -8.69 -447.12" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-316.51 -42.71 -472.70" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-333.84 -20.88 -21.52" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-350.54 4.82 -61.98" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-340.53 -5.61 -93.97" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-346.14 -39.64 -116.66" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-346.26 -41.40 -165.12" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-341.37 -32.93 -194.92" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-349.62 -23.78 -222.30" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-337.60 -17.12 -249.11" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-344.06 5.99 -280.18" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-342.99 -9.93 -309.13" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-335.84 -42.01 -341.66" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-351.11 -39.70 -367.15" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-340.43 -49.52 -414.48" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-338.12 -3.28 -431.83" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-349.18 -1.76 -472.11" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-379.12 -49.43 -26.77" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-383.31 1.77 -58.60" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-371.59 -21.00 -90.17" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-370.89 -48.53 -115.87" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-369.56 -32.84 -161.26" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-378.99 -43.23 -179.65" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-375.03 -38.91 -224.97" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-376.51 -23.15 -245.09" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-375.12 -30.40 -287.56" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-384.71 -40.22 -306.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-383.32 7.05 -343.13" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-376.48 -8.35 -381.13" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-369.11 -19.88 -406.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-372.94 -38.52 -436.14" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-375.48 -8.37 -461.02" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-407.73 -11.09 -32.87" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-403.97 -9.98 -56.40" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-410.95 9.15 -97.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-402.25 -49.80 -124.24" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-414.73 -15.40 -163.44" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-404.36 -42.81 -178.63" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-403.66 9.43 -228.27" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-402.74 3.20 -256.00" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-409.01 -29.81 -272.82" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-400.85 -16.31 -305.41" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-403.17 4.68 -338.88" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-410.91 -16.30 -366.51" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-397.52 -49.57 -399.79" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-399.12 -7.75 -436.72" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-412.15 -3.12 -474.03" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-428.25 7.46 -22.38" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-446.25 8.99 -64.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-428.99 -45.38 -91.80" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-433.16 -31.16 -121.97" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-443.18 3.99 -153.81" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-440.25 -16.02 -186.94" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-443.74 -43.95 -210.11" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-431.17 -2.47 -255.40" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-433.56 -25.06 -285.26" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-431.82 -18.87 -312.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-445.37 -27.39 -339.41" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-432.68 -45.62 -384.49" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-430.91 -37.51 -410.97" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-442.72 -14.59 -439.80" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-437.81 -20.27 -475.26" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-471.68 -47.18 -21.45" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-461.76 -18.10 -70.39" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-464.56 5.01 -99.30" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-467.33 -48.70 -124.49" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-463.98 -4.86 -165.31" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-471.40 -28.25 -179.11" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-478.60 -18.43 -223.43" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-462.79 -20.40 -246.13" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-473.79 -37.59 -287.21" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-464.24 -18.44 -308.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-463.47 -18.16 -336.13" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-473.45 -23.25 -379.71" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-459.67 -43.67 -399.17" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-469.73 -33.51 -437.59" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-478.64 -36.51 -462.45" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="26.05 -5.95 -39.91" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="57.23 8.48 -31.79" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="94.83 -35.66 -30.18" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="281.21 -26.34 -37.20" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="312.89 -14.06 -25.22" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="335.87 2.98 -26.03" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="381.30 -20.09 -23.55" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="401.46 0.80 -30.45" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="432.88 -48.18 -21.47" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="464.25 -34.15 -34.05" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="27.12 -34.70 -69.55" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="66.98 -0.46 -66.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="84.64 -12.96 -58.55" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="102.24 8.44 -68.41" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="286.60 -6.20 -63.71" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="316.63 -2.91 -56.36" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="344.95 -37.48 -58.19" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="368.11 -46.87 -59.60" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="405.07 -9.54 -54.81" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="446.39 -15.32 -72.24" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="461.48 -23.35 -65.66" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="39.61 -12.31 -93.75" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="53.20 0.87 -97.12" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="90.64 -5.59 -97.86" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="321.78 -11.99 -89.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="342.90 -40.13 -98.72" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="372.72 -29.00 -97.12" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="415.40 -31.74 -94.37" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="430.82 0.89 -94.46" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="461.75 -3.07 -98.32" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="28.00 -5.10 -130.44" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="64.14 -1.79 -120.61" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="89.67 -10.37 -118.70" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="289.37 -49.63 -130.08" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="303.88 -16.95 -117.08" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="340.38 -2.80 -117.53" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="371.12 -49.47 -121.79" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="412.56 2.53 -132.14" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="432.49 -30.90 -128.12" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="461.22 9.05 -132.09" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="21.71 -39.19 -158.93" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="56.26 0.46 -160.77" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="93.39 -10.69 -155.65" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="116.89 -33.41 -165.82" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="157.39 -16.60 -161.81" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="252.19 -15.19 -159.84" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="274.63 -3.47 -149.25" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="308.79 -12.63 -156.30" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="344.91 9.62 -147.68" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="369.43 -39.90 -150.51" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="413.05 5.87 -156.14" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="444.04 -42.72 -159.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="476.42 -3.20 -148.44" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="40.98 -10.70 -196.07" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="56.66 -5.04 -190.25" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="103.71 -3.10 -185.31" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="121.12 -37.36 -194.06" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="164.27 -7.87 -179.44" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="190.65 9.41 -181.85" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="211.40 -37.26 -195.20" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="257.54 -36.94 -189.79" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="271.87 3.69 -187.35" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="307.36 -34.13 -184.22" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="335.42 -42.90 -193.24" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="379.00 0.70 -178.10" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="413.48 1.42 -189.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="442.44 -34.79 -187.36" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="477.27 -16.16 -190.56" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="36.97 -16.97 -210.37" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="59.63 -12.60 -211.28" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="100.52 4.56 -224.89" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="115.74 -28.50 -223.55" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="155.24 -49.47 -221.85" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="193.84 -0.12 -215.00" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="208.86 9.78 -217.43" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="256.54 -44.14 -222.22" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="275.35 -46.69 -222.32" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="305.84 -14.11 -219.06" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="344.70 -0.46 -224.14" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="379.75 -45.04 -210.80" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="399.00 9.12 -214.70" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="431.72 -25.80 -228.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="471.06 -7.14 -212.50" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="35.36 -37.46 -248.77" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="58.86 -9.95 -253.19" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="97.82 -12.38 -251.74" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="127.28 -40.55 -254.02" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="160.34 -40.12 -242.15" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="185.22 -49.81 -248.80" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="218.47 -7.32 -249.92" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="241.82 -36.62 -243.87" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="273.87 -5.31 -244.53" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="313.93 -23.80 -259.32" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="351.25 -0.36 -258.57" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="371.49 4.54 -244.45" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="404.35 -19.96 -248.30" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="430.89 -40.38 -241.15" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="468.61 -13.42 -257.00" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="35.14 -40.04 -279.62" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="62.40 -19.73 -285.12" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="88.38 -39.20 -284.97" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="126.54 9.76 -284.89" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="148.93 -42.25 -279.98" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="182.69 -1.31 -282.81" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="214.72 -1.01 -290.47" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="247.64 -23.06 -285.34" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="289.71 -7.24 -283.40" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="316.73 -47.76 -284.61" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="344.97 5.87 -284.63" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="373.82 -22.08 -273.44" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="407.05 -22.93 -281.32" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="441.86 -42.33 -286.75" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="459.27 1.42 -282.38" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="30.14 -16.07 -309.27" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="69.33 -40.08 -311.33" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="100.36 -34.44 -315.91" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="125.44 -40.01 -302.92" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="165.06 -44.54 -311.64" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="178.69 -20.77 -319.43" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="214.44 -33.44 -319.73" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="245.63 -14.91 -319.46" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="290.62 -41.19 -315.54" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="320.45 -12.62 -321.33" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="335.70 -28.27 -307.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="371.07 -49.84 -313.81" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="401.98 -16.84 -309.78" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="435.17 -22.51 -309.35" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="459.59 -28.15 -305.13" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="31.08 -33.61 -336.30" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="52.90 -48.76 -340.17" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="92.14 -37.96 -345.39" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="133.05 -33.81 -335.28" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="152.56 -16.95 -350.41" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="177.66 2.27 -345.00" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="225.97 -31.70 -334.49" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="245.86 -30.15 -351.16" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="271.34 -5.52 -349.43" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="311.16 -22.26 -337.68" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="343.62 -10.37 -351.20" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="365.08 -16.86 -348.05" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="413.86 -44.86 -342.34" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="436.58 -18.50 -342.97" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="462.18 -4.74 -340.62" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="31.47 9.70 -383.96" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="56.34 -29.83 -381.92" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="97.08 5.54 -370.19" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="134.90 4.26 -372.16" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="155.40 8.42 -376.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="186.40 -17.65 -370.69" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="224.65 -11.19 -367.35" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="256.88 -32.42 -371.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="283.58 -0.98 -367.37" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="320.17 -2.07 -372.98" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="334.87 -47.66 -383.44" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="372.68 -21.37 -368.32" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="411.19 -40.80 -371.28" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="433.55 -45.57 -376.90" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="459.27 -13.98 -381.26" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="27.57 -40.97 -414.30" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="68.93 -7.84 -405.32" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="98.86 8.72 -404.45" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="117.94 -33.41 -402.96" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="156.94 -29.54 -403.19" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="188.20 -1.24 -401.51" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="215.36 5.27 -412.14" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="245.04 -0.91 -412.73" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="276.36 -46.99 -405.81" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="322.33 -31.58 -409.29" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="339.87 -29.41 -410.35" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="382.57 6.25 -402.68" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="415.06 -39.66 -397.82" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="428.65 -14.86 -397.66" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="465.40 1.82 -410.05" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="30.99 -39.19 -441.08" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="57.69 -7.62 -444.90" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="95.58 -25.11 -438.36" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="123.99 -35.00 -442.69" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="147.44 -17.01 -436.66" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="193.20 -24.64 -428.82" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="223.49 -31.41 -435.22" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="258.90 -11.23 -437.02" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="273.49 -38.17 -445.96" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="308.46 -16.08 -429.61" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="350.05 -26.52 -441.56" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="381.37 -48.85 -442.35" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="397.30 3.21 -446.92" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="442.17 -25.75 -432.93" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="459.44 6.49 -430.70" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="22.19 9.99 -477.04" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="58.59 -7.79 -472.94" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="91.80 -15.61 -462.33" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="118.26 9.48 -472.25" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="156.24 -47.01 -465.98" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="191.69 5.41 -464.82" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="225.26 1.88 -468.84" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="256.39 -44.98 -464.62" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="284.96 -11.65 -460.29" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="318.64 -38.95 -462.08" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="346.31 -23.70 -462.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="384.77 -12.52 -472.43" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="412.90 -31.02 -463.72" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="428.14 -13.91 -476.45" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="466.32 -37.58 -465.43" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="21.63 -47.14 23.22" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="24.44 -37.29 180.77" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="32.57 -31.02 224.39" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="37.83 0.54 252.54" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="37.03 -3.42 272.08" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="21.86 -42.89 313.27" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="37.07 9.06 343.46" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="34.97 -47.72 368.23" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="24.87 9.75 412.78" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="40.81 3.12 429.46" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="31.89 -20.40 471.72" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="63.36 -25.27 29.46" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="60.29 2.04 59.47" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="66.13 -45.43 99.96" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="63.20 -41.26 130.47" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="62.35 -9.40 151.76" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="64.80 -44.27 195.64" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="55.48 -38.38 224.52" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="72.06 -5.64 258.83" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="71.98 -25.61 283.36" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="60.60 -34.26 313.48" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="61.01 -46.46 347.44" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="60.75 -17.50 365.66" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="65.49 -23.82 402.16" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="59.36 -20.33 428.48" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="56.05 -34.16 467.83" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="100.47 -31.70 41.05" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="93.47 -49.82 64.93" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="97.67 -11.74 103.17" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="96.62 -43.04 123.39" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="85.60 1.65 146.50" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="91.09 -26.05 194.35" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="91.68 -9.44 224.20" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="97.77 5.30 248.74" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="95.50 6.91 281.95" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="93.34 -4.21 310.99" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="90.51 -10.83 345.95" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="87.57 -47.28 375.11" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="89.83 2.17 403.98" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="97.90 -18.42 446.52" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="94.74 -10.40 472.61" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="132.72 -31.06 254.58" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="132.36 -6.88 277.51" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="122.15 -16.12 311.74" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="116.46 -12.89 337.27" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="133.83 -33.21 380.98" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="128.62 -41.90 398.46" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="116.83 -46.54 432.62" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="130.05 -48.01 459.86" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="153.29 -7.91 248.74" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="161.60 -17.73 285.07" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="159.21 -41.87 306.68" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="152.41 8.87 348.80" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="158.05 -20.42 378.12" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="150.11 -2.27 406.04" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="147.73 2.68 435.76" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="150.26 -0.71 462.84" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="187.64 -17.61 242.73" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="183.77 -38.69 287.26" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="181.19 7.48 319.86" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="196.14 -7.36 345.26" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="184.54 -19.54 372.08" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="180.11 -17.80 409.11" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="194.68 -1.27 442.60" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="195.70 2.01 477.25" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="215.39 -32.49 211.54" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="221.97 -49.15 251.45" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="212.73 -2.80 283.33" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="220.46 -9.22 312.03" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="227.61 -37.23 337.03" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="214.59 -5.40 372.61" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="225.60 -17.92 402.23" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="209.71 -15.02 433.63" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="213.88 -17.04 474.99" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="256.30 -6.13 186.03" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="257.19 -31.67 214.28" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="248.08 -26.56 248.60" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="248.98 -11.04 275.29" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="241.08 -16.89 312.03" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="255.76 -46.11 349.53" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="242.16 -43.91 373.64" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="247.26 1.83 413.88" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="248.70 -49.32 444.65" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="241.81 -4.70 477.43" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="282.34 -46.61 157.40" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="276.83 -27.73 196.39" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="278.19 -14.42 226.21" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="286.09 -32.45 244.05" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="276.07 -1.53 288.09" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="286.14 -0.33 310.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="287.74 7.30 351.13" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="283.43 -34.79 367.66" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="285.16 -27.57 401.68" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="271.61 -2.68 445.59" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="277.45 -0.18 462.10" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="319.92 -25.76 33.52" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="311.32 -15.94 71.88" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="306.64 -22.42 86.90" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="319.61 -23.14 118.59" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="315.01 -40.07 148.17" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="318.50 -18.54 181.76" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="317.89 9.18 215.60" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="313.46 -48.88 248.15" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="321.98 -16.17 277.85" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="319.48 -12.42 317.22" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="305.49 -15.68 348.06" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="310.15 8.29 365.85" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="303.86 -29.69 405.88" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="317.26 -34.14 438.74" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="319.79 -30.53 475.46" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="339.04 -40.53 21.29" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="346.29 -0.92 54.00" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="334.89 -39.56 97.16" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="343.08 -45.02 124.52" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="341.45 -29.08 151.50" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="343.29 -4.49 184.12" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="343.74 1.44 213.48" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="344.89 -9.93 251.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="347.51 1.96 285.57" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="350.17 8.45 313.97" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="347.21 -4.55 345.65" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="334.03 -11.85 377.33" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="338.39 -47.51 399.06" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="353.46 -20.17 442.89" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="335.59 -9.93 474.10" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="377.65 -40.37 28.88" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="369.85 -4.17 63.80" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="367.38 -41.40 84.23" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="383.96 -48.95 122.50" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="384.76 -23.38 152.95" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="379.46 4.14 192.40" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="382.63 -47.52 210.56" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="379.69 8.20 257.84" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="382.60 -39.12 290.68" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="378.04 -17.88 321.50" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="384.61 -16.04 351.94" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="376.87 -43.23 366.36" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="380.31 -21.07 404.27" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="370.37 3.35 434.05" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="374.72 6.41 464.64" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="406.25 -16.83 29.69" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="406.92 -23.98 53.37" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="412.87 -27.29 87.51" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="401.61 -32.37 122.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="408.51 1.69 161.84" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="406.82 -17.21 193.29" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="400.73 -17.58 223.33" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="407.45 -12.62 248.85" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="412.40 8.48 286.39" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="398.63 -30.20 317.65" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="404.55 -12.18 344.01" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="399.67 -9.77 372.61" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="398.07 -14.13 404.12" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="404.86 -1.24 436.80" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="398.26 -28.87 470.03" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="445.39 -15.15 37.09" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="439.00 -44.74 72.34" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="432.70 -20.38 94.48" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="441.83 -3.64 130.88" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="443.97 -25.30 164.78" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="435.06 -34.66 183.54" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="446.59 -32.38 220.00" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="445.02 -21.57 254.74" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="432.79 -23.42 283.05" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="429.36 -21.30 304.75" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="440.33 -24.79 336.52" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="444.53 -1.57 384.04" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="443.87 -13.59 402.84" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="443.33 -33.69 443.88" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="443.73 1.38 471.26" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="468.61 2.28 26.15" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="466.68 -29.39 53.75" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="461.36 -34.06 102.24" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="463.23 -23.36 126.94" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="461.50 -11.23 157.51" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="462.42 -46.74 194.37" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="476.14 0.46 214.16" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="475.88 -42.21 256.25" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="476.65 -8.20 276.86" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="467.02 -34.03 309.09" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="460.02 5.87 346.47" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="467.12 -47.62 372.84" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="473.92 3.69 410.89" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="469.99 -41.70 427.87" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="463.28 -20.34 465.37" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-212.23 -18.14 39.29" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-247.36 -13.55 37.95" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-273.32 -27.27 23.37" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-318.72 -11.64 34.24" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-348.30 -7.20 28.38" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-370.90 -20.17 37.32" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-412.41 -41.79 22.68" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-439.14 -20.82 26.59" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-476.55 9.77 34.40" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-209.44 -44.86 60.79" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-247.84 6.24 52.97" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-273.19 -17.69 60.92" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-303.85 -49.87 70.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-345.90 -24.27 55.58" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-370.50 5.25 65.13" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-400.82 -28.18 52.83" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-432.44 -22.77 70.32" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-478.15 -30.24 64.64" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-225.89 -8.43 98.56" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-246.13 -25.69 86.80" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-276.67 3.78 103.64" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-319.74 0.98 91.20" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-337.34 -24.03 102.44" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-383.38 6.85 86.54" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-397.73 -32.32 91.13" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-430.92 5.99 88.15" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-473.09 -31.89 99.71" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-182.07 8.30 120.66" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-214.67 -46.15 129.03" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-250.46 -5.65 129.87" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-271.41 -6.85 128.19" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-311.47 -25.16 115.66" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-340.24 -43.89 115.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-379.54 2.74 118.28" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-404.20 -19.21 120.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-439.82 -14.33 124.26" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-464.66 -16.36 126.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-164.33 -18.51 165.24" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-188.67 -28.76 159.99" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-216.31 -30.17 164.66" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-240.99 -49.07 149.69" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-291.10 -26.91 148.39" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-321.46 -32.88 161.78" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-341.04 -11.16 150.99" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-374.61 -7.35 165.83" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-400.73 -41.36 158.10" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-444.67 -46.48 165.83" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-466.34 -33.23 147.61" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-116.26 -32.07 194.28" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-163.14 -15.64 180.47" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-182.99 -47.87 185.08" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-218.59 -6.52 183.90" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-257.28 -35.60 195.93" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-277.96 2.64 191.79" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-318.26 -35.80 177.64" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-341.69 -29.28 178.08" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-381.09 -11.66 189.04" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-408.12 -17.12 195.25" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-445.75 -42.70 188.21" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-467.93 -47.91 180.54" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-32.44 -19.29 215.29" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-58.19 -22.35 227.11" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-84.37 -16.86 213.11" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-117.38 -11.05 213.38" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-154.70 -42.37 208.82" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-179.53 1.14 222.74" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-209.27 2.22 212.39" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-257.40 -20.24 213.32" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-272.40 -18.13 227.20" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-322.10 -0.58 224.52" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-351.93 1.27 228.55" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-378.82 1.17 226.73" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-398.78 1.80 216.46" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-444.23 -45.14 219.89" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-474.54 -19.30 216.54" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-38.96 -21.21 258.44" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-67.74 -12.01 246.75" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-95.92 -32.29 247.37" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-115.48 -23.50 243.47" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-162.95 -32.73 247.71" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-179.76 0.83 253.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-223.36 4.85 249.66" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-251.30 -17.26 252.38" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-275.71 -26.97 240.75" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-315.46 -6.39 253.31" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-343.52 -45.77 242.96" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-378.69 -25.80 247.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-413.34 -46.25 251.57" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-441.81 -0.04 255.45" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-472.99 -25.81 245.05" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-24.51 -41.28 288.82" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-60.52 -16.38 279.24" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-87.35 -26.48 272.95" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-134.18 -3.47 271.55" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-152.52 -4.14 273.25" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-182.17 -1.23 284.98" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-212.67 -43.54 274.44" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-257.24 -10.58 290.83" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-272.63 -24.84 281.30" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-312.39 6.43 282.99" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-343.12 -37.48 278.31" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-377.14 -28.20 281.25" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-400.01 9.45 271.43" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-442.37 -49.94 287.13" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-469.63 -46.87 284.26" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-25.10 4.00 312.85" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-58.59 -9.53 312.53" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-94.94 -32.25 312.01" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-124.97 -41.98 316.27" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-151.02 -12.39 305.19" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-192.65 -47.28 306.70" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-213.84 -33.45 311.51" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-249.34 -42.39 312.36" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-275.35 -6.68 317.34" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-317.63 2.86 313.70" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-350.84 -34.98 313.53" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-375.59 -46.50 321.24" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-398.17 -49.09 321.71" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-445.04 -18.76 309.99" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-466.81 -24.88 318.22" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-28.03 -17.13 340.09" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-69.02 -23.78 338.57" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-93.50 -23.05 340.68" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-128.83 7.01 347.88" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-149.20 -0.31 338.07" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-178.26 -13.47 341.73" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-217.03 -18.79 343.46" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-253.12 -13.19 353.65" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-274.76 -29.68 344.59" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-320.12 -48.09 342.35" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-344.16 -6.25 340.14" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-378.20 -34.17 350.23" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-406.00 -34.50 336.82" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-439.11 -31.27 348.89" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-476.02 -20.62 346.61" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-40.82 1.23 369.15" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-69.57 -4.90 380.08" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-90.04 -16.56 368.26" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-130.52 1.72 378.69" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-161.39 0.61 383.10" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-183.25 -23.96 376.89" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-213.01 7.67 381.04" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-259.27 -1.69 382.40" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-272.66 -18.66 384.38" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-307.22 -24.23 373.92" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-337.31 -35.09 369.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-382.51 -21.81 382.87" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-403.07 -15.61 372.58" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-433.96 -14.25 377.81" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-462.60 -27.13 373.72" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-37.30 3.79 396.28" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-67.83 -27.04 397.12" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-84.07 -47.57 407.76" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-124.96 -31.13 405.98" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-164.05 -26.68 403.93" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-180.17 -32.52 405.84" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-219.33 -27.56 409.37" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-245.15 2.83 405.87" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-284.43 -15.58 397.80" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-320.55 -36.40 396.35" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-336.51 -4.68 407.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-382.78 -1.29 399.07" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-399.62 -45.87 399.12" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-445.46 -20.58 412.91" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-467.45 5.77 414.58" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-30.91 -37.52 439.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-61.27 -45.32 444.04" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-87.40 -43.51 437.11" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-122.11 -43.33 447.13" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-163.17 -14.27 427.60" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-179.89 -29.21 447.35" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-210.77 -19.91 434.35" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-242.36 -7.01 442.22" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-275.69 -16.76 438.40" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-315.56 -13.21 430.14" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-350.21 -32.24 439.17" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-374.93 -29.27 446.17" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-397.76 -13.75 441.76" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-428.22 2.66 429.63" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-461.05 -48.70 434.94" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-32.53 -36.50 468.17" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-67.54 -19.38 461.51" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-101.51 -3.30 470.98" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-134.89 -1.90 466.55" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-161.49 2.70 463.27" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-185.01 -21.02 477.66" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-221.22 -17.10 461.89" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-243.47 7.31 465.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-281.33 -46.90 460.36" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-320.03 -39.37 465.77" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-340.30 -1.77 470.00" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-369.65 -28.53 472.98" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-401.57 3.16 459.13" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-440.45 0.01 467.78" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-465.65 -16.64 468.28" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-494.85 -45.70 475.11" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-491.29 -40.69 447.47" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-498.28 -16.41 397.91" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-494.72 -0.57 365.93" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-496.58 -25.75 345.66" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-509.14 0.70 321.06" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-500.53 -47.50 281.68" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-502.21 -47.69 257.60" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-497.81 -48.19 210.56" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-490.84 5.41 180.79" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-491.10 -45.32 164.78" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-491.17 -12.15 128.61" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-502.78 -16.30 102.74" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-506.20 -2.51 68.15" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-504.68 -24.28 26.95" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-506.52 -10.47 -6.60" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-500.39 -0.90 -22.32" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-494.34 9.25 -60.49" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-503.39 -49.45 -88.80" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-503.41 5.47 -115.63" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-504.20 -37.57 -152.53" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-495.57 -20.24 -189.42" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-503.78 -16.97 -210.74" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-504.15 -35.83 -256.98" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-507.00 -34.85 -279.21" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-506.62 -8.98 -306.75" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-499.72 -41.11 -339.10" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-496.27 -47.48 -375.75" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-506.46 9.21 -409.67" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-496.92 -46.26 -446.17" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-502.87 -6.06 -467.96" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-464.22 -29.41 -490.77" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-430.54 -13.74 -504.82" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-407.14 -36.80 -509.75" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-369.80 -14.54 -502.93" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-352.22 -3.11 -494.70" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-306.31 -30.33 -498.94" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <object type="billboard" texture="clouds.png" xyz="-286.82 -35.59 -493.36" 
+             width="100.000" height="100.000" fadeout="true" start="5.00" end="20.00">
+  </object>
+  <default-start karts-per-row     ="2"
+                 forwards-distance ="1.10"
+                 sidewards-distance="1.10"
+                 upwards-distance  ="1.10"/>
+</scene>

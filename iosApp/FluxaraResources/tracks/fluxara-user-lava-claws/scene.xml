@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<scene>
+  <track model="lava-claws_track.spm" x="0" y="0" z="0"/>
+  <weather particles="lightLava.xml"/>
+  <sun  fog="true" fog-color="15 6 6" fog-max="0.20000000298023224" fog-start="15.00" fog-end="500.00" xyz="0.00 111.21 0.00" sun-specular="120 48 31" sun-diffuse="120 102 97" ambient="111 111 111"/>
+  <sky-box texture="magma_sky_t.png magma_sky_bottom.png magma_sky_e.png magma_sky_w.png magma_sky_s.png magma_sky_n.png" sh-texture="ibl.jpg ibl.jpg ibl.jpg ibl.jpg ibl.jpg ibl.jpg"/>
+  <camera far="1000.0"/>
+  <small-nitro id="Empty" x="-3.18" y="-2.00" z="3.64" />
+  <small-nitro id="Empty.001" x="-0.97" y="-2.00" z="0.80" />
+  <small-nitro id="Empty.002" x="1.66" y="-2.00" z="-2.04" />
+  <small-nitro id="Empty.003" x="4.29" y="-2.00" z="-4.98" />
+  <small-nitro id="Empty.004" x="6.29" y="-2.00" z="-7.41" />
+  <item id="Empty.005" x="-99.55" y="11.82" z="0.74" />
+  <item id="Empty.006" x="49.56" y="3.59" z="44.64" />
+  <item id="Empty.007" x="86.51" y="-0.58" z="-39.16" />
+  <banana id="Empty.008" x="-1.64" y="7.65" z="39.91" />
+  <banana id="Empty.009" x="-1.64" y="8.16" z="32.71" />
+  <banana id="Empty.010" x="-1.64" y="8.77" z="25.51" />
+  <small-nitro id="Empty.011" x="-70.15" y="10.24" z="23.61" />
+  <small-nitro id="Empty.012" x="-70.15" y="10.24" z="19.11" />
+  <small-nitro id="Empty.013" x="-70.15" y="10.24" z="14.61" />
+  <item id="Empty.014" x="-7.87" y="-3.18" z="-15.18" />
+  <item id="Empty.015" x="-26.59" y="0.14" z="-80.49" />
+  <item id="Empty.016" x="-71.97" y="-1.86" z="-34.04" />
+  <item id="Empty.017" x="-11.40" y="-5.67" z="-55.73" />
+  <banana id="Empty.018" x="2.60" y="-5.32" z="-106.57" />
+  <big-nitro id="Empty.019" x="-0.55" y="-5.76" z="-84.14" />
+  <item id="Empty.020" x="12.09" y="-3.26" z="-121.21" />
+  <item id="Empty.021" x="-63.73" y="0.43" z="-69.52" />
+  <item id="Empty.022" x="-53.93" y="7.84" z="24.52" />
+  <item id="Empty.023" x="-12.27" y="7.87" z="56.53" />
+  <item id="Empty.024" x="40.50" y="1.91" z="-83.25" />
+  <small-nitro id="Empty.025" x="23.08" y="9.74" z="-31.18" />
+  <small-nitro id="Empty.026" x="26.30" y="9.74" z="-27.30" />
+  <small-nitro id="Empty.027" x="29.73" y="9.76" z="-22.77" />
+  <item id="Empty.028" x="-121.17" y="4.14" z="7.36" />
+  <item id="Empty.029" x="-109.38" y="3.28" z="4.76" />
+  <item id="Empty.030" x="102.37" y="-0.33" z="20.31" />
+  <item id="Empty.031" x="74.11" y="-2.01" z="14.43" />
+  <item id="Empty.032" x="44.49" y="0.81" z="-138.48" />
+  <lightshaft xyz="-163.02 132.64 -187.94" id="Sun" opacity="0.56" color="145 69 29"/>
+  <default-start karts-per-row     ="8"
+                 forwards-distance ="0.56"
+                 sidewards-distance="1.50"
+                 upwards-distance  ="1.10"/>
+  <start x="19.10" y="0.81" z="-84.40" h="-90.00"/>
+  <start x="-63.06" y="-0.84" z="-22.89" h="82.24"/>
+  <start x="60.90" y="-2.57" z="14.40" h="93.56"/>
+  <start x="-40.43" y="8.06" z="27.37" h="-83.11"/>
+  <start x="-17.54" y="0.80" z="-82.49" h="96.64"/>
+  <start x="-58.16" y="-3.12" z="-42.89" h="108.06"/>
+  <start x="98.26" y="-1.38" z="-9.03" h="308.09"/>
+  <start x="-76.42" y="7.98" z="38.82" h="209.68"/>
+  <start x="-14.74" y="2.12" z="-116.93" h="57.24"/>
+  <start x="44.59" y="2.75" z="-67.12" h="-0.00"/>
+  <start x="-32.93" y="12.36" z="2.18" h="-0.00"/>
+</scene>

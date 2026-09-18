@@ -559,8 +559,10 @@ if (IOS)
         "^src/states_screens/motorica_(hub|about)_screen\\.cpp$")
     set(STK_SOURCES
         ${STK_SOURCES}
-        src/input/motorica_game_control_ios.mm)
+        src/input/motorica_game_control_ios.mm
+        src/utils/fluxara_orientation_ios.mm)
     set_source_files_properties(src/input/motorica_game_control_ios.mm
+        src/utils/fluxara_orientation_ios.mm
         PROPERTIES COMPILE_FLAGS "-x objective-c++" LANGUAGE CXX)
 endif()
 
@@ -656,6 +658,7 @@ else()
             ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_campaign_screen.cpp
             ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_race_setup_screen.cpp
             ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_kart_screen.cpp
+            ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_race_result_screen.cpp
             ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_settings_screen.cpp)
         set(FLUXARA_IOS_SKIN
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/stkskin.xml
@@ -664,6 +667,17 @@ else()
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/action_card.png)
         set_source_files_properties(${FLUXARA_IOS_SKIN} PROPERTIES
             MACOSX_PACKAGE_LOCATION Resources/data/skins/fluxara)
+        file(GLOB_RECURSE FLUXARA_IOS_UI_ART CONFIGURE_DEPENDS
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/fluxara/*.png)
+        foreach(FLUXARA_IOS_UI_IMAGE IN LISTS FLUXARA_IOS_UI_ART)
+            file(RELATIVE_PATH FLUXARA_IOS_UI_RELATIVE
+                ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources
+                ${FLUXARA_IOS_UI_IMAGE})
+            get_filename_component(FLUXARA_IOS_UI_DIRECTORY
+                ${FLUXARA_IOS_UI_RELATIVE} DIRECTORY)
+            set_source_files_properties(${FLUXARA_IOS_UI_IMAGE} PROPERTIES
+                MACOSX_PACKAGE_LOCATION Resources/data/${FLUXARA_IOS_UI_DIRECTORY})
+        endforeach()
         # Each Fluxara package stays self-contained in the source tree and is
         # mirrored under the same identifier inside the iOS data bundle.
         # This keeps adding a reviewed circuit or drive from touching Android.
@@ -695,13 +709,18 @@ else()
                 list(APPEND FLUXARA_IOS_TRACK ${FLUXARA_IOS_TRACK_FILES})
             endif()
         endforeach()
+        set(FLUXARA_IOS_CAMPAIGN
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/fluxara-campaign.xml)
+        set_source_files_properties(${FLUXARA_IOS_CAMPAIGN} PROPERTIES
+            MACOSX_PACKAGE_LOCATION Resources/data)
         set(FLUXARA_IOS_NOTICES
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/NOTICE-THIRD-PARTY.txt)
         set_source_files_properties(${FLUXARA_IOS_NOTICES} PROPERTIES
             MACOSX_PACKAGE_LOCATION Resources)
         add_executable(supertuxkart ${STK_SOURCES} ${STK_RESOURCES} ${STK_HEADERS}
             ${IOS_ASSETS_FILES} ${FLUXARA_IOS_SOURCES} ${FLUXARA_IOS_SCREENS}
-            ${FLUXARA_IOS_SKIN} ${FLUXARA_IOS_KART} ${FLUXARA_IOS_TRACK}
+            ${FLUXARA_IOS_SKIN} ${FLUXARA_IOS_UI_ART}
+            ${FLUXARA_IOS_KART} ${FLUXARA_IOS_TRACK} ${FLUXARA_IOS_CAMPAIGN}
             ${FLUXARA_IOS_NOTICES})
         # The generated mobile asset snapshot may contain the retired
         # Motorica-only content. Fluxara ships its curated content instead.

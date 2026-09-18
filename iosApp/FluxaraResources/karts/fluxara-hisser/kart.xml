@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<kart name="Hisser" version="3" model-file="hisser.spm" icon-file="icon.png" minimap-icon-file="icon.png" shadow-file="spicyrubber" type="medium" groups="Fluxara" rgb="1.00 0.18 0.00" revision="1">
+    <sounds engine="custom" file="birb.ogg" rolloff="0.2" max_dist="300" volume="1.0"/>
+    <wheels>
+        <front-left position="-0.251926 0.128713 0.517823" model="wheel-front-left.spm"/>
+        <front-right position="0.252275 0.128713 0.517823" model="wheel-front-right.spm"/>
+        <rear-left position="-0.251926 0.155920 -0.475090" model="wheel-rear-left.spm"/>
+        <rear-right position="0.252275 0.155920 -0.475090" model="wheel-rear-right.spm"/>
+    </wheels>
+    <nitro-emitter>
+        <nitro-emitter-a position="-0.086687 0.208114 -0.664032"/>
+        <nitro-emitter-b position="0.086687 0.208114 -0.664032"/>
+    </nitro-emitter>
+    <headlights>
+        <object position="0.000174 0.210338 1.048527" rotation="0.000000 -0.000000 0.000000" scale="0.176464 0.176464 1.000000" model="headlight.spm"/>
+    </headlights>
+    <lean max="0"/>
+    <exhaust file="kart_exhaust.xml"/>
+</kart>

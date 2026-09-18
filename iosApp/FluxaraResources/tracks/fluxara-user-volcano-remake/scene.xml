@@ -1,0 +1,1122 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<scene>
+  <track model="volcano_track.spm" x="0" y="0" z="0">
+    <static-object  model="Lavafield.spm" xyz="174.84 -35.28 -11.15" hpr="-16.1 -43.9 11.3" scale="100.87 87.97 100.87">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.00300" />
+    </static-object>
+    <static-object  model="Crater.spm" xyz="107.91 20.21 122.23" hpr="17.1 60.7 17.5" scale="1.17 1.17 1.17">
+    <animated-texture name="lava.png" dy="-0.10000" />
+    </static-object>
+    <static-object  model="Crater.spm" xyz="-153.13 18.47 -34.39" hpr="-79.7 98.6 -81.5" scale="1.17 1.17 1.17">
+    <animated-texture name="lava.png" dy="-0.10000" />
+    </static-object>
+    <static-object  model="Crater.spm" xyz="-39.35 29.10 208.84" hpr="6.7 30.7 9.9" scale="1.61 1.61 1.61">
+    <animated-texture name="lava.png" dy="-0.10000" />
+    </static-object>
+    <static-object  model="Crater.spm" xyz="-66.60 4.48 -50.19" hpr="47.0 105.7 60.2" scale="0.99 0.99 0.59">
+    <animated-texture name="lava.png" dy="-0.10000" />
+    </static-object>
+    <static-object  model="Crater.spm" xyz="4.77 35.02 30.98" hpr="0.0 -84.8 0.0" scale="1.00 1.00 1.00">
+    <animated-texture name="lava.png" dy="-0.10000" />
+    </static-object>
+    <static-object  model="Crater.spm" xyz="177.71 27.00 112.22" hpr="6.5 29.6 9.8" scale="1.76 1.76 1.76">
+    <animated-texture name="lava.png" dy="-0.10000" />
+    </static-object>
+    <static-object  model="vulcan_02.spm" xyz="-152.53 -7.28 -35.39" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.03000" />
+    </static-object>
+    <static-object  model="vulcan_01.spm" xyz="110.03 -4.75 119.35" hpr="-0.0 180.0 -0.0" scale="1.00 1.00 1.00">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.03000" />
+    </static-object>
+    <static-object  model="vulcan_03.spm" xyz="-37.24 -6.08 207.57" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.03000" />
+    </static-object>
+    <static-object  model="vulcan_02.spm" xyz="277.64 -51.25 -59.99" hpr="0.0 -0.0 0.0" scale="2.47 2.47 2.47">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.03000" />
+    </static-object>
+    <static-object  model="vulcan_02.spm" xyz="277.64 -31.02 41.89" hpr="0.0 -11.4 0.0" scale="1.90 1.90 1.90">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.03000" />
+    </static-object>
+    <static-object  model="vulcan_02.spm" xyz="179.16 -22.88 107.08" hpr="0.0 -65.8 0.0" scale="1.90 1.90 1.90">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.03000" />
+    </static-object>
+    <static-object  model="vulcan_02.spm" xyz="-272.50 -16.23 -105.12" hpr="-0.0 163.9 -0.0" scale="1.38 1.38 1.38">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.03000" />
+    </static-object>
+    <static-object  model="vulcan_02.spm" xyz="-276.20 -7.88 -168.76" hpr="0.0 150.9 0.0" scale="1.38 1.38 1.38">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.03000" />
+    </static-object>
+    <animated-texture name="stkflag_blackBooster_b.png" dy="1.00000" />
+    <animated-texture name="stkflag_blackBooster_a.png" dy="1.00000" />
+    <animated-texture name="stkflag_blackBooster_b.png" dy="1.00000" />
+  </track>
+  <object id="Cube.003" type="animation" xyz="-42.84 141.39 -390.40" hpr="0.0 -1.5 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="AshCloud.spm" skeletal-animation="false">
+    <animated-texture name="smoke_huricane_transp.png" dy="0.05000" />
+  </object>
+  <object id="Cube.005" type="animation" xyz="-43.00 56.40 -10.91" hpr="-19.9 -0.0 0.0" scale="0.90 0.99 0.91" interaction="ghost" model="AshColumn.spm" skeletal-animation="false">
+    <animated-texture name="smoke_huricane_transp.png" dy="0.50000" />
+  </object>
+  <object id="Cube.014" type="animation" xyz="-182.39 -9.82 -36.21" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="explode" shape="exact" model="Lavaflow3.spm" explode="y" skeletal-animation="false">
+    <animated-texture name="Lava_004_COLOR.jpg" dy="-0.01000" />
+  </object>
+  <object id="Cube.015" type="animation" xyz="17.83 11.02 -83.42" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ReverseRamp.spm" driveable="true" skeletal-animation="false" if="isTrackReverse">
+    <animated-texture name="stkflag_blackBooster_b.png" dy="1.00000" />
+  </object>
+  <object id="Cube.017" type="animation" xyz="-56.62 -8.94 171.40" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="explode" shape="exact" model="Lavaflow4.spm" explode="y" skeletal-animation="false">
+    <animated-texture name="Lava_004_COLOR.jpg" dy="-0.01000" />
+  </object>
+  <object id="Cube.018" type="animation" xyz="-111.70 -33.53 -129.59" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="MudBubbles.spm" skeletal-animation="false">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="23.000 -111.698" h1="11.288 -111.698" h2="34.712 -111.698"/>
+      <p c="53.000 -111.698" h1="41.288 -111.698" h2="62.370 -111.698"/>
+      <p c="77.000 -111.698" h1="67.630 -111.698" h2="112.137 -111.698"/>
+      <p c="167.000 -111.698" h1="131.863 -111.698" h2="179.884 -111.698"/>
+      <p c="200.000 -111.698" h1="187.116 -111.698" h2="212.884 -111.698"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="23.000 -129.594" h1="11.288 -129.594" h2="34.712 -129.594"/>
+      <p c="53.000 -129.594" h1="41.288 -129.594" h2="62.370 -129.594"/>
+      <p c="77.000 -129.594" h1="67.630 -129.594" h2="112.137 -129.594"/>
+      <p c="167.000 -129.594" h1="131.863 -129.594" h2="179.884 -129.594"/>
+      <p c="200.000 -129.594" h1="187.116 -129.594" h2="212.884 -129.594"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="23.000 -32.536" h1="11.288 -32.536" h2="34.712 -32.536"/>
+      <p c="53.000 -33.058" h1="41.288 -33.058" h2="62.370 -33.058"/>
+      <p c="77.000 -32.232" h1="67.630 -32.232" h2="112.137 -32.232"/>
+      <p c="167.000 -33.851" h1="131.863 -33.851" h2="179.884 -33.851"/>
+      <p c="200.000 -32.536" h1="187.116 -32.536" h2="212.884 -32.536"/>
+    </curve>
+    <curve channel="RotX" interpolation="bezier" extend="cyclic">
+      <p c="23.000 -0.000" h1="11.288 -0.000" h2="34.712 -0.000"/>
+      <p c="53.000 -0.000" h1="41.288 -0.000" h2="62.370 -0.000"/>
+      <p c="77.000 -0.000" h1="67.630 -0.000" h2="112.137 -0.000"/>
+      <p c="167.000 -0.000" h1="131.863 -0.000" h2="179.884 -0.000"/>
+      <p c="200.000 -0.000" h1="187.116 -0.000" h2="212.884 -0.000"/>
+    </curve>
+    <curve channel="RotZ" interpolation="bezier" extend="cyclic">
+      <p c="23.000 -0.000" h1="11.288 -0.000" h2="34.712 -0.000"/>
+      <p c="53.000 -0.000" h1="41.288 -0.000" h2="62.370 -0.000"/>
+      <p c="77.000 -0.000" h1="67.630 -0.000" h2="112.137 -0.000"/>
+      <p c="167.000 -0.000" h1="131.863 -0.000" h2="179.884 -0.000"/>
+      <p c="200.000 -0.000" h1="187.116 -0.000" h2="212.884 -0.000"/>
+    </curve>
+    <curve channel="RotY" interpolation="bezier" extend="cyclic">
+      <p c="23.000 -0.000" h1="11.288 -0.000" h2="34.712 -0.000"/>
+      <p c="53.000 -0.000" h1="41.288 -0.000" h2="62.370 -0.000"/>
+      <p c="77.000 -0.000" h1="67.630 -0.000" h2="112.137 -0.000"/>
+      <p c="167.000 -0.000" h1="131.863 -0.000" h2="179.884 -0.000"/>
+      <p c="200.000 -0.000" h1="187.116 -0.000" h2="212.884 -0.000"/>
+    </curve>
+    <curve channel="ScaleX" interpolation="bezier" extend="cyclic">
+      <p c="23.000 1.000" h1="11.288 1.000" h2="34.712 1.000"/>
+      <p c="53.000 1.000" h1="41.288 1.000" h2="62.370 1.000"/>
+      <p c="77.000 1.000" h1="67.630 1.000" h2="112.137 1.000"/>
+      <p c="167.000 1.000" h1="131.863 1.000" h2="179.884 1.000"/>
+      <p c="200.000 1.000" h1="187.116 1.000" h2="212.884 1.000"/>
+    </curve>
+    <curve channel="ScaleZ" interpolation="bezier" extend="cyclic">
+      <p c="23.000 1.000" h1="11.288 1.000" h2="34.712 1.000"/>
+      <p c="53.000 1.000" h1="41.288 1.000" h2="62.370 1.000"/>
+      <p c="77.000 1.000" h1="67.630 1.000" h2="112.137 1.000"/>
+      <p c="167.000 1.000" h1="131.863 1.000" h2="179.884 1.000"/>
+      <p c="200.000 1.000" h1="187.116 1.000" h2="212.884 1.000"/>
+    </curve>
+    <curve channel="ScaleY" interpolation="bezier" extend="cyclic">
+      <p c="23.000 1.000" h1="11.288 1.000" h2="34.712 1.000"/>
+      <p c="53.000 1.000" h1="41.288 1.000" h2="62.370 1.000"/>
+      <p c="77.000 1.000" h1="67.630 1.000" h2="112.137 1.000"/>
+      <p c="167.000 1.000" h1="131.863 1.000" h2="179.884 1.000"/>
+      <p c="200.000 1.000" h1="187.116 1.000" h2="212.884 1.000"/>
+    </curve>
+  </object>
+  <object id="Cube.027" type="animation" xyz="11.49 27.91 31.20" hpr="-5.8 -0.0 0.0" scale="1.00 1.00 1.00" interaction="explode" shape="exact" model="Lavaflow2.spm" explode="y" skeletal-animation="false">
+    <animated-texture name="Lava_004_COLOR.jpg"/>
+  </object>
+  <object id="Cube.029" type="animation" xyz="50.42 -11.74 116.67" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="explode" shape="exact" model="Lavaflow1.spm" explode="y" skeletal-animation="false">
+    <animated-texture name="Lava_004_COLOR.jpg" dy="-0.01000" />
+  </object>
+  <object id="Cube.030" type="animation" xyz="-42.01 20.05 -19.11" hpr="-5.1 -20.6 -0.0" scale="1.00 1.00 1.00" interaction="ghost" model="PyroclasticFlow.spm" skeletal-animation="false">
+    <animated-texture name="smoke_huricane.png" dy="0.30000" />
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -40.830" h1="103.041 -40.830" h2="252.959 -40.830"/>
+      <p c="370.000 -40.830" h1="295.041 -40.830" h2="427.391 -40.830"/>
+      <p c="517.000 -38.415" h1="459.609 -38.415" h2="559.555 -38.415"/>
+      <p c="626.000 -40.842" h1="583.445 -39.884" h2="655.671 -41.511"/>
+      <p c="702.000 -42.573" h1="672.329 -42.573" h2="815.219 -42.573"/>
+      <p c="992.000 -40.830" h1="878.781 -40.830" h2="1105.219 -40.830"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -25.014" h1="103.041 -25.014" h2="252.959 -25.014"/>
+      <p c="370.000 -25.014" h1="295.041 -25.014" h2="427.391 -25.014"/>
+      <p c="517.000 -27.349" h1="459.609 -27.349" h2="559.555 -27.349"/>
+      <p c="626.000 -20.894" h1="583.445 -23.443" h2="655.671 -19.117"/>
+      <p c="702.000 -16.289" h1="672.329 -16.289" h2="815.219 -16.289"/>
+      <p c="992.000 -25.014" h1="878.781 -25.014" h2="1105.219 -25.014"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="178.000 35.129" h1="103.041 35.129" h2="252.959 35.129"/>
+      <p c="370.000 35.129" h1="295.041 35.129" h2="427.391 35.129"/>
+      <p c="517.000 41.094" h1="459.609 41.094" h2="559.555 41.094"/>
+      <p c="626.000 24.602" h1="583.445 31.115" h2="655.671 20.061"/>
+      <p c="702.000 12.837" h1="672.329 12.837" h2="815.219 12.837"/>
+      <p c="992.000 35.129" h1="878.781 35.129" h2="1105.219 35.129"/>
+    </curve>
+    <curve channel="RotX" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -24.143" h1="103.041 -24.143" h2="252.959 -24.143"/>
+      <p c="370.000 -24.143" h1="295.041 -24.143" h2="427.391 -24.143"/>
+      <p c="517.000 -0.000" h1="459.609 -3.800" h2="559.555 2.818"/>
+      <p c="626.000 2.818" h1="583.445 1.940" h2="655.671 3.430"/>
+      <p c="702.000 3.988" h1="672.329 3.988" h2="815.219 3.988"/>
+      <p c="992.000 -24.143" h1="878.781 -24.143" h2="1105.219 -24.143"/>
+    </curve>
+    <curve channel="RotZ" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -0.000" h1="103.041 -0.000" h2="252.959 -0.000"/>
+      <p c="370.000 -0.000" h1="295.041 -0.000" h2="427.391 -0.000"/>
+      <p c="517.000 -0.000" h1="459.609 -0.000" h2="559.555 -0.000"/>
+      <p c="626.000 -0.000" h1="583.445 -0.000" h2="655.671 -0.000"/>
+      <p c="702.000 -0.000" h1="672.329 -0.000" h2="815.219 -0.000"/>
+      <p c="992.000 -0.000" h1="878.781 -0.000" h2="1105.219 -0.000"/>
+    </curve>
+    <curve channel="RotY" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -20.605" h1="103.041 -20.605" h2="252.959 -20.605"/>
+      <p c="370.000 -20.605" h1="295.041 -20.605" h2="427.391 -20.605"/>
+      <p c="517.000 -20.605" h1="459.609 -20.605" h2="559.555 -20.605"/>
+      <p c="626.000 -20.605" h1="583.445 -20.605" h2="655.671 -20.605"/>
+      <p c="702.000 -20.605" h1="672.329 -20.605" h2="815.219 -20.605"/>
+      <p c="992.000 -20.605" h1="878.781 -20.605" h2="1105.219 -20.605"/>
+    </curve>
+    <curve channel="ScaleX" interpolation="bezier" extend="cyclic">
+      <p c="178.000 1.000" h1="103.041 1.000" h2="252.959 1.000"/>
+      <p c="370.000 1.000" h1="295.041 1.000" h2="427.391 1.000"/>
+      <p c="517.000 1.000" h1="459.609 1.000" h2="559.555 1.000"/>
+      <p c="626.000 1.000" h1="583.445 1.000" h2="655.671 1.000"/>
+      <p c="702.000 1.000" h1="672.329 1.000" h2="815.219 1.000"/>
+      <p c="992.000 1.000" h1="878.781 1.000" h2="1105.219 1.000"/>
+    </curve>
+    <curve channel="ScaleZ" interpolation="bezier" extend="cyclic">
+      <p c="178.000 1.000" h1="103.041 1.000" h2="252.959 1.000"/>
+      <p c="370.000 1.000" h1="295.041 1.000" h2="427.391 1.000"/>
+      <p c="517.000 1.000" h1="459.609 1.000" h2="559.555 1.000"/>
+      <p c="626.000 1.000" h1="583.445 1.000" h2="655.671 1.000"/>
+      <p c="702.000 1.000" h1="672.329 1.000" h2="815.219 1.000"/>
+      <p c="992.000 1.000" h1="878.781 1.000" h2="1105.219 1.000"/>
+    </curve>
+    <curve channel="ScaleY" interpolation="bezier" extend="cyclic">
+      <p c="178.000 1.000" h1="103.041 1.000" h2="252.959 1.000"/>
+      <p c="370.000 1.000" h1="295.041 1.000" h2="427.391 1.000"/>
+      <p c="517.000 1.000" h1="459.609 1.000" h2="559.555 1.000"/>
+      <p c="626.000 1.000" h1="583.445 1.000" h2="655.671 1.000"/>
+      <p c="702.000 1.000" h1="672.329 1.000" h2="815.219 1.000"/>
+      <p c="992.000 1.000" h1="878.781 1.000" h2="1105.219 1.000"/>
+    </curve>
+  </object>
+  <object id="Cube.031" type="animation" xyz="-75.67 -7.74 174.26" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="explode" shape="exact" model="Lavaflow5.spm" explode="y" skeletal-animation="false">
+    <animated-texture name="Lava_004_COLOR.jpg" dy="-0.01000" />
+  </object>
+  <object id="Cube.034" type="animation" xyz="-75.67 -7.74 174.26" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Lavafall.spm" skeletal-animation="false">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.01000" />
+  </object>
+  <object id="Cube.036" type="animation" xyz="-41.19 28.12 -23.12" hpr="2.4 -20.6 -0.0" scale="1.00 1.00 1.00" interaction="ghost" model="PyroclasticFlowAsh.spm" skeletal-animation="false">
+    <animated-texture name="gfx_snowStormAnimated_a.png" dx="0.00200"  dy="0.06250"  animByStep="true" dt="0.050" />
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -40.830" h1="83.130 -40.830" h2="272.870 -40.830"/>
+      <p c="421.000 -40.830" h1="326.130 -40.830" h2="485.027 -40.830"/>
+      <p c="585.000 -40.984" h1="520.973 -40.984" h2="641.610 -40.984"/>
+      <p c="730.000 -40.984" h1="673.390 -40.984" h2="832.288 -40.984"/>
+      <p c="992.000 -41.887" h1="889.712 -41.887" h2="1094.288 -41.887"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -25.014" h1="83.130 -25.014" h2="272.870 -25.014"/>
+      <p c="421.000 -25.014" h1="326.130 -25.014" h2="485.027 -25.014"/>
+      <p c="585.000 -24.605" h1="520.973 -24.605" h2="641.610 -24.605"/>
+      <p c="730.000 -24.605" h1="673.390 -24.605" h2="832.288 -24.605"/>
+      <p c="992.000 -18.115" h1="889.712 -18.115" h2="1094.288 -18.115"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="178.000 35.129" h1="83.130 35.129" h2="272.870 35.129"/>
+      <p c="421.000 35.129" h1="326.130 35.129" h2="485.027 35.129"/>
+      <p c="585.000 42.613" h1="520.973 42.613" h2="641.610 42.613"/>
+      <p c="730.000 42.613" h1="673.390 42.613" h2="832.288 42.613"/>
+      <p c="992.000 -20.558" h1="889.712 -20.558" h2="1094.288 -20.558"/>
+    </curve>
+    <curve channel="RotX" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -24.143" h1="83.130 -24.143" h2="272.870 -24.143"/>
+      <p c="421.000 -24.143" h1="326.130 -24.143" h2="485.027 -24.143"/>
+      <p c="585.000 2.156" h1="520.973 2.156" h2="641.610 2.156"/>
+      <p c="730.000 2.156" h1="673.390 2.156" h2="832.288 2.156"/>
+      <p c="992.000 3.343" h1="889.712 3.343" h2="1094.288 3.343"/>
+    </curve>
+    <curve channel="RotZ" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -0.000" h1="83.130 -0.000" h2="272.870 -0.000"/>
+      <p c="421.000 -0.000" h1="326.130 -0.000" h2="485.027 -0.000"/>
+      <p c="585.000 -0.000" h1="520.973 -0.000" h2="641.610 -0.000"/>
+      <p c="730.000 -0.000" h1="673.390 -0.000" h2="832.288 -0.000"/>
+      <p c="992.000 -0.000" h1="889.712 -0.000" h2="1094.288 -0.000"/>
+    </curve>
+    <curve channel="RotY" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -20.605" h1="83.130 -20.605" h2="272.870 -20.605"/>
+      <p c="421.000 -20.605" h1="326.130 -20.605" h2="485.027 -20.605"/>
+      <p c="585.000 -20.605" h1="520.973 -20.605" h2="641.610 -20.605"/>
+      <p c="730.000 -20.605" h1="673.390 -20.605" h2="832.288 -20.605"/>
+      <p c="992.000 -20.605" h1="889.712 -20.605" h2="1094.288 -20.605"/>
+    </curve>
+    <curve channel="ScaleX" interpolation="bezier" extend="cyclic">
+      <p c="178.000 1.000" h1="83.130 1.000" h2="272.870 1.000"/>
+      <p c="421.000 1.000" h1="326.130 1.000" h2="485.027 1.000"/>
+      <p c="585.000 1.000" h1="520.973 1.000" h2="641.610 1.000"/>
+      <p c="730.000 1.000" h1="673.390 1.000" h2="832.288 1.000"/>
+      <p c="992.000 1.000" h1="889.712 1.000" h2="1094.288 1.000"/>
+    </curve>
+    <curve channel="ScaleZ" interpolation="bezier" extend="cyclic">
+      <p c="178.000 1.000" h1="83.130 1.000" h2="272.870 1.000"/>
+      <p c="421.000 1.000" h1="326.130 1.000" h2="485.027 1.000"/>
+      <p c="585.000 1.000" h1="520.973 1.000" h2="641.610 1.000"/>
+      <p c="730.000 1.000" h1="673.390 1.000" h2="832.288 1.000"/>
+      <p c="992.000 1.000" h1="889.712 1.000" h2="1094.288 1.000"/>
+    </curve>
+    <curve channel="ScaleY" interpolation="bezier" extend="cyclic">
+      <p c="178.000 1.000" h1="83.130 1.000" h2="272.870 1.000"/>
+      <p c="421.000 1.000" h1="326.130 1.000" h2="485.027 1.000"/>
+      <p c="585.000 1.000" h1="520.973 1.000" h2="641.610 1.000"/>
+      <p c="730.000 1.000" h1="673.390 1.000" h2="832.288 1.000"/>
+      <p c="992.000 1.000" h1="889.712 1.000" h2="1094.288 1.000"/>
+    </curve>
+  </object>
+  <object id="Plane" type="animation" xyz="52.05 -7.77 75.81" hpr="-0.0 -91.8 -0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.002" type="animation" xyz="46.41 -7.77 97.65" hpr="-0.0 -116.5 -0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.004" type="animation" xyz="7.62 40.49 71.16" hpr="-0.0 -105.2 -0.0" scale="0.90 0.90 0.90" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.005" type="animation" xyz="8.06 37.34 67.05" hpr="-0.0 -105.2 -0.0" scale="0.64 0.64 0.64" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.006" type="animation" xyz="12.07 37.53 68.08" hpr="-0.0 -105.2 -0.0" scale="0.74 0.74 0.74" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.007" type="animation" xyz="-140.00 -7.17 106.04" hpr="0.0 -23.8 0.0" scale="0.74 0.74 0.74" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.008" type="animation" xyz="-141.62 -7.35 109.85" hpr="0.0 -23.8 0.0" scale="0.64 0.64 0.64" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.009" type="animation" xyz="-137.62 -4.20 110.90" hpr="0.0 -23.8 0.0" scale="0.90 0.90 0.90" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.010" type="animation" xyz="-202.76 -11.50 -44.05" hpr="0.0 -23.8 0.0" scale="1.54 1.54 1.54" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.011" type="animation" xyz="-201.49 -11.63 -39.00" hpr="0.0 -23.8 0.0" scale="0.90 0.90 0.90" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.012" type="animation" xyz="-200.22 -11.87 -49.65" hpr="0.0 -23.8 0.0" scale="1.41 1.41 1.41" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.013" type="animation" xyz="-193.73 -12.21 -52.38" hpr="0.0 -23.8 0.0" scale="1.04 1.04 1.04" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.015" type="animation" xyz="-196.53 -12.05 -51.70" hpr="0.0 -23.8 0.0" scale="0.93 0.93 0.93" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.016" type="animation" xyz="-190.85 -12.09 -54.69" hpr="0.0 -23.8 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.017" type="animation" xyz="-186.24 -12.51 -57.91" hpr="0.0 -23.8 0.0" scale="0.64 0.64 0.64" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.018" type="animation" xyz="-182.90 -12.36 -63.50" hpr="0.0 -23.8 0.0" scale="1.14 1.14 1.14" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.019" type="animation" xyz="-179.41 -12.00 -63.46" hpr="0.0 -23.8 0.0" scale="1.57 1.57 1.57" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.020" type="animation" xyz="2.70 13.46 -60.49" hpr="15.2 -124.3 1.1" scale="1.19 1.19 1.19" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.021" type="animation" xyz="6.03 9.29 -64.79" hpr="15.2 -124.3 1.1" scale="0.84 0.84 0.84" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.022" type="animation" xyz="10.34 11.04 -61.92" hpr="15.2 -124.3 1.1" scale="0.98 0.98 0.98" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.023" type="animation" xyz="34.08 7.46 -73.24" hpr="1.0 -169.0 1.6" scale="0.98 0.98 0.98" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.024" type="animation" xyz="-60.50 -11.29 141.81" hpr="0.0 -23.8 0.0" scale="1.27 1.27 1.27" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.025" type="animation" xyz="27.72 11.11 -76.77" hpr="1.0 -169.0 1.6" scale="1.19 1.19 1.19" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.026" type="animation" xyz="-54.71 -11.55 141.03" hpr="0.0 -23.8 0.0" scale="0.95 0.95 0.95" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.027" type="animation" xyz="-56.10 -11.01 140.47" hpr="0.0 -23.8 0.0" scale="1.73 1.73 1.73" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.028" type="animation" xyz="-49.97 -11.15 142.86" hpr="0.0 -23.8 0.0" scale="1.33 1.33 1.33" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.029" type="animation" xyz="-64.47 -11.60 144.60" hpr="0.0 -23.8 0.0" scale="0.77 0.77 0.77" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.032" type="animation" xyz="65.24 -9.16 58.94" hpr="-4.6 139.8 -2.6" scale="0.33 0.33 0.33" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.034" type="animation" xyz="64.19 -9.21 89.11" hpr="19.6 84.8 22.6" scale="0.32 0.32 0.32" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.035" type="animation" xyz="64.48 -9.02 92.71" hpr="35.3 -104.9 -37.6" scale="0.23 0.23 0.23" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.036" type="animation" xyz="63.59 -8.69 92.10" hpr="-20.7 -64.3 21.2" scale="0.36 0.36 0.36" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.039" type="animation" xyz="-267.08 34.66 -138.67" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="AshCloud2.spm" skeletal-animation="false">
+    <animated-texture name="gfx_snowStormAnimated_a.png" dy="0.12500"  animByStep="true" dt="0.100" />
+  </object>
+  <object id="Plane.043" type="animation" xyz="48.47 -11.81 114.41" hpr="0.0 -23.8 0.0" scale="0.75 0.75 0.75" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.044" type="animation" xyz="15.55 27.56 29.96" hpr="0.0 -23.8 0.0" scale="1.41 1.41 1.41" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.045" type="animation" xyz="13.98 28.08 34.60" hpr="0.0 -23.8 0.0" scale="0.88 0.88 0.88" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.046" type="animation" xyz="-73.64 52.20 38.31" hpr="0.0 -57.9 0.0" scale="0.90 0.90 0.90" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.047" type="animation" xyz="-76.37 49.68 35.20" hpr="0.0 -57.9 0.0" scale="0.64 0.64 0.64" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.048" type="animation" xyz="-72.89 49.87 32.95" hpr="0.0 -57.9 0.0" scale="0.74 0.74 0.74" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.049" type="animation" xyz="33.45 -7.62 116.13" hpr="-0.0 -135.0 -0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.050" type="animation" xyz="-98.67 -19.30 168.04" hpr="0.0 -14.7 0.0" scale="1.00 1.00 1.00" interaction="reset" shape="exact" model="Lava.spm" reset="y" skeletal-animation="false">
+    <animated-texture name="lava.png" dy="-0.10000" />
+  </object>
+  <object id="Plane.051" type="animation" xyz="275.32 28.35 -85.18" hpr="0.0 -21.6 0.0" scale="-1.00 1.00 1.00" interaction="ghost" model="AshCloud2.spm" skeletal-animation="false">
+    <animated-texture name="gfx_snowStormAnimated_a.png" dy="0.12500"  animByStep="true" dt="0.100" />
+  </object>
+  <object id="Plane.052" type="animation" xyz="17.51 32.01 99.22" hpr="-0.0 -105.2 -0.0" scale="5.34 5.34 5.34" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.053" type="animation" xyz="42.26 29.52 95.41" hpr="-0.0 -105.2 -0.0" scale="2.93 2.93 2.93" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.055" type="animation" xyz="37.34 25.69 101.91" hpr="-0.0 -105.2 -0.0" scale="5.31 5.31 5.31" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.056" type="animation" xyz="37.16 30.36 114.01" hpr="-0.0 -105.2 -0.0" scale="3.48 3.48 3.48" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.057" type="animation" xyz="14.37 -7.59 129.73" hpr="-0.0 -153.5 -0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.058" type="animation" xyz="-5.78 -7.26 135.24" hpr="-0.0 -178.2 -0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.059" type="animation" xyz="-263.38 43.00 -200.24" hpr="0.0 -13.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="AshCloud2.spm" skeletal-animation="false">
+    <animated-texture name="gfx_snowStormAnimated_a.png" dy="0.12500"  animByStep="true" dt="0.100" />
+  </object>
+  <object id="Plane.063" type="animation" xyz="-202.25 -10.39 -59.31" hpr="4.7 122.2 0.0" scale="1.00 1.00 1.00" interaction="static" shape="box" model="Arrows.spm" skeletal-animation="false" if="isTrackNotReverse">
+    <animated-texture name="stkflag_blackBooster_a.png" dy="0.50000" />
+  </object>
+  <object id="Plane.064" type="animation" xyz="-213.12 -9.10 -49.07" hpr="-2.9 -173.6 0.0" scale="1.00 1.00 1.00" interaction="static" shape="box" model="ArrowsReverse.spm" skeletal-animation="false" if="isTrackReverse">
+    <animated-texture name="stkflag_blackBooster_a.png" dy="0.50000" />
+  </object>
+  <object id="Plane.065" type="animation" xyz="27.53 -7.31 134.87" hpr="0.0 35.6 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.066" type="animation" xyz="33.94 -7.31 130.32" hpr="0.0 35.6 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.067" type="animation" xyz="-81.54 53.05 86.90" hpr="0.0 -0.0 0.0" scale="1.62 1.62 1.62" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.068" type="animation" xyz="-106.85 55.02 54.31" hpr="0.0 -1.8 0.0" scale="0.90 0.90 0.90" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.069" type="animation" xyz="-110.95 51.87 54.83" hpr="0.0 -1.8 0.0" scale="0.64 0.64 0.64" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.070" type="animation" xyz="-110.88 52.05 50.69" hpr="0.0 -1.8 0.0" scale="0.74 0.74 0.74" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.071" type="animation" xyz="-124.71 53.25 15.77" hpr="0.0 -0.0 0.0" scale="1.62 1.62 1.62" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.072" type="animation" xyz="27.15 19.37 -62.69" hpr="-3.2 16.5 7.8" scale="1.00 1.00 1.00" interaction="static" shape="box" model="Arrows.spm" skeletal-animation="false" if="isTrackNotReverse">
+    <animated-texture name="stkflag_blackBooster_a.png" dy="0.50000" />
+  </object>
+  <object id="Plane.073" type="animation" xyz="25.47 19.56 -67.87" hpr="12.1 42.8 3.7" scale="1.00 1.00 1.00" interaction="static" shape="box" model="ArrowsReverse.spm" skeletal-animation="false" if="isTrackReverse">
+    <animated-texture name="stkflag_blackBooster_a.png" dy="0.50000" />
+  </object>
+  <object id="Plane.074" type="animation" xyz="-49.44 -27.48 28.93" hpr="26.0 -72.1 -114.9" scale="1.70 1.63 4.75" interaction="ghost" model="EruptionAsh.spm" skeletal-animation="false">
+    <animated-texture name="gfx_snowStormAnimated_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -44.574" h1="103.041 -44.574" h2="252.959 -44.574"/>
+      <p c="370.000 -44.574" h1="295.041 -44.574" h2="389.521 -44.574"/>
+      <p c="420.000 -44.574" h1="400.479 -44.574" h2="511.356 -44.574"/>
+      <p c="654.000 -44.574" h1="562.644 -44.574" h2="716.075 -44.574"/>
+      <p c="813.000 -49.440" h1="750.925 -49.440" h2="882.884 -49.440"/>
+      <p c="992.000 -44.574" h1="922.116 -44.574" h2="1061.884 -44.574"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -6.772" h1="103.041 -6.772" h2="252.959 -6.772"/>
+      <p c="370.000 -6.772" h1="295.041 -6.772" h2="389.521 -6.772"/>
+      <p c="420.000 -6.772" h1="400.479 -6.772" h2="511.356 -6.772"/>
+      <p c="654.000 -6.772" h1="562.644 -6.772" h2="716.075 -6.772"/>
+      <p c="813.000 28.937" h1="750.925 28.937" h2="882.884 28.937"/>
+      <p c="992.000 -6.772" h1="922.116 -6.772" h2="1061.884 -6.772"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="178.000 23.014" h1="103.041 23.014" h2="252.959 23.014"/>
+      <p c="370.000 23.014" h1="295.041 23.014" h2="389.521 23.014"/>
+      <p c="420.000 23.014" h1="400.479 23.014" h2="511.356 23.014"/>
+      <p c="654.000 23.014" h1="562.644 23.014" h2="716.075 23.014"/>
+      <p c="813.000 -27.498" h1="750.925 -27.498" h2="882.884 -27.498"/>
+      <p c="992.000 23.014" h1="922.116 23.014" h2="1061.884 23.014"/>
+    </curve>
+    <curve channel="RotX" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -90.000" h1="103.041 -90.000" h2="252.959 -90.000"/>
+      <p c="370.000 -90.000" h1="295.041 -90.000" h2="389.521 -90.000"/>
+      <p c="420.000 -90.000" h1="400.479 -90.000" h2="511.356 -90.000"/>
+      <p c="654.000 -90.000" h1="562.644 -90.000" h2="716.075 -90.000"/>
+      <p c="813.000 -90.000" h1="750.925 -90.000" h2="882.884 -90.000"/>
+      <p c="992.000 -90.000" h1="922.116 -90.000" h2="1061.884 -90.000"/>
+    </curve>
+    <curve channel="RotZ" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -52.624" h1="103.041 -52.624" h2="252.959 -52.624"/>
+      <p c="370.000 -52.624" h1="295.041 -52.624" h2="389.521 -52.624"/>
+      <p c="420.000 -52.624" h1="400.479 -52.624" h2="517.603 -52.624"/>
+      <p c="813.000 -16.194" h1="659.568 -16.194" h2="882.884 -16.194"/>
+      <p c="992.000 -52.624" h1="922.116 -52.624" h2="1061.884 -52.624"/>
+    </curve>
+    <curve channel="RotY" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -97.759" h1="103.041 -97.759" h2="252.959 -97.759"/>
+      <p c="370.000 -97.759" h1="295.041 -97.759" h2="389.521 -97.759"/>
+      <p c="420.000 -97.759" h1="400.479 -97.759" h2="511.356 -97.759"/>
+      <p c="654.000 -97.759" h1="562.644 -97.759" h2="716.075 -97.759"/>
+      <p c="813.000 -97.759" h1="750.925 -97.759" h2="882.884 -97.759"/>
+      <p c="992.000 -97.759" h1="922.116 -97.759" h2="1061.884 -97.759"/>
+    </curve>
+    <curve channel="ScaleX" interpolation="bezier" extend="cyclic">
+      <p c="178.000 0.334" h1="103.041 0.334" h2="252.959 0.334"/>
+      <p c="370.000 0.334" h1="295.041 0.334" h2="389.521 0.334"/>
+      <p c="420.000 1.042" h1="400.479 0.902" h2="511.356 1.698"/>
+      <p c="654.000 1.698" h1="562.644 1.698" h2="716.075 1.698"/>
+      <p c="813.000 1.698" h1="750.925 1.698" h2="882.884 1.698"/>
+      <p c="992.000 0.334" h1="922.116 0.334" h2="1061.884 0.334"/>
+    </curve>
+    <curve channel="ScaleZ" interpolation="bezier" extend="cyclic">
+      <p c="178.000 1.000" h1="103.041 1.000" h2="252.959 1.000"/>
+      <p c="370.000 1.000" h1="295.041 1.000" h2="389.521 1.000"/>
+      <p c="420.000 1.000" h1="400.479 1.000" h2="511.356 1.000"/>
+      <p c="654.000 4.755" h1="562.644 4.755" h2="716.075 4.755"/>
+      <p c="813.000 4.755" h1="750.925 4.755" h2="882.884 4.755"/>
+      <p c="992.000 1.000" h1="922.116 1.000" h2="1061.884 1.000"/>
+    </curve>
+    <curve channel="ScaleY" interpolation="bezier" extend="cyclic">
+      <p c="178.000 1.000" h1="103.041 1.000" h2="252.959 1.000"/>
+      <p c="370.000 1.000" h1="295.041 1.000" h2="389.521 1.000"/>
+      <p c="420.000 1.000" h1="400.479 1.000" h2="511.356 1.000"/>
+      <p c="654.000 1.630" h1="562.644 1.630" h2="716.075 1.630"/>
+      <p c="813.000 1.630" h1="750.925 1.630" h2="882.884 1.630"/>
+      <p c="992.000 1.000" h1="922.116 1.000" h2="1061.884 1.000"/>
+    </curve>
+  </object>
+  <object id="Plane.075" type="animation" xyz="-58.43 -26.52 9.60" hpr="53.5 -36.5 -128.9" scale="1.48 1.24 4.60" interaction="ghost" model="EruptionAsh.spm" skeletal-animation="false">
+    <animated-texture name="gfx_snowStormAnimated_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -44.574" h1="103.041 -44.574" h2="252.959 -44.574"/>
+      <p c="370.000 -44.574" h1="295.041 -44.574" h2="396.548 -44.574"/>
+      <p c="438.000 -44.574" h1="411.452 -44.574" h2="487.582 -44.574"/>
+      <p c="565.000 -44.574" h1="515.418 -44.574" h2="644.254 -44.574"/>
+      <p c="768.000 -59.935" h1="688.746 -59.935" h2="855.452 -59.935"/>
+      <p c="992.000 -44.574" h1="904.548 -44.574" h2="1079.452 -44.574"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -6.772" h1="103.041 -6.772" h2="252.959 -6.772"/>
+      <p c="370.000 -6.772" h1="295.041 -6.772" h2="396.548 -6.772"/>
+      <p c="438.000 -6.772" h1="411.452 -6.772" h2="487.582 -6.772"/>
+      <p c="565.000 -6.772" h1="515.418 -6.772" h2="644.254 -6.772"/>
+      <p c="768.000 11.371" h1="688.746 11.371" h2="855.452 11.371"/>
+      <p c="992.000 -6.772" h1="904.548 -6.772" h2="1079.452 -6.772"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="178.000 23.014" h1="103.041 23.014" h2="252.959 23.014"/>
+      <p c="370.000 23.014" h1="295.041 23.014" h2="396.548 23.014"/>
+      <p c="438.000 23.014" h1="411.452 23.014" h2="487.582 23.014"/>
+      <p c="565.000 23.014" h1="515.418 23.014" h2="644.254 23.014"/>
+      <p c="768.000 -31.888" h1="688.746 -31.888" h2="855.452 -31.888"/>
+      <p c="992.000 23.014" h1="904.548 23.014" h2="1079.452 23.014"/>
+    </curve>
+    <curve channel="RotX" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -90.000" h1="103.041 -90.000" h2="252.959 -90.000"/>
+      <p c="370.000 -90.000" h1="295.041 -90.000" h2="396.548 -90.000"/>
+      <p c="438.000 -90.000" h1="411.452 -90.000" h2="487.582 -90.000"/>
+      <p c="565.000 -90.000" h1="515.418 -90.000" h2="644.254 -90.000"/>
+      <p c="768.000 -90.000" h1="688.746 -90.000" h2="855.452 -90.000"/>
+      <p c="992.000 -90.000" h1="904.548 -90.000" h2="1079.452 -90.000"/>
+    </curve>
+    <curve channel="RotZ" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -57.042" h1="103.041 -57.042" h2="252.959 -57.042"/>
+      <p c="370.000 -57.042" h1="295.041 -57.042" h2="396.548 -57.042"/>
+      <p c="438.000 -57.042" h1="411.452 -57.042" h2="566.836 -57.042"/>
+      <p c="768.000 -36.736" h1="639.164 -36.736" h2="855.452 -36.736"/>
+      <p c="992.000 -57.042" h1="904.548 -57.042" h2="1079.452 -57.042"/>
+    </curve>
+    <curve channel="RotY" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -130.253" h1="103.041 -130.253" h2="252.959 -130.253"/>
+      <p c="370.000 -130.253" h1="295.041 -130.253" h2="396.548 -130.253"/>
+      <p c="438.000 -130.253" h1="411.452 -130.253" h2="487.582 -130.253"/>
+      <p c="565.000 -130.253" h1="515.418 -130.253" h2="644.254 -130.253"/>
+      <p c="768.000 -130.253" h1="688.746 -130.253" h2="855.452 -130.253"/>
+      <p c="992.000 -130.253" h1="904.548 -130.253" h2="1079.452 -130.253"/>
+    </curve>
+    <curve channel="ScaleX" interpolation="bezier" extend="cyclic">
+      <p c="178.000 0.384" h1="103.041 0.384" h2="252.959 0.384"/>
+      <p c="370.000 0.384" h1="295.041 0.384" h2="396.548 0.384"/>
+      <p c="438.000 1.261" h1="411.452 1.081" h2="487.582 1.598"/>
+      <p c="565.000 1.598" h1="515.418 1.598" h2="644.254 1.598"/>
+      <p c="768.000 1.598" h1="688.746 1.598" h2="855.452 1.598"/>
+      <p c="992.000 0.384" h1="904.548 0.384" h2="1079.452 0.384"/>
+    </curve>
+    <curve channel="ScaleZ" interpolation="bezier" extend="cyclic">
+      <p c="178.000 1.000" h1="103.041 1.000" h2="252.959 1.000"/>
+      <p c="370.000 1.000" h1="295.041 1.000" h2="396.548 1.000"/>
+      <p c="438.000 1.000" h1="411.452 1.000" h2="487.582 1.000"/>
+      <p c="565.000 4.995" h1="515.418 4.995" h2="644.254 4.995"/>
+      <p c="768.000 4.995" h1="688.746 4.995" h2="855.452 4.995"/>
+      <p c="992.000 1.000" h1="904.548 1.000" h2="1079.452 1.000"/>
+    </curve>
+    <curve channel="ScaleY" interpolation="bezier" extend="cyclic">
+      <p c="178.000 1.000" h1="103.041 1.000" h2="252.959 1.000"/>
+      <p c="370.000 1.000" h1="295.041 1.000" h2="396.548 1.000"/>
+      <p c="438.000 1.000" h1="411.452 1.000" h2="487.582 1.000"/>
+      <p c="565.000 1.267" h1="515.418 1.267" h2="644.254 1.267"/>
+      <p c="768.000 1.267" h1="688.746 1.267" h2="855.452 1.267"/>
+      <p c="992.000 1.000" h1="904.548 1.000" h2="1079.452 1.000"/>
+    </curve>
+  </object>
+  <object id="Plane.076" type="animation" xyz="-55.81 0.97 17.90" hpr="-82.9 -114.7 -7.9" scale="1.71 1.25 3.62" interaction="ghost" model="EruptionAsh.spm" skeletal-animation="false">
+    <animated-texture name="gfx_snowStormAnimated_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -44.574" h1="103.041 -44.574" h2="252.959 -44.574"/>
+      <p c="370.000 -44.574" h1="315.342 -44.574" h2="380.932 -44.574"/>
+      <p c="398.000 -44.574" h1="387.068 -44.574" h2="452.658 -44.574"/>
+      <p c="609.000 -44.574" h1="526.623 -44.574" h2="679.664 -44.574"/>
+      <p c="790.000 -56.210" h1="719.336 -56.210" h2="868.863 -56.210"/>
+      <p c="992.000 -44.574" h1="913.137 -44.574" h2="1070.863 -44.574"/>
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -6.772" h1="103.041 -6.772" h2="252.959 -6.772"/>
+      <p c="370.000 -6.772" h1="315.342 -6.772" h2="380.932 -6.772"/>
+      <p c="398.000 -6.772" h1="387.068 -6.772" h2="452.658 -6.772"/>
+      <p c="609.000 -6.772" h1="526.623 -6.772" h2="679.664 -6.772"/>
+      <p c="790.000 18.770" h1="719.336 18.770" h2="868.863 18.770"/>
+      <p c="992.000 -6.772" h1="913.137 -6.772" h2="1070.863 -6.772"/>
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="178.000 23.014" h1="103.041 23.014" h2="252.959 23.014"/>
+      <p c="370.000 23.014" h1="315.342 23.014" h2="380.932 23.014"/>
+      <p c="398.000 23.014" h1="387.068 23.014" h2="452.658 23.014"/>
+      <p c="609.000 23.014" h1="526.623 23.014" h2="679.664 23.014"/>
+      <p c="790.000 0.191" h1="719.336 0.191" h2="868.863 0.191"/>
+      <p c="992.000 23.014" h1="913.137 23.014" h2="1070.863 23.014"/>
+    </curve>
+    <curve channel="RotX" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -90.000" h1="103.041 -90.000" h2="252.959 -90.000"/>
+      <p c="370.000 -90.000" h1="315.342 -90.000" h2="380.932 -90.000"/>
+      <p c="398.000 -90.000" h1="387.068 -90.000" h2="452.658 -90.000"/>
+      <p c="609.000 -90.000" h1="526.623 -90.000" h2="679.664 -90.000"/>
+      <p c="790.000 -90.000" h1="719.336 -90.000" h2="868.863 -90.000"/>
+      <p c="992.000 -90.000" h1="913.137 -90.000" h2="1070.863 -90.000"/>
+    </curve>
+    <curve channel="RotZ" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -40.217" h1="103.041 -40.217" h2="252.959 -40.217"/>
+      <p c="370.000 -40.217" h1="315.342 -40.217" h2="380.932 -40.217"/>
+      <p c="398.000 -40.217" h1="387.068 -40.217" h2="452.658 -40.217"/>
+      <p c="790.000 4.803" h1="636.959 4.803" h2="868.863 4.803"/>
+      <p c="992.000 -40.217" h1="913.137 -40.217" h2="1070.863 -40.217"/>
+    </curve>
+    <curve channel="RotY" interpolation="bezier" extend="cyclic">
+      <p c="178.000 -114.493" h1="103.041 -114.493" h2="252.959 -114.493"/>
+      <p c="370.000 -114.493" h1="315.342 -114.493" h2="380.932 -114.493"/>
+      <p c="398.000 -114.493" h1="387.068 -114.493" h2="452.658 -114.493"/>
+      <p c="609.000 -114.493" h1="526.623 -114.493" h2="679.664 -114.493"/>
+      <p c="790.000 -114.493" h1="719.336 -114.493" h2="868.863 -114.493"/>
+      <p c="992.000 -114.493" h1="913.137 -114.493" h2="1070.863 -114.493"/>
+    </curve>
+    <curve channel="ScaleX" interpolation="bezier" extend="cyclic">
+      <p c="178.000 0.287" h1="103.041 0.287" h2="252.959 0.287"/>
+      <p c="370.000 0.287" h1="315.342 0.287" h2="380.932 0.287"/>
+      <p c="398.000 1.399" h1="387.068 1.327" h2="452.658 1.760"/>
+      <p c="609.000 1.760" h1="526.623 1.760" h2="679.664 1.760"/>
+      <p c="790.000 1.760" h1="719.336 1.760" h2="868.863 1.760"/>
+      <p c="992.000 0.287" h1="913.137 0.287" h2="1070.863 0.287"/>
+    </curve>
+    <curve channel="ScaleZ" interpolation="bezier" extend="cyclic">
+      <p c="178.000 1.000" h1="103.041 1.000" h2="252.959 1.000"/>
+      <p c="370.000 1.000" h1="315.342 1.000" h2="380.932 1.000"/>
+      <p c="398.000 1.000" h1="387.068 1.000" h2="452.658 1.000"/>
+      <p c="609.000 3.714" h1="526.623 3.714" h2="679.664 3.714"/>
+      <p c="790.000 3.714" h1="719.336 3.714" h2="868.863 3.714"/>
+      <p c="992.000 1.000" h1="913.137 1.000" h2="1070.863 1.000"/>
+    </curve>
+    <curve channel="ScaleY" interpolation="bezier" extend="cyclic">
+      <p c="178.000 1.000" h1="103.041 1.000" h2="252.959 1.000"/>
+      <p c="370.000 1.000" h1="315.342 1.000" h2="380.932 1.000"/>
+      <p c="398.000 1.000" h1="387.068 1.000" h2="452.658 1.000"/>
+      <p c="609.000 1.258" h1="526.623 1.258" h2="679.664 1.258"/>
+      <p c="790.000 1.258" h1="719.336 1.258" h2="868.863 1.258"/>
+      <p c="992.000 1.000" h1="913.137 1.000" h2="1070.863 1.000"/>
+    </curve>
+  </object>
+  <object id="Plane.077" type="animation" xyz="-33.75 55.00 -7.77" hpr="0.0 -15.5 0.0" scale="2.14 2.14 2.14" interaction="ghost" model="AshColumnEffect.spm" skeletal-animation="false">
+    <animated-texture name="gfx_snowStormAnimated_a.png" dx="0.00600"  dy="0.06250"  animByStep="true" dt="0.050" />
+  </object>
+  <sun  xyz="199.67 253.30 -139.47" sun-specular="255 161 79" sun-diffuse="255 160 133" ambient="120 102 97"/>
+  <sky-box texture="magma_sky_t.png magma_sky_bottom.png magma_sky_e.png magma_sky_w.png magma_sky_s.png magma_sky_n.png" sh-texture="ibl.jpg ibl.jpg ibl.jpg ibl.jpg ibl.jpg ibl.jpg"/>
+  <camera far="1000.0"/>
+  <checks>
+    <check-lap kind="lap" same-group="0" other-ids="1" />
+    <check-line kind="activate" other-ids="2" p1="-51.97 123.53" p2="-48.03 151.35"
+                min-height="-13.81" same-group="1"/>
+    <check-line kind="activate" other-ids="3" p1="-207.56 -54.50" p2="-188.56 -46.94"
+                min-height="-13.37" same-group="2"/>
+    <check-line kind="activate" other-ids="0" p1="-117.97 -15.01" p2="-101.96 -2.29"
+                min-height="53.95" same-group="3"/>
+    <cannon p1="-19.00 15.89 -93.00" p2="-22.00 15.89 -80.00" target-p1="14.53 10.62 -87.93" target-p2="0.77 10.62 -65.09">
+    <curve channel="LocXYZ" speed="50.00" interpolation="bezier" extend="const">
+      <point c="-22.748402 12.783736 -85.553848" h1="-26.928881 10.139997 -86.888283" h2="-18.567924 15.427474 -84.219414" />
+      <point c="8.494653 17.015415 -75.838776" h1="1.689118 18.657862 -78.371628" h2="15.300192 15.372969 -73.305916" />
+    </curve>
+    </cannon>
+    <cannon p1="-19.00 15.89 -93.00" p2="-22.00 15.89 -80.00" target-p1="14.53 15.30 -87.93" target-p2="0.77 15.30 -65.09">
+    <curve channel="LocXYZ" speed="50.00" interpolation="bezier" extend="const">
+      <point c="-22.748402 12.783736 -85.553848" h1="-26.928881 10.139997 -86.888283" h2="-18.567924 15.427474 -84.219414" />
+      <point c="8.494653 17.015415 -75.838776" h1="1.689118 18.657862 -78.371628" h2="15.300192 15.372969 -73.305916" />
+    </curve>
+    </cannon>
+    <cannon p1="-19.00 15.89 -93.00" p2="-22.00 15.89 -80.00" target-p1="14.53 20.96 -87.93" target-p2="0.77 20.96 -65.09">
+    <curve channel="LocXYZ" speed="50.00" interpolation="bezier" extend="const">
+      <point c="-22.748402 12.783736 -85.553848" h1="-26.928881 10.139997 -86.888283" h2="-18.567924 15.427474 -84.219414" />
+      <point c="8.494653 17.015415 -75.838776" h1="1.689118 18.657862 -78.371628" h2="15.300192 15.372969 -73.305916" />
+    </curve>
+    </cannon>
+  </checks>
+  <particle-emitter kind="fire.xml" id="Empty.014" xyz="52.05 -8.45 75.81" h="8.06" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.015" xyz="46.41 -8.45 97.63" h="32.77" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.016" xyz="7.62 40.12 71.13" h="0.00" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.017" xyz="8.03 36.93 67.06" h="0.00" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.018" xyz="12.13 37.16 68.04" h="0.00" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.019" xyz="-140.03 -7.54 105.98" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.020" xyz="-141.61 -7.76 109.88" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.021" xyz="-137.65 -4.58 110.90" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.022" xyz="-202.75 -12.44 -44.03" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.023" xyz="-201.48 -12.51 -38.97" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.024" xyz="-200.21 -12.55 -49.63" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.025" xyz="-193.72 -12.86 -52.36" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.026" xyz="-196.53 -12.70 -51.67" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.027" xyz="-190.84 -12.92 -54.67" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.028" xyz="-186.23 -12.92 -57.89" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.029" xyz="-182.89 -13.21 -63.48" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.030" xyz="-179.40 -13.07 -63.44" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.031" xyz="2.83 12.98 -60.45" h="18.70" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.032" xyz="6.12 8.76 -64.71" h="18.70" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.033" xyz="10.55 10.60 -61.87" h="18.70" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.034" xyz="34.18 6.98 -73.18" h="63.85" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.035" xyz="-60.49 -12.52 141.84" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.036" xyz="27.77 10.62 -76.78" h="63.85" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.037" xyz="-54.70 -12.47 141.06" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.038" xyz="-56.09 -12.69 140.51" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.039" xyz="-49.96 -12.44 142.90" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.040" xyz="-64.47 -12.35 144.62" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.041" xyz="48.48 -12.28 114.44" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.075" xyz="15.55 26.40 29.99" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.076" xyz="13.99 27.47 34.61" h="-81.38" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.077" xyz="-73.66 51.83 38.29" h="-47.25" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.078" xyz="-76.37 48.65 35.22" h="-47.25" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.079" xyz="-72.88 48.87 32.88" h="-47.25" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.080" xyz="33.45 -8.30 116.13" h="51.31" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.081" xyz="17.52 30.63 99.19" h="0.00" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.082" xyz="42.26 28.59 95.39" h="0.00" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.083" xyz="37.35 23.51 101.88" h="0.00" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.084" xyz="37.16 29.15 113.98" h="0.00" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.085" xyz="14.37 -8.27 129.73" h="69.84" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.086" xyz="-5.78 -7.94 135.24" h="94.48" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.087" xyz="27.53 -7.99 134.87" h="-119.28" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.088" xyz="33.94 -7.99 130.32" h="-119.35" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.089" xyz="-81.54 52.01 86.90" h="0.00" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.090" xyz="-106.87 54.64 54.31" h="-103.39" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.091" xyz="-110.93 51.46 54.85" h="-103.39" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.092" xyz="-110.93 51.69 50.64" h="-103.39" >
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.094" xyz="-124.71 52.20 15.77" h="0.00" >
+  </particle-emitter>
+  <item id="Empty" x="58.54" y="-12.34" z="54.43" />
+  <item id="Empty.001" x="53.29" y="-12.35" z="54.60" />
+  <small-nitro id="Empty.002" x="38.87" y="-12.35" z="121.67" />
+  <small-nitro id="Empty.003" x="34.79" y="-12.35" z="118.35" />
+  <banana id="Empty.004" x="-39.49" y="-12.34" z="134.21" />
+  <banana id="Empty.005" x="-39.23" y="-12.35" z="140.64" />
+  <small-nitro id="Empty.006" x="-39.39" y="-12.35" z="137.53" />
+  <item id="Empty.007" x="-161.13" y="-12.35" z="79.93" />
+  <item id="Empty.008" x="-166.79" y="-11.63" z="80.46" />
+  <banana id="Empty.009" x="-164.30" y="-12.35" z="8.76" />
+  <small-nitro id="Empty.010" x="-163.70" y="-11.63" z="80.07" />
+  <item id="Empty.011" x="-192.75" y="-12.97" z="-61.85" />
+  <item id="Empty.012" x="-190.44" y="-12.98" z="-59.73" />
+  <item id="Empty.013" x="-188.62" y="-12.97" z="-57.64" />
+  <banana id="Empty.042" x="8.67" y="12.79" z="-31.86" />
+  <banana id="Empty.043" x="19.33" y="14.56" z="-32.07" />
+  <small-nitro id="Empty.044" x="20.80" y="14.03" z="-37.39" />
+  <small-nitro id="Empty.045" x="8.68" y="14.00" z="-27.31" />
+  <item id="Empty.046" x="10.56" y="29.60" z="44.78" />
+  <item id="Empty.047" x="15.34" y="29.58" z="46.21" />
+  <small-nitro id="Empty.048" x="-26.56" y="37.50" z="87.83" />
+  <small-nitro id="Empty.049" x="-24.82" y="37.52" z="91.05" />
+  <small-nitro id="Empty.050" x="-23.41" y="37.52" z="94.06" />
+  <item id="Empty.052" x="-86.41" y="46.54" z="86.93" />
+  <small-nitro id="Empty.053" x="-89.28" y="47.41" z="91.57" />
+  <small-nitro id="Empty.054" x="-92.89" y="57.42" z="-24.79" />
+  <small-nitro id="Empty.055" x="-94.85" y="57.38" z="-27.20" />
+  <item id="Empty.056" x="-91.16" y="57.39" z="-22.38" />
+  <banana id="Empty.057" x="-14.86" y="60.10" z="23.39" />
+  <banana id="Empty.058" x="-13.19" y="60.37" z="29.15" />
+  <banana id="Empty.059" x="-12.18" y="60.60" z="35.77" />
+  <small-nitro id="Empty.060" x="-87.97" y="42.99" z="31.82" />
+  <small-nitro id="Empty.061" x="-81.76" y="43.04" z="29.61" />
+  <banana id="Empty.062" x="-169.15" y="-12.35" z="10.84" />
+  <banana id="Empty.063" x="-77.64" y="14.96" z="-23.30" />
+  <banana id="Empty.064" x="-71.65" y="15.41" z="-20.90" />
+  <small-nitro id="Empty.065" x="-79.34" y="-14.58" z="-79.63" />
+  <item id="Empty.066" x="-82.18" y="-14.45" z="-78.78" />
+  <item id="Empty.067" x="-76.19" y="-14.41" z="-79.41" />
+  <small-nitro id="Empty.068" x="-76.26" y="-18.83" z="-110.92" />
+  <small-nitro id="Empty.069" x="-71.84" y="-18.86" z="-116.79" />
+  <small-nitro id="Empty.070" x="-65.20" y="-17.23" z="-121.32" />
+  <small-nitro id="Empty.071" x="-59.21" y="-16.15" z="-121.52" />
+  <item id="Empty.072" x="52.71" y="-12.79" z="-76.39" />
+  <item id="Empty.074" x="57.64" y="-12.79" z="-78.14" />
+  <banana id="Empty.093" x="-102.94" y="47.94" z="71.54" />
+  <light xyz="59.49 -1.27 50.21" id="Point" distance="15.00" energy="1.00" color="254 42 0">
+  </light>
+  <light xyz="50.83 -1.39 50.43" id="Point.001" distance="15.00" energy="1.00" color="254 42 0">
+  </light>
+  <light xyz="52.05 -8.45 75.81" id="Point.002" distance="7.50" energy="1.00" color="254 102 27">
+  </light>
+  <light xyz="46.41 -8.45 97.63" id="Point.003" distance="7.50" energy="1.00" color="254 102 27">
+  </light>
+  <light xyz="7.62 40.12 71.13" id="Point.004" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="8.06 37.02 67.03" id="Point.005" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="12.07 37.13 68.06" id="Point.006" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-140.02 -7.57 106.04" id="Point.007" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-141.64 -7.68 109.85" id="Point.008" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-137.65 -4.58 110.90" id="Point.009" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-202.78 -12.36 -44.06" id="Point.010" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-201.51 -12.18 -39.00" id="Point.011" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-200.24 -12.46 -49.65" id="Point.012" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-193.75 -12.66 -52.38" id="Point.013" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-196.55 -12.61 -51.70" id="Point.014" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-190.87 -12.72 -54.69" id="Point.015" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-186.26 -12.84 -57.92" id="Point.016" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-182.92 -12.93 -63.51" id="Point.017" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-179.43 -12.99 -63.47" id="Point.018" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-22.47 8.94 -85.10" id="Point.019" distance="5.00" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-21.71 10.32 -88.04" id="Point.020" distance="5.00" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-20.94 11.71 -90.99" id="Point.021" distance="5.00" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="2.83 12.98 -60.45" id="Point.022" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="6.14 8.88 -64.75" id="Point.023" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="10.48 10.53 -61.87" id="Point.024" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="34.12 6.93 -73.24" id="Point.025" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="12.99 18.47 -79.57" id="Point.026" distance="5.00" energy="1.00" color="255 51 0" if="isTrackReverse">
+  </light>
+  <light xyz="27.77 10.62 -76.78" id="Point.027" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="10.05 15.20 -76.09" id="Point.028" distance="5.00" energy="1.00" color="255 51 0" if="isTrackReverse">
+  </light>
+  <light xyz="7.69 12.14 -72.75" id="Point.029" distance="5.00" energy="1.00" color="255 51 0" if="isTrackReverse">
+  </light>
+  <light xyz="-60.53 -12.06 141.80" id="Point.030" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-54.73 -12.05 141.03" id="Point.031" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-56.14 -11.99 140.46" id="Point.032" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-50.00 -12.09 142.86" id="Point.033" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-64.49 -12.15 144.59" id="Point.034" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="65.72 -9.09 60.33" id="Point.035" distance="7.00" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="65.25 -9.34 58.93" id="Point.036" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="64.74 -11.41 91.14" id="Point.037" distance="7.00" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="64.20 -9.38 89.11" id="Point.038" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="64.47 -9.15 92.72" id="Point.039" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="63.59 -8.88 92.12" id="Point.040" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-81.46 -13.16 -122.20" id="Point.041" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-79.22 -14.84 -120.72" id="Point.042" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-57.82 -12.00 -128.98" id="Point.043" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-57.54 -10.29 -131.99" id="Point.044" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="64.98 -9.96 91.21" id="Point.045" distance="10.00" energy="1.00" color="254 49 2">
+  </light>
+  <light xyz="65.49 -9.54 59.38" id="Point.046" distance="10.00" energy="1.00" color="254 49 2">
+  </light>
+  <light xyz="33.17 -7.68 -130.55" id="Point.047" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="32.33 -9.21 -127.99" id="Point.048" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="59.05 -10.97 -96.09" id="Point.049" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="56.01 -11.34 -95.86" id="Point.050" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="48.44 -12.15 114.40" id="Point.051" distance="2.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-10.05 -9.73 -127.26" id="Point.052" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-10.69 -8.59 -130.86" id="Point.053" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-67.46 3.66 -50.58" id="Point.054" distance="10.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="5.08 34.20 31.49" id="Point.055" distance="15.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="15.53 26.73 29.96" id="Point.056" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="13.97 27.68 34.59" id="Point.057" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-73.66 51.83 38.29" id="Point.058" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-76.38 48.73 35.18" id="Point.059" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-72.90 48.84 32.93" id="Point.060" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="33.45 -8.30 116.13" id="Point.061" distance="7.50" energy="1.00" color="254 102 27">
+  </light>
+  <light xyz="-130.73 -20.99 154.60" id="Point.062" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-138.46 -20.99 129.93" id="Point.063" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-175.66 -20.99 77.61" id="Point.064" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-177.21 -20.99 26.95" id="Point.065" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-203.46 -20.99 -8.26" id="Point.066" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-114.32 -20.99 153.90" id="Point.067" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-124.11 -20.99 169.10" id="Point.068" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-213.25 -20.99 6.94" id="Point.069" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-186.99 -20.99 42.15" id="Point.070" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-185.45 -20.99 92.81" id="Point.071" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-167.84 -20.99 142.23" id="Point.072" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-195.32 -20.99 23.38" id="Point.073" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-185.79 -20.99 69.87" id="Point.074" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-179.35 -20.99 121.71" id="Point.075" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-147.89 -20.99 160.14" id="Point.076" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-153.03 -20.99 135.14" id="Point.077" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-169.66 -20.99 116.55" id="Point.078" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-176.67 -20.99 99.01" id="Point.079" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-179.89 -20.99 74.88" id="Point.080" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-180.96 -20.99 49.14" id="Point.081" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-185.07 -20.99 23.93" id="Point.082" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-202.41 -20.99 4.99" id="Point.083" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-184.53 -20.99 10.88" id="Point.084" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-175.78 -20.99 49.85" id="Point.085" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-154.36 -20.73 109.11" id="Point.086" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-140.74 -20.99 150.13" id="Point.087" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-222.52 -20.99 -15.05" id="Point.088" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-233.49 -20.99 -1.45" id="Point.089" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-245.56 -20.99 -15.05" id="Point.090" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-263.77 -20.99 -5.40" id="Point.091" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-270.13 -20.99 -14.62" id="Point.092" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-286.36 -20.99 0.96" id="Point.093" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-289.43 -20.99 -12.86" id="Point.094" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-305.67 -20.99 -11.76" id="Point.095" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-304.79 -20.99 0.74" id="Point.096" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="17.52 30.63 99.19" id="Point.097" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="42.26 28.59 95.39" id="Point.098" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="37.35 23.51 101.88" id="Point.099" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="37.16 29.15 113.98" id="Point.100" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="14.37 -8.27 129.73" id="Point.101" distance="7.50" energy="1.00" color="254 102 27">
+  </light>
+  <light xyz="-5.78 -7.94 135.24" id="Point.102" distance="7.50" energy="1.00" color="254 102 27">
+  </light>
+  <light xyz="-203.90 -10.00 -58.11" id="Point.103" distance="3.00" energy="1.00" color="252 84 23" if="isTrackNotReverse">
+  </light>
+  <light xyz="-210.35 -9.50 -53.95" id="Point.104" distance="3.00" energy="1.00" color="252 84 23" if="isTrackNotReverse">
+  </light>
+  <light xyz="-212.18 -9.51 -39.14" id="Point.105" distance="3.00" energy="1.00" color="252 84 23" if="isTrackReverse">
+  </light>
+  <light xyz="-212.93 -9.05 -46.68" id="Point.106" distance="3.00" energy="1.00" color="252 84 23" if="isTrackReverse">
+  </light>
+  <light xyz="27.53 -7.99 134.87" id="Point.107" distance="7.50" energy="1.00" color="254 102 27">
+  </light>
+  <light xyz="33.94 -7.99 130.32" id="Point.108" distance="7.50" energy="1.00" color="254 102 27">
+  </light>
+  <light xyz="-119.17 49.79 59.57" id="Point.109" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-122.21 50.33 61.35" id="Point.110" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-81.54 52.01 86.90" id="Point.111" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-106.87 54.64 54.31" id="Point.112" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-110.97 51.55 54.84" id="Point.113" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-110.90 51.65 50.70" id="Point.114" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-124.71 52.20 15.77" id="Point.115" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="24.25 18.50 -71.97" id="Point.116" distance="3.00" energy="1.00" color="252 84 23" if="isTrackNotReverse">
+  </light>
+  <light xyz="26.42 19.37 -64.64" id="Point.117" distance="3.00" energy="1.00" color="252 84 23" if="isTrackNotReverse">
+  </light>
+  <light xyz="23.92 20.12 -69.62" id="Point.118" distance="3.00" energy="1.00" color="252 84 23" if="isTrackReverse">
+  </light>
+  <light xyz="18.85 21.31 -75.13" id="Point.119" distance="3.00" energy="1.00" color="252 84 23" if="isTrackReverse">
+  </light>
+  <lightshaft xyz="172.29 170.81 -220.63" id="Sun" opacity="10.00" color="255 21 0"/>
+  <default-start karts-per-row     ="4"
+                 forwards-distance ="1.50"
+                 sidewards-distance="1.80"
+                 upwards-distance  ="1.10"/>
+  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy" xyz="-121.80 -33.40 -115.33" hpr="0.0 -37.7 0.0" scale="3.00 3.00 3.00">
+  </library>
+  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy.001" xyz="-196.88 -17.69 -152.36" hpr="0.0 47.7 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy.002" xyz="-135.20 -16.62 -230.42" hpr="0.0 -8.7 0.0" scale="2.00 2.00 2.00">
+  </library>
+  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy.003" xyz="-169.80 -25.74 -107.53" hpr="-0.0 125.2 -0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy.004" xyz="-121.80 -33.47 -144.25" hpr="0.0 -37.7 0.0" scale="1.78 1.78 1.78">
+  </library>
+  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy.005" xyz="-81.40 -33.47 -169.64" hpr="-0.0 -101.6 -0.0" scale="2.63 2.63 2.63">
+  </library>
+  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy.006" xyz="-191.29 -25.73 -115.71" hpr="0.0 39.3 0.0" scale="1.50 1.50 1.50">
+  </library>
+  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy.007" xyz="-198.40 -17.69 -176.88" hpr="0.0 -14.5 0.0" scale="1.50 1.50 1.50">
+  </library>
+  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy.008" xyz="-118.82 -16.94 -250.92" hpr="0.0 -36.1 0.0" scale="1.50 1.50 1.50">
+  </library>
+</scene>

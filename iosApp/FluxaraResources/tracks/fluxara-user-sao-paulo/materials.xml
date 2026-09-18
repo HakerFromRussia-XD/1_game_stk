@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<materials>
+  <material name="road-pit_n.png" gloss-map="ROADgloss.png"/>
+  <material name="road-start.png" gloss-map="ROADgloss.png"/>
+  <material name="rroad.png" gloss-map="ROADgloss.png"/>
+  <material name="BRtree_n.png" shader="alphatest" ignore="Y"/>
+  <material name="tree01_n.png" shader="alphatest" ignore="Y"/>
+  <material name="tree02_n.png" shader="alphatest" ignore="Y"/>
+  <material name="FENCWIRE_arbor_n.png" shader="alphatest"/>
+  <material name="M1_arbor.png" shader="alphatest"/>
+  <material name="people1_tree_n.png" shader="alphatest"/>
+  <material name="people2_tree_n.png" shader="alphatest"/>
+  <material name="people3_tree_n.png" shader="alphatest"/>
+  <material name="people4_tree_n.png" shader="alphatest"/>
+  <material name="people7_tree_n.png" shader="alphatest"/>
+  <material name="people8_tree_n.png" shader="alphatest"/>
+  <material name="people9_tree_n.png" shader="alphatest"/>
+  <material name="PY048_arbor.png" shader="alphatest"/>
+  <material name="ST_arbor.png" shader="alphatest"/>
+  <material name="TR_arbor.png" shader="alphatest"/>
+  <material name="TR1_arbor.png" shader="alphatest"/>
+  <material name="TR115_arbor.png" shader="alphatest"/>
+  <material name="TR116_arbor.png" shader="alphatest"/>
+  <material name="its-curb.png">
+    <sfx filename="kerb.ogg" min_speed="1.00" max_speed="25.00" min_pitch="0.80" max_pitch="0.85" positional="true" rolloff="0.10"/>
+  </material>
+  <material name="its-curb2.png">
+    <sfx filename="kerb.ogg" min_speed="1.00" max_speed="25.00" min_pitch="0.80" max_pitch="0.85" positional="true" rolloff="0.10"/>
+  </material>
+  <material name="grass2.png" slowdown-time="0.50" max-speed="0.70">
+    <particles base="smoke_brown.xml" condition="skid"/>
+  </material>
+  <material name="rsand.png" slowdown-time="0.40" max-speed="0.40">
+    <sfx filename="sand.ogg" min_speed="1.00" max_speed="25.00" min_pitch="1.00" max_pitch="1.40" positional="true" rolloff="0.10"/>
+    <particles base="smoke_yellow.xml" condition="skid drive"/>
+  </material>
+  <material name="superzipper.png" mirror-axis="U">
+    <particles base="greenzipper_fire.xml" condition="skid drive"/>
+    <zipper duration="20.0" max-speed-increase="10.0" fade-out-time="0.5" speed-gain="10.5" min-speed="-1.0"/>
+  </material>
+  </materials>

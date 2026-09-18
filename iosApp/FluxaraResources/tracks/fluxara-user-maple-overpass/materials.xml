@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<materials>
+  <material name="rmbl_0119_dds_img.png">
+    <sfx filename="kerb.ogg" min_speed="1.00" max_speed="25.00" min_pitch="0.80" max_pitch="0.85" positional="true" rolloff="0.10"/>
+  </material>
+  <material name="rmblgreen16_dds_img.png">
+    <sfx filename="kerb.ogg" min_speed="1.00" max_speed="25.00" min_pitch="0.80" max_pitch="0.85" positional="true" rolloff="0.10"/>
+  </material>
+  <material name="aut_start4.png" gloss-map="aut_start4Glow.png"/>
+  <material name="grlt_dds_img.png" gloss-map="grlt_dds_imgGlow.png"/>
+  <material name="road_tarmac001_dds_img.png" gloss-map="ROADgloss.png"/>
+  <material name="road_tarmac003_dds_img.png" gloss-map="ROADgloss.png"/>
+  <material name="road_tarmac004_dds_img.png" gloss-map="ROADgloss.png"/>
+  <material name="banflags1_dds_img.png" shader="alphatest"/>
+  <material name="bka_dds_img.png" shader="alphatest"/>
+  <material name="crowd1_d_dds_img.png" shader="alphatest"/>
+  <material name="crowd1_d1_dds_img.png" shader="alphatest"/>
+  <material name="crowd1_d2_dds_img.png" shader="alphatest"/>
+  <material name="crowd1_d3_dds_img.png" shader="alphatest"/>
+  <material name="crowd1_d4_dds_img.png" shader="alphatest"/>
+  <material name="crowd1_d5_dds_img.png" shader="alphatest"/>
+  <material name="crowd1_d6_dds_img.png" shader="alphatest"/>
+  <material name="crowd1_d7_dds_img.png" shader="alphatest"/>
+  <material name="crowd1_d8_dds_img.png" shader="alphatest"/>
+  <material name="crowd1_d9_dds_img.png" shader="alphatest"/>
+  <material name="crowd2_d_dds_img.png" shader="alphatest"/>
+  <material name="crowd2_d1_dds_img.png" shader="alphatest"/>
+  <material name="crowd2_d2_dds_img.png" shader="alphatest"/>
+  <material name="crowd2_d3_dds_img.png" shader="alphatest"/>
+  <material name="fencealpha_dds_img.png" shader="alphatest"/>
+  <material name="fencealpha1_dds_img.png" shader="alphatest"/>
+  <material name="fencealpha2_dds_img.png" shader="alphatest"/>
+  <material name="fencingb_dds_img.png" shader="alphatest"/>
+  <material name="girdercrossed_dds_img.png" shader="alphatest"/>
+  <material name="grass_03_dds_img.png" shader="alphatest"/>
+  <material name="grasstrans_dds_img.png" shader="alphatest"/>
+  <material name="gstandsteps_dds_img.png" shader="alphatest"/>
+  <material name="gurdrcrssa_dds_img.png" shader="alphatest"/>
+  <material name="gurdrcrssa1_dds_img.png" shader="alphatest"/>
+  <material name="gurdrcrssa2_dds_img.png" shader="alphatest"/>
+  <material name="gurdrcrssaub_dds_img.png" shader="alphatest"/>
+  <material name="lighta_dds_img.png" shader="alphatest"/>
+  <material name="lighta1_dds_img.png" shader="alphatest"/>
+  <material name="peopletest_dds_img.png" shader="alphatest"/>
+  <material name="peopletest1_dds_img.png" shader="alphatest"/>
+  <material name="raila_dds_img.png" shader="alphatest"/>
+  <material name="raila1_dds_img.png" shader="alphatest"/>
+  <material name="rwbrid_dds_img.png" shader="alphatest"/>
+  <material name="th_fence.png" shader="alphatest"/>
+  <material name="trackedgeblend1_dds_img.png" shader="alphatest" ignore="Y"/>
+  <material name="wall_fence001_dds_img.png" shader="alphatest"/>
+  <material name="window23_dds_img.png" shader="alphatest"/>
+  <material name="tree01_dds_img.png" shader="alphatest" ignore="Y"/>
+  <material name="tree02_dds_img.png" shader="alphatest" ignore="Y"/>
+  <material name="tree03_dds_img.png" shader="alphatest" ignore="Y"/>
+  <material name="grass_dds_img.png" slowdown-time="0.80" max-speed="0.66">
+    <particles base="smoke_brown.xml" condition="skid"/>
+  </material>
+  <material name="ground_grass002_dds_img.png" slowdown-time="0.80" max-speed="0.66">
+    <particles base="smoke_brown.xml" condition="skid"/>
+  </material>
+  <material name="ground_gravel001_dds_img.png" slowdown-time="0.33" max-speed="0.33">
+    <sfx filename="sand.ogg" min_speed="1.00" max_speed="25.00" min_pitch="1.00" max_pitch="1.40" positional="true" rolloff="0.10"/>
+    <particles base="smoke_yellow.xml" condition="skid drive"/>
+  </material>
+  <material name="gfxGlow_blue_a.png">
+    <zipper duration="10.0" max-speed-increase="15.0" fade-out-time="0.5" speed-gain="1.0" min-speed="-1.0"/>
+  </material>
+</materials>

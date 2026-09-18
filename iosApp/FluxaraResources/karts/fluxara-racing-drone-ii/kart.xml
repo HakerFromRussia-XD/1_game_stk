@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<kart name="Racing Drone II" version="3" model-file="racing drone ii.spm" icon-file="icon.png" minimap-icon-file="icon.png" shadow-file="edgy green doods" type="medium" groups="Fluxara" rgb="0.00 1.00 0.00" revision="1">
+    <sounds engine="custom" file="sports.ogg" rolloff="0.2" max_dist="300" volume="0.6"/>
+    <wheels>
+        <front-right position="0.301216 0.128951 0.532686" model="wheel-front-right.spm"/>
+        <front-left position="-0.301216 0.128951 0.532686" model="wheel-front-left.spm"/>
+        <rear-left position="-0.273578 0.182539 -0.508622" model="wheel-rear-left.spm"/>
+        <rear-right position="0.273578 0.182539 -0.508622" model="wheel-rear-right.spm"/>
+    </wheels>
+    <nitro-emitter>
+        <nitro-emitter-a position="-0.074801 0.298819 -0.657461"/>
+        <nitro-emitter-b position="0.074801 0.298819 -0.657461"/>
+    </nitro-emitter>
+    <headlights>
+        <object position="-0.000000 0.213678 -0.822928" rotation="0.000000 -0.000000 0.000000" scale="0.000100 0.000100 0.000100" color="255 0 0" model="Cube.spm"/>
+        <object position="0.001481 0.202352 1.141356" rotation="0.000000 -0.000000 0.000000" scale="0.185577 0.079549 1.000000" model="stk_conelight_a.png__.spm"/>
+    </headlights>
+    <lean max="0"/>
+    <exhaust file="kart_exhaust.xml"/>
+</kart>

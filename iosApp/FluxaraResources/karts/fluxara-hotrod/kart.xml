@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<kart name="Hotrod" version="3" model-file="hotrod.spm" icon-file="icon.png" minimap-icon-file="iconMinimap.png" shadow-file="backfire" type="medium" groups="Fluxara" rgb="0.00 0.24 0.97" revision="2">
+    <sounds engine="custom" file="backfire.ogg" rolloff="0.2" max_dist="300" volume="0.8"/>
+    <animations start-winning="0" start-winning-loop="28" end-winning="28" start-losing="31" start-losing-loop="58" end-losing="58" left="0" straight="0" right="0" selection-start="0" selection-end="0"/>
+    <wheels>
+        <rear-right position="0.265275 0.156339 -0.395433" model="wheel-rear-right.spm"/>
+        <rear-left position="-0.265275 0.156339 -0.395433" model="wheel-rear-left.spm"/>
+        <front-right position="0.286897 0.138630 0.515402" model="wheel-front-right.spm"/>
+        <front-left position="-0.286897 0.138630 0.515402" model="wheel-front-left.spm"/>
+    </wheels>
+    <nitro-emitter>
+        <nitro-emitter-a position="0.000000 0.248506 -0.603566"/>
+        <nitro-emitter-b position="0.000000 0.248506 -0.603566"/>
+    </nitro-emitter>
+    <headlights>
+        <object position="0.000000 0.357304 -0.809902" rotation="0.000000 -0.000000 0.000000" scale="0.000010 0.000010 0.000010" color="255 0 0" model="___.spm"/>
+        <object position="0.001005 0.184348 1.036314" rotation="0.000000 -0.000000 0.000000" scale="0.675348 0.675348 1.000000" model="headlight.spm"/>
+    </headlights>
+    <lean max="0"/>
+    <exhaust file="kart_exhaust.xml"/>
+</kart>

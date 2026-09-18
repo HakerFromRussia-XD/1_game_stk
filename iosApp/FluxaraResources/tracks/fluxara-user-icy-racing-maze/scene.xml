@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<scene>
+  <track model="icy-racing-maze_track.spm" x="0" y="0" z="0">
+    <static-object  model="invisible_wall.spm" xyz="-0.01 5.56 0.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.61" interaction="physics-only"/>
+  </track>
+  <object type="movable" id="Puck" xyz="-0.48 7.00 0.58" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00"
+          shape="cylinderY" mass="1000.0" model="puck.spm" reset-when-below="-15" friction="-0.5" restitution="0.6" linear-factor="1.0 1.0 1.0" angular-factor="0.0 1.0 0.0" linear-damping="0.0" angular-damping="0.9" skeletal-animation="false"/>
+  <object type="movable" id="Puck.001" xyz="-0.48 7.00 20.58" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00"
+          shape="cylinderY" mass="1000.0" model="puckB.spm" reset-when-below="-15" friction="-0.5" restitution="0.6" linear-factor="1.0 1.0 1.0" angular-factor="0.0 1.0 0.0" linear-damping="0.0" angular-damping="0.9" skeletal-animation="false"/>
+  <object type="movable" id="Puck.002" xyz="19.52 7.00 0.58" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00"
+          shape="cylinderY" mass="1000.0" model="puckG.spm" reset-when-below="-15" friction="-0.5" restitution="0.6" linear-factor="1.0 1.0 1.0" angular-factor="0.0 1.0 0.0" linear-damping="0.0" angular-damping="0.9" skeletal-animation="false"/>
+  <object type="movable" id="Puck.003" xyz="-0.48 7.00 -19.42" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00"
+          shape="cylinderY" mass="1000.0" model="puckY.spm" reset-when-below="-15" friction="-0.5" restitution="0.6" linear-factor="1.0 1.0 1.0" angular-factor="0.0 1.0 0.0" linear-damping="0.0" angular-damping="0.9" skeletal-animation="false"/>
+  <object type="movable" id="Puck.004" xyz="-20.48 7.00 0.58" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00"
+          shape="cylinderY" mass="1000.0" model="puckR.spm" reset-when-below="-15" friction="-0.5" restitution="0.6" linear-factor="1.0 1.0 1.0" angular-factor="0.0 1.0 0.0" linear-damping="0.0" angular-damping="0.9" skeletal-animation="false"/>
+  <sun  fog="true" fog-color="29 63 111" fog-max="1.0" fog-start="5.00" fog-end="150.00" xyz="-323.32 562.74 676.22" sun-diffuse="255 213 160" ambient="85 85 85"/>
+  <sky-color rgb="56 255 202"/>
+  <weather particles="snow.xml"/>
+  <sky-box texture="blue_sky_top.jpg blue_sky_top.jpg blue_sky_east.jpg blue_sky_west.jpg blue_sky_south.jpg blue_sky_north.jpg" sh-texture="blue_sky_ibl.jpg blue_sky_ibl.jpg blue_sky_ibl.jpg blue_sky_ibl.jpg blue_sky_ibl.jpg blue_sky_ibl.jpg"/>
+  <camera far="1000.0"/>
+  <checks>
+    <check-lap kind="lap" same-group="0" other-ids="1 2 3" />
+    <check-line kind="activate" other-ids="4 5 6" p1="38.36 25.36" p2="34.55 6.49"
+                min-height="-0.00" same-group="1 2 3"/>
+    <check-line kind="activate" other-ids="4 5 6" p1="38.36 25.36" p2="34.55 6.49"
+                min-height="4.00" same-group="1 2 3"/>
+    <check-line kind="activate" other-ids="4 5 6" p1="38.36 25.36" p2="34.55 6.49"
+                min-height="8.00" same-group="1 2 3"/>
+    <check-line kind="activate" other-ids="7 8 9" p1="-19.75 -28.64" p2="-29.75 -41.03"
+                min-height="-0.00" same-group="4 5 6"/>
+    <check-line kind="activate" other-ids="7 8 9" p1="-19.75 -28.64" p2="-29.75 -41.03"
+                min-height="4.00" same-group="4 5 6"/>
+    <check-line kind="activate" other-ids="7 8 9" p1="-19.75 -28.64" p2="-29.75 -41.03"
+                min-height="8.00" same-group="4 5 6"/>
+    <check-line kind="activate" other-ids="0" p1="17.13 66.43" p2="16.46 50.48"
+                min-height="-0.00" same-group="7 8 9"/>
+    <check-line kind="activate" other-ids="0" p1="17.13 66.43" p2="16.46 50.48"
+                min-height="4.00" same-group="7 8 9"/>
+    <check-line kind="activate" other-ids="0" p1="17.13 66.43" p2="16.46 50.48"
+                min-height="8.00" same-group="7 8 9"/>
+    <goal p1="10.46 0.07 64.50" p2="-10.51 0.07 64.50"  first_goal="true" />
+    <goal p1="-10.45 0.07 -64.50" p2="10.45 0.07 -64.50" />
+  </checks>
+  <item id="gift_1" x="-0.36" y="0.15" z="-23.67" h="-30.00" />
+  <item id="gift_2" x="-0.36" y="0.15" z="23.33" h="-210.00" />
+  <item id="gift_3" x="-33.29" y="0.15" z="0.19" h="210.00" />
+  <item id="gift_3.001" x="-41.06" y="0.15" z="-45.42" h="210.00" />
+  <item id="gift_3.002" x="-38.16" y="0.15" z="-44.11" h="210.00" />
+  <item id="gift_3.003" x="-35.37" y="0.15" z="-42.98" h="210.00" />
+  <item id="gift_3.004" x="-32.88" y="0.15" z="-41.92" h="210.00" />
+  <item id="gift_3.005" x="-22.21" y="0.15" z="-18.11" h="183.19" />
+  <item id="gift_3.006" x="-24.92" y="0.15" z="-17.94" h="183.19" />
+  <item id="gift_3.007" x="-27.91" y="0.15" z="-17.68" h="183.19" />
+  <item id="gift_3.008" x="-31.10" y="0.15" z="-17.54" h="183.19" />
+  <item id="gift_3.013" x="18.99" y="0.15" z="63.02" h="275.97" />
+  <item id="gift_3.014" x="18.95" y="0.15" z="60.31" h="275.97" />
+  <item id="gift_3.015" x="18.84" y="0.15" z="57.30" h="275.97" />
+  <item id="gift_3.016" x="18.85" y="0.15" z="54.12" h="275.97" />
+  <item id="gift_3.017" x="20.57" y="0.15" z="27.84" h="345.88" />
+  <item id="gift_3.018" x="17.58" y="0.15" z="28.93" h="345.88" />
+  <item id="gift_3.019" x="14.79" y="0.15" z="30.06" h="345.88" />
+  <item id="gift_3.020" x="12.26" y="0.15" z="31.03" h="345.88" />
+  <item id="gift_3.021" x="14.99" y="0.15" z="10.44" h="301.96" />
+  <item id="gift_3.022" x="16.14" y="0.15" z="7.98" h="301.96" />
+  <item id="gift_3.023" x="17.36" y="0.15" z="5.24" h="301.96" />
+  <item id="gift_3.024" x="18.76" y="0.15" z="2.38" h="301.96" />
+  <banana id="gift_3.026" x="-19.21" y="0.15" z="39.75" h="210.00" />
+  <banana id="gift_3.029" x="-40.48" y="0.15" z="-15.83" h="210.00" />
+  <banana id="gift_3.032" x="-23.26" y="0.15" z="-33.54" h="210.00" />
+  <banana id="gift_3.036" x="-3.85" y="0.15" z="-36.55" h="210.00" />
+  <banana id="gift_3.038" x="23.25" y="0.15" z="-5.63" h="210.00" />
+  <banana id="gift_3.041" x="0.87" y="0.15" z="32.49" h="210.00" />
+  <banana id="gift_3.043" x="-12.77" y="0.15" z="-50.52" h="210.00" />
+  <big-nitro id="nitro_big" x="31.71" y="0.15" z="0.19" h="30.00" />
+  <big-nitro id="nitro_big.001" x="-5.54" y="0.15" z="-66.61" h="30.00" />
+  <big-nitro id="nitro_big.002" x="-1.54" y="0.15" z="-66.61" h="30.00" />
+  <big-nitro id="nitro_big.003" x="2.46" y="0.15" z="-66.61" h="30.00" />
+  <big-nitro id="nitro_big.004" x="6.46" y="0.15" z="-66.61" h="30.00" />
+  <big-nitro id="nitro_big.005" x="6.46" y="0.15" z="65.73" h="30.00" />
+  <big-nitro id="nitro_big.006" x="2.46" y="0.15" z="65.73" h="30.00" />
+  <big-nitro id="nitro_big.007" x="-1.54" y="0.15" z="65.73" h="30.00" />
+  <big-nitro id="nitro_big.008" x="-5.54" y="0.15" z="65.73" h="30.00" />
+  <lightshaft xyz="-323.32 340.45 676.22" id="Lamp_2" opacity="0.70" color="255 215 146"/>
+  <default-start karts-per-row     ="3"
+                 forwards-distance ="1.50"
+                 sidewards-distance="1.80"
+                 upwards-distance  ="1.10"/>
+</scene>

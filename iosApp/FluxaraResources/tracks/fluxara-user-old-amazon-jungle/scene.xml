@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 7732 -->
+<scene>
+  <track model="jungle_track.b3d" x="0" y="0" z="0">
+    <animated-texture name="water_light.png" dy="0.1" />
+  </track>
+  <particle-emitter kind="fire.xml" x="-36.951355" y="13.247737" z="-267.217987" h="0.000000"  clip_distance="200"/>
+  <particle-emitter kind="fire.xml" x="-16.415476" y="13.247737" z="-266.559082" h="0.000000"  clip_distance="200"/>
+  <particle-emitter kind="fire.xml" x="-15.746194" y="13.247737" z="-245.651047" h="-8.144329" clip_distance="200"/>
+  <particle-emitter kind="fire.xml" x="-36.168301" y="13.247737" z="-243.394058" h="-8.144329" clip_distance="200"/>
+  <particle-emitter kind="fire.xml" x="-34.423897" y="13.247737" z="-286.185608" h="4.549343"  clip_distance="200"/>
+  <particle-emitter kind="fire.xml" x="-14.004982" y="13.247737" z="-283.899933" h="4.549343"  clip_distance="200"/>
+  <particle-emitter kind="fire.xml" x="-50.161980" y="13.247732" z="-327.927979" h="4.549343"  clip_distance="200"/>
+  <particle-emitter kind="fire.xml" x="-59.349590" y="12.889566" z="-286.837433" h="4.549343"  clip_distance="200"/>
+  <particle-emitter kind="fire.xml" x="-59.162716" y="12.198290" z="-240.242065" h="4.549343"  clip_distance="200"/>
+  <banana x="143.363571" y="24.771011" z="-397.839813" />
+  <banana x="194.90358" y="24.771011" z="-409.123688" />
+  <banana x="279.394592" y="14.622768" z="-380.759613" />
+  <banana x="286.861847" y="14.622768" z="-368.021454" />
+  <banana x="303.992554" y="14.622768" z="-356.600983" />
+  <banana x="311.459778" y="14.622768" z="-346.937469" />
+  <banana x="321.5625" y="12.287371" z="-344.741241" />
+  <banana x="329.880096" y="12.287371" z="-343.986664" />
+  <banana x="326.917908" y="12.287371" z="-331.32077" />
+  <banana x="335.191589" y="12.287371" z="-319.778412" />
+  <banana x="344.287872" y="12.287371" z="-327.084198" />
+  <banana x="348.736328" y="12.287371" z="-310.985199" />
+  <banana x="360.359467" y="12.287371" z="-307.582977" />
+  <banana x="373.097717" y="12.287371" z="-297.919586" />
+  <banana x="377.929413" y="12.287371" z="-282.985077" />
+  <banana x="336.567291" y="12.287371" z="-329.543243" />
+  <item x="386.221924" y="13.568262" z="-232.229996" />
+  <item x="386.730408" y="13.568262" z="-237.060745" />
+  <item x="387.238922" y="13.568262" z="-241.637222" />
+  <item x="355.582062" y="19.10272" z="-151.672989" />
+  <item x="331.533386" y="17.767706" z="-126.689056" />
+  <item x="234.588577" y="9.834072" z="-314.818695" />
+  <item x="216.221878" y="9.997129" z="-251.197922" />
+  <item x="236.070023" y="9.834072" z="-312.490692" />
+  <item x="127.857559" y="4.392476" z="-263.951569" />
+  <item x="102.350342" y="4.501786" z="-308.589142" />
+  <item x="232.472122" y="9.834072" z="-317.993378" />
+  <item x="213.258865" y="9.997129" z="-251.83284" />
+  <item x="219.608109" y="9.997129" z="-250.12468" />
+  <item x="176.126144" y="9.834072" z="-221.625931" />
+  <item x="117.966995" y="9.834072" z="43.014614" />
+  <item x="121.518448" y="9.834072" z="39.95303" />
+  <small-nitro x="251.07991" y="17.767706" z="-18.738756" />
+  <small-nitro x="259.00882" y="17.767706" z="-27.887537" />
+  <small-nitro x="261.753448" y="17.767706" z="-40.085922" />
+  <small-nitro x="264.498108" y="17.767706" z="-51.674389" />
+  <small-nitro x="272.427032" y="17.767706" z="-60.213261" />
+  <small-nitro x="281.880798" y="17.767706" z="-68.447159" />
+  <small-nitro x="283.710541" y="17.767706" z="-79.42572" />
+  <small-nitro x="-18.988575" y="17.767702" z="-313.0784" />
+  <small-nitro x="7.901196" y="17.767708" z="-331.004913" />
+  <small-nitro x="25.386883" y="17.767706" z="-349.81308" />
+  <small-nitro x="57.074856" y="17.767706" z="-341.891083" />
+  <small-nitro x="78.098602" y="17.767706" z="-341.281708" />
+  <checks>
+    <check-lap kind="lap" same-group="0 2 3" other-ids="1" />
+    <check-line kind="activate" other-ids="0 2 3" p1="313.383087 -103.716087" p2="299.768646 -116.171570"
+                min-height="13.537922" same-group="1"/>
+    <check-line kind="lap" other-ids="1" p1="12.179106 3.189663" p2="4.133845 3.212799"
+                min-height="-2.068940" same-group="0 2 3"/>
+    <check-line kind="lap" other-ids="1" p1="-6.681207 3.102375" p2="-17.880486 3.125511"
+                min-height="-1.998197" same-group="0 2 3"/>
+  </checks>
+
+  <sky-color rgb="77 104 255"/>
+  <sky-box texture="skybox5.jpg skybox5.jpg skybox4.jpg skybox2.jpg skybox3.jpg skybox1.jpg" />
+  <camera far="1000.0"/>
+
+  <default-start karts-per-row     ="2"
+                 forwards-distance ="1.5"
+                 sidewards-distance="3"
+                 upwards-distance  ="0"/>
+</scene>

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<graph>
+  <!-- First define all nodes of the graph, and what quads they represent -->
+  <node-list from-quad="0" to-quad="654"/>  <!-- map each quad to a node  -->
+  <!-- Define the main loop -->
+  <edge-loop from="0" to="340"/>
+  <!-- Shortcut DrivelineCaveCut -->
+  <edge from="210" to="341"/>
+  <edge-line from="341" to="376"/>
+  <edge from="376" to="242"/>
+  <!-- Shortcut DrivelineCave1 -->
+  <edge from="359" to="377"/>
+  <edge-line from="377" to="405"/>
+  <edge from="405" to="254"/>
+  <!-- Shortcut DrivelineIce1 -->
+  <edge from="288" to="406"/>
+  <edge-line from="406" to="429"/>
+  <edge from="429" to="498"/>
+  <!-- Shortcut DrivelineFinishRCut -->
+  <edge from="0" to="430"/>
+  <edge-line from="430" to="453"/>
+  <edge from="453" to="40"/>
+  <!-- Shortcut DrivelinePillars1 -->
+  <edge from="264" to="454"/>
+  <edge-line from="454" to="466"/>
+  <edge from="466" to="283"/>
+  <!-- Shortcut DrivelineRampR -->
+  <edge from="321" to="467"/>
+  <edge-line from="467" to="480"/>
+  <edge from="480" to="336"/>
+  <!-- Shortcut DrivelineIce2 -->
+  <edge from="466" to="481"/>
+  <edge-line from="481" to="498"/>
+  <edge from="498" to="312"/>
+  <!-- Shortcut DrivelineRampLeftBypass -->
+  <edge from="316" to="499"/>
+  <edge-line from="499" to="528"/>
+  <edge from="528" to="476"/>
+  <!-- Shortcut DrivelineBowCut -->
+  <edge from="29" to="529"/>
+  <edge-line from="529" to="548"/>
+  <edge from="548" to="63"/>
+  <!-- Shortcut DrivelineIce4 -->
+  <edge from="283" to="549"/>
+  <edge-line from="549" to="563"/>
+  <edge from="563" to="311"/>
+  <!-- Shortcut DrivelineIce3 -->
+  <edge from="550" to="564"/>
+  <edge-line from="564" to="571"/>
+  <edge from="571" to="490"/>
+  <!-- Shortcut DrivelineJumpCut2 -->
+  <edge from="17" to="572"/>
+  <edge-line from="572" to="588"/>
+  <edge from="588" to="87"/>
+  <!-- Shortcut DrivelinePillars3 -->
+  <edge from="269" to="589"/>
+  <edge-line from="589" to="613"/>
+  <edge from="613" to="282"/>
+  <!-- Shortcut DrivelineJumpCut1 -->
+  <edge from="431" to="614"/>
+  <edge-line from="614" to="627"/>
+  <edge from="627" to="46"/>
+  <!-- Shortcut DrivelineRampRightBypass -->
+  <edge from="503" to="628"/>
+  <edge-line from="628" to="654"/>
+  <edge from="654" to="334"/>
+</graph>

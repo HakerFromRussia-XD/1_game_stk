@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<graph>
+  <!-- First define all nodes of the graph, and what quads they represent -->
+  <node-list from-quad="0" to-quad="1459"/>  <!-- map each quad to a node  -->
+  <!-- Define the main loop -->
+  <edge-loop from="0" to="658"/>
+  <!-- Shortcut DriveLineASec1Pipe5 -->
+  <edge from="76" to="659"/>
+  <edge-line from="659" to="731"/>
+  <edge from="731" to="150"/>
+  <!-- Shortcut DriveLineASec1Pipe6 -->
+  <edge from="94" to="732"/>
+  <edge-line from="732" to="766"/>
+  <edge from="766" to="1075"/>
+  <!-- Shortcut DriveLineASec3Centre -->
+  <edge from="445" to="767"/>
+  <edge-line from="767" to="796"/>
+  <edge from="796" to="476"/>
+  <!-- Shortcut DriveLineASec2CentreF -->
+  <edge from="323" to="797"/>
+  <edge-line from="797" to="808"/>
+  <edge from="808" to="336"/>
+  <!-- Shortcut DriveLineASec3HT1R -->
+  <edge from="398" to="809"/>
+  <edge-line from="809" to="825"/>
+  <edge from="825" to="410"/>
+  <!-- Shortcut DriveLineASec1JumpRescue -->
+  <edge from="67" to="826"/>
+  <edge-line from="826" to="837"/>
+  <edge from="837" to="76"/>
+  <!-- Shortcut DriveLineASec1Pipe3Plus -->
+  <edge from="77" to="838"/>
+  <edge-line from="838" to="953"/>
+  <edge from="953" to="192"/>
+  <!-- Shortcut DriveLineASec3DomeX -->
+  <edge from="606" to="954"/>
+  <edge-line from="954" to="1005"/>
+  <edge from="1005" to="649"/>
+  <!-- Shortcut DriveLineASec3Dome -->
+  <edge from="606" to="1006"/>
+  <edge-line from="1006" to="1025"/>
+  <edge from="1025" to="621"/>
+  <!-- Shortcut DriveLineASec1Pipe2 -->
+  <edge from="80" to="1026"/>
+  <edge-line from="1026" to="1099"/>
+  <edge from="1099" to="912"/>
+  <!-- Shortcut DriveLineASec1JumpRescueR -->
+  <edge from="47" to="1100"/>
+  <edge-line from="1100" to="1130"/>
+  <edge from="1130" to="837"/>
+  <!-- Shortcut DriveLineASec1Pipe4 -->
+  <edge from="662" to="1131"/>
+  <edge-line from="1131" to="1202"/>
+  <edge from="1202" to="730"/>
+  <!-- Shortcut DriveLineASec2.001 -->
+  <edge from="263" to="1203"/>
+  <edge-line from="1203" to="1260"/>
+  <edge from="1260" to="322"/>
+  <!-- Shortcut DriveLineASec2Special -->
+  <edge from="297" to="1261"/>
+  <edge-line from="1261" to="1333"/>
+  <edge from="1333" to="375"/>
+  <!-- Shortcut DriveLineASec1Turns -->
+  <edge from="17" to="1334"/>
+  <edge-line from="1334" to="1359"/>
+  <edge from="1359" to="46"/>
+  <!-- Shortcut DriveLineASec2 -->
+  <edge from="198" to="1360"/>
+  <edge-line from="1360" to="1400"/>
+  <edge from="1400" to="240"/>
+  <!-- Shortcut DriveLineASec3GateHelp -->
+  <edge from="559" to="1401"/>
+  <edge-line from="1401" to="1411"/>
+  <edge from="1411" to="563"/>
+  <!-- Shortcut DriveLineASec3GateFixPlus -->
+  <edge from="1401" to="1412"/>
+  <edge-line from="1412" to="1459"/>
+  <edge from="1459" to="598"/>
+</graph>

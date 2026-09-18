@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<graph>
+  <!-- First define all nodes of the graph, and what quads they represent -->
+  <node-list from-quad="0" to-quad="304"/>  <!-- map each quad to a node  -->
+  <!-- Define the main loop -->
+  <edge-loop from="0" to="202"/>
+  <!-- Shortcut DrivelineCastle -->
+  <edge from="127" to="203"/>
+  <edge-line from="203" to="263"/>
+  <edge from="263" to="182"/>
+  <!-- Shortcut DrivelineCastleAlternate -->
+  <edge from="205" to="264"/>
+  <edge-line from="264" to="268"/>
+  <edge from="268" to="209"/>
+  <!-- Shortcut Plane.005 -->
+  <edge from="93" to="269"/>
+  <edge-line from="269" to="304"/>
+  <edge from="304" to="117"/>
+</graph>
