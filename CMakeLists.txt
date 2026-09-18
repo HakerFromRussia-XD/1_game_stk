@@ -724,22 +724,26 @@ else()
         # resource rules have already been considered up to date. Overlay the
         # curated Fluxara bundle once, at the end, so clean and incremental
         # builds always contain the exact same screens, karts and tracks.
+        # copy_directory recopies the entire curated bundle on every link
+        # (thousands of files), turning a two-file UI edit into a multi-minute
+        # iteration. rsync preserves the overlay semantics while transferring
+        # only files whose size or timestamp changed.
         add_custom_command(TARGET supertuxkart POST_BUILD
-            COMMAND ${CMAKE_COMMAND} -E copy_directory
-                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens"
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens"
-            COMMAND ${CMAKE_COMMAND} -E copy_directory
-                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/fluxara"
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/fluxara"
-            COMMAND ${CMAKE_COMMAND} -E copy_directory
-                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara"
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/skins/fluxara"
-            COMMAND ${CMAKE_COMMAND} -E copy_directory
-                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/karts"
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/karts"
-            COMMAND ${CMAKE_COMMAND} -E copy_directory
-                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/tracks"
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/tracks"
+            COMMAND /usr/bin/rsync -a
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/"
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/"
+            COMMAND /usr/bin/rsync -a
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/fluxara/"
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/fluxara/"
+            COMMAND /usr/bin/rsync -a
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/"
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/skins/fluxara/"
+            COMMAND /usr/bin/rsync -a
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/karts/"
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/karts/"
+            COMMAND /usr/bin/rsync -a
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/tracks/"
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/tracks/"
             COMMAND ${CMAKE_COMMAND} -E copy_if_different
                 "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/fluxara-campaign.xml"
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/fluxara-campaign.xml"

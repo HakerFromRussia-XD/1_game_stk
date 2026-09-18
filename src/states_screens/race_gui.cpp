@@ -103,9 +103,13 @@ void drawFluxaraHudText(gui::ScalableFont* font, const core::stringw& text,
     // getDimension() already includes the font's current scale.  Apply the
     // fit ratio to that scale instead of treating it as an absolute value.
     font->setScale(old_scale * std::min(fit_height, fit_width));
-    font->setBlackBorder(true);
-    font->draw(text, rect, color, true, true, nullptr, true);
     font->setBlackBorder(false);
+    core::rect<s32> shadow_rect = rect;
+    shadow_rect.UpperLeftCorner += core::position2di(1, 2);
+    shadow_rect.LowerRightCorner += core::position2di(1, 2);
+    font->draw(text, shadow_rect, video::SColor(175, 3, 20, 52),
+               true, true, nullptr, true);
+    font->draw(text, rect, color, true, true, nullptr, true);
     font->setScale(old_scale);
 }
 
@@ -423,6 +427,7 @@ void RaceGUI::renderGlobal(float dt)
     FontDrawer::startBatching();
     drawGlobalTimer();
 
+#ifndef IOS_STK
     if (!m_is_tutorial)
     {
         if (RaceManager::get()->isLinearRaceMode() &&
@@ -436,6 +441,7 @@ void RaceGUI::renderGlobal(float dt)
             drawGlobalMusicDescription();
         }
     }
+#endif
 
     if (!m_is_tutorial)
     {
@@ -1456,17 +1462,16 @@ void RaceGUI::drawLap(const AbstractKart* kart,
         }
         else if (world->raceHasLaps())
         {
-            int lap = world->getFinishedLapsOfKart(kart->getWorldKartId());
-            if (lap + 1 > RaceManager::get()->getNumLaps())
-                lap--;
-            if (lap >= 0)
+            const int total_laps = RaceManager::get()->getNumLaps();
+            const int finished_laps =
+                world->getFinishedLapsOfKart(kart->getWorldKartId());
+            const int display_lap = core::clamp(finished_laps + 1,
+                                                1, total_laps);
+            value = core::stringw(display_lap);
+            if (world->showLapsTarget())
             {
-                value = core::stringw(lap + 1);
-                if (world->showLapsTarget())
-                {
-                    value += L"/";
-                    value += core::stringw(RaceManager::get()->getNumLaps());
-                }
+                value += L"/";
+                value += core::stringw(total_laps);
             }
         }
         else

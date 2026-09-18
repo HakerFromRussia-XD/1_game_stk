@@ -612,7 +612,10 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
                     (button->axis_y >= 0 ? -1 : 1) * steering_axis, color);
             }
 
-            const int alpha = emg_connected ? 190 : 85;
+            // The level bars are meaningful only while Motorica input is
+            // connected. Hiding their disconnected placeholders prevents two
+            // legacy dark rails from framing the approved steering control.
+            const int alpha = emg_connected ? 190 : 0;
             const int bar_width = std::max(6, (int)(button->width * 0.08f));
             const int bar_height = std::max(24, (int)(button->height * 0.56f));
             const int gap = std::max(4, (int)(button->width * 0.03f));
