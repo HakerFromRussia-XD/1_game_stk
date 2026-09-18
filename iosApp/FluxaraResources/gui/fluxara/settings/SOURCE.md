@@ -2,6 +2,8 @@
 
 Exported from Figma file `Pws4Hw0fwwTmTMf6OJvil8`, screen `55:2`, on 2026-09-18.
 Original screen: 360 x 780. Layers use original Figma bounds and preserve transparency.
+`background.png` is exported directly from node `201:46` at 3x
+(1080 x 2340) so Retina rendering does not upscale the former 1x raster.
 
 | Asset | Node |
 |---|---|

@@ -3,14 +3,18 @@
 #define HEADER_FLUXARA_UI_HPP
 
 #include "graphics/2dutils.hpp"
+#include "graphics/central_settings.hpp"
 #include "graphics/irr_driver.hpp"
 #include "guiengine/engine.hpp"
 #include "guiengine/scalable_font.hpp"
 #include "guiengine/widget.hpp"
 #include "io/file_manager.hpp"
 #include <IGUIButton.h>
+#include <IVideoDriver.h>
+#include <SMaterial.h>
 #include <algorithm>
 #include <cmath>
+#include <vector>
 
 namespace FluxaraUI
 {
@@ -21,9 +25,27 @@ inline void rasterHitTarget(GUIEngine::Widget* widget)
     button->setDrawBorder(false);
     button->setText(L"");
 }
+inline irr::video::ITexture* nativeTexture(const std::string& path)
+{
+    // STK normally caps textures at 512 px unless the global HD option is
+    // enabled.  Fluxara UI rasters are screen-space artwork, not world
+    // textures, so loading them through that cap makes a portrait background
+    // roughly 288 x 512 on a Retina screen.  Raise the limit only while the
+    // texture object captures its load parameters, then restore the user's
+    // graphics setting for track/kart textures.
+    auto& attributes = irr_driver->getVideoDriver()->getNonConstDriverAttributes();
+    const irr::core::dimension2du previous =
+        attributes.getAttributeAsDimension2d("MAX_TEXTURE_SIZE");
+    attributes.setAttribute("MAX_TEXTURE_SIZE",
+                            irr::core::dimension2du(4096, 4096));
+    irr::video::ITexture* result = irr_driver->getTexture(path);
+    attributes.setAttribute("MAX_TEXTURE_SIZE", previous);
+    return result;
+}
 inline irr::video::ITexture* texture(const std::string& path)
 {
-    return irr_driver->getTexture(file_manager->getAsset("gui/fluxara/" + path + ".png"));
+    return nativeTexture(file_manager->getAsset(
+        "gui/fluxara/" + path + ".png"));
 }
 
 struct Canvas
@@ -88,6 +110,91 @@ struct Canvas
         }
         draw2DImage(t, destination, source, clip,
                    irr::video::SColor(alpha,255,255,255), true);
+    }
+    void roundedImage(irr::video::ITexture* t, float left, float top,
+                      float width, float height, float radius,
+                      const irr::core::recti* clip = nullptr) const
+    {
+        if (!t) return;
+        const auto texture_size = t->getSize();
+        auto layout_size = t->getOriginalSize();
+        if (texture_size.Width == 0 || texture_size.Height == 0) return;
+        if (layout_size.Width == 0 || layout_size.Height == 0)
+            layout_size = texture_size;
+
+        // Cover-crop in source-art coordinates, then translate the crop to
+        // the uploaded texture.  The rounded polygon clips in destination
+        // space, so square and panoramic screenshots get identical corners.
+        const float cover = std::max(width / layout_size.Width,
+                                     height / layout_size.Height);
+        const float crop_w = width / cover;
+        const float crop_h = height / cover;
+        const float crop_x = (layout_size.Width - crop_w) * .5f;
+        const float crop_y = (layout_size.Height - crop_h) * .5f;
+        const float u0 = crop_x / layout_size.Width;
+        const float v0 = crop_y / layout_size.Height;
+        const float u1 = (crop_x + crop_w) / layout_size.Width;
+        const float v1 = (crop_y + crop_h) / layout_size.Height;
+
+        const irr::core::recti destination = rect(left, top, width, height);
+        const float l = float(destination.UpperLeftCorner.X);
+        const float t0 = float(destination.UpperLeftCorner.Y);
+        const float r = float(destination.LowerRightCorner.X);
+        const float b = float(destination.LowerRightCorner.Y);
+        const float corner = std::min(radius * scale,
+            std::min((r - l) * .5f, (b - t0) * .5f));
+        const irr::video::SColor white(255, 255, 255, 255);
+
+        std::vector<irr::video::S3DVertex> vertices;
+        std::vector<irr::u16> indices;
+        vertices.reserve(38);
+        indices.reserve(39);
+        const auto append = [&](float px, float py)
+        {
+            const float nx = (px - l) / std::max(1.0f, r - l);
+            const float ny = (py - t0) / std::max(1.0f, b - t0);
+            vertices.emplace_back(px, py, 0.0f, 0.0f, 0.0f, 0.0f, white,
+                u0 + (u1 - u0) * nx, v0 + (v1 - v0) * ny);
+        };
+        append((l + r) * .5f, (t0 + b) * .5f);
+        const float centers[][2] = {
+            {r - corner, t0 + corner}, {r - corner, b - corner},
+            {l + corner, b - corner}, {l + corner, t0 + corner}
+        };
+        constexpr int segments = 8;
+        constexpr float pi = 3.14159265358979323846f;
+        for (int quadrant = 0; quadrant < 4; ++quadrant)
+        {
+            const float start = (-90.0f + quadrant * 90.0f) * pi / 180.0f;
+            for (int step = 0; step <= segments; ++step)
+            {
+                const float angle = start +
+                    (pi * .5f * float(step) / float(segments));
+                append(centers[quadrant][0] + std::cos(angle) * corner,
+                       centers[quadrant][1] + std::sin(angle) * corner);
+            }
+        }
+        indices.push_back(0);
+        for (irr::u16 i = 1; i < vertices.size(); ++i)
+            indices.push_back(i);
+        indices.push_back(1);
+
+        irr::video::SMaterial material;
+        material.setTexture(0, t);
+        material.MaterialType = irr::video::EMT_TRANSPARENT_ALPHA_CHANNEL;
+        irr_driver->getVideoDriver()->setMaterial(material);
+        if (clip) irr_driver->getVideoDriver()->enableScissorTest(*clip);
+        if (CVS->isGLSL())
+        {
+            glEnable(GL_BLEND);
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        }
+        draw2DVertexPrimitiveList(t, vertices.data(),
+            static_cast<irr::u32>(vertices.size()), indices.data(),
+            static_cast<irr::u32>(indices.size() - 2), irr::video::EVT_STANDARD,
+            irr::scene::EPT_TRIANGLE_FAN, irr::video::EIT_16BIT);
+        if (CVS->isGLSL()) glDisable(GL_BLEND);
+        if (clip) irr_driver->getVideoDriver()->disableScissorTest();
     }
     void label(const irr::core::stringw& text, float left, float top,
                float width, float height, float point_size,

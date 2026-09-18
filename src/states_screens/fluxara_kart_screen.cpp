@@ -184,7 +184,9 @@ void FluxaraKartScreen::layoutControls()
     for (const char* id : {"back", "previous", "next", "start"})
         FluxaraUI::rasterHitTarget(getWidget<ButtonWidget>(id));
     c.move(getWidget<IconButtonWidget>("garage-background"), -2, -63, 360, 780);
-    c.move(getWidget<ModelViewWidget>("kart-model"), 32, 162, 296, 260);
+    // Move the whole preview down to the podium, including wheels and child
+    // meshes. Keep its size/camera unchanged so every kart retains its scale.
+    c.move(getWidget<ModelViewWidget>("kart-model"), 32, 222, 296, 260);
     c.move(getWidget<Widget>("stats-panel"), 54, 431, 254, 254);
     c.move(getWidget<ButtonWidget>("back"), 21, 26, 50, 50);
     c.move(getWidget<ButtonWidget>("previous"), 35, 684, 67, 64);

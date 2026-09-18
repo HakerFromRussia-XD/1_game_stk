@@ -35,9 +35,16 @@ private:
     static GLuint m_ui_vao;
     static GLuint m_quad_buffer;
     static GLuint m_quad_vbo;
+    // Scratch geometry used by the immediate 2D primitive path.  Keeping
+    // these objects alive avoids creating and deleting three GL objects for
+    // every rounded UI image on every frame.
+    static GLuint m_primitive_2d_vao;
+    static GLuint m_primitive_2d_vbo;
+    static GLuint m_primitive_2d_ibo;
 
     static void initQuadVBO();
     static void initQuadBuffer();
+    static void initPrimitive2DBuffers();
     static void initSkyTriVBO();
     static void initFrustrumVBO();
     static void initShadowVPMUBO();
@@ -100,6 +107,24 @@ public:
         assert(m_has_been_initialised);
         return m_quad_vbo;
     }   // getQuadVBO
+    // ------------------------------------------------------------------------
+    static GLuint getPrimitive2DVAO()
+    {
+        assert(m_has_been_initialised);
+        return m_primitive_2d_vao;
+    }
+    // ------------------------------------------------------------------------
+    static GLuint getPrimitive2DVBO()
+    {
+        assert(m_has_been_initialised);
+        return m_primitive_2d_vbo;
+    }
+    // ------------------------------------------------------------------------
+    static GLuint getPrimitive2DIBO()
+    {
+        assert(m_has_been_initialised);
+        return m_primitive_2d_ibo;
+    }
 
 };   // class SharedGPUObjects
 

@@ -63,6 +63,12 @@ private:
     video::ITexture* m_up_tex;
     video::ITexture* m_down_tex;
     video::ITexture* m_screen_tex;
+#ifdef IOS_STK
+    /** Icon-free approved Fluxara surfaces. Icons remain separate layers. */
+    video::ITexture* m_fluxara_button_blue_tex;
+    video::ITexture* m_fluxara_button_cyan_tex;
+    video::ITexture* m_fluxara_button_purple_tex;
+#endif
 
     void init();
     void createRaceGUI();

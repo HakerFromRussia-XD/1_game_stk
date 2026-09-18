@@ -485,16 +485,13 @@ void draw2DVertexPrimitiveList(video::ITexture *tex, const void* vertices,
         return;
     }
 
-    GLuint tmpvao, tmpvbo, tmpibo;
     primitiveCount += 2;
-    glGenVertexArrays(1, &tmpvao);
-    glBindVertexArray(tmpvao);
-    glGenBuffers(1, &tmpvbo);
-    glBindBuffer(GL_ARRAY_BUFFER, tmpvbo);
+    glBindVertexArray(SharedGPUObjects::getPrimitive2DVAO());
+    glBindBuffer(GL_ARRAY_BUFFER, SharedGPUObjects::getPrimitive2DVBO());
     glBufferData(GL_ARRAY_BUFFER, vertexCount * getVertexPitchFromType(vType),
                  vertices, GL_STREAM_DRAW);
-    glGenBuffers(1, &tmpibo);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, tmpibo);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,
+                 SharedGPUObjects::getPrimitive2DIBO());
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, primitiveCount * sizeof(u16),
                  indexList, GL_STREAM_DRAW);
 
@@ -507,9 +504,9 @@ void draw2DVertexPrimitiveList(video::ITexture *tex, const void* vertices,
     Primitive2DList::getInstance()->setTextureUnits(tex->getTextureHandler());
     glDrawElements(GL_TRIANGLE_FAN, primitiveCount, GL_UNSIGNED_SHORT, 0);
 
-    glDeleteVertexArrays(1, &tmpvao);
-    glDeleteBuffers(1, &tmpvbo);
-    glDeleteBuffers(1, &tmpibo);
+    glBindVertexArray(0);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
 }   // draw2DVertexPrimitiveList
 
@@ -587,4 +584,3 @@ void preloadShaders()
 }   // preloadShaders
 
 #endif   // !SERVER_ONLY
-

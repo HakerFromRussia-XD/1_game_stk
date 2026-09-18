@@ -6,7 +6,6 @@
 #include "guiengine/widgets/label_widget.hpp"
 #include "guiengine/widgets/button_widget.hpp"
 #include "guiengine/widgets/list_widget.hpp"
-#include "graphics/stk_tex_manager.hpp"
 #include "io/xml_node.hpp"
 #include <IGUIScrollBar.h>
 #include <memory>
@@ -130,13 +129,11 @@ void FluxaraCampaignScreen::onDraw(float)
         {
             if (track->getIdent()=="fluxara-circuit") m_cards[i]=m_art[4];
             else if (track->getIdent()=="fluxara-summit-run") m_cards[i]=m_art[5];
-            else m_cards[i]=STKTexManager::getInstance()->getTexture(
-                track->getScreenshotFile(),"While loading Fluxara track card:",track->getFilename());
+            else m_cards[i]=FluxaraUI::nativeTexture(track->getScreenshotFile());
         }
-        c.image(m_cards[i],30,y,300,236,true,255,&clip);
+        c.roundedImage(m_cards[i],30,y,300,236,18,&clip);
         c.image(m_art[3],45,y+180,270,40,false,255,&clip);
         c.label(track->getName(),58,y+190,244,20,16,&clip);
-        c.label(FluxaraModes::label(m_events[i].mode),45,y+220,270,15,10,&clip);
     }
     if (m_tracks.empty()) c.label(L"No circuit available",30,300,300,50,20);
 }

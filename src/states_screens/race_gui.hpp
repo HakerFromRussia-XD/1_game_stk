@@ -105,6 +105,12 @@ private:
     irr::video::ITexture *m_speed_meter_icon;
     irr::video::ITexture *m_speed_bar_icon;
 
+#ifdef IOS_STK
+    /** Approved Fluxara button surfaces reused as compact HUD cards. */
+    irr::video::ITexture *m_fluxara_hud_blue;
+    irr::video::ITexture *m_fluxara_hud_cyan;
+#endif
+
     /** Animation state: none, getting smaller (old value),
      *  getting bigger (new number). */
     enum AnimationState {AS_NONE, AS_SMALLER, AS_BIGGER};

@@ -31,6 +31,9 @@ GLuint SharedGPUObjects::m_full_screen_quad_vao;
 GLuint SharedGPUObjects::m_ui_vao;
 GLuint SharedGPUObjects::m_quad_buffer;
 GLuint SharedGPUObjects::m_quad_vbo;
+GLuint SharedGPUObjects::m_primitive_2d_vao;
+GLuint SharedGPUObjects::m_primitive_2d_vbo;
+GLuint SharedGPUObjects::m_primitive_2d_ibo;
 bool   SharedGPUObjects::m_has_been_initialised = false;
 
 #include "matrix4.h"
@@ -100,6 +103,19 @@ void SharedGPUObjects::initQuadBuffer()
 }   // initQuadBuffer
 
 // ----------------------------------------------------------------------------
+/** Initialises reusable streaming buffers for draw2DVertexPrimitiveList.
+ *  The old immediate path allocated and destroyed a VAO, VBO and IBO for
+ *  every call. Rounded Fluxara cards use that path every frame, which forces
+ *  avoidable driver synchronisation on iOS.
+ */
+void SharedGPUObjects::initPrimitive2DBuffers()
+{
+    glGenVertexArrays(1, &m_primitive_2d_vao);
+    glGenBuffers(1, &m_primitive_2d_vbo);
+    glGenBuffers(1, &m_primitive_2d_ibo);
+}
+
+// ----------------------------------------------------------------------------
 void SharedGPUObjects::initSkyTriVBO()
 {
     const float TRI_VERTEX[] =
@@ -162,6 +178,7 @@ void SharedGPUObjects::init()
         return;
     initQuadVBO();
     initQuadBuffer();
+    initPrimitive2DBuffers();
     initSkyTriVBO();
     initFrustrumVBO();
     if (CVS->isARBUniformBufferObjectUsable())
@@ -184,4 +201,3 @@ void SharedGPUObjects::reset()
 }   // reset
 
 #endif   // !SERVER_ONLY
-
