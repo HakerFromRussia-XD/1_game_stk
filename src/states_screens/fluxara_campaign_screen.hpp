@@ -23,17 +23,19 @@ private:
     std::vector<FluxaraEvent> m_events;
     unsigned m_selected_track = 0;
     std::string m_next_after;
-    irr::video::ITexture* m_art[8] = {};
-    irr::video::ITexture* m_cards[2] = {};
-    irr::core::stringw m_card_names[2];
+    int m_last_scroll_pos = 0;
+    float m_scroll_idle_time = 1.0f;
+    irr::video::ITexture* m_art[6] = {};
+    std::vector<irr::video::ITexture*> m_cards;
     void layoutControls();
-
-    void updateTrackCard();
+    void populateTrackList();
+    void openTrack(unsigned selected);
 
 public:
     void loadedFromFile() OVERRIDE;
     void init() OVERRIDE;
     void onDraw(float dt) OVERRIDE;
+    void onUpdate(float dt) OVERRIDE;
     void onResize() OVERRIDE;
     void eventCallback(GUIEngine::Widget* widget, const std::string& name,
                        const int player_id) OVERRIDE;

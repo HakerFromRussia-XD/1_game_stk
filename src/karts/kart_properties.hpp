@@ -82,6 +82,11 @@ private:
      *  KartModel can rotate and turn, and animations are played, but otherwise
      *  the kart_properties object is const. */
     mutable std::shared_ptr<KartModel> m_kart_model;
+    // Only catalogue entries may defer their render resources. Copies are
+    // materialised before copying, so derived physics values stay identical.
+    bool m_models_pending = false;
+    bool m_models_loading = false;
+    std::string m_models_error;
 
     /** List of all groups the kart belongs to. */
     std::vector<std::string> m_groups;
@@ -262,7 +267,9 @@ public:
     // ------------------------------------------------------------------------
     /** Returns a pointer to the main KartModel object. This copy
      *  should not be modified, not attachModel be called on it. */
-    const KartModel& getMasterKartModel() const {return *m_kart_model;        }
+    void ensureModelsLoaded() const;
+    const KartModel& getMasterKartModel() const
+    { ensureModelsLoaded(); return *m_kart_model; }
     // ------------------------------------------------------------------------
     void setHatMeshName(const std::string &hat_name);
     // ------------------------------------------------------------------------
@@ -531,4 +538,3 @@ public:
 };   // KartProperties
 
 #endif
-

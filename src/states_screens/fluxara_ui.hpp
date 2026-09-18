@@ -49,30 +49,49 @@ struct Canvas
         widget->move(r.UpperLeftCorner.X, r.UpperLeftCorner.Y, r.getWidth(), r.getHeight());
     }
     void image(irr::video::ITexture* t, float left, float top, float width, float height,
-               bool cover = false, unsigned alpha = 255) const
+               bool cover = false, unsigned alpha = 255,
+               const irr::core::recti* clip = nullptr) const
     {
         if (!t) return;
-        const auto size = t->getOriginalSize();
-        irr::core::recti source(0, 0, size.Width, size.Height);
+        // iOS can upload an NPOT raster into a differently proportioned GPU
+        // texture. Sample the entire uploaded texture, but use the source
+        // artwork's dimensions for layout so buttons keep their approved
+        // proportions instead of becoming square or repeating.
+        const auto source_size = t->getSize();
+        auto layout_size = t->getOriginalSize();
+        if (layout_size.Width == 0 || layout_size.Height == 0)
+            layout_size = source_size;
+        irr::core::recti source(0, 0, source_size.Width, source_size.Height);
         auto destination = rect(left, top, width, height);
         if (cover)
         {
-            const float s = std::max(width / size.Width, height / size.Height);
-            const int w = int(width / s), h = int(height / s);
-            source = irr::core::recti((size.Width - w) / 2, (size.Height - h) / 2,
-                                     (size.Width + w) / 2, (size.Height + h) / 2);
+            const float s = std::max(width / layout_size.Width,
+                                     height / layout_size.Height);
+            const float crop_w = width / s;
+            const float crop_h = height / s;
+            const float x0 = (layout_size.Width - crop_w) * .5f;
+            const float y0 = (layout_size.Height - crop_h) * .5f;
+            const float sx = source_size.Width / float(layout_size.Width);
+            const float sy = source_size.Height / float(layout_size.Height);
+            source = irr::core::recti(
+                int(std::lround(x0 * sx)), int(std::lround(y0 * sy)),
+                int(std::lround((x0 + crop_w) * sx)),
+                int(std::lround((y0 + crop_h) * sy)));
         }
         else
         {
-            const float fit = std::min(width / size.Width, height / size.Height);
-            const float w = size.Width * fit, h = size.Height * fit;
+            const float fit = std::min(width / layout_size.Width,
+                                       height / layout_size.Height);
+            const float w = layout_size.Width * fit;
+            const float h = layout_size.Height * fit;
             destination = rect(left + (width-w)*.5f, top + (height-h)*.5f,w,h);
         }
-        draw2DImage(t, destination, source, nullptr,
+        draw2DImage(t, destination, source, clip,
                    irr::video::SColor(alpha,255,255,255), true);
     }
     void label(const irr::core::stringw& text, float left, float top,
-               float width, float height, float point_size) const
+               float width, float height, float point_size,
+               const irr::core::recti* clip = nullptr) const
     {
         auto* font = GUIEngine::getTitleFont();
         const float saved = font->getScale();
@@ -84,8 +103,8 @@ struct Canvas
         const auto r = rect(left, top, width, height);
         auto shadow = r;
         shadow += irr::core::position2di(0, std::max(1, int(2 * scale)));
-        font->draw(text, shadow, irr::video::SColor(160,8,18,59), true, true);
-        font->draw(text, r, irr::video::SColor(255,255,255,255), true, true);
+        font->draw(text, shadow, irr::video::SColor(160,8,18,59), true, true, clip);
+        font->draw(text, r, irr::video::SColor(255,255,255,255), true, true, clip);
         font->setScale(saved);
     }
 };

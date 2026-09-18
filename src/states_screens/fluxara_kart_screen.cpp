@@ -229,7 +229,7 @@ void FluxaraKartScreen::onDraw(float)
                           float width, float height)
     {
         if (!texture) return;
-        const auto size = texture->getOriginalSize();
+        const auto size = texture->getSize();
         draw2DImage(texture, rect(left, top, width, height),
                     core::recti(0, 0, size.Width, size.Height), nullptr,
                     video::SColor(255, 255, 255, 255), true);

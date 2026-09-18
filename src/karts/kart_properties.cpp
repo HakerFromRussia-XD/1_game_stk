@@ -150,6 +150,9 @@ void KartProperties::copyForPlayer(const KartProperties *source,
         return;
     }
     
+    // Dimensions determine gravity shift and wheel base: resolve them on the
+    // canonical catalogue entry before copying any physics properties.
+    source->ensureModelsLoaded();
     *this = *source;
 
     // After the memcpy any pointers will be shared.
@@ -265,7 +268,6 @@ void KartProperties::load(const std::string &filename, const std::string &node)
         m_is_addon = true;
     }
 
-    std::vector<std::string> odt = handleOnDemandLoadTexture();
     try
     {
         if(!root || root->getName()!="kart")
@@ -300,23 +302,13 @@ void KartProperties::load(const std::string &filename, const std::string &node)
         m_groups.push_back(DEFAULT_GROUP_NAME);
 
 
-    // Load material
-    std::string materials_file = m_root+"materials.xml";
+    // Icons remain eager so catalogue enumeration never needs a mesh.
     std::string unique_id = StringUtils::insertValues("karts/%s", m_ident.c_str());
     file_manager->pushModelSearchPath(m_root);
     file_manager->pushTextureSearchPath(m_root, unique_id);
-#ifndef SERVER_ONLY
-    if (CVS->isGLSL())
-    {
-        SP::SPShaderManager::get()->loadSPShaders(m_root);
-    }
-#endif
 
     STKTexManager::getInstance()
         ->setTextureErrorMessage("Error while loading kart '%s':", m_name);
-
-    // addShared makes sure that these textures/material infos stay in memory
-    material_manager->addSharedMaterial(materials_file);
 
     // load the kart icon file
     if(Addon::isAddon(filename))
@@ -368,44 +360,88 @@ void KartProperties::load(const std::string &filename, const std::string &node)
     else
         m_minimap_icon = NULL;
 
+    STKTexManager::getInstance()->unsetTextureErrorMessage();
+    file_manager->popTextureSearchPath();
+    file_manager->popModelSearchPath();
+    m_models_pending = true;
+    // Preserve original loading behaviour outside the curated Fluxara roster.
+    if (!StringUtils::startsWith(m_ident, "fluxara-"))
+        ensureModelsLoaded();
+}   // load
+
+// ----------------------------------------------------------------------------
+void KartProperties::ensureModelsLoaded() const
+{
+    if (!m_models_pending)
+        return;
+    if (!m_models_error.empty())
+        throw std::runtime_error(m_models_error);
+    // Resource loading must run on the same render thread as the original
+    // eager loader. Never dispatch this function to a background worker.
+    KartProperties* self = const_cast<KartProperties*>(this);
+    if (m_models_loading)
+        throw std::runtime_error("Recursive kart model loading: " + m_ident);
+    self->m_models_loading = true;
+    const std::vector<std::string> odt = self->handleOnDemandLoadTexture();
+    const std::string unique_id = StringUtils::insertValues("karts/%s", m_ident.c_str());
+    file_manager->pushModelSearchPath(m_root);
+    file_manager->pushTextureSearchPath(m_root, unique_id);
+    auto cleanup = [&]()
+    {
+        STKTexManager::getInstance()->unsetTextureErrorMessage();
+        file_manager->popTextureSearchPath();
+        file_manager->popModelSearchPath();
+#ifndef SERVER_ONLY
+        if (GE::getDriver()->getDriverType() == video::EDT_VULKAN)
+            for (const auto& path : odt)
+                GE::getGEConfig()->m_ondemand_load_texture_paths.erase(path);
+#endif
+        self->m_models_loading = false;
+    };
+    try
+    {
+#ifndef SERVER_ONLY
+    if (CVS->isGLSL())
+        SP::SPShaderManager::get()->loadSPShaders(m_root);
+#endif
+    STKTexManager::getInstance()->setTextureErrorMessage(
+        "Error while loading kart '%s':", m_name);
+    material_manager->addSharedMaterial(m_root + "materials.xml");
     const bool success = m_kart_model->loadModels(*this);
     if (!success)
     {
-        file_manager->popTextureSearchPath();
-        file_manager->popModelSearchPath();
         throw std::runtime_error("Cannot load kart models");
     }
 
     if(m_gravity_center_shift.getX()==UNDEFINED)
     {
-        m_gravity_center_shift.setX(0);
+        self->m_gravity_center_shift.setX(0);
         // Default: center at the very bottom of the kart.
         // If the kart is 'too high', its height will be changed in
         // kart.cpp, the same adjustment needs to be made here.
         if (m_kart_model->getHeight() > m_kart_model->getLength()*0.6f)
-            m_gravity_center_shift.setY(m_kart_model->getLength()*0.6f*0.5f);
+            self->m_gravity_center_shift.setY(m_kart_model->getLength()*0.6f*0.5f);
         else
-            m_gravity_center_shift.setY(m_kart_model->getHeight()*0.5f);
+            self->m_gravity_center_shift.setY(m_kart_model->getHeight()*0.5f);
 
-        m_gravity_center_shift.setZ(0);
+        self->m_gravity_center_shift.setZ(0);
     }
 
-    setWheelBase(m_kart_model->getLength());
-    m_shadow_material = material_manager->getMaterialSPM(m_shadow_file, "",
+    self->setWheelBase(m_kart_model->getLength());
+    self->m_shadow_material = material_manager->getMaterialSPM(m_shadow_file, "",
         "alphablend");
-
-    STKTexManager::getInstance()->unsetTextureErrorMessage();
-    file_manager->popTextureSearchPath();
-    file_manager->popModelSearchPath();
-
-#ifndef SERVER_ONLY
-    if (GE::getDriver()->getDriverType() == video::EDT_VULKAN)
-    {
-        for (auto& t : odt)
-            GE::getGEConfig()->m_ondemand_load_texture_paths.erase(t);
+    self->m_models_pending = false;
     }
-#endif
-}   // load
+    catch (...)
+    {
+        // A failed loader can leave partially grabbed meshes. Never retry it
+        // on that same master (which would duplicate ownership/references).
+        self->m_models_error = "Cannot load kart models: " + m_ident;
+        cleanup();
+        throw;
+    }
+    cleanup();
+}
 
 // ----------------------------------------------------------------------------
 /** Returns a pointer to the KartModel object.
@@ -414,6 +450,7 @@ void KartProperties::load(const std::string &filename, const std::string &node)
  */
 KartModel* KartProperties::getKartModelCopy(std::shared_ptr<GE::GERenderInfo> ri) const
 {
+    ensureModelsLoaded();
     return m_kart_model->makeCopy(ri);
 }  // getKartModelCopy
 

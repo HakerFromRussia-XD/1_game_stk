@@ -5,8 +5,10 @@
 #include "guiengine/widgets/icon_button_widget.hpp"
 #include "guiengine/widgets/label_widget.hpp"
 #include "guiengine/widgets/button_widget.hpp"
+#include "guiengine/widgets/list_widget.hpp"
 #include "graphics/stk_tex_manager.hpp"
 #include "io/xml_node.hpp"
+#include <IGUIScrollBar.h>
 #include <memory>
 #include "states_screens/fluxara_race_setup_screen.hpp"
 #include "states_screens/state_manager.hpp"
@@ -32,8 +34,8 @@ void FluxaraCampaignScreen::init()
 {
     Screen::init();
     const char* files[] = {"race/background", "home/back-surface", "home/icon-back",
-        "race/campaign-plate", "race/circuit-card", "race/summit-card", "home/icon-previous", "home/icon-next"};
-    for (int i=0;i<8;++i) m_art[i]=FluxaraUI::texture(files[i]);
+        "race/campaign-plate", "race/circuit-card", "race/summit-card"};
+    for (int i=0;i<6;++i) m_art[i]=FluxaraUI::texture(files[i]);
     layoutControls();
 
     m_tracks.clear();
@@ -65,39 +67,40 @@ void FluxaraCampaignScreen::init()
     }
     else if (m_selected_track >= m_tracks.size())
         m_selected_track = 0;
-    updateTrackCard();
+    populateTrackList();
 }
 
-void FluxaraCampaignScreen::updateTrackCard()
+void FluxaraCampaignScreen::populateTrackList()
 {
-    for (unsigned i=0;i<2;++i)
+    ListWidget* list = getWidget<ListWidget>("tracks");
+    list->clear();
+    for (unsigned i = 0; i < m_tracks.size(); ++i)
+        list->addItem(m_events[i].id, L"");
+
+    auto* box = list->getIrrlichtElement<irr::gui::CGUISTKListBox>();
+    box->setDrawBackground(false);
+    box->setItemHeight(std::max(1, int(std::lround(256.0f * FluxaraUI::Canvas().scale))));
+    m_cards.assign(m_tracks.size(), nullptr);
+
+    if (!m_tracks.empty())
     {
-        m_cards[i]=nullptr;
-        m_card_names[i]="";
-        Track* track = m_selected_track+i < m_tracks.size() ?
-            track_manager->getTrack(m_tracks[m_selected_track+i]) : nullptr;
-        getWidget<ButtonWidget>(i==0?"choose":"choose-second")->setActive(track!=nullptr);
-        if (!track) continue;
-        m_card_names[i]=track->getName();
-        if (track->getIdent()=="fluxara-circuit") m_cards[i]=m_art[4];
-        else if (track->getIdent()=="fluxara-summit-run") m_cards[i]=m_art[5];
-        else m_cards[i]=STKTexManager::getInstance()->getTexture(
-            track->getScreenshotFile(),"While loading Fluxara track card:",track->getFilename());
+        const unsigned target = std::min(m_selected_track,
+                                         unsigned(m_tracks.size() - 1));
+        box->getScrollBar()->setPos(target * box->getItemHeight());
     }
-    getWidget<ButtonWidget>("previous")->setActive(m_tracks.size()>2);
-    getWidget<ButtonWidget>("next")->setActive(m_tracks.size()>2);
+    m_last_scroll_pos = box->getScrollBar()->getPos();
+    m_scroll_idle_time = 1.0f;
 }
 
 void FluxaraCampaignScreen::layoutControls()
 {
     const FluxaraUI::Canvas c;
-    for (const char* id : {"back","choose","choose-second","previous","next"})
-        FluxaraUI::rasterHitTarget(getWidget<ButtonWidget>(id));
+    FluxaraUI::rasterHitTarget(getWidget<ButtonWidget>("back"));
     c.move(getWidget<ButtonWidget>("back"),21,26,50,50);
-    c.move(getWidget<ButtonWidget>("choose"),30,104,300,236);
-    c.move(getWidget<ButtonWidget>("choose-second"),30,380,300,236);
-    c.move(getWidget<ButtonWidget>("previous"),35,674,67,64);
-    c.move(getWidget<ButtonWidget>("next"),258,674,67,64);
+    ListWidget* list = getWidget<ListWidget>("tracks");
+    c.move(list,20,92,320,676);
+    if (auto* box = list->getIrrlichtElement<irr::gui::CGUISTKListBox>())
+        box->setItemHeight(std::max(1, int(std::lround(256.0f * c.scale))));
 }
 
 void FluxaraCampaignScreen::onResize()
@@ -113,24 +116,53 @@ void FluxaraCampaignScreen::onDraw(float)
     c.image(m_art[0],0,0,360,780,true,77);
     c.image(m_art[1],21,26,50,50); c.image(m_art[2],32,36,25,31);
     c.label(L"CAMPAIGN",96,37,220,32,28);
-    for (int i=0;i<2;++i)
+    ListWidget* list = getWidget<ListWidget>("tracks");
+    auto* box = list->getIrrlichtElement<irr::gui::CGUISTKListBox>();
+    const float scroll = box->getScrollBar()->getPos() / c.scale;
+    const irr::core::recti clip = c.rect(20,92,320,676);
+    for (unsigned i=0;i<m_tracks.size();++i)
     {
-        if (!m_cards[i]) continue;
-        c.image(m_cards[i],30,104+i*276,300,236,true);
-        c.image(m_art[3],45,284+i*276,270,40);
-        c.label(m_card_names[i],58,294+i*276,244,20,16);
-        if(m_selected_track+i<m_events.size())
-            c.label(FluxaraModes::label(m_events[m_selected_track+i].mode),45,324+i*276,270,15,10);
+        const float y = 104.0f + i * 256.0f - scroll;
+        if (y > 768.0f || y + 236.0f < 92.0f) continue;
+        Track* track = track_manager->getTrack(m_tracks[i]);
+        if (!track) continue;
+        if (!m_cards[i])
+        {
+            if (track->getIdent()=="fluxara-circuit") m_cards[i]=m_art[4];
+            else if (track->getIdent()=="fluxara-summit-run") m_cards[i]=m_art[5];
+            else m_cards[i]=STKTexManager::getInstance()->getTexture(
+                track->getScreenshotFile(),"While loading Fluxara track card:",track->getFilename());
+        }
+        c.image(m_cards[i],30,y,300,236,true,255,&clip);
+        c.image(m_art[3],45,y+180,270,40,false,255,&clip);
+        c.label(track->getName(),58,y+190,244,20,16,&clip);
+        c.label(FluxaraModes::label(m_events[i].mode),45,y+220,270,15,10,&clip);
     }
     if (m_tracks.empty()) c.label(L"No circuit available",30,300,300,50,20);
-    if (m_tracks.size()>2)
+}
+
+void FluxaraCampaignScreen::onUpdate(float dt)
+{
+    auto* box = getWidget<ListWidget>("tracks")->
+        getIrrlichtElement<irr::gui::CGUISTKListBox>();
+    const int scroll_pos = box->getScrollBar()->getPos();
+    if (scroll_pos != m_last_scroll_pos)
     {
-        c.image(m_art[6],45,680,47,51); c.image(m_art[7],268,680,47,51);
-        const core::stringw page = core::stringw(m_selected_track+1)+L"–"+
-            core::stringw(std::min(unsigned(m_tracks.size()),m_selected_track+2))+L" / "+
-            core::stringw(unsigned(m_tracks.size()));
-        c.label(page,105,691,150,30,18);
+        m_last_scroll_pos = scroll_pos;
+        m_scroll_idle_time = 0.0f;
     }
+    else
+        m_scroll_idle_time += dt;
+}
+
+void FluxaraCampaignScreen::openTrack(unsigned selected)
+{
+    if (selected>=m_tracks.size()) return;
+    Track* track = track_manager->getTrack(m_tracks[selected]);
+    if (!track) return;
+    m_selected_track = selected;
+    FluxaraRaceSetupScreen::getInstance()->setTrack(track,m_events[selected].mode);
+    FluxaraRaceSetupScreen::getInstance()->push();
 }
 
 void FluxaraCampaignScreen::eventCallback(Widget* widget,
@@ -146,29 +178,19 @@ void FluxaraCampaignScreen::eventCallback(Widget* widget,
     if (m_tracks.empty())
         return;
 
-    if (name == "previous")
+    if (name == "tracks")
     {
-        m_selected_track = m_selected_track < 2 ?
-            unsigned((m_tracks.size() - 1) / 2 * 2) : m_selected_track - 2;
-        updateTrackCard();
+        ListWidget* list = getWidget<ListWidget>("tracks");
+        auto* box = list->getIrrlichtElement<irr::gui::CGUISTKListBox>();
+        const int selected = list->getSelectionID();
+        list->setSelectionID(-1);
+        const int scroll_pos = box->getScrollBar()->getPos();
+        const bool was_scrolling = scroll_pos != m_last_scroll_pos ||
+                                   m_scroll_idle_time < 0.18f;
+        m_last_scroll_pos = scroll_pos;
+        if (selected >= 0 && !was_scrolling) openTrack(unsigned(selected));
         return;
     }
-    if (name == "next")
-    {
-        m_selected_track = m_selected_track + 2 < m_tracks.size() ? m_selected_track+2 : 0;
-        updateTrackCard();
-        return;
-    }
-    if (name != "choose" && name != "choose-second")
-        return;
-    const unsigned selected = m_selected_track + (name=="choose-second"?1:0);
-    if (selected>=m_tracks.size()) return;
-    Track* track = track_manager->getTrack(m_tracks[selected]);
-    if (!track)
-        return;
-
-    FluxaraRaceSetupScreen::getInstance()->setTrack(track,m_events[selected].mode);
-    FluxaraRaceSetupScreen::getInstance()->push();
 }
 
 bool FluxaraCampaignScreen::onEscapePressed()

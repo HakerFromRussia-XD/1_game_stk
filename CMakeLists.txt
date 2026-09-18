@@ -718,10 +718,34 @@ else()
         set_source_files_properties(${FLUXARA_IOS_NOTICES} PROPERTIES
             MACOSX_PACKAGE_LOCATION Resources)
         add_executable(supertuxkart ${STK_SOURCES} ${STK_RESOURCES} ${STK_HEADERS}
-            ${IOS_ASSETS_FILES} ${FLUXARA_IOS_SOURCES} ${FLUXARA_IOS_SCREENS}
-            ${FLUXARA_IOS_SKIN} ${FLUXARA_IOS_UI_ART}
-            ${FLUXARA_IOS_KART} ${FLUXARA_IOS_TRACK} ${FLUXARA_IOS_CAMPAIGN}
-            ${FLUXARA_IOS_NOTICES})
+            ${IOS_ASSETS_FILES} ${FLUXARA_IOS_SOURCES})
+        # Xcode copies the generated mobile data snapshot as one directory.
+        # That operation can replace the whole destination after individual
+        # resource rules have already been considered up to date. Overlay the
+        # curated Fluxara bundle once, at the end, so clean and incremental
+        # builds always contain the exact same screens, karts and tracks.
+        add_custom_command(TARGET supertuxkart POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy_directory
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens"
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens"
+            COMMAND ${CMAKE_COMMAND} -E copy_directory
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/fluxara"
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/fluxara"
+            COMMAND ${CMAKE_COMMAND} -E copy_directory
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara"
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/skins/fluxara"
+            COMMAND ${CMAKE_COMMAND} -E copy_directory
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/karts"
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/karts"
+            COMMAND ${CMAKE_COMMAND} -E copy_directory
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/tracks"
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/tracks"
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/fluxara-campaign.xml"
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/fluxara-campaign.xml"
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/NOTICE-THIRD-PARTY.txt"
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/NOTICE-THIRD-PARTY.txt")
         # The generated mobile asset snapshot may contain the retired
         # Motorica-only content. Fluxara ships its curated content instead.
         add_custom_command(TARGET supertuxkart POST_BUILD
@@ -761,6 +785,7 @@ else()
             XCODE_ATTRIBUTE_FLUXARA_INPUT_BRIDGE_APP_GROUP ${CMAKE_XCODE_ATTRIBUTE_FLUXARA_INPUT_BRIDGE_APP_GROUP}
             XCODE_ATTRIBUTE_CODE_SIGN_ENTITLEMENTS ${PROJECT_SOURCE_DIR}/data/SuperTuxKart-iOS.entitlements
             XCODE_ATTRIBUTE_DEBUG_INFORMATION_FORMAT "dwarf-with-dsym"
+            XCODE_ATTRIBUTE_ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS NO
             XCODE_ATTRIBUTE_ASSETCATALOG_COMPILER_APPICON_NAME "AppIcon")
         if(CMAKE_GENERATOR MATCHES "Xcode")
             set(MOTORICA_IOS_SCHEME_DIR

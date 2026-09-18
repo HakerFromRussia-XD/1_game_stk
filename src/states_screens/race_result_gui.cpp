@@ -587,6 +587,9 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
     {
         if (name == "fluxara-again")
         {
+            // Results are portrait while a rerun stays in GAME state, so the
+            // normal state-change hook is not guaranteed to fire again.
+            fluxaraRequestPortraitMenu(false);
             StateManager::get()->popMenu();
             RaceManager::get()->rerunRace();
             return;
@@ -597,6 +600,7 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
             if (name == "fluxara-next" &&
                 RaceManager::get()->getMajorMode() == RaceManager::MAJOR_MODE_GRAND_PRIX)
             {
+                fluxaraRequestPortraitMenu(false);
                 cleanupGPProgress();
                 StateManager::get()->popMenu();
                 RaceManager::get()->next();

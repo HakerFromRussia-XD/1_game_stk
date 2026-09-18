@@ -76,7 +76,7 @@ void FluxaraSettingsScreen::onDraw(float)
     GL32_draw2DRectangle(irr::video::SColor(255,16,53,126), c.rect(0,0,360,780));
     if (m_art[0])
     {
-        const auto size = m_art[0]->getOriginalSize();
+        const auto size = m_art[0]->getSize();
         draw2DImage(m_art[0], c.rect(0,0,360,780),
             irr::core::recti(0,0,size.Width,size.Height), nullptr,
             irr::video::SColor(77,255,255,255), true);
