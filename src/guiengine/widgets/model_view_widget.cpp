@@ -31,6 +31,7 @@
 #include <IMeshSceneNode.h>
 
 #include <algorithm>
+#include <cmath>
 #ifndef SERVER_ONLY
 #include "../../../lib/irrlicht/source/Irrlicht/os.h"
 #endif
@@ -345,6 +346,15 @@ void ModelViewWidget::setRotateContinuously(float speed)
 }   // setRotateContinuously
 
 // ----------------------------------------------------------------------------
+void ModelViewWidget::rotateBy(float degrees)
+{
+    m_rotation_mode = ROTATE_OFF;
+    m_angle = std::fmod(m_angle + degrees, 360.0f);
+    if (m_angle < 0.0f)
+        m_angle += 360.0f;
+}   // rotateBy
+
+// ----------------------------------------------------------------------------
 void ModelViewWidget::setRotateTo(float targetAngle, float speed)
 {
     m_rotation_mode = ROTATE_TO;
@@ -362,6 +372,11 @@ bool ModelViewWidget::isRotating()
 void ModelViewWidget::elementRemoved()
 {
 #ifndef SERVER_ONLY
+    // A race transition clears the GUI before it unloads the Irrlicht
+    // world. Release the RTT scene while its nodes are still valid; keeping
+    // these pointers until the next kart-selection screen leaves dangling
+    // light/camera nodes and causes a post-race SIGSEGV.
+    clearModels();
     m_render_target = NULL;
     IconButtonWidget::elementRemoved();
 #endif
@@ -381,4 +396,3 @@ void ModelViewWidget::drawRTTScene(const irr::core::rect<s32>& dest_rect) const
         m_render_target->draw2DImage(dest_rect, NULL, video::SColor(255, 255, 255, 255), true);
 #endif
 }   // drawRTTScene
-

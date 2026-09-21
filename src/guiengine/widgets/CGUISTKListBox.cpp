@@ -771,4 +771,3 @@ void CGUISTKListBox::updateScrollBarSize(s32 size)
 
 } // end namespace gui
 } // end namespace irr
-

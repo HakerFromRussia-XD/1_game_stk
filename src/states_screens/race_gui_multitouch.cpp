@@ -112,9 +112,8 @@ RaceGUIMultitouch::RaceGUIMultitouch(RaceGUIBase* race_gui)
     m_down_tex = NULL;
     m_screen_tex = NULL;
 #ifdef IOS_STK
-    m_fluxara_button_blue_tex = NULL;
-    m_fluxara_button_cyan_tex = NULL;
-    m_fluxara_button_purple_tex = NULL;
+    m_fluxara_halo_idle_tex = NULL;
+    m_fluxara_halo_pressed_tex = NULL;
 #endif
 
     m_device = input_manager->getDeviceManager()->getMultitouchDevice();
@@ -187,6 +186,56 @@ void RaceGUIMultitouch::init()
         UserConfigParams::m_multitouch_scale = 0.8f;
     }
     
+#ifdef IOS_STK
+    // HUD node 93:62 is deliberately a set of independent alpha assets. Its
+    // steering wheel comes from the source layer in node 93:179, not a frame
+    // export with a coloured background. Do not mix in Android HUD masks.
+    const auto hud = [](const char* name)
+    {
+        return irr_driver->getTexture(file_manager->getAsset(
+            std::string("gui/fluxara/hud/") + name));
+    };
+    m_steering_wheel_tex = hud("steering-wheel.png");
+    m_accelerator_tex = hud("accelerator.png");
+    // BUTTON_UP sits directly above nitro in the iOS layout. Figma node
+    // 103:23 specifies the tall pedal here; the compact 93:182 control is
+    // reserved for the accelerometer's up/down input.
+    m_accelerator_icon_tex = hud("throttle-pedal.png");
+    m_pause_tex = hud("pause.png");
+    m_nitro_tex = hud("nitro.png");
+    m_nitro_empty_tex = hud("nitro-empty.png");
+    m_wing_mirror_tex = hud("mirror.png");
+    m_thunderbird_reset_tex = hud("reset.png");
+    m_drift_tex = hud("drift.png");
+    m_up_tex = hud("up.png");
+    m_down_tex = hud("down.png");
+    m_screen_tex = hud("screen-other.png");
+    // These two transparent overlays carry the Figma pressed-state treatment.
+    m_fluxara_halo_idle_tex = hud("halo-idle.png");
+    m_fluxara_halo_pressed_tex = hud("halo-pressed.png");
+
+    m_fluxara_powerup_tex.assign(PowerupManager::POWERUP_MAX, NULL);
+    m_fluxara_powerup_tex[PowerupManager::POWERUP_BUBBLEGUM] =
+        hud("bonus-bubblegum.png");
+    m_fluxara_powerup_tex[PowerupManager::POWERUP_CAKE] = hud("bonus-cake.png");
+    m_fluxara_powerup_tex[PowerupManager::POWERUP_BOWLING] =
+        hud("bonus-bowling.png");
+    m_fluxara_powerup_tex[PowerupManager::POWERUP_ZIPPER] =
+        hud("bonus-zipper.png");
+    m_fluxara_powerup_tex[PowerupManager::POWERUP_PLUNGER] =
+        hud("bonus-plunger.png");
+    m_fluxara_powerup_tex[PowerupManager::POWERUP_SWITCH] = hud("bonus-swap.png");
+    m_fluxara_powerup_tex[PowerupManager::POWERUP_SWATTER] =
+        hud("bonus-swatter.png");
+    m_fluxara_powerup_tex[PowerupManager::POWERUP_RUBBERBALL] =
+        hud("bonus-rubber-ball.png");
+    m_fluxara_powerup_tex[PowerupManager::POWERUP_PARACHUTE] =
+        hud("bonus-parachute.png");
+    // Figma's approved anchor is the replacement for the legacy anvil token.
+    m_fluxara_powerup_tex[PowerupManager::POWERUP_ANVIL] =
+        hud("bonus-anchor.png");
+#endif
+#ifndef IOS_STK
     m_steering_wheel_tex = irr_driver->getTexture(FileManager::GUI_ICON,
                                                   "android/steering_wheel.png");
     m_accelerator_tex = irr_driver->getTexture(FileManager::GUI_ICON,
@@ -212,18 +261,11 @@ void RaceGUIMultitouch::init()
     m_up_tex = irr_driver->getTexture(FileManager::GUI_ICON, "up.png");
     m_down_tex = irr_driver->getTexture(FileManager::GUI_ICON, "down.png");
     m_screen_tex = irr_driver->getTexture(FileManager::GUI_ICON, "screen_other.png");
-#ifdef IOS_STK
-    m_fluxara_button_blue_tex = irr_driver->getTexture(
-        file_manager->getAsset("gui/fluxara/home/button-settings.png"));
-    m_fluxara_button_cyan_tex = irr_driver->getTexture(
-        file_manager->getAsset("gui/fluxara/home/button-garage.png"));
-    m_fluxara_button_purple_tex = irr_driver->getTexture(
-        file_manager->getAsset("gui/fluxara/race/laps-surface.png"));
-#endif
     m_steering_wheel_tex_mask_up = irr_driver->getTexture(FileManager::GUI_ICON,
                                         "android/steering_wheel_mask_up.png");
     m_steering_wheel_tex_mask_down = irr_driver->getTexture(FileManager::GUI_ICON,
                                         "android/steering_wheel_mask_down.png");
+#endif
 
     auto cl = LobbyProtocol::get<ClientLobby>();
     
@@ -279,70 +321,31 @@ void RaceGUIMultitouch::createRaceGUI()
     }
 
 #ifdef IOS_STK
-    // Fluxara's race view is authored on a 780 x 360 landscape canvas. Keep
-    // every hit target on that grid, inside the iPhone safe area, instead of
-    // deriving a three-column stack from height alone. The latter made the
-    // controls consume most of a modern wide display and collide with the map.
+    // Exact 844 x 390 layout from Figma node 100:2. The coordinates below
+    // deliberately mirror the approved frame instead of adapting an STK
+    // three-column touch layout.
     {
         const int screen_width = irr_driver->getActualScreenSize().Width;
         const int screen_height = irr_driver->getActualScreenSize().Height;
-        const float canvas_scale = screen_height / 360.0f;
-        const float control_scale = core::clamp(
-            float(UserConfigParams::m_multitouch_scale), 0.9f, 1.15f);
-        const int side_margin = int(14 * canvas_scale);
-        const int bottom_margin = int(12 * canvas_scale);
-        const int gap = int(9 * canvas_scale);
-        const int action = int(54 * canvas_scale * control_scale);
-        const int small = int(42 * canvas_scale * control_scale);
-        const int wheel = int(116 * canvas_scale * control_scale);
-        const int safe_left = irr_driver->getDevice()->getLeftPadding() +
-            side_margin;
-        const int safe_right = screen_width -
-            irr_driver->getDevice()->getRightPadding() - side_margin;
-        const int bottom = screen_height - bottom_margin;
+        const float canvas_scale = screen_height / 390.0f;
+        const int origin_x = (screen_width - int(844 * canvas_scale)) / 2;
+        const auto x = [origin_x, canvas_scale](int value)
+        { return origin_x + int(value * canvas_scale); };
+        const auto y = [canvas_scale](int value)
+        { return int(value * canvas_scale); };
+        const auto size = [canvas_scale](int value)
+        { return int(value * canvas_scale); };
 
-        const bool inverted = UserConfigParams::m_multitouch_inverted;
-        const int steering_x = inverted ? safe_right - wheel : safe_left;
-        const int edge_x = inverted ? safe_left : safe_right - action;
-        const int inner_x = inverted ? safe_left + action + gap :
-            safe_right - action * 2 - gap;
-        const int row_bottom = bottom - action;
-        const int row_middle = row_bottom - action - gap;
-        const int row_top = row_middle - action - gap;
-
-        if (UserConfigParams::m_multitouch_controls ==
-                MULTITOUCH_CONTROLS_ACCELEROMETER ||
-            UserConfigParams::m_multitouch_controls ==
-                MULTITOUCH_CONTROLS_GYROSCOPE)
-        {
-            const int accelerator_width = wheel / 2;
-            m_device->addButton(BUTTON_UP_DOWN,
-                inverted ? safe_right - accelerator_width : safe_left,
-                bottom - wheel, accelerator_width, wheel);
-        }
-        else
-        {
-            m_device->addButton(BUTTON_STEERING, steering_x,
-                                bottom - wheel, wheel, wheel);
-        }
-
-        // Small global actions stay in the upper-right safe area; the map is
-        // anchored immediately below them by RaceGUI::calculateMinimapSize.
-        m_device->addButton(BUTTON_RESCUE,
-            safe_right - small * 2 - gap, int(12 * canvas_scale),
-            small, small);
-        m_device->addButton(BUTTON_ESCAPE,
-            safe_right - small, int(12 * canvas_scale), small, small);
-
-        // Five separate icon layers on equal approved circular surfaces.
-        m_device->addButton(BUTTON_UP, edge_x, row_top, action, action);
-        m_device->addButton(BUTTON_NITRO, edge_x, row_middle, action, action);
-        m_device->addButton(BUTTON_SKIDDING, edge_x, row_bottom,
-                            action, action);
-        m_device->addButton(BUTTON_FIRE, inner_x, row_middle, action, action);
-        m_device->addButton(BUTTON_LOOK_BACKWARDS, inner_x, row_bottom,
-                            action, action);
-        m_height = wheel + bottom_margin * 2;
+        m_device->addButton(BUTTON_STEERING, x(21), y(205), size(163), size(163));
+        m_device->addButton(BUTTON_ESCAPE, x(34), y(89), size(43), size(43));
+        m_device->addButton(BUTTON_RESCUE, x(104), y(89), size(43), size(43));
+        m_device->addButton(BUTTON_UP, x(750), y(109), size(58), size(58));
+        m_device->addButton(BUTTON_NITRO, x(750), y(202), size(58), size(58));
+        m_device->addButton(BUTTON_SKIDDING, x(750), y(296), size(58), size(58));
+        m_device->addButton(BUTTON_FIRE, x(656), y(202), size(58), size(58));
+        m_device->addButton(BUTTON_LOOK_BACKWARDS, x(656), y(296), size(58),
+                            size(58));
+        m_height = size(185);
         return;
     }
 #endif
@@ -577,25 +580,15 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
             video::SColor color((unsigned)-1);
             video::ITexture* btn_texture = m_steering_wheel_tex;
             core::rect<s32> coords(pos_zero, btn_texture->getSize());
-#ifdef IOS_STK
-            if (m_fluxara_button_cyan_tex)
-            {
-                core::rect<s32> surface_coords(pos_zero,
-                    m_fluxara_button_cyan_tex->getSize());
-                draw2DImage(m_fluxara_button_cyan_tex, btn_pos,
-                            surface_coords, NULL, NULL, true);
-            }
-            const int wheel_inset = std::max(4, button->width / 14);
-            core::rect<s32> wheel_pos = btn_pos;
-            wheel_pos.UpperLeftCorner +=
-                core::position2di(wheel_inset, wheel_inset);
-            wheel_pos.LowerRightCorner -=
-                core::position2di(wheel_inset, wheel_inset);
+#ifndef IOS_STK
+            const core::rect<s32>& wheel_pos = btn_pos;
 #else
+            // The Figma wheel is already a transparent, padded layer.
             const core::rect<s32>& wheel_pos = btn_pos;
 #endif
             draw2DImageRotationColor(btn_texture, wheel_pos, coords, NULL,
                 (button->axis_y >= 0 ? -1 : 1) * steering_axis, color);
+#ifndef IOS_STK
             AbstractKart* k = NULL;
             Camera* c = Camera::getActiveCamera();
             if (c)
@@ -611,7 +604,9 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
                 draw2DImageRotationColor(m_steering_wheel_tex_mask_down, wheel_pos, mask_coords, NULL,
                     (button->axis_y >= 0 ? -1 : 1) * steering_axis, color);
             }
+#endif
 
+#ifndef IOS_STK
             // The level bars are meaningful only while Motorica input is
             // connected. Hiding their disconnected placeholders prevents two
             // legacy dark rails from framing the approved steering control.
@@ -656,6 +651,7 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
                                         bar_top + bar_height);
             GL32_draw2DRectangle(video::SColor(alpha, 255, 192, 0), left_value);
             GL32_draw2DRectangle(video::SColor(alpha, 0, 186, 255), right_value);
+#endif
             // float x = (float)(button->x) + (float)(button->width) / 2.0f *
             //                                          (button->axis_x + 1.0f);
             // float y = (float)(button->y) + (float)(button->height) / 2.0f *
@@ -672,16 +668,8 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
         {
             video::ITexture* btn_texture = m_accelerator_tex;
             core::rect<s32> coords(pos_zero, btn_texture->getSize());
-#ifdef IOS_STK
-            if (m_fluxara_button_cyan_tex)
-            {
-                core::rect<s32> surface_coords(pos_zero,
-                    m_fluxara_button_cyan_tex->getSize());
-                draw2DImage(m_fluxara_button_cyan_tex, btn_pos,
-                            surface_coords, NULL, NULL, true);
-            }
-#endif
             draw2DImage(btn_texture, btn_pos, coords, NULL, NULL, true);
+#ifndef IOS_STK
             AbstractKart* k = NULL;
             Camera* c = Camera::getActiveCamera();
             if (c)
@@ -703,6 +691,7 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
                 core::rect<s32> handle_coords(pos_zero, m_accelerator_handle_tex->getSize());
                 draw2DImage(m_accelerator_handle_tex, handle_pos, handle_coords, NULL, NULL, true);
             }
+#endif
         }
         else
         {
@@ -724,7 +713,13 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
                 else if (powerup->getType() != PowerupManager::POWERUP_NOTHING
                          && !kart->hasFinishedRace())
                 {
+#ifdef IOS_STK
+                    const unsigned type = unsigned(powerup->getType());
+                    btn_texture = type < m_fluxara_powerup_tex.size() ?
+                        m_fluxara_powerup_tex[type] : NULL;
+#else
                     btn_texture = powerup->getIcon()->getTexture();
+#endif
                 }
                 else
                 {
@@ -780,52 +775,36 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
                 break;
             }
 
-// Keep the approved item-button surface visible even when the kart has no
-// power-up.  The gameplay glyph remains a separate optional layer.
-#ifdef IOS_STK
-            if (!btn_texture &&
-                button->type == MultitouchButtonType::BUTTON_FIRE &&
-                m_fluxara_button_purple_tex)
-            {
-                core::rect<s32> surface_coords(pos_zero,
-                    m_fluxara_button_purple_tex->getSize());
-                draw2DImage(m_fluxara_button_purple_tex, btn_pos,
-                            surface_coords, NULL, NULL, true);
-            }
-#endif
-
             if (btn_texture)
             {
 #ifdef IOS_STK
-                video::ITexture* surface = m_fluxara_button_blue_tex;
-                if (button->type == MultitouchButtonType::BUTTON_UP ||
-                    button->type == MultitouchButtonType::BUTTON_NITRO)
-                    surface = m_fluxara_button_cyan_tex;
-                else if (button->type == MultitouchButtonType::BUTTON_FIRE ||
-                         button->type == MultitouchButtonType::BUTTON_SKIDDING)
-                    surface = m_fluxara_button_purple_tex;
-                if (can_be_pressed && button->pressed)
-                    surface = m_fluxara_button_cyan_tex;
-
-                if (surface)
+                video::ITexture* halo = can_be_pressed && button->pressed ?
+                    m_fluxara_halo_pressed_tex : m_fluxara_halo_idle_tex;
+                if (halo)
                 {
-                    core::rect<s32> surface_coords(pos_zero,
-                                                   surface->getSize());
-                    draw2DImage(surface, btn_pos, surface_coords, NULL,
+                    core::rect<s32> halo_coords(pos_zero, halo->getSize());
+                    // The Figma halo belongs to the exact 43x43 / 58x58
+                    // control cell.  Do not inherit STK's inflated backdrop:
+                    // it turns a transparent state layer into a 1.4x plate.
+                    draw2DImage(halo, btn_pos, halo_coords, NULL,
                                 NULL, true);
                 }
-
-                // Approved bases are icon-free. Keep every legacy gameplay
-                // glyph a separate centered layer with enough breathing room
-                // that large garage/settings-style symbols cannot clip.
-                int inset = std::max(5, button->width / 5);
-                if (button->type == MultitouchButtonType::BUTTON_ESCAPE ||
-                    button->type == MultitouchButtonType::BUTTON_RESCUE)
-                    inset = std::max(inset, button->width / 4);
-                core::rect<s32> icon_pos = btn_pos;
-                icon_pos.UpperLeftCorner += core::position2di(inset, inset);
-                icon_pos.LowerRightCorner -= core::position2di(inset, inset);
                 core::rect<s32> coords(pos_zero, btn_texture->getSize());
+                // Figma 100:2 puts the 2:3 gas pedal in a 58x58 touch cell
+                // with object-contain.  The cell remains square for input;
+                // only its transparent artwork keeps its native aspect ratio.
+                core::rect<s32> icon_pos = btn_pos;
+                if (button->type == MultitouchButtonType::BUTTON_UP)
+                {
+                    const core::dimension2du source = btn_texture->getSize();
+                    const int contained_width = int(std::lround(
+                        button->height * source.Width /
+                        float(std::max(1u, source.Height))));
+                    const int left = button->x +
+                        (button->width - contained_width) / 2;
+                    icon_pos = core::rect<s32>(left, button->y,
+                        left + contained_width, button->y + button->height);
+                }
                 draw2DImage(btn_texture, icon_pos, coords, NULL, NULL, true);
 #else
                 video::ITexture* btn_bg = (can_be_pressed && button->pressed) ?
@@ -862,6 +841,7 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
             if (button->type == MultitouchButtonType::BUTTON_NITRO &&
                 m_race_gui != NULL)
             {
+#ifndef IOS_STK
                 float scale = UserConfigParams::m_multitouch_scale *
                     (float)(irr_driver->getActualScreenSize().Height) / 760.0f;
 
@@ -869,6 +849,7 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
                                             int(button->y + button->height * 1.15f),
                                             kart, viewport,
                                             core::vector2df(scale, scale));
+#endif
             }
             else if (button->type == MultitouchButtonType::BUTTON_FIRE &&
                      kart->getPowerup()->getNum() > 1 &&

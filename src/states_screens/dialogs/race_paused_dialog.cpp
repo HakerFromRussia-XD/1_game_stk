@@ -53,6 +53,7 @@
 #ifdef IOS_STK
 #include "input/motorica_game_control_ios.hpp"
 #include "input/motorica_standalone_training.hpp"
+#include "states_screens/fluxara_home_screen.hpp"
 #endif
 
 #include <IrrlichtDevice.h>
@@ -149,7 +150,9 @@ RacePausedDialog::RacePausedDialog(const float percentWidth,
             getWidget<IconButtonWidget>("backbtn")->setLabel(_("Back to Battle"));
             if (!NetworkConfig::get()->isNetworking())
             {
-                getWidget<IconButtonWidget>("newrace")->setLabel(_("Setup New Game"));
+                if (getWidget<IconButtonWidget>("newrace"))
+                    getWidget<IconButtonWidget>("newrace")->setLabel(
+                        _("Setup New Game"));
                 if (getWidget<IconButtonWidget>("restart"))
                     getWidget<IconButtonWidget>("restart")->setLabel(_("Restart Battle"));
             }
@@ -160,7 +163,9 @@ RacePausedDialog::RacePausedDialog(const float percentWidth,
             getWidget<IconButtonWidget>("backbtn")->setLabel(_("Back to Race"));
             if (!NetworkConfig::get()->isNetworking())
             {
-                getWidget<IconButtonWidget>("newrace")->setLabel(_("Setup New Race"));
+                if (getWidget<IconButtonWidget>("newrace"))
+                    getWidget<IconButtonWidget>("newrace")->setLabel(
+                        _("Setup New Race"));
                 if (getWidget<IconButtonWidget>("restart"))
                     getWidget<IconButtonWidget>("restart")->setLabel(_("Restart Race"));
             }
@@ -204,6 +209,20 @@ RacePausedDialog::~RacePausedDialog()
 
 void RacePausedDialog::loadedFromFile()
 {
+#ifdef IOS_STK
+    // The public iPhone flow must never expose the legacy race setup, help or
+    // options screens from STK. Fluxara settings remain available from Home.
+    if (!NetworkConfig::get()->isNetworking() &&
+        dynamic_cast<OverWorld*>(World::getWorld()) == NULL)
+    {
+        GUIEngine::RibbonWidget* fluxara_choices =
+            getWidget<GUIEngine::RibbonWidget>("choiceribbon");
+        fluxara_choices->deleteChild("newrace");
+        fluxara_choices->deleteChild("endrace");
+        fluxara_choices->deleteChild("options");
+        fluxara_choices->deleteChild("help");
+    }
+#else
     // disable the "restart" button in GPs
     if (RaceManager::get()->getMajorMode() == RaceManager::MAJOR_MODE_GRAND_PRIX)
     {
@@ -245,6 +264,7 @@ void RacePausedDialog::loadedFromFile()
         choice_ribbon->deleteChild("options");
         choice_ribbon->deleteChild("help");
     }
+#endif
 }
 
 // ----------------------------------------------------------------------------
@@ -357,6 +377,10 @@ GUIEngine::EventPropagation
             }
             else
             {
+#ifdef IOS_STK
+                StateManager::get()->resetAndGoToScreen(
+                    FluxaraHomeScreen::getInstance());
+#else
                 StateManager::get()->resetAndGoToScreen(MainMenuScreen::getInstance());
 
                 // Pause story mode timer when quitting story mode
@@ -367,6 +391,7 @@ GUIEngine::EventPropagation
                 {
                     OverWorld::enterOverWorld();
                 }
+#endif
             }
             return GUIEngine::EVENT_BLOCK;
         }

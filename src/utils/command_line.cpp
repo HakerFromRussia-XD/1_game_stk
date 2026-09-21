@@ -65,6 +65,17 @@ void CommandLine::addArgsFromUserConfig()
 }
 
 // ----------------------------------------------------------------------------
+bool CommandLine::hasPrefix(const std::string& prefix)
+{
+    for (const std::string& argument : m_argv)
+    {
+        if (argument.compare(0, prefix.size(), prefix) == 0)
+            return true;
+    }
+    return false;
+}   // hasPrefix
+
+// ----------------------------------------------------------------------------
 bool CommandLine::has(const std::string &option)
 {
     std::vector<std::string>::iterator i;

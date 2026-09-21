@@ -15,16 +15,21 @@
 #include "guiengine/widgets/model_view_widget.hpp"
 #include "input/device_manager.hpp"
 #include "input/input_manager.hpp"
+#include "input/multitouch_device.hpp"
 #include "io/file_manager.hpp"
 #include "karts/abstract_characteristic.hpp"
 #include "karts/kart_model.hpp"
 #include "karts/kart_properties.hpp"
 #include "karts/kart_properties_manager.hpp"
 #include "race/race_manager.hpp"
+#include "replay/replay_play.hpp"
 #include "states_screens/state_manager.hpp"
+#include "states_screens/fluxara_home_screen.hpp"
 #include "states_screens/fluxara_ui.hpp"
 #include "states_screens/fluxara_event.hpp"
 #include "tracks/track.hpp"
+#include "utils/string_utils.hpp"
+#include "utils/translation.hpp"
 
 #include <cmath>
 #include <algorithm>
@@ -41,12 +46,15 @@ void FluxaraKartScreen::loadedFromFile()
 {
 }
 
-void FluxaraKartScreen::setRace(Track* track, int laps, int karts, const std::string& mode)
+void FluxaraKartScreen::setRace(Track* track, int laps, int karts,
+                                const std::string& mode,
+                                const std::string& event_id)
 {
     m_track = track;
     m_laps = laps;
     m_num_karts = karts;
     m_mode = mode;
+    m_event_id = event_id;
 }
 
 void FluxaraKartScreen::init()
@@ -86,7 +94,7 @@ void FluxaraKartScreen::init()
     }
     if (m_karts.empty())
     {
-        m_kart_name = "No drive available";
+        m_kart_name = _C("fluxara", "No drive available");
         getWidget<ModelViewWidget>("kart-model")->clearModels();
         getWidget<ButtonWidget>("previous")->setActive(false);
         getWidget<ButtonWidget>("next")->setActive(false);
@@ -111,6 +119,12 @@ void FluxaraKartScreen::init()
     updateKartPreview();
     getWidget<ButtonWidget>("previous")->setFocusForPlayer(
         PLAYER_ID_GAME_MASTER);
+
+#if 0 // AUTOPLAY ACCEPTANCE — disabled for human play; retained for a future lab run.
+    m_auto_start_delay = FluxaraModes::autoCampaignValidation() ? 0.1f : -1.0f;
+#else
+    m_auto_start_delay = -1.0f;
+#endif
 }
 
 void FluxaraKartScreen::updateKartPreview()
@@ -130,6 +144,12 @@ void FluxaraKartScreen::updateKartPreview()
     core::matrix4 model_location;
     float scale = model.getLength() > 1.45f ? 30.0f : 35.0f;
     model_location.setScale(core::vector3df(scale, scale, scale));
+    // Kart meshes do not share a common local X origin.  Keep the preview
+    // centred by its rendered body rather than by whichever mesh origin an
+    // imported kart happened to use (most visibly Fluxara Ace).
+    const float body_center_x = model.getModel()->getBoundingBox().getCenter().X;
+    model_location.setTranslation(core::vector3df(-body_center_x * scale,
+                                                   0.0f, 0.0f));
     view->addModel(model.getModel(), model_location, model.getBaseFrame(),
                    model.getBaseFrame());
 
@@ -178,20 +198,114 @@ void FluxaraKartScreen::updateKartPreview()
             int(std::lround(std::max(0.0f, std::min(100.0f, values[i])) * 13.0f / 100.0f)) : 0;
 }
 
+// -----------------------------------------------------------------------------
+void FluxaraKartScreen::updateKartRotation()
+{
+    constexpr float idle_rotation_speed = 30.0f;
+    ModelViewWidget* view = getWidget<ModelViewWidget>("kart-model");
+    MultitouchDevice* touch = input_manager->getDeviceManager()
+        ->getMultitouchDevice();
+    if (!view || !touch)
+    {
+        if (view) view->setRotateContinuously(idle_rotation_speed);
+        return;
+    }
+
+    if (m_kart_dragging)
+    {
+        const MultitouchEvent& event = touch->m_events[m_kart_drag_touch];
+        if (!event.touched)
+        {
+            m_kart_dragging = false;
+            m_kart_drag_touch = -1;
+            view->setRotateContinuously(idle_rotation_speed);
+            return;
+        }
+
+        const int delta_x = event.x - m_kart_drag_x;
+        if (delta_x != 0)
+        {
+            // The preview follows a horizontal finger drag without inertia;
+            // automatic rotation resumes only after the touch is released.
+            view->rotateBy(float(delta_x) * 0.5f);
+            m_kart_drag_x = event.x;
+        }
+        return;
+    }
+
+    for (unsigned int i = 0; i < touch->m_events.size(); ++i)
+    {
+        const MultitouchEvent& event = touch->m_events[i];
+        if (!event.touched || event.x < view->m_x ||
+            event.x >= view->m_x + view->m_w || event.y < view->m_y ||
+            event.y >= view->m_y + view->m_h)
+            continue;
+
+        m_kart_dragging = true;
+        m_kart_drag_touch = int(i);
+        m_kart_drag_x = event.x;
+        view->setRotateOff();
+        return;
+    }
+
+    view->setRotateContinuously(idle_rotation_speed);
+}
+
+// -----------------------------------------------------------------------------
+void FluxaraKartScreen::onUpdate(float dt)
+{
+    if (m_auto_start_delay >= 0.0f)
+    {
+        m_auto_start_delay -= dt;
+        if (m_auto_start_delay <= 0.0f)
+        {
+            m_auto_start_delay = -1.0f;
+            startRace();
+            return;
+        }
+    }
+    updateKartRotation();
+}
+
 void FluxaraKartScreen::layoutControls()
 {
-    const FluxaraUI::Canvas c;
     for (const char* id : {"back", "previous", "next", "start"})
         FluxaraUI::rasterHitTarget(getWidget<ButtonWidget>(id));
-    c.move(getWidget<IconButtonWidget>("garage-background"), -2, -63, 360, 780);
-    // Move the whole preview down to the podium, including wheels and child
-    // meshes. Keep its size/camera unchanged so every kart retains its scale.
-    c.move(getWidget<ModelViewWidget>("kart-model"), 32, 222, 296, 260);
-    c.move(getWidget<Widget>("stats-panel"), 54, 431, 254, 254);
-    c.move(getWidget<ButtonWidget>("back"), 21, 26, 50, 50);
-    c.move(getWidget<ButtonWidget>("previous"), 35, 684, 67, 64);
-    c.move(getWidget<ButtonWidget>("next"), 258, 684, 67, 64);
-    c.move(getWidget<ButtonWidget>("start"), 117, 695, 126, 47);
+
+    // This screen is a 360x780 full-bleed Figma composition. Unlike menus,
+    // the garage scenery and podium must not be moved by the iPhone safe
+    // area: that breaks the intended alignment between the 3D preview and
+    // the painted turntable.
+    const auto screen = irr_driver->getActualScreenSize();
+    const float scale = std::min(float(screen.Width) / 360.0f,
+                                 float(screen.Height) / 780.0f);
+    const auto coordinate = [scale](float value)
+    {
+        return int(std::lround(value * scale));
+    };
+    const auto move = [&coordinate](Widget* widget, float x, float y,
+                                    float width, float height)
+    {
+        widget->move(coordinate(x), coordinate(y), coordinate(width),
+                     coordinate(height));
+    };
+
+    // Figma node 54:3 was exported at 3x with its own blur and alpha fade.
+    // The outpainted asset already matches the full 360x780 canvas. Draw it
+    // at its native logical frame: shifting or stretching it changes the
+    // approved perspective of the garage and podium.
+    getWidget<IconButtonWidget>("garage-background")->move(
+        0, 0, screen.Width, screen.Height);
+    // Shift the rendered kart 20 pt right and 20 pt up with its turntable.
+    // Keep its size and the stats panel untouched.
+    move(getWidget<ModelViewWidget>("kart-model"), 52, 202, 296, 260);
+    move(getWidget<Widget>("stats-panel"), 53, 418, 254, 254);
+    // The scenery stays full-bleed; only the interactive header is lowered
+    // clear of the Dynamic Island on the actual portrait device.
+    move(getWidget<ButtonWidget>("back"), 21, 58, 50, 50);
+    move(getWidget<ButtonWidget>("previous"), 35, 684, 67, 64);
+    move(getWidget<ButtonWidget>("next"), 258, 684, 67, 64);
+    move(getWidget<ButtonWidget>("start"), 117, 695, 126, 47);
 }
 
 void FluxaraKartScreen::onResize()
@@ -202,18 +316,19 @@ void FluxaraKartScreen::onResize()
 
 void FluxaraKartScreen::onDraw(float)
 {
+    // Garage is the one portrait screen whose 3D model is aligned to painted
+    // scenery, so draw its Figma layers in the physical full-bleed canvas.
     const FluxaraUI::Canvas c;
-    // The approved contained scenery ends at y647. Fill its uncovered footer
-    // before compositing the separate stats/nav layers, away from the 3D kart.
-    GL32_draw2DRectangle(video::SColor(255,11,45,120),c.rect(0,647,360,133));
     c.image(m_garage_art[0], 22, 684, 316, 64);
     c.image(m_garage_art[1], 117, 695, 126, 47);
-    c.image(m_garage_art[2], 21, 26, 50, 50);
-    c.image(m_garage_art[3], 32, 36, 25, 31);
+    c.image(m_garage_art[2], 21, 58, 50, 50);
+    c.image(m_garage_art[3], 32, 68, 25, 31);
     c.image(m_garage_art[4], 268, 690, 47, 51);
     c.image(m_garage_art[5], 45, 690, 47, 51);
-    c.label(L"GARAGE", 88, 32, 190, 38, 31);
-    c.label(L"SELECT", 125, 703, 110, 28, 18);
+    // Keep the header clear of the portrait sensor housing without moving
+    // the 3D kart/podium composition below it.
+    c.label(_C("fluxara", "GARAGE"), 88, 69, 190, 38, 31);
+    c.label(_C("fluxara", "SELECT"), 125, 703, 110, 28, 18);
     Widget* slot = getWidget<Widget>("stats-panel");
     if (!slot || !m_stats_panel || slot->m_w <= 0 || slot->m_h <= 0) return;
     // Reference coordinates: a single scale preserves every raster's shape.
@@ -239,7 +354,7 @@ void FluxaraKartScreen::onDraw(float)
     const auto label = [&](const core::stringw& text, float left, float top,
                            float width, float height)
     {
-        gui::ScalableFont* font = GUIEngine::getTitleFont();
+        gui::ScalableFont* font = GUIEngine::getFont();
         const float saved_scale = font->getScale();
         font->setScale(1.0f);
         const auto size = font->getDimension(text.c_str());
@@ -251,8 +366,8 @@ void FluxaraKartScreen::onDraw(float)
     };
     draw(m_stats_panel, 0, 0, 1254, 1254);
     label(m_kart_name, 165, 158, 920, 116);
-    label(L"STATS", 80, 352, 168, 58);
-    const wchar_t* labels[] = {L"WEIGHT", L"SPEED", L"ACCEL", L"NITRO"};
+    label(_C("fluxara", "STATS"), 80, 352, 168, 58);
+    const core::stringw labels[] = {_C("fluxara", "WEIGHT"), _C("fluxara", "SPEED"), _C("fluxara", "ACCEL"), _C("fluxara", "NITRO")};
     for (int row = 0; row < 4; ++row)
     {
         const float top = 444.0f + row * 175.0f;
@@ -291,6 +406,32 @@ void FluxaraKartScreen::startRace()
     RaceManager::get()->setMinorMode(FluxaraModes::nativeMode(m_mode));
     RaceManager::get()->setWatchingReplay(false);
     RaceManager::get()->setRaceGhostKarts(false);
+    RaceManager::get()->setRecordRace(false);
+    if (m_mode == "ghost_geometry")
+    {
+        // Prefer a replay of this exact circuit.  A first visit remains
+        // playable: it records a seed run instead of substituting a replay
+        // from another map, then the next visit races against that ghost.
+        ReplayPlay* replay = ReplayPlay::get();
+        replay->loadAllReplayFile();
+        bool found_matching_ghost = false;
+        for (unsigned int i = 0; i < replay->getNumReplayFile(); ++i)
+        {
+            const ReplayPlay::ReplayData& candidate = replay->getReplayData(i);
+            if (candidate.m_track_name == m_track->getIdent() &&
+                candidate.m_minor_mode == "time-trial" &&
+                !candidate.m_kart_list.empty())
+            {
+                replay->setReplayFile(i);
+                replay->setSecondReplayFile(0, false);
+                RaceManager::get()->setRaceGhostKarts(true);
+                found_matching_ghost = true;
+                break;
+            }
+        }
+        if (!found_matching_ghost)
+            RaceManager::get()->setRecordRace(true);
+    }
     // Clear targets left by a previously played mode before applying this
     // event's native target semantics. Arena/timed events never become races.
     RaceManager::get()->setHitCaptureTime(0,0.0f);
@@ -299,21 +440,74 @@ void FluxaraKartScreen::startRace()
         RaceManager::get()->setTimeTarget(float(m_laps*60));
     if(m_mode=="free_for_all")
         RaceManager::get()->setHitCaptureTime(0,float(m_laps*60));
-    if(m_mode=="egg_hunt") m_num_karts=1;
-    RaceManager::get()->setNumKarts(std::max(1, m_num_karts));
+    if(m_mode=="soccer")
+    {
+        // SoccerWorld regards a zero goal target as a completed 0:0 match.
+        // Keep the Garage launch equivalent to the direct campaign route:
+        // a playable first-to-three local game.
+        RaceManager::get()->setMaxGoal(3);
+    }
+    if(m_mode=="capture_the_flag")
+    {
+        // CTF treats a zero capture limit with no timer as an already-over
+        // match.  A local event is a three-capture practice with a bounded
+        // time limit, so it enters actual gameplay instead of jumping straight
+        // to the result screen. The automatic campaign pass is the only
+        // consumer that may shorten this real CTF round for coverage. A
+        // score-validation launch still uses the normal match duration.
+        RaceManager::get()->setHitCaptureTime(
+            3, (FluxaraModes::autoCampaignValidation() &&
+                FluxaraModes::forceValidationWins()) ? 5.0f : 180.0f);
+    }
+    const bool has_opponents = FluxaraModes::hasOfflineOpponents(m_mode);
+    int wanted_opponents = has_opponents
+        ? FluxaraModes::opponentsPerRace : 0;
+    int maximum_opponents = std::max(0, int(m_karts.size()) - 1);
+    if (FluxaraModes::arena(m_mode) || m_mode == "soccer")
+        maximum_opponents = std::min(maximum_opponents,
+            std::max(0, int(m_track->getMaxArenaPlayers()) - 1));
+    wanted_opponents = std::min(wanted_opponents, maximum_opponents);
+
+    std::vector<std::string> ai_karts;
+    for (unsigned int offset = 1; offset < m_karts.size() &&
+                                  int(ai_karts.size()) < wanted_opponents;
+         ++offset)
+    {
+        const std::string& candidate =
+            m_karts[(m_selected_kart + offset) % m_karts.size()];
+        if (candidate != kart && std::find(ai_karts.begin(), ai_karts.end(),
+                                            candidate) == ai_karts.end())
+            ai_karts.push_back(candidate);
+    }
+
+    // Set the total from the actual unique roster, so the engine never fills
+    // a missing slot with an arbitrary duplicate kart.
+    const int total_karts = int(ai_karts.size()) + 1;
+    RaceManager::get()->setNumKarts(total_karts);
     RaceManager::get()->setPlayerKart(0, kart);
+    RaceManager::get()->setDefaultAIKartList(ai_karts);
     if(m_mode=="soccer")
     {
         RaceManager::get()->setKartTeam(0,KART_TEAM_RED);
-        const int ai=std::max(0,m_num_karts-1);
+        const int ai=total_karts-1;
         RaceManager::get()->setNumRedAI(ai/2);
         RaceManager::get()->setNumBlueAI(ai-ai/2);
     }
-    // Keep rivals inside the curated Fluxara roster while allowing the player
-    // to drive either bundled kart.
-    RaceManager::get()->setAIKartOverride(
-        m_karts[(m_selected_kart + 1) % m_karts.size()]);
+    else if(m_mode=="capture_the_flag")
+    {
+        RaceManager::get()->setKartTeam(0,KART_TEAM_RED);
+        const int ai = total_karts - 1;
+        // Six opponents form 4-vs-3 teams including the player. This keeps
+        // the automatic player on a real team without turning CTF into the
+        // old one-kart practice route.
+        RaceManager::get()->setNumRedAI(ai / 2);
+        RaceManager::get()->setNumBlueAI(ai - ai / 2);
+    }
     RaceManager::get()->setReverseTrack(false);
+
+    if (!m_event_id.empty() && PlayerManager::getCurrentPlayer())
+        PlayerManager::getCurrentPlayer()->beginFluxaraEvent(
+            m_event_id, m_track->getIdent());
 
     input_manager->getDeviceManager()->setAssignMode(ASSIGN);
     input_manager->getDeviceManager()->setSinglePlayer(
@@ -327,7 +521,15 @@ void FluxaraKartScreen::eventCallback(Widget*, const std::string& name,
 {
     if (name == "back")
     {
-        StateManager::get()->escapePressed();
+        // A Garage deep launch has no Home page beneath it.  Popping that
+        // one-item menu stack quits the app, while the same visual action
+        // must return to the Fluxara home screen.  Kart choice for a campaign
+        // event does have a setup page underneath and keeps ordinary Back.
+        if (m_track == nullptr)
+            StateManager::get()->resetAndGoToScreen(
+                FluxaraHomeScreen::getInstance());
+        else
+            StateManager::get()->escapePressed();
         return;
     }
 

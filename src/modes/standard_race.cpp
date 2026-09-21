@@ -199,8 +199,10 @@ void StandardRace::endRaceEarly()
     } // Finish the active players
     endSetKartPositions();
     setPhase(RESULT_DISPLAY_PHASE);
+    // terminateRace() persists the active Fluxara campaign event.  Mark an
+    // explicit pause-menu abort before that callback, not afterwards, so a
+    // sole kart's forced first position cannot be interpreted as a win.
+    m_ended_early = true;
     if (!isNetworkWorld() || NetworkConfig::get()->isServer())
         terminateRace();
-    if (!isNetworkWorld())
-        m_ended_early = true;
 } // endRaceEarly

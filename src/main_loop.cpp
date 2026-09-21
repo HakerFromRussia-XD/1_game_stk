@@ -53,6 +53,10 @@
 #include "states_screens/online/server_selection.hpp"
 #include "states_screens/main_menu_screen.hpp"
 #include "states_screens/state_manager.hpp"
+#ifdef IOS_STK
+#include "states_screens/fluxara_event.hpp"
+#include "states_screens/race_result_gui.hpp"
+#endif
 #include "utils/profiler.hpp"
 #include "utils/string_utils.hpp"
 #include "utils/time.hpp"
@@ -577,6 +581,22 @@ void MainLoop::run()
                 PROFILER_PUSH_CPU_MARKER("Input/GUI", 0x7F, 0x00, 0x00);
                 input_manager->update(frame_duration);
                 GUIEngine::update(frame_duration);
+#ifdef IOS_STK
+                // The result GUI schedules this during its update. Execute
+                // the ordinary Next callback only after that update returns.
+                if (FluxaraModes::autoCampaignReplayPending())
+                {
+                    FluxaraModes::autoCampaignReplayPending() = false;
+                    RaceResultGUI::getInstance()->eventCallback(
+                        nullptr, "fluxara-again", PLAYER_ID_GAME_MASTER);
+                }
+                else if (FluxaraModes::autoCampaignAdvancePending())
+                {
+                    FluxaraModes::autoCampaignAdvancePending() = false;
+                    RaceResultGUI::getInstance()->eventCallback(
+                        nullptr, "fluxara-next", PLAYER_ID_GAME_MASTER);
+                }
+#endif
                 PROFILER_POP_CPU_MARKER();
                 if (!m_download_assets)
                 {

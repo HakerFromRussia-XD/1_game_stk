@@ -26,6 +26,9 @@
 #include "ge_vulkan_driver.hpp"
 #include "ge_vulkan_scene_manager.hpp"
 #include "MoltenVK.h"
+#ifdef IOS_STK
+#include "utils/fluxara_orientation_ios.hpp"
+#endif
 
 #include <SDL_vulkan.h>
 
@@ -95,8 +98,12 @@ CIrrDeviceSDL::CIrrDeviceSDL(const SIrrlichtCreationParameters& param)
 	SDL_SetHint(SDL_HINT_ORIENTATIONS, "LandscapeLeft LandscapeRight");
 #endif
 #ifdef IOS_STK
-	// Fluxara menus are portrait; the game state requests landscape for races.
-	SDL_SetHint(SDL_HINT_ORIENTATIONS, "Portrait");
+    // The app determines its initial route before the renderer exists.  Do
+    // not overwrite a direct-race landscape request here: this is the final
+    // hint consumed by SDL before it creates the iOS framebuffer.
+    SDL_SetHint(SDL_HINT_ORIENTATIONS,
+        fluxaraInitialOrientationIsPortrait()
+            ? "Portrait" : "LandscapeLeft LandscapeRight");
 #endif
 
 #ifndef MOBILE_STK
@@ -966,8 +973,36 @@ bool CIrrDeviceSDL::run()
 
 		case SDL_WINDOWEVENT:
 			{
-				if (SDL_event.window.event == SDL_WINDOWEVENT_SIZE_CHANGED)
+				// SDL's UIKit backend reports an interface-orientation change as
+				// RESIZED from viewDidLayoutSubviews().  Treat it like SIZE_CHANGED
+				// so Vulkan recreates its swapchain before portrait menus draw.
+				if (SDL_event.window.event == SDL_WINDOWEVENT_SIZE_CHANGED ||
+					SDL_event.window.event == SDL_WINDOWEVENT_RESIZED)
 				{
+#ifdef IOS_STK
+					if (SDL_event.window.event == SDL_WINDOWEVENT_RESIZED &&
+						VideoDriver &&
+						CreationParams.DriverType == video::EDT_VULKAN)
+					{
+						// SDL emits RESIZED while its UIKit view is first laid out.
+						// The initial Vulkan swapchain already uses that drawable, so
+						// recreating it then aborts the launch.  A real interface
+						// rotation changes the drawable before this event is polled.
+						int drawable_width = 0;
+						int drawable_height = 0;
+						SDL_Vulkan_GetDrawableSize(Window, &drawable_width,
+							&drawable_height);
+						const core::dimension2du& current =
+							VideoDriver->getScreenSize();
+						if (drawable_width == (int)current.Width &&
+							drawable_height == (int)current.Height)
+						{
+							Width = SDL_event.window.data1;
+							Height = SDL_event.window.data2;
+							break;
+						}
+					}
+#endif
 					handleNewSize(SDL_event.window.data1, SDL_event.window.data2);
 				}
 				else if (SDL_event.window.event == SDL_WINDOWEVENT_MINIMIZED)

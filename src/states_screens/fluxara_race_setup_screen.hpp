@@ -21,6 +21,8 @@ private:
     int m_laps = 3;
     int m_ai_karts = 3;
     int m_difficulty = 1;
+    float m_auto_start_delay = -1.0f;
+    std::string m_event_id;
     std::string m_mode = "normal";
     irr::core::stringw m_unavailable_reason;
     irr::video::ITexture* m_art[10] = {};
@@ -32,13 +34,15 @@ private:
 public:
     void loadedFromFile() OVERRIDE;
     void init() OVERRIDE;
+    void onUpdate(float dt) OVERRIDE;
     void onDraw(float dt) OVERRIDE;
     void onResize() OVERRIDE;
     void eventCallback(GUIEngine::Widget* widget, const std::string& name,
                        const int player_id) OVERRIDE;
     bool onEscapePressed() OVERRIDE;
 
-    void setTrack(Track* track, const std::string& mode = "normal");
+    void setTrack(Track* track, const std::string& mode = "normal",
+                  const std::string& event_id = "");
 };
 
 #endif

@@ -27,6 +27,7 @@
 #include "challenges/story_mode_timer.hpp"
 #include "challenges/unlock_manager.hpp"
 #include "config/player_manager.hpp"
+#include "config/player_profile.hpp"
 #include "config/stk_config.hpp"
 #include "config/user_config.hpp"
 #include "graphics/2dutils.hpp"
@@ -193,7 +194,7 @@ void RaceResultGUI::init()
     }
     else
     {
-        for (const char* id : {"fluxara-again", "fluxara-next", "fluxara-list"})
+        for (const char* id : {"fluxara-again", "fluxara-next"})
             getWidget(id)->setVisible(false);
         getWidget("operations")->setVisible(true);
     }
@@ -202,6 +203,12 @@ void RaceResultGUI::init()
     m_animation_state = RR_INIT;
 
     m_timer = 0;
+#if 0 // AUTOPLAY ACCEPTANCE — disabled for human play; retained for a future lab run.
+    m_fluxara_auto_advance_delay =
+        (isFluxaraRace() && FluxaraModes::autoCampaignValidation()) ? 1.0f : -1.0f;
+#else
+    m_fluxara_auto_advance_delay = -1.0f;
+#endif
 
     getWidget("operations")->setActive(false);
     getWidget("left")->setVisible(false);
@@ -478,8 +485,8 @@ void RaceResultGUI::enableAllButtons()
         return;
     }
 
-    // Fluxara currently ships one curated circuit. Keep the result loop
-    // truthful: repeat it or return to Fluxara's circuit card, never to the
+    // Keep the Fluxara result loop inside the campaign: repeat the current
+    // event or return to its next unlocked campaign card, never to the
     // upstream STK race setup.
     if (isFluxaraRace())
     {
@@ -590,11 +597,22 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
             // Results are portrait while a rerun stays in GAME state, so the
             // normal state-change hook is not guaranteed to fire again.
             fluxaraRequestPortraitMenu(false);
+            // raceFinished() clears the active event before the result UI is
+            // shown. Restore the exact stable id before a replay so a real
+            // later win records its cup rather than becoming an orphan race.
+            if (PlayerProfile* player = PlayerManager::getCurrentPlayer())
+            {
+                const std::string event_id =
+                    player->getLastFluxaraFinishedEvent();
+                if (!event_id.empty())
+                    player->beginFluxaraEvent(event_id,
+                                              RaceManager::get()->getTrackName());
+            }
             StateManager::get()->popMenu();
             RaceManager::get()->rerunRace();
             return;
         }
-        if (name == "fluxara-next" || name == "fluxara-list")
+        if (name == "fluxara-next")
         {
             const std::string current_track = RaceManager::get()->getTrackName();
             if (name == "fluxara-next" &&
@@ -606,12 +624,39 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
                 RaceManager::get()->next();
                 return;
             }
+                // Follow the same pop -> exit -> campaign order as the
+                // interactive Next action. Resetting the screen stack while
+                // the race world still owns this result GUI can end the iOS
+                // main loop, which looks like an application crash.
+            if (FluxaraModes::autoCampaignValidation())
+            {
+                PlayerProfile* player = PlayerManager::getCurrentPlayer();
+                const std::string event_id = player ?
+                    player->getLastFluxaraFinishedEvent() : "";
+                if (event_id.empty() || !player->didLastFluxaraEventWin())
+                {
+                    // A validation run must not turn an unlocked card into a
+                    // fabricated completion.  Stay on the real result and
+                    // make the failed event visible to the emulator check.
+                    FluxaraModes::autoCampaignFailed() = true;
+                    return;
+                }
+                FluxaraCampaignScreen::getInstance()->showNextAfterEvent(event_id);
+                StateManager::get()->popMenu();
+                RaceManager::get()->exitRace();
+                RaceManager::get()->setAIKartOverride("");
+                StateManager::get()->resetAndGoToScreen(
+                    FluxaraCampaignScreen::getInstance());
+                return;
+            }
+            // Race state owns the result screen. Pop it before deleting the
+            // world; this is also the normal interactive "Next" path.
             StateManager::get()->popMenu();
             RaceManager::get()->exitRace();
             RaceManager::get()->setAIKartOverride("");
-            if (name == "fluxara-next")
-                FluxaraCampaignScreen::getInstance()->showNextAfter(current_track);
-            StateManager::get()->resetAndGoToScreen(FluxaraCampaignScreen::getInstance());
+            FluxaraCampaignScreen::getInstance()->showNextAfter(current_track);
+            StateManager::get()->resetAndGoToScreen(
+                FluxaraCampaignScreen::getInstance());
             return;
         }
     }
@@ -1324,7 +1369,7 @@ bool RaceResultGUI::onEscapePressed()
 #ifdef IOS_STK
     if (isFluxaraRace())
     {
-        eventCallback(nullptr,"fluxara-list",PLAYER_ID_GAME_MASTER);
+        eventCallback(nullptr,"fluxara-next",PLAYER_ID_GAME_MASTER);
         return false;
     }
 #endif
@@ -1375,6 +1420,33 @@ void RaceResultGUI::onUpdate(float dt)
                 "trying to load music: %s", e.what());
         }
     }
+
+#ifdef IOS_STK
+    if (m_fluxara_auto_advance_delay >= 0.0f)
+    {
+        m_fluxara_auto_advance_delay -= dt;
+        if (m_fluxara_auto_advance_delay <= 0.0f)
+        {
+            // MainLoop consumes this after GUIEngine::update returns. The
+            // actual callback remains the exact one the visible Next button
+            // uses, but this screen is not torn down mid-update.
+            m_fluxara_auto_advance_delay = -1.0f;
+            PlayerProfile* player = PlayerManager::getCurrentPlayer();
+            if (player && !player->getLastFluxaraFinishedEvent().empty() &&
+                !player->didLastFluxaraEventWin())
+            {
+                // Do not conceal a loss as a Next transition. Reuse the
+                // normal Replay route in this process, preserving the event
+                // identity so that only a later real win can save a cup.
+                FluxaraModes::autoCampaignReplayPending() = true;
+            }
+            else
+            {
+                FluxaraModes::autoCampaignAdvancePending() = true;
+            }
+        }
+    }
+#endif
 }   // onUpdate
 
 //-----------------------------------------------------------------------------

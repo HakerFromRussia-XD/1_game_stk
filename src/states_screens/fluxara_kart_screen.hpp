@@ -22,6 +22,7 @@ private:
     Track* m_track = NULL;
     int m_laps = 3;
     int m_num_karts = 4;
+    std::string m_event_id;
     std::string m_mode = "normal";
     std::vector<std::string> m_karts;
     unsigned m_selected_kart = 0;
@@ -32,21 +33,29 @@ private:
     irr::video::ITexture* m_stat_fills[4] = {};
     irr::video::ITexture* m_stat_empty = nullptr;
     irr::video::ITexture* m_garage_art[6] = {};
+    bool m_kart_dragging = false;
+    int m_kart_drag_touch = -1;
+    int m_kart_drag_x = 0;
+    float m_auto_start_delay = -1.0f;
     void layoutControls();
 
     void updateKartPreview();
+    void updateKartRotation();
     void startRace();
 
 public:
     void loadedFromFile() OVERRIDE;
     void init() OVERRIDE;
     void onDraw(float dt) OVERRIDE;
+    void onUpdate(float dt) OVERRIDE;
     void onResize() OVERRIDE;
     void eventCallback(GUIEngine::Widget* widget, const std::string& name,
                        const int player_id) OVERRIDE;
     bool onEscapePressed() OVERRIDE;
 
-    void setRace(Track* track, int laps, int karts, const std::string& mode = "normal");
+    void setRace(Track* track, int laps, int karts,
+                 const std::string& mode = "normal",
+                 const std::string& event_id = "");
 };
 
 #endif

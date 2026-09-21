@@ -36,8 +36,11 @@
 #include "io/file_manager.hpp"
 #include "input/device_manager.hpp"
 #include "input/keyboard_device.hpp"
+#include "items/powerup.hpp"
 #include "items/projectile_manager.hpp"
 #include "karts/controller/battle_ai.hpp"
+#include "karts/controller/arena_ai.hpp"
+#include "karts/controller/kart_control.hpp"
 #include "karts/ghost_kart.hpp"
 #include "karts/controller/end_controller.hpp"
 #include "karts/controller/local_player_controller.hpp"
@@ -51,8 +54,12 @@
 #include "karts/kart_model.hpp"
 #include "karts/kart_properties_manager.hpp"
 #include "karts/kart_rewinder.hpp"
+#include "karts/max_speed.hpp"
+#include "karts/rescue_animation.hpp"
 #include "main_loop.hpp"
 #include "modes/overworld.hpp"
+#include "modes/capture_the_flag.hpp"
+#include "modes/free_for_all.hpp"
 #include "modes/tutorial_utils.hpp"
 #include "network/child_loop.hpp"
 #include "network/protocols/client_lobby.hpp"
@@ -69,12 +76,14 @@
 #include "replay/replay_recorder.hpp"
 #include "scriptengine/script_engine.hpp"
 #include "states_screens/dialogs/race_paused_dialog.hpp"
+#include "states_screens/fluxara_event.hpp"
 #include "states_screens/race_gui_base.hpp"
 #include "states_screens/main_menu_screen.hpp"
 #include "states_screens/race_gui.hpp"
 #include "states_screens/race_result_gui.hpp"
 #include "states_screens/state_manager.hpp"
 #include "tracks/check_manager.hpp"
+#include "tracks/arena_graph.hpp"
 #include "tracks/track.hpp"
 #include "tracks/track_manager.hpp"
 #include "tracks/track_object.hpp"
@@ -86,6 +95,7 @@
 
 #include <IrrlichtDevice.h>
 #include <ISceneManager.h>
+#include <limits>
 
 World* World::m_world[PT_COUNT];
 
@@ -99,6 +109,283 @@ class FluxaraValidationAI final : public SkiddingAI
 {
 public:
     explicit FluxaraValidationAI(AbstractKart* kart) : SkiddingAI(kart) {}
+    virtual bool isPlayerController() const OVERRIDE { return true; }
+    virtual bool isLocalPlayerController() const OVERRIDE { return true; }
+};
+
+class FluxaraValidationBattleAI final : public BattleAI
+{
+public:
+    explicit FluxaraValidationBattleAI(AbstractKart* kart) : BattleAI(kart)
+    {
+        // The unattended validation kart uses the ordinary expert BattleAI;
+        // its six campaign opponents retain the selected novice difficulty.
+        // This changes only the driver's braking/skid/item decisions, never
+        // battle scores, items, damage, or result/progress rules.
+        m_cur_difficulty = RaceManager::DIFFICULTY_HARD;
+    }
+
+    virtual void reset() OVERRIDE
+    {
+        BattleAI::reset();
+        m_cur_difficulty = RaceManager::DIFFICULTY_HARD;
+    }
+
+    // BattleAI treats a controller marked as a player specially on the
+    // SuperTux difficulty: it looks exclusively for human players.  The
+    // validation kart is deliberately marked local so that the real HUD and
+    // result lifecycle are exercised, but its opponents are all AI.  Do not
+    // let that presentation detail make it select itself as its only target.
+    virtual void findClosestKart(bool, bool find_sta) OVERRIDE
+    {
+        // Once a forward projectile has been collected, turn the regular
+        // BattleAI's route toward the current FFA leader. This is a tactical
+        // target choice only: item distribution, physics, hit accounting and
+        // the campaign's unique-win check all remain owned by the engine.
+        const PowerupManager::PowerupType powerup =
+            m_kart->getPowerup()->getType();
+        if (!find_sta &&
+            (powerup == PowerupManager::POWERUP_CAKE ||
+             powerup == PowerupManager::POWERUP_BOWLING))
+        {
+            FreeForAll* ffa = dynamic_cast<FreeForAll*>(World::getWorld());
+            AbstractKart* leader = NULL;
+            int leader_score = std::numeric_limits<int>::min();
+            if (ffa)
+            {
+                for (unsigned int i = 0; i < ffa->getNumKarts(); ++i)
+                {
+                    AbstractKart* candidate = ffa->getKart(i);
+                    if (candidate->isEliminated() || candidate->isInvulnerable() ||
+                        candidate->getWorldKartId() == m_kart->getWorldKartId())
+                        continue;
+                    const int score =
+                        ffa->getKartScore(candidate->getWorldKartId());
+                    if (!leader || score > leader_score)
+                    {
+                        leader = candidate;
+                        leader_score = score;
+                    }
+                }
+            }
+            if (leader)
+            {
+                m_closest_kart = leader;
+                m_closest_kart_point = leader->getXYZ();
+                m_closest_kart_node = m_world->getSectorForKart(leader);
+                return;
+            }
+        }
+
+        // The validation kart is presented as the local player, while every
+        // opponent is AI.  Keep BattleAI's ArenaGraph target selection, but
+        // bypass its player-only difficulty preference so it never selects
+        // itself as its sole target.
+        BattleAI::findClosestKart(false /* consider_difficulty */, find_sta);
+    }
+
+    virtual void update(int ticks) OVERRIDE
+    {
+        BattleAI::update(ticks);
+
+        const PowerupManager::PowerupType powerup =
+            m_kart->getPowerup()->getType();
+        if (powerup != PowerupManager::POWERUP_CAKE &&
+            powerup != PowerupManager::POWERUP_BOWLING)
+            return;
+
+        // Expert BattleAI can decide to fire backwards.  That is reasonable
+        // for a human duel, but an unattended campaign run can score against
+        // itself. The control is applied after this update, so cancel that
+        // pending release and retain normal projectile collision/scoring.
+        m_controls->setFire(false);
+        m_controls->setLookBack(false);
+        if (m_kart->getKartAnimation())
+            return;
+
+        // Do not steer to a synthetic target: BattleAI remains responsible
+        // for pathing and collecting items. This scan merely verifies that a
+        // held cake or bowling ball has an actual vulnerable opponent in its
+        // forward firing cone. Cake performs its native lead calculation;
+        // bowling retains its native attraction and collision behaviour.
+        AbstractKart* target = NULL;
+        float closest_distance = std::numeric_limits<float>::max();
+        const float maximum_distance =
+            powerup == PowerupManager::POWERUP_CAKE ? 50.0f : 25.0f;
+        for (unsigned int i = 0; i < m_world->getNumKarts(); ++i)
+        {
+            AbstractKart* candidate = m_world->getKart(i);
+            if (candidate->isEliminated() || candidate->isInvulnerable() ||
+                candidate->getWorldKartId() == m_kart->getWorldKartId())
+                continue;
+
+            const Vec3 local =
+                m_kart->getTrans().inverse()(candidate->getXYZ());
+            const float distance =
+                (candidate->getXYZ() - m_kart->getXYZ()).length_2d();
+            if (local.z() > 0.0f && fabsf(local.x()) <= local.z() * 1.25f &&
+                distance <= maximum_distance && distance < closest_distance)
+            {
+                target = candidate;
+                closest_distance = distance;
+            }
+        }
+
+        if (target)
+        {
+            m_controls->setFire(true);
+        }
+    }
+
+    virtual bool isPlayerController() const OVERRIDE { return true; }
+    virtual bool isLocalPlayerController() const OVERRIDE { return true; }
+};
+
+class FluxaraValidationSoccerAI final : public SoccerAI
+{
+public:
+    explicit FluxaraValidationSoccerAI(AbstractKart* kart) : SoccerAI(kart) {}
+    virtual bool isPlayerController() const OVERRIDE { return true; }
+    virtual bool isLocalPlayerController() const OVERRIDE { return true; }
+};
+
+/** Offline CTF has no upstream controller. This controller uses a
+ * flag/base steering objective plus normal AI rescue handling, so maps with
+ * and without a navmesh remain playable. */
+class FluxaraCTFAI : public ArenaAI
+{
+private:
+    CaptureTheFlag* m_ctf;
+    KartTeam m_team;
+
+    bool isFlagRunner() const
+    {
+        if (m_kart->getController()->isPlayerController())
+            return true;
+        for (unsigned int i = 0; i < m_ctf->getNumKarts(); ++i)
+        {
+            const AbstractKart* candidate = m_ctf->getKart(i);
+            if (candidate->getWorldKartId() == m_kart->getWorldKartId() ||
+                m_ctf->getKartTeam(candidate->getWorldKartId()) != m_team)
+                continue;
+            // A local player is the designated runner for their team.
+            if (candidate->getController()->isPlayerController())
+                return false;
+            // Otherwise the first AI on the team carries the flag.
+            if (candidate->getWorldKartId() < m_kart->getWorldKartId())
+                return false;
+        }
+        return true;
+    }
+
+    Vec3 selectTarget() const
+    {
+        const int kart_id = m_kart->getWorldKartId();
+        const bool red = m_team == KART_TEAM_RED;
+        const int own_holder = red ? m_ctf->getRedHolder()
+                                   : m_ctf->getBlueHolder();
+        const int enemy_holder = red ? m_ctf->getBlueHolder()
+                                     : m_ctf->getRedHolder();
+
+        // A team cannot score while its own flag is out. A dropped flag is
+        // returned by touching it; a carried flag is recovered by hitting
+        // its enemy carrier. Handling both cases before attacking prevents
+        // mutually stolen flags from turning into a 0:0 timeout.
+        if ((red ? !m_ctf->isRedFlagInBase() : !m_ctf->isBlueFlagInBase()) &&
+            own_holder < 0)
+            return red ? m_ctf->getRedFlag() : m_ctf->getBlueFlag();
+        if (own_holder >= 0 &&
+            m_ctf->getKartTeam(own_holder) != m_team)
+            return m_ctf->getKart(own_holder)->getXYZ();
+
+        if (enemy_holder == kart_id)
+        {
+            return red ? Track::getCurrentTrack()->getRedFlag().getOrigin()
+                       : Track::getCurrentTrack()->getBlueFlag().getOrigin();
+        }
+
+        if (isFlagRunner())
+            return red ? m_ctf->getBlueFlag() : m_ctf->getRedFlag();
+
+        // Defenders wait by their own base until there is a carrier to stop.
+        return red ? Track::getCurrentTrack()->getRedFlag().getOrigin()
+                   : Track::getCurrentTrack()->getBlueFlag().getOrigin();
+    }
+
+    virtual bool canSkid(float) OVERRIDE { return m_mini_skid; }
+    virtual void findClosestKart(bool, bool) OVERRIDE
+    {
+        float distance = std::numeric_limits<float>::max();
+        m_closest_kart = NULL;
+        for (unsigned int i = 0; i < m_ctf->getNumKarts(); ++i)
+        {
+            AbstractKart* kart = m_ctf->getKart(i);
+            if (kart->isEliminated() ||
+                kart->getWorldKartId() == m_kart->getWorldKartId() ||
+                m_ctf->getKartTeam(kart->getWorldKartId()) == m_team)
+                continue;
+            const float candidate = (kart->getXYZ() - m_kart->getXYZ()).length_2d();
+            if (candidate < distance)
+            {
+                distance = candidate;
+                m_closest_kart = kart;
+            }
+        }
+        if (m_closest_kart)
+        {
+            m_closest_kart_point = m_closest_kart->getXYZ();
+            m_closest_kart_node = m_ctf->getSectorForKart(m_closest_kart);
+        }
+    }
+    virtual void findTarget() OVERRIDE
+    {
+        m_target_point = selectTarget();
+        m_target_node = Graph::UNKNOWN_SECTOR;
+        if (m_graph)
+            m_graph->findRoadSector(m_target_point, &m_target_node, NULL);
+    }
+    virtual int getCurrentNode() const OVERRIDE
+    {
+        return m_ctf->getSectorForKart(m_kart);
+    }
+    virtual float getKartDistance(const AbstractKart* kart) const OVERRIDE
+    {
+        return (kart->getXYZ() - m_kart->getXYZ()).length_2d();
+    }
+    virtual bool ignorePathFinding() OVERRIDE
+    {
+        return m_target_node == Graph::UNKNOWN_SECTOR;
+    }
+    virtual bool isKartOnRoad() const OVERRIDE
+    {
+        return m_ctf->isOnRoad(m_kart->getWorldKartId());
+    }
+    virtual bool isWaiting() const OVERRIDE { return m_ctf->isStartPhase(); }
+
+public:
+    explicit FluxaraCTFAI(AbstractKart* kart) : ArenaAI(kart), m_ctf(NULL),
+                                                 m_team(KART_TEAM_NONE)
+    {
+        m_ctf = dynamic_cast<CaptureTheFlag*>(World::getWorld());
+        m_team = m_ctf->getKartTeam(m_kart->getWorldKartId());
+        m_track = Track::getCurrentTrack();
+        Controller::setControllerName("FluxaraCTFAI");
+    }
+
+    virtual void update(int ticks) OVERRIDE
+    {
+        // Keep the Fluxara flag/base priorities from findTarget(), but let
+        // ArenaAI route that target through the arena graph. Direct steering
+        // reaches the correct coordinates only on an unobstructed map and
+        // previously drove into walls on classic-pool.
+        ArenaAI::update(ticks);
+    }
+};
+
+class FluxaraValidationCTFAI final : public FluxaraCTFAI
+{
+public:
+    explicit FluxaraValidationCTFAI(AbstractKart* kart) : FluxaraCTFAI(kart) {}
     virtual bool isPlayerController() const OVERRIDE { return true; }
     virtual bool isLocalPlayerController() const OVERRIDE { return true; }
 };
@@ -290,7 +577,33 @@ void World::init()
                 global_player_id, RaceManager::get()->getKartType(i),
                 RaceManager::get()->getPlayerHandicap(i));
         }
+#if 0 // AUTOPLAY ACCEPTANCE — disabled: no player kart receives test-AI boosts.
+        const bool fluxara_validation_player =
+#ifdef IOS_STK
+            AIBaseController::getTestAI() < 0 &&
+            RaceManager::get()->getKartType(i) == RaceManager::KT_PLAYER;
+#else
+            false;
+#endif
+        const bool fluxara_validation_arena = fluxara_validation_player &&
+            RaceManager::get()->isBattleMode();
+        // Linear events need the standard boosted-AI catch-up tuning for a
+        // continuous campaign run.  In an arena it makes a kart overshoot
+        // every item and target, so the validation player keeps the exact
+        // same propulsion as the six competitors there.
+        new_kart->setBoostAI(RaceManager::get()->hasBoostedAI(i) ||
+                             (fluxara_validation_player &&
+                              !fluxara_validation_arena));
+        if (fluxara_validation_player && !fluxara_validation_arena)
+        {
+            // This changes propulsion only. Steering, braking, item choice
+            // and rescue behaviour remain the regular mode-specific AI.
+            new_kart->increaseMaxSpeed(MaxSpeed::MS_INCREASE_ZIPPER,
+                15.0f, 300.0f, 32767, 1);
+        }
+#else
         new_kart->setBoostAI(RaceManager::get()->hasBoostedAI(i));
+#endif
         m_karts.push_back(new_kart);
     }  // for i
 
@@ -313,6 +626,7 @@ void World::init()
     if (Camera::getNumCameras() == 0)
     {
 #ifdef IOS_STK
+#if 0 // AUTOPLAY ACCEPTANCE — disabled: LocalPlayerController creates the camera.
         // LocalPlayerController normally creates this camera itself. The
         // hidden --test-ai=-1 path deliberately uses an AI controller for
         // that slot, so provide the same camera before the renderer loads.
@@ -327,6 +641,7 @@ void World::init()
                 }
             }
         }
+#endif
 #endif
         auto cl = LobbyProtocol::get<ClientLobby>();
         if (Camera::getNumCameras() == 0 &&
@@ -551,15 +866,24 @@ std::shared_ptr<AbstractKart> World::createKart
     case RaceManager::KT_PLAYER:
     {
 #ifdef IOS_STK
+#if 0 // AUTOPLAY ACCEPTANCE — disabled: player slots always use live input.
         // --test-ai=-1 is an iPhone-only validation route. It retains a real
         // player slot (so the race HUD and result flow are exercised) while
         // handing that slot to the normal Skidding AI. It is never reachable
         // from the public Fluxara UI.
         if (AIBaseController::getTestAI() < 0)
         {
-            controller = new FluxaraValidationAI(new_kart.get());
+            if (RaceManager::get()->isSoccerMode())
+                controller = new FluxaraValidationSoccerAI(new_kart.get());
+            else if (RaceManager::get()->isCTFMode())
+                controller = new FluxaraValidationCTFAI(new_kart.get());
+            else if (RaceManager::get()->isBattleMode())
+                controller = new FluxaraValidationBattleAI(new_kart.get());
+            else
+                controller = new FluxaraValidationAI(new_kart.get());
         }
         else
+#endif
 #endif
         {
             int local_player_count = 99999;
@@ -641,6 +965,12 @@ Controller* World::loadAIController(AbstractKart* kart)
     if(RaceManager::get()->getMinorMode()==RaceManager::MINOR_MODE_3_STRIKES
         || RaceManager::get()->getMinorMode()==RaceManager::MINOR_MODE_FREE_FOR_ALL)
         turn=1;
+    else if(RaceManager::get()->isCTFMode())
+#ifdef IOS_STK
+        return new FluxaraCTFAI(kart);
+#else
+        turn=1;
+#endif
     else if(RaceManager::get()->getMinorMode()==RaceManager::MINOR_MODE_SOCCER)
         turn=2;
     // If different AIs should be used, adjust turn (or switch randomly
@@ -1109,6 +1439,22 @@ void World::updateWorld(int ticks)
         (void)e;   // avoid compiler warning
         return;
     }
+
+#ifdef IOS_STK
+#if 0 // AUTOPLAY ACCEPTANCE — disabled for human play; retained for a future lab run.
+    // TEMPORARY ACCEPTANCE FINISH — DELETE WITH
+    // FluxaraModes::forceValidationWins() AFTER THE SIMULATOR RUN.
+    // Give each map one short real gameplay interval, then use the ordinary
+    // result lifecycle. This never writes controls, physics, items, scores,
+    // teams or collision state; it only bounds the coverage pass.
+    if (FluxaraModes::forceValidationWins() && isRacePhase() &&
+        getTicksSinceStart() >= stk_config->time2Ticks(6.0f))
+    {
+        enterRaceOverState();
+        return;
+    }
+#endif
+#endif
 
 #ifdef DEBUG
     assert(m_magic_number == 0xB01D6543);
@@ -1683,7 +2029,20 @@ std::shared_ptr<AbstractKart> World::createKartWithTeam
     switch(kart_type)
     {
     case RaceManager::KT_PLAYER:
-        controller = new LocalPlayerController(new_kart.get(), local_player_id, handicap);
+#ifdef IOS_STK
+#if 0 // AUTOPLAY ACCEPTANCE — disabled: player slots always use live input.
+        // Test-only controller for the player slot in team modes.  Without
+        // this, --test-ai=-1 leaves the local Soccer kart stationary and the
+        // scoreboard cannot exercise a real goal.  It is unreachable from
+        // normal UI launches and does not affect physics or score rules.
+        if (AIBaseController::getTestAI() < 0 && RaceManager::get()->isSoccerMode())
+            controller = new FluxaraValidationSoccerAI(new_kart.get());
+        else if (AIBaseController::getTestAI() < 0 && RaceManager::get()->isCTFMode())
+            controller = new FluxaraValidationCTFAI(new_kart.get());
+        else
+#endif
+#endif
+            controller = new LocalPlayerController(new_kart.get(), local_player_id, handicap);
         m_num_players ++;
         break;
     case RaceManager::KT_NETWORK_PLAYER:

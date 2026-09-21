@@ -4,7 +4,12 @@ cmake_minimum_required(VERSION 3.12...4.0)
 project(SuperTuxKart)
 set(PROJECT_VERSION "git")
 
-add_definitions( -DSUPERTUXKART_VERSION="${PROJECT_VERSION}" )
+# STK_VERSION is consumed by src/utils/constants.cpp only.  Keeping the
+# generated value in the global compiler command invalidates every object when
+# the version changes (including every UI-only iOS iteration).  Keep the
+# definition source-local so a version update recompiles only constants.cpp.
+set_source_files_properties(src/utils/constants.cpp
+    PROPERTIES COMPILE_DEFINITIONS "SUPERTUXKART_VERSION=\"${PROJECT_VERSION}\"")
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake")
 include(CMakeDependentOption)
@@ -82,7 +87,8 @@ endif()
 if (IOS)
     ADD_DEFINITIONS(-DMOBILE_STK)
     ADD_DEFINITIONS(-DIOS_STK)
-    set(CMAKE_XCODE_ATTRIBUTE_TARGETED_DEVICE_FAMILY "1,2")
+    # Fluxara's approved portrait menus and landscape race HUD target iPhone.
+    set(CMAKE_XCODE_ATTRIBUTE_TARGETED_DEVICE_FAMILY "1")
     option(USE_GLES2 "Use OpenGL ES2 renderer" ON)
 endif()
 
@@ -653,6 +659,21 @@ else()
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_settings.stkgui)
         set_source_files_properties(${FLUXARA_IOS_SCREENS} PROPERTIES
             MACOSX_PACKAGE_LOCATION Resources/data/gui/screens)
+        # The generated asset snapshot still contains upstream STK screen
+        # definitions.  Fluxara owns the complete public navigation flow, so
+        # retain only its six explicit screens in the iOS product.  This list
+        # is built from the snapshot at configure time instead of deleting
+        # anything from the shared source checkout.
+        file(GLOB FLUXARA_IOS_UPSTREAM_SCREEN_FILES
+            "${IOS_ASSETS}/gui/screens/*.stkgui")
+        set(FLUXARA_IOS_LEGACY_SCREEN_DESTINATIONS)
+        foreach(FLUXARA_IOS_UPSTREAM_SCREEN_FILE IN LISTS
+                FLUXARA_IOS_UPSTREAM_SCREEN_FILES)
+            get_filename_component(FLUXARA_IOS_UPSTREAM_SCREEN_NAME
+                "${FLUXARA_IOS_UPSTREAM_SCREEN_FILE}" NAME)
+            list(APPEND FLUXARA_IOS_LEGACY_SCREEN_DESTINATIONS
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/${FLUXARA_IOS_UPSTREAM_SCREEN_NAME}")
+        endforeach()
         set(FLUXARA_IOS_SOURCES
             ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_home_screen.cpp
             ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_campaign_screen.cpp
@@ -664,7 +685,12 @@ else()
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/stkskin.xml
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/background.png
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/background-v2.png
-            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/action_card.png)
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/action_card.png
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/data/ttf/Baloo2-ExtraBold.ttf
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/data/ttf/Baloo2-ExtraBold-Cyrillic.ttf
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/data/ttf/Baloo2-ExtraBold-BalooCyrillic.ttf
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/data/ttf/OFL-Baloo2.txt
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/data/ttf/OFL-Nunito.txt)
         set_source_files_properties(${FLUXARA_IOS_SKIN} PROPERTIES
             MACOSX_PACKAGE_LOCATION Resources/data/skins/fluxara)
         file(GLOB_RECURSE FLUXARA_IOS_UI_ART CONFIGURE_DEPENDS
@@ -702,6 +728,13 @@ else()
             if(IS_DIRECTORY ${FLUXARA_IOS_TRACK_DIR})
                 get_filename_component(FLUXARA_IOS_TRACK_IDENT
                     ${FLUXARA_IOS_TRACK_DIR} NAME)
+                # The curated campaign is the iOS catalogue.  This legacy
+                # preview circuit is not referenced by fluxara-campaign.xml;
+                # keep it in the shared source checkout, but do not ship an
+                # unreachable 51st track in Fluxara Drift.
+                if(FLUXARA_IOS_TRACK_IDENT STREQUAL "fluxara-circuit")
+                    continue()
+                endif()
                 file(GLOB FLUXARA_IOS_TRACK_FILES ${FLUXARA_IOS_TRACK_DIR}/*)
                 set_source_files_properties(${FLUXARA_IOS_TRACK_FILES} PROPERTIES
                     MACOSX_PACKAGE_LOCATION
@@ -744,12 +777,24 @@ else()
             COMMAND /usr/bin/rsync -a
                 "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/tracks/"
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/tracks/"
+            # rsync keeps the shared source intact, including its old preview
+            # circuit.  Remove that exact unreachable directory from the
+            # generated Fluxara bundle after the overlay.
+            COMMAND ${CMAKE_COMMAND} -E rm -rf
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/tracks/fluxara-circuit"
             COMMAND ${CMAKE_COMMAND} -E copy_if_different
                 "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/fluxara-campaign.xml"
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/fluxara-campaign.xml"
             COMMAND ${CMAKE_COMMAND} -E copy_if_different
                 "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/NOTICE-THIRD-PARTY.txt"
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/NOTICE-THIRD-PARTY.txt")
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/NOTICE-THIRD-PARTY.txt"
+            # The generated asset snapshot is copied before the custom
+            # Fluxara sources.  Keep the selected language catalogue in the
+            # final bundle as well, otherwise a fresh Russian translation can
+            # silently be replaced by the stale snapshot.
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${PROJECT_SOURCE_DIR}/data/po/ru.po"
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/po/ru.po")
         # The generated mobile asset snapshot may contain the retired
         # Motorica-only content. Fluxara ships its curated content instead.
         add_custom_command(TARGET supertuxkart POST_BUILD
@@ -759,10 +804,33 @@ else()
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/karts/motorica_signal_pilot"
             COMMAND ${CMAKE_COMMAND} -E rm -rf
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/motorica-start-full"
+            # iOS loads the independent Figma HUD assets above.  The Android
+            # wheel masks, slider and blurred STK button plates are not a
+            # fallback on this target and must not ship in Fluxara's bundle.
+            COMMAND ${CMAKE_COMMAND} -E rm -rf
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/icons/android"
+            # Fluxara exposes neither the upstream Help, Online nor Options
+            # navigation trees.  Keep generic engine dialogs for the moment
+            # (pause/confirmation still need their Fluxara replacements), but
+            # do not ship these unreachable STK screen families.
+            COMMAND ${CMAKE_COMMAND} -E rm -rf
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/help"
+            COMMAND ${CMAKE_COMMAND} -E rm -rf
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/online"
+            COMMAND ${CMAKE_COMMAND} -E rm -rf
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/options"
+            COMMAND ${CMAKE_COMMAND} -E rm -rf
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/dialogs/online"
+            COMMAND ${CMAKE_COMMAND} -E rm -rf
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/icons/online"
             COMMAND ${CMAKE_COMMAND} -E rm -f
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/music/motorica_signal_lab.music"
             COMMAND ${CMAKE_COMMAND} -E rm -f
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/music/motorica_signal_lab.ogg"
+            COMMAND ${CMAKE_COMMAND} -E rm -f
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/music/motorica_signal_lab_license.txt"
+            COMMAND ${CMAKE_COMMAND} -E rm -rf
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/packaged-scripts/tracks/motorica_signal_lab"
             COMMAND ${CMAKE_COMMAND} -E rm -f
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/motorica_hub.stkgui"
             COMMAND ${CMAKE_COMMAND} -E rm -f
@@ -771,16 +839,31 @@ else()
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/motorica_history.stkgui"
             COMMAND ${CMAKE_COMMAND} -E rm -f
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/motorica_about.stkgui"
+            # Do not leave an unreachable STK menu behind as an accidental
+            # fallback or an App Store bundle residue.  The Fluxara screen
+            # overlay is already copied above, so this removes only the
+            # upstream snapshot files collected at configure time.
+            COMMAND ${CMAKE_COMMAND} -E rm -f
+                ${FLUXARA_IOS_LEGACY_SCREEN_DESTINATIONS}
             COMMAND ${CMAKE_COMMAND} -E rm -f
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/challenges/motorica_precision.challenge"
             COMMAND ${CMAKE_COMMAND} -E rm -f
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/challenges/motorica_reaction.challenge"
             COMMAND ${CMAKE_COMMAND} -E rm -f
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/challenges/motorica_signal_hold.challenge")
+                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/challenges/motorica_signal_hold.challenge"
+            # Xcode signs before CMake's POST_BUILD overlay.  Sign the final
+            # Simulator bundle once more after every copied/removed Fluxara
+            # resource.  Otherwise simctl strips the stale signature (and
+            # can omit unlisted resources such as fluxara-campaign.xml),
+            # leaving an app that launchd cannot execute.
+            COMMAND /usr/bin/codesign --force --sign -
+                "$<TARGET_BUNDLE_DIR:supertuxkart>")
         set_target_properties(supertuxkart PROPERTIES
             OUTPUT_NAME "Fluxara Drift"
             XCODE_GENERATE_SCHEME TRUE
             MACOSX_BUNDLE_INFO_PLIST ${PROJECT_SOURCE_DIR}/data/SuperTuxKart-Info-iOS.plist
+            XCODE_ATTRIBUTE_SDKROOT ${FLUXARA_IOS_PLATFORM}
+            XCODE_ATTRIBUTE_SUPPORTED_PLATFORMS ${FLUXARA_IOS_PLATFORM}
             XCODE_ATTRIBUTE_IPHONEOS_DEPLOYMENT_TARGET 15.0
             XCODE_ATTRIBUTE_INSTALL_PATH /Applications
             XCODE_ATTRIBUTE_SKIP_INSTALL No

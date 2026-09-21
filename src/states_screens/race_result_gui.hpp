@@ -55,6 +55,9 @@ private:
     /** Timer variable for animations. */
     float                      m_timer;
 
+    /** Simulator-only delay before an automated campaign advances. */
+    float                      m_fluxara_auto_advance_delay;
+
     /** Finite state machine for the animations:
         INIT:            Set up data structures.
         RACE_RESULT:     The rows scroll into place.

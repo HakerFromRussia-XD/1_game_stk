@@ -24,11 +24,20 @@
 #include "io/file_manager.hpp"
 #include "io/utf_writer.hpp"
 #include "io/xml_node.hpp"
+#include "karts/abstract_kart.hpp"
 #include "karts/kart_properties.hpp"
 #include "karts/kart_properties_manager.hpp"
+#include "modes/capture_the_flag.hpp"
+#include "modes/free_for_all.hpp"
+#include "modes/soccer_world.hpp"
+#include "modes/world.hpp"
 #include "online/online_player_profile.hpp"
+#include "race/race_manager.hpp"
 #include "tracks/track_manager.hpp"
+#include "states_screens/fluxara_event.hpp"
 #include "utils/string_utils.hpp"
+
+#include <algorithm>
 
 //------------------------------------------------------------------------------
 /** Constructor to create a new player that didn't exist before.
@@ -151,6 +160,24 @@ void PlayerProfile::loadRemainingData(const XMLNode *node)
     assert(m_favorite_kart_status == NULL);
     m_favorite_kart_status = new FavoriteStatus(xml_favorites, "kart");
 
+    m_fluxara_cups.clear();
+    const XMLNode* fluxara = node->getNode("fluxara-campaign");
+    if (fluxara)
+    {
+        for (unsigned int i = 0; i < fluxara->getNumNodes(); ++i)
+        {
+            const XMLNode* event = fluxara->getNode(i);
+            if (!event || event->getName() != "event")
+                continue;
+            std::string id;
+            int cups = 0;
+            event->get("id", &id);
+            event->get("cups", &cups);
+            if (!id.empty() && cups > 0)
+                m_fluxara_cups[id] = std::min(3, cups);
+        }
+    }
+
     // Fix up any potentially missing icons.
     addIcon();
 }   // loadRemainingData
@@ -269,6 +296,19 @@ void PlayerProfile::save(UTFWriter &out)
 
         if (m_achievements_status)
             m_achievements_status->save(out);
+
+        out << "      <fluxara-campaign version=\"1\">\n";
+        for (const auto& progress : m_fluxara_cups)
+        {
+            if (progress.second == 0)
+                continue;
+            out << "        <event id=\""
+                << StringUtils::xmlEncode(
+                       StringUtils::utf8ToWide(progress.first))
+                << "\" cups=\"" << std::min(3u, progress.second)
+                << "\"/>\n";
+        }
+        out << "      </fluxara-campaign>\n";
         
         
         out << "      <favorites>\n";
@@ -323,7 +363,146 @@ void PlayerProfile::raceFinished()
 {
     m_story_mode_status->raceFinished();
     m_achievements_status->onRaceEnd();
+
+    if (m_fluxara_active_event.empty() || m_fluxara_active_track.empty() ||
+        RaceManager::get()->getTrackName() != m_fluxara_active_track)
+        return;
+
+    World* world = World::getWorld();
+    AbstractKart* kart = world ? world->getPlayerKart(0) : NULL;
+    // A pause-menu abort makes StandardRace finish every kart synthetically
+    // for its result screen.  With one kart that result is otherwise a false
+    // first place, so never turn an aborted event into campaign progress.
+    bool campaign_win = world && !world->hasRaceEndedEarly() && kart &&
+        kart->getRaceResult();
+    const RaceManager::MinorRaceModeType mode =
+        RaceManager::get()->getMinorMode();
+    // The normal result UI deliberately accepts a top-half finish for races
+    // and a draw for several arena modes. Fluxara's campaign has a stronger
+    // contract: its cup means an outright win, not simply a non-loss.
+    if (campaign_win &&
+        (mode == RaceManager::MINOR_MODE_NORMAL_RACE ||
+         mode == RaceManager::MINOR_MODE_TIME_TRIAL ||
+         mode == RaceManager::MINOR_MODE_LAP_TRIAL ||
+         mode == RaceManager::MINOR_MODE_FOLLOW_LEADER ||
+         mode == RaceManager::MINOR_MODE_3_STRIKES ||
+         mode == RaceManager::MINOR_MODE_FREE_FOR_ALL))
+    {
+        campaign_win = kart->getPosition() == 1;
+    }
+    if (campaign_win && mode == RaceManager::MINOR_MODE_FREE_FOR_ALL)
+    {
+        FreeForAll* ffa = dynamic_cast<FreeForAll*>(world);
+        if (!ffa)
+            campaign_win = false;
+        else
+        {
+            const int player_score = ffa->getKartScore(kart->getWorldKartId());
+            unsigned int tied_for_first = 0;
+            for (unsigned int i = 0; i < world->getNumKarts(); ++i)
+            {
+                if (ffa->getKartScore(i) == player_score)
+                    ++tied_for_first;
+            }
+            campaign_win = tied_for_first == 1;
+        }
+    }
+    // Upstream CTF and soccer intentionally treat a draw as a non-loss for
+    // both teams. A campaign cup must mean a completed win, so any tie
+    // neither unlocks the next segment nor awards progress.
+    if (campaign_win && mode == RaceManager::MINOR_MODE_CAPTURE_THE_FLAG)
+    {
+        CaptureTheFlag* ctf = dynamic_cast<CaptureTheFlag*>(world);
+        if (!ctf)
+            campaign_win = false;
+        else if (ctf->getKartTeam(kart->getWorldKartId()) == KART_TEAM_RED)
+            campaign_win = ctf->getRedScore() > ctf->getBlueScore();
+        else
+            campaign_win = ctf->getBlueScore() > ctf->getRedScore();
+    }
+    if (campaign_win && mode == RaceManager::MINOR_MODE_SOCCER)
+    {
+        SoccerWorld* soccer = dynamic_cast<SoccerWorld*>(world);
+        if (!soccer)
+            campaign_win = false;
+        else if (soccer->getKartTeam(kart->getWorldKartId()) == KART_TEAM_RED)
+            campaign_win = soccer->getScore(KART_TEAM_RED) >
+                           soccer->getScore(KART_TEAM_BLUE);
+        else
+            campaign_win = soccer->getScore(KART_TEAM_BLUE) >
+                           soccer->getScore(KART_TEAM_RED);
+    }
+#ifdef IOS_STK
+#if 0 // AUTOPLAY ACCEPTANCE — disabled for human play; retained for a future lab run.
+    // TEMPORARY VALIDATION OVERRIDE — DELETE AFTER THE SIMULATOR ACCEPTANCE
+    // RUN.  This is deliberately limited to the explicitly named private
+    // command-line switch.  It changes only the final campaign verdict after
+    // a race has ended: race physics, item handling, team-score callbacks and
+    // result calculation run unchanged and remain available for observation.
+    if (FluxaraModes::forceValidationWins())
+        campaign_win = true;
+#endif
+#endif
+    if (campaign_win)
+    {
+        unsigned int cups = std::min(3u,
+            unsigned(RaceManager::get()->getDifficulty()) + 1u);
+#ifdef IOS_STK
+#if 0 // AUTOPLAY ACCEPTANCE — disabled for human play; retained for a future lab run.
+        // TEMPORARY ACCEPTANCE AWARD — DELETE WITH
+        // FluxaraModes::forceValidationWins() AFTER THE SIMULATOR RUN.
+        // This is the single test-only grant point: after the ordinary race
+        // result is final, record the maximum three cups instead of Novice's
+        // one. No world, physics, item, score or result code is modified.
+        if (FluxaraModes::forceValidationWins())
+            cups = 3;
+#endif
+#endif
+        unsigned int& saved = m_fluxara_cups[m_fluxara_active_event];
+        if (cups > saved)
+        {
+            saved = cups;
+            PlayerManager::get()->save();
+        }
+    }
+    // The active event is cleared below, but the result screen is shown only
+    // afterwards.  Keep an in-memory verdict so the simulator campaign pass
+    // cannot advance merely because the next card happened to be unlocked.
+    m_fluxara_last_finished_event = m_fluxara_active_event;
+    m_fluxara_last_finished_event_won = campaign_win;
+    m_fluxara_active_event.clear();
+    m_fluxara_active_track.clear();
 }   // raceFinished
+
+//------------------------------------------------------------------------------
+void PlayerProfile::beginFluxaraEvent(const std::string& event_id,
+                                      const std::string& track_id)
+{
+    m_fluxara_active_event = event_id;
+    m_fluxara_active_track = track_id;
+    m_fluxara_last_finished_event.clear();
+    m_fluxara_last_finished_event_won = false;
+}
+
+//------------------------------------------------------------------------------
+unsigned int PlayerProfile::getFluxaraCups(const std::string& event_id) const
+{
+    const auto it = m_fluxara_cups.find(event_id);
+    return it == m_fluxara_cups.end() ? 0u : std::min(3u, it->second);
+}
+
+//------------------------------------------------------------------------------
+unsigned int PlayerProfile::getFluxaraCompletedCount(
+    const std::vector<std::string>& event_ids) const
+{
+    unsigned int completed = 0;
+    for (const std::string& id : event_ids)
+    {
+        if (getFluxaraCups(id) > 0)
+            ++completed;
+    }
+    return completed;
+}
 
 //------------------------------------------------------------------------------
 /** Comparison used to sort players.

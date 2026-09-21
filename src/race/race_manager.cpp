@@ -176,6 +176,9 @@ void RaceManager::reset()
  */
 void RaceManager::setDefaultAIKartList(const std::vector<std::string>& ai_list)
 {
+    // A Fluxara event supplies its complete roster. Do not leak the list from
+    // the previous event into this race.
+    m_default_ai_list.clear();
     for(unsigned int i=0; i<ai_list.size(); i++)
     {
         const std::string &name=ai_list[i];

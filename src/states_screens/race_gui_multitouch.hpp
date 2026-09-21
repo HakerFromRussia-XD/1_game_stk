@@ -20,6 +20,7 @@
 
 #include <irrString.h>
 #include <rect.h>
+#include <vector>
 #include <vector2d.h>
 
 namespace irr
@@ -64,10 +65,10 @@ private:
     video::ITexture* m_down_tex;
     video::ITexture* m_screen_tex;
 #ifdef IOS_STK
-    /** Icon-free approved Fluxara surfaces. Icons remain separate layers. */
-    video::ITexture* m_fluxara_button_blue_tex;
-    video::ITexture* m_fluxara_button_cyan_tex;
-    video::ITexture* m_fluxara_button_purple_tex;
+    /** Exact transparent exports from Figma HUD node 93:62. */
+    video::ITexture* m_fluxara_halo_idle_tex;
+    video::ITexture* m_fluxara_halo_pressed_tex;
+    std::vector<video::ITexture*> m_fluxara_powerup_tex;
 #endif
 
     void init();

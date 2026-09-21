@@ -281,6 +281,15 @@ void StateManager::onTopMostScreenChanged()
     if (GUIEngine::isNoGraphics())
         return;
 
+#ifdef IOS_STK
+    // A standalone Fluxara launch starts in MENU, so its game-state value does
+    // not change and onGameStateChange() is not called.  Request UIKit
+    // geometry once the first actual menu screen exists; direct races remain
+    // guarded by fluxaraRequestPortraitMenu() until GAME takes over.
+    if (m_game_mode == MENU)
+        fluxaraRequestPortraitMenu(true);
+#endif
+
     if (m_game_mode == MENU && GUIEngine::getCurrentScreen() != NULL)
     {
         if (GUIEngine::getCurrentScreen()->getMusic() != NULL && music_manager)

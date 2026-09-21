@@ -1469,6 +1469,49 @@ namespace GUIEngine
 
         if (clearIcons) g_loading_icons.clear();
 
+#ifdef IOS_STK
+        // Fluxara never exposes the upstream loading carousel.  Besides being
+        // visually unrelated to the product, those dynamically collected
+        // icons could briefly reveal retired STK UI while a Fluxara screen or
+        // race is being prepared.  Keep the interim frame in the same visual
+        // family as the destination and deliberately draw no legacy icons.
+        core::dimension2d<u32> fluxara_frame_size =
+            GUIEngine::getDriver()->getCurrentRenderTargetSize();
+        const bool landscape = fluxara_frame_size.Width > fluxara_frame_size.Height;
+        ITexture* fluxara_background = irr_driver->getTexture(
+            file_manager->getAsset(landscape ?
+                "gui/fluxara/race/background.png" :
+                "gui/fluxara/home/home-background.png"));
+        if (fluxara_background)
+        {
+            const core::dimension2du source_size =
+                fluxara_background->getSize();
+            draw2DImage(fluxara_background,
+                core::rect<s32>(0, 0, fluxara_frame_size.Width,
+                                 fluxara_frame_size.Height),
+                core::rect<s32>(0, 0, source_size.Width, source_size.Height),
+                nullptr, nullptr, true);
+        }
+        else
+        {
+            GL32_draw2DRectangle(SColor(255, 12, 31, 76),
+                core::rect<s32>(0, 0, fluxara_frame_size.Width,
+                                 fluxara_frame_size.Height));
+        }
+
+        gui::ScalableFont* fluxara_font = GUIEngine::getFont();
+        const float old_scale = fluxara_font->getScale();
+        fluxara_font->setScale(std::max(1.0f,
+            fluxara_frame_size.Height / 780.0f));
+        fluxara_font->draw(_("Loading"),
+            core::rect<s32>(0, fluxara_frame_size.Height / 2 - 20,
+                             fluxara_frame_size.Width,
+                             fluxara_frame_size.Height / 2 + 20),
+            SColor(255, 255, 255, 255), true, true);
+        fluxara_font->setScale(old_scale);
+        return;
+#endif
+
         g_skin->drawBgImage();
         ITexture* loading =
             irr_driver->getTexture(file_manager->getAsset(FileManager::GUI_ICON,

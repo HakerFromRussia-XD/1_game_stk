@@ -1218,11 +1218,12 @@ void IrrDriver::commonInit()
     kart_properties_manager->loadAllKarts();
     std::string startup_kart = UserConfigParams::m_default_kart;
 #ifdef IOS_STK
-    // The standalone bundle intentionally has no STK kart catalogue.  Do not
-    // mutate the saved default kart: a later motorica-stk:// launch must see
-    // exactly the same preference and full-catalogue behaviour as before.
-    if (isMotoricaStandaloneModeIOS())
-        startup_kart = "motorica_signal_pilot";
+    // A migrated install can still contain an old default-kart preference.
+    // The public Fluxara bundle has one catalogue for direct and bridge
+    // launches, so preload a bundled kart instead of the retired Signal LAB
+    // pilot whenever that saved identifier is unavailable.
+    if (!kart_properties_manager->getKart(startup_kart))
+        startup_kart = "fluxara-ace";
 #endif
     kart_properties_manager->onDemandLoadKartTextures(
         { startup_kart }, false/*unload_unused*/);

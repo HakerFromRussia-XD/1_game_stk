@@ -276,7 +276,13 @@ extern "C" {
 #include "replay/replay_recorder.hpp"
 #include "states_screens/main_menu_screen.hpp"
 #ifdef IOS_STK
+#include "states_screens/fluxara_campaign_screen.hpp"
+#include "states_screens/fluxara_event.hpp"
 #include "states_screens/fluxara_home_screen.hpp"
+#include "states_screens/fluxara_kart_screen.hpp"
+#include "states_screens/fluxara_settings_screen.hpp"
+#include "utils/fluxara_orientation_ios.hpp"
+#include <SDL.h>
 #endif
 #include "states_screens/online/networking_lobby.hpp"
 #include "states_screens/online/register_screen.hpp"
@@ -299,12 +305,102 @@ extern "C" {
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
 #include "io/rich_presence.hpp"
+#include "io/xml_node.hpp"
 
 #include <IrrlichtDevice.h>
+#include <memory>
 
 static void cleanSuperTuxKart();
 static void cleanUserConfig();
 void runUnitTests();
+
+#ifdef IOS_STK
+// Motorica Start can deep-launch a selected campaign event.  The value only
+// binds a successful direct race to its stable campaign ID; it never alters
+// the selected track or native race mode.
+static std::string g_fluxara_launch_event;
+static std::string g_fluxara_launch_screen;
+
+static bool fluxaraLaunchStartsRace()
+{
+    // This probe runs before handleCmdLine(), so g_fluxara_launch_screen has
+    // not been populated yet.  An explicit screen route wins over a stable
+    // event id: Motorica Start may ask the campaign to focus that event, but
+    // the campaign itself is still a portrait menu.
+    if (CommandLine::hasPrefix("--fluxara-screen="))
+        return false;
+
+    // iOS launch services can rewrite argv while retaining the arguments in
+    // STK's parser.  This startup probe must not consume them before the
+    // normal race route handles the same values.
+    return CommandLine::hasPrefix("--no-start-screen") ||
+           CommandLine::hasPrefix("-N") ||
+           CommandLine::hasPrefix("--race-now") ||
+           CommandLine::hasPrefix("-R") ||
+           CommandLine::hasPrefix("--track=") ||
+           CommandLine::hasPrefix("--fluxara-event=");
+}
+
+static bool fluxaraLaunchEventMatchesTrack(const std::string& event_id,
+                                           const std::string& track_id,
+                                           std::string* mode = nullptr)
+{
+    const std::string manifest = file_manager->getAsset("fluxara-campaign.xml");
+    std::unique_ptr<XMLNode> campaign(manifest.empty() ? nullptr :
+        file_manager->createXMLTree(manifest));
+    if (!campaign)
+        return false;
+    for (unsigned int i = 0; i < campaign->getNumNodes(); ++i)
+    {
+        const XMLNode* event = campaign->getNode(i);
+        if (!event || event->getName() != "event")
+            continue;
+        std::string id, track, event_mode;
+        event->get("id", &id);
+        event->get("track", &track);
+        event->get("mode", &event_mode);
+        if (id == event_id && track == track_id)
+        {
+            if (mode)
+                *mode = event_mode;
+            return true;
+        }
+    }
+    return false;
+}
+
+// Motorica Start addresses campaign races by their immutable event ID.  A
+// bridge launch need not duplicate STK's track/mode command-line internals;
+// resolve that one stable value from the packaged campaign manifest instead.
+static bool fluxaraFindLaunchEvent(const std::string& event_id,
+                                   std::string* track_id,
+                                   std::string* mode)
+{
+    const std::string manifest = file_manager->getAsset("fluxara-campaign.xml");
+    std::unique_ptr<XMLNode> campaign(manifest.empty() ? nullptr :
+        file_manager->createXMLTree(manifest));
+    if (!campaign)
+        return false;
+    for (unsigned int i = 0; i < campaign->getNumNodes(); ++i)
+    {
+        const XMLNode* event = campaign->getNode(i);
+        if (!event || event->getName() != "event")
+            continue;
+        std::string id, track, event_mode;
+        event->get("id", &id);
+        event->get("track", &track);
+        event->get("mode", &event_mode);
+        if (id != event_id || track.empty() || event_mode.empty())
+            continue;
+        if (track_id)
+            *track_id = track;
+        if (mode)
+            *mode = event_mode;
+        return true;
+    }
+    return false;
+}
+#endif
 
 // ============================================================================
 //                        gamepad visualisation screen
@@ -521,6 +617,18 @@ void setupRaceStart()
     // a current player
     PlayerManager::get()->enforceCurrentPlayer();
 
+#ifdef IOS_STK
+    // A fresh upstream profile defaults to `tux`, which is deliberately not
+    // part of the Fluxara-only bundle.  Correct that before the active player
+    // is created: otherwise a first direct campaign launch exits while trying
+    // to resolve a removed kart instead of reaching its race and result flow.
+    if (!kart_properties_manager->getKart(UserConfigParams::m_default_kart) &&
+        kart_properties_manager->getKart("fluxara-ace"))
+    {
+        UserConfigParams::m_default_kart = "fluxara-ace";
+    }
+#endif
+
     InputDevice *device = NULL;
 
     // Assign the player a device; check the command line params for preferences; by default use keyboard 0
@@ -593,6 +701,13 @@ void cmdLineHelp()
     "       --use-gamepad=N    Used in conjunction with the -N or -R option, will assign the player to the specified"
                               " gamepad. Is zero indexed.\n"
     "  -t,  --track=NAME       Start track NAME.\n"
+    "       --fluxara-event=ID Associate an immediate iOS launch with a campaign event.\n"
+    "       --fluxara-screen=home|campaign|garage|settings\n"
+    "                                  Open the selected Fluxara iOS screen.\n"
+#if 0 // AUTOPLAY ACCEPTANCE — intentionally hidden in player builds.
+    "       --fluxara-auto-campaign Run the Fluxara campaign continuously with --test-ai=-1.\n"
+    "       --fluxara-auto-smoke    Shorten only CTF in the automatic transition smoke test.\n"
+#endif
     "       --gp=NAME          Start the specified Grand Prix.\n"
     "       --add-gp-dir=DIR   Load Grand Prix files in DIR. Setting will be saved"
                               "in config.xml under additional_gp_directory. Use"
@@ -605,7 +720,9 @@ void cmdLineHelp()
     "       --aiNP=a,b,...     Use the karts a, b, ... for the AI, no additional player kart.\n"
     "       --laps=N           Define number of laps to N, if used in a server all races will use this value.\n"
     "       --mode=N           N=0 Normal, N=1 Time trial, N=2 Battle, N=3 Soccer,\n"
-    "                          N=4 Follow The Leader, N=5 Capture The Flag. In configure server use --battle-mode=n\n"
+    "                          N=4 Follow The Leader, N=5 Capture The Flag,\n"
+    "                          N=6 Three Strikes, N=7 Lap Trial, N=8 Egg Hunt.\n"
+    "                          In configure server use --battle-mode=n\n"
     "                          for battle server and --soccer-timed / goals for soccer server\n"
     "                          to control verbosely, see below:\n"
     "       --difficulty=N     N=0 Beginner, N=1 Intermediate, N=2 Expert, N=3 SuperTux.\n"
@@ -1121,6 +1238,20 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
 
     if (CommandLine::has("--no-high-scores"))
         UserConfigParams::m_no_high_scores=true;
+#ifdef IOS_STK
+    CommandLine::has("--fluxara-event", &g_fluxara_launch_event);
+    CommandLine::has("--fluxara-screen", &g_fluxara_launch_screen);
+#if 0 // AUTOPLAY ACCEPTANCE — disabled for human play; retained for a future lab run.
+    FluxaraModes::autoCampaignValidation() =
+        CommandLine::has("--fluxara-auto-campaign");
+    FluxaraModes::autoCampaignSmoke() =
+        CommandLine::has("--fluxara-auto-smoke");
+    FluxaraModes::forceValidationWins() =
+        CommandLine::has("--fluxara-validation-force-wins");
+    if (FluxaraModes::autoCampaignSmoke())
+        FluxaraModes::autoCampaignValidation() = true;
+#endif
+#endif
     if (CommandLine::has("--unit-testing"))
         UserConfigParams::m_unit_testing = true;
     if (CommandLine::has("--gamepad-debug"))
@@ -1313,6 +1444,21 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
         {
             ServerConfig::m_server_mode = 8;
             RaceManager::get()->setMinorMode(RaceManager::MINOR_MODE_CAPTURE_THE_FLAG);
+            break;
+        }
+        case 6:
+        {
+            RaceManager::get()->setMinorMode(RaceManager::MINOR_MODE_3_STRIKES);
+            break;
+        }
+        case 7:
+        {
+            RaceManager::get()->setMinorMode(RaceManager::MINOR_MODE_LAP_TRIAL);
+            break;
+        }
+        case 8:
+        {
+            RaceManager::get()->setMinorMode(RaceManager::MINOR_MODE_EASTER_EGG);
             break;
         }
         default:
@@ -1749,6 +1895,52 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
         UserConfigParams::m_race_now = true;
     }   // --race-now
 
+#ifdef IOS_STK
+    // A direct Fluxara screen is an explicit menu request.  m_no_start_screen
+    // is persisted by STK, so a previous event probe must not make a later
+    // --fluxara-screen=garage/settings/campaign launch skip its UI and reuse
+    // the last race instead.
+    if (!g_fluxara_launch_screen.empty())
+    {
+        UserConfigParams::m_no_start_screen = false;
+        UserConfigParams::m_race_now = false;
+    }
+    else if (!g_fluxara_launch_event.empty() &&
+             !CommandLine::hasPrefix("--track=") &&
+             !CommandLine::hasPrefix("-t"))
+    {
+        std::string track, mode;
+        if (fluxaraFindLaunchEvent(g_fluxara_launch_event, &track, &mode))
+        {
+            RaceManager::get()->setTrack(track);
+            RaceManager::get()->setMinorMode(FluxaraModes::nativeMode(mode));
+            RaceManager::get()->setNumLaps(1);
+            // The manifest provides a sensible battle default, while an
+            // explicit command-line roster remains authoritative.  Besides
+            // preserving STK's documented --numkarts contract, this lets the
+            // Simulator exercise the one-player result/save path without
+            // changing Motorica Start's ordinary event launch.
+            if (!CommandLine::hasPrefix("--numkarts=") &&
+                !CommandLine::hasPrefix("-k"))
+            {
+                const unsigned int karts = (mode == "free_for_all" ||
+                    mode == "three_strikes" || mode == "soccer" ||
+                    mode == "follow_leader") ? 3 : 1;
+                RaceManager::get()->setNumKarts(karts);
+            }
+            UserConfigParams::m_no_start_screen = true;
+            Log::info("main", "Resolved Fluxara event '%s' to track '%s' (%s).",
+                      g_fluxara_launch_event.c_str(), track.c_str(),
+                      mode.c_str());
+        }
+        else
+        {
+            Log::warn("main", "Unknown Fluxara event '%s'.",
+                      g_fluxara_launch_event.c_str());
+        }
+    }
+#endif
+
     if(CommandLine::has( "--use-keyboard",&n)) {
         UserConfigParams::m_default_keyboard = n;
     } //--use-keyboard
@@ -1918,6 +2110,14 @@ void initUserConfig()
     // their first-run consent prompt out of the iPhone product altogether.
     UserConfigParams::m_internet_status =
         Online::RequestManager::IPERM_NOT_ALLOWED;
+
+    // Apple's iOS Simulator exposes OpenGL ES through Apple Software
+    // Renderer, which makes a normal race run at about one frame per second.
+    // This build already ships MoltenVK, so always take the GPU-backed Vulkan
+    // path before IrrDriver creates its first device.  The assignment also
+    // migrates profiles created by earlier OpenGL-only Fluxara builds.
+    if (std::string(UserConfigParams::m_render_driver) != "vulkan")
+        UserConfigParams::m_render_driver = "vulkan";
 #endif
     // Some parts of the file manager needs user config (paths for models
     // depend on artist debug flag). So init the rest of the file manager
@@ -2231,7 +2431,7 @@ int main(int argc, char *argv[])
 #ifdef IOS_STK
     // SDL does not surface a custom URL delivered in cold launch options until
     // after native startup. Motorica Start therefore writes a five-second,
-    // one-shot URL lease immediately before opening motorica-stk://. It is
+    // one-shot URL lease immediately before opening fluxara-drive://. It is
     // consumed and deleted here; snapshots never change launch mode.
     consumeMotoricaStartLaunchRequestIOS();
     writeMotoricaGameVersionIOS();
@@ -2330,6 +2530,13 @@ int main(int argc, char *argv[])
         CommandLine::addArgsFromUserConfig();
 
         handleCmdLinePreliminary();
+
+#ifdef IOS_STK
+        // Set SDL's initial UIKit mask without consuming a race argument.
+        // Direct launches start landscape, while standalone Fluxara views
+        // start portrait. Subsequent duplicate geometry requests are ignored.
+        fluxaraPrepareInitialOrientation(!fluxaraLaunchStartsRace());
+#endif
 
         // ServerConfig will use stk_config for server version testing
         stk_config->load(file_manager->getAsset("stk_config.xml"));
@@ -2599,7 +2806,41 @@ int main(int argc, char *argv[])
             // Both direct launches and Fluxara Drive launches share one
             // offline campaign. Their only difference is the control source.
             PlayerManager::get()->enforceCurrentPlayer();
-            FluxaraHomeScreen::getInstance()->push();
+            if (g_fluxara_launch_screen == "garage")
+            {
+                FluxaraKartScreen::getInstance()->setRace(nullptr, 3, 4);
+                FluxaraKartScreen::getInstance()->push();
+            }
+            else if (g_fluxara_launch_screen == "campaign" ||
+                     FluxaraModes::autoCampaignValidation())
+            {
+                // A direct validation event opens Campaign as the visible
+                // root. Its ordinary Next route pops the result/campaign
+                // menu before returning to Campaign; without this retained
+                // Home base that pop ends the iOS main loop.
+                if (FluxaraModes::autoCampaignValidation())
+                    FluxaraHomeScreen::getInstance()->push();
+                // Motorica Start and the direct iOS bridge use stable
+                // campaign IDs, never list offsets or display names.  Resolve
+                // it after the manifest is loaded so a restart preserves the
+                // intended card and its saved cups.
+                if (!g_fluxara_launch_event.empty())
+                    FluxaraCampaignScreen::getInstance()->showEvent(
+                        g_fluxara_launch_event);
+                FluxaraCampaignScreen::getInstance()->push();
+            }
+            else if (g_fluxara_launch_screen == "settings")
+            {
+                FluxaraSettingsScreen::getInstance()->push();
+            }
+            else
+            {
+                if (!g_fluxara_launch_screen.empty() &&
+                    g_fluxara_launch_screen != "home")
+                    Log::warn("main", "Unknown Fluxara screen '%s'.",
+                              g_fluxara_launch_screen.c_str());
+                FluxaraHomeScreen::getInstance()->push();
+            }
             #else
             if(PlayerManager::getCurrentPlayer() && !
                 UserConfigParams::m_always_show_login_screen)
@@ -2632,6 +2873,122 @@ int main(int argc, char *argv[])
         else
         {
             setupRaceStart();
+#ifdef IOS_STK
+            std::string fluxara_event_mode;
+            if (!g_fluxara_launch_event.empty() &&
+                PlayerManager::getCurrentPlayer() &&
+                fluxaraLaunchEventMatchesTrack(g_fluxara_launch_event,
+                                               RaceManager::get()->getTrackName(),
+                                               &fluxara_event_mode))
+            {
+                PlayerManager::getCurrentPlayer()->beginFluxaraEvent(
+                    g_fluxara_launch_event, RaceManager::get()->getTrackName());
+
+                // The bundle intentionally omits upstream karts.  Build a
+                // complete curated roster here too: Motorica Start launches
+                // directly into a race and therefore bypasses the kart
+                // selection screen's roster setup.
+                std::vector<std::string> fluxara_ai;
+                if (FluxaraModes::hasOfflineOpponents(fluxara_event_mode))
+                {
+                    const int wanted_opponents =
+                        FluxaraModes::opponentsPerRace;
+                    const std::string player_kart =
+                        UserConfigParams::m_default_kart;
+                    for (const std::string& ident :
+                         kart_properties_manager->getAllAvailableKarts())
+                    {
+                        const KartProperties* props =
+                            kart_properties_manager->getKart(ident);
+                        if (!props || !props->isInGroup("Fluxara") ||
+                            ident == player_kart ||
+                            std::find(fluxara_ai.begin(), fluxara_ai.end(),
+                                      ident) != fluxara_ai.end())
+                            continue;
+                        fluxara_ai.push_back(ident);
+                        if (int(fluxara_ai.size()) == wanted_opponents)
+                            break;
+                    }
+                    RaceManager::get()->setNumKarts(
+                        int(fluxara_ai.size()) + 1);
+                    RaceManager::get()->setDefaultAIKartList(fluxara_ai);
+                }
+
+                // The bridge may deep-launch an event without visiting the
+                // garage.  Preserve the Ghost event contract in that path:
+                // race a replay of this exact circuit when one exists; on a
+                // first visit, record the seed run for the next launch.
+                if (fluxara_event_mode == "ghost_geometry")
+                {
+                    ReplayPlay* replay = ReplayPlay::get();
+                    replay->loadAllReplayFile();
+                    bool found_matching_ghost = false;
+                    for (unsigned int i = 0;
+                         i < replay->getNumReplayFile(); ++i)
+                    {
+                        const ReplayPlay::ReplayData& candidate =
+                            replay->getReplayData(i);
+                        if (candidate.m_track_name ==
+                                RaceManager::get()->getTrackName() &&
+                            candidate.m_minor_mode == "time-trial" &&
+                            !candidate.m_kart_list.empty())
+                        {
+                            replay->setReplayFile(i);
+                            replay->setSecondReplayFile(0, false);
+                            RaceManager::get()->setRaceGhostKarts(true);
+                            found_matching_ghost = true;
+                            break;
+                        }
+                    }
+                    if (!found_matching_ghost)
+                        RaceManager::get()->setRecordRace(true);
+                }
+                else if (fluxara_event_mode == "soccer")
+                {
+                    // The upstream --track handler deliberately resets a
+                    // soccer field to one local kart.  Restore the offline
+                    // event roster here, after command-line parsing and
+                    // before setupPlayerKartInfo() computes the AI list.
+                    // SoccerWorld requires both sides to be populated.
+                    const unsigned int ai_karts = fluxara_ai.size();
+                    RaceManager::get()->setKartTeam(0, KART_TEAM_RED);
+                    RaceManager::get()->setNumRedAI(ai_karts / 2);
+                    RaceManager::get()->setNumBlueAI(ai_karts - ai_karts / 2);
+                    // RaceManager defaults its goal target to zero, which
+                    // makes SoccerWorld declare a 0:0 match over on its
+                    // first tick.  Fluxara's local event is a real
+                    // first-to-three game, not an instantly completed route.
+                    RaceManager::get()->setMaxGoal(3);
+                }
+                else if (fluxara_event_mode == "capture_the_flag")
+                {
+                    // A zero CTF target is immediately complete upstream.
+                    // Fluxara supplies an offline CTF controller, so start a
+                    // balanced local match instead of a one-kart practice.
+                    const unsigned int ai_karts = fluxara_ai.size();
+                    RaceManager::get()->setKartTeam(0, KART_TEAM_RED);
+                    RaceManager::get()->setNumRedAI(ai_karts / 2);
+                    RaceManager::get()->setNumBlueAI(ai_karts - ai_karts / 2);
+                    RaceManager::get()->setHitCaptureTime(3,
+                        (FluxaraModes::autoCampaignValidation() &&
+                         FluxaraModes::forceValidationWins()) ? 5.0f : 180.0f);
+                }
+                else if (fluxara_event_mode == "lap_trial")
+                {
+                    // LapTrial is a countdown world.  Its default target is
+                    // zero, which reaches the result screen before a frame
+                    // of gameplay.  The Garage path uses one minute per
+                    // selected lap; direct campaign events are one lap.
+                    RaceManager::get()->setTimeTarget(60.0f);
+                }
+            }
+            else if (!g_fluxara_launch_event.empty())
+            {
+                Log::warn("main", "Ignoring Fluxara event '%s' for track '%s'.",
+                          g_fluxara_launch_event.c_str(),
+                          RaceManager::get()->getTrackName().c_str());
+            }
+#endif
             // Go straight to the race
             StateManager::get()->enterGameState();
         }

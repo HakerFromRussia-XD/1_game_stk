@@ -624,7 +624,12 @@ void MultitouchDevice::handleControls(MultitouchButton* button)
 
     if (button->type == MultitouchButtonType::BUTTON_ESCAPE)
     {
+        // BUTTON_ESCAPE already maps to PA_PAUSE_RACE.  Handling it here and
+        // then forwarding the same press to PlayerController caused a second
+        // escapePressed() in the same touch dispatch, immediately toggling
+        // the pause dialog back out of the stack.
         StateManager::get()->escapePressed();
+        return;
     }
     
     if (m_controller != NULL && !RaceManager::get()->isWatchingReplay())

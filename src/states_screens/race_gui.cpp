@@ -28,6 +28,7 @@ using namespace irr;
 #include "challenges/unlock_manager.hpp"
 #include "config/user_config.hpp"
 #include "font/font_drawer.hpp"
+#include "font/font_settings.hpp"
 #include "graphics/camera/camera.hpp"
 #include "graphics/central_settings.hpp"
 #include "graphics/2dutils.hpp"
@@ -56,6 +57,7 @@ using namespace irr;
 #include "network/protocols/client_lobby.hpp"
 #include "race/race_manager.hpp"
 #include "states_screens/race_gui_multitouch.hpp"
+#include "states_screens/fluxara_ui.hpp"
 #include "tracks/track.hpp"
 #include "tracks/track_object_manager.hpp"
 #include "utils/constants.hpp"
@@ -63,6 +65,7 @@ using namespace irr;
 #include "utils/translation.hpp"
 
 #include <algorithm>
+#include <cmath>
 
 #include <IrrlichtDevice.h>
 
@@ -71,12 +74,13 @@ namespace
 {
 float fluxaraHudScale()
 {
-    return irr_driver->getActualScreenSize().Height / 360.0f;
+    return irr_driver->getActualScreenSize().Height / 390.0f;
 }
 
-int fluxaraSafeLeft(float scale)
+int fluxaraHudOriginX(float scale)
 {
-    return irr_driver->getDevice()->getLeftPadding() + int(14.0f * scale);
+    return (int(irr_driver->getActualScreenSize().Width) -
+            int(844.0f * scale)) / 2;
 }
 
 void drawFluxaraSurface(video::ITexture* texture, const core::rect<s32>& rect)
@@ -88,6 +92,21 @@ void drawFluxaraSurface(video::ITexture* texture, const core::rect<s32>& rect)
         nullptr, nullptr, true);
 }
 
+// Figma's exported HUD cards carry the page colour in the pixels outside their
+// rounded outline.  Clip the raster to the design radius so those pixels can
+// never become a square backing plate when the value makes a card wider.
+void drawFluxaraRoundedSurface(video::ITexture* texture,
+                               const core::rect<s32>& rect, float radius)
+{
+    const FluxaraUI::Canvas canvas;
+    const float inverse_scale = 1.0f / std::max(canvas.scale, 0.001f);
+    canvas.roundedImage(texture,
+        (rect.UpperLeftCorner.X - canvas.x) * inverse_scale,
+        (rect.UpperLeftCorner.Y - canvas.y) * inverse_scale,
+        rect.getWidth() * inverse_scale, rect.getHeight() * inverse_scale,
+        radius * inverse_scale);
+}
+
 void drawFluxaraHudText(gui::ScalableFont* font, const core::stringw& text,
                         const core::rect<s32>& rect, float target_height,
                         const video::SColor& color)
@@ -95,6 +114,9 @@ void drawFluxaraHudText(gui::ScalableFont* font, const core::stringw& text,
     if (!font)
         return;
     const float old_scale = font->getScale();
+    // HUD temporarily suppresses its outline; restore this shared font state
+    // before the following menu frame can use it.
+    const bool old_black_border = font->getFontSettings()->useBlackBorder();
     const core::dimension2du measured = font->getDimension(text.c_str());
     const float fit_height = target_height /
         float(std::max(1u, measured.Height));
@@ -108,9 +130,23 @@ void drawFluxaraHudText(gui::ScalableFont* font, const core::stringw& text,
     shadow_rect.UpperLeftCorner += core::position2di(1, 2);
     shadow_rect.LowerRightCorner += core::position2di(1, 2);
     font->draw(text, shadow_rect, video::SColor(175, 3, 20, 52),
-               true, true, nullptr, true);
-    font->draw(text, rect, color, true, true, nullptr, true);
+               false, false, nullptr, true);
+    font->draw(text, rect, color, false, false, nullptr, true);
+    font->setBlackBorder(old_black_border);
     font->setScale(old_scale);
+}
+
+int fluxaraHudValueWidth(const core::stringw& value, int minimum,
+                         float scale)
+{
+    gui::ScalableFont* font = GUIEngine::getHighresDigitFont();
+    if (!font)
+        return int(minimum * scale);
+    const core::dimension2du measured = font->getDimension(value.c_str());
+    const float glyph_scale = (22.0f * scale) /
+        float(std::max(1u, measured.Height));
+    const int text_width = int(std::ceil(measured.Width * glyph_scale));
+    return std::max(int(minimum * scale), text_width + int(20 * scale));
 }
 
 void drawFluxaraHudCard(video::ITexture* texture,
@@ -118,17 +154,19 @@ void drawFluxaraHudCard(video::ITexture* texture,
                         const core::stringw& caption,
                         const core::stringw& value, float scale)
 {
-    drawFluxaraSurface(texture, rect);
-    core::rect<s32> caption_rect(rect.UpperLeftCorner.X,
-        rect.UpperLeftCorner.Y + int(4 * scale), rect.LowerRightCorner.X,
-        rect.UpperLeftCorner.Y + int(17 * scale));
-    core::rect<s32> value_rect(rect.UpperLeftCorner.X,
-        rect.UpperLeftCorner.Y + int(15 * scale), rect.LowerRightCorner.X,
+    drawFluxaraRoundedSurface(texture, rect, 18 * scale);
+    const int left = rect.UpperLeftCorner.X + int(12 * scale);
+    core::rect<s32> value_rect(left, rect.UpperLeftCorner.Y + int(8 * scale),
+        rect.LowerRightCorner.X - int(5 * scale),
+        rect.UpperLeftCorner.Y + int(32 * scale));
+    core::rect<s32> caption_rect(left,
+        rect.UpperLeftCorner.Y + int(35 * scale),
+        rect.LowerRightCorner.X - int(5 * scale),
         rect.LowerRightCorner.Y - int(4 * scale));
-    drawFluxaraHudText(GUIEngine::getSmallFont(), caption, caption_rect,
-        10 * scale, video::SColor(255, 184, 235, 255));
     drawFluxaraHudText(GUIEngine::getHighresDigitFont(), value, value_rect,
         22 * scale, video::SColor(255, 255, 255, 255));
+    drawFluxaraHudText(GUIEngine::getSmallFont(), caption, caption_rect,
+        9 * scale, video::SColor(255, 224, 245, 255));
 }
 }
 #endif
@@ -141,10 +179,12 @@ RaceGUI::RaceGUI()
 {
     m_enabled = true;
 #ifdef IOS_STK
-    m_fluxara_hud_blue = irr_driver->getTexture(
-        file_manager->getAsset("gui/fluxara/home/button-settings.png"));
-    m_fluxara_hud_cyan = irr_driver->getTexture(
-        file_manager->getAsset("gui/fluxara/home/button-garage.png"));
+    m_fluxara_counter_small = irr_driver->getTexture(
+        file_manager->getAsset("gui/fluxara/hud/counter-small.png"));
+    m_fluxara_counter_time = irr_driver->getTexture(
+        file_manager->getAsset("gui/fluxara/hud/counter-time.png"));
+    m_fluxara_minimap_panel = irr_driver->getTexture(
+        file_manager->getAsset("gui/fluxara/hud/minimap-panel.png"));
 #endif
     
     if (UserConfigParams::m_artist_debug_mode && UserConfigParams::m_hide_gui)
@@ -302,29 +342,21 @@ void RaceGUI::calculateMinimapSize()
     m_map_height            = (int)(map_size * scaling);
 
 #ifdef IOS_STK
-    // Fluxara uses one fixed landscape HUD grid. The legacy touch override
-    // pushed the map to 95% of the screen width after sizing it, placing it
-    // below the right action column. Anchor it between the status row and the
-    // action cluster instead.
+    // Exact 844 x 390 Figma HUD grid (node 100:2): the minimap is above the
+    // right-side controls and its transparent Figma panel scales with it.
     if (m_multitouch_gui != NULL &&
-        !m_multitouch_gui->isSpectatorMode() &&
-        RaceManager::get()->getNumLocalPlayers() == 1)
+        !m_multitouch_gui->isSpectatorMode())
     {
-        const int screen_width = irr_driver->getActualScreenSize().Width;
         const int screen_height = irr_driver->getActualScreenSize().Height;
         const float hud_scale = fluxaraHudScale();
-        const int right_padding = irr_driver->getDevice()->getRightPadding();
-        const int margin = int(14.0f * hud_scale);
-        const int map_top = int(62.0f * hud_scale);
-        const int map_size_px = core::clamp(int(screen_height * 0.235f),
-                                            int(76 * hud_scale),
-                                            int(104 * hud_scale));
-        m_map_width = map_size_px;
-        m_map_height = map_size_px;
-        m_map_left = screen_width - right_padding - margin - map_size_px;
-        m_map_bottom = std::max(0, screen_height - map_top - map_size_px);
-        m_minimap_ai_size = std::max(9, int(map_size_px * 0.13f));
-        m_minimap_player_size = std::max(13, int(map_size_px * 0.18f));
+        const int origin_x = fluxaraHudOriginX(hud_scale);
+        m_map_width = int(46 * hud_scale);
+        m_map_height = int(60 * hud_scale);
+        m_map_left = origin_x + int(746 * hud_scale);
+        m_map_bottom = std::max(0, screen_height - int(20 * hud_scale) -
+                                     m_map_height);
+        m_minimap_ai_size = std::max(3, int(5 * hud_scale));
+        m_minimap_player_size = std::max(4, int(7 * hud_scale));
         m_map_rendered_width = 256;
         m_map_rendered_height = 256;
         return;
@@ -441,8 +473,6 @@ void RaceGUI::renderGlobal(float dt)
             drawGlobalMusicDescription();
         }
     }
-#endif
-
     if (!m_is_tutorial)
     {
         if (m_multitouch_gui != NULL)
@@ -460,6 +490,7 @@ void RaceGUI::renderGlobal(float dt)
             drawGlobalPlayerIcons(0);
         }
     }
+#endif
     FontDrawer::endBatching();
 #endif
 }   // renderGlobal
@@ -528,7 +559,13 @@ void RaceGUI::drawGlobalTimer()
 {
     assert(World::getWorld() != NULL);
 
-    if (!World::getWorld()->shouldDrawTimer())
+    // Fluxara owns the iOS counter row.  Arena modes can suppress STK's
+    // stock timer, but that must not suppress the Figma card entirely.
+    if (!World::getWorld()->shouldDrawTimer()
+#ifdef IOS_STK
+        && (m_multitouch_gui == NULL || m_multitouch_gui->isSpectatorMode())
+#endif
+       )
     {
         return;
     }
@@ -579,15 +616,24 @@ void RaceGUI::drawGlobalTimer()
 
 #ifdef IOS_STK
     if (m_multitouch_gui != NULL &&
-        !m_multitouch_gui->isSpectatorMode() &&
-        RaceManager::get()->getNumLocalPlayers() == 1)
+        !m_multitouch_gui->isSpectatorMode())
     {
+        core::stringw fluxara_time = sw;
+        if (use_digit_font)
+        {
+            // The approved HUD uses a compact MM:SS value. Milliseconds made
+            // the value spill outside the fixed glossy card on iPhone.
+            fluxara_time = core::stringw(
+                StringUtils::timeToString(elapsed_time, 0).c_str());
+        }
         const float scale = fluxaraHudScale();
-        const int left = fluxaraSafeLeft(scale) + int(140 * scale);
-        const int top = int(12 * scale);
-        const core::rect<s32> card(left, top, left + int(94 * scale),
-                                   top + int(44 * scale));
-        drawFluxaraHudCard(m_fluxara_hud_blue, card, L"TIME", sw, scale);
+        const int left = fluxaraHudOriginX(scale) + int(184 * scale);
+        const int top = int(11 * scale);
+        const int width = fluxaraHudValueWidth(fluxara_time, 120, scale);
+        const core::rect<s32> card(left, top, left + width,
+                                   top + int(58 * scale));
+        drawFluxaraHudCard(m_fluxara_counter_time, card, L"TIME", fluxara_time,
+                           scale);
         return;
     }
 #endif
@@ -716,15 +762,10 @@ void RaceGUI::drawGlobalMiniMap()
 
 #ifdef IOS_STK
     if (m_multitouch_gui != NULL &&
-        !m_multitouch_gui->isSpectatorMode() &&
-        RaceManager::get()->getNumLocalPlayers() == 1)
+        !m_multitouch_gui->isSpectatorMode())
     {
-        const int frame = std::max(5, int(5 * fluxaraHudScale()));
-        const core::rect<s32> panel(dest.UpperLeftCorner.X - frame,
-            dest.UpperLeftCorner.Y - frame,
-            dest.LowerRightCorner.X + frame,
-            dest.LowerRightCorner.Y + frame);
-        drawFluxaraSurface(m_fluxara_hud_blue, panel);
+        drawFluxaraRoundedSurface(m_fluxara_minimap_panel, dest,
+                                  13 * fluxaraHudScale());
     }
 #endif
 
@@ -1416,23 +1457,22 @@ void RaceGUI::drawLap(const AbstractKart* kart,
 
 #ifdef IOS_STK
     if (m_multitouch_gui != NULL &&
-        !m_multitouch_gui->isSpectatorMode() &&
-        RaceManager::get()->getNumLocalPlayers() == 1 &&
-        viewport.UpperLeftCorner.X == 0 &&
-        viewport.UpperLeftCorner.Y == 0 &&
-        viewport.LowerRightCorner.X ==
-            int(irr_driver->getActualScreenSize().Width) &&
-        viewport.LowerRightCorner.Y ==
-            int(irr_driver->getActualScreenSize().Height))
+        !m_multitouch_gui->isSpectatorMode())
     {
+        // UIKit can reserve a camera viewport around the sensor housing while
+        // the 2D overlay still spans the complete render target.  Testing
+        // viewport == render target here therefore sent CTF/Ghost back to the
+        // legacy STK score and lap art.  One local player is the relevant
+        // guard: it keeps split-screen out while every Fluxara race mode uses
+        // the approved shared counter row.
         const float hud_scale = fluxaraHudScale();
-        const int left = fluxaraSafeLeft(hud_scale);
-        const int top = int(12 * hud_scale);
-        const int width = int(64 * hud_scale);
-        const int height = int(44 * hud_scale);
-        const int gap = int(6 * hud_scale);
+        const int left = fluxaraHudOriginX(hud_scale) + int(34 * hud_scale);
+        const int top = int(11 * hud_scale);
+        const int height = int(58 * hud_scale);
+        const int gap = int(9 * hud_scale);
 
         const bool show_rank = world->shouldDrawSpeedometerDigit();
+        int rank_width = 0;
         if (show_rank)
         {
             const std::pair<int, video::SColor> rank =
@@ -1440,8 +1480,9 @@ void RaceGUI::drawLap(const AbstractKart* kart,
             core::stringw rank_value(rank.first);
             rank_value += L"/";
             rank_value += core::stringw(RaceManager::get()->getNumberOfKarts());
-            drawFluxaraHudCard(m_fluxara_hud_cyan,
-                core::rect<s32>(left, top, left + width, top + height),
+            rank_width = fluxaraHudValueWidth(rank_value, 66, hud_scale);
+            drawFluxaraHudCard(m_fluxara_counter_small,
+                core::rect<s32>(left, top, left + rank_width, top + height),
                 L"POS", rank_value, hud_scale);
         }
 
@@ -1478,9 +1519,10 @@ void RaceGUI::drawLap(const AbstractKart* kart,
         {
             caption = L"ROUND";
         }
-        const int second_left = show_rank ? left + width + gap : left;
-        drawFluxaraHudCard(m_fluxara_hud_blue,
-            core::rect<s32>(second_left, top, second_left + width,
+        const int second_left = show_rank ? left + rank_width + gap : left;
+        const int second_width = fluxaraHudValueWidth(value, 66, hud_scale);
+        drawFluxaraHudCard(m_fluxara_counter_small,
+            core::rect<s32>(second_left, top, second_left + second_width,
                             top + height), caption, value, hud_scale);
         return;
     }

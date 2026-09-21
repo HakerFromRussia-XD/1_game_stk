@@ -22,9 +22,7 @@
 #ifdef IOS_STK
 #include "input/motorica_game_control_ios.hpp"
 #include "race/race_manager.hpp"
-#include "states_screens/dialogs/download_assets.hpp"
-#include "states_screens/main_menu_screen.hpp"
-#include "utils/extract_mobile_assets.hpp"
+#include "states_screens/fluxara_home_screen.hpp"
 #endif
 
 namespace
@@ -86,21 +84,12 @@ extern "C" bool handle_motorica_game_control_event(SDL_Event& event)
         if (StateManager::get()->getGameState() == GUIEngine::GAME)
             RaceManager::get()->exitRace();
 
-        if (ExtractMobileAssets::isFullAssetsInstalled())
-        {
-            ExtractMobileAssets::reinit();
-            StateManager::get()->resetAndGoToScreen(
-                MainMenuScreen::getInstance());
-        }
-        else
-        {
-            // Replace the currently visible standalone screen before showing
-            // the download gate. This is important for warm launches from
-            // Motorica Start while Motorica Signal LAB is already running.
-            StateManager::get()->resetAndGoToScreen(
-                MainMenuScreen::getInstance());
-            new DownloadAssets();
-        }
+        // Fluxara Drive owns the entire iOS public flow. A warm handoff from
+        // Motorica Start enables its input bridge, then returns to Fluxara
+        // Home; it must never reveal the inherited STK catalogue or asset
+        // download gate.
+        StateManager::get()->resetAndGoToScreen(
+            FluxaraHomeScreen::getInstance());
     }
     return handled;
 #endif

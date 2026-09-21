@@ -93,6 +93,9 @@ namespace GUIEngine
         /** Makes the model rotate at given speed (in degrees per second) */
         void setRotateContinuously(float speed);
 
+        /** Applies an immediate horizontal-drag rotation in degrees. */
+        void rotateBy(float degrees);
+
         /** Rotate to 'targetAngle' in degrees at given speed (in degrees per second) */
         void setRotateTo(float targetAngle, float speed);
 

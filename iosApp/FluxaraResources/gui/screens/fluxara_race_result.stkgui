@@ -4,7 +4,6 @@
 <stkgui>
     <button id="fluxara-again" x="12%" y="69%" width="76%" height="11%" raw_text="Play again"/>
     <button id="fluxara-next" x="12%" y="80%" width="76%" height="12%" raw_text="Next"/>
-    <button id="fluxara-list" x="21%" y="93%" width="58%" height="5%" raw_text="Campaign"/>
     <div x="0" y="0" width="100%" height="100%" layout="vertical-row">
         <div id="result-table" width="100%" height="74%" align="center"/>
         <buttonbar id="operations" width="68%" height="20%" align="center">

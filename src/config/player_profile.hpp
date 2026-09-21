@@ -30,6 +30,8 @@
 using namespace irr;
 
 #include <string>
+#include <map>
+#include <vector>
 
 class AchievementsStatus;
 namespace Online
@@ -121,6 +123,16 @@ private:
     /** The favorite karts selected by this player. */
     FavoriteStatus *m_favorite_kart_status;
 
+    /** Fluxara campaign progress, keyed by stable manifest event id. */
+    std::map<std::string, unsigned int> m_fluxara_cups;
+    std::string m_fluxara_active_event;
+    std::string m_fluxara_active_track;
+    // Result state is deliberately transient.  The result screen needs it
+    // after raceFinished() has released the active event, while progress
+    // itself remains represented solely by the saved cup map above.
+    std::string m_fluxara_last_finished_event;
+    bool m_fluxara_last_finished_event_won = false;
+
 public:
 
     PlayerProfile(const core::stringw &name, bool is_guest = false);
@@ -133,6 +145,15 @@ public:
     int getUseFrequency() const { return m_use_frequency; }
     bool operator<(const PlayerProfile &other);
     void raceFinished();
+    void beginFluxaraEvent(const std::string& event_id,
+                           const std::string& track_id);
+    const std::string& getLastFluxaraFinishedEvent() const
+    { return m_fluxara_last_finished_event; }
+    bool didLastFluxaraEventWin() const
+    { return m_fluxara_last_finished_event_won; }
+    unsigned int getFluxaraCups(const std::string& event_id) const;
+    unsigned int getFluxaraCompletedCount(
+        const std::vector<std::string>& event_ids) const;
     void saveSession(int user_id, const std::string &token);
     void clearSession(bool save=true);
     void addIcon();

@@ -2,12 +2,63 @@
 #include <SDL.h>
 #import <UIKit/UIKit.h>
 
+namespace
+{
+bool g_fluxara_orientation_initialized = false;
+bool g_fluxara_orientation_portrait = true;
+// The initial SDL hint is consumed before UIKit has a view controller that
+// can receive a geometry request.  Remember whether the current orientation
+// has subsequently been requested from the foreground scene as well.
+bool g_fluxara_geometry_requested = false;
+// STK constructs its initial menu stack while an immediate race is still
+// loading.  That transient MENU state must not overwrite a landscape hint
+// that was supplied before SDL created its iOS window.
+bool g_fluxara_initial_race_pending = false;
+
+void setSDLOutputOrientation(bool portrait)
+{
+    SDL_SetHint(SDL_HINT_ORIENTATIONS,
+                portrait ? "Portrait" : "LandscapeLeft LandscapeRight");
+}
+}
+
+void fluxaraPrepareInitialOrientation(bool portrait)
+{
+    // SDL reads this hint while creating its UIKit view controller.  Setting
+    // it later rotates UIKit without rotating the already-created renderer.
+    g_fluxara_orientation_initialized = true;
+    g_fluxara_orientation_portrait = portrait;
+    g_fluxara_initial_race_pending = !portrait;
+    g_fluxara_geometry_requested = false;
+    setSDLOutputOrientation(portrait);
+}
+
+bool fluxaraInitialOrientationIsPortrait()
+{
+    return g_fluxara_orientation_portrait;
+}
+
 void fluxaraRequestPortraitMenu(bool portrait)
 {
+    // A direct race briefly visits MENU during STK's bootstrap.  Ignoring only
+    // that one portrait request keeps SDL's first framebuffer landscape.  The
+    // first GAME request clears the guard, so results and every later menu
+    // still restore portrait normally.
+    if (g_fluxara_initial_race_pending && portrait)
+        return;
+    if (!portrait)
+        g_fluxara_initial_race_pending = false;
+    if (g_fluxara_orientation_initialized &&
+        g_fluxara_orientation_portrait == portrait &&
+        g_fluxara_geometry_requested)
+        return;
+
+    g_fluxara_geometry_requested = true;
+    g_fluxara_orientation_initialized = true;
+    g_fluxara_orientation_portrait = portrait;
     dispatch_async(dispatch_get_main_queue(), ^{
         // SDL's view controller consults this hint for its supported mask.
-        SDL_SetHint(SDL_HINT_ORIENTATIONS,
-                    portrait ? "Portrait" : "LandscapeLeft LandscapeRight");
+        setSDLOutputOrientation(portrait);
         const UIInterfaceOrientationMask mask = portrait
             ? UIInterfaceOrientationMaskPortrait : UIInterfaceOrientationMaskLandscape;
         UIApplication* application = [UIApplication sharedApplication];

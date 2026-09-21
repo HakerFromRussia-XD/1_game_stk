@@ -81,6 +81,8 @@ public:
     static void init(unsigned int argc, char *argv[]);
     static void addArgsFromUserConfig();
     static void reportInvalidParameters();
+    /** Checks an unconsumed prefix without removing it. */
+    static bool hasPrefix(const std::string& prefix);
     static bool has(const std::string &option);
     // ------------------------------------------------------------------------
     /** Searches for an option 'option=XX'. If found, *value will contain 'XX'.

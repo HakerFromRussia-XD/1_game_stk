@@ -106,9 +106,10 @@ private:
     irr::video::ITexture *m_speed_bar_icon;
 
 #ifdef IOS_STK
-    /** Approved Fluxara button surfaces reused as compact HUD cards. */
-    irr::video::ITexture *m_fluxara_hud_blue;
-    irr::video::ITexture *m_fluxara_hud_cyan;
+    /** Exact Figma 100:2 surfaces for the race counters and minimap. */
+    irr::video::ITexture *m_fluxara_counter_small;
+    irr::video::ITexture *m_fluxara_counter_time;
+    irr::video::ITexture *m_fluxara_minimap_panel;
 #endif
 
     /** Animation state: none, getting smaller (old value),

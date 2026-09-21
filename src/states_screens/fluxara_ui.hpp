@@ -200,7 +200,10 @@ struct Canvas
                float width, float height, float point_size,
                const irr::core::recti* clip = nullptr) const
     {
-        auto* font = GUIEngine::getTitleFont();
+        // Fluxara's Figma type is the skin's normal Baloo face.  The upstream
+        // title face is a synthetic BoldFace with an STK-style dark outline;
+        // using it here would leak that treatment into every Fluxara screen.
+        auto* font = GUIEngine::getFont();
         const float saved = font->getScale();
         font->setScale(1.0f);
         const auto size = font->getDimension(text.c_str());
