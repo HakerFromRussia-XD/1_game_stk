@@ -797,6 +797,15 @@ else()
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/po/ru.po")
         # The generated mobile asset snapshot may contain the retired
         # Motorica-only content. Fluxara ships its curated content instead.
+        # Xcode signs before this post-build overlay.  Simulator bundles need
+        # an ad-hoc signature after the overlay; physical-device bundles must
+        # retain Xcode's provisioned Developer signature.
+        set(FLUXARA_IOS_FINAL_SIGN_COMMAND)
+        if (FLUXARA_IOS_PLATFORM STREQUAL "iphonesimulator")
+            list(APPEND FLUXARA_IOS_FINAL_SIGN_COMMAND
+                COMMAND /usr/bin/codesign --force --sign -
+                "$<TARGET_BUNDLE_DIR:supertuxkart>")
+        endif()
         add_custom_command(TARGET supertuxkart POST_BUILD
             COMMAND ${CMAKE_COMMAND} -E rm -rf
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/tracks/motorica_signal_lab"
@@ -851,13 +860,7 @@ else()
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/challenges/motorica_reaction.challenge"
             COMMAND ${CMAKE_COMMAND} -E rm -f
                 "$<TARGET_BUNDLE_DIR:supertuxkart>/data/challenges/motorica_signal_hold.challenge"
-            # Xcode signs before CMake's POST_BUILD overlay.  Sign the final
-            # Simulator bundle once more after every copied/removed Fluxara
-            # resource.  Otherwise simctl strips the stale signature (and
-            # can omit unlisted resources such as fluxara-campaign.xml),
-            # leaving an app that launchd cannot execute.
-            COMMAND /usr/bin/codesign --force --sign -
-                "$<TARGET_BUNDLE_DIR:supertuxkart>")
+            ${FLUXARA_IOS_FINAL_SIGN_COMMAND})
         set_target_properties(supertuxkart PROPERTIES
             OUTPUT_NAME "Fluxara Drift"
             XCODE_GENERATE_SCHEME TRUE
