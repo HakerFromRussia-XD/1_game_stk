@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 
 #include "input/motorica_game_control.hpp"
 
@@ -10,7 +10,7 @@
 #include "guiengine/modaldialog.hpp"
 #include "input/input.hpp"
 #include "karts/controller/controller.hpp"
-#if defined(ANDROID) || defined(IOS_STK)
+#if defined(ANDROID) || defined(IOS_FLUXARA_DRIFT)
 #include "SDL_events.h"
 #endif
 #ifdef ANDROID
@@ -19,7 +19,7 @@
 #include "states_screens/state_manager.hpp"
 #include "utils/time.hpp"
 #include "utils/log.hpp"
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "input/motorica_game_control_ios.hpp"
 #include "race/race_manager.hpp"
 #include "states_screens/fluxara_home_screen.hpp"
@@ -44,7 +44,7 @@ namespace
         if (event_type == (Uint32)-1)
         {
             Log::error("MotoricaGameControl",
-                "[BLE stk-game debug] android recovery event registration failed");
+                "[BLE fluxara_drift-game debug] android recovery event registration failed");
             return;
         }
 
@@ -53,14 +53,14 @@ namespace
         if (SDL_PushEvent(&event) <= 0)
         {
             Log::error("MotoricaGameControl",
-                "[BLE stk-game debug] android recovery event enqueue failed: %s",
+                "[BLE fluxara_drift-game debug] android recovery event enqueue failed: %s",
                 SDL_GetError());
         }
     }
 #endif
 }
 
-#if defined(ANDROID) || defined(IOS_STK)
+#if defined(ANDROID) || defined(IOS_FLUXARA_DRIFT)
 extern "C" bool handle_motorica_game_control_event(SDL_Event& event)
 {
 #ifdef ANDROID
@@ -86,7 +86,7 @@ extern "C" bool handle_motorica_game_control_event(SDL_Event& event)
 
         // Fluxara Drive owns the entire iOS public flow. A warm handoff from
         // Motorica Start enables its input bridge, then returns to Fluxara
-        // Home; it must never reveal the inherited STK catalogue or asset
+        // Home; it must never reveal the inherited FLUXARA_DRIFT catalogue or asset
         // download gate.
         StateManager::get()->resetAndGoToScreen(
             FluxaraHomeScreen::getInstance());
@@ -117,15 +117,15 @@ void MotoricaGameControl::updateSnapshot(int open_level, int close_level,
     m_open_level.store(std::max(0, std::min(open_level, 255)));
     m_close_level.store(std::max(0, std::min(close_level, 255)));
     m_connected.store(connected);
-    m_receive_time_ms.store(StkTime::getMonoTimeMs());
+    m_receive_time_ms.store(FluxaraDriftTime::getMonoTimeMs());
     m_seq.store(seq);
     if (connected && m_loss_handled.load() &&
         !m_restore_pending.exchange(true))
     {
         Log::info("MotoricaGameControl",
-            "[BLE stk-game debug] native recovery pending seq=%llu",
+            "[BLE fluxara_drift-game debug] native recovery pending seq=%llu",
             (unsigned long long)seq);
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
         flushMotoricaConnectionRestoreUiIOS();
 #elif defined(ANDROID)
         scheduleMotoricaConnectionRestoreUiAndroid();
@@ -134,7 +134,7 @@ void MotoricaGameControl::updateSnapshot(int open_level, int close_level,
     if (!connected || seq <= 3 || seq % 30 == 0)
     {
         Log::info("MotoricaGameControl",
-            "[BLE stk-game debug] native update seq=%llu open=%d close=%d connected=%d",
+            "[BLE fluxara_drift-game debug] native update seq=%llu open=%d close=%d connected=%d",
             (unsigned long long)seq, m_open_level.load(),
             m_close_level.load(), connected ? 1 : 0);
     }
@@ -150,7 +150,7 @@ void MotoricaGameControl::handleConnectionLost(uint64_t seq, uint64_t age_ms,
         return;
 
     Log::info("MotoricaGameControl",
-        "[BLE stk-game debug] native connection lost seq=%llu reason=%s ageMs=%llu",
+        "[BLE fluxara_drift-game debug] native connection lost seq=%llu reason=%s ageMs=%llu",
         (unsigned long long)seq, reason, (unsigned long long)age_ms);
 
     m_pause_pending.store(true);
@@ -164,7 +164,7 @@ void MotoricaGameControl::checkConnectionTimeout()
     if (received == 0)
         return;
 
-    const uint64_t now = StkTime::getMonoTimeMs();
+    const uint64_t now = FluxaraDriftTime::getMonoTimeMs();
     const uint64_t age_ms = now > received ? now - received : 0;
     if (m_connected.load() && age_ms <= STALE_TIMEOUT_MS)
         return;
@@ -180,11 +180,11 @@ void MotoricaGameControl::flushConnectionLossUi()
 
     if (StateManager::get()->getGameState() == GUIEngine::GAME)
         StateManager::get()->escapePressed();
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     showMotoricaConnectionLostDialogIOS();
 #endif
     Log::info("MotoricaGameControl",
-        "[BLE stk-game debug] native connection loss ui shown seq=%llu",
+        "[BLE fluxara_drift-game debug] native connection loss ui shown seq=%llu",
         (unsigned long long)m_seq.load());
 }
 
@@ -193,7 +193,7 @@ void MotoricaGameControl::flushConnectionRestoreUi()
     if (!m_restore_pending.exchange(false))
         return;
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     dismissMotoricaConnectionLostDialogIOS();
     if (GUIEngine::ModalDialog::isADialogActive())
         GUIEngine::ModalDialog::dismiss();
@@ -204,7 +204,7 @@ void MotoricaGameControl::flushConnectionRestoreUi()
     m_pause_pending.store(false);
     m_loss_handled.store(false);
     Log::info("MotoricaGameControl",
-        "[BLE stk-game debug] native recovery applied seq=%llu",
+        "[BLE fluxara_drift-game debug] native recovery applied seq=%llu",
         (unsigned long long)m_seq.load());
 }
 
@@ -221,9 +221,9 @@ void MotoricaGameControl::apply(Controller* controller)
     if (!controller)
         return;
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // APP_STORE_STANDALONE_TEMP: direct icon launches use standard touch,
-    // accelerometer or gyroscope steering. A motorica-stk:// launch enables
+    // accelerometer or gyroscope steering. A motorica-fluxara_drift:// launch enables
     // the existing Motorica Start control, connection dialog and pause flow.
     if (!isMotoricaGameControlEnabledIOS())
         return;
@@ -235,13 +235,13 @@ void MotoricaGameControl::apply(Controller* controller)
         if (!logged_disabled)
         {
             Log::info("MotoricaGameControl",
-                "[BLE stk-game debug] apply disabled motorica_emg_steering=0");
+                "[BLE fluxara_drift-game debug] apply disabled motorica_emg_steering=0");
             logged_disabled = true;
         }
         return;
     }
 
-    const uint64_t now = StkTime::getMonoTimeMs();
+    const uint64_t now = FluxaraDriftTime::getMonoTimeMs();
     const uint64_t received = m_receive_time_ms.load();
     const bool active = m_connected.load() &&
         received > 0 && now - received <= STALE_TIMEOUT_MS;
@@ -256,7 +256,7 @@ void MotoricaGameControl::apply(Controller* controller)
         {
             last_logged_apply_seq = seq;
             Log::info("MotoricaGameControl",
-                "[BLE stk-game debug] apply inactive seq=%llu connected=%d ageMs=%llu",
+                "[BLE fluxara_drift-game debug] apply inactive seq=%llu connected=%d ageMs=%llu",
                 (unsigned long long)seq, m_connected.load() ? 1 : 0,
                 (unsigned long long)(received > 0 ? now - received : 0));
         }
@@ -281,7 +281,7 @@ void MotoricaGameControl::apply(Controller* controller)
         {
             last_logged_apply_seq = seq;
             Log::info("MotoricaGameControl",
-                "[BLE stk-game debug] apply deadzone seq=%llu diff=%d open=%d close=%d",
+                "[BLE fluxara_drift-game debug] apply deadzone seq=%llu diff=%d open=%d close=%d",
                 (unsigned long long)seq, diff, m_open_level.load(),
                 m_close_level.load());
         }
@@ -297,7 +297,7 @@ void MotoricaGameControl::apply(Controller* controller)
         {
             last_logged_apply_seq = seq;
             Log::info("MotoricaGameControl",
-                "[BLE stk-game debug] apply left seq=%llu diff=%d value=%d open=%d close=%d",
+                "[BLE fluxara_drift-game debug] apply left seq=%llu diff=%d value=%d open=%d close=%d",
                 (unsigned long long)seq, diff, value, m_open_level.load(),
                 m_close_level.load());
         }
@@ -313,7 +313,7 @@ void MotoricaGameControl::apply(Controller* controller)
         {
             last_logged_apply_seq = seq;
             Log::info("MotoricaGameControl",
-                "[BLE stk-game debug] apply right seq=%llu diff=%d value=%d open=%d close=%d",
+                "[BLE fluxara_drift-game debug] apply right seq=%llu diff=%d value=%d open=%d close=%d",
                 (unsigned long long)seq, diff, value, m_open_level.load(),
                 m_close_level.load());
         }
@@ -351,5 +351,5 @@ bool MotoricaGameControl::isConnected() const
 {
     const uint64_t received = m_receive_time_ms.load();
     return m_connected.load() && received > 0 &&
-        StkTime::getMonoTimeMs() - received <= STALE_TIMEOUT_MS;
+        FluxaraDriftTime::getMonoTimeMs() - received <= STALE_TIMEOUT_MS;
 }

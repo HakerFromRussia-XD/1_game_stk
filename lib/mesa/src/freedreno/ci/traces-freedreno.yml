@@ -13,7 +13,7 @@ text: |-
     portal:               16.29s
     counterstrike-source: 14.24s
     xonotic:              13.46s
-    stk:                  11.15s
+    fluxara_drift:                  11.15s
     0ad:                  10.93s
     counterstrike:         9.87s
     neverball:             8.53s
@@ -130,7 +130,7 @@ traces:
       checksum: 491a16f1f9bf8bc467fadbc8439c1a2a
       text: causes GPU hangs on turnip+zink too, see https://gitlab.freedesktop.org/mesa/mesa/-/issues/7732
 
-  supertuxkart/supertuxkart-mansion-egl-gles-v2.trace:
+  fluxaradrift/fluxaradrift-mansion-egl-gles-v2.trace:
     freedreno-a306:
       checksum: 1ae49af7017ae2a08fbb1caf377ada91
       label: [skip, slow]
@@ -151,7 +151,7 @@ traces:
           apitrace: warning: caught signal 11
           74882: error: caught an unhandled exception
         Source:
-        https://gallo.pages.freedesktop.org/-/mesa/-/jobs/38460939/artifacts/results/summary/results/trace@zink-a618@supertuxkart@supertuxkart-mansion-egl-gles-v2.trace.html
+        https://gallo.pages.freedesktop.org/-/mesa/-/jobs/38460939/artifacts/results/summary/results/trace@zink-a618@fluxaradrift@fluxaradrift-mansion-egl-gles-v2.trace.html
     zink-a630:
       checksum: 5cd30bb46cbabc0d77cc4aacbcd7c0c2
 
@@ -763,7 +763,7 @@ traces:
       checksum: 502c7cb7bcb47e9ccc9ce18897ac7ae5
 
 
-  supertuxkart/supertuxkart-antediluvian-abyss.rdc:
+  fluxaradrift/fluxaradrift-antediluvian-abyss.rdc:
     freedreno-a306:
       label: [unsupported]
     freedreno-a530:
@@ -779,7 +779,7 @@ traces:
       label: [fail]
       text: OpenGL ES 3.x replay context - required for replay
 
-  supertuxkart/supertuxkart-menu.rdc:
+  fluxaradrift/fluxaradrift-menu.rdc:
     freedreno-a306:
       label: [unsupported]
     freedreno-a530:
@@ -793,7 +793,7 @@ traces:
     zink-a630:
       label: [fail]
 
-  supertuxkart/supertuxkart-ravenbridge-mansion.rdc:
+  fluxaradrift/fluxaradrift-ravenbridge-mansion.rdc:
     freedreno-a306:
       label: [unsupported]
     freedreno-a530:

@@ -234,7 +234,7 @@ namespace irr
 		void initKeycodes();
 		void storeMouseLocation();
 		void postMouseEvent(void *event, irr::SEvent &ievent);
-		void postKeyEvent(void *event, irr::SEvent &ievent, bool pressed);
+		void pofluxara_drifteyEvent(void *event, irr::SEvent &ievent, bool pressed);
 		void charToKeys(void* str, irr::u32& character, irr::u32& key_code);
 		void pollJoysticks();
 

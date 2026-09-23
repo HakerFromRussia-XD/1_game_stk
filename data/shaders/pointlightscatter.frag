@@ -10,7 +10,7 @@ flat in vec4 direction_scale_offset;
 
 out vec4 Fog;
 
-#stk_include "utils/getPosFromUVDepth.frag"
+#fluxara_drift_include "utils/getPosFromUVDepth.frag"
 
 void main()
 {

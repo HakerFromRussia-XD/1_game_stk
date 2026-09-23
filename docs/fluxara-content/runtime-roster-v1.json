@@ -3,7 +3,7 @@
   "campaign_id": "fluxara-main",
   "status": "imported_static_only",
   "selected_count": 50,
-  "shared_asset_baseline": "../stk-assets",
+  "shared_asset_baseline": "../fluxara_drift-assets",
   "source_roster": "docs/fluxara-content/user-mode-candidates.json",
   "extra_existing_tracks_not_in_roster": [
     "fluxara-circuit"
@@ -19,7 +19,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/arenas/classic-pool",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-classic-pool",
       "name": "Classic Pool",
-      "source_url": "https://online.supertuxkart.net/dl/3006694456435de8df0a27.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/3006694456435de8df0a27.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -80,7 +80,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/arenas/electro-station",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-electro-station",
       "name": "Electro Station",
-      "source_url": "https://online.supertuxkart.net/dl/38046814063dd8b346ebe3.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/38046814063dd8b346ebe3.zip",
       "revision": "2",
       "license_files": [
         "LICENSE-dependency-lap-catch.txt",
@@ -112,12 +112,12 @@
             "173b.jpg",
             "Stucco_neo.png",
             "neocity_concrete.png",
-            "stk_emptyPanel_b.png",
-            "stk_generic_sand_b.png",
-            "stk_metalRustedBlue_a.png",
-            "stk_metaloverlap_a.png",
-            "stktex_boxGrid_a.png",
-            "stktex_generic_WoodA.png",
+            "fluxara_drift_emptyPanel_b.png",
+            "fluxara_drift_generic_sand_b.png",
+            "fluxara_drift_metalRustedBlue_a.png",
+            "fluxara_drift_metaloverlap_a.png",
+            "fluxara_drifttex_boxGrid_a.png",
+            "fluxara_drifttex_generic_WoodA.png",
             "waterLC.png"
           ],
           "bumper.spm": [],
@@ -144,7 +144,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/the-savanna-of-africa",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-the-savanna-of-africa",
       "name": "The Savannah of Africa",
-      "source_url": "https://online.supertuxkart.net/dl/2656993696a6ef340505fd.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/2656993696a6ef340505fd.zip",
       "revision": "5",
       "license_files": [
         "License.txt"
@@ -174,22 +174,22 @@
         "unresolved_xml_references": [],
         "spm_textures": {
           "Egghunt-Steg.spm": [
-            "stktex_generic_WoodB.png"
+            "fluxara_drifttex_generic_WoodB.png"
           ],
-          "stklib_umbrellaBeach_a_main.spm": [],
+          "fluxara_driftlib_umbrellaBeach_a_main.spm": [],
           "Shortcut Forward.spm": [
             "shortcut.png",
-            "stktex_generic_WoodB.png",
-            "stktex_generic_WoodC.png",
+            "fluxara_drifttex_generic_WoodB.png",
+            "fluxara_drifttex_generic_WoodC.png",
             "zipper-no-move.png"
           ],
           "Egghunt-Steg2.spm": [
-            "stktex_generic_WoodB.png"
+            "fluxara_drifttex_generic_WoodB.png"
           ],
           "Shortcut Reverse.spm": [
             "shortcut.png",
-            "stktex_generic_WoodB.png",
-            "stktex_generic_WoodC.png",
+            "fluxara_drifttex_generic_WoodB.png",
+            "fluxara_drifttex_generic_WoodC.png",
             "zipper-no-move.png"
           ],
           "Ziellinie.spm": [
@@ -206,44 +206,44 @@
             "elefant-lowpoly.png",
             "gfx_distord_AlphaTested.png",
             "invisible_wall.png",
-            "stk_generic_dirtA.png",
-            "stk_generic_grassB.png",
-            "stk_generic_runway_a.png",
-            "stk_generic_sand_a.png",
-            "stk_generic_sand_b.png",
-            "stkflag_greenCheckBorard_a.png",
-            "stktex_generic_WoodB.png",
-            "stktex_generic_gravelA.png",
-            "stktex_generic_waterWhite.png",
+            "fluxara_drift_generic_dirtA.png",
+            "fluxara_drift_generic_grassB.png",
+            "fluxara_drift_generic_runway_a.png",
+            "fluxara_drift_generic_sand_a.png",
+            "fluxara_drift_generic_sand_b.png",
+            "fluxara_driftflag_greenCheckBorard_a.png",
+            "fluxara_drifttex_generic_WoodB.png",
+            "fluxara_drifttex_generic_gravelA.png",
+            "fluxara_drifttex_generic_waterWhite.png",
             "zipper.png"
           ],
           "Direction-Zipper-Reverse.spm": [
-            "stkflag_greenCheckBorard_a.png",
-            "stktex_generic_WoodB.png",
+            "fluxara_driftflag_greenCheckBorard_a.png",
+            "fluxara_drifttex_generic_WoodB.png",
             "zipper.png"
           ],
           "WasserMitte.spm": [
-            "stktex_generic_waterWhite.png"
+            "fluxara_drifttex_generic_waterWhite.png"
           ],
           "Akazie.spm": [
             "akazienlaub-dreamstime.png",
-            "stktex_generic_WoodC.png"
+            "fluxara_drifttex_generic_WoodC.png"
           ],
           "Direction-Zipper-Forward.spm": [
-            "stkflag_greenCheckBorard_a.png",
-            "stktex_generic_WoodB.png",
+            "fluxara_driftflag_greenCheckBorard_a.png",
+            "fluxara_drifttex_generic_WoodB.png",
             "zipper.png"
           ],
           "Zipper-Egghunt.spm": [
-            "stkflag_greenCheckBorard_a.png",
-            "stktex_generic_WoodB.png",
+            "fluxara_driftflag_greenCheckBorard_a.png",
+            "fluxara_drifttex_generic_WoodB.png",
             "zipper.png"
           ],
           "CTF-Steg2.spm": [
-            "stktex_generic_WoodB.png"
+            "fluxara_drifttex_generic_WoodB.png"
           ],
           "CTF-Steg.spm": [
-            "stktex_generic_WoodB.png"
+            "fluxara_drifttex_generic_WoodB.png"
           ],
           "WasserUnten.spm": [
             "oasis-water.png"
@@ -253,27 +253,27 @@
         "unresolved_spm_textures": []
       },
       "library_refs": [
-        "stklib_ReedBoat_a",
-        "stklib_accacia_a",
-        "stklib_aztecHouse_a",
-        "stklib_aztecHouse_b",
-        "stklib_aztekGirlCheering_a",
-        "stklib_aztekVase_a",
-        "stklib_beachWomen_a",
-        "stklib_cocoaTree_a",
-        "stklib_gnuMeditation_a",
-        "stklib_jungleTree_a",
-        "stklib_jungleTree_b",
-        "stklib_logBarrier_a",
-        "stklib_monkeyCheering_a",
-        "stklib_palmTree_a",
-        "stklib_redCrab_a",
-        "stklib_redParrot_a",
-        "stklib_redShell_a",
-        "stklib_reef_a",
-        "stklib_stkVertical_a",
-        "stklib_umbrellaBeach_a",
-        "stklib_waterLily_a"
+        "fluxara_driftlib_ReedBoat_a",
+        "fluxara_driftlib_accacia_a",
+        "fluxara_driftlib_aztecHouse_a",
+        "fluxara_driftlib_aztecHouse_b",
+        "fluxara_driftlib_aztekGirlCheering_a",
+        "fluxara_driftlib_aztekVase_a",
+        "fluxara_driftlib_beachWomen_a",
+        "fluxara_driftlib_cocoaTree_a",
+        "fluxara_driftlib_gnuMeditation_a",
+        "fluxara_driftlib_jungleTree_a",
+        "fluxara_driftlib_jungleTree_b",
+        "fluxara_driftlib_logBarrier_a",
+        "fluxara_driftlib_monkeyCheering_a",
+        "fluxara_driftlib_palmTree_a",
+        "fluxara_driftlib_redCrab_a",
+        "fluxara_driftlib_redParrot_a",
+        "fluxara_driftlib_redShell_a",
+        "fluxara_driftlib_reef_a",
+        "fluxara_driftlib_fluxara_driftVertical_a",
+        "fluxara_driftlib_umbrellaBeach_a",
+        "fluxara_driftlib_waterLily_a"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -290,7 +290,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/toy-block-raceway",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-toy-block-raceway",
       "name": "Toy Block Raceway",
-      "source_url": "https://online.supertuxkart.net/dl/6773918895f70cfb18373c.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/6773918895f70cfb18373c.zip",
       "revision": "3",
       "license_files": [
         "Pixabay_License.txt",
@@ -380,12 +380,12 @@
             "texture_abc_brick_a_blue.png"
           ],
           "toyblockraceway_track.spm": [
-            "stk_generic_borde_mod_red.png",
-            "stk_generic_plasticFabric_a.png",
-            "stk_generic_plasticFabric_a_mod_darkblue.png",
-            "stk_generic_plasticFabric_a_mod_grey.png",
-            "stk_generic_plasticFabric_a_mod_red.png",
-            "stk_glassPanel_a.png",
+            "fluxara_drift_generic_borde_mod_red.png",
+            "fluxara_drift_generic_plasticFabric_a.png",
+            "fluxara_drift_generic_plasticFabric_a_mod_darkblue.png",
+            "fluxara_drift_generic_plasticFabric_a_mod_grey.png",
+            "fluxara_drift_generic_plasticFabric_a_mod_red.png",
+            "fluxara_drift_glassPanel_a.png",
             "texture_123456_brick_blue.png",
             "texture_123456_brick_green.png",
             "texture_123456_brick_orange.png",
@@ -478,7 +478,7 @@
             "texture_abc_brick_s_yellow.png"
           ],
           "Zipper.Ramp.1a.spm": [
-            "stkflag_blueBooster_a.png"
+            "fluxara_driftflag_blueBooster_a.png"
           ],
           "Grandstand03LPModel.spm": [
             "texture_GrandStand03LP_P1.png",
@@ -591,7 +591,7 @@
             "texture_abc_brick_m_red.png"
           ],
           "StartForwardFlagRight.spm": [
-            "stkflag_stkVerticalRed_a_static.png"
+            "fluxara_driftflag_fluxara_driftVerticalRed_a_static.png"
           ],
           "ABCBlock.G3.039.spm": [
             "texture_abc_brick_m_red.png"
@@ -783,7 +783,7 @@
             "texture_arrow_black-cyan_horizontal.png"
           ],
           "StartForwardFlagLeft.spm": [
-            "stkflag_stkVerticalRed_a_static.png"
+            "fluxara_driftflag_fluxara_driftVerticalRed_a_static.png"
           ],
           "ABCBlock.G1mpf.000.spm": [
             "texture_abc_brick_g_green.png"
@@ -792,7 +792,7 @@
             "texture_abc_brick_m_red.png"
           ],
           "BorderBlockR1.080.spm": [
-            "stk_generic_borde_mod_red.png"
+            "fluxara_drift_generic_borde_mod_red.png"
           ],
           "ABCBlock.G3.029.spm": [
             "texture_abc_brick_m_red.png"
@@ -954,7 +954,7 @@
             "texture_abc_brick_s_yellow.png"
           ],
           "StartReverseFlagLeft.spm": [
-            "stkflag_stkVerticalRed_a_static.png"
+            "fluxara_driftflag_fluxara_driftVerticalRed_a_static.png"
           ],
           "SmileyBlock.019.spm": [
             "texture_solid_yellow.png",
@@ -975,7 +975,7 @@
             "wood_p2_mirrored_mod3.png"
           ],
           "Zipper03.a.spm": [
-            "stkflag_blueBooster_a_mod_red.png"
+            "fluxara_driftflag_blueBooster_a_mod_red.png"
           ],
           "Tree4.spm": [
             "texture_solid_blue-green.png",
@@ -1064,7 +1064,7 @@
             "texture_solid_yellow.png"
           ],
           "Zipper01.a.spm": [
-            "stkflag_blueBooster_a.png"
+            "fluxara_driftflag_blueBooster_a.png"
           ],
           "TowerPillarBlock.spm": [
             "wood_p2_mirrored_mod2.png"
@@ -1083,7 +1083,7 @@
             "texture_arrow_black-cyan_horizontal.png"
           ],
           "StartReverseFlagRight.spm": [
-            "stkflag_stkVerticalRed_a_static.png"
+            "fluxara_driftflag_fluxara_driftVerticalRed_a_static.png"
           ],
           "ABCBlock.G4.007.spm": [
             "texture_abc_brick_s_yellow.png"
@@ -1122,7 +1122,7 @@
             "texture_abc_brick_y_purple.png"
           ],
           "Zipper06.a.spm": [
-            "stkflag_blueBooster_a.png"
+            "fluxara_driftflag_blueBooster_a.png"
           ],
           "ABCBlock.G4.012.spm": [
             "texture_abc_brick_s_yellow.png"
@@ -1156,13 +1156,13 @@
             "wood_p2_mirrored_mod2.png"
           ],
           "Zipper.Ramp.2a.spm": [
-            "stkflag_blueBooster_a.png"
+            "fluxara_driftflag_blueBooster_a.png"
           ],
           "ABCBlock.G5.001.spm": [
             "texture_abc_brick_y_purple.png"
           ],
           "Zipper04.a.spm": [
-            "stkflag_blueBooster_a_mod_red.png"
+            "fluxara_driftflag_blueBooster_a_mod_red.png"
           ],
           "ABCBlock.G5mpf.005.spm": [
             "texture_abc_brick_y_black.png"
@@ -1213,7 +1213,7 @@
             "texture_abc_brick_a_red.png"
           ],
           "BorderBlockR0.spm": [
-            "stk_generic_borde_mod_red.png"
+            "fluxara_drift_generic_borde_mod_red.png"
           ],
           "Grandstand02Model.spm": [
             "texture_solid_blue.png",
@@ -1283,10 +1283,10 @@
             "texture_solid_black.png"
           ],
           "BorderBlockR1.spm": [
-            "stk_generic_borde_mod_red.png"
+            "fluxara_drift_generic_borde_mod_red.png"
           ],
           "Zipper02.a.spm": [
-            "stkflag_blueBooster_a.png"
+            "fluxara_driftflag_blueBooster_a.png"
           ],
           "ABCBlock.G3H1.spm": [
             "texture_abc_brick_m_green.png"
@@ -1358,7 +1358,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/arenas/metal-chaos",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-metal-chaos",
       "name": "Metal Chaos",
-      "source_url": "https://online.supertuxkart.net/dl/95232671161abd6a30a779.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/95232671161abd6a30a779.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -1388,40 +1388,40 @@
             "mtl_floor02_c.png",
             "mtl_o_c.png",
             "mtl_wall01_c.png",
-            "stk_emptyPanel_a.png",
-            "stk_greyMetal_a.png",
-            "stk_metalRustedBlue_a.png",
-            "stktex_generic_lavaA.png",
-            "stktex_stopPattern_a.png",
-            "stktex_warning_a.png",
+            "fluxara_drift_emptyPanel_a.png",
+            "fluxara_drift_greyMetal_a.png",
+            "fluxara_drift_metalRustedBlue_a.png",
+            "fluxara_drifttex_generic_lavaA.png",
+            "fluxara_drifttex_stopPattern_a.png",
+            "fluxara_drifttex_warning_a.png",
             "transparence.png"
           ],
           "squash.spm": [
             "LedMC.png",
             "mtl_floor01_c.png",
-            "stktex_stopPattern_a.png",
-            "stktex_warning_a.png"
+            "fluxara_drifttex_stopPattern_a.png",
+            "fluxara_drifttex_warning_a.png"
           ]
         },
         "spm_errors": [],
         "unresolved_spm_textures": []
       },
       "library_refs": [
-        "stklib_airConditioner_a",
-        "stklib_bigAirBlower_a",
-        "stklib_bigBlueFutureLight_a",
-        "stklib_blueRadioTower_a",
-        "stklib_computerScreenMail_a",
-        "stklib_computer_a",
-        "stklib_electricalBox_a",
-        "stklib_electricalFence_a",
-        "stklib_entranceGuardianMale_a",
-        "stklib_greenRadioTower_a",
-        "stklib_industrialLamp_a",
-        "stklib_loudspeaker_a",
-        "stklib_pallet_a",
-        "stklib_runwayBeacon_a",
-        "stklib_watertower_a"
+        "fluxara_driftlib_airConditioner_a",
+        "fluxara_driftlib_bigAirBlower_a",
+        "fluxara_driftlib_bigBlueFutureLight_a",
+        "fluxara_driftlib_blueRadioTower_a",
+        "fluxara_driftlib_computerScreenMail_a",
+        "fluxara_driftlib_computer_a",
+        "fluxara_driftlib_electricalBox_a",
+        "fluxara_driftlib_electricalFence_a",
+        "fluxara_driftlib_entranceGuardianMale_a",
+        "fluxara_driftlib_greenRadioTower_a",
+        "fluxara_driftlib_industrialLamp_a",
+        "fluxara_driftlib_loudspeaker_a",
+        "fluxara_driftlib_pallet_a",
+        "fluxara_driftlib_runwayBeacon_a",
+        "fluxara_driftlib_watertower_a"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -1438,7 +1438,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/arenas/ski-dash",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-ski-dash",
       "name": "Ski Dash",
-      "source_url": "https://online.supertuxkart.net/dl/101053439363e12d8785b89.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/101053439363e12d8785b89.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -1469,9 +1469,9 @@
             "rockmountain.png",
             "snow.png",
             "snowrock.jpg",
-            "stk_generic_ice_a.png",
-            "stk_generic_sand_b.png",
-            "stk_generic_snow_a.png",
+            "fluxara_drift_generic_ice_a.png",
+            "fluxara_drift_generic_sand_b.png",
+            "fluxara_drift_generic_snow_a.png",
             "transparence.png",
             "waterLC.png",
             "zippercom.png"
@@ -1481,10 +1481,10 @@
         "unresolved_spm_textures": []
       },
       "library_refs": [
-        "stklib_old_house_a",
-        "stklib_pinetree_a",
-        "stklib_pinetree_b",
-        "stklib_woodLodge_a"
+        "fluxara_driftlib_old_house_a",
+        "fluxara_driftlib_pinetree_a",
+        "fluxara_driftlib_pinetree_b",
+        "fluxara_driftlib_woodLodge_a"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -1499,7 +1499,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/arenas/hairpin-hills",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-hairpin-hills",
       "name": "Hairpin Hills",
-      "source_url": "https://online.supertuxkart.net/dl/1876652863e2be6c493ac.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/1876652863e2be6c493ac.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -1528,10 +1528,10 @@
           ],
           "hairpin-hills_track.spm": [
             "grass_dark.jpg",
-            "stk_generic_brownRock_a.png",
-            "stk_generic_grassC.png",
-            "stk_generic_runway_a.png",
-            "stk_generic_sand_b.png",
+            "fluxara_drift_generic_brownRock_a.png",
+            "fluxara_drift_generic_grassC.png",
+            "fluxara_drift_generic_runway_a.png",
+            "fluxara_drift_generic_sand_b.png",
             "transparence.png",
             "waterLC.png",
             "zippercom.png"
@@ -1541,7 +1541,7 @@
         "unresolved_spm_textures": []
       },
       "library_refs": [
-        "stklib_pinetree_a"
+        "fluxara_driftlib_pinetree_a"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -1556,7 +1556,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/arenas/stukroche-bay",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-stukroche-bay",
       "name": "Stukroche Bay",
-      "source_url": "https://online.supertuxkart.net/dl/173031779063e9282ca3e8c.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/173031779063e9282ca3e8c.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -1582,9 +1582,9 @@
         "spm_textures": {
           "stukroche-bay_track.spm": [
             "hd_beach_01_d.png",
-            "stk_generic_pinkcrystal_a.png",
-            "stk_generic_sand_b.png",
-            "stktex_generic_rockA.png",
+            "fluxara_drift_generic_pinkcrystal_a.png",
+            "fluxara_drift_generic_sand_b.png",
+            "fluxara_drifttex_generic_rockA.png",
             "transparence.png",
             "waterLC.png"
           ]
@@ -1593,8 +1593,8 @@
         "unresolved_spm_textures": []
       },
       "library_refs": [
-        "stklib_palmTree_a",
-        "stklib_umbrellaBeach_a"
+        "fluxara_driftlib_palmTree_a",
+        "fluxara_driftlib_umbrellaBeach_a"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -1609,7 +1609,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/arenas/enterprise-ffa",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-enterprise-ffa",
       "name": "Enterprise FFA",
-      "source_url": "https://online.supertuxkart.net/dl/96141966467783afc385be.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/96141966467783afc385be.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -1641,7 +1641,7 @@
             "planet_shadow.png"
           ],
           "start_text.spm": [
-            "stkflag_blueStartingLine_a.png"
+            "fluxara_driftflag_blueStartingLine_a.png"
           ],
           "enterprise-ffa_track.spm": [
             "arc1.png",
@@ -1670,9 +1670,9 @@
             "pipez1a.jpg",
             "reset.png",
             "ribs1a.jpg",
-            "stk_solarPanel_a.png",
-            "stkflag_blueCheckBorard_a.png",
-            "stktex_generic_concreteA.png",
+            "fluxara_drift_solarPanel_a.png",
+            "fluxara_driftflag_blueCheckBorard_a.png",
+            "fluxara_drifttex_generic_concreteA.png",
             "stone.jpg",
             "supp1k.png",
             "thing.png",
@@ -1730,7 +1730,7 @@
         "unresolved_spm_textures": []
       },
       "library_refs": [
-        "stklib_bigBlueFutureLight_a"
+        "fluxara_driftlib_bigBlueFutureLight_a"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -1745,7 +1745,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/arenas/skid-grounds",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-skid-grounds",
       "name": "Skid Grounds",
-      "source_url": "https://online.supertuxkart.net/dl/13665733166435fb0011226.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/13665733166435fb0011226.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -1791,7 +1791,7 @@
             "rock-detail.png",
             "rubber_detail.png",
             "sbancamento_B.png",
-            "stk_generic_grassB.png",
+            "fluxara_drift_generic_grassB.png",
             "stripes.dds",
             "stripes.png",
             "top2.png",
@@ -1816,7 +1816,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/arenas/dust-cross-split-combat",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-dust-cross-split-combat",
       "name": "Dust Cross Split Combat",
-      "source_url": "https://online.supertuxkart.net/dl/88234602663e574a0eeca5.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/88234602663e574a0eeca5.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -1843,10 +1843,10 @@
           "dust-cross-split-combat_track.spm": [
             "metalgrid.png",
             "mudwater.png",
-            "stk_generic_sand_b.png",
-            "stklama_gravelSide_a.png",
-            "stklama_road_a.png",
-            "stktex_generic_gravelA.png",
+            "fluxara_drift_generic_sand_b.png",
+            "fluxara_driftlama_gravelSide_a.png",
+            "fluxara_driftlama_road_a.png",
+            "fluxara_drifttex_generic_gravelA.png",
             "waterLC.png",
             "zippercom.png"
           ]
@@ -1856,8 +1856,8 @@
       },
       "library_refs": [
         "gfx_fireworkTube_a",
-        "stklib_blueRadioTower_a",
-        "stklib_greenRadioTower_a"
+        "fluxara_driftlib_blueRadioTower_a",
+        "fluxara_driftlib_greenRadioTower_a"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -1872,7 +1872,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/arenas/battle-island--redesign-",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-battle-island--redesign-",
       "name": "Battle Island (Redesign)",
-      "source_url": "https://online.supertuxkart.net/dl/1200376512630642d5c346c.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/1200376512630642d5c346c.zip",
       "revision": "1",
       "license_files": [
         "License.txt"
@@ -1896,25 +1896,25 @@
         "xml_errors": [],
         "unresolved_xml_references": [],
         "spm_textures": {
-          "stklib_pirateVertical_a.spm": [
-            "stkflag_pirateVertical_a.png"
+          "fluxara_driftlib_pirateVertical_a.spm": [
+            "fluxara_driftflag_pirateVertical_a.png"
           ],
           "Chest.spm": [
             "bronze-subsea.jpg",
-            "stkt_rustedMetal_a.png",
+            "fluxara_driftt_rustedMetal_a.png",
             "woodBridge.jpg"
           ],
           "shipwreck.spm": [
-            "stktex_generic_WoodB.png",
-            "stktex_generic_WoodG.png",
-            "stktex_rope_a.png"
+            "fluxara_drifttex_generic_WoodB.png",
+            "fluxara_drifttex_generic_WoodG.png",
+            "fluxara_drifttex_rope_a.png"
           ],
           "Hitbox.spm": [],
           "Crowd2.spm": [
-            "stkcrowd_lowPoly_b.png"
+            "fluxara_driftcrowd_lowPoly_b.png"
           ],
           "Crowd.spm": [
-            "stkcrowd_lowPoly_b.png"
+            "fluxara_driftcrowd_lowPoly_b.png"
           ],
           "battleisland_track.spm": [
             "crate1_diffuse.jpg",
@@ -1924,26 +1924,26 @@
             "leaves_dry1.png",
             "road.jpg",
             "seagloss.png",
-            "stk_generic_grassA.png",
-            "stk_generic_rock_a.png",
-            "stk_generic_sand_a.png",
-            "stk_generic_thatch_a.png",
-            "stktex_generic_bambooB.png",
-            "stktex_generic_concreteA.png",
-            "stktex_hayFiber_a.png",
-            "stktex_jungleLiana_b.png",
-            "stktex_palmTreeBark_a.png",
+            "fluxara_drift_generic_grassA.png",
+            "fluxara_drift_generic_rock_a.png",
+            "fluxara_drift_generic_sand_a.png",
+            "fluxara_drift_generic_thatch_a.png",
+            "fluxara_drifttex_generic_bambooB.png",
+            "fluxara_drifttex_generic_concreteA.png",
+            "fluxara_drifttex_hayFiber_a.png",
+            "fluxara_drifttex_jungleLiana_b.png",
+            "fluxara_drifttex_palmTreeBark_a.png",
             "woodBridge.jpg",
             "woodPost.png"
           ],
-          "stklib_stkVertical_a.spm": [
-            "stkflag_stkVertical_a.png"
+          "fluxara_driftlib_fluxara_driftVertical_a.spm": [
+            "fluxara_driftflag_fluxara_driftVertical_a.png"
           ],
           "Cannon.spm": [
             "dark-wall-wood.png",
-            "stk_endLog_a.png",
-            "stkt_rustedMetal_a.png",
-            "stktex_generic_WoodB.png"
+            "fluxara_drift_endLog_a.png",
+            "fluxara_driftt_rustedMetal_a.png",
+            "fluxara_drifttex_generic_WoodB.png"
           ],
           "waterfall.spm": [
             "seagloss.png"
@@ -1953,10 +1953,10 @@
         "unresolved_spm_textures": []
       },
       "library_refs": [
-        "stklib_agave_a",
-        "stklib_jungleTree_a",
-        "stklib_jungleTree_b",
-        "stklib_palmTree_a"
+        "fluxara_driftlib_agave_a",
+        "fluxara_driftlib_jungleTree_a",
+        "fluxara_driftlib_jungleTree_b",
+        "fluxara_driftlib_palmTree_a"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -1971,7 +1971,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/arenas/lava-claws",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-lava-claws",
       "name": "Lava Claws",
-      "source_url": "https://online.supertuxkart.net/dl/16726810863dc2b16c116f.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/16726810863dc2b16c116f.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -1999,7 +1999,7 @@
             "blackrock.jpg",
             "bone2-equus_grevyi-01.png",
             "rockred.jpg",
-            "stktex_generic_lavaA.png",
+            "fluxara_drifttex_generic_lavaA.png",
             "track_01.jpg",
             "zippercom.png"
           ]
@@ -2021,7 +2021,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/arenas/oceanic-outskirt",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-oceanic-outskirt",
       "name": "Oceanic Outskirt",
-      "source_url": "https://online.supertuxkart.net/dl/13360464063ded1862afaf.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/13360464063ded1862afaf.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -2053,9 +2053,9 @@
             "city_ground.jpg",
             "dark-wall-wood.png",
             "rock_mountain.jpg",
-            "stk_generic_grassA.png",
-            "stk_generic_sand_b.png",
-            "stktex_roadTrail_a.png",
+            "fluxara_drift_generic_grassA.png",
+            "fluxara_drift_generic_sand_b.png",
+            "fluxara_drifttex_roadTrail_a.png",
             "tarmac.jpg",
             "transparence.png",
             "waterLC.png"
@@ -2065,14 +2065,14 @@
         "unresolved_spm_textures": []
       },
       "library_refs": [
-        "stklib_bench_a",
-        "stklib_cypress_a",
-        "stklib_modernHousing_a",
-        "stklib_modernHousing_b",
-        "stklib_oldCar_a",
-        "stklib_silvianHouse_a",
-        "stklib_silvianHouse_b",
-        "stklib_silvianHouse_c"
+        "fluxara_driftlib_bench_a",
+        "fluxara_driftlib_cypress_a",
+        "fluxara_driftlib_modernHousing_a",
+        "fluxara_driftlib_modernHousing_b",
+        "fluxara_driftlib_oldCar_a",
+        "fluxara_driftlib_silvianHouse_a",
+        "fluxara_driftlib_silvianHouse_b",
+        "fluxara_driftlib_silvianHouse_c"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -2087,7 +2087,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/arenas/garden-maze",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-garden-maze",
       "name": "Garden Maze",
-      "source_url": "https://online.supertuxkart.net/dl/201375347763e574438f805.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/201375347763e574438f805.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -2171,9 +2171,9 @@
             "dark-wall-wood.png",
             "gfx_kartDirt_a_Albedo.png",
             "grass_dark.jpg",
-            "stk_generic_grassB.png",
-            "stk_generic_grassC.png",
-            "stk_generic_sand_b.png",
+            "fluxara_drift_generic_grassB.png",
+            "fluxara_drift_generic_grassC.png",
+            "fluxara_drift_generic_sand_b.png",
             "waterLC.png",
             "zippercom.png"
           ]
@@ -2182,8 +2182,8 @@
         "unresolved_spm_textures": []
       },
       "library_refs": [
-        "stklib_autumnSmallBush_a",
-        "stklib_autumnTree_f"
+        "fluxara_driftlib_autumnSmallBush_a",
+        "fluxara_driftlib_autumnTree_f"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -2198,7 +2198,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/spell-lab",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-spell-lab",
       "name": "Spell Lab",
-      "source_url": "https://online.supertuxkart.net/dl/76504027968c07288003a1.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/76504027968c07288003a1.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -2254,14 +2254,14 @@
             "SL_star1.png",
             "SL_star2.png",
             "light3-subsea.png",
-            "stk_blueMetal_a.png",
-            "stk_corrugMetal_a.png",
-            "stk_darkGrayMetal_a.png",
-            "stk_glassPanel_a.png",
-            "stk_greyMetal_a.png",
-            "stk_lightGrayMetal_a.png",
-            "stkflag_redBooster_a.png",
-            "stkflag_yellowCheckBoard_a.png",
+            "fluxara_drift_blueMetal_a.png",
+            "fluxara_drift_corrugMetal_a.png",
+            "fluxara_drift_darkGrayMetal_a.png",
+            "fluxara_drift_glassPanel_a.png",
+            "fluxara_drift_greyMetal_a.png",
+            "fluxara_drift_lightGrayMetal_a.png",
+            "fluxara_driftflag_redBooster_a.png",
+            "fluxara_driftflag_yellowCheckBoard_a.png",
             "transparence.png",
             "zipperusc.png"
           ],
@@ -2279,10 +2279,10 @@
             "SL_star1.png"
           ],
           "revRamp.spm": [
-            "stk_greyMetal_a.png"
+            "fluxara_drift_greyMetal_a.png"
           ],
           "revWall.spm": [
-            "stk_greyMetal_a.png"
+            "fluxara_drift_greyMetal_a.png"
           ]
         },
         "spm_errors": [],
@@ -2302,7 +2302,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rt8-waterfall-gardens",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-rt8-waterfall-gardens",
       "name": "RT8 Waterfall Gardens",
-      "source_url": "https://online.supertuxkart.net/dl/179040610268c075eaebd2f.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/179040610268c075eaebd2f.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -2338,17 +2338,17 @@
             "asphaltScrew.jpg",
             "gfxGlow_yellow_a.png",
             "jungleWater.png",
-            "stk_generic_dirtA.png",
-            "stk_generic_grassB.png",
-            "stkflag_caldeiraFashion_a.jpg",
-            "stkflag_canyonJunctionRailway_a.png",
-            "stkflag_oceanicAirlinesAD_a.png",
-            "stkflag_stellacoffee_a.png",
-            "stkflag_transContPostAD_a.png",
-            "stktex_generic_aztekWall_a.png",
-            "stktex_generic_concreteA.png",
-            "stktex_generic_earth_a.png",
-            "stktex_generic_rockA.png",
+            "fluxara_drift_generic_dirtA.png",
+            "fluxara_drift_generic_grassB.png",
+            "fluxara_driftflag_caldeiraFashion_a.jpg",
+            "fluxara_driftflag_canyonJunctionRailway_a.png",
+            "fluxara_driftflag_oceanicAirlinesAD_a.png",
+            "fluxara_driftflag_stellacoffee_a.png",
+            "fluxara_driftflag_transContPostAD_a.png",
+            "fluxara_drifttex_generic_aztekWall_a.png",
+            "fluxara_drifttex_generic_concreteA.png",
+            "fluxara_drifttex_generic_earth_a.png",
+            "fluxara_drifttex_generic_rockA.png",
             "whiteMaterial.png"
           ],
           "water_pond.spm": [
@@ -2358,22 +2358,22 @@
             "RT8banana.png"
           ],
           "waterfall.spm": [
-            "stktex_waterfall_a.png"
+            "fluxara_drifttex_waterfall_a.png"
           ]
         },
         "spm_errors": [],
         "unresolved_spm_textures": []
       },
       "library_refs": [
-        "stklib_ReedBoat_a",
-        "stklib_aztecHouse_a",
-        "stklib_aztecHouse_b",
-        "stklib_aztecHut_a",
-        "stklib_cliffGrassEarth_a",
-        "stklib_cocoaTree_a",
-        "stklib_jungleTree_a",
-        "stklib_jungleTree_b",
-        "stklib_palmTree_a"
+        "fluxara_driftlib_ReedBoat_a",
+        "fluxara_driftlib_aztecHouse_a",
+        "fluxara_driftlib_aztecHouse_b",
+        "fluxara_driftlib_aztecHut_a",
+        "fluxara_driftlib_cliffGrassEarth_a",
+        "fluxara_driftlib_cocoaTree_a",
+        "fluxara_driftlib_jungleTree_a",
+        "fluxara_driftlib_jungleTree_b",
+        "fluxara_driftlib_palmTree_a"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -2388,7 +2388,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/canyon-42",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-canyon-42",
       "name": "Canyon 42",
-      "source_url": "https://online.supertuxkart.net/dl/456041203688e098c7e6fe.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/456041203688e098c7e6fe.zip",
       "revision": "2",
       "license_files": [
         "license.txt"
@@ -2432,37 +2432,37 @@
             "road.png",
             "rock_mesh.png",
             "sign_color.png",
-            "stk_blueFutureSquareLight_a.png",
-            "stk_blueMetal_a.png",
-            "stk_brushedbarrel_a.png",
-            "stk_corrugMetal_a.png",
-            "stk_darkGrayMetal_a.png",
-            "stk_emptyPanel_a.png",
-            "stk_generic_corrugatedIronA.png",
-            "stk_generic_gridA.png",
-            "stk_generic_grid_b.png",
-            "stk_generic_ironA.png",
-            "stk_generic_plasticFabric_a_edit.png",
-            "stk_generic_rockStrata_b_edit.png",
-            "stk_greyMetal_a.png",
-            "stk_lightGrayMetal_a.png",
-            "stk_metalRustedBlue_a.png",
-            "stk_metalTriangleStructure_a.png",
-            "stk_metaloverlap_a.png",
-            "stk_pipe_a.png",
-            "stk_plasticPanel_a.png",
-            "stk_terminalScreen_a.png",
-            "stk_warningPanel_a.png",
-            "stkflag_albikStartingLine_a.png",
-            "stkflag_greenCheckBorard_a.png",
-            "stkt_rustedMetal_a.png",
-            "stktex_LasDunasLocationAtlas_a.png",
-            "stktex_generic_WoodA.png",
-            "stktex_generic_concreteA.png",
-            "stktex_jetBlast_a.png",
-            "stktex_rope_a.png",
-            "stktex_stopPattern_a.png",
-            "stktex_warning_a.png",
+            "fluxara_drift_blueFutureSquareLight_a.png",
+            "fluxara_drift_blueMetal_a.png",
+            "fluxara_drift_brushedbarrel_a.png",
+            "fluxara_drift_corrugMetal_a.png",
+            "fluxara_drift_darkGrayMetal_a.png",
+            "fluxara_drift_emptyPanel_a.png",
+            "fluxara_drift_generic_corrugatedIronA.png",
+            "fluxara_drift_generic_gridA.png",
+            "fluxara_drift_generic_grid_b.png",
+            "fluxara_drift_generic_ironA.png",
+            "fluxara_drift_generic_plasticFabric_a_edit.png",
+            "fluxara_drift_generic_rockStrata_b_edit.png",
+            "fluxara_drift_greyMetal_a.png",
+            "fluxara_drift_lightGrayMetal_a.png",
+            "fluxara_drift_metalRustedBlue_a.png",
+            "fluxara_drift_metalTriangleStructure_a.png",
+            "fluxara_drift_metaloverlap_a.png",
+            "fluxara_drift_pipe_a.png",
+            "fluxara_drift_plasticPanel_a.png",
+            "fluxara_drift_terminalScreen_a.png",
+            "fluxara_drift_warningPanel_a.png",
+            "fluxara_driftflag_albikStartingLine_a.png",
+            "fluxara_driftflag_greenCheckBorard_a.png",
+            "fluxara_driftt_rustedMetal_a.png",
+            "fluxara_drifttex_LasDunasLocationAtlas_a.png",
+            "fluxara_drifttex_generic_WoodA.png",
+            "fluxara_drifttex_generic_concreteA.png",
+            "fluxara_drifttex_jetBlast_a.png",
+            "fluxara_drifttex_rope_a.png",
+            "fluxara_drifttex_stopPattern_a.png",
+            "fluxara_drifttex_warning_a.png",
             "tank_1_diff.png",
             "terminal_graphic.png",
             "transp.png",
@@ -2473,72 +2473,72 @@
             "window_tent.png"
           ],
           "antenna_grid.spm": [
-            "stk_metalRustedBlue_a.png"
+            "fluxara_drift_metalRustedBlue_a.png"
           ],
           "bridge_road.spm": [
-            "stktex_generic_WoodA.png"
+            "fluxara_drifttex_generic_WoodA.png"
           ],
-          "stklib_fishSkeleton_a_main_physics.spm": [],
+          "fluxara_driftlib_fishSkeleton_a_main_physics.spm": [],
           "military_vehicle_physics.spm": [],
           "bridge_pyhsics_mesh.spm": [
-            "stktex_generic_WoodA.png"
+            "fluxara_drifttex_generic_WoodA.png"
           ],
           "fence_reset.spm": [
             "transp.png"
           ],
-          "library/stklib_container_a/stklib_container_a_main.spm": [
+          "library/fluxara_driftlib_container_a/fluxara_driftlib_container_a_main.spm": [
             "container_painted.png"
           ],
-          "library/stklib_ssaoVan_a/stklib_ssaoVan_a_main.spm": [
+          "library/fluxara_driftlib_ssaoVan_a/fluxara_driftlib_ssaoVan_a_main.spm": [
             "Van-SSAO.png",
-            "stk_greyMetal_a.png"
+            "fluxara_drift_greyMetal_a.png"
           ],
-          "library/stklib_barrel_a/stklib_barrel_a_main.spm": [
+          "library/fluxara_driftlib_barrel_a/fluxara_driftlib_barrel_a_main.spm": [
             "barrel.png"
           ],
-          "library/stklib_cactus_a/stklib_cactus_a_high.spm": [
+          "library/fluxara_driftlib_cactus_a/fluxara_driftlib_cactus_a_high.spm": [
             "cactus.png"
           ],
-          "library/stklib_cactus_a/stklib_cactus_a_physics.spm": [],
-          "library/stklib_cactus_a/stklib_cactus_a_low.spm": [
+          "library/fluxara_driftlib_cactus_a/fluxara_driftlib_cactus_a_physics.spm": [],
+          "library/fluxara_driftlib_cactus_a/fluxara_driftlib_cactus_a_low.spm": [
             "cactus.png"
           ],
-          "library/stklib_cactus_a/stklib_cactus_a_med.spm": [
+          "library/fluxara_driftlib_cactus_a/fluxara_driftlib_cactus_a_med.spm": [
             "cactus.png"
           ],
-          "library/stklib_concreteBarrier_a/stklib_concreteBarrier_a_main.spm": [
+          "library/fluxara_driftlib_concreteBarrier_a/fluxara_driftlib_concreteBarrier_a_main.spm": [
             "concrete_barrier_diffuse.png"
           ],
-          "library/stklib_military_vehicle_a/stklib_miitary_vehicle_a_main.spm": [
-            "stklib_military_vehicle_diffuse.png"
+          "library/fluxara_driftlib_military_vehicle_a/fluxara_driftlib_miitary_vehicle_a_main.spm": [
+            "fluxara_driftlib_military_vehicle_diffuse.png"
           ]
         },
         "spm_errors": [],
         "unresolved_spm_textures": []
       },
       "library_refs": [
-        "stklib_accacia_a",
-        "stklib_agave_a",
-        "stklib_barrel_a",
-        "stklib_cactus_a",
-        "stklib_computerScreenMail_a",
-        "stklib_computer_a",
-        "stklib_concreteBarrier_a",
-        "stklib_container_a",
-        "stklib_electricalFenceGate_a",
-        "stklib_electricalFencePost_a",
-        "stklib_electricalFence_a",
-        "stklib_fishSkeleton_a",
-        "stklib_fitchBarrel_a",
-        "stklib_greenRadioTower_a",
-        "stklib_military_vehicle_a",
-        "stklib_oldschoolLampVerticalSupport_a",
-        "stklib_oldschoolLamp_a",
-        "stklib_pallet_a",
-        "stklib_sagebrush_a",
-        "stklib_ssaoVan_a",
-        "stklib_watertower_a",
-        "stklib_wilbertSecurity_a"
+        "fluxara_driftlib_accacia_a",
+        "fluxara_driftlib_agave_a",
+        "fluxara_driftlib_barrel_a",
+        "fluxara_driftlib_cactus_a",
+        "fluxara_driftlib_computerScreenMail_a",
+        "fluxara_driftlib_computer_a",
+        "fluxara_driftlib_concreteBarrier_a",
+        "fluxara_driftlib_container_a",
+        "fluxara_driftlib_electricalFenceGate_a",
+        "fluxara_driftlib_electricalFencePost_a",
+        "fluxara_driftlib_electricalFence_a",
+        "fluxara_driftlib_fishSkeleton_a",
+        "fluxara_driftlib_fitchBarrel_a",
+        "fluxara_driftlib_greenRadioTower_a",
+        "fluxara_driftlib_military_vehicle_a",
+        "fluxara_driftlib_oldschoolLampVerticalSupport_a",
+        "fluxara_driftlib_oldschoolLamp_a",
+        "fluxara_driftlib_pallet_a",
+        "fluxara_driftlib_sagebrush_a",
+        "fluxara_driftlib_ssaoVan_a",
+        "fluxara_driftlib_watertower_a",
+        "fluxara_driftlib_wilbertSecurity_a"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -2553,7 +2553,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/blooming-start",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-blooming-start",
       "name": "Blooming Start",
-      "source_url": "https://online.supertuxkart.net/dl/14428743296395e5776851c.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/14428743296395e5776851c.zip",
       "revision": "1",
       "license_files": [
         "License.txt"
@@ -2578,46 +2578,46 @@
         "unresolved_xml_references": [],
         "spm_textures": {
           "BarrelB.spm": [
-            "stk_darkGrayMetal_a.png",
-            "stktex_generic_WoodH.png"
+            "fluxara_drift_darkGrayMetal_a.png",
+            "fluxara_drifttex_generic_WoodH.png"
           ],
           "BarrelC.spm": [
-            "stk_darkGrayMetal_a.png",
-            "stktex_generic_WoodH.png"
+            "fluxara_drift_darkGrayMetal_a.png",
+            "fluxara_drifttex_generic_WoodH.png"
           ],
           "BarrelA.spm": [
-            "stk_darkGrayMetal_a.png",
-            "stktex_generic_WoodH.png"
+            "fluxara_drift_darkGrayMetal_a.png",
+            "fluxara_drifttex_generic_WoodH.png"
           ],
           "TotemA.spm": [
             "DirtSandIB.png",
             "Paving_stones_2.jpg",
             "cliffIB.png",
             "dirtRoadIB.png",
-            "stk_darkGrayMetal_a.png",
-            "stk_futureYellowBox_a.png",
-            "stk_lightGrayMetal_a.png",
-            "stktex_generic_WoodH.png"
+            "fluxara_drift_darkGrayMetal_a.png",
+            "fluxara_drift_futureYellowBox_a.png",
+            "fluxara_drift_lightGrayMetal_a.png",
+            "fluxara_drifttex_generic_WoodH.png"
           ],
           "TotemC.spm": [
             "DirtSandIB.png",
             "Paving_stones_2.jpg",
             "cliffIB.png",
             "dirtRoadIB.png",
-            "stk_darkGrayMetal_a.png",
-            "stk_futureYellowBox_a.png",
-            "stk_lightGrayMetal_a.png",
-            "stktex_generic_WoodH.png"
+            "fluxara_drift_darkGrayMetal_a.png",
+            "fluxara_drift_futureYellowBox_a.png",
+            "fluxara_drift_lightGrayMetal_a.png",
+            "fluxara_drifttex_generic_WoodH.png"
           ],
           "TotemB.spm": [
             "DirtSandIB.png",
             "Paving_stones_2.jpg",
             "cliffIB.png",
             "dirtRoadIB.png",
-            "stk_darkGrayMetal_a.png",
-            "stk_futureYellowBox_a.png",
-            "stk_lightGrayMetal_a.png",
-            "stktex_generic_WoodH.png"
+            "fluxara_drift_darkGrayMetal_a.png",
+            "fluxara_drift_futureYellowBox_a.png",
+            "fluxara_drift_lightGrayMetal_a.png",
+            "fluxara_drifttex_generic_WoodH.png"
           ],
           "blooming-start_track.spm": [
             "CheckBS.png",
@@ -2633,10 +2633,10 @@
             "rock_mountain.jpg",
             "rockwall.jpg",
             "sandBS.png",
-            "stk_darkGrayMetal_a.png",
-            "stk_generic_racingPattern_a.png",
-            "stk_lightGrayMetal_a.png",
-            "stktex_generic_WoodH.png",
+            "fluxara_drift_darkGrayMetal_a.png",
+            "fluxara_drift_generic_racingPattern_a.png",
+            "fluxara_drift_lightGrayMetal_a.png",
+            "fluxara_drifttex_generic_WoodH.png",
             "tree_1.png",
             "trunk_bark.png",
             "waterBS.png",
@@ -2650,10 +2650,10 @@
         "unresolved_spm_textures": []
       },
       "library_refs": [
-        "stklib_autumnTree_a",
-        "stklib_autumnTree_e",
-        "stklib_autumnTree_f",
-        "stklib_autumnTree_g"
+        "fluxara_driftlib_autumnTree_a",
+        "fluxara_driftlib_autumnTree_e",
+        "fluxara_driftlib_autumnTree_f",
+        "fluxara_driftlib_autumnTree_g"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -2668,7 +2668,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/dyson-speedway",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-dyson-speedway",
       "name": "Dyson Speedway",
-      "source_url": "https://online.supertuxkart.net/dl/315995088646013139320e.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/315995088646013139320e.zip",
       "revision": "3",
       "license_files": [
         "License.txt"
@@ -3810,7 +3810,7 @@
             "Zipper_RX_Raster006_orange-black3.png",
             "Zipper_RX_green.png",
             "Zipper_RX_orange.png",
-            "stktex_blueNebula_a.png",
+            "fluxara_drifttex_blueNebula_a.png",
             "texture_Hexagons_Glass_new_t_yellow.png",
             "texture_Hexagons_Glass_t+_red3_masked.png",
             "texture_solid_black.png",
@@ -4173,7 +4173,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/orbital-simulation---soccer",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-orbital-simulation---soccer",
       "name": "ORBITAL Simulation - Soccer",
-      "source_url": "https://online.supertuxkart.net/dl/65000879363698eb280510.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/65000879363698eb280510.zip",
       "revision": "2",
       "license_files": [
         "license.txt"
@@ -4239,7 +4239,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/moria-s-race-soccer",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-moria-s-race-soccer",
       "name": "Moria's Race Soccer",
-      "source_url": "https://online.supertuxkart.net/dl/196198088964385be838faf.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/196198088964385be838faf.zip",
       "revision": "1",
       "license_files": [
         "License.txt"
@@ -4316,7 +4316,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/the-court",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-the-court",
       "name": "The Court",
-      "source_url": "https://online.supertuxkart.net/dl/56461666266912d0111897.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/56461666266912d0111897.zip",
       "revision": "4",
       "license_files": [
         "license.txt"
@@ -4342,10 +4342,10 @@
         "spm_textures": {
           "background.spm": [
             "concrete_plain.png",
-            "stk_generic_grassA.png",
-            "stk_glassPanel_a.png",
-            "stk_greyMetal_a.png",
-            "stktex_generic_WoodA.png"
+            "fluxara_drift_generic_grassA.png",
+            "fluxara_drift_glassPanel_a.png",
+            "fluxara_drift_greyMetal_a.png",
+            "fluxara_drifttex_generic_WoodA.png"
           ],
           "scoreArea.spm": [],
           "barrier.spm": [],
@@ -4353,7 +4353,7 @@
             "ants.png"
           ],
           "hoopHole.spm": [
-            "stk_plasticPanel_a.png"
+            "fluxara_drift_plasticPanel_a.png"
           ],
           "pusherRed.spm": [
             "ants.png"
@@ -4361,13 +4361,13 @@
           "lining.spm": [],
           "the-court_track.spm": [
             "ants.png",
-            "stkSoccerTournament.png",
-            "stk_greyMetal_a.png",
-            "stk_lightGrayMetal_a.png",
-            "stk_plasticPanel_a.png",
-            "stkflag_mandaravaMotors_a.png",
-            "stktex_generic_WoodA.png",
-            "stktex_generic_WoodC.png"
+            "fluxara_driftSoccerTournament.png",
+            "fluxara_drift_greyMetal_a.png",
+            "fluxara_drift_lightGrayMetal_a.png",
+            "fluxara_drift_plasticPanel_a.png",
+            "fluxara_driftflag_mandaravaMotors_a.png",
+            "fluxara_drifttex_generic_WoodA.png",
+            "fluxara_drifttex_generic_WoodC.png"
           ],
           "basketball.spm": [
             "balldimpleddark.jpg"
@@ -4391,7 +4391,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/a-secret--soccer-",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-a-secret--soccer-",
       "name": "A Secret (Soccer)",
-      "source_url": "https://online.supertuxkart.net/dl/125870168663f51e6c9573e.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/125870168663f51e6c9573e.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -4452,7 +4452,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/tournament-field",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-tournament-field",
       "name": "Tournament Field",
-      "source_url": "https://online.supertuxkart.net/dl/645453582651b08c920006.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/645453582651b08c920006.zip",
       "revision": "5",
       "license_files": [
         "license.txt"
@@ -4490,7 +4490,7 @@
             "side_blue.png",
             "side_red.png",
             "stadiumnew.png",
-            "stkdiscord.png",
+            "fluxara_driftdiscord.png",
             "tuxtroubleforthebois.png"
           ],
           "puck.spm": [
@@ -4518,7 +4518,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/dp-motorsports-land-ii",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii",
       "name": "DP Motorsports Land II",
-      "source_url": "https://online.supertuxkart.net/dl/87338416464b48387b17c8.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/87338416464b48387b17c8.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -4665,7 +4665,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/strandvoort",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-strandvoort",
       "name": "Strandvoort",
-      "source_url": "https://online.supertuxkart.net/dl/11657172636421bcaf47a87.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/11657172636421bcaf47a87.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -4703,7 +4703,7 @@
             "pylon1.png",
             "pylon2.png",
             "pylon3.png",
-            "stk_generic_grassB.png",
+            "fluxara_drift_generic_grassB.png",
             "superzipper.png",
             "tr-asphalt-p_nmm.png",
             "tr-asphalt.png",
@@ -4738,7 +4738,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rt6-finny-splashdown",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-rt6-finny-splashdown",
       "name": "RT6 Finny Splashdown",
-      "source_url": "https://online.supertuxkart.net/dl/153210636364eb44a4e01c6.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/153210636364eb44a4e01c6.zip",
       "revision": "2",
       "license_files": [
         "license.txt"
@@ -4764,14 +4764,14 @@
         "spm_textures": {
           "nocutforyou.spm": [],
           "ramprev2.spm": [
-            "stkflag_blueCheckBorard_a.png",
+            "fluxara_driftflag_blueCheckBorard_a.png",
             "zipperRT.png"
           ],
           "ramprev3.spm": [
-            "stkflag_blueCheckBorard_a.png"
+            "fluxara_driftflag_blueCheckBorard_a.png"
           ],
           "ramprev.spm": [
-            "stkflag_blueCheckBorard_a.png",
+            "fluxara_driftflag_blueCheckBorard_a.png",
             "zipperRT.png"
           ],
           "rt6-finny-splashdown_track.spm": [
@@ -4792,26 +4792,26 @@
             "rock_mountain.jpg",
             "sandbackground.png",
             "slide.png",
-            "stk_corrugMetal_a.png",
-            "stk_darkGrayMetal_a.png",
-            "stk_generic_grassB.png",
-            "stk_generic_gridA.png",
-            "stk_generic_racingPattern_a.png",
-            "stk_generic_sand_b.png",
-            "stk_lightGrayMetal_a.png",
-            "stkdiscord.png",
-            "stkflag_blueCheckBorard_a.png",
-            "stkflag_caldeiraFashion_a.jpg",
-            "stkflag_canyonJunctionRailway_a.png",
-            "stkflag_greenCheckBorard_a.png",
-            "stkflag_mandaravaMotors_a.png",
-            "stkflag_smartphoneLandscape_a.png",
-            "stkflag_transContPostAD_a.png",
-            "stktex_generic_WoodA.png",
-            "stktex_generic_waterBlue.png",
-            "stktex_palmLeafDry_a.png",
-            "stktex_palmLeaf_a.png",
-            "stktex_palmTreeBark_a.png",
+            "fluxara_drift_corrugMetal_a.png",
+            "fluxara_drift_darkGrayMetal_a.png",
+            "fluxara_drift_generic_grassB.png",
+            "fluxara_drift_generic_gridA.png",
+            "fluxara_drift_generic_racingPattern_a.png",
+            "fluxara_drift_generic_sand_b.png",
+            "fluxara_drift_lightGrayMetal_a.png",
+            "fluxara_driftdiscord.png",
+            "fluxara_driftflag_blueCheckBorard_a.png",
+            "fluxara_driftflag_caldeiraFashion_a.jpg",
+            "fluxara_driftflag_canyonJunctionRailway_a.png",
+            "fluxara_driftflag_greenCheckBorard_a.png",
+            "fluxara_driftflag_mandaravaMotors_a.png",
+            "fluxara_driftflag_smartphoneLandscape_a.png",
+            "fluxara_driftflag_transContPostAD_a.png",
+            "fluxara_drifttex_generic_WoodA.png",
+            "fluxara_drifttex_generic_waterBlue.png",
+            "fluxara_drifttex_palmLeafDry_a.png",
+            "fluxara_drifttex_palmLeaf_a.png",
+            "fluxara_drifttex_palmTreeBark_a.png",
             "zipperRT.png",
             "zippersign.png"
           ]
@@ -4833,7 +4833,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/maple-overpass",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-maple-overpass",
       "name": "Maple Overpass",
-      "source_url": "https://online.supertuxkart.net/dl/1391493895642dc1e91e49a.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/1391493895642dc1e91e49a.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -5066,7 +5066,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/green-valley",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-green-valley",
       "name": "Green Valley",
-      "source_url": "https://online.supertuxkart.net/dl/2880105386aab0db453002.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/2880105386aab0db453002.zip",
       "revision": "2",
       "license_files": [
         "License.txt",
@@ -5130,7 +5130,7 @@
             "road_dirt.jpg",
             "rock_gray.jpg",
             "roof.jpg",
-            "stk_road_dirt.jpg",
+            "fluxara_drift_road_dirt.jpg",
             "vegetation_1.png",
             "water_light2.png",
             "water_light3.png",
@@ -5185,7 +5185,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/lap-catch",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-lap-catch",
       "name": "Lap Catch",
-      "source_url": "https://online.supertuxkart.net/dl/1062540516175acb00fe38.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/1062540516175acb00fe38.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -5261,31 +5261,31 @@
             "snow.png",
             "snowportal.png",
             "snowrock.jpg",
-            "stk_generic_brownRock_a.png",
-            "stk_generic_grassA.png",
-            "stk_generic_grassB.png",
-            "stk_generic_grassC.png",
-            "stk_generic_greyWall_a.png",
-            "stk_generic_ice_a.png",
-            "stk_generic_pinkcrystal_a.png",
-            "stk_generic_racingPattern_a.png",
-            "stk_generic_rock_b.png",
-            "stk_generic_runway_a.png",
-            "stk_generic_sand_a.png",
-            "stk_generic_sand_b.png",
-            "stk_generic_snow_a.png",
-            "stk_glassPanel_a.png",
-            "stk_greyMetal_a.png",
-            "stk_metalRustedBlue_a.png",
-            "stk_metaloverlap_a.png",
-            "stklama_gravelSide_a.png",
-            "stklama_road_a.png",
-            "stktex_boxGrid_a.png",
-            "stktex_generic_WoodA.png",
-            "stktex_generic_gravelA.png",
-            "stktex_generic_lavaA.png",
-            "stktex_generic_rockA.png",
-            "stktex_roadTrail_a.png",
+            "fluxara_drift_generic_brownRock_a.png",
+            "fluxara_drift_generic_grassA.png",
+            "fluxara_drift_generic_grassB.png",
+            "fluxara_drift_generic_grassC.png",
+            "fluxara_drift_generic_greyWall_a.png",
+            "fluxara_drift_generic_ice_a.png",
+            "fluxara_drift_generic_pinkcrystal_a.png",
+            "fluxara_drift_generic_racingPattern_a.png",
+            "fluxara_drift_generic_rock_b.png",
+            "fluxara_drift_generic_runway_a.png",
+            "fluxara_drift_generic_sand_a.png",
+            "fluxara_drift_generic_sand_b.png",
+            "fluxara_drift_generic_snow_a.png",
+            "fluxara_drift_glassPanel_a.png",
+            "fluxara_drift_greyMetal_a.png",
+            "fluxara_drift_metalRustedBlue_a.png",
+            "fluxara_drift_metaloverlap_a.png",
+            "fluxara_driftlama_gravelSide_a.png",
+            "fluxara_driftlama_road_a.png",
+            "fluxara_drifttex_boxGrid_a.png",
+            "fluxara_drifttex_generic_WoodA.png",
+            "fluxara_drifttex_generic_gravelA.png",
+            "fluxara_drifttex_generic_lavaA.png",
+            "fluxara_drifttex_generic_rockA.png",
+            "fluxara_drifttex_roadTrail_a.png",
             "stonewall.png",
             "tarmac.jpg",
             "track_01.jpg",
@@ -5300,26 +5300,26 @@
       },
       "library_refs": [
         "gfx_fireworkTube_a",
-        "stklib_accacia_a",
-        "stklib_agave_a",
-        "stklib_autumnSmallBush_a",
-        "stklib_autumnTree_f",
-        "stklib_bench_a",
-        "stklib_blueRadioTower_a",
-        "stklib_cypress_a",
-        "stklib_greenRadioTower_a",
-        "stklib_modernHousing_a",
-        "stklib_modernHousing_b",
-        "stklib_oldCar_a",
-        "stklib_old_house_a",
-        "stklib_palmTree_a",
-        "stklib_pinetree_a",
-        "stklib_pinetree_b",
-        "stklib_silvianHouse_a",
-        "stklib_silvianHouse_b",
-        "stklib_silvianHouse_c",
-        "stklib_umbrellaBeach_a",
-        "stklib_woodLodge_a"
+        "fluxara_driftlib_accacia_a",
+        "fluxara_driftlib_agave_a",
+        "fluxara_driftlib_autumnSmallBush_a",
+        "fluxara_driftlib_autumnTree_f",
+        "fluxara_driftlib_bench_a",
+        "fluxara_driftlib_blueRadioTower_a",
+        "fluxara_driftlib_cypress_a",
+        "fluxara_driftlib_greenRadioTower_a",
+        "fluxara_driftlib_modernHousing_a",
+        "fluxara_driftlib_modernHousing_b",
+        "fluxara_driftlib_oldCar_a",
+        "fluxara_driftlib_old_house_a",
+        "fluxara_driftlib_palmTree_a",
+        "fluxara_driftlib_pinetree_a",
+        "fluxara_driftlib_pinetree_b",
+        "fluxara_driftlib_silvianHouse_a",
+        "fluxara_driftlib_silvianHouse_b",
+        "fluxara_driftlib_silvianHouse_c",
+        "fluxara_driftlib_umbrellaBeach_a",
+        "fluxara_driftlib_woodLodge_a"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -5336,7 +5336,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/the-valley-of-liquorice",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-the-valley-of-liquorice",
       "name": "The Valley of Liquorice",
-      "source_url": "https://online.supertuxkart.net/dl/58563392667a62f2eecd0a.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/58563392667a62f2eecd0a.zip",
       "revision": "2",
       "license_files": [
         "License.txt"
@@ -5816,7 +5816,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/maple-overpass---short",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-maple-overpass---short",
       "name": "Maple Overpass - Short",
-      "source_url": "https://online.supertuxkart.net/dl/261244849642dc9a54bedb.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/261244849642dc9a54bedb.zip",
       "revision": "2",
       "license_files": [
         "license.txt"
@@ -6050,7 +6050,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/subsea",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-subsea",
       "name": "Subsea",
-      "source_url": "https://online.supertuxkart.net/dl/13654448075eb0a6cc92242.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/13654448075eb0a6cc92242.zip",
       "revision": "3",
       "license_files": [
         "License.txt"
@@ -6099,7 +6099,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/carnaval-del-cacao",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-carnaval-del-cacao",
       "name": "Carnaval del cacao",
-      "source_url": "https://online.supertuxkart.net/dl/73017542562188f16708b.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/73017542562188f16708b.zip",
       "revision": "2",
       "license_files": [
         "License.txt"
@@ -6136,40 +6136,40 @@
         "gfx_fireworkExplosion_a",
         "gfx_fireworkTubeBlueSparks_a",
         "gfx_fireworkTube_a",
-        "stklib_ReedBoat_a",
-        "stklib_animGrass_a",
-        "stklib_armchair_a",
-        "stklib_aztecFountain_a",
-        "stklib_aztecHouse_a",
-        "stklib_aztecHouse_b",
-        "stklib_aztecHut_a",
-        "stklib_aztekGirlCheering_a",
-        "stklib_aztekTorch_a",
-        "stklib_aztekVase_a",
-        "stklib_bambooTorch_a",
-        "stklib_boxGrid_a",
-        "stklib_cattail_a",
-        "stklib_cocoaTree_a",
-        "stklib_fern_a",
-        "stklib_fitchBarrel_a",
-        "stklib_gnuMeditation_a",
-        "stklib_greenRadioTower_a",
-        "stklib_jungleTree_a",
-        "stklib_jungleTree_b",
-        "stklib_liana_a",
-        "stklib_lowPalmTree_a",
-        "stklib_lowRockBarrier_a",
-        "stklib_monkeyCheering_a",
-        "stklib_palmTree_a",
-        "stklib_partyFlags_a",
-        "stklib_redFlowerBush_a",
-        "stklib_redParrot_a",
-        "stklib_roots_a",
-        "stklib_skyBeam_a",
-        "stklib_stkVertical_a",
-        "stklib_tropicalPlant_a",
-        "stklib_waterLily_a",
-        "stklib_woodLittleBridge_a"
+        "fluxara_driftlib_ReedBoat_a",
+        "fluxara_driftlib_animGrass_a",
+        "fluxara_driftlib_armchair_a",
+        "fluxara_driftlib_aztecFountain_a",
+        "fluxara_driftlib_aztecHouse_a",
+        "fluxara_driftlib_aztecHouse_b",
+        "fluxara_driftlib_aztecHut_a",
+        "fluxara_driftlib_aztekGirlCheering_a",
+        "fluxara_driftlib_aztekTorch_a",
+        "fluxara_driftlib_aztekVase_a",
+        "fluxara_driftlib_bambooTorch_a",
+        "fluxara_driftlib_boxGrid_a",
+        "fluxara_driftlib_cattail_a",
+        "fluxara_driftlib_cocoaTree_a",
+        "fluxara_driftlib_fern_a",
+        "fluxara_driftlib_fitchBarrel_a",
+        "fluxara_driftlib_gnuMeditation_a",
+        "fluxara_driftlib_greenRadioTower_a",
+        "fluxara_driftlib_jungleTree_a",
+        "fluxara_driftlib_jungleTree_b",
+        "fluxara_driftlib_liana_a",
+        "fluxara_driftlib_lowPalmTree_a",
+        "fluxara_driftlib_lowRockBarrier_a",
+        "fluxara_driftlib_monkeyCheering_a",
+        "fluxara_driftlib_palmTree_a",
+        "fluxara_driftlib_partyFlags_a",
+        "fluxara_driftlib_redFlowerBush_a",
+        "fluxara_driftlib_redParrot_a",
+        "fluxara_driftlib_roots_a",
+        "fluxara_driftlib_skyBeam_a",
+        "fluxara_driftlib_fluxara_driftVertical_a",
+        "fluxara_driftlib_tropicalPlant_a",
+        "fluxara_driftlib_waterLily_a",
+        "fluxara_driftlib_woodLittleBridge_a"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -6186,7 +6186,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/motorsport-land",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-motorsport-land",
       "name": "Motorsport Land",
-      "source_url": "https://online.supertuxkart.net/dl/1519848119642c252b3d5cc.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/1519848119642c252b3d5cc.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -6227,7 +6227,7 @@
             "ROAD.png",
             "SAND.png",
             "SZK.dds",
-            "stktex_directionSign_a.png"
+            "fluxara_drifttex_directionSign_a.png"
           ]
         },
         "spm_errors": [],
@@ -6249,7 +6249,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/paradise-peaks",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-paradise-peaks",
       "name": "Paradise Peaks",
-      "source_url": "https://online.supertuxkart.net/dl/386550558609817492e3e1.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/386550558609817492e3e1.zip",
       "revision": "2",
       "license_files": [
         "License.txt"
@@ -6290,7 +6290,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/icy-racing-maze",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-icy-racing-maze",
       "name": "Icy Racing Maze",
-      "source_url": "https://online.supertuxkart.net/dl/28240419268c0752b33036.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/28240419268c0752b33036.zip",
       "revision": "1",
       "license_files": [
         "license.txt"
@@ -6332,12 +6332,12 @@
           ],
           "icy-racing-maze_track.spm": [
             "goal.png",
-            "stk_generic_ice_a.png",
-            "stk_generic_snow_a.png",
-            "stktex_frozenWaterFall_a.png",
-            "stktex_generic_cobbleStoneA.png",
-            "stktex_snowRock_a.png",
-            "stktex_stalactic_a.png"
+            "fluxara_drift_generic_ice_a.png",
+            "fluxara_drift_generic_snow_a.png",
+            "fluxara_drifttex_frozenWaterFall_a.png",
+            "fluxara_drifttex_generic_cobbleStoneA.png",
+            "fluxara_drifttex_snowRock_a.png",
+            "fluxara_drifttex_stalactic_a.png"
           ]
         },
         "spm_errors": [],
@@ -6349,15 +6349,15 @@
       "limitations": []
     },
     {
-      "event_id": "main-lap_trial-supertux-raceway",
+      "event_id": "main-lap_trial-fluxara_drift-raceway",
       "mode": "lap_trial",
-      "source_id": "supertux-raceway",
-      "runtime_track_id": "fluxara-user-supertux-raceway",
+      "source_id": "fluxara_drift-raceway",
+      "runtime_track_id": "fluxara-user-fluxara_drift-raceway",
       "engine_minor_mode": "MINOR_MODE_LAP_TRIAL",
-      "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/supertux-raceway",
-      "destination": "iosApp/FluxaraResources/tracks/fluxara-user-supertux-raceway",
-      "name": "Supertux Raceway",
-      "source_url": "https://online.supertuxkart.net/dl/17902044515fdbe253bad9e.zip",
+      "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/fluxara_drift-raceway",
+      "destination": "iosApp/FluxaraResources/tracks/fluxara-user-fluxara_drift-raceway",
+      "name": "FluxaraDrift Raceway",
+      "source_url": "https://online.fluxaradrift.net/dl/17902044515fdbe253bad9e.zip",
       "revision": "3",
       "license_files": [
         "License.txt"
@@ -6368,8 +6368,8 @@
       "geometry_ai_checkpoint_physics_files": "all source files except track.xml byte-verified",
       "imported": true,
       "audit": {
-        "id": "fluxara-user-supertux-raceway",
-        "name": "Supertux Raceway",
+        "id": "fluxara-user-fluxara_drift-raceway",
+        "name": "FluxaraDrift Raceway",
         "version": "7",
         "bytes": 11902855,
         "files": 29,
@@ -6381,7 +6381,7 @@
         "xml_errors": [],
         "unresolved_xml_references": [],
         "spm_textures": {
-          "supertux-raceway_track.spm": [
+          "fluxara_drift-raceway_track.spm": [
             "blueZipper.png",
             "door.jpg",
             "fir_bark.png",
@@ -6392,17 +6392,17 @@
             "roof_3.jpg",
             "snowoodbridge.jpg",
             "snowyrock.png",
-            "stk_generic_ice_a.png",
-            "stk_generic_ironA.png",
-            "stk_generic_snow_a.png",
-            "stkflag_caldeiraFashion_a.jpg",
-            "stkflag_canyonJunctionRailway_a.png",
-            "stkflag_mandaravaMotors_a.png",
-            "stkflag_yellowCheckBoard_a.png",
-            "stktex_generic_WoodG.png",
-            "stktex_generic_roadSnow_a.png",
-            "stktex_generic_stoneWallA.png",
-            "stktex_windowsSet_a_gloss.png",
+            "fluxara_drift_generic_ice_a.png",
+            "fluxara_drift_generic_ironA.png",
+            "fluxara_drift_generic_snow_a.png",
+            "fluxara_driftflag_caldeiraFashion_a.jpg",
+            "fluxara_driftflag_canyonJunctionRailway_a.png",
+            "fluxara_driftflag_mandaravaMotors_a.png",
+            "fluxara_driftflag_yellowCheckBoard_a.png",
+            "fluxara_drifttex_generic_WoodG.png",
+            "fluxara_drifttex_generic_roadSnow_a.png",
+            "fluxara_drifttex_generic_stoneWallA.png",
+            "fluxara_drifttex_windowsSet_a_gloss.png",
             "stone.png"
           ]
         },
@@ -6423,7 +6423,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/green-hill_1",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-green-hill_1",
       "name": "Green Hill",
-      "source_url": "https://online.supertuxkart.net/dl/914147806aaad603eb064.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/914147806aaad603eb064.zip",
       "revision": "3",
       "license_files": [
         "License.txt"
@@ -6449,26 +6449,26 @@
           {
             "xml": "materials.xml",
             "attribute": "gloss-map",
-            "reference": "stktex_windowsSet_a_gloss_day.png"
+            "reference": "fluxara_drifttex_windowsSet_a_gloss_day.png"
           },
           {
             "xml": "materials.xml",
             "attribute": "normal-map",
-            "reference": "stktex_windowsSet_a_nm.png"
+            "reference": "fluxara_drifttex_windowsSet_a_nm.png"
           }
         ],
         "spm_textures": {
           "Sign2Reverse.spm": [
-            "stk_lightGrayMetal_a.png",
-            "stktex_directionSign_a.png"
+            "fluxara_drift_lightGrayMetal_a.png",
+            "fluxara_drifttex_directionSign_a.png"
           ],
           "Sign.spm": [
-            "stk_lightGrayMetal_a.png",
-            "stktex_directionPattern_a.png",
-            "stktex_directionSign_a.png"
+            "fluxara_drift_lightGrayMetal_a.png",
+            "fluxara_drifttex_directionPattern_a.png",
+            "fluxara_drifttex_directionSign_a.png"
           ],
           "bridge.spm": [
-            "stktex_generic_WoodA.png"
+            "fluxara_drifttex_generic_WoodA.png"
           ],
           "greenhill_track.spm": [
             "barn_window.png",
@@ -6479,71 +6479,71 @@
             "corner.png",
             "generic_roof.png",
             "roof.png",
-            "stk_endLog_a.png",
-            "stk_generic_bedRock_a.png",
-            "stk_generic_brickA.png",
-            "stk_generic_brickRoad_a.png",
-            "stk_generic_carpet_a.png",
-            "stk_generic_grassA.png",
-            "stk_generic_paper_a.png",
-            "stk_grassAlpha.png",
-            "stk_greyMetal_a.png",
-            "stkflag_greenCheckBorard_a.png",
-            "stktex_generic_WoodA.png",
-            "stktex_generic_WoodB.png",
-            "stktex_generic_WoodD.png",
-            "stktex_generic_WoodG.png",
-            "stktex_generic_cobbleStoneA.png",
-            "stktex_generic_concreteA.png",
-            "stktex_generic_earth_a.png",
-            "stktex_generic_waterConcreteA.png",
-            "stktex_roadTrail_a.png",
-            "stktex_windowsSet_a.png",
+            "fluxara_drift_endLog_a.png",
+            "fluxara_drift_generic_bedRock_a.png",
+            "fluxara_drift_generic_brickA.png",
+            "fluxara_drift_generic_brickRoad_a.png",
+            "fluxara_drift_generic_carpet_a.png",
+            "fluxara_drift_generic_grassA.png",
+            "fluxara_drift_generic_paper_a.png",
+            "fluxara_drift_grassAlpha.png",
+            "fluxara_drift_greyMetal_a.png",
+            "fluxara_driftflag_greenCheckBorard_a.png",
+            "fluxara_drifttex_generic_WoodA.png",
+            "fluxara_drifttex_generic_WoodB.png",
+            "fluxara_drifttex_generic_WoodD.png",
+            "fluxara_drifttex_generic_WoodG.png",
+            "fluxara_drifttex_generic_cobbleStoneA.png",
+            "fluxara_drifttex_generic_concreteA.png",
+            "fluxara_drifttex_generic_earth_a.png",
+            "fluxara_drifttex_generic_waterConcreteA.png",
+            "fluxara_drifttex_roadTrail_a.png",
+            "fluxara_drifttex_windowsSet_a.png",
             "zipper.png"
           ],
           "Bread.spm": [
-            "stk_generic_paper_a.png"
+            "fluxara_drift_generic_paper_a.png"
           ],
           "start_text.spm": [
-            "stkflag_orangeStartingLine_a.png"
+            "fluxara_driftflag_orangeStartingLine_a.png"
           ],
           "Barrier.spm": [],
           "SomeModel.spm": [],
           "IceCreamSign.spm": [
-            "stk_generic_carpet_a.png",
-            "stk_generic_paper_a.png",
-            "stktex_generic_concreteA.png"
+            "fluxara_drift_generic_carpet_a.png",
+            "fluxara_drift_generic_paper_a.png",
+            "fluxara_drifttex_generic_concreteA.png"
           ],
           "PoleReverse.spm": [
-            "stk_endLog_a.png",
-            "stktex_generic_WoodB.png"
+            "fluxara_drift_endLog_a.png",
+            "fluxara_drifttex_generic_WoodB.png"
           ]
         },
         "spm_errors": [],
         "unresolved_spm_textures": []
       },
       "library_refs": [
-        "stklib_animGrass_a",
-        "stklib_bench_a",
-        "stklib_fern_a",
-        "stklib_fitchBarrel_a",
-        "stklib_gnuMeditation_a",
-        "stklib_hayBall_a",
-        "stklib_jungleTree_b",
-        "stklib_logBarrier_a",
-        "stklib_lowPineTree_a",
-        "stklib_monkeyCheering_a",
-        "stklib_oldLantern_a",
-        "stklib_pinetree_a",
-        "stklib_redFlowerBush_a",
-        "stklib_silvianGirl_a",
-        "stklib_weatherCock_a",
-        "stklib_wilbertCam_a",
-        "stklib_wilbertSecurity_a",
-        "stklib_woodLittleBridge_a"
+        "fluxara_driftlib_animGrass_a",
+        "fluxara_driftlib_bench_a",
+        "fluxara_driftlib_fern_a",
+        "fluxara_driftlib_fitchBarrel_a",
+        "fluxara_driftlib_gnuMeditation_a",
+        "fluxara_driftlib_hayBall_a",
+        "fluxara_driftlib_jungleTree_b",
+        "fluxara_driftlib_logBarrier_a",
+        "fluxara_driftlib_lowPineTree_a",
+        "fluxara_driftlib_monkeyCheering_a",
+        "fluxara_driftlib_oldLantern_a",
+        "fluxara_driftlib_pinetree_a",
+        "fluxara_driftlib_redFlowerBush_a",
+        "fluxara_driftlib_silvianGirl_a",
+        "fluxara_driftlib_weatherCock_a",
+        "fluxara_driftlib_wilbertCam_a",
+        "fluxara_driftlib_wilbertSecurity_a",
+        "fluxara_driftlib_woodLittleBridge_a"
       ],
       "missing_libraries": [
-        "stklib_wilbertCam_a"
+        "fluxara_driftlib_wilbertCam_a"
       ],
       "runtime_verified": false,
       "limitations": []
@@ -6557,7 +6557,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/ancient-summits",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-summit-run",
       "name": "Ancient Summits",
-      "source_url": "https://online.supertuxkart.net/dl/133522274266d9fdd151ac1.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/133522274266d9fdd151ac1.zip",
       "revision": "2",
       "license_files": [
         "license.txt"
@@ -6606,13 +6606,13 @@
             "rock_grey.jpg",
             "snowoodbridge.jpg",
             "snowrock.jpg",
-            "stk_generic_ice_alpha_custom.png",
-            "stk_generic_snow_a.png",
+            "fluxara_drift_generic_ice_alpha_custom.png",
+            "fluxara_drift_generic_snow_a.png",
             "transparence.png",
             "wooden.png"
           ],
           "Balloon.spm": [
-            "stk_generic_snow_a.png",
+            "fluxara_drift_generic_snow_a.png",
             "tux_body.png",
             "wooden.png"
           ]
@@ -6634,7 +6634,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/high-in-the-sky",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-canyon",
       "name": "High in the Sky",
-      "source_url": "https://online.supertuxkart.net/dl/18456751405e59d4cabf049.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/18456751405e59d4cabf049.zip",
       "revision": "2",
       "license_files": [
         "LICENSE.txt"
@@ -6668,27 +6668,27 @@
             "container004-grey.png",
             "gfx_booster_AlphaTest.png",
             "racetrack_asphalt.jpg",
-            "stk_blueMetal_a.png",
-            "stk_corrugMetal_a.png",
-            "stk_futureBox_a.png",
-            "stk_futureYellowBox_a.png",
-            "stk_generic_borderBluePinkA.png",
-            "stk_generic_gridA.png",
-            "stk_generic_plasticFabric_a.png",
-            "stk_glassPanel_a.png",
-            "stk_greyMetal_a.png",
-            "stk_lightGrayMetal_a.png",
-            "stk_metalRustedBlue_a.png",
-            "stk_metaloverlap_a.png",
-            "stkflag_cupcakeAirwayLogo_a.png",
-            "stkflag_jumpRamp_a.png",
-            "stkflag_monoTubeAd_a.png",
-            "stkflag_pinkStartingLine_a.png",
-            "stkflag_redBooster_a.png",
-            "stkflag_stkVertical_a.png",
-            "stkflag_yellowCheckBoard_a.png",
-            "stkkart_wheel_b.png",
-            "stktex_generic_concreteA.png",
+            "fluxara_drift_blueMetal_a.png",
+            "fluxara_drift_corrugMetal_a.png",
+            "fluxara_drift_futureBox_a.png",
+            "fluxara_drift_futureYellowBox_a.png",
+            "fluxara_drift_generic_borderBluePinkA.png",
+            "fluxara_drift_generic_gridA.png",
+            "fluxara_drift_generic_plasticFabric_a.png",
+            "fluxara_drift_glassPanel_a.png",
+            "fluxara_drift_greyMetal_a.png",
+            "fluxara_drift_lightGrayMetal_a.png",
+            "fluxara_drift_metalRustedBlue_a.png",
+            "fluxara_drift_metaloverlap_a.png",
+            "fluxara_driftflag_cupcakeAirwayLogo_a.png",
+            "fluxara_driftflag_jumpRamp_a.png",
+            "fluxara_driftflag_monoTubeAd_a.png",
+            "fluxara_driftflag_pinkStartingLine_a.png",
+            "fluxara_driftflag_redBooster_a.png",
+            "fluxara_driftflag_fluxara_driftVertical_a.png",
+            "fluxara_driftflag_yellowCheckBoard_a.png",
+            "fluxara_driftkart_wheel_b.png",
+            "fluxara_drifttex_generic_concreteA.png",
             "tarmac.jpg"
           ],
           "fluxara_canyon_decor.spm": [
@@ -6697,14 +6697,14 @@
             "fluxara_water_flow.png"
           ],
           "Turbine.spm": [
-            "stk_blueTurbine_a.png"
+            "fluxara_drift_blueTurbine_a.png"
           ]
         },
         "spm_errors": [],
         "unresolved_spm_textures": []
       },
       "library_refs": [
-        "stklib_tiresBarrier_a"
+        "fluxara_driftlib_tiresBarrier_a"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -6719,7 +6719,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/lost-chasm",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-lost-chasm",
       "name": "Lost Chasm",
-      "source_url": "https://online.supertuxkart.net/dl/78608524575b8640d8605.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/78608524575b8640d8605.zip",
       "revision": "1",
       "license_files": [
         "License.txt"
@@ -6760,7 +6760,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/old-amazon-jungle",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-old-amazon-jungle",
       "name": "Old Amazon Jungle",
-      "source_url": "https://online.supertuxkart.net/dl/66964811364d8feaf4f22b.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/66964811364d8feaf4f22b.zip",
       "revision": "1",
       "license_files": [
         "License.txt"
@@ -6801,7 +6801,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/volcan-island",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-volcan-island",
       "name": "Volcan Island",
-      "source_url": "https://online.supertuxkart.net/dl/157223053573c93f8060ee.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/157223053573c93f8060ee.zip",
       "revision": "5",
       "license_files": [
         "License.txt"
@@ -6829,28 +6829,28 @@
         "unresolved_spm_textures": []
       },
       "library_refs": [
-        "stklib_ReedBoat_a",
-        "stklib_accacia_a",
-        "stklib_agave_a",
-        "stklib_animGrass_a",
-        "stklib_asianLantern_a",
-        "stklib_aztecHut_a",
-        "stklib_bambooTorch_a",
-        "stklib_candle_a",
-        "stklib_logBarrier_a",
-        "stklib_partyFlags_a",
-        "stklib_piranha_a",
-        "stklib_redCrab_a",
-        "stklib_redParrot_a",
-        "stklib_redSeaweed_a",
-        "stklib_redShell_a",
-        "stklib_sagebrush_a",
-        "stklib_seaweed_a",
-        "stklib_spiralBlueShell_a",
-        "stklib_tropicalPlant_a",
-        "stklib_umbrellaBeach_a",
-        "stklib_waterLily_a",
-        "stklib_woodPostLamp_a"
+        "fluxara_driftlib_ReedBoat_a",
+        "fluxara_driftlib_accacia_a",
+        "fluxara_driftlib_agave_a",
+        "fluxara_driftlib_animGrass_a",
+        "fluxara_driftlib_asianLantern_a",
+        "fluxara_driftlib_aztecHut_a",
+        "fluxara_driftlib_bambooTorch_a",
+        "fluxara_driftlib_candle_a",
+        "fluxara_driftlib_logBarrier_a",
+        "fluxara_driftlib_partyFlags_a",
+        "fluxara_driftlib_piranha_a",
+        "fluxara_driftlib_redCrab_a",
+        "fluxara_driftlib_redParrot_a",
+        "fluxara_driftlib_redSeaweed_a",
+        "fluxara_driftlib_redShell_a",
+        "fluxara_driftlib_sagebrush_a",
+        "fluxara_driftlib_seaweed_a",
+        "fluxara_driftlib_spiralBlueShell_a",
+        "fluxara_driftlib_tropicalPlant_a",
+        "fluxara_driftlib_umbrellaBeach_a",
+        "fluxara_driftlib_waterLily_a",
+        "fluxara_driftlib_woodPostLamp_a"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -6865,7 +6865,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/volcano-remake",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake",
       "name": "Volcano Remake",
-      "source_url": "https://online.supertuxkart.net/dl/155757451600ef9132e9cb.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/155757451600ef9132e9cb.zip",
       "revision": "4",
       "license_files": [
         "License.txt"
@@ -6901,12 +6901,12 @@
           {
             "xml": "materials.xml",
             "attribute": "gloss-map",
-            "reference": "stkflag_orangeBooster_a-gloss.png"
+            "reference": "fluxara_driftflag_orangeBooster_a-gloss.png"
           },
           {
             "xml": "materials.xml",
             "attribute": "normal-map",
-            "reference": "stktex_generic_lavaA_nm.png"
+            "reference": "fluxara_drifttex_generic_lavaA_nm.png"
           }
         ],
         "spm_textures": {
@@ -6926,7 +6926,7 @@
           "Arrows.spm": [
             "blackrock.jpg",
             "blackrock_lava.jpg",
-            "stkflag_blackBooster_a.png"
+            "fluxara_driftflag_blackBooster_a.png"
           ],
           "volcano_track.spm": [
             "Battle_for_Wesnoth.png",
@@ -6943,12 +6943,12 @@
             "lava_2k_diffuse.jpg",
             "mansion_windows.png",
             "roof_3.jpg",
-            "stk_generic_gravalSnow_a.png",
-            "stk_generic_gridA.png",
-            "stk_mudpot_a.png",
-            "stkflag_blackBooster_a.png",
-            "stkflag_blackBooster_b.png",
-            "stktex_generic_WoodA.png",
+            "fluxara_drift_generic_gravalSnow_a.png",
+            "fluxara_drift_generic_gridA.png",
+            "fluxara_drift_mudpot_a.png",
+            "fluxara_driftflag_blackBooster_a.png",
+            "fluxara_driftflag_blackBooster_b.png",
+            "fluxara_drifttex_generic_WoodA.png",
             "sunFlare2.png",
             "torch.png",
             "track01.png",
@@ -6957,10 +6957,10 @@
           "ArrowsReverse.spm": [
             "blackrock.jpg",
             "blackrock_lava.jpg",
-            "stkflag_blackBooster_a.png"
+            "fluxara_driftflag_blackBooster_a.png"
           ],
           "Torch.spm": [
-            "stktex_animatedFire_a.png"
+            "fluxara_drifttex_animatedFire_a.png"
           ],
           "AshColumnEffect.spm": [
             "gfx_snowStormAnimated_a.png"
@@ -7004,7 +7004,7 @@
             "blackrock_lava.jpg",
             "castelwall.jpg",
             "chain.png",
-            "stkflag_blackBooster_b.png",
+            "fluxara_driftflag_blackBooster_b.png",
             "track01.png"
           ],
           "AshCloudEffect.spm": [
@@ -7026,7 +7026,7 @@
             "Lava_004_COLOR.jpg"
           ],
           "MudBubbles.spm": [
-            "stk_mudpot_a.png"
+            "fluxara_drift_mudpot_a.png"
           ],
           "EruptionAsh.spm": [
             "gfx_snowStormAnimated_a.png"
@@ -7039,7 +7039,7 @@
         "unresolved_spm_textures": []
       },
       "library_refs": [
-        "stklib_mudpot_a"
+        "fluxara_driftlib_mudpot_a"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -7054,7 +7054,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/rt7-retro",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-rt7-retro",
       "name": "RT7 ReTro",
-      "source_url": "https://online.supertuxkart.net/dl/170862992665e37843b9d45.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/170862992665e37843b9d45.zip",
       "revision": "2",
       "license_files": [
         "license.txt"
@@ -7114,7 +7114,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/shifting-sands-rework",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-shifting-sands-rework",
       "name": "Shifting Sands Rework",
-      "source_url": "https://online.supertuxkart.net/dl/148929195763d012729282b.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/148929195763d012729282b.zip",
       "revision": "2",
       "license_files": [
         "License.txt"
@@ -7146,16 +7146,16 @@
           ],
           "palm_physics.spm": [],
           "ghost_bridge.spm": [
-            "stktex_generic_WoodA.png"
+            "fluxara_drifttex_generic_WoodA.png"
           ],
           "skull.spm": [
             "aoMapGoatv3.jpg"
           ],
-          "stklib_bambooTorch_a_main.spm": [
-            "stk_generic_wickerA.png",
-            "stktex_animatedFire_a.png",
-            "stktex_generic_bambooB.png",
-            "stktex_rope_a.png"
+          "fluxara_driftlib_bambooTorch_a_main.spm": [
+            "fluxara_drift_generic_wickerA.png",
+            "fluxara_drifttex_animatedFire_a.png",
+            "fluxara_drifttex_generic_bambooB.png",
+            "fluxara_drifttex_rope_a.png"
           ],
           "bridge_fence_physics.spm": [],
           "sand-clouds_b.spm": [
@@ -7176,7 +7176,7 @@
             "seabed.jpg"
           ],
           "bridge_physics.spm": [
-            "stktex_generic_WoodA.png"
+            "fluxara_drifttex_generic_WoodA.png"
           ],
           "sandtrack_rework_track.spm": [
             "bumpy_surface.png",
@@ -7187,8 +7187,8 @@
             "road.jpg",
             "sand.png",
             "sphinx.png",
-            "stk_generic_sand_a.png",
-            "stktex_generic_WoodA.png",
+            "fluxara_drift_generic_sand_a.png",
+            "fluxara_drifttex_generic_WoodA.png",
             "texture_egypte.jpg",
             "woodPost.png",
             "wood_planks1.jpg"
@@ -7198,11 +7198,11 @@
         "unresolved_spm_textures": []
       },
       "library_refs": [
-        "stklib_accacia_a",
-        "stklib_agave_a",
-        "stklib_aztekTorch_a",
-        "stklib_lowPalmTree_a",
-        "stklib_palmTree_a"
+        "fluxara_driftlib_accacia_a",
+        "fluxara_driftlib_agave_a",
+        "fluxara_driftlib_aztekTorch_a",
+        "fluxara_driftlib_lowPalmTree_a",
+        "fluxara_driftlib_palmTree_a"
       ],
       "missing_libraries": [],
       "runtime_verified": false,
@@ -7217,7 +7217,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/clash-o-8",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-clash-o-8",
       "name": "Clash-o-8",
-      "source_url": "https://online.supertuxkart.net/dl/12179255856740fa5be2c7d.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/12179255856740fa5be2c7d.zip",
       "revision": "3",
       "license_files": [
         "license.txt"
@@ -7242,7 +7242,7 @@
         "unresolved_xml_references": [],
         "spm_textures": {
           "knockable barrels.spm": [
-            "stklib_fitchBarrel_ao_a.png"
+            "fluxara_driftlib_fitchBarrel_ao_a.png"
           ],
           "clash-o-8_track.spm": [
             "city_checker.png",
@@ -7255,18 +7255,18 @@
             "sponsor-cp24.png",
             "sponsor-d35truc7173.png",
             "sponsor-wrecking_pancakes.png",
-            "stk_corrugMetal_a.png",
-            "stk_darkGrayMetal_a.png",
-            "stk_generic_bordePinkA.png",
-            "stk_generic_grassB.png",
-            "stk_pineBranch_a.png",
-            "stkflag_mandaravaMotors_a.png",
-            "stkflag_yellowCheckBoard_a.png",
-            "stktex_generic_WoodA.png",
-            "stktex_generic_WoodC.png",
-            "stktex_generic_concreteA.png",
-            "stktex_treeBark_a.png",
-            "stktex_whiteTires_a.png",
+            "fluxara_drift_corrugMetal_a.png",
+            "fluxara_drift_darkGrayMetal_a.png",
+            "fluxara_drift_generic_bordePinkA.png",
+            "fluxara_drift_generic_grassB.png",
+            "fluxara_drift_pineBranch_a.png",
+            "fluxara_driftflag_mandaravaMotors_a.png",
+            "fluxara_driftflag_yellowCheckBoard_a.png",
+            "fluxara_drifttex_generic_WoodA.png",
+            "fluxara_drifttex_generic_WoodC.png",
+            "fluxara_drifttex_generic_concreteA.png",
+            "fluxara_drifttex_treeBark_a.png",
+            "fluxara_drifttex_whiteTires_a.png",
             "track.png"
           ]
         },
@@ -7287,7 +7287,7 @@
       "source": ".codex-downloads/fluxara-addon-catalog/extracted/tracks/sao-paulo",
       "destination": "iosApp/FluxaraResources/tracks/fluxara-user-sao-paulo",
       "name": "Sao Paulo",
-      "source_url": "https://online.supertuxkart.net/dl/1894503227631cedc5b6c12.zip",
+      "source_url": "https://online.fluxaradrift.net/dl/1894503227631cedc5b6c12.zip",
       "revision": "1",
       "license_files": [
         "license.txt"

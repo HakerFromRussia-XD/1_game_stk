@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2012-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -18,7 +18,7 @@
 
 #include "replay/replay_recorder.hpp"
 
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "io/file_manager.hpp"
 #include "items/attachment.hpp"
 #include "items/powerup.hpp"
@@ -53,8 +53,8 @@ ReplayRecorder::ReplayRecorder()
     m_incorrect_replay = false;
     m_previous_steer   = 0.0f;
 
-    assert(stk_config->m_replay_max_frames >= 0);
-    m_max_frames = stk_config->m_replay_max_frames;
+    assert(fluxara_drift_config->m_replay_max_frames >= 0);
+    m_max_frames = fluxara_drift_config->m_replay_max_frames;
 }   // ReplayRecorder
 
 //-----------------------------------------------------------------------------
@@ -127,7 +127,7 @@ void ReplayRecorder::update(int ticks)
         // If a single player give up in game menu, stop recording
         if (kart->isEliminated() && single_player) return;
 
-        if (kart->isGhostKart()) continue;
+        if (kart->isGhofluxara_driftart()) continue;
 #ifdef DEBUG
         m_count++;
 #endif
@@ -168,7 +168,7 @@ void ReplayRecorder::update(int ticks)
 
             // If the kart changes its steering
             if (fabsf(kart->getControls().getSteer() - m_previous_steer) >
-                                            stk_config->m_replay_delta_steering)
+                                            fluxara_drift_config->m_replay_delta_steering)
                 force_update = true;
 
             // If the kart starts or stops skidding
@@ -176,14 +176,14 @@ void ReplayRecorder::update(int ticks)
                 force_update = true;
             // If the kart changes speed significantly
             float speed_change = fabsf(kart->getSpeed() - q_prev->m_speed);
-            if ( speed_change > stk_config->m_replay_delta_speed )
+            if ( speed_change > fluxara_drift_config->m_replay_delta_speed )
             {
-                if (speed_change > 4*stk_config->m_replay_delta_speed)
+                if (speed_change > 4*fluxara_drift_config->m_replay_delta_speed)
                     force_update = true;
-                else if (speed_change > 2*stk_config->m_replay_delta_speed &&
-                         time - m_last_saved_time[i] > (stk_config->m_replay_dt/8.0f))
+                else if (speed_change > 2*fluxara_drift_config->m_replay_delta_speed &&
+                         time - m_last_saved_time[i] > (fluxara_drift_config->m_replay_dt/8.0f))
                     force_update = true;
-                else if (time - m_last_saved_time[i] > (stk_config->m_replay_dt/3.0f))
+                else if (time - m_last_saved_time[i] > (fluxara_drift_config->m_replay_dt/3.0f))
                     force_update = true;
             }
 
@@ -230,14 +230,14 @@ void ReplayRecorder::update(int ticks)
                 {
                     if (fabsf(full_distance - linearworld->getOverallDistance(i)) < DISTANCE_MAX_UPDATES)
                         force_update = true;
-                    else if (time - m_last_saved_time[i] > (stk_config->m_replay_dt/5.0f))
+                    else if (time - m_last_saved_time[i] > (fluxara_drift_config->m_replay_dt/5.0f))
                         force_update = true;
                 }
             }
         }
 
 
-        if ( time - m_last_saved_time[i] < (stk_config->m_replay_dt - stk_config->ticks2Time(1)) &&
+        if ( time - m_last_saved_time[i] < (fluxara_drift_config->m_replay_dt - fluxara_drift_config->ticks2Time(1)) &&
             !force_update)
         {
 #ifdef DEBUG
@@ -323,7 +323,7 @@ uint64_t ReplayRecorder::computeUID(float min_time)
     min_time_uid = min_time_uid%60000;
 
     int day, month, year;
-    StkTime::getDate(&day, &month, &year);
+    FluxaraDriftTime::getDate(&day, &month, &year);
     uint64_t date_uid = year%10;
     date_uid = date_uid*12 + (month-1);;
     date_uid = date_uid*31 + (day-1);
@@ -368,14 +368,14 @@ void ReplayRecorder::save()
     float min_time = 99999.99f;
     for (unsigned int k = 0; k < num_karts; k++)
     {
-        if (world->getKart(k)->isGhostKart()) continue;
+        if (world->getKart(k)->isGhofluxara_driftart()) continue;
         float cur_time = world->getKart(k)->getFinishTime();
         if (cur_time < min_time)
             min_time = cur_time;
     }
 
     int day, month, year;
-    StkTime::getDate(&day, &month, &year);
+    FluxaraDriftTime::getDate(&day, &month, &year);
     std::string time = StringUtils::toString(min_time);
     std::replace(time.begin(), time.end(), '.', '_');
     std::ostringstream oss;
@@ -396,13 +396,13 @@ void ReplayRecorder::save()
     MessageQueue::add(MessageQueue::MT_GENERIC, msg);
 
     fprintf(fd, "version: %d\n", getCurrentReplayVersion());
-    fprintf(fd, "stk_version: %s\n", STK_VERSION);
+    fprintf(fd, "fluxara_drift_version: %s\n", FLUXARA_DRIFT_VERSION);
 
     unsigned int player_count = 0;
     for (unsigned int real_karts = 0; real_karts < num_karts; real_karts++)
     {
         const AbstractKart *kart = world->getKart(real_karts);
-        if (kart->isGhostKart()) continue;
+        if (kart->isGhofluxara_driftart()) continue;
 
         // XML encode the username to handle Unicode
         fprintf(fd, "kart: %s %s\n", kart->getIdent().c_str(),
@@ -433,7 +433,7 @@ void ReplayRecorder::save()
 
     for (unsigned int k = 0; k < num_karts; k++)
     {
-        if (world->getKart(k)->isGhostKart()) continue;
+        if (world->getKart(k)->isGhofluxara_driftart()) continue;
 
         const unsigned int num_transforms = std::min(m_max_frames,
                                                      m_count_transforms[k]);

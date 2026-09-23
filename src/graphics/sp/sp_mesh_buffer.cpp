@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -70,7 +70,7 @@ SPMeshBuffer::~SPMeshBuffer()
 void SPMeshBuffer::initDrawMaterial()
 {
 #ifndef SERVER_ONLY
-    Material* m = std::get<2>(m_stk_material[0]);
+    Material* m = std::get<2>(m_fluxara_drift_material[0]);
     if (RaceManager::get()->getReverseTrack() && m->getMirrorAxisInReverse() != ' ')
     {
         for (unsigned i = 0; i < getVertexCount(); i++)
@@ -95,7 +95,7 @@ void SPMeshBuffer::initDrawMaterial()
 bool SPMeshBuffer::initTexture()
 {
 #ifndef SERVER_ONLY
-    for (unsigned i = 0; i < m_stk_material.size(); i++)
+    for (unsigned i = 0; i < m_fluxara_drift_material.size(); i++)
     {
         for (unsigned j = 0; j < 6; j++)
         {
@@ -121,28 +121,28 @@ void SPMeshBuffer::uploadGLMesh()
     if (!m_shaders[0])
     {
         Log::warn("SPMeshBuffer", "%s shader is missing",
-            std::get<2>(m_stk_material[0])->getShaderName().c_str());
+            std::get<2>(m_fluxara_drift_material[0])->getShaderName().c_str());
         return;
     }
 
-    m_textures.resize(m_stk_material.size());
-    for (unsigned i = 0; i < m_stk_material.size(); i++)
+    m_textures.resize(m_fluxara_drift_material.size());
+    for (unsigned i = 0; i < m_fluxara_drift_material.size(); i++)
     {
         for (unsigned j = 0; j < 6; j++)
         {
             m_textures[i][j] = SPTextureManager::get()->getTexture
                 (m_shaders[0]->hasTextureLayer(j) ?
-                std::get<2>(m_stk_material[i])->getSamplerPath(j) : "",
-                j == 0 ? std::get<2>(m_stk_material[i]) : NULL,
+                std::get<2>(m_fluxara_drift_material[i])->getSamplerPath(j) : "",
+                j == 0 ? std::get<2>(m_fluxara_drift_material[i]) : NULL,
                 m_shaders[0]->isSrgbForTextureLayer(j),
-                std::get<2>(m_stk_material[i])->getContainerId());
+                std::get<2>(m_fluxara_drift_material[i])->getContainerId());
         }
         // Use the original spm uv texture 1 and 2 for compare in scene manager
-        m_tex_cmp[std::get<2>(m_stk_material[i])->getSamplerPath(0) +
-            std::get<2>(m_stk_material[i])->getSamplerPath(1)] = i;
+        m_tex_cmp[std::get<2>(m_fluxara_drift_material[i])->getSamplerPath(0) +
+            std::get<2>(m_fluxara_drift_material[i])->getSamplerPath(1)] = i;
     }
 
-    bool use_2_uv = std::get<2>(m_stk_material[0])->use2UV();
+    bool use_2_uv = std::get<2>(m_fluxara_drift_material[0])->use2UV();
     bool use_tangents = m_shaders[0]->useTangents();
     const unsigned pitch = 48 - (use_tangents ? 0 : 4) - (use_2_uv ? 0 : 4) -
         (m_skinned ? 0 : 16);
@@ -230,7 +230,7 @@ void SPMeshBuffer::recreateVAO(unsigned i)
     {
         return;
     }
-    bool use_2_uv = std::get<2>(m_stk_material[0])->use2UV();
+    bool use_2_uv = std::get<2>(m_fluxara_drift_material[0])->use2UV();
     bool use_tangents = m_shaders[0]->useTangents();
     const unsigned pitch = m_pitch;
 
@@ -428,12 +428,12 @@ void SPMeshBuffer::uploadInstanceData()
 void SPMeshBuffer::enableTextureMatrix(unsigned mat_id)
 {
 #ifndef SERVER_ONLY
-    assert(mat_id < m_stk_material.size());
+    assert(mat_id < m_fluxara_drift_material.size());
     // Make the 31 bit in normal to be 1
     uploadGLMesh();
     if (m_vbo == 0 || m_ibo == 0)
         return;
-    auto& ret = m_stk_material[mat_id];
+    auto& ret = m_fluxara_drift_material[mat_id];
     glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
     std::set<uint16_t> used_vertices;
     for (unsigned int j = 0; j < std::get<1>(ret); j += 3)
@@ -467,7 +467,7 @@ void SPMeshBuffer::reloadTextureCompare()
 {
     assert(!m_textures.empty());
     m_tex_cmp.clear();
-    for (unsigned i = 0; i < m_stk_material.size(); i++)
+    for (unsigned i = 0; i < m_fluxara_drift_material.size(); i++)
     {
         const std::string name =
             m_textures[i][0]->getPath() + m_textures[i][1]->getPath();
@@ -476,18 +476,18 @@ void SPMeshBuffer::reloadTextureCompare()
 }   // reloadTextureCompare
 
 // ----------------------------------------------------------------------------
-void SPMeshBuffer::setSTKMaterial(Material* m)
+void SPMeshBuffer::setFLUXARA_DRIFTMaterial(Material* m)
 {
-    m_stk_material[0] = std::make_tuple(0u, getIndexCount(), m);
+    m_fluxara_drift_material[0] = std::make_tuple(0u, getIndexCount(), m);
 #ifndef SERVER_ONLY
     // Used by b3d mesh loader, clean up later after SP is removed
     if (GE::getVKDriver() != NULL)
         return;
 #endif
     const std::string shader_name =
-        std::get<2>(m_stk_material[0])->getShaderName();
+        std::get<2>(m_fluxara_drift_material[0])->getShaderName();
     const std::string skinned_shader_name =
-        std::get<2>(m_stk_material[0])->getShaderName() + "_skinned";
+        std::get<2>(m_fluxara_drift_material[0])->getShaderName() + "_skinned";
 
     m_shaders[0] = SPShaderManager::get()->getSPShader(shader_name);
     if (!m_shaders[0])
@@ -500,6 +500,6 @@ void SPMeshBuffer::setSTKMaterial(Material* m)
     m_shaders[1] = SPShaderManager::get()->getSPShader(skinned_shader_name);
     if (!m_shaders[1])
         m_shaders[1] = SPShaderManager::get()->getSPShader("solid_skinned");
-}   // setSTKMaterial
+}   // setFLUXARA_DRIFTMaterial
 
 }

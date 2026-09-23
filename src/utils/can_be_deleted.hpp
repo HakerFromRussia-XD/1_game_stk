@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -55,7 +55,7 @@ public:
     bool waitForReadyToDeleted(float waiting_time)
     {
         if (m_can_be_deleted.load()) return true;
-        double start = StkTime::getRealTime();
+        double start = FluxaraDriftTime::getRealTime();
         Log::verbose("Thread", "Start waiting %lf", start);
         while(1)
         {
@@ -63,14 +63,14 @@ public:
             {
                 Log::verbose("Thread",
                          "Waited %lf seconds for thread to become deleteable.",
-                         StkTime::getRealTime()-start);
-                Log::verbose("Thread", "Stop waiting %lf", StkTime::getRealTime());
+                         FluxaraDriftTime::getRealTime()-start);
+                Log::verbose("Thread", "Stop waiting %lf", FluxaraDriftTime::getRealTime());
                 return true;
             }
-            StkTime::sleep(10);
-            if(StkTime::getRealTime() - start > waiting_time)
+            FluxaraDriftTime::sleep(10);
+            if(FluxaraDriftTime::getRealTime() - start > waiting_time)
             {
-                Log::verbose("Thread", "Stop waiting %lf", StkTime::getRealTime());
+                Log::verbose("Thread", "Stop waiting %lf", FluxaraDriftTime::getRealTime());
                 Log::verbose("Thread", "Waited for more than %f seconds for "
                                        "thread to become deleteable",
                                        waiting_time);

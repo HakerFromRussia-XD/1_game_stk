@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -33,7 +33,7 @@ namespace irr
 }
 using namespace irr;
 
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "guiengine/abstract_top_level_container.hpp"
 #include "guiengine/engine.hpp"
 #include "guiengine/event_handler.hpp"
@@ -283,7 +283,7 @@ namespace GUIEngine
         /**
          * \return which music to play at this screen
          */
-        virtual MusicInformation* getMusic() const { return stk_config->m_title_music; }
+        virtual MusicInformation* getMusic() const { return fluxara_drift_config->m_title_music; }
 
         /**
          * \return which music to play at this screen, if accessed in "in-game-menu" mode
@@ -304,6 +304,17 @@ namespace GUIEngine
                                                Input::InputType type,
                                                int playerId)
             { return EVENT_LET; }
+
+        /**
+         * \brief Optional early hook for raw pointer input while this menu is
+         *        visible. Return true only when the screen has consumed it.
+         *
+         * Menu pointer events are normally passed straight to Irrlicht GUI
+         * widgets, rather than through the game input mapper. Screens that
+         * need a drag surface can therefore opt in here without changing the
+         * controls used by races or other menus.
+         */
+        virtual bool onPointerInput(const irr::SEvent& event) { return false; }
 
         /** Callback you can use if you want to know when the user pressed
          *  on a disabled ribbon item.

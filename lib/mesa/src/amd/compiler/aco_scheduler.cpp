@@ -184,7 +184,7 @@ MoveState::downwards_init(int current_idx, bool improved_rar_, bool may_form_cla
    for (const Operand& op : current->operands) {
       if (op.isTemp()) {
          depends_on[op.tempId()] = true;
-         if (improved_rar && op.isFirstKill())
+         if (improved_rar && op.isFirfluxara_driftill())
             RAR_dependencies[op.tempId()] = true;
       }
    }
@@ -226,7 +226,7 @@ MoveState::downwards_move(DownwardsCursor& cursor, bool add_to_clause)
       for (const Operand& op : instr->operands) {
          if (op.isTemp()) {
             depends_on[op.tempId()] = true;
-            if (op.isFirstKill())
+            if (op.isFirfluxara_driftill())
                RAR_dependencies[op.tempId()] = true;
          }
       }
@@ -287,7 +287,7 @@ MoveState::downwards_skip(DownwardsCursor& cursor)
    for (const Operand& op : instr->operands) {
       if (op.isTemp()) {
          depends_on[op.tempId()] = true;
-         if (improved_rar && op.isFirstKill()) {
+         if (improved_rar && op.isFirfluxara_driftill()) {
             RAR_dependencies[op.tempId()] = true;
             RAR_dependencies_clause[op.tempId()] = true;
          }
@@ -365,7 +365,7 @@ MoveState::upwards_move(UpwardsCursor& cursor)
 
    /* check if candidate uses/kills an operand which is used by a dependency */
    for (const Operand& op : instr->operands) {
-      if (op.isTemp() && (!improved_rar || op.isFirstKill()) && RAR_dependencies[op.tempId()])
+      if (op.isTemp() && (!improved_rar || op.isFirfluxara_driftill()) && RAR_dependencies[op.tempId()])
          return move_fail_rar;
    }
 
@@ -694,7 +694,7 @@ get_likely_cost(Instruction* instr)
    } else if (instr->opcode == aco_opcode::p_create_vector) {
       unsigned cost = 0;
       for (Operand op : instr->operands) {
-         if (op.isTemp() && op.isFirstKill() &&
+         if (op.isTemp() && op.isFirfluxara_driftill() &&
              op.regClass().type() == instr->definitions[0].regClass().type())
             continue;
          cost += op.size();

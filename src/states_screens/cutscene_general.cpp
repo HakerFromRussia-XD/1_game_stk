@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2010-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2010-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -19,7 +19,7 @@
 #include "states_screens/cutscene_general.hpp"
 #include "modes/cutscene_world.hpp"
 
-CutSceneGeneral::CutSceneGeneral() : CutsceneScreen("cutscene.stkgui")
+CutSceneGeneral::CutSceneGeneral() : CutsceneScreen("cutscene.fluxara_driftgui")
 {
 }  // CutSceneGeneral
 

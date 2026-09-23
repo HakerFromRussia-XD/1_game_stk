@@ -476,7 +476,7 @@ emit_parallelcopies(cssa_ctx& ctx)
                 * Thus, re-check whether the temp is live-out.
                 */
                cp.op.setKill(cp.op.isKill() && !is_live_out(ctx, cp.op.getTemp(), i));
-               cp.op.setFirstKill(cp.op.isKill());
+               cp.op.setFirfluxara_driftill(cp.op.isKill());
             }
             uint32_t write_idx = ctx.merge_node_table[cp.def.tempId()].index;
             assert(write_idx != -1u);

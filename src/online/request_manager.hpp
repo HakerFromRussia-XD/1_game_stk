@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Lucas Baudin
 //            (C) 2011-2015 Joerg Henrichs
 //            (C) 2013-2015 Glenn De Jonghe
@@ -37,7 +37,7 @@
 namespace Online
 {
     /** A class to execute requests in a separate thread. Typically the
-     *  requests involve a http(s) requests to be sent to the stk server, and
+     *  requests involve a http(s) requests to be sent to the fluxara_drift server, and
      *  receive an answer (e.g. to sign in; or to download an addon). The
      *  requests are sorted by priority (e.g. sign in and out have higher
      *  priority than downloading addon icons).
@@ -56,16 +56,16 @@ namespace Online
      *  same priority as the sign-out is added to the queue (since it will
      *  be added later, the sign-out will be executed first, making sure that
      *  a logged in user is logged out (or its session saved). Once this is
-     *  done, most of stk is deleted (except a few objects like the file
+     *  done, most of fluxara_drift is deleted (except a few objects like the file
      *  manager which might be accessed if a download just finished before the
      *  abort). On executing the quit request, the request manager will set
      *  a flag that it is ready to be deleted (using the CanBeDeleted class).
      *  The main thread will wait for a certain amount of time for the
      *  RequestManager to be ready to be deleted (i.e. the sign-out and quit
      *  request have been processes), before deleting the RequestManager.
-     *  Typically the RequestManager will finish while the rest of stk is
+     *  Typically the RequestManager will finish while the rest of fluxara_drift is
      *  shutting down, so the user will not experience any waiting time. Only
-     *  on first start of stk (which will trigger downloading of all addon
+     *  on first start of fluxara_drift (which will trigger downloading of all addon
      *  icons) is it possible that actually a download request is running,
      *  which might take a bit before it can be deleted.
      * \ingroup online
@@ -73,12 +73,12 @@ namespace Online
     class RequestManager : public CanBeDeleted
     {
     public:
-        /** If stk has permission to access the internet (for news
+        /** If fluxara_drift has permission to access the internet (for news
         *  server etc).
         *  IPERM_NOT_ASKED: The user needs to be asked if he wants to
         *                   grant permission
-        *  IPERM_ALLOWED:   STK is allowed to access server.
-        *  IPERM_NOT_ALLOWED: STK must not access external servers. */
+        *  IPERM_ALLOWED:   FLUXARA_DRIFT is allowed to access server.
+        *  IPERM_NOT_ALLOWED: FLUXARA_DRIFT must not access external servers. */
         enum InternetPermission
         {
             IPERM_NOT_ASKED   = 0,
@@ -99,7 +99,7 @@ namespace Online
             /** Signal an abort in case that a download is still happening. */
             Synchronised<bool>        m_abort;
 
-            /** Signal an pause before STK goes into background in iOS. */
+            /** Signal an pause before FLUXARA_DRIFT goes into background in iOS. */
             std::atomic_bool m_paused;
 
             /** The polling interval while a game is running. */

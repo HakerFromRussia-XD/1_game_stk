@@ -22,7 +22,7 @@ layout(location = 10) in vec4 i_scale;
 layout(location = 11) in vec2 i_texture_trans;
 layout(location = 12) in ivec2 i_misc_data;
 
-#stk_include "utils/get_world_location.vert"
+#fluxara_drift_include "utils/get_world_location.vert"
 
 out vec3 tangent;
 out vec3 bitangent;

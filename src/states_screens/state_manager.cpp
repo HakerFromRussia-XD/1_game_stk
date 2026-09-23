@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -20,7 +20,7 @@
 
 #include "audio/sfx_manager.hpp"
 #include "audio/music_manager.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "graphics/irr_driver.hpp"
 #include "guiengine/engine.hpp"
 #include "guiengine/modaldialog.hpp"
@@ -28,15 +28,17 @@
 #include "guiengine/screen_keyboard.hpp"
 #include "input/input_device.hpp"
 #include "input/input_manager.hpp"
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "states_screens/fluxara_home_screen.hpp"
 #include "utils/fluxara_orientation_ios.hpp"
+#include <IrrlichtDevice.h>
+#include <SDL.h>
 #endif
 #include "main_loop.hpp"
 #include "modes/world.hpp"
 #include "modes/profile_world.hpp"
 #include "utils/log.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 
 #include <cstring>
 
@@ -44,16 +46,16 @@ using namespace GUIEngine;
 
 static StateManager* state_manager_singleton[PT_COUNT];
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 static bool shouldRouteToFluxaraHome(GUIEngine::Screen* screen)
 {
-    return screen != NULL && screen->getName() == "main_menu.stkgui";
+    return screen != NULL && screen->getName() == "main_menu.fluxara_driftgui";
 }
 #endif
 
 StateManager* StateManager::get()
 {
-    ProcessType type = STKProcess::getType();
+    ProcessType type = FLUXARA_DRIFTProcess::getType();
     if (state_manager_singleton[type] == NULL)
         state_manager_singleton[type] = new StateManager();
     return state_manager_singleton[type];
@@ -61,7 +63,7 @@ StateManager* StateManager::get()
 
 void StateManager::deallocate()
 {
-    ProcessType type = STKProcess::getType();
+    ProcessType type = FLUXARA_DRIFTProcess::getType();
     delete state_manager_singleton[type];
     state_manager_singleton[type] = NULL;
 }   // deallocate
@@ -166,7 +168,7 @@ void StateManager::resetActivePlayers()
 
 void StateManager::pushScreen(GUIEngine::Screen* screen)
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (shouldRouteToFluxaraHome(screen))
         screen = FluxaraHomeScreen::getInstance();
 #endif
@@ -177,7 +179,7 @@ void StateManager::pushScreen(GUIEngine::Screen* screen)
 
 void StateManager::resetAndGoToScreen(GUIEngine::Screen* screen)
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (shouldRouteToFluxaraHome(screen))
         screen = FluxaraHomeScreen::getInstance();
 #endif
@@ -188,7 +190,7 @@ void StateManager::resetAndGoToScreen(GUIEngine::Screen* screen)
 
 void StateManager::resetAndSetStack(GUIEngine::Screen* screens[])
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (screens != NULL && shouldRouteToFluxaraHome(screens[0]))
     {
         AbstractStateManager::resetAndGoToScreen(
@@ -245,9 +247,40 @@ void StateManager::onGameStateChange(GameState new_state)
     if (GUIEngine::isNoGraphics())
         return;
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // Keep gameplay and pause menus landscape; standalone menus are portrait.
-    fluxaraRequestPortraitMenu(new_state == MENU);
+    // Popping a portrait race-result overlay momentarily changes to GAME
+    // before its Next handler opens the portrait campaign.  Do not expose
+    // that internal landscape hop to UIKit.
+    const bool entering_portrait_menu =
+        new_state == MENU && !fluxaraInitialOrientationIsPortrait();
+    if (entering_portrait_menu)
+    {
+        // The previous landscape drawable is about to be physically rotated
+        // by UIKit. Clear it before that happens so neither gameplay nor a
+        // partially-created Fluxara Home canvas is exposed in portrait.
+        IrrlichtDevice* device = irr_driver->getDevice();
+        device->getVideoDriver()->beginScene(true, true,
+            video::SColor(255, 12, 31, 76));
+        device->getVideoDriver()->endScene();
+    }
+    if (!fluxaraPreservePortraitDuringState(new_state == MENU))
+        fluxaraRequestPortraitMenu(new_state == MENU);
+    if (entering_portrait_menu)
+    {
+        // Build Home only after SDL has received UIKit's portrait drawable.
+        // This keeps its full Figma layout from becoming a one-frame
+        // background-only or narrow portrait composition.
+        IrrlichtDevice* device = irr_driver->getDevice();
+        for (unsigned int frame = 0;
+             frame < 12 && fluxaraOrientationTransitionPending(); ++frame)
+        {
+            device->run();
+            irr_driver->handleWindowResize();
+            if (fluxaraOrientationTransitionPending())
+                SDL_Delay(16);
+        }
+    }
 #endif
 
     if (new_state == GAME)
@@ -281,7 +314,7 @@ void StateManager::onTopMostScreenChanged()
     if (GUIEngine::isNoGraphics())
         return;
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // A standalone Fluxara launch starts in MENU, so its game-state value does
     // not change and onGameStateChange() is not called.  Request UIKit
     // geometry once the first actual menu screen exists; direct races remain

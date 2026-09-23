@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013-2015  SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2013-2015  FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -25,18 +25,18 @@
 #include <ctime>
 #include <IrrlichtDevice.h>
 
-irr::ITimer *StkTime::m_timer = NULL;
+irr::ITimer *FluxaraDriftTime::m_timer = NULL;
 std::chrono::steady_clock::time_point
-   StkTime::m_mono_start = std::chrono::steady_clock::now();
+   FluxaraDriftTime::m_mono_start = std::chrono::steady_clock::now();
 
 /** Init function for the timer. It grabs a copy of the timer of the
  *  current irrlicht device (which is the NULL device). This way the
  *  irrlicht time routine can be used even if no device exists. This
  *  situation can happen when the window resolution is changed - if the
  *  sfx manager (in a separate thread) would access the timer while the
- *  device does not exist, stk crashes.
+ *  device does not exist, fluxara_drift crashes.
  */
-void StkTime::init()
+void FluxaraDriftTime::init()
 {
     assert(!m_timer);
     m_timer = irr_driver->getDevice()->getTimer();
@@ -45,7 +45,7 @@ void StkTime::init()
 
 // ----------------------------------------------------------------------------
 /** Get the time in string for game server logging prefix (thread-safe)*/
-std::string StkTime::getLogTime()
+std::string FluxaraDriftTime::getLogTime()
 {
     time_t time_now = 0;
     time(&time_now);
@@ -66,7 +66,7 @@ std::string StkTime::getLogTime()
 // ----------------------------------------------------------------------------
 
 /** Converts the time in this object to a human readable string. */
-std::string StkTime::toString(const TimeType &tt)
+std::string FluxaraDriftTime::toString(const TimeType &tt)
 {
     const struct tm *t = gmtime(&tt);
 
@@ -81,7 +81,7 @@ std::string StkTime::toString(const TimeType &tt)
 
 /** Converts the date represented by year, month, day
  *  to a human readable string. */
-std::string StkTime::toString(int year, int month, int day)
+std::string FluxaraDriftTime::toString(int year, int month, int day)
 {
     struct tm *t = new tm();
     t->tm_year = year - 1900;
@@ -99,7 +99,7 @@ std::string StkTime::toString(int year, int month, int day)
 // ----------------------------------------------------------------------------
 
 /** Obtains the translated format of the time string. */
-std::string StkTime::getDateFormat()
+std::string FluxaraDriftTime::getDateFormat()
 {
     //I18N: Format for dates (%d = day, %m = month, %Y = year). See http://www.cplusplus.com/reference/ctime/strftime/ for more info about date formats.
     core::stringw w_date_format = translations->w_gettext(N_("%d/%m/%Y"));
@@ -121,7 +121,7 @@ std::string StkTime::getDateFormat()
  *  time of the application, 1.1.1970, ...).
  *  The value is a double precision floating point value in seconds.
  */
-double StkTime::getRealTime(long startAt)
+double FluxaraDriftTime::getRealTime(long startAt)
 {
     assert(m_timer);
     return m_timer->getRealTime()/1000.0;
@@ -133,7 +133,7 @@ double StkTime::getRealTime(long startAt)
  *  \param month (1-12).
  *  \param year (4 digits).
  */
-void StkTime::getDate(int *day, int *month, int *year)
+void FluxaraDriftTime::getDate(int *day, int *month, int *year)
 {
     std::time_t t = std::time(0);   // get time now
     std::tm * now = std::localtime(&t);
@@ -144,17 +144,17 @@ void StkTime::getDate(int *day, int *month, int *year)
 }   // getDate
 
 // ----------------------------------------------------------------------------
-StkTime::ScopeProfiler::ScopeProfiler(const char* name)
+FluxaraDriftTime::ScopeProfiler::ScopeProfiler(const char* name)
 {
     Log::info("ScopeProfiler", "%s {\n", name);
     m_time = getMonoTimeMs();
     m_name = name;
-}   // StkTime::ScopeProfiler::ScopeProfiler
+}   // FluxaraDriftTime::ScopeProfiler::ScopeProfiler
 
 // ----------------------------------------------------------------------------
-StkTime::ScopeProfiler::~ScopeProfiler()
+FluxaraDriftTime::ScopeProfiler::~ScopeProfiler()
 {
     uint64_t difference = getMonoTimeMs() - m_time;
     Log::info("ScopeProfiler", "} // took %d ms (%s)\n",
         (int)difference, m_name.c_str());
-}   // StkTime::ScopeProfiler::ScopeProfiler
+}   // FluxaraDriftTime::ScopeProfiler::ScopeProfiler

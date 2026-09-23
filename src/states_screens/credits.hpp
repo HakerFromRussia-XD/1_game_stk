@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -35,7 +35,7 @@ using namespace irr;
 class CreditsSection;
 
 /**
- * \brief Screen where STK credits are shown
+ * \brief Screen where FLUXARA_DRIFT credits are shown
  * \ingroup states_screens
  */
 class CreditsScreen : public GUIEngine::Screen,
@@ -101,7 +101,7 @@ public:
         if (m_is_victory_music)
             return music_manager->getMusicInformation("win_theme.music");
         else
-            return stk_config->m_title_music;
+            return fluxara_drift_config->m_title_music;
     }
 
     virtual void onResize() OVERRIDE

@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -18,7 +18,7 @@
 #ifndef SERVER_ONLY
 
 #include "graphics/sp/sp_base.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "graphics/central_settings.hpp"
 #include "graphics/frame_buffer.hpp"
@@ -68,7 +68,7 @@ namespace SP
 {
 
 // ----------------------------------------------------------------------------
-ShaderBasedRenderer* g_stk_sbr = NULL;
+ShaderBasedRenderer* g_fluxara_drift_sbr = NULL;
 // ----------------------------------------------------------------------------
 std::array<float, 16>* g_joint_ptr = NULL;
 // ----------------------------------------------------------------------------
@@ -128,10 +128,10 @@ bool g_skinning_use_tbo = false;
 // ----------------------------------------------------------------------------
 int sp_cur_shadow_cascade = 0;
 // ----------------------------------------------------------------------------
-void initSTKRenderer(ShaderBasedRenderer* sbr)
+void initFLUXARA_DRIFTRenderer(ShaderBasedRenderer* sbr)
 {
-    g_stk_sbr = sbr;
-}   // initSTKRenderer
+    g_fluxara_drift_sbr = sbr;
+}   // initFLUXARA_DRIFTRenderer
 // ----------------------------------------------------------------------------
 GLuint sp_mat_ubo[MAX_PLAYER_COUNT][3] = {};
 // ----------------------------------------------------------------------------
@@ -147,7 +147,7 @@ unsigned g_skinning_size;
 // ----------------------------------------------------------------------------
 ShaderBasedRenderer* getRenderer()
 {
-    return g_stk_sbr;
+    return g_fluxara_drift_sbr;
 }   // getRenderer
 
 // ----------------------------------------------------------------------------
@@ -161,7 +161,7 @@ void displaceShaderInit(SPShader* shader)
     shader->addAllUniforms(RP_1ST);
     shader->setUseFunction([]()->void
         {
-            assert(g_stk_sbr->getRTTs() != NULL);
+            assert(g_fluxara_drift_sbr->getRTTs() != NULL);
             glEnable(GL_DEPTH_TEST);
             glDepthMask(GL_FALSE);
             glDisable(GL_CULL_FACE);
@@ -170,24 +170,24 @@ void displaceShaderInit(SPShader* shader)
             glEnable(GL_STENCIL_TEST);
             glStencilFunc(GL_ALWAYS, 1, 0xFF);
             glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
-            g_stk_sbr->getRTTs()->getFBO(FBO_DISPLACE_SSR).bind(),
+            g_fluxara_drift_sbr->getRTTs()->getFBO(FBO_DISPLACE_SSR).bind(),
             glClear(GL_COLOR_BUFFER_BIT);
         }, RP_1ST);
     shader->addCustomPrefilledTextures(ST_BILINEAR,
         GL_TEXTURE_2D, "u_displace_color", []()->GLuint
         {
-            return g_stk_sbr->getRTTs()->getFBO(FBO_COLORS).getRTT()[0];
+            return g_fluxara_drift_sbr->getRTTs()->getFBO(FBO_COLORS).getRTT()[0];
         }, RP_1ST);
     shader->addCustomPrefilledTextures(ST_SHADOW,
         GL_TEXTURE_2D, "u_depth", []()->GLuint
         {
-            return g_stk_sbr->getRTTs()->getDepthStencilTexture();
+            return g_fluxara_drift_sbr->getRTTs()->getDepthStencilTexture();
         }, RP_1ST);
     shader->addCustomPrefilledTextures(ST_TRILINEAR_CLAMPED,
         GL_TEXTURE_CUBE_MAP, "u_skybox_texture", []()->GLuint
         {
-            return g_stk_sbr->getSkybox() ?
-                g_stk_sbr->getSkybox()->getCubeMap() : 0;
+            return g_fluxara_drift_sbr->getSkybox() ?
+                g_fluxara_drift_sbr->getSkybox()->getCubeMap() : 0;
         }, RP_1ST);
     shader->addShaderFile("sp_pass.vert", GL_VERTEX_SHADER, RP_RESERVED);
     shader->addShaderFile("sp_displace.frag", GL_FRAGMENT_SHADER, RP_RESERVED);
@@ -204,7 +204,7 @@ void displaceShaderInit(SPShader* shader)
             glEnable(GL_STENCIL_TEST);
             glStencilFunc(GL_ALWAYS, 1, 0xFF);
             glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
-            g_stk_sbr->getRTTs()->getFBO(FBO_TMP1_WITH_DS).bind(),
+            g_fluxara_drift_sbr->getRTTs()->getFBO(FBO_TMP1_WITH_DS).bind(),
             glClear(GL_COLOR_BUFFER_BIT);
         }, RP_RESERVED);
     SPShaderManager::addPrefilledTexturesToShader(shader,
@@ -213,17 +213,17 @@ void displaceShaderInit(SPShader* shader)
     shader->addCustomPrefilledTextures(ST_BILINEAR,
         GL_TEXTURE_2D, "mask_tex", []()->GLuint
         {
-            return g_stk_sbr->getRTTs()->getFBO(FBO_DISPLACE_SSR).getRTT()[0];
+            return g_fluxara_drift_sbr->getRTTs()->getFBO(FBO_DISPLACE_SSR).getRTT()[0];
         }, RP_RESERVED);
     shader->addCustomPrefilledTextures(ST_BILINEAR,
         GL_TEXTURE_2D, "color_tex", []()->GLuint
         {
-            return g_stk_sbr->getRTTs()->getFBO(FBO_COLORS).getRTT()[0];
+            return g_fluxara_drift_sbr->getRTTs()->getFBO(FBO_COLORS).getRTT()[0];
         }, RP_RESERVED);
     shader->addCustomPrefilledTextures(ST_BILINEAR,
         GL_TEXTURE_2D, "ssr_tex", []()->GLuint
         {
-            auto& r = g_stk_sbr->getRTTs()->getFBO(FBO_DISPLACE_SSR).getRTT();
+            auto& r = g_fluxara_drift_sbr->getRTTs()->getFBO(FBO_DISPLACE_SSR).getRTT();
             if (r.size() > 1)
                 return r[1];
             return 0;
@@ -231,12 +231,12 @@ void displaceShaderInit(SPShader* shader)
     shader->addAllTextures(RP_RESERVED);
     shader->setUnuseFunction([]()->void
         {
-            g_stk_sbr->getRTTs()->getFBO(FBO_COLORS).bind();
+            g_fluxara_drift_sbr->getRTTs()->getFBO(FBO_COLORS).bind();
             glStencilFunc(GL_EQUAL, 1, 0xFF);
-            g_stk_sbr->getPostProcessing()->renderPassThrough
-                (g_stk_sbr->getRTTs()->getFBO(FBO_TMP1_WITH_DS).getRTT()[0],
-                g_stk_sbr->getRTTs()->getFBO(FBO_COLORS).getWidth(),
-                g_stk_sbr->getRTTs()->getFBO(FBO_COLORS).getHeight());
+            g_fluxara_drift_sbr->getPostProcessing()->renderPassThrough
+                (g_fluxara_drift_sbr->getRTTs()->getFBO(FBO_TMP1_WITH_DS).getRTT()[0],
+                g_fluxara_drift_sbr->getRTTs()->getFBO(FBO_COLORS).getWidth(),
+                g_fluxara_drift_sbr->getRTTs()->getFBO(FBO_COLORS).getHeight());
             glDisable(GL_STENCIL_TEST);
         }, RP_RESERVED);
     static_cast<SPPerObjectUniform*>(shader)
@@ -267,7 +267,7 @@ void resizeSkinning(unsigned number)
             m.pointer());
         glBindTexture(GL_TEXTURE_2D, 0);
         static std::vector<std::array<float, 16> >
-            tmp_buf(stk_config->m_max_skinning_bones);
+            tmp_buf(fluxara_drift_config->m_max_skinning_bones);
         g_joint_ptr = tmp_buf.data();
     }
     else
@@ -312,29 +312,29 @@ void initSkinning()
     {
         glGetIntegerv(GL_MAX_TEXTURE_SIZE, &max_size);
     
-        if (stk_config->m_max_skinning_bones > (unsigned)max_size)
+        if (fluxara_drift_config->m_max_skinning_bones > (unsigned)max_size)
         {
             Log::warn("SharedGPUObjects", "Too many bones for skinning, max: %d",
                       max_size);
-            stk_config->m_max_skinning_bones = max_size;
+            fluxara_drift_config->m_max_skinning_bones = max_size;
         }
         Log::info("SharedGPUObjects", "Hardware Skinning enabled, method: %u"
                   " (max bones) * 16 RGBA float texture",
-                  stk_config->m_max_skinning_bones);
+                  fluxara_drift_config->m_max_skinning_bones);
     }
     else
     {
 #ifndef USE_GLES2
         int skinning_tbo_limit;
         glGetIntegerv(GL_MAX_TEXTURE_BUFFER_SIZE, &skinning_tbo_limit);
-        if (stk_config->m_max_skinning_bones << 6 > (unsigned)skinning_tbo_limit)
+        if (fluxara_drift_config->m_max_skinning_bones << 6 > (unsigned)skinning_tbo_limit)
         {
             Log::warn("SharedGPUObjects", "Too many bones for skinning, max: %d",
                       skinning_tbo_limit >> 6);
-            stk_config->m_max_skinning_bones = skinning_tbo_limit >> 6;
+            fluxara_drift_config->m_max_skinning_bones = skinning_tbo_limit >> 6;
         }
         Log::info("SharedGPUObjects", "Hardware Skinning enabled, method: TBO, "
-                  "max bones: %u", stk_config->m_max_skinning_bones);
+                  "max bones: %u", fluxara_drift_config->m_max_skinning_bones);
 #endif
     }
 
@@ -349,7 +349,7 @@ void initSkinning()
         glGenBuffers(1, &g_skinning_buf);
     }
 #endif
-    resizeSkinning(stk_config->m_max_skinning_bones);
+    resizeSkinning(fluxara_drift_config->m_max_skinning_bones);
 
     sp_prefilled_tex[0] = g_skinning_tex;
 }   // initSkinning
@@ -453,7 +453,7 @@ void init()
     {
         int skinning_tbo_limit;
         glGetIntegerv(GL_MAX_TEXTURE_BUFFER_SIZE_ARB, &skinning_tbo_limit);
-        g_skinning_use_tbo = (unsigned)skinning_tbo_limit >= stk_config->m_max_skinning_bones << 6;
+        g_skinning_use_tbo = (unsigned)skinning_tbo_limit >= fluxara_drift_config->m_max_skinning_bones << 6;
     }
     else
     {
@@ -753,13 +753,13 @@ void prepareDrawCalls()
     if (g_handle_shadow)
     {
         mathPlaneFrustumf(g_frustums[1],
-            g_stk_sbr->getShadowMatrices()->getSunOrthoMatrices()[0]);
+            g_fluxara_drift_sbr->getShadowMatrices()->getSunOrthoMatrices()[0]);
         mathPlaneFrustumf(g_frustums[2],
-            g_stk_sbr->getShadowMatrices()->getSunOrthoMatrices()[1]);
+            g_fluxara_drift_sbr->getShadowMatrices()->getSunOrthoMatrices()[1]);
         mathPlaneFrustumf(g_frustums[3],
-            g_stk_sbr->getShadowMatrices()->getSunOrthoMatrices()[2]);
+            g_fluxara_drift_sbr->getShadowMatrices()->getSunOrthoMatrices()[2]);
         mathPlaneFrustumf(g_frustums[4],
-            g_stk_sbr->getShadowMatrices()->getSunOrthoMatrices()[3]);
+            g_fluxara_drift_sbr->getShadowMatrices()->getSunOrthoMatrices()[3]);
     }
 
     for (auto& p : g_draw_calls)
@@ -858,11 +858,11 @@ void addObject(SPMeshNode* node)
         {
             added_for_skinning = true;
             int skinning_offset = g_skinning_offset + node->getTotalJoints();
-            if (skinning_offset > int(stk_config->m_max_skinning_bones))
+            if (skinning_offset > int(fluxara_drift_config->m_max_skinning_bones))
             {
                 Log::error("SPBase", "No enough space to render skinned"
                     " mesh %s! Max joints can hold: %d",
-                    node->getName(), stk_config->m_max_skinning_bones);
+                    node->getName(), fluxara_drift_config->m_max_skinning_bones);
                 return;
             }
             node->setSkinningOffset(g_skinning_offset);
@@ -1213,11 +1213,11 @@ void uploadAll()
     /*void* ptr = glMapBufferRange(GL_UNIFORM_BUFFER, 0,
         (16 * 9 + 2) * sizeof(float), GL_MAP_WRITE_BIT |
         GL_MAP_UNSYNCHRONIZED_BIT | GL_MAP_INVALIDATE_BUFFER_BIT);
-    memcpy(ptr, g_stk_sbr->getShadowMatrices()->getMatricesData(),
+    memcpy(ptr, g_fluxara_drift_sbr->getShadowMatrices()->getMatricesData(),
         (16 * 9 + 2) * sizeof(float));
     glUnmapBuffer(GL_UNIFORM_BUFFER);*/
     glBufferSubData(GL_UNIFORM_BUFFER, 0, (16 * 9 + 2) * sizeof(float),
-        g_stk_sbr->getShadowMatrices()->getMatricesData());
+        g_fluxara_drift_sbr->getShadowMatrices()->getMatricesData());
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
 
     for (SPMeshBuffer* spmb : g_instances)
@@ -1414,7 +1414,7 @@ SPMesh* convertEVTStandard(irr::scene::IMesh* mesh,
         SPMeshBuffer* buffer = new SPMeshBuffer();
         buffer->setSPMVertices(vertices);
         buffer->setIndices(indices);
-        buffer->setSTKMaterial(material);
+        buffer->setFLUXARA_DRIFTMaterial(material);
         spm->addSPMeshBuffer(buffer);
     }
     mesh->drop();

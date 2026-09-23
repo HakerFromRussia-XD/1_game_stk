@@ -243,7 +243,7 @@ void Android_toggleOnScreenKeyboard(bool show, int type, int y)
     env->DeleteLocalRef(activity);
 }
 
-void Android_fromSTKEditBox(int widget_id, const core::stringw& text, int selection_start, int selection_end, int type)
+void Android_fromFLUXARA_DRIFTEditBox(int widget_id, const core::stringw& text, int selection_start, int selection_end, int type)
 {
     JNIEnv* env = (JNIEnv*)SDL_AndroidGetJNIEnv();
     if (!env)
@@ -264,7 +264,7 @@ void Android_fromSTKEditBox(int widget_id, const core::stringw& text, int select
         return;
     }
 
-    jmethodID method_id = env->GetMethodID(class_native_activity, "fromSTKEditBox", "(ILjava/lang/String;III)V");
+    jmethodID method_id = env->GetMethodID(class_native_activity, "fromFLUXARA_DRIFTEditBox", "(ILjava/lang/String;III)V");
     if (method_id == NULL)
     {
         env->DeleteLocalRef(class_native_activity);

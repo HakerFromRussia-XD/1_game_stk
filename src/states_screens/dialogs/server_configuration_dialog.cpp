@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -24,7 +24,7 @@
 #include "guiengine/widgets/spinner_widget.hpp"
 #include "network/network_string.hpp"
 #include "network/protocols/lobby_protocol.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "states_screens/state_manager.hpp"
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
@@ -122,7 +122,7 @@ GUIEngine::EventPropagation
                     break;
                 }
             }
-            STKHost::get()->sendToServer(&change, true);
+            FLUXARA_DRIFTHost::get()->sendToServer(&change, true);
             return GUIEngine::EVENT_BLOCK;
         }
     }

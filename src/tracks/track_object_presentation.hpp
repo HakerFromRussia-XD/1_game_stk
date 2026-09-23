@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //
 //  Copyright (C) 2013-2015 Joerg Henrichs, Marianne Gagnon
 //
@@ -39,7 +39,7 @@ class PhysicalObject;
 class ThreeDAnimation;
 class ModelDefinitionLoader;
 namespace GE { class GERenderInfo; }
-class STKInstancedSceneNode;
+class FLUXARA_DRIFTInstancedSceneNode;
 class XMLNode;
 class TrackObject;
 
@@ -416,20 +416,20 @@ public:
     // ------------------------------------------------------------------------
     /** Reset the trigger (i.e. sets it to active again). */
     virtual void reset() OVERRIDE
-                             { m_reenable_timeout = StkTime::getMonoTimeMs(); }
+                             { m_reenable_timeout = FluxaraDriftTime::getMonoTimeMs(); }
     // ------------------------------------------------------------------------
     /** Sets the trigger to be enabled or disabled. getMonoTimeMs is used to
      *  to avoid called update which duplicated in network rewinding. */
     virtual void setEnable(bool status) OVERRIDE
     {
-        m_reenable_timeout = status ? StkTime::getMonoTimeMs() :
+        m_reenable_timeout = status ? FluxaraDriftTime::getMonoTimeMs() :
             std::numeric_limits<uint64_t>::max();
     }
     // ------------------------------------------------------------------------
     void setReenableTimeout(float time)
     {
         m_reenable_timeout =
-            StkTime::getMonoTimeMs() + (uint64_t)(time * 1000.0f);
+            FluxaraDriftTime::getMonoTimeMs() + (uint64_t)(time * 1000.0f);
     }
 };   // class TrackObjectPresentationActionTrigger
 

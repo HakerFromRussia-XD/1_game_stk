@@ -171,7 +171,7 @@
     <static-object  lod_instance="true" lod_group="Tree5LODNew" xyz="-36.99 -0.00 123.14" hpr="-0.0 -159.5 0.0" scale="1.00 1.00 1.00"/>
     <static-object  lod_instance="true" lod_group="TunnelTunnelLOD" xyz="-30.18 6.90 85.45" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00"/>
     <static-object  model="Zipper.Ramp.2a.spm" xyz="-24.35 13.16 48.09" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
-    <animated-texture name="stkflag_blueBooster_a.png" dy="0.50000" />
+    <animated-texture name="fluxara_driftflag_blueBooster_a.png" dy="0.50000" />
     </static-object>
     <static-object  model="Zipper.Ramp.2b.spm" xyz="-24.35 13.16 48.09" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
     <animated-texture name="texture_checkboard_bg.png" dy="-1.50000" />
@@ -986,7 +986,7 @@
   <object id="Turn8RevArrows" type="animation" xyz="91.57 1.19 73.26" hpr="90.0 -82.8 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Ramp2ForwArrows.spm" shadow-pass="false" skeletal-animation="false" if="isTrackReverse">
   </object>
   <object id="Zipper.Ramp.1a" type="animation" xyz="50.87 7.37 60.08" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="Zipper.Ramp.1a.spm" driveable="true" skeletal-animation="false" if="isEasterEggOrCTF">
-    <animated-texture name="stkflag_blueBooster_a.png" dy="0.50000" />
+    <animated-texture name="fluxara_driftflag_blueBooster_a.png" dy="0.50000" />
   </object>
   <object id="Zipper.Ramp.1b" type="animation" xyz="50.87 7.37 60.08" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="Zipper.Ramp.1b.spm" driveable="true" skeletal-animation="false" if="isEasterEggOrCTF">
     <animated-texture name="texture_checkboard_bg.png" dy="1.50000" />
@@ -994,31 +994,31 @@
   <object id="Zipper.Ramp.1c.Base" type="animation" xyz="50.87 7.37 60.08" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="Zipper.Ramp.1c.Base.spm" driveable="true" skeletal-animation="false" if="isEasterEggOrCTF">
   </object>
   <object id="Zipper01.a" type="animation" xyz="-11.44 3.29 -33.55" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="Zipper01.a.spm" shadow-pass="false" skeletal-animation="false" if="isTrackForward">
-    <animated-texture name="stkflag_blueBooster_a.png" dy="0.50000" />
+    <animated-texture name="fluxara_driftflag_blueBooster_a.png" dy="0.50000" />
   </object>
   <object id="Zipper01.b" type="animation" xyz="-11.44 3.25 -33.58" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="Zipper01.b.spm" shadow-pass="false" skeletal-animation="false" if="isTrackForward">
     <animated-texture name="texture_checkboard_bg.png" dy="-1.50000" />
   </object>
   <object id="Zipper02.a" type="animation" xyz="-0.65 3.29 -33.55" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="Zipper02.a.spm" shadow-pass="false" skeletal-animation="false" if="isTrackForward">
-    <animated-texture name="stkflag_blueBooster_a.png" dy="0.50000" />
+    <animated-texture name="fluxara_driftflag_blueBooster_a.png" dy="0.50000" />
   </object>
   <object id="Zipper02.b" type="animation" xyz="-0.65 3.25 -33.58" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="Zipper02.b.spm" shadow-pass="false" skeletal-animation="false" if="isTrackForward">
     <animated-texture name="texture_checkboard_bg.png" dy="-1.50000" />
   </object>
   <object id="Zipper03.a" type="animation" xyz="62.89 0.05 85.43" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="Zipper03.a.spm" shadow-pass="false" skeletal-animation="false" if="isTrackForward">
-    <animated-texture name="stkflag_blueBooster_a_mod_red.png" dy="0.50000" />
+    <animated-texture name="fluxara_driftflag_blueBooster_a_mod_red.png" dy="0.50000" />
   </object>
   <object id="Zipper03.b" type="animation" xyz="62.89 0.01 85.43" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="Zipper03.b.spm" shadow-pass="false" skeletal-animation="false" if="isTrackForward">
     <animated-texture name="texture_checkboard_bg.png" dy="-1.50000" />
   </object>
   <object id="Zipper04.a" type="animation" xyz="-20.15 4.87 80.63" hpr="-0.0 180.0 -0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="Zipper04.a.spm" shadow-pass="false" skeletal-animation="false" if="isTrackReverse">
-    <animated-texture name="stkflag_blueBooster_a_mod_red.png" dy="0.50000" />
+    <animated-texture name="fluxara_driftflag_blueBooster_a_mod_red.png" dy="0.50000" />
   </object>
   <object id="Zipper04.b" type="animation" xyz="-20.15 4.84 80.63" hpr="-0.0 90.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="Zipper04.b.spm" shadow-pass="false" skeletal-animation="false" if="isTrackReverse">
     <animated-texture name="texture_checkboard_bg.png" dy="-1.50000" />
   </object>
   <object id="Zipper06.a" type="animation" xyz="57.49 0.05 -1.00" hpr="0.0 -0.0 -0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="Zipper06.a.spm" shadow-pass="false" skeletal-animation="false" if="isTrackReverse">
-    <animated-texture name="stkflag_blueBooster_a.png" dy="0.50000" />
+    <animated-texture name="fluxara_driftflag_blueBooster_a.png" dy="0.50000" />
   </object>
   <object id="Zipper06.b" type="animation" xyz="57.49 0.01 -1.00" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="Zipper06.b.spm" shadow-pass="false" skeletal-animation="false" if="isTrackReverse">
     <animated-texture name="texture_checkboard_bg.png" dy="-1.50000" />

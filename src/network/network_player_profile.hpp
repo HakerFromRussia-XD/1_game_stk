@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2013-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -31,7 +31,7 @@
 #include <memory>
 #include <string>
 
-class STKPeer;
+class FLUXARA_DRIFTPeer;
 enum KartTeam : int8_t;
 enum HandicapLevel : uint8_t;
 
@@ -41,7 +41,7 @@ enum HandicapLevel : uint8_t;
 class NetworkPlayerProfile
 {
 private:
-    std::weak_ptr<STKPeer> m_peer;
+    std::weak_ptr<FLUXARA_DRIFTPeer> m_peer;
 
     /** The name of the player. */
     irr::core::stringw m_player_name;
@@ -96,7 +96,7 @@ public:
         resetGrandPrixData();
     }
     // ------------------------------------------------------------------------
-    NetworkPlayerProfile(std::shared_ptr<STKPeer> peer,
+    NetworkPlayerProfile(std::shared_ptr<FLUXARA_DRIFTPeer> peer,
                          const irr::core::stringw &name, uint32_t host_id,
                          float default_kart_color, uint32_t online_id,
                          HandicapLevel handicap,
@@ -149,7 +149,7 @@ public:
     // ------------------------------------------------------------------------
     bool isOfflineAccount() const                  { return m_online_id == 0; }
     // ------------------------------------------------------------------------
-    std::shared_ptr<STKPeer> getPeer() const          { return m_peer.lock(); }
+    std::shared_ptr<FLUXARA_DRIFTPeer> getPeer() const          { return m_peer.lock(); }
     // ------------------------------------------------------------------------
     int getScore() const                                    { return m_score; }
     // ------------------------------------------------------------------------

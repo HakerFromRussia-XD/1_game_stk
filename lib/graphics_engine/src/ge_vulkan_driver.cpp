@@ -41,6 +41,10 @@
 #include <stdexcept>
 #include "../source/Irrlicht/os.h"
 
+#ifdef IOS_FLUXARA_DRIFT
+extern "C" void fluxaraConfigureMetalDrawableTimeout();
+#endif
+
 extern "C" VKAPI_ATTR VkBool32 VKAPI_CALL debug_callback(
     VkDebugUtilsMessageSeverityFlagBitsEXT message_severity,
     VkDebugUtilsMessageTypeFlagsEXT message_type,
@@ -572,6 +576,13 @@ GEVulkanDriver::GEVulkanDriver(const SIrrlichtCreationParameters& params,
     if (SDL_Vulkan_CreateSurface(window, m_vk->instance, &m_vk->surface) == SDL_FALSE)
         throw std::runtime_error("SDL_Vulkan_CreateSurface failed");
 
+#ifdef IOS_FLUXARA_DRIFT
+    // Avoid an unbounded CAMetalLayer nextDrawable wait while UIKit replaces
+    // the drawable during rotation/resizing. MoltenVK can then return an
+    // acquire timeout and keep the main loop alive.
+    fluxaraConfigureMetalDrawableTimeout();
+#endif
+
     m_device_extensions.push_back(VK_KHR_SWAPCHAIN_EXTENSION_NAME);
     findPhysicalDevice();
     vkGetPhysicalDeviceProperties(m_physical_device, &m_properties);
@@ -641,7 +652,13 @@ GEVulkanDriver::GEVulkanDriver(const SIrrlichtCreationParameters& params,
             GEVulkanShaderManager::getSamplerSize(),
             GEVulkanShaderManager::getMeshTextureLayer(),
             GEVulkanFeatures::supportsBindMeshTexturesAtOnce());
+        // Fluxara packages track textures as ASTC 6x6 for iPhone.  Do not
+        // also run the 4x4 encoder at runtime: it starts many CPU workers,
+        // has no size benefit for packaged content, and its uncaught worker
+        // failures previously aborted race loading on device.
+#ifndef IOS_FLUXARA_DRIFT
         GECompressorASTC4x4::init();
+#endif
         GECompressorBPTCBC7::init();
         GEMaterialManager::init();
         GEVulkanFeatures::printStats();
@@ -663,7 +680,9 @@ GEVulkanDriver::~GEVulkanDriver()
 // ----------------------------------------------------------------------------
 void GEVulkanDriver::destroyVulkan()
 {
+#ifndef IOS_FLUXARA_DRIFT
     GECompressorASTC4x4::destroy();
+#endif
     if (m_depth_texture)
     {
         m_depth_texture->drop();
@@ -2406,6 +2425,9 @@ void GEVulkanDriver::createSwapChainRelated(bool handle_surface)
     {
         if (SDL_Vulkan_CreateSurface(m_params.m_sdl_window, m_vk->instance, &m_vk->surface) == SDL_FALSE)
             throw std::runtime_error("SDL_Vulkan_CreateSurface failed");
+#ifdef IOS_FLUXARA_DRIFT
+        fluxaraConfigureMetalDrawableTimeout();
+#endif
     }
     updateSurfaceInformation(m_physical_device, &m_surface_capabilities,
         &m_surface_formats, &m_present_modes);

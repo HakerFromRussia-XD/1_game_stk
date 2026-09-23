@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -205,7 +205,7 @@ namespace SkinConfig
     }   // parseColor
     // ------------------------------------------------------------------------
     /**
-      * \brief loads skin information from a STK skin file
+      * \brief loads skin information from a FLUXARA_DRIFT skin file
       * \throw std::runtime_error if file cannot be read
       */
     static void loadFromFile(std::string file, bool clear_prev_params, std::vector<std::string>& skin_paths)
@@ -217,16 +217,16 @@ namespace SkinConfig
             m_render_params.clear();
             m_colors.clear();
             m_normal_ttf.clear();
-            for (auto& p : stk_config->m_normal_ttf)
+            for (auto& p : fluxara_drift_config->m_normal_ttf)
                 m_normal_ttf.push_back(file_manager->getAssetChecked(FileManager::TTF, p, true));
             m_digit_ttf.clear();
-            for (auto& p : stk_config->m_digit_ttf)
+            for (auto& p : fluxara_drift_config->m_digit_ttf)
                 m_digit_ttf.push_back(file_manager->getAssetChecked(FileManager::TTF, p, true));
             m_color_emoji_ttf.clear();
-            if (!stk_config->m_color_emoji_ttf.empty())
+            if (!fluxara_drift_config->m_color_emoji_ttf.empty())
             {
                 m_color_emoji_ttf = file_manager->getAssetChecked(FileManager::TTF,
-                    stk_config->m_color_emoji_ttf, true);
+                    fluxara_drift_config->m_color_emoji_ttf, true);
             }
             m_icon_theme_paths.clear();
             m_font = false;
@@ -328,8 +328,8 @@ namespace SkinConfig
         {
             std::string skin_file = chain[0].find("addon_") != std::string::npos ?
                 file_manager->getAddonsFile(
-                    std::string("skins/") + chain[0].substr(6) + "/stkskin.xml") :
-                file_manager->getAsset(FileManager::SKIN, chain[0] + "/stkskin.xml");
+                    std::string("skins/") + chain[0].substr(6) + "/fluxara_driftskin.xml") :
+                file_manager->getAsset(FileManager::SKIN, chain[0] + "/fluxara_driftskin.xml");
 
             XMLNode* root = file_manager->createXMLTree(skin_file);
             if (!root)
@@ -580,10 +580,10 @@ X##_yflip.LowerRightCorner.Y =  y1;}
 Skin::Skin(IGUISkin* fallback_skin)
 {
     std::string skin_id = UserConfigParams::m_skin_file;
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // The public iPhone product ships one controlled design system. Resolve
     // it here, at the sole skin-loading boundary, so a saved legacy setting
-    // cannot bring back the inherited SuperTuxKart presentation.
+    // cannot bring back the inherited FluxaraDrift presentation.
     skin_id = "fluxara";
 #endif
 
@@ -633,7 +633,7 @@ void Skin::chainLoad(std::string skin_id)
             file_manager->getAsset(FileManager::SKIN, skin_id);
         m_skin_paths.push_back(skin_path);
 
-        skin_path += "/stkskin.xml";
+        skin_path += "/fluxara_driftskin.xml";
 
         Log::info("GUI", "Loading skin data from file: %s", skin_path.c_str());
         SkinConfig::loadFromFile(skin_path, reset, m_skin_paths);
@@ -3104,7 +3104,7 @@ video::SColor Skin::getColor (EGUI_DEFAULT_COLOR color) const
 const wchar_t*  Skin::getDefaultText (EGUI_DEFAULT_TEXT text) const
 {
     // No idea what this is for
-    return L"SuperTuxKart";
+    return L"FluxaraDrift";
 }   // getDefaultText
 
 // -----------------------------------------------------------------------------

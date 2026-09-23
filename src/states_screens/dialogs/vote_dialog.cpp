@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
 //  This program is free software; you can redistribute it and/or
@@ -45,7 +45,7 @@ VoteDialog::VoteDialog(const std::string & addon_id)
          : ModalDialog(0.8f,0.6f), m_addon_id(addon_id)
 {
     m_self_destroy         = false;
-    loadFromFile("online/vote_dialog.stkgui");
+    loadFromFile("online/vote_dialog.fluxara_driftgui");
 
     m_info_widget = getWidget<LabelWidget>("info");
     assert(m_info_widget != NULL);

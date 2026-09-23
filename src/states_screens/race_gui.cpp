@@ -1,7 +1,7 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
-//  Copyright (C) 2006-2015 Joerg Henrichs, SuperTuxKart-Team, Steve Baker
+//  Copyright (C) 2006-2015 Joerg Henrichs, FluxaraDrift-Team, Steve Baker
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -69,7 +69,7 @@ using namespace irr;
 
 #include <IrrlichtDevice.h>
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 namespace
 {
 float fluxaraHudScale()
@@ -178,7 +178,7 @@ void drawFluxaraHudCard(video::ITexture* texture,
 RaceGUI::RaceGUI()
 {
     m_enabled = true;
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     m_fluxara_counter_small = irr_driver->getTexture(
         file_manager->getAsset("gui/fluxara/hud/counter-small.png"));
     m_fluxara_counter_time = irr_driver->getTexture(
@@ -197,7 +197,7 @@ RaceGUI::RaceGUI()
     
     // Fluxara's iOS race HUD is the primary touch UI, so it must also be
     // present on a clean install where the legacy preference defaults false.
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     const bool draw_multitouch_gui = true;
 #else
     const bool draw_multitouch_gui = UserConfigParams::m_multitouch_draw_gui;
@@ -341,7 +341,7 @@ void RaceGUI::calculateMinimapSize()
     m_map_width             = (int)(map_size * scaling);
     m_map_height            = (int)(map_size * scaling);
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // Exact 844 x 390 Figma HUD grid (node 100:2): the minimap is above the
     // right-side controls and its transparent Figma panel scales with it.
     if (m_multitouch_gui != NULL &&
@@ -459,11 +459,11 @@ void RaceGUI::renderGlobal(float dt)
     FontDrawer::startBatching();
     drawGlobalTimer();
 
-#ifndef IOS_STK
+#ifndef IOS_FLUXARA_DRIFT
     if (!m_is_tutorial)
     {
         if (RaceManager::get()->isLinearRaceMode() &&
-            RaceManager::get()->hasGhostKarts() &&
+            RaceManager::get()->hasGhofluxara_driftarts() &&
             RaceManager::get()->getNumberOfKarts() >= 2 )
             drawLiveDifference();
 
@@ -559,10 +559,10 @@ void RaceGUI::drawGlobalTimer()
 {
     assert(World::getWorld() != NULL);
 
-    // Fluxara owns the iOS counter row.  Arena modes can suppress STK's
+    // Fluxara owns the iOS counter row.  Arena modes can suppress FLUXARA_DRIFT's
     // stock timer, but that must not suppress the Figma card entirely.
     if (!World::getWorld()->shouldDrawTimer()
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
         && (m_multitouch_gui == NULL || m_multitouch_gui->isSpectatorMode())
 #endif
        )
@@ -614,7 +614,7 @@ void RaceGUI::drawGlobalTimer()
             time_color = video::SColor(255,255,255,0);
     }
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (m_multitouch_gui != NULL &&
         !m_multitouch_gui->isSpectatorMode())
     {
@@ -760,7 +760,7 @@ void RaceGUI::drawGlobalMiniMap()
     core::rect<s32> dest(m_map_left, upper_y,
                          m_map_left + m_map_width, lower_y);
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (m_multitouch_gui != NULL &&
         !m_multitouch_gui->isSpectatorMode())
     {
@@ -1455,14 +1455,14 @@ void RaceGUI::drawLap(const AbstractKart* kart,
 
     World *world = World::getWorld();
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (m_multitouch_gui != NULL &&
         !m_multitouch_gui->isSpectatorMode())
     {
         // UIKit can reserve a camera viewport around the sensor housing while
         // the 2D overlay still spans the complete render target.  Testing
         // viewport == render target here therefore sent CTF/Ghost back to the
-        // legacy STK score and lap art.  One local player is the relevant
+        // legacy FLUXARA_DRIFT score and lap art.  One local player is the relevant
         // guard: it keeps split-screen out while every Fluxara race mode uses
         // the approved shared counter row.
         const float hud_scale = fluxaraHudScale();

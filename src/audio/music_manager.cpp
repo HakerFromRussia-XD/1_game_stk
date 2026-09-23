@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006-2015 Patrick Ammann <pammann@aro.ch>
 //  Copyright (C) 2008-2015 Patrick Ammann <pammann@aro.ch>, Joerg Henrichs
 //
@@ -32,7 +32,7 @@
 #include "audio/sfx_openal.hpp"
 #include "config/user_config.hpp"
 #include "io/file_manager.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 #include "utils/string_utils.hpp"
 
 MusicManager* music_manager= NULL;
@@ -117,7 +117,7 @@ MusicManager::~MusicManager()
 void MusicManager::loadMusicInformation()
 {
     // Load music files from data/music, and dirs defined in
-    // SUPERTUXKART_MUSIC_PATH
+    // FLUXARA_DRIFT_MUSIC_PATH
     std::vector<std::string> allMusicDirs=file_manager->getMusicDirs();
     for(std::vector<std::string>::iterator dir=allMusicDirs.begin();
                                            dir!=allMusicDirs.end(); dir++)
@@ -175,7 +175,7 @@ void MusicManager::startMusic()
  */
 void MusicManager::startMusic(MusicInformation* mi, bool start_right_now)
 {
-    if (STKProcess::getType() != PT_MAIN || !m_initialized)
+    if (FLUXARA_DRIFTProcess::getType() != PT_MAIN || !m_initialized)
         return;
 
     if (!UserConfigParams::m_music)

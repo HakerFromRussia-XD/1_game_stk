@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -18,11 +18,11 @@
 #ifndef TEXT_BILLBOARD_DRAWER_HPP
 #define TEXT_BILLBOARD_DRAWER_HPP
 
-class STKTextBillboard;
+class FLUXARA_DRIFTTextBillboard;
 
 namespace TextBillboardDrawer
 {
-    void addTextBillboard(STKTextBillboard* tb);
+    void addTextBillboard(FLUXARA_DRIFTTextBillboard* tb);
     void drawAll();
     void reset();
     void updateAll();

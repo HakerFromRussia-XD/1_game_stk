@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -17,7 +17,7 @@
 //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include "network/smooth_network_body.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 
 #include <algorithm>
 
@@ -28,11 +28,11 @@ SmoothNetworkBody::SmoothNetworkBody(bool enable)
     m_enabled = enable;
     m_smooth_rotation = true;
     m_adjust_vertical_offset = true;
-    m_min_adjust_length = stk_config->m_snb_min_adjust_length;
-    m_max_adjust_length = stk_config->m_snb_max_adjust_length;
-    m_min_adjust_speed = stk_config->m_snb_min_adjust_speed;
-    m_max_adjust_time = stk_config->m_snb_max_adjust_time;
-    m_adjust_length_threshold = stk_config->m_snb_adjust_length_threshold;
+    m_min_adjust_length = fluxara_drift_config->m_snb_min_adjust_length;
+    m_max_adjust_length = fluxara_drift_config->m_snb_max_adjust_length;
+    m_min_adjust_speed = fluxara_drift_config->m_snb_min_adjust_speed;
+    m_max_adjust_time = fluxara_drift_config->m_snb_max_adjust_time;
+    m_adjust_length_threshold = fluxara_drift_config->m_snb_adjust_length_threshold;
 }   // SmoothNetworkBody
 
 // ----------------------------------------------------------------------------

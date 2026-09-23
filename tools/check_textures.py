@@ -184,7 +184,7 @@ def checkDir(dir, shared_textures):
 # =============================================================================
 
 if __name__=="__main__":
-    assets = "../stk-assets/"
+    assets = "../fluxara_drift-assets/"
     shared_textures = {}
     readAllTextures([assets+"textures",
                      assets+"/textures/deprecated"],

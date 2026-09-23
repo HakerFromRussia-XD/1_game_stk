@@ -6,7 +6,7 @@ layout(location = 8) in vec3 i_origin;
 layout(location = 9) in vec4 i_rotation;
 layout(location = 10) in vec4 i_scale;
 
-#stk_include "utils/get_world_location.vert"
+#fluxara_drift_include "utils/get_world_location.vert"
 
 out vec2 uv;
 

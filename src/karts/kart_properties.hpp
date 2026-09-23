@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2006-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2006-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -49,10 +49,10 @@ class XMLNode;
 /**
  *  \brief This class stores the properties of a kart.
  *  This includes size, name, identifier, physical properties etc.
- *  It is atm also the base class for STKConfig, which stores the default values
+ *  It is atm also the base class for FLUXARA_DRIFTConfig, which stores the default values
  *  for all physics constants.
  *  Note that KartProperties is copied (when setting the default values from
- *  stk_config.
+ *  fluxara_drift_config.
  *
  * \ingroup karts
  */
@@ -177,7 +177,7 @@ private:
     Vec3  m_gravity_center_shift;
 
 public:
-    /** STK can add an impulse to push karts away from the track in case
+    /** FLUXARA_DRIFT can add an impulse to push karts away from the track in case
      *  of a kart-track collision. This can be done in two ways: either
      *  apply the impulse in the direction of the normal, or towards the
      *  driveline. The later works nice as long as the kart is driving
@@ -233,7 +233,7 @@ public:
         setWheelBase(kart_length);
     }
     void  copyFrom          (const KartProperties *source);
-    void  getAllData        (const XMLNode * root, bool called_from_stk_config = false);
+    void  getAllData        (const XMLNode * root, bool called_from_fluxara_drift_config = false);
     void  checkAllSet       (const std::string &filename);
     bool  isInGroup         (const std::string &group) const;
     bool operator<(const KartProperties &other) const;
@@ -344,7 +344,7 @@ public:
                                           {return m_collision_terrain_impulse;}
 
     // ------------------------------------------------------------------------
-    /** Returns what kind of impulse STK should use in case of a kart-track
+    /** Returns what kind of impulse FLUXARA_DRIFT should use in case of a kart-track
      *  collision. */
     TerrainImpulseType getTerrainImpulseType() const
                                              { return m_terrain_impulse_type; }

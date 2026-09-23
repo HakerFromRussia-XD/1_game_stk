@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2011-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -20,7 +20,7 @@
 
 #include "audio/sfx_base.hpp"
 #include "audio/sfx_manager.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "io/xml_node.hpp"
 #include "items/attachment.hpp"
@@ -37,7 +37,7 @@
 #include "tracks/drive_graph.hpp"
 #include "tracks/drive_node.hpp"
 #include "tracks/track.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 
 #include "utils/log.hpp" //TODO: remove after debugging is done
 
@@ -69,7 +69,7 @@ RubberBall::RubberBall(AbstractKart *kart)
     // the ball so that it's easy to collect all debug output for one
     // particular ball only.
     static int next_id[PT_COUNT] = {};
-    m_id = next_id[STKProcess::getType()]++;
+    m_id = next_id[FLUXARA_DRIFTProcess::getType()]++;
 
     m_target = NULL;
     m_ping_sfx = SFXManager::get()->createSoundSource("ball_bounce");
@@ -100,7 +100,7 @@ void RubberBall::onFireFlyable()
 
     // Do not adjust the up velocity
     setAdjustUpVelocity(false);
-    m_max_lifespan       = stk_config->time2Ticks(9999);
+    m_max_lifespan       = fluxara_drift_config->time2Ticks(9999);
     m_target             = NULL;
     m_aiming_at_target   = false;
     m_fast_ping          = false;
@@ -297,7 +297,7 @@ void RubberBall::init(const XMLNode &node, scene::IMesh *rubberball)
     m_st_min_interpolation_distance =  30.0f;
     m_st_target_distance            =  50.0f;
     m_st_target_max_angle           =  25.0f;
-    m_st_delete_ticks               = (int16_t)stk_config->time2Ticks(10.0f);
+    m_st_delete_ticks               = (int16_t)fluxara_drift_config->time2Ticks(10.0f);
     m_st_max_height_difference      =  10.0f;
     m_st_fast_ping_distance         =  50.0f;
     m_st_early_target_factor        =   1.0f;
@@ -324,7 +324,7 @@ void RubberBall::init(const XMLNode &node, scene::IMesh *rubberball)
     float f;
     if(!node.get("delete-time", &f))
         Log::warn("powerup", "No delete-time specified for basket ball.");
-    m_st_delete_ticks = stk_config->time2Ticks(f);
+    m_st_delete_ticks = fluxara_drift_config->time2Ticks(f);
     if(!node.get("target-max-angle", &m_st_target_max_angle))
         Log::warn("powerup", "No target-max-angle specified for basket ball.");
     m_st_target_max_angle *= DEGREE_TO_RAD;
@@ -445,7 +445,7 @@ bool RubberBall::updateAndDelete(int ticks)
     // Flyable::update for basket balls.
     TerrainInfo::update(next_xyz + getNormal()*vertical_offset, -getNormal());
 
-    m_height_timer += stk_config->ticks2Time(ticks);
+    m_height_timer += fluxara_drift_config->ticks2Time(ticks);
     float height    = updateHeight()+m_extend.getY()*0.5f;
     
     if(UserConfigParams::logFlyable())
@@ -522,7 +522,7 @@ void RubberBall::moveTowardsTarget(Vec3 *next_xyz, int ticks)
         *next_xyz = getXYZ() - getNormal()*m_previous_height;
     else
     {
-        float dt = stk_config->ticks2Time(ticks);
+        float dt = fluxara_drift_config->ticks2Time(ticks);
         *next_xyz = getXYZ() - getNormal()*m_previous_height
                              + (dt*m_speed / diff.length())*diff;
     }
@@ -560,7 +560,7 @@ void RubberBall::updateWeightedSpeed(int ticks)
     // Get the speed depending on difficulty but not on kart type/handicap
     float targeted_speed = kp->getEngineGenericMaxSpeed();
 
-    float dt = stk_config->ticks2Time(ticks);
+    float dt = fluxara_drift_config->ticks2Time(ticks);
 
     //Calculate the targeted weighted speed
     if (m_distance_to_target <= m_st_min_offset_distance)
@@ -610,7 +610,7 @@ void RubberBall::interpolate(Vec3 *next_xyz, int ticks)
 {
     // If we have reached or overshot the next control point, move to the
     // the next section of the spline
-    float dt = stk_config->ticks2Time(ticks);
+    float dt = fluxara_drift_config->ticks2Time(ticks);
     m_t += m_t_increase * dt;
     if(m_t > 1.0f)
     {

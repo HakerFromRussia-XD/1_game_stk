@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2006-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2006-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -87,9 +87,9 @@ void CutsceneWorld::init()
 
     m_duration = -1.0f;
 
-    Camera* stk_cam = Camera::createCamera(NULL, 0);
-    m_camera = stk_cam->getCameraSceneNode();
-    m_camera->setFOV(stk_config->m_cutscene_fov);
+    Camera* fluxara_drift_cam = Camera::createCamera(NULL, 0);
+    m_camera = fluxara_drift_cam->getCameraSceneNode();
+    m_camera->setFOV(fluxara_drift_config->m_cutscene_fov);
     m_camera->bindTargetAndRotation(true); // no "look-at"
 
     // --- Build list of sounds to play at certain frames
@@ -225,7 +225,7 @@ void CutsceneWorld::update(int ticks)
             curr->reset();
         }
         m_time = 0.01f;
-        m_time_at_second_reset = StkTime::getRealTime();
+        m_time_at_second_reset = FluxaraDriftTime::getRealTime();
         m_second_reset = true;
     }
     else if (m_second_reset)
@@ -241,14 +241,14 @@ void CutsceneWorld::update(int ticks)
         }
 
         //m_time_at_second_reset = m_time;
-        m_time_at_second_reset = StkTime::getRealTime();
+        m_time_at_second_reset = FluxaraDriftTime::getRealTime();
         m_time = 0.01f;
     }
     else
     {
         // this way of calculating time and dt is more in line with what
         // irrlicht does and provides better synchronisation
-        double now = StkTime::getRealTime();
+        double now = FluxaraDriftTime::getRealTime();
         m_time = now - m_time_at_second_reset;
     }
 

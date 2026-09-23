@@ -2,8 +2,8 @@
 // This file is part of the "Irrlicht Engine".
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
-#ifndef HEADER_STK_MESH_LOADER_HPP
-#define HEADER_STK_MESH_LOADER_HPP
+#ifndef HEADER_FLUXARA_DRIFT_MESH_LOADER_HPP
+#define HEADER_FLUXARA_DRIFT_MESH_LOADER_HPP
 
 #include "../lib/irrlicht/source/Irrlicht/CSkinnedMesh.h"
 

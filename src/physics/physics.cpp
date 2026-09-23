@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -36,14 +36,14 @@
 #include "physics/btKart.hpp"
 #include "physics/irr_debug_drawer.hpp"
 #include "physics/physical_object.hpp"
-#include "physics/stk_dynamics_world.hpp"
+#include "physics/fluxara_drift_dynamics_world.hpp"
 #include "physics/triangle_mesh.hpp"
 #include "race/race_manager.hpp"
 #include "scriptengine/script_engine.hpp"
 #include "tracks/track.hpp"
 #include "tracks/track_object.hpp"
 #include "utils/profiler.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 
 #include <IVideoDriver.h>
 
@@ -52,21 +52,21 @@ Physics* g_physics[PT_COUNT];
 // ----------------------------------------------------------------------------
 Physics* Physics::get()
 {
-    ProcessType type = STKProcess::getType();
+    ProcessType type = FLUXARA_DRIFTProcess::getType();
     return g_physics[type];
 }   // get
 
 // ----------------------------------------------------------------------------
 void Physics::create()
 {
-    ProcessType type = STKProcess::getType();
+    ProcessType type = FLUXARA_DRIFTProcess::getType();
     g_physics[type] = new Physics();
 }   // create
 
 // ----------------------------------------------------------------------------
 void Physics::destroy()
 {
-    ProcessType type = STKProcess::getType();
+    ProcessType type = FLUXARA_DRIFTProcess::getType();
     delete g_physics[type];
     g_physics[type] = NULL;
 }   // destroy
@@ -90,7 +90,7 @@ void Physics::init(const Vec3 &world_min, const Vec3 &world_max)
 {
     m_physics_loop_active = false;
     m_axis_sweep          = new btAxisSweep3(world_min, world_max);
-    m_dynamics_world      = new STKDynamicsWorld(m_dispatcher,
+    m_dynamics_world      = new FLUXARA_DRIFTDynamicsWorld(m_dispatcher,
                                                  m_axis_sweep,
                                                  this,
                                                  m_collision_conf);
@@ -104,14 +104,14 @@ void Physics::init(const Vec3 &world_min, const Vec3 &world_max)
 
     // Get the solver settings from the config file
     btContactSolverInfo& info = m_dynamics_world->getSolverInfo();
-    info.m_numIterations = stk_config->m_solver_iterations;
-    info.m_splitImpulse  = stk_config->m_solver_split_impulse;
+    info.m_numIterations = fluxara_drift_config->m_solver_iterations;
+    info.m_splitImpulse  = fluxara_drift_config->m_solver_split_impulse;
     info.m_splitImpulsePenetrationThreshold =
-        stk_config->m_solver_split_impulse_thresh;
+        fluxara_drift_config->m_solver_split_impulse_thresh;
 
     // Modify the mode according to the bits of the solver mode:
-    info.m_solverMode = (info.m_solverMode & (~stk_config->m_solver_reset_flags))
-                      | stk_config->m_solver_set_flags;
+    info.m_solverMode = (info.m_solverMode & (~fluxara_drift_config->m_solver_reset_flags))
+                      | fluxara_drift_config->m_solver_set_flags;
 }   // init
 
 //-----------------------------------------------------------------------------
@@ -193,15 +193,15 @@ void Physics::update(int ticks)
     // fixed frequency necessary for the physics update, we need to do exactly
     // one physic step only.
     double start;
-    if(UserConfigParams::m_physics_debug) start = StkTime::getRealTime();
+    if(UserConfigParams::m_physics_debug) start = FluxaraDriftTime::getRealTime();
 
-    m_dynamics_world->stepSimulation(stk_config->ticks2Time(1), 1,
-                                     stk_config->ticks2Time(1)      );
+    m_dynamics_world->stepSimulation(fluxara_drift_config->ticks2Time(1), 1,
+                                     fluxara_drift_config->ticks2Time(1)      );
     if (UserConfigParams::m_physics_debug)
     {
         Log::verbose("Physics", "At %d physics duration %12.8f",
                      World::getWorld()->getTicksSinceStart(),
-                     StkTime::getRealTime() - start);
+                     FluxaraDriftTime::getRealTime() - start);
     }
 
     // Now handle the actual collision. Note: flyables can not be removed
@@ -210,7 +210,7 @@ void Physics::update(int ticks)
     // clean up is then done later in the projectile manager.
     std::vector<CollisionPair>::iterator p;
     // Child process currently has no scripting engine
-    bool is_child = STKProcess::getType() == PT_CHILD;
+    bool is_child = FLUXARA_DRIFTProcess::getType() == PT_CHILD;
     for(p=m_all_collisions.begin(); p!=m_all_collisions.end(); ++p)
     {
         // Kart-kart collision
@@ -536,7 +536,7 @@ void Physics::KartKartCollision(AbstractKart *kart_a,
         impulse = right_kart->getTrans().getBasis() * impulse;
         right_kart->getVehicle()
             ->setTimedCentralImpulse(
-            (uint16_t)stk_config->time2Ticks(kp->getCollisionImpulseTime()),
+            (uint16_t)fluxara_drift_config->time2Ticks(kp->getCollisionImpulseTime()),
             impulse);
         right_kart ->getBody()->setAngularVelocity(btVector3(0,0,0));
     }
@@ -550,7 +550,7 @@ void Physics::KartKartCollision(AbstractKart *kart_a,
         impulse = left_kart->getTrans().getBasis() * impulse;
         left_kart->getVehicle()
             ->setTimedCentralImpulse(
-            (uint16_t)stk_config->time2Ticks(kp->getCollisionImpulseTime()),
+            (uint16_t)fluxara_drift_config->time2Ticks(kp->getCollisionImpulseTime()),
             impulse);
         left_kart->getBody()->setAngularVelocity(btVector3(0,0,0));
     }

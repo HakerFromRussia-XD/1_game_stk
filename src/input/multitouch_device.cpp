@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2013-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -21,7 +21,7 @@
 
 #include "config/user_config.hpp"
 #include "input/multitouch_device.hpp"
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "input/motorica_game_control_ios.hpp"
 #endif
 #include "karts/abstract_kart.hpp"
@@ -460,7 +460,7 @@ void MultitouchDevice::updateAxisX(float value)
     if (m_controller == NULL)
         return;
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // APP_STORE_STANDALONE_TEMP: direct iOS launches currently receive the
     // touch-wheel, accelerometer and gyroscope steering axis with the opposite
     // sign. Preserve the existing axis in Motorica Start launch mode.
@@ -580,7 +580,7 @@ void MultitouchDevice::updateOrientationFromGyroscope(float z)
 {
     const float GYRO_SPEED_THRESHOLD = 0.005f;
 
-    uint64_t now = StkTime::getMonoTimeMs();
+    uint64_t now = FluxaraDriftTime::getMonoTimeMs();
     uint64_t delta = now - m_gyro_time;
     m_gyro_time = now;
     float timedelta = (float)delta / 1000.f;

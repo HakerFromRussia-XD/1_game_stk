@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2011-2015  Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -62,7 +62,7 @@ void KartWithStats::update(int ticks)
 {
     Kart::update(ticks);
     if(getSpeed()>m_top_speed        ) m_top_speed = getSpeed();
-    float dt = stk_config->ticks2Time(ticks);
+    float dt = fluxara_drift_config->ticks2Time(ticks);
     if(getControls().getSkidControl()) m_skidding_time += dt;
     if(getControls().getBrake()      ) m_brake_count ++;
     LinearWorld *world = dynamic_cast<LinearWorld*>(World::getWorld());

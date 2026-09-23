@@ -4,7 +4,7 @@
 # (C) 2020 Dawid Gan, under the Holy Hedgehog License (do whatever you want)
 #
 
-# This is a build script that creates STK linux package.
+# This is a build script that creates FLUXARA_DRIFT linux package.
 #
 # To run the script you need debootstrap and schroot packages, and working
 # chroot environment.
@@ -41,7 +41,7 @@
 #   users=deve
 #
 #
-# Packages that are needed to compile all STK dependencies have to be installed
+# Packages that are needed to compile all FLUXARA_DRIFT dependencies have to be installed
 # manually inside both chroot directories.
       
 
@@ -49,7 +49,7 @@ export DIRNAME="$(dirname "$(readlink -f "$0")")"
 
 ######################## CONFIG ########################
 
-export STK_VERSION="git`date +%Y%m%d`"
+export FLUXARA_DRIFT_VERSION="git`date +%Y%m%d`"
 export THREADS_NUMBER=`nproc`
 export SCHROOT_32BIT_NAME="chroot-buster32"
 export SCHROOT_64BIT_NAME="chroot-buster64"
@@ -57,10 +57,10 @@ export SCHROOT_ARMV7_NAME="chroot-buster-armhf"
 export SCHROOT_ARM64_NAME="chroot-buster-arm64"
 export SCHROOT_RISCV_NAME="chroot-trixie-riscv64"
 
-export STKCODE_DIR="$DIRNAME/.."
-export STKASSETS_DIR="$STKCODE_DIR/../supertuxkart-assets"
-export OPENGLRECORDER_DIR="$STKCODE_DIR/../libopenglrecorder"
-export STKEDITOR_DIR="$STKCODE_DIR/../supertuxkart-editor"
+export FLUXARA_DRIFTCODE_DIR="$DIRNAME/.."
+export FLUXARA_DRIFTASSETS_DIR="$FLUXARA_DRIFTCODE_DIR/../fluxaradrift-assets"
+export OPENGLRECORDER_DIR="$FLUXARA_DRIFTCODE_DIR/../libopenglrecorder"
+export FLUXARA_DRIFTEDITOR_DIR="$FLUXARA_DRIFTCODE_DIR/../fluxaradrift-editor"
 
 export BLACKLIST_LIBS="ld-linux libbsd.so libc.so libdl.so libdrm libexpat \
                        libGL libgl libm.so libmvec.so libpthread libresolv \
@@ -68,12 +68,12 @@ export BLACKLIST_LIBS="ld-linux libbsd.so libc.so libdl.so libdrm libexpat \
                        libEGL libgbm libwayland libffi bcm_host libvc"
 
 export BUILD_DIR="build-linux"
-export DEPENDENCIES_DIR="$STKCODE_DIR/dependencies-linux"
-export STK_INSTALL_DIR="$STKCODE_DIR/build-linux-install"
+export DEPENDENCIES_DIR="$FLUXARA_DRIFTCODE_DIR/dependencies-linux"
+export FLUXARA_DRIFT_INSTALL_DIR="$FLUXARA_DRIFTCODE_DIR/build-linux-install"
 
 export STATIC_GCC=1
 
-# Use it if you build STK with Debian Jessie
+# Use it if you build FLUXARA_DRIFT with Debian Jessie
 export ENABLE_JESSIE_HACKS=1
 
 ########################################################
@@ -102,24 +102,24 @@ write_run_game_sh()
     echo 'export DIRNAME="$(dirname "$(readlink -f "$0")")"'             >> "$FILE"
     echo 'export SYSTEM_LD_LIBRARY_PATH="$LD_LIBRARY_PATH"'              >> "$FILE"
     echo ''                                                              >> "$FILE"
-    echo 'export SUPERTUXKART_DATADIR="$DIRNAME"'                        >> "$FILE"
-    echo 'export SUPERTUXKART_ASSETS_DIR="$DIRNAME/data/"'               >> "$FILE"
+    echo 'export FLUXARA_DRIFT_DATADIR="$DIRNAME"'                        >> "$FILE"
+    echo 'export FLUXARA_DRIFT_ASSETS_DIR="$DIRNAME/data/"'               >> "$FILE"
     echo ''                                                              >> "$FILE"
     echo 'cd "$DIRNAME"'                                                 >> "$FILE"
     echo ''                                                              >> "$FILE"
     echo 'export LD_LIBRARY_PATH="$DIRNAME/lib:$LD_LIBRARY_PATH"'        >> "$FILE"
-    echo '"$DIRNAME/bin/supertuxkart" "$@"'                              >> "$FILE"
+    echo '"$DIRNAME/bin/fluxaradrift" "$@"'                              >> "$FILE"
     echo ''                                                              >> "$FILE"
 }
 
-build_stk()
+build_fluxara_drift()
 {
     if [ -z "$1" ] || [ -z "$2" ]; then
         return
     fi
     
     export ARCH_OPTION="$1"
-    export STK_CMAKE_FLAGS="$2"
+    export FLUXARA_DRIFT_CMAKE_FLAGS="$2"
     export DEPENDENCIES_DIR="$DEPENDENCIES_DIR-$ARCH_OPTION"
     export BUILD_DIR="$BUILD_DIR-$ARCH_OPTION"
     export INSTALL_DIR="$DEPENDENCIES_DIR/dependencies"
@@ -137,7 +137,7 @@ build_stk()
         LDFLAGS="$LDFLAGS -static-libgcc -static-libstdc++"
     fi
     
-    cd "$STKCODE_DIR"
+    cd "$FLUXARA_DRIFTCODE_DIR"
     mkdir -p "$DEPENDENCIES_DIR"
     
     # CMake
@@ -568,9 +568,9 @@ build_stk()
         touch "$DEPENDENCIES_DIR/openglrecorder.stamp"
     fi
 
-    # Supertuxkart
-    mkdir -p "$STKCODE_DIR/$BUILD_DIR"
-    cd "$STKCODE_DIR/$BUILD_DIR"
+    # FluxaraDrift
+    mkdir -p "$FLUXARA_DRIFTCODE_DIR/$BUILD_DIR"
+    cd "$FLUXARA_DRIFTCODE_DIR/$BUILD_DIR"
     
     if [ -f "$INSTALL_DIR/bin/ispc" ]; then
         HAS_ISPC=1
@@ -588,18 +588,18 @@ build_stk()
              -DENABLE_WAYLAND_DEVICE=0 \
              -DBC7_ISPC=$HAS_ISPC \
              -DCMAKE_DISABLE_FIND_PACKAGE_Fontconfig=1 \
-             $STK_CMAKE_FLAGS &&
+             $FLUXARA_DRIFT_CMAKE_FLAGS &&
     make -j$THREADS_NUMBER
     check_error
     
-    # Stk editor
-    # mkdir -p "$STKEDITOR_DIR/$BUILD_DIR"
-    # cd "$STKEDITOR_DIR/$BUILD_DIR"
+    # FluxaraDrift editor
+    # mkdir -p "$FLUXARA_DRIFTEDITOR_DIR/$BUILD_DIR"
+    # cd "$FLUXARA_DRIFTEDITOR_DIR/$BUILD_DIR"
     # cmake .. -DCMAKE_FIND_ROOT_PATH="$INSTALL_DIR" \
     #          -DSTATIC_ZLIB=1 \
     #          -DSTATIC_PHYSFS=1 \
     #          -DCMAKE_DISABLE_FIND_PACKAGE_Fontconfig=1 \
-    #          $STK_CMAKE_FLAGS &&
+    #          $FLUXARA_DRIFT_CMAKE_FLAGS &&
     # make -j$THREADS_NUMBER
     # check_error
 }
@@ -620,7 +620,7 @@ copy_libraries()
     fi
     
     LIBRARIES_LIST=`LD_LIBRARY_PATH="$DEPENDENCIES_DIR/dependencies/lib" \
-                    ldd "$STKCODE_DIR/$BUILD_DIR/bin/supertuxkart" | \
+                    ldd "$FLUXARA_DRIFTCODE_DIR/$BUILD_DIR/bin/fluxaradrift" | \
                     cut -d">" -f2 | cut -d"(" -f1 | grep "\.so"`
 
     for FILE in $LIBRARIES_LIST; do 
@@ -653,30 +653,30 @@ test_package()
     PACKAGE_DIR="$1"
     BINARY_ARCH="$2"
     
-    if [ `objdump -a "$PACKAGE_DIR/bin/supertuxkart" | grep -c "$BINARY_ARCH"` -eq 0 ]; then
-        echo "Error: bin/supertuxkart is not $BINARY_ARCH"
+    if [ `objdump -a "$PACKAGE_DIR/bin/fluxaradrift" | grep -c "$BINARY_ARCH"` -eq 0 ]; then
+        echo "Error: bin/fluxaradrift is not $BINARY_ARCH"
         exit 1
     fi
     
-    # if [ `objdump -a "$PACKAGE_DIR/bin/supertuxkart-editor" | grep -c "$BINARY_ARCH"` -eq 0 ]; then
-    #     echo "Error: bin/supertuxkart-editor is not $BINARY_ARCH"
+    # if [ `objdump -a "$PACKAGE_DIR/bin/fluxaradrift-editor" | grep -c "$BINARY_ARCH"` -eq 0 ]; then
+    #     echo "Error: bin/fluxaradrift-editor is not $BINARY_ARCH"
     #     exit 1
     # fi
 
-    if [ `LD_LIBRARY_PATH="$PACKAGE_DIR/lib" ldd "$PACKAGE_DIR/bin/supertuxkart" | grep -c "not found"` -gt 0 ]; then
-        echo "Error: bin/supertuxkart has some missing libraries"
+    if [ `LD_LIBRARY_PATH="$PACKAGE_DIR/lib" ldd "$PACKAGE_DIR/bin/fluxaradrift" | grep -c "not found"` -gt 0 ]; then
+        echo "Error: bin/fluxaradrift has some missing libraries"
         exit 1
     fi
     
-    # if [ `ldd "$PACKAGE_DIR/bin/supertuxkart-editor" | grep -c "not found"` -gt 0 ]; then
-    #     echo "Error: bin/supertuxkart-editor has some missing libraries"
+    # if [ `ldd "$PACKAGE_DIR/bin/fluxaradrift-editor" | grep -c "not found"` -gt 0 ]; then
+    #     echo "Error: bin/fluxaradrift-editor has some missing libraries"
     #     exit 1
     # fi
 
-    LD_LIBRARY_PATH="$PACKAGE_DIR/lib" "$PACKAGE_DIR/bin/supertuxkart" --version
+    LD_LIBRARY_PATH="$PACKAGE_DIR/lib" "$PACKAGE_DIR/bin/fluxaradrift" --version
     
     if [ $? -ne 0 ]; then
-        echo "Error: Couldn't start bin/supertuxkart"
+        echo "Error: Couldn't start bin/fluxaradrift"
         exit 1
     fi
 }
@@ -689,87 +689,87 @@ create_package()
     
     echo "Building $ARCH version..."
     
-    schroot -c $SCHROOT_NAME -- "$0" build_stk "$ARCH" "-DDEBUG_SYMBOLS=1"
+    schroot -c $SCHROOT_NAME -- "$0" build_fluxara_drift "$ARCH" "-DDEBUG_SYMBOLS=1"
     
-    if [ ! -f "$STKCODE_DIR/$BUILD_DIR-$ARCH/bin/supertuxkart" ]; then
+    if [ ! -f "$FLUXARA_DRIFTCODE_DIR/$BUILD_DIR-$ARCH/bin/fluxaradrift" ]; then
         echo "Couldn't build $ARCH version."
         exit 1
     fi
     
     echo "Prepare package..."
 
-    STK_PACKAGE_DIR="$STK_INSTALL_DIR/SuperTuxKart-$STK_VERSION-linux-$ARCH"
+    FLUXARA_DRIFT_PACKAGE_DIR="$FLUXARA_DRIFT_INSTALL_DIR/FluxaraDrift-$FLUXARA_DRIFT_VERSION-linux-$ARCH"
     
-    if [ -f "$STK_PACKAGE_DIR" ]; then
-        rm -rf "$STK_PACKAGE_DIR"
+    if [ -f "$FLUXARA_DRIFT_PACKAGE_DIR" ]; then
+        rm -rf "$FLUXARA_DRIFT_PACKAGE_DIR"
     fi
     
-    mkdir -p "$STK_PACKAGE_DIR"
-    mkdir -p "$STK_PACKAGE_DIR/bin"
-    mkdir -p "$STK_PACKAGE_DIR/lib"
+    mkdir -p "$FLUXARA_DRIFT_PACKAGE_DIR"
+    mkdir -p "$FLUXARA_DRIFT_PACKAGE_DIR/bin"
+    mkdir -p "$FLUXARA_DRIFT_PACKAGE_DIR/lib"
     
-    schroot -c $SCHROOT_NAME -- "$0" copy_libraries "$ARCH" "$STK_PACKAGE_DIR/lib"
+    schroot -c $SCHROOT_NAME -- "$0" copy_libraries "$ARCH" "$FLUXARA_DRIFT_PACKAGE_DIR/lib"
     
-    find "$STK_PACKAGE_DIR/lib" -type f -exec strip -s {} \;
+    find "$FLUXARA_DRIFT_PACKAGE_DIR/lib" -type f -exec strip -s {} \;
     
     if [ "$STATIC_GCC" -eq 0 ]; then
-        mv "$STK_PACKAGE_DIR/lib/libgcc_s.so.1" "$STK_PACKAGE_DIR/lib/libgcc_s.so.1-orig"
-        mv "$STK_PACKAGE_DIR/lib/libstdc++.so.6" "$STK_PACKAGE_DIR/lib/libstdc++.so.6-orig"
+        mv "$FLUXARA_DRIFT_PACKAGE_DIR/lib/libgcc_s.so.1" "$FLUXARA_DRIFT_PACKAGE_DIR/lib/libgcc_s.so.1-orig"
+        mv "$FLUXARA_DRIFT_PACKAGE_DIR/lib/libstdc++.so.6" "$FLUXARA_DRIFT_PACKAGE_DIR/lib/libstdc++.so.6-orig"
     fi
     
-    write_run_game_sh "$STK_PACKAGE_DIR"
+    write_run_game_sh "$FLUXARA_DRIFT_PACKAGE_DIR"
     
-    cp "$STKCODE_DIR/$BUILD_DIR-$ARCH/bin/supertuxkart" "$STK_INSTALL_DIR/supertuxkart-$STK_VERSION-linux-$ARCH-symbols"
-    # cp "$STKEDITOR_DIR/$BUILD_DIR-$ARCH/bin/supertuxkart-editor" "$STK_INSTALL_DIR/supertuxkart-editor-$STK_VERSION-linux-$ARCH-symbols"
+    cp "$FLUXARA_DRIFTCODE_DIR/$BUILD_DIR-$ARCH/bin/fluxaradrift" "$FLUXARA_DRIFT_INSTALL_DIR/fluxaradrift-$FLUXARA_DRIFT_VERSION-linux-$ARCH-symbols"
+    # cp "$FLUXARA_DRIFTEDITOR_DIR/$BUILD_DIR-$ARCH/bin/fluxaradrift-editor" "$FLUXARA_DRIFT_INSTALL_DIR/fluxaradrift-editor-$FLUXARA_DRIFT_VERSION-linux-$ARCH-symbols"
     
-    cp -a "$STKCODE_DIR/$BUILD_DIR-$ARCH/bin/supertuxkart" "$STK_PACKAGE_DIR/bin/"
-    # cp -a "$STKEDITOR_DIR/$BUILD_DIR-$ARCH/bin/supertuxkart-editor" "$STK_PACKAGE_DIR/bin/"
+    cp -a "$FLUXARA_DRIFTCODE_DIR/$BUILD_DIR-$ARCH/bin/fluxaradrift" "$FLUXARA_DRIFT_PACKAGE_DIR/bin/"
+    # cp -a "$FLUXARA_DRIFTEDITOR_DIR/$BUILD_DIR-$ARCH/bin/fluxaradrift-editor" "$FLUXARA_DRIFT_PACKAGE_DIR/bin/"
     
-    cp -a "$STKCODE_DIR/data/." "$STK_PACKAGE_DIR/data"
-    # cp -a "$STKASSETS_DIR/editor" "$STK_PACKAGE_DIR/data/"
-    cp -a "$STKASSETS_DIR/karts" "$STK_PACKAGE_DIR/data/"
-    cp -a "$STKASSETS_DIR/library" "$STK_PACKAGE_DIR/data/"
-    cp -a "$STKASSETS_DIR/models" "$STK_PACKAGE_DIR/data/"
-    cp -a "$STKASSETS_DIR/music" "$STK_PACKAGE_DIR/data/"
-    cp -a "$STKASSETS_DIR/sfx" "$STK_PACKAGE_DIR/data/"
-    cp -a "$STKASSETS_DIR/textures" "$STK_PACKAGE_DIR/data/"
-    cp -a "$STKASSETS_DIR/tracks" "$STK_PACKAGE_DIR/data/"
-    cp -a "$STKASSETS_DIR/licenses.txt" "$STK_PACKAGE_DIR/data/"
+    cp -a "$FLUXARA_DRIFTCODE_DIR/data/." "$FLUXARA_DRIFT_PACKAGE_DIR/data"
+    # cp -a "$FLUXARA_DRIFTASSETS_DIR/editor" "$FLUXARA_DRIFT_PACKAGE_DIR/data/"
+    cp -a "$FLUXARA_DRIFTASSETS_DIR/karts" "$FLUXARA_DRIFT_PACKAGE_DIR/data/"
+    cp -a "$FLUXARA_DRIFTASSETS_DIR/library" "$FLUXARA_DRIFT_PACKAGE_DIR/data/"
+    cp -a "$FLUXARA_DRIFTASSETS_DIR/models" "$FLUXARA_DRIFT_PACKAGE_DIR/data/"
+    cp -a "$FLUXARA_DRIFTASSETS_DIR/music" "$FLUXARA_DRIFT_PACKAGE_DIR/data/"
+    cp -a "$FLUXARA_DRIFTASSETS_DIR/sfx" "$FLUXARA_DRIFT_PACKAGE_DIR/data/"
+    cp -a "$FLUXARA_DRIFTASSETS_DIR/textures" "$FLUXARA_DRIFT_PACKAGE_DIR/data/"
+    cp -a "$FLUXARA_DRIFTASSETS_DIR/tracks" "$FLUXARA_DRIFT_PACKAGE_DIR/data/"
+    cp -a "$FLUXARA_DRIFTASSETS_DIR/licenses.txt" "$FLUXARA_DRIFT_PACKAGE_DIR/data/"
     
-    strip --strip-debug "$STK_PACKAGE_DIR/bin/supertuxkart"
-    # strip --strip-debug "$STK_PACKAGE_DIR/bin/supertuxkart-editor"
+    strip --strip-debug "$FLUXARA_DRIFT_PACKAGE_DIR/bin/fluxaradrift"
+    # strip --strip-debug "$FLUXARA_DRIFT_PACKAGE_DIR/bin/fluxaradrift-editor"
     
-    find "$STK_PACKAGE_DIR/bin" -type f -exec chrpath -d {} \;
-    find "$STK_PACKAGE_DIR/lib" -type f -exec chrpath -d {} \;
+    find "$FLUXARA_DRIFT_PACKAGE_DIR/bin" -type f -exec chrpath -d {} \;
+    find "$FLUXARA_DRIFT_PACKAGE_DIR/lib" -type f -exec chrpath -d {} \;
     
-    chmod a+rwx "$STK_PACKAGE_DIR" -R
-    find "$STK_PACKAGE_DIR" -type f -exec chmod a-x {} \;
-    find "$STK_PACKAGE_DIR/bin" -type f -exec chmod a+x {} \;
-    chmod a+x "$STK_PACKAGE_DIR/run_game.sh"
+    chmod a+rwx "$FLUXARA_DRIFT_PACKAGE_DIR" -R
+    find "$FLUXARA_DRIFT_PACKAGE_DIR" -type f -exec chmod a-x {} \;
+    find "$FLUXARA_DRIFT_PACKAGE_DIR/bin" -type f -exec chmod a+x {} \;
+    chmod a+x "$FLUXARA_DRIFT_PACKAGE_DIR/run_game.sh"
     
-    schroot -c $SCHROOT_NAME -- "$0" test_package "$STK_PACKAGE_DIR" "$BINARY_ARCH"
+    schroot -c $SCHROOT_NAME -- "$0" test_package "$FLUXARA_DRIFT_PACKAGE_DIR" "$BINARY_ARCH"
     
     # Compress package
     
     echo "Compress package..."
     
-    cd "$STK_INSTALL_DIR"
-    tar -czf "SuperTuxKart-$STK_VERSION-linux-$ARCH.tar.gz" "SuperTuxKart-$STK_VERSION-linux-$ARCH"
+    cd "$FLUXARA_DRIFT_INSTALL_DIR"
+    tar -czf "FluxaraDrift-$FLUXARA_DRIFT_VERSION-linux-$ARCH.tar.gz" "FluxaraDrift-$FLUXARA_DRIFT_VERSION-linux-$ARCH"
     cd -
 }
 
 # Handle clean command
 if [ ! -z "$1" ] && [ "$1" = "clean" ]; then
     rm -rf "$DEPENDENCIES_DIR-"*
-    rm -rf "$STKCODE_DIR/$BUILD_DIR-"*
-    # rm -rf "$STKEDITOR_DIR/$BUILD_DIR-"*
-    rm -rf "$STK_INSTALL_DIR"
+    rm -rf "$FLUXARA_DRIFTCODE_DIR/$BUILD_DIR-"*
+    # rm -rf "$FLUXARA_DRIFTEDITOR_DIR/$BUILD_DIR-"*
+    rm -rf "$FLUXARA_DRIFT_INSTALL_DIR"
     exit 0
 fi
 
-# Handle build_stk command (internal only)
-if [ ! -z "$1 " ] && [ "$1" = "build_stk" ]; then
-    build_stk "$2" "$3"
+# Handle build_fluxara_drift command (internal only)
+if [ ! -z "$1 " ] && [ "$1" = "build_fluxara_drift" ]; then
+    build_fluxara_drift "$2" "$3"
     exit 0
 fi
 
@@ -786,7 +786,7 @@ if [ ! -z "$1 " ] && [ "$1" = "test_package" ]; then
 fi
 
 
-# Building STK
+# Building FLUXARA_DRIFT
 
 create_package "$SCHROOT_32BIT_NAME" "x86" "elf32-i386"
 create_package "$SCHROOT_64BIT_NAME" "x86_64" "elf64-x86-64"

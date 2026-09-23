@@ -12,7 +12,7 @@ python3 tools/motorica_assets/build_assets.py all
 
 This command:
 
-1. rebuilds the overlay from a compatible `stk-assets` checkout;
+1. rebuilds the overlay from a compatible `fluxara_drift-assets` checkout;
 2. builds the minimal `build-motorica-ios-assets/assets/data` tree;
 3. builds the full data-only ZIP under `dist/motorica-assets`;
 4. generates the JSON manifest, SHA-256 file, C++ trusted manifest and size
@@ -22,9 +22,9 @@ This command:
 
 The release assets for build 28 are:
 
-- `motorica-stk-full-assets-1.zip`
-- `motorica-stk-full-assets-1.json`
-- `motorica-stk-full-assets-1.sha256`
+- `motorica-fluxara_drift-full-assets-1.zip`
+- `motorica-fluxara_drift-full-assets-1.json`
+- `motorica-fluxara_drift-full-assets-1.sha256`
 
 Upload them to the non-draft, non-prerelease GitHub Release tagged
 `ios-assets-1.0-build28`. The application deliberately uses the immutable tag

@@ -15,12 +15,12 @@ out vec4 Diff;
 out vec4 Spec;
 #endif
 
-#stk_include "utils/decodeNormal.frag"
-#stk_include "utils/encode_normal.frag"
-#stk_include "utils/getPosFromUVDepth.frag"
-#stk_include "utils/DiffuseIBL.frag"
-#stk_include "utils/SpecularIBL.frag"
-#stk_include "utils/screen_space_reflection.frag"
+#fluxara_drift_include "utils/decodeNormal.frag"
+#fluxara_drift_include "utils/encode_normal.frag"
+#fluxara_drift_include "utils/getPosFromUVDepth.frag"
+#fluxara_drift_include "utils/DiffuseIBL.frag"
+#fluxara_drift_include "utils/SpecularIBL.frag"
+#fluxara_drift_include "utils/screen_space_reflection.frag"
 
 vec3 gtaoMultiBounce(float visibility, vec3 albedo)
 {

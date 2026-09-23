@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2011-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -20,7 +20,7 @@
 #include "addons/news_manager.hpp"
 
 #include "config/user_config.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "io/file_manager.hpp"
 #include "online/http_request.hpp"
 #include "online/request_manager.hpp"
@@ -121,7 +121,7 @@ void NewsManager::downloadNews()
     bool download = ( UserConfigParams::m_news_last_updated==0  ||
                       UserConfigParams::m_news_last_updated
                           +UserConfigParams::m_news_frequency
-                        < StkTime::getTimeSinceEpoch()          ||
+                        < FluxaraDriftTime::getTimeSinceEpoch()          ||
                       m_force_refresh                       ||
                       !news_exists                                    )
          && UserConfigParams::m_internet_status==RequestManager::IPERM_ALLOWED
@@ -191,7 +191,7 @@ void NewsManager::downloadNews()
         }   // hadDownloadError
 
         if(!download_req->hadDownloadError())
-            UserConfigParams::m_news_last_updated = StkTime::getTimeSinceEpoch();
+            UserConfigParams::m_news_last_updated = FluxaraDriftTime::getTimeSinceEpoch();
 
         // No download error, update the last_updated time value, and delete
         // the potentially loaded xml file
@@ -213,7 +213,7 @@ void NewsManager::downloadNews()
         delete xml;
     }
 
-    // We can't finish stk (esp. delete the file manager) before
+    // We can't finish fluxara_drift (esp. delete the file manager) before
     // this part of the code is reached (since otherwise the file
     // manager might be access after it was deleted).
     CanBeDeleted::setCanBeDeleted();
@@ -226,7 +226,7 @@ void NewsManager::downloadNews()
  */
 void NewsManager::checkRedirect(const XMLNode *xml)
 {
-    if (stk_config->m_allow_news_redirects)
+    if (fluxara_drift_config->m_allow_news_redirects)
     {
         // NOTE: Before 0.10 there were just two redirect attributes
         // "redirect" - addons server (contains /dl/xml/ path)
@@ -239,9 +239,9 @@ void NewsManager::checkRedirect(const XMLNode *xml)
             if (UserConfigParams::logAddons())
             {
                 Log::info("[Addons]", "Current addons server: '%s'\n [Addons] New addons server: '%s'",
-                            stk_config->m_server_addons.c_str(), new_addons_server.c_str());
+                            fluxara_drift_config->m_server_addons.c_str(), new_addons_server.c_str());
             }
-            stk_config->m_server_addons = new_addons_server;
+            fluxara_drift_config->m_server_addons = new_addons_server;
         }
 
         // Redirect for the API server
@@ -251,9 +251,9 @@ void NewsManager::checkRedirect(const XMLNode *xml)
             if (UserConfigParams::logAddons())
             {
                 Log::info("[Addons]", "Current API server: '%s'\n [Addons] New API server: '%s'",
-                            stk_config->m_server_api.c_str(), new_api_server.c_str());
+                            fluxara_drift_config->m_server_api.c_str(), new_api_server.c_str());
             }
-            stk_config->m_server_api = new_api_server;
+            fluxara_drift_config->m_server_api = new_api_server;
         }
 
         // Redirect for the hardware report server
@@ -261,8 +261,8 @@ void NewsManager::checkRedirect(const XMLNode *xml)
         if (xml->get("redirect-server-hardware-report", &new_hardware_report_server) == 1 && !new_hardware_report_server.empty())
         {
             Log::info("hw report", "Current hardware report  server: '%s'\n [hw report] New hardware report server: '%s'",
-                        stk_config->m_server_hardware_report.c_str(), new_hardware_report_server.c_str());
-            stk_config->m_server_hardware_report = new_hardware_report_server;
+                        fluxara_drift_config->m_server_hardware_report.c_str(), new_hardware_report_server.c_str());
+            fluxara_drift_config->m_server_hardware_report = new_hardware_report_server;
         }
     }
 
@@ -284,7 +284,7 @@ void NewsManager::checkRedirect(const XMLNode *xml)
  *  \param xml The XML data from the news file.
  *  \param filename The filename of the news xml file. Only needed
  *         in case of an error (e.g. the file might be corrupted)
- *         - the file will be deleted so that on next start of stk it
+ *         - the file will be deleted so that on next start of fluxara_drift it
  *         will be updated again.
  */
 void NewsManager::updateNews(const XMLNode *xml, const std::string &filename)
@@ -350,7 +350,7 @@ void NewsManager::updateNews(const XMLNode *xml, const std::string &filename)
         // a new read on the next start, instead of waiting
         // for some time).
         file_manager->removeFile(filename);
-        NewsMessage n(_("Failed to connect to the SuperTuxKart add-ons server."), -1);
+        NewsMessage n(_("Failed to connect to the FluxaraDrift add-ons server."), -1);
 
         for (int type = 0; type < NTYPE_COUNT; type++)
         {
@@ -546,9 +546,9 @@ const int NewsManager::getNextNewsID(NewsType type)
 /** Checks if the given condition list are all fulfilled.
  *  The conditions must be separated by ";", and each condition
  *  must be of the form "type comp version".
- *  Type must be 'stkversion'
+ *  Type must be 'fluxara_driftversion'
  *  comp must be one of "<", "=", ">"
- *  version must be a valid STK version string
+ *  version must be a valid FLUXARA_DRIFT version string
  *  \param cond The list of conditions
  *  \return True if all conditions are true.
  */
@@ -565,25 +565,25 @@ bool NewsManager::conditionFulfilled(const std::string &cond)
                                      "be true.", cond_list[i].c_str());
             continue;
         }
-        // Check for stkversion comparisons
+        // Check for fluxara_driftversion comparisons
         // ================================
-        if(cond[0]=="stkversion")
+        if(cond[0]=="fluxara_driftversion")
         {
             int news_version = StringUtils::versionToInt(cond[2]);
-            int stk_version  = StringUtils::versionToInt(STK_VERSION);
+            int fluxara_drift_version  = StringUtils::versionToInt(FLUXARA_DRIFT_VERSION);
             if(cond[1]=="=")
             {
-                if(stk_version!=news_version) return false;
+                if(fluxara_drift_version!=news_version) return false;
                 continue;
             }
             if(cond[1]=="<")
             {
-                if(stk_version>=news_version) return false;
+                if(fluxara_drift_version>=news_version) return false;
                 continue;
             }
             if(cond[1]==">")
             {
-                if(stk_version<=news_version) return false;
+                if(fluxara_drift_version<=news_version) return false;
                 continue;
             }
             Log::warn("NewsManager", "Invalid comparison in condition '%s' - "

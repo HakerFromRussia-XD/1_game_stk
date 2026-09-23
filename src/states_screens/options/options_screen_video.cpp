@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -26,7 +26,7 @@
 #include "graphics/shader.hpp"
 #include "graphics/sp/sp_base.hpp"
 #include "graphics/sp/sp_texture_manager.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "io/file_manager.hpp"
 #include "states_screens/dialogs/custom_video_settings.hpp"
 #include "states_screens/dialogs/recommend_video_settings.hpp"
@@ -73,11 +73,11 @@ void OptionsScreenVideo::updateImageQuality(bool force_reload_texture)
             SP::SPTextureManager::get()->reloadTexture("");
     }
     else if (prev_max_size != cur_max_size || force_reload_texture)
-        STKTexManager::getInstance()->reloadAllTextures(true/*mesh_texture_only*/);
+        FLUXARA_DRIFTTexManager::getInstance()->reloadAllTextures(true/*mesh_texture_only*/);
 }   // updateImageQuality
 
 // --------------------------------------------------------------------------------------------
-OptionsScreenVideo::OptionsScreenVideo() : Screen("options/options_video.stkgui"),
+OptionsScreenVideo::OptionsScreenVideo() : Screen("options/options_video.fluxara_driftgui"),
                                            m_prev_adv_pipline(false)
 {
 }   // OptionsScreenVideo
@@ -122,7 +122,7 @@ void OptionsScreenVideo::init()
     vsync->clearLabels();
     //I18N: In the video options
     vsync->addLabel(_("Vertical Sync"));
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
     std::set<int> fps = { 30, 60, 90, 120 };
 #else
     std::set<int> fps = { 30, 60, 120, 180, 240, 480, 1000 };
@@ -225,13 +225,13 @@ void OptionsScreenVideo::init()
     assert( bench_select != NULL );
 
     // Only display the scene selection widget if there are multiple valid replays
-    if (stk_config->m_benchmark_files.size() <= 1)
+    if (fluxara_drift_config->m_benchmark_files.size() <= 1)
     {
         bench_select->setActive(false);
         bench_select->setVisible(false);
         getWidget<LabelWidget>("benchmarkSelect_label")->setVisible(false);
         // Disable the performance test button if there is no valid replay
-        if (stk_config->m_benchmark_files.size() == 0)
+        if (fluxara_drift_config->m_benchmark_files.size() == 0)
             getWidget<ButtonWidget>("benchmarkCurrent")->setActive(false);
     }
     // Use the replay names as labels for selection
@@ -239,14 +239,14 @@ void OptionsScreenVideo::init()
     else
     {
         bench_select->clearLabels();
-        for (auto it = stk_config->m_benchmark_files.begin();
-                it != stk_config->m_benchmark_files.end(); it++)
+        for (auto it = fluxara_drift_config->m_benchmark_files.begin();
+                it != fluxara_drift_config->m_benchmark_files.end(); it++)
         {
             core::stringw bench_name = StringUtils::utf8ToWide(*it);
             bench_select->addLabel(bench_name);
         }
         // Reset the active benchmark file in case we left and reentered options after changing it
-        stk_config->m_active_benchmark_file = stk_config->m_benchmark_files[0];
+        fluxara_drift_config->m_active_benchmark_file = fluxara_drift_config->m_benchmark_files[0];
     }
 
     // If a benchmark was requested and the game had to reload
@@ -583,9 +583,9 @@ void OptionsScreenVideo::eventCallback(Widget* widget, const std::string& name,
         assert( bench_select != NULL );
 
         const unsigned int bench_id = bench_select->getValue();
-        assert(bench_id < stk_config->m_benchmark_files.size());
+        assert(bench_id < fluxara_drift_config->m_benchmark_files.size());
 
-        stk_config->m_active_benchmark_file = stk_config->m_benchmark_files[bench_id];
+        fluxara_drift_config->m_active_benchmark_file = fluxara_drift_config->m_benchmark_files[bench_id];
     }
     /*else if (name == "benchmarkRecommend")
     {

@@ -63,7 +63,7 @@ typedef int socklen_t;
 
 static enet_uint32 timeBase = 0;
 
-// Global variable handled by STK
+// Global variable handled by FLUXARA_DRIFT
 extern int isIPv6Socket(void);
 
 int
@@ -344,7 +344,7 @@ enet_socket_create (ENetSocketType type)
     {
         int no = 0;
         // Allow IPv6 socket listen to IPv4 connection (as long as the host has IPv4 address)
-        // We always use dual stack in STK
+        // We always use dual stack in FLUXARA_DRIFT
         setsockopt (socket_fd, IPPROTO_IPV6, IPV6_V6ONLY, (void *) & no, sizeof (no));
     }
     return socket_fd;

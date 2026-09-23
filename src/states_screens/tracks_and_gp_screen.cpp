@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -21,7 +21,7 @@
 #include "config/favorite_status.hpp"
 #include "config/player_manager.hpp"
 #include "config/user_config.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "guiengine/widget.hpp"
 #include "guiengine/widgets/check_box_widget.hpp"
 #include "guiengine/widgets/dynamic_ribbon_widget.hpp"
@@ -269,7 +269,7 @@ void TracksAndGPScreen::init()
     buildTrackList();
 
     // select old track for the game master (if found)
-    STKTexManager::getInstance()->setTextureErrorMessage(
+    FLUXARA_DRIFTTexManager::getInstance()->setTextureErrorMessage(
               "While loading screenshot in track screen for last track '%s':",
               UserConfigParams::m_last_track);
     if (!tracks_widget->setSelection(UserConfigParams::m_last_track,
@@ -277,7 +277,7 @@ void TracksAndGPScreen::init()
     {
         tracks_widget->setSelection(0, PLAYER_ID_GAME_MASTER, true);
     }
-    STKTexManager::getInstance()->unsetTextureErrorMessage();
+    FLUXARA_DRIFTTexManager::getInstance()->unsetTextureErrorMessage();
 }   // init
 
 // -----------------------------------------------------------------------------

@@ -20,7 +20,7 @@ get_live_changes(Instruction* instr)
    }
 
    for (const Operand& op : instr->operands) {
-      if (!op.isTemp() || !op.isFirstKill())
+      if (!op.isTemp() || !op.isFirfluxara_driftill())
          continue;
       changes -= op.getTemp();
    }
@@ -42,7 +42,7 @@ get_temp_registers(Instruction* instr)
    }
 
    for (Operand op : instr->operands) {
-      if (op.isFirstKill() || op.isCopyKill()) {
+      if (op.isFirfluxara_driftill() || op.isCopyKill()) {
          demand_before += op.getTemp();
          if (op.isLateKill())
             demand_after += op.getTemp();
@@ -65,7 +65,7 @@ RegisterDemand get_temp_reg_changes(Instruction* instr)
    }
 
    for (Operand op : instr->operands) {
-      if (op.isFirstKillBeforeDef() || op.isCopyKill())
+      if (op.isFirfluxara_driftillBeforeDef() || op.isCopyKill())
          available_def_space -= op.getTemp();
       else if (op.isClobbered() && !op.isKill())
          available_def_space -= op.getTemp();
@@ -358,7 +358,7 @@ process_live_temps_per_block(live_ctx& ctx, Block* block)
             continue;
 
          if (live.insert(temp.id()).second) {
-            operand.setFirstKill(true);
+            operand.setFirfluxara_driftill(true);
             for (unsigned j = i + 1; j < insn->operands.size(); ++j) {
                if (insn->operands[j].isTemp() && insn->operands[j].getTemp() == temp)
                   insn->operands[j].setKill(true);

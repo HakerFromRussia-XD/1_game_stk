@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //            (C) 2014-2015 Joerg Henrichs
 //
@@ -70,7 +70,7 @@ private:
     /** Number of available tracks */
     int m_max_num_tracks;
 
-    irr::gui::STKModifiedSpriteBank* m_icon_bank;
+    irr::gui::FLUXARA_DRIFTModifiedSpriteBank* m_icon_bank;
     /** Icon for unknown kart in highscore list */
     int m_unknown_kart_icon;
 

@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -17,7 +17,7 @@
 //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include "network/network_config.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "input/device_manager.hpp"
 #include "modes/world.hpp"
@@ -26,8 +26,8 @@
 #include "network/rewind_manager.hpp"
 #include "network/server_config.hpp"
 #include "network/socket_address.hpp"
-#include "network/stk_host.hpp"
-#include "network/stk_ipv6.hpp"
+#include "network/fluxara_drift_host.hpp"
+#include "network/fluxara_drift_ipv6.hpp"
 #include "network/stun_detection.hpp"
 #include "online/xml_request.hpp"
 #include "states_screens/main_menu_screen.hpp"
@@ -132,12 +132,12 @@ void NetworkConfig::initSystemIP()
 }   // initSystemIP
 
 /** \class NetworkConfig
- *  This class is the interface between STK and the online code, particularly
- *  STKHost. It stores all online related properties (e.g. if this is a server
+ *  This class is the interface between FLUXARA_DRIFT and the online code, particularly
+ *  FLUXARA_DRIFTHost. It stores all online related properties (e.g. if this is a server
  *  or a host, name of the server, maximum number of players, ip address, ...).
  *  They can either be set from the GUI code, or via the command line (for a
  *  stand-alone server).
- *  When STKHost is created, it takes all necessary information from this
+ *  When FLUXARA_DRIFTHost is created, it takes all necessary information from this
  *  instance.
  */
 // ============================================================================
@@ -169,7 +169,7 @@ NetworkConfig::NetworkConfig()
 void NetworkConfig::initClientPort()
 {
     m_client_port = UserConfigParams::m_random_client_port ?
-        0 : stk_config->m_client_port;
+        0 : fluxara_drift_config->m_client_port;
 }   // initClientPort
 
 // ----------------------------------------------------------------------------
@@ -288,10 +288,10 @@ std::vector<std::unique_ptr<StunDetection> > g_ipv4_detection;
 std::vector<std::unique_ptr<StunDetection> > g_ipv6_detection;
 #endif
 
-void NetworkConfig::clearDetectIPThread(bool quit_stk)
+void NetworkConfig::clearDetectIPThread(bool quit_fluxara_drift)
 {
 #ifdef ENABLE_IPV6
-    if (!quit_stk)
+    if (!quit_fluxara_drift)
     {
         auto it = g_ipv4_detection.begin();
         while (it != g_ipv4_detection.end())
@@ -343,7 +343,7 @@ void NetworkConfig::queueIPDetection()
     if (stunv4_map.empty())
         return;
     auto ipv4_it = stunv4_map.begin();
-    int adv = StkTime::getMonoTimeMs() % stunv4_map.size();
+    int adv = FluxaraDriftTime::getMonoTimeMs() % stunv4_map.size();
     std::advance(ipv4_it, adv);
 
     auto& stunv6_map = UserConfigParams::m_stun_servers;
@@ -357,7 +357,7 @@ void NetworkConfig::queueIPDetection()
     if (stunv6_map.empty())
         return;
     auto ipv6_it = stunv6_map.begin();
-    adv = StkTime::getMonoTimeMs() % stunv6_map.size();
+    adv = FluxaraDriftTime::getMonoTimeMs() % stunv6_map.size();
     std::advance(ipv6_it, adv);
 
     SocketAddress::g_ignore_error_message = true;
@@ -399,7 +399,7 @@ void NetworkConfig::getIPDetectionResult(uint64_t timeout)
     if (g_ipv4_detection.empty() || g_ipv6_detection.empty())
         goto end;
 
-    timeout += StkTime::getMonoTimeMs();
+    timeout += FluxaraDriftTime::getMonoTimeMs();
     do
     {
         has_ipv4 = g_ipv4_detection.back()->connectionSucceeded();
@@ -408,8 +408,8 @@ void NetworkConfig::getIPDetectionResult(uint64_t timeout)
         if (g_ipv4_detection.back()->socketClosed() &&
             g_ipv6_detection.back()->socketClosed())
             break;
-    } while (timeout > StkTime::getMonoTimeMs());
-    clearDetectIPThread(false/*quit_stk*/);
+    } while (timeout > FluxaraDriftTime::getMonoTimeMs());
+    clearDetectIPThread(false/*quit_fluxara_drift*/);
 
 end:
     if (has_ipv6)
@@ -733,13 +733,13 @@ const std::vector<std::pair<std::string, int> >&
     if (ipv4)
     {
         if (ipv4_list.empty())
-            NetworkConfig::fillStunList(&ipv4_list, stk_config->m_stun_ipv4);
+            NetworkConfig::fillStunList(&ipv4_list, fluxara_drift_config->m_stun_ipv4);
         return ipv4_list;
     }
     else
     {
         if (ipv6_list.empty())
-            NetworkConfig::fillStunList(&ipv6_list, stk_config->m_stun_ipv6);
+            NetworkConfig::fillStunList(&ipv6_list, fluxara_drift_config->m_stun_ipv6);
         return ipv6_list;
     }
 }   // getStunList

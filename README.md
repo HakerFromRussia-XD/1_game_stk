@@ -1,12 +1,12 @@
 # Motorica Kart
 
 This repository contains the Motorica-maintained distribution of
-[SuperTuxKart](https://github.com/supertuxkart/stk-code), adapted by
+[Fluxara Drift](https://github.com/fluxaradrift/fluxara_drift-code), adapted by
 **MOTORICA RESEARCH LLC** for integration with the Motorica Start application.
 
-It is a modified, unofficial SuperTuxKart build. This repository and the
+It is a modified, unofficial Fluxara Drift build. This repository and the
 applications built from it are not produced, affiliated with, or endorsed by
-the SuperTuxKart development team.
+the Fluxara Drift development team.
 
 ## Purpose
 
@@ -14,9 +14,9 @@ The iOS application has two permanent, documented product modes:
 
 - a direct Home Screen launch opens **Motorica Training Hub**, containing the
   Motorica Night Island, Motorica Kiki, and the Motorica Signal Circuit race;
-- a valid `motorica-stk://` launch from Motorica Start enables local
+- a valid `motorica-fluxara_drift://` launch from Motorica Start enables local
   game-control snapshots from a compatible Motorica device and the optional
-  full SuperTuxKart content catalog;
+  full Fluxara Drift content catalog;
 - Motorica Start and the game exchange control state locally through an Apple
   App Group. The App Group identifier is supplied to entitlements, Info.plist,
   and runtime code from one Xcode build setting to prevent configuration drift.
@@ -33,10 +33,10 @@ catalog and work offline without Motorica Start or a Motorica device.
 | Product | Motorica Kart |
 | Maintainer | MOTORICA RESEARCH LLC |
 | App Store version | 1.0 (build 28) |
-| Bundle identifier | `com.motorica.games.stkttt` |
+| Bundle identifier | `com.motorica.games.fluxara_driftttt` |
 | Apple team | `R7M384QD5A` |
 | App Group | `group.com.motorica.start.gamecontrolll` |
-| Motorica Start integration | local App Group and `motorica-stk` URL scheme |
+| Motorica Start integration | local App Group and `motorica-fluxara_drift` URL scheme |
 | Full asset package | tag `ios-assets-1.0-build28` |
 
 The App Group identifier is intentionally documented without treating it as a
@@ -55,11 +55,11 @@ contain later development.
 - [Third-party and asset notices](THIRD_PARTY_NOTICES.md)
 - [Names and trademark notice](TRADEMARKS.md)
 - [Full GPL text and asset-license overview](COPYING)
-- [SuperTuxKart credits](data/CREDITS)
+- [Fluxara Drift credits](data/CREDITS)
 
 ## Licensing
 
-The SuperTuxKart program code, including Motorica's modifications in this
+The Fluxara Drift program code, including Motorica's modifications in this
 repository, is distributed under the GNU General Public License, version 3 or
 any later version. See [COPYING](COPYING).
 
@@ -69,8 +69,8 @@ license and attribution files remain in `data/` and `lib/`; see
 
 ## Support and privacy
 
-- [Support page](https://hakerfromrussia-xd.github.io/1_game_stk/support/stk/)
-- [Privacy policy](https://hakerfromrussia-xd.github.io/1_game_stk/privacy/stk/)
+- [Support page](https://hakerfromrussia-xd.github.io/1_game_fluxara_drift/support/fluxara_drift/)
+- [Privacy policy](https://hakerfromrussia-xd.github.io/1_game_fluxara_drift/privacy/fluxara_drift/)
 - [Motorica website](https://motorica.org/)
 
 ## Upstream project
@@ -78,5 +78,5 @@ license and attribution files remain in `data/` and `lib/`; see
 For the official, unmodified game, releases, community support, and general
 cross-platform build instructions, visit:
 
-- <https://github.com/supertuxkart/stk-code>
-- <https://supertuxkart.net/>
+- <https://github.com/fluxaradrift/fluxara_drift-code>
+- <https://fluxaradrift.net/>

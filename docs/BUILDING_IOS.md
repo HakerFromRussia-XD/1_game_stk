@@ -8,7 +8,7 @@ archives are required.
 
 - App Store version: `1.0`
 - build number: `28`
-- bundle identifier: `com.motorica.games.stkttt`
+- bundle identifier: `com.motorica.games.fluxara_driftttt`
 - Apple Developer team: `R7M384QD5A`
 - App Group build setting:
   `MOTORICA_GAME_CONTROL_APP_GROUP=group.com.motorica.start.gamecontrolll`
@@ -23,21 +23,21 @@ the entitlements or Objective-C++ runtime code.
    current branch until the final build-28 source tag is created:
 
    ```sh
-   git clone https://github.com/HakerFromRussia-XD/1_game_stk.git
-   cd 1_game_stk
+   git clone https://github.com/HakerFromRussia-XD/1_game_fluxara_drift.git
+   cd 1_game_fluxara_drift
    ```
 
-2. Obtain the source-compatible iOS dependencies from the SuperTuxKart
+2. Obtain the source-compatible iOS dependencies from the Fluxara Drift
    dependency project and prepare these directories in the repository root:
 
    - `dependencies-iphoneos`
    - `dependencies-iphonesimulator`
 
    Dependency sources and releases:
-   <https://github.com/supertuxkart/dependencies>
+   <https://github.com/fluxaradrift/dependencies>
 
 3. Prepare the compatible upstream assets at
-   `/Users/motoricallc/Downloads/stk-assets`, then build the tracked Motorica
+   `/Users/motoricallc/Downloads/fluxara_drift-assets`, then build the tracked Motorica
    overlay, the minimal IPA assets, and the data-only full package:
 
    ```sh
@@ -62,10 +62,10 @@ cmake -S . -B build-ios -G Xcode \
 Open:
 
 ```text
-build-ios/SuperTuxKart.xcodeproj
+build-ios/FluxaraDrift.xcodeproj
 ```
 
-Select the `supertuxkart` scheme and an iOS device. Signing uses MOTORICA
+Select the `fluxaradrift` scheme and an iOS device. Signing uses MOTORICA
 RESEARCH LLC and requires a provisioning profile that contains both the bundle
 identifier and App Group listed above.
 
@@ -78,8 +78,8 @@ with the same Bundle ID and App Group.
 
 ```sh
 xcodebuild \
-  -project build-ios/SuperTuxKart.xcodeproj \
-  -scheme supertuxkart \
+  -project build-ios/FluxaraDrift.xcodeproj \
+  -scheme fluxaradrift \
   -configuration Release \
   -sdk iphoneos \
   -destination 'generic/platform=iOS' \
@@ -89,7 +89,7 @@ xcodebuild \
 Before submission, inspect the signed product and confirm that its identifier,
 team identifier, and application-groups entitlement match this document.
 Also compare `dwarfdump --uuid` for the application executable and
-`dSYMs/supertuxkart.app.dSYM/Contents/Resources/DWARF/supertuxkart` inside the
+`dSYMs/fluxaradrift.app.dSYM/Contents/Resources/DWARF/fluxaradrift` inside the
 archive; the UUIDs must be identical.
 
 Also confirm that the IPA contains only the standalone `motorica_signal_lab`

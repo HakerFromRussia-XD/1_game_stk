@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013 the SuperTuxKart team
+//  Fluxara Drift - a fun racing game with go-kart
+//  Copyright (C) 2013 the Fluxara Drift team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -42,7 +42,7 @@ out vec4 FragColor;
 // Number of samples used for blurring
 #define NB_SAMPLES 8
 
-#stk_include "utils/getPosFromUVDepth.frag"
+#fluxara_drift_include "utils/getPosFromUVDepth.frag"
 
 void main()
 {

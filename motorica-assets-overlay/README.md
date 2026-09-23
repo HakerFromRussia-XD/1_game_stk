@@ -1,7 +1,7 @@
 # Motorica standalone asset overlay
 
 This directory is the tracked source of the permanent Motorica Training Hub
-gameplay content. It is derived from the compatible `stk-assets` checkout and
+gameplay content. It is derived from the compatible `fluxara_drift-assets` checkout and
 keeps each upstream `licenses.txt` file next to the reused assets.
 
 - `motorica_signal_pilot`: original static hover vehicle geometry with four

@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -18,7 +18,7 @@
 
 #include "items/item_manager.hpp"
 
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "graphics/irr_driver.hpp"
 #include "graphics/material.hpp"
@@ -179,7 +179,7 @@ ItemManager::ItemManager()
     m_switch_to.reserve(ItemState::ITEM_COUNT);
     for(unsigned int i=ItemState::ITEM_FIRST; i<ItemState::ITEM_COUNT; i++)
         m_switch_to.push_back((ItemState::ItemType)i);
-    setSwitchItems(stk_config->m_switch_items);
+    setSwitchItems(fluxara_drift_config->m_switch_items);
 
     if(Graph::get())
     {
@@ -555,7 +555,7 @@ void ItemManager::deleteItemInQuad(ItemState* item)
 
 //-----------------------------------------------------------------------------
 /** Switches all items: boxes become bananas and vice versa for a certain
- *  amount of time (as defined in stk_config.xml).
+ *  amount of time (as defined in fluxara_drift_config.xml).
  */
 void ItemManager::switchItems()
 {
@@ -564,7 +564,7 @@ void ItemManager::switchItems()
 
 //-----------------------------------------------------------------------------
 /** Switches all items: boxes become bananas and vice versa for a certain
- *  amount of time (as defined in stk_config.xml).
+ *  amount of time (as defined in fluxara_drift_config.xml).
  */
 void ItemManager::switchItemsInternal(std::vector<ItemState*> &all_items)
 {
@@ -586,7 +586,7 @@ void ItemManager::switchItemsInternal(std::vector<ItemState*> &all_items)
     // if the items are already switched (m_switch_ticks >=0)
     // then switch back, and set m_switch_ticks to -1 to indicate
     // that the items are now back to normal.
-    m_switch_ticks = m_switch_ticks < 0 ? stk_config->m_item_switch_ticks : -1;
+    m_switch_ticks = m_switch_ticks < 0 ? fluxara_drift_config->m_item_switch_ticks : -1;
 
 }   // switchItems
 

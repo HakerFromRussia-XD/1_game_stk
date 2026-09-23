@@ -1,2 +1,2 @@
-nacptool --create "SuperTuxKart" "Many People" "${PROJECT_VERSION}" control.nacp
-elf2nro bin/supertuxkart.elf bin/stk.nro --nacp=control.nacp --icon=../switch/supertuxkart_256.jpg
+nacptool --create "FluxaraDrift" "Many People" "${PROJECT_VERSION}" control.nacp
+elf2nro bin/fluxaradrift.elf bin/fluxara_drift.nro --nacp=control.nacp --icon=../switch/fluxaradrift_256.jpg

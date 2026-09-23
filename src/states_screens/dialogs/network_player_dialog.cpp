@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -28,7 +28,7 @@
 #include "online/online_profile.hpp"
 #include "network/network_string.hpp"
 #include "network/protocols/client_lobby.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "states_screens/dialogs/general_text_field_dialog.hpp"
 #include "states_screens/dialogs/ranking_callback.hpp"
 #include "states_screens/state_manager.hpp"
@@ -106,8 +106,8 @@ void NetworkPlayerDialog::beforeAddingWidgets()
 
     //I18N: In the network player dialog
     m_kick_widget->setText(_("Kick"));
-    m_kick_widget->setVisible(STKHost::get()->isAuthorisedToControl()
-        && m_host_id != STKHost::get()->getMyHostId());
+    m_kick_widget->setVisible(FLUXARA_DRIFTHost::get()->isAuthorisedToControl()
+        && m_host_id != FLUXARA_DRIFTHost::get()->getMyHostId());
 
     m_cancel_widget = getWidget<IconButtonWidget>("cancel");
     assert(m_cancel_widget != NULL);
@@ -116,7 +116,7 @@ void NetworkPlayerDialog::beforeAddingWidgets()
     assert(m_options_widget != NULL);
 
     m_change_team_widget = NULL;
-    if (m_allow_change_team && m_host_id == STKHost::get()->getMyHostId())
+    if (m_allow_change_team && m_host_id == FLUXARA_DRIFTHost::get()->getMyHostId())
     {
         m_change_team_widget = getWidget<IconButtonWidget>("accept");
         m_change_team_widget->setVisible(true);
@@ -129,7 +129,7 @@ void NetworkPlayerDialog::beforeAddingWidgets()
         getWidget<IconButtonWidget>("accept")->setVisible(false);
 
     m_handicap_widget = NULL;
-    if (m_host_id == STKHost::get()->getMyHostId())
+    if (m_host_id == FLUXARA_DRIFTHost::get()->getMyHostId())
     {
         m_handicap_widget = getWidget<IconButtonWidget>("remove");
         m_handicap_widget->setVisible(true);
@@ -152,7 +152,7 @@ void NetworkPlayerDialog::beforeAddingWidgets()
     assert(m_report_widget != NULL);
     auto cl = LobbyProtocol::get<ClientLobby>();
     if (cl->serverEnabledReportPlayer() &&
-        m_host_id != STKHost::get()->getMyHostId())
+        m_host_id != FLUXARA_DRIFTHost::get()->getMyHostId())
     {
         // I18N: In the network player dialog,
         // report player about for example abusive behaviour in game
@@ -205,7 +205,7 @@ void NetworkPlayerDialog::onUpdate(float dt)
                 NetworkString report(PROTOCOL_LOBBY_ROOM);
                 report.addUInt8(LobbyProtocol::LE_REPORT_PLAYER)
                     .addUInt32(host_id).encodeString16(info);
-                STKHost::get()->sendToServer(&report, true/*reliable*/);
+                FLUXARA_DRIFTHost::get()->sendToServer(&report, true/*reliable*/);
                 return true;
             });
         return;
@@ -248,7 +248,7 @@ GUIEngine::EventPropagation
         {
             NetworkString kick(PROTOCOL_LOBBY_ROOM);
             kick.addUInt8(LobbyProtocol::LE_KICK_HOST).addUInt32(m_host_id);
-            STKHost::get()->sendToServer(&kick, true/*reliable*/);
+            FLUXARA_DRIFTHost::get()->sendToServer(&kick, true/*reliable*/);
             m_self_destroy = true;
             return GUIEngine::EVENT_BLOCK;
         }
@@ -258,7 +258,7 @@ GUIEngine::EventPropagation
             NetworkString change_team(PROTOCOL_LOBBY_ROOM);
             change_team.addUInt8(LobbyProtocol::LE_CHANGE_TEAM)
                 .addUInt8(m_local_id);
-            STKHost::get()->sendToServer(&change_team, true/*reliable*/);
+            FLUXARA_DRIFTHost::get()->sendToServer(&change_team, true/*reliable*/);
             m_self_destroy = true;
             return GUIEngine::EVENT_BLOCK;
         }
@@ -273,7 +273,7 @@ GUIEngine::EventPropagation
             NetworkString change_handicap(PROTOCOL_LOBBY_ROOM);
             change_handicap.addUInt8(LobbyProtocol::LE_CHANGE_HANDICAP)
                 .addUInt8(m_local_id).addUInt8(new_handicap);
-            STKHost::get()->sendToServer(&change_handicap, true/*reliable*/);
+            FLUXARA_DRIFTHost::get()->sendToServer(&change_handicap, true/*reliable*/);
             m_self_destroy = true;
             return GUIEngine::EVENT_BLOCK;
         }

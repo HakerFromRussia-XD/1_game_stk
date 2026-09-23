@@ -1,7 +1,7 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
-//  Copyright (C) 2006-2015 SuperTuxKart-Team, Steve Baker
+//  Copyright (C) 2006-2015 FluxaraDrift-Team, Steve Baker
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -19,7 +19,7 @@
 
 #include "graphics/camera/camera_debug.hpp"
 
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "karts/abstract_kart.hpp"
 #include "karts/explosion_animation.hpp"
@@ -187,7 +187,7 @@ void CameraDebug::positionCamera(float dt, float above_kart, float cam_angle,
                            fabsf(distance)*tan_up+above_kart,
                            distance);
     btTransform t=m_kart->getSmoothedTrans();
-    if(stk_config->m_camera_follow_skid &&
+    if(fluxara_drift_config->m_camera_follow_skid &&
         m_kart->getSkidding()->getVisualSkidRotation()!=0)
     {
         // If the camera should follow the graphical skid, add the

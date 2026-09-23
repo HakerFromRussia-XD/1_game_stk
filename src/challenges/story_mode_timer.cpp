@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2006-2019 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2006-2019 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -106,7 +106,7 @@ void StoryModeTimer::startTimer()
     // and it thus persist if the user disable/reenable it.
     if (!m_valid_speedrun_started && m_player_can_speedrun)
     {
-        m_speedrun_start = StkTime::getMonoTimeMs();
+        m_speedrun_start = FluxaraDriftTime::getMonoTimeMs();
         m_valid_speedrun_started = true;
     }
 
@@ -115,7 +115,7 @@ void StoryModeTimer::startTimer()
     // and is correct
     if (!m_story_mode_started)
     {
-        m_story_mode_start = StkTime::getMonoTimeMs();
+        m_story_mode_start = FluxaraDriftTime::getMonoTimeMs();
         m_story_mode_end = m_story_mode_start;
         m_story_mode_started = true;
     }
@@ -125,13 +125,13 @@ void StoryModeTimer::stopTimer()
 {
     if (m_valid_speedrun_started)
     {
-        m_speedrun_end = StkTime::getMonoTimeMs();
+        m_speedrun_end = FluxaraDriftTime::getMonoTimeMs();
         m_valid_speedrun_ended = true;
     }
 
     if (m_story_mode_started)
     {
-        m_story_mode_end = StkTime::getMonoTimeMs();
+        m_story_mode_end = FluxaraDriftTime::getMonoTimeMs();
         m_story_mode_ended = true;
     }
     updateTimer();
@@ -161,13 +161,13 @@ void StoryModeTimer::pauseTimer(bool loading)
 
 void StoryModeTimer::pauseSpeedrunTimer()
 {
-    m_speedrun_pause_start = StkTime::getMonoTimeMs();
+    m_speedrun_pause_start = FluxaraDriftTime::getMonoTimeMs();
     m_speedrun_pause_active = true;
 }
 
 void StoryModeTimer::pauseStoryModeTimer()
 {
-    m_story_mode_pause_start = StkTime::getMonoTimeMs();
+    m_story_mode_pause_start = FluxaraDriftTime::getMonoTimeMs();
     m_story_mode_pause_active = true;
 }
 
@@ -188,7 +188,7 @@ void StoryModeTimer::unpauseTimer(bool loading)
 
 void StoryModeTimer::unpauseSpeedrunTimer()
 {
-    uint64_t now = StkTime::getMonoTimeMs();
+    uint64_t now = FluxaraDriftTime::getMonoTimeMs();
     m_speedrun_total_pause_time += now - m_speedrun_pause_start;
     m_speedrun_pause_active = false;
 
@@ -197,7 +197,7 @@ void StoryModeTimer::unpauseSpeedrunTimer()
 
 void StoryModeTimer::unpauseStoryModeTimer()
 {
-    uint64_t now = StkTime::getMonoTimeMs();
+    uint64_t now = FluxaraDriftTime::getMonoTimeMs();
     m_story_mode_total_pause_time += now - m_story_mode_pause_start;
     m_story_mode_pause_active = false;
 } // unpauseStoryModeTimer
@@ -230,7 +230,7 @@ void StoryModeTimer::updateSpeedrunTimer()
     }
     else
     {
-        uint64_t now = StkTime::getMonoTimeMs();
+        uint64_t now = FluxaraDriftTime::getMonoTimeMs();
         elapsed_time = now - m_speedrun_start - m_speedrun_total_pause_time;
     }
 
@@ -253,7 +253,7 @@ void StoryModeTimer::updateStoryModeTimer()
     }
     else
     {
-        uint64_t now = StkTime::getMonoTimeMs();
+        uint64_t now = FluxaraDriftTime::getMonoTimeMs();
         elapsed_time = now - m_story_mode_start - m_story_mode_total_pause_time;
     }
     m_story_mode_milliseconds = m_stored_story_mode_milliseconds + elapsed_time;

@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2013-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -20,7 +20,7 @@
 
 #include "network/crypto.hpp"
 #include "network/protocols/client_lobby.hpp"
-#include "network/stk_peer.hpp"
+#include "network/fluxara_drift_peer.hpp"
 #include "utils/log.hpp"
 #include "utils/time.hpp"
 
@@ -39,9 +39,9 @@ constexpr bool isConnectionRequestPacket(unsigned char* data, size_t length)
 }   // isConnectionRequestPacket
 
 // ============================================================================
-Event::Event(ENetEvent* event, std::shared_ptr<STKPeer> peer)
+Event::Event(ENetEvent* event, std::shared_ptr<FLUXARA_DRIFTPeer> peer)
 {
-    m_arrival_time = StkTime::getMonoTimeMs();
+    m_arrival_time = FluxaraDriftTime::getMonoTimeMs();
     m_pdi = PDI_TIMEOUT;
     m_peer = peer;
 

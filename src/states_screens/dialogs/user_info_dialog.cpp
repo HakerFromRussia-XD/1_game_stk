@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
 //  This program is free software; you can redistribute it and/or
@@ -54,7 +54,7 @@ UserInfoDialog::UserInfoDialog(uint32_t showing_id, const core::stringw info,
 // ----------------------------------------------------------------------------
 void UserInfoDialog::load()
 {
-    loadFromFile("online/user_info_dialog.stkgui");
+    loadFromFile("online/user_info_dialog.fluxara_driftgui");
     if(m_error)
         m_info_widget->setErrorColor();
     //I18N: In the user info dialog

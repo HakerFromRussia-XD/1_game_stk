@@ -1,9 +1,9 @@
 # Usage:
 # cmake .. -DDEPS_PATH=/path/to/dependencies -DIOS_ASSETS=/path/to/generated/assets -DCMAKE_TOOLCHAIN_FILE=../cmake/Toolchain-ios-xcode.cmake -G Xcode
 # Need to use ../android/generate_assets.sh for assets first
-# In Xcode you need to choose Product -> Scheme -> supertuxkart
+# In Xcode you need to choose Product -> Scheme -> fluxaradrift
 # And then Signing & Capabilities choose a suitable team
-# You may need to use another bundle identifier as the current one is already used by STK team
+# You may need to use another bundle identifier as the current one is already used by FLUXARA_DRIFT team
 # You can also use -DCMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM=xxxxxxxxxx to specify team
 
 # Increase every upload to App store
@@ -19,29 +19,29 @@ set(CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM
 set(CMAKE_XCODE_ATTRIBUTE_FLUXARA_INPUT_BRIDGE_APP_GROUP
     group.io.fluxara.drift.inputbridge CACHE STRING "" FORCE)
 
-# Simulator is the safe default.  A physical-device project must opt in with
-# -DFLUXARA_IOS_PLATFORM=iphoneos and always use its own build directory.
-set(FLUXARA_IOS_PLATFORM "iphonesimulator" CACHE STRING
-    "Apple platform for this isolated Xcode build")
-set_property(CACHE FLUXARA_IOS_PLATFORM PROPERTY STRINGS iphonesimulator iphoneos)
-if (NOT FLUXARA_IOS_PLATFORM STREQUAL "iphonesimulator" AND
-    NOT FLUXARA_IOS_PLATFORM STREQUAL "iphoneos")
-    message(FATAL_ERROR "FLUXARA_IOS_PLATFORM must be iphonesimulator or iphoneos.")
+# Fluxara Drift is validated and installed only on a connected physical iPhone.
+# Force the device SDK on every configure, including Xcode's ZERO_CHECK pass,
+# so a stale cache can never silently turn a device bundle into a simulator one.
+set(FLUXARA_IOS_PLATFORM "iphoneos" CACHE STRING
+    "Apple platform for this Fluxara iPhone build" FORCE)
+set_property(CACHE FLUXARA_IOS_PLATFORM PROPERTY STRINGS iphoneos)
+if (NOT FLUXARA_IOS_PLATFORM STREQUAL "iphoneos")
+    message(FATAL_ERROR "Fluxara Drift must be built for iphoneos.")
 endif()
 set(FLUXARA_IOS_DEPENDENCY_DIR "dependencies-${FLUXARA_IOS_PLATFORM}")
 
 execute_process(COMMAND xcodebuild -version -sdk ${FLUXARA_IOS_PLATFORM} Path
-    OUTPUT_VARIABLE CMAKE_OSX_SYSROOT_SIMULATOR
+    OUTPUT_VARIABLE CMAKE_OSX_SYSROOT_PLATFORM
     ERROR_QUIET
     OUTPUT_STRIP_TRAILING_WHITESPACE)
 execute_process(COMMAND xcodebuild -sdk ${FLUXARA_IOS_PLATFORM} -version SDKVersion
     OUTPUT_VARIABLE SDK_VERSION
     ERROR_QUIET
     OUTPUT_STRIP_TRAILING_WHITESPACE)
-if (NOT CMAKE_OSX_SYSROOT_SIMULATOR OR NOT SDK_VERSION)
+if (NOT CMAKE_OSX_SYSROOT_PLATFORM OR NOT SDK_VERSION)
     message(FATAL_ERROR "Cannot find the ${FLUXARA_IOS_PLATFORM} SDK location and version info.")
 else()
-    message(STATUS "Using ${FLUXARA_IOS_PLATFORM} SDK path: ${CMAKE_OSX_SYSROOT_SIMULATOR}.")
+    message(STATUS "Using ${FLUXARA_IOS_PLATFORM} SDK path: ${CMAKE_OSX_SYSROOT_PLATFORM}.")
 endif()
 set(CMAKE_OSX_SYSROOT "${FLUXARA_IOS_PLATFORM}" CACHE INTERNAL "" FORCE)
 set(CMAKE_XCODE_ATTRIBUTE_SDKROOT "${FLUXARA_IOS_PLATFORM}" CACHE STRING "" FORCE)
@@ -81,18 +81,18 @@ set(LIBASTCENC_LIBRARY ${PROJECT_SOURCE_DIR}/dependencies\${EFFECTIVE_PLATFORM_N
 set(LIBASTCENC_INCLUDEDIR ${PROJECT_SOURCE_DIR}/${FLUXARA_IOS_DEPENDENCY_DIR}/include CACHE STRING "" FORCE)
 set(SHADERC_LIBRARY ${PROJECT_SOURCE_DIR}/dependencies\${EFFECTIVE_PLATFORM_NAME}/lib/libshaderc_combined.a CACHE STRING "" FORCE)
 set(SHADERC_INCLUDEDIR ${PROJECT_SOURCE_DIR}/${FLUXARA_IOS_DEPENDENCY_DIR}/include CACHE STRING "" FORCE)
-# Existing build-ios caches predate the Simulator-only toolchain.  CMake's
+# Existing build caches may contain a different Apple platform. CMake's
 # plain CACHE form preserves those stale paths, so refresh every header path
 # explicitly on the next project generation.
-foreach(FLUXARA_SIMULATOR_INCLUDE_CACHE
+foreach(FLUXARA_PLATFORM_INCLUDE_CACHE
         JPEG_INCLUDE_DIR ZLIB_INCLUDE_DIR PNG_INCLUDE_DIRS PNG_PNG_INCLUDE_DIR
         OGGVORBIS_OGG_INCLUDE_DIR OGGVORBIS_VORBIS_INCLUDE_DIR
         OGGVORBIS_VORBISFILE_INCLUDE_DIR OGGVORBIS_VORBISENC_INCLUDE_DIR
         HARFBUZZ_INCLUDEDIR FREETYPE_INCLUDE_DIRS CURL_INCLUDE_DIR
         MBEDTLS_INCLUDE_DIRS SDL2_INCLUDEDIR LIBSAMPLERATE_INCLUDEDIR
         VULKAN_INCLUDEDIR LIBASTCENC_INCLUDEDIR SHADERC_INCLUDEDIR)
-    set(${FLUXARA_SIMULATOR_INCLUDE_CACHE}
-        "${${FLUXARA_SIMULATOR_INCLUDE_CACHE}}" CACHE STRING "" FORCE)
+    set(${FLUXARA_PLATFORM_INCLUDE_CACHE}
+        "${${FLUXARA_PLATFORM_INCLUDE_CACHE}}" CACHE STRING "" FORCE)
 endforeach()
 
 # For universal iOS and simulator
@@ -108,8 +108,8 @@ set(CMAKE_AR ar CACHE FILEPATH "" FORCE)
 set(CMAKE_RANLIB ranlib CACHE FILEPATH "" FORCE)
 set(CMAKE_STRIP strip CACHE FILEPATH "" FORCE)
 
-# Build only the currently used Apple Silicon Simulator architecture.
-set(CMAKE_OSX_ARCHITECTURES "arm64" CACHE STRING "Build architecture for iOS Simulator" FORCE)
+# Build the physical iPhone arm64 slice.
+set(CMAKE_OSX_ARCHITECTURES "arm64" CACHE STRING "Build architecture for physical iPhone" FORCE)
 set(CMAKE_C_SIZEOF_DATA_PTR 8)
 set(CMAKE_CXX_SIZEOF_DATA_PTR 8)
 set(CMAKE_SYSTEM_PROCESSOR "arm64")
@@ -117,6 +117,20 @@ set(CMAKE_SYSTEM_NAME iOS CACHE INTERNAL "" FORCE)
 
 # Change the type of target generated for try_compile() so it'll work when cross-compiling
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+
+# ENet probes these POSIX APIs one at a time with a temporary Xcode project.
+# They are present on every supported iPhoneOS SDK, so cache the known results
+# for the cross-compile instead of repeatedly launching Xcode during configure.
+set(HAS_FCNTL 1 CACHE INTERNAL "" FORCE)
+set(HAS_POLL 1 CACHE INTERNAL "" FORCE)
+set(HAS_GETADDRINFO 1 CACHE INTERNAL "" FORCE)
+set(HAS_GETNAMEINFO 1 CACHE INTERNAL "" FORCE)
+set(HAS_GETHOSTBYNAME_R 0 CACHE INTERNAL "" FORCE)
+set(HAS_GETHOSTBYADDR_R 0 CACHE INTERNAL "" FORCE)
+set(HAS_INET_PTON 1 CACHE INTERNAL "" FORCE)
+set(HAS_INET_NTOP 1 CACHE INTERNAL "" FORCE)
+set(HAS_MSGHDR_FLAGS 1 CACHE INTERNAL "" FORCE)
+set(HAS_SOCKLEN_T 4 CACHE INTERNAL "" FORCE)
 
 # All iOS/Darwin specific settings - some may be redundant.
 set(CMAKE_SHARED_LIBRARY_PREFIX "lib")
@@ -134,7 +148,7 @@ set(CMAKE_C_OSX_CURRENT_VERSION_FLAG "-current_version ")
 set(CMAKE_CXX_OSX_COMPATIBILITY_VERSION_FLAG "${CMAKE_C_OSX_COMPATIBILITY_VERSION_FLAG}")
 set(CMAKE_CXX_OSX_CURRENT_VERSION_FLAG "${CMAKE_C_OSX_CURRENT_VERSION_FLAG}")
 
-# Fixed variables in iOS STK
+# Fixed variables in iOS FLUXARA_DRIFT
 set(CMAKE_XCODE_ATTRIBUTE_CLANG_ENABLE_OBJC_ARC YES CACHE INTERNAL "")
 set(CMAKE_XCODE_ATTRIBUTE_GCC_SYMBOLS_PRIVATE_EXTERN YES CACHE INTERNAL "")
 set(USE_WIIUSE FALSE CACHE BOOL "")

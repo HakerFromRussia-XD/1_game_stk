@@ -15,7 +15,7 @@ layout(location = 9) in vec4 i_rotation;
 layout(location = 10) in vec4 i_scale;
 layout(location = 12) in ivec2 i_misc_data;
 
-#stk_include "utils/get_world_location.vert"
+#fluxara_drift_include "utils/get_world_location.vert"
 
 out vec3 normal;
 out vec2 uv;

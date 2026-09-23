@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -24,7 +24,7 @@
 #include "config/hardware_stats.hpp"
 
 #include "config/user_config.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "graphics/central_settings.hpp"
 #include "graphics/glwrap.hpp"
 #include "graphics/irr_driver.hpp"
@@ -267,7 +267,7 @@ const std::string& getOSVersion()
 
 // ----------------------------------------------------------------------------
 /** If the configuration of this installation has not been reported for the
- *  current version, collect the hardware statistics and send it to STK's
+ *  current version, collect the hardware statistics and send it to FLUXARA_DRIFT's
  *  server.
  */
 void reportHardwareStats()
@@ -279,7 +279,7 @@ void reportHardwareStats()
         return;
 
     // Version of the hw report, which is stored in the DB. If new fields
-    // are added, increase this version. Each STK installation will report
+    // are added, increase this version. Each FLUXARA_DRIFT installation will report
     // its configuration only once (per version number). So if the version
     // number is increased, a new report will be sent.
     const int report_version = 1;
@@ -298,7 +298,7 @@ void reportHardwareStats()
     json.add("os_win", 0);
 #endif
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     json.add("os_ios", 1);
     json.add("os_macosx", 0);
 #elif defined(__APPLE__)
@@ -371,9 +371,9 @@ void reportHardwareStats()
     json.finish();
 
     // ------------------------------------------------------------------------
-    /** A small class which sends the HW report to the STK server. On
+    /** A small class which sends the HW report to the FLUXARA_DRIFT server. On
      *  completion, it will either update the last-submitted-hw-report version,
-     *  or log an error message (in which case next time STK is started it
+     *  or log an error message (in which case next time FLUXARA_DRIFT is started it
      *  wil try again to log the report).
      */
     class HWReportRequest : public Online::HTTPRequest
@@ -415,11 +415,11 @@ void reportHardwareStats()
 
     auto request = std::make_shared<HWReportRequest>(report_version);
     request->addParameter("user_id", UserConfigParams::m_random_identifier);
-    request->addParameter("time", StkTime::getTimeSinceEpoch());
+    request->addParameter("time", FluxaraDriftTime::getTimeSinceEpoch());
     request->addParameter("type", "hwdetect");
     request->addParameter("version", report_version);
     request->addParameter("data", json.toString());
-    const std::string request_url = stk_config->m_server_hardware_report + "/upload/v1/";
+    const std::string request_url = fluxara_drift_config->m_server_hardware_report + "/upload/v1/";
     request->setURL(request_url);
     //request->setURL("http://127.0.0.1:8000/upload/v1/");
     request->queue();

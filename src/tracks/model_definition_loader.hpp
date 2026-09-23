@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2007-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -20,7 +20,7 @@
 #define HEADER_LOD_NODE_LOADER_HPP
 
 class LODNode;
-class STKInstancedSceneNode;
+class FLUXARA_DRIFTInstancedSceneNode;
 namespace GE { class GERenderInfo; }
 class Track;
 
@@ -82,7 +82,7 @@ class ModelDefinitionLoader
 private:
     std::map<std::string, XMLNode*> m_library_nodes;
     std::map< std::string, std::vector< ModelDefinition > > m_lod_groups;
-    std::map< std::string, STKInstancedSceneNode* > m_instancing_nodes;
+    std::map< std::string, FLUXARA_DRIFTInstancedSceneNode* > m_instancing_nodes;
     Track* m_track;
 
 public:

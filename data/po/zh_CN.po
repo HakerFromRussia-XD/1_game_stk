@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the supertuxkart package.
+# This file is distributed under the same license as the fluxaradrift package.
 # 
 # Translators:
 # Ben Au, 2015
@@ -15,12 +15,12 @@
 # CodingJellyfish <dumaosen_main01@outlook.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: SuperTuxKart\n"
+"Project-Id-Version: Fluxara Drift\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-29 22:11+0100\n"
 "PO-Revision-Date: 2015-02-15 01:58+0000\n"
 "Last-Translator: CodingJellyfish <dumaosen_main01@outlook.com>, 2018,2021-2025\n"
-"Language-Team: Chinese (China) (http://app.transifex.com/supertuxkart/supertuxkart/language/zh_CN/)\n"
+"Language-Team: Chinese (China) (http://app.transifex.com/fluxaradrift/fluxaradrift/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -36,11 +36,11 @@ msgid "Game data extraction error"
 msgstr "游戏数据提取错误"
 
 #. I18N: In Android UI, po_extract_error_msg
-msgid "Check remaining device space or reinstall SuperTuxKart."
-msgstr "请检查剩余存储空间或者重新安装SuperTuxKart。"
+msgid "Check remaining device space or reinstall Fluxara Drift."
+msgstr "请检查剩余存储空间或者重新安装Fluxara Drift。"
 
 #. I18N: In Android UI, po_quit
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: In the main screen
 msgid "Quit"
 msgstr "退出"
@@ -145,7 +145,7 @@ msgstr "不败传说"
 
 #. I18N: ./data/achievements.xml
 msgid ""
-"Win 10 single races in a row in Expert or SuperTux against at least 5 AIs. "
+"Win 10 single races in a row in Expert or FluxaraDrift against at least 5 AIs. "
 "Beware, restarting a race counts as a loss."
 msgstr "在专家级或超级企鹅级难度中打败至少5名电脑玩家并连续赢得10场单场比赛。当心，重新开始比赛则前功尽弃。"
 
@@ -165,198 +165,198 @@ msgstr "长途跋涉"
 msgid "At World's End"
 msgstr "天涯海角"
 
-#. I18N: ./data/gui/dialogs/addons_loading.stkgui
+#. I18N: ./data/gui/dialogs/addons_loading.fluxara_driftgui
 #. I18N: Add-on screen action
-#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.fluxara_driftgui
 #. I18N: Ghost replay info action
-#. I18N: ./data/gui/dialogs/high_score_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/high_score_info_dialog.fluxara_driftgui
 #. I18N: High score info screen action
-#. I18N: ./data/gui/dialogs/online/server_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_info_dialog.fluxara_driftgui
 #. I18N: In the server info dialog
-#. I18N: ./data/gui/dialogs/select_challenge.stkgui
+#. I18N: ./data/gui/dialogs/select_challenge.fluxara_driftgui
 #. I18N: name of buttons on gamepads
 #: src/input/gamepad_config.cpp:157
 #: src/states_screens/dialogs/addons_loading.cpp:320
 msgid "Back"
 msgstr "后退"
 
-#. I18N: ./data/gui/dialogs/addons_loading.stkgui
+#. I18N: ./data/gui/dialogs/addons_loading.fluxara_driftgui
 #. I18N: Add-on screen action
 msgid "Install"
 msgstr "安装"
 
-#. I18N: ./data/gui/dialogs/addons_loading.stkgui
+#. I18N: ./data/gui/dialogs/addons_loading.fluxara_driftgui
 #. I18N: Add-on screen action
 msgid "Uninstall"
 msgstr "卸载"
 
-#. I18N: ./data/gui/dialogs/android/init_android.stkgui
+#. I18N: ./data/gui/dialogs/android/init_android.fluxara_driftgui
 msgid "Select a type of control that you prefer"
 msgstr "选择一种您适合的操控方式"
 
-#. I18N: ./data/gui/dialogs/android/init_android.stkgui
+#. I18N: ./data/gui/dialogs/android/init_android.fluxara_driftgui
 #. I18N: Control type
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 #: src/states_screens/dialogs/race_paused_dialog.cpp:572
 msgid "Accelerometer"
 msgstr "加速计"
 
-#. I18N: ./data/gui/dialogs/android/init_android.stkgui
+#. I18N: ./data/gui/dialogs/android/init_android.fluxara_driftgui
 #. I18N: Control type
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
-#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.fluxara_driftgui
 #. I18N: Race paused button
-#. I18N: ./data/gui/dialogs/overworld_dialog.stkgui
+#. I18N: ./data/gui/dialogs/overworld_dialog.fluxara_driftgui
 #. I18N: Race paused button
-#. I18N: ./data/gui/dialogs/race_paused_dialog.stkgui
+#. I18N: ./data/gui/dialogs/race_paused_dialog.fluxara_driftgui
 #. I18N: Race paused button
 #: src/states_screens/dialogs/race_paused_dialog.cpp:577
 msgid "Gyroscope"
 msgstr "陀螺仪"
 
-#. I18N: ./data/gui/dialogs/android/init_android.stkgui
+#. I18N: ./data/gui/dialogs/android/init_android.fluxara_driftgui
 #. I18N: Control type
 #: src/states_screens/dialogs/race_paused_dialog.cpp:567
 msgid "Steering wheel"
 msgstr "方向盘"
 
-#. I18N: ./data/gui/dialogs/android/init_android.stkgui
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/init_android.fluxara_driftgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 msgid "Auto acceleration"
 msgstr "自动加速 "
 
-#. I18N: ./data/gui/dialogs/android/init_android.stkgui
+#. I18N: ./data/gui/dialogs/android/init_android.fluxara_driftgui
 msgid "You can change it later in touch device settings."
 msgstr "稍后您可以在触摸设备设置中更改它。"
 
-#. I18N: ./data/gui/dialogs/android/init_android.stkgui
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/init_android.fluxara_driftgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera screen
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
-#. I18N: ./data/gui/dialogs/kart_color_slider.stkgui
+#. I18N: ./data/gui/dialogs/kart_color_slider.fluxara_driftgui
 #. I18N: In the kart color slider dialog
 msgid "Apply"
 msgstr "应用"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 msgid "Touch Device Settings"
 msgstr "触屏设备设置"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_language.stkgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: Section in the settings menu
 msgid "General"
 msgstr "常规"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 msgid "Device enabled"
 msgstr "设备启用"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 msgid "Inverted buttons"
 msgstr "反转按键"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 msgid "Buttons scale"
 msgstr "按键大小"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 msgid "Advanced"
 msgstr "高级"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 msgid "Deadzone"
 msgstr "死区"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 msgid "Sensitivity X"
 msgstr "X坐标灵敏度"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 msgid "Sensitivity Y"
 msgstr "Y坐标灵敏度"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 msgid "Restore defaults"
 msgstr "恢复默认"
 
-#. I18N: ./data/gui/dialogs/confirm_dialog.stkgui
+#. I18N: ./data/gui/dialogs/confirm_dialog.fluxara_driftgui
 #. I18N: In a 'are you sure?' dialog
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera screen
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
-#. I18N: ./data/gui/dialogs/enter_address_dialog.stkgui
+#. I18N: ./data/gui/dialogs/enter_address_dialog.fluxara_driftgui
 #. I18N: In the enter address dialog
-#. I18N: ./data/gui/dialogs/general_text_field_dialog.stkgui
+#. I18N: ./data/gui/dialogs/general_text_field_dialog.fluxara_driftgui
 #. I18N: In the general textfield dialog
-#. I18N: ./data/gui/dialogs/kart_color_slider.stkgui
+#. I18N: ./data/gui/dialogs/kart_color_slider.fluxara_driftgui
 #. I18N: In the kart color slider dialog
-#. I18N: ./data/gui/dialogs/online/change_password.stkgui
+#. I18N: ./data/gui/dialogs/online/change_password.fluxara_driftgui
 #. I18N: In the change password dialog
-#. I18N: ./data/gui/dialogs/online/recovery_input.stkgui
+#. I18N: ./data/gui/dialogs/online/recovery_input.fluxara_driftgui
 #. I18N: In the recovery dialog
-#. I18N: ./data/gui/dialogs/online/registration_terms.stkgui
+#. I18N: ./data/gui/dialogs/online/registration_terms.fluxara_driftgui
 #. I18N: In the registration dialog
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: In the server configuration screen
-#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.fluxara_driftgui
 #. I18N: Splitscreen player in network
-#. I18N: ./data/gui/dialogs/press_a_key_dialog.stkgui
+#. I18N: ./data/gui/dialogs/press_a_key_dialog.fluxara_driftgui
 #. I18N: When configuring input
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
-#. I18N: ./data/gui/screens/edit_track.stkgui
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/edit_track.fluxara_driftgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: In the server creation screen
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 #: src/states_screens/dialogs/add_device_dialog.cpp:101
 #: src/states_screens/dialogs/addons_loading.cpp:229
@@ -367,7 +367,7 @@ msgstr "恢复默认"
 msgid "Cancel"
 msgstr "取消"
 
-#. I18N: ./data/gui/dialogs/confirm_dialog.stkgui
+#. I18N: ./data/gui/dialogs/confirm_dialog.fluxara_driftgui
 #. I18N: In a 'are you sure?' dialog
 #: src/states_screens/dialogs/ghost_replay_info_dialog.cpp:204
 #: src/states_screens/dialogs/high_score_info_dialog.cpp:138
@@ -378,182 +378,182 @@ msgstr "取消"
 msgid "Yes"
 msgstr "是"
 
-#. I18N: ./data/gui/dialogs/confirm_resolution_dialog.stkgui
+#. I18N: ./data/gui/dialogs/confirm_resolution_dialog.fluxara_driftgui
 #. I18N: In the 'confirm resolution' dialog, that's shown when switching
 #. resoluton
 msgid "Revert"
 msgstr "撤销"
 
-#. I18N: ./data/gui/dialogs/confirm_resolution_dialog.stkgui
+#. I18N: ./data/gui/dialogs/confirm_resolution_dialog.fluxara_driftgui
 #. I18N: In the 'confirm resolution' dialog, that's shown when switching
 #. resoluton
-#. I18N: ./data/gui/dialogs/online/registration_terms.stkgui
+#. I18N: ./data/gui/dialogs/online/registration_terms.fluxara_driftgui
 #. I18N: In the registration dialog
 msgid "Accept"
 msgstr "接受"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 msgid "Camera Settings"
 msgstr "相机设置"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera settings
 msgid "Player camera"
 msgstr "玩家相机"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera screen
 msgid "FOV"
 msgstr "可视范围（FOV）"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera screen
 msgid "Distance"
 msgstr "距离"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera screen
 msgid "Angle"
 msgstr "俯仰角度"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera screen
 msgid "Smooth camera"
 msgstr "平滑相机"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera settings
 msgid "Backward camera"
 msgstr "后视相机"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera screen
 msgid "Follow ball in soccer mode"
 msgstr "足球模式中视角跟随足球"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera screen
 msgid "Reset"
 msgstr "重置"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 msgid "Graphics Settings"
 msgstr "图像设置"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Advanced pipeline (lights, etc.)"
 msgstr "高级渲染管线（光线等）"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Shadows"
 msgstr "阴影"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Bloom"
 msgstr "泛光"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Light shaft (God rays)"
 msgstr "光轴渲染（云隙光）"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Ambient occlusion"
 msgstr "环境光遮蔽 "
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Depth of field"
 msgstr "景深"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Glow (Outlines)"
 msgstr "光辉（外框） "
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Anti-aliasing"
 msgstr "抗锯齿"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Motion blur"
 msgstr "动态模糊"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Image-based lighting"
 msgstr "基于图像的照明"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Light Scattering"
 msgstr "光散射"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Animated characters"
 msgstr "角色动画 "
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Texture compression"
 msgstr "纹理压缩"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Particle effects"
 msgstr "粒子效果"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Rendered image quality"
 msgstr "渲染图像质量"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Geometry detail"
 msgstr "几何细节"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
-msgid "* Restart STK to apply new settings"
-msgstr "※ 重新启动 STK 以更新设置"
+msgid "* Restart FLUXARA_DRIFT to apply new settings"
+msgstr "※ 重新启动 FLUXARA_DRIFT 以更新设置"
 
-#. I18N: ./data/gui/dialogs/debug_slider.stkgui
-#. I18N: ./data/gui/dialogs/online/recovery_info.stkgui
+#. I18N: ./data/gui/dialogs/debug_slider.fluxara_driftgui
+#. I18N: ./data/gui/dialogs/online/recovery_info.fluxara_driftgui
 #. I18N: In the recovery dialog
-#. I18N: ./data/gui/dialogs/online/user_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/user_info_dialog.fluxara_driftgui
 #. I18N: User info dialog
 msgid "Close"
 msgstr "关闭"
 
-#. I18N: ./data/gui/dialogs/enter_address_dialog.stkgui
+#. I18N: ./data/gui/dialogs/enter_address_dialog.fluxara_driftgui
 #. I18N: In the enter address dialog
-#. I18N: ./data/gui/dialogs/online/server_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_info_dialog.fluxara_driftgui
 #. I18N: In the server info dialog
 msgid "Join"
 msgstr "加入"
 
-#. I18N: ./data/gui/dialogs/general_text_field_dialog.stkgui
+#. I18N: ./data/gui/dialogs/general_text_field_dialog.fluxara_driftgui
 #. I18N: In the general textfield dialog
-#. I18N: ./data/gui/dialogs/online/achievement_progress_dialog.stkgui
-#. I18N: ./data/gui/dialogs/online/player_rankings_dialog.stkgui
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/achievement_progress_dialog.fluxara_driftgui
+#. I18N: ./data/gui/dialogs/online/player_rankings_dialog.fluxara_driftgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: In the server configuration screen
-#. I18N: ./data/gui/dialogs/online/vote_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/vote_dialog.fluxara_driftgui
 #. I18N: Vote dialog
-#. I18N: ./data/gui/screens/edit_track.stkgui
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/edit_track.fluxara_driftgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 #: src/states_screens/dialogs/message_dialog.cpp:127
 #: src/states_screens/dialogs/message_dialog.cpp:138
@@ -561,488 +561,488 @@ msgstr "加入"
 msgid "OK"
 msgstr "确定"
 
-#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.fluxara_driftgui
 #. I18N: Ghost replay info action
-#. I18N: ./data/gui/screens/track_info.stkgui
+#. I18N: ./data/gui/screens/track_info.fluxara_driftgui
 #. I18N: In the track info screen
 msgid "Record the race for ghost replay"
 msgstr "录制比赛成重播录像"
 
-#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.fluxara_driftgui
 #. I18N: Ghost replay info action
 msgid "Watch replay only"
 msgstr "只观看重播录像"
 
-#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.fluxara_driftgui
 #. I18N: Ghost replay info action
 msgid "Compare to another ghost"
 msgstr "比较其他重播录像"
 
-#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.fluxara_driftgui
 #. I18N: Ghost replay info action
-#. I18N: ./data/gui/dialogs/high_score_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/high_score_info_dialog.fluxara_driftgui
 #. I18N: High score info screen action
-#. I18N: ./data/gui/screens/edit_gp.stkgui
+#. I18N: ./data/gui/screens/edit_gp.fluxara_driftgui
 #. I18N: Menu item
-#. I18N: ./data/gui/screens/grand_prix_editor.stkgui
+#. I18N: ./data/gui/screens/grand_prix_editor.fluxara_driftgui
 #. I18N: Menu item
 msgid "Remove"
 msgstr "删除"
 
-#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.fluxara_driftgui
 #. I18N: Ghost replay info screen action
 msgid "Compare ghost"
 msgstr "比较录像"
 
-#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.fluxara_driftgui
 #. I18N: Ghost replay info screen action
-#. I18N: ./data/gui/dialogs/high_score_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/high_score_info_dialog.fluxara_driftgui
 #. I18N: High score info screen action
-#. I18N: ./data/gui/dialogs/select_challenge.stkgui
-#. I18N: ./data/gui/screens/gp_info.stkgui
+#. I18N: ./data/gui/dialogs/select_challenge.fluxara_driftgui
+#. I18N: ./data/gui/screens/gp_info.fluxara_driftgui
 #. I18N: In the grand prix info screen
-#. I18N: ./data/gui/screens/track_info.stkgui
+#. I18N: ./data/gui/screens/track_info.fluxara_driftgui
 #. I18N: In the track info screen
 msgid "Start Race"
 msgstr "开始游戏"
 
-#. I18N: ./data/gui/dialogs/online/achievement_progress_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/achievement_progress_dialog.fluxara_driftgui
 #. I18N: Objective shown in achievement dialog
 msgid "Goal"
 msgstr "目标"
 
-#. I18N: ./data/gui/dialogs/online/achievement_progress_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/achievement_progress_dialog.fluxara_driftgui
 #. I18N: Progress shown in achievement dialog
 #. I18N: Progress in achievement
 #: src/states_screens/online/online_profile_achievements.cpp:87
 msgid "Progress"
 msgstr "进度"
 
-#. I18N: ./data/gui/dialogs/online/change_password.stkgui
+#. I18N: ./data/gui/dialogs/online/change_password.fluxara_driftgui
 #. I18N: In the change password dialog
 msgid "Password Change"
 msgstr "更改密码"
 
-#. I18N: ./data/gui/dialogs/online/change_password.stkgui
+#. I18N: ./data/gui/dialogs/online/change_password.fluxara_driftgui
 #. I18N: In the change password dialog
 msgid "Current Password"
 msgstr "当前密码"
 
-#. I18N: ./data/gui/dialogs/online/change_password.stkgui
+#. I18N: ./data/gui/dialogs/online/change_password.fluxara_driftgui
 #. I18N: In the change password dialog
 msgid "New Password"
 msgstr "新密码"
 
-#. I18N: ./data/gui/dialogs/online/change_password.stkgui
+#. I18N: ./data/gui/dialogs/online/change_password.fluxara_driftgui
 #. I18N: In the change password dialog
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
 msgid "Confirm"
 msgstr "确认"
 
-#. I18N: ./data/gui/dialogs/online/change_password.stkgui
+#. I18N: ./data/gui/dialogs/online/change_password.fluxara_driftgui
 #. I18N: In the change password dialog
-#. I18N: ./data/gui/dialogs/online/recovery_input.stkgui
+#. I18N: ./data/gui/dialogs/online/recovery_input.fluxara_driftgui
 #. I18N: In the recovery dialog
 msgid "Submit"
 msgstr "送出"
 
-#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.fluxara_driftgui
 #. I18N: Race paused button
 #: src/states_screens/dialogs/race_paused_dialog.cpp:150
 msgid "Back to Race"
 msgstr "继续游戏"
 
-#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.fluxara_driftgui
 #. I18N: Race paused button
 msgid "Quit Server"
 msgstr "退出服务器"
 
-#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.fluxara_driftgui
 #. I18N: Show in network ingame dialog to allow user to go back to lobby to
 #. end spectating (for example)
 msgid "Back to lobby"
 msgstr "回到大堂"
 
-#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.fluxara_driftgui
 #. I18N: Race paused button
 #: src/states_screens/dialogs/race_paused_dialog.cpp:155
 msgid "Restart Race"
 msgstr "重新开始游戏"
 
-#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.fluxara_driftgui
 #. I18N: Race paused button
-#. I18N: ./data/gui/dialogs/race_paused_dialog.stkgui
+#. I18N: ./data/gui/dialogs/race_paused_dialog.fluxara_driftgui
 #. I18N: Race paused button
 msgid "Give Up Race"
 msgstr "放弃比赛"
 
-#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.fluxara_driftgui
 #. I18N: Race paused button
-#. I18N: ./data/gui/dialogs/overworld_dialog.stkgui
+#. I18N: ./data/gui/dialogs/overworld_dialog.fluxara_driftgui
 #. I18N: In the in-game dialog
-#. I18N: ./data/gui/dialogs/race_paused_dialog.stkgui
+#. I18N: ./data/gui/dialogs/race_paused_dialog.fluxara_driftgui
 #. I18N: Race paused button
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: In the main screen
 msgid "Options"
 msgstr "选项"
 
-#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.fluxara_driftgui
 #. I18N: Race paused button
-#. I18N: ./data/gui/dialogs/overworld_dialog.stkgui
+#. I18N: ./data/gui/dialogs/overworld_dialog.fluxara_driftgui
 #. I18N: In the in-game dialog
-#. I18N: ./data/gui/dialogs/race_paused_dialog.stkgui
+#. I18N: ./data/gui/dialogs/race_paused_dialog.fluxara_driftgui
 #. I18N: Race paused button
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: In the main screen
 msgid "Help"
 msgstr "帮助"
 
-#. I18N: ./data/gui/dialogs/online/player_rankings_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/player_rankings_dialog.fluxara_driftgui
 #. I18N: In player rankings dialog
 msgid "Top 10 players"
 msgstr "排名前10玩家"
 
-#. I18N: ./data/gui/dialogs/online/player_rankings_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/player_rankings_dialog.fluxara_driftgui
 msgid "Refresh"
 msgstr "刷新"
 
-#. I18N: ./data/gui/dialogs/online/recovery_info.stkgui
+#. I18N: ./data/gui/dialogs/online/recovery_info.fluxara_driftgui
 #. I18N: In the recovery dialog
-#. I18N: ./data/gui/dialogs/online/recovery_input.stkgui
+#. I18N: ./data/gui/dialogs/online/recovery_input.fluxara_driftgui
 #. I18N: In the recovery dialog
 msgid "Account Recovery"
 msgstr "恢复帐号"
 
-#. I18N: ./data/gui/dialogs/online/recovery_info.stkgui
+#. I18N: ./data/gui/dialogs/online/recovery_info.fluxara_driftgui
 #. I18N: In the recovery dialog
 msgid ""
 "You will receive an email with further instructions on how to reset your "
 "password. Please be patient and be sure to check your spam folder."
 msgstr "您将会收到一封关于重设密码的电子邮件。请耐心等待，并不要忘了检查您的垃圾邮件箱。"
 
-#. I18N: ./data/gui/dialogs/online/recovery_input.stkgui
+#. I18N: ./data/gui/dialogs/online/recovery_input.fluxara_driftgui
 msgid ""
 "Fill in the username and email address you supplied at registration to be "
 "able to reset your password."
 msgstr "填写您在注册时提供的用户名和电子邮箱来重置密码。"
 
-#. I18N: ./data/gui/dialogs/online/recovery_input.stkgui
+#. I18N: ./data/gui/dialogs/online/recovery_input.fluxara_driftgui
 #. I18N: In the recovery dialog
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 #: src/states_screens/online/online_profile_friends.cpp:77
 #: src/states_screens/online/online_user_search.cpp:76
 msgid "Username"
 msgstr "用户名"
 
-#. I18N: ./data/gui/dialogs/online/recovery_input.stkgui
+#. I18N: ./data/gui/dialogs/online/recovery_input.fluxara_driftgui
 #. I18N: In the recovery dialog
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
 msgid "Email"
 msgstr "电子邮箱"
 
-#. I18N: ./data/gui/dialogs/online/registration_terms.stkgui
+#. I18N: ./data/gui/dialogs/online/registration_terms.fluxara_driftgui
 #. I18N: In the registration dialog
 msgid "Terms and Agreement"
 msgstr "条款与协议"
 
-#. I18N: ./data/gui/dialogs/online/registration_terms.stkgui
+#. I18N: ./data/gui/dialogs/online/registration_terms.fluxara_driftgui
 #. I18N: In the registration dialog
 msgid "I agree to the above terms and am 13 years or older. "
 msgstr "我同意以上条款，且我已年满 13 岁。"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: In the server configuration screen
 msgid "Server Configuration"
 msgstr "服务器设置"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: In the server configuration screen
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: In the server creation screen
 msgid "Difficulty"
 msgstr "难度"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/dialogs/select_challenge.stkgui
+#. I18N: ./data/gui/dialogs/select_challenge.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/screens/race_setup.stkgui
+#. I18N: ./data/gui/screens/race_setup.fluxara_driftgui
 #. I18N: Difficulty
 #: src/race/race_manager.cpp:1317
 msgid "Novice"
 msgstr "初级"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/dialogs/select_challenge.stkgui
+#. I18N: ./data/gui/dialogs/select_challenge.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/screens/race_setup.stkgui
+#. I18N: ./data/gui/screens/race_setup.fluxara_driftgui
 #. I18N: Difficulty
 #: src/race/race_manager.cpp:1318
 msgid "Intermediate"
 msgstr "中级"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/dialogs/select_challenge.stkgui
+#. I18N: ./data/gui/dialogs/select_challenge.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/screens/race_setup.stkgui
+#. I18N: ./data/gui/screens/race_setup.fluxara_driftgui
 #. I18N: Difficulty
 #: src/race/race_manager.cpp:1319
 msgid "Expert"
 msgstr "专家级"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/dialogs/select_challenge.stkgui
+#. I18N: ./data/gui/dialogs/select_challenge.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/screens/race_setup.stkgui
+#. I18N: ./data/gui/screens/race_setup.fluxara_driftgui
 #. I18N: Difficulty
 #: src/race/race_manager.cpp:1320
-msgid "SuperTux"
+msgid "FluxaraDrift"
 msgstr "超级企鹅级"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: In the server configuration screen
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: In the server creation screen
 #: src/states_screens/high_score_selection.cpp:151
 #: src/states_screens/track_info_screen.cpp:251
 msgid "Game mode"
 msgstr "游戏模式"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: Multiplayer game mode
-#. I18N: ./data/gui/screens/high_score_selection.stkgui
+#. I18N: ./data/gui/screens/high_score_selection.fluxara_driftgui
 #. I18N: In the high score selection screen
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: Multiplayer game mode
 #. I18N: Game mode
 #: src/network/server_config.cpp:265 src/race/race_manager.cpp:1290
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:34
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:34
 msgid "Normal Race"
 msgstr "正常比赛"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: Multiplayer game mode
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
-#. I18N: ./data/gui/screens/high_score_selection.stkgui
+#. I18N: ./data/gui/screens/high_score_selection.fluxara_driftgui
 #. I18N: In the high score selection screen
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: Multiplayer game mode
 #. I18N: Game mode
 #: src/network/server_config.cpp:267 src/race/race_manager.cpp:1292
 msgid "Time Trial"
 msgstr "竞速模式"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: Multiplayer game mode
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: Multiplayer game mode
 #: src/states_screens/race_setup_screen.cpp:113
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:38
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:38
 msgid "Battle"
 msgstr "对战"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: Multiplayer game mode
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: Multiplayer game mode
 #. I18N: Game mode
 #: src/network/server_config.cpp:269 src/race/race_manager.cpp:1306
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:42
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:42
 msgid "Soccer"
 msgstr "足球"
 
-#. I18N: ./data/gui/dialogs/online/server_info_dialog.stkgui
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/dialogs/online/server_info_dialog.fluxara_driftgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 msgid "Password"
 msgstr "密码"
 
-#. I18N: ./data/gui/dialogs/online/server_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_info_dialog.fluxara_driftgui
 #. I18N: In the server info dialog
 #: src/states_screens/dialogs/server_info_dialog.cpp:292
 msgid "Bookmark this server"
 msgstr "标记该服务器"
 
-#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.fluxara_driftgui
 #. I18N: Splitscreen player in network
 msgid "Add player"
 msgstr "添加玩家"
 
-#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.fluxara_driftgui
 #. I18N: Splitscreen player in network
 #: src/states_screens/online/online_profile_achievements.cpp:78
 msgid "Name"
 msgstr "名称"
 
-#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.fluxara_driftgui
 #. I18N: Splitscreen player in network
 msgid "Handicap"
 msgstr "让赛"
 
-#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.fluxara_driftgui
 #. I18N: Splitscreen player in network
 msgid "Press the 'All players ready' button after the player list is ready."
 msgstr "在所有玩家准备就绪后按下“全部就绪”按钮"
 
-#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.fluxara_driftgui
 #. I18N: Splitscreen player in network
 msgid "Clear players"
 msgstr "清除玩家"
 
-#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.fluxara_driftgui
 #. I18N: Splitscreen player in network
 msgid "All players ready"
 msgstr "全部就绪"
 
-#. I18N: ./data/gui/dialogs/online/user_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/user_info_dialog.fluxara_driftgui
 #. I18N: User info dialog
 msgid "User Info"
 msgstr "用户资料"
 
-#. I18N: ./data/gui/dialogs/online/user_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/user_info_dialog.fluxara_driftgui
 #. I18N: User info dialog
 msgid "Remove Friend"
 msgstr "删除好友"
 
-#. I18N: ./data/gui/dialogs/online/user_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/user_info_dialog.fluxara_driftgui
 #. I18N: User info dialog
 msgid "Add Friend"
 msgstr "添加好友"
 
-#. I18N: ./data/gui/dialogs/online/user_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/user_info_dialog.fluxara_driftgui
 #. I18N: User info dialog
 msgid "Accept Invite"
 msgstr "接受邀请"
 
-#. I18N: ./data/gui/dialogs/online/user_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/user_info_dialog.fluxara_driftgui
 #. I18N: User info dialog
 msgid "Decline Invite"
 msgstr "拒绝邀请"
 
-#. I18N: ./data/gui/dialogs/online/user_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/user_info_dialog.fluxara_driftgui
 #. I18N: User info dialog
 msgid "View Profile"
 msgstr "查看资料"
 
-#. I18N: ./data/gui/dialogs/online/vote_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/vote_dialog.fluxara_driftgui
 #. I18N: In the vote dialog
 msgid "Vote"
 msgstr "投票"
 
-#. I18N: ./data/gui/dialogs/overworld_dialog.stkgui
-#. I18N: ./data/gui/dialogs/race_paused_dialog.stkgui
+#. I18N: ./data/gui/dialogs/overworld_dialog.fluxara_driftgui
+#. I18N: ./data/gui/dialogs/race_paused_dialog.fluxara_driftgui
 msgid "Paused"
 msgstr "暂停"
 
-#. I18N: ./data/gui/dialogs/overworld_dialog.stkgui
+#. I18N: ./data/gui/dialogs/overworld_dialog.fluxara_driftgui
 #. I18N: In the in-game dialog
 msgid "Back to Game"
 msgstr "回到游戏"
 
-#. I18N: ./data/gui/dialogs/overworld_dialog.stkgui
+#. I18N: ./data/gui/dialogs/overworld_dialog.fluxara_driftgui
 #. I18N: In the in-game dialog
 msgid "Back to menu"
 msgstr "回到菜单"
 
-#. I18N: ./data/gui/dialogs/overworld_dialog.stkgui
+#. I18N: ./data/gui/dialogs/overworld_dialog.fluxara_driftgui
 #. I18N: In the in-game dialog
 msgid "Select kart"
 msgstr "选择赛车"
 
-#. I18N: ./data/gui/dialogs/press_a_key_dialog.stkgui
+#. I18N: ./data/gui/dialogs/press_a_key_dialog.fluxara_driftgui
 #. I18N: When changing input configurations
 msgid "Press fully and release..."
 msgstr "完全按下并释放......"
 
-#. I18N: ./data/gui/dialogs/press_a_key_dialog.stkgui
+#. I18N: ./data/gui/dialogs/press_a_key_dialog.fluxara_driftgui
 #. I18N: When configuring input
 msgid "Assign to ESC key"
 msgstr "设置为 ESC 键"
 
-#. I18N: ./data/gui/dialogs/press_a_key_dialog.stkgui
+#. I18N: ./data/gui/dialogs/press_a_key_dialog.fluxara_driftgui
 #. I18N: When configuring input
 msgid "Assign nothing"
 msgstr "未指定"
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 msgid "Recommend Video Settings"
 msgstr ""
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
 msgid "The recommended settings will be valid for the current resolution."
 msgstr ""
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
 msgid "What should the settings prioritize?"
 msgstr ""
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
 msgid "Performance"
 msgstr ""
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
 msgid "Balance performance and graphics quality"
 msgstr ""
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
 msgid "Graphics quality"
 msgstr ""
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
 msgid "Sparing energy"
 msgstr ""
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
 msgid "Do you like graphics effects creating blur?"
 msgstr ""
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
 msgid "Start the test"
 msgstr ""
 
-#. I18N: ./data/gui/dialogs/select_challenge.stkgui
-#. I18N: ./data/gui/screens/race_setup.stkgui
-#. I18N: ./data/gui/screens/soccer_setup.stkgui
+#. I18N: ./data/gui/dialogs/select_challenge.fluxara_driftgui
+#. I18N: ./data/gui/screens/race_setup.fluxara_driftgui
+#. I18N: ./data/gui/screens/soccer_setup.fluxara_driftgui
 msgid "Race Setup"
 msgstr "建立游戏"
 
-#. I18N: ./data/gui/dialogs/tutorial_message_dialog.stkgui
+#. I18N: ./data/gui/dialogs/tutorial_message_dialog.fluxara_driftgui
 #. I18N: Button in tutorial
-#. I18N: ./data/gui/screens/grand_prix_lose.stkgui
-#. I18N: ./data/gui/screens/grand_prix_win.stkgui
-#. I18N: ./data/gui/screens/karts.stkgui
-#. I18N: ./data/gui/screens/online/network_karts.stkgui
-#. I18N: ./data/gui/screens/soccer_setup.stkgui
+#. I18N: ./data/gui/screens/grand_prix_lose.fluxara_driftgui
+#. I18N: ./data/gui/screens/grand_prix_win.fluxara_driftgui
+#. I18N: ./data/gui/screens/karts.fluxara_driftgui
+#. I18N: ./data/gui/screens/online/network_karts.fluxara_driftgui
+#. I18N: ./data/gui/screens/soccer_setup.fluxara_driftgui
 #. I18N: In soccer setup screen
 #: src/states_screens/race_result_gui.cpp:284
 #: src/states_screens/race_result_gui.cpp:307
@@ -1052,55 +1052,55 @@ msgstr "建立游戏"
 msgid "Continue"
 msgstr "继续"
 
-#. I18N: ./data/gui/screens/addons_screen.stkgui
-msgid "SuperTuxKart Addons"
-msgstr "SuperTuxKart 附加组件"
+#. I18N: ./data/gui/screens/addons_screen.fluxara_driftgui
+msgid "Fluxara Drift Addons"
+msgstr "Fluxara Drift 附加组件"
 
-#. I18N: ./data/gui/screens/addons_screen.stkgui
+#. I18N: ./data/gui/screens/addons_screen.fluxara_driftgui
 #. I18N: In addons screen, in the filtering bar, to enable a filter that will
 #. show only recently updated items
 msgid "Updated"
 msgstr "最近更新"
 
-#. I18N: ./data/gui/screens/addons_screen.stkgui
+#. I18N: ./data/gui/screens/addons_screen.fluxara_driftgui
 #. I18N: In addons screen, in the filtering bar, to enable a filter that will
 #. show only items with good rating
 msgid "Rating >="
 msgstr "评分 >="
 
-#. I18N: ./data/gui/screens/addons_screen.stkgui
+#. I18N: ./data/gui/screens/addons_screen.fluxara_driftgui
 #. I18N: In the addons screen
 msgid "Karts"
 msgstr "赛车"
 
-#. I18N: ./data/gui/screens/addons_screen.stkgui
+#. I18N: ./data/gui/screens/addons_screen.fluxara_driftgui
 #. I18N: In the addons screen
-#. I18N: ./data/gui/screens/gp_info.stkgui
+#. I18N: ./data/gui/screens/gp_info.fluxara_driftgui
 #. I18N: In the grand prix info screen
 msgid "Tracks"
 msgstr "赛道"
 
-#. I18N: ./data/gui/screens/addons_screen.stkgui
+#. I18N: ./data/gui/screens/addons_screen.fluxara_driftgui
 #. I18N: In the addons screen
-#. I18N: ./data/gui/screens/arenas.stkgui
+#. I18N: ./data/gui/screens/arenas.fluxara_driftgui
 #. I18N: Section in arena tracks selection screen
 msgid "Arenas"
 msgstr "竞技场"
 
-#. I18N: ./data/gui/screens/addons_screen.stkgui
+#. I18N: ./data/gui/screens/addons_screen.fluxara_driftgui
 #. I18N: In addons screen, above the list of addons to be installed
 #: src/states_screens/addons_screen.cpp:138
 msgid "Installed"
 msgstr "已安装"
 
-#. I18N: ./data/gui/screens/arenas.stkgui
+#. I18N: ./data/gui/screens/arenas.fluxara_driftgui
 #. I18N: Section in arena tracksselection screen
 msgid "Edit favorite arenas"
 msgstr "收藏竞技场"
 
-#. I18N: ./data/gui/screens/arenas.stkgui
+#. I18N: ./data/gui/screens/arenas.fluxara_driftgui
 #. I18N: track group
-#. I18N: ./data/gui/screens/easter_egg.stkgui
+#. I18N: ./data/gui/screens/easter_egg.fluxara_driftgui
 #. I18N: track group
 #. I18N: track group name
 #. I18N: kart group name
@@ -1124,9 +1124,9 @@ msgstr "收藏竞技场"
 msgid "Standard"
 msgstr "标准"
 
-#. I18N: ./data/gui/screens/arenas.stkgui
+#. I18N: ./data/gui/screens/arenas.fluxara_driftgui
 #. I18N: track group
-#. I18N: ./data/gui/screens/easter_egg.stkgui
+#. I18N: ./data/gui/screens/easter_egg.fluxara_driftgui
 #. I18N: track group
 #. I18N: track group name
 #. I18N: kart group name
@@ -1140,9 +1140,9 @@ msgstr "标准"
 msgid "Add-Ons"
 msgstr "附加"
 
-#. I18N: ./data/gui/screens/arenas.stkgui
+#. I18N: ./data/gui/screens/arenas.fluxara_driftgui
 #. I18N: track group
-#. I18N: ./data/gui/screens/easter_egg.stkgui
+#. I18N: ./data/gui/screens/easter_egg.fluxara_driftgui
 #. I18N: track group
 #. I18N: Time filters for add-ons
 #. I18N: name of the tab that will show arenas from all groups
@@ -1175,125 +1175,125 @@ msgstr "附加"
 msgid "All"
 msgstr "所有"
 
-#. I18N: ./data/gui/screens/credits.stkgui
+#. I18N: ./data/gui/screens/credits.fluxara_driftgui
 #. I18N: Title in credits screen
 msgid "Credits"
 msgstr "致谢"
 
-#. I18N: ./data/gui/screens/cutscene.stkgui
+#. I18N: ./data/gui/screens/cutscene.fluxara_driftgui
 msgid "Skip"
 msgstr "跳过"
 
-#. I18N: ./data/gui/screens/easter_egg.stkgui
+#. I18N: ./data/gui/screens/easter_egg.fluxara_driftgui
 #. I18N: Section in easter egg tracks selection screen
-#. I18N: ./data/gui/screens/tracks_and_gp.stkgui
+#. I18N: ./data/gui/screens/tracks_and_gp.fluxara_driftgui
 #. I18N: In the track and grand prix selection screen
-#. I18N: ./data/gui/screens/tracks.stkgui
+#. I18N: ./data/gui/screens/tracks.fluxara_driftgui
 #. I18N: In the track selection screen
 msgid "All Tracks"
 msgstr "所有赛道"
 
-#. I18N: ./data/gui/screens/edit_gp.stkgui
+#. I18N: ./data/gui/screens/edit_gp.fluxara_driftgui
 #. I18N: Title in edit grand prix screen
 msgid "Edit Grand Prix"
 msgstr "编辑锦标赛"
 
-#. I18N: ./data/gui/screens/edit_gp.stkgui
+#. I18N: ./data/gui/screens/edit_gp.fluxara_driftgui
 #. I18N: Menu item
 msgid "Move up"
 msgstr "上移"
 
-#. I18N: ./data/gui/screens/edit_gp.stkgui
+#. I18N: ./data/gui/screens/edit_gp.fluxara_driftgui
 #. I18N: Menu item
 msgid "Move down"
 msgstr "下移"
 
-#. I18N: ./data/gui/screens/edit_gp.stkgui
+#. I18N: ./data/gui/screens/edit_gp.fluxara_driftgui
 #. I18N: Menu item
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 msgid "Add"
 msgstr "添加"
 
-#. I18N: ./data/gui/screens/edit_gp.stkgui
+#. I18N: ./data/gui/screens/edit_gp.fluxara_driftgui
 #. I18N: Menu item
-#. I18N: ./data/gui/screens/grand_prix_editor.stkgui
+#. I18N: ./data/gui/screens/grand_prix_editor.fluxara_driftgui
 #. I18N: Menu item
 msgid "Edit"
 msgstr "编辑"
 
-#. I18N: ./data/gui/screens/edit_gp.stkgui
+#. I18N: ./data/gui/screens/edit_gp.fluxara_driftgui
 #. I18N: Menu item
 msgid "Save"
 msgstr "保存"
 
-#. I18N: ./data/gui/screens/edit_track.stkgui
+#. I18N: ./data/gui/screens/edit_track.fluxara_driftgui
 #. I18N: In the edit track screen
 msgid "Number of laps:"
 msgstr "圈数："
 
-#. I18N: ./data/gui/screens/edit_track.stkgui
+#. I18N: ./data/gui/screens/edit_track.fluxara_driftgui
 #. I18N: In the edit track screen
 msgid "Reverse:"
 msgstr "反向："
 
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
 msgid "Ghost Replay Selection"
 msgstr "重播录像选择"
 
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
-#. I18N: ./data/gui/screens/high_score_selection.stkgui
+#. I18N: ./data/gui/screens/high_score_selection.fluxara_driftgui
 #. I18N: In the high score selection screen
 #. I18N: Game mode
 #: src/race/race_manager.cpp:1304
 msgid "Egg Hunt"
 msgstr "收集彩蛋"
 
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
 msgid "Only show the best times"
 msgstr "只显示最佳时间"
 
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
 msgid "Compare replay"
 msgstr "比较重播录像"
 
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
 msgid "Only show replays matching the current difficulty"
 msgstr "只显示符合当前难度的重播录像"
 
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
 msgid "Only show replays matching the current version"
 msgstr "只显示符合当前版本的重播录像"
 
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
 msgid "Hide multiplayer replays"
 msgstr "隐藏多人游戏的重播录像"
 
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
 msgid "Record a ghost replay"
 msgstr "录制重播录像"
 
-#. I18N: ./data/gui/screens/gp_info.stkgui
+#. I18N: ./data/gui/screens/gp_info.fluxara_driftgui
 #. I18N: In the grand prix info screen
 msgid "AI karts"
 msgstr "电脑玩家"
 
-#. I18N: ./data/gui/screens/gp_info.stkgui
+#. I18N: ./data/gui/screens/gp_info.fluxara_driftgui
 #. I18N: In the grand prix info screen
 msgid "Reverse"
 msgstr "反向比赛"
 
-#. I18N: ./data/gui/screens/gp_info.stkgui
+#. I18N: ./data/gui/screens/gp_info.fluxara_driftgui
 #. I18N: In the grand prix info screen
 #. I18N: In track screen
 #: src/states_screens/online/tracks_screen.cpp:517
@@ -1303,179 +1303,179 @@ msgstr "反向比赛"
 msgid "Maximum time (min.)"
 msgstr "最大时间（分钟）"
 
-#. I18N: ./data/gui/screens/gp_info.stkgui
+#. I18N: ./data/gui/screens/gp_info.fluxara_driftgui
 #. I18N: In the grand prix info screen
 msgid "Track group"
 msgstr "赛道群组"
 
-#. I18N: ./data/gui/screens/gp_info.stkgui
+#. I18N: ./data/gui/screens/gp_info.fluxara_driftgui
 #. I18N: In the grand prix info screen
 #: src/states_screens/gp_info_screen.cpp:164
 msgid "Continue saved GP"
 msgstr "继续已保存的锦标赛"
 
-#. I18N: ./data/gui/screens/grand_prix_editor.stkgui
+#. I18N: ./data/gui/screens/grand_prix_editor.fluxara_driftgui
 #. I18N: Title in grand prix editor screen
 msgid "Grand Prix editor"
 msgstr "锦标赛编辑器"
 
-#. I18N: ./data/gui/screens/grand_prix_editor.stkgui
+#. I18N: ./data/gui/screens/grand_prix_editor.fluxara_driftgui
 #. I18N: Menu item
 msgid "New"
 msgstr "新增"
 
-#. I18N: ./data/gui/screens/grand_prix_editor.stkgui
+#. I18N: ./data/gui/screens/grand_prix_editor.fluxara_driftgui
 #. I18N: Menu item
 msgid "Copy"
 msgstr "复制"
 
-#. I18N: ./data/gui/screens/grand_prix_editor.stkgui
+#. I18N: ./data/gui/screens/grand_prix_editor.fluxara_driftgui
 #. I18N: Menu item
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 #: src/states_screens/online/register_screen.cpp:71
 msgid "Rename"
 msgstr "重命名"
 
-#. I18N: ./data/gui/screens/grand_prix_lose.stkgui
-#. I18N: ./data/gui/screens/grand_prix_win.stkgui
+#. I18N: ./data/gui/screens/grand_prix_lose.fluxara_driftgui
+#. I18N: ./data/gui/screens/grand_prix_win.fluxara_driftgui
 msgid "Save Grand Prix"
 msgstr "保存锦标赛"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
-#. I18N: ./data/gui/screens/help/help2.stkgui
-#. I18N: ./data/gui/screens/help/help3.stkgui
-#. I18N: ./data/gui/screens/help/help4.stkgui
-#. I18N: ./data/gui/screens/help/help5.stkgui
-#. I18N: ./data/gui/screens/help/help6.stkgui
-#. I18N: ./data/gui/screens/help/help7.stkgui
-msgid "SuperTuxKart Help"
-msgstr "SuperTuxKart 帮助"
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
+msgid "Fluxara Drift Help"
+msgstr "Fluxara Drift 帮助"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: Tab in help menu
 msgid "Game Modes"
 msgstr "游戏模式"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: Tab in help menu
 msgid "Powerups"
 msgstr "道具"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: Tab in help menu
 msgid "Bananas"
 msgstr "香蕉"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: Main menu button
 #: src/io/rich_presence.cpp:501
 msgid "Story Mode"
 msgstr "剧情模式"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: Tab in help menu
 msgid "Kart classes"
 msgstr "赛车种类"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: Tab in help menu
 msgid "Multiplayer"
 msgstr "多人游戏"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 msgid "Start the tutorial"
 msgstr "开始教学关"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: In the help menu
 msgid "Collect blue gift boxes, they will give you powerups."
 msgstr "收集蓝色礼盒，他们会助您一臂之力。"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: In the help menu
-#: ../stk-assets/tracks/tutorial/scripting.as:49
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:49
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:49
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:49
 msgid "Avoid bananas!"
 msgstr "注意香蕉皮！"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Collecting nitro allows you to get speed boosts whenever you wish by "
@@ -1483,14 +1483,14 @@ msgid ""
 "nitro in the gauge at the bottom-right of the race screen."
 msgstr "收集氮气作为燃料，当您按下正确的按键使用它时，赛车可以得到很大的加速。您可以在屏幕右侧看到当前燃料的数量"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "If you see a button with a lock like this one, you need to complete a "
 "challenge to unlock it."
 msgstr "如果您看到一个按钮带有像这样的锁的图标，您就必须要先完成其它一些挑战赛才能解锁它。"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "You can skid by pressing a special key or button. Successive short skids "
@@ -1499,34 +1499,34 @@ msgid ""
 "carefully before!"
 msgstr "您可以通过按特殊键或按钮来漂移。 短距离的漂移有助于急转弯; 而中等长度的漂移将提高您的速度，长的更是如此。 在漂移时您不能停止转弯，所以您要小心地控制您的赛车！"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "You can get a startup boost by pressing the accelerate button at 'Set!', "
 "before the race's start."
 msgstr "在“预备”显示时按加速按钮可以得到启动加速。"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: in the help screen
 msgid "* Current key bindings can be seen/changed in the Options menu"
 msgstr "* 可以在“选项”菜单中查看/更改当前按键设置"
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
-msgid "SuperTuxKart features several game modes:"
-msgstr "SuperTuxKart 有多种游戏模式： "
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
+msgid "Fluxara Drift features several game modes:"
+msgstr "Fluxara Drift 有多种游戏模式： "
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Regular Race: All blows allowed, so collect powerups and use them smartly!"
 msgstr "常规比赛：所有道具都可用，合理使用它们会有意想不到的效果！"
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid "Time Trial: Contains no powerups, so only your driving skills matter!"
 msgstr "竞速模式：该模式下没有道具，因此该模式将考验您的驾驶技术！ "
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Follow the leader: Run for second place, as the last kart will be "
@@ -1534,7 +1534,7 @@ msgid ""
 " leader will get you eliminated too!"
 msgstr "跟紧老大：您至多只能跑到第二名，每隔一定时间最后一名会被淘汰掉。注意：如果您超过了老大，您也会被淘汰！"
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "There are 3 types of battle mode: In 3 Strikes Battle, you need to hit "
@@ -1544,30 +1544,30 @@ msgid ""
 "your own flag base, as long as your flag is not captured by the other team."
 msgstr "有三种战斗模式：在三击对战中，您需要用武器打击其他人，直到他们失去所有生命为止。 在自由混战中，在次数或时间限制内击中其他人最多的玩家取胜。 在夺旗大战中，只要您的旗帜未被其他团队夺得，您的队伍就需要将其他队伍的旗帜带到您自己队伍的旗帜旁。"
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid "Soccer: Use your kart to push the ball into the goal."
 msgstr "足球模式：把球推到对面的球门里来赢得分数。"
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid "Egg hunt: Explore tracks to find all hidden eggs."
 msgstr "收集彩蛋：在赛道里探险，找到所有的隐藏彩蛋。"
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Ghost replay: Race against ghost replays in time-trial or egg hunt mode, and"
 " record your own!"
 msgstr "重播录像：在竞速模式或收集彩蛋中与重播录像比赛，并录制自己的！"
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Lap Trial: Complete as many laps as possible in a given amount of time."
 msgstr "圈数模式：在指定的时间内达到尽可能多的圈数。"
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "* Many of these game modes can also be played in a Grand Prix fashion: "
@@ -1576,93 +1576,93 @@ msgid ""
 "wins the cup."
 msgstr "* 这些游戏模式中的许多也可以以锦标赛的方式进行：您并非进行单一的比赛，而是连续进行许多比赛。排名越高，得分越多。最后，得分最多的玩家将赢得奖杯。"
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 #. I18N: In the help menu
 msgid "To help you win, there are some powerups you can collect:"
 msgstr "下面这些道具可以帮助您取得游戏的胜利："
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid ""
 "BubbleGum - protect yourself with a shield, or use while looking back to "
 "leave a sticky pink puddle behind you."
 msgstr "泡泡糖 - 用大泡泡来保护您，或者在向后看时用，在您身后留下一坨粘糊糊的、粉红色的恶心东西。"
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid ""
 "Zipper - will give you a strong speed boost. But beware of not losing "
 "control of your kart!"
 msgstr "加速 - 会使您速度提升。 但要注意不要失去对赛车的控制！"
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid ""
 "Cake - thrown at the closest rival, best on short ranges and long straights."
 " It also affects other karts close to the explosion."
 msgstr "蛋糕 - 自动瞄准最近的敌人，适合于短距离或正前方的对手。它也会同时打击到其它靠近爆炸的车辆。"
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid ""
 "Plunger - throw straight to pull an opponent back, or throw while looking "
 "back to make one lose sight."
 msgstr "马桶揣子 - 向前发射可以把前面玩家向后拉，同时您也会得到加速；向后发射则可以把别人的视线挡住，让他们看不清方向。"
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid ""
 "Bowling Ball - goes straight until it strikes, it can bounce off walls. If "
 "you are looking back, it will be thrown backwards."
 msgstr "保龄球 - 在击中车辆前一直向前滚动，碰到墙壁会反弹，在向后看的时候，保龄球可以向后发射。 "
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid "Parachute - slows down all karts in a better position."
 msgstr "降落伞 - 减慢您前方所有玩家的速度。"
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid ""
 "Swapper - gift boxes are transformed into bananas, nitro cans into "
 "bubblegums, and vice versa for a short time."
 msgstr "交换器 - 使得箱子和香蕉皮、氮气和泡泡糖在短时间内暂时交换。 "
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid ""
 "Basket Ball - bounces after the leader, and might squash and slow down karts"
 " down on the way."
 msgstr "篮球 - 跳向领先的玩家，并可能会压扁其他赛车让其减速。"
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid ""
 "Swatter - will squash karts close by, slowing them down. Can also be used to"
 " remove parachutes and bombs."
 msgstr "苍蝇拍 - 会拍扁靠近的赛车，使它们减速，也可用于移除降落伞和炸弹。"
 
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 msgid ""
 "Hitting a banana can result in one of the following being attached to the "
 "kart:"
 msgstr "碰到一个香蕉皮会导致下列其中一种东西施加到赛车上："
 
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: In the help menu
 msgid "Anchor - slows down the kart suddenly."
 msgstr "锚 - 瞬间减慢赛车。 "
 
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Parachute - slows down the kart, more progressively than the anchor. The "
 "faster you go, the stronger it slows you down."
 msgstr "降落伞 - 减缓赛车的速度，但与锚相比作用更小。 您开得越快，它的作用就越强。"
 
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Bomb - detonates after some amount of time, throwing the kart up in the air."
 " Bump into another kart to transfer the bomb to it."
 msgstr "炸弹 - 经过一段时间后引爆，将赛车炸到空中。 撞上另一辆赛车会将其转移。"
 
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 msgid "The evil Nolok has captured Gnu! Here are a few tips to help you:"
 msgstr "邪恶的Nolok抓走了Gnu！ 这里有一些秘诀可以帮助您："
 
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "This icon on the minimap shows the available challenges you've not "
@@ -1671,7 +1671,7 @@ msgid ""
 " accept to race against you. Win to liberate Gnu!"
 msgstr "这些小地图上的图标显示您可用但尚未完成的挑战赛。 在屏幕的右上角，它也会显示您目前有多少积分。 完成尽可能多的挑战赛，最终邪恶的Nolok将接受与您竞赛。取得胜利后将解放Gnu！"
 
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "When you complete a challenge, you get a cup. Each cup is worth several "
@@ -1679,20 +1679,20 @@ msgid ""
 " the cup and the more points it is worth."
 msgstr "完成一项挑战赛后，您会得到一个奖杯。 每个奖杯都相当于一些积分。 您完成的挑战赛难度越高，您就会取得更高级的奖杯，对应的分数就越多。"
 
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "When you get the number of points indicated below this icon, you'll be "
 "gifted a surprise. There are several to collect."
 msgstr "当您达到这个图标下面指示的点数时，我们为您准备了一份大大的惊喜！其中有许多不同的礼物。"
 
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 msgid ""
 "Not all karts drive the same! They belong to classes with several "
 "differences:"
 msgstr "并非所有的赛车都一样！ 它们分别有以下几种不同的参数："
 
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Mass - there are three classes of karts, depending on their mass: light, "
@@ -1700,7 +1700,7 @@ msgid ""
 " resistant to explosions."
 msgstr "质量 - 根据质量可将赛车分为轻，中，重三类。较重的赛车受降落伞影响较小，对爆炸的抵抗力更强。"
 
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Acceleration - especially useful at start, after an accident, or in tracks "
@@ -1708,7 +1708,7 @@ msgid ""
 " especially at low speeds."
 msgstr "加速 - 在发生事故，事故发生后或在有许多弯路的塞道上特别有用。 赛车越轻，加速越快，特别是在低速行驶时。"
 
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Max speed - the higher it is, the faster the kart can go. Especially useful "
@@ -1716,14 +1716,14 @@ msgid ""
 " top speed."
 msgstr "最高速度 - 最高速度越高，赛车越快。 在直线和幅度较小的弯路中更加有用。 较重的赛车一般具有更高的最高速度。"
 
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Nitro efficiency - The higher it is, the more speed you get from a can of "
 "nitro. A lighter kart will have higher nitro efficiency."
 msgstr "氮气效率 - 氮气效率越高，使用一瓶氮气就可以得到更多的加速。 较轻赛车的氮气效率更高。"
 
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "If you follow closely another kart for a few seconds, you'll get a "
@@ -1731,12 +1731,12 @@ msgid ""
 "easier it is."
 msgstr "如果您紧跟另一个赛车几秒钟，您将得到一个加速奖励。 您的赛车越轻，就越容易做到。"
 
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: In the help menu
-msgid "SuperTuxKart can be played in multiplayer mode online...:"
-msgstr "SuperTuxKart 支持在线上进行多人游戏 ："
+msgid "Fluxara Drift can be played in multiplayer mode online...:"
+msgstr "Fluxara Drift 支持在线上进行多人游戏 ："
 
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "First, select the 'online' icon in the main menu. Choose either local "
@@ -1746,7 +1746,7 @@ msgid ""
 "recommended servers with optionally ranked races."
 msgstr "首先，选择主菜单中的“在线”图标。 选择本地网络或全局网络（需要在选项中启用互联网）。 然后，您可以使用自定义选项创建自己的服务器，也可以在要加入的现有服务器列表中进行搜索。 其中一些是推荐的服务器，可选择排名比赛。 "
 
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Once in a server, a race will begin once its owner (symbolized with the "
@@ -1756,12 +1756,12 @@ msgid ""
 "players and the server."
 msgstr "在服务器上，所有者（以皇冠标记）决定比赛的开始。官方服务器在有足够玩家的情况下可能会自动开始比赛。然后，您可以选择赛车并投票选择下一条赛道。附加赛道只有在所有玩家以及服务器都安装的情况下才可以选择。"
 
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: In the help menu
 msgid "... or on the same device:"
 msgstr "…或者在同一台设备上："
 
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "First, you will need several input devices. Use the input configuration "
@@ -1771,7 +1771,7 @@ msgid ""
 "multiple simultaneous keypresses."
 msgstr "要进行多人游戏,，首先您需要多个输入设备。在输入选项中设置游戏手柄。多个游戏手柄或操纵杆是最理想的选择。您也可以只使用键盘进行多人游戏，但是每个玩家的按键设置不能有重复的按键，而且大多数键盘支持同时按下的按键数有限，因此不适于多人游戏。"
 
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "When input devices are configured, select the 'Splitscreen Multiplayer' icon"
@@ -1781,12 +1781,12 @@ msgid ""
 "may not be used for this operation."
 msgstr "请先确定键盘/游戏手柄已经正确配置，在主界面中选择“分屏多人游戏”的图标。每一个玩家按下自己键盘/游戏手柄上的“开火”键加入游戏，然后使用自己的键盘/游戏手柄选择赛车。当所有玩家都选择了赛车后，游戏会继续进行。注意：鼠标可能不能用来完成这一操作。"
 
-#. I18N: ./data/gui/screens/high_score_selection.stkgui
+#. I18N: ./data/gui/screens/high_score_selection.fluxara_driftgui
 #. I18N: In the high score selection screen
 msgid "High Score Selection"
 msgstr "高分选择"
 
-#. I18N: ./data/gui/screens/high_score_selection.stkgui
+#. I18N: ./data/gui/screens/high_score_selection.fluxara_driftgui
 #. I18N: In the high score selection screen
 #. I18N: Game mode
 #. I18N: Lap Trial: Complete as many laps as possible in a given amount of
@@ -1795,9 +1795,9 @@ msgstr "高分选择"
 msgid "Lap Trial"
 msgstr "圈数模式"
 
-#. I18N: ./data/gui/screens/high_score_selection.stkgui
+#. I18N: ./data/gui/screens/high_score_selection.fluxara_driftgui
 #. I18N: In the high score selection screen
-#. I18N: ./data/gui/screens/tracks_and_gp.stkgui
+#. I18N: ./data/gui/screens/tracks_and_gp.fluxara_driftgui
 #. I18N: In the track and grand prix selection screen
 #: src/states_screens/dialogs/high_score_info_dialog.cpp:75
 #: src/states_screens/dialogs/select_challenge.cpp:51
@@ -1805,128 +1805,128 @@ msgstr "圈数模式"
 msgid "Grand Prix"
 msgstr "锦标赛"
 
-#. I18N: ./data/gui/screens/karts.stkgui
+#. I18N: ./data/gui/screens/karts.fluxara_driftgui
 #. I18N: In the kart selection (player setup) screen
-#. I18N: ./data/gui/screens/online/network_karts.stkgui
+#. I18N: ./data/gui/screens/online/network_karts.fluxara_driftgui
 #. I18N: In the kart selection (player setup) screen
 msgid "Choose a Kart"
 msgstr "选择赛车"
 
-#. I18N: ./data/gui/screens/karts.stkgui
+#. I18N: ./data/gui/screens/karts.fluxara_driftgui
 #. I18N: In karts selection screen, determine the kart group shown on the list
-#. I18N: ./data/gui/screens/online/network_karts.stkgui
+#. I18N: ./data/gui/screens/online/network_karts.fluxara_driftgui
 #. I18N: In karts selection screen, determine the kart group shown on the list
 msgid "Kart Class"
 msgstr "赛车种类"
 
-#. I18N: ./data/gui/screens/karts.stkgui
+#. I18N: ./data/gui/screens/karts.fluxara_driftgui
 #. I18N: In the track and grand prix selection screen
-#. I18N: ./data/gui/screens/online/network_karts.stkgui
+#. I18N: ./data/gui/screens/online/network_karts.fluxara_driftgui
 #. I18N: In the track and grand prix selection screen
 msgid "Edit favorite karts"
 msgstr "收藏赛车"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: Main menu button
 msgid "Singleplayer"
 msgstr "单人游戏"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: Main menu button
 msgid "Splitscreen Multiplayer"
 msgstr "分屏多人游戏"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: Main menu button
-#. I18N: ./data/gui/screens/online/online.stkgui
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/online/online.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 #: src/states_screens/online/online_profile_friends.cpp:245
 msgid "Online"
 msgstr "在线"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: Main menu button
 msgid "Addons"
 msgstr "附加组件"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: In the main screen
 #: src/states_screens/race_gui_overworld.cpp:530
 msgid "Tutorial"
 msgstr "教学关"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: In the main screen
 #: src/states_screens/track_info_screen.cpp:343
 msgid "High Scores"
 msgstr "高分"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: In the main screen
-#. I18N: ./data/gui/screens/online/profile_achievements_tab.stkgui
+#. I18N: ./data/gui/screens/online/profile_achievements_tab.fluxara_driftgui
 #. I18N: Section in the profile screen
 #: src/states_screens/online/online_profile_base.cpp:113
 msgid "Achievements"
 msgstr "成就"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: In the main screen
 msgid "Grand Prix Editor"
 msgstr "锦标赛编辑器"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: In the main screen
 msgid "About"
 msgstr "关于"
 
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: In the server creation screen
 msgid "Server Creation"
 msgstr "创建服务器"
 
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: In the server creation screen
 msgid "Name of the server"
 msgstr "服务器名称"
 
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: In the server creation screen
 msgid "Max. number of players"
 msgstr "最大玩家数量"
 
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: In the server creation screen
 msgid "Password for private server (optional)"
 msgstr "私人服务器的密码（可选）"
 
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: In the server creation screen
 msgid "Create"
 msgstr "创建"
 
-#. I18N: ./data/gui/screens/online/lan.stkgui
+#. I18N: ./data/gui/screens/online/lan.fluxara_driftgui
 msgid "Local Networking"
 msgstr "本地网络"
 
-#. I18N: ./data/gui/screens/online/lan.stkgui
+#. I18N: ./data/gui/screens/online/lan.fluxara_driftgui
 #. I18N: In the online multiplayer screen
-#. I18N: ./data/gui/screens/online/profile_servers.stkgui
+#. I18N: ./data/gui/screens/online/profile_servers.fluxara_driftgui
 #. I18N: In the online multiplayer screen
 msgid "Find Server"
 msgstr "寻找服务器"
 
-#. I18N: ./data/gui/screens/online/lan.stkgui
+#. I18N: ./data/gui/screens/online/lan.fluxara_driftgui
 #. I18N: In the online multiplayer screen
-#. I18N: ./data/gui/screens/online/profile_servers.stkgui
+#. I18N: ./data/gui/screens/online/profile_servers.fluxara_driftgui
 #. I18N: In the online multiplayer screen
 #: src/states_screens/online/create_server_screen.cpp:108
 msgid "Create Server"
 msgstr "建立服务器"
 
-#. I18N: ./data/gui/screens/online/networking_lobby.stkgui
+#. I18N: ./data/gui/screens/online/networking_lobby.fluxara_driftgui
 #. I18N: In networking lobby
 #. I18N: In the networking lobby
 #: src/states_screens/online/networking_lobby.cpp:86
@@ -1936,40 +1936,40 @@ msgstr "建立服务器"
 msgid "Lobby"
 msgstr "大堂"
 
-#. I18N: ./data/gui/screens/online/networking_lobby.stkgui
+#. I18N: ./data/gui/screens/online/networking_lobby.fluxara_driftgui
 #. I18N: In the network lobby
 #. I18N: In networking lobby to configuration server settings
 #: src/states_screens/online/networking_lobby.cpp:201
 msgid "Configuration"
 msgstr "设置"
 
-#. I18N: ./data/gui/screens/online/networking_lobby.stkgui
+#. I18N: ./data/gui/screens/online/networking_lobby.fluxara_driftgui
 #. I18N: In the network lobby
 #: src/states_screens/online/networking_lobby.cpp:193
 msgid "Start race"
 msgstr "开始游戏"
 
-#. I18N: ./data/gui/screens/online/online.stkgui
+#. I18N: ./data/gui/screens/online/online.fluxara_driftgui
 #. I18N: In the networking menu
 msgid "Enable splitscreen or player handicaps"
 msgstr "开启分屏和玩家让赛"
 
-#. I18N: ./data/gui/screens/online/online.stkgui
+#. I18N: ./data/gui/screens/online/online.fluxara_driftgui
 #. I18N: Networking menu button
 msgid "Local networking"
 msgstr "本地网络 "
 
-#. I18N: ./data/gui/screens/online/online.stkgui
+#. I18N: ./data/gui/screens/online/online.fluxara_driftgui
 #. I18N: Networking menu button
 msgid "Global networking"
 msgstr "全球网络 "
 
-#. I18N: ./data/gui/screens/online/online.stkgui
+#. I18N: ./data/gui/screens/online/online.fluxara_driftgui
 #. I18N: Networking menu button
 msgid "Enter server address"
 msgstr "输入服务器地址"
 
-#. I18N: ./data/gui/screens/online/online.stkgui
+#. I18N: ./data/gui/screens/online/online.fluxara_driftgui
 #. I18N: Networking menu button
 #: src/states_screens/online/online_profile_base.cpp:118
 #: src/states_screens/online/online_profile_base.cpp:128
@@ -1977,294 +1977,294 @@ msgstr "输入服务器地址"
 msgid "Your profile"
 msgstr "个人档案"
 
-#. I18N: ./data/gui/screens/online/profile_achievements.stkgui
-#. I18N: ./data/gui/screens/online/profile_achievements_tab.stkgui
-#. I18N: ./data/gui/screens/online/profile_friends.stkgui
-#. I18N: ./data/gui/screens/online/profile_settings.stkgui
+#. I18N: ./data/gui/screens/online/profile_achievements.fluxara_driftgui
+#. I18N: ./data/gui/screens/online/profile_achievements_tab.fluxara_driftgui
+#. I18N: ./data/gui/screens/online/profile_friends.fluxara_driftgui
+#. I18N: ./data/gui/screens/online/profile_settings.fluxara_driftgui
 msgid "..."
 msgstr "……"
 
-#. I18N: ./data/gui/screens/online/profile_achievements_tab.stkgui
+#. I18N: ./data/gui/screens/online/profile_achievements_tab.fluxara_driftgui
 #. I18N: In the achievements screen
 msgid "Player rankings"
 msgstr "玩家排名"
 
-#. I18N: ./data/gui/screens/online/profile_friends.stkgui
+#. I18N: ./data/gui/screens/online/profile_friends.fluxara_driftgui
 #. I18N: Section in the profile screen
 #: src/states_screens/online/online_profile_base.cpp:112
 msgid "Friends"
 msgstr "好友"
 
-#. I18N: ./data/gui/screens/online/profile_friends.stkgui
+#. I18N: ./data/gui/screens/online/profile_friends.fluxara_driftgui
 #. I18N: In the profile screen
 msgid "Look for more friends:"
 msgstr "寻找更多朋友"
 
-#. I18N: ./data/gui/screens/online/profile_friends.stkgui
-#. I18N: ./data/gui/screens/online/user_search.stkgui
+#. I18N: ./data/gui/screens/online/profile_friends.fluxara_driftgui
+#. I18N: ./data/gui/screens/online/user_search.fluxara_driftgui
 msgid "Search"
 msgstr "搜索"
 
-#. I18N: ./data/gui/screens/online/profile_servers.stkgui
+#. I18N: ./data/gui/screens/online/profile_servers.fluxara_driftgui
 msgid "Global Networking"
 msgstr "全球网络"
 
-#. I18N: ./data/gui/screens/online/profile_servers.stkgui
+#. I18N: ./data/gui/screens/online/profile_servers.fluxara_driftgui
 #. I18N: In the online multiplayer screen
 msgid "Quick Play"
 msgstr "快速游戏"
 
-#. I18N: ./data/gui/screens/online/profile_settings.stkgui
+#. I18N: ./data/gui/screens/online/profile_settings.fluxara_driftgui
 #. I18N: Section in the profile screen
 #: src/states_screens/online/online_profile_base.cpp:114
 msgid "Account Settings"
 msgstr "帐号设置"
 
-#. I18N: ./data/gui/screens/online/profile_settings.stkgui
+#. I18N: ./data/gui/screens/online/profile_settings.fluxara_driftgui
 #. I18N: In the online account settings screen
 msgid "Password:"
 msgstr "密码："
 
-#. I18N: ./data/gui/screens/online/profile_settings.stkgui
+#. I18N: ./data/gui/screens/online/profile_settings.fluxara_driftgui
 msgid "Change"
 msgstr "更改"
 
-#. I18N: ./data/gui/screens/online/profile_settings.stkgui
+#. I18N: ./data/gui/screens/online/profile_settings.fluxara_driftgui
 #. I18N: In the online account settings screen
 msgid "E-mail:"
 msgstr "邮箱："
 
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
 #: src/states_screens/online/register_screen.cpp:73
 msgid "Create User"
 msgstr "创建用户"
 
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: Section in the register screen
 msgid "New Online Account"
 msgstr "新在线帐号"
 
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: Section in the register screen
 msgid "Existing Online Account"
 msgstr "已存的在线帐号"
 
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: Section in the register screen
 msgid "Offline Account"
 msgstr "离线帐号"
 
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
 msgid "Local Name"
 msgstr "本地名称"
 
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
 msgid "Online Username"
 msgstr "在线用户名"
 
-#. I18N: ./data/gui/screens/online/register.stkgui
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 msgid "Reset password"
 msgstr "重设密码"
 
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
 msgid ""
 "You can play without creating an online account by selecting an offline "
 "account. Though then you can not connect to friends, vote for addons etc. "
-"Please read our privacy statement at https://privacy.supertuxkart.net"
-msgstr "您可以选取离线帐号以避免在要游玩时建立在线帐号。虽然这样您就无法与朋友连线，为附加组件投票等。请到 https://privacy.supertuxkart.net 详阅我们的隐私政策。"
+"Please read our privacy statement at https://privacy.fluxaradrift.net"
+msgstr "您可以选取离线帐号以避免在要游玩时建立在线帐号。虽然这样您就无法与朋友连线，为附加组件投票等。请到 https://privacy.fluxaradrift.net 详阅我们的隐私政策。"
 
-#. I18N: ./data/gui/screens/online/server_selection.stkgui
+#. I18N: ./data/gui/screens/online/server_selection.fluxara_driftgui
 #: src/states_screens/online/server_selection.cpp:578
 msgid "Server Selection"
 msgstr "选择服务器"
 
-#. I18N: ./data/gui/screens/online/server_selection.stkgui
+#. I18N: ./data/gui/screens/online/server_selection.fluxara_driftgui
 #. I18N: In the server selection screen
 msgid "Show private server(s)"
 msgstr "显示私人服务器"
 
-#. I18N: ./data/gui/screens/online/server_selection.stkgui
+#. I18N: ./data/gui/screens/online/server_selection.fluxara_driftgui
 #. I18N: In the server selection screen
 msgid "Use IPv6 connection"
 msgstr "使用IPv6连接"
 
-#. I18N: ./data/gui/screens/online/user_search.stkgui
+#. I18N: ./data/gui/screens/online/user_search.fluxara_driftgui
 msgid "User search"
 msgstr "用户搜索"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
-#. I18N: ./data/gui/screens/options/options_device.stkgui
-#. I18N: ./data/gui/screens/options/options_display.stkgui
-#. I18N: ./data/gui/screens/options/options_general.stkgui
-#. I18N: ./data/gui/screens/options/options_input.stkgui
-#. I18N: ./data/gui/screens/options/options_language.stkgui
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
-#. I18N: ./data/gui/screens/options/options_video.stkgui
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
-msgid "SuperTuxKart Options"
-msgstr "SuperTuxKart 选项"
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
+msgid "Fluxara Drift Options"
+msgstr "Fluxara Drift 选项"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_language.stkgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: Section in the settings menu
 msgid "Display"
 msgstr "显示"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_language.stkgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: In the video settings
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: Section in the settings menu
 msgid "Graphics"
 msgstr "图像"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_language.stkgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: Section in the settings menu
 msgid "Audio"
 msgstr "音频"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_language.stkgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: Section in the settings menu
 msgid "Interface"
 msgstr "界面"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_language.stkgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: Section in the settings menu
 msgid "Players"
 msgstr "玩家"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_language.stkgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: Section in the settings menu
 msgid "Controls"
 msgstr "操控"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_language.stkgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: Section in the settings menu
 msgid "Language"
 msgstr "语言"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: In the audio options screen
 msgid "Music"
 msgstr "音乐"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: In the audio options screen
 #. I18N: in the graphical options tooltip;
 #. indicates a graphical feature is enabled
@@ -2274,22 +2274,22 @@ msgstr "音乐"
 msgid "Enabled"
 msgstr "已启用"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: In the audio options screen
 msgid "Volume"
 msgstr "音量"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: In the audio options screen
 msgid "Sound Effects"
 msgstr "音效"
 
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: In the input configuration screen
 msgid "Delete Configuration"
 msgstr "删除按键设置"
 
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: In the input configuration screen
 #. I18N: button to disable a keyboard configuration
 #: src/states_screens/options/options_screen_device.cpp:105
@@ -2297,265 +2297,265 @@ msgstr "删除按键设置"
 msgid "Disable Configuration"
 msgstr "取消按键设置"
 
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: In the input configuration screen
 msgid "Back to device list"
 msgstr "返回设备列表"
 
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: In the input configuration screen
 msgid "Rename Configuration"
 msgstr "重命名配置"
 
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: In the input configuration screen, for gamepad
 msgid "Enable force feedback (if supported)"
 msgstr "启用强制反馈（仅支持）"
 
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: In the display settings
 msgid "Resolution"
 msgstr "分辨率"
 
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: In the display settings
 msgid "Fullscreen"
 msgstr "全屏幕"
 
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: In the display settings
 msgid "Remember window location"
 msgstr "保存窗口位置"
 
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: In the display settings
 msgid "Apply new resolution"
 msgstr "使用新的分辨率"
 
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: In the display settings
 msgid "Splitscreen Multiplayer layout"
 msgstr "分屏方式"
 
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: In the general settings
 msgid "Internet options"
 msgstr "互联网设置"
 
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: In the general settings
 msgid "Always show login screen"
 msgstr "总是显示登录界面"
 
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: In the general settings
 msgid "Connect to the Internet"
 msgstr "连接网络"
 
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: In the general settings
 msgid "Enable chatting in online lobbies"
 msgstr "在游戏大堂中开启聊天"
 
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: In the general settings
 msgid "Enable chatting in online matches"
 msgstr "在比赛中开启聊天"
 
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: In the general settings
 msgid "Miscellaneous options"
 msgstr "杂项"
 
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: In the general settings
 msgid "Enable per-player handicaps"
 msgstr "开启每个玩家的让赛功能"
 
-#. I18N: ./data/gui/screens/options/options_general.stkgui
-#. I18N: For mobile version for STK, uninstall the downloaded assets
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
+#. I18N: For mobile version for FLUXARA_DRIFT, uninstall the downloaded assets
 #: src/states_screens/options/options_screen_general.cpp:79
 msgid "Uninstall full game assets"
 msgstr "卸载完整游戏组件"
 
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: In the input configuration screen
 #: src/states_screens/options/options_screen_input.cpp:191
 msgid "Press enter or double-click on a device to configure it"
 msgstr "按回车或双击一个设备来配置它"
 
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: In the input configuration screen
 msgid "Add a device"
 msgstr "添加设备"
 
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: In the input configuration screen
 msgid ""
 "* Which config to use will be inferred from which 'Select' key is pressed to"
 " join the game."
 msgstr "※ 使用何种设定将会由加入游戏时所按下的“选择”键来推断。"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Skin"
 msgstr "皮肤"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Skin variant"
 msgstr "配色"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Minimap"
 msgstr "小地图"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Font size"
 msgstr "字体大小"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Camera"
 msgstr "相机"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Custom..."
 msgstr "自定义…"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Display FPS"
 msgstr "显示帧速率"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Show other karts' held powerups"
 msgstr "显示其他玩家的道具"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Enable the story mode timer"
 msgstr "开启故事模式计时器"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Enable the speedrun timer"
 msgstr "开启竞速计时器"
 
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: In the video settings
 msgid "Render resolution"
 msgstr "渲染分辨率"
 
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: In the video settings
 msgid "Graphical Effects Level"
 msgstr "图形特效等级"
 
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: In the video settings
 msgid "Blur Effects Level"
 msgstr "模糊等级"
 
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: In the video options, maximum frame per second
 msgid "Maximum FPS"
 msgstr "最大 FPS"
 
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: In the video settings
 msgid "Custom settings..."
 msgstr "自定义设置..."
 
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: In the video settings
 msgid "Performance tests"
 msgstr "性能测试"
 
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: In the video settings
 msgid "Performance test of the current settings"
 msgstr "性能测试"
 
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 msgid "Remember password"
 msgstr "记住密码"
 
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 msgid "Delete"
 msgstr "删除"
 
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 msgid "Kart color"
 msgstr "赛车颜色"
 
-#. I18N: ./data/gui/screens/race_setup.stkgui
+#. I18N: ./data/gui/screens/race_setup.fluxara_driftgui
 msgid "Select a difficulty"
 msgstr "选择难度"
 
-#. I18N: ./data/gui/screens/race_setup.stkgui
+#. I18N: ./data/gui/screens/race_setup.fluxara_driftgui
 msgid "Select a game mode"
 msgstr "选择游戏模式"
 
-#. I18N: ./data/gui/screens/soccer_setup.stkgui
+#. I18N: ./data/gui/screens/soccer_setup.fluxara_driftgui
 #. I18N: In soccer setup screen
 msgid "Use left/right to choose your team and press fire"
 msgstr "使用左/右键选择您的队伍，然后按开火"
 
-#. I18N: ./data/gui/screens/soccer_setup.stkgui
+#. I18N: ./data/gui/screens/soccer_setup.fluxara_driftgui
 #. I18N: In soccer setup screen
 msgid "Red Team"
 msgstr "红队"
 
-#. I18N: ./data/gui/screens/soccer_setup.stkgui
+#. I18N: ./data/gui/screens/soccer_setup.fluxara_driftgui
 #. I18N: In soccer setup screen
 msgid "Blue Team"
 msgstr "蓝队"
 
-#. I18N: ./data/gui/screens/track_info.stkgui
+#. I18N: ./data/gui/screens/track_info.fluxara_driftgui
 #. I18N: In the track info screen
 #: src/states_screens/online/tracks_screen.cpp:546
 #: src/states_screens/track_info_screen.cpp:278
 msgid "Number of laps"
 msgstr "圈数"
 
-#. I18N: ./data/gui/screens/track_info.stkgui
+#. I18N: ./data/gui/screens/track_info.fluxara_driftgui
 #. I18N: In the track info screen
 #: src/states_screens/online/create_server_screen.cpp:201
 #: src/states_screens/track_info_screen.cpp:197
 msgid "Number of AI karts"
 msgstr "电脑玩家数量"
 
-#. I18N: ./data/gui/screens/track_info.stkgui
+#. I18N: ./data/gui/screens/track_info.fluxara_driftgui
 #. I18N: In the track info screen
 msgid "Number of blue team AI karts"
 msgstr "蓝队电脑玩家数量"
 
-#. I18N: ./data/gui/screens/tracks_and_gp.stkgui
+#. I18N: ./data/gui/screens/tracks_and_gp.fluxara_driftgui
 #. I18N: In the track and grand prix selection screen
 #: src/race/grand_prix_data.cpp:623
 msgid "Random Grand Prix"
 msgstr "随机锦标赛"
 
-#. I18N: ./data/gui/screens/tracks_and_gp.stkgui
+#. I18N: ./data/gui/screens/tracks_and_gp.fluxara_driftgui
 #. I18N: In the track and grand prix selection screen
 msgid "Edit favorite tracks"
 msgstr "收藏赛道"
 
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: Used as a verb, appears on the main networking menu (login button)
 #: src/states_screens/online/online_screen.cpp:69
 msgid "Login"
@@ -2583,8 +2583,8 @@ msgstr "在单人游戏中，您可以查看或挑战已录制的竞速模式录
 
 #. I18N: ./data/tips.xml
 msgid ""
-"You can visit https://supertuxkart.net/ for more information about the game."
-msgstr "您可以在这个网站得到更多关于游戏的信息：https://supertuxkart.net/。"
+"You can visit https://fluxaradrift.net/ for more information about the game."
+msgstr "您可以在这个网站得到更多关于游戏的信息：https://fluxaradrift.net/。"
 
 #. I18N: ./data/tips.xml
 msgid "Short nitro boosts are more efficient."
@@ -2678,307 +2678,307 @@ msgid ""
 "hit opponents attempting to stop them from scoring."
 msgstr "当您的队友带球的时候，避免干扰其前进的路线。您可以使用道具防止对手得分。"
 
-#. I18N: ../stk-assets/karts/adiumy/kart.xml
-#. I18N: ../supertuxkart-assets/karts/adiumy/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/adiumy/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/adiumy/kart.xml
 msgid "Adiumy"
 msgstr "Adiumy"
 
-#. I18N: ../stk-assets/karts/amanda/kart.xml
-#. I18N: ../supertuxkart-assets/karts/amanda/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/amanda/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/amanda/kart.xml
 msgid "Amanda"
 msgstr "Amanda"
 
-#. I18N: ../stk-assets/karts/beastie/kart.xml
-#. I18N: ../supertuxkart-assets/karts/beastie/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/beastie/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/beastie/kart.xml
 msgid "Godette"
 msgstr "Godette"
 
-#. I18N: ../stk-assets/karts/emule/kart.xml
-#. I18N: ../supertuxkart-assets/karts/emule/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/emule/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/emule/kart.xml
 msgid "Emule"
 msgstr "Emule"
 
-#. I18N: ../stk-assets/karts/gavroche/kart.xml
-#. I18N: ../supertuxkart-assets/karts/gavroche/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/gavroche/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/gavroche/kart.xml
 msgid "Gavroche"
 msgstr "Gavroche"
 
-#. I18N: ../stk-assets/karts/gnu/kart.xml
-#. I18N: ../supertuxkart-assets/karts/gnu/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/gnu/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/gnu/kart.xml
 msgid "Gnu"
 msgstr "Gnu"
 
-#. I18N: ../stk-assets/karts/hexley/kart.xml
-#. I18N: ../supertuxkart-assets/karts/hexley/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/hexley/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/hexley/kart.xml
 msgid "Hexley"
 msgstr "Hexley"
 
-#. I18N: ../stk-assets/karts/kiki/kart.xml
-#. I18N: ../supertuxkart-assets/karts/kiki/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/kiki/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/kiki/kart.xml
 msgid "Kiki"
 msgstr "Kiki"
 
-#. I18N: ../stk-assets/karts/konqi/kart.xml
-#. I18N: ../supertuxkart-assets/karts/konqi/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/konqi/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/konqi/kart.xml
 msgid "Konqi"
 msgstr "Konqi"
 
-#. I18N: ../stk-assets/karts/nolok/kart.xml
-#. I18N: ../supertuxkart-assets/karts/nolok/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/nolok/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/nolok/kart.xml
 msgid "Nolok"
 msgstr "Nolok"
 
-#. I18N: ../stk-assets/karts/pidgin/kart.xml
-#. I18N: ../supertuxkart-assets/karts/pidgin/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/pidgin/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/pidgin/kart.xml
 msgid "Pidgin"
 msgstr "Pidgin"
 
-#. I18N: ../stk-assets/karts/puffy/kart.xml
-#. I18N: ../supertuxkart-assets/karts/puffy/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/puffy/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/puffy/kart.xml
 msgid "Puffy"
 msgstr "Puffy"
 
-#. I18N: ../stk-assets/karts/sara_the_racer/kart.xml
-#. I18N: ../supertuxkart-assets/karts/sara_the_racer/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/sara_the_racer/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/sara_the_racer/kart.xml
 msgid "Pepper"
 msgstr "Pepper"
 
-#. I18N: ../stk-assets/karts/sara_the_wizard/kart.xml
-#. I18N: ../supertuxkart-assets/karts/sara_the_wizard/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/sara_the_wizard/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/sara_the_wizard/kart.xml
 msgid "Sara"
 msgstr "Sara"
 
-#. I18N: ../stk-assets/karts/suzanne/kart.xml
-#. I18N: ../supertuxkart-assets/karts/suzanne/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/suzanne/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/suzanne/kart.xml
 msgid "Suzanne"
 msgstr "Suzanne"
 
-#. I18N: ../stk-assets/karts/tux/kart.xml
-#. I18N: ../supertuxkart-assets/karts/tux/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/tux/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/tux/kart.xml
 msgid "Tux"
 msgstr "Tux"
 
-#. I18N: ../stk-assets/karts/wilber/kart.xml
-#. I18N: ../supertuxkart-assets/karts/wilber/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/wilber/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/wilber/kart.xml
 msgid "Wilber"
 msgstr "Wilber"
 
-#. I18N: ../stk-assets/karts/xue/kart.xml
-#. I18N: ../supertuxkart-assets/karts/xue/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/xue/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/xue/kart.xml
 msgid "Xue"
 msgstr "Xue"
 
-#. I18N: ../stk-assets/tracks/abyss/track.xml
-#. I18N: ../supertuxkart-assets/tracks/abyss/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/abyss/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/abyss/track.xml
 msgid "Antediluvian Abyss"
 msgstr "史前深渊"
 
-#. I18N: ../stk-assets/tracks/alien_signal/track.xml
-#. I18N: ../supertuxkart-assets/tracks/alien_signal/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/alien_signal/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/alien_signal/track.xml
 msgid "Alien Signal"
 msgstr "外星讯号"
 
-#. I18N: ../stk-assets/tracks/ancient_colosseum_labyrinth/track.xml
-#. I18N: ../supertuxkart-assets/tracks/ancient_colosseum_labyrinth/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/ancient_colosseum_labyrinth/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/ancient_colosseum_labyrinth/track.xml
 msgid "Ancient Colosseum Labyrinth"
 msgstr "上古迷宫"
 
-#. I18N: ../stk-assets/tracks/arena_candela_city/track.xml
-#. I18N: ../stk-assets/tracks/candela_city/track.xml
-#. I18N: ../supertuxkart-assets/tracks/arena_candela_city/track.xml
-#. I18N: ../supertuxkart-assets/tracks/candela_city/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/arena_candela_city/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/candela_city/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/arena_candela_city/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/candela_city/track.xml
 msgid "Candela City"
 msgstr "坎德拉城"
 
-#. I18N: ../stk-assets/tracks/battleisland/track.xml
-#. I18N: ../supertuxkart-assets/tracks/battleisland/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/battleisland/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/battleisland/track.xml
 msgid "Battle Island"
 msgstr "战斗之岛"
 
-#. I18N: ../stk-assets/tracks/black_forest/track.xml
-#. I18N: ../supertuxkart-assets/tracks/black_forest/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/black_forest/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/black_forest/track.xml
 msgid "Black Forest"
 msgstr "黑森林"
 
-#. I18N: ../stk-assets/tracks/cave/track.xml
-#. I18N: ../supertuxkart-assets/tracks/cave/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/cave/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/cave/track.xml
 msgid "Cave X"
 msgstr "X洞穴"
 
-#. I18N: ../stk-assets/tracks/cocoa_temple/track.xml
-#. I18N: ../supertuxkart-assets/tracks/cocoa_temple/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/cocoa_temple/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/cocoa_temple/track.xml
 msgid "Cocoa Temple"
 msgstr "可可寺院"
 
-#. I18N: ../stk-assets/tracks/cornfield_crossing/track.xml
-#. I18N: ../supertuxkart-assets/tracks/cornfield_crossing/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/cornfield_crossing/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/cornfield_crossing/track.xml
 msgid "Cornfield Crossing"
 msgstr "飘香田野"
 
-#. I18N: ../stk-assets/tracks/fortmagma/track.xml
-#. I18N: ../supertuxkart-assets/tracks/fortmagma/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/fortmagma/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/fortmagma/track.xml
 msgid "Fort Magma"
 msgstr "熔岩城堡"
 
-#. I18N: ../stk-assets/tracks/gran_paradiso_island/track.xml
-#. I18N: ../supertuxkart-assets/tracks/gran_paradiso_island/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/gran_paradiso_island/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/gran_paradiso_island/track.xml
 msgid "Gran Paradiso Island"
 msgstr "大帕拉迪索岛"
 
-#. I18N: ../stk-assets/tracks/hacienda/track.xml
-#. I18N: ../supertuxkart-assets/tracks/hacienda/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/hacienda/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/hacienda/track.xml
 msgid "Hacienda"
 msgstr "大庄园"
 
-#. I18N: ../stk-assets/tracks/hole_drop/track.xml
-#. I18N: ../supertuxkart-assets/tracks/hole_drop/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/hole_drop/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/hole_drop/track.xml
 msgid "Hole Drop"
 msgstr "纽扣球场"
 
-#. I18N: ../stk-assets/tracks/icy_soccer_field/track.xml
-#. I18N: ../supertuxkart-assets/tracks/icy_soccer_field/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/icy_soccer_field/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/icy_soccer_field/track.xml
 msgid "Icy Soccer Field"
 msgstr "冰雪球场"
 
-#. I18N: Cutscene subtitle from ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: Cutscene subtitle from ../supertuxkart-
+#. I18N: Cutscene subtitle from ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: Cutscene subtitle from ../fluxaradrift-
 #. assets/tracks/introcutscene2/scene.xml
-#. I18N: ../supertuxkart-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxaradrift-assets/tracks/introcutscene2/scene.xml
 msgid "What's wrong, little hippies? Your great gnu leader is missing?"
 msgstr "怎么了，小家伙？你的伟大的 GNU 领导不见了？"
 
-#. I18N: Cutscene subtitle from ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: Cutscene subtitle from ../supertuxkart-
+#. I18N: Cutscene subtitle from ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: Cutscene subtitle from ../fluxaradrift-
 #. assets/tracks/introcutscene2/scene.xml
-#. I18N: ../supertuxkart-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxaradrift-assets/tracks/introcutscene2/scene.xml
 msgid "Oh yes, see, he's in my castle now and will be served for supper..."
 msgstr "没错，你看，他正在我的城堡里，即将被当成晚餐..."
 
-#. I18N: Cutscene subtitle from ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: Cutscene subtitle from ../supertuxkart-
+#. I18N: Cutscene subtitle from ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: Cutscene subtitle from ../fluxaradrift-
 #. assets/tracks/introcutscene2/scene.xml
-#. I18N: ../supertuxkart-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxaradrift-assets/tracks/introcutscene2/scene.xml
 msgid "But I'm a fair creature, so I'll make you a deal."
 msgstr "但是我是很公平的，所以我跟你打个赌。"
 
-#. I18N: Cutscene subtitle from ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: Cutscene subtitle from ../supertuxkart-
+#. I18N: Cutscene subtitle from ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: Cutscene subtitle from ../fluxaradrift-
 #. assets/tracks/introcutscene2/scene.xml
-#. I18N: ../supertuxkart-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxaradrift-assets/tracks/introcutscene2/scene.xml
 msgid "If you can beat me at racing, I will free the old codger."
 msgstr "如果你能在赛车上赢过我，我就会把那老家伙放了"
 
-#. I18N: Cutscene subtitle from ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: Cutscene subtitle from ../supertuxkart-
+#. I18N: Cutscene subtitle from ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: Cutscene subtitle from ../fluxaradrift-
 #. assets/tracks/introcutscene2/scene.xml
-#. I18N: ../supertuxkart-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxaradrift-assets/tracks/introcutscene2/scene.xml
 msgid ""
 " But you pathetic little twerps will never be able to beat me - King of the "
 "Karts!"
 msgstr " 不过你们这些可怜的小蠢货是永远不可能打败我这个赛车之王的！"
 
-#. I18N: ../stk-assets/tracks/lasdunasarena/track.xml
-#. I18N: ../supertuxkart-assets/tracks/lasdunasarena/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/lasdunasarena/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/lasdunasarena/track.xml
 msgid "Las Dunas Arena"
 msgstr "沙墩竞技场"
 
-#. I18N: ../stk-assets/tracks/lasdunassoccer/track.xml
-#. I18N: ../supertuxkart-assets/tracks/lasdunassoccer/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/lasdunassoccer/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/lasdunassoccer/track.xml
 msgid "Las Dunas Soccer Stadium"
 msgstr "沙墩球场"
 
-#. I18N: ../stk-assets/tracks/lighthouse/track.xml
-#. I18N: ../supertuxkart-assets/tracks/lighthouse/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/lighthouse/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/lighthouse/track.xml
 msgid "Around the Lighthouse"
 msgstr "灯塔海岸"
 
-#. I18N: ../stk-assets/tracks/mines/track.xml
-#. I18N: ../supertuxkart-assets/tracks/mines/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/mines/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/mines/track.xml
 msgid "Old Mine"
 msgstr "老矿井"
 
-#. I18N: ../stk-assets/tracks/minigolf/track.xml
-#. I18N: ../supertuxkart-assets/tracks/minigolf/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/minigolf/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/minigolf/track.xml
 msgid "Minigolf"
 msgstr "迷你高尔夫球场"
 
-#. I18N: ../stk-assets/tracks/oasis/track.xml
-#. I18N: ../supertuxkart-assets/tracks/oasis/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/oasis/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/oasis/track.xml
 msgid "Oasis"
 msgstr "绿洲球场"
 
-#. I18N: ../stk-assets/tracks/olivermath/track.xml
-#. I18N: ../supertuxkart-assets/tracks/olivermath/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/olivermath/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/olivermath/track.xml
 msgid "Oliver's Math Class"
 msgstr "奥利弗的学堂"
 
-#. I18N: ../stk-assets/tracks/pumpkin_park/track.xml
-#. I18N: ../supertuxkart-assets/tracks/pumpkin_park/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/pumpkin_park/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/pumpkin_park/track.xml
 msgid "Pumpkin Park"
 msgstr "南瓜公园"
 
-#. I18N: ../stk-assets/tracks/ravenbridge_mansion/track.xml
-#. I18N: ../supertuxkart-assets/tracks/ravenbridge_mansion/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/ravenbridge_mansion/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/ravenbridge_mansion/track.xml
 msgid "Ravenbridge Mansion"
 msgstr "渡鸦公馆"
 
-#. I18N: ../stk-assets/tracks/sandtrack/track.xml
-#. I18N: ../supertuxkart-assets/tracks/sandtrack/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/sandtrack/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/sandtrack/track.xml
 msgid "Shifting Sands"
 msgstr "漂移沙漠"
 
-#. I18N: ../stk-assets/tracks/scotland/track.xml
-#. I18N: ../supertuxkart-assets/tracks/scotland/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/scotland/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/scotland/track.xml
 msgid "Nessie's Pond"
 msgstr "水怪之潭"
 
-#. I18N: ../stk-assets/tracks/snowmountain/track.xml
-#. I18N: ../supertuxkart-assets/tracks/snowmountain/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/snowmountain/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/snowmountain/track.xml
 msgid "Northern Resort"
 msgstr "北国风光"
 
-#. I18N: ../stk-assets/tracks/snowtuxpeak/track.xml
-#. I18N: ../supertuxkart-assets/tracks/snowtuxpeak/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/snowtuxpeak/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/snowtuxpeak/track.xml
 msgid "Snow Peak"
 msgstr "积雪顶峰"
 
-#. I18N: ../stk-assets/tracks/soccer_field/track.xml
-#. I18N: ../supertuxkart-assets/tracks/soccer_field/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/soccer_field/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/soccer_field/track.xml
 msgid "Soccer Field"
 msgstr "经典球场"
 
-#. I18N: ../stk-assets/tracks/stadium/track.xml
-#. I18N: ../supertuxkart-assets/tracks/stadium/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/stadium/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/stadium/track.xml
 msgid "The Stadium"
 msgstr "体育场"
 
-#. I18N: ../stk-assets/tracks/stk_enterprise/track.xml
-#. I18N: ../supertuxkart-assets/tracks/stk_enterprise/track.xml
-msgid "STK Enterprise"
-msgstr "STK 企业号"
+#. I18N: ../fluxara_drift-assets/tracks/fluxara_drift_enterprise/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/fluxara_drift_enterprise/track.xml
+msgid "FLUXARA_DRIFT Enterprise"
+msgstr "FLUXARA_DRIFT 企业号"
 
-#. I18N: ../stk-assets/tracks/temple/track.xml
-#. I18N: ../supertuxkart-assets/tracks/temple/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/temple/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/temple/track.xml
 msgid "Temple"
 msgstr "寺院"
 
-#. I18N: ../stk-assets/tracks/volcano_island/track.xml
-#. I18N: ../supertuxkart-assets/tracks/volcano_island/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/volcano_island/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/volcano_island/track.xml
 msgid "Volcan Island"
 msgstr "火山之岛"
 
-#. I18N: ../stk-assets/tracks/xr591/track.xml
-#. I18N: ../supertuxkart-assets/tracks/xr591/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/xr591/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/xr591/track.xml
 msgid "XR591"
 msgstr "XR591"
 
-#. I18N: ../stk-assets/tracks/zengarden/track.xml
-#. I18N: ../supertuxkart-assets/tracks/zengarden/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/zengarden/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/zengarden/track.xml
 msgid "Zen Garden"
 msgstr "禅宗花园"
 
@@ -2988,8 +2988,8 @@ msgid "Completed achievement \"%s\"."
 msgstr "已完成成就 “%s”。"
 
 #: src/addons/addons_manager.cpp:113 src/addons/news_manager.cpp:353
-msgid "Failed to connect to the SuperTuxKart add-ons server."
-msgstr "无法连接到 SuperTuxKart 附加组件服务器。"
+msgid "Failed to connect to the Fluxara Drift add-ons server."
+msgstr "无法连接到 Fluxara Drift 附加组件服务器。"
 
 #: src/addons/news_manager.cpp:184
 #, c-format
@@ -3646,8 +3646,8 @@ msgid "Please re-configure your key bindings."
 msgstr "请重新设置您的按键设置。"
 
 #: src/input/device_manager.cpp:497
-msgid "Your input config file is not compatible with this version of STK."
-msgstr "您的按键设置与当前版本的 SuperTuxKart 不兼容。"
+msgid "Your input config file is not compatible with this version of FLUXARA_DRIFT."
+msgstr "您的按键设置与当前版本的 Fluxara Drift 不兼容。"
 
 #. I18N: name of buttons on gamepads
 #: src/input/gamepad_config.cpp:159
@@ -3766,15 +3766,15 @@ msgstr "%s电池电量不足"
 #: src/input/wiimote_manager.cpp:379
 msgid ""
 "Connect your wiimote to the Bluetooth manager, then click on Ok. Detailed "
-"instructions at https://supertuxkart.net/Wiimote"
-msgstr "将您的 Wiimote 连接到蓝牙管理器，然后点击确定。详细步骤参见 supertuxkart.net/Wiimote"
+"instructions at https://fluxaradrift.net/Wiimote"
+msgstr "将您的 Wiimote 连接到蓝牙管理器，然后点击确定。详细步骤参见 fluxaradrift.net/Wiimote"
 
 #: src/input/wiimote_manager.cpp:382
 msgid ""
 "Press the buttons 1+2 simultaneously on your wiimote to put it in discovery "
 "mode, then click on Ok. Detailed instructions at "
-"https://supertuxkart.net/Wiimote"
-msgstr "同时按 Wiimote 上的 1+2 按钮使其进入发现模式，然后点击确定。详细步骤参见 supertuxkart.net/Wiimote"
+"https://fluxaradrift.net/Wiimote"
+msgstr "同时按 Wiimote 上的 1+2 按钮使其进入发现模式，然后点击确定。详细步骤参见 fluxaradrift.net/Wiimote"
 
 #: src/input/wiimote_manager.cpp:405
 #, c-format
@@ -3831,16 +3831,16 @@ msgstr "%s 离开了游戏。"
 
 #: src/main.cpp:2042
 msgid ""
-"SuperTuxKart may connect to a server to download add-ons and notify you of "
-"updates. Please read our privacy policy at https://supertuxkart.net/Privacy."
+"Fluxara Drift may connect to a server to download add-ons and notify you of "
+"updates. Please read our privacy policy at https://fluxaradrift.net/Privacy."
 " Would you like this feature to be enabled? (To change this setting at a "
 "later time, go to options, select tab 'General', and edit \"Connect to the "
 "Internet\")."
-msgstr "SuperTuxKart可能会连接到服务器下载附加组件并通知您最近的更新。请到 https://supertuxkart.net/Privacy 详阅我们的隐私政策。您想启用这个功能吗？（您稍后可以在设置中更改设定：请​​到选项中，选择“常规”页面，并编辑“连接到网络”）"
+msgstr "Fluxara Drift可能会连接到服务器下载附加组件并通知您最近的更新。请到 https://fluxaradrift.net/Privacy 详阅我们的隐私政策。您想启用这个功能吗？（您稍后可以在设置中更改设定：请​​到选项中，选择“常规”页面，并编辑“连接到网络”）"
 
 #: src/main.cpp:2393
-msgid "Your screen resolution is too low to run STK."
-msgstr "您的屏幕分辨率太低, 无法运行 STK。"
+msgid "Your screen resolution is too low to run FLUXARA_DRIFT."
+msgstr "您的屏幕分辨率太低, 无法运行 FLUXARA_DRIFT。"
 
 #: src/main.cpp:2444
 msgid ""
@@ -3851,9 +3851,9 @@ msgstr "您的驱动太旧，请安装最新的显卡驱动。"
 #, c-format
 msgid ""
 "Your graphics driver appears to be very old. Please check if an update is "
-"available. SuperTuxKart recommends a driver supporting %s or better. The "
+"available. Fluxara Drift recommends a driver supporting %s or better. The "
 "game will likely still run, but in a reduced-graphics mode."
-msgstr "您的显卡驱动似乎太旧了，请检查可用的更新。SuperTuxKart 需要支持 %s 或更新的版本的驱动。此游戏可能仍然会正常运作，不过图形效果会减弱。"
+msgstr "您的显卡驱动似乎太旧了，请检查可用的更新。Fluxara Drift 需要支持 %s 或更新的版本的驱动。此游戏可能仍然会正常运作，不过图形效果会减弱。"
 
 #: src/main_loop.cpp:480 src/network/protocols/client_lobby.cpp:129
 msgid "Server connection timed out."
@@ -4322,9 +4322,9 @@ msgstr "附加组件正在更新，请稍候"
 #: src/states_screens/main_menu_screen.cpp:671
 msgid ""
 "Sorry, an error occurred while contacting the add-ons website. Make sure you"
-" are connected to the Internet and that SuperTuxKart is not blocked by a "
+" are connected to the Internet and that Fluxara Drift is not blocked by a "
 "firewall"
-msgstr "很抱歉，在连接到附加组件网站的过程中出现了错误。请确保您已经连接上网络，并且 SuperTuxKart 没有被防火墙拦截。"
+msgstr "很抱歉，在连接到附加组件网站的过程中出现了错误。请确保您已经连接上网络，并且 Fluxara Drift 没有被防火墙拦截。"
 
 #. I18N: track group name
 #: src/states_screens/arenas_screen.cpp:89
@@ -4346,7 +4346,7 @@ msgstr "随机竞技场"
 
 #: src/states_screens/credits.cpp:184
 msgid "translator-credits"
-msgstr "Launchpad Contributions:\nBen Au, 2015\nBenau, 2016,2019-2020\nBenau, 2015-2016\nCodingJellyfish, 2018,2021-2022\nJiawei Sun, 2022\nJin Zhang, 2015,2019-2021\nJz Pan, 2017\nCodingJellyfish, 2018-2019\nCodingJellyfish, 2018\nCodingJellyfish, 2021\nDawid Gan\nSTK-team\nSizhuang Liu\nXhacker Liu\nacme_pjz\njin\nlks\nluojie-dune\nsohey\ndumaosen"
+msgstr "Launchpad Contributions:\nBen Au, 2015\nBenau, 2016,2019-2020\nBenau, 2015-2016\nCodingJellyfish, 2018,2021-2022\nJiawei Sun, 2022\nJin Zhang, 2015,2019-2021\nJz Pan, 2017\nCodingJellyfish, 2018-2019\nCodingJellyfish, 2018\nCodingJellyfish, 2021\nDawid Gan\nFLUXARA_DRIFT-team\nSizhuang Liu\nXhacker Liu\nacme_pjz\njin\nlks\nluojie-dune\nsohey\ndumaosen"
 
 #: src/states_screens/dialogs/achievement_progress_dialog.cpp:65
 msgctxt "achievement_info"
@@ -4413,7 +4413,7 @@ msgstr "连续赢得比赛"
 #. I18N: A goal for achievements. If this text is in (), it's a precision
 #. added to multiple different goals.
 #: src/states_screens/dialogs/achievement_progress_dialog.cpp:180
-msgid "Consecutive won races in Expert or SuperTux"
+msgid "Consecutive won races in Expert or FluxaraDrift"
 msgstr "在专家级或超级企鹅级难度下连续赢得比赛"
 
 #. I18N: A goal for achievements. If this text is in (), it's a precision
@@ -4455,13 +4455,13 @@ msgstr "完成专家级比赛"
 #. I18N: A goal for achievements. If this text is in (), it's a precision
 #. added to multiple different goals.
 #: src/states_screens/dialogs/achievement_progress_dialog.cpp:194
-msgid "SuperTux races started"
+msgid "FluxaraDrift races started"
 msgstr "开始超级企鹅级比赛"
 
 #. I18N: A goal for achievements. If this text is in (), it's a precision
 #. added to multiple different goals.
 #: src/states_screens/dialogs/achievement_progress_dialog.cpp:196
-msgid "SuperTux races finished"
+msgid "FluxaraDrift races finished"
 msgstr "完成超级企鹅级比赛"
 
 #. I18N: A goal for achievements. If this text is in (), it's a precision
@@ -4942,17 +4942,17 @@ msgstr "最高"
 #. I18N: In download assets dialog
 #: src/states_screens/dialogs/download_assets.cpp:113
 msgid ""
-"SuperTuxKart will download full assets (including high quality textures and "
+"Fluxara Drift will download full assets (including high quality textures and "
 "music) for better gaming experience, this will use your mobile data if you "
 "don't have a wifi connection."
-msgstr "为了更好的游戏体验，SuperTuxKart会下载全部游戏资源（包括高质量的纹理和音乐）。如果您没有连接WiFi网络，这会使用您的移动数据流量。"
+msgstr "为了更好的游戏体验，Fluxara Drift会下载全部游戏资源（包括高质量的纹理和音乐）。如果您没有连接WiFi网络，这会使用您的移动数据流量。"
 
 #. I18N: In download assets dialog
 #: src/states_screens/dialogs/download_assets.cpp:121
 msgid ""
-"SuperTuxKart will download full assets (including high quality textures and "
+"Fluxara Drift will download full assets (including high quality textures and "
 "music) for better gaming experience."
-msgstr "为了更好的游戏体验，SuperTuxKart会下载全部游戏资源（包括高质量的纹理和音乐）。"
+msgstr "为了更好的游戏体验，Fluxara Drift会下载全部游戏资源（包括高质量的纹理和音乐）。"
 
 #: src/states_screens/dialogs/enter_address_dialog.cpp:42
 msgid ""
@@ -5205,11 +5205,11 @@ msgstr "用户名及/或电子邮箱位置无效。"
 #: src/states_screens/dialogs/registration_dialog.cpp:43
 #, c-format
 msgid ""
-"Please read the terms and conditions for SuperTuxKart at '%s'. You must "
-"agree to these terms in order to register an account for STK. If you have "
+"Please read the terms and conditions for Fluxara Drift at '%s'. You must "
+"agree to these terms in order to register an account for FLUXARA_DRIFT. If you have "
 "any questions or comments regarding these terms, one of the members of the "
 "development team would gladly assist you."
-msgstr " 请在 “%s” 阅读 SuperTuxKart 的服务条款。您必须同意这些条款以在 STK 上注册帐号。若您对这些条款有任何问题或意见，开发人员都会很乐意为您服务。 "
+msgstr " 请在 “%s” 阅读 Fluxara Drift 的服务条款。您必须同意这些条款以在 FLUXARA_DRIFT 上注册帐号。若您对这些条款有任何问题或意见，开发人员都会很乐意为您服务。 "
 
 #. I18N: In the Select challenge dialog
 #: src/states_screens/dialogs/select_challenge.cpp:60
@@ -5444,7 +5444,7 @@ msgstr "您完成了困难级的挑战赛！在这个等级得到的点数：%i/
 #: src/states_screens/feature_unlocked.cpp:272
 #, c-format
 msgid ""
-"You completed the SuperTux challenge! Points earned on this level: %i/%i"
+"You completed the FluxaraDrift challenge! Points earned on this level: %i/%i"
 msgstr "您完成了超级企鹅级的挑战赛！在这个等级得到的点数：%i/%i"
 
 #: src/states_screens/feature_unlocked.cpp:315
@@ -5604,7 +5604,7 @@ msgid "Please wait while the add-ons are loading"
 msgstr "附加组件正在加载，请稍候"
 
 #: src/states_screens/main_menu_screen.cpp:699
-msgid "Are you sure you want to quit STK?"
+msgid "Are you sure you want to quit FLUXARA_DRIFT?"
 msgstr "您确定要退出游戏吗？"
 
 #: src/states_screens/online/create_server_screen.cpp:107
@@ -5781,7 +5781,7 @@ msgid "Failed to change E-mail: %s"
 msgstr "邮箱修改失败：%s"
 
 #: src/states_screens/online/online_screen.cpp:109
-msgid "News from STK Blog"
+msgid "News from FLUXARA_DRIFT Blog"
 msgstr "新闻列表"
 
 #: src/states_screens/online/online_screen.cpp:110
@@ -5886,12 +5886,12 @@ msgstr "距离（千米）"
 msgid "Unknown"
 msgstr "未知"
 
-#. I18N: Message shown to user if no IPv4 detected by STK
+#. I18N: Message shown to user if no IPv4 detected by FLUXARA_DRIFT
 #: src/states_screens/online/server_selection.cpp:361
 msgid "No IPv4 detected, you may not be able to join any servers."
 msgstr "没有检测到IPv4，您可能无法加入到任何服务器。"
 
-#. I18N: Message shown to user if no IPv6 detected by STK
+#. I18N: Message shown to user if no IPv6 detected by FLUXARA_DRIFT
 #: src/states_screens/online/server_selection.cpp:363
 msgid "No IPv6 detected, you may not be able to join any servers."
 msgstr "没有检测到IPv6，您可能无法加入到任何服务器。"
@@ -6093,8 +6093,8 @@ msgid ""
 "(more difficult) profiles on the kart selection screen"
 msgstr "在多人模式中，玩家可以在赛车选取画面中选取让赛（较困难）的设定档 "
 
-#. I18N: For mobile version for STK, install the full game assets which
-#. will download from stk server
+#. I18N: For mobile version for FLUXARA_DRIFT, install the full game assets which
+#. will download from fluxara_drift server
 #: src/states_screens/options/options_screen_general.cpp:85
 msgid "Install full game assets"
 msgstr "下载完整游戏组件"
@@ -6494,8 +6494,8 @@ msgid "You failed the challenge!"
 msgstr "您挑战失败了！"
 
 #: src/states_screens/race_result_gui.cpp:2282
-msgid "Reached Requirements of SuperTux"
-msgstr "完成了神秘任务，达成SuperTux"
+msgid "Reached Requirements of FluxaraDrift"
+msgstr "完成了神秘任务，达成FluxaraDrift"
 
 #: src/states_screens/race_result_gui.cpp:2353
 msgid "Performance Test Results"
@@ -6660,13 +6660,13 @@ msgstr "%s KB"
 msgid "%d/%m/%Y"
 msgstr "%d/%m/%Y"
 
-#: ../stk-assets/tracks/overworld/scripting.as:15
-#: ../supertuxkart-assets/tracks/overworld/scripting.as:15
+#: ../fluxara_drift-assets/tracks/overworld/scripting.as:15
+#: ../fluxaradrift-assets/tracks/overworld/scripting.as:15
 msgid "Complete all challenges to unlock the big door!"
 msgstr "大门会在完成所有的挑战赛后打开！"
 
-#: ../stk-assets/tracks/overworld/scripting.as:63
-#: ../supertuxkart-assets/tracks/overworld/scripting.as:63
+#: ../fluxara_drift-assets/tracks/overworld/scripting.as:63
+#: ../fluxaradrift-assets/tracks/overworld/scripting.as:63
 msgid ""
 "You need more points\n"
 "to enter this challenge!\n"
@@ -6674,137 +6674,137 @@ msgid ""
 "available challenges."
 msgstr "您需要更多的点数\n来进入这个挑战赛！\n在小地图上检查\n可用的挑战赛。"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:8
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:8
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:8
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:8
 #, c-format
 msgid "Accelerate with <%s>, and steer with <%s> and <%s>."
 msgstr "按下 <%s> 键加速，<%s> 和 <%s> 控制方向。"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:17
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:17
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:17
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:17
 msgid ""
 "Accelerate by touching the upper part of the wheel, and steer by moving left"
 " or right."
 msgstr "按下方向盘前端加速，向左右转动以控制方向。"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:22
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:22
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:22
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:22
 msgid ""
 "Accelerate by moving the accelerator upwards, and steer by tilting your "
 "device."
 msgstr "向前推变速杆加速，倾斜以转向。"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:27
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:27
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:27
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:27
 msgid ""
 "Accelerate by moving the accelerator upwards, and steer by rotating your "
 "device."
 msgstr "向前推变速杆加速，旋转设备以控制方向。"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:59
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:59
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:59
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:59
 #, c-format
 msgid ""
 "Collect gift boxes, and fire the weapon with <%s> to blow away these boxes!"
 msgstr "收集礼物箱并使用<%s>键来开火，并将这些箱子撞飞！"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:67
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:67
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:67
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:67
 msgid ""
 "Collect gift boxes, and fire by pressing the bowling icon to blow away these"
 " boxes!"
 msgstr "收集礼物箱并按下保龄球图标来开火，并将这些箱子撞飞！"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:78
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:78
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:78
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:78
 #, c-format
 msgid ""
 "Press <%s> to look behind.\n"
 "Fire the weapon with <%s> while pressing <%s> to fire behind!"
 msgstr "按下<%s>向后看。\n按下<%s>开火，同时按下<%s>可以向后开火。"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:88
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:88
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:88
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:88
 msgid ""
 "Press the mirror icon to look behind.\n"
 "Fire the weapon behind by holding the mirror icon and then swiping to the bowling icon!"
 msgstr "按下“后视镜”图标向后看。\n保持按下“后视镜”图标的同时用手指滑到“保龄球”图标可以向后开火！"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:98
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:98
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:98
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:98
 #, c-format
 msgid "Use the nitro you collected by pressing <%s>!"
 msgstr "按下 <%s> 来使用收集到的氮气"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:104
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:104
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:104
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:104
 msgid "Use the nitro you collected by pressing the nitro icon"
 msgstr "按下氮气罐图标以使用收集到的氮气 "
 
-#: ../stk-assets/tracks/tutorial/scripting.as:112
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:112
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:112
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:112
 msgid "Collect nitro bottles (we will use them after the curve)."
 msgstr "收集氮气瓶（转弯后将会用上）。"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:121
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:121
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:121
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:121
 #, c-format
 msgid "Oops! When you're in trouble, press <%s> to be rescued."
 msgstr "哎呀呀！当您被困住了，按 <%s> 可以恢复哦。"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:127
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:127
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:127
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:127
 msgid "Oops! When you're in trouble, press the bird icon to be rescued."
 msgstr "哎呀呀！当您被困住了，按左上角的蓝鸟图标可以恢复哦。"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:137
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:137
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:137
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:137
 #, c-format
 msgid ""
 "Accelerate and press the <%s> key while turning to skid.\n"
 "Skidding for a short while can help you turn faster to take sharp turns."
 msgstr "转弯时可以按住加速键并按住<%s>实现漂移\n短时间漂移可以帮助您快速过弯。"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:145
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:145
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:145
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:145
 msgid ""
 "Accelerate and press the skid icon while turning to skid.\n"
 "Skidding for a short while can help you turn faster to take sharp turns."
 msgstr "转弯时可以按住加速键并按住“漂移”图标实现漂移\n短时间漂移可以帮助您快速过弯。"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:156
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:156
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:156
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:156
 msgid ""
 "Note that if you manage to skid for several seconds, you will receive a "
 "bonus speedup as a reward!"
 msgstr "如果您成功漂移数秒，将会得到一个加速奖励哦！"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:164
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:164
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:164
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:164
 msgid "You are now ready to race. Good luck!"
 msgstr "您现在已准备好开始比赛了。祝您好运！"
 
 #. I18N: Generic name in desktop file entry, summary in AppData and short
 #. description in Google Play
-#: supertuxkart.desktop:4 net.supertuxkart.SuperTuxKart.metainfo.xml:7
+#: fluxaradrift.desktop:4 net.fluxaradrift.FluxaraDrift.metainfo.xml:7
 msgid "A 3D open-source kart racing game"
 msgstr "一个三维开源赛车游戏"
 
 #. I18N: Keywords in desktop entry, translators please keep it separated with
 #. semicolons
-#: supertuxkart.desktop:11
+#: fluxaradrift.desktop:11
 msgid "tux;game;race;"
 msgstr "企鹅、游戏、赛车"
 
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:9
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:9
 msgid ""
-"Karts. Nitro. Action! SuperTuxKart is a 3D open-source arcade racer with a "
+"Karts. Nitro. Action! Fluxara Drift is a 3D open-source arcade racer with a "
 "variety of characters, tracks, and modes to play. Our aim is to create a "
 "game that is more fun than realistic, and provide an enjoyable experience "
 "for all ages."
-msgstr "引擎轰鸣，燃气喷涌，正是赛车启动时！SuperTuxKart 是一款开源的三维街机赛车游戏，内含多种角色、赛道和游戏模式。我们的目标是创造一款比现实世界的卡丁车更有趣的、老少皆宜的游戏。"
+msgstr "引擎轰鸣，燃气喷涌，正是赛车启动时！Fluxara Drift 是一款开源的三维街机赛车游戏，内含多种角色、赛道和游戏模式。我们的目标是创造一款比现实世界的卡丁车更有趣的、老少皆宜的游戏。"
 
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:12
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:12
 msgid ""
 "We have several tracks with various themes for players to enjoy, from "
 "driving underwater, rural farmlands, jungles or even in space! Try your best"
@@ -6813,7 +6813,7 @@ msgid ""
 "your opponents."
 msgstr "我们有很多不同主题的赛道，您可以在水下、农场、丛林，甚至在太空中比赛！尽你最大的努力，同时在超车的时候避免相撞，记住不要吃到香蕉！注意对手扔的保龄球、马桶揣子、泡泡糖和蛋糕。"
 
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:15
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:15
 msgid ""
 "You can do a single race against other karts, compete in one of several "
 "Grand Prix, try to beat the high score in time trials on your own, play "
@@ -6822,30 +6822,30 @@ msgid ""
 "your racing skills!"
 msgstr "您可以和其它赛车一起比赛；参加锦标赛；试着在竞速模式中获得更高的分数；和电脑或者您的朋友玩战斗模式；此外还有更多有趣的东西等待您去发现。如果您想要更高的挑战，去在线和来自世界各地的玩家一起比赛吧，来证明您的赛车技术！"
 
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:18
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:18
 msgid "This game has no ads."
 msgstr "本游戏不含广告。"
 
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:21
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:21
 msgid ""
-"This is an unstable version of SuperTuxKart that contains latest "
-"improvements. It is released mainly for testing, to make stable STK as good "
+"This is an unstable version of Fluxara Drift that contains latest "
+"improvements. It is released mainly for testing, to make stable FLUXARA_DRIFT as good "
 "as possible."
-msgstr "此为SuperTuxKart的开发版，包含最新的改进。这一版本主要用来测试一些新的特性，以确保其进入稳定版本前得到足够的测试。"
+msgstr "此为Fluxara Drift的开发版，包含最新的改进。这一版本主要用来测试一些新的特性，以确保其进入稳定版本前得到足够的测试。"
 
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:24
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:24
 msgid ""
 "This version can be installed in parallel with the stable version on the "
 "device."
 msgstr "在同一设备上可以同时安装这一版本和稳定版本。"
 
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:27
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:27
 msgid "If you need more stability, consider using the stable version: %s"
 msgstr "如果您注重稳定性，请考虑使用此稳定版本：%s"
 
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:45
-msgid "SuperTuxKart Team"
-msgstr "SuperTuxKart开发团队"
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:45
+msgid "Fluxara Drift Team"
+msgstr "Fluxara Drift开发团队"
 
 #. I18N: Motorica EMG control connection-lost dialog on iOS.
 #: src/input/motorica_game_control_ios.mm

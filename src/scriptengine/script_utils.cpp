@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2014-2015  SuperTuxKart Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2014-2015  FluxaraDrift Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -187,16 +187,16 @@ namespace Scripting
             return NetworkConfig::get()->isNetworking();
         }
 
-        /* Return a (STK) version string to its integer value */
+        /* Return a (FLUXARA_DRIFT) version string to its integer value */
         int versionToInt(const std::string* version)
         {
             return StringUtils::versionToInt(*version);
         }
 
-        /* Return the current STK version in string */
-        std::string getSTKVersion()
+        /* Return the current FLUXARA_DRIFT version in string */
+        std::string getFLUXARA_DRIFTVersion()
         {
-            return STK_VERSION;
+            return FLUXARA_DRIFT_VERSION;
         }
         /** @}*/
         /** @}*/
@@ -261,8 +261,8 @@ namespace Scripting
                                                mp ? WRAP_FN(versionToInt) : asFUNCTION(versionToInt),
                                                call_conv); assert(r >= 0);
 
-            r = engine->RegisterGlobalFunction("string getSTKVersion()",
-                                               mp ? WRAP_FN(getSTKVersion) : asFUNCTION(getSTKVersion),
+            r = engine->RegisterGlobalFunction("string getFLUXARA_DRIFTVersion()",
+                                               mp ? WRAP_FN(getFLUXARA_DRIFTVersion) : asFUNCTION(getFLUXARA_DRIFTVersion),
                                                call_conv); assert(r >= 0);
 
             r = engine->RegisterGlobalFunction("float randomFloat(int, int)",

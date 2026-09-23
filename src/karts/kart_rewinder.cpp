@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -142,7 +142,7 @@ void KartRewinder::computeError()
         {
             Log::debug("KartRewinder", "Kart id %d connected.",
                 getWorldKartId());
-            cl->requestKartInfo((uint8_t)getWorldKartId());
+            cl->requefluxara_driftartInfo((uint8_t)getWorldKartId());
             // New live join kart, hide the node until new kart info is received
             // see ClientLobby::handleKartInfo
             World::getWorld()->addReservedKart(getWorldKartId());
@@ -388,7 +388,7 @@ void KartRewinder::restoreState(BareNetworkString *buffer, int count)
             float timed_rotation_y = buffer->getFloat();
             // Set timed rotation divides by time_rot
             m_vehicle->setTimedRotation(time_rot,
-                stk_config->ticks2Time(time_rot) * timed_rotation_y);
+                fluxara_drift_config->ticks2Time(time_rot) * timed_rotation_y);
         }
         else
             m_vehicle->setTimedRotation(0, 0.0f);

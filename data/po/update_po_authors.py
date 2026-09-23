@@ -3,10 +3,10 @@
 # A simple script that adds all authors from transifex, which are
 # listed in comments at the beginning of the file, to the 
 # 'translator-credits' translations - where launchpad added them
-# and which are shown in stk.
+# and which are shown in fluxara_drift.
 #
 # First rename the transifex files:
-# for i in supertuxkartpot_*; do mv $i ${i##supertuxkartpot_}; done
+# for i in fluxaradriftpot_*; do mv $i ${i##fluxaradriftpot_}; done
 #
 # Usage:  update_po_authors.py  PATH_TO/LANGUAGE.po
 #

@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2008-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -305,8 +305,8 @@ void RubberBand::update(int ticks)
         m_owner->increaseMaxSpeed(MaxSpeed::MS_INCREASE_RUBBER,
             kp->getPlungerBandSpeedIncrease(),
             /*engine_force*/ 0.0f,
-            /*duration*/stk_config->time2Ticks(0.1f),
-            stk_config->time2Ticks(kp->getPlungerBandFadeOutTime()));
+            /*duration*/fluxara_drift_config->time2Ticks(0.1f),
+            fluxara_drift_config->time2Ticks(kp->getPlungerBandFadeOutTime()));
         if(m_attached_state==RB_TO_KART)
             m_hit_kart->getBody()->applyCentralForce(diff*(-force));
     }

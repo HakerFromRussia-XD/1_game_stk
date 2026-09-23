@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015 Marc Coll
 //
 //  This program is free software; you can redistribute it and/or
@@ -26,7 +26,7 @@
 
 
 namespace GUIEngine { class Widget; }
-namespace irr { namespace gui { class STKModifiedSpriteBank; } }
+namespace irr { namespace gui { class FLUXARA_DRIFTModifiedSpriteBank; } }
 
 class GrandPrixData;
 
@@ -60,7 +60,7 @@ class EditGPScreen :
 
     GrandPrixData*                     m_gp;
     GUIEngine::ListWidget*             m_list;
-    irr::gui::STKModifiedSpriteBank*   m_icon_bank;
+    irr::gui::FLUXARA_DRIFTModifiedSpriteBank*   m_icon_bank;
     std::vector<int>                   m_icons;
     int                                m_selected;
     bool                               m_modified;

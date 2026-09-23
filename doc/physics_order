@@ -21,7 +21,7 @@ main_loop:
         RewindManager::update()          : Store current state on server if necessary and
 	                                   broadcast it to clients.
 	Karts::update()
-	     Moveable::update()          : Copy physics data from bullet to STK.
+	     Moveable::update()          : Copy physics data from bullet to FLUXARA_DRIFT.
 	     updateSpeed()               : Get physics speed and set it in kart.
 	     Controller::update()        : Set kart steering based on user/AI input.
 	     Slipstream::update()        : call Kart::handleZipper if required.

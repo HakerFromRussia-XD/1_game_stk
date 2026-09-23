@@ -32,6 +32,6 @@ if target.exists() and source.read_bytes() != target.read_bytes():
 shutil.copyfile(source, target)
 shutil.copyfile(root / 'fluxara-user-lap-catch/license.txt', target.parent / 'LICENSE-dependency-lap-catch.txt')
 evidence.append({'source': str(source), 'destination': str(target), 'sha256': hashlib.sha256(source.read_bytes()).hexdigest(),
-                 'license': 'LICENSE-dependency-lap-catch.txt; original package says CC-BY4 textures or stock STK texture sources; preserve provenance, rights acceptance separate'})
+                 'license': 'LICENSE-dependency-lap-catch.txt; original package says CC-BY4 textures or stock FLUXARA_DRIFT texture sources; preserve provenance, rights acceptance separate'})
 Path('docs/fluxara-content/texture-dependency-repairs.json').write_text(json.dumps({'repairs': evidence}, indent=2)+'\n')
 print(json.dumps({'exact_texture_copies': len(evidence), 'geometry_changes': 0}))

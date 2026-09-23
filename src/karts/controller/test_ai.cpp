@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
 //  Copyright (C) 2006-2015 Eduardo Hernandez Munoz
 //  Copyright (C) 2008-2015 Joerg Henrichs
@@ -228,7 +228,7 @@ unsigned int SkiddingAI::getNextSector(unsigned int index)
  */
 void SkiddingAI::update(int ticks)
 {
-    float dt = stk_config->ticks2Time(ticks);
+    float dt = fluxara_drift_config->ticks2Time(ticks);
     // This is used to enable firing an item backwards.
     m_controls->setLookBack(false);
     m_controls->setNitro(false);
@@ -314,7 +314,7 @@ void SkiddingAI::update(int ticks)
     }
 
     // Get information that is needed by more than 1 of the handling funcs
-    computeNearestKarts();
+    computeNearefluxara_driftarts();
    
     //Detect if we are going to crash with the track and/or kart
     checkCrashes(m_kart->getXYZ());
@@ -338,7 +338,7 @@ void SkiddingAI::update(int ticks)
             // If we are faster, try to predict the point where we will hit
             // the other kart
             if((m_kart_ahead->getSpeed() < m_kart->getSpeed()) &&
-                !m_kart_ahead->isGhostKart())
+                !m_kart_ahead->isGhofluxara_driftart())
             {
                 float time_till_hit = m_distance_ahead
                                     / (m_kart->getSpeed()-m_kart_ahead->getSpeed());
@@ -1379,7 +1379,7 @@ void SkiddingAI::handleItems(const float dt)
         // after a waiting an appropriate time
         if(m_kart->getPosition()>1 &&
             m_time_since_last_shot
-            > stk_config->ticks2Time(stk_config->m_item_switch_ticks)+2.0f)
+            > fluxara_drift_config->ticks2Time(fluxara_drift_config->m_item_switch_ticks)+2.0f)
             m_controls->setFire(true);
         break;   // POWERUP_SWITCH
 
@@ -1448,7 +1448,7 @@ void SkiddingAI::handleItems(const float dt)
  *  'closeness' is for now simply based on the position, i.e. if a kart is
  *  more than one lap behind or ahead, it is not considered to be closest.
  */
-void SkiddingAI::computeNearestKarts()
+void SkiddingAI::computeNearefluxara_driftarts()
 {
     int my_position    = m_kart->getPosition();
 
@@ -1504,7 +1504,7 @@ void SkiddingAI::computeNearestKarts()
     m_distance_to_player =
                 m_world->getOverallDistance(m_kart->getWorldKartId())
                 - max_overall_distance;
-}   // computeNearestKarts
+}   // computeNearefluxara_driftarts
 
 //-----------------------------------------------------------------------------
 /** Determines if the AI should accelerate or not.
@@ -1539,7 +1539,7 @@ void SkiddingAI::handleAcceleration(int ticks)
         return;
     }
 
-    m_controls->setAccel(stk_config->m_ai_acceleration);
+    m_controls->setAccel(fluxara_drift_config->m_ai_acceleration);
 
 }   // handleAcceleration
 
@@ -1550,7 +1550,7 @@ void SkiddingAI::handleRaceStart()
     {
         // Each kart starts at a different, random time, and the time is
         // smaller depending on the difficulty.
-        m_start_delay = stk_config->time2Ticks(
+        m_start_delay = fluxara_drift_config->time2Ticks(
                         m_ai_properties->m_min_start_delay
                         + static_cast<float>(
                            static_cast<double>(rand()) / static_cast<double>(RAND_MAX)
@@ -1564,11 +1564,11 @@ void SkiddingAI::handleRaceStart()
         // Now check for a false start. If so, add 1 second penalty time.
         if (static_cast<double>(rand()) < static_cast<double>(RAND_MAX) * false_start_probability)
         {
-            m_start_delay+=stk_config->m_penalty_ticks;
+            m_start_delay+=fluxara_drift_config->m_penalty_ticks;
             return;
         }
         m_kart->setStartupBoost(m_kart->getStartupBoostFromStartTicks(
-            m_start_delay + stk_config->time2Ticks(1.0f)));
+            m_start_delay + fluxara_drift_config->time2Ticks(1.0f)));
         m_start_delay = 0;
     }
 }   // handleRaceStart
@@ -1634,7 +1634,7 @@ void SkiddingAI::handleNitroAndZipper()
     // city                 -3      491.625            60.69 0.00   3  1143 0.00   0   0   9 119  31   0  1075 0.69
     // greenvalley          -2      652.688            60.41 0.00  22  4292 0.00   0   0  19 133  48   0  7610 1.89
     // snowtuxpeak           0      405.667           163.87 0.00   6  1420 0.00   0   0   7  28   0   0  7984 0.00
-    // stk_enterprise        2      576.479           104.78 0.00   5  2549 0.00   0   0   7 250   5   0  6293 0.00
+    // fluxara_drift_enterprise        2      576.479           104.78 0.00   5  2549 0.00   0   0   7 250   5   0  6293 0.00
     // fortmagma             3      432.117           179.53 0.00  14  3244 0.00   2   0   0  89   0   0 13091 0.00
     // scotland              3      444.075           255.65 0.00   3   308 0.00   0   0   0 133   0   0  1353 0.00
     // abyss                 7      480.771           226.85 0.00   1   163 0.00   0   0   2   2   0   0  2684 0.00
@@ -1819,7 +1819,7 @@ void SkiddingAI::checkCrashes(const Vec3& pos )
             {
                 const AbstractKart* kart = m_world->getKart(j);
                 // Ignore eliminated karts
-                if(kart==m_kart||kart->isEliminated()||kart->isGhostKart()) continue;
+                if(kart==m_kart||kart->isEliminated()||kart->isGhofluxara_driftart()) continue;
                 const AbstractKart *other_kart = m_world->getKart(j);
                 // Ignore karts ahead that are faster than this kart.
                 if(m_kart->getVelocityLC().getZ() < other_kart->getVelocityLC().getZ())
@@ -2007,7 +2007,7 @@ void SkiddingAI::findNonCrashingPointFixed(Vec3 *aim_position, int *last_node)
         if( steps < 3 ) steps = 3;
 
         // That shouldn't happen, but since we had one instance of
-        // STK hanging, add an upper limit here (usually it's at most
+        // FLUXARA_DRIFT hanging, add an upper limit here (usually it's at most
         // 20 steps)
         if( steps>1000) steps = 1000;
 
@@ -2114,7 +2114,7 @@ void SkiddingAI::findNonCrashingPointFixed(Vec3 *aim_position, int *last_node)
         if( steps < 3 ) steps = 3;
 
         // That shouldn't happen, but since we had one instance of
-        // STK hanging, add an upper limit here (usually it's at most
+        // FLUXARA_DRIFT hanging, add an upper limit here (usually it's at most
         // 20 steps)
         if( steps>1000) steps = 1000;
 

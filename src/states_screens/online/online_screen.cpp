@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -37,8 +37,8 @@
 #include "network/server.hpp"
 #include "network/server_config.hpp"
 #include "network/socket_address.hpp"
-#include "network/stk_host.hpp"
-#include "network/stk_peer.hpp"
+#include "network/fluxara_drift_host.hpp"
+#include "network/fluxara_drift_peer.hpp"
 #include "online/link_helper.hpp"
 #include "online/profile_manager.hpp"
 #include "online/request_manager.hpp"
@@ -62,7 +62,7 @@ using namespace Online;
 
 // ----------------------------------------------------------------------------
 
-OnlineScreen::OnlineScreen() : Screen("online/online.stkgui")
+OnlineScreen::OnlineScreen() : Screen("online/online.fluxara_driftgui")
 {
     m_online_string = _("Your profile");
     //I18N: Used as a verb, appears on the main networking menu (login button)
@@ -80,7 +80,7 @@ void OnlineScreen::loadedFromFile()
     video::ITexture* icon3 = irr_driver->getTexture( file_manager->getAsset(FileManager::GUI_ICON,
                                                      "news.png"  ));
 
-    m_icon_bank = new irr::gui::STKModifiedSpriteBank( GUIEngine::getGUIEnv());
+    m_icon_bank = new irr::gui::FLUXARA_DRIFTModifiedSpriteBank( GUIEngine::getGUIEnv());
     m_icon_red_dot       = m_icon_bank->addTextureAsSprite(icon1);
     m_icon_news_headline = m_icon_bank->addTextureAsSprite(icon2);
     m_icon_news          = m_icon_bank->addTextureAsSprite(icon3);
@@ -106,7 +106,7 @@ void OnlineScreen::unloaded()
 void OnlineScreen::beforeAddingWidget()
 {
     m_news_list->clearColumns();
-    m_news_list->addColumn( _("News from STK Blog"), 4 );
+    m_news_list->addColumn( _("News from FLUXARA_DRIFT Blog"), 4 );
     m_news_list->addColumn( _("Date"), 1 );
 } // beforeAddingWidget
 
@@ -195,7 +195,7 @@ void OnlineScreen::loadList()
         // Date format
         int yyyy, mm, dd;
         sscanf(date.c_str(), "%d-%d-%d", &yyyy, &mm, &dd);
-        date = StkTime::toString(yyyy, mm, dd);
+        date = FluxaraDriftTime::toString(yyyy, mm, dd);
 
         std::vector<GUIEngine::ListWidget::ListCell> row;
         row.push_back(GUIEngine::ListWidget::ListCell(str.c_str(), icon, 4, false));
@@ -218,7 +218,7 @@ void OnlineScreen::onUpdate(float delta)
     {
         m_online->setActive(true);
         m_online->setLabel(m_online_string);
-        m_user_id->setText(player->getLastOnlineName() + "@stk");
+        m_user_id->setText(player->getLastOnlineName() + "@fluxara_drift");
     }
     else if (PlayerManager::getCurrentOnlineState() == PlayerProfile::OS_SIGNED_OUT)
     {
@@ -241,7 +241,7 @@ void OnlineScreen::onUpdate(float delta)
         NetworkConfig::get()->setIsLAN();
         NetworkConfig::get()->setIsServer(false);
         ServerConfig::m_private_server_password = "";
-        STKHost::create();
+        FLUXARA_DRIFTHost::create();
         NetworkingLobby::getInstance()->setJoinedServer(m_entered_server);
         m_entered_server = nullptr;
         StateManager::get()->resetAndSetStack(

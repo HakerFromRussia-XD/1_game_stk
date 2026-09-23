@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2013-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -21,8 +21,8 @@
 #include "network/event.hpp"
 #include "network/network_string.hpp"
 #include "network/protocol_manager.hpp"
-#include "network/stk_host.hpp"
-#include "network/stk_peer.hpp"
+#include "network/fluxara_drift_host.hpp"
+#include "network/fluxara_drift_peer.hpp"
 
 namespace ProtocolUtils
 {
@@ -100,7 +100,7 @@ void Protocol::requestTerminate()
 */
 void Protocol::sendMessageToPeers(NetworkString *message, bool reliable)
 {
-    STKHost::get()->sendPacketToAllPeers(message, reliable);
+    FLUXARA_DRIFTHost::get()->sendPacketToAllPeers(message, reliable);
 }   // sendMessageToPeers
 
 // ----------------------------------------------------------------------------
@@ -112,7 +112,7 @@ void Protocol::sendMessageToPeers(NetworkString *message, bool reliable)
 void Protocol::sendMessageToPeersInServer(NetworkString* message,
                                           bool reliable)
 {
-    STKHost::get()->sendPacketToAllPeersInServer(message, reliable);
+    FLUXARA_DRIFTHost::get()->sendPacketToAllPeersInServer(message, reliable);
 }   // sendMessageToPeersInServer
 
 // ----------------------------------------------------------------------------
@@ -120,5 +120,5 @@ void Protocol::sendMessageToPeersInServer(NetworkString* message,
  */
 void Protocol::sendToServer(NetworkString *message, bool reliable)
 {
-    STKHost::get()->sendToServer(message, reliable);
+    FLUXARA_DRIFTHost::get()->sendToServer(message, reliable);
 }   // sendMessage

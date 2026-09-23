@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -28,7 +28,7 @@ class Server;
 class SocketAddress;
 
 namespace GUIEngine { class CheckBoxWidget; class ButtonWidget;
-                      class IconButtonWidget; class STKModifiedSpriteBank; }
+                      class IconButtonWidget; class FLUXARA_DRIFTModifiedSpriteBank; }
 
 /**
   * \brief Handles the networking main menu
@@ -67,7 +67,7 @@ private:
     /** Icon for normal news. */
     int              m_icon_news;
 
-    irr::gui::STKModifiedSpriteBank
+    irr::gui::FLUXARA_DRIFTModifiedSpriteBank
                     *m_icon_bank;
 
     std::unordered_map<std::string, std::string> m_news_links;

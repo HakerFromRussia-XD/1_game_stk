@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2004-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2004-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -21,7 +21,7 @@
 #include "audio/music_manager.hpp"
 #include "audio/sfx_base.hpp"
 #include "audio/sfx_manager.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "graphics/irr_driver.hpp"
 #include "guiengine/engine.hpp"
@@ -34,12 +34,12 @@
 #include "network/race_event_manager.hpp"
 #include "tracks/track.hpp"
 #include "utils/profiler.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 
 #include <IrrlichtDevice.h>
 
 //-----------------------------------------------------------------------------
-WorldStatus::WorldStatus() : m_process_type(STKProcess::getType()), m_started_at(StkTime::getMonoTimeMs())
+WorldStatus::WorldStatus() : m_process_type(FLUXARA_DRIFTProcess::getType()), m_started_at(FluxaraDriftTime::getMonoTimeMs())
 {
     if (m_process_type == PT_MAIN)
         main_loop->setFrameBeforeLoadingWorld();
@@ -73,7 +73,7 @@ WorldStatus::WorldStatus() : m_process_type(STKProcess::getType()), m_started_at
  */
 void WorldStatus::reset(bool restart)
 {
-    m_started_at      = StkTime::getMonoTimeMs();
+    m_started_at      = FluxaraDriftTime::getMonoTimeMs();
     m_time            = 0.0f;
     m_time_ticks      = 0;
     m_auxiliary_ticks = 0;
@@ -81,7 +81,7 @@ void WorldStatus::reset(bool restart)
     m_start_music_ticks = -1;
     // how long to display the 'music' message
     m_race_ticks =
-        stk_config->time2Ticks(stk_config->m_music_credit_time);
+        fluxara_drift_config->time2Ticks(fluxara_drift_config->m_music_credit_time);
     m_live_join_ticks = -1;
     m_engines_started = false;
     
@@ -159,8 +159,8 @@ void WorldStatus::startEngines()
 void WorldStatus::setClockMode(const ClockType mode, const float initial_time)
 {
     m_clock_mode = mode;
-    m_time_ticks = stk_config->time2Ticks(initial_time);
-    m_time       = stk_config->ticks2Time(m_time_ticks);
+    m_time_ticks = fluxara_drift_config->time2Ticks(initial_time);
+    m_time       = fluxara_drift_config->ticks2Time(m_time_ticks);
 }   // setClockMode
 
 //-----------------------------------------------------------------------------
@@ -249,7 +249,7 @@ void WorldStatus::updateTime(int ticks)
             }
 
             // Wait before ready phase
-            if (m_auxiliary_ticks < stk_config->time2Ticks(3.0f))
+            if (m_auxiliary_ticks < fluxara_drift_config->time2Ticks(3.0f))
                 return;
 
             m_auxiliary_ticks = 0;
@@ -287,12 +287,12 @@ void WorldStatus::updateTime(int ticks)
                 // Add 3 seconds delay before telling server finish loading
                 // world, so previous (if any) disconnected player has left
                 // fully
-                if (m_auxiliary_ticks == stk_config->time2Ticks(3.0f))
+                if (m_auxiliary_ticks == fluxara_drift_config->time2Ticks(3.0f))
                 {
                     auto cl = LobbyProtocol::get<ClientLobby>();
                     assert(cl);
                     cl->finishedLoadingWorld();
-#ifndef MOBILE_STK
+#ifndef MOBILE_FLUXARA_DRIFT
                     static bool helper_msg_shown = false;
                     if (!helper_msg_shown && cl->isSpectator())
                     {
@@ -319,7 +319,7 @@ void WorldStatus::updateTime(int ticks)
         case READY_PHASE:
             startEngines();
             // One second
-            if (m_auxiliary_ticks > stk_config->getPhysicsFPS())
+            if (m_auxiliary_ticks > fluxara_drift_config->getPhysicsFPS())
             {
                 if (m_play_ready_set_go_sounds)
                 {
@@ -344,7 +344,7 @@ void WorldStatus::updateTime(int ticks)
 
             return;   // Do not increase time
         case SET_PHASE:
-            if (m_auxiliary_ticks > 2*stk_config->getPhysicsFPS())
+            if (m_auxiliary_ticks > 2*fluxara_drift_config->getPhysicsFPS())
             {
                 // set phase is over, go to the next one
                 m_phase = GO_PHASE;
@@ -370,8 +370,8 @@ void WorldStatus::updateTime(int ticks)
                     RaceManager::get()->getNumberOfKarts() -
                     RaceManager::get()->getNumSpareTireKarts() == 1 &&
                     RaceManager::get()->getTrackName() != "tutorial" ?
-                    stk_config->time2Ticks(0.2f) :
-                    stk_config->time2Ticks(1.0f);
+                    fluxara_drift_config->time2Ticks(0.2f) :
+                    fluxara_drift_config->time2Ticks(1.0f);
             }
 
             m_auxiliary_ticks++;
@@ -435,7 +435,7 @@ void WorldStatus::updateTime(int ticks)
 
             // Change to next phase if delay is over
             if (m_auxiliary_ticks >
-                stk_config->time2Ticks(stk_config->m_delay_finish_time))
+                fluxara_drift_config->time2Ticks(fluxara_drift_config->m_delay_finish_time))
             {
                 m_phase = RESULT_DISPLAY_PHASE;
                 if(RaceManager::get()->isBenchmarking())
@@ -468,7 +468,7 @@ void WorldStatus::updateTime(int ticks)
             if (m_process_type == PT_CHILD || !device->getTimer()->isStopped())
             {
                 m_time_ticks++;
-                m_time  = stk_config->ticks2Time(m_time_ticks);
+                m_time  = fluxara_drift_config->ticks2Time(m_time_ticks);
                 m_count_up_ticks++;
             }
             break;
@@ -487,7 +487,7 @@ void WorldStatus::updateTime(int ticks)
             if (m_process_type == PT_CHILD || !device->getTimer()->isStopped())
             {
                 m_time_ticks--;
-                m_time = stk_config->ticks2Time(m_time_ticks);
+                m_time = fluxara_drift_config->ticks2Time(m_time_ticks);
                 m_count_up_ticks++;
             }
 
@@ -509,9 +509,9 @@ void WorldStatus::updateTime(int ticks)
  */
 void WorldStatus::setTime(const float time)
 {
-    int new_time_ticks = stk_config->time2Ticks(time);
+    int new_time_ticks = fluxara_drift_config->time2Ticks(time);
     m_time_ticks       = new_time_ticks;
-    m_time             = stk_config->ticks2Time(new_time_ticks);
+    m_time             = fluxara_drift_config->ticks2Time(new_time_ticks);
 }   // setTime
 
 //-----------------------------------------------------------------------------
@@ -521,7 +521,7 @@ void WorldStatus::setTime(const float time)
 void WorldStatus::setTicks(int ticks)
 {
     m_time_ticks = ticks;
-    m_time = stk_config->ticks2Time(ticks);
+    m_time = fluxara_drift_config->ticks2Time(ticks);
 }   // setTicks
 
 //-----------------------------------------------------------------------------
@@ -533,12 +533,12 @@ void WorldStatus::setTicksForRewind(int ticks)
     m_count_up_ticks = ticks;
     if (RaceManager::get()->hasTimeTarget())
     {
-        m_time_ticks = stk_config->time2Ticks(RaceManager::get()->getTimeTarget()) -
+        m_time_ticks = fluxara_drift_config->time2Ticks(RaceManager::get()->getTimeTarget()) -
             m_count_up_ticks;
     }
     else
         m_time_ticks = ticks;
-    m_time = stk_config->ticks2Time(m_time_ticks);
+    m_time = fluxara_drift_config->ticks2Time(m_time_ticks);
 }   // setTicksForRewind
 
 //-----------------------------------------------------------------------------
@@ -591,8 +591,8 @@ void WorldStatus::endLiveJoinWorld(int ticks_now)
     m_live_join_world = false;
     m_auxiliary_ticks = 0;
     m_phase = MUSIC_PHASE;
-    m_race_ticks = m_live_join_ticks + stk_config->time2Ticks(
-        stk_config->m_music_credit_time);
+    m_race_ticks = m_live_join_ticks + fluxara_drift_config->time2Ticks(
+        fluxara_drift_config->m_music_credit_time);
     onGo();
     startEngines();
     music_manager->startMusic();

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <materials>
-  <material name="stk_generic_dirtA.png" max-speed="0.70" high-adhesion="Y">
+  <material name="fluxara_drift_generic_dirtA.png" max-speed="0.70" high-adhesion="Y">
     <particles base="smoke.xml" condition="skid drive"/>
   </material>
   <material name="elefant-lowpoly.png" shader="alphatest" ignore="Y"/>
   <material name="invisible_wall.png" shader="alphatest"/>
-  <material name="stktex_generic_gravelA.png" max-speed="0.60" high-adhesion="Y">
+  <material name="fluxara_drifttex_generic_gravelA.png" max-speed="0.60" high-adhesion="Y">
     <particles base="smoke.xml" condition="skid drive"/>
   </material>
   <material name="akazienlaub-dreamstime.png" shader="grass" grass-speed="1.50"/>
-  <material name="stk_generic_runway_a.png" has-gravity="Y" high-adhesion="Y">
+  <material name="fluxara_drift_generic_runway_a.png" has-gravity="Y" high-adhesion="Y">
     <particles base="smoke.xml" condition="skid"/>
   </material>
   <material name="shortcut.png" shader="alphatest"/>
-  <material name="stktex_generic_waterWhite.png" shader="alphablend" surface="Y" high-adhesion="Y" falling-effect="Y">
+  <material name="fluxara_drifttex_generic_waterWhite.png" shader="alphablend" surface="Y" high-adhesion="Y" falling-effect="Y">
     <sfx filename="splash.ogg" min_speed="0.00" max_speed="25.00" min_pitch="0.80" max_pitch="1.20" positional="true" rolloff="0.10"/>>
     <particles base="splash.xml" condition="skid drive"/>
   </material>
   <material name="oasis-water.png" shader="alphablend" water-splash="Y"/>
-  <material name="stk_generic_sand_b.png" reset="Y" falling-effect="Y" high-adhesion="Y"/>
-  <material name="stktex_generic_WoodB.png" high-adhesion="Y" has-gravity="Y">
+  <material name="fluxara_drift_generic_sand_b.png" reset="Y" falling-effect="Y" high-adhesion="Y"/>
+  <material name="fluxara_drifttex_generic_WoodB.png" high-adhesion="Y" has-gravity="Y">
     <sfx filename="wooden_bridge.ogg" min_speed="0.00" max_speed="25.00" min_pitch="0.80" max_pitch="1.20" positional="true" rolloff="0.10"/>>
     <particles base="smoke.xml" condition="skid"/>
   </material>
@@ -28,6 +28,6 @@
     <zipper duration="2.799999952316284" max-speed-increase="11.300000190734863" fade-out-time="3.0" speed-gain="4.5" min-speed="-1.0"/>
   </material>
   <material name="zipper-no-move.png" shader="alphatest"/>
-  <material name="stkflag_greenCheckBorard_a.png" mirror-axis="V"/>
+  <material name="fluxara_driftflag_greenCheckBorard_a.png" mirror-axis="V"/>
   <material name="bubble.png" reset="Y" shader="alphablend"/>
 </materials>

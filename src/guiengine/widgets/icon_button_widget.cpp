@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -19,7 +19,7 @@
 #include "guiengine/widgets/icon_button_widget.hpp"
 #include "graphics/central_settings.hpp"
 #include "graphics/irr_driver.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "guiengine/engine.hpp"
 #include "guiengine/scalable_font.hpp"
 #include "io/file_manager.hpp"
@@ -268,8 +268,8 @@ video::ITexture* IconButtonWidget::getDeactivatedTexture(video::ITexture* textur
 #ifndef SERVER_ONLY
     std::string name = texture->getName().getPtr();
     name += "_disabled";
-    STKTexManager* stkm = STKTexManager::getInstance();
-    if (!stkm->hasTexture(name))
+    FLUXARA_DRIFTTexManager* fluxara_driftm = FLUXARA_DRIFTTexManager::getInstance();
+    if (!fluxara_driftm->hasTexture(name))
     {
         SColor c;
         u32 g;
@@ -298,9 +298,9 @@ video::ITexture* IconButtonWidget::getDeactivatedTexture(video::ITexture* textur
         video::ITexture* disabled_tex = GE::createTexture(image, name);
         image->drop();
         texture->unlock();
-        return stkm->addTexture(disabled_tex);
+        return fluxara_driftm->addTexture(disabled_tex);
     }
-    return stkm->getTexture(name);
+    return fluxara_driftm->getTexture(name);
 #else
     return texture;
 #endif

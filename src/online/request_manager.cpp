@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Lucas Baudin
 //            (C) 2014-2015 Joerg Henrichs
 //            (C) 2013-2015 Glenn De Jonghe
@@ -99,7 +99,7 @@ namespace Online
     void RequestManager::startNetworkThread()
     {
         m_thread = std::thread(std::bind(mainLoop, this));
-        // In case that login id was not saved (or first start of stk),
+        // In case that login id was not saved (or first start of fluxara_drift),
         // current player would not be defined at this stage.
         PlayerProfile *player = PlayerManager::getCurrentPlayer();
         if (player && player->wasOnlineLastTime() &&
@@ -119,7 +119,7 @@ namespace Online
     void RequestManager::stopNetworkThread()
     {
         // This will queue a sign-out or client-quit request
-        PlayerManager::onSTKQuit();
+        PlayerManager::onFLUXARA_DRIFTQuit();
 
         // Put in a high priortity quit request in. It has the same priority
         // as a sign-out request (so the sign-out will be executed before the
@@ -132,7 +132,7 @@ namespace Online
 
         // It is possible that downloads are still ongoing (either an addon
         // download that the user aborted, or the addon icons etc are still
-        // queued). In order to allow a quick exit of stk we set a flag that
+        // queued). In order to allow a quick exit of fluxara_drift we set a flag that
         // will cause libcurl to abort downloading asap, and then allow the
         // other requests (sign-out and quit) to be executed asap. Note that
         // the sign-out request is set to be not abortable, so it still will
@@ -194,7 +194,7 @@ namespace Online
             // We pause the request manager thread when going into background in iOS
             // So this will only be evaluated a while
             if (me->m_paused.load())
-                StkTime::sleep(1);
+                FluxaraDriftTime::sleep(1);
             me->m_current_request = me->m_request_queue.getData().top();
             me->m_request_queue.getData().pop();
 
@@ -215,7 +215,7 @@ namespace Online
 
         // Signal that the request manager can now be deleted.
         // We signal this even before cleaning up memory, since there's no
-        // need to keep the user waiting for STK to exit.
+        // need to keep the user waiting for FLUXARA_DRIFT to exit.
         me->setCanBeDeleted();
 
         // At this stage we have the lock for m_request_queue
@@ -269,7 +269,7 @@ namespace Online
 
         // Database polling starts here, only needed for registered users. If
         // there is no player data yet (i.e. either because first time start
-        // of stk, and loging screen hasn't finished yet, or no default player
+        // of fluxara_drift, and loging screen hasn't finished yet, or no default player
         // was saved), don't do anything
         if (!PlayerManager::getCurrentPlayer() ||
             !PlayerManager::isCurrentLoggedIn())

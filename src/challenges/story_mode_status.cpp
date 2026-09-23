@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2010-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2010-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -27,7 +27,7 @@
 #include "config/user_config.hpp"
 #include "io/utf_writer.hpp"
 #include "io/xml_node.hpp"
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "input/motorica_game_control_ios.hpp"
 #include "utils/extract_mobile_assets.hpp"
 #endif
@@ -60,7 +60,7 @@ StoryModeStatus::StoryModeStatus(const XMLNode *node)
             m_story_mode_finished     = !m_first_time;
         if(!node->get("speedrun-finished", &m_valid_speedrun_finished))
             m_valid_speedrun_finished = false;
-        // Disable showing story mode timer if starting stk with old
+        // Disable showing story mode timer if starting fluxara_drift with old
         // players.xml
         if(!node->get("story-ms", &m_story_mode_milliseconds))
         {
@@ -104,8 +104,8 @@ bool StoryModeStatus::hasChallenge(const std::string& challenge_id) const
 //-----------------------------------------------------------------------------
 bool StoryModeStatus::isLocked(const std::string& feature)
 {
-#ifdef IOS_STK
-    // The Motorica Start product mode exposes the complete downloaded STK
+#ifdef IOS_FLUXARA_DRIFT
+    // The Motorica Start product mode exposes the complete downloaded FLUXARA_DRIFT
     // catalog. Do not let progress saved by the deliberately small standalone
     // catalog turn full-mode karts, tracks or difficulties into question marks.
     // This is deliberately evaluated at runtime and never persisted, so a

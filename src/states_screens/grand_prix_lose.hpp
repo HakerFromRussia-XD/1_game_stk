@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2010-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2010-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -41,7 +41,7 @@ class GrandPrixLose :
 {
     friend class GUIEngine::ScreenSingleton<GrandPrixLose>;
 
-    GrandPrixLose(): GrandPrixCutscene("grand_prix_lose.stkgui") {};
+    GrandPrixLose(): GrandPrixCutscene("grand_prix_lose.fluxara_driftgui") {};
 
     /** Global evolution of time */
     float m_global_time;

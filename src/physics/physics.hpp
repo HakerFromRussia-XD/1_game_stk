@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -30,11 +30,11 @@
 #include "btBulletDynamicsCommon.h"
 
 #include "physics/irr_debug_drawer.hpp"
-#include "physics/stk_dynamics_world.hpp"
+#include "physics/fluxara_drift_dynamics_world.hpp"
 #include "physics/user_pointer.hpp"
 
 class AbstractKart;
-class STKDynamicsWorld;
+class FLUXARA_DRIFTDynamicsWorld;
 class Vec3;
 
 /**
@@ -137,7 +137,7 @@ private:
     std::vector<const AbstractKart*> m_karts_to_delete;
 
     /** Pointer to the physics dynamics world. */
-    STKDynamicsWorld                *m_dynamics_world;
+    FLUXARA_DRIFTDynamicsWorld                *m_dynamics_world;
 
     /** Used in physics debugging to draw the physics world. */
     IrrDebugDrawer                  *m_debug_drawer;
@@ -167,7 +167,7 @@ public:
                             AbstractKart *kb, const Vec3 &contact_point_b);
     void  update           (int ticks);
     void  draw             ();
-    STKDynamicsWorld*
+    FLUXARA_DRIFTDynamicsWorld*
           getPhysicsWorld  () const {return m_dynamics_world;}
     /** Activates the next debug mode (or switches it off again).
      */

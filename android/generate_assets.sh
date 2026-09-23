@@ -36,8 +36,8 @@ export CONVERT_TO_JPG_DEFAULT=1
 export ONLY_ASSETS_DEFAULT=0
 
 export ASSETS_PATHS_DEFAULT="../data                    \
-                             ../../stk-assets           \
-                             ../../supertuxkart-assets"
+                             ../../fluxara_drift-assets           \
+                             ../../fluxaradrift-assets"
                              
 export OUTPUT_PATH_DEFAULT="assets"
 
@@ -45,15 +45,15 @@ export ASSETS_DIRS="library models music sfx textures"
 
 export CONVERT_TO_JPG_BLACKLIST="data/models/traffic_light.png"
 
-export BLACKLIST_FILES="data/supertuxkart.icns \
-                        data/supertuxkart_1024.png \
-                        data/supertuxkart_128.png \
-                        data/supertuxkart_16.png \
-                        data/supertuxkart_256.png \
-                        data/supertuxkart_32.png \
-                        data/supertuxkart_48.png \
-                        data/supertuxkart_512.png \
-                        data/supertuxkart_64.png"
+export BLACKLIST_FILES="data/fluxaradrift.icns \
+                        data/fluxaradrift_1024.png \
+                        data/fluxaradrift_128.png \
+                        data/fluxaradrift_16.png \
+                        data/fluxaradrift_256.png \
+                        data/fluxaradrift_32.png \
+                        data/fluxaradrift_48.png \
+                        data/fluxaradrift_512.png \
+                        data/fluxaradrift_64.png"
 
 ################################################################################
 

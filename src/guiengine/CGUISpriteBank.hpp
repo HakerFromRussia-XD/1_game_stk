@@ -26,14 +26,14 @@ namespace gui
     class IGUIEnvironment;
 
 //! Sprite bank interface.
-class STKModifiedSpriteBank : public IGUISpriteBank
+class FLUXARA_DRIFTModifiedSpriteBank : public IGUISpriteBank
 {
 public:
 
     LEAK_CHECK()
 
-    STKModifiedSpriteBank(IGUIEnvironment* env);
-    virtual ~STKModifiedSpriteBank();
+    FLUXARA_DRIFTModifiedSpriteBank(IGUIEnvironment* env);
+    virtual ~FLUXARA_DRIFTModifiedSpriteBank();
 
     virtual core::array< core::rect<s32> >& getPositions();
     virtual core::array< SGUISprite >& getSprites();
@@ -89,7 +89,7 @@ protected:
     };
 
     core::dimension2du m_target_icon_size;
-    //FIXME: ugly hack to work around irrLicht limitations, see STKModifiedSpriteBank::getPositions()
+    //FIXME: ugly hack to work around irrLicht limitations, see FLUXARA_DRIFTModifiedSpriteBank::getPositions()
     // for all the gory details.
     core::array< core::rect<s32> > copy;
 

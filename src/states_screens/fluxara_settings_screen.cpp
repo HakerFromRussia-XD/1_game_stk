@@ -6,6 +6,8 @@
 #include "audio/sfx_manager.hpp"
 #include "config/user_config.hpp"
 #include "guiengine/widgets/button_widget.hpp"
+#include "modes/world.hpp"
+#include "states_screens/dialogs/race_paused_dialog.hpp"
 #include "states_screens/fluxara_home_screen.hpp"
 #include "states_screens/state_manager.hpp"
 #include "states_screens/fluxara_ui.hpp"
@@ -16,7 +18,7 @@
 using namespace GUIEngine;
 
 FluxaraSettingsScreen::FluxaraSettingsScreen()
-    : Screen("fluxara_settings.stkgui")
+    : Screen("fluxara_settings.fluxara_driftgui")
 {
 }
 
@@ -68,9 +70,17 @@ void FluxaraSettingsScreen::onResize()
 void FluxaraSettingsScreen::onDraw(float)
 {
     const FluxaraUI::Canvas c;
+    if (!c.isStable())
+    {
+        const auto size = irr_driver->getActualScreenSize();
+        GL32_draw2DRectangle(irr::video::SColor(255,16,53,126),
+            irr::core::recti(0, 0, size.Width, size.Height));
+        FluxaraUI::transitionBackdrop(m_art[0], 77);
+        return;
+    }
     const auto label = [&c](const irr::core::stringw& text, float x, float y,
                             float w, float h, float points,
-                            irr::video::SColor color)
+                            irr::video::SColor color, bool centered = false)
     {
         auto* font = GUIEngine::getFont();
         const float saved = font->getScale();
@@ -80,8 +90,8 @@ void FluxaraSettingsScreen::onDraw(float)
         const auto r = c.rect(x,y,w,h);
         auto shadow = r;
         shadow += irr::core::position2di(0,std::max(1,int(2*c.scale)));
-        font->draw(text.c_str(),shadow,irr::video::SColor(128,5,13,43),false,true);
-        font->draw(text.c_str(),r,color,false,true);
+        font->draw(text.c_str(),shadow,irr::video::SColor(128,5,13,43),centered,true);
+        font->draw(text.c_str(),r,color,centered,true);
         font->setScale(saved);
     };
     GL32_draw2DRectangle(irr::video::SColor(255,16,53,126), c.rect(0,0,360,780));
@@ -94,7 +104,8 @@ void FluxaraSettingsScreen::onDraw(float)
     }
     c.image(m_art[5],21,58,50,50);
     c.image(m_art[6],32,68,25,31);
-    label(_C("fluxara", "SETTINGS"),88,69,190,38,31,irr::video::SColor(255,255,255,255));
+    label(_C("fluxara", "SETTINGS"),88,69,190,38,31,
+          irr::video::SColor(255,255,255,255),true);
     for (int row = 0; row < 2; ++row)
     {
         const float y = 32.0f + row * 130.0f;
@@ -169,6 +180,13 @@ void FluxaraSettingsScreen::eventCallback(Widget*, const std::string& name,
 {
     if (name == "back")
     {
+        if (m_return_to_paused_race && World::getWorld())
+        {
+            m_return_to_paused_race = false;
+            StateManager::get()->popMenu();
+            new RacePausedDialog(1.0f, 1.0f);
+            return;
+        }
         // Settings is a valid direct-launch destination; its Back action
         // must not pop the only menu screen and exit to SpringBoard.
         StateManager::get()->resetAndGoToScreen(
@@ -222,6 +240,12 @@ void FluxaraSettingsScreen::eventCallback(Widget*, const std::string& name,
     refreshLabels();
     // Persist immediately, including if iOS suspends before this screen closes.
     user_config->saveConfig();
+}
+
+void FluxaraSettingsScreen::openFromPausedRace()
+{
+    m_return_to_paused_race = true;
+    push();
 }
 
 bool FluxaraSettingsScreen::onEscapePressed()

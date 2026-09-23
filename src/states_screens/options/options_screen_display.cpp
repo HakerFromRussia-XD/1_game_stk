@@ -1,5 +1,5 @@
  
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -40,7 +40,7 @@ bool OptionsScreenDisplay::m_fullscreen_checkbox_focus = false;
 
 // --------------------------------------------------------------------------------------------
 
-OptionsScreenDisplay::OptionsScreenDisplay() : Screen("options/options_display.stkgui")
+OptionsScreenDisplay::OptionsScreenDisplay() : Screen("options/options_display.fluxara_driftgui")
 {
     m_inited = false;
 }   // OptionsScreenDisplay
@@ -138,7 +138,7 @@ void OptionsScreenDisplay::init()
     applyBtn->setActive(!in_game);
     OptionsCommon::updatePauseTooltip(applyBtn, in_game);
 
-#if defined(MOBILE_STK) || defined(__SWITCH__)
+#if defined(MOBILE_FLUXARA_DRIFT) || defined(__SWITCH__)
     applyBtn->setVisible(false);
     full->setVisible(false);
     getWidget<LabelWidget>("fullscreenText")->setVisible(false);
@@ -252,7 +252,7 @@ void OptionsScreenDisplay::configResolutionsList()
         }
     } // next found resolution
 
-#if !defined(MOBILE_STK) && !defined(__SWITCH__)
+#if !defined(MOBILE_FLUXARA_DRIFT) && !defined(__SWITCH__)
     // Add default resolutions that were not found by irrlicht
     if (!found_1024_768)
     {

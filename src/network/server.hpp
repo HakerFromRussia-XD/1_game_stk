@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
 //  This program is free software; you can redistribute it and/or
@@ -95,7 +95,7 @@ protected:
     /* WAN server only, distance based on IP latitude and longitude. */
     float m_distance;
 
-    /* WAN server only, true if hosted officially by stk team. */
+    /* WAN server only, true if hosted officially by fluxara_drift team. */
     bool m_official;
 
     bool m_supports_encrytion;
@@ -141,7 +141,7 @@ public:
     /** Returns the ID of this server. */
     const uint32_t getServerId() const { return m_server_id; }
     // ------------------------------------------------------------------------
-    /** Returns the user id in STK addon server of the server owner (WAN). */
+    /** Returns the user id in FLUXARA_DRIFT addon server of the server owner (WAN). */
     const uint32_t getServerOwner() const { return m_server_owner; }
     // ------------------------------------------------------------------------
     uint16_t getPrivatePort() const { return m_private_port; }

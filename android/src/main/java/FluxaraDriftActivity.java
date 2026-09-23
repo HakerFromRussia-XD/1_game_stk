@@ -1,0 +1,971 @@
+package com.motorica.games.fluxara_drift;
+
+import com.motorica.games.fluxara_drift.FLUXARA_DRIFTEditText;
+import org.libsdl.app.SDLActivity;
+import org.libsdl.app.SDL;
+
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.ServiceConnection;
+import android.content.pm.PackageManager;
+import android.content.res.AssetManager;
+import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.Rect;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.IBinder;
+import android.os.Process;
+import android.os.RemoteException;
+import android.os.SystemClock;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.Display;
+import android.view.DisplayCutout;
+import android.view.Gravity;
+import android.view.inputmethod.InputMethodManager;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.ViewGroup;
+import android.view.ViewGroup.MarginLayoutParams;
+import android.view.ViewTreeObserver.OnGlobalLayoutListener;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowInsets;
+import android.view.WindowManager;
+import android.view.WindowManager.LayoutParams;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.util.DisplayMetrics;
+import android.util.Log;
+
+import java.io.InputStream;
+import java.lang.ref.WeakReference;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.Set;
+
+import com.motorica.gamecontrol.GameControlSnapshot;
+import com.motorica.gamecontrol.IGameControlCallback;
+import com.motorica.gamecontrol.IGameControlService;
+
+import org.minidns.hla.DnssecResolverApi;
+import org.minidns.hla.ResolverResult;
+import org.minidns.record.SRV;
+import org.minidns.record.TXT;
+
+public class FluxaraDriftActivity extends SDLActivity
+{
+    private static final String TAG = "MotoricaFLUXARA_DRIFT";
+    private static final String LOG_PREFIX = "[BLE fluxara_drift-game debug] ";
+    private static final String MOTORICA_START_PACKAGE = "com.bailout.stickk";
+    private static final String MOTORICA_GAME_CONTROL_ACTION =
+        "com.motorica.gamecontrol.BIND";
+    private static final String RUSTORE_LAUNCHER_ACTIVITY =
+        "com.motorica.games.fluxara_drift.RuStoreLauncherActivity";
+    private static final long MOTORICA_STALE_TIMEOUT_MS = 500L;
+
+    private static volatile boolean s_motorica_natives_ready;
+    private static WeakReference<FluxaraDriftActivity> s_current_activity;
+
+    private AlertDialog m_progress_dialog;
+    private AlertDialog m_connection_lost_dialog;
+    private AlertDialog m_motorica_required_dialog;
+    private ProgressBar m_progress_bar;
+    private ImageView m_splash_screen;
+    private FLUXARA_DRIFTEditText m_fluxara_drift_edittext;
+    private int m_bottom_y;
+    private int m_intial_orientation;
+    private float m_top_padding;
+    private float m_bottom_padding;
+    private float m_left_padding;
+    private float m_right_padding;
+    private AtomicInteger m_keyboard_height;
+    private AtomicInteger m_moved_height;
+    private Handler m_motorica_handler;
+    private IGameControlService m_game_control_service;
+    private boolean m_game_control_bound;
+    private long m_last_game_control_elapsed;
+    private GameControlSnapshot m_pending_game_control_snapshot;
+    private boolean m_seen_game_control_connected;
+    private boolean m_game_control_stale_reported;
+    private long m_last_logged_game_control_callback_seq = Long.MIN_VALUE;
+    private long m_last_logged_game_control_native_seq = Long.MIN_VALUE;
+    // ------------------------------------------------------------------------
+    public native static void debugMsg(String msg);
+    // ------------------------------------------------------------------------
+    private native static void handlePadding(boolean val);
+    // ------------------------------------------------------------------------
+    private native static void saveKeyboardHeight(int height);
+    // ------------------------------------------------------------------------
+    private native static void saveMovedHeight(int height);
+    // ------------------------------------------------------------------------
+    private native static void addDNSSrvRecords(String name, int weight);
+    // ------------------------------------------------------------------------
+    private native static void pauseRenderingJNI();
+    // ------------------------------------------------------------------------
+    private native static void onMotoricaGameControl(int open_level,
+                                                     int close_level,
+                                                     boolean connected,
+                                                     long timestamp_ms,
+                                                     long seq);
+    // ------------------------------------------------------------------------
+    private final IGameControlCallback m_game_control_callback =
+        new IGameControlCallback.Stub()
+        {
+            @Override
+            public void onGameControlSnapshot(GameControlSnapshot snapshot)
+            {
+                handleGameControlSnapshot(snapshot);
+            }
+        };
+    // ------------------------------------------------------------------------
+    private final ServiceConnection m_game_control_connection =
+        new ServiceConnection()
+        {
+            @Override
+            public void onServiceConnected(ComponentName name, IBinder service)
+            {
+                Log.d(TAG, LOG_PREFIX + "Game control service connected");
+                m_game_control_service =
+                    IGameControlService.Stub.asInterface(service);
+                m_game_control_bound = true;
+                try
+                {
+                    m_game_control_service.registerCallback(
+                        m_game_control_callback);
+                    GameControlSnapshot latest =
+                        m_game_control_service.getLatestSnapshot();
+                    logGameControlSnapshot("latest", latest);
+                    handleGameControlSnapshot(latest);
+                }
+                catch (RemoteException e)
+                {
+                    Log.w(TAG, LOG_PREFIX + "Failed to read game control snapshot", e);
+                    if (m_seen_game_control_connected)
+                        showConnectionLostDialog();
+                }
+            }
+
+            @Override
+            public void onServiceDisconnected(ComponentName name)
+            {
+                Log.w(TAG, LOG_PREFIX + "Game control service disconnected");
+                m_game_control_service = null;
+                m_game_control_bound = false;
+                sendGameControlSnapshotToNative(createDisconnectedSnapshot(
+                    SystemClock.elapsedRealtime()));
+                if (m_seen_game_control_connected)
+                    showConnectionLostDialog();
+            }
+        };
+    // ------------------------------------------------------------------------
+    private final Runnable m_motorica_watchdog = new Runnable()
+    {
+        @Override
+        public void run()
+        {
+            long now = SystemClock.elapsedRealtime();
+            if (m_game_control_bound &&
+                m_seen_game_control_connected &&
+                !m_game_control_stale_reported &&
+                now - m_last_game_control_elapsed > MOTORICA_STALE_TIMEOUT_MS)
+            {
+                Log.w(TAG, LOG_PREFIX + "Game control snapshot is stale");
+                sendGameControlSnapshotToNative(createDisconnectedSnapshot(now));
+                showConnectionLostDialog();
+                m_game_control_stale_reported = true;
+            }
+            if (m_motorica_handler != null)
+                m_motorica_handler.postDelayed(this, 250L);
+        }
+    };
+    // ------------------------------------------------------------------------
+    private void handleGameControlSnapshot(final GameControlSnapshot snapshot)
+    {
+        if (snapshot == null)
+            return;
+        m_last_game_control_elapsed = SystemClock.elapsedRealtime();
+        if (shouldLogGameControlSnapshot(snapshot,
+            m_last_logged_game_control_callback_seq))
+        {
+            m_last_logged_game_control_callback_seq = snapshot.seq;
+            logGameControlSnapshot("callback", snapshot);
+        }
+        sendGameControlSnapshotToNative(snapshot);
+        if (snapshot.connected)
+        {
+            if (!m_seen_game_control_connected)
+                Log.d(TAG, LOG_PREFIX + "First connected game control snapshot received");
+            m_seen_game_control_connected = true;
+            m_game_control_stale_reported = false;
+            dismissConnectionLostDialog();
+        }
+        else if (m_seen_game_control_connected)
+        {
+            showConnectionLostDialog();
+        }
+    }
+    // ------------------------------------------------------------------------
+    private GameControlSnapshot createDisconnectedSnapshot(long timestamp_ms)
+    {
+        return new GameControlSnapshot(1, 0L, timestamp_ms, 0, 0, false);
+    }
+    // ------------------------------------------------------------------------
+    private void sendGameControlSnapshotToNative(GameControlSnapshot snapshot)
+    {
+        if (snapshot == null)
+            return;
+        if (!s_motorica_natives_ready)
+        {
+            m_pending_game_control_snapshot = snapshot;
+            logGameControlSnapshot("native pending", snapshot);
+            return;
+        }
+        try
+        {
+            if (shouldLogGameControlSnapshot(snapshot,
+                m_last_logged_game_control_native_seq))
+            {
+                m_last_logged_game_control_native_seq = snapshot.seq;
+                logGameControlSnapshot("native send", snapshot);
+            }
+            onMotoricaGameControl(snapshot.openLevel, snapshot.closeLevel,
+                snapshot.connected, snapshot.timestampMs, snapshot.seq);
+        }
+        catch (UnsatisfiedLinkError e)
+        {
+            s_motorica_natives_ready = false;
+            m_pending_game_control_snapshot = snapshot;
+            Log.w(TAG, LOG_PREFIX + "Native game control method is not ready yet", e);
+        }
+    }
+    // ------------------------------------------------------------------------
+    private void flushPendingGameControlSnapshot()
+    {
+        GameControlSnapshot snapshot = m_pending_game_control_snapshot;
+        m_pending_game_control_snapshot = null;
+        if (snapshot != null)
+        {
+            logGameControlSnapshot("native flush", snapshot);
+            sendGameControlSnapshotToNative(snapshot);
+        }
+    }
+    // ------------------------------------------------------------------------
+    private static void onMotoricaNativeReady()
+    {
+        s_motorica_natives_ready = true;
+        Log.d(TAG, LOG_PREFIX + "Motorica native bridge is ready");
+        FluxaraDriftActivity activity =
+            s_current_activity == null ? null : s_current_activity.get();
+        if (activity != null)
+            activity.flushPendingGameControlSnapshot();
+    }
+    // ------------------------------------------------------------------------
+    private void bindGameControlService()
+    {
+        if (m_game_control_bound)
+            return;
+        Intent intent = new Intent(MOTORICA_GAME_CONTROL_ACTION);
+        intent.setPackage(MOTORICA_START_PACKAGE);
+        m_last_game_control_elapsed = SystemClock.elapsedRealtime();
+        Log.d(TAG, LOG_PREFIX + "Binding game control service action=" +
+            MOTORICA_GAME_CONTROL_ACTION + " package=" + MOTORICA_START_PACKAGE);
+        try
+        {
+            boolean bound = bindService(intent, m_game_control_connection,
+                Context.BIND_AUTO_CREATE);
+            if (!bound)
+            {
+                Log.w(TAG, LOG_PREFIX + "Game control service bind returned false");
+                showMotoricaRequiredDialog();
+            }
+        }
+        catch (SecurityException e)
+        {
+            Log.w(TAG, LOG_PREFIX + "Game control service bind rejected", e);
+            showMotoricaRequiredDialog();
+        }
+    }
+    // ------------------------------------------------------------------------
+    private boolean shouldLogGameControlSnapshot(GameControlSnapshot snapshot,
+                                                 long last_logged_seq)
+    {
+        if (snapshot == null)
+            return false;
+        if (!snapshot.connected)
+            return snapshot.seq != last_logged_seq;
+        return snapshot.seq <= 3 || snapshot.seq % 30L == 0L;
+    }
+    // ------------------------------------------------------------------------
+    private void logGameControlSnapshot(String stage, GameControlSnapshot snapshot)
+    {
+        if (snapshot == null)
+        {
+            Log.d(TAG, LOG_PREFIX + stage + " snapshot=null");
+            return;
+        }
+        long age_ms = SystemClock.elapsedRealtime() - snapshot.timestampMs;
+        Log.d(TAG, LOG_PREFIX + stage + " seq=" + snapshot.seq +
+            " open=" + snapshot.openLevel +
+            " close=" + snapshot.closeLevel +
+            " connected=" + snapshot.connected +
+            " ageMs=" + age_ms);
+    }
+    // ------------------------------------------------------------------------
+    private void unbindGameControlService()
+    {
+        if (m_game_control_service != null)
+        {
+            try
+            {
+                m_game_control_service.unregisterCallback(
+                    m_game_control_callback);
+            }
+            catch (RemoteException e) {}
+        }
+        if (m_game_control_bound)
+        {
+            unbindService(m_game_control_connection);
+            m_game_control_bound = false;
+        }
+        m_game_control_service = null;
+    }
+    // ------------------------------------------------------------------------
+    private boolean isActivityDead()
+    {
+        return isFinishing() || (Build.VERSION.SDK_INT >=
+            Build.VERSION_CODES.JELLY_BEAN_MR1 && isDestroyed());
+    }
+    // ------------------------------------------------------------------------
+    private void showConnectionLostDialog()
+    {
+        runOnUiThread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                if (isActivityDead() || m_connection_lost_dialog != null)
+                    return;
+                try
+                {
+                    m_connection_lost_dialog = new AlertDialog.Builder(
+                        FluxaraDriftActivity.this)
+                        .setTitle("Связь потеряна")
+                        .setMessage("Обрыв связи с протезом. Игра продолжится автоматически после восстановления связи.")
+                        .setCancelable(false)
+                        .setPositiveButton("Выйти из игры", null)
+                        .show();
+                }
+                catch (RuntimeException e)
+                {
+                    Log.w(TAG, LOG_PREFIX + "Failed to show connection lost dialog", e);
+                    return;
+                }
+                m_connection_lost_dialog.getButton(AlertDialog.BUTTON_POSITIVE)
+                    .setVisibility(View.GONE);
+                if (m_motorica_handler != null)
+                {
+                    m_motorica_handler.postDelayed(new Runnable()
+                    {
+                        @Override
+                        public void run()
+                        {
+                            if (isActivityDead() ||
+                                m_connection_lost_dialog == null)
+                                return;
+                            m_connection_lost_dialog.getButton(
+                                AlertDialog.BUTTON_POSITIVE).setVisibility(
+                                    View.VISIBLE);
+                            m_connection_lost_dialog.getButton(
+                                AlertDialog.BUTTON_POSITIVE).setOnClickListener(
+                                new View.OnClickListener()
+                                {
+                                    @Override
+                                    public void onClick(View v)
+                                    {
+                                        finish();
+                                    }
+                                });
+                        }
+                    }, 5000L);
+                }
+            }
+        });
+    }
+    // ------------------------------------------------------------------------
+    private void dismissConnectionLostDialog()
+    {
+        runOnUiThread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                if (m_connection_lost_dialog == null)
+                    return;
+                try
+                {
+                    m_connection_lost_dialog.dismiss();
+                }
+                catch (RuntimeException e)
+                {
+                    Log.w(TAG, LOG_PREFIX + "Failed to dismiss connection lost dialog", e);
+                }
+                m_connection_lost_dialog = null;
+            }
+        });
+    }
+    // ------------------------------------------------------------------------
+    private void showMotoricaRequiredDialog()
+    {
+        runOnUiThread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                if (isActivityDead() || m_motorica_required_dialog != null)
+                    return;
+                try
+                {
+                    m_motorica_required_dialog = new AlertDialog.Builder(
+                        FluxaraDriftActivity.this)
+                        .setTitle("Motorica Start")
+                        .setMessage("Игру можно запускать только из приложения Motorica Start.")
+                        .setCancelable(false)
+                        .setPositiveButton("Закрыть",
+                            new DialogInterface.OnClickListener()
+                            {
+                                @Override
+                                public void onClick(DialogInterface dialog,
+                                                    int which)
+                                {
+                                    finish();
+                                }
+                            })
+                        .show();
+                }
+                catch (RuntimeException e)
+                {
+                    Log.w(TAG, LOG_PREFIX + "Failed to show Motorica required dialog", e);
+                }
+            }
+        });
+    }
+    // ------------------------------------------------------------------------
+    private void showExtractProgressPrivate()
+    {
+        WindowManager wm =
+            (WindowManager)getSystemService(Context.WINDOW_SERVICE);
+        DisplayMetrics display_metrics = new DisplayMetrics();
+        wm.getDefaultDisplay().getMetrics(display_metrics);
+        int padding = display_metrics.widthPixels / 64;
+
+        LinearLayout ll = new LinearLayout(this);
+        ll.setOrientation(LinearLayout.VERTICAL);
+        ll.setPadding(padding, padding, padding, padding);
+        ll.setGravity(Gravity.CENTER);
+
+        LinearLayout.LayoutParams ll_param = new LinearLayout.LayoutParams(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT);
+        ll_param.gravity = Gravity.CENTER;
+        TextView tv = new TextView(this);
+        // From values strings.xml which is generated by make.sh
+        tv.setText(getString(R.string.po_extract_game_data));
+        tv.setLayoutParams(ll_param);
+
+        ll_param = new LinearLayout.LayoutParams(
+            display_metrics.widthPixels,
+            LinearLayout.LayoutParams.WRAP_CONTENT);
+        ll_param.gravity = Gravity.CENTER;
+        ll.setLayoutParams(ll_param);
+
+        m_progress_bar = new ProgressBar(this, null,
+            android.R.attr.progressBarStyleHorizontal);
+        m_progress_bar.setIndeterminate(false);
+        m_progress_bar.setPadding(0, padding, 0, padding);
+        m_progress_bar.setLayoutParams(ll_param);
+        ll.addView(tv);
+        ll.addView(m_progress_bar);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setView(ll);
+
+        m_progress_dialog = builder.create();
+        m_progress_dialog.show();
+        Window window = m_progress_dialog.getWindow();
+        if (window != null)
+        {
+            WindowManager.LayoutParams layout_params =
+                new WindowManager.LayoutParams();
+            layout_params.copyFrom(
+                m_progress_dialog.getWindow().getAttributes());
+            layout_params.width = WindowManager.LayoutParams.MATCH_PARENT;
+            layout_params.height = LinearLayout.LayoutParams.WRAP_CONTENT;
+            m_progress_dialog.getWindow().setAttributes(layout_params);
+        }
+    }
+    // ------------------------------------------------------------------------
+    private void hideKeyboardNative(final boolean clear_text)
+    {
+        if (m_fluxara_drift_edittext == null)
+            return;
+
+        m_fluxara_drift_edittext.beforeHideKeyboard(clear_text);
+
+        InputMethodManager imm = (InputMethodManager)
+            getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (imm == null)
+            return;
+
+        imm.hideSoftInputFromWindow(m_fluxara_drift_edittext.getWindowToken(), 0);
+    }
+    // ------------------------------------------------------------------------
+    private void createFLUXARA_DRIFTEditText()
+    {
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
+            FrameLayout.LayoutParams.WRAP_CONTENT,
+            FrameLayout.LayoutParams.WRAP_CONTENT);
+        // We move the dummy edittext out of the android screen because we draw
+        // our own manually
+        params.setMargins(0, -100000, 1, -100010);
+        m_fluxara_drift_edittext = new FLUXARA_DRIFTEditText(this);
+        // For some copy-and-paste text are not done by commitText in
+        // FLUXARA_DRIFTInputConnection, so we need an extra watcher
+        m_fluxara_drift_edittext.addTextChangedListener(new TextWatcher()
+        {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before,
+                                      int count) {}
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {}
+            @Override
+            public void afterTextChanged(Editable edit)
+            {
+                if (m_fluxara_drift_edittext != null)
+                    m_fluxara_drift_edittext.updateFLUXARA_DRIFTEditBox();
+            }
+        });
+        addContentView(m_fluxara_drift_edittext, params);
+        // Only focus it and make visible when soft keybord is opened
+        m_fluxara_drift_edittext.setVisibility(View.GONE);
+    }
+    // ------------------------------------------------------------------------
+    @Override
+    public void onCreate(Bundle instance)
+    {
+        super.onCreate(instance);
+        disableRuStoreLauncherActivity();
+        s_current_activity = new WeakReference<FluxaraDriftActivity>(this);
+        m_motorica_handler = new Handler();
+        m_keyboard_height = new AtomicInteger();
+        m_moved_height = new AtomicInteger();
+        m_progress_dialog = null;
+        m_progress_bar = null;
+        m_splash_screen = null;
+        m_bottom_y = m_intial_orientation = 0;
+        m_top_padding = m_bottom_padding = m_left_padding = m_right_padding =
+            0.0f;
+        final View root = getWindow().getDecorView().findViewById(
+            android.R.id.content);
+        root.getViewTreeObserver().addOnGlobalLayoutListener(new
+            OnGlobalLayoutListener()
+            {
+                @Override
+                public void onGlobalLayout()
+                {
+                    Rect r = new Rect();
+                    root.getWindowVisibleDisplayFrame(r);
+                    int screen_height = root.getRootView().getHeight();
+                    int keyboard_height = screen_height - (r.bottom);
+                    m_keyboard_height.set(keyboard_height);
+                    int moved_height = 0;
+                    int margin = screen_height - m_bottom_y;
+                    if (keyboard_height > margin)
+                        moved_height = -keyboard_height + margin;
+                    m_moved_height.set(-moved_height);
+                    SDLActivity.moveView(moved_height);
+                }
+            });
+
+        InputStream istr = null;
+        try
+        {
+            LinearLayout ll = new LinearLayout(this);
+            LinearLayout.LayoutParams ll_param = new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT);
+            ll.setLayoutParams(ll_param);
+
+            WindowManager wm =
+                (WindowManager)getSystemService(Context.WINDOW_SERVICE);
+            DisplayMetrics display_metrics = new DisplayMetrics();
+            wm.getDefaultDisplay().getMetrics(display_metrics);
+            Bitmap.Config conf = Bitmap.Config.ARGB_8888;
+            int w = display_metrics.widthPixels;
+            int h = display_metrics.heightPixels;
+            Bitmap scaled = Bitmap.createBitmap(w, h, conf);
+
+            Canvas canvas = new Canvas(scaled);
+            istr = getAssets().open("data/gui/icons/logo.png");
+            Bitmap logo = BitmapFactory.decodeStream(istr);
+            Rect src = new Rect(0, 0, logo.getWidth(), logo.getHeight());
+            // FLUXARA_DRIFT logo is a square
+            int target_size = w;
+            if (target_size > h)
+                target_size = h;
+            target_size /= 2;
+            Rect dest = new Rect(w / 2 - target_size / 2,
+                h / 2 - target_size / 2,
+                w / 2 - target_size / 2 + target_size,
+                h / 2 - target_size / 2 + target_size);
+            canvas.drawBitmap(logo, src, dest, null);
+
+            m_splash_screen = new ImageView(this);
+            m_splash_screen.setBackgroundColor(Color.argb(255, 168, 168, 168));
+            m_splash_screen.setImageDrawable(new BitmapDrawable(getResources(),
+                scaled));
+            addContentView(m_splash_screen, ll_param);
+        }
+        catch (Exception e) {}
+        finally
+        {
+            try
+            {
+                if (istr != null)
+                    istr.close();
+            }
+            catch(Exception e) {}
+        }
+    }
+    // ------------------------------------------------------------------------
+    private void disableRuStoreLauncherActivity()
+    {
+        ComponentName launcher_activity =
+            new ComponentName(this, RUSTORE_LAUNCHER_ACTIVITY);
+        getPackageManager().setComponentEnabledSetting(
+            launcher_activity,
+            PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+            PackageManager.DONT_KILL_APP);
+    }
+    // ------------------------------------------------------------------------
+    @Override
+    public void onStart()
+    {
+        super.onStart();
+        m_keyboard_height.set(0);
+        m_moved_height.set(0);
+        bindGameControlService();
+        m_motorica_handler.removeCallbacks(m_motorica_watchdog);
+        m_motorica_handler.postDelayed(m_motorica_watchdog, 250L);
+    }
+    // ------------------------------------------------------------------------
+    @Override
+    public void onPause()
+    {
+        super.onPause();
+        hideKeyboardNative(false/*clear_text*/);
+        if (SDLActivity.mSDLThread != null && s_motorica_natives_ready)
+            pauseRenderingJNI();
+    }
+    // ------------------------------------------------------------------------
+    @Override
+    public void onDestroy()
+    {
+        if (m_motorica_handler != null)
+            m_motorica_handler.removeCallbacksAndMessages(null);
+        unbindGameControlService();
+        dismissConnectionLostDialog();
+        if (m_motorica_required_dialog != null)
+        {
+            try
+            {
+                m_motorica_required_dialog.dismiss();
+            }
+            catch (RuntimeException e)
+            {
+                Log.w(TAG, LOG_PREFIX + "Failed to dismiss Motorica required dialog", e);
+            }
+            m_motorica_required_dialog = null;
+        }
+        m_pending_game_control_snapshot = null;
+        if (s_current_activity != null &&
+            s_current_activity.get() == this)
+            s_current_activity = null;
+        super.onDestroy();
+    }
+    // ------------------------------------------------------------------------
+    /* SDL manually dlopen main to allow unload after main thread exit. */
+    protected String[] getLibraries()
+    {
+        return new String[]{ "SDL2" };
+    }
+    // ------------------------------------------------------------------------
+    protected String getMainSharedObject()
+    {
+        return getContext().getApplicationInfo().nativeLibraryDir + "/libmain.so";
+    }
+    // ------------------------------------------------------------------------
+    public void showKeyboard(final int type, final int y)
+    {
+        final Context context = this;
+        // Need to run in ui thread as it access the view m_fluxara_drift_edittext
+        runOnUiThread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                m_bottom_y = y;
+                InputMethodManager imm = (InputMethodManager)
+                    getSystemService(Context.INPUT_METHOD_SERVICE);
+                if (imm == null)
+                    return;
+
+                if (m_fluxara_drift_edittext == null)
+                    createFLUXARA_DRIFTEditText();
+
+                m_fluxara_drift_edittext.configType(type);
+                m_fluxara_drift_edittext.setVisibility(View.VISIBLE);
+                m_fluxara_drift_edittext.requestFocus();
+
+                imm.showSoftInput(m_fluxara_drift_edittext,
+                    InputMethodManager.SHOW_FORCED);
+            }
+        });
+    }
+    // ------------------------------------------------------------------------
+    /* Called by FLUXARA_DRIFT in JNI. */
+    public void hideKeyboard(final boolean clear_text)
+    {
+        runOnUiThread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                m_bottom_y = 0;
+                hideKeyboardNative(clear_text);
+            }
+        });
+    }
+    // ------------------------------------------------------------------------
+    /* Called by FLUXARA_DRIFT in JNI. */
+    public void fromFLUXARA_DRIFTEditBox(final int widget_id, final String text,
+                               final int selection_start,
+                               final int selection_end, final int type)
+    {
+        runOnUiThread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                if (m_fluxara_drift_edittext == null)
+                    createFLUXARA_DRIFTEditText();
+                m_fluxara_drift_edittext.configType(type);
+                m_fluxara_drift_edittext.setTextFromFLUXARA_DRIFT(widget_id, text, selection_start,
+                    selection_end);
+            }
+        });
+    }
+    // ------------------------------------------------------------------------
+    public String[] getDNSTxtRecords(String domain)
+    {
+        try
+        {
+            ResolverResult<TXT> txts =
+                DnssecResolverApi.INSTANCE.resolve(domain, TXT.class);
+            Set<TXT> ans = txts.getAnswers();
+            String[] result = new String[ans.size()];
+            int i = 0;
+            for (TXT t : ans)
+                result[i++] = t.getText();
+            return result;
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            return new String[0];
+        }
+    }
+    // ------------------------------------------------------------------------
+    public void getDNSSrvRecords(String domain)
+    {
+        try
+        {
+            ResolverResult<SRV> srvs =
+                DnssecResolverApi.INSTANCE.resolve(domain, SRV.class);
+            Set<SRV> ans = srvs.getAnswers();
+            for (SRV s : ans)
+                addDNSSrvRecords(s.target.toString() + ":" + s.port, s.weight);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+    // ------------------------------------------------------------------------
+    public boolean isHardwareKeyboardConnected()
+    {
+        return getResources().getConfiguration()
+            .keyboard == Configuration.KEYBOARD_QWERTY;
+    }
+    // ------------------------------------------------------------------------
+    public int getScreenSize()
+    {
+        return getResources().getConfiguration().screenLayout &
+            Configuration.SCREENLAYOUT_SIZE_MASK;
+    }
+    // ------------------------------------------------------------------------
+    public float getTopPadding()                      { return m_top_padding; }
+    // ------------------------------------------------------------------------
+    public float getBottomPadding()                { return m_bottom_padding; }
+    // ------------------------------------------------------------------------
+    public float getLeftPadding()                    { return m_left_padding; }
+    // ------------------------------------------------------------------------
+    public float getRightPadding()                  { return m_right_padding; }
+    // ------------------------------------------------------------------------
+    public int getInitialOrientation()         { return m_intial_orientation; }
+    // ------------------------------------------------------------------------
+
+    public void showExtractProgress(final int progress)
+    {
+        runOnUiThread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                if (progress == -1)
+                {
+                    if (m_progress_dialog != null)
+                    {
+                        m_progress_dialog.dismiss();
+                        m_progress_dialog = null;
+                        m_progress_bar = null;
+                    }
+                    AlertDialog.Builder error =
+                        new AlertDialog.Builder(SDL.getContext());
+                    error.setMessage(getString(R.string.po_extract_error_msg));
+                    error.setTitle(getString(R.string.po_extract_error));
+                    error.setPositiveButton(getString(R.string.po_quit),
+                        new DialogInterface.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(DialogInterface dialog,
+                                                int id)
+                            {
+                                android.os.Process.killProcess(
+                                    android.os.Process.myPid());
+                            }
+                        });
+                    error.setCancelable(false);
+                    error.create().show();
+                    return;
+                }
+                if (progress == 0 && m_progress_dialog == null)
+                    showExtractProgressPrivate();
+                else if (progress == 100 && m_progress_dialog != null)
+                {
+                    m_progress_dialog.dismiss();
+                    m_progress_dialog = null;
+                    m_progress_bar = null;
+                }
+                else if (m_progress_bar != null &&
+                    m_progress_bar.getProgress() != progress)
+                {
+                    m_progress_bar.setProgress(progress);
+                }
+            }
+        });
+
+    }
+    // ------------------------------------------------------------------------
+    public void hideSplashScreen()
+    {
+        if (m_splash_screen != null)
+        {
+            m_splash_screen.animate().setDuration(200).alpha(0).setListener(
+            new AnimatorListenerAdapter()
+            {
+                @Override
+                public void onAnimationEnd(Animator animation)
+                {
+                    if (m_splash_screen.getParent() instanceof ViewGroup)
+                    {
+                        ViewGroup view = (ViewGroup)m_splash_screen.getParent();
+                        view.removeView(m_splash_screen);
+                        m_splash_screen = null;
+                    }
+                }
+            });
+        }
+    }
+    // ------------------------------------------------------------------------
+    @Override
+    public void onAttachedToWindow()
+    {
+        super.onAttachedToWindow();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
+        {
+            DisplayCutout dc = getWindow().getDecorView().getRootWindowInsets()
+                .getDisplayCutout();
+            if (dc != null)
+            {
+                m_top_padding = (float)dc.getBoundingRectTop().height();
+                m_bottom_padding = (float)dc.getBoundingRectBottom().height();
+                m_left_padding = (float)dc.getBoundingRectLeft().width();
+                m_right_padding = (float)dc.getBoundingRectRight().width();
+                // Left or right will depend on the device initial orientation
+                // So save it for dealing with device rotation later
+                m_intial_orientation = SDLActivity.getCurrentOrientation();
+            }
+        }
+    }
+    // ------------------------------------------------------------------------
+    @Override
+    public void onMultiWindowModeChanged(boolean isInMultiWindowMode,
+                                         Configuration newConfig)
+    {
+        handlePadding(isInMultiWindowMode);
+    }
+    // ------------------------------------------------------------------------
+    public int getKeyboardHeight()          { return m_keyboard_height.get(); }
+    // ------------------------------------------------------------------------
+    public int getMovedHeight()                { return m_moved_height.get(); }
+    // ------------------------------------------------------------------------
+    public String getLocaleString()
+    {
+        String language = "";
+        if (mCurrentLocale != null)
+        {
+            language = mCurrentLocale.getLanguage();
+            if (language == "iw")
+                language = "he";
+            else if (language == "in")
+                language = "id";
+            else if (language == "ji")
+                language = "yi";
+            String country = mCurrentLocale.getCountry();
+            if (country != "")
+                language += "_" + country;
+        }
+        return language;
+    }
+
+}

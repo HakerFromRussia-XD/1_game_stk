@@ -1,6 +1,6 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //
-//  Copyright (C) 2012-2015 SuperTuxKart-Team
+//  Copyright (C) 2012-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -29,5 +29,5 @@ static const char* endianness_test_ptr = (const char*)&endianness_test;
 // in little-endian, byte 0 will be 0. in big endian, byte 0 will be 1
 const bool IS_LITTLE_ENDIAN = (endianness_test_ptr[0] == 0);
 
-// "SUPERTUXKART_VERSION" is defined from CMakeLists.txt from the project version
-const char STK_VERSION[] = SUPERTUXKART_VERSION;
+// "FLUXARA_DRIFT_BUILD_VERSION" is defined by CMake from the project version.
+const char FLUXARA_DRIFT_VERSION[] = FLUXARA_DRIFT_BUILD_VERSION;

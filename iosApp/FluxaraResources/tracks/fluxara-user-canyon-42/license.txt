@@ -25,10 +25,10 @@ metal_transfo.png
 mars_eye.png
 mars_nose.jpg
 crate_msg.png
-	from stk-media-repo/tracks/hacienda/
+	from fluxara_drift-media-repo/tracks/hacienda/
 
 road.png
-	mixed from stk_generic_plasticFabric_a_edit.png and sandtrack road.jpg
+	mixed from fluxara_drift_generic_plasticFabric_a_edit.png and sandtrack road.jpg
 	(original road.jpg by ctdabomb released under CC BY-SA 3.0)
 
 
@@ -44,13 +44,13 @@ sky*.png
 	License: CC-BY-SA 4.0
 
 gfx_whiteBeam_a.png
-stk_blueMetal_a.png
-stk_generic_plasticFabric_a_edit.png
-stk_generic_rockStrata_b_edit*.png
-	edit from original stk textures
+fluxara_drift_blueMetal_a.png
+fluxara_drift_generic_plasticFabric_a_edit.png
+fluxara_drift_generic_rockStrata_b_edit*.png
+	edit from original fluxara_drift textures
 
 rock_mesh*.png
-	based on stk_generic_rockStrata_b.png
+	based on fluxara_drift_generic_rockStrata_b.png
 
 tank_1_*.png
 	from own model, CC0
@@ -87,28 +87,28 @@ concrete barriers from https://opengameart.org/content/concrete-barriers (CC0, b
 
 library nodes:
 
-stklib_container_a
+fluxara_driftlib_container_a
 	model from me, texture from BMacZero (CC0)
 	see https://opengameart.org/content/us-navy-seabee-equipment-container
 	and https://opengameart.org/content/container-0
 
-stklib_barrel_a
+fluxara_driftlib_barrel_a
 	model and texture from from https://opengameart.org/content/barreloil02 (CC0, by yughues)
 	barrel.png modified (added hazard warning symbol from openclipart: https://openclipart.org/detail/14430/biological-hazard-warning-sign, CC0)
 
-stklib_military_vehicle_a
+fluxara_driftlib_military_vehicle_a
 	model and texture based on
 	https://opengameart.org/content/willys-jeep-asset (CC-BY-SA 3.0, by Johannes Nienaber Videogame Development)
 
-stklib_ssaoVan_a
-	model from stklib_tvVan_a
+fluxara_driftlib_ssaoVan_a
+	model from fluxara_driftlib_tvVan_a
 	texture from GeekPenguinBR, see https://forum.freegamedev.net/viewtopic.php?f=18&t=8214&start=25#p79657 (BSD / GPL license)
 	normal map from MR.XX99, see https://forum.freegamedev.net/viewtopic.php?f=18&t=8214&start=25#p81436
 
-stklib_cactus_a
+fluxara_driftlib_cactus_a
 	model and texture from https://opengameart.org/content/freebies-mundo-commissions (CC0, by yughues)
 
-stklib_concrete_barrier_a (model and textures)
+fluxara_driftlib_concrete_barrier_a (model and textures)
 	from https://opengameart.org/content/concrete-barriers (CC0, by yughues)
 
 

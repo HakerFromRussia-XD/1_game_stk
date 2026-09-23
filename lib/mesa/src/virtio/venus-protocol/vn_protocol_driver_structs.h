@@ -2364,10 +2364,10 @@ vn_encode_VkCopyAccelerationStructureToMemoryInfoKHR(struct vn_cs_encoder *enc, 
     vn_encode_VkCopyAccelerationStructureToMemoryInfoKHR_self(enc, val);
 }
 
-/* union VkDeviceOrHostAddressConstKHR */
+/* union VkDeviceOrHostAddressConfluxara_driftHR */
 
 static inline size_t
-vn_sizeof_VkDeviceOrHostAddressConstKHR(const VkDeviceOrHostAddressConstKHR *val)
+vn_sizeof_VkDeviceOrHostAddressConfluxara_driftHR(const VkDeviceOrHostAddressConfluxara_driftHR *val)
 {
     static const uint32_t tag = 0; /* union with default tag */
     size_t size = vn_sizeof_uint32_t(&tag);
@@ -2388,7 +2388,7 @@ vn_sizeof_VkDeviceOrHostAddressConstKHR(const VkDeviceOrHostAddressConstKHR *val
 }
 
 static inline void
-vn_encode_VkDeviceOrHostAddressConstKHR(struct vn_cs_encoder *enc, const VkDeviceOrHostAddressConstKHR *val)
+vn_encode_VkDeviceOrHostAddressConfluxara_driftHR(struct vn_cs_encoder *enc, const VkDeviceOrHostAddressConfluxara_driftHR *val)
 {
     static const uint32_t tag = 0; /* union with default tag */
     vn_encode_uint32_t(enc, &tag);
@@ -2420,7 +2420,7 @@ vn_sizeof_VkCopyMemoryToAccelerationStructureInfoKHR_self(const VkCopyMemoryToAc
 {
     size_t size = 0;
     /* skip val->{sType,pNext} */
-    size += vn_sizeof_VkDeviceOrHostAddressConstKHR(&val->src);
+    size += vn_sizeof_VkDeviceOrHostAddressConfluxara_driftHR(&val->src);
     size += vn_sizeof_VkAccelerationStructureKHR(&val->dst);
     size += vn_sizeof_VkCopyAccelerationStructureModeKHR(&val->mode);
     return size;
@@ -2449,7 +2449,7 @@ static inline void
 vn_encode_VkCopyMemoryToAccelerationStructureInfoKHR_self(struct vn_cs_encoder *enc, const VkCopyMemoryToAccelerationStructureInfoKHR *val)
 {
     /* skip val->{sType,pNext} */
-    vn_encode_VkDeviceOrHostAddressConstKHR(enc, &val->src);
+    vn_encode_VkDeviceOrHostAddressConfluxara_driftHR(enc, &val->src);
     vn_encode_VkAccelerationStructureKHR(enc, &val->dst);
     vn_encode_VkCopyAccelerationStructureModeKHR(enc, &val->mode);
 }
@@ -2478,12 +2478,12 @@ vn_sizeof_VkAccelerationStructureGeometryTrianglesDataKHR_self(const VkAccelerat
     size_t size = 0;
     /* skip val->{sType,pNext} */
     size += vn_sizeof_VkFormat(&val->vertexFormat);
-    size += vn_sizeof_VkDeviceOrHostAddressConstKHR(&val->vertexData);
+    size += vn_sizeof_VkDeviceOrHostAddressConfluxara_driftHR(&val->vertexData);
     size += vn_sizeof_VkDeviceSize(&val->vertexStride);
     size += vn_sizeof_uint32_t(&val->maxVertex);
     size += vn_sizeof_VkIndexType(&val->indexType);
-    size += vn_sizeof_VkDeviceOrHostAddressConstKHR(&val->indexData);
-    size += vn_sizeof_VkDeviceOrHostAddressConstKHR(&val->transformData);
+    size += vn_sizeof_VkDeviceOrHostAddressConfluxara_driftHR(&val->indexData);
+    size += vn_sizeof_VkDeviceOrHostAddressConfluxara_driftHR(&val->transformData);
     return size;
 }
 
@@ -2511,12 +2511,12 @@ vn_encode_VkAccelerationStructureGeometryTrianglesDataKHR_self(struct vn_cs_enco
 {
     /* skip val->{sType,pNext} */
     vn_encode_VkFormat(enc, &val->vertexFormat);
-    vn_encode_VkDeviceOrHostAddressConstKHR(enc, &val->vertexData);
+    vn_encode_VkDeviceOrHostAddressConfluxara_driftHR(enc, &val->vertexData);
     vn_encode_VkDeviceSize(enc, &val->vertexStride);
     vn_encode_uint32_t(enc, &val->maxVertex);
     vn_encode_VkIndexType(enc, &val->indexType);
-    vn_encode_VkDeviceOrHostAddressConstKHR(enc, &val->indexData);
-    vn_encode_VkDeviceOrHostAddressConstKHR(enc, &val->transformData);
+    vn_encode_VkDeviceOrHostAddressConfluxara_driftHR(enc, &val->indexData);
+    vn_encode_VkDeviceOrHostAddressConfluxara_driftHR(enc, &val->transformData);
 }
 
 static inline void
@@ -2542,7 +2542,7 @@ vn_sizeof_VkAccelerationStructureGeometryAabbsDataKHR_self(const VkAccelerationS
 {
     size_t size = 0;
     /* skip val->{sType,pNext} */
-    size += vn_sizeof_VkDeviceOrHostAddressConstKHR(&val->data);
+    size += vn_sizeof_VkDeviceOrHostAddressConfluxara_driftHR(&val->data);
     size += vn_sizeof_VkDeviceSize(&val->stride);
     return size;
 }
@@ -2570,7 +2570,7 @@ static inline void
 vn_encode_VkAccelerationStructureGeometryAabbsDataKHR_self(struct vn_cs_encoder *enc, const VkAccelerationStructureGeometryAabbsDataKHR *val)
 {
     /* skip val->{sType,pNext} */
-    vn_encode_VkDeviceOrHostAddressConstKHR(enc, &val->data);
+    vn_encode_VkDeviceOrHostAddressConfluxara_driftHR(enc, &val->data);
     vn_encode_VkDeviceSize(enc, &val->stride);
 }
 
@@ -2598,7 +2598,7 @@ vn_sizeof_VkAccelerationStructureGeometryInstancesDataKHR_self(const VkAccelerat
     size_t size = 0;
     /* skip val->{sType,pNext} */
     size += vn_sizeof_VkBool32(&val->arrayOfPointers);
-    size += vn_sizeof_VkDeviceOrHostAddressConstKHR(&val->data);
+    size += vn_sizeof_VkDeviceOrHostAddressConfluxara_driftHR(&val->data);
     return size;
 }
 
@@ -2626,7 +2626,7 @@ vn_encode_VkAccelerationStructureGeometryInstancesDataKHR_self(struct vn_cs_enco
 {
     /* skip val->{sType,pNext} */
     vn_encode_VkBool32(enc, &val->arrayOfPointers);
-    vn_encode_VkDeviceOrHostAddressConstKHR(enc, &val->data);
+    vn_encode_VkDeviceOrHostAddressConfluxara_driftHR(enc, &val->data);
 }
 
 static inline void

@@ -18,13 +18,13 @@ namespace irr
 namespace gui
 {
 
-STKModifiedSpriteBank::STKModifiedSpriteBank(IGUIEnvironment* env) :
+FLUXARA_DRIFTModifiedSpriteBank::FLUXARA_DRIFTModifiedSpriteBank(IGUIEnvironment* env) :
     Environment(env), Driver(0)
 {
     m_magic_number = 0xCAFEC001;
 
     #ifdef _DEBUG
-    setDebugName("STKModifiedSpriteBank");
+    setDebugName("FLUXARA_DRIFTModifiedSpriteBank");
     #endif
 
     m_scale = 1.0f;
@@ -36,10 +36,10 @@ STKModifiedSpriteBank::STKModifiedSpriteBank(IGUIEnvironment* env) :
         if (Driver)
             Driver->grab();
     }
-}   // STKModifiedSpriteBank
+}   // FLUXARA_DRIFTModifiedSpriteBank
 
 // ----------------------------------------------------------------------------
-STKModifiedSpriteBank::~STKModifiedSpriteBank()
+FLUXARA_DRIFTModifiedSpriteBank::~FLUXARA_DRIFTModifiedSpriteBank()
 {
     // drop textures
     for (u32 i=0; i<Textures.size(); ++i)
@@ -51,10 +51,10 @@ STKModifiedSpriteBank::~STKModifiedSpriteBank()
         Driver->drop();
 
     m_magic_number = 0xDEADBEEF;
-}   // ~STKModifiedSpriteBank
+}   // ~FLUXARA_DRIFTModifiedSpriteBank
 
 // ----------------------------------------------------------------------------
-core::array< core::rect<s32> >& STKModifiedSpriteBank::getPositions()
+core::array< core::rect<s32> >& FLUXARA_DRIFTModifiedSpriteBank::getPositions()
 {
     assert( m_magic_number == 0xCAFEC001 );
     copy.clear();
@@ -87,21 +87,21 @@ core::array< core::rect<s32> >& STKModifiedSpriteBank::getPositions()
 }   // getPositions
 
 // ----------------------------------------------------------------------------
-core::array< SGUISprite >& STKModifiedSpriteBank::getSprites()
+core::array< SGUISprite >& FLUXARA_DRIFTModifiedSpriteBank::getSprites()
 {
     assert( m_magic_number == 0xCAFEC001 );
     return Sprites;
 }   // getSprites
 
 // ----------------------------------------------------------------------------
-u32 STKModifiedSpriteBank::getTextureCount() const
+u32 FLUXARA_DRIFTModifiedSpriteBank::getTextureCount() const
 {
     assert( m_magic_number == 0xCAFEC001 );
     return Textures.size();
 }   // getTextureCount
 
 // ----------------------------------------------------------------------------
-video::ITexture* STKModifiedSpriteBank::getTexture(u32 index) const
+video::ITexture* FLUXARA_DRIFTModifiedSpriteBank::getTexture(u32 index) const
 {
     assert( m_magic_number == 0xCAFEC001 );
     if (index < Textures.size())
@@ -111,7 +111,7 @@ video::ITexture* STKModifiedSpriteBank::getTexture(u32 index) const
 }   // getTexture
 
 // ----------------------------------------------------------------------------
-void STKModifiedSpriteBank::addTexture(video::ITexture* texture)
+void FLUXARA_DRIFTModifiedSpriteBank::addTexture(video::ITexture* texture)
 {
     assert( m_magic_number == 0xCAFEC001 );
     if (texture)
@@ -121,7 +121,7 @@ void STKModifiedSpriteBank::addTexture(video::ITexture* texture)
 }   // addTexture
 
 // ----------------------------------------------------------------------------
-void STKModifiedSpriteBank::setTexture(u32 index, video::ITexture* texture)
+void FLUXARA_DRIFTModifiedSpriteBank::setTexture(u32 index, video::ITexture* texture)
 {
     assert( m_magic_number == 0xCAFEC001 );
     while (index >= Textures.size())
@@ -138,7 +138,7 @@ void STKModifiedSpriteBank::setTexture(u32 index, video::ITexture* texture)
 
 // ----------------------------------------------------------------------------
 //! clear everything
-void STKModifiedSpriteBank::clear()
+void FLUXARA_DRIFTModifiedSpriteBank::clear()
 {
     assert( m_magic_number == 0xCAFEC001 );
     // drop textures
@@ -153,7 +153,7 @@ void STKModifiedSpriteBank::clear()
 // ----------------------------------------------------------------------------
 /** Add the texture and use it for a single non-animated sprite.
  */
-s32 STKModifiedSpriteBank::addTextureAsSprite(video::ITexture* texture)
+s32 FLUXARA_DRIFTModifiedSpriteBank::addTextureAsSprite(video::ITexture* texture)
 {
     assert( m_magic_number == 0xCAFEC001 );
     if ( !texture )
@@ -182,7 +182,7 @@ s32 STKModifiedSpriteBank::addTextureAsSprite(video::ITexture* texture)
 
 // ----------------------------------------------------------------------------
 //! draws a sprite in 2d with scale and color
-void STKModifiedSpriteBank::draw2DSprite(u32 index,
+void FLUXARA_DRIFTModifiedSpriteBank::draw2DSprite(u32 index,
         const core::position2di& pos,
         const core::rect<s32>* clip, const video::SColor& color,
         u32 starttime, u32 currenttime, bool loop, bool center)
@@ -246,7 +246,7 @@ void STKModifiedSpriteBank::draw2DSprite(u32 index,
      */
     if (FontDrawer::isBatching())
     {
-        // FontDrawing is batching when stk list box widget is drawing text,
+        // FontDrawing is batching when fluxara_drift list box widget is drawing text,
         // so we combine the images to them to make it faster (for example in
         // server list when there are all green tick icons)
         FontDrawer::addGlyph(tex, core::rect<f32>(dest.UpperLeftCorner.X,
@@ -262,7 +262,7 @@ void STKModifiedSpriteBank::draw2DSprite(u32 index,
 }   // draw2DSprite
 
 // ----------------------------------------------------------------------------
-void STKModifiedSpriteBank::draw2DSpriteBatch(const core::array<u32>& indices,
+void FLUXARA_DRIFTModifiedSpriteBank::draw2DSpriteBatch(const core::array<u32>& indices,
                             const core::array<core::position2di>& pos,
                             const core::rect<s32>* clip,
                             const video::SColor& color,
@@ -334,7 +334,7 @@ void STKModifiedSpriteBank::draw2DSpriteBatch(const core::array<u32>& indices,
 }   // draw2DSpriteBatch
 
 // ----------------------------------------------------------------------------
-s32 STKModifiedSpriteBank::getScaledWidth(s32 width) const
+s32 FLUXARA_DRIFTModifiedSpriteBank::getScaledWidth(s32 width) const
 {
     if (m_fixed_scale == 0.0f)
         return (s32)(GUIEngine::getFontHeight() * (float)width * m_scale);
@@ -343,7 +343,7 @@ s32 STKModifiedSpriteBank::getScaledWidth(s32 width) const
 }
 
 // ----------------------------------------------------------------------------
-s32 STKModifiedSpriteBank::getScaledHeight(s32 height) const
+s32 FLUXARA_DRIFTModifiedSpriteBank::getScaledHeight(s32 height) const
 {
     if (m_fixed_scale == 0.0f)
         return (s32)(GUIEngine::getFontHeight() * (float)height * m_scale);

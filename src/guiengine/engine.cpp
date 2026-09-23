@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -93,7 +93,7 @@ namespace GUIEngine
  \section widgets Widgets
  <HR>
 
- This section describes the widgets you can use in STK's GUI XML files. The
+ This section describes the widgets you can use in FLUXARA_DRIFT's GUI XML files. The
  upper-case name starting with WTYPE_* is the internal name of the widget
  (see the WidgetType enum).
 
@@ -299,7 +299,7 @@ namespace GUIEngine
  <em> Name in XML files: </em> \c "icon"
 
  give an icon to the widget. Property contents is the path to the file, by
- default relative to the /data directory of STK (several methods of
+ default relative to the /data directory of FLUXARA_DRIFT (several methods of
  IconButtonWidget and DynamicRibbon can enable you to use absolute paths if
  you wish, however).
 
@@ -582,12 +582,12 @@ namespace GUIEngine
 
  \subsection Widget Widget
 
- SuperTuxKart's GUIEngine::Widget class is a wrapper for the underlying
+ FluxaraDrift's GUIEngine::Widget class is a wrapper for the underlying
  irrlicht classes. This is needed for a couple reasons :
- - irrlicht widgets do not do everything we want; so many STK widgets act as
+ - irrlicht widgets do not do everything we want; so many FLUXARA_DRIFT widgets act as
    composite widgets (create multiple irrlicht widgets and adds logic so they
    behave as a whole to the end-user)
- - STK widgets have a longer life-span than their underlying irrlicht
+ - FLUXARA_DRIFT widgets have a longer life-span than their underlying irrlicht
    counterparts. This is simply an optimisation measure to prevent having to
    seek the file to disk everytime a screen switch occurs.
 
@@ -640,10 +640,10 @@ namespace GUIEngine
  may need to get your hands dirty. Take a look at
  GUIEngine::Screen::manualRemoveWidget() and
  GUIEngine::Screen::manualAddWidget() if you wish to dynamically modify the
- STK widget tree at runtime. If you get into this, be very careful about the
+ FLUXARA_DRIFT widget tree at runtime. If you get into this, be very careful about the
  relationship
- between the STK widget tree and the irrlicht widget tree. If you
- \c manualRemoveWidget() a STK widget that is currently visible on screen,
+ between the FLUXARA_DRIFT widget tree and the irrlicht widget tree. If you
+ \c manualRemoveWidget() a FLUXARA_DRIFT widget that is currently visible on screen,
  this does not remove its associated irrlicht widget; call
  \c widget->getIrrlichtElement()->remove() for that. When you removed a
  widget from a Screen you are also responsible to call
@@ -655,8 +655,8 @@ namespace GUIEngine
  widget so that it is added to the irrlicht GUI environment).
 
  As a final note, note that the GUIEngine::Skin depends on both the irrlicht
- widget and the STK widget to render widgets properly. So adding an irrlicht
- IGUIElement without having its SuperTuxKart GUIEngine::Widget accessible
+ widget and the FLUXARA_DRIFT widget to render widgets properly. So adding an irrlicht
+ IGUIElement without having its FluxaraDrift GUIEngine::Widget accessible
  through the current GUIEngine::Screen (or a modal dialog) may result in
  rendering glitches.
 
@@ -694,11 +694,15 @@ namespace GUIEngine
 #include "states_screens/race_gui_overworld.hpp"
 #include "tips/tips_manager.hpp"
 #include "utils/debug.hpp"
+#ifdef IOS_FLUXARA_DRIFT
+#include "utils/fluxara_orientation_ios.hpp"
+#endif
 #include "utils/string_utils.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 #include "utils/translation.hpp"
 
 #include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <assert.h>
 #include <mutex>
@@ -1469,15 +1473,33 @@ namespace GUIEngine
 
         if (clearIcons) g_loading_icons.clear();
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
         // Fluxara never exposes the upstream loading carousel.  Besides being
         // visually unrelated to the product, those dynamically collected
-        // icons could briefly reveal retired STK UI while a Fluxara screen or
+        // icons could briefly reveal retired FLUXARA_DRIFT UI while a Fluxara screen or
         // race is being prepared.  Keep the interim frame in the same visual
         // family as the destination and deliberately draw no legacy icons.
         core::dimension2d<u32> fluxara_frame_size =
             GUIEngine::getDriver()->getCurrentRenderTargetSize();
-        const bool landscape = fluxara_frame_size.Width > fluxara_frame_size.Height;
+        // Do not ever submit a completed landscape splash to the old
+        // portrait drawable. If iOS has not delivered the new framebuffer
+        // yet, retain a neutral Fluxara blue frame until the next render.
+        // Drawing the artwork here is what causes it to be stretched across
+        // the landscape screen after UIKit rotates that drawable.
+        if (!launching && fluxaraOrientationTransitionPending())
+        {
+            GL32_draw2DRectangle(SColor(255, 12, 31, 76),
+                core::rect<s32>(0, 0, fluxara_frame_size.Width,
+                                 fluxara_frame_size.Height));
+            return;
+        }
+        // The iOS geometry transaction has not necessarily delivered its
+        // resize event yet.  Its old portrait framebuffer must not select the
+        // Home composition for a race load: UIKit would rotate that complete
+        // Home frame sideways (including its logo) while the world loads.
+        // `launching` is the stable route signal here: only app launch may use
+        // the portrait Home art; every race-loading call passes false.
+        const bool landscape = !launching;
         ITexture* fluxara_background = irr_driver->getTexture(
             file_manager->getAsset(landscape ?
                 "gui/fluxara/race/background.png" :
@@ -1486,10 +1508,28 @@ namespace GUIEngine
         {
             const core::dimension2du source_size =
                 fluxara_background->getSize();
+            auto layout_size = fluxara_background->getOriginalSize();
+            if (layout_size.Width == 0 || layout_size.Height == 0)
+                layout_size = source_size;
+            // Loading can run while UIKit is swapping between portrait menus
+            // and the landscape race.  Do not stretch the artwork to the
+            // transient framebuffer: cover it and crop the excess instead.
+            const float cover = std::max(
+                fluxara_frame_size.Width / float(layout_size.Width),
+                fluxara_frame_size.Height / float(layout_size.Height));
+            const float crop_w = fluxara_frame_size.Width / cover;
+            const float crop_h = fluxara_frame_size.Height / cover;
+            const float crop_x = (layout_size.Width - crop_w) * .5f;
+            const float crop_y = (layout_size.Height - crop_h) * .5f;
+            const float sx = source_size.Width / float(layout_size.Width);
+            const float sy = source_size.Height / float(layout_size.Height);
             draw2DImage(fluxara_background,
                 core::rect<s32>(0, 0, fluxara_frame_size.Width,
                                  fluxara_frame_size.Height),
-                core::rect<s32>(0, 0, source_size.Width, source_size.Height),
+                core::rect<s32>(int(std::lround(crop_x * sx)),
+                                int(std::lround(crop_y * sy)),
+                                int(std::lround((crop_x + crop_w) * sx)),
+                                int(std::lround((crop_y + crop_h) * sy))),
                 nullptr, nullptr, true);
         }
         else
@@ -1637,6 +1677,11 @@ namespace GUIEngine
             g_device->setEventReceiver(NULL);
             g_device->run();
             g_device->setEventReceiver(EventHandler::get());
+#ifdef IOS_FLUXARA_DRIFT
+            // SDL posts the iOS geometry event while pumping the drawable.
+            // Apply it before a later loading render queries its dimensions.
+            irr_driver->handleWindowResize();
+#endif
         }
 
         // If launch is finished, pause & display the story mode timers
@@ -1739,13 +1784,13 @@ namespace GUIEngine
     // -----------------------------------------------------------------------
     void disableGraphics()
     {
-        g_is_no_graphics[STKProcess::getType()] = true;
+        g_is_no_graphics[FLUXARA_DRIFTProcess::getType()] = true;
     }   // disableGraphics
 
     // -----------------------------------------------------------------------
     bool isNoGraphics()
     {
-        return g_is_no_graphics[STKProcess::getType()];
+        return g_is_no_graphics[FLUXARA_DRIFTProcess::getType()];
     }   // isNoGraphics
 #endif
 

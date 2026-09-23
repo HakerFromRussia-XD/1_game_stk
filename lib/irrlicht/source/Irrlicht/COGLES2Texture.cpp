@@ -17,10 +17,19 @@
 #include "CColorConverter.h"
 #include "IAttributes.h"
 #include "IrrlichtDevice.h"
+#include "IReadFile.h"
 
 #include "irrString.h"
 
-#ifndef IOS_STK
+#include <algorithm>
+#include <cstring>
+#include <vector>
+
+#ifdef ENABLE_LIBASTCENC
+#include <astcenc.h>
+#endif
+
+#ifndef IOS_FLUXARA_DRIFT
 #include <GLES2/gl2.h>
 #include <GLES2/gl2ext.h>
 #include <EGL/egl.h>
@@ -38,6 +47,143 @@ namespace irr
 {
 namespace video
 {
+
+namespace
+{
+const u8 ASTC_MAGIC[4] = { 0x13, 0xab, 0xa1, 0x5c };
+
+u32 astcRead24(const u8* bytes)
+{
+	return (u32)bytes[0] | ((u32)bytes[1] << 8) | ((u32)bytes[2] << 16);
+}
+
+GLenum astcFormat(u8 block_x, u8 block_y)
+{
+	if (block_x == 6 && block_y == 6)
+		return GL_COMPRESSED_RGBA_ASTC_6x6_KHR;
+	return 0;
+}
+}
+
+// ---------------------------------------------------------------------------
+ITexture* COGLES2Texture::createASTCTexture(io::IReadFile* file,
+	const io::path& name, COGLES2Driver* driver)
+{
+	if (!file || !driver)
+		return 0;
+
+	u8 header[16];
+	file->seek(0);
+	if (file->read(header, sizeof(header)) != sizeof(header) ||
+		memcmp(header, ASTC_MAGIC, sizeof(ASTC_MAGIC)) != 0)
+		return 0;
+
+	const u8 block_x = header[4];
+	const u8 block_y = header[5];
+	const u8 block_z = header[6];
+	const u32 width = astcRead24(header + 7);
+	const u32 height = astcRead24(header + 10);
+	const u32 depth = astcRead24(header + 13);
+	const GLenum format = astcFormat(block_x, block_y);
+	if (!format || block_z != 1 || depth != 1 || width == 0 || height == 0 ||
+		width > driver->MaxTextureSize || height > driver->MaxTextureSize)
+		return 0;
+
+	const u32 block_count_x = (width + block_x - 1) / block_x;
+	const u32 block_count_y = (height + block_y - 1) / block_y;
+	const u32 compressed_size = block_count_x * block_count_y * 16;
+	if (file->getSize() != (long)(sizeof(header) + compressed_size))
+		return 0;
+
+	std::vector<u8> payload(compressed_size);
+	if (file->read(payload.data(), compressed_size) != (s32)compressed_size)
+		return 0;
+
+	if (!driver->queryOpenGLFeature(COGLES2ExtensionHandler::IRR_KHR_texture_compression_astc_ldr))
+	{
+#ifdef ENABLE_LIBASTCENC
+		astcenc_config config;
+		if (astcenc_config_init(ASTCENC_PRF_LDR, block_x, block_y, block_z,
+			ASTCENC_PRE_FASTEST, 0, &config) != ASTCENC_SUCCESS)
+			return 0;
+		astcenc_context* context = 0;
+		if (astcenc_context_alloc(&config, 1, &context) != ASTCENC_SUCCESS)
+			return 0;
+
+		std::vector<u8> decoded(width * height * 4);
+		void* image_data[1] = { decoded.data() };
+		astcenc_image image = { width, height, 1, ASTCENC_TYPE_U8, image_data };
+		astcenc_swizzle swizzle = { ASTCENC_SWZ_R, ASTCENC_SWZ_G,
+			ASTCENC_SWZ_B, ASTCENC_SWZ_A };
+		const astcenc_error result = astcenc_decompress_image(context, payload.data(),
+			compressed_size, &image, &swizzle, 0);
+		astcenc_context_free(context);
+		if (result != ASTCENC_SUCCESS)
+			return 0;
+
+		// Irrlicht's A8R8G8B8 memory layout is BGRA on little-endian iOS.
+		for (u32 offset = 0; offset < decoded.size(); offset += 4)
+			std::swap(decoded[offset], decoded[offset + 2]);
+		IImage* software_image = driver->createImageFromData(ECF_A8R8G8B8,
+			core::dimension2du(width, height), decoded.data(), false);
+		if (!software_image)
+			return 0;
+		ITexture* texture = new COGLES2Texture(software_image, name, 0, driver);
+		software_image->drop();
+		os::Printer::log("Loaded ASTC texture through software fallback", file->getFileName());
+		return texture;
+#else
+		return 0;
+#endif
+	}
+
+	COGLES2Texture* texture = new COGLES2Texture(name, driver);
+	texture->ImageSize = core::dimension2du(width, height);
+	texture->TextureSize = texture->ImageSize;
+	texture->ColorFormat = ECF_A8R8G8B8;
+	texture->HasMipMaps = driver->getTextureCreationFlag(ETCF_CREATE_MIP_MAPS);
+	texture->AutomaticMipmapUpdate = false;
+	texture->InternalFormat = format;
+	texture->PixelFormat = GL_RGBA;
+	texture->PixelType = GL_UNSIGNED_BYTE;
+
+	glGenTextures(1, &texture->TextureName);
+	driver->setActiveTexture(0, texture);
+	driver->getBridgeCalls()->setTexture(0);
+	glCompressedTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0,
+		compressed_size, payload.data());
+	if (!driver->testGLError() && texture->HasMipMaps)
+	{
+		// Preserve the original loader's mip behaviour without retaining an
+		// uncompressed source image in the bundle. iOS generates the lower
+		// levels on the GPU from the ASTC base level.
+		glGenerateMipmap(GL_TEXTURE_2D);
+		if (driver->testGLError())
+			texture->HasMipMaps = false;
+	}
+	if (texture->HasMipMaps)
+	{
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,
+			GL_LINEAR_MIPMAP_NEAREST);
+		texture->StatesCache.MipMapStatus = true;
+	}
+	else
+	{
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		texture->StatesCache.MipMapStatus = false;
+	}
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	texture->StatesCache.BilinearFilter = true;
+	texture->StatesCache.TrilinearFilter = false;
+	if (driver->testGLError())
+	{
+		texture->drop();
+		return 0;
+	}
+
+	os::Printer::log("Loaded ASTC texture", file->getFileName());
+	return texture;
+}
 
 //! constructor for usual textures
 COGLES2Texture::COGLES2Texture(IImage* origImage, const io::path& name, void* mipmapData, COGLES2Driver* driver)

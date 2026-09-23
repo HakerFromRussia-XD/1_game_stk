@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -53,7 +53,7 @@ void WorldWithRank::init()
     // 3SB now uses WorldWithRank too, so we have to account for spare tire karts
     int sta = RaceManager::get()->getNumSpareTireKarts();
     int kart_num = RaceManager::get()->getNumberOfKarts() - sta;
-    stk_config->getAllScores(&m_score_for_position, kart_num);
+    fluxara_drift_config->getAllScores(&m_score_for_position, kart_num);
 
     Track *track = Track::getCurrentTrack();
     // Don't init track sector if navmesh is not found in arena
@@ -242,7 +242,7 @@ bool WorldWithRank::isOnRoad(unsigned int kart_index) const
  *  case that a collision with the track happens during resetAllKarts: at this
  *  time m_kart_track_sector is not initialised (and has size 0), so it would
  *  trigger this assert. While this normally does not happen, it is useful for
- *  track designers that STK does not crash.
+ *  track designers that FLUXARA_DRIFT does not crash.
  *  \param kart Kart for which to return the sector.
  */
 int WorldWithRank::getSectorForKart(const AbstractKart *kart) const

@@ -5,7 +5,7 @@
 #ifndef HEADER_MOTORICA_STANDALONE_TRAINING_HPP
 #define HEADER_MOTORICA_STANDALONE_TRAINING_HPP
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 
 #include "input/input.hpp"
 #include "input/motorica_game_control_ios.hpp"
@@ -706,6 +706,6 @@ public:
     }
 };
 
-#endif // IOS_STK
+#endif // IOS_FLUXARA_DRIFT
 
 #endif

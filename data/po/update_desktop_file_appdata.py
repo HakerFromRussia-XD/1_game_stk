@@ -18,17 +18,17 @@ def traslate_po(po, translation):
         return ''
     return po[begin : end]
 
-STK_DESCRIPTION = 'A 3D open-source kart racing game'
-STK_DESKTOP_FILE_P1 = """[Desktop Entry]
+FLUXARA_DRIFT_DESCRIPTION = 'A 3D open-source kart racing game'
+FLUXARA_DRIFT_DESKTOP_FILE_P1 = """[Desktop Entry]
 """
-# Split it to avoid SuperTuxKart being translated
-STK_DESKTOP_FILE_P2 = """Name=SuperTuxKart
-Icon=supertuxkart
-StartupWMClass=supertuxkart
+# Split it to avoid FluxaraDrift being translated
+FLUXARA_DRIFT_DESKTOP_FILE_P2 = """Name=FluxaraDrift
+Icon=fluxaradrift
+StartupWMClass=fluxaradrift
 """
-STK_DESKTOP_FILE_P3 = """#I18N: Generic name in desktop file entry, summary in AppData and short description in Google Play
-GenericName=""" + STK_DESCRIPTION + """
-Exec=supertuxkart
+FLUXARA_DRIFT_DESKTOP_FILE_P3 = """#I18N: Generic name in desktop file entry, summary in AppData and short description in Google Play
+GenericName=""" + FLUXARA_DRIFT_DESCRIPTION + """
+Exec=fluxaradrift
 Terminal=false
 StartupNotify=false
 Type=Application
@@ -38,107 +38,107 @@ Keywords=tux;game;race;
 PrefersNonDefaultGPU=true
 """
 
-desktop_file = open('supertuxkart.desktop', 'w')
-desktop_file.write(STK_DESKTOP_FILE_P1 + STK_DESKTOP_FILE_P3)
+desktop_file = open('fluxaradrift.desktop', 'w')
+desktop_file.write(FLUXARA_DRIFT_DESKTOP_FILE_P1 + FLUXARA_DRIFT_DESKTOP_FILE_P3)
 desktop_file.close()
 
-STK_APPDATA_P1 = 'Karts. Nitro. Action! SuperTuxKart is a 3D open-source arcade racer \
+FLUXARA_DRIFT_APPDATA_P1 = 'Karts. Nitro. Action! FluxaraDrift is a 3D open-source arcade racer \
 with a variety of characters, tracks, and modes to play. \
 Our aim is to create a game that is more fun than realistic, \
 and provide an enjoyable experience for all ages.'
-STK_APPDATA_P2 = 'We have several tracks with various themes for players to enjoy, \
+FLUXARA_DRIFT_APPDATA_P2 = 'We have several tracks with various themes for players to enjoy, \
 from driving underwater, rural farmlands, jungles or even in space! \
 Try your best while avoiding other karts as they may overtake you, \
 but don\'t eat the bananas! Watch for bowling balls, plungers, bubble gum, \
 and cakes thrown by your opponents.'
-STK_APPDATA_P3 = 'You can do a single race against other karts, \
+FLUXARA_DRIFT_APPDATA_P3 = 'You can do a single race against other karts, \
 compete in one of several Grand Prix, \
 try to beat the high score in time trials on your own, \
 play battle mode against the computer or your friends, \
 and more! For a greater challenge, join online and meet players from all over the world \
 and prove your racing skills!'
 # Used in google play only for now
-STK_APPDATA_P4 = 'This game has no ads.'
+FLUXARA_DRIFT_APPDATA_P4 = 'This game has no ads.'
 # Used in google play beta only for now
-STK_APPDATA_P5 = 'This is an unstable version of SuperTuxKart that contains latest improvements. \
-It is released mainly for testing, to make stable STK as good as possible.'
-STK_APPDATA_P6 = 'This version can be installed in parallel with the stable version on the device.'
-STK_APPDATA_P7 = 'If you need more stability, consider using the stable version: %s'
-STK_STABLE_URL = 'https://play.google.com/store/apps/details?id=org.supertuxkart.stk'
+FLUXARA_DRIFT_APPDATA_P5 = 'This is an unstable version of FluxaraDrift that contains latest improvements. \
+It is released mainly for testing, to make stable FLUXARA_DRIFT as good as possible.'
+FLUXARA_DRIFT_APPDATA_P6 = 'This version can be installed in parallel with the stable version on the device.'
+FLUXARA_DRIFT_APPDATA_P7 = 'If you need more stability, consider using the stable version: %s'
+FLUXARA_DRIFT_STABLE_URL = 'https://play.google.com/store/apps/details?id=org.fluxaradrift.fluxara_drift'
 
-STK_APPDATA_FILE_1 = """<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+FLUXARA_DRIFT_APPDATA_FILE_1 = """<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 <component type=\"desktop-application\">
-  <id>net.supertuxkart.SuperTuxKart</id>
+  <id>net.fluxaradrift.FluxaraDrift</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
-  <launchable type="desktop-id">supertuxkart.desktop</launchable>
+  <launchable type="desktop-id">fluxaradrift.desktop</launchable>
 """
-# Split it to avoid SuperTuxKart being translated
-STK_APPDATA_FILE_2 = """  <name>SuperTuxKart</name>
+# Split it to avoid FluxaraDrift being translated
+FLUXARA_DRIFT_APPDATA_FILE_2 = """  <name>FluxaraDrift</name>
 """
-STK_APPDATA_FILE_3 = """  <summary>""" + STK_DESCRIPTION + """</summary>
+FLUXARA_DRIFT_APPDATA_FILE_3 = """  <summary>""" + FLUXARA_DRIFT_DESCRIPTION + """</summary>
   <description>
     <p>
-      """ + STK_APPDATA_P1 + """
+      """ + FLUXARA_DRIFT_APPDATA_P1 + """
     </p>
     <p>
-      """ + STK_APPDATA_P2 + """
+      """ + FLUXARA_DRIFT_APPDATA_P2 + """
     </p>
     <p>
-      """ + STK_APPDATA_P3 + """
+      """ + FLUXARA_DRIFT_APPDATA_P3 + """
     </p>
 """
-STK_APPDATA_FILE_4 = """    <p>
-      """ + STK_APPDATA_P4 + """
+FLUXARA_DRIFT_APPDATA_FILE_4 = """    <p>
+      """ + FLUXARA_DRIFT_APPDATA_P4 + """
     </p>
     <p>
-      """ + STK_APPDATA_P5 + """
+      """ + FLUXARA_DRIFT_APPDATA_P5 + """
     </p>
     <p>
-      """ + STK_APPDATA_P6 + """
+      """ + FLUXARA_DRIFT_APPDATA_P6 + """
     </p>
     <p>
-      """ + STK_APPDATA_P7 + """
+      """ + FLUXARA_DRIFT_APPDATA_P7 + """
     </p>
 """
-STK_APPDATA_FILE_5 = """  </description>
+FLUXARA_DRIFT_APPDATA_FILE_5 = """  </description>
   <branding>
     <color type="primary" scheme_preference="light">#7c6e6e</color>
     <color type="primary" scheme_preference="dark">#392828</color>
   </branding>
   <screenshots>
     <screenshot type=\"default\">
-      <image>https://supertuxkart.net/assets/wiki/STK1.3_1.jpg</image>
+      <image>https://fluxaradrift.net/assets/wiki/FLUXARA_DRIFT1.3_1.jpg</image>
       <caption>Normal Race</caption>
     </screenshot>
     <screenshot>
-      <image>https://supertuxkart.net/assets/wiki/STK1.3_5.jpg</image>
+      <image>https://fluxaradrift.net/assets/wiki/FLUXARA_DRIFT1.3_5.jpg</image>
       <caption>Battle</caption>
     </screenshot>
     <screenshot>
-      <image>https://supertuxkart.net/assets/wiki/STK1.3_6.jpg</image>
+      <image>https://fluxaradrift.net/assets/wiki/FLUXARA_DRIFT1.3_6.jpg</image>
       <caption>Soccer</caption>
     </screenshot>
   </screenshots>
-  <developer_name>SuperTuxKart Team</developer_name>
-  <update_contact>supertuxkart-devel@lists.sourceforge.net</update_contact>
-  <url type=\"homepage\">https://supertuxkart.net</url>
-  <url type=\"bugtracker\">https://github.com/supertuxkart/stk-code/issues</url>
-  <url type=\"donation\">https://supertuxkart.net/Donate</url>
-  <url type=\"help\">https://supertuxkart.net/Community</url>
-  <url type=\"translate\">https://supertuxkart.net/Translating_STK</url>
-  <url type="faq">https://supertuxkart.net/FAQ</url>
-  <url type="vcs-browser">https://github.com/supertuxkart/stk-code</url>
-  <url type="contribute">https://supertuxkart.net/Community</url>
+  <developer_name>FluxaraDrift Team</developer_name>
+  <update_contact>fluxaradrift-devel@lists.sourceforge.net</update_contact>
+  <url type=\"homepage\">https://fluxaradrift.net</url>
+  <url type=\"bugtracker\">https://github.com/fluxaradrift/fluxara_drift-code/issues</url>
+  <url type=\"donation\">https://fluxaradrift.net/Donate</url>
+  <url type=\"help\">https://fluxaradrift.net/Community</url>
+  <url type=\"translate\">https://fluxaradrift.net/Translating_FLUXARA_DRIFT</url>
+  <url type="faq">https://fluxaradrift.net/FAQ</url>
+  <url type="vcs-browser">https://github.com/fluxaradrift/fluxara_drift-code</url>
+  <url type="contribute">https://fluxaradrift.net/Community</url>
   <content_rating type=\"oars-1.1\">
     <content_attribute id=\"violence-cartoon\">mild</content_attribute>
     <content_attribute id=\"social-chat\">intense</content_attribute>
   </content_rating>
   <languages>
 """
-STK_APPDATA_FILE_6 = """  </languages>
+FLUXARA_DRIFT_APPDATA_FILE_6 = """  </languages>
   <provides>
-    <binary>supertuxkart</binary>
+    <binary>fluxaradrift</binary>
   </provides>
   <supports>
     <control>pointing</control>
@@ -151,22 +151,22 @@ STK_APPDATA_FILE_6 = """  </languages>
 </component>
 """
 
-appdata_file = open('net.supertuxkart.SuperTuxKart.metainfo.xml', 'w')
-appdata_file.write(STK_APPDATA_FILE_1 + STK_APPDATA_FILE_3 + STK_APPDATA_FILE_4 \
-+ STK_APPDATA_FILE_5 + STK_APPDATA_FILE_6)
+appdata_file = open('net.fluxaradrift.FluxaraDrift.metainfo.xml', 'w')
+appdata_file.write(FLUXARA_DRIFT_APPDATA_FILE_1 + FLUXARA_DRIFT_APPDATA_FILE_3 + FLUXARA_DRIFT_APPDATA_FILE_4 \
++ FLUXARA_DRIFT_APPDATA_FILE_5 + FLUXARA_DRIFT_APPDATA_FILE_6)
 appdata_file.close()
 
-os.system('xgettext -j -d supertuxkart --add-comments=\"I18N:\" \
-                    -p ./data/po -o supertuxkart.pot \
-                    --package-name=supertuxkart supertuxkart.desktop net.supertuxkart.SuperTuxKart.metainfo.xml')
+os.system('xgettext -j -d fluxaradrift --add-comments=\"I18N:\" \
+                    -p ./data/po -o fluxaradrift.pot \
+                    --package-name=fluxaradrift fluxaradrift.desktop net.fluxaradrift.FluxaraDrift.metainfo.xml')
 
-desktop_file = open('supertuxkart.desktop', 'w')
-desktop_file.write(STK_DESKTOP_FILE_P1 + STK_DESKTOP_FILE_P2 + STK_DESKTOP_FILE_P3)
+desktop_file = open('fluxaradrift.desktop', 'w')
+desktop_file.write(FLUXARA_DRIFT_DESKTOP_FILE_P1 + FLUXARA_DRIFT_DESKTOP_FILE_P2 + FLUXARA_DRIFT_DESKTOP_FILE_P3)
 desktop_file.close()
 
-appdata = STK_APPDATA_FILE_1 + STK_APPDATA_FILE_2 + STK_APPDATA_FILE_3
+appdata = FLUXARA_DRIFT_APPDATA_FILE_1 + FLUXARA_DRIFT_APPDATA_FILE_2 + FLUXARA_DRIFT_APPDATA_FILE_3
 # Skip google play message
-appdata += STK_APPDATA_FILE_5
+appdata += FLUXARA_DRIFT_APPDATA_FILE_5
 
 # Manually copy zh_TW to zh_HK for fallback
 shutil.copyfile('./data/po/zh_TW.po', './data/po/zh_HK.po')
@@ -205,17 +205,17 @@ for po_filename in po_list:
             appdata += '    <lang>' + cur_lang +'</lang>\n'
 
         if cur_lang != 'fr_CA' and len(sys.argv) == 2 and sys.argv[1] == '--generate-google-play-msg':
-            desc = traslate_po(po, STK_DESCRIPTION)
-            p1 = traslate_po(po, STK_APPDATA_P1)
-            p2 = traslate_po(po, STK_APPDATA_P2)
-            p3 = traslate_po(po, STK_APPDATA_P3)
-            p4 = traslate_po(po, STK_APPDATA_P4)
-            p5 = traslate_po(po, STK_APPDATA_P5)
-            p6 = traslate_po(po, STK_APPDATA_P6)
-            p7 = traslate_po(po, STK_APPDATA_P7)
+            desc = traslate_po(po, FLUXARA_DRIFT_DESCRIPTION)
+            p1 = traslate_po(po, FLUXARA_DRIFT_APPDATA_P1)
+            p2 = traslate_po(po, FLUXARA_DRIFT_APPDATA_P2)
+            p3 = traslate_po(po, FLUXARA_DRIFT_APPDATA_P3)
+            p4 = traslate_po(po, FLUXARA_DRIFT_APPDATA_P4)
+            p5 = traslate_po(po, FLUXARA_DRIFT_APPDATA_P5)
+            p6 = traslate_po(po, FLUXARA_DRIFT_APPDATA_P6)
+            p7 = traslate_po(po, FLUXARA_DRIFT_APPDATA_P7)
             if desc and p1 and p2 and p3 and p4 and p5 and p6 and p7:
                 os.makedirs('./google_play_msg/' + cur_lang)
-                p7 = p7.replace('%s', STK_STABLE_URL)
+                p7 = p7.replace('%s', FLUXARA_DRIFT_STABLE_URL)
                 short = open('./google_play_msg/' + cur_lang + '/short.txt', 'w')
                 short.write(desc)
                 short.close()
@@ -228,14 +228,14 @@ for po_filename in po_list:
                 full_beta.close()
 
 lingas.close()
-appdata += STK_APPDATA_FILE_6
-appdata_file = open('net.supertuxkart.SuperTuxKart.metainfo.xml', 'w')
+appdata += FLUXARA_DRIFT_APPDATA_FILE_6
+appdata_file = open('net.fluxaradrift.FluxaraDrift.metainfo.xml', 'w')
 appdata_file.write(appdata)
 appdata_file.close()
 
-os.system('msgfmt --desktop -d data/po --template supertuxkart.desktop -o data/supertuxkart.desktop')
-os.system('msgfmt --xml -d data/po --template net.supertuxkart.SuperTuxKart.metainfo.xml -o data/net.supertuxkart.SuperTuxKart.metainfo.xml')
-os.remove('./supertuxkart.desktop')
-os.remove('./net.supertuxkart.SuperTuxKart.metainfo.xml')
+os.system('msgfmt --desktop -d data/po --template fluxaradrift.desktop -o data/fluxaradrift.desktop')
+os.system('msgfmt --xml -d data/po --template net.fluxaradrift.FluxaraDrift.metainfo.xml -o data/net.fluxaradrift.FluxaraDrift.metainfo.xml')
+os.remove('./fluxaradrift.desktop')
+os.remove('./net.fluxaradrift.FluxaraDrift.metainfo.xml')
 os.remove('./data/po/LINGUAS')
 os.remove('./data/po/zh_HK.po')

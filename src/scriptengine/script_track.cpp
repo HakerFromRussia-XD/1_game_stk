@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2014-2015  SuperTuxKart Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2014-2015  FluxaraDrift Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -24,7 +24,7 @@
 #include "font/font_manager.hpp"
 #include "graphics/central_settings.hpp"
 #include "graphics/irr_driver.hpp"
-#include "graphics/stk_text_billboard.hpp"
+#include "graphics/fluxara_drift_text_billboard.hpp"
 #include "guiengine/scalable_font.hpp"
 #include "input/device_manager.hpp"
 #include "input/input_device.hpp"
@@ -114,7 +114,7 @@ namespace Scripting
             DigitFace* digit_face = font_manager->getFont<DigitFace>();
             core::vector3df xyz(location->getX(), location->getY(), location->getZ());
 #ifndef SERVER_ONLY
-            STKTextBillboard* tb = new STKTextBillboard(
+            FLUXARA_DRIFTTextBillboard* tb = new FLUXARA_DRIFTTextBillboard(
                 GUIEngine::getSkin()->getColor("font::bottom"),
                 GUIEngine::getSkin()->getColor("font::top"),
                 irr_driver->getSceneManager()->getRootSceneNode(),

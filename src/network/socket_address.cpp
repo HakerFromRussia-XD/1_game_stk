@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2020 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2020 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -17,7 +17,7 @@
 
 #include "network/socket_address.hpp"
 #include "network/network_config.hpp"
-#include "network/stk_ipv6.hpp"
+#include "network/fluxara_drift_ipv6.hpp"
 #include "utils/log.hpp"
 #include "utils/string_utils.hpp"
 

@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2007-2015 Joerg Henrichs
 //
 //  Physics improvements and linear intersection algorithm by
@@ -76,7 +76,7 @@ void Plunger::onFireFlyable()
     const AbstractKart *closest_kart=0;
     Vec3        direction;
     float       kart_dist_2;
-    getClosestKart(&closest_kart, &kart_dist_2, &direction,
+    getClosefluxara_driftart(&closest_kart, &kart_dist_2, &direction,
                    m_owner /* search in front of this kart */, m_reverse_mode);
 
     btTransform kart_transform = m_owner->getAlignedTransform();
@@ -218,7 +218,7 @@ bool Plunger::hit(AbstractKart *kart, PhysicalObject *obj)
     }
     else
     {
-        m_keep_alive = (int16_t)stk_config->time2Ticks(m_owner->getKartProperties()
+        m_keep_alive = (int16_t)fluxara_drift_config->time2Ticks(m_owner->getKartProperties()
             ->getPlungerBandDuration());
         if(kart)
         {

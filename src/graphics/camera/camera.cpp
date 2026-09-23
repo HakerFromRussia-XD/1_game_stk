@@ -1,7 +1,7 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
-//  Copyright (C) 2006-2015 SuperTuxKart-Team, Steve Baker
+//  Copyright (C) 2006-2015 FluxaraDrift-Team, Steve Baker
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -20,7 +20,7 @@
 #include "graphics/camera/camera.hpp"
 
 #include "audio/sfx_manager.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "graphics/camera/camera_debug.hpp"
 #include "graphics/camera/camera_end.hpp"
@@ -131,7 +131,7 @@ Camera::Camera(CameraType type, int camera_index, AbstractKart* kart)
 
     if (RaceManager::get()->getNumLocalPlayers() > 1)
     {
-        m_fov = DEGREE_TO_RAD * stk_config->m_camera_fov
+        m_fov = DEGREE_TO_RAD * fluxara_drift_config->m_camera_fov
           [RaceManager::get()->getNumLocalPlayers() - 1];
     }
     else

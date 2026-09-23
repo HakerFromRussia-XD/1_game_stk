@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
 //  This program is free software; you can redistribute it and/or
@@ -20,7 +20,7 @@
 #include "io/file_manager.hpp"
 #include "graphics/irr_driver.hpp"
 #include "guiengine/engine.hpp"
-#include "guiengine/widgets/CGUISTKListBox.hpp"
+#include "guiengine/widgets/CGUIFLUXARA_DRIFTListBox.hpp"
 #include "guiengine/widgets/icon_button_widget.hpp"
 #include "guiengine/widgets/label_widget.hpp"
 #include "guiengine/widgets/list_widget.hpp"
@@ -28,7 +28,7 @@
 #include "guiengine/widgets/text_box_widget.hpp"
 #include "network/server.hpp"
 #include "network/server_config.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "states_screens/online/networking_lobby.hpp"
 #include "states_screens/online/server_selection.hpp"
 #include "states_screens/state_manager.hpp"
@@ -65,7 +65,7 @@ ServerInfoDialog::ServerInfoDialog(std::shared_ptr<Server> server)
     m_remove_icon = irr_driver->getTexture
         (file_manager->getAsset(FileManager::GUI_ICON, "remove.png"));
 
-    loadFromFile("online/server_info_dialog.stkgui");
+    loadFromFile("online/server_info_dialog.fluxara_driftgui");
     LabelWidget* title = getWidget<LabelWidget>("title");
     title->setText(server->getName(), true);
     // Make sure server name is not clickable for URL
@@ -183,7 +183,7 @@ void ServerInfoDialog::requestJoin()
     {
         ServerConfig::m_private_server_password = "";
     }
-    STKHost::create();
+    FLUXARA_DRIFTHost::create();
     NetworkingLobby::getInstance()->setJoinedServer(m_server);
     ModalDialog::dismiss();
     NetworkingLobby::getInstance()->push();
@@ -269,7 +269,7 @@ void ServerInfoDialog::updateBookmarkStatus(bool change_bookmark)
     {
         if (change_bookmark)
         {
-            bookmarks[key] = StkTime::getTimeSinceEpoch();
+            bookmarks[key] = FluxaraDriftTime::getTimeSinceEpoch();
             uint32_t max_id = 0;
             for (auto& order : bookmarks_order)
             {
@@ -300,9 +300,9 @@ void ServerInfoDialog::updateBookmarkStatus(bool change_bookmark)
     }
     GUIEngine::ListWidget* w =
         ServerSelection::getInstance()->getServerList();
-    CGUISTKListBox* box = NULL;
+    CGUIFLUXARA_DRIFTListBox* box = NULL;
     if (w)
-        box = w->getIrrlichtElement<CGUISTKListBox>();
+        box = w->getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>();
     int old_pos = -1;
     if (box)
         old_pos = box->getScrollBar()->getPos();

@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -27,7 +27,7 @@
 #include "states_screens/dialogs/message_dialog.hpp"
 #include "states_screens/main_menu_screen.hpp"
 #include "utils/extract_mobile_assets.hpp"
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "input/motorica_game_control_ios.hpp"
 #endif
 
@@ -38,7 +38,7 @@ using namespace Online;
 
 // -----------------------------------------------------------------------------
 
-OptionsScreenGeneral::OptionsScreenGeneral() : Screen("options/options_general.stkgui")
+OptionsScreenGeneral::OptionsScreenGeneral() : Screen("options/options_general.fluxara_driftgui")
 {
     m_inited = false;
 }   // OptionsScreenVideo
@@ -79,8 +79,8 @@ void OptionsScreenGeneral::init()
 
     OptionsCommon::setTabStatus();
 
-#ifdef MOBILE_STK
-#ifdef IOS_STK
+#ifdef MOBILE_FLUXARA_DRIFT
+#ifdef IOS_FLUXARA_DRIFT
     if (isMotoricaStandaloneModeIOS())
     {
         // The full catalog belongs to Motorica Start mode.  Direct launches
@@ -92,13 +92,13 @@ void OptionsScreenGeneral::init()
     {
     if (ExtractMobileAssets::hasFullAssets())
     {
-        // I18N: For mobile version for STK, uninstall the downloaded assets
+        // I18N: For mobile version for FLUXARA_DRIFT, uninstall the downloaded assets
         getWidget("assets_settings")->setText(_("Uninstall full game assets"));
     }
     else
     {
-        // I18N: For mobile version for STK, install the full game assets which
-        // will download from stk server
+        // I18N: For mobile version for FLUXARA_DRIFT, install the full game assets which
+        // will download from fluxara_drift server
         getWidget("assets_settings")->setText(_("Install full game assets"));
     }
     if (UserConfigParams::m_internet_status != RequestManager::IPERM_ALLOWED ||
@@ -188,7 +188,7 @@ void OptionsScreenGeneral::eventCallback(Widget* widget, const std::string& name
         assert( handicap != NULL );
         UserConfigParams::m_per_player_difficulty = handicap->getState();
     }
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
     else if (name=="assets_settings")
     {
         if (ExtractMobileAssets::hasFullAssets())
@@ -227,7 +227,7 @@ void OptionsScreenGeneral::setInternetCheckboxes(bool activate)
         chat->setState(UserConfigParams::m_lobby_chat);
         race_chat->setActive(UserConfigParams::m_lobby_chat);
         race_chat->setState(UserConfigParams::m_race_chat);
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
         getWidget("assets_settings")->setActive(true);
 #endif
         }
@@ -236,7 +236,7 @@ void OptionsScreenGeneral::setInternetCheckboxes(bool activate)
         chat->setActive(false);
         //stats->setActive(false);
         race_chat->setActive(false);
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
         getWidget("assets_settings")->setActive(false);
 #endif
         // Disable this, so that the user has to re-check this if

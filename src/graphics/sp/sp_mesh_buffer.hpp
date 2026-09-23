@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -50,7 +50,7 @@ protected:
     std::shared_ptr<SPShader> m_shaders[2];
 
     std::vector<std::tuple<size_t/*first_index_id*/,
-        unsigned/*indices_count*/, Material*> > m_stk_material;
+        unsigned/*indices_count*/, Material*> > m_fluxara_drift_material;
 
     std::vector<std::array<std::shared_ptr<SPTexture>, 6> > m_textures;
 
@@ -92,7 +92,7 @@ public:
 #ifdef _DEBUG
         setDebugName("SMeshBuffer");
 #endif
-        m_stk_material.resize(1, std::make_tuple(0u, 0u, nullptr));
+        m_fluxara_drift_material.resize(1, std::make_tuple(0u, 0u, nullptr));
 
         for (unsigned i = 0; i < DCT_FOR_VAO; i++)
         {
@@ -124,13 +124,13 @@ public:
         }
         else
         {
-            unsigned idx_count = std::get<1>(m_stk_material[material_id]);
+            unsigned idx_count = std::get<1>(m_fluxara_drift_material[material_id]);
             if (idx_count == 0)
                 return;
             glDrawElementsInstanced(GL_TRIANGLES,
                 idx_count,
                 GL_UNSIGNED_SHORT,
-                (void*)(std::get<0>(m_stk_material[material_id]) << 1),
+                (void*)(std::get<0>(m_fluxara_drift_material[material_id]) << 1),
                 (unsigned)m_ins_dat[dct].size());
         }
 #endif
@@ -156,12 +156,12 @@ public:
         }
         if (different_material)
         {
-            m_stk_material.emplace_back(getIndexCount(), spmb->getIndexCount(),
-                std::get<2>(spmb->m_stk_material[0]));
+            m_fluxara_drift_material.emplace_back(getIndexCount(), spmb->getIndexCount(),
+                std::get<2>(spmb->m_fluxara_drift_material[0]));
         }
         else
         {
-            std::get<1>(m_stk_material[0]) += (unsigned)spmb->m_indices.size();
+            std::get<1>(m_fluxara_drift_material[0]) += (unsigned)spmb->m_indices.size();
         }
         m_indices.insert(m_indices.end(), spmb->m_indices.begin(),
             spmb->m_indices.end());
@@ -172,15 +172,15 @@ public:
     // ------------------------------------------------------------------------
     void enableSkinningData()                             { m_skinned = true; }
     // ------------------------------------------------------------------------
-    Material* getSTKMaterial(unsigned first_index = 0) const
+    Material* getFLUXARA_DRIFTMaterial(unsigned first_index = 0) const
     {
-        for (unsigned i = 0; i < m_stk_material.size(); i++)
+        for (unsigned i = 0; i < m_fluxara_drift_material.size(); i++)
         {
-            if (i == unsigned(m_stk_material.size() - 1) ||
-                (first_index >= std::get<0>(m_stk_material[i]) &&
-                first_index < std::get<0>(m_stk_material[i + 1])))
+            if (i == unsigned(m_fluxara_drift_material.size() - 1) ||
+                (first_index >= std::get<0>(m_fluxara_drift_material[i]) &&
+                first_index < std::get<0>(m_fluxara_drift_material[i + 1])))
             {
-                return std::get<2>(m_stk_material[i]);
+                return std::get<2>(m_fluxara_drift_material[i]);
             }
         }
         assert(false);
@@ -192,12 +192,12 @@ public:
     std::array<std::shared_ptr<SPTexture>, 6>&
         getSPTextures(unsigned first_index = 0)
     {
-        assert(m_stk_material.size() == m_textures.size());
-        for (unsigned i = 0; i < m_stk_material.size(); i++)
+        assert(m_fluxara_drift_material.size() == m_textures.size());
+        for (unsigned i = 0; i < m_fluxara_drift_material.size(); i++)
         {
-            if (i == unsigned(m_stk_material.size() - 1) ||
-                (first_index >= std::get<0>(m_stk_material[i]) &&
-                first_index < std::get<0>(m_stk_material[i + 1])))
+            if (i == unsigned(m_fluxara_drift_material.size() - 1) ||
+                (first_index >= std::get<0>(m_fluxara_drift_material[i]) &&
+                first_index < std::get<0>(m_fluxara_drift_material[i + 1])))
             {
                 return m_textures[i];
             }
@@ -213,12 +213,12 @@ public:
         return m_textures[material_id];
     }
     // ------------------------------------------------------------------------
-    std::vector<Material*> getAllSTKMaterials() const
+    std::vector<Material*> getAllFLUXARA_DRIFTMaterials() const
     {
         std::vector<Material*> ret;
-        for (unsigned i = 0; i < m_stk_material.size(); i++)
+        for (unsigned i = 0; i < m_fluxara_drift_material.size(); i++)
         {
-            ret.push_back(std::get<2>(m_stk_material[i]));
+            ret.push_back(std::get<2>(m_fluxara_drift_material[i]));
         }
         return ret;
     }
@@ -276,7 +276,7 @@ public:
         m_indices = std::move(indices);
     }
     // ------------------------------------------------------------------------
-    void setSTKMaterial(Material* m);
+    void setFLUXARA_DRIFTMaterial(Material* m);
     // ------------------------------------------------------------------------
     void reloadTextureCompare();
     // ------------------------------------------------------------------------
@@ -440,7 +440,7 @@ public:
     // ------------------------------------------------------------------------
     virtual u32 getChangedID_Index() const { return 0; }
     // ------------------------------------------------------------------------
-    void disableForMaterial(u32 idx)  { std::get<1>(m_stk_material[idx]) = 0; }
+    void disableForMaterial(u32 idx)  { std::get<1>(m_fluxara_drift_material[idx]) = 0; }
 
 };
 

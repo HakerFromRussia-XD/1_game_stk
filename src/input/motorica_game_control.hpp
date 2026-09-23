@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 
 #ifndef HEADER_MOTORICA_GAME_CONTROL_HPP
 #define HEADER_MOTORICA_GAME_CONTROL_HPP

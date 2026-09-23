@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006,-2015 2007, 2008 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -49,7 +49,7 @@
 #include <jni.h>
 #include "utils/utf8/unchecked.h"
 #include "SDL_system.h"
-#elif defined(MOBILE_STK)
+#elif defined(MOBILE_FLUXARA_DRIFT)
 #include "SDL_locale.h"
 #endif
 
@@ -75,7 +75,7 @@ extern "C" {
 Translations* translations = NULL;
 
 #ifdef LINUX // m_debug
-#define PACKAGE "supertuxkart"
+#define PACKAGE "fluxaradrift"
 #endif
 
 #ifndef SERVER_ONLY
@@ -118,7 +118,7 @@ const LanguageList* Translations::getLanguageList() const
 Translations::Translations() //: m_dictionary_manager("UTF-16")
 {
 #ifndef SERVER_ONLY
-    class StkFileSystem : public tinygettext::FileSystem
+    class FluxaraDriftFileSystem : public tinygettext::FileSystem
     {
     public:
     std::vector<std::string> open_directory(const std::string& pathname)
@@ -144,7 +144,7 @@ Translations::Translations() //: m_dictionary_manager("UTF-16")
         { Log::error("tinygettext", "%s", str.c_str()); });
 
     m_dictionary_manager.set_filesystem(std::unique_ptr<tinygettext::FileSystem>(
-        new StkFileSystem()));
+        new FluxaraDriftFileSystem()));
 
     m_dictionary_manager.add_directory(
                         file_manager->getAsset(FileManager::TRANSLATION,""));
@@ -442,7 +442,7 @@ end:
                 env->DeleteLocalRef(class_native_activity);
             if (native_activity != NULL)
                 env->DeleteLocalRef(native_activity);
-#elif defined(MOBILE_STK)
+#elif defined(MOBILE_FLUXARA_DRIFT)
             SDL_Locale* locale = SDL_GetPreferredLocales();
             if (locale)
             {

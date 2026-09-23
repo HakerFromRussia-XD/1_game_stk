@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2012-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -29,7 +29,7 @@
 #include "input/device_manager.hpp"
 #include "input/input_manager.hpp"
 #include "input/keyboard_device.hpp"
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "input/motorica_standalone_training.hpp"
 #endif
 #include "io/file_manager.hpp"
@@ -48,7 +48,7 @@ namespace
 {
 bool isMotoricaTrainingChallenge(const std::string& challenge_id)
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     return challenge_id == "motorica_precision" ||
            challenge_id == "motorica_reaction" ||
            challenge_id == "motorica_signal_hold";
@@ -167,7 +167,7 @@ bool SelectChallengeDialog::startRace(std::string challenge_id,
     // The standalone Hub is a regular menu, not an overworld.  Consequently
     // it has no ActivePlayer yet, while the original challenge path assumes
     // that the overworld already created one.  Create the missing local
-    // player only for Motorica Signal LAB; the Motorica Start/full-STK path
+    // player only for Motorica Signal LAB; the Motorica Start/full-FLUXARA_DRIFT path
     // keeps the original player lifecycle unchanged.
     if (motorica_training && StateManager::get()->activePlayerCount() == 0)
     {
@@ -231,7 +231,7 @@ bool SelectChallengeDialog::startRace(std::string challenge_id,
         // the AI list empty also prevents the standalone package from
         // resolving any kart from the full Motorica Start asset catalogue.
         RaceManager::get()->setAIKartList(std::vector<std::string>());
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
         MotoricaStandaloneTraining::get()->beginRace();
 #endif
         Log::info("MotoricaHub", "Prepared standalone Signal Lab exercise");
@@ -254,7 +254,7 @@ SelectChallengeDialog::SelectChallengeDialog(const float percentWidth,
                                              std::string challenge_id) :
     ModalDialog(percentWidth, percentHeight)
 {
-    loadFromFile("select_challenge.stkgui");
+    loadFromFile("select_challenge.fluxara_driftgui");
     
     m_challenge_id = challenge_id;
     World::getWorld()->schedulePause(WorldStatus::IN_GAME_MENU_PHASE);
@@ -321,7 +321,7 @@ SelectChallengeDialog::SelectChallengeDialog(const float percentWidth,
     updateSolvedIcon(c, RaceManager::DIFFICULTY_EASY,   "novice",       "cup_bronze.png");
     updateSolvedIcon(c, RaceManager::DIFFICULTY_MEDIUM, "intermediate", "cup_silver.png");
     updateSolvedIcon(c, RaceManager::DIFFICULTY_HARD,   "expert",       "cup_gold.png");
-    updateSolvedIcon(c, RaceManager::DIFFICULTY_BEST,   "supertux",     "cup_platinum.png");
+    updateSolvedIcon(c, RaceManager::DIFFICULTY_BEST,   "fluxara_drift",     "cup_platinum.png");
     
     if (c->getData()->isGrandPrix())
     {
@@ -338,13 +338,13 @@ SelectChallengeDialog::SelectChallengeDialog(const float percentWidth,
     
     if (PlayerManager::getCurrentPlayer()->isLocked("difficulty_best"))
     {
-        getWidget<IconButtonWidget>("supertux")->setBadge(LOCKED_BADGE);
-        getWidget<IconButtonWidget>("supertux")->setActive(false);
+        getWidget<IconButtonWidget>("fluxara_drift")->setBadge(LOCKED_BADGE);
+        getWidget<IconButtonWidget>("fluxara_drift")->setActive(false);
     }
     else
     {
-        getWidget<IconButtonWidget>("supertux")->unsetBadge(LOCKED_BADGE);
-        getWidget<IconButtonWidget>("supertux")->setActive(true);
+        getWidget<IconButtonWidget>("fluxara_drift")->unsetBadge(LOCKED_BADGE);
+        getWidget<IconButtonWidget>("fluxara_drift")->setActive(true);
     }
 
     GUIEngine::RibbonWidget* actions =
@@ -449,7 +449,7 @@ GUIEngine::EventPropagation SelectChallengeDialog::processEvent(const std::strin
             description = getLabel(RaceManager::DIFFICULTY_HARD,   c_stat->getData());
             UserConfigParams::m_difficulty = 2;
         }
-        else if (selected == "supertux")
+        else if (selected == "fluxara_drift")
         {
             description = getLabel(RaceManager::DIFFICULTY_BEST,   c_stat->getData());
             UserConfigParams::m_difficulty = 3;

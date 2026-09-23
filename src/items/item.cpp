@@ -1,7 +1,7 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
-//  Copyright (C) 2006-2015 SuperTuxKart-Team
+//  Copyright (C) 2006-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -59,7 +59,7 @@ ItemState::ItemState(ItemType type, const AbstractKart *owner, int id)
     m_previous_owner = owner;
     m_used_up_counter = -1;
     if (owner)
-        setDeactivatedTicks(stk_config->time2Ticks(1.5f));
+        setDeactivatedTicks(fluxara_drift_config->time2Ticks(1.5f));
     else
         setDeactivatedTicks(0);
 }   // ItemState(ItemType)
@@ -90,7 +90,7 @@ void ItemState::setDisappearCounter()
     switch (m_type)
     {
     case ITEM_BUBBLEGUM:
-        m_used_up_counter = stk_config->m_bubblegum_counter; break;
+        m_used_up_counter = fluxara_drift_config->m_bubblegum_counter; break;
     case ITEM_EASTER_EGG:
         m_used_up_counter = -1; break;
     default:
@@ -138,7 +138,7 @@ void ItemState::collected(const AbstractKart *kart)
     if (m_type == ITEM_EASTER_EGG)
     {
         // They will disappear 'forever'
-        m_ticks_till_return = stk_config->time2Ticks(99999);
+        m_ticks_till_return = fluxara_drift_config->time2Ticks(99999);
     }
     else if (m_used_up_counter > 0)
     {
@@ -146,7 +146,7 @@ void ItemState::collected(const AbstractKart *kart)
         // Deactivates the item for a certain amount of time. It is used to
         // prevent bubble gum from hitting a kart over and over again (in each
         // frame) by giving it time to drive away.
-        m_deactive_ticks = stk_config->time2Ticks(0.5f);
+        m_deactive_ticks = fluxara_drift_config->time2Ticks(0.5f);
         // Set the time till reappear to -1 seconds --> the item will
         // reappear immediately.
         m_ticks_till_return = -1;
@@ -156,21 +156,21 @@ void ItemState::collected(const AbstractKart *kart)
         switch (m_type)
         {
             case ITEM_BONUS_BOX:
-                m_ticks_till_return = stk_config->m_bonusbox_item_return_ticks;
+                m_ticks_till_return = fluxara_drift_config->m_bonusbox_item_return_ticks;
                 break;
             case ITEM_NITRO_BIG:
             case ITEM_NITRO_SMALL:
-                m_ticks_till_return = stk_config->m_nitro_item_return_ticks;
+                m_ticks_till_return = fluxara_drift_config->m_nitro_item_return_ticks;
                 break;
             case ITEM_BANANA:
-                m_ticks_till_return = stk_config->m_banana_item_return_ticks;
+                m_ticks_till_return = fluxara_drift_config->m_banana_item_return_ticks;
                 break;
             case ITEM_BUBBLEGUM:
             case ITEM_BUBBLEGUM_NOLOK:
-                m_ticks_till_return = stk_config->m_bubblegum_item_return_ticks;
+                m_ticks_till_return = fluxara_drift_config->m_bubblegum_item_return_ticks;
                 break;
             default:
-                m_ticks_till_return = stk_config->time2Ticks(2.0f);
+                m_ticks_till_return = fluxara_drift_config->time2Ticks(2.0f);
                 break;
         }
     }
@@ -447,7 +447,7 @@ void Item::updateGraphics(float dt)
         m_graphical_type = getGrahpicalType();
     }
 
-    float time_till_return = stk_config->ticks2Time(getTicksTillReturn());
+    float time_till_return = fluxara_drift_config->ticks2Time(getTicksTillReturn());
     bool is_visible = isAvailable() || time_till_return <= 1.0f ||
                       (getType() == ITEM_BUBBLEGUM &&
                        getOriginalType() == ITEM_NONE && !isUsedUp());
@@ -462,7 +462,7 @@ void Item::updateGraphics(float dt)
         m_node->setScale(core::vector3df(0.0f, 0.0f, 0.0f));
     }
 
-    float time_since_return = stk_config->ticks2Time(
+    float time_since_return = fluxara_drift_config->ticks2Time(
         World::getWorld()->getTicksSinceStart() - m_animation_start_ticks);
 
     if (is_visible)

@@ -1,16 +1,16 @@
 #!/bin/bash
-# convert_to_opus.sh — Convert STK audio assets from OGG/Vorbis to Opus
+# convert_to_opus.sh — Convert FLUXARA_DRIFT audio assets from OGG/Vorbis to Opus
 # and update all XML references.
 #
 # Requires: opusenc (from opus-tools)
 #
 # Usage:
-#   ./tools/convert_to_opus.sh <stk-assets-dir> [--bitrate KBPS] [--dry-run]
+#   ./tools/convert_to_opus.sh <fluxara_drift-assets-dir> [--bitrate KBPS] [--dry-run]
 #
 # Examples:
-#   ./tools/convert_to_opus.sh ../stk-assets
-#   ./tools/convert_to_opus.sh ../stk-assets --bitrate 48
-#   ./tools/convert_to_opus.sh ../stk-assets --dry-run
+#   ./tools/convert_to_opus.sh ../fluxara_drift-assets
+#   ./tools/convert_to_opus.sh ../fluxara_drift-assets --bitrate 48
+#   ./tools/convert_to_opus.sh ../fluxara_drift-assets --dry-run
 
 set -euo pipefail
 
@@ -20,7 +20,7 @@ ASSETS_DIR=""
 
 usage()
 {
-    echo "Usage: $0 <stk-assets-dir> [--bitrate KBPS] [--dry-run]"
+    echo "Usage: $0 <fluxara_drift-assets-dir> [--bitrate KBPS] [--dry-run]"
     echo ""
     echo "  --bitrate KBPS   Opus encoding bitrate in kbps (default: 24)"
     echo "  --dry-run        Show what would be done without making changes"
@@ -53,7 +53,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 if [[ -z "$ASSETS_DIR" ]]; then
-    echo "Error: stk-assets directory not specified"
+    echo "Error: fluxara_drift-assets directory not specified"
     usage
 fi
 

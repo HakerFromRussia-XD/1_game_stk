@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
 //  Copyright (C) 2006-2015 Joerg Henrichs, Steve Baker
 //
@@ -21,7 +21,7 @@
 
 #include "audio/sfx_base.hpp"
 #include "config/player_manager.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "graphics/camera/camera.hpp"
 #include "graphics/camera/camera_normal.hpp"
@@ -30,7 +30,7 @@
 #include "graphics/particle_kind.hpp"
 #include "input/input_manager.hpp"
 #include "input/motorica_game_control.hpp"
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "input/motorica_standalone_training.hpp"
 #endif
 #include "items/attachment.hpp"
@@ -258,17 +258,17 @@ void LocalPlayerController::update(int ticks)
         Log::debug("LocalPlayerController", "irr_driver", "-------------------------------------");
     }
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (MotoricaStandaloneTraining::get()->isActive())
         MotoricaStandaloneTraining::get()->apply(
             this, World::getWorld()->getTime());
 #endif
     MotoricaGameControl::get()->apply(this);
     PlayerController::update(ticks);
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (MotoricaStandaloneTraining::get()->isActive())
         MotoricaStandaloneTraining::get()->observe(
-            m_controls->getSteer(), stk_config->ticks2Time(ticks),
+            m_controls->getSteer(), fluxara_drift_config->ticks2Time(ticks),
             World::getWorld()->getTime(), m_kart->getXYZ().getX(),
             m_kart->getXYZ().getZ());
 #endif
@@ -388,7 +388,7 @@ void LocalPlayerController::setPosition(int p)
  d*/
 void LocalPlayerController::finishedRace(float time)
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     MotoricaStandaloneTraining::get()->finish(time);
 #endif
     // This will implicitly trigger setting the first end camera to be active
@@ -500,7 +500,7 @@ void LocalPlayerController::doCrashHaptics() {
     int now = World::getWorld()->getTicksSinceStart();
     int lastCrash = m_last_crash;
     m_last_crash = now;
-    if ((now - lastCrash) < stk_config->time2Ticks(0.2f))
+    if ((now - lastCrash) < fluxara_drift_config->time2Ticks(0.2f))
         return;
 
     float strength =
@@ -531,7 +531,7 @@ void LocalPlayerController::rumble(float strength_low, float strength_high, uint
 void LocalPlayerController::crashed(const AbstractKart* k) {
     doCrashHaptics();
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     MotoricaStandaloneTraining::get()->recordCollision();
 #endif
 
@@ -541,7 +541,7 @@ void LocalPlayerController::crashed(const AbstractKart* k) {
 void LocalPlayerController::crashed(const Material *m) {
     doCrashHaptics();
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     MotoricaStandaloneTraining::get()->recordCollision();
 #endif
 

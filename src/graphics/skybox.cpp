@@ -1,5 +1,5 @@
- //  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2015 SuperTuxKart-Team
+ //  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -18,7 +18,7 @@
 #ifndef SERVER_ONLY
 
 #include "graphics/skybox.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "graphics/central_settings.hpp"
 #include "graphics/irr_driver.hpp"
 #include "graphics/sp/sp_base.hpp"
@@ -213,7 +213,7 @@ void Skybox::generateCubeMapFromTextures()
 
         if (CVS->isTextureCompressionEnabled())
         {
-            const unsigned tc_flag = squish::kDxt5 | stk_config->m_tc_quality;
+            const unsigned tc_flag = squish::kDxt5 | fluxara_drift_config->m_tc_quality;
 
             unsigned tex_size = GE::get4x4CompressedTextureSize(size, size);
             uint8_t* compressed = new uint8_t[tex_size];

@@ -44,7 +44,7 @@ static const struct gmem_key keys[] = {
    { .minx=0, .miny=0, .width=1024, .height=1024, .gmem_page_align=1, .nr_cbufs=1, .cbuf_cpp = {4,0,0,0,0,0,0,0,}, .zsbuf_cpp = {2,0,}},
 // { .minx=0, .miny=0, .width=64, .height=64, .gmem_page_align=1, .nr_cbufs=1, .cbuf_cpp = {2,0,0,0,0,0,0,0,}, .zsbuf_cpp = {0,0,}},
 
-   /* supertuxkart: */
+   /* fluxaradrift: */
    { .minx=0, .miny=0, .width=1920, .height=1080, .gmem_page_align=1, .nr_cbufs=1, .cbuf_cpp = {4,0,0,0,0,0,0,0,}, .zsbuf_cpp = {0,0,}},
    { .minx=0, .miny=0, .width=1920, .height=1080, .gmem_page_align=1, .nr_cbufs=1, .cbuf_cpp = {4,0,0,0,0,0,0,0,}, .zsbuf_cpp = {2,0,}},
    { .minx=0, .miny=0, .width=810, .height=810, .gmem_page_align=1, .nr_cbufs=2, .cbuf_cpp = {4,4,0,0,0,0,0,0,}, .zsbuf_cpp = {4,0,}},

@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2005 Steve Baker <sjbaker1@airmail.net>
 //  Copyright (C) 2006-2007 Eduardo Hernandez Munoz
 //  Copyright (C) 2008-2015 Joerg Henrichs
@@ -72,7 +72,7 @@ BattleAI::~BattleAI()
  *  \param consider_difficulty If take current difficulty into account.
  *  \param find_sta If find \ref SpareTireAI only.
  */
-void BattleAI::findClosestKart(bool consider_difficulty, bool find_sta)
+void BattleAI::findClosefluxara_driftart(bool consider_difficulty, bool find_sta)
 {
     float distance = 99999.9f;
     int closest_kart_num = 0;
@@ -107,7 +107,7 @@ void BattleAI::findClosestKart(bool consider_difficulty, bool find_sta)
         else if (m_cur_difficulty == RaceManager::DIFFICULTY_BEST &&
             consider_difficulty)
         {
-            // Skip AI players for supertux mode
+            // Skip AI players for fluxara_drift mode
             const AbstractKart* temp = m_world->getKart(start_id);
             if (!(temp->getController()->isPlayerController()))
                 continue;
@@ -126,7 +126,7 @@ void BattleAI::findClosestKart(bool consider_difficulty, bool find_sta)
     m_closest_kart_node = m_world->getSectorForKart(m_closest_kart);
     m_closest_kart_point = m_closest_kart->getXYZ();
 
-}   // findClosestKart
+}   // findClosefluxara_driftart
 
 //-----------------------------------------------------------------------------
 /** Find a suitable target to follow, it will find the closest kart first, it's
@@ -134,7 +134,7 @@ void BattleAI::findClosestKart(bool consider_difficulty, bool find_sta)
  *  account, also collect life from \ref SpareTireAI depends on current
  *  difficulty if actually they are spawned:
  *  \li Novice and intermediate - collect them only AI has 1 life only.
- *  \li Expert and supertux - collect them if AI dones't have 3 lives.
+ *  \li Expert and fluxara_drift - collect them if AI dones't have 3 lives.
  */
 void BattleAI::findTarget()
 {
@@ -160,7 +160,7 @@ void BattleAI::findTarget()
     }
 
     bool consider_difficulty = !find_sta;
-    findClosestKart(consider_difficulty, find_sta);
+    findClosefluxara_driftart(consider_difficulty, find_sta);
 
     // Find a suitable target to drive to, either powerup or kart
     if (m_kart->getPowerup()->getType() == PowerupManager::POWERUP_NOTHING &&

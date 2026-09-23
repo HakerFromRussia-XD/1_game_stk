@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -36,7 +36,7 @@ EnterAddressDialog::EnterAddressDialog(std::shared_ptr<Server>* entered_server)
     : ModalDialog(0.8f, 0.8f, GUIEngine::MODAL_DIALOG_LOCATION_CENTER),
     m_self_destroy(false)
 {
-    loadFromFile("enter_address_dialog.stkgui");
+    loadFromFile("enter_address_dialog.fluxara_driftgui");
     m_text_field = getWidget<GUIEngine::TextBoxWidget>("textfield");
     m_title = getWidget<GUIEngine::LabelWidget>("title");
     m_title->setText(_("Enter the server address optionally followed by : and"
@@ -77,7 +77,7 @@ void EnterAddressDialog::onEnterPressedInternal()
     {
         m_self_destroy = true;
         UserConfigParams::m_address_history[
-            StringUtils::wideToUtf8(m_text_field->getText().trim())] = (uint32_t)StkTime::getTimeSinceEpoch();
+            StringUtils::wideToUtf8(m_text_field->getText().trim())] = (uint32_t)FluxaraDriftTime::getTimeSinceEpoch();
     }
 }   // onEnterPressedInternal
 
@@ -101,7 +101,7 @@ GUIEngine::EventPropagation EnterAddressDialog::processEvent(const std::string& 
             {
                 m_self_destroy = true;
                 UserConfigParams::m_address_history[
-                    StringUtils::wideToUtf8(m_text_field->getText().trim())] = (uint32_t)StkTime::getTimeSinceEpoch();
+                    StringUtils::wideToUtf8(m_text_field->getText().trim())] = (uint32_t)FluxaraDriftTime::getTimeSinceEpoch();
             }
             return GUIEngine::EVENT_BLOCK;
         }
@@ -160,7 +160,7 @@ void EnterAddressDialog::loadList()
         m_list->addItem("list_item",
             std::vector<GUIEngine::ListWidget::ListCell>
             { GUIEngine::ListWidget::ListCell(StringUtils::utf8ToWide(entries[i].first)),
-            GUIEngine::ListWidget::ListCell(StringUtils::utf8ToWide(StkTime::toString(entries[i].second)))});
+            GUIEngine::ListWidget::ListCell(StringUtils::utf8ToWide(FluxaraDriftTime::toString(entries[i].second)))});
         addr[entries[i].first] = entries[i].second;
         if (i >= MAX_ENTRIES - 1)
             break;

@@ -19,6 +19,7 @@ private:
     void refreshLabels();
     void layoutControls();
     irr::video::ITexture* m_art[9] = {};
+    bool m_return_to_paused_race = false;
 
 public:
     void loadedFromFile() OVERRIDE;
@@ -28,6 +29,8 @@ public:
     void onDraw(float dt) OVERRIDE;
     void eventCallback(GUIEngine::Widget* widget, const std::string& name,
                        const int player_id) OVERRIDE;
+    // Opens settings above the race stack; Back restores the pause modal.
+    void openFromPausedRace();
     bool onEscapePressed() OVERRIDE;
 };
 

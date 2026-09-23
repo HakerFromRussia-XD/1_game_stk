@@ -276,7 +276,7 @@ LOCAL_CFLAGS       := -I../lib/irrlicht/source/Irrlicht/ \
                       -Ideps-$(TARGET_ARCH_ABI)/zlib/    \
                       -I../lib/sdl2/include/             \
                       -I../lib/graphics_engine/include   \
-                      -DMOBILE_STK                       \
+                      -DMOBILE_FLUXARA_DRIFT                       \
                       -DANDROID_PACKAGE_CALLBACK_NAME=$(PACKAGE_CALLBACK_NAME)
 LOCAL_CPPFLAGS     := -std=gnu++0x
 LOCAL_STATIC_LIBRARIES := libjpeg png zlib
@@ -345,7 +345,7 @@ endif
 include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
-# STK
+# FLUXARA_DRIFT
 LOCAL_MODULE       := main
 LOCAL_PATH         := .
 LOCAL_CPP_FEATURES += rtti exceptions
@@ -375,7 +375,7 @@ LOCAL_CFLAGS       := -I../lib/angelscript/include      \
                       -Ideps-$(TARGET_ARCH_ABI)/openal/include    \
                       -Ideps-$(TARGET_ARCH_ABI)/mbedtls/include   \
                       -DUSE_GLES2      \
-                      -DMOBILE_STK     \
+                      -DMOBILE_FLUXARA_DRIFT     \
                       -DENABLE_SOUND   \
                       -DENABLE_IPV6    \
                       -DENABLE_CRYPTO_MBEDTLS \
@@ -383,7 +383,7 @@ LOCAL_CFLAGS       := -I../lib/angelscript/include      \
                       -DDISABLE_ICONV  \
                       -DANDROID_PACKAGE_NAME=\"$(PACKAGE_NAME)\"    \
                       -DANDROID_APP_DIR_NAME=\"$(APP_DIR_NAME)\"    \
-                      -DSUPERTUXKART_VERSION=\"$(PROJECT_VERSION)\" \
+                      -DFLUXARA_DRIFT_VERSION=\"$(PROJECT_VERSION)\" \
                       -DANDROID_PACKAGE_CLASS_NAME=\"$(PACKAGE_CLASS_NAME)\"
 LOCAL_CPPFLAGS     := -std=gnu++0x
 

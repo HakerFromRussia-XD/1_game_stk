@@ -10,7 +10,7 @@
     <particles base="smoke.xml" condition="skid drive"/>
   </material>
   <material name="seabed.jpg" reset="Y"/>
-  <material name="stk_generic_sand_a.png" max-speed="0.60">
+  <material name="fluxara_drift_generic_sand_a.png" max-speed="0.60">
     <particles base="smoke.xml" condition="skid drive"/>
   </material>
   <material name="water_light.png" surface="Y" falling-effect="Y" water-splash="Y">

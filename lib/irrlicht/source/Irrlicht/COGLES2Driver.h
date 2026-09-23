@@ -34,7 +34,7 @@ namespace irr
 #include <OpenGLES/ES2/glext.h>
 #elif defined(_IRR_COMPILE_WITH_ANDROID_DEVICE_)
 #include <GLES2/gl2.h>
-#include "stk_android_native_app_glue.h"
+#include "fluxara_drift_android_native_app_glue.h"
 #endif
 
 #ifdef _MSC_VER
@@ -418,6 +418,10 @@ namespace video
 
 		//! returns a device dependent texture from a software surface (IImage)
 		virtual video::ITexture* createDeviceDependentTexture(IImage* surface, const io::path& name, void* mipmapData);
+
+		//! Loads ASTC payloads emitted by the Fluxara iOS packaging stage.
+		virtual video::ITexture* createCompressedTextureFromFile(io::IReadFile* file,
+			const io::path& name);
 
 		//! creates a transposed matrix in supplied GLfloat array to pass to OGLES1
 		inline void createGLMatrix(float gl_matrix[16], const core::matrix4& m);

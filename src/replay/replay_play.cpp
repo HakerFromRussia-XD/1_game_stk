@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2012-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -18,7 +18,7 @@
 
 #include "replay/replay_play.hpp"
 
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "io/file_manager.hpp"
 #include "karts/ghost_kart.hpp"
 #include "karts/controller/ghost_controller.hpp"
@@ -138,7 +138,7 @@ bool ReplayPlay::addReplayFile(const std::string& fn, bool custom_replay, int ca
     }
     else if (version > getCurrentReplayVersion())
     {
-        Log::warn("Replay", "Replay is version '%d', STK replay version is '%d', skipped '%s'",
+        Log::warn("Replay", "Replay is version '%d', FLUXARA_DRIFT replay version is '%d', skipped '%s'",
                   version, getCurrentReplayVersion(), fn.c_str());
         return false;
     }
@@ -148,15 +148,15 @@ bool ReplayPlay::addReplayFile(const std::string& fn, bool custom_replay, int ca
     if (version >= 4)
     {
         fgets(s, 1023, fd);
-        if(sscanf(s, "stk_version: %1023s", s1) != 1)
+        if(sscanf(s, "fluxara_drift_version: %1023s", s1) != 1)
         {
-            Log::warn("Replay", "No STK release version found in replay file, '%s'.", fn.c_str());
+            Log::warn("Replay", "No FLUXARA_DRIFT release version found in replay file, '%s'.", fn.c_str());
             return false;
         }
-        rd.m_stk_version = s1;
+        rd.m_fluxara_drift_version = s1;
     }
     else
-        rd.m_stk_version = "";
+        rd.m_fluxara_drift_version = "";
 
     while(true)
     {
@@ -278,7 +278,7 @@ bool ReplayPlay::addReplayFile(const std::string& fn, bool custom_replay, int ca
     Track* t = track_manager->getTrack(rd.m_track_name);
     if (t == NULL)
     {
-        Log::warn("Replay", "Track '%s' used in replay '%s' not found in STK!",
+        Log::warn("Replay", "Track '%s' used in replay '%s' not found in FLUXARA_DRIFT!",
         rd.m_track_name.c_str(), fn.c_str());
         return false;
     }
@@ -419,13 +419,13 @@ void ReplayPlay::readKartData(FILE *fd, char *next_line, bool second_replay)
                                                              .m_kart_list.size();
 
     ReplayData &rd = m_replay_file_list[replay_index];
-    m_ghost_karts.push_back(std::make_shared<GhostKart>
+    m_ghost_karts.push_back(std::make_shared<Ghofluxara_driftart>
         (rd.m_kart_list.at(kart_num-first_loaded_f_num), kart_num, kart_num + 1,
         rd.m_kart_color.at(kart_num-first_loaded_f_num), rd));
     m_ghost_karts[kart_num]->init(RaceManager::KT_GHOST);
-    Controller* controller = new GhostController(getGhostKart(kart_num).get(),
+    Controller* controller = new GhostController(getGhofluxara_driftart(kart_num).get(),
                                                  rd.m_name_list[kart_num-first_loaded_f_num]);
-    getGhostKart(kart_num)->setController(controller);
+    getGhofluxara_driftart(kart_num)->setController(controller);
 
     unsigned int size;
     if(sscanf(next_line,"size: %u",&size)!=1)
@@ -442,7 +442,7 @@ void ReplayPlay::readKartData(FILE *fd, char *next_line, bool second_replay)
         // Check for EV_TRANSFORM event:
         // -----------------------------
 
-        // Up to STK 0.9.3 replays
+        // Up to FLUXARA_DRIFT 0.9.3 replays
         if (rd.m_replay_version == 3)
         {
             if(sscanf(s, "%f  %f %f %f  %f %f %f %f  %f  %f  %f %f %f %f  %d %d %d %d %d\n",
@@ -490,7 +490,7 @@ void ReplayPlay::readKartData(FILE *fd, char *next_line, bool second_replay)
             }
         }
 
-        //version 4 replays (STK 1.0 and higher)
+        //version 4 replays (FLUXARA_DRIFT 1.0 and higher)
         else
         {
             if(sscanf(s, "%f  %f %f %f  %f %f %f %f  %f  %f  %f %f %f %f %d  %d %f %d %d %d  %f %d %d %d %d %d\n",

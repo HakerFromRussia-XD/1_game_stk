@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
 //  This program is free software; you can redistribute it and/or
@@ -32,9 +32,9 @@
 
 #include <algorithm>
 
-/** Constructor based on XML data received from the stk server.
+/** Constructor based on XML data received from the fluxara_drift server.
  *  \param xml The data for one server as received as part of the
- *         get-all stk-server request.
+ *         get-all fluxara_drift-server request.
  */
 Server::Server(const XMLNode& server_info) : m_supports_encrytion(true)
 {
@@ -157,8 +157,8 @@ Server::Server(const XMLNode& server_info) : m_supports_encrytion(true)
     xml.get("official", &m_official);
     if (m_official)
     {
-        m_server_owner_name = L"\u2606\u2605STK\u2605\u2606";
-        m_server_owner_lower_case_name = "stk";
+        m_server_owner_name = L"\u2606\u2605FLUXARA_DRIFT\u2605\u2606";
+        m_server_owner_lower_case_name = "fluxara_drift";
         return;
     }
 

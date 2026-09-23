@@ -17,7 +17,7 @@ export HOST_X86=i686-linux-android
 export ARCH_X86_64=x86_64
 export HOST_X86_64=x86_64-linux-android
 
-# For cmake 4.0 until stk dependencies are updated
+# For cmake 4.0 until fluxara_drift dependencies are updated
 export CMAKE_POLICY_VERSION_MINIMUM=3.5
 
 case "$(uname -s)" in
@@ -64,11 +64,11 @@ if [ -z "$NDK_PATH" ]; then
     export NDK_PATH="$NDK_PATH_DEFAULT"
 fi
 
-if [ -z "$STK_NDK_VERSION" ]; then
-    export STK_NDK_VERSION="28.1.13356709"
+if [ -z "$FLUXARA_DRIFT_NDK_VERSION" ]; then
+    export FLUXARA_DRIFT_NDK_VERSION="28.1.13356709"
 fi
 
-NDK_PATH="$(realpath "$NDK_PATH")/${STK_NDK_VERSION}"
+NDK_PATH="$(realpath "$NDK_PATH")/${FLUXARA_DRIFT_NDK_VERSION}"
 if [ ! -d "$NDK_PATH" ]; then
     echo "Error: Couldn't find $NDK_PATH directory. Please create a symlink" \
          "to your Android NDK installation in the $NDK_PATH_DEFAULT or set"  \
@@ -375,7 +375,7 @@ build_deps()
         sed_in_place 's|${ASTCENC_TARGET}-static|astcenc|g' Source/cmake_core.cmake
         if [ "$ARCH_OPTION" = "armeabi-v7a" ]; then
             cmake . -DCMAKE_TOOLCHAIN_FILE=../../../cmake/Toolchain-android.cmake \
-                    -DHOST=$HOST -DARCH=$ARCH -DSTK_ARM_NEON=ON                   \
+                    -DHOST=$HOST -DARCH=$ARCH -DFLUXARA_DRIFT_ARM_NEON=ON                   \
                     -DCMAKE_C_FLAGS="-fpic -O3 -g -mfpu=neon"                     \
                     -DCMAKE_CXX_FLAGS="-fpic -O3 -g -mfpu=neon"                   \
                     -DASTCENC_INVARIANCE=OFF -DASTCENC_CLI=OFF
@@ -425,8 +425,8 @@ build_deps()
             touch "$DIRNAME/deps-$ARCH_OPTION/libadrenotools.stamp"
         fi
 
-        if [ "${STK_BUILD_MESA:-0}" != "1" ]; then
-            echo "Skipping optional $ARCH_OPTION mesa. Set STK_BUILD_MESA=1 to build it."
+        if [ "${FLUXARA_DRIFT_BUILD_MESA:-0}" != "1" ]; then
+            echo "Skipping optional $ARCH_OPTION mesa. Set FLUXARA_DRIFT_BUILD_MESA=1 to build it."
         elif [ ! -f "$DIRNAME/deps-$ARCH_OPTION/mesa.stamp" ]; then
             echo "Compiling $ARCH_OPTION mesa"
             mkdir -p "$DIRNAME/deps-$ARCH_OPTION/mesa"

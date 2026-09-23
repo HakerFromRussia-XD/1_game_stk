@@ -2,13 +2,13 @@
 <scene>
   <track model="highinsky_track.spm" x="0" y="0" z="0">
     <static-object model="limit.spm" xyz="35.43 0.56 -92.89" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="physics-only" />
-    <animated-texture name="stkflag_jumpRamp_a.png" dy="1.00000" />
-    <animated-texture name="stkflag_redBooster_a.png" dy="1.00000" />
-    <animated-texture name="stkflag_redBooster_a.png" dy="1.00000" />
-    <animated-texture name="stkflag_redBooster_a.png" dy="1.00000" />
-    <animated-texture name="stkflag_redBooster_a.png" dy="1.00000" />
-    <animated-texture name="stkflag_redBooster_a.png" dy="1.00000" />
-    <animated-texture name="stkflag_jumpRamp_a.png" dy="1.00000" />
+    <animated-texture name="fluxara_driftflag_jumpRamp_a.png" dy="1.00000" />
+    <animated-texture name="fluxara_driftflag_redBooster_a.png" dy="1.00000" />
+    <animated-texture name="fluxara_driftflag_redBooster_a.png" dy="1.00000" />
+    <animated-texture name="fluxara_driftflag_redBooster_a.png" dy="1.00000" />
+    <animated-texture name="fluxara_driftflag_redBooster_a.png" dy="1.00000" />
+    <animated-texture name="fluxara_driftflag_redBooster_a.png" dy="1.00000" />
+    <animated-texture name="fluxara_driftflag_jumpRamp_a.png" dy="1.00000" />
   </track>
   <object id="TurbineLeft" type="animation" xyz="100.91 19.94 328.14" hpr="-90.0 -0.0 0.0" scale="18.00 18.00 18.00" interaction="ghost" model="Turbine.spm" skeletal-animation="false">
     <curve channel="RotX" interpolation="bezier" extend="cyclic">
@@ -128,56 +128,56 @@
   <light xyz="-3.37 12.69 128.20" id="PointUpwardsArrow.001" distance="10.00" energy="1.00" color="252 255 204">
   </light>
   <default-start karts-per-row="3" forwards-distance="1.50" sidewards-distance="1.80" upwards-distance="1.10" />
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy" xyz="52.61 -2.94 -119.05" hpr="0.0 -70.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy" xyz="52.61 -2.94 -119.05" hpr="0.0 -70.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.001" xyz="39.34 -2.34 136.24" hpr="0.0 93.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.001" xyz="39.34 -2.34 136.24" hpr="0.0 93.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.002" xyz="38.79 -2.34 123.35" hpr="0.0 89.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.002" xyz="38.79 -2.34 123.35" hpr="0.0 89.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.003" xyz="39.21 -2.34 110.40" hpr="0.0 85.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.003" xyz="39.21 -2.34 110.40" hpr="0.0 85.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.004" xyz="39.78 -2.34 140.53" hpr="0.0 100.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.004" xyz="39.78 -2.34 140.53" hpr="0.0 100.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.005" xyz="39.09 -2.34 131.93" hpr="0.0 93.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.005" xyz="39.09 -2.34 131.93" hpr="0.0 93.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.006" xyz="38.89 -2.34 127.65" hpr="0.0 93.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.006" xyz="38.89 -2.34 127.65" hpr="0.0 93.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.007" xyz="38.84 -2.34 119.00" hpr="0.0 89.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.007" xyz="38.84 -2.34 119.00" hpr="0.0 89.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.008" xyz="38.94 -2.34 114.64" hpr="0.0 89.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.008" xyz="38.94 -2.34 114.64" hpr="0.0 89.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.009" xyz="6.04 -2.94 208.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.009" xyz="6.04 -2.94 208.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.010" xyz="6.04 -2.94 212.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.010" xyz="6.04 -2.94 212.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.011" xyz="77.25 -2.94 -59.15" hpr="0.0 -70.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.011" xyz="77.25 -2.94 -59.15" hpr="0.0 -70.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.012" xyz="75.89 -2.94 -62.91" hpr="0.0 -70.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.012" xyz="75.89 -2.94 -62.91" hpr="0.0 -70.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.013" xyz="-17.22 -2.94 87.33" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.013" xyz="-17.22 -2.94 87.33" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.014" xyz="-21.22 -2.94 87.33" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.014" xyz="-21.22 -2.94 87.33" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.015" xyz="-25.22 -2.94 87.33" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.015" xyz="-25.22 -2.94 87.33" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.016" xyz="53.57 -2.94 -128.58" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.016" xyz="53.57 -2.94 -128.58" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.017" xyz="57.57 -2.94 -128.58" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.017" xyz="57.57 -2.94 -128.58" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.018" xyz="86.07 -2.94 -69.01" hpr="-0.0 -145.0 -0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.018" xyz="86.07 -2.94 -69.01" hpr="-0.0 -145.0 -0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.019" xyz="0.27 -2.94 130.18" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.019" xyz="0.27 -2.94 130.18" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.020" xyz="6.04 -2.94 216.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.020" xyz="6.04 -2.94 216.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.021" xyz="6.04 -2.94 220.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.021" xyz="6.04 -2.94 220.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.022" xyz="6.04 -2.94 228.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.022" xyz="6.04 -2.94 228.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.023" xyz="6.04 -2.94 224.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.023" xyz="6.04 -2.94 224.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.024" xyz="6.04 -2.94 232.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.024" xyz="6.04 -2.94 232.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_tiresBarrier_a" id="stklib_tiresBarrier_a_main_proxy.025" xyz="6.04 -2.94 236.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_tiresBarrier_a" id="fluxara_driftlib_tiresBarrier_a_main_proxy.025" xyz="6.04 -2.94 236.07" hpr="-0.0 -90.0 0.0" scale="1.00 1.00 1.00">
   </library>
   <object id="FluxaraCanyonDecor" type="static" model="fluxara_canyon_decor.spm" xyz="0 0 0" hpr="0 0 0" scale="1 1 1" interaction="ghost"><animated-texture name="fluxara_water_flow.png" dy="0.18" /></object><sun id="FluxaraCanyonSun" xyz="-80 180 -80" ambient="160 170 180" sun-diffuse="255 242 225" sun-specular="220 230 240" /><object id="FluxaraBrandSign" type="static" model="fluxara_brand_sign.spm" xyz="0 0 0" hpr="0 0 0" scale="1 1 1" interaction="ghost" /></scene>

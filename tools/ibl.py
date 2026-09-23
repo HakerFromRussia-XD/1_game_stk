@@ -86,7 +86,7 @@ print(computeCoefficients())
 #    res.append(computeYmlOnGrid(Xd, Yd, Zd))
 
 
-#I = img.open("C:/Users/vljn_000/Documents/GitHub/stk-assets/textures/ants.png")
+#I = img.open("C:/Users/vljn_000/Documents/GitHub/fluxara_drift-assets/textures/ants.png")
 #m = np.array(I)
 #print(type(m))
 #pl.imshow(m)

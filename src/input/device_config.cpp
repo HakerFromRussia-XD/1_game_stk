@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2010-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2010-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -110,7 +110,7 @@ irr::core::stringw DeviceConfig::getMappingIdString (const PlayerAction action) 
                 break;
 
             case Input::IT_STICKMOTION:
-                return_string += "stkmo_";
+                return_string += "fluxara_driftmo_";
                 return_string += id;
                 return_string += "$";
                 return_string += dir;
@@ -119,7 +119,7 @@ irr::core::stringw DeviceConfig::getMappingIdString (const PlayerAction action) 
                 break;
 
             case Input::IT_STICKBUTTON:
-                return_string += "stkbt_";
+                return_string += "fluxara_driftbt_";
                 return_string += id;
                 break;
 

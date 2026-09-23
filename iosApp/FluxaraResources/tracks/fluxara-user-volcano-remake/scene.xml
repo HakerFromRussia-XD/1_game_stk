@@ -47,9 +47,9 @@
     <static-object  model="vulcan_02.spm" xyz="-276.20 -7.88 -168.76" hpr="0.0 150.9 0.0" scale="1.38 1.38 1.38">
     <animated-texture name="lava_2k_diffuse.jpg" dy="-0.03000" />
     </static-object>
-    <animated-texture name="stkflag_blackBooster_b.png" dy="1.00000" />
-    <animated-texture name="stkflag_blackBooster_a.png" dy="1.00000" />
-    <animated-texture name="stkflag_blackBooster_b.png" dy="1.00000" />
+    <animated-texture name="fluxara_driftflag_blackBooster_b.png" dy="1.00000" />
+    <animated-texture name="fluxara_driftflag_blackBooster_a.png" dy="1.00000" />
+    <animated-texture name="fluxara_driftflag_blackBooster_b.png" dy="1.00000" />
   </track>
   <object id="Cube.003" type="animation" xyz="-42.84 141.39 -390.40" hpr="0.0 -1.5 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="AshCloud.spm" skeletal-animation="false">
     <animated-texture name="smoke_huricane_transp.png" dy="0.05000" />
@@ -61,7 +61,7 @@
     <animated-texture name="Lava_004_COLOR.jpg" dy="-0.01000" />
   </object>
   <object id="Cube.015" type="animation" xyz="17.83 11.02 -83.42" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ReverseRamp.spm" driveable="true" skeletal-animation="false" if="isTrackReverse">
-    <animated-texture name="stkflag_blackBooster_b.png" dy="1.00000" />
+    <animated-texture name="fluxara_driftflag_blackBooster_b.png" dy="1.00000" />
   </object>
   <object id="Cube.017" type="animation" xyz="-56.62 -8.94 171.40" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="explode" shape="exact" model="Lavaflow4.spm" explode="y" skeletal-animation="false">
     <animated-texture name="Lava_004_COLOR.jpg" dy="-0.01000" />
@@ -285,121 +285,121 @@
     </curve>
   </object>
   <object id="Plane" type="animation" xyz="52.05 -7.77 75.81" hpr="-0.0 -91.8 -0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.002" type="animation" xyz="46.41 -7.77 97.65" hpr="-0.0 -116.5 -0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.004" type="animation" xyz="7.62 40.49 71.16" hpr="-0.0 -105.2 -0.0" scale="0.90 0.90 0.90" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.005" type="animation" xyz="8.06 37.34 67.05" hpr="-0.0 -105.2 -0.0" scale="0.64 0.64 0.64" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.006" type="animation" xyz="12.07 37.53 68.08" hpr="-0.0 -105.2 -0.0" scale="0.74 0.74 0.74" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.007" type="animation" xyz="-140.00 -7.17 106.04" hpr="0.0 -23.8 0.0" scale="0.74 0.74 0.74" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.008" type="animation" xyz="-141.62 -7.35 109.85" hpr="0.0 -23.8 0.0" scale="0.64 0.64 0.64" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.009" type="animation" xyz="-137.62 -4.20 110.90" hpr="0.0 -23.8 0.0" scale="0.90 0.90 0.90" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.010" type="animation" xyz="-202.76 -11.50 -44.05" hpr="0.0 -23.8 0.0" scale="1.54 1.54 1.54" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.011" type="animation" xyz="-201.49 -11.63 -39.00" hpr="0.0 -23.8 0.0" scale="0.90 0.90 0.90" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.012" type="animation" xyz="-200.22 -11.87 -49.65" hpr="0.0 -23.8 0.0" scale="1.41 1.41 1.41" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.013" type="animation" xyz="-193.73 -12.21 -52.38" hpr="0.0 -23.8 0.0" scale="1.04 1.04 1.04" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.015" type="animation" xyz="-196.53 -12.05 -51.70" hpr="0.0 -23.8 0.0" scale="0.93 0.93 0.93" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.016" type="animation" xyz="-190.85 -12.09 -54.69" hpr="0.0 -23.8 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.017" type="animation" xyz="-186.24 -12.51 -57.91" hpr="0.0 -23.8 0.0" scale="0.64 0.64 0.64" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.018" type="animation" xyz="-182.90 -12.36 -63.50" hpr="0.0 -23.8 0.0" scale="1.14 1.14 1.14" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.019" type="animation" xyz="-179.41 -12.00 -63.46" hpr="0.0 -23.8 0.0" scale="1.57 1.57 1.57" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.020" type="animation" xyz="2.70 13.46 -60.49" hpr="15.2 -124.3 1.1" scale="1.19 1.19 1.19" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.021" type="animation" xyz="6.03 9.29 -64.79" hpr="15.2 -124.3 1.1" scale="0.84 0.84 0.84" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.022" type="animation" xyz="10.34 11.04 -61.92" hpr="15.2 -124.3 1.1" scale="0.98 0.98 0.98" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.023" type="animation" xyz="34.08 7.46 -73.24" hpr="1.0 -169.0 1.6" scale="0.98 0.98 0.98" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.024" type="animation" xyz="-60.50 -11.29 141.81" hpr="0.0 -23.8 0.0" scale="1.27 1.27 1.27" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.025" type="animation" xyz="27.72 11.11 -76.77" hpr="1.0 -169.0 1.6" scale="1.19 1.19 1.19" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.026" type="animation" xyz="-54.71 -11.55 141.03" hpr="0.0 -23.8 0.0" scale="0.95 0.95 0.95" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.027" type="animation" xyz="-56.10 -11.01 140.47" hpr="0.0 -23.8 0.0" scale="1.73 1.73 1.73" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.028" type="animation" xyz="-49.97 -11.15 142.86" hpr="0.0 -23.8 0.0" scale="1.33 1.33 1.33" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.029" type="animation" xyz="-64.47 -11.60 144.60" hpr="0.0 -23.8 0.0" scale="0.77 0.77 0.77" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.032" type="animation" xyz="65.24 -9.16 58.94" hpr="-4.6 139.8 -2.6" scale="0.33 0.33 0.33" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.034" type="animation" xyz="64.19 -9.21 89.11" hpr="19.6 84.8 22.6" scale="0.32 0.32 0.32" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.035" type="animation" xyz="64.48 -9.02 92.71" hpr="35.3 -104.9 -37.6" scale="0.23 0.23 0.23" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.036" type="animation" xyz="63.59 -8.69 92.10" hpr="-20.7 -64.3 21.2" scale="0.36 0.36 0.36" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.039" type="animation" xyz="-267.08 34.66 -138.67" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="AshCloud2.spm" skeletal-animation="false">
     <animated-texture name="gfx_snowStormAnimated_a.png" dy="0.12500"  animByStep="true" dt="0.100" />
   </object>
   <object id="Plane.043" type="animation" xyz="48.47 -11.81 114.41" hpr="0.0 -23.8 0.0" scale="0.75 0.75 0.75" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.044" type="animation" xyz="15.55 27.56 29.96" hpr="0.0 -23.8 0.0" scale="1.41 1.41 1.41" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.045" type="animation" xyz="13.98 28.08 34.60" hpr="0.0 -23.8 0.0" scale="0.88 0.88 0.88" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.046" type="animation" xyz="-73.64 52.20 38.31" hpr="0.0 -57.9 0.0" scale="0.90 0.90 0.90" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.047" type="animation" xyz="-76.37 49.68 35.20" hpr="0.0 -57.9 0.0" scale="0.64 0.64 0.64" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.048" type="animation" xyz="-72.89 49.87 32.95" hpr="0.0 -57.9 0.0" scale="0.74 0.74 0.74" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.049" type="animation" xyz="33.45 -7.62 116.13" hpr="-0.0 -135.0 -0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.050" type="animation" xyz="-98.67 -19.30 168.04" hpr="0.0 -14.7 0.0" scale="1.00 1.00 1.00" interaction="reset" shape="exact" model="Lava.spm" reset="y" skeletal-animation="false">
     <animated-texture name="lava.png" dy="-0.10000" />
@@ -408,58 +408,58 @@
     <animated-texture name="gfx_snowStormAnimated_a.png" dy="0.12500"  animByStep="true" dt="0.100" />
   </object>
   <object id="Plane.052" type="animation" xyz="17.51 32.01 99.22" hpr="-0.0 -105.2 -0.0" scale="5.34 5.34 5.34" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.053" type="animation" xyz="42.26 29.52 95.41" hpr="-0.0 -105.2 -0.0" scale="2.93 2.93 2.93" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.055" type="animation" xyz="37.34 25.69 101.91" hpr="-0.0 -105.2 -0.0" scale="5.31 5.31 5.31" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.056" type="animation" xyz="37.16 30.36 114.01" hpr="-0.0 -105.2 -0.0" scale="3.48 3.48 3.48" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.057" type="animation" xyz="14.37 -7.59 129.73" hpr="-0.0 -153.5 -0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.058" type="animation" xyz="-5.78 -7.26 135.24" hpr="-0.0 -178.2 -0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.059" type="animation" xyz="-263.38 43.00 -200.24" hpr="0.0 -13.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="AshCloud2.spm" skeletal-animation="false">
     <animated-texture name="gfx_snowStormAnimated_a.png" dy="0.12500"  animByStep="true" dt="0.100" />
   </object>
   <object id="Plane.063" type="animation" xyz="-202.25 -10.39 -59.31" hpr="4.7 122.2 0.0" scale="1.00 1.00 1.00" interaction="static" shape="box" model="Arrows.spm" skeletal-animation="false" if="isTrackNotReverse">
-    <animated-texture name="stkflag_blackBooster_a.png" dy="0.50000" />
+    <animated-texture name="fluxara_driftflag_blackBooster_a.png" dy="0.50000" />
   </object>
   <object id="Plane.064" type="animation" xyz="-213.12 -9.10 -49.07" hpr="-2.9 -173.6 0.0" scale="1.00 1.00 1.00" interaction="static" shape="box" model="ArrowsReverse.spm" skeletal-animation="false" if="isTrackReverse">
-    <animated-texture name="stkflag_blackBooster_a.png" dy="0.50000" />
+    <animated-texture name="fluxara_driftflag_blackBooster_a.png" dy="0.50000" />
   </object>
   <object id="Plane.065" type="animation" xyz="27.53 -7.31 134.87" hpr="0.0 35.6 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.066" type="animation" xyz="33.94 -7.31 130.32" hpr="0.0 35.6 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.067" type="animation" xyz="-81.54 53.05 86.90" hpr="0.0 -0.0 0.0" scale="1.62 1.62 1.62" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.068" type="animation" xyz="-106.85 55.02 54.31" hpr="0.0 -1.8 0.0" scale="0.90 0.90 0.90" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.069" type="animation" xyz="-110.95 51.87 54.83" hpr="0.0 -1.8 0.0" scale="0.64 0.64 0.64" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.070" type="animation" xyz="-110.88 52.05 50.69" hpr="0.0 -1.8 0.0" scale="0.74 0.74 0.74" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.071" type="animation" xyz="-124.71 53.25 15.77" hpr="0.0 -0.0 0.0" scale="1.62 1.62 1.62" interaction="ghost" model="Torch.spm" skeletal-animation="false">
-    <animated-texture name="stktex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
   </object>
   <object id="Plane.072" type="animation" xyz="27.15 19.37 -62.69" hpr="-3.2 16.5 7.8" scale="1.00 1.00 1.00" interaction="static" shape="box" model="Arrows.spm" skeletal-animation="false" if="isTrackNotReverse">
-    <animated-texture name="stkflag_blackBooster_a.png" dy="0.50000" />
+    <animated-texture name="fluxara_driftflag_blackBooster_a.png" dy="0.50000" />
   </object>
   <object id="Plane.073" type="animation" xyz="25.47 19.56 -67.87" hpr="12.1 42.8 3.7" scale="1.00 1.00 1.00" interaction="static" shape="box" model="ArrowsReverse.spm" skeletal-animation="false" if="isTrackReverse">
-    <animated-texture name="stkflag_blackBooster_a.png" dy="0.50000" />
+    <animated-texture name="fluxara_driftflag_blackBooster_a.png" dy="0.50000" />
   </object>
   <object id="Plane.074" type="animation" xyz="-49.44 -27.48 28.93" hpr="26.0 -72.1 -114.9" scale="1.70 1.63 4.75" interaction="ghost" model="EruptionAsh.spm" skeletal-animation="false">
     <animated-texture name="gfx_snowStormAnimated_a.png" dy="0.06250"  animByStep="true" dt="0.050" />
@@ -1101,22 +1101,22 @@
                  forwards-distance ="1.50"
                  sidewards-distance="1.80"
                  upwards-distance  ="1.10"/>
-  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy" xyz="-121.80 -33.40 -115.33" hpr="0.0 -37.7 0.0" scale="3.00 3.00 3.00">
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy" xyz="-121.80 -33.40 -115.33" hpr="0.0 -37.7 0.0" scale="3.00 3.00 3.00">
   </library>
-  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy.001" xyz="-196.88 -17.69 -152.36" hpr="0.0 47.7 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy.001" xyz="-196.88 -17.69 -152.36" hpr="0.0 47.7 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy.002" xyz="-135.20 -16.62 -230.42" hpr="0.0 -8.7 0.0" scale="2.00 2.00 2.00">
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy.002" xyz="-135.20 -16.62 -230.42" hpr="0.0 -8.7 0.0" scale="2.00 2.00 2.00">
   </library>
-  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy.003" xyz="-169.80 -25.74 -107.53" hpr="-0.0 125.2 -0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy.003" xyz="-169.80 -25.74 -107.53" hpr="-0.0 125.2 -0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy.004" xyz="-121.80 -33.47 -144.25" hpr="0.0 -37.7 0.0" scale="1.78 1.78 1.78">
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy.004" xyz="-121.80 -33.47 -144.25" hpr="0.0 -37.7 0.0" scale="1.78 1.78 1.78">
   </library>
-  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy.005" xyz="-81.40 -33.47 -169.64" hpr="-0.0 -101.6 -0.0" scale="2.63 2.63 2.63">
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy.005" xyz="-81.40 -33.47 -169.64" hpr="-0.0 -101.6 -0.0" scale="2.63 2.63 2.63">
   </library>
-  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy.006" xyz="-191.29 -25.73 -115.71" hpr="0.0 39.3 0.0" scale="1.50 1.50 1.50">
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy.006" xyz="-191.29 -25.73 -115.71" hpr="0.0 39.3 0.0" scale="1.50 1.50 1.50">
   </library>
-  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy.007" xyz="-198.40 -17.69 -176.88" hpr="0.0 -14.5 0.0" scale="1.50 1.50 1.50">
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy.007" xyz="-198.40 -17.69 -176.88" hpr="0.0 -14.5 0.0" scale="1.50 1.50 1.50">
   </library>
-  <library name="stklib_mudpot_a" id="stklib_mudpot_a_main_proxy.008" xyz="-118.82 -16.94 -250.92" hpr="0.0 -36.1 0.0" scale="1.50 1.50 1.50">
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy.008" xyz="-118.82 -16.94 -250.92" hpr="0.0 -36.1 0.0" scale="1.50 1.50 1.50">
   </library>
 </scene>

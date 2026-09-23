@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2012-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -32,7 +32,7 @@
 class ReplayBase : public NoCopy
 {
     // Needs access to KartReplayEvent
-    friend class GhostKart;
+    friend class Ghofluxara_driftart;
 
 protected:
     /** Stores a transform event, i.e. a position and rotation of a kart

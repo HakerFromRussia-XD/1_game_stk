@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2006-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2006-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -88,7 +88,7 @@ static const std::string IDENT_LAP_TRIAL("LAP_TRIAL"       );
 class RaceManager
 {
 public:
-    /** The major types or races supported in STK
+    /** The major types or races supported in FLUXARA_DRIFT
     */
     enum MajorRaceModeType
     {
@@ -552,7 +552,7 @@ public:
     // ----------------------------------------------------------------------------------------
     unsigned int getNumberOfBlueAIKarts() const { return m_num_blue_ai; }
     // ----------------------------------------------------------------------------------------
-    unsigned int getNumNonGhostKarts() const
+    unsigned int getNumNonGhofluxara_driftarts() const
                                     { return m_num_karts - m_num_ghost_karts; }
     // ----------------------------------------------------------------------------------------
     MajorRaceModeType getMajorMode() const { return m_major_mode; }
@@ -849,10 +849,10 @@ public:
         m_is_recording_race = record;
     }   // setRecordRace
     // ----------------------------------------------------------------------------------------
-    void setRaceGhostKarts(bool ghost)
+    void setRaceGhofluxara_driftarts(bool ghost)
     {
         m_has_ghost_karts = ghost;
-    }   // setRaceGhostKarts
+    }   // setRaceGhofluxara_driftarts
     // ----------------------------------------------------------------------------------------
     void setWatchingReplay(bool watch)
     {
@@ -864,10 +864,10 @@ public:
         return m_is_recording_race;
     }   // isRecordingRace
     // ----------------------------------------------------------------------------------------
-    bool hasGhostKarts() const
+    bool hasGhofluxara_driftarts() const
     {
         return m_has_ghost_karts;
-    }   // hasGhostKarts
+    }   // hasGhofluxara_driftarts
     // ----------------------------------------------------------------------------------------
     bool isWatchingReplay() const
     {

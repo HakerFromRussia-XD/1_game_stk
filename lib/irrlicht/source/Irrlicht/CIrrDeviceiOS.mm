@@ -12,10 +12,30 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSURL.h>
 #import <UIKit/UIKit.h>
+#import <QuartzCore/CAMetalLayer.h>
 
 extern void getConfigForDevice(const char* dev);
 extern void override_default_params_for_mobile();
 extern int ios_main(int argc, char *argv[]);
+
+static UIWindow* g_fluxara_sdl_window = nil;
+
+// SDL creates the UIKit-backed CAMetalLayer while Vulkan creates its surface.
+// Retain the window supplied by SDL so the renderer can configure that exact
+// layer immediately after the surface has been made.
+extern "C" void fluxaraConfigureMetalDrawableTimeout()
+{
+    if (!g_fluxara_sdl_window || ![NSThread isMainThread])
+        return;
+
+    if (@available(iOS 11.0, *))
+    {
+        CALayer* layer =
+            g_fluxara_sdl_window.rootViewController.view.layer;
+        if ([layer isKindOfClass:[CAMetalLayer class]])
+            ((CAMetalLayer*)layer).allowsNextDrawableTimeout = YES;
+    }
+}
 
 std::string irr::CIrrDeviceiOS::getSystemLanguageCode()
 {
@@ -57,6 +77,7 @@ void irr::CIrrDeviceiOS::debugPrint(const char* line)
 
 extern "C" void init_objc(SDL_SysWMinfo* info, float* top, float* bottom, float* left, float* right)
 {
+    g_fluxara_sdl_window = info->info.uikit.window;
     if (@available(iOS 11.0, *))
     {
         *top = info->info.uikit.window.safeAreaInsets.top,

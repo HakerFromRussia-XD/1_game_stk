@@ -26,7 +26,7 @@
 #include "ge_vulkan_driver.hpp"
 #include "ge_vulkan_scene_manager.hpp"
 #include "MoltenVK.h"
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "utils/fluxara_orientation_ios.hpp"
 #endif
 
@@ -97,7 +97,7 @@ CIrrDeviceSDL::CIrrDeviceSDL(const SIrrlichtCreationParameters& param)
 #ifdef ANDROID
 	SDL_SetHint(SDL_HINT_ORIENTATIONS, "LandscapeLeft LandscapeRight");
 #endif
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // The app determines its initial route before the renderer exists.  Do
     // not overwrite a direct-race landscape request here: this is the final
     // hint consumed by SDL before it creates the iOS framebuffer.
@@ -106,7 +106,7 @@ CIrrDeviceSDL::CIrrDeviceSDL(const SIrrlichtCreationParameters& param)
             ? "Portrait" : "LandscapeLeft LandscapeRight");
 #endif
 
-#ifndef MOBILE_STK
+#ifndef MOBILE_FLUXARA_DRIFT
 	// Prevent fullscreen minimizes when losing focus
 	if (CreationParams.Fullscreen)
 	{
@@ -138,7 +138,7 @@ CIrrDeviceSDL::CIrrDeviceSDL(const SIrrlichtCreationParameters& param)
 	// create window
 	if (CreationParams.DriverType != video::EDT_NULL)
 	{
-#if defined(_IRR_OSX_PLATFORM_) && !defined(IOS_STK)
+#if defined(_IRR_OSX_PLATFORM_) && !defined(IOS_FLUXARA_DRIFT)
 		enable_momentum_scroll();
 #endif
 
@@ -147,17 +147,17 @@ CIrrDeviceSDL::CIrrDeviceSDL(const SIrrlichtCreationParameters& param)
 		{
 			SDL_VERSION(&Info.version);
 
-#if (defined(IOS_STK) || defined(_IRR_COMPILE_WITH_DIRECT3D_9_)) && !defined(__SWITCH__)
+#if (defined(IOS_FLUXARA_DRIFT) || defined(_IRR_COMPILE_WITH_DIRECT3D_9_)) && !defined(__SWITCH__)
 			// Only iOS or DirectX9 build uses the Info structure
 			// Switch doesn't support GetWindowWMInfo
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 			if (!SDL_GetWindowWMInfo(Window, &Info))
 #else
 			if (CreationParams.DriverType == video::EDT_DIRECT3D9 && !SDL_GetWindowWMInfo(Window, &Info))
 #endif
 				return;
 #endif
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 			init_objc(&Info, &TopPadding, &BottomPadding, &LeftPadding, &RightPadding);
 #endif
 #ifdef ANDROID
@@ -212,7 +212,7 @@ CIrrDeviceSDL::CIrrDeviceSDL(const SIrrlichtCreationParameters& param)
 		else
 			createGUIAndScene();
 	}
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 	SDL_SetEventFilter(handle_app_event, NULL);
 #endif
 }
@@ -379,7 +379,7 @@ extern "C" void update_fullscreen_desktop(int val)
 // Used in OptionsScreenVideo for live updating vertical sync config
 extern "C" void update_swap_interval(int swap_interval)
 {
-#ifndef IOS_STK
+#ifndef IOS_FLUXARA_DRIFT
 	// iOS always use vertical sync
 	if (swap_interval > 1)
 		swap_interval = 1;
@@ -472,7 +472,7 @@ bool CIrrDeviceSDL::createWindow()
 		flags |= SDL_WINDOW_VULKAN;
 	}
 
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
 	flags |= SDL_WINDOW_BORDERLESS | SDL_WINDOW_MAXIMIZED;
 #endif
 
@@ -695,7 +695,7 @@ void CIrrDeviceSDL::createDriver()
 	{
 		#ifdef _IRR_COMPILE_WITH_OGLES2_
 		u32 default_fb = 0;
-		#ifdef IOS_STK
+		#ifdef IOS_FLUXARA_DRIFT
 		default_fb = Info.info.uikit.framebuffer;
 		#endif
 		VideoDriver = video::createOGLES2Driver(CreationParams, FileSystem, this, default_fb);
@@ -763,7 +763,7 @@ bool CIrrDeviceSDL::run()
 	{
 		switch ( SDL_event.type )
 		{
-#if defined(MOBILE_STK) && !defined(IOS_STK)
+#if defined(MOBILE_FLUXARA_DRIFT) && !defined(IOS_FLUXARA_DRIFT)
 		case SDL_APP_WILLENTERBACKGROUND:
 			pause_mainloop();
 			break;
@@ -800,7 +800,7 @@ bool CIrrDeviceSDL::run()
 					irrevent.AccelerometerEvent.Y = -SDL_event.sensor.data[0];
 				}
 				irrevent.AccelerometerEvent.Z = SDL_event.sensor.data[2];
-				// Mobile STK specific
+				// Mobile FLUXARA_DRIFT specific
 				if (irrevent.AccelerometerEvent.X < 0.0)
 					irrevent.AccelerometerEvent.X *= -1.0;
 
@@ -979,7 +979,7 @@ bool CIrrDeviceSDL::run()
 				if (SDL_event.window.event == SDL_WINDOWEVENT_SIZE_CHANGED ||
 					SDL_event.window.event == SDL_WINDOWEVENT_RESIZED)
 				{
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 					if (SDL_event.window.event == SDL_WINDOWEVENT_RESIZED &&
 						VideoDriver &&
 						CreationParams.DriverType == video::EDT_VULKAN)
@@ -1161,8 +1161,8 @@ video::IVideoModeList* CIrrDeviceSDL::getVideoModeList()
 				core::dimension2d<u32>(mode.w, mode.h));
 		}
 
-#ifdef MOBILE_STK
-	// SDL2 will return w,h and h,w for mobile STK, as we only use landscape
+#ifdef MOBILE_FLUXARA_DRIFT
+	// SDL2 will return w,h and h,w for mobile FLUXARA_DRIFT, as we only use landscape
 	// so we just use desktop resolution for now
 	VideoModeList.addMode(core::dimension2d<u32>(mode.w, mode.h),
 		SDL_BITSPERPIXEL(mode.format));
@@ -1605,7 +1605,7 @@ bool CIrrDeviceSDL::hasOnScreenKeyboard() const
 extern "C" int Android_getMovedHeight();
 s32 CIrrDeviceSDL::getMovedHeight() const
 {
-#if defined(IOS_STK)
+#if defined(IOS_FLUXARA_DRIFT)
 	return SDL_GetMovedHeightByScreenKeyboard() * getNativeScaleY();
 #elif defined(ANDROID)
 	return Android_getMovedHeight();
@@ -1618,7 +1618,7 @@ s32 CIrrDeviceSDL::getMovedHeight() const
 extern "C" int Android_getKeyboardHeight();
 u32 CIrrDeviceSDL::getOnScreenKeyboardHeight() const
 {
-#if defined(IOS_STK)
+#if defined(IOS_FLUXARA_DRIFT)
 	return SDL_GetScreenKeyboardHeight() * getNativeScaleY();
 #elif defined(ANDROID)
 	return Android_getKeyboardHeight();

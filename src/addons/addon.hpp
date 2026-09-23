@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Lucas Baudin, Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -92,7 +92,7 @@ private:
      *  in the addons.xml file. */
     bool        m_still_exists;
     /** Date when the addon was added. */
-    StkTime::TimeType m_date;
+    FluxaraDriftTime::TimeType m_date;
     /** A description of this addon. */
     core::stringw m_description;
     /** The URL of the icon (relative to the server) */
@@ -165,7 +165,7 @@ public:
     // ------------------------------------------------------------------------
     /** Returns the date (in seconds since epoch) when the addon was
      *  uploaded. */
-    StkTime::TimeType getDate() const { return m_date; }
+    FluxaraDriftTime::TimeType getDate() const { return m_date; }
     // ------------------------------------------------------------------------
     /** Returns a user readable date as a string. */
     std::string getDateAsString() const;

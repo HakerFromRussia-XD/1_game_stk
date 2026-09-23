@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2013-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -32,7 +32,7 @@
 
 #include <memory>
 
-class STKPeer;
+class FLUXARA_DRIFTPeer;
 
 /*!
  * \enum EVENT_TYPE
@@ -47,7 +47,7 @@ enum EVENT_TYPE
 
 /*!
  * \enum EVENT_CHANNEL
- * \brief Represents a list of channels stk used.
+ * \brief Represents a list of channels fluxara_drift used.
  */
 enum EVENT_CHANNEL : uint8_t
 {
@@ -81,7 +81,7 @@ private:
     EVENT_TYPE m_type;
 
     /** Pointer to the peer that triggered that event. */
-    std::shared_ptr<STKPeer> m_peer;
+    std::shared_ptr<FLUXARA_DRIFTPeer> m_peer;
 
     /** Arrivial time of the event, for timeouts. */
     uint64_t m_arrival_time;
@@ -90,7 +90,7 @@ private:
     PeerDisconnectInfo m_pdi;
 
 public:
-         Event(ENetEvent* event, std::shared_ptr<STKPeer> peer);
+         Event(ENetEvent* event, std::shared_ptr<FLUXARA_DRIFTPeer> peer);
         ~Event();
 
     // ------------------------------------------------------------------------
@@ -98,10 +98,10 @@ public:
     EVENT_TYPE getType() const { return m_type; }
     // ------------------------------------------------------------------------
     /** Returns the peer of this event (shared pointer). */
-    std::shared_ptr<STKPeer> getPeerSP() const { return m_peer; }
+    std::shared_ptr<FLUXARA_DRIFTPeer> getPeerSP() const { return m_peer; }
     // ------------------------------------------------------------------------
     /** Returns the peer of this event. */
-    STKPeer* getPeer() const { return m_peer.get(); }
+    FLUXARA_DRIFTPeer* getPeer() const { return m_peer.get(); }
     // ------------------------------------------------------------------------
     /** \brief Get a const reference to the received data.
      *  This is empty for events like connection or disconnections.

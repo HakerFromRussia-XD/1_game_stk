@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015 Marc Coll
 //
 //  This program is free software; you can redistribute it and/or
@@ -39,7 +39,7 @@ using namespace irr::core;
 
 // -----------------------------------------------------------------------------
 GrandPrixEditorScreen::GrandPrixEditorScreen()
-                     : Screen("grand_prix_editor.stkgui"), m_selection(NULL),
+                     : Screen("grand_prix_editor.fluxara_driftgui"), m_selection(NULL),
                        m_gpgroup(GrandPrixData::GP_NONE)
 {
 }

@@ -8,7 +8,7 @@
 
         fallback-shader: The name of the shader to be used when advanced
                          lighting is off, make sure that shader is loaded first
-                         (default is empty). STK will load list of sps*.xml
+                         (default is empty). FLUXARA_DRIFT will load list of sps*.xml
                          files in ascending order from a directory.
 
         transparent: If Y, than this shader will be used in transparent pass
@@ -21,7 +21,7 @@
                           matter).
 
         use-alpha-channel: If Y, this shader is going to access alpha channel
-                           from mesh texture layers. It's used to hint STK not
+                           from mesh texture layers. It's used to hint FLUXARA_DRIFT not
                            to encode colorization mask for this material using
                            this shader which it will overwrite the alpha
                            channel (default N).
@@ -57,7 +57,7 @@
         vertex-shader: Specify the vertex shader, it will search in the
                        directory of the location of this xml file first, if not
                        found it will search in the official shader directory.
-                       Notice: if you use #stk_include in your shader file, STK
+                       Notice: if you use #fluxara_drift_include in your shader file, FLUXARA_DRIFT
                        will only search the include header in official shader
                        directory.
 

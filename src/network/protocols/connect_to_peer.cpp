@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2013-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -19,7 +19,7 @@
 #include "network/protocols/connect_to_peer.hpp"
 #include "network/network.hpp"
 #include "network/network_string.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "utils/time.hpp"
 #include "utils/log.hpp"
 
@@ -47,7 +47,7 @@ void ConnectToPeer::asynchronousUpdate()
     {
         case WAIT_FOR_CONNECTION:
         {
-            if (STKHost::get()->peerExists(m_peer_address))
+            if (FLUXARA_DRIFTHost::get()->peerExists(m_peer_address))
             {
                 Log::info("ConnectToPeer",
                     "Peer %s has established a connection.",
@@ -56,21 +56,21 @@ void ConnectToPeer::asynchronousUpdate()
                 break;
             }
             // Each 2 second for a ping or broadcast
-            if (StkTime::getMonoTimeMs() > m_timer + 2000)
+            if (FluxaraDriftTime::getMonoTimeMs() > m_timer + 2000)
             {
-                m_timer = StkTime::getMonoTimeMs();
-                // Send a broadcast packet with the string aloha_stk inside,
+                m_timer = FluxaraDriftTime::getMonoTimeMs();
+                // Send a broadcast packet with the string aloha_fluxara_drift inside,
                 // the client will use enet intercept to discover if server
-                // address or port is different from stk addons database.
+                // address or port is different from fluxara_drift addons database.
                 // (Happens if there is firewall in between)
-                BareNetworkString aloha("aloha-stk");
+                BareNetworkString aloha("aloha-fluxara_drift");
 
                 // Enet packet will not have 0xFFFF for first 2 bytes
                 // We use the feature to distinguish between the enet packets
                 // and this aloha
                 aloha.getBuffer().insert(aloha.getBuffer().begin(), 2, 0xFF);
 
-                STKHost::get()->sendRawPacket(aloha, m_peer_address);
+                FLUXARA_DRIFTHost::get()->sendRawPacket(aloha, m_peer_address);
                 Log::debug("ConnectToPeer", "Broadcast aloha sent.");
                 // 20 seconds timeout
                 if (m_tried_connection++ > 10)

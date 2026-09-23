@@ -1,8 +1,8 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //
 //  Copyright (C) 2004-2015  Steve Baker <sjbaker1@airmail.net>,
 //  Copyright (C) 2004-2015  Ingo Ruhnke <grumbel@gmx.de>
-//  Copyright (C) 2006-2015  SuperTuxKart-Team
+//  Copyright (C) 2006-2015  FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -20,7 +20,7 @@
 
 #include "utils/string_utils.hpp"
 
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "utils/constants.hpp"
 #include "utils/log.hpp"
 #include "utils/time.hpp"
@@ -553,7 +553,7 @@ namespace StringUtils
     /** Returns the time (in seconds) as string, based on ticks. */
     std::string ticksTimeToString(int ticks)
     {
-        return timeToString(stk_config->ticks2Time(ticks));
+        return timeToString(fluxara_drift_config->ticks2Time(ticks));
     }   // ticksTimeToString(ticks)
 
     // ------------------------------------------------------------------------
@@ -688,7 +688,7 @@ namespace StringUtils
       */
     irr::core::stringw loadingDots(float interval, int max_dots)
     {
-        int nr_dots = int(floor(StkTime::getRealTime() / interval))
+        int nr_dots = int(floor(FluxaraDriftTime::getRealTime() / interval))
                     % (max_dots + 1);
         return irr::core::stringw((std::string(nr_dots, '.') +
                                    std::string(max_dots - nr_dots, ' ')).c_str());
@@ -1198,7 +1198,7 @@ namespace StringUtils
                                                  const std::string& user_agent)
     {
         std::pair<std::string, std::string> ret;
-        // '#^(SuperTuxKart/[a-z0-9\\.\\-_]+)( \\(.*\\))?$#'
+        // '#^(FluxaraDrift/[a-z0-9\\.\\-_]+)( \\(.*\\))?$#'
         std::vector<std::string> out = split(user_agent, '/');
         if (out.size() != 2 || out[1].empty() || out[1].back() != ')')
             return ret;
@@ -1213,10 +1213,10 @@ namespace StringUtils
     // ------------------------------------------------------------------------
     std::string getUserAgentString()
     {
-        std::string uagent(std::string("SuperTuxKart/") + STK_VERSION);
+        std::string uagent(std::string("FluxaraDrift/") + FLUXARA_DRIFT_VERSION);
 #if defined(__SWITCH__)
         uagent += (std::string)" (Switch)";
-#elif defined(IOS_STK)
+#elif defined(IOS_FLUXARA_DRIFT)
         uagent += (std::string)" (iOS)";
 #elif defined(WIN32)
         uagent += (std::string)" (Windows)";

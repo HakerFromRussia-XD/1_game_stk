@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2012-2015  Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -35,7 +35,7 @@
 
 #include <ge_render_info.hpp>
 
-GhostKart::GhostKart(const std::string& ident, unsigned int world_kart_id,
+Ghofluxara_driftart::Ghofluxara_driftart(const std::string& ident, unsigned int world_kart_id,
                      int position, float color_hue,
                      const ReplayPlay::ReplayData& rd)
           : Kart(ident, world_kart_id,
@@ -46,10 +46,10 @@ GhostKart::GhostKart(const std::string& ident, unsigned int world_kart_id,
 {
     m_graphical_y_offset = 0;
     m_finish_computed = false;
-}   // GhostKart
+}   // Ghofluxara_driftart
 
 // ----------------------------------------------------------------------------
-void GhostKart::reset()
+void Ghofluxara_driftart::reset()
 {
     m_node->setVisible(true);
     Kart::reset();
@@ -60,7 +60,7 @@ void GhostKart::reset()
 }   // reset
 
 // ----------------------------------------------------------------------------
-void GhostKart::addReplayEvent(float time,
+void Ghofluxara_driftart::addReplayEvent(float time,
                                const btTransform &trans,
                                const ReplayBase::PhysicInfo &pi,
                                const ReplayBase::BonusInfo &bi,
@@ -91,7 +91,7 @@ void GhostKart::addReplayEvent(float time,
  *  effects.
  *  \param dt Time step size (since last call).
  */
-void GhostKart::updateGraphics(float dt)
+void Ghofluxara_driftart::updateGraphics(float dt)
 {
     Vec3 center_shift(0, m_graphical_y_offset, 0);
     center_shift = getTrans().getBasis() * center_shift;
@@ -110,7 +110,7 @@ void GhostKart::updateGraphics(float dt)
 /** Updates the current event of the ghost kart using interpolation
  *  \param dt Time step size.
  */
-void GhostKart::update(int ticks)
+void Ghofluxara_driftart::update(int ticks)
 {
     GhostController* gc = dynamic_cast<GhostController*>(getController());
     if (gc == NULL) return;
@@ -158,7 +158,7 @@ void GhostKart::update(int ticks)
     }
 
     Moveable::updatePosition();
-    float dt = stk_config->ticks2Time(ticks);
+    float dt = fluxara_drift_config->ticks2Time(ticks);
     getKartModel()->update(dt, dt*(m_all_physic_info[idx].m_speed),
         m_all_physic_info[idx].m_steer, m_all_physic_info[idx].m_speed,
         /*lean*/0.0f, idx);
@@ -174,9 +174,9 @@ void GhostKart::update(int ticks)
         ReplayRecorder::codeToEnumAttach(m_all_bonus_info[idx].m_attachment);
     int16_t attach_ticks = 0;
     if (attach_type == Attachment::ATTACH_BUBBLEGUM_SHIELD)
-        attach_ticks = (int16_t)stk_config->time2Ticks(10);
+        attach_ticks = (int16_t)fluxara_drift_config->time2Ticks(10);
     else if (attach_type == Attachment::ATTACH_BOMB)
-        attach_ticks = (int16_t)stk_config->time2Ticks(30);
+        attach_ticks = (int16_t)fluxara_drift_config->time2Ticks(30);
     // The replay history will take care of clearing,
     // just make sure it won't expire by itself
     else
@@ -248,7 +248,7 @@ void GhostKart::update(int ticks)
 }   // update
 
 // ----------------------------------------------------------------------------
-void GhostKart::updateSound(float dt)
+void Ghofluxara_driftart::updateSound(float dt)
 {
     if (!getController() ||
         World::getWorld()->getPhase() == World::IN_GAME_MENU_PHASE)
@@ -280,7 +280,7 @@ void GhostKart::updateSound(float dt)
 
 // ----------------------------------------------------------------------------
 /** Returns the speed of the kart in meters/second. */
-float GhostKart::getSpeed() const
+float Ghofluxara_driftart::getSpeed() const
 {
     if (!getController())
     {
@@ -305,7 +305,7 @@ float GhostKart::getSpeed() const
 
 // ----------------------------------------------------------------------------
 /** Compute the time at which the ghost finished the race */
-void GhostKart::computeFinishTime()
+void Ghofluxara_driftart::computeFinishTime()
 {
     // In egg hunts, the finish time is the moment at which all egs are collected
     if (RaceManager::get()->isEggHuntMode())
@@ -326,7 +326,7 @@ void GhostKart::computeFinishTime()
 
 // ------------------------------------------------------------------------
 /** Returns the finish time for a ghost kart. */
-float GhostKart::getGhostFinishTime()
+float Ghofluxara_driftart::getGhostFinishTime()
 {
     if (!m_finish_computed)
         computeFinishTime();
@@ -337,7 +337,7 @@ float GhostKart::getGhostFinishTime()
 // ----------------------------------------------------------------------------
 /** Returns the time at which the kart was at a given distance.
   * Returns -1.0f if none */
-float GhostKart::getTimeForDistance(float distance)
+float Ghofluxara_driftart::getTimeForDistance(float distance)
 {
     const GhostController* gc =
         dynamic_cast<const GhostController*>(getController());
@@ -415,7 +415,7 @@ float GhostKart::getTimeForDistance(float distance)
 // ----------------------------------------------------------------------------
 /** Returns the smallest time at which the kart had the required number of eggs
   * Returns -1.0f if none */
-float GhostKart::getTimeForEggs(int egg_number)
+float Ghofluxara_driftart::getTimeForEggs(int egg_number)
 {
     const GhostController* gc =
         dynamic_cast<const GhostController*>(getController());

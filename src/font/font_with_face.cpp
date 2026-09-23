@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -26,7 +26,7 @@
 #include "graphics/2dutils.hpp"
 #include "graphics/central_settings.hpp"
 #include "graphics/irr_driver.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "guiengine/engine.hpp"
 #include "guiengine/skin.hpp"
 #include "utils/string_utils.hpp"
@@ -72,7 +72,7 @@ FontWithFace::~FontWithFace()
 {
     for (unsigned int i = 0; i < m_spritebank->getTextureCount(); i++)
     {
-        STKTexManager::getInstance()->removeTexture(
+        FLUXARA_DRIFTTexManager::getInstance()->removeTexture(
             m_spritebank->getTexture(i));
     }
     m_spritebank->drop();
@@ -126,7 +126,7 @@ void FontWithFace::reset()
     m_character_glyph_info_map.clear();
     for (unsigned int i = 0; i < m_spritebank->getTextureCount(); i++)
     {
-        STKTexManager::getInstance()->removeTexture(
+        FLUXARA_DRIFTTexManager::getInstance()->removeTexture(
             m_spritebank->getTexture(i));
     }
     m_spritebank->clear();
@@ -168,7 +168,7 @@ void FontWithFace::createNewGlyphPage()
     video::ITexture* font_texture = GE::createFontTexture(typeid(*this).name() +
         StringUtils::toString(m_spritebank->getTextureCount()),
         getGlyphPageSize(), !useColorGlyphPage());
-    m_spritebank->addTexture(STKTexManager::getInstance()->addTexture(
+    m_spritebank->addTexture(FLUXARA_DRIFTTexManager::getInstance()->addTexture(
         font_texture));
 #endif
 }   // createNewGlyphPage

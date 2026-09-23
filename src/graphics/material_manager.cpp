@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
 //  Copyright (C) 2010-2015 Steve Baker, Joerg Henrichs
 //
@@ -373,7 +373,7 @@ Material *MaterialManager::getMaterial(const std::string& fname,
 {
     if(fname=="")
     {
-        // This happens while reading the stk_config file, which contains
+        // This happens while reading the fluxara_drift_config file, which contains
         // kart_properties information (but no icon file): since at this
         // stage loadMaterial() hasn't been called, an exception can be
         // triggered here (as it happened with visual c++), when
@@ -434,7 +434,7 @@ void MaterialManager::unloadAllTextures()
     for (int i = 0; i < m_shared_material_index; i++)
     {
         // Global particle textures will stay until exit
-        // STK, which avoid hangs when lazy-loading the texture when being
+        // FLUXARA_DRIFT, which avoid hangs when lazy-loading the texture when being
         // triggered.
         Material* m = m_materials[i];
         if (!ParticleKindManager::get()->isGlobalParticleMaterial(m)

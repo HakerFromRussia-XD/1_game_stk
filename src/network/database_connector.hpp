@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2024 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2024 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -32,7 +32,7 @@
 #include <vector>
 
 class SocketAddress;
-class STKPeer;
+class FLUXARA_DRIFTPeer;
 class NetworkPlayerProfile;
 
 /** The purpose of Binder and BinderCollection structures is to allow
@@ -161,11 +161,11 @@ public:
                                                          sqlite3_value** argv);
     static void insideIPv6CIDRSQL(sqlite3_context* context, int argc,
                                                          sqlite3_value** argv);
-    void writeDisconnectInfoTable(STKPeer* peer);
+    void writeDisconnectInfoTable(FLUXARA_DRIFTPeer* peer);
     void initServerStatsTable();
     bool writeReport(
-         STKPeer* reporter, std::shared_ptr<NetworkPlayerProfile> reporter_npp,
-       STKPeer* reporting, std::shared_ptr<NetworkPlayerProfile> reporting_npp,
+         FLUXARA_DRIFTPeer* reporter, std::shared_ptr<NetworkPlayerProfile> reporter_npp,
+       FLUXARA_DRIFTPeer* reporting, std::shared_ptr<NetworkPlayerProfile> reporting_npp,
                                                      irr::core::stringw& info);
     bool hasDatabase() const                        { return m_db != nullptr; }
     bool hasServerStatsTable() const  { return !m_server_stats_table.empty(); }
@@ -175,8 +175,8 @@ public:
     bool hasIpv6BanTable() const            { return m_ipv6_ban_table_exists; }
     bool hasOnlineIdBanTable() const   { return m_online_id_ban_table_exists; }
     bool isTimeToPoll() const
-            { return StkTime::getMonoTimeMs() >= m_last_poll_db_time + 60000; }
-    void updatePollTime()   { m_last_poll_db_time = StkTime::getMonoTimeMs(); }
+            { return FluxaraDriftTime::getMonoTimeMs() >= m_last_poll_db_time + 60000; }
+    void updatePollTime()   { m_last_poll_db_time = FluxaraDriftTime::getMonoTimeMs(); }
     std::vector<IpBanTableData> getIpBanTableData(uint32_t ip = 0) const;
     std::vector<Ipv6BanTableData> getIpv6BanTableData(std::string ipv6 = "") const;
     std::vector<OnlineIdBanTableData> getOnlineIdBanTableData(uint32_t online_id = 0) const;
@@ -186,7 +186,7 @@ public:
     void clearOldReports();
     void setDisconnectionTimes(std::vector<uint32_t>& present_hosts);
     void saveAddressToIpBanTable(const SocketAddress& addr);
-    void onPlayerJoinQueries(std::shared_ptr<STKPeer> peer, uint32_t online_id,
+    void onPlayerJoinQueries(std::shared_ptr<FLUXARA_DRIFTPeer> peer, uint32_t online_id,
         unsigned player_count, const std::string& country_code);
     void listBanTable();
 };

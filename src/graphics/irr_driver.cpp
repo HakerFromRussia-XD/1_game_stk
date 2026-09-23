@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -50,8 +50,8 @@
 #include "graphics/sp/sp_mesh_node.hpp"
 #include "graphics/sp/sp_shader_manager.hpp"
 #include "graphics/sp/sp_texture_manager.hpp"
-#include "graphics/stk_text_billboard.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_text_billboard.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "graphics/sun.hpp"
 #include "guiengine/dialog_queue.hpp"
 #include "guiengine/engine.hpp"
@@ -62,8 +62,9 @@
 #include "guiengine/screen_keyboard.hpp"
 #include "guiengine/skin.hpp"
 #include "io/file_manager.hpp"
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "input/motorica_game_control_ios.hpp"
+#include "utils/fluxara_orientation_ios.hpp"
 #endif
 #include "items/item_manager.hpp"
 #include "items/powerup_manager.hpp"
@@ -74,8 +75,8 @@
 #include "main_loop.hpp"
 #include "modes/world.hpp"
 #include "network/network_config.hpp"
-#include "network/stk_host.hpp"
-#include "network/stk_peer.hpp"
+#include "network/fluxara_drift_host.hpp"
+#include "network/fluxara_drift_peer.hpp"
 #include "physics/physics.hpp"
 #include "scriptengine/property_animator.hpp"
 #include "states_screens/dialogs/confirm_resolution_dialog.hpp"
@@ -239,7 +240,7 @@ IrrDriver::~IrrDriver()
 #ifdef ENABLE_RECORDER
     ogrDestroy();
 #endif
-    STKTexManager::getInstance()->kill();
+    FLUXARA_DRIFTTexManager::getInstance()->kill();
     delete m_wind;
     delete m_renderer;
 #ifndef SERVER_ONLY
@@ -393,8 +394,8 @@ void IrrDriver::createListOfVideoModes()
         {
             const int w = modes->getVideoModeResolution(i).Width;
             const int h = modes->getVideoModeResolution(i).Height;
-#ifndef MOBILE_STK
-            // Mobile STK reports only 1 desktop (phone) resolution at native scale
+#ifndef MOBILE_FLUXARA_DRIFT
+            // Mobile FLUXARA_DRIFT reports only 1 desktop (phone) resolution at native scale
             if ((h < MIN_SUPPORTED_HEIGHT || w < MIN_SUPPORTED_WIDTH) &&
                 (!(h==600 && w==800 && UserConfigParams::m_artist_debug_mode) &&
                 (!(h==720 && w==1280 && ALLOW_1280_X_720 == true))))
@@ -704,7 +705,7 @@ begin:
 
     // Some drivers are able to create OpenGL 3.1 context, but shader-based
     // pipeline doesn't work for them. For example some radeon drivers
-    // support only GLSL 1.3 and it causes STK to crash. We should force to use
+    // support only GLSL 1.3 and it causes FLUXARA_DRIFT to crash. We should force to use
     // fixed pipeline in this case.
     if (!GUIEngine::isNoGraphics() &&
         (GraphicsRestrictions::isDisabled(GraphicsRestrictions::GR_FORCE_LEGACY_DEVICE) ||
@@ -865,8 +866,8 @@ begin:
     // Only change video driver settings if we are showing graphics
     if (!GUIEngine::isNoGraphics())
     {
-        m_device->setWindowClass("SuperTuxKart");
-        m_device->setWindowCaption(L"SuperTuxKart");
+        m_device->setWindowClass("FluxaraDrift");
+        m_device->setWindowCaption(L"FluxaraDrift");
         m_device->getVideoDriver()
             ->setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, true);
         m_device->getVideoDriver()
@@ -1034,7 +1035,7 @@ core::position2di IrrDriver::getMouseLocation()
 }
 
 // --------------------------------------------------------------------------------------------
-/** Moves the STK main window to coordinates (x,y)
+/** Moves the FLUXARA_DRIFT main window to coordinates (x,y)
  *  \return true on success, false on failure
  *          (always true on Linux at the moment)
  */
@@ -1117,7 +1118,7 @@ void IrrDriver::applyResolutionSettings(bool recreate_device)
     material_manager = NULL;
 
     // ---- Reinit
-    STKTexManager::getInstance()->kill();
+    FLUXARA_DRIFTTexManager::getInstance()->kill();
 #ifdef ENABLE_RECORDER
     if (recreate_device)
     {
@@ -1217,7 +1218,7 @@ void IrrDriver::commonInit()
 
     kart_properties_manager->loadAllKarts();
     std::string startup_kart = UserConfigParams::m_default_kart;
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // A migrated install can still contain an old default-kart preference.
     // The public Fluxara bundle has one catalogue for direct and bridge
     // launches, so preload a bundled kart instead of the retired Signal LAB
@@ -1253,7 +1254,7 @@ void IrrDriver::cancelResChange()
 // --------------------------------------------------------------------------------------------
 /** Prints statistics about rendering, e.g. number of drawn and culled
  *  triangles etc. Note that printing this information will also slow
- *  down STK.
+ *  down FLUXARA_DRIFT.
  */
 void IrrDriver::printRenderStats()
 {
@@ -1683,7 +1684,7 @@ void IrrDriver::removeMeshFromCache(scene::IMesh *mesh)
  */
 void IrrDriver::removeTexture(video::ITexture *t)
 {
-    if (STKTexManager::getInstance()->removeTexture(t))
+    if (FLUXARA_DRIFTTexManager::getInstance()->removeTexture(t))
         return;
     m_video_driver->removeTexture(t);
 }   // removeTexture
@@ -1777,7 +1778,7 @@ void IrrDriver::removeCameraSceneNode(scene::ICameraSceneNode *camera)
 
 // --------------------------------------------------------------------------------------------
 /** Loads a texture from a file and returns the texture object. This is just
- *  a convenient wrapper which loads the texture from a STK asset directory.
+ *  a convenient wrapper which loads the texture from a FLUXARA_DRIFT asset directory.
  *  It calls the file manager to get the full path, then calls the normal
  *  getTexture() function.s
  *  \param type The FileManager::AssetType of the texture.
@@ -1796,7 +1797,7 @@ video::ITexture *IrrDriver::getTexture(FileManager::AssetType type,
  */
 video::ITexture *IrrDriver::getTexture(const std::string &filename)
 {
-    return STKTexManager::getInstance()->getTexture(filename);
+    return FLUXARA_DRIFTTexManager::getInstance()->getTexture(filename);
 }   // getTexture
 
 // --------------------------------------------------------------------------------------------
@@ -1949,8 +1950,8 @@ void IrrDriver::displayFPS()
     }
 
     uint32_t ping = 0;
-    if (STKHost::existHost())
-        ping = STKHost::get()->getClientPingToServer();
+    if (FLUXARA_DRIFTHost::existHost())
+        ping = FLUXARA_DRIFTHost::get()->getClientPingToServer();
 
     core::stringw fps_string;
     if (no_trust)
@@ -2133,6 +2134,11 @@ void IrrDriver::handleWindowResize()
 
         m_screen_orientation = new_orientation;
         m_actual_screen_size = new_size;
+#ifdef IOS_FLUXARA_DRIFT
+        // UIKit has now delivered a framebuffer with the requested geometry.
+        // Fluxara screens may safely lay out their portrait 360x780 canvas.
+        fluxaraNotifyRenderTargetSize(new_size.Width, new_size.Height);
+#endif
         UserConfigParams::m_width = m_actual_screen_size.Width;
         UserConfigParams::m_height = m_actual_screen_size.Height;
         UserConfigParams::m_real_width = (unsigned)((float)m_actual_screen_size.Width / m_device->getNativeScaleX());
@@ -2265,10 +2271,10 @@ void IrrDriver::renderNetworkDebug()
 {
 #ifndef SERVER_ONLY
     if (!NetworkConfig::get()->isNetworking() ||
-        NetworkConfig::get()->isServer() || !STKHost::existHost())
+        NetworkConfig::get()->isServer() || !FLUXARA_DRIFTHost::existHost())
         return;
 
-    auto peer = STKHost::get()->getServerPeerForClient();
+    auto peer = FLUXARA_DRIFTHost::get()->getServerPeerForClient();
     if (!peer)
         return;
 
@@ -2282,7 +2288,7 @@ void IrrDriver::renderNetworkDebug()
     video::SColor color(0x80, 0xFF, 0xFF, 0xFF);
     GL32_draw2DRectangle(color, background_rect);
     uint64_t r, d, h, m, s, f;
-    r = STKHost::get()->getNetworkTimer();
+    r = FLUXARA_DRIFTHost::get()->getNetworkTimer();
     d = r / 86400000;
     r = r % 86400000;
     h = r / 3600000;
@@ -2307,8 +2313,8 @@ void IrrDriver::renderNetworkDebug()
     background_rect.UpperLeftCorner.Y += height;
     font->drawQuick(StringUtils::insertValues(
         L"Upload speed (KBps): %f      Download speed (KBps): %f",
-        (float)STKHost::get()->getUploadSpeed() / 1024.0f,
-        (float)STKHost::get()->getDownloadSpeed() / 1024.0f,
+        (float)FLUXARA_DRIFTHost::get()->getUploadSpeed() / 1024.0f,
+        (float)FLUXARA_DRIFTHost::get()->getDownloadSpeed() / 1024.0f,
         NetworkConfig::get()->getStateFrequency()), background_rect, black,
         false);
 
@@ -2357,9 +2363,9 @@ void IrrDriver::setRecording(bool val)
         ogrStopCapture();
     }
 #else
-    Log::error("Recorder", "Recording unavailable, STK was compiled without "
-               "recording support.  Please re-compile STK with libopenglrecorder "
-               "to enable recording.  If you got SuperTuxKart from your distribution's "
+    Log::error("Recorder", "Recording unavailable, FLUXARA_DRIFT was compiled without "
+               "recording support.  Please re-compile FLUXARA_DRIFT with libopenglrecorder "
+               "to enable recording.  If you got FluxaraDrift from your distribution's "
                "repositories, please use the official binaries, or contact your "
                "distributions's package mantainers.");
 #endif
@@ -2537,7 +2543,7 @@ void IrrDriver::resizeWindow()
             // This will recreate the RTTs
             sbr->onLoadWorld();
         }
-        STKTextBillboard::updateAllTextBillboards();
+        FLUXARA_DRIFTTextBillboard::updateAllTextBillboards();
         World::getWorld()->getRaceGUI()->recreateGUI();
     }
 

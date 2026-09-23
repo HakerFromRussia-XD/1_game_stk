@@ -29,7 +29,7 @@ Source manifest approved flag required (AddonStatus AS_APPROVED=1), license file
 | 19 | `blooming-start` | Blooming Start | race | 17.2 | CC-BY-SA, CC-BY |
 | 20 | `icy-racing-maze` | Icy Racing Maze | race | 2.2 | CC-BY-SA |
 | 21 | `dyson-speedway` | Dyson Speedway | race | 39.1 | CC-BY-SA, CC-BY, CC0 |
-| 22 | `supertux-raceway` | Supertux Raceway | race | 11.4 | CC-BY, GPL |
+| 22 | `fluxara_drift-raceway` | FluxaraDrift Raceway | race | 11.4 | CC-BY, GPL |
 | 23 | `green-hill_1` | Green Hill | race | 7.7 | CC-BY-SA, CC0 |
 | 24 | `lost-chasm` | Lost Chasm | race | 15.5 | CC-BY-SA, CC-BY, CC0, GPL |
 | 25 | `old-amazon-jungle` | Old Amazon Jungle | race | 5.5 | CC-BY-SA, GPL |

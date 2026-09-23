@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -602,7 +602,7 @@ ShaderBasedRenderer::ShaderBasedRenderer()
     m_spherical_harmonics   = new SphericalHarmonics(irr_driver->getAmbientLight().toSColor());
     SharedGPUObjects::init();
     SP::init();
-    SP::initSTKRenderer(this);
+    SP::initFLUXARA_DRIFTRenderer(this);
     createPostProcessing();
 }
 
@@ -918,7 +918,7 @@ void ShaderBasedRenderer::renderToTexture(GL3RenderTarget *render_target,
             true/*ownForeignMemory*/);
         irr_driver->getVideoDriver()->writeImageToFile(image,
             core::stringc("rtt_") + StringUtils::toString(
-            StkTime::getMonoTimeMs()).c_str() + ".png");
+            FluxaraDriftTime::getMonoTimeMs()).c_str() + ".png");
         image->drop();
 #endif
     }

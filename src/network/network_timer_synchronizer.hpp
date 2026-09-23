@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -19,7 +19,7 @@
 #ifndef HEADER_NETWORK_TIMER_SYNCHRONIZER_HPP
 #define HEADER_NETWORK_TIMER_SYNCHRONIZER_HPP
 
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "utils/log.hpp"
 #include "utils/time.hpp"
 #include "utils/types.hpp"
@@ -64,14 +64,14 @@ public:
         {
             m_force_set_timer.store(false);
             m_synchronised.store(true);
-            STKHost::get()->setNetworkTimer(server_time + (uint64_t)(ping / 2));
+            FLUXARA_DRIFTHost::get()->setNetworkTimer(server_time + (uint64_t)(ping / 2));
             return;
         }
 
-        const uint64_t cur_time = StkTime::getMonoTimeMs();
+        const uint64_t cur_time = FluxaraDriftTime::getMonoTimeMs();
         // Discard too close time compared to last ping
         // (due to resend when packet loss)
-        // 10 packets per second as seen in STKHost
+        // 10 packets per second as seen in FLUXARA_DRIFTHost
         const uint64_t frequency = (uint64_t)((1.0f / 10.0f) * 1000.0f) / 2;
         if (!m_times.empty() &&
             cur_time - std::get<2>(m_times.back()) < frequency)
@@ -95,7 +95,7 @@ public:
             if (std::abs(averaged_time - server_time_now) <
                 UserConfigParams::m_timer_sync_difference_tolerance)
             {
-                STKHost::get()->setNetworkTimer(averaged_time);
+                FLUXARA_DRIFTHost::get()->setNetworkTimer(averaged_time);
                 m_times.clear();
                 m_force_set_timer.store(false);
                 m_synchronised.store(true);

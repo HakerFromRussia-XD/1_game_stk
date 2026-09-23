@@ -53,8 +53,8 @@ typedef enum {
    OPC_FLOW_REV        = _OPC(0, 11),
 
    OPC_BKT             = _OPC(0, 16),
-   OPC_STKS            = _OPC(0, 17),
-   OPC_STKR            = _OPC(0, 18),
+   OPC_FLUXARA_DRIFTS            = _OPC(0, 17),
+   OPC_FLUXARA_DRIFTR            = _OPC(0, 18),
    OPC_XSET            = _OPC(0, 19),
    OPC_XCLR            = _OPC(0, 20),
    OPC_GETONE          = _OPC(0, 21),

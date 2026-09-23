@@ -1,12 +1,12 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: Icons for stk-code
+Upstream-Name: Icons for fluxara_drift-code
 Upstream-Contact:
  Jean-Manuel "samuncle" Clémençon <sam.un@protonmail.com>
-Source: https://supertuxkart.net
+Source: https://fluxaradrift.net
 License: Various
 
 Files: materials.xml
-Copyright: SuperTuxKart dev team
+Copyright: FluxaraDrift dev team
 License: CC-BY-SA 3.0
 Comment: Material data
 
@@ -16,27 +16,27 @@ Files:
  player.png
  mode_3strikes.png
  mode_weapons.png
-Copyright: SuperTuxKart dev team
+Copyright: FluxaraDrift dev team
 License: CC-BY-SA 3.0+
 Comment:
  All icons come from Open Game Art (art by onyum.com, comissionned by Bart Kelsey)
  Released under CC-BY-SA 3+, options_players & random_kart were tweaked by Marianne Gagnon
- Added in commit: https://sourceforge.net/p/supertuxkart/code/4217/
+ Added in commit: https://sourceforge.net/p/fluxaradrift/code/4217/
 
 Files:
  blue_plus.png
  down.png
  player_add.png
  remove.png
-Copyright: SuperTuxKart dev team, Marc Coll
+Copyright: FluxaraDrift dev team, Marc Coll
 License: CC-BY-SA 3.0
 Comment:
- blue_plus.png, down.png, and remove.png were remixed from back.png, and thus inherit its license.  They were added in https://github.com/supertuxkart/stk-code/commit/2f2547420deb628d8308ef12464b1725ee4160f6
+ blue_plus.png, down.png, and remove.png were remixed from back.png, and thus inherit its license.  They were added in https://github.com/fluxaradrift/fluxara_drift-code/commit/2f2547420deb628d8308ef12464b1725ee4160f6
  player_add.png is a simple combination of player.png and blue_plus.png
 
 Files:
  player_view.png
-Copyright: SuperTuxKart dev team, Tango Desktop Project
+Copyright: FluxaraDrift dev team, Tango Desktop Project
 License: CC-BY-SA 3.0
 Comment: combination of player.png and search.png
 
@@ -49,7 +49,7 @@ License: CC-BY-SA 3.0
 
 Files:
  main_network_add.png
-Copyright: yeKcim (Anthony Carré), SuperTuxKart dev team
+Copyright: yeKcim (Anthony Carré), FluxaraDrift dev team
 License: CC-BY-SA 3.0
 Comment: combination of main_network.png and blue_plus.png
 
@@ -59,7 +59,7 @@ Files:
  mode_normal.png
  mode_soccer.png
  race_giveup.png
-Copyright: Totoplus62, SuperTuxKart dev team, ???
+Copyright: Totoplus62, FluxaraDrift dev team, ???
 License: CC-BY-SA 3.0
 Comment:
  Original backgrounds come from set made by onyum.com (see above)
@@ -70,7 +70,7 @@ Comment:
 
 Files:
  mode_normal.png
-Copyright: Totoplus62, MiniBjorn, Marianne "Auria" Gagnon, SuperTuxKart dev team
+Copyright: Totoplus62, MiniBjorn, Marianne "Auria" Gagnon, FluxaraDrift dev team
 License: CC-BY-SA 3.0
 Comment:
  Original backgrounds come from set made by onyum.com (see above)
@@ -79,7 +79,7 @@ Comment:
 
 Files:
  mode_tt.png
-Copyright: Totoplus62, yeKcim, SuperTuxKart dev team
+Copyright: Totoplus62, yeKcim, FluxaraDrift dev team
 License: CC-BY-SA 3.0
 Comment:
  Original backgrounds come from set made by onyum.com (see above)
@@ -88,7 +88,7 @@ Comment:
 
 Files:
  mode_easter.png
-Copyright: Totoplus62, fraang, SuperTuxKart dev team
+Copyright: Totoplus62, fraang, FluxaraDrift dev team
 License: CC-BY-SA 3.0
 Comment:
  Original backgrounds come from set made by onyum.com (see above)
@@ -98,7 +98,7 @@ Comment:
 
 Files:
  mode_laptrial.png
-Copyright: Totoplus62, yeKcim, Alina Oleynik, SuperTuxKart dev team
+Copyright: Totoplus62, yeKcim, Alina Oleynik, FluxaraDrift dev team
 License: CC-BY-SA 3.0
 Comment:
  Original backgrounds come from set made by onyum.com (see above)
@@ -155,7 +155,7 @@ Files:
  menu_addons*
  menu_multi*
  menu_race*
-Copyright: Dakal, SuperTuxKart dev team
+Copyright: Dakal, FluxaraDrift dev team
 License: CC-BY-SA 3.0
 Comment:
  Background by Dakal, from https://forum.freegamedev.net/viewtopic.php?f=18&t=585
@@ -164,7 +164,7 @@ Comment:
 
 Files:
  online/menu_online_player*
-Copyright: Dakal, yeKcim, SuperTuxKart dev team
+Copyright: Dakal, yeKcim, FluxaraDrift dev team
 License: CC-BY-SA 3.0
 Comment:
  Background by Dakal, from https://forum.freegamedev.net/viewtopic.php?f=18&t=585

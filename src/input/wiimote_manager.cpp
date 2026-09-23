@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2012-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2012-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -190,7 +190,7 @@ void WiimoteManager::launchDetection(int timeout)
         wiiuse_rumble(wiimote_handle, 1);
     }
 
-    StkTime::sleep(200);
+    FluxaraDriftTime::sleep(200);
 
     for(unsigned int i=0 ; i < m_wiimotes.size(); i++)
     {
@@ -365,7 +365,7 @@ void WiimoteManager::threadFunc()
             }
         }
 
-        StkTime::sleep(1);  // 'cause come on, the whole CPU is not ours :)
+        FluxaraDriftTime::sleep(1);  // 'cause come on, the whole CPU is not ours :)
     } // end while
 }   // threadFunc
 
@@ -377,11 +377,11 @@ int WiimoteManager::askUserToConnectWiimotes()
     new MessageDialog(
 #ifdef WIN32
         _("Connect your wiimote to the Bluetooth manager, then click on Ok. "
-                  "Detailed instructions at %s.", "https://supertuxkart.net/Wiimote"),
+                  "Detailed instructions at %s.", "https://fluxaradrift.net/Wiimote"),
 #else
         _("Press the buttons 1+2 simultaneously on your wiimote to put "
           "it in discovery mode, then click on Ok. "
-                  "Detailed instructions at %s.", "https://supertuxkart.net/Wiimote"),
+                  "Detailed instructions at %s.", "https://fluxaradrift.net/Wiimote"),
 #endif
         MessageDialog::MESSAGE_DIALOG_OK_CANCEL,
         new WiimoteDialogListener(), true);

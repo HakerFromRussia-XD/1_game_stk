@@ -27,7 +27,7 @@ from PIL import Image, ImageDraw, ImageEnhance
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 OVERLAY_ROOT = REPO_ROOT / "motorica-assets-overlay" / "data"
-DEFAULT_SOURCE = Path("/Users/motoricallc/Downloads/stk-assets")
+DEFAULT_SOURCE = Path("/Users/motoricallc/Downloads/fluxara_drift-assets")
 DEFAULT_MOBILE_BASE = REPO_ROOT / "build-ios-assets" / "assets" / "data"
 DEFAULT_BASE_OUTPUT = REPO_ROOT / "build-motorica-ios-assets" / "assets" / "data"
 DEFAULT_DIST = REPO_ROOT / "dist" / "motorica-assets"
@@ -35,14 +35,14 @@ DEFAULT_DIST = REPO_ROOT / "dist" / "motorica-assets"
 ASSET_VERSION = "1"
 MINIMUM_APP_BUILD = 28
 RELEASE_TAG = "ios-assets-1.0-build28"
-ARCHIVE_NAME = "motorica-stk-full-assets-1.zip"
-MANIFEST_NAME = "motorica-stk-full-assets-1.json"
-CHECKSUM_NAME = "motorica-stk-full-assets-1.sha256"
+ARCHIVE_NAME = "motorica-fluxara_drift-full-assets-1.zip"
+MANIFEST_NAME = "motorica-fluxara_drift-full-assets-1.json"
+CHECKSUM_NAME = "motorica-fluxara_drift-full-assets-1.sha256"
 ARCHIVE_URL = (
-    "https://github.com/HakerFromRussia-XD/1_game_stk/releases/download/"
+    "https://github.com/HakerFromRussia-XD/1_game_fluxara_drift/releases/download/"
     f"{RELEASE_TAG}/{ARCHIVE_NAME}"
 )
-MARKER = "motorica-stk-assets.1"
+MARKER = "motorica-fluxara_drift-assets.1"
 
 REMOTE_ALLOWED_EXTENSIONS = {
     ".jpg", ".jpeg", ".music", ".ogg", ".png", ".spm", ".txt", ".xml"
@@ -64,7 +64,7 @@ def verify_source(source: Path) -> None:
     ]
     missing = [str(path) for path in required if not path.is_file()]
     if missing:
-        fail("Incompatible stk-assets checkout; missing: " + ", ".join(missing))
+        fail("Incompatible fluxara_drift-assets checkout; missing: " + ", ".join(missing))
 
     # Large shared collections use aggregate license inventories, while each
     # kart keeps an adjacent one. Refuse to package an incomplete checkout.
@@ -623,7 +623,7 @@ def build_signal_circuit(source: Path, overlay: Path) -> None:
 def write_spm(path: Path, materials: list[str],
               buffers: list[tuple[int, list[tuple[float, float, float, float, float]],
                                   list[int]]]) -> None:
-    """Write a small static SPM v1 mesh accepted by STK's native loader."""
+    """Write a small static SPM v1 mesh accepted by FLUXARA_DRIFT's native loader."""
     all_vertices = [vertex for _, vertices, _ in buffers for vertex in vertices]
     if not all_vertices:
         fail(f"Cannot write empty SPM: {path}")
@@ -781,7 +781,7 @@ def build_signal_lab_track(overlay: Path) -> None:
     ET.SubElement(scene, "sky-color", {"rgb": "4 6 20"})
     ET.SubElement(scene, "camera", {"far": "500"})
     # A lap group plus ordered activation lines prevents shortcut completion
-    # and keeps STK's track-sector/ranking logic well-defined.
+    # and keeps FLUXARA_DRIFT's track-sector/ranking logic well-defined.
     append_signal_race_nodes(scene, sections)
     ET.SubElement(scene, "default-start", {
         "karts-per-row": "1", "forwards-distance": "2.0",
@@ -1003,7 +1003,7 @@ def write_overlay_notes(overlay: Path) -> None:
     notes = """# Motorica standalone asset overlay
 
 This directory is the tracked source of the permanent Motorica Training Hub
-gameplay content. It is derived from the compatible `stk-assets` checkout and
+gameplay content. It is derived from the compatible `fluxara_drift-assets` checkout and
 keeps each upstream `licenses.txt` file next to the reused assets.
 
 - `motorica_signal_pilot`: original static hover vehicle geometry with four
@@ -1088,12 +1088,12 @@ def build_base_assets(mobile_base: Path, output: Path, source: Path) -> None:
         shutil.copytree(source_directory, full_catalog / name)
 
     # These screens live with the reviewed application source rather than the
-    # upstream stk-assets checkout. Always inject them into the generated
+    # upstream fluxara_drift-assets checkout. Always inject them into the generated
     # minimal IPA tree; otherwise the native Hub screen exists in the binary
     # but fatally fails when GUIEngine tries to load its layout on first launch.
     motorica_screens = [
-        "motorica_hub.stkgui", "motorica_exercise.stkgui",
-        "motorica_history.stkgui", "motorica_about.stkgui",
+        "motorica_hub.fluxara_driftgui", "motorica_exercise.fluxara_driftgui",
+        "motorica_history.fluxara_driftgui", "motorica_about.fluxara_driftgui",
     ]
     screen_directory = output / "gui" / "screens"
     screen_directory.mkdir(parents=True, exist_ok=True)
@@ -1225,7 +1225,7 @@ def write_manifest(dist: Path, size: int, sha256: str, files: list[str]) -> None
     (dist / MANIFEST_NAME).write_text(manifest_text, encoding="utf-8")
     (dist / CHECKSUM_NAME).write_text(
         f"{sha256}  {ARCHIVE_NAME}\n", encoding="utf-8")
-    (dist / "motorica-stk-full-assets-1.files.txt").write_text(
+    (dist / "motorica-fluxara_drift-full-assets-1.files.txt").write_text(
         "\n".join(files) + "\n", encoding="utf-8")
     (REPO_ROOT / "data" / MANIFEST_NAME).write_text(manifest_text, encoding="utf-8")
 

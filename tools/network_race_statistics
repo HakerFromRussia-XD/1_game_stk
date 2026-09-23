@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Start an STK client with:
+# Start an FLUXARA_DRIFT client with:
 # --log=0 --stdout=client  --online  --logbuffer=100000
 # Add "--history=2" if you want to use a replay.
 # Start a server with:
@@ -38,18 +38,18 @@ cat xx.c   | sed 's/Rewind /Rewind/'  >xx.cc
 # This indicates that the column 9-11 in the file are the xyz position
 # It saves column counting if the heading is kept up to date
 
-# Comparison of (physical) position used in STK:
-~/stk-code/tools/compute_client_error.py -f 6,9,10,11  xx.s xx.cc >pos
+# Comparison of (physical) position used in FLUXARA_DRIFT:
+~/fluxara_drift-code/tools/compute_client_error.py -f 6,9,10,11  xx.s xx.cc >pos
 
 # Comparison of physical position at the end of the last full
 # bullet time step (i.e. multple of 1/120).
-~/stk-code/tools/compute_client_error.py -f 6,12,13,14 xx.s xx.cc >phys-pos
+~/fluxara_drift-code/tools/compute_client_error.py -f 6,12,13,14 xx.s xx.cc >phys-pos
 
 # Comparison of velocity
-~/stk-code/tools/compute_client_error.py -f 6,16,17,18 xx.s xx.cc >v
+~/fluxara_drift-code/tools/compute_client_error.py -f 6,16,17,18 xx.s xx.cc >v
 
 # Comparison of steering
-~/stk-code/tools/compute_client_error.py -f 6,20 xx.s xx.cc >steering
+~/fluxara_drift-code/tools/compute_client_error.py -f 6,20 xx.s xx.cc >steering
 
 # Useful gnuplot commands:
 # Plot the path taken for client and server (use xx.c instead of xx.cc not

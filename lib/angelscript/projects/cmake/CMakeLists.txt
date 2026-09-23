@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5...4.0)
 
-# STK Fix llvm mingw crashes
+# FLUXARA_DRIFT Fix llvm mingw crashes
 if (MINGW AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang" AND CMAKE_SIZEOF_VOID_P EQUAL 4)
   set(USE_AS_MAX_PORTABILITY 1)
   ADD_DEFINITIONS(-DAS_MAX_PORTABILITY)
@@ -110,7 +110,7 @@ set(ANGELSCRIPT_SOURCE
     ../../source/as_variablescope.cpp
 )
 
-# STK
+# FLUXARA_DRIFT
 set(BUILD_ARCH "unknown")
 if (CMAKE_GENERATOR_PLATFORM)
     set(BUILD_ARCH "${CMAKE_GENERATOR_PLATFORM}")

@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -41,11 +41,11 @@ using namespace GUIEngine;
 // -----------------------------------------------------------------------------
 /**
  * \brief          Creates a screen populated by the widgets described
- *                 in a STK GUI file.
+ *                 in a FLUXARA_DRIFT GUI file.
  * \param filename Name of the XML file describing the screen.
  *                 This is NOT a path.
  *                 The passed file name will be searched for in the
- *                 STK data/gui directory.
+ *                 FLUXARA_DRIFT data/gui directory.
  */
 Screen::Screen(const char* file, bool pause_race)
 {

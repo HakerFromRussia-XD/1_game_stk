@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -20,7 +20,7 @@
 #include "challenges/unlock_manager.hpp"
 #include "config/player_manager.hpp"
 #include "config/user_config.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "guiengine/widget.hpp"
 #include "guiengine/widgets/dynamic_ribbon_widget.hpp"
 #include "guiengine/widgets/icon_button_widget.hpp"
@@ -42,7 +42,7 @@ static const char ALL_TRACK_GROUPS_ID[] = "all";
 
 // -----------------------------------------------------------------------------
 
-EasterEggScreen::EasterEggScreen() : Screen("easter_egg.stkgui")
+EasterEggScreen::EasterEggScreen() : Screen("easter_egg.fluxara_driftgui")
 {
 }
 
@@ -189,7 +189,7 @@ void EasterEggScreen::init()
     buildTrackList();
 
     // select old track for the game master (if found)
-    STKTexManager::getInstance()->setTextureErrorMessage(
+    FLUXARA_DRIFTTexManager::getInstance()->setTextureErrorMessage(
               "While loading screenshot in track screen for last track '%s':",
               UserConfigParams::m_last_track);
     if (!tracks_widget->setSelection(UserConfigParams::m_last_track,
@@ -197,7 +197,7 @@ void EasterEggScreen::init()
     {
         tracks_widget->setSelection(0, PLAYER_ID_GAME_MASTER, true);
     }
-    STKTexManager::getInstance()->unsetTextureErrorMessage();
+    FLUXARA_DRIFTTexManager::getInstance()->unsetTextureErrorMessage();
 }
 
 // -----------------------------------------------------------------------------

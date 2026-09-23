@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2012-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2012-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -184,7 +184,7 @@ void PlayerProfile::loadRemainingData(const XMLNode *node)
 
 //------------------------------------------------------------------------------
 /** Initialises the story- and achievement data structure in case of the first
- *  start of STK.
+ *  start of FLUXARA_DRIFT.
  */
 void PlayerProfile::initRemainingData()
 {
@@ -205,7 +205,7 @@ void PlayerProfile::initRemainingData()
  *  names). The icon is then copied to the user config directory, so that it
  *  can be replaced by an icon made by the user.
  *  If there should be an error copying the file, the icon filename is set
- *  to "". Every time stk is started, it will try to fix missing icons
+ *  to "". Every time fluxara_drift is started, it will try to fix missing icons
  *  (which allows it to start from old/incompatible config files).
  *  \pre This function must only be called after all karts are read in.
  */
@@ -218,7 +218,7 @@ void PlayerProfile::addIcon()
     if (kart_count <= 0)
         return;
 
-    // Full STK installations retain the original Tux-anchored selection.
+    // Full FLUXARA_DRIFT installations retain the original Tux-anchored selection.
     // Minimal standalone catalogues can legitimately omit Tux, so use the
     // first available kart as the deterministic anchor instead of throwing.
     const KartProperties* tux = kart_properties_manager->getKart("tux");
@@ -432,37 +432,28 @@ void PlayerProfile::raceFinished()
             campaign_win = soccer->getScore(KART_TEAM_BLUE) >
                            soccer->getScore(KART_TEAM_RED);
     }
-#ifdef IOS_STK
-#if 0 // AUTOPLAY ACCEPTANCE — disabled for human play; retained for a future lab run.
-    // TEMPORARY VALIDATION OVERRIDE — DELETE AFTER THE SIMULATOR ACCEPTANCE
-    // RUN.  This is deliberately limited to the explicitly named private
-    // command-line switch.  It changes only the final campaign verdict after
-    // a race has ended: race physics, item handling, team-score callbacks and
-    // result calculation run unchanged and remain available for observation.
+#ifdef IOS_FLUXARA_DRIFT
+    // The device soak needs a deterministic result boundary, but does not
+    // alter physics, scores, item handling, or saved player progress.
     if (FluxaraModes::forceValidationWins())
         campaign_win = true;
-#endif
 #endif
     if (campaign_win)
     {
         unsigned int cups = std::min(3u,
             unsigned(RaceManager::get()->getDifficulty()) + 1u);
-#ifdef IOS_STK
-#if 0 // AUTOPLAY ACCEPTANCE — disabled for human play; retained for a future lab run.
-        // TEMPORARY ACCEPTANCE AWARD — DELETE WITH
-        // FluxaraModes::forceValidationWins() AFTER THE SIMULATOR RUN.
-        // This is the single test-only grant point: after the ordinary race
-        // result is final, record the maximum three cups instead of Novice's
-        // one. No world, physics, item, score or result code is modified.
+#ifdef IOS_FLUXARA_DRIFT
         if (FluxaraModes::forceValidationWins())
             cups = 3;
 #endif
-#endif
-        unsigned int& saved = m_fluxara_cups[m_fluxara_active_event];
+        unsigned int& saved = FluxaraModes::autoCampaignValidation()
+            ? FluxaraModes::validationCups()[m_fluxara_active_event]
+            : m_fluxara_cups[m_fluxara_active_event];
         if (cups > saved)
         {
             saved = cups;
-            PlayerManager::get()->save();
+            if (!FluxaraModes::autoCampaignValidation())
+                PlayerManager::get()->save();
         }
     }
     // The active event is cleared below, but the result screen is shown only
@@ -487,6 +478,12 @@ void PlayerProfile::beginFluxaraEvent(const std::string& event_id,
 //------------------------------------------------------------------------------
 unsigned int PlayerProfile::getFluxaraCups(const std::string& event_id) const
 {
+    if (FluxaraModes::autoCampaignValidation())
+    {
+        const auto validation = FluxaraModes::validationCups().find(event_id);
+        return validation == FluxaraModes::validationCups().end() ? 0u :
+            std::min(3u, validation->second);
+    }
     const auto it = m_fluxara_cups.find(event_id);
     return it == m_fluxara_cups.end() ? 0u : std::min(3u, it->second);
 }

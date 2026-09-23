@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -21,7 +21,7 @@
 #include "audio/sfx_base.hpp"
 #include "audio/sfx_manager.hpp"
 #include "config/player_manager.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "items/attachment.hpp"
 #include "items/item_manager.hpp"
 #include "items/projectile_manager.hpp"
@@ -66,7 +66,7 @@ void Powerup::reset()
     m_number = 0;
 
     // Ghost kart will update powerup every frame
-    if (m_kart->isGhostKart())
+    if (m_kart->isGhofluxara_driftart())
         return;
     int type, number;
     World::getWorld()->getDefaultCollectibles( &type, &number );
@@ -299,7 +299,7 @@ void Powerup::use()
     case PowerupManager::POWERUP_RUBBERBALL:
     case PowerupManager::POWERUP_BOWLING:
     case PowerupManager::POWERUP_PLUNGER:
-        if(stk_config->m_shield_restrict_weapons)
+        if(fluxara_drift_config->m_shield_restrict_weapons)
             m_kart->setShieldTime(0.0f); // make weapon usage destroy the shield
         if (!has_played_sound)
         {
@@ -312,7 +312,7 @@ void Powerup::use()
     case PowerupManager::POWERUP_SWATTER:
         m_kart->getAttachment()
                 ->set(Attachment::ATTACH_SWATTER,
-                      stk_config->time2Ticks(kp->getSwatterDuration()));
+                      fluxara_drift_config->time2Ticks(kp->getSwatterDuration()));
         break;
 
     case PowerupManager::POWERUP_BUBBLEGUM:
@@ -338,14 +338,14 @@ void Powerup::use()
                 {
                     m_kart->getAttachment()
                           ->set(Attachment::ATTACH_NOLOK_BUBBLEGUM_SHIELD,
-                                stk_config->
+                                fluxara_drift_config->
                                   time2Ticks(kp->getBubblegumShieldDuration()));
                 }
                 else
                 {
                     m_kart->getAttachment()
                           ->set(Attachment::ATTACH_BUBBLEGUM_SHIELD,
-                                stk_config->
+                                fluxara_drift_config->
                                   time2Ticks(kp->getBubblegumShieldDuration()));
                 }
             }
@@ -355,14 +355,14 @@ void Powerup::use()
                 {
                     m_kart->getAttachment()
                           ->set(Attachment::ATTACH_NOLOK_BUBBLEGUM_SHIELD,
-                                stk_config->
+                                fluxara_drift_config->
                                  time2Ticks(kp->getBubblegumShieldDuration()));
                 }
                 else
                 {
                     m_kart->getAttachment()
                           ->set(Attachment::ATTACH_BUBBLEGUM_SHIELD,
-                                stk_config->
+                                fluxara_drift_config->
                                 time2Ticks(kp->getBubblegumShieldDuration()
                                            + m_kart->getShieldTime()       ) );
                 }
@@ -397,7 +397,7 @@ void Powerup::use()
             if(kart->getPosition() == 1)
             {
                 kart->getAttachment()->set(Attachment::ATTACH_ANVIL,
-                                           stk_config->
+                                           fluxara_drift_config->
                                            time2Ticks(kp->getAnvilDuration()) );
                 kart->adjustSpeed(kp->getAnvilSpeedFactor() * 0.5f);
 
@@ -457,7 +457,7 @@ void Powerup::use()
 
                     kart->getAttachment()
                         ->set(Attachment::ATTACH_PARACHUTE,
-                              stk_config->time2Ticks(kp->getParachuteDurationOther()*rank_mult) );
+                              fluxara_drift_config->time2Ticks(kp->getParachuteDurationOther()*rank_mult) );
 
                     if(kart->getController()->isLocalPlayerController())
                         player_kart = kart;
@@ -561,7 +561,7 @@ void Powerup::hitBonusBox(const ItemState &item_state)
     // bullet's btSequentialImpulseConstraintSolver) to avoid getting
     // consecutive numbers. Without this the same item could be
     // produced for a longer period of time, which would make this
-    // exploitable: someone could hack STK to display the item that
+    // exploitable: someone could hack FLUXARA_DRIFT to display the item that
     // can be collected for each box, and the pick the one with the
     // 'best' item.
     random_number = (1664525L * random_number + 1013904223L);
@@ -576,7 +576,7 @@ void Powerup::hitBonusBox(const ItemState &item_state)
     // Always add a new powerup in ITEM_MODE_NEW (or if the kart
     // doesn't have a powerup atm).
     if(m_type == PowerupManager::POWERUP_NOTHING ||
-       stk_config->m_same_powerup_mode == STKConfig::POWERUP_MODE_NEW )
+       fluxara_drift_config->m_same_powerup_mode == FLUXARA_DRIFTConfig::POWERUP_MODE_NEW )
     {
         set( new_powerup, n );
     }
@@ -584,7 +584,7 @@ void Powerup::hitBonusBox(const ItemState &item_state)
     {
         // If powerup mode is 'SAME', or it's ONLY_IF_SAME and it is the
         // same powerup, increase the number of items.
-        if(stk_config->m_same_powerup_mode == STKConfig::POWERUP_MODE_SAME ||
+        if(fluxara_drift_config->m_same_powerup_mode == FLUXARA_DRIFTConfig::POWERUP_MODE_SAME ||
             new_powerup==m_type)
         {
             m_number+=n;

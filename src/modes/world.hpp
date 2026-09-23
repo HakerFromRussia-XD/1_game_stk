@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2004-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2004-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -38,7 +38,7 @@
 #include "states_screens/race_gui_base.hpp"
 #include "states_screens/state_manager.hpp"
 #include "utils/random_generator.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 
 #include "LinearMath/btTransform.h"
 
@@ -48,7 +48,7 @@ class btRigidBody;
 class Controller;
 class ItemState;
 class PhysicalObject;
-class STKPeer;
+class FLUXARA_DRIFTPeer;
 
 namespace Scripting
 {
@@ -214,7 +214,7 @@ public:
     /** Returns a pointer to the (singleton) world object. */
     static World*   getWorld()
     {
-        ProcessType type = STKProcess::getType();
+        ProcessType type = FLUXARA_DRIFTProcess::getType();
         return m_world[type];
     }
     // ------------------------------------------------------------------------
@@ -223,7 +223,7 @@ public:
       *  has been deleted already. */
     static void     deleteWorld()
     {
-        ProcessType type = STKProcess::getType();
+        ProcessType type = FLUXARA_DRIFTProcess::getType();
         delete m_world[type];
         m_world[type] = NULL;
     }
@@ -232,7 +232,7 @@ public:
      *  the race_manager.*/
     static void     setWorld(World *world)
     {
-        ProcessType type = STKProcess::getType();
+        ProcessType type = FLUXARA_DRIFTProcess::getType();
         m_world[type] = world;
     }
     // ------------------------------------------------------------------------
@@ -266,7 +266,7 @@ public:
     virtual bool showLapsTarget() { return false; }
     // ------------------------------------------------------------------------
     /** Returns the number of laps for a given kart. Only valid when
-     *  raceHasLaps() - otherwise STK will abort. */
+     *  raceHasLaps() - otherwise FLUXARA_DRIFT will abort. */
     virtual int getFinishedLapsOfKart(unsigned int kart_index) const
     {
         assert(false); return -1; // remove compiler warning
@@ -368,7 +368,7 @@ public:
             m_eliminated_karts--;
     }
     // ------------------------------------------------------------------------
-    virtual void saveCompleteState(BareNetworkString* bns, STKPeer* peer) {}
+    virtual void saveCompleteState(BareNetworkString* bns, FLUXARA_DRIFTPeer* peer) {}
     // ------------------------------------------------------------------------
     virtual void restoreCompleteState(const BareNetworkString& buffer) {}
     // ------------------------------------------------------------------------

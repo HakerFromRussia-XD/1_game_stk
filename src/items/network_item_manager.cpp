@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2018 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -24,8 +24,8 @@
 #include "network/network_string.hpp"
 #include "network/protocols/game_protocol.hpp"
 #include "network/rewind_manager.hpp"
-#include "network/stk_host.hpp"
-#include "network/stk_peer.hpp"
+#include "network/fluxara_drift_host.hpp"
+#include "network/fluxara_drift_peer.hpp"
 
 bool NetworkItemManager::m_network_item_debugging = false;
 // ============================================================================
@@ -51,7 +51,7 @@ void NetworkItemManager::initServer()
 {
     if (NetworkConfig::get()->isServer())
     {
-        auto peers = STKHost::get()->getPeers();
+        auto peers = FLUXARA_DRIFTHost::get()->getPeers();
         for (auto& p : peers)
         {
             if (!p->isValidated() || p->isWaitingForGame())
@@ -168,7 +168,7 @@ Item* NetworkItemManager::dropNewItem(ItemState::ItemType type,
  *  \param peer Peer confirming the latest event time received.
  *  \param ticks Time at which the last event was received.
  */
-void NetworkItemManager::setItemConfirmationTime(std::weak_ptr<STKPeer> peer,
+void NetworkItemManager::setItemConfirmationTime(std::weak_ptr<FLUXARA_DRIFTPeer> peer,
                                                  int ticks)
 {
     assert(NetworkConfig::get()->isServer());

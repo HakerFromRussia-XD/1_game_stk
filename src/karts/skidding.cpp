@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2012-2015  Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -86,7 +86,7 @@ void Skidding::reset()
 
     btVector3 rot(0, 0, 0);
     // Only access the vehicle if the kart is not a ghost
-    if (!m_kart->isGhostKart())
+    if (!m_kart->isGhofluxara_driftart())
         m_kart->getVehicle()->setTimedRotation(0, 0);
 }   // reset
 
@@ -147,8 +147,8 @@ void Skidding::checkSmoothing()
  */
 float Skidding::updateSteering(float steer, int ticks)
 {
-    float dt = stk_config->ticks2Time(ticks);
-    float skid_time_float = stk_config->ticks2Time(m_skid_time);
+    float dt = fluxara_drift_config->ticks2Time(ticks);
+    float skid_time_float = fluxara_drift_config->ticks2Time(m_skid_time);
     float steer_result = 0.0f;
 
     const KartProperties *kp = m_kart->getKartProperties();
@@ -353,7 +353,7 @@ float Skidding::updateGraphics(float dt)
 void Skidding::update(int ticks, bool is_on_ground,
                       float steering, KartControl::SkidControl skidding)
 {
-    float dt = stk_config->ticks2Time(ticks);
+    float dt = fluxara_drift_config->ticks2Time(ticks);
 
     m_remaining_jump_time -= dt;
 
@@ -538,15 +538,15 @@ void Skidding::update(int ticks, bool is_on_ground,
                 m_skid_state = m_skid_state == SKID_ACCUMULATE_LEFT
                              ? SKID_SHOW_GFX_LEFT
                              : SKID_SHOW_GFX_RIGHT;
-                float skid_time_float = stk_config->ticks2Time(m_skid_time);
+                float skid_time_float = fluxara_drift_config->ticks2Time(m_skid_time);
                 float t = std::min(skid_time_float, kp->getSkidVisualTime());
                 t       = std::min(t,           kp->getSkidRevertVisualTime());
 
                 m_kart->getVehicle()->setTimedRotation(
-                    (uint16_t)stk_config->time2Ticks(t),
+                    (uint16_t)fluxara_drift_config->time2Ticks(t),
                     m_visual_rotation * kp->getSkidPostSkidRotateFactor());
                 // skid_time is used to count backwards for the GFX
-                m_skid_time = stk_config->time2Ticks(t);
+                m_skid_time = fluxara_drift_config->time2Ticks(t);
                 if(bonus_time>0)
                 {
                     unsigned int bonus_cat = (level == 1) ? MaxSpeed::MS_INCREASE_SKIDDING :
@@ -555,11 +555,11 @@ void Skidding::update(int ticks, bool is_on_ground,
                         instantSpeedIncrease(bonus_cat,
                                bonus_speed, bonus_speed/2,
                                bonus_force,
-                               stk_config->time2Ticks(bonus_time),
-                               /*fade-out-time*/ stk_config->time2Ticks(1.0f));
+                               fluxara_drift_config->time2Ticks(bonus_time),
+                               /*fade-out-time*/ fluxara_drift_config->time2Ticks(1.0f));
 
                     m_skid_bonus_end_ticks = World::getWorld()->getTicksSinceStart() +
-                        stk_config->time2Ticks(1.0f);
+                        fluxara_drift_config->time2Ticks(1.0f);
 
                     if (m_kart->getController()->canGetAchievements())
                     {
@@ -613,7 +613,7 @@ unsigned int Skidding::getSkidBonus(float *bonus_time,
     *bonus_force = 0;
     for (unsigned int i = 0; i < kp->getSkidBonusSpeed().size(); i++)
     {
-        if (stk_config->ticks2Time(m_skid_time) <=
+        if (fluxara_drift_config->ticks2Time(m_skid_time) <=
             kp->getSkidTimeTillBonus()[i])
             return i;
         *bonus_speed = kp->getSkidBonusSpeed()[i];

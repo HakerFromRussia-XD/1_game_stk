@@ -297,7 +297,7 @@ int	btDiscreteDynamicsWorld::stepSimulation( btScalar timeStep,int maxSubSteps, 
 	}
 
 	clearForces();
-    // Reset the max speeds of all karts, so that supertuxkart can
+    // Reset the max speeds of all karts, so that fluxaradrift can
     // set any new max_speed.
     for (int i = 0; i<m_actions.size(); i++)
     {

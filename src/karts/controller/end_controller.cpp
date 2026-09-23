@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
 //  Copyright (C) 2006-2015 Eduardo Hernandez Munoz
 //  Copyright (C) 2008-2015 Joerg Henrichs
@@ -20,7 +20,7 @@
 
 
 //The AI debugging works best with just 1 AI kart, so set the number of karts
-//to 2 in main.cpp with quickstart and run supertuxkart with the arg -N.
+//to 2 in main.cpp with quickstart and run fluxaradrift with the arg -N.
 #undef AI_DEBUG
 
 #include "karts/controller/end_controller.hpp"
@@ -205,7 +205,7 @@ void EndController::update(int ticks)
     calcSteps();
 
     /*Response handling functions*/
-    float dt = stk_config->ticks2Time(ticks);
+    float dt = fluxara_drift_config->ticks2Time(ticks);
     handleSteering(dt);
     handleRescue(dt);
 }   // update

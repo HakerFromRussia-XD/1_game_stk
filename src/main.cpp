@@ -1,6 +1,6 @@
 
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
 //  Copyright (C) 2011-2015 Joerg Henrichs, Marianne Gagnon
 //
@@ -20,9 +20,9 @@
 
 
 /**
- * \mainpage SuperTuxKart developer documentation
+ * \mainpage FluxaraDrift developer documentation
  *
- * This document contains the developer documentation for SuperTuxKart,
+ * This document contains the developer documentation for FluxaraDrift,
  * including the list of modules, the list of classes, the API reference,
  * and some pages that describe in more depth some parts of the code/engine.
  *
@@ -69,8 +69,8 @@
 # challenges -> modes
  guiengine -> challenges
  online_manager -> addons
- online_manager -> "STK Server"
- "STK Server" -> online_manager
+ online_manager -> "FLUXARA_DRIFT Server"
+ "FLUXARA_DRIFT Server" -> online_manager
  karts -> replay
  replay
  # force karts and tracks on the same level, looks better this way
@@ -98,20 +98,20 @@
    This module handles the challenge system, which locks features (tracks, karts
    modes, etc.) until the user completes some task.
  \li \ref config :
-   This module handles the user configuration, the supertuxkart configuration
+   This module handles the user configuration, the fluxaradrift configuration
    file (which contains options usually not edited by the player) and the input
    configuration file.
  \li \ref font :
-   This module stores font files and tools used to draw characters in STK.
+   This module stores font files and tools used to draw characters in FLUXARA_DRIFT.
  \li \ref graphics :
    This module contains the core graphics engine, that is mostly a thin layer
-   on top of irrlicht providing some additional features we need for STK
+   on top of irrlicht providing some additional features we need for FLUXARA_DRIFT
    (like particles, more scene node types, mesh manipulation tools, material
    management, etc...)
  \li \ref guiengine :
    Contains the generic GUI engine (contains the widgets and the backing logic
    for event handling, the skin, screens and dialogs). See module @ref states_screens
-   for the actual STK GUI screens. Note that all input comes through this module
+   for the actual FLUXARA_DRIFT GUI screens. Note that all input comes through this module
    too.
  \li \ref widgetsgroup :
    Contains the various types of widgets supported by the GUI engine.
@@ -120,7 +120,7 @@
  \li \ref io :
   Contains generic utility classes for file I/O (especially XML handling).
  \li \ref items :
-   Defines the various collectibles and weapons of STK.
+   Defines the various collectibles and weapons of FLUXARA_DRIFT.
  \li \ref karts :
    Contains classes that deal with the properties, models and physics
    of karts.
@@ -137,7 +137,7 @@
    in group Modes. Handles highscores, grands prix, number of karts, which
    track was selected, etc.
  \li \ref states_screens :
-   Contains the various screens and dialogs of the STK user interface,
+   Contains the various screens and dialogs of the FLUXARA_DRIFT user interface,
    using the facilities of the guiengine module. Also contains the
    stack of menus and handles state management (in-game vs menu).
  \li \ref tracks :
@@ -208,7 +208,7 @@ extern "C" {
 #include "config/hardware_stats.hpp"
 #include "config/player_manager.hpp"
 #include "config/player_profile.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "font/font_manager.hpp"
 #include "graphics/camera/camera.hpp"
@@ -229,7 +229,7 @@ extern "C" {
 #include "input/device_manager.hpp"
 #include "input/input_manager.hpp"
 #include "input/keyboard_device.hpp"
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "input/motorica_game_control_ios.hpp"
 #endif
 #include "input/wiimote_manager.hpp"
@@ -264,8 +264,8 @@ extern "C" {
 #include "network/server_config.hpp"
 #include "network/servers_manager.hpp"
 #include "network/socket_address.hpp"
-#include "network/stk_host.hpp"
-#include "network/stk_peer.hpp"
+#include "network/fluxara_drift_host.hpp"
+#include "network/fluxara_drift_peer.hpp"
 #include "online/profile_manager.hpp"
 #include "online/request_manager.hpp"
 #include "race/grand_prix_manager.hpp"
@@ -275,7 +275,7 @@ extern "C" {
 #include "replay/replay_play.hpp"
 #include "replay/replay_recorder.hpp"
 #include "states_screens/main_menu_screen.hpp"
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "states_screens/fluxara_campaign_screen.hpp"
 #include "states_screens/fluxara_event.hpp"
 #include "states_screens/fluxara_home_screen.hpp"
@@ -301,7 +301,7 @@ extern "C" {
 #include "utils/log.hpp"
 #include "mini_glm.hpp"
 #include "utils/profiler.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
 #include "io/rich_presence.hpp"
@@ -310,11 +310,11 @@ extern "C" {
 #include <IrrlichtDevice.h>
 #include <memory>
 
-static void cleanSuperTuxKart();
+static void cleanFluxaraDrift();
 static void cleanUserConfig();
 void runUnitTests();
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 // Motorica Start can deep-launch a selected campaign event.  The value only
 // binds a successful direct race to its stable campaign ID; it never alters
 // the selected track or native race mode.
@@ -331,7 +331,7 @@ static bool fluxaraLaunchStartsRace()
         return false;
 
     // iOS launch services can rewrite argv while retaining the arguments in
-    // STK's parser.  This startup probe must not consume them before the
+    // FLUXARA_DRIFT's parser.  This startup probe must not consume them before the
     // normal race route handles the same values.
     return CommandLine::hasPrefix("--no-start-screen") ||
            CommandLine::hasPrefix("-N") ||
@@ -370,7 +370,7 @@ static bool fluxaraLaunchEventMatchesTrack(const std::string& event_id,
 }
 
 // Motorica Start addresses campaign races by their immutable event ID.  A
-// bridge launch need not duplicate STK's track/mode command-line internals;
+// bridge launch need not duplicate FLUXARA_DRIFT's track/mode command-line internals;
 // resolve that one stable value from the packaged campaign manifest instead.
 static bool fluxaraFindLaunchEvent(const std::string& event_id,
                                    std::string* track_id,
@@ -535,7 +535,7 @@ void handleXmasMode()
     case 0:
         {
             int day, month;
-            StkTime::getDate(&day, &month);
+            FluxaraDriftTime::getDate(&day, &month);
             // Christmat hats are shown between 17. of December
             // and 5th of January
             xmas = (month == 12 && day>=17)  || (month ==  1 && day <=5);
@@ -601,7 +601,7 @@ bool isEasterMode(int day, int month, int year, int before_after_days)
 void handleEasterEarMode()
 {
     int day, month, year;
-    StkTime::getDate(&day, &month, &year);
+    FluxaraDriftTime::getDate(&day, &month, &year);
     if (isEasterMode(day, month, year, /*before_after_days*/5))
         kart_properties_manager->setHatMeshName("easter_ears.spm");
 }   // handleEasterMode
@@ -617,7 +617,7 @@ void setupRaceStart()
     // a current player
     PlayerManager::get()->enforceCurrentPlayer();
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // A fresh upstream profile defaults to `tux`, which is deliberately not
     // part of the Fluxara-only bundle.  Correct that before the active player
     // is created: otherwise a first direct campaign launch exits while trying
@@ -689,7 +689,7 @@ void cmdLineHelp()
 {
     fprintf(stdout,
     "Usage: %s [OPTIONS]\n\n"
-    "Run SuperTuxKart, a go-kart racing game that features "
+    "Run FluxaraDrift, a go-kart racing game that features "
     "Tux and friends.\n\n"
     "Options:\n"
     "  -N,  --no-start-screen  Immediately start race without showing a "
@@ -712,8 +712,8 @@ void cmdLineHelp()
     "       --add-gp-dir=DIR   Load Grand Prix files in DIR. Setting will be saved"
                               "in config.xml under additional_gp_directory. Use"
                               "--add-gp-dir=\"\" to unset.\n"
-    "       --stk-config=FILE  use ./data/FILE instead of "
-                              "./data/stk_config.xml\n"
+    "       --fluxara_drift-config=FILE  use ./data/FILE instead of "
+                              "./data/fluxara_drift_config.xml\n"
     "  -k,  --numkarts=NUM     Set number of karts on the racetrack.\n"
     "       --kart=NAME        Use kart NAME.\n"
     "       --ai=a,b,...       Use the karts a, b, ... for the AI, and additional player kart.\n"
@@ -725,7 +725,7 @@ void cmdLineHelp()
     "                          In configure server use --battle-mode=n\n"
     "                          for battle server and --soccer-timed / goals for soccer server\n"
     "                          to control verbosely, see below:\n"
-    "       --difficulty=N     N=0 Beginner, N=1 Intermediate, N=2 Expert, N=3 SuperTux.\n"
+    "       --difficulty=N     N=0 Beginner, N=1 Intermediate, N=2 Expert, N=3 FluxaraDrift.\n"
     "       --battle-mode=n    Specify battle mode in network, 0 is Free-For-All and\n"
     "                          1 is Capture The Flag.\n"
     "       --soccer-timed     Use time limit mode in network soccer game.\n"
@@ -736,7 +736,7 @@ void cmdLineHelp()
     "  -f,  --fullscreen       Use fullscreen display.\n"
     "  -w,  --windowed         Use windowed display (default).\n"
     "  -s,  --screensize=WxH   Set the display size (e.g. 320x200).\n"
-    "  -v,  --version          Print version of SuperTuxKart.\n"
+    "  -v,  --version          Print version of FluxaraDrift.\n"
     "       --trackdir=DIR     A directory from which additional tracks are "
                               "loaded.\n"
     "       --seed=n           Seed for random number generation to provide reproducible behavior.\n"
@@ -765,13 +765,13 @@ void cmdLineHelp()
     "                            one if not found.\n"
     "       --network-console  Enable network console.\n"
     "       --wan-server=name  Start a Wan server (not a playing client).\n"
-    "       --public-server    Allow direct connection to the server (without stk server)\n"
+    "       --public-server    Allow direct connection to the server (without fluxara_drift server)\n"
     "       --lan-server=name  Start a LAN server (not a playing client).\n"
     "       --server-password= Sets a password for a server (both client and server).\n"
     "       --connect-now=ip   Connect to a server with IP or domain known now\n"
     "                          (in format x.x.x.x:xxx(optional port)), the port should be its\n"
     "                          public port, you can use [::] to replace x.x.x.x for IPv6 address.\n"
-    "       --server-id=n      Server id in stk addons for --connect-now.\n"
+    "       --server-id=n      Server id in fluxara_drift addons for --connect-now.\n"
     "       --network-ai=n     Numbers of AI for connecting to linear race server, used\n"
     "                          together with --connect-now.\n"
     "       --login=s          Automatically log in (set the login).\n"
@@ -791,8 +791,8 @@ void cmdLineHelp()
     "       --network-gp=n     Specify number of tracks used in network grand prix.\n"
     "       --graphical-server Enable graphical view in server.\n"
     "       --no-validation    Allow non validated and unencrypted connection in wan.\n"
-    "       --ranked           Server will submit ranking to stk addons server.\n"
-    "       --no-ranked        Server will not submit ranking to stk addons server.\n"
+    "       --ranked           Server will submit ranking to fluxara_drift addons server.\n"
+    "       --no-ranked        Server will not submit ranking to fluxara_drift addons server.\n"
     "                          You require permission for that.\n"
     "       --owner-less       Race will autostart and no one can kick players in server.\n"
     "       --no-owner-less    Race will not autostart and server owner can kick players in server.\n"
@@ -806,13 +806,13 @@ void cmdLineHelp()
     "       --log=N            Set the verbosity to a value between\n"
     "                          0 (Debug) and 5 (Only Fatal messages)\n"
     "       --logbuffer=N      Buffers up to N lines log lines before writing.\n"
-    "       --root=DIR         Path to add to the list of STK root directories.\n"
+    "       --root=DIR         Path to add to the list of FLUXARA_DRIFT root directories.\n"
     "                          You can specify more than one by separating them\n"
     "                          with colons (:).\n"
     "       --cutscene=NAME    Launch the specified track as a cutscene.\n"
     "                          This is for internal debugging use only.\n"
     "       --gfx-preset=n     Set the graphics settings to the selected preset.\n"
-    "                          Valid values for this STK version are between 1 and 7.\n"
+    "                          Valid values for this FLUXARA_DRIFT version are between 1 and 7.\n"
     "                          Other graphic command-line parameters will override the preset.\n"
     "       --enable-glow      Enable glow effect.\n"
     "       --disable-glow     Disable glow effect.\n"
@@ -855,7 +855,7 @@ void cmdLineHelp()
     "       --render-driver=n   Render driver to use (gl or directx9).\n"
     "       --disable-addon-karts Disable loading of addon karts.\n"
     "       --disable-addon-tracks Disable loading of addon tracks.\n"
-    "       --dump-official-karts Dump official karts for current stk-assets.\n"
+    "       --dump-official-karts Dump official karts for current fluxara_drift-assets.\n"
     "       --apitrace          This will disable buffer storage and\n"
     "                           writing gpu query strings to opengl, which\n"
     "                           can be seen later in apitrace.\n"
@@ -871,8 +871,8 @@ void cmdLineHelp()
     "                                      fullscreen window, eg. HDMI-0\n"
 #endif
     "\n"
-    "You can visit SuperTuxKart's homepage at "
-    "https://supertuxkart.net\n\n",
+    "You can visit FluxaraDrift's homepage at "
+    "https://fluxaradrift.net\n\n",
     CommandLine::getExecName().c_str()
     );
 }   // cmdLineHelp
@@ -881,7 +881,7 @@ void cmdDebugHelp()
 {
     fprintf(stdout,
     "Usage: %s [OPTIONS]\n\n"
-    "Run SuperTuxKart, a go-kart racing game that features "
+    "Run FluxaraDrift, a go-kart racing game that features "
     "Tux and friends.\n\n"
     "Debug options (some work only if artist debug mode is enabled):\n"
     "       --debug=s                   s=all Log everything, s=addons Log addons management,\n"
@@ -916,8 +916,8 @@ void cmdDebugHelp()
     "                                   debugging client/server item management.\n"
     "       --network-item-debugging    Print item handling debug information.\n"
     "\n"
-    "You can visit SuperTuxKart's homepage at "
-    "https://supertuxkart.net\n\n",
+    "You can visit FluxaraDrift's homepage at "
+    "https://fluxaradrift.net\n\n",
     CommandLine::getExecName().c_str()
     );
 }   // cmdDebugHelp
@@ -946,7 +946,7 @@ int handleCmdLineOutputModifier()
     if(CommandLine::has("--version") || CommandLine::has("-v"))
     {
         Log::info("main", "==============================");
-        Log::info("main", "SuperTuxKart, %s.", STK_VERSION ) ;
+        Log::info("main", "FluxaraDrift, %s.", FLUXARA_DRIFT_VERSION ) ;
         Log::info("main", "==============================");
         cleanUserConfig();
         exit(0);
@@ -1003,10 +1003,10 @@ int handleCmdLinePreliminary()
 #endif
 
     std::string s;
-    if(CommandLine::has("--stk-config", &s))
+    if(CommandLine::has("--fluxara_drift-config", &s))
     {
-        stk_config->load(file_manager->getAsset(s));
-        Log::info("main", "STK config will be read from %s.",s.c_str());
+        fluxara_drift_config->load(file_manager->getAsset(s));
+        Log::info("main", "FLUXARA_DRIFT config will be read from %s.",s.c_str());
     }
     if(CommandLine::has("--render-driver", &s))
         UserConfigParams::m_render_driver = s;
@@ -1213,7 +1213,7 @@ int handleCmdLinePreliminary()
     {
         srand(n);
         RandomGenerator::seed(n);
-        Log::info("main", "STK using random seed (%d)", n);
+        Log::info("main", "FLUXARA_DRIFT using random seed (%d)", n);
     }
 
     if (CommandLine::has("--disable-addon-karts"))
@@ -1238,19 +1238,25 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
 
     if (CommandLine::has("--no-high-scores"))
         UserConfigParams::m_no_high_scores=true;
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     CommandLine::has("--fluxara-event", &g_fluxara_launch_event);
     CommandLine::has("--fluxara-screen", &g_fluxara_launch_screen);
-#if 0 // AUTOPLAY ACCEPTANCE — disabled for human play; retained for a future lab run.
+    // A soak run is enabled only by this private three-part signature.  It
+    // cannot be reached from the public UI or by a normal deep launch.
+    int fluxara_validation_ai = 0;
     FluxaraModes::autoCampaignValidation() =
-        CommandLine::has("--fluxara-auto-campaign");
+        CommandLine::has("--fluxara-auto-campaign") &&
+        CommandLine::has("--fluxara-validation-force-wins") &&
+        CommandLine::has("--test-ai", &fluxara_validation_ai) &&
+        fluxara_validation_ai < 0;
     FluxaraModes::autoCampaignSmoke() =
+        FluxaraModes::autoCampaignValidation() &&
         CommandLine::has("--fluxara-auto-smoke");
     FluxaraModes::forceValidationWins() =
-        CommandLine::has("--fluxara-validation-force-wins");
+        FluxaraModes::autoCampaignValidation();
+    FluxaraModes::resetValidationCups();
     if (FluxaraModes::autoCampaignSmoke())
         FluxaraModes::autoCampaignValidation() = true;
-#endif
 #endif
     if (CommandLine::has("--unit-testing"))
         UserConfigParams::m_unit_testing = true;
@@ -1344,23 +1350,23 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
     {
         if (!PlayerManager::getCurrentPlayer())
         {
-            Log::error("Main", "Run supertuxkart with --init-user");
-            cleanSuperTuxKart();
+            Log::error("Main", "Run fluxaradrift with --init-user");
+            cleanFluxaraDrift();
             return false;
         }
         irr::core::stringw s;
         PlayerManager::requestSignIn(login, password);
-        uint64_t started_time = StkTime::getMonoTimeMs();
+        uint64_t started_time = FluxaraDriftTime::getMonoTimeMs();
         while (PlayerManager::getCurrentOnlineState() != PlayerProfile::OS_SIGNED_IN)
         {
             Online::RequestManager::get()->update(0.0f);
-            StkTime::sleep(1);
-            if (StkTime::getMonoTimeMs() > started_time + 20000)
+            FluxaraDriftTime::sleep(1);
+            if (FluxaraDriftTime::getMonoTimeMs() > started_time + 20000)
             {
                 Log::error("Main",
                     "Timed out trying login, check login info or connection "
-                    "to stk addons.");
-                cleanSuperTuxKart();
+                    "to fluxara_drift addons.");
+                cleanFluxaraDrift();
                 return false;
             }
         }
@@ -1372,7 +1378,7 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
     if (init_user)
     {
         Log::info("Main", "Done saving user, leaving");
-        cleanSuperTuxKart();
+        cleanFluxaraDrift();
         return false;
     }
 
@@ -1513,12 +1519,12 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
     if (CommandLine::has("--network-console"))
     {
         ServerConfig::m_enable_console = true;
-        STKHost::m_enable_console = true;
+        FLUXARA_DRIFTHost::m_enable_console = true;
     }
     else if (ServerConfig::m_enable_console &&
         NetworkConfig::get()->isServer() && !has_parent_process)
     {
-        STKHost::m_enable_console = true;
+        FLUXARA_DRIFTHost::m_enable_console = true;
     }
 
     if (CommandLine::has("--disable-item-collection"))
@@ -1606,18 +1612,18 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
         if (!can_wan && player && player->wasOnlineLastTime() &&
             player->wasOnlineLastTime() && player->hasSavedSession())
         {
-            uint64_t started_time = StkTime::getMonoTimeMs();
+            uint64_t started_time = FluxaraDriftTime::getMonoTimeMs();
             while (PlayerManager::getCurrentOnlineState() !=
                 PlayerProfile::OS_SIGNED_IN)
             {
                 Online::RequestManager::get()->update(0.0f);
-                StkTime::sleep(1);
-                if (StkTime::getMonoTimeMs() > started_time + 20000)
+                FluxaraDriftTime::sleep(1);
+                if (FluxaraDriftTime::getMonoTimeMs() > started_time + 20000)
                 {
                     Log::error("Main",
                         "Timed out trying to login saved session, check "
-                        "connection to stk addons or rerun --init-user.");
-                    cleanSuperTuxKart();
+                        "connection to fluxara_drift addons or rerun --init-user.");
+                    cleanFluxaraDrift();
                     return false;
                 }
             }
@@ -1662,7 +1668,7 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
         if (server_addr.getIP() == 0 && !server_addr.isIPv6())
         {
             Log::error("Main", "Invalid server address: %s", addr.c_str());
-            cleanSuperTuxKart();
+            cleanFluxaraDrift();
             return false;
         }
         SocketAddress ipv4_addr = server_addr;
@@ -1685,7 +1691,7 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
         }
         else
             NetworkConfig::get()->setIsLAN();
-        STKHost::create();
+        FLUXARA_DRIFTHost::create();
         if (!GUIEngine::isNoGraphics())
             NetworkingLobby::getInstance()->setJoinedServer(server);
         else if (NetworkConfig::get()->isClient())
@@ -1875,11 +1881,11 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
     if(CommandLine::has("--numkarts", &n) ||CommandLine::has("-k", &n))
     {
         UserConfigParams::m_default_num_karts = n;
-        if(UserConfigParams::m_default_num_karts > stk_config->m_max_karts)
+        if(UserConfigParams::m_default_num_karts > fluxara_drift_config->m_max_karts)
         {
             Log::warn("main", "Number of karts reset to maximum number %d.",
-                      stk_config->m_max_karts);
-            UserConfigParams::m_default_num_karts = stk_config->m_max_karts;
+                      fluxara_drift_config->m_max_karts);
+            UserConfigParams::m_default_num_karts = fluxara_drift_config->m_max_karts;
         }
         RaceManager::get()->setNumKarts( UserConfigParams::m_default_num_karts );
         Log::verbose("main", "%d karts will be used.",
@@ -1895,9 +1901,9 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
         UserConfigParams::m_race_now = true;
     }   // --race-now
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // A direct Fluxara screen is an explicit menu request.  m_no_start_screen
-    // is persisted by STK, so a previous event probe must not make a later
+    // is persisted by FLUXARA_DRIFT, so a previous event probe must not make a later
     // --fluxara-screen=garage/settings/campaign launch skip its UI and reuse
     // the last race instead.
     if (!g_fluxara_launch_screen.empty())
@@ -1917,7 +1923,7 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
             RaceManager::get()->setNumLaps(1);
             // The manifest provides a sensible battle default, while an
             // explicit command-line roster remains authoritative.  Besides
-            // preserving STK's documented --numkarts contract, this lets the
+            // preserving FLUXARA_DRIFT's documented --numkarts contract, this lets the
             // Simulator exercise the one-player result/save path without
             // changing Motorica Start's ordinary event launch.
             if (!CommandLine::hasPrefix("--numkarts=") &&
@@ -1992,18 +1998,18 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
         if (s.find(".replay") != std::string::npos)
         {
             bool found_replay = false;
-            for (unsigned int i=0; i < stk_config->m_benchmark_files.size(); i++)
+            for (unsigned int i=0; i < fluxara_drift_config->m_benchmark_files.size(); i++)
             {
-                if (stk_config->m_benchmark_files[i] == s)
+                if (fluxara_drift_config->m_benchmark_files[i] == s)
                 {
                     found_replay = true;
-                    stk_config->m_active_benchmark_file = s;
+                    fluxara_drift_config->m_active_benchmark_file = s;
                     break;
                 }
             }
             if (!found_replay)
                 Log::error("main","The requested benchmark file '%s' "
-                    "isn't registered as a benchmark file in stk_config.xml.", s.c_str());
+                    "isn't registered as a benchmark file in fluxara_drift_config.xml.", s.c_str());
         }
         else
         {
@@ -2105,7 +2111,7 @@ void initUserConfig()
     file_manager = new FileManager();
     user_config  = new UserConfig();     // needs file_manager
     user_config->loadConfig();
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // Fluxara Drift ships as an offline racing game. Keep online services and
     // their first-run consent prompt out of the iPhone product altogether.
     UserConfigParams::m_internet_status =
@@ -2135,7 +2141,7 @@ void initUserConfig()
     }
 
     translations            = new Translations();   // needs file_manager
-    stk_config              = new STKConfig();      // in case of --stk-config
+    fluxara_drift_config              = new FLUXARA_DRIFTConfig();      // in case of --fluxara_drift-config
                                                     // command line parameters
 }   // initUserConfig
 
@@ -2144,10 +2150,10 @@ void clearGlobalVariables()
 {
     // In android sometimes global variables is not reset when restart the app
     // we clear it here as much as possible
-    STKProcess::reset();
+    FLUXARA_DRIFTProcess::reset();
     StateManager::clear();
     NetworkConfig::clear();
-    STKHost::clear();
+    FLUXARA_DRIFTHost::clear();
     RaceManager::clear();
     ProjectileManager::clear();
     RaceEventManager::clear();
@@ -2172,7 +2178,7 @@ void initRest()
         Log::fatal("main", "Couldn't initialise irrlicht device. Quitting.\n");
     }
 
-    StkTime::init();   // grabs the timer object from the irrlicht device
+    FluxaraDriftTime::init();   // grabs the timer object from the irrlicht device
 
     // Now create the actual non-null device in the irrlicht driver
     irr_driver->initDevice();
@@ -2219,7 +2225,7 @@ void initRest()
     }
 #endif
 
-    stk_config->initMusicFiles();
+    fluxara_drift_config->initMusicFiles();
     // This only initialises the non-network part of the add-ons manager. The
     // online section of the add-ons manager will be initialised from a
     // separate thread running in network HTTP.
@@ -2250,7 +2256,7 @@ void initRest()
     music_manager = new MusicManager();
     SFXManager::create();
     // The order here can be important, e.g. KartPropertiesManager needs
-    // defaultKartProperties, which are defined in stk_config.
+    // defaultKartProperties, which are defined in fluxara_drift_config.
     history                 = new History              ();
     ReplayPlay::create();
     ReplayRecorder::create();
@@ -2282,7 +2288,7 @@ void initRest()
     }
 
     track_manager->loadTrackList();
-    stk_config->validateBenchmarkReplays();
+    fluxara_drift_config->validateBenchmarkReplays();
     music_manager->addMusicToTracks();
 
     GUIEngine::addLoadingIcon(irr_driver->getTexture(FileManager::GUI_ICON,
@@ -2351,9 +2357,9 @@ void askForInternetPermission()
     };   // ConfirmServer
 
     MessageDialog *dialog =
-    new MessageDialog(_("SuperTuxKart may connect to a server "
+    new MessageDialog(_("FluxaraDrift may connect to a server "
         "to download add-ons and notify you of updates.") + L"\n\n"
-        + _("Please read our privacy policy at %s.", "https://supertuxkart.net/Privacy")
+        + _("Please read our privacy policy at %s.", "https://fluxaradrift.net/Privacy")
         + L"\n\n" + _("Would you like this feature to be enabled? (To change this setting "
         "at a later time, go to options, select tab "
         "'General', and edit \"Connect to the Internet\")."),
@@ -2422,13 +2428,13 @@ void debugLoop()
 // ----------------------------------------------------------------------------
 #if defined(ANDROID)
 int android_main(int argc, char *argv[])
-#elif defined(IOS_STK)
+#elif defined(IOS_FLUXARA_DRIFT)
 int ios_main(int argc, char *argv[])
 #else
 int main(int argc, char *argv[])
 #endif
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // SDL does not surface a custom URL delivered in cold launch options until
     // after native startup. Motorica Start therefore writes a five-second,
     // one-shot URL lease immediately before opening fluxara-drive://. It is
@@ -2531,17 +2537,17 @@ int main(int argc, char *argv[])
 
         handleCmdLinePreliminary();
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
         // Set SDL's initial UIKit mask without consuming a race argument.
         // Direct launches start landscape, while standalone Fluxara views
         // start portrait. Subsequent duplicate geometry requests are ignored.
         fluxaraPrepareInitialOrientation(!fluxaraLaunchStartsRace());
 #endif
 
-        // ServerConfig will use stk_config for server version testing
-        stk_config->load(file_manager->getAsset("stk_config.xml"));
+        // ServerConfig will use fluxara_drift_config for server version testing
+        fluxara_drift_config->load(file_manager->getAsset("fluxara_drift_config.xml"));
         NetworkConfig::initSystemIP();
-        // Client port depends on user config file and stk_config
+        // Client port depends on user config file and fluxara_drift_config
         NetworkConfig::get()->initClientPort();
         bool no_graphics = !CommandLine::has("--graphical-server");
 
@@ -2685,7 +2691,7 @@ int main(int argc, char *argv[])
                 {
                     MessageDialog *dialog =
                         new MessageDialog(_("Your screen resolution is too "
-                                            "low to run STK."),
+                                            "low to run FLUXARA_DRIFT."),
                                             /*from queue*/ true);
                     GUIEngine::DialogQueue::get()->pushDialog(dialog);
                 }
@@ -2695,10 +2701,10 @@ int main(int argc, char *argv[])
             {
                 irr_driver->getDevice()->setWindowMinimumSize(480, 480);
             }
-            #ifdef MOBILE_STK
+            #ifdef MOBILE_FLUXARA_DRIFT
             if (UserConfigParams::m_multitouch_controls == MULTITOUCH_CONTROLS_UNDEFINED)
             {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
                 // Fluxara starts into its own campaign shell on iPhone. Use
                 // the familiar touch wheel by default; the Fluxara Drive
                 // bridge continues to replace steering with its own source.
@@ -2754,7 +2760,7 @@ int main(int argc, char *argv[])
             }
             else if (!CVS->isGLSL() && irr_driver->getVideoDriver()->getDriverType() != video::EDT_VULKAN)
             {
-                #if !defined(MOBILE_STK)
+                #if !defined(MOBILE_FLUXARA_DRIFT)
                 if (UserConfigParams::m_old_driver_popup)
                 {
                     #ifdef USE_GLES2
@@ -2764,7 +2770,7 @@ int main(int argc, char *argv[])
                     #endif
                     MessageDialog *dialog = new MessageDialog(_(
                         "Your graphics driver appears to be very old. Please "
-                        "check if an update is available. SuperTuxKart "
+                        "check if an update is available. FluxaraDrift "
                         "recommends a driver supporting %s or better. The game "
                         "will likely still run, but in a reduced-graphics mode.",
                         version),
@@ -2776,7 +2782,7 @@ int main(int argc, char *argv[])
                 Log::warn("OpenGL", "OpenGL version is too old!");
             }
 
-            // Note that on the very first run of STK internet status is set to
+            // Note that on the very first run of FLUXARA_DRIFT internet status is set to
             // "not asked", so the report will only be sent in the next run.
             if(UserConfigParams::m_internet_status==Online::RequestManager::IPERM_ALLOWED)
             {
@@ -2785,7 +2791,7 @@ int main(int argc, char *argv[])
         }
 #endif
 
-        if (STKHost::existHost())
+        if (FLUXARA_DRIFTHost::existHost())
         {
             if (!GUIEngine::isNoGraphics())
                 NetworkingLobby::getInstance()->push();
@@ -2802,7 +2808,7 @@ int main(int argc, char *argv[])
             // so we immediately start the main menu (unless it was requested
             // to always show the login screen). Otherwise show the login
             // screen first.
-            #ifdef IOS_STK
+            #ifdef IOS_FLUXARA_DRIFT
             // Both direct launches and Fluxara Drive launches share one
             // offline campaign. Their only difference is the control source.
             PlayerManager::get()->enforceCurrentPlayer();
@@ -2873,7 +2879,7 @@ int main(int argc, char *argv[])
         else
         {
             setupRaceStart();
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
             std::string fluxara_event_mode;
             if (!g_fluxara_launch_event.empty() &&
                 PlayerManager::getCurrentPlayer() &&
@@ -2935,7 +2941,7 @@ int main(int argc, char *argv[])
                         {
                             replay->setReplayFile(i);
                             replay->setSecondReplayFile(0, false);
-                            RaceManager::get()->setRaceGhostKarts(true);
+                            RaceManager::get()->setRaceGhofluxara_driftarts(true);
                             found_matching_ghost = true;
                             break;
                         }
@@ -3056,7 +3062,7 @@ int main(int argc, char *argv[])
     {
         Log::flushBuffers();
         Log::error("main", "Exception caught : %s.",e.what());
-        Log::error("main", "Aborting SuperTuxKart.");
+        Log::error("main", "Aborting FluxaraDrift.");
         Log::flushBuffers();
     }
 
@@ -3076,11 +3082,11 @@ int main(int argc, char *argv[])
         input_manager = NULL;
     }
 
-    if (STKHost::existHost())
-        STKHost::get()->shutdown();
+    if (FLUXARA_DRIFTHost::existHost())
+        FLUXARA_DRIFTHost::get()->shutdown();
     ClientLobby::destroyBackgroundDownload();
 
-    cleanSuperTuxKart();
+    cleanFluxaraDrift();
     NetworkConfig::destroy();
 
     RichPresenceNS::RichPresence::destroy();
@@ -3096,7 +3102,7 @@ int main(int argc, char *argv[])
     {
         Log::closeOutputFiles();
 #endif
-#if !defined(ANDROID) && !defined(ASAN_STK)
+#if !defined(ANDROID) && !defined(ASAN_FLUXARA_DRIFT)
         fclose(stderr);
         fclose(stdout);
 #endif
@@ -3113,8 +3119,8 @@ int main(int argc, char *argv[])
     nifmExit();
 #endif
 
-#ifdef IOS_STK
-    // App store may not like this, but this can happen if player uses keyboard to quit stk
+#ifdef IOS_FLUXARA_DRIFT
+    // App store may not like this, but this can happen if player uses keyboard to quit fluxara_drift
     exit(0);
     return 0;
 #else
@@ -3135,7 +3141,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 //=============================================================================
 /** Frees all manager and their associated memory.
  */
-static void cleanSuperTuxKart()
+static void cleanFluxaraDrift()
 {
 
     delete main_loop;
@@ -3200,7 +3206,7 @@ static void cleanSuperTuxKart()
     // the NewsManager thread should have finished quite early on anyway.
     // But still give them some additional time to finish. It avoids a
     // race condition where a thread might access the file manager after it
-    // was deleted (in cleanUserConfig below), but before STK finishes and
+    // was deleted (in cleanUserConfig below), but before FLUXARA_DRIFT finishes and
     // the OS takes all threads down.
 
 #ifndef SERVER_ONLY
@@ -3239,7 +3245,7 @@ static void cleanSuperTuxKart()
 
     StateManager::deallocate();
     GUIEngine::EventHandler::deallocate();
-}   // cleanSuperTuxKart
+}   // cleanFluxaraDrift
 
 //=============================================================================
 /**
@@ -3247,7 +3253,7 @@ static void cleanSuperTuxKart()
  */
 static void cleanUserConfig()
 {
-    if(stk_config)              delete stk_config;
+    if(fluxara_drift_config)              delete fluxara_drift_config;
     if(translations)            delete translations;
     if (user_config)
     {

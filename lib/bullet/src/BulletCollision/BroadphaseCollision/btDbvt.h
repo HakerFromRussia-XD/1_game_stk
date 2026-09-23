@@ -190,32 +190,32 @@ struct	btDbvtNode
 struct	btDbvt
 {
 	/* Stack element	*/ 
-	struct	sStkNN
+	struct	sFluxaraDriftNN
 	{
 		const btDbvtNode*	a;
 		const btDbvtNode*	b;
-		sStkNN() {}
-		sStkNN(const btDbvtNode* na,const btDbvtNode* nb) : a(na),b(nb) {}
+		sFluxaraDriftNN() {}
+		sFluxaraDriftNN(const btDbvtNode* na,const btDbvtNode* nb) : a(na),b(nb) {}
 	};
-	struct	sStkNP
+	struct	sFluxaraDriftNP
 	{
 		const btDbvtNode*	node;
 		int			mask;
-		sStkNP(const btDbvtNode* n,unsigned m) : node(n),mask(m) {}
+		sFluxaraDriftNP(const btDbvtNode* n,unsigned m) : node(n),mask(m) {}
 	};
-	struct	sStkNPS
+	struct	sFluxaraDriftNPS
 	{
 		const btDbvtNode*	node;
 		int			mask;
 		btScalar	value;
-		sStkNPS() {}
-		sStkNPS(const btDbvtNode* n,unsigned m,btScalar v) : node(n),mask(m),value(v) {}
+		sFluxaraDriftNPS() {}
+		sFluxaraDriftNPS(const btDbvtNode* n,unsigned m,btScalar v) : node(n),mask(m),value(v) {}
 	};
-	struct	sStkCLN
+	struct	sFluxaraDriftCLN
 	{
 		const btDbvtNode*	node;
 		btDbvtNode*		parent;
-		sStkCLN(const btDbvtNode* n,btDbvtNode* p) : node(n),parent(p) {}
+		sFluxaraDriftCLN(const btDbvtNode* n,btDbvtNode* p) : node(n),parent(p) {}
 	};
 	// Policies/Interfaces
 
@@ -258,7 +258,7 @@ struct	btDbvt
 	unsigned		m_opath;
 
 	
-	btAlignedObjectArray<sStkNN>	m_stkStack;
+	btAlignedObjectArray<sFluxaraDriftNN>	m_fluxara_driftStack;
 
 
 	// Methods
@@ -358,7 +358,7 @@ struct	btDbvt
 		static void		collideTU(	const btDbvtNode* root,
 		DBVT_IPOLICY);
 	// Helpers	
-	static DBVT_INLINE int	nearest(const int* i,const btDbvt::sStkNPS* a,btScalar v,int l,int h)
+	static DBVT_INLINE int	nearest(const int* i,const btDbvt::sFluxaraDriftNPS* a,btScalar v,int l,int h)
 	{
 		int	m=0;
 		while(l<h)
@@ -369,8 +369,8 @@ struct	btDbvt
 		return(h);
 	}
 	static DBVT_INLINE int	allocate(	btAlignedObjectArray<int>& ifree,
-		btAlignedObjectArray<sStkNPS>& stock,
-		const sStkNPS& value)
+		btAlignedObjectArray<sFluxaraDriftNPS>& stock,
+		const sFluxaraDriftNPS& value)
 	{
 		int	i;
 		if(ifree.size()>0)
@@ -716,23 +716,23 @@ inline void		btDbvt::collideTT(	const btDbvtNode* root0,
 		{
 			int								depth=1;
 			int								treshold=DOUBLE_STACKSIZE-4;
-			btAlignedObjectArray<sStkNN>	stkStack;
-			stkStack.resize(DOUBLE_STACKSIZE);
-			stkStack[0]=sStkNN(root0,root1);
+			btAlignedObjectArray<sFluxaraDriftNN>	fluxara_driftStack;
+			fluxara_driftStack.resize(DOUBLE_STACKSIZE);
+			fluxara_driftStack[0]=sFluxaraDriftNN(root0,root1);
 			do	{		
-				sStkNN	p=stkStack[--depth];
+				sFluxaraDriftNN	p=fluxara_driftStack[--depth];
 				if(depth>treshold)
 				{
-					stkStack.resize(stkStack.size()*2);
-					treshold=stkStack.size()-4;
+					fluxara_driftStack.resize(fluxara_driftStack.size()*2);
+					treshold=fluxara_driftStack.size()-4;
 				}
 				if(p.a==p.b)
 				{
 					if(p.a->isinternal())
 					{
-						stkStack[depth++]=sStkNN(p.a->childs[0],p.a->childs[0]);
-						stkStack[depth++]=sStkNN(p.a->childs[1],p.a->childs[1]);
-						stkStack[depth++]=sStkNN(p.a->childs[0],p.a->childs[1]);
+						fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[0],p.a->childs[0]);
+						fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[1],p.a->childs[1]);
+						fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[0],p.a->childs[1]);
 					}
 				}
 				else if(Intersect(p.a->volume,p.b->volume))
@@ -741,23 +741,23 @@ inline void		btDbvt::collideTT(	const btDbvtNode* root0,
 					{
 						if(p.b->isinternal())
 						{
-							stkStack[depth++]=sStkNN(p.a->childs[0],p.b->childs[0]);
-							stkStack[depth++]=sStkNN(p.a->childs[1],p.b->childs[0]);
-							stkStack[depth++]=sStkNN(p.a->childs[0],p.b->childs[1]);
-							stkStack[depth++]=sStkNN(p.a->childs[1],p.b->childs[1]);
+							fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[0],p.b->childs[0]);
+							fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[1],p.b->childs[0]);
+							fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[0],p.b->childs[1]);
+							fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[1],p.b->childs[1]);
 						}
 						else
 						{
-							stkStack[depth++]=sStkNN(p.a->childs[0],p.b);
-							stkStack[depth++]=sStkNN(p.a->childs[1],p.b);
+							fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[0],p.b);
+							fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[1],p.b);
 						}
 					}
 					else
 					{
 						if(p.b->isinternal())
 						{
-							stkStack[depth++]=sStkNN(p.a,p.b->childs[0]);
-							stkStack[depth++]=sStkNN(p.a,p.b->childs[1]);
+							fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a,p.b->childs[0]);
+							fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a,p.b->childs[1]);
 						}
 						else
 						{
@@ -782,22 +782,22 @@ inline void		btDbvt::collideTTpersistentStack(	const btDbvtNode* root0,
 			int								depth=1;
 			int								treshold=DOUBLE_STACKSIZE-4;
 			
-			m_stkStack.resize(DOUBLE_STACKSIZE);
-			m_stkStack[0]=sStkNN(root0,root1);
+			m_fluxara_driftStack.resize(DOUBLE_STACKSIZE);
+			m_fluxara_driftStack[0]=sFluxaraDriftNN(root0,root1);
 			do	{		
-				sStkNN	p=m_stkStack[--depth];
+				sFluxaraDriftNN	p=m_fluxara_driftStack[--depth];
 				if(depth>treshold)
 				{
-					m_stkStack.resize(m_stkStack.size()*2);
-					treshold=m_stkStack.size()-4;
+					m_fluxara_driftStack.resize(m_fluxara_driftStack.size()*2);
+					treshold=m_fluxara_driftStack.size()-4;
 				}
 				if(p.a==p.b)
 				{
 					if(p.a->isinternal())
 					{
-						m_stkStack[depth++]=sStkNN(p.a->childs[0],p.a->childs[0]);
-						m_stkStack[depth++]=sStkNN(p.a->childs[1],p.a->childs[1]);
-						m_stkStack[depth++]=sStkNN(p.a->childs[0],p.a->childs[1]);
+						m_fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[0],p.a->childs[0]);
+						m_fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[1],p.a->childs[1]);
+						m_fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[0],p.a->childs[1]);
 					}
 				}
 				else if(Intersect(p.a->volume,p.b->volume))
@@ -806,23 +806,23 @@ inline void		btDbvt::collideTTpersistentStack(	const btDbvtNode* root0,
 					{
 						if(p.b->isinternal())
 						{
-							m_stkStack[depth++]=sStkNN(p.a->childs[0],p.b->childs[0]);
-							m_stkStack[depth++]=sStkNN(p.a->childs[1],p.b->childs[0]);
-							m_stkStack[depth++]=sStkNN(p.a->childs[0],p.b->childs[1]);
-							m_stkStack[depth++]=sStkNN(p.a->childs[1],p.b->childs[1]);
+							m_fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[0],p.b->childs[0]);
+							m_fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[1],p.b->childs[0]);
+							m_fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[0],p.b->childs[1]);
+							m_fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[1],p.b->childs[1]);
 						}
 						else
 						{
-							m_stkStack[depth++]=sStkNN(p.a->childs[0],p.b);
-							m_stkStack[depth++]=sStkNN(p.a->childs[1],p.b);
+							m_fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[0],p.b);
+							m_fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[1],p.b);
 						}
 					}
 					else
 					{
 						if(p.b->isinternal())
 						{
-							m_stkStack[depth++]=sStkNN(p.a,p.b->childs[0]);
-							m_stkStack[depth++]=sStkNN(p.a,p.b->childs[1]);
+							m_fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a,p.b->childs[0]);
+							m_fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a,p.b->childs[1]);
 						}
 						else
 						{
@@ -847,39 +847,39 @@ inline void		btDbvt::collideTT(	const btDbvtNode* root0,
 		{
 			int								depth=1;
 			int								treshold=DOUBLE_STACKSIZE-4;
-			btAlignedObjectArray<sStkNN>	stkStack;
-			stkStack.resize(DOUBLE_STACKSIZE);
-			stkStack[0]=sStkNN(root0,root1);
+			btAlignedObjectArray<sFluxaraDriftNN>	fluxara_driftStack;
+			fluxara_driftStack.resize(DOUBLE_STACKSIZE);
+			fluxara_driftStack[0]=sFluxaraDriftNN(root0,root1);
 			do	{
-				sStkNN	p=stkStack[--depth];
+				sFluxaraDriftNN	p=fluxara_driftStack[--depth];
 				if(Intersect(p.a->volume,p.b->volume,xform))
 				{
 					if(depth>treshold)
 					{
-						stkStack.resize(stkStack.size()*2);
-						treshold=stkStack.size()-4;
+						fluxara_driftStack.resize(fluxara_driftStack.size()*2);
+						treshold=fluxara_driftStack.size()-4;
 					}
 					if(p.a->isinternal())
 					{
 						if(p.b->isinternal())
 						{					
-							stkStack[depth++]=sStkNN(p.a->childs[0],p.b->childs[0]);
-							stkStack[depth++]=sStkNN(p.a->childs[1],p.b->childs[0]);
-							stkStack[depth++]=sStkNN(p.a->childs[0],p.b->childs[1]);
-							stkStack[depth++]=sStkNN(p.a->childs[1],p.b->childs[1]);
+							fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[0],p.b->childs[0]);
+							fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[1],p.b->childs[0]);
+							fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[0],p.b->childs[1]);
+							fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[1],p.b->childs[1]);
 						}
 						else
 						{
-							stkStack[depth++]=sStkNN(p.a->childs[0],p.b);
-							stkStack[depth++]=sStkNN(p.a->childs[1],p.b);
+							fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[0],p.b);
+							fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a->childs[1],p.b);
 						}
 					}
 					else
 					{
 						if(p.b->isinternal())
 						{
-							stkStack[depth++]=sStkNN(p.a,p.b->childs[0]);
-							stkStack[depth++]=sStkNN(p.a,p.b->childs[1]);
+							fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a,p.b->childs[0]);
+							fluxara_driftStack[depth++]=sFluxaraDriftNN(p.a,p.b->childs[1]);
 						}
 						else
 						{
@@ -1069,7 +1069,7 @@ inline void		btDbvt::collideKDOP(const btDbvtNode* root,
 		if(root)
 		{
 			const int						inside=(1<<count)-1;
-			btAlignedObjectArray<sStkNP>	stack;
+			btAlignedObjectArray<sFluxaraDriftNP>	stack;
 			int								signs[sizeof(unsigned)*8];
 			btAssert(count<int (sizeof(signs)/sizeof(signs[0])));
 			for(int i=0;i<count;++i)
@@ -1079,9 +1079,9 @@ inline void		btDbvt::collideKDOP(const btDbvtNode* root,
 					((normals[i].z()>=0)?4:0);
 			}
 			stack.reserve(SIMPLE_STACKSIZE);
-			stack.push_back(sStkNP(root,0));
+			stack.push_back(sFluxaraDriftNP(root,0));
 			do	{
-				sStkNP	se=stack[stack.size()-1];
+				sFluxaraDriftNP	se=stack[stack.size()-1];
 				bool	out=false;
 				stack.pop_back();
 				for(int i=0,j=1;(!out)&&(i<count);++i,j<<=1)
@@ -1100,8 +1100,8 @@ inline void		btDbvt::collideKDOP(const btDbvtNode* root,
 				{
 					if((se.mask!=inside)&&(se.node->isinternal()))
 					{
-						stack.push_back(sStkNP(se.node->childs[0],se.mask));
-						stack.push_back(sStkNP(se.node->childs[1],se.mask));
+						stack.push_back(sFluxaraDriftNP(se.node->childs[0],se.mask));
+						stack.push_back(sFluxaraDriftNP(se.node->childs[1],se.mask));
 					}
 					else
 					{
@@ -1129,7 +1129,7 @@ inline void		btDbvt::collideOCL(	const btDbvtNode* root,
 				(sortaxis[1]>=0?2:0)+
 				(sortaxis[2]>=0?4:0);
 			const int						inside=(1<<count)-1;
-			btAlignedObjectArray<sStkNPS>	stock;
+			btAlignedObjectArray<sFluxaraDriftNPS>	stock;
 			btAlignedObjectArray<int>		ifree;
 			btAlignedObjectArray<int>		stack;
 			int								signs[sizeof(unsigned)*8];
@@ -1143,10 +1143,10 @@ inline void		btDbvt::collideOCL(	const btDbvtNode* root,
 			stock.reserve(SIMPLE_STACKSIZE);
 			stack.reserve(SIMPLE_STACKSIZE);
 			ifree.reserve(SIMPLE_STACKSIZE);
-			stack.push_back(allocate(ifree,stock,sStkNPS(root,0,root->volume.ProjectMinimum(sortaxis,srtsgns))));
+			stack.push_back(allocate(ifree,stock,sFluxaraDriftNPS(root,0,root->volume.ProjectMinimum(sortaxis,srtsgns))));
 			do	{
 				const int	id=stack[stack.size()-1];
-				sStkNPS		se=stock[id];
+				sFluxaraDriftNPS		se=stock[id];
 				stack.pop_back();ifree.push_back(id);
 				if(se.mask!=inside)
 				{
@@ -1170,8 +1170,8 @@ inline void		btDbvt::collideOCL(	const btDbvtNode* root,
 					if(se.node->isinternal())
 					{
 						const btDbvtNode* pns[]={	se.node->childs[0],se.node->childs[1]};
-						sStkNPS		nes[]={	sStkNPS(pns[0],se.mask,pns[0]->volume.ProjectMinimum(sortaxis,srtsgns)),
-							sStkNPS(pns[1],se.mask,pns[1]->volume.ProjectMinimum(sortaxis,srtsgns))};
+						sFluxaraDriftNPS		nes[]={	sFluxaraDriftNPS(pns[0],se.mask,pns[0]->volume.ProjectMinimum(sortaxis,srtsgns)),
+							sFluxaraDriftNPS(pns[1],se.mask,pns[1]->volume.ProjectMinimum(sortaxis,srtsgns))};
 						const int	q=nes[0].value<nes[1].value?1:0;				
 						int			j=stack.size();
 						if(fsort&&(j>0))

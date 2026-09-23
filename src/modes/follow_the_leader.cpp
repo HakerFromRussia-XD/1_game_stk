@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2004-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2004-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -40,10 +40,10 @@ FollowTheLeaderRace::FollowTheLeaderRace() : LinearWorld()
     // after crossing the start line
     RaceManager::get()->setNumLaps(99999);
 
-    m_leader_intervals = stk_config->m_leader_intervals;
+    m_leader_intervals = fluxara_drift_config->m_leader_intervals;
     for(unsigned int i=0; i<m_leader_intervals.size(); i++)
         m_leader_intervals[i] +=
-            stk_config->m_leader_time_per_kart*RaceManager::get()->getNumberOfKarts();
+            fluxara_drift_config->m_leader_time_per_kart*RaceManager::get()->getNumberOfKarts();
     m_use_highscores   = false;  // disable high scores
     setClockMode(WorldStatus::CLOCK_COUNTDOWN, m_leader_intervals[0]);
     m_is_over_delay = 5.0f;
@@ -60,7 +60,7 @@ void FollowTheLeaderRace::init()
     LinearWorld::init();
     // WorldWithRank determines the score based on getNumKarts(), but since
     // we ignore the leader, the points need to be based on number of karts -1
-    stk_config->getAllScores(&m_score_for_position, getNumKarts() - 1);
+    fluxara_drift_config->getAllScores(&m_score_for_position, getNumKarts() - 1);
     getKart(0)->setOnScreenText(_("Leader"));
     getKart(0)->setBoostAI(true);
 }    // init
@@ -82,10 +82,10 @@ void FollowTheLeaderRace::reset(bool restart)
     LinearWorld::reset(restart);
     m_last_eliminated_time = 0.0f;
     m_leader_intervals.clear();
-    m_leader_intervals    = stk_config->m_leader_intervals;
+    m_leader_intervals    = fluxara_drift_config->m_leader_intervals;
     for(unsigned int i=0; i<m_leader_intervals.size(); i++)
         m_leader_intervals[i] +=
-            stk_config->m_leader_time_per_kart*RaceManager::get()->getNumberOfKarts();
+            fluxara_drift_config->m_leader_time_per_kart*RaceManager::get()->getNumberOfKarts();
     WorldStatus::setClockMode(WorldStatus::CLOCK_COUNTDOWN,
                               m_leader_intervals[0]);
     
@@ -114,7 +114,7 @@ const btTransform &FollowTheLeaderRace::getStartTransform(int index)
         return Track::getCurrentTrack()->getStartTransform(index);
 
     // Otherwise the karts will start at the rear starting positions
-    int start_index = stk_config->m_max_karts
+    int start_index = fluxara_drift_config->m_max_karts
                     - RaceManager::get()->getNumberOfKarts() + index;
     return Track::getCurrentTrack()->getStartTransform(start_index);
 }   // getStartTransform
@@ -230,7 +230,7 @@ bool FollowTheLeaderRace::isRaceOver()
 void FollowTheLeaderRace::leaderHit()
 {
     int countdown = getTimeTicks();
-    countdown += stk_config->time2Ticks(LEADER_HIT_TIME);
+    countdown += fluxara_drift_config->time2Ticks(LEADER_HIT_TIME);
     setTicks(countdown);
     m_leader_hit_count++;
 } // leaderHit

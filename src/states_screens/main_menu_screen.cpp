@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -81,7 +81,7 @@ using namespace Online;
 
 // ----------------------------------------------------------------------------
 
-MainMenuScreen::MainMenuScreen() : Screen("main_menu.stkgui")
+MainMenuScreen::MainMenuScreen() : Screen("main_menu.fluxara_driftgui")
 {
 }   // MainMenuScreen
 
@@ -117,7 +117,7 @@ void MainMenuScreen::loadedFromFile()
 
 void MainMenuScreen::beforeAddingWidget()
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // iOS app doesn't like quit button in UI
     Widget* w = getWidget("quit");
     if (w)
@@ -245,7 +245,7 @@ void MainMenuScreen::init()
     r->setFocusForPlayer(PLAYER_ID_GAME_MASTER);
     DemoWorld::resetIdleTime();
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // iOS app doesn't like quit button in UI
     Widget* quit = getWidget("quit");
     if (quit)
@@ -324,7 +324,7 @@ void MainMenuScreen::onUpdate(float delta)
     if(PlayerManager::getCurrentOnlineState() == PlayerProfile::OS_GUEST  ||
        PlayerManager::getCurrentOnlineState() == PlayerProfile::OS_SIGNED_IN)
     {
-        m_user_id->setText(player->getLastOnlineName() + "@stk");
+        m_user_id->setText(player->getLastOnlineName() + "@fluxara_drift");
     }
     else if (PlayerManager::getCurrentOnlineState() == PlayerProfile::OS_SIGNED_OUT)
     {
@@ -690,7 +690,7 @@ void MainMenuScreen::onDisabledItemClicked(const std::string& item)
             new MessageDialog( _("Sorry, an error occurred while contacting "
                                  "the add-ons website. Make sure you are "
                                  "connected to the Internet and that "
-                                 "SuperTuxKart is not blocked by a firewall"));
+                                 "FluxaraDrift is not blocked by a firewall"));
         }
         else if (addons_manager->isLoading())
         {
@@ -715,7 +715,7 @@ bool MainMenuScreen::onEscapePressed()
         }   // onConfirm
     };   // ConfirmClose
 
-    new MessageDialog(_("Are you sure you want to quit STK?"),
+    new MessageDialog(_("Are you sure you want to quit FLUXARA_DRIFT?"),
         MessageDialog::MESSAGE_DIALOG_YESNO, new ConfirmClose(),
         true/*delete_listener*/);
     return false;

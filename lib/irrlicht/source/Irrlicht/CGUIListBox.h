@@ -172,7 +172,7 @@ namespace gui
 		gui::IGUISpriteBank* IconBank;
 		gui::IGUIScrollBar* ScrollBar;
 		u32 selectTime;
-		u32 LastKeyTime;
+		u32 Lafluxara_drifteyTime;
 		core::stringw KeyBuffer;
 		bool Selecting;
 		bool DrawBack;

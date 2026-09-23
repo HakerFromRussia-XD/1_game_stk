@@ -3,8 +3,8 @@ uniform float scale;
 
 out vec4 FragColor;
 
-#stk_include "utils/getCIEXYZ.frag"
-#stk_include "utils/getRGBfromCIEXxy.frag"
+#fluxara_drift_include "utils/getCIEXYZ.frag"
+#fluxara_drift_include "utils/getRGBfromCIEXxy.frag"
 
 void main()
 {

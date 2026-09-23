@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2011-2015  Joerg Henrichs, Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -33,7 +33,7 @@ using namespace irr;
 
 class Material;
 class ParticleKind;
-class STKParticle;
+class FLUXARA_DRIFTParticle;
 class Track;
 
 /**
@@ -43,8 +43,8 @@ class Track;
 class ParticleEmitter : public NoCopy
 {
 private:
-    /** STK particle systems. */
-    STKParticle*                     m_node;
+    /** FLUXARA_DRIFT particle systems. */
+    FLUXARA_DRIFTParticle*                     m_node;
 
     Vec3                             m_position;
 
@@ -93,7 +93,7 @@ public:
 
     void         resizeBox(float size);
 
-    STKParticle* getNode() { return m_node; }
+    FLUXARA_DRIFTParticle* getNode() { return m_node; }
 
     /** call this if the node was freed otherwise */
     void         unsetNode() { m_node = NULL; }

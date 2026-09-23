@@ -12,8 +12,8 @@ precision mediump float;
 #define TransparentAlphaChannelRef 7
 #define TransparentVertexAlpha 8
 #define TransparentReflection2Layer 9
-#define StkGrass 10
-#define StkBlend 11
+#define FluxaraDriftGrass 10
+#define FluxaraDriftBlend 11
 
 /* Uniforms */
 
@@ -193,14 +193,14 @@ void main ()
 			discard;
 		gl_FragColor = Color;
 	}
-	else if(uMaterialType == StkGrass)
+	else if(uMaterialType == FluxaraDriftGrass)
 	{
 		vec4 Color = renderTransparent();
 		if (Color.a < 0.5)
 			discard;
 		gl_FragColor = Color;
 	}
-	else if(uMaterialType == StkBlend)
+	else if(uMaterialType == FluxaraDriftBlend)
 	{
 		gl_FragColor = renderTransparentVertexColor();
 	}

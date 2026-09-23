@@ -8,9 +8,9 @@ in vec2 uv;
 layout(location = 0) out vec4 o_diffuse_color;
 layout(location = 1) out vec4 o_normal_color;
 
-#stk_include "utils/encode_normal.frag"
-#stk_include "utils/rgb_conversion.frag"
-#stk_include "utils/sp_texture_sampling.frag"
+#fluxara_drift_include "utils/encode_normal.frag"
+#fluxara_drift_include "utils/rgb_conversion.frag"
+#fluxara_drift_include "utils/sp_texture_sampling.frag"
 
 void main()
 {

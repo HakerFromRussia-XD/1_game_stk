@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -82,7 +82,7 @@ protected:
     /** Find the closest kart around this AI, implemented by sub-class.
      *  \param consider_difficulty If take current difficulty into account.
      *  \param find_sta If find \ref SpareTireAI only. */
-    virtual void  findClosestKart(bool consider_difficulty, bool find_sta) = 0;
+    virtual void  findClosefluxara_driftart(bool consider_difficulty, bool find_sta) = 0;
 
 private:
     /** Local coordinates of current target point. */

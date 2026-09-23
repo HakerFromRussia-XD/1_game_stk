@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015 Joerg Henrichs
 //  Copyright (C) 2006-2015 Patrick Ammann <pammann@aro.ch>
 //  Copyright (C) 2009-2015 Marianne Gagnon
@@ -350,7 +350,7 @@ void SFXOpenAL::play()
         m_play_time = 0.0f;
 
     // Technically the sfx is only playing after the sfx thread starts it,
-    // but it is important to set this here since stk might decide to
+    // but it is important to set this here since fluxara_drift might decide to
     // delete a sfx if it has finished playing (i.e. is in stopped state)
     // - which can happen if the sfx thread had no time to actually start
     // it yet.
@@ -411,7 +411,7 @@ void SFXOpenAL::play(const Vec3 &position, SFXBuffer* buffer)
         m_play_time = 0.0f;
 
     // Technically the sfx is only playing after the sfx thread starts it,
-    // but it is important to set this here since stk might decide to
+    // but it is important to set this here since fluxara_drift might decide to
     // delete a sfx if it has finished playing (i.e. is in stopped state)
     // - which can happen if the sfx thread had no time to actually start
     // it yet.

@@ -627,7 +627,7 @@ zink_get_physical_device_info(struct zink_screen *screen)
         vk_layered_props.properties.pNext = &info->vk_layered_driver_props;
       info->layered_props.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_LAYERED_API_PROPERTIES_KHR;
       info->layered_props.pNext = &vk_layered_props;
-      VkPhysicalDeviceLayeredApiPropertiesListKHR layered_props_list = {
+      VkPhysicalDeviceLayeredApiPropertiesLifluxara_driftHR layered_props_list = {
         VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_LAYERED_API_PROPERTIES_LIST_KHR,
         props.pNext,
         1,

@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2010-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2010-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -24,7 +24,7 @@
 #include "challenges/challenge_data.hpp"
 #include "challenges/unlock_manager.hpp"
 #include "config/player_manager.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "graphics/central_settings.hpp"
 #include "graphics/sp/sp_base.hpp"
@@ -170,7 +170,7 @@ FeatureUnlockedCutScene::UnlockedThing::~UnlockedThing()
 #endif
 
 FeatureUnlockedCutScene::FeatureUnlockedCutScene()
-            : CutsceneScreen("cutscene.stkgui")
+            : CutsceneScreen("cutscene.fluxara_driftgui")
 {
     m_key_angle = 0;
 }  // FeatureUnlockedCutScene
@@ -269,7 +269,7 @@ void FeatureUnlockedCutScene::addTrophy(RaceManager::Difficulty difficulty,
                     CHALLENGE_POINTS[max_unlocked_difficulty]*gp_factor);
             break;
         case RaceManager::DIFFICULTY_BEST:
-            msg = _("You completed the SuperTux challenge! "
+            msg = _("You completed the FluxaraDrift challenge! "
                     "Points earned on this level: %i/%i",
                     CHALLENGE_POINTS[RaceManager::DIFFICULTY_BEST]*gp_factor,
                 CHALLENGE_POINTS[max_unlocked_difficulty]*gp_factor);
@@ -749,7 +749,7 @@ void FeatureUnlockedCutScene::continueButtonPressed()
         {
             // simulate all the steps of the animation until we reach the end
             onUpdate(0.4f);
-            World::getWorld()->updateWorld(stk_config->time2Ticks(0.4f));
+            World::getWorld()->updateWorld(fluxara_drift_config->time2Ticks(0.4f));
         }
     }
     else
@@ -775,6 +775,6 @@ void FeatureUnlockedCutScene::eventCallback(GUIEngine::Widget* widget,
 
 MusicInformation* FeatureUnlockedCutScene::getInGameMenuMusic() const
 {
-    MusicInformation* mi = stk_config->m_unlock_music;
+    MusicInformation* mi = fluxara_drift_config->m_unlock_music;
     return mi;
 }

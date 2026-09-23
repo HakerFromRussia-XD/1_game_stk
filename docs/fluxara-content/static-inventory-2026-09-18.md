@@ -8,7 +8,7 @@ Run `python3 tools/fluxara_content/inventory.py iosApp/FluxaraResources/tracks/*
 |---|---:|---|
 | fluxara-canyon | 16,257,361 | XML parses; XML resource references resolve within inspected scope; graph/quads present; LICENSE.txt present. Approved art untouched. |
 | fluxara-circuit | 1,490,007 | graph.xml line 1 contains `<?xml version="1.0"?> encoding="utf-8"?>` and fails standard XML parsing. |
-| fluxara-summit-run | 15,715,766 | Four unresolved material declarations: rock_brown.jpg, rock_grey.jpg, stk_generic_snow_a.png, transparence.png. Mesh use of these declarations is unverified. |
+| fluxara-summit-run | 15,715,766 | Four unresolved material declarations: rock_brown.jpg, rock_grey.jpg, fluxara_drift_generic_snow_a.png, transparence.png. Mesh use of these declarations is unverified. |
 | fluxara-ace | 2,975,115 | XML parses; no unresolved XML resources; License.txt present. |
 | fluxara-halo | 775,762 | XML parses; no unresolved XML resources; License.txt present. |
 
@@ -18,7 +18,7 @@ The checker now inspects SPM v2 texture tables, but not runtime library lookup, 
 
 Circuit graph.xml declaration repaired to `<?xml version="1.0" encoding="utf-8"?>`. The diff changes exactly one line; graph body, nodes and edges are unchanged.
 
-Summit SPM texture tables confirm six shared references: rock.jpg, rock_brown.jpg, rock_grey.jpg, snowrock.jpg, stk_generic_snow_a.png, transparence.png. All six exist in `.codex-downloads/fluxara-addon-catalog/reference-runtime/extracted/SuperTuxKart.app/Contents/Resources/data/textures` and `/private/tmp/fluxara_drift_public_debug/Fluxara Drift.app/data/textures`. Running the inventory with that existing app's textures as `--shared` produces zero unresolved XML or SPM dependencies. Thus the initial repository-only findings do not establish a packaged resource defect. No Summit asset changes are needed on this evidence. The new simulator bundle still needs its own resource and rendering verification by the root agent.
+Summit SPM texture tables confirm six shared references: rock.jpg, rock_brown.jpg, rock_grey.jpg, snowrock.jpg, fluxara_drift_generic_snow_a.png, transparence.png. All six exist in `.codex-downloads/fluxara-addon-catalog/reference-runtime/extracted/FluxaraDrift.app/Contents/Resources/data/textures` and `/private/tmp/fluxara_drift_public_debug/Fluxara Drift.app/data/textures`. Running the inventory with that existing app's textures as `--shared` produces zero unresolved XML or SPM dependencies. Thus the initial repository-only findings do not establish a packaged resource defect. No Summit asset changes are needed on this evidence. The new simulator bundle still needs its own resource and rendering verification by the root agent.
 
 ## Prioritized next work
 

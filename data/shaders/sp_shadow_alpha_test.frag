@@ -1,4 +1,4 @@
-#stk_include "utils/sp_texture_sampling.frag"
+#fluxara_drift_include "utils/sp_texture_sampling.frag"
 
 in vec2 uv;
 out vec4 o_frag_color;

@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2006-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2006-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -65,7 +65,7 @@
 #include "network/protocols/client_lobby.hpp"
 #include "network/network_config.hpp"
 #include "network/rewind_manager.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "physics/btKart.hpp"
 #include "physics/physics.hpp"
 #include "physics/triangle_mesh.hpp"
@@ -99,7 +99,7 @@
 
 World* World::m_world[PT_COUNT];
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 namespace
 {
 /** An internal device-validation controller. It drives with the regular
@@ -132,11 +132,11 @@ public:
     }
 
     // BattleAI treats a controller marked as a player specially on the
-    // SuperTux difficulty: it looks exclusively for human players.  The
+    // FluxaraDrift difficulty: it looks exclusively for human players.  The
     // validation kart is deliberately marked local so that the real HUD and
     // result lifecycle are exercised, but its opponents are all AI.  Do not
     // let that presentation detail make it select itself as its only target.
-    virtual void findClosestKart(bool, bool find_sta) OVERRIDE
+    virtual void findClosefluxara_driftart(bool, bool find_sta) OVERRIDE
     {
         // Once a forward projectile has been collected, turn the regular
         // BattleAI's route toward the current FFA leader. This is a tactical
@@ -181,7 +181,7 @@ public:
         // opponent is AI.  Keep BattleAI's ArenaGraph target selection, but
         // bypass its player-only difficulty preference so it never selects
         // itself as its sole target.
-        BattleAI::findClosestKart(false /* consider_difficulty */, find_sta);
+        BattleAI::findClosefluxara_driftart(false /* consider_difficulty */, find_sta);
     }
 
     virtual void update(int ticks) OVERRIDE
@@ -313,7 +313,7 @@ private:
     }
 
     virtual bool canSkid(float) OVERRIDE { return m_mini_skid; }
-    virtual void findClosestKart(bool, bool) OVERRIDE
+    virtual void findClosefluxara_driftart(bool, bool) OVERRIDE
     {
         float distance = std::numeric_limits<float>::max();
         m_closest_kart = NULL;
@@ -399,7 +399,7 @@ public:
  *  this time a winning (or losing) animation can be played. The WorldStatus
  *  class will in its enterRaceOverState switch to DELAY_FINISH_PHASE,
  *  but the remaining AI kart will keep on racing during that time.
- *  After a time period specified in stk_config.xml WorldStatus will
+ *  After a time period specified in fluxara_drift_config.xml WorldStatus will
  *  switch to FINISH_PHASE and call terminateRace. Now the finishing status
  *  of all karts is set (i.e. in a normal race the arrival time for karts
  *  will be estimated), highscore is updated, and the race result gui
@@ -465,8 +465,8 @@ void World::init()
     m_num_players         = 0;
     unsigned int gk       = 0;
     m_red_ai = m_blue_ai = 0;
-    if (RaceManager::get()->hasGhostKarts())
-        gk = ReplayPlay::get()->getNumGhostKart();
+    if (RaceManager::get()->hasGhofluxara_driftarts())
+        gk = ReplayPlay::get()->getNumGhofluxara_driftart();
 
     // Create the race gui before anything else is attached to the scene node
     // (which happens when the track is loaded). This allows the race gui to
@@ -517,10 +517,10 @@ void World::init()
     else
     {
         Track* child_track = Track::getCurrentTrack();
-        ChildLoop* child_loop = STKHost::getByType(PT_MAIN)->getChildLoop();
+        ChildLoop* child_loop = FLUXARA_DRIFTHost::getByType(PT_MAIN)->getChildLoop();
         while (!child_loop->isAborted() && child_track == NULL)
         {
-            StkTime::sleep(1);
+            FluxaraDriftTime::sleep(1);
             child_track = Track::getCurrentTrack();
         }
         if (!child_loop->isAborted())
@@ -547,7 +547,7 @@ void World::init()
         }
         ReplayPlay::get()->load();
         for (unsigned int k = 0; k < gk; k++)
-            m_karts.push_back(ReplayPlay::get()->getGhostKart(k));
+            m_karts.push_back(ReplayPlay::get()->getGhofluxara_driftart(k));
     }
     main_loop->renderGUI(6999);
 
@@ -579,7 +579,7 @@ void World::init()
         }
 #if 0 // AUTOPLAY ACCEPTANCE — disabled: no player kart receives test-AI boosts.
         const bool fluxara_validation_player =
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
             AIBaseController::getTestAI() < 0 &&
             RaceManager::get()->getKartType(i) == RaceManager::KT_PLAYER;
 #else
@@ -625,11 +625,11 @@ void World::init()
 
     if (Camera::getNumCameras() == 0)
     {
-#ifdef IOS_STK
-#if 0 // AUTOPLAY ACCEPTANCE — disabled: LocalPlayerController creates the camera.
+#ifdef IOS_FLUXARA_DRIFT
         // LocalPlayerController normally creates this camera itself. The
-        // hidden --test-ai=-1 path deliberately uses an AI controller for
-        // that slot, so provide the same camera before the renderer loads.
+        // hidden device-soak --test-ai=-1 path deliberately uses an AI
+        // controller for that slot, so provide the same camera before the
+        // renderer loads.
         if (AIBaseController::getTestAI() < 0)
         {
             for (const auto& kart : m_karts)
@@ -641,7 +641,6 @@ void World::init()
                 }
             }
         }
-#endif
 #endif
         auto cl = LobbyProtocol::get<ClientLobby>();
         if (Camera::getNumCameras() == 0 &&
@@ -758,7 +757,7 @@ void World::reset(bool restart)
     if (!GUIEngine::isNoGraphics())
         Camera::resetAllCameras();
 
-    if(RaceManager::get()->hasGhostKarts())
+    if(RaceManager::get()->hasGhofluxara_driftarts())
         ReplayPlay::get()->reset();
 
     // Remove all (if any) previous game flyables before reset karts, so no
@@ -825,8 +824,8 @@ std::shared_ptr<AbstractKart> World::createKart
     HandicapLevel handicap)
 {
     unsigned int gk = 0;
-    if (RaceManager::get()->hasGhostKarts())
-        gk = ReplayPlay::get()->getNumGhostKart();
+    if (RaceManager::get()->hasGhofluxara_driftarts())
+        gk = ReplayPlay::get()->getNumGhofluxara_driftart();
 
     std::shared_ptr<GE::GERenderInfo> ri = std::make_shared<GE::GERenderInfo>();
     core::stringw online_name;
@@ -865,8 +864,7 @@ std::shared_ptr<AbstractKart> World::createKart
     {
     case RaceManager::KT_PLAYER:
     {
-#ifdef IOS_STK
-#if 0 // AUTOPLAY ACCEPTANCE — disabled: player slots always use live input.
+#ifdef IOS_FLUXARA_DRIFT
         // --test-ai=-1 is an iPhone-only validation route. It retains a real
         // player slot (so the race HUD and result flow are exercised) while
         // handing that slot to the normal Skidding AI. It is never reachable
@@ -883,7 +881,6 @@ std::shared_ptr<AbstractKart> World::createKart
                 controller = new FluxaraValidationAI(new_kart.get());
         }
         else
-#endif
 #endif
         {
             int local_player_count = 99999;
@@ -966,7 +963,7 @@ Controller* World::loadAIController(AbstractKart* kart)
         || RaceManager::get()->getMinorMode()==RaceManager::MINOR_MODE_FREE_FOR_ALL)
         turn=1;
     else if(RaceManager::get()->isCTFMode())
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
         return new FluxaraCTFAI(kart);
 #else
         turn=1;
@@ -1044,7 +1041,7 @@ World::~World()
         Weather::kill();
 
     m_karts.clear();
-    if(RaceManager::get()->hasGhostKarts() || RaceManager::get()->isRecordingRace())
+    if(RaceManager::get()->hasGhofluxara_driftarts() || RaceManager::get()->isRecordingRace())
     {
         // Destroy the old replay object, which also stored the ghost
         // karts, and create a new one (which means that in further
@@ -1056,7 +1053,7 @@ World::~World()
     }
     if(RaceManager::get()->isRecordingRace())
         ReplayRecorder::get()->reset();
-    RaceManager::get()->setRaceGhostKarts(false);
+    RaceManager::get()->setRaceGhofluxara_driftarts(false);
     RaceManager::get()->setRecordRace(false);
     RaceManager::get()->setWatchingReplay(false);
     RaceManager::get()->setTimeTarget(0.0f);
@@ -1094,7 +1091,7 @@ void World::onGo()
     // from sliding downhill)
     for(unsigned int i=0; i<m_karts.size(); i++)
     {
-        if (m_karts[i]->isGhostKart()) continue;
+        if (m_karts[i]->isGhofluxara_driftart()) continue;
         m_karts[i]->getVehicle()->setAllBrakes(0);
     }
     // Reset track objects 1 more time to make sure all instances of moveable
@@ -1156,7 +1153,7 @@ void World::terminateRace()
      */
     int best_highscore_rank = -1;
     std::string highscore_who = "";
-    if (!isNetworkWorld() && RaceManager::get()->getNumNonGhostKarts() > 0 &&
+    if (!isNetworkWorld() && RaceManager::get()->getNumNonGhofluxara_driftarts() > 0 &&
         RaceManager::get()->getNumLaps() > 0 &&
         !(UserConfigParams::m_no_high_scores))
     {
@@ -1213,7 +1210,7 @@ void World::resetAllKarts()
         // Loop over all karts, in case that some karts are dfferent
         for(unsigned int kart_id=0; kart_id<(unsigned int)m_karts.size(); kart_id++)
         {
-            if (m_karts[kart_id]->isGhostKart()) continue;
+            if (m_karts[kart_id]->isGhofluxara_driftart()) continue;
             for(unsigned int rescue_pos=0;
                 rescue_pos<getNumberOfRescuePositions();
                 rescue_pos++)
@@ -1241,7 +1238,7 @@ void World::resetAllKarts()
     //that at least one of its wheel will be on the surface of the track
     for ( KartList::iterator i=m_karts.begin(); i!=m_karts.end(); i++)
     {
-        if ((*i)->isGhostKart()) continue;
+        if ((*i)->isGhofluxara_driftart()) continue;
         Vec3 xyz = (*i)->getXYZ();
         //start projection from top of kart
         Vec3 up_offset = (*i)->getNormal() * (0.5f * ((*i)->getKartHeight()));
@@ -1273,12 +1270,12 @@ void World::resetAllKarts()
     float g = Track::getCurrentTrack()->getGravity();
     for (KartList::iterator i = m_karts.begin(); i != m_karts.end(); i++)
     {
-        if ((*i)->isGhostKart()) continue;
+        if ((*i)->isGhofluxara_driftart()) continue;
         (*i)->getBody()->setGravity(
             (*i)->getMaterial() && (*i)->getMaterial()->hasGravity() ?
             (*i)->getNormal() * -g : Vec3(0, -g, 0));
     }
-    for(int i=0; i<stk_config->getPhysicsFPS(); i++)
+    for(int i=0; i<fluxara_drift_config->getPhysicsFPS(); i++)
         Physics::get()->update(1);
 
     for ( KartList::iterator i=m_karts.begin(); i!=m_karts.end(); i++)
@@ -1361,7 +1358,7 @@ void World::updateTimeTargetSound()
     }
 
     if (time_left <= (RaceManager::get()->isFollowMode() ? 3 : 5) &&
-            getTimeTicks() % stk_config->time2Ticks(1.0f) == 0 &&
+            getTimeTicks() % fluxara_drift_config->time2Ticks(1.0f) == 0 &&
             !World::getWorld()->isRaceOver() && time_left > 0)
     {
         SFXManager::get()->quickSound("pre_start_race");
@@ -1440,20 +1437,16 @@ void World::updateWorld(int ticks)
         return;
     }
 
-#ifdef IOS_STK
-#if 0 // AUTOPLAY ACCEPTANCE — disabled for human play; retained for a future lab run.
-    // TEMPORARY ACCEPTANCE FINISH — DELETE WITH
-    // FluxaraModes::forceValidationWins() AFTER THE SIMULATOR RUN.
+#ifdef IOS_FLUXARA_DRIFT
     // Give each map one short real gameplay interval, then use the ordinary
     // result lifecycle. This never writes controls, physics, items, scores,
     // teams or collision state; it only bounds the coverage pass.
-    if (FluxaraModes::forceValidationWins() && isRacePhase() &&
-        getTicksSinceStart() >= stk_config->time2Ticks(6.0f))
+    if (FluxaraModes::forceValidationWins() &&
+        getTicksSinceStart() >= fluxara_drift_config->time2Ticks(6.0f))
     {
         enterRaceOverState();
         return;
     }
-#endif
 #endif
 
 #ifdef DEBUG
@@ -1566,9 +1559,9 @@ void World::update(int ticks)
 #if MEASURE_FPS
     static int time = 0.0f;
     time += ticks;
-    if (time > stk_config->time2Ticks(5.0f))
+    if (time > fluxara_drift_config->time2Ticks(5.0f))
     {
-        time -= stk_config->time2Ticks(5.0f);
+        time -= fluxara_drift_config->time2Ticks(5.0f);
         printf("%i\n",irr_driver->getVideoDriver()->getFPS());
     }
 #endif
@@ -1591,7 +1584,7 @@ void World::update(int ticks)
     PROFILER_POP_CPU_MARKER();
 
     PROFILER_PUSH_CPU_MARKER("World::update (Track object manager)", 0x20, 0x7F, 0x40);
-    Track::getCurrentTrack()->getTrackObjectManager()->update(stk_config->ticks2Time(ticks));
+    Track::getCurrentTrack()->getTrackObjectManager()->update(fluxara_drift_config->ticks2Time(ticks));
     PROFILER_POP_CPU_MARKER();
 
     PROFILER_PUSH_CPU_MARKER("World::update (Kart::upate)", 0x40, 0x7F, 0x00);
@@ -1630,7 +1623,7 @@ void World::update(int ticks)
 }   // update
 
 // ----------------------------------------------------------------------------
-/** Only updates the track. The order in which the various parts of STK are
+/** Only updates the track. The order in which the various parts of FLUXARA_DRIFT are
  *  updated is quite important (i.e. the track can't be updated as part of
  *  the standard update call):
  *  the track must be updated after updating the karts (otherwise the
@@ -1660,7 +1653,7 @@ Highscores* World::getHighscores() const
 
     Highscores * highscores =
         highscore_manager->getHighscores(type,
-                                         RaceManager::get()->getNumNonGhostKarts(),
+                                         RaceManager::get()->getNumNonGhofluxara_driftarts(),
                                          RaceManager::get()->getDifficulty(),
                                          RaceManager::get()->getTrackName(),
                                          RaceManager::get()->isLapTrialMode() ? RaceManager::get()->getTimeTarget() : RaceManager::get()->getNumLaps(),
@@ -1672,7 +1665,7 @@ Highscores* World::getHighscores() const
 // ---------------------------------------------------------------------------
 Highscores* World::getGPHighscores() const
 {
-    Highscores* highscores = highscore_manager->getGPHighscores(RaceManager::get()->getNumNonGhostKarts(),
+    Highscores* highscores = highscore_manager->getGPHighscores(RaceManager::get()->getNumNonGhofluxara_driftarts(),
                                                                 RaceManager::get()->getDifficulty(),
                                                                 RaceManager::get()->getGrandPrix().getId(),
                                                                 RaceManager::get()->isLapTrialMode() ? RaceManager::get()->getTimeTarget() : 0,
@@ -1822,7 +1815,7 @@ void World::eliminateKart(int kart_id, bool notify_of_elimination)
 {
     assert(kart_id < (int)m_karts.size());
     AbstractKart *kart = m_karts[kart_id].get();
-    if (kart->isGhostKart()) return;
+    if (kart->isGhofluxara_driftart()) return;
 
     // Display a message about the eliminated kart in the race gui
     if (m_race_gui && notify_of_elimination)
@@ -2029,8 +2022,7 @@ std::shared_ptr<AbstractKart> World::createKartWithTeam
     switch(kart_type)
     {
     case RaceManager::KT_PLAYER:
-#ifdef IOS_STK
-#if 0 // AUTOPLAY ACCEPTANCE — disabled: player slots always use live input.
+#ifdef IOS_FLUXARA_DRIFT
         // Test-only controller for the player slot in team modes.  Without
         // this, --test-ai=-1 leaves the local Soccer kart stationary and the
         // scoreboard cannot exercise a real goal.  It is unreachable from
@@ -2040,7 +2032,6 @@ std::shared_ptr<AbstractKart> World::createKartWithTeam
         else if (AIBaseController::getTestAI() < 0 && RaceManager::get()->isCTFMode())
             controller = new FluxaraValidationCTFAI(new_kart.get());
         else
-#endif
 #endif
             controller = new LocalPlayerController(new_kart.get(), local_player_id, handicap);
         m_num_players ++;
@@ -2167,7 +2158,7 @@ void World::updateAchievementDataEndRace()
                 // Check if the player has won
                 if (m_karts[i]->getPosition() == winner_position)
                 {
-                    if (RaceManager::get()->getNumNonGhostKarts() >= 2)
+                    if (RaceManager::get()->getNumNonGhofluxara_driftarts() >= 2)
                         PlayerManager::trackEvent(RaceManager::get()->getTrackName(), ACS::TR_WON);
                     else
                         PlayerManager::trackEvent(RaceManager::get()->getTrackName(), ACS::TR_FINISHED_ALONE);
@@ -2231,7 +2222,7 @@ void World::updateAchievementModeCounters(bool start)
     else // normal races
         PlayerManager::increaseAchievement(start ? ACS::NORMAL_STARTED : ACS::NORMAL_FINISHED,1);
 
-    if (RaceManager::get()->hasGhostKarts())
+    if (RaceManager::get()->hasGhofluxara_driftarts())
         PlayerManager::increaseAchievement(start ? ACS::WITH_GHOST_STARTED : ACS::WITH_GHOST_FINISHED,1);
 } // updateAchievementModeCounters
 #undef ACS

@@ -12,10 +12,10 @@ CPP_FILE_LIST="`find ./src                 \
                      -name "*.h" | sort -n \
               `"
 XML_FILE_LIST="`find ./data                        \
-                     ../stk-assets/tracks          \
-                     ../stk-assets/karts           \
-                     ../supertuxkart-assets/tracks \
-                     ../supertuxkart-assets/karts  \
+                     ../fluxara_drift-assets/tracks          \
+                     ../fluxara_drift-assets/karts           \
+                     ../fluxaradrift-assets/tracks \
+                     ../fluxaradrift-assets/karts  \
                      ./android/res/values          \
                      -name 'achievements.xml' -or  \
                      -name 'skin_names.xml' -or    \
@@ -26,11 +26,11 @@ XML_FILE_LIST="`find ./data                        \
                      -name '*.challenge' -or       \
                      -name '*.grandprix' -or       \
                      -name 'strings.xml' -or       \
-                     -name '*.stkgui' | sort -n    \
+                     -name '*.fluxara_driftgui' | sort -n    \
               `"
 ANGELSCRIPT_FILE_LIST="`find ./data                        \
-                             ../stk-assets/tracks          \
-                             ../supertuxkart-assets/tracks \
+                             ../fluxara_drift-assets/tracks          \
+                             ../fluxaradrift-assets/tracks \
                              -name '*.as' | sort -n        \
                       `"
 
@@ -54,22 +54,22 @@ echo "---------------------------"
 echo "    Generating .pot file..."
 
 # XML Files
-xgettext  -d supertuxkart --keyword=_ --add-comments="I18N:" \
-                               -p ./data/po -o supertuxkart.pot \
+xgettext  -d fluxaradrift --keyword=_ --add-comments="I18N:" \
+                               -p ./data/po -o fluxaradrift.pot \
                                --no-location --from-code=UTF-8 ./data/po/gui_strings.h \
-                               --package-name=supertuxkart
+                               --package-name=fluxaradrift
 
 # C++ Files
-xgettext  -j  -d supertuxkart --keyword=_ --keyword=N_ --keyword=_LTR \
+xgettext  -j  -d fluxaradrift --keyword=_ --keyword=N_ --keyword=_LTR \
                                --keyword=_C:1c,2 --keyword=_P:1,2 \
                                --keyword=_CP:1c,2,3 --add-comments="I18N:" \
-                               -p ./data/po -o supertuxkart.pot $CPP_FILE_LIST \
-                               --package-name=supertuxkart
+                               -p ./data/po -o fluxaradrift.pot $CPP_FILE_LIST \
+                               --package-name=fluxaradrift
 
 # Angelscript files (xgettext doesn't support AS so pretend it's c++)
-xgettext  -j  -d supertuxkart --keyword="translate" --add-comments="I18N:" \
-                               -p ./data/po -o supertuxkart.pot $ANGELSCRIPT_FILE_LIST \
-                               --package-name=supertuxkart --language=c++
+xgettext  -j  -d fluxaradrift --keyword="translate" --add-comments="I18N:" \
+                               -p ./data/po -o fluxaradrift.pot $ANGELSCRIPT_FILE_LIST \
+                               --package-name=fluxaradrift --language=c++
 
 # Desktop file and AppData
 if [ "$1" = "--generate-google-play-msg" ]; then

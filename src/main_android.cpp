@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016-2017 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016-2017 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -15,7 +15,7 @@
 //  along with this program; if not, write to the Free Software
 //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
 
 #include "config/user_config.hpp"
 #include "graphics/irr_driver.hpp"
@@ -38,7 +38,7 @@ extern "C" JNIEXPORT void JNICALL addDNSSrvRecords(JNIEnv* env, jclass cls, jstr
 extern "C" JNIEXPORT void JNICALL pauseRenderingJNI(JNIEnv* env, jclass cls);
 extern "C" JNIEXPORT void JNICALL onMotoricaGameControlJNI(JNIEnv* env, jclass cls, jint open_level, jint close_level, jboolean connected, jlong timestamp_ms, jlong seq);
 
-extern "C" JNIEXPORT void JNICALL editText2STKEditbox(JNIEnv* env, jclass cls, jint widget_id, jstring text, jint start, jint end, jint composing_start, jint composing_end);
+extern "C" JNIEXPORT void JNICALL editText2FLUXARA_DRIFTEditbox(JNIEnv* env, jclass cls, jint widget_id, jstring text, jint start, jint end, jint composing_start, jint composing_end);
 extern "C" JNIEXPORT void JNICALL handleActionNext(JNIEnv* env, jclass cls, jint widget_id);
 extern "C" JNIEXPORT void JNICALL handleLeftRight(JNIEnv* env, jclass cls, jboolean left, jint widget_id);
 
@@ -48,7 +48,7 @@ extern "C" JNIEXPORT void JNICALL handleLeftRight(JNIEnv* env, jclass cls, jbool
 
 void registering_natives()
 {
-    JNINativeMethod stkactivity_tab[] =
+    JNINativeMethod fluxara_driftactivity_tab[] =
     {
         { "debugMsg",           "(Ljava/lang/String;)V", (void*)&debugMsg },
         { "handlePadding",      "(Z)V", (void*)&handlePadding },
@@ -58,19 +58,19 @@ void registering_natives()
     };
     JNIEnv* env = (JNIEnv*)SDL_AndroidGetJNIEnv();
     assert(env);
-    const char* stkactivity_class = ANDROID_PACKAGE_CLASS_NAME "/SuperTuxKartActivity";
-    jclass clazz = env->FindClass(stkactivity_class);
+    const char* fluxara_driftactivity_class = ANDROID_PACKAGE_CLASS_NAME "/FluxaraDriftActivity";
+    jclass clazz = env->FindClass(fluxara_driftactivity_class);
     if (clazz == NULL)
     {
         Log::error("MainAndroid", "Failed to find class %s.",
-            stkactivity_class);
+            fluxara_driftactivity_class);
         return;
     }
     if (env->RegisterNatives(
-        clazz, stkactivity_tab, (int)SDL_arraysize(stkactivity_tab)) < 0)
+        clazz, fluxara_driftactivity_tab, (int)SDL_arraysize(fluxara_driftactivity_tab)) < 0)
     {
         Log::error("MainAndroid", "Failed to register methods of %s.",
-            stkactivity_class);
+            fluxara_driftactivity_class);
     }
     else
     {
@@ -82,29 +82,29 @@ void registering_natives()
         {
             env->ExceptionClear();
             Log::warn("MainAndroid",
-                "Failed to find SuperTuxKartActivity.onMotoricaNativeReady.");
+                "Failed to find FluxaraDriftActivity.onMotoricaNativeReady.");
         }
     }
 
-    JNINativeMethod stkeditbox_tab[] =
+    JNINativeMethod fluxara_drifteditbox_tab[] =
     {
-        { "editText2STKEditbox", "(ILjava/lang/String;IIII)V", (void*)&editText2STKEditbox },
+        { "editText2FLUXARA_DRIFTEditbox", "(ILjava/lang/String;IIII)V", (void*)&editText2FLUXARA_DRIFTEditbox },
         { "handleActionNext",    "(I)V", (void*)&handleActionNext },
         { "handleLeftRight",     "(ZI)V", (void*)&handleLeftRight }
     };
-    const char* stkeditbox_class = ANDROID_PACKAGE_CLASS_NAME "/STKEditText";
-    clazz = env->FindClass(stkeditbox_class);
+    const char* fluxara_drifteditbox_class = ANDROID_PACKAGE_CLASS_NAME "/FLUXARA_DRIFTEditText";
+    clazz = env->FindClass(fluxara_drifteditbox_class);
     if (clazz == NULL)
     {
         Log::error("MainAndroid", "Failed to find class %s.",
-            stkeditbox_class);
+            fluxara_drifteditbox_class);
         return;
     }
     if (env->RegisterNatives(
-        clazz, stkeditbox_tab, (int)SDL_arraysize(stkeditbox_tab)) < 0)
+        clazz, fluxara_drifteditbox_tab, (int)SDL_arraysize(fluxara_drifteditbox_tab)) < 0)
     {
         Log::error("MainAndroid", "Failed to register methods of %s.",
-            stkeditbox_class);
+            fluxara_drifteditbox_class);
     }
 }
 
@@ -117,7 +117,7 @@ extern "C" JNIEXPORT void JNICALL onMotoricaGameControlJNI(
     if (connected != JNI_TRUE || seq <= 3 || seq % 30 == 0)
     {
         Log::info("MotoricaGameControl",
-            "[BLE stk-game debug] jni seq=%llu open=%d close=%d connected=%d timestamp=%llu",
+            "[BLE fluxara_drift-game debug] jni seq=%llu open=%d close=%d connected=%d timestamp=%llu",
             (unsigned long long)seq, (int)open_level, (int)close_level,
             connected == JNI_TRUE ? 1 : 0, (unsigned long long)timestamp_ms);
     }
@@ -138,7 +138,7 @@ extern "C" int SDL_main(int argc, char *argv[])
 void override_default_params_for_mobile()
 {
     // It has an effect only on the first run, when config file is created.
-    // So that we can still modify these params in STK options and user's
+    // So that we can still modify these params in FLUXARA_DRIFT options and user's
     // choice will be then remembered.
     
     // Set smaller texture size to avoid high RAM usage
@@ -271,7 +271,7 @@ void override_default_params_for_mobile()
     // Enable screen keyboard
     UserConfigParams::m_screen_keyboard = 1;
     
-    // It shouldn't matter, but STK is always run in fullscreen on android
+    // It shouldn't matter, but FLUXARA_DRIFT is always run in fullscreen on android
     UserConfigParams::m_fullscreen = true;
     
     // Make sure that user can play every track even if there are installed
@@ -282,7 +282,7 @@ void override_default_params_for_mobile()
     UserConfigParams::m_enforce_current_player = true;
 }
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 void getConfigForDevice(const char* dev)
 {
     // Check browser.geekbench.com/ios-benchmarks metal benchmark

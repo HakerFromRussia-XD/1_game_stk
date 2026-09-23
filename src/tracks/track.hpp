@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
 //  Copyright (C) 2009-2015  Joerg Henrichs, Steve Baker
@@ -57,7 +57,7 @@ using namespace irr;
 #include "utils/log.hpp"
 #include "utils/random_generator.hpp"
 #include "utils/vec3.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 
 class AbstractKart;
 class AnimationManager;
@@ -238,7 +238,7 @@ private:
 
     bool                     m_is_cutscene;
 
-    /** The version of this track. A certain STK version will only support
+    /** The version of this track. A certain FLUXARA_DRIFT version will only support
      *  certain track versions. */
     int                      m_version;
 
@@ -432,7 +432,7 @@ public:
      *  track is defined (i.e. no race is active atm) */
     static Track* getCurrentTrack()
     {
-        ProcessType type = STKProcess::getType();
+        ProcessType type = FLUXARA_DRIFTProcess::getType();
         return m_current_track[type];
     }
     // ------------------------------------------------------------------------

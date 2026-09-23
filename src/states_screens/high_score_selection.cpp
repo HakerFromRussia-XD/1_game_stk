@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -42,9 +42,9 @@
 using namespace GUIEngine;
 
 // ----------------------------------------------------------------------------
-/** Constructor, which loads the stkgui file.
+/** Constructor, which loads the fluxara_driftgui file.
  */
-HighScoreSelection::HighScoreSelection() : Screen("high_score_selection.stkgui")
+HighScoreSelection::HighScoreSelection() : Screen("high_score_selection.fluxara_driftgui")
 {
     m_selected_index = -1;
 }   // HighScoreSelection
@@ -109,7 +109,7 @@ void HighScoreSelection::loadedFromFile()
     m_major_mode = RaceManager::MAJOR_MODE_SINGLE;
     m_active_mode_is_linear = true;
 
-    m_icon_bank = new irr::gui::STKModifiedSpriteBank( GUIEngine::getGUIEnv());
+    m_icon_bank = new irr::gui::FLUXARA_DRIFTModifiedSpriteBank( GUIEngine::getGUIEnv());
 
     for(unsigned int i=0; i<kart_properties_manager->getNumberOfKarts(); i++)
     {

@@ -32,9 +32,9 @@ Overworld/Tutorial/Cutscene также есть в enum (`race/race_manager.hpp:
 
 ## Что установлено в оригинале
 
-`data/challenges` содержит 28 XML: 21 одиночное испытание, 4 Grand Prix, 3 записи только разблокировки. Объединение track id одиночных испытаний и всех этапов используемых GP содержит **21 уникальную трассу**, а не 25 и не 28. Четыре GP повторно используют 20 этих трасс; Fort Magma — отдельная финальная трасса. Воспроизводимый подсчёт: `python3 tools/fluxara_content/original_campaign_inventory.py`. Каталог challenges сравнен с `/private/tmp/original-stk-pre-fluxara.app/data/challenges`: `diff -rq` не вывел различий; в архивном оригинале также 28 файлов.
+`data/challenges` содержит 28 XML: 21 одиночное испытание, 4 Grand Prix, 3 записи только разблокировки. Объединение track id одиночных испытаний и всех этапов используемых GP содержит **21 уникальную трассу**, а не 25 и не 28. Четыре GP повторно используют 20 этих трасс; Fort Magma — отдельная финальная трасса. Воспроизводимый подсчёт: `python3 tools/fluxara_content/original_campaign_inventory.py`. Каталог challenges сравнен с `/private/tmp/original-fluxara_drift-pre-fluxara.app/data/challenges`: `diff -rq` не вывел различий; в архивном оригинале также 28 файлов.
 
-Уникальные id: abyss, black_forest, candela_city, cocoa_temple, cornfield_crossing, fortmagma, gran_paradiso_island, hacienda, lighthouse, mines, minigolf, olivermath, ravenbridge_mansion, sandtrack, scotland, snowmountain, snowtuxpeak, stk_enterprise, volcano_island, xr591, zengarden.
+Уникальные id: abyss, black_forest, candela_city, cocoa_temple, cornfield_crossing, fortmagma, gran_paradiso_island, hacienda, lighthouse, mines, minigolf, olivermath, ravenbridge_mansion, sandtrack, scotland, snowmountain, snowtuxpeak, fluxara_drift_enterprise, volcano_island, xr591, zengarden.
 
 Источники: `data/grandprix/1_penguinplayground.grandprix:3`, `2_offthebeatentrack.grandprix:3`, `3_tothemoonandback.grandprix:3`, `4_atworldsend.grandprix:3`; `data/challenges/fortmagma.challenge:4`. Не считайте имя challenge именем трассы: `green_valley.challenge:4` указывает на black_forest.
 

@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2008-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -45,7 +45,7 @@ class XMLNode;
   *  solve it), or solved. This status is stored for each difficulty level.
   *  This data is saved to and loaded from the players.xml file.
   *  A StoryModeStatus instance will store an array of ChallengeStatuses,
-  *  one for each Challenge in STK.
+  *  one for each Challenge in FLUXARA_DRIFT.
   *
   * \ingroup challenges
   */
@@ -56,7 +56,7 @@ private:
     int m_active;
     int m_solved;
 
-    // If the challenge's SuperTux time requirement has been beaten
+    // If the challenge's FluxaraDrift time requirement has been beaten
     // in a (s)lower difficulty.
     bool m_max_req_in_lower_diff;
 

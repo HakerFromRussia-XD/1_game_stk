@@ -1,18 +1,18 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the supertuxkart package.
+# This file is distributed under the same license as the fluxaradrift package.
 # 
 # Translators:
 # Marija Jovanovic, 2022
 # Marija Jovanovic, 2022-2023,2025
 msgid ""
 msgstr ""
-"Project-Id-Version: SuperTuxKart\n"
+"Project-Id-Version: Fluxara Drift\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-29 22:11+0100\n"
 "PO-Revision-Date: 2015-02-15 01:58+0000\n"
 "Last-Translator: Marija Jovanovic, 2022-2023,2025\n"
-"Language-Team: Macedonian (http://app.transifex.com/supertuxkart/supertuxkart/language/mk/)\n"
+"Language-Team: Macedonian (http://app.transifex.com/fluxaradrift/fluxaradrift/language/mk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,11 +28,11 @@ msgid "Game data extraction error"
 msgstr "Грешка во извлекувањето податоци за играта"
 
 #. I18N: In Android UI, po_extract_error_msg
-msgid "Check remaining device space or reinstall SuperTuxKart."
+msgid "Check remaining device space or reinstall Fluxara Drift."
 msgstr "Проверете го преостанатиот мемориски простор на уредот или преинсталирајте го СуперТуксКарт."
 
 #. I18N: In Android UI, po_quit
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: In the main screen
 msgid "Quit"
 msgstr "Откажи се"
@@ -137,7 +137,7 @@ msgstr "Без Среќа"
 
 #. I18N: ./data/achievements.xml
 msgid ""
-"Win 10 single races in a row in Expert or SuperTux against at least 5 AIs. "
+"Win 10 single races in a row in Expert or FluxaraDrift against at least 5 AIs. "
 "Beware, restarting a race counts as a loss."
 msgstr "Победете 10 самостојни трки по ред во Експерт или СуперТукс против најмалку 5 AI роботи. Бидете внимателни, рестартирањето на трката се смета за загуба."
 
@@ -157,198 +157,198 @@ msgstr "До Месечината и Назад"
 msgid "At World's End"
 msgstr "На Крајот на Светот"
 
-#. I18N: ./data/gui/dialogs/addons_loading.stkgui
+#. I18N: ./data/gui/dialogs/addons_loading.fluxara_driftgui
 #. I18N: Add-on screen action
-#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.fluxara_driftgui
 #. I18N: Ghost replay info action
-#. I18N: ./data/gui/dialogs/high_score_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/high_score_info_dialog.fluxara_driftgui
 #. I18N: High score info screen action
-#. I18N: ./data/gui/dialogs/online/server_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_info_dialog.fluxara_driftgui
 #. I18N: In the server info dialog
-#. I18N: ./data/gui/dialogs/select_challenge.stkgui
+#. I18N: ./data/gui/dialogs/select_challenge.fluxara_driftgui
 #. I18N: name of buttons on gamepads
 #: src/input/gamepad_config.cpp:157
 #: src/states_screens/dialogs/addons_loading.cpp:320
 msgid "Back"
 msgstr "Назад"
 
-#. I18N: ./data/gui/dialogs/addons_loading.stkgui
+#. I18N: ./data/gui/dialogs/addons_loading.fluxara_driftgui
 #. I18N: Add-on screen action
 msgid "Install"
 msgstr "Инсталирај"
 
-#. I18N: ./data/gui/dialogs/addons_loading.stkgui
+#. I18N: ./data/gui/dialogs/addons_loading.fluxara_driftgui
 #. I18N: Add-on screen action
 msgid "Uninstall"
 msgstr "Деинсталирај"
 
-#. I18N: ./data/gui/dialogs/android/init_android.stkgui
+#. I18N: ./data/gui/dialogs/android/init_android.fluxara_driftgui
 msgid "Select a type of control that you prefer"
 msgstr "Одберете тип на контролер по Ваш избор"
 
-#. I18N: ./data/gui/dialogs/android/init_android.stkgui
+#. I18N: ./data/gui/dialogs/android/init_android.fluxara_driftgui
 #. I18N: Control type
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 #: src/states_screens/dialogs/race_paused_dialog.cpp:572
 msgid "Accelerometer"
 msgstr "Акцелерометар"
 
-#. I18N: ./data/gui/dialogs/android/init_android.stkgui
+#. I18N: ./data/gui/dialogs/android/init_android.fluxara_driftgui
 #. I18N: Control type
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
-#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.fluxara_driftgui
 #. I18N: Race paused button
-#. I18N: ./data/gui/dialogs/overworld_dialog.stkgui
+#. I18N: ./data/gui/dialogs/overworld_dialog.fluxara_driftgui
 #. I18N: Race paused button
-#. I18N: ./data/gui/dialogs/race_paused_dialog.stkgui
+#. I18N: ./data/gui/dialogs/race_paused_dialog.fluxara_driftgui
 #. I18N: Race paused button
 #: src/states_screens/dialogs/race_paused_dialog.cpp:577
 msgid "Gyroscope"
 msgstr "Жироскоп"
 
-#. I18N: ./data/gui/dialogs/android/init_android.stkgui
+#. I18N: ./data/gui/dialogs/android/init_android.fluxara_driftgui
 #. I18N: Control type
 #: src/states_screens/dialogs/race_paused_dialog.cpp:567
 msgid "Steering wheel"
 msgstr "Волан"
 
-#. I18N: ./data/gui/dialogs/android/init_android.stkgui
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/init_android.fluxara_driftgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 msgid "Auto acceleration"
 msgstr "Автоматско забрзување"
 
-#. I18N: ./data/gui/dialogs/android/init_android.stkgui
+#. I18N: ./data/gui/dialogs/android/init_android.fluxara_driftgui
 msgid "You can change it later in touch device settings."
 msgstr "Можете да го смените подоцна во touch device нагодувањата."
 
-#. I18N: ./data/gui/dialogs/android/init_android.stkgui
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/init_android.fluxara_driftgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera screen
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
-#. I18N: ./data/gui/dialogs/kart_color_slider.stkgui
+#. I18N: ./data/gui/dialogs/kart_color_slider.fluxara_driftgui
 #. I18N: In the kart color slider dialog
 msgid "Apply"
 msgstr "Примени"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 msgid "Touch Device Settings"
 msgstr "Touch Device Нагодувања"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_language.stkgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: Section in the settings menu
 msgid "General"
 msgstr "Генерално"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 msgid "Device enabled"
 msgstr "Уредот е овозможен"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 msgid "Inverted buttons"
 msgstr "Превртени копчиња"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 msgid "Buttons scale"
 msgstr "Скалирање на копчиња"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 msgid "Advanced"
 msgstr "Напредно"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 msgid "Deadzone"
 msgstr "Мртва зона"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 msgid "Sensitivity X"
 msgstr "Чувствителност X"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 #. I18N: In the multitouch settings screen
 msgid "Sensitivity Y"
 msgstr "Чувствителност Y"
 
-#. I18N: ./data/gui/dialogs/android/multitouch_settings.stkgui
+#. I18N: ./data/gui/dialogs/android/multitouch_settings.fluxara_driftgui
 msgid "Restore defaults"
 msgstr "Врати ги стандардите"
 
-#. I18N: ./data/gui/dialogs/confirm_dialog.stkgui
+#. I18N: ./data/gui/dialogs/confirm_dialog.fluxara_driftgui
 #. I18N: In a 'are you sure?' dialog
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera screen
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
-#. I18N: ./data/gui/dialogs/enter_address_dialog.stkgui
+#. I18N: ./data/gui/dialogs/enter_address_dialog.fluxara_driftgui
 #. I18N: In the enter address dialog
-#. I18N: ./data/gui/dialogs/general_text_field_dialog.stkgui
+#. I18N: ./data/gui/dialogs/general_text_field_dialog.fluxara_driftgui
 #. I18N: In the general textfield dialog
-#. I18N: ./data/gui/dialogs/kart_color_slider.stkgui
+#. I18N: ./data/gui/dialogs/kart_color_slider.fluxara_driftgui
 #. I18N: In the kart color slider dialog
-#. I18N: ./data/gui/dialogs/online/change_password.stkgui
+#. I18N: ./data/gui/dialogs/online/change_password.fluxara_driftgui
 #. I18N: In the change password dialog
-#. I18N: ./data/gui/dialogs/online/recovery_input.stkgui
+#. I18N: ./data/gui/dialogs/online/recovery_input.fluxara_driftgui
 #. I18N: In the recovery dialog
-#. I18N: ./data/gui/dialogs/online/registration_terms.stkgui
+#. I18N: ./data/gui/dialogs/online/registration_terms.fluxara_driftgui
 #. I18N: In the registration dialog
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: In the server configuration screen
-#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.fluxara_driftgui
 #. I18N: Splitscreen player in network
-#. I18N: ./data/gui/dialogs/press_a_key_dialog.stkgui
+#. I18N: ./data/gui/dialogs/press_a_key_dialog.fluxara_driftgui
 #. I18N: When configuring input
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
-#. I18N: ./data/gui/screens/edit_track.stkgui
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/edit_track.fluxara_driftgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: In the server creation screen
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 #: src/states_screens/dialogs/add_device_dialog.cpp:101
 #: src/states_screens/dialogs/addons_loading.cpp:229
@@ -359,7 +359,7 @@ msgstr "Врати ги стандардите"
 msgid "Cancel"
 msgstr "Откажи"
 
-#. I18N: ./data/gui/dialogs/confirm_dialog.stkgui
+#. I18N: ./data/gui/dialogs/confirm_dialog.fluxara_driftgui
 #. I18N: In a 'are you sure?' dialog
 #: src/states_screens/dialogs/ghost_replay_info_dialog.cpp:204
 #: src/states_screens/dialogs/high_score_info_dialog.cpp:138
@@ -370,182 +370,182 @@ msgstr "Откажи"
 msgid "Yes"
 msgstr "Да"
 
-#. I18N: ./data/gui/dialogs/confirm_resolution_dialog.stkgui
+#. I18N: ./data/gui/dialogs/confirm_resolution_dialog.fluxara_driftgui
 #. I18N: In the 'confirm resolution' dialog, that's shown when switching
 #. resoluton
 msgid "Revert"
 msgstr "Врати"
 
-#. I18N: ./data/gui/dialogs/confirm_resolution_dialog.stkgui
+#. I18N: ./data/gui/dialogs/confirm_resolution_dialog.fluxara_driftgui
 #. I18N: In the 'confirm resolution' dialog, that's shown when switching
 #. resoluton
-#. I18N: ./data/gui/dialogs/online/registration_terms.stkgui
+#. I18N: ./data/gui/dialogs/online/registration_terms.fluxara_driftgui
 #. I18N: In the registration dialog
 msgid "Accept"
 msgstr "Прифати"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 msgid "Camera Settings"
 msgstr "Камера Нагодувања"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera settings
 msgid "Player camera"
 msgstr "Камера на играч"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera screen
 msgid "FOV"
 msgstr "Видно поле"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera screen
 msgid "Distance"
 msgstr "Растојание"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera screen
 msgid "Angle"
 msgstr "Агол"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera screen
 msgid "Smooth camera"
 msgstr "Мазна камера"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera settings
 msgid "Backward camera"
 msgstr "Задна камера"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera screen
 msgid "Follow ball in soccer mode"
 msgstr "Следи ја топката во режим на фудбал"
 
-#. I18N: ./data/gui/dialogs/custom_camera_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_camera_settings.fluxara_driftgui
 #. I18N: In the ui/camera screen
 msgid "Reset"
 msgstr "Ресетирај"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 msgid "Graphics Settings"
 msgstr "Графички Нагодувања"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Advanced pipeline (lights, etc.)"
 msgstr "Напреден pipeline (светла, итн.)"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Shadows"
 msgstr "Сенки"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Bloom"
 msgstr "Bloom"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Light shaft (God rays)"
 msgstr "Светлосни зраци (Божји зраци)"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Ambient occlusion"
 msgstr "Амбиентална оклузија"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Depth of field"
 msgstr "Длабочина на поле"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Glow (Outlines)"
 msgstr "Сјае (Контури)"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Anti-aliasing"
 msgstr "Анти-алиасирање"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Motion blur"
 msgstr "Заматување на движењето"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Image-based lighting"
 msgstr "Светлина базирана на слика"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Light Scattering"
 msgstr "Расејување на Светлината"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Animated characters"
 msgstr "Анимирани ликови"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Texture compression"
 msgstr "Компресија на текстура"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Particle effects"
 msgstr "Ефекти на честичка"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Rendered image quality"
 msgstr "Квалитет на рендер слика"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
 msgid "Geometry detail"
 msgstr "Детал за геометријата"
 
-#. I18N: ./data/gui/dialogs/custom_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/custom_video_settings.fluxara_driftgui
 #. I18N: Video settings
-msgid "* Restart STK to apply new settings"
+msgid "* Restart FLUXARA_DRIFT to apply new settings"
 msgstr "* Рестартирајте го СТК за да поставите нови нагодувања"
 
-#. I18N: ./data/gui/dialogs/debug_slider.stkgui
-#. I18N: ./data/gui/dialogs/online/recovery_info.stkgui
+#. I18N: ./data/gui/dialogs/debug_slider.fluxara_driftgui
+#. I18N: ./data/gui/dialogs/online/recovery_info.fluxara_driftgui
 #. I18N: In the recovery dialog
-#. I18N: ./data/gui/dialogs/online/user_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/user_info_dialog.fluxara_driftgui
 #. I18N: User info dialog
 msgid "Close"
 msgstr "Затвори"
 
-#. I18N: ./data/gui/dialogs/enter_address_dialog.stkgui
+#. I18N: ./data/gui/dialogs/enter_address_dialog.fluxara_driftgui
 #. I18N: In the enter address dialog
-#. I18N: ./data/gui/dialogs/online/server_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_info_dialog.fluxara_driftgui
 #. I18N: In the server info dialog
 msgid "Join"
 msgstr "Приклучи се"
 
-#. I18N: ./data/gui/dialogs/general_text_field_dialog.stkgui
+#. I18N: ./data/gui/dialogs/general_text_field_dialog.fluxara_driftgui
 #. I18N: In the general textfield dialog
-#. I18N: ./data/gui/dialogs/online/achievement_progress_dialog.stkgui
-#. I18N: ./data/gui/dialogs/online/player_rankings_dialog.stkgui
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/achievement_progress_dialog.fluxara_driftgui
+#. I18N: ./data/gui/dialogs/online/player_rankings_dialog.fluxara_driftgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: In the server configuration screen
-#. I18N: ./data/gui/dialogs/online/vote_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/vote_dialog.fluxara_driftgui
 #. I18N: Vote dialog
-#. I18N: ./data/gui/screens/edit_track.stkgui
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/edit_track.fluxara_driftgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 #: src/states_screens/dialogs/message_dialog.cpp:127
 #: src/states_screens/dialogs/message_dialog.cpp:138
@@ -553,488 +553,488 @@ msgstr "Приклучи се"
 msgid "OK"
 msgstr "Ок"
 
-#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.fluxara_driftgui
 #. I18N: Ghost replay info action
-#. I18N: ./data/gui/screens/track_info.stkgui
+#. I18N: ./data/gui/screens/track_info.fluxara_driftgui
 #. I18N: In the track info screen
 msgid "Record the race for ghost replay"
 msgstr "Снимајте ја трката за дух снимка"
 
-#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.fluxara_driftgui
 #. I18N: Ghost replay info action
 msgid "Watch replay only"
 msgstr "Гледајте само снимка"
 
-#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.fluxara_driftgui
 #. I18N: Ghost replay info action
 msgid "Compare to another ghost"
 msgstr "Споредете со друг дух"
 
-#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.fluxara_driftgui
 #. I18N: Ghost replay info action
-#. I18N: ./data/gui/dialogs/high_score_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/high_score_info_dialog.fluxara_driftgui
 #. I18N: High score info screen action
-#. I18N: ./data/gui/screens/edit_gp.stkgui
+#. I18N: ./data/gui/screens/edit_gp.fluxara_driftgui
 #. I18N: Menu item
-#. I18N: ./data/gui/screens/grand_prix_editor.stkgui
+#. I18N: ./data/gui/screens/grand_prix_editor.fluxara_driftgui
 #. I18N: Menu item
 msgid "Remove"
 msgstr "Отстрани"
 
-#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.fluxara_driftgui
 #. I18N: Ghost replay info screen action
 msgid "Compare ghost"
 msgstr "Спореди дух"
 
-#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/ghost_replay_info_dialog.fluxara_driftgui
 #. I18N: Ghost replay info screen action
-#. I18N: ./data/gui/dialogs/high_score_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/high_score_info_dialog.fluxara_driftgui
 #. I18N: High score info screen action
-#. I18N: ./data/gui/dialogs/select_challenge.stkgui
-#. I18N: ./data/gui/screens/gp_info.stkgui
+#. I18N: ./data/gui/dialogs/select_challenge.fluxara_driftgui
+#. I18N: ./data/gui/screens/gp_info.fluxara_driftgui
 #. I18N: In the grand prix info screen
-#. I18N: ./data/gui/screens/track_info.stkgui
+#. I18N: ./data/gui/screens/track_info.fluxara_driftgui
 #. I18N: In the track info screen
 msgid "Start Race"
 msgstr "Започни ја Tрката"
 
-#. I18N: ./data/gui/dialogs/online/achievement_progress_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/achievement_progress_dialog.fluxara_driftgui
 #. I18N: Objective shown in achievement dialog
 msgid "Goal"
 msgstr "Гол"
 
-#. I18N: ./data/gui/dialogs/online/achievement_progress_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/achievement_progress_dialog.fluxara_driftgui
 #. I18N: Progress shown in achievement dialog
 #. I18N: Progress in achievement
 #: src/states_screens/online/online_profile_achievements.cpp:87
 msgid "Progress"
 msgstr "Напредок"
 
-#. I18N: ./data/gui/dialogs/online/change_password.stkgui
+#. I18N: ./data/gui/dialogs/online/change_password.fluxara_driftgui
 #. I18N: In the change password dialog
 msgid "Password Change"
 msgstr "Промена на Лозинка"
 
-#. I18N: ./data/gui/dialogs/online/change_password.stkgui
+#. I18N: ./data/gui/dialogs/online/change_password.fluxara_driftgui
 #. I18N: In the change password dialog
 msgid "Current Password"
 msgstr "Тековна Лозинка"
 
-#. I18N: ./data/gui/dialogs/online/change_password.stkgui
+#. I18N: ./data/gui/dialogs/online/change_password.fluxara_driftgui
 #. I18N: In the change password dialog
 msgid "New Password"
 msgstr "Нова Лозинка"
 
-#. I18N: ./data/gui/dialogs/online/change_password.stkgui
+#. I18N: ./data/gui/dialogs/online/change_password.fluxara_driftgui
 #. I18N: In the change password dialog
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
 msgid "Confirm"
 msgstr "Потврди"
 
-#. I18N: ./data/gui/dialogs/online/change_password.stkgui
+#. I18N: ./data/gui/dialogs/online/change_password.fluxara_driftgui
 #. I18N: In the change password dialog
-#. I18N: ./data/gui/dialogs/online/recovery_input.stkgui
+#. I18N: ./data/gui/dialogs/online/recovery_input.fluxara_driftgui
 #. I18N: In the recovery dialog
 msgid "Submit"
 msgstr "Поднеси"
 
-#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.fluxara_driftgui
 #. I18N: Race paused button
 #: src/states_screens/dialogs/race_paused_dialog.cpp:150
 msgid "Back to Race"
 msgstr "Назад кон Трката"
 
-#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.fluxara_driftgui
 #. I18N: Race paused button
 msgid "Quit Server"
 msgstr "Напушти го Серверот"
 
-#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.fluxara_driftgui
 #. I18N: Show in network ingame dialog to allow user to go back to lobby to
 #. end spectating (for example)
 msgid "Back to lobby"
 msgstr "Назад кон лобито"
 
-#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.fluxara_driftgui
 #. I18N: Race paused button
 #: src/states_screens/dialogs/race_paused_dialog.cpp:155
 msgid "Restart Race"
 msgstr "Рестартирај ја Трката"
 
-#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.fluxara_driftgui
 #. I18N: Race paused button
-#. I18N: ./data/gui/dialogs/race_paused_dialog.stkgui
+#. I18N: ./data/gui/dialogs/race_paused_dialog.fluxara_driftgui
 #. I18N: Race paused button
 msgid "Give Up Race"
 msgstr "Откажи ја Трката"
 
-#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.fluxara_driftgui
 #. I18N: Race paused button
-#. I18N: ./data/gui/dialogs/overworld_dialog.stkgui
+#. I18N: ./data/gui/dialogs/overworld_dialog.fluxara_driftgui
 #. I18N: In the in-game dialog
-#. I18N: ./data/gui/dialogs/race_paused_dialog.stkgui
+#. I18N: ./data/gui/dialogs/race_paused_dialog.fluxara_driftgui
 #. I18N: Race paused button
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: In the main screen
 msgid "Options"
 msgstr "Опции"
 
-#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/network_ingame_dialog.fluxara_driftgui
 #. I18N: Race paused button
-#. I18N: ./data/gui/dialogs/overworld_dialog.stkgui
+#. I18N: ./data/gui/dialogs/overworld_dialog.fluxara_driftgui
 #. I18N: In the in-game dialog
-#. I18N: ./data/gui/dialogs/race_paused_dialog.stkgui
+#. I18N: ./data/gui/dialogs/race_paused_dialog.fluxara_driftgui
 #. I18N: Race paused button
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: In the main screen
 msgid "Help"
 msgstr "Помош"
 
-#. I18N: ./data/gui/dialogs/online/player_rankings_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/player_rankings_dialog.fluxara_driftgui
 #. I18N: In player rankings dialog
 msgid "Top 10 players"
 msgstr "Топ 10 играчи"
 
-#. I18N: ./data/gui/dialogs/online/player_rankings_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/player_rankings_dialog.fluxara_driftgui
 msgid "Refresh"
 msgstr "Освежи"
 
-#. I18N: ./data/gui/dialogs/online/recovery_info.stkgui
+#. I18N: ./data/gui/dialogs/online/recovery_info.fluxara_driftgui
 #. I18N: In the recovery dialog
-#. I18N: ./data/gui/dialogs/online/recovery_input.stkgui
+#. I18N: ./data/gui/dialogs/online/recovery_input.fluxara_driftgui
 #. I18N: In the recovery dialog
 msgid "Account Recovery"
 msgstr "Враќање на Акаунтот"
 
-#. I18N: ./data/gui/dialogs/online/recovery_info.stkgui
+#. I18N: ./data/gui/dialogs/online/recovery_info.fluxara_driftgui
 #. I18N: In the recovery dialog
 msgid ""
 "You will receive an email with further instructions on how to reset your "
 "password. Please be patient and be sure to check your spam folder."
 msgstr "Ќе добиете електронска пошта со понатамошни инструкции за тоа како да ја ресетирате вашата лозинка. Ве молиме бидете трпеливи и проверувајте ја вашата спам папка."
 
-#. I18N: ./data/gui/dialogs/online/recovery_input.stkgui
+#. I18N: ./data/gui/dialogs/online/recovery_input.fluxara_driftgui
 msgid ""
 "Fill in the username and email address you supplied at registration to be "
 "able to reset your password."
 msgstr "Пополнете ги корисничкото име и адресата на електронската пошта кои ги поставивте при регистрацијата, за да можете да ја ресетирате лозинката."
 
-#. I18N: ./data/gui/dialogs/online/recovery_input.stkgui
+#. I18N: ./data/gui/dialogs/online/recovery_input.fluxara_driftgui
 #. I18N: In the recovery dialog
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 #: src/states_screens/online/online_profile_friends.cpp:77
 #: src/states_screens/online/online_user_search.cpp:76
 msgid "Username"
 msgstr "Корисничко име"
 
-#. I18N: ./data/gui/dialogs/online/recovery_input.stkgui
+#. I18N: ./data/gui/dialogs/online/recovery_input.fluxara_driftgui
 #. I18N: In the recovery dialog
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
 msgid "Email"
 msgstr "Електронска пошта"
 
-#. I18N: ./data/gui/dialogs/online/registration_terms.stkgui
+#. I18N: ./data/gui/dialogs/online/registration_terms.fluxara_driftgui
 #. I18N: In the registration dialog
 msgid "Terms and Agreement"
 msgstr "Услови и Договор"
 
-#. I18N: ./data/gui/dialogs/online/registration_terms.stkgui
+#. I18N: ./data/gui/dialogs/online/registration_terms.fluxara_driftgui
 #. I18N: In the registration dialog
 msgid "I agree to the above terms and am 13 years or older. "
 msgstr "Се согласувам со горенаведените услови и сум 13 години или постар/а."
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: In the server configuration screen
 msgid "Server Configuration"
 msgstr "Конфигурација на Серверот"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: In the server configuration screen
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: In the server creation screen
 msgid "Difficulty"
 msgstr "Тежина"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/dialogs/select_challenge.stkgui
+#. I18N: ./data/gui/dialogs/select_challenge.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/screens/race_setup.stkgui
+#. I18N: ./data/gui/screens/race_setup.fluxara_driftgui
 #. I18N: Difficulty
 #: src/race/race_manager.cpp:1317
 msgid "Novice"
 msgstr "Почетник"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/dialogs/select_challenge.stkgui
+#. I18N: ./data/gui/dialogs/select_challenge.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/screens/race_setup.stkgui
+#. I18N: ./data/gui/screens/race_setup.fluxara_driftgui
 #. I18N: Difficulty
 #: src/race/race_manager.cpp:1318
 msgid "Intermediate"
 msgstr "Напредно"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/dialogs/select_challenge.stkgui
+#. I18N: ./data/gui/dialogs/select_challenge.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/screens/race_setup.stkgui
+#. I18N: ./data/gui/screens/race_setup.fluxara_driftgui
 #. I18N: Difficulty
 #: src/race/race_manager.cpp:1319
 msgid "Expert"
 msgstr "Експерт"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/dialogs/select_challenge.stkgui
+#. I18N: ./data/gui/dialogs/select_challenge.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: Difficulty
-#. I18N: ./data/gui/screens/race_setup.stkgui
+#. I18N: ./data/gui/screens/race_setup.fluxara_driftgui
 #. I18N: Difficulty
 #: src/race/race_manager.cpp:1320
-msgid "SuperTux"
+msgid "FluxaraDrift"
 msgstr "СуперТукс"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: In the server configuration screen
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: In the server creation screen
 #: src/states_screens/high_score_selection.cpp:151
 #: src/states_screens/track_info_screen.cpp:251
 msgid "Game mode"
 msgstr "Режим на игра"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: Multiplayer game mode
-#. I18N: ./data/gui/screens/high_score_selection.stkgui
+#. I18N: ./data/gui/screens/high_score_selection.fluxara_driftgui
 #. I18N: In the high score selection screen
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: Multiplayer game mode
 #. I18N: Game mode
 #: src/network/server_config.cpp:265 src/race/race_manager.cpp:1290
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:34
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:34
 msgid "Normal Race"
 msgstr "Обична Трка"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: Multiplayer game mode
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
-#. I18N: ./data/gui/screens/high_score_selection.stkgui
+#. I18N: ./data/gui/screens/high_score_selection.fluxara_driftgui
 #. I18N: In the high score selection screen
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: Multiplayer game mode
 #. I18N: Game mode
 #: src/network/server_config.cpp:267 src/race/race_manager.cpp:1292
 msgid "Time Trial"
 msgstr "Временски Ограничена Трка"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: Multiplayer game mode
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: Multiplayer game mode
 #: src/states_screens/race_setup_screen.cpp:113
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:38
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:38
 msgid "Battle"
 msgstr "Борба"
 
-#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_configuration_dialog.fluxara_driftgui
 #. I18N: Multiplayer game mode
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: Multiplayer game mode
 #. I18N: Game mode
 #: src/network/server_config.cpp:269 src/race/race_manager.cpp:1306
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:42
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:42
 msgid "Soccer"
 msgstr "Фудбал"
 
-#. I18N: ./data/gui/dialogs/online/server_info_dialog.stkgui
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/dialogs/online/server_info_dialog.fluxara_driftgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 msgid "Password"
 msgstr "Лозинка"
 
-#. I18N: ./data/gui/dialogs/online/server_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/server_info_dialog.fluxara_driftgui
 #. I18N: In the server info dialog
 #: src/states_screens/dialogs/server_info_dialog.cpp:292
 msgid "Bookmark this server"
 msgstr "Обележи го серверот"
 
-#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.fluxara_driftgui
 #. I18N: Splitscreen player in network
 msgid "Add player"
 msgstr "Додади играч"
 
-#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.fluxara_driftgui
 #. I18N: Splitscreen player in network
 #: src/states_screens/online/online_profile_achievements.cpp:78
 msgid "Name"
 msgstr "Име"
 
-#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.fluxara_driftgui
 #. I18N: Splitscreen player in network
 msgid "Handicap"
 msgstr "Хендикеп"
 
-#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.fluxara_driftgui
 #. I18N: Splitscreen player in network
 msgid "Press the 'All players ready' button after the player list is ready."
 msgstr "Притиснете го 'Сите играчи подготвени' копчето откако листата на играчи ќе биде подготвена."
 
-#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.fluxara_driftgui
 #. I18N: Splitscreen player in network
 msgid "Clear players"
 msgstr "Избриши играчи"
 
-#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/splitscreen_player_dialog.fluxara_driftgui
 #. I18N: Splitscreen player in network
 msgid "All players ready"
 msgstr "Сите играчи подготвени"
 
-#. I18N: ./data/gui/dialogs/online/user_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/user_info_dialog.fluxara_driftgui
 #. I18N: User info dialog
 msgid "User Info"
 msgstr "Информации за Корисникот"
 
-#. I18N: ./data/gui/dialogs/online/user_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/user_info_dialog.fluxara_driftgui
 #. I18N: User info dialog
 msgid "Remove Friend"
 msgstr "Отстрани пријател"
 
-#. I18N: ./data/gui/dialogs/online/user_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/user_info_dialog.fluxara_driftgui
 #. I18N: User info dialog
 msgid "Add Friend"
 msgstr "Додади Пријател"
 
-#. I18N: ./data/gui/dialogs/online/user_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/user_info_dialog.fluxara_driftgui
 #. I18N: User info dialog
 msgid "Accept Invite"
 msgstr "Прифати покана"
 
-#. I18N: ./data/gui/dialogs/online/user_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/user_info_dialog.fluxara_driftgui
 #. I18N: User info dialog
 msgid "Decline Invite"
 msgstr "Одби покана"
 
-#. I18N: ./data/gui/dialogs/online/user_info_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/user_info_dialog.fluxara_driftgui
 #. I18N: User info dialog
 msgid "View Profile"
 msgstr "Погледни профил"
 
-#. I18N: ./data/gui/dialogs/online/vote_dialog.stkgui
+#. I18N: ./data/gui/dialogs/online/vote_dialog.fluxara_driftgui
 #. I18N: In the vote dialog
 msgid "Vote"
 msgstr "Гласај"
 
-#. I18N: ./data/gui/dialogs/overworld_dialog.stkgui
-#. I18N: ./data/gui/dialogs/race_paused_dialog.stkgui
+#. I18N: ./data/gui/dialogs/overworld_dialog.fluxara_driftgui
+#. I18N: ./data/gui/dialogs/race_paused_dialog.fluxara_driftgui
 msgid "Paused"
 msgstr "Паузирано"
 
-#. I18N: ./data/gui/dialogs/overworld_dialog.stkgui
+#. I18N: ./data/gui/dialogs/overworld_dialog.fluxara_driftgui
 #. I18N: In the in-game dialog
 msgid "Back to Game"
 msgstr "Назад кон Играта"
 
-#. I18N: ./data/gui/dialogs/overworld_dialog.stkgui
+#. I18N: ./data/gui/dialogs/overworld_dialog.fluxara_driftgui
 #. I18N: In the in-game dialog
 msgid "Back to menu"
 msgstr "Назад кон менито"
 
-#. I18N: ./data/gui/dialogs/overworld_dialog.stkgui
+#. I18N: ./data/gui/dialogs/overworld_dialog.fluxara_driftgui
 #. I18N: In the in-game dialog
 msgid "Select kart"
 msgstr "Одбери возило"
 
-#. I18N: ./data/gui/dialogs/press_a_key_dialog.stkgui
+#. I18N: ./data/gui/dialogs/press_a_key_dialog.fluxara_driftgui
 #. I18N: When changing input configurations
 msgid "Press fully and release..."
 msgstr "Притиснете целосно и ослободете..."
 
-#. I18N: ./data/gui/dialogs/press_a_key_dialog.stkgui
+#. I18N: ./data/gui/dialogs/press_a_key_dialog.fluxara_driftgui
 #. I18N: When configuring input
 msgid "Assign to ESC key"
 msgstr "Доделете го ESC копчето"
 
-#. I18N: ./data/gui/dialogs/press_a_key_dialog.stkgui
+#. I18N: ./data/gui/dialogs/press_a_key_dialog.fluxara_driftgui
 #. I18N: When configuring input
 msgid "Assign nothing"
 msgstr "Не доделувајте ништо"
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 msgid "Recommend Video Settings"
 msgstr "Препорачај Видео Нагодувања"
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
 msgid "The recommended settings will be valid for the current resolution."
 msgstr "Препорачаните нагодување ќе бидат валидни за сегашната резолуција."
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
 msgid "What should the settings prioritize?"
 msgstr " На што треба нагодувањата да дадат приоритет?"
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
 msgid "Performance"
 msgstr "Перформанса"
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
 msgid "Balance performance and graphics quality"
 msgstr "Балансирајте ја перформансата и квалитетот на графиките"
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
 msgid "Graphics quality"
 msgstr "Графички квалитет"
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
 msgid "Sparing energy"
 msgstr "Штедење енергија"
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
 msgid "Do you like graphics effects creating blur?"
 msgstr "Дали сакате графичките ефекти да создадат заматување?"
 
-#. I18N: ./data/gui/dialogs/recommend_video_settings.stkgui
+#. I18N: ./data/gui/dialogs/recommend_video_settings.fluxara_driftgui
 #. I18N: Recommend video settings dialog
 msgid "Start the test"
 msgstr "Започни го тестот"
 
-#. I18N: ./data/gui/dialogs/select_challenge.stkgui
-#. I18N: ./data/gui/screens/race_setup.stkgui
-#. I18N: ./data/gui/screens/soccer_setup.stkgui
+#. I18N: ./data/gui/dialogs/select_challenge.fluxara_driftgui
+#. I18N: ./data/gui/screens/race_setup.fluxara_driftgui
+#. I18N: ./data/gui/screens/soccer_setup.fluxara_driftgui
 msgid "Race Setup"
 msgstr "Поставки за Трката"
 
-#. I18N: ./data/gui/dialogs/tutorial_message_dialog.stkgui
+#. I18N: ./data/gui/dialogs/tutorial_message_dialog.fluxara_driftgui
 #. I18N: Button in tutorial
-#. I18N: ./data/gui/screens/grand_prix_lose.stkgui
-#. I18N: ./data/gui/screens/grand_prix_win.stkgui
-#. I18N: ./data/gui/screens/karts.stkgui
-#. I18N: ./data/gui/screens/online/network_karts.stkgui
-#. I18N: ./data/gui/screens/soccer_setup.stkgui
+#. I18N: ./data/gui/screens/grand_prix_lose.fluxara_driftgui
+#. I18N: ./data/gui/screens/grand_prix_win.fluxara_driftgui
+#. I18N: ./data/gui/screens/karts.fluxara_driftgui
+#. I18N: ./data/gui/screens/online/network_karts.fluxara_driftgui
+#. I18N: ./data/gui/screens/soccer_setup.fluxara_driftgui
 #. I18N: In soccer setup screen
 #: src/states_screens/race_result_gui.cpp:284
 #: src/states_screens/race_result_gui.cpp:307
@@ -1044,55 +1044,55 @@ msgstr "Поставки за Трката"
 msgid "Continue"
 msgstr "Продолжи"
 
-#. I18N: ./data/gui/screens/addons_screen.stkgui
-msgid "SuperTuxKart Addons"
+#. I18N: ./data/gui/screens/addons_screen.fluxara_driftgui
+msgid "Fluxara Drift Addons"
 msgstr "СуперТуксКарт Додатоци"
 
-#. I18N: ./data/gui/screens/addons_screen.stkgui
+#. I18N: ./data/gui/screens/addons_screen.fluxara_driftgui
 #. I18N: In addons screen, in the filtering bar, to enable a filter that will
 #. show only recently updated items
 msgid "Updated"
 msgstr "Ажурирано"
 
-#. I18N: ./data/gui/screens/addons_screen.stkgui
+#. I18N: ./data/gui/screens/addons_screen.fluxara_driftgui
 #. I18N: In addons screen, in the filtering bar, to enable a filter that will
 #. show only items with good rating
 msgid "Rating >="
 msgstr "Оцена >="
 
-#. I18N: ./data/gui/screens/addons_screen.stkgui
+#. I18N: ./data/gui/screens/addons_screen.fluxara_driftgui
 #. I18N: In the addons screen
 msgid "Karts"
 msgstr "Возила"
 
-#. I18N: ./data/gui/screens/addons_screen.stkgui
+#. I18N: ./data/gui/screens/addons_screen.fluxara_driftgui
 #. I18N: In the addons screen
-#. I18N: ./data/gui/screens/gp_info.stkgui
+#. I18N: ./data/gui/screens/gp_info.fluxara_driftgui
 #. I18N: In the grand prix info screen
 msgid "Tracks"
 msgstr "Стази"
 
-#. I18N: ./data/gui/screens/addons_screen.stkgui
+#. I18N: ./data/gui/screens/addons_screen.fluxara_driftgui
 #. I18N: In the addons screen
-#. I18N: ./data/gui/screens/arenas.stkgui
+#. I18N: ./data/gui/screens/arenas.fluxara_driftgui
 #. I18N: Section in arena tracks selection screen
 msgid "Arenas"
 msgstr "Арени"
 
-#. I18N: ./data/gui/screens/addons_screen.stkgui
+#. I18N: ./data/gui/screens/addons_screen.fluxara_driftgui
 #. I18N: In addons screen, above the list of addons to be installed
 #: src/states_screens/addons_screen.cpp:138
 msgid "Installed"
 msgstr "Инсталирано"
 
-#. I18N: ./data/gui/screens/arenas.stkgui
+#. I18N: ./data/gui/screens/arenas.fluxara_driftgui
 #. I18N: Section in arena tracksselection screen
 msgid "Edit favorite arenas"
 msgstr "Уреди омилени арени"
 
-#. I18N: ./data/gui/screens/arenas.stkgui
+#. I18N: ./data/gui/screens/arenas.fluxara_driftgui
 #. I18N: track group
-#. I18N: ./data/gui/screens/easter_egg.stkgui
+#. I18N: ./data/gui/screens/easter_egg.fluxara_driftgui
 #. I18N: track group
 #. I18N: track group name
 #. I18N: kart group name
@@ -1116,9 +1116,9 @@ msgstr "Уреди омилени арени"
 msgid "Standard"
 msgstr "Стандард"
 
-#. I18N: ./data/gui/screens/arenas.stkgui
+#. I18N: ./data/gui/screens/arenas.fluxara_driftgui
 #. I18N: track group
-#. I18N: ./data/gui/screens/easter_egg.stkgui
+#. I18N: ./data/gui/screens/easter_egg.fluxara_driftgui
 #. I18N: track group
 #. I18N: track group name
 #. I18N: kart group name
@@ -1132,9 +1132,9 @@ msgstr "Стандард"
 msgid "Add-Ons"
 msgstr "Додатоци"
 
-#. I18N: ./data/gui/screens/arenas.stkgui
+#. I18N: ./data/gui/screens/arenas.fluxara_driftgui
 #. I18N: track group
-#. I18N: ./data/gui/screens/easter_egg.stkgui
+#. I18N: ./data/gui/screens/easter_egg.fluxara_driftgui
 #. I18N: track group
 #. I18N: Time filters for add-ons
 #. I18N: name of the tab that will show arenas from all groups
@@ -1167,125 +1167,125 @@ msgstr "Додатоци"
 msgid "All"
 msgstr "Сите"
 
-#. I18N: ./data/gui/screens/credits.stkgui
+#. I18N: ./data/gui/screens/credits.fluxara_driftgui
 #. I18N: Title in credits screen
 msgid "Credits"
 msgstr "Заслуги"
 
-#. I18N: ./data/gui/screens/cutscene.stkgui
+#. I18N: ./data/gui/screens/cutscene.fluxara_driftgui
 msgid "Skip"
 msgstr "Прескокни"
 
-#. I18N: ./data/gui/screens/easter_egg.stkgui
+#. I18N: ./data/gui/screens/easter_egg.fluxara_driftgui
 #. I18N: Section in easter egg tracks selection screen
-#. I18N: ./data/gui/screens/tracks_and_gp.stkgui
+#. I18N: ./data/gui/screens/tracks_and_gp.fluxara_driftgui
 #. I18N: In the track and grand prix selection screen
-#. I18N: ./data/gui/screens/tracks.stkgui
+#. I18N: ./data/gui/screens/tracks.fluxara_driftgui
 #. I18N: In the track selection screen
 msgid "All Tracks"
 msgstr "Сите Стази"
 
-#. I18N: ./data/gui/screens/edit_gp.stkgui
+#. I18N: ./data/gui/screens/edit_gp.fluxara_driftgui
 #. I18N: Title in edit grand prix screen
 msgid "Edit Grand Prix"
 msgstr "Измени Гран При"
 
-#. I18N: ./data/gui/screens/edit_gp.stkgui
+#. I18N: ./data/gui/screens/edit_gp.fluxara_driftgui
 #. I18N: Menu item
 msgid "Move up"
 msgstr "Движи се нагоре"
 
-#. I18N: ./data/gui/screens/edit_gp.stkgui
+#. I18N: ./data/gui/screens/edit_gp.fluxara_driftgui
 #. I18N: Menu item
 msgid "Move down"
 msgstr "Движи се надолу"
 
-#. I18N: ./data/gui/screens/edit_gp.stkgui
+#. I18N: ./data/gui/screens/edit_gp.fluxara_driftgui
 #. I18N: Menu item
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 msgid "Add"
 msgstr "Додади"
 
-#. I18N: ./data/gui/screens/edit_gp.stkgui
+#. I18N: ./data/gui/screens/edit_gp.fluxara_driftgui
 #. I18N: Menu item
-#. I18N: ./data/gui/screens/grand_prix_editor.stkgui
+#. I18N: ./data/gui/screens/grand_prix_editor.fluxara_driftgui
 #. I18N: Menu item
 msgid "Edit"
 msgstr "Измени"
 
-#. I18N: ./data/gui/screens/edit_gp.stkgui
+#. I18N: ./data/gui/screens/edit_gp.fluxara_driftgui
 #. I18N: Menu item
 msgid "Save"
 msgstr "Зачувај"
 
-#. I18N: ./data/gui/screens/edit_track.stkgui
+#. I18N: ./data/gui/screens/edit_track.fluxara_driftgui
 #. I18N: In the edit track screen
 msgid "Number of laps:"
 msgstr "Број на кругови:"
 
-#. I18N: ./data/gui/screens/edit_track.stkgui
+#. I18N: ./data/gui/screens/edit_track.fluxara_driftgui
 #. I18N: In the edit track screen
 msgid "Reverse:"
 msgstr "Обратно:"
 
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
 msgid "Ghost Replay Selection"
 msgstr "Дух Снимка Селекција"
 
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
-#. I18N: ./data/gui/screens/high_score_selection.stkgui
+#. I18N: ./data/gui/screens/high_score_selection.fluxara_driftgui
 #. I18N: In the high score selection screen
 #. I18N: Game mode
 #: src/race/race_manager.cpp:1304
 msgid "Egg Hunt"
 msgstr "Лов на Јајца"
 
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
 msgid "Only show the best times"
 msgstr "Само покажувај ги најдобрите времиња"
 
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
 msgid "Compare replay"
 msgstr "Спореди снимка"
 
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
 msgid "Only show replays matching the current difficulty"
 msgstr "Само покажувај снимки кои соодвествуваат на тековната тежина"
 
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
 msgid "Only show replays matching the current version"
 msgstr "Само покажувај снимки кои соодвествуваат на тековната верзија"
 
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
 msgid "Hide multiplayer replays"
 msgstr "Сокриј мултиплејер снимки"
 
-#. I18N: ./data/gui/screens/ghost_replay_selection.stkgui
+#. I18N: ./data/gui/screens/ghost_replay_selection.fluxara_driftgui
 #. I18N: In the ghost replay selection screen
 msgid "Record a ghost replay"
 msgstr "Сними дух снимка"
 
-#. I18N: ./data/gui/screens/gp_info.stkgui
+#. I18N: ./data/gui/screens/gp_info.fluxara_driftgui
 #. I18N: In the grand prix info screen
 msgid "AI karts"
 msgstr "AI робот возила"
 
-#. I18N: ./data/gui/screens/gp_info.stkgui
+#. I18N: ./data/gui/screens/gp_info.fluxara_driftgui
 #. I18N: In the grand prix info screen
 msgid "Reverse"
 msgstr "Обратно"
 
-#. I18N: ./data/gui/screens/gp_info.stkgui
+#. I18N: ./data/gui/screens/gp_info.fluxara_driftgui
 #. I18N: In the grand prix info screen
 #. I18N: In track screen
 #: src/states_screens/online/tracks_screen.cpp:517
@@ -1295,179 +1295,179 @@ msgstr "Обратно"
 msgid "Maximum time (min.)"
 msgstr "Максимум време (мин.)"
 
-#. I18N: ./data/gui/screens/gp_info.stkgui
+#. I18N: ./data/gui/screens/gp_info.fluxara_driftgui
 #. I18N: In the grand prix info screen
 msgid "Track group"
 msgstr "Следи група"
 
-#. I18N: ./data/gui/screens/gp_info.stkgui
+#. I18N: ./data/gui/screens/gp_info.fluxara_driftgui
 #. I18N: In the grand prix info screen
 #: src/states_screens/gp_info_screen.cpp:164
 msgid "Continue saved GP"
 msgstr "Продолжи го зачуваниот ГП"
 
-#. I18N: ./data/gui/screens/grand_prix_editor.stkgui
+#. I18N: ./data/gui/screens/grand_prix_editor.fluxara_driftgui
 #. I18N: Title in grand prix editor screen
 msgid "Grand Prix editor"
 msgstr "Гран При изменувач"
 
-#. I18N: ./data/gui/screens/grand_prix_editor.stkgui
+#. I18N: ./data/gui/screens/grand_prix_editor.fluxara_driftgui
 #. I18N: Menu item
 msgid "New"
 msgstr "Ново"
 
-#. I18N: ./data/gui/screens/grand_prix_editor.stkgui
+#. I18N: ./data/gui/screens/grand_prix_editor.fluxara_driftgui
 #. I18N: Menu item
 msgid "Copy"
 msgstr "Копирај"
 
-#. I18N: ./data/gui/screens/grand_prix_editor.stkgui
+#. I18N: ./data/gui/screens/grand_prix_editor.fluxara_driftgui
 #. I18N: Menu item
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 #: src/states_screens/online/register_screen.cpp:71
 msgid "Rename"
 msgstr "Преименувај"
 
-#. I18N: ./data/gui/screens/grand_prix_lose.stkgui
-#. I18N: ./data/gui/screens/grand_prix_win.stkgui
+#. I18N: ./data/gui/screens/grand_prix_lose.fluxara_driftgui
+#. I18N: ./data/gui/screens/grand_prix_win.fluxara_driftgui
 msgid "Save Grand Prix"
 msgstr "Зачувај Гран При"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
-#. I18N: ./data/gui/screens/help/help2.stkgui
-#. I18N: ./data/gui/screens/help/help3.stkgui
-#. I18N: ./data/gui/screens/help/help4.stkgui
-#. I18N: ./data/gui/screens/help/help5.stkgui
-#. I18N: ./data/gui/screens/help/help6.stkgui
-#. I18N: ./data/gui/screens/help/help7.stkgui
-msgid "SuperTuxKart Help"
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
+msgid "Fluxara Drift Help"
 msgstr "СуперТуксКарт Помош"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: Tab in help menu
 msgid "Game Modes"
 msgstr "Режими на Игра"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: Tab in help menu
 msgid "Powerups"
 msgstr "Напојувања"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: Tab in help menu
 msgid "Bananas"
 msgstr "Банани"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: Main menu button
 #: src/io/rich_presence.cpp:501
 msgid "Story Mode"
 msgstr "Режим Приказна "
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: Tab in help menu
 msgid "Kart classes"
 msgstr "Класеви на возила"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: Tab in help menu
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: Tab in help menu
 msgid "Multiplayer"
 msgstr "Мултиплејер"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 msgid "Start the tutorial"
 msgstr "Започни го упатството"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: In the help menu
 msgid "Collect blue gift boxes, they will give you powerups."
 msgstr "Собирајте ги сините подароци, тие ќе ви дадат напојувања."
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: In the help menu
-#: ../stk-assets/tracks/tutorial/scripting.as:49
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:49
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:49
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:49
 msgid "Avoid bananas!"
 msgstr "Избегнувајте ги бананите!"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Collecting nitro allows you to get speed boosts whenever you wish by "
@@ -1475,14 +1475,14 @@ msgid ""
 "nitro in the gauge at the bottom-right of the race screen."
 msgstr "Собирањето нитро ви овозможува забрзување кога и да посакате со притискање на соодветното копче. Можете да си го видите тековното ниво на нитро долу во десниот дел на екранот."
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "If you see a button with a lock like this one, you need to complete a "
 "challenge to unlock it."
 msgstr "Ако видите копче со катанец како овој, тогаш морате да извршите предизвик за да го отклучите."
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "You can skid by pressing a special key or button. Successive short skids "
@@ -1491,34 +1491,34 @@ msgid ""
 "carefully before!"
 msgstr "Можете да се лизгате преку притискање на специјално копче. Последователни кратки лизгања ви помагаат да свртите на остри кривини; додека средни лизгања ќе ве забрзаат, долги лизгања уште повеќе. Не можете да престанете да вртите додека лизгате, затоа позиционирајте го вашето возило внимателно претходно!"
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "You can get a startup boost by pressing the accelerate button at 'Set!', "
 "before the race's start."
 msgstr "Можете да добиете почетно забрзување преку притискање на копчето за забрзување при 'Позор!', пред почетокот на трката."
 
-#. I18N: ./data/gui/screens/help/help1.stkgui
+#. I18N: ./data/gui/screens/help/help1.fluxara_driftgui
 #. I18N: in the help screen
 msgid "* Current key bindings can be seen/changed in the Options menu"
 msgstr "* Тековните сетови на копчиња можат да се видат/променат во менито за Опции"
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
-msgid "SuperTuxKart features several game modes:"
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
+msgid "Fluxara Drift features several game modes:"
 msgstr "СуперТуксКарт вклучува повеќе режими на игра:"
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Regular Race: All blows allowed, so collect powerups and use them smartly!"
 msgstr "Регуларна Трка: Секое користење на напојувања е дозволено, па затоа соберете и искористете ги паметно!"
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid "Time Trial: Contains no powerups, so only your driving skills matter!"
 msgstr "Временски Ограничена Трка: Не содржи напојувања, само вашите возачки способности се важни!"
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Follow the leader: Run for second place, as the last kart will be "
@@ -1526,7 +1526,7 @@ msgid ""
 " leader will get you eliminated too!"
 msgstr "Следете го лидерот: Целете за второ место, бидејќи последното возило ќе биде дисквалификувано секој пат кога бројачот ќе стигне до нула. Бидете внимателни: одењето пред лидерот исто така ќе ве елиминира!"
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "There are 3 types of battle mode: In 3 Strikes Battle, you need to hit "
@@ -1536,30 +1536,30 @@ msgid ""
 "your own flag base, as long as your flag is not captured by the other team."
 msgstr "Постојат 3 режими на борба: Во 3 Погодоци Борба, треба да ги удирате останатите со оружје додека не ги загубат сите нивни животи. Во Секој-За-Себе, играчот кој најмногу ќе ги удри останатите ќе победи во дадено ограничување на удари или време. Во Фати го Знамето, вашиот тим треба да го донесе знамето на другиот тим до вашата територија на знаме, се додека вашето знаме не е одземено од другиот тим."
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid "Soccer: Use your kart to push the ball into the goal."
 msgstr "Фудбал: Искористете го вашето возило за да ја бутнете топката во голот."
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid "Egg hunt: Explore tracks to find all hidden eggs."
 msgstr "Лов на јајца: Истражувајте стази за да ги пронајдете сите скриени јајца."
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Ghost replay: Race against ghost replays in time-trial or egg hunt mode, and"
 " record your own!"
 msgstr "Дух снимка: Тркајте се против дух снимки во временски-ограничена трка или лов на јајца, и снимете си ваша!"
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Lap Trial: Complete as many laps as possible in a given amount of time."
 msgstr "Пробен круг: Завршете колку што е можно повеќе кругови во одредено дадено време."
 
-#. I18N: ./data/gui/screens/help/help2.stkgui
+#. I18N: ./data/gui/screens/help/help2.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "* Many of these game modes can also be played in a Grand Prix fashion: "
@@ -1568,93 +1568,93 @@ msgid ""
 "wins the cup."
 msgstr "* Многу од овие режими на игра можат да бидат играни како Гран При: наместо играње една трка, вие играте повеќе по ред. Колку подобар ранг добиете, толку повеќе поени добивате. На крај, играчот со најмногу поени победува."
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 #. I18N: In the help menu
 msgid "To help you win, there are some powerups you can collect:"
 msgstr "За да ви се помогне да победите, постојат некои напојувања кои можете да ги собирате:"
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid ""
 "BubbleGum - protect yourself with a shield, or use while looking back to "
 "leave a sticky pink puddle behind you."
 msgstr "Гума за Џвакање - одбранете се со штит, или користете ја додека гледате наназад за да оставите розева леплива трага позади вас."
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid ""
 "Zipper - will give you a strong speed boost. But beware of not losing "
 "control of your kart!"
 msgstr "Стрелки за забрзување - ви даваат силно забрзување. Но бидете внимателни да не изгубите контрола врз вашето возило!"
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid ""
 "Cake - thrown at the closest rival, best on short ranges and long straights."
 " It also affects other karts close to the explosion."
 msgstr "Торта - се фрла кон најблискиот противник, најдобра при кратки опсези и при долги и прави делови. Исто така влијае врз останатите возила кои се блиску до експлозијата."
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid ""
 "Plunger - throw straight to pull an opponent back, or throw while looking "
 "back to make one lose sight."
 msgstr "Алатка за отпушување - фрлете ја право за да го повлечете противникот назад, или фрлете ја додека гледате наназад за да ослепите противник."
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid ""
 "Bowling Ball - goes straight until it strikes, it can bounce off walls. If "
 "you are looking back, it will be thrown backwards."
 msgstr "Топка за Куглање - се движи право додека не погоди, може да отскокнува од ѕидови. Ако гледате наназад, ќе биде фрлена наназад."
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid "Parachute - slows down all karts in a better position."
 msgstr "Падобран - ги успорува сите возила кои се подобро пласирани од вас."
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid ""
 "Swapper - gift boxes are transformed into bananas, nitro cans into "
 "bubblegums, and vice versa for a short time."
 msgstr "Променувач - подароците се трансформираат во банани, нитрото во гума за џвакање, и обратно за кратко време."
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid ""
 "Basket Ball - bounces after the leader, and might squash and slow down karts"
 " down on the way."
 msgstr "Кошаркарска Топка - отскокнува кон лидерот, и може да ги сплеска и успори останатите возила по патот."
 
-#. I18N: ./data/gui/screens/help/help3.stkgui
+#. I18N: ./data/gui/screens/help/help3.fluxara_driftgui
 msgid ""
 "Swatter - will squash karts close by, slowing them down. Can also be used to"
 " remove parachutes and bombs."
 msgstr "Мрежа - ги сплескува возилата кои се во близина, успорувајќи ги. Може да се искористи и за отстранување на падобрани и бомби."
 
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 msgid ""
 "Hitting a banana can result in one of the following being attached to the "
 "kart:"
 msgstr "Земањето банана може да доведе до следниве нешта да се закачат за возилото:"
 
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: In the help menu
 msgid "Anchor - slows down the kart suddenly."
 msgstr "Сидро - одеднаш го успорува возилото."
 
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Parachute - slows down the kart, more progressively than the anchor. The "
 "faster you go, the stronger it slows you down."
 msgstr "Падобран - го успорува возилото, уште повеќе и од сидрото. Колку побрзо се движите, толку повеќе ќе ве успори."
 
-#. I18N: ./data/gui/screens/help/help4.stkgui
+#. I18N: ./data/gui/screens/help/help4.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Bomb - detonates after some amount of time, throwing the kart up in the air."
 " Bump into another kart to transfer the bomb to it."
 msgstr "Бомба - експлодира после некое време, фрлајќи го возилото во воздух. Допрете се до друго возило за да му ја пренесете бомбата."
 
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 msgid "The evil Nolok has captured Gnu! Here are a few tips to help you:"
 msgstr "Лошиот Нолок го заробил Гну! Еве ви неколку совети кои ќе ви помогнат:"
 
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "This icon on the minimap shows the available challenges you've not "
@@ -1663,7 +1663,7 @@ msgid ""
 " accept to race against you. Win to liberate Gnu!"
 msgstr "Оваа икона на мини мапата ги покажува достапните предизвици кои не сте ги завршиле. Во горниот десен дел од екранот ви се прикажани поените кои моментално ги имате. Завршете колку е можно повеќе предизвици, и Нолок ќе прифати да се трка со вас. Победете за да го ослободите Гну!"
 
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "When you complete a challenge, you get a cup. Each cup is worth several "
@@ -1671,20 +1671,20 @@ msgid ""
 " the cup and the more points it is worth."
 msgstr "Кога ќе завршите предизвик, добивате пехар. Секој пехар носи одредени поени. Со колку поголема тежина сте го завршиле предизвикот, толку подобар пехар ќе добиете со повеќе поени."
 
-#. I18N: ./data/gui/screens/help/help5.stkgui
+#. I18N: ./data/gui/screens/help/help5.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "When you get the number of points indicated below this icon, you'll be "
 "gifted a surprise. There are several to collect."
 msgstr "Кога ќе го добиете бројот на поени прикажан под оваа икона, ќе добиете изненадување. Постојат повеќе различни подароци за собирање."
 
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 msgid ""
 "Not all karts drive the same! They belong to classes with several "
 "differences:"
 msgstr "Не сите возила возат исто! Тие припаѓаат на класи со повеќе различности: "
 
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Mass - there are three classes of karts, depending on their mass: light, "
@@ -1692,7 +1692,7 @@ msgid ""
 " resistant to explosions."
 msgstr "Маса - постојат три класи на возила, во зависност од нивната маса: лесни, средни и тешки. Потешките возила помалку го чувствуваат ефектот на падобраните и се поотпорни на експлозии."
 
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Acceleration - especially useful at start, after an accident, or in tracks "
@@ -1700,7 +1700,7 @@ msgid ""
 " especially at low speeds."
 msgstr "Забрзување - особено корисно при почетокот, после незгода, или при стази со многу остри кривини. Колку полесно возило, толку побрзо забрзува, особено при ниски брзини. "
 
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Max speed - the higher it is, the faster the kart can go. Especially useful "
@@ -1708,14 +1708,14 @@ msgid ""
 " top speed."
 msgstr "Максимална брзина - колку поголема, толку побрзо возилото може да се движи. Особено корисна при прави стази и благи кривини. Потешките возила имаат поголема максимална брзина."
 
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Nitro efficiency - The higher it is, the more speed you get from a can of "
 "nitro. A lighter kart will have higher nitro efficiency."
 msgstr "Нитро ефикасност - Колку е поголема, толку поголема брзина можете да добиете од нитрото. Полесните возила имаат поголема нитро ефикасност."
 
-#. I18N: ./data/gui/screens/help/help6.stkgui
+#. I18N: ./data/gui/screens/help/help6.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "If you follow closely another kart for a few seconds, you'll get a "
@@ -1723,12 +1723,12 @@ msgid ""
 "easier it is."
 msgstr "Ако следите некое возило многу блиску за неколку секунди, ќе добиете бонус брзина при претркување. Колку е полесно возилото, толку е полесно да се добие бонус брзината. "
 
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: In the help menu
-msgid "SuperTuxKart can be played in multiplayer mode online...:"
+msgid "Fluxara Drift can be played in multiplayer mode online...:"
 msgstr "СуперТуксКарт може да се игра како мултиплејер онлајн...:"
 
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "First, select the 'online' icon in the main menu. Choose either local "
@@ -1738,7 +1738,7 @@ msgid ""
 "recommended servers with optionally ranked races."
 msgstr "Прво, селектирајте ја 'онлајн' иконата во главното мени. Одберете или локална мрежа или глобална мрежа (бара интернет за да се овозможи во опциите). Потоа, можете или да креирате ваш сопствен сервер со персонализирани опции, или да пребарувате сервер на кој ќе се приклучите од листата на постоечки сервери. Некои од нив се препорачани сервери со опционално рангирани трки."
 
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "Once in a server, a race will begin once its owner (symbolized with the "
@@ -1748,12 +1748,12 @@ msgid ""
 "players and the server."
 msgstr "Кога сте веќе во некој сервер, трката ќе започне кога сопственикот (симболизиран со круна) ќе одлучи. Официјалните сервери можат автоматски да ги започнат трките само кога ќе има доволно играчи. Потоа, можете да си го одберете возилото и да гласате за следната стаза за тркање. Додатна стаза се дозволува само ако постои кај сите приклучени играчи и самиот сервер."
 
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: In the help menu
 msgid "... or on the same device:"
 msgstr "... или на истиот уред:"
 
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "First, you will need several input devices. Use the input configuration "
@@ -1763,7 +1763,7 @@ msgid ""
 "multiple simultaneous keypresses."
 msgstr "Прво, ќе ви бидат потребни повеќе влезни уреди. Користете го екранот за влезна конфигурација за да ги поставите уредите. Повеќе гејмпади или џојстикови се идеални: на тастатурата(тастатурите), на секој играч ќе му требаат различни сетови на копчиња, и повеќете тастатури не се соодветни за мултиплејер бидејќи тие не поддржуваат повеќе истовремени притиснувања на копчиња. "
 
-#. I18N: ./data/gui/screens/help/help7.stkgui
+#. I18N: ./data/gui/screens/help/help7.fluxara_driftgui
 #. I18N: In the help menu
 msgid ""
 "When input devices are configured, select the 'Splitscreen Multiplayer' icon"
@@ -1773,12 +1773,12 @@ msgid ""
 "may not be used for this operation."
 msgstr "Кога влезните уреди ќе бидат конфигурирани, одберете ја 'Поделен екран за мултиплејер' иконата во главното мени. Секој играч може да го притисне 'fire' копчето на својот гејмпад или тастатура за да се приклучи во играта, и да го одбере своето возило. Играта продолжува кога сите ќе одберат возило. Забележете дека глувчето може и да не се искористи за оваа операција."
 
-#. I18N: ./data/gui/screens/high_score_selection.stkgui
+#. I18N: ./data/gui/screens/high_score_selection.fluxara_driftgui
 #. I18N: In the high score selection screen
 msgid "High Score Selection"
 msgstr "Селекција на Висок Резултат"
 
-#. I18N: ./data/gui/screens/high_score_selection.stkgui
+#. I18N: ./data/gui/screens/high_score_selection.fluxara_driftgui
 #. I18N: In the high score selection screen
 #. I18N: Game mode
 #. I18N: Lap Trial: Complete as many laps as possible in a given amount of
@@ -1787,9 +1787,9 @@ msgstr "Селекција на Висок Резултат"
 msgid "Lap Trial"
 msgstr "Пробен Круг"
 
-#. I18N: ./data/gui/screens/high_score_selection.stkgui
+#. I18N: ./data/gui/screens/high_score_selection.fluxara_driftgui
 #. I18N: In the high score selection screen
-#. I18N: ./data/gui/screens/tracks_and_gp.stkgui
+#. I18N: ./data/gui/screens/tracks_and_gp.fluxara_driftgui
 #. I18N: In the track and grand prix selection screen
 #: src/states_screens/dialogs/high_score_info_dialog.cpp:75
 #: src/states_screens/dialogs/select_challenge.cpp:51
@@ -1797,128 +1797,128 @@ msgstr "Пробен Круг"
 msgid "Grand Prix"
 msgstr "Гран При"
 
-#. I18N: ./data/gui/screens/karts.stkgui
+#. I18N: ./data/gui/screens/karts.fluxara_driftgui
 #. I18N: In the kart selection (player setup) screen
-#. I18N: ./data/gui/screens/online/network_karts.stkgui
+#. I18N: ./data/gui/screens/online/network_karts.fluxara_driftgui
 #. I18N: In the kart selection (player setup) screen
 msgid "Choose a Kart"
 msgstr "Одберете Возило"
 
-#. I18N: ./data/gui/screens/karts.stkgui
+#. I18N: ./data/gui/screens/karts.fluxara_driftgui
 #. I18N: In karts selection screen, determine the kart group shown on the list
-#. I18N: ./data/gui/screens/online/network_karts.stkgui
+#. I18N: ./data/gui/screens/online/network_karts.fluxara_driftgui
 #. I18N: In karts selection screen, determine the kart group shown on the list
 msgid "Kart Class"
 msgstr "Класа на Возило"
 
-#. I18N: ./data/gui/screens/karts.stkgui
+#. I18N: ./data/gui/screens/karts.fluxara_driftgui
 #. I18N: In the track and grand prix selection screen
-#. I18N: ./data/gui/screens/online/network_karts.stkgui
+#. I18N: ./data/gui/screens/online/network_karts.fluxara_driftgui
 #. I18N: In the track and grand prix selection screen
 msgid "Edit favorite karts"
 msgstr "Уреди омилени возила"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: Main menu button
 msgid "Singleplayer"
 msgstr "Самостоен играч"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: Main menu button
 msgid "Splitscreen Multiplayer"
 msgstr "Поделен Екран за Мултиплејер"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: Main menu button
-#. I18N: ./data/gui/screens/online/online.stkgui
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/online/online.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 #: src/states_screens/online/online_profile_friends.cpp:245
 msgid "Online"
 msgstr "Онлајн"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: Main menu button
 msgid "Addons"
 msgstr "Додатоци"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: In the main screen
 #: src/states_screens/race_gui_overworld.cpp:530
 msgid "Tutorial"
 msgstr "Упатство"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: In the main screen
 #: src/states_screens/track_info_screen.cpp:343
 msgid "High Scores"
 msgstr "Високи Резултати"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: In the main screen
-#. I18N: ./data/gui/screens/online/profile_achievements_tab.stkgui
+#. I18N: ./data/gui/screens/online/profile_achievements_tab.fluxara_driftgui
 #. I18N: Section in the profile screen
 #: src/states_screens/online/online_profile_base.cpp:113
 msgid "Achievements"
 msgstr "Постигнувања"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: In the main screen
 msgid "Grand Prix Editor"
 msgstr "Гран При Изменувач"
 
-#. I18N: ./data/gui/screens/main_menu.stkgui
+#. I18N: ./data/gui/screens/main_menu.fluxara_driftgui
 #. I18N: In the main screen
 msgid "About"
 msgstr "За"
 
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: In the server creation screen
 msgid "Server Creation"
 msgstr "Креирање на Сервер"
 
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: In the server creation screen
 msgid "Name of the server"
 msgstr "Име на серверот"
 
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: In the server creation screen
 msgid "Max. number of players"
 msgstr "Максимален број на играчи"
 
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: In the server creation screen
 msgid "Password for private server (optional)"
 msgstr "Лозинка за приватен сервер (опционално)"
 
-#. I18N: ./data/gui/screens/online/create_server.stkgui
+#. I18N: ./data/gui/screens/online/create_server.fluxara_driftgui
 #. I18N: In the server creation screen
 msgid "Create"
 msgstr "Креирај"
 
-#. I18N: ./data/gui/screens/online/lan.stkgui
+#. I18N: ./data/gui/screens/online/lan.fluxara_driftgui
 msgid "Local Networking"
 msgstr "Локална мрежа"
 
-#. I18N: ./data/gui/screens/online/lan.stkgui
+#. I18N: ./data/gui/screens/online/lan.fluxara_driftgui
 #. I18N: In the online multiplayer screen
-#. I18N: ./data/gui/screens/online/profile_servers.stkgui
+#. I18N: ./data/gui/screens/online/profile_servers.fluxara_driftgui
 #. I18N: In the online multiplayer screen
 msgid "Find Server"
 msgstr "Пронајди Сервер"
 
-#. I18N: ./data/gui/screens/online/lan.stkgui
+#. I18N: ./data/gui/screens/online/lan.fluxara_driftgui
 #. I18N: In the online multiplayer screen
-#. I18N: ./data/gui/screens/online/profile_servers.stkgui
+#. I18N: ./data/gui/screens/online/profile_servers.fluxara_driftgui
 #. I18N: In the online multiplayer screen
 #: src/states_screens/online/create_server_screen.cpp:108
 msgid "Create Server"
 msgstr "Креирај Сервер"
 
-#. I18N: ./data/gui/screens/online/networking_lobby.stkgui
+#. I18N: ./data/gui/screens/online/networking_lobby.fluxara_driftgui
 #. I18N: In networking lobby
 #. I18N: In the networking lobby
 #: src/states_screens/online/networking_lobby.cpp:86
@@ -1928,40 +1928,40 @@ msgstr "Креирај Сервер"
 msgid "Lobby"
 msgstr "Лоби"
 
-#. I18N: ./data/gui/screens/online/networking_lobby.stkgui
+#. I18N: ./data/gui/screens/online/networking_lobby.fluxara_driftgui
 #. I18N: In the network lobby
 #. I18N: In networking lobby to configuration server settings
 #: src/states_screens/online/networking_lobby.cpp:201
 msgid "Configuration"
 msgstr "Конфигурација"
 
-#. I18N: ./data/gui/screens/online/networking_lobby.stkgui
+#. I18N: ./data/gui/screens/online/networking_lobby.fluxara_driftgui
 #. I18N: In the network lobby
 #: src/states_screens/online/networking_lobby.cpp:193
 msgid "Start race"
 msgstr "Започни трка"
 
-#. I18N: ./data/gui/screens/online/online.stkgui
+#. I18N: ./data/gui/screens/online/online.fluxara_driftgui
 #. I18N: In the networking menu
 msgid "Enable splitscreen or player handicaps"
 msgstr "Овозможи поделен екран или хендикеп за играчот"
 
-#. I18N: ./data/gui/screens/online/online.stkgui
+#. I18N: ./data/gui/screens/online/online.fluxara_driftgui
 #. I18N: Networking menu button
 msgid "Local networking"
 msgstr "Локална мрежа"
 
-#. I18N: ./data/gui/screens/online/online.stkgui
+#. I18N: ./data/gui/screens/online/online.fluxara_driftgui
 #. I18N: Networking menu button
 msgid "Global networking"
 msgstr "Глобална мрежа"
 
-#. I18N: ./data/gui/screens/online/online.stkgui
+#. I18N: ./data/gui/screens/online/online.fluxara_driftgui
 #. I18N: Networking menu button
 msgid "Enter server address"
 msgstr "Внесете ја адресата на серверот"
 
-#. I18N: ./data/gui/screens/online/online.stkgui
+#. I18N: ./data/gui/screens/online/online.fluxara_driftgui
 #. I18N: Networking menu button
 #: src/states_screens/online/online_profile_base.cpp:118
 #: src/states_screens/online/online_profile_base.cpp:128
@@ -1969,294 +1969,294 @@ msgstr "Внесете ја адресата на серверот"
 msgid "Your profile"
 msgstr "Вашиот профил"
 
-#. I18N: ./data/gui/screens/online/profile_achievements.stkgui
-#. I18N: ./data/gui/screens/online/profile_achievements_tab.stkgui
-#. I18N: ./data/gui/screens/online/profile_friends.stkgui
-#. I18N: ./data/gui/screens/online/profile_settings.stkgui
+#. I18N: ./data/gui/screens/online/profile_achievements.fluxara_driftgui
+#. I18N: ./data/gui/screens/online/profile_achievements_tab.fluxara_driftgui
+#. I18N: ./data/gui/screens/online/profile_friends.fluxara_driftgui
+#. I18N: ./data/gui/screens/online/profile_settings.fluxara_driftgui
 msgid "..."
 msgstr "..."
 
-#. I18N: ./data/gui/screens/online/profile_achievements_tab.stkgui
+#. I18N: ./data/gui/screens/online/profile_achievements_tab.fluxara_driftgui
 #. I18N: In the achievements screen
 msgid "Player rankings"
 msgstr "Рангирања на играчот"
 
-#. I18N: ./data/gui/screens/online/profile_friends.stkgui
+#. I18N: ./data/gui/screens/online/profile_friends.fluxara_driftgui
 #. I18N: Section in the profile screen
 #: src/states_screens/online/online_profile_base.cpp:112
 msgid "Friends"
 msgstr "Пријатели"
 
-#. I18N: ./data/gui/screens/online/profile_friends.stkgui
+#. I18N: ./data/gui/screens/online/profile_friends.fluxara_driftgui
 #. I18N: In the profile screen
 msgid "Look for more friends:"
 msgstr "Пребарувај повеќе пријатели:"
 
-#. I18N: ./data/gui/screens/online/profile_friends.stkgui
-#. I18N: ./data/gui/screens/online/user_search.stkgui
+#. I18N: ./data/gui/screens/online/profile_friends.fluxara_driftgui
+#. I18N: ./data/gui/screens/online/user_search.fluxara_driftgui
 msgid "Search"
 msgstr "Пребарувај"
 
-#. I18N: ./data/gui/screens/online/profile_servers.stkgui
+#. I18N: ./data/gui/screens/online/profile_servers.fluxara_driftgui
 msgid "Global Networking"
 msgstr "Глобална Мрежа"
 
-#. I18N: ./data/gui/screens/online/profile_servers.stkgui
+#. I18N: ./data/gui/screens/online/profile_servers.fluxara_driftgui
 #. I18N: In the online multiplayer screen
 msgid "Quick Play"
 msgstr "Брза Игра"
 
-#. I18N: ./data/gui/screens/online/profile_settings.stkgui
+#. I18N: ./data/gui/screens/online/profile_settings.fluxara_driftgui
 #. I18N: Section in the profile screen
 #: src/states_screens/online/online_profile_base.cpp:114
 msgid "Account Settings"
 msgstr "Акаунт Нагодувања"
 
-#. I18N: ./data/gui/screens/online/profile_settings.stkgui
+#. I18N: ./data/gui/screens/online/profile_settings.fluxara_driftgui
 #. I18N: In the online account settings screen
 msgid "Password:"
 msgstr "Лозинка:"
 
-#. I18N: ./data/gui/screens/online/profile_settings.stkgui
+#. I18N: ./data/gui/screens/online/profile_settings.fluxara_driftgui
 msgid "Change"
 msgstr "Промени"
 
-#. I18N: ./data/gui/screens/online/profile_settings.stkgui
+#. I18N: ./data/gui/screens/online/profile_settings.fluxara_driftgui
 #. I18N: In the online account settings screen
 msgid "E-mail:"
 msgstr "Електронска пошта:"
 
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
 #: src/states_screens/online/register_screen.cpp:73
 msgid "Create User"
 msgstr "Креирај Корисник"
 
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: Section in the register screen
 msgid "New Online Account"
 msgstr "Нов Онлајн Акаунт"
 
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: Section in the register screen
 msgid "Existing Online Account"
 msgstr "Постоечки Онлајн Акаунт"
 
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: Section in the register screen
 msgid "Offline Account"
 msgstr "Офлајн Акаунт"
 
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
 msgid "Local Name"
 msgstr "Локално Име"
 
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
 msgid "Online Username"
 msgstr "Онлајн Корисничко Име"
 
-#. I18N: ./data/gui/screens/online/register.stkgui
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 msgid "Reset password"
 msgstr "Ресетирај лозинка"
 
-#. I18N: ./data/gui/screens/online/register.stkgui
+#. I18N: ./data/gui/screens/online/register.fluxara_driftgui
 #. I18N: In the registration dialog
 msgid ""
 "You can play without creating an online account by selecting an offline "
 "account. Though then you can not connect to friends, vote for addons etc. "
-"Please read our privacy statement at https://privacy.supertuxkart.net"
-msgstr "Можете да играте без да создадете онлајн акаунт така што ќе селектирате офлајн акаунт. Меѓутоа тогаш не можете да се конектирате со пријатели, да гласате за додатоци итн. Ве молиме прочитајте ја нашата приватна изјава на  https://privacy.supertuxkart.net"
+"Please read our privacy statement at https://privacy.fluxaradrift.net"
+msgstr "Можете да играте без да создадете онлајн акаунт така што ќе селектирате офлајн акаунт. Меѓутоа тогаш не можете да се конектирате со пријатели, да гласате за додатоци итн. Ве молиме прочитајте ја нашата приватна изјава на  https://privacy.fluxaradrift.net"
 
-#. I18N: ./data/gui/screens/online/server_selection.stkgui
+#. I18N: ./data/gui/screens/online/server_selection.fluxara_driftgui
 #: src/states_screens/online/server_selection.cpp:578
 msgid "Server Selection"
 msgstr "Селекција на Сервер"
 
-#. I18N: ./data/gui/screens/online/server_selection.stkgui
+#. I18N: ./data/gui/screens/online/server_selection.fluxara_driftgui
 #. I18N: In the server selection screen
 msgid "Show private server(s)"
 msgstr "Покажи приватен сервер(и)"
 
-#. I18N: ./data/gui/screens/online/server_selection.stkgui
+#. I18N: ./data/gui/screens/online/server_selection.fluxara_driftgui
 #. I18N: In the server selection screen
 msgid "Use IPv6 connection"
 msgstr "Користи IPv6 конекција"
 
-#. I18N: ./data/gui/screens/online/user_search.stkgui
+#. I18N: ./data/gui/screens/online/user_search.fluxara_driftgui
 msgid "User search"
 msgstr "Пребарување корисник"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
-#. I18N: ./data/gui/screens/options/options_device.stkgui
-#. I18N: ./data/gui/screens/options/options_display.stkgui
-#. I18N: ./data/gui/screens/options/options_general.stkgui
-#. I18N: ./data/gui/screens/options/options_input.stkgui
-#. I18N: ./data/gui/screens/options/options_language.stkgui
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
-#. I18N: ./data/gui/screens/options/options_video.stkgui
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
-msgid "SuperTuxKart Options"
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
+msgid "Fluxara Drift Options"
 msgstr "СуперТуксКарт Опции"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_language.stkgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: Section in the settings menu
 msgid "Display"
 msgstr "Приказ"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_language.stkgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: In the video settings
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: Section in the settings menu
 msgid "Graphics"
 msgstr "Графика"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_language.stkgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: Section in the settings menu
 msgid "Audio"
 msgstr "Аудио"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_language.stkgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: Section in the settings menu
 msgid "Interface"
 msgstr "Интерфејс"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_language.stkgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: Section in the settings menu
 msgid "Players"
 msgstr "Играчи"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_language.stkgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: Section in the settings menu
 msgid "Controls"
 msgstr "Контроли"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_language.stkgui
+#. I18N: ./data/gui/screens/options/options_language.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: Section in the settings menu
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: Section in the settings menu
 msgid "Language"
 msgstr "Јазик"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: In the audio options screen
 msgid "Music"
 msgstr "Музика"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: In the audio options screen
 #. I18N: in the graphical options tooltip;
 #. indicates a graphical feature is enabled
@@ -2266,22 +2266,22 @@ msgstr "Музика"
 msgid "Enabled"
 msgstr "Овозможено"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: In the audio options screen
 msgid "Volume"
 msgstr "Глас"
 
-#. I18N: ./data/gui/screens/options/options_audio.stkgui
+#. I18N: ./data/gui/screens/options/options_audio.fluxara_driftgui
 #. I18N: In the audio options screen
 msgid "Sound Effects"
 msgstr "Звучни Ефекти"
 
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: In the input configuration screen
 msgid "Delete Configuration"
 msgstr "Избриши Конфигурација"
 
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: In the input configuration screen
 #. I18N: button to disable a keyboard configuration
 #: src/states_screens/options/options_screen_device.cpp:105
@@ -2289,265 +2289,265 @@ msgstr "Избриши Конфигурација"
 msgid "Disable Configuration"
 msgstr "Оневозможи Конфигурација"
 
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: In the input configuration screen
 msgid "Back to device list"
 msgstr "Назад кон листа на уреди"
 
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: In the input configuration screen
 msgid "Rename Configuration"
 msgstr "Преименувај Конфигурација"
 
-#. I18N: ./data/gui/screens/options/options_device.stkgui
+#. I18N: ./data/gui/screens/options/options_device.fluxara_driftgui
 #. I18N: In the input configuration screen, for gamepad
 msgid "Enable force feedback (if supported)"
 msgstr "Овозможи принудна повратна информација (ако е поддржано)"
 
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: In the display settings
 msgid "Resolution"
 msgstr "Резолуција"
 
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: In the display settings
 msgid "Fullscreen"
 msgstr "Целосен екран"
 
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: In the display settings
 msgid "Remember window location"
 msgstr "Памти локација на прозорец"
 
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: In the display settings
 msgid "Apply new resolution"
 msgstr "Постави нова резолуција"
 
-#. I18N: ./data/gui/screens/options/options_display.stkgui
+#. I18N: ./data/gui/screens/options/options_display.fluxara_driftgui
 #. I18N: In the display settings
 msgid "Splitscreen Multiplayer layout"
 msgstr "Распоред на Поделен Екран за Мултиплејер"
 
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: In the general settings
 msgid "Internet options"
 msgstr "Интернет опции"
 
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: In the general settings
 msgid "Always show login screen"
 msgstr "Секогаш прикажувај екран за најава"
 
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: In the general settings
 msgid "Connect to the Internet"
 msgstr "Приклучи се на Интернет"
 
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: In the general settings
 msgid "Enable chatting in online lobbies"
 msgstr "Овозможи чет во онлајн лобија"
 
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: In the general settings
 msgid "Enable chatting in online matches"
 msgstr "Овозможи чет во онлајн натпреварувања"
 
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: In the general settings
 msgid "Miscellaneous options"
 msgstr "Разни опции"
 
-#. I18N: ./data/gui/screens/options/options_general.stkgui
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
 #. I18N: In the general settings
 msgid "Enable per-player handicaps"
 msgstr "Овозможи хендикеп по играч"
 
-#. I18N: ./data/gui/screens/options/options_general.stkgui
-#. I18N: For mobile version for STK, uninstall the downloaded assets
+#. I18N: ./data/gui/screens/options/options_general.fluxara_driftgui
+#. I18N: For mobile version for FLUXARA_DRIFT, uninstall the downloaded assets
 #: src/states_screens/options/options_screen_general.cpp:79
 msgid "Uninstall full game assets"
 msgstr "Деинсталирај целосна содржина на играта"
 
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: In the input configuration screen
 #: src/states_screens/options/options_screen_input.cpp:191
 msgid "Press enter or double-click on a device to configure it"
 msgstr "Притисни ентер или двоен клик на уред за да се конфигурира"
 
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: In the input configuration screen
 msgid "Add a device"
 msgstr "Додади уред"
 
-#. I18N: ./data/gui/screens/options/options_input.stkgui
+#. I18N: ./data/gui/screens/options/options_input.fluxara_driftgui
 #. I18N: In the input configuration screen
 msgid ""
 "* Which config to use will be inferred from which 'Select' key is pressed to"
 " join the game."
 msgstr "* Која конфигурација ќе се користи ќе зависи од тоа кое 'Селектирај' копче е притиснато за приклучување во играта."
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Skin"
 msgstr "Тема"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Skin variant"
 msgstr "Варијанта на кожа"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Minimap"
 msgstr "Мини мапа"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Font size"
 msgstr "Големина на фонт"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Camera"
 msgstr "Камера"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Custom..."
 msgstr "Спецификации..."
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Display FPS"
 msgstr "Приказ на рамки во секунда"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Show other karts' held powerups"
 msgstr "Прикажи ги напојувањата на другите возила"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Enable the story mode timer"
 msgstr "Овозможи тајмер за режим приказна"
 
-#. I18N: ./data/gui/screens/options/options_ui.stkgui
+#. I18N: ./data/gui/screens/options/options_ui.fluxara_driftgui
 #. I18N: In the ui settings
 msgid "Enable the speedrun timer"
 msgstr "Овозможи speedrun тајмер"
 
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: In the video settings
 msgid "Render resolution"
 msgstr "Рендер резолуција"
 
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: In the video settings
 msgid "Graphical Effects Level"
 msgstr "Ниво на Графички Ефекти"
 
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: In the video settings
 msgid "Blur Effects Level"
 msgstr "Ниво на Ефект на Заматување"
 
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: In the video options, maximum frame per second
 msgid "Maximum FPS"
 msgstr "Максимум рамки во секунда"
 
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: In the video settings
 msgid "Custom settings..."
 msgstr "Персонализирани нагодувања..."
 
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: In the video settings
 msgid "Performance tests"
 msgstr "Тестови за Перформанса"
 
-#. I18N: ./data/gui/screens/options/options_video.stkgui
+#. I18N: ./data/gui/screens/options/options_video.fluxara_driftgui
 #. I18N: In the video settings
 msgid "Performance test of the current settings"
 msgstr "Тест за Перформанса на сегашните нагодувања"
 
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 msgid "Remember password"
 msgstr "Запамти лозинка"
 
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 msgid "Delete"
 msgstr "Избриши"
 
-#. I18N: ./data/gui/screens/options/user_screen_tab.stkgui
+#. I18N: ./data/gui/screens/options/user_screen_tab.fluxara_driftgui
 #. I18N: In the user screen
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: In the user screen
 msgid "Kart color"
 msgstr "Боја на возило"
 
-#. I18N: ./data/gui/screens/race_setup.stkgui
+#. I18N: ./data/gui/screens/race_setup.fluxara_driftgui
 msgid "Select a difficulty"
 msgstr "Одберете тежина"
 
-#. I18N: ./data/gui/screens/race_setup.stkgui
+#. I18N: ./data/gui/screens/race_setup.fluxara_driftgui
 msgid "Select a game mode"
 msgstr "Одберете режим на игра"
 
-#. I18N: ./data/gui/screens/soccer_setup.stkgui
+#. I18N: ./data/gui/screens/soccer_setup.fluxara_driftgui
 #. I18N: In soccer setup screen
 msgid "Use left/right to choose your team and press fire"
 msgstr "Користете лево/десно за да го одберете вашиот тим и притиснете fire"
 
-#. I18N: ./data/gui/screens/soccer_setup.stkgui
+#. I18N: ./data/gui/screens/soccer_setup.fluxara_driftgui
 #. I18N: In soccer setup screen
 msgid "Red Team"
 msgstr "Црвен Тим"
 
-#. I18N: ./data/gui/screens/soccer_setup.stkgui
+#. I18N: ./data/gui/screens/soccer_setup.fluxara_driftgui
 #. I18N: In soccer setup screen
 msgid "Blue Team"
 msgstr "Син Тим"
 
-#. I18N: ./data/gui/screens/track_info.stkgui
+#. I18N: ./data/gui/screens/track_info.fluxara_driftgui
 #. I18N: In the track info screen
 #: src/states_screens/online/tracks_screen.cpp:546
 #: src/states_screens/track_info_screen.cpp:278
 msgid "Number of laps"
 msgstr "Број на кругови"
 
-#. I18N: ./data/gui/screens/track_info.stkgui
+#. I18N: ./data/gui/screens/track_info.fluxara_driftgui
 #. I18N: In the track info screen
 #: src/states_screens/online/create_server_screen.cpp:201
 #: src/states_screens/track_info_screen.cpp:197
 msgid "Number of AI karts"
 msgstr "Број на AI робот возила"
 
-#. I18N: ./data/gui/screens/track_info.stkgui
+#. I18N: ./data/gui/screens/track_info.fluxara_driftgui
 #. I18N: In the track info screen
 msgid "Number of blue team AI karts"
 msgstr "Број на AI робот возила за синиот тим"
 
-#. I18N: ./data/gui/screens/tracks_and_gp.stkgui
+#. I18N: ./data/gui/screens/tracks_and_gp.fluxara_driftgui
 #. I18N: In the track and grand prix selection screen
 #: src/race/grand_prix_data.cpp:623
 msgid "Random Grand Prix"
 msgstr "Случаен Гран При"
 
-#. I18N: ./data/gui/screens/tracks_and_gp.stkgui
+#. I18N: ./data/gui/screens/tracks_and_gp.fluxara_driftgui
 #. I18N: In the track and grand prix selection screen
 msgid "Edit favorite tracks"
 msgstr "Уреди омилени стази"
 
-#. I18N: ./data/gui/screens/user_screen.stkgui
+#. I18N: ./data/gui/screens/user_screen.fluxara_driftgui
 #. I18N: Used as a verb, appears on the main networking menu (login button)
 #: src/states_screens/online/online_screen.cpp:69
 msgid "Login"
@@ -2575,8 +2575,8 @@ msgstr "Во самостоен-играч, можете да гледате и 
 
 #. I18N: ./data/tips.xml
 msgid ""
-"You can visit https://supertuxkart.net/ for more information about the game."
-msgstr "Можете да ја посетите https://supertuxkart.net/ страната за повеќе информации во врска со играта."
+"You can visit https://fluxaradrift.net/ for more information about the game."
+msgstr "Можете да ја посетите https://fluxaradrift.net/ страната за повеќе информации во врска со играта."
 
 #. I18N: ./data/tips.xml
 msgid "Short nitro boosts are more efficient."
@@ -2670,307 +2670,307 @@ msgid ""
 "hit opponents attempting to stop them from scoring."
 msgstr "Не им го попречувајте патот на членовите од вашиот тим кои ја носат топката, но можете да се обидете да ги удрите противниците за да ги запрете да добијат поени."
 
-#. I18N: ../stk-assets/karts/adiumy/kart.xml
-#. I18N: ../supertuxkart-assets/karts/adiumy/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/adiumy/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/adiumy/kart.xml
 msgid "Adiumy"
 msgstr "Адиуми"
 
-#. I18N: ../stk-assets/karts/amanda/kart.xml
-#. I18N: ../supertuxkart-assets/karts/amanda/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/amanda/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/amanda/kart.xml
 msgid "Amanda"
 msgstr "Аманда"
 
-#. I18N: ../stk-assets/karts/beastie/kart.xml
-#. I18N: ../supertuxkart-assets/karts/beastie/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/beastie/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/beastie/kart.xml
 msgid "Godette"
 msgstr "Годет"
 
-#. I18N: ../stk-assets/karts/emule/kart.xml
-#. I18N: ../supertuxkart-assets/karts/emule/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/emule/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/emule/kart.xml
 msgid "Emule"
 msgstr "Емул"
 
-#. I18N: ../stk-assets/karts/gavroche/kart.xml
-#. I18N: ../supertuxkart-assets/karts/gavroche/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/gavroche/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/gavroche/kart.xml
 msgid "Gavroche"
 msgstr "Гаврош"
 
-#. I18N: ../stk-assets/karts/gnu/kart.xml
-#. I18N: ../supertuxkart-assets/karts/gnu/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/gnu/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/gnu/kart.xml
 msgid "Gnu"
 msgstr "Гну"
 
-#. I18N: ../stk-assets/karts/hexley/kart.xml
-#. I18N: ../supertuxkart-assets/karts/hexley/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/hexley/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/hexley/kart.xml
 msgid "Hexley"
 msgstr "Хексли"
 
-#. I18N: ../stk-assets/karts/kiki/kart.xml
-#. I18N: ../supertuxkart-assets/karts/kiki/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/kiki/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/kiki/kart.xml
 msgid "Kiki"
 msgstr "Кики"
 
-#. I18N: ../stk-assets/karts/konqi/kart.xml
-#. I18N: ../supertuxkart-assets/karts/konqi/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/konqi/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/konqi/kart.xml
 msgid "Konqi"
 msgstr "Конки"
 
-#. I18N: ../stk-assets/karts/nolok/kart.xml
-#. I18N: ../supertuxkart-assets/karts/nolok/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/nolok/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/nolok/kart.xml
 msgid "Nolok"
 msgstr "Нолок"
 
-#. I18N: ../stk-assets/karts/pidgin/kart.xml
-#. I18N: ../supertuxkart-assets/karts/pidgin/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/pidgin/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/pidgin/kart.xml
 msgid "Pidgin"
 msgstr "Пиџин"
 
-#. I18N: ../stk-assets/karts/puffy/kart.xml
-#. I18N: ../supertuxkart-assets/karts/puffy/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/puffy/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/puffy/kart.xml
 msgid "Puffy"
 msgstr "Пафи"
 
-#. I18N: ../stk-assets/karts/sara_the_racer/kart.xml
-#. I18N: ../supertuxkart-assets/karts/sara_the_racer/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/sara_the_racer/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/sara_the_racer/kart.xml
 msgid "Pepper"
 msgstr "Пепер"
 
-#. I18N: ../stk-assets/karts/sara_the_wizard/kart.xml
-#. I18N: ../supertuxkart-assets/karts/sara_the_wizard/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/sara_the_wizard/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/sara_the_wizard/kart.xml
 msgid "Sara"
 msgstr "Сара"
 
-#. I18N: ../stk-assets/karts/suzanne/kart.xml
-#. I18N: ../supertuxkart-assets/karts/suzanne/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/suzanne/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/suzanne/kart.xml
 msgid "Suzanne"
 msgstr "Сузан"
 
-#. I18N: ../stk-assets/karts/tux/kart.xml
-#. I18N: ../supertuxkart-assets/karts/tux/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/tux/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/tux/kart.xml
 msgid "Tux"
 msgstr "Тукс"
 
-#. I18N: ../stk-assets/karts/wilber/kart.xml
-#. I18N: ../supertuxkart-assets/karts/wilber/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/wilber/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/wilber/kart.xml
 msgid "Wilber"
 msgstr "Вилбер"
 
-#. I18N: ../stk-assets/karts/xue/kart.xml
-#. I18N: ../supertuxkart-assets/karts/xue/kart.xml
+#. I18N: ../fluxara_drift-assets/karts/xue/kart.xml
+#. I18N: ../fluxaradrift-assets/karts/xue/kart.xml
 msgid "Xue"
 msgstr "Ксу"
 
-#. I18N: ../stk-assets/tracks/abyss/track.xml
-#. I18N: ../supertuxkart-assets/tracks/abyss/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/abyss/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/abyss/track.xml
 msgid "Antediluvian Abyss"
 msgstr "Праисториска Бездна"
 
-#. I18N: ../stk-assets/tracks/alien_signal/track.xml
-#. I18N: ../supertuxkart-assets/tracks/alien_signal/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/alien_signal/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/alien_signal/track.xml
 msgid "Alien Signal"
 msgstr "Вонземјански Сигнал"
 
-#. I18N: ../stk-assets/tracks/ancient_colosseum_labyrinth/track.xml
-#. I18N: ../supertuxkart-assets/tracks/ancient_colosseum_labyrinth/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/ancient_colosseum_labyrinth/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/ancient_colosseum_labyrinth/track.xml
 msgid "Ancient Colosseum Labyrinth"
 msgstr "Антички Колосеумски Лавиринт"
 
-#. I18N: ../stk-assets/tracks/arena_candela_city/track.xml
-#. I18N: ../stk-assets/tracks/candela_city/track.xml
-#. I18N: ../supertuxkart-assets/tracks/arena_candela_city/track.xml
-#. I18N: ../supertuxkart-assets/tracks/candela_city/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/arena_candela_city/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/candela_city/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/arena_candela_city/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/candela_city/track.xml
 msgid "Candela City"
 msgstr "Кандела Град"
 
-#. I18N: ../stk-assets/tracks/battleisland/track.xml
-#. I18N: ../supertuxkart-assets/tracks/battleisland/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/battleisland/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/battleisland/track.xml
 msgid "Battle Island"
 msgstr "Борбен Остров"
 
-#. I18N: ../stk-assets/tracks/black_forest/track.xml
-#. I18N: ../supertuxkart-assets/tracks/black_forest/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/black_forest/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/black_forest/track.xml
 msgid "Black Forest"
 msgstr "Црна Шума"
 
-#. I18N: ../stk-assets/tracks/cave/track.xml
-#. I18N: ../supertuxkart-assets/tracks/cave/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/cave/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/cave/track.xml
 msgid "Cave X"
 msgstr "Пештера Х"
 
-#. I18N: ../stk-assets/tracks/cocoa_temple/track.xml
-#. I18N: ../supertuxkart-assets/tracks/cocoa_temple/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/cocoa_temple/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/cocoa_temple/track.xml
 msgid "Cocoa Temple"
 msgstr "Какаов Храм"
 
-#. I18N: ../stk-assets/tracks/cornfield_crossing/track.xml
-#. I18N: ../supertuxkart-assets/tracks/cornfield_crossing/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/cornfield_crossing/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/cornfield_crossing/track.xml
 msgid "Cornfield Crossing"
 msgstr "Премин кроз Пченкарно Поле"
 
-#. I18N: ../stk-assets/tracks/fortmagma/track.xml
-#. I18N: ../supertuxkart-assets/tracks/fortmagma/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/fortmagma/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/fortmagma/track.xml
 msgid "Fort Magma"
 msgstr "Кула Магма"
 
-#. I18N: ../stk-assets/tracks/gran_paradiso_island/track.xml
-#. I18N: ../supertuxkart-assets/tracks/gran_paradiso_island/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/gran_paradiso_island/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/gran_paradiso_island/track.xml
 msgid "Gran Paradiso Island"
 msgstr "Гран Парадизо Остров"
 
-#. I18N: ../stk-assets/tracks/hacienda/track.xml
-#. I18N: ../supertuxkart-assets/tracks/hacienda/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/hacienda/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/hacienda/track.xml
 msgid "Hacienda"
 msgstr "Хациенда"
 
-#. I18N: ../stk-assets/tracks/hole_drop/track.xml
-#. I18N: ../supertuxkart-assets/tracks/hole_drop/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/hole_drop/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/hole_drop/track.xml
 msgid "Hole Drop"
 msgstr "Испуштање Дупка"
 
-#. I18N: ../stk-assets/tracks/icy_soccer_field/track.xml
-#. I18N: ../supertuxkart-assets/tracks/icy_soccer_field/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/icy_soccer_field/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/icy_soccer_field/track.xml
 msgid "Icy Soccer Field"
 msgstr "Ледено Фудбалско Игралиште"
 
-#. I18N: Cutscene subtitle from ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: Cutscene subtitle from ../supertuxkart-
+#. I18N: Cutscene subtitle from ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: Cutscene subtitle from ../fluxaradrift-
 #. assets/tracks/introcutscene2/scene.xml
-#. I18N: ../supertuxkart-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxaradrift-assets/tracks/introcutscene2/scene.xml
 msgid "What's wrong, little hippies? Your great gnu leader is missing?"
 msgstr "Што е, мали хипици? Вашиот голем лидер Гну го нема?"
 
-#. I18N: Cutscene subtitle from ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: Cutscene subtitle from ../supertuxkart-
+#. I18N: Cutscene subtitle from ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: Cutscene subtitle from ../fluxaradrift-
 #. assets/tracks/introcutscene2/scene.xml
-#. I18N: ../supertuxkart-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxaradrift-assets/tracks/introcutscene2/scene.xml
 msgid "Oh yes, see, he's in my castle now and will be served for supper..."
 msgstr "Ах да, гледате, тој е во мојот замок сега и ќе биде сервиран за вечера..."
 
-#. I18N: Cutscene subtitle from ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: Cutscene subtitle from ../supertuxkart-
+#. I18N: Cutscene subtitle from ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: Cutscene subtitle from ../fluxaradrift-
 #. assets/tracks/introcutscene2/scene.xml
-#. I18N: ../supertuxkart-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxaradrift-assets/tracks/introcutscene2/scene.xml
 msgid "But I'm a fair creature, so I'll make you a deal."
 msgstr "Но јас сум фер суштество, па ќе ви направам договор."
 
-#. I18N: Cutscene subtitle from ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: Cutscene subtitle from ../supertuxkart-
+#. I18N: Cutscene subtitle from ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: Cutscene subtitle from ../fluxaradrift-
 #. assets/tracks/introcutscene2/scene.xml
-#. I18N: ../supertuxkart-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxaradrift-assets/tracks/introcutscene2/scene.xml
 msgid "If you can beat me at racing, I will free the old codger."
 msgstr "Ако можете да ме победите во тркање, ќе го ослободам стариов."
 
-#. I18N: Cutscene subtitle from ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: ../stk-assets/tracks/introcutscene2/scene.xml
-#. I18N: Cutscene subtitle from ../supertuxkart-
+#. I18N: Cutscene subtitle from ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxara_drift-assets/tracks/introcutscene2/scene.xml
+#. I18N: Cutscene subtitle from ../fluxaradrift-
 #. assets/tracks/introcutscene2/scene.xml
-#. I18N: ../supertuxkart-assets/tracks/introcutscene2/scene.xml
+#. I18N: ../fluxaradrift-assets/tracks/introcutscene2/scene.xml
 msgid ""
 " But you pathetic little twerps will never be able to beat me - King of the "
 "Karts!"
 msgstr "Но вие мали патетични смотковци никогаш нема да можете да ме победите мене - Крал на возилата!"
 
-#. I18N: ../stk-assets/tracks/lasdunasarena/track.xml
-#. I18N: ../supertuxkart-assets/tracks/lasdunasarena/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/lasdunasarena/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/lasdunasarena/track.xml
 msgid "Las Dunas Arena"
 msgstr "Арена Лас Дунас"
 
-#. I18N: ../stk-assets/tracks/lasdunassoccer/track.xml
-#. I18N: ../supertuxkart-assets/tracks/lasdunassoccer/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/lasdunassoccer/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/lasdunassoccer/track.xml
 msgid "Las Dunas Soccer Stadium"
 msgstr "Фудбалски Стадион Лас Дунас"
 
-#. I18N: ../stk-assets/tracks/lighthouse/track.xml
-#. I18N: ../supertuxkart-assets/tracks/lighthouse/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/lighthouse/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/lighthouse/track.xml
 msgid "Around the Lighthouse"
 msgstr "Околу Светилникот"
 
-#. I18N: ../stk-assets/tracks/mines/track.xml
-#. I18N: ../supertuxkart-assets/tracks/mines/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/mines/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/mines/track.xml
 msgid "Old Mine"
 msgstr "Стар Рудник"
 
-#. I18N: ../stk-assets/tracks/minigolf/track.xml
-#. I18N: ../supertuxkart-assets/tracks/minigolf/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/minigolf/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/minigolf/track.xml
 msgid "Minigolf"
 msgstr "Мини Голф"
 
-#. I18N: ../stk-assets/tracks/oasis/track.xml
-#. I18N: ../supertuxkart-assets/tracks/oasis/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/oasis/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/oasis/track.xml
 msgid "Oasis"
 msgstr "Оаза"
 
-#. I18N: ../stk-assets/tracks/olivermath/track.xml
-#. I18N: ../supertuxkart-assets/tracks/olivermath/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/olivermath/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/olivermath/track.xml
 msgid "Oliver's Math Class"
 msgstr "Часот по Математика на Оливер"
 
-#. I18N: ../stk-assets/tracks/pumpkin_park/track.xml
-#. I18N: ../supertuxkart-assets/tracks/pumpkin_park/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/pumpkin_park/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/pumpkin_park/track.xml
 msgid "Pumpkin Park"
 msgstr "Тиква Парк"
 
-#. I18N: ../stk-assets/tracks/ravenbridge_mansion/track.xml
-#. I18N: ../supertuxkart-assets/tracks/ravenbridge_mansion/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/ravenbridge_mansion/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/ravenbridge_mansion/track.xml
 msgid "Ravenbridge Mansion"
 msgstr "Палата Гавранов Мост"
 
-#. I18N: ../stk-assets/tracks/sandtrack/track.xml
-#. I18N: ../supertuxkart-assets/tracks/sandtrack/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/sandtrack/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/sandtrack/track.xml
 msgid "Shifting Sands"
 msgstr "Поместувачки Песок"
 
-#. I18N: ../stk-assets/tracks/scotland/track.xml
-#. I18N: ../supertuxkart-assets/tracks/scotland/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/scotland/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/scotland/track.xml
 msgid "Nessie's Pond"
 msgstr "Езерцето на Неси"
 
-#. I18N: ../stk-assets/tracks/snowmountain/track.xml
-#. I18N: ../supertuxkart-assets/tracks/snowmountain/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/snowmountain/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/snowmountain/track.xml
 msgid "Northern Resort"
 msgstr "Северно Одморалиште"
 
-#. I18N: ../stk-assets/tracks/snowtuxpeak/track.xml
-#. I18N: ../supertuxkart-assets/tracks/snowtuxpeak/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/snowtuxpeak/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/snowtuxpeak/track.xml
 msgid "Snow Peak"
 msgstr "Снежен Врв"
 
-#. I18N: ../stk-assets/tracks/soccer_field/track.xml
-#. I18N: ../supertuxkart-assets/tracks/soccer_field/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/soccer_field/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/soccer_field/track.xml
 msgid "Soccer Field"
 msgstr "Фудбалско Игралиште"
 
-#. I18N: ../stk-assets/tracks/stadium/track.xml
-#. I18N: ../supertuxkart-assets/tracks/stadium/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/stadium/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/stadium/track.xml
 msgid "The Stadium"
 msgstr "Стадионот"
 
-#. I18N: ../stk-assets/tracks/stk_enterprise/track.xml
-#. I18N: ../supertuxkart-assets/tracks/stk_enterprise/track.xml
-msgid "STK Enterprise"
+#. I18N: ../fluxara_drift-assets/tracks/fluxara_drift_enterprise/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/fluxara_drift_enterprise/track.xml
+msgid "FLUXARA_DRIFT Enterprise"
 msgstr "СТК Претпријатие"
 
-#. I18N: ../stk-assets/tracks/temple/track.xml
-#. I18N: ../supertuxkart-assets/tracks/temple/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/temple/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/temple/track.xml
 msgid "Temple"
 msgstr "Храм"
 
-#. I18N: ../stk-assets/tracks/volcano_island/track.xml
-#. I18N: ../supertuxkart-assets/tracks/volcano_island/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/volcano_island/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/volcano_island/track.xml
 msgid "Volcan Island"
 msgstr "Вулкански Остров"
 
-#. I18N: ../stk-assets/tracks/xr591/track.xml
-#. I18N: ../supertuxkart-assets/tracks/xr591/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/xr591/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/xr591/track.xml
 msgid "XR591"
 msgstr "ХР591"
 
-#. I18N: ../stk-assets/tracks/zengarden/track.xml
-#. I18N: ../supertuxkart-assets/tracks/zengarden/track.xml
+#. I18N: ../fluxara_drift-assets/tracks/zengarden/track.xml
+#. I18N: ../fluxaradrift-assets/tracks/zengarden/track.xml
 msgid "Zen Garden"
 msgstr "Зен Градина"
 
@@ -2980,7 +2980,7 @@ msgid "Completed achievement \"%s\"."
 msgstr "Завршено достигнување \"%s\"."
 
 #: src/addons/addons_manager.cpp:113 src/addons/news_manager.cpp:353
-msgid "Failed to connect to the SuperTuxKart add-ons server."
+msgid "Failed to connect to the Fluxara Drift add-ons server."
 msgstr "Неуспешно поврзување со СуперТуксКарт серверот за додатоци."
 
 #: src/addons/news_manager.cpp:184
@@ -3638,7 +3638,7 @@ msgid "Please re-configure your key bindings."
 msgstr "Ве молиме ре-конфигурирајте ги сетовите на вашите копчиња."
 
 #: src/input/device_manager.cpp:497
-msgid "Your input config file is not compatible with this version of STK."
+msgid "Your input config file is not compatible with this version of FLUXARA_DRIFT."
 msgstr "Вашиот влезен конфигурациски фајл не е компатибилен со оваа верзија на СТК."
 
 #. I18N: name of buttons on gamepads
@@ -3758,15 +3758,15 @@ msgstr "%s има ниско ниво на батерија."
 #: src/input/wiimote_manager.cpp:379
 msgid ""
 "Connect your wiimote to the Bluetooth manager, then click on Ok. Detailed "
-"instructions at https://supertuxkart.net/Wiimote"
-msgstr "Поврзете го вашиот wiimote со Bluetooth менаџерот, потоа притиснете Ок. Подетални инструкции на https://supertuxkart.net/Wiimote"
+"instructions at https://fluxaradrift.net/Wiimote"
+msgstr "Поврзете го вашиот wiimote со Bluetooth менаџерот, потоа притиснете Ок. Подетални инструкции на https://fluxaradrift.net/Wiimote"
 
 #: src/input/wiimote_manager.cpp:382
 msgid ""
 "Press the buttons 1+2 simultaneously on your wiimote to put it in discovery "
 "mode, then click on Ok. Detailed instructions at "
-"https://supertuxkart.net/Wiimote"
-msgstr "Притиснете ги копчињата 1+2 истовремено на вашиот wiimote за да го ставите во discovery mode, потоа притиснете Ок. Подетални инструкции на https://supertuxkart.net/Wiimote"
+"https://fluxaradrift.net/Wiimote"
+msgstr "Притиснете ги копчињата 1+2 истовремено на вашиот wiimote за да го ставите во discovery mode, потоа притиснете Ок. Подетални инструкции на https://fluxaradrift.net/Wiimote"
 
 #: src/input/wiimote_manager.cpp:405
 #, c-format
@@ -3824,15 +3824,15 @@ msgstr "%s ја напушти играта."
 
 #: src/main.cpp:2042
 msgid ""
-"SuperTuxKart may connect to a server to download add-ons and notify you of "
-"updates. Please read our privacy policy at https://supertuxkart.net/Privacy."
+"Fluxara Drift may connect to a server to download add-ons and notify you of "
+"updates. Please read our privacy policy at https://fluxaradrift.net/Privacy."
 " Would you like this feature to be enabled? (To change this setting at a "
 "later time, go to options, select tab 'General', and edit \"Connect to the "
 "Internet\")."
-msgstr "СуперТуксКарт се поврзува со сервер за да презема додатоци и ве известува за ажурирања. Ве молиме прочитајте ја нашата полиса за приватност на https://supertuxkart.net/Privacy. Дали би сакале оваа опција да ја овозможите? (За да го смените ова нагодување подоцна, одете во опции, одберете 'Генерално', и изменете во \"Приклучи се на Интернет\")."
+msgstr "СуперТуксКарт се поврзува со сервер за да презема додатоци и ве известува за ажурирања. Ве молиме прочитајте ја нашата полиса за приватност на https://fluxaradrift.net/Privacy. Дали би сакале оваа опција да ја овозможите? (За да го смените ова нагодување подоцна, одете во опции, одберете 'Генерално', и изменете во \"Приклучи се на Интернет\")."
 
 #: src/main.cpp:2393
-msgid "Your screen resolution is too low to run STK."
+msgid "Your screen resolution is too low to run FLUXARA_DRIFT."
 msgstr "Вашата резолуција на екран е прениска за да може да работи СТК."
 
 #: src/main.cpp:2444
@@ -3844,7 +3844,7 @@ msgstr "Вашата верзија на драјвер е престара. В�
 #, c-format
 msgid ""
 "Your graphics driver appears to be very old. Please check if an update is "
-"available. SuperTuxKart recommends a driver supporting %s or better. The "
+"available. Fluxara Drift recommends a driver supporting %s or better. The "
 "game will likely still run, but in a reduced-graphics mode."
 msgstr "Изгледа дека вашиот графички драјвер е многу стар. Ве молиме проверете дали е достапно ажурирање за него. СуперТуксКарт препорачува драјвер кој поддржува %s или повеќе. Играта најверојатно ќе ви работи, но во намален-графички режим."
 
@@ -4318,7 +4318,7 @@ msgstr "Ве молиме почекајте додека додатоците �
 #: src/states_screens/main_menu_screen.cpp:671
 msgid ""
 "Sorry, an error occurred while contacting the add-ons website. Make sure you"
-" are connected to the Internet and that SuperTuxKart is not blocked by a "
+" are connected to the Internet and that Fluxara Drift is not blocked by a "
 "firewall"
 msgstr "Жалам, настана грешка при комуникацијата со веб страната за додатоци. Осигурајте се дека сте приклучени на Интернет и дека СуперТуксКарт не е блокиран од firewall"
 
@@ -4409,7 +4409,7 @@ msgstr "Победени последователни трки"
 #. I18N: A goal for achievements. If this text is in (), it's a precision
 #. added to multiple different goals.
 #: src/states_screens/dialogs/achievement_progress_dialog.cpp:180
-msgid "Consecutive won races in Expert or SuperTux"
+msgid "Consecutive won races in Expert or FluxaraDrift"
 msgstr "Победени последователни трки во Експерт или СуперТукс"
 
 #. I18N: A goal for achievements. If this text is in (), it's a precision
@@ -4451,13 +4451,13 @@ msgstr "Завршени експерт трки"
 #. I18N: A goal for achievements. If this text is in (), it's a precision
 #. added to multiple different goals.
 #: src/states_screens/dialogs/achievement_progress_dialog.cpp:194
-msgid "SuperTux races started"
+msgid "FluxaraDrift races started"
 msgstr "Започнати СуперТукс трки"
 
 #. I18N: A goal for achievements. If this text is in (), it's a precision
 #. added to multiple different goals.
 #: src/states_screens/dialogs/achievement_progress_dialog.cpp:196
-msgid "SuperTux races finished"
+msgid "FluxaraDrift races finished"
 msgstr "Завршени СуперТукс трки"
 
 #. I18N: A goal for achievements. If this text is in (), it's a precision
@@ -4939,7 +4939,7 @@ msgstr "Ултра"
 #. I18N: In download assets dialog
 #: src/states_screens/dialogs/download_assets.cpp:113
 msgid ""
-"SuperTuxKart will download full assets (including high quality textures and "
+"Fluxara Drift will download full assets (including high quality textures and "
 "music) for better gaming experience, this will use your mobile data if you "
 "don't have a wifi connection."
 msgstr "СуперТуксКарт ја презема целосната содржина (вклучувајќи висок квалитет на текстури и музика) за подобро гејминг искуство, ова ќе го користи вашиот мобилен интернет ако немате wifi конекција."
@@ -4947,7 +4947,7 @@ msgstr "СуперТуксКарт ја презема целосната сод
 #. I18N: In download assets dialog
 #: src/states_screens/dialogs/download_assets.cpp:121
 msgid ""
-"SuperTuxKart will download full assets (including high quality textures and "
+"Fluxara Drift will download full assets (including high quality textures and "
 "music) for better gaming experience."
 msgstr "СуперТуксКарт ја презема целосната содржина (вклучувајќи висок квалитет на текстури и музика) за подобро гејминг искуство."
 
@@ -5202,8 +5202,8 @@ msgstr "Неважечко корисничко име и/или адреса н
 #: src/states_screens/dialogs/registration_dialog.cpp:43
 #, c-format
 msgid ""
-"Please read the terms and conditions for SuperTuxKart at '%s'. You must "
-"agree to these terms in order to register an account for STK. If you have "
+"Please read the terms and conditions for Fluxara Drift at '%s'. You must "
+"agree to these terms in order to register an account for FLUXARA_DRIFT. If you have "
 "any questions or comments regarding these terms, one of the members of the "
 "development team would gladly assist you."
 msgstr "Ве молиме прочитајте ги правилата и условите за СуперТуксКарт на '%s'. Мора да се согласите со овие правила за да регистрирате акаунт за СТК. Ако имате некои прашања или коментари во врска со овие правила, некој од членовите на развојниот тим со задоволство ќе ви помогне."
@@ -5441,7 +5441,7 @@ msgstr "Го завршивте тешкиот предизвик! Поени д
 #: src/states_screens/feature_unlocked.cpp:272
 #, c-format
 msgid ""
-"You completed the SuperTux challenge! Points earned on this level: %i/%i"
+"You completed the FluxaraDrift challenge! Points earned on this level: %i/%i"
 msgstr "Го завршивте СуперТукс предизвикот! Поени добиени на ова ниво: %i/%i"
 
 #: src/states_screens/feature_unlocked.cpp:315
@@ -5601,7 +5601,7 @@ msgid "Please wait while the add-ons are loading"
 msgstr "Ве молиме почекајте додека додатоците се вчитуваат"
 
 #: src/states_screens/main_menu_screen.cpp:699
-msgid "Are you sure you want to quit STK?"
+msgid "Are you sure you want to quit FLUXARA_DRIFT?"
 msgstr "Дали сте сигурни дека сакате да го исклучите СТК?"
 
 #: src/states_screens/online/create_server_screen.cpp:107
@@ -5780,7 +5780,7 @@ msgid "Failed to change E-mail: %s"
 msgstr "Неуспешна промена на електронска пошта: %s"
 
 #: src/states_screens/online/online_screen.cpp:109
-msgid "News from STK Blog"
+msgid "News from FLUXARA_DRIFT Blog"
 msgstr "Новости од СТК Блогот"
 
 #: src/states_screens/online/online_screen.cpp:110
@@ -5885,12 +5885,12 @@ msgstr "Растојание (km)"
 msgid "Unknown"
 msgstr "Непознато"
 
-#. I18N: Message shown to user if no IPv4 detected by STK
+#. I18N: Message shown to user if no IPv4 detected by FLUXARA_DRIFT
 #: src/states_screens/online/server_selection.cpp:361
 msgid "No IPv4 detected, you may not be able to join any servers."
 msgstr "Не е детектирана IPv4, нема да можете да се приклучите кон серверите."
 
-#. I18N: Message shown to user if no IPv6 detected by STK
+#. I18N: Message shown to user if no IPv6 detected by FLUXARA_DRIFT
 #: src/states_screens/online/server_selection.cpp:363
 msgid "No IPv6 detected, you may not be able to join any servers."
 msgstr "Не е детектирана IPv6, нема да можете да се приклучите кон серверите."
@@ -6092,8 +6092,8 @@ msgid ""
 "(more difficult) profiles on the kart selection screen"
 msgstr "Во мултиплејер режимот, играчите можат да селектираат хендикепирани\n(потешки) профили на екранот за селекција на возило"
 
-#. I18N: For mobile version for STK, install the full game assets which
-#. will download from stk server
+#. I18N: For mobile version for FLUXARA_DRIFT, install the full game assets which
+#. will download from fluxara_drift server
 #: src/states_screens/options/options_screen_general.cpp:85
 msgid "Install full game assets"
 msgstr "Инсталирај ја целосната содржина на играта"
@@ -6493,7 +6493,7 @@ msgid "You failed the challenge!"
 msgstr "Не успеавте во предизвикот!"
 
 #: src/states_screens/race_result_gui.cpp:2282
-msgid "Reached Requirements of SuperTux"
+msgid "Reached Requirements of FluxaraDrift"
 msgstr "Постигнати Барања за СуперТукс"
 
 #: src/states_screens/race_result_gui.cpp:2353
@@ -6659,13 +6659,13 @@ msgstr "%s KB"
 msgid "%d/%m/%Y"
 msgstr "%d/%m/%Y"
 
-#: ../stk-assets/tracks/overworld/scripting.as:15
-#: ../supertuxkart-assets/tracks/overworld/scripting.as:15
+#: ../fluxara_drift-assets/tracks/overworld/scripting.as:15
+#: ../fluxaradrift-assets/tracks/overworld/scripting.as:15
 msgid "Complete all challenges to unlock the big door!"
 msgstr "Завршете ги сите предизвици за да ја отклучите големата врата!"
 
-#: ../stk-assets/tracks/overworld/scripting.as:63
-#: ../supertuxkart-assets/tracks/overworld/scripting.as:63
+#: ../fluxara_drift-assets/tracks/overworld/scripting.as:63
+#: ../fluxaradrift-assets/tracks/overworld/scripting.as:63
 msgid ""
 "You need more points\n"
 "to enter this challenge!\n"
@@ -6673,137 +6673,137 @@ msgid ""
 "available challenges."
 msgstr "Потребни ви се повеќе поени\nза да го извршите овој предизвик!\nПроверете ја минимапата за\nдостапни предизвици."
 
-#: ../stk-assets/tracks/tutorial/scripting.as:8
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:8
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:8
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:8
 #, c-format
 msgid "Accelerate with <%s>, and steer with <%s> and <%s>."
 msgstr "Забрзајте со <%s>, и управувајте со <%s> и <%s>."
 
-#: ../stk-assets/tracks/tutorial/scripting.as:17
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:17
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:17
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:17
 msgid ""
 "Accelerate by touching the upper part of the wheel, and steer by moving left"
 " or right."
 msgstr "Забрзајте со допирање на погорниот дел од воланот, и управувајте со движење лево или десно."
 
-#: ../stk-assets/tracks/tutorial/scripting.as:22
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:22
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:22
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:22
 msgid ""
 "Accelerate by moving the accelerator upwards, and steer by tilting your "
 "device."
 msgstr "Забрзајте движејќи го акцелераторот нагоре, и управувајте навалувајќи го вашиот уред."
 
-#: ../stk-assets/tracks/tutorial/scripting.as:27
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:27
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:27
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:27
 msgid ""
 "Accelerate by moving the accelerator upwards, and steer by rotating your "
 "device."
 msgstr "Забрзајте движејќи го акцелераторот нагоре, и управувајте ротирајќи го вашиот уред."
 
-#: ../stk-assets/tracks/tutorial/scripting.as:59
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:59
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:59
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:59
 #, c-format
 msgid ""
 "Collect gift boxes, and fire the weapon with <%s> to blow away these boxes!"
 msgstr "Собирајте кутии со подароци, и испуштете го оружјето со <%s> за да ги разнесете овие кутии!"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:67
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:67
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:67
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:67
 msgid ""
 "Collect gift boxes, and fire by pressing the bowling icon to blow away these"
 " boxes!"
 msgstr "Собирајте кутии со подароци, и испуштете ги со притискање на иконата за куглање за да ги разнесете овие кутии!"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:78
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:78
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:78
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:78
 #, c-format
 msgid ""
 "Press <%s> to look behind.\n"
 "Fire the weapon with <%s> while pressing <%s> to fire behind!"
 msgstr "Притиснете <%s> за да погледнете позади.\nИспуштете го оружјето со <%s>  додека притискате <%s> за да го испуштите позади!"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:88
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:88
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:88
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:88
 msgid ""
 "Press the mirror icon to look behind.\n"
 "Fire the weapon behind by holding the mirror icon and then swiping to the bowling icon!"
 msgstr "Притиснете ја иконата за огледало за да погледнете позади.\nИспуштете го оружјето позади држејќи ја иконата за огледало и потоа лизгајте до иконата за куглање!"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:98
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:98
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:98
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:98
 #, c-format
 msgid "Use the nitro you collected by pressing <%s>!"
 msgstr "Користете го нитрото што сте го собрале со притискање на <%s>!"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:104
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:104
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:104
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:104
 msgid "Use the nitro you collected by pressing the nitro icon"
 msgstr "Користете го нитрото што сте го собрале со притискање на иконата за нитро"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:112
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:112
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:112
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:112
 msgid "Collect nitro bottles (we will use them after the curve)."
 msgstr "Собирајте шишиња нитро (ќе ги искористиме после кривината)."
 
-#: ../stk-assets/tracks/tutorial/scripting.as:121
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:121
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:121
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:121
 #, c-format
 msgid "Oops! When you're in trouble, press <%s> to be rescued."
 msgstr "Упс! Кога сте во неволја, притиснете <%s> за да бидете спасени."
 
-#: ../stk-assets/tracks/tutorial/scripting.as:127
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:127
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:127
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:127
 msgid "Oops! When you're in trouble, press the bird icon to be rescued."
 msgstr "Упс! Кога сте во неволја, притиснете ја иконата за птица за да бидете спасени."
 
-#: ../stk-assets/tracks/tutorial/scripting.as:137
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:137
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:137
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:137
 #, c-format
 msgid ""
 "Accelerate and press the <%s> key while turning to skid.\n"
 "Skidding for a short while can help you turn faster to take sharp turns."
 msgstr "Забрзајте и притиснете го <%s> копчето додека се вртите за да лизгате.\nЛизгањето за кратко време може да ви помогне да свртите побрзо за да направите остри кривини."
 
-#: ../stk-assets/tracks/tutorial/scripting.as:145
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:145
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:145
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:145
 msgid ""
 "Accelerate and press the skid icon while turning to skid.\n"
 "Skidding for a short while can help you turn faster to take sharp turns."
 msgstr "Забрзајте и притиснете ја иконата за лизгање додека се вртите за да лизгате.\nЛизгањето за кратко време може да ви помогне да свртите побрзо за да направите остри кривини."
 
-#: ../stk-assets/tracks/tutorial/scripting.as:156
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:156
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:156
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:156
 msgid ""
 "Note that if you manage to skid for several seconds, you will receive a "
 "bonus speedup as a reward!"
 msgstr "Забележете дека ако успеете да лизгате за неколку секунди, ќе добиете бонус забрзување како награда!"
 
-#: ../stk-assets/tracks/tutorial/scripting.as:164
-#: ../supertuxkart-assets/tracks/tutorial/scripting.as:164
+#: ../fluxara_drift-assets/tracks/tutorial/scripting.as:164
+#: ../fluxaradrift-assets/tracks/tutorial/scripting.as:164
 msgid "You are now ready to race. Good luck!"
 msgstr "Сега сте спремни за тркање. Со среќа!"
 
 #. I18N: Generic name in desktop file entry, summary in AppData and short
 #. description in Google Play
-#: supertuxkart.desktop:4 net.supertuxkart.SuperTuxKart.metainfo.xml:7
+#: fluxaradrift.desktop:4 net.fluxaradrift.FluxaraDrift.metainfo.xml:7
 msgid "A 3D open-source kart racing game"
 msgstr "3D open-source тркачка картинг игра"
 
 #. I18N: Keywords in desktop entry, translators please keep it separated with
 #. semicolons
-#: supertuxkart.desktop:11
+#: fluxaradrift.desktop:11
 msgid "tux;game;race;"
 msgstr "тукс;игра;трка;"
 
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:9
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:9
 msgid ""
-"Karts. Nitro. Action! SuperTuxKart is a 3D open-source arcade racer with a "
+"Karts. Nitro. Action! Fluxara Drift is a 3D open-source arcade racer with a "
 "variety of characters, tracks, and modes to play. Our aim is to create a "
 "game that is more fun than realistic, and provide an enjoyable experience "
 "for all ages."
 msgstr "Возила. Нитро. Акција! Супертукскарт е 3Д отворен-код аркаден тркач со разновидност од ликови, стази и режими за играње. Нашата цел е да создадеме игра која што е повеќе интересна отколку реална, и да обезбедиме пријатно искуство за сите возрасти. "
 
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:12
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:12
 msgid ""
 "We have several tracks with various themes for players to enjoy, from "
 "driving underwater, rural farmlands, jungles or even in space! Try your best"
@@ -6812,7 +6812,7 @@ msgid ""
 "your opponents."
 msgstr "Имаме неколку стази со различни теми за играчите да уживаат, од возење под вода, селски обработливи површини, џунгли или дури во вселената! Дадете го вашето најдобро додека избегнувате други возила бидејќи можат да ве престигнат, но не јадете ги бананите! Внимавајте на топки за куглање, алатки за отпушување, гума за џвакање, и торти фрлени од вашите противници"
 
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:15
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:15
 msgid ""
 "You can do a single race against other karts, compete in one of several "
 "Grand Prix, try to beat the high score in time trials on your own, play "
@@ -6821,29 +6821,29 @@ msgid ""
 "your racing skills!"
 msgstr "Можете да се тркате во самостојна игра со други возила, да се натпреварувате во еден од повеќе Гран При, обидете се да го поминете вашиот најдобар резултат во временско ограничени трки самостојно, играјте во режимот борба против компјутерот или вашите пријатели, и повеќе! За поголем предизвик, придружете се онлајн и запознајте играчи од целиот свет и докажете ги вашите возачки вештини!"
 
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:18
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:18
 msgid "This game has no ads."
 msgstr "Оваа игра нема додатоци."
 
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:21
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:21
 msgid ""
-"This is an unstable version of SuperTuxKart that contains latest "
-"improvements. It is released mainly for testing, to make stable STK as good "
+"This is an unstable version of Fluxara Drift that contains latest "
+"improvements. It is released mainly for testing, to make stable FLUXARA_DRIFT as good "
 "as possible."
 msgstr "Ова е нетсабилна верзија од СуперТуксКарт која содржи најнови подобрувања. Издадена е главно за тестирање, да ја направиме стабилна СТК колку што е можно подобро."
 
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:24
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:24
 msgid ""
 "This version can be installed in parallel with the stable version on the "
 "device."
 msgstr "Оваа верзија може да се инсталира паралелно со стабилната верзија на уредот."
 
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:27
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:27
 msgid "If you need more stability, consider using the stable version: %s"
 msgstr "Ако ви треба повеќе стабилност, размислете за користење на стабилната верзија: %s"
 
-#: net.supertuxkart.SuperTuxKart.metainfo.xml:45
-msgid "SuperTuxKart Team"
+#: net.fluxaradrift.FluxaraDrift.metainfo.xml:45
+msgid "Fluxara Drift Team"
 msgstr "СуперТуксКарт Тим"
 
 #. I18N: Motorica EMG control connection-lost dialog on iOS.

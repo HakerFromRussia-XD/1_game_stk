@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2018 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -22,7 +22,7 @@
 #include "network/network_string.hpp"
 #include "network/protocols/game_protocol.hpp"
 #include "network/rewind_manager.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 
 
 /** Loads an event from a server message. It helps encapsulate the encoding

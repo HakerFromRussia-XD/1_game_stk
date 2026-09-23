@@ -3,25 +3,25 @@
 -- Author : RX1
 -- Email  : rx1@posteo.de
 -- Version: 3
--- Source : https://online.supertuxkart.net/addons.php?type=tracks
+-- Source : https://online.fluxaradrift.net/addons.php?type=tracks
 -- License: CC-BY-SA 4.0 - https://creativecommons.org/licenses/by-sa/4.0/
 -- Date   : 2023-05-13
 --------------------------------------------------------------------------------
 
-This track was created with Blender v2.79b and the scripts from "blender_26" folder of the 
-SuperTuxKart Media Repository (Revision 18272). It was tested with SuperTuxKart v1.2 and v1.3.
+This track was created with Blender v2.79b and the scripts from "blender_26" folder of the
+FluxaraDrift Media Repository (Revision 18272). It was tested with FluxaraDrift v1.2 and v1.3.
 
-Files that are listed under headers with the suffix "(source archive)" are not required to play this track 
-and are included in the revision 3 source archive of this track only. The source archive only contains 
-these additional files. All other files (listed below) required to build this track can be taken from 
+Files that are listed under headers with the suffix "(source archive)" are not required to play this track
+and are included in the revision 3 source archive of this track only. The source archive only contains
+these additional files. All other files (listed below) required to build this track can be taken from
 the revision 3 track archive.
 --------------------------------------------------------------------------------
 
-STK Add-Ons version / revision: 3
+FLUXARA_DRIFT Add-Ons version / revision: 3
 Internal version: 1.000
 --------------------------------------------------------------------------------
 
-Following files were taken from SuperTuxKart media repository Revision 18272 (https://sourceforge.net/p/supertuxkart/code/HEAD/tree/):
+Following files were taken from FluxaraDrift media repository Revision 18272 (https://sourceforge.net/p/fluxaradrift/code/HEAD/tree/):
 
 Particle specifications:
 	fire.xml
@@ -43,22 +43,22 @@ Textures:
 	startrack-sky_north.png
 	startrack-sky_top.png
 	startrack-sky_west.png
-	stktex_blueNebula_a.png
+	fluxara_drifttex_blueNebula_a.png
 
-Licenses: See https://github.com/supertuxkart/stk-code
+Licenses: See https://github.com/fluxaradrift/fluxara_drift-code
 --------------------------------------------------------------------------------
 
-Following files were taken from SuperTuxKart media repository Revision 18272 (https://sourceforge.net/p/supertuxkart/code/HEAD/tree/) 
+Following files were taken from FluxaraDrift media repository Revision 18272 (https://sourceforge.net/p/fluxaradrift/code/HEAD/tree/)
 and have been modified by RX1:
 
 Textures:
 	startrack-sky_south_RX.png
-		- Modification: I removed some of the visible artifacts, which were probably left over 
+		- Modification: I removed some of the visible artifacts, which were probably left over
 		  from previous image manipulations.
 
 Export scripts (source archive):
-	_modified_scripts/stk_material_parameters.xml
-		- Modification: The script has been modified to make faster zipper speeds possible 
+	_modified_scripts/fluxara_drift_material_parameters.xml
+		- Modification: The script has been modified to make faster zipper speeds possible
 		  by increasing the values of the "max" parameter in the lines 187-190.
 
 Sounds:
@@ -90,7 +90,7 @@ Particle specifications:
 		- Original file: fire.xml
 		- Modification: more, bigger, longer lasting, wider spreading particles
 
-Licenses: Same as the original files (see https://github.com/supertuxkart/stk-code)
+Licenses: Same as the original files (see https://github.com/fluxaradrift/fluxara_drift-code)
 --------------------------------------------------------------------------------
 
 Following files have been created by RX1 and are released under CC-BY-SA 4.0:
@@ -335,21 +335,21 @@ Textures:
 	texture_solid_red_gravity.png
 --------------------------------------------------------------------------------
 
-Following font sets were made by Harald Koenigsperger and have been downloaded 
+Following font sets were made by Harald Koenigsperger and have been downloaded
 from http://www.dxx-rebirth.com/download-misc/ (external source):
 	descent-ttf/DESCLOGO.TTF
 	descent-ttf/DESCMENU.TTF
 	descent-ttf/DESCSCOR.TTF
-	- Note: These font sets were used for the text of the textures StartSignText4.png, WarningForcefieldText, 
-	  WarningHyperTubeText.png, WarningSlopeText.png. The folder "descent-ttf" contains the license files of 
-	  these font sets. The non-commercial distribution of these fonts is explicitly granted in the 
+	- Note: These font sets were used for the text of the textures StartSignText4.png, WarningForcefieldText,
+	  WarningHyperTubeText.png, WarningSlopeText.png. The folder "descent-ttf" contains the license files of
+	  these font sets. The non-commercial distribution of these fonts is explicitly granted in the
 	  descent-ttf/README.TXT file.
-	  The true type font sets (.ttf files) itself can not be included in this archive because they are 
-	  automatically deleted by the STK Add-ons site during upload. 
+	  The true type font sets (.ttf files) itself can not be included in this archive because they are
+	  automatically deleted by the FLUXARA_DRIFT Add-ons site during upload.
 	  However, they still can be downloaded from http://www.dxx-rebirth.com/download-misc/.
 --------------------------------------------------------------------------------
 
-The sound tracks "Level 2" and "Level 3" were taken from the "Retro Game Music Pack" 
+The sound tracks "Level 2" and "Level 3" were taken from the "Retro Game Music Pack"
 created by Juhani Junkala, downloaded from https://opengameart.org .
 
 License: CC0 1.0 - https://creativecommons.org/publicdomain/zero/1.0/
@@ -360,7 +360,7 @@ These sound tracks were modified by RX1 in following ways:
 	- conversion to ogg format
 	- "Level 3" is played twice, followed by "Level 2"
 	- a fade in effect was added to the first playback of "Level 3"
-After the first playback of "Level 3", in SuperTuxKart "Level 3" and "Level 2" are looped continuously.
+After the first playback of "Level 3", in FluxaraDrift "Level 3" and "Level 2" are looped continuously.
 
 Files:
 	Juhani_Junkala_-_Retro_Game_Music_Pack_Level_3_and_2_LQ.ogg
@@ -383,7 +383,7 @@ Sounds:
 				- increased loudness with compressor tool
 				- exported in .ogg format
 		- license of the modification: CC-BY 3.0 - https://creativecommons.org/licenses/by/3.0/
-		
+
 	constant_fire_looped_louder_LQ.ogg
 		- original sound (name): Fire constant, strong (synthetized) by Nakhas
 			- source: https://freesound.org/people/Nakhas/sounds/569253/
@@ -457,7 +457,7 @@ Sounds:
 		- license of the modification: CC-BY 3.0 - https://creativecommons.org/licenses/by/3.0/
 --------------------------------------------------------------------------------
 
-Following sound file was created by RX1 mixing sounds from 
+Following sound file was created by RX1 mixing sounds from
 https://freesound.org and https://opengameart.org with Audacity v2.2.1:
 
 tube2_4.ogg

@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -39,7 +39,7 @@ class DatabaseConnector;
 class NetworkItemManager;
 class NetworkString;
 class NetworkPlayerProfile;
-class STKPeer;
+class FLUXARA_DRIFTPeer;
 class SocketAddress;
 class Ranking;
 
@@ -55,7 +55,7 @@ public:
     enum ServerState : unsigned int
     {
         SET_PUBLIC_ADDRESS,       // Waiting to receive its public ip address
-        REGISTER_SELF_ADDRESS,    // Register with STK online server
+        REGISTER_SELF_ADDRESS,    // Register with FLUXARA_DRIFT online server
         WAITING_FOR_START_GAME,   // In lobby, waiting for (auto) start game
         SELECTING,                // kart, track, ... selection started
         LOAD_WORLD,               // Server starts loading world
@@ -97,7 +97,7 @@ private:
     std::atomic<ResetState> m_rs_state;
 
     /** AI peer which holds the list of reserved AI for dedicated server. */
-    std::weak_ptr<STKPeer> m_ai_peer;
+    std::weak_ptr<FLUXARA_DRIFTPeer> m_ai_peer;
 
     /** AI profiles for all-in-one graphical client server, this will be a
      *  fixed count thorough the live time of server, which its value is
@@ -118,8 +118,8 @@ private:
     bool m_save_server_config;
 
     /** Counts how many peers have finished loading the world. */
-    std::map<std::weak_ptr<STKPeer>, bool,
-        std::owner_less<std::weak_ptr<STKPeer> > > m_peers_ready;
+    std::map<std::weak_ptr<FLUXARA_DRIFTPeer>, bool,
+        std::owner_less<std::weak_ptr<FLUXARA_DRIFTPeer> > > m_peers_ready;
 
     std::weak_ptr<Online::Request> m_server_registering;
 
@@ -130,9 +130,9 @@ private:
 
     std::map<uint32_t, KeyData> m_keys;
 
-    std::map<std::weak_ptr<STKPeer>,
+    std::map<std::weak_ptr<FLUXARA_DRIFTPeer>,
         std::pair<uint32_t, BareNetworkString>,
-        std::owner_less<std::weak_ptr<STKPeer> > > m_pending_connection;
+        std::owner_less<std::weak_ptr<FLUXARA_DRIFTPeer> > > m_pending_connection;
 
     std::map<std::string, uint64_t> m_pending_peer_connection;
 
@@ -214,16 +214,16 @@ private:
     }
     void addPeerConnection(const std::string& addr_str)
     {
-        m_pending_peer_connection[addr_str] = StkTime::getMonoTimeMs();
+        m_pending_peer_connection[addr_str] = FluxaraDriftTime::getMonoTimeMs();
     }
     void removeExpiredPeerConnection()
     {
         // Remove connect to peer protocol running more than a 45 seconds
-        // (from stk addons poll server request),
+        // (from fluxara_drift addons poll server request),
         for (auto it = m_pending_peer_connection.begin();
              it != m_pending_peer_connection.end();)
         {
-            if (StkTime::getMonoTimeMs() - it->second > 45000)
+            if (FluxaraDriftTime::getMonoTimeMs() - it->second > 45000)
                 it = m_pending_peer_connection.erase(it);
             else
                 it++;
@@ -235,13 +235,13 @@ private:
         std::swap(m_keys, new_keys);
     }
     void handlePendingConnection();
-    void handleUnencryptedConnection(std::shared_ptr<STKPeer> peer,
+    void handleUnencryptedConnection(std::shared_ptr<FLUXARA_DRIFTPeer> peer,
                                      BareNetworkString& data,
                                      uint32_t online_id,
                                      const irr::core::stringw& online_name,
                                      bool is_pending_connection,
                                      std::string country_code = "");
-    bool decryptConnectionRequest(std::shared_ptr<STKPeer> peer,
+    bool decryptConnectionRequest(std::shared_ptr<FLUXARA_DRIFTPeer> peer,
                                   BareNetworkString& data,
                                   const std::string& key,
                                   const std::string& iv,
@@ -270,10 +270,10 @@ private:
     void encodePlayers(BareNetworkString* bns,
         std::vector<std::shared_ptr<NetworkPlayerProfile> >& players) const;
     std::vector<std::shared_ptr<NetworkPlayerProfile> > getLivePlayers() const;
-    void setPlayerKarts(const NetworkString& ns, STKPeer* peer) const;
-    bool handleAssets(const NetworkString& ns, STKPeer* peer);
+    void setPlayerKarts(const NetworkString& ns, FLUXARA_DRIFTPeer* peer) const;
+    bool handleAssets(const NetworkString& ns, FLUXARA_DRIFTPeer* peer);
     void liveJoinRequest(Event* event);
-    void rejectLiveJoin(STKPeer* peer, BackLobbyReason blr);
+    void rejectLiveJoin(FLUXARA_DRIFTPeer* peer, BackLobbyReason blr);
     bool canLiveJoinNow() const;
     bool worldIsActive() const;
     int getReservedId(std::shared_ptr<NetworkPlayerProfile>& p,
@@ -281,11 +281,11 @@ private:
     void handleKartInfo(Event* event);
     void clientInGameWantsToBackLobby(Event* event);
     void clientSelectingAssetsWantsToBackLobby(Event* event);
-    std::set<std::shared_ptr<STKPeer>> getSpectatorsByLimit();
-    void kickPlayerWithReason(STKPeer* peer, const char* reason) const;
-    void testBannedForIP(STKPeer* peer) const;
-    void testBannedForIPv6(STKPeer* peer) const;
-    void testBannedForOnlineId(STKPeer* peer, uint32_t online_id) const;
+    std::set<std::shared_ptr<FLUXARA_DRIFTPeer>> getSpectatorsByLimit();
+    void kickPlayerWithReason(FLUXARA_DRIFTPeer* peer, const char* reason) const;
+    void testBannedForIP(FLUXARA_DRIFTPeer* peer) const;
+    void testBannedForIPv6(FLUXARA_DRIFTPeer* peer) const;
+    void testBannedForOnlineId(FLUXARA_DRIFTPeer* peer, uint32_t online_id) const;
     void writePlayerReport(Event* event);
     bool supportsAI();
     void updateAddons();
@@ -295,7 +295,7 @@ public:
 
     /** Hold the next connected peer for server owner if current one expired
      * (disconnected). */
-    std::weak_ptr<STKPeer> m_server_owner;
+    std::weak_ptr<FLUXARA_DRIFTPeer> m_server_owner;
 
     /** Official karts and tracks available in server. */
     // FIXME: We should use two different variables instead of this weird
@@ -313,8 +313,8 @@ public:
     /** Addon soccers available in server. */
     std::set<std::string> m_addon_soccers;
 
-    std::map<std::weak_ptr<STKPeer>, std::set<irr::core::stringw>,
-        std::owner_less<std::weak_ptr<STKPeer> > > m_peers_muted_players;
+    std::map<std::weak_ptr<FLUXARA_DRIFTPeer>, std::set<irr::core::stringw>,
+        std::owner_less<std::weak_ptr<FLUXARA_DRIFTPeer> > > m_peers_muted_players;
 
              ServerLobby();
     virtual ~ServerLobby();

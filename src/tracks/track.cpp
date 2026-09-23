@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //
 //  Copyright (C) 2004-2015  Steve Baker <sjbaker1@airmail.net>
 //  Copyright (C) 2009-2015  Joerg Henrichs, Steve Baker
@@ -25,7 +25,7 @@
 #include "challenges/unlock_manager.hpp"
 #include "config/favorite_status.hpp"
 #include "config/player_manager.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "graphics/camera/camera_end.hpp"
 #include "graphics/camera/camera_normal.hpp"
@@ -44,7 +44,7 @@
 #include "graphics/render_target.hpp"
 #include "graphics/shader_based_renderer.hpp"
 #include "graphics/shader_files_manager.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "graphics/sp/sp_base.hpp"
 #include "graphics/sp/sp_mesh.hpp"
 #include "graphics/sp/sp_mesh_buffer.hpp"
@@ -535,7 +535,7 @@ void Track::loadTrackInfo()
     m_fog_height_start      = 0.0f;
     m_fog_height_end        = 100.0f;
     m_gravity               = 9.80665f;
-    m_friction              = stk_config->m_default_track_friction;
+    m_friction              = fluxara_drift_config->m_default_track_friction;
     m_smooth_normals        = false;
     m_godrays               = false;
     m_godrays_opacity       = 1.0f;
@@ -714,7 +714,7 @@ void Track::getMusicInformation(std::vector<std::string>&       filenames,
 
     if (m_music.empty() && !isInternal() && !m_is_cutscene)
     {
-        m_music.push_back(stk_config->m_default_music);
+        m_music.push_back(fluxara_drift_config->m_default_music);
 
         Log::warn("Track",
             "Music information for track '%s' replaced by default music.",
@@ -1029,7 +1029,7 @@ void Track::convertTrackToBullet(scene::ISceneNode *node,
                 for (unsigned int j = 0; j < mb->getIndexCount(); j += 3)
                 {
                     TriangleMesh* tmesh = m_track_mesh;
-                    Material* material = spmb->getSTKMaterial(j);
+                    Material* material = spmb->getFLUXARA_DRIFTMaterial(j);
                     if (material->isSurface())
                     {
                         tmesh = m_gfx_effect_mesh;
@@ -1528,7 +1528,7 @@ bool Track::loadMainTrack(const XMLNode &root)
                             {
                                 std::string fp = file_manager->getFileSystem()->getAbsolutePath
                                     (sshot.c_str()).c_str();
-                                spmb->setSTKMaterial(
+                                spmb->setFLUXARA_DRIFTMaterial(
                                     material_manager->getDefaultSPMaterial("alphablend", fp, true/*full_path*/));
                             }
                         }
@@ -1651,7 +1651,7 @@ void Track::handleAnimatedTextures(scene::ISceneNode *node, const XMLNode &xml)
             for (unsigned i = 0; i < spmn->getSPM()->getMeshBufferCount(); i++)
             {
                 SP::SPMeshBuffer* spmb = spmn->getSPM()->getSPMeshBuffer(i);
-                const std::vector<Material*>& m = spmb->getAllSTKMaterials();
+                const std::vector<Material*>& m = spmb->getAllFLUXARA_DRIFTMaterials();
                 bool found = false;
                 for (unsigned j = 0; j < m.size(); j++)
                 {
@@ -1729,7 +1729,7 @@ void Track::updateGraphics(float dt)
  */
 void Track::update(int ticks)
 {
-    ProcessType type = STKProcess::getType();
+    ProcessType type = FLUXARA_DRIFTProcess::getType();
     if (type == PT_MAIN && !m_startup_run) // first time running update = good point to run startup script
     {
         Scripting::ScriptEngine::getInstance()->runFunction(false, "void onStart()");
@@ -1742,7 +1742,7 @@ void Track::update(int ticks)
             m_current_track[PT_CHILD] = child_track;
         }
     }
-    float dt = stk_config->ticks2Time(ticks);
+    float dt = fluxara_drift_config->ticks2Time(ticks);
     m_check_manager->update(dt);
     m_item_manager->update(ticks);
 
@@ -1898,7 +1898,7 @@ void Track::loadTrackModel(bool reverse_track, unsigned int mode_id)
     assert(m_current_track[PT_MAIN].load() == NULL);
 
     // Use m_filename to also get the path, not only the identifier
-    STKTexManager::getInstance()
+    FLUXARA_DRIFTTexManager::getInstance()
         ->setTextureErrorMessage("While loading track '%s'", m_filename);
     if(!m_reverse_available)
     {
@@ -2033,7 +2033,7 @@ void Track::loadTrackModel(bool reverse_track, unsigned int mode_id)
     else
     {
         // Seed random engine locally
-        uint32_t seed = (uint32_t)StkTime::getTimeSinceEpoch();
+        uint32_t seed = (uint32_t)FluxaraDriftTime::getTimeSinceEpoch();
         ItemManager::updateRandomSeed(seed);
         m_item_manager = std::make_shared<ItemManager>();
         powerup_manager->setRandomSeed(seed);
@@ -2062,7 +2062,7 @@ void Track::loadTrackModel(bool reverse_track, unsigned int mode_id)
         {
             // In a FTL race the non-leader karts are placed at the end of the
             // field, so we need all start positions.
-            m_start_transforms.resize(stk_config->m_max_karts);
+            m_start_transforms.resize(fluxara_drift_config->m_max_karts);
         }
         else
             m_start_transforms.resize(RaceManager::get()->getNumberOfKarts());
@@ -2299,7 +2299,7 @@ void Track::loadTrackModel(bool reverse_track, unsigned int mode_id)
             m_track_object_manager->removeDriveableObject(to);
             TrackObjectPresentationSceneNode* ts =
                 to->getPresentation<TrackObjectPresentationSceneNode>();
-            // physicial only node is always hidden, remove it from stk after
+            // physicial only node is always hidden, remove it from fluxara_drift after
             // joining to track mesh
             if (ts && ts->isAlwaysHidden())
                 objs_removing.push_back(to);
@@ -2405,7 +2405,7 @@ void Track::loadTrackModel(bool reverse_track, unsigned int mode_id)
     }
     main_loop->renderGUI(6100);
 
-    STKTexManager::getInstance()->unsetTextureErrorMessage();
+    FLUXARA_DRIFTTexManager::getInstance()->unsetTextureErrorMessage();
 #ifndef SERVER_ONLY
     if (CVS->isGLSL())
     {
@@ -3079,7 +3079,7 @@ void Track::copyFromMainProcess()
 void Track::initChildTrack()
 {
     // This will be called in child process after main one copied to it
-    assert(STKProcess::getType() == PT_CHILD);
+    assert(FLUXARA_DRIFTProcess::getType() == PT_CHILD);
     // Add in child process for rewind manager
     std::dynamic_pointer_cast<NetworkItemManager>
         (m_item_manager)->rewinderAdd();
@@ -3106,7 +3106,7 @@ void Track::initChildTrack()
 //-----------------------------------------------------------------------------
 void Track::cleanChildTrack()
 {
-    assert(STKProcess::getType() == PT_CHILD);
+    assert(FLUXARA_DRIFTProcess::getType() == PT_CHILD);
     Track* child_track = m_current_track[PT_CHILD];
     child_track->m_item_manager = nullptr;
     delete child_track->m_check_manager;

@@ -30,11 +30,11 @@ out vec4 Diff;
 out vec4 Spec;
 #endif
 
-#stk_include "utils/decodeNormal.frag"
-#stk_include "utils/SpecularBRDF.frag"
-#stk_include "utils/DiffuseBRDF.frag"
-#stk_include "utils/getPosFromUVDepth.frag"
-#stk_include "utils/SunMRP.frag"
+#fluxara_drift_include "utils/decodeNormal.frag"
+#fluxara_drift_include "utils/SpecularBRDF.frag"
+#fluxara_drift_include "utils/DiffuseBRDF.frag"
+#fluxara_drift_include "utils/getPosFromUVDepth.frag"
+#fluxara_drift_include "utils/SunMRP.frag"
 
 // https://web.archive.org/web/20230210095515/http://the-witness.net/news/2013/09/shadow-mapping-summary-part-1
 float getShadowFactor(vec3 pos, int index)

@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2014-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2014-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -26,7 +26,7 @@
 #include "network/network_string.hpp"
 #include "network/protocols/client_lobby.hpp"
 #include "network/server.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "states_screens/state_manager.hpp"
 #include "states_screens/online/networking_lobby.hpp"
 #include "states_screens/online/tracks_screen.hpp"
@@ -85,10 +85,10 @@ void NetworkKartSelectionScreen::init()
  */
 void NetworkKartSelectionScreen::onUpdate(float dt)
 {
-    if (StkTime::getMonoTimeMs() > m_exit_timeout)
+    if (FluxaraDriftTime::getMonoTimeMs() > m_exit_timeout)
     {
         // Reset the screen to networking menu if failed to back to lobby
-        STKHost::get()->shutdown();
+        FLUXARA_DRIFTHost::get()->shutdown();
         StateManager::get()->resetAndSetStack(
             NetworkConfig::get()->getResetScreens().data());
         NetworkConfig::get()->unsetNetworking();
@@ -157,7 +157,7 @@ void NetworkKartSelectionScreen::allPlayersDone()
             kart_data.encode(&kart);
         }
     }
-    STKHost::get()->sendToServer(&kart, true);
+    FLUXARA_DRIFTHost::get()->sendToServer(&kart, true);
 
     // ---- Switch to assign mode
     input_manager->getDeviceManager()->setAssignMode(ASSIGN);
@@ -185,10 +185,10 @@ bool NetworkKartSelectionScreen::onEscapePressed()
         {
             // Send go back lobby event to server with an exit timeout, so if
             // server doesn't react in time we exit the server
-            m_exit_timeout = StkTime::getMonoTimeMs() + 5000;
+            m_exit_timeout = FluxaraDriftTime::getMonoTimeMs() + 5000;
             NetworkString back(PROTOCOL_LOBBY_ROOM);
             back.addUInt8(LobbyProtocol::LE_CLIENT_BACK_LOBBY);
-            STKHost::get()->sendToServer(&back, true);
+            FLUXARA_DRIFTHost::get()->sendToServer(&back, true);
         }
         return false;
     }

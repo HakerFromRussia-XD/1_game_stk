@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Automate the build process on Linux based on 
-# http://supertuxkart.net/Build_STK_on_Linux
+# http://fluxaradrift.net/Build_FLUXARA_DRIFT_on_Linux
 
 # CMake build type
 BUILDTYPE=Debug
@@ -70,6 +70,6 @@ echo
 #git status
 #git submodule foreach git status
 #git submodule foreach git rev-parse HEAD
-#ls -l cmake_build/bin/supertuxkart
+#ls -l cmake_build/bin/fluxaradrift
 
 cd "$CURRENTDIR"

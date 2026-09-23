@@ -56,7 +56,7 @@ namespace video
 		/** Supports shaders etc. */
 		EDT_OGLES2,
 
-		//! A driver using vulkan coded by STK
+		//! A driver using vulkan coded by FLUXARA_DRIFT
 		EDT_VULKAN,
 
 		//! No driver, just for counting the elements

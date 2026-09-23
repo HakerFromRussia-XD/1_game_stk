@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2025 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2025 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -40,7 +40,7 @@ class DatabaseConnector;
 class NetworkItemManager;
 class NetworkString;
 class NetworkPlayerProfile;
-class STKPeer;
+class FLUXARA_DRIFTPeer;
 class SocketAddress;
 class Ranking;
 
@@ -99,21 +99,21 @@ namespace ChatCommands
     };
 
 
-    void answerCommand(CommandAnswers command_id, std::shared_ptr<STKPeer> peer, std::string args = "");
+    void answerCommand(CommandAnswers command_id, std::shared_ptr<FLUXARA_DRIFTPeer> peer, std::string args = "");
     irr::core::stringw getAnswerString(CommandAnswers command_id, std::string args);
-    void handleServerCommand(ServerLobby* lobby, Event* event, std::shared_ptr<STKPeer> peer);
+    void handleServerCommand(ServerLobby* lobby, Event* event, std::shared_ptr<FLUXARA_DRIFTPeer> peer);
 
-    void help(std::string cmd, std::shared_ptr<STKPeer> peer);
-    void helpMessage(std::string cmd_name, std::shared_ptr<STKPeer> peer, bool extra_info = false);
-    void spectate(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer);
-    void listServerAddons(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer);
-    void playerHasAddon(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer);
-    void serverHasAddon(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer);
-    void playerAddonScore(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer);
-    void kick(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer);
-    void mute(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer);
-    void unmute(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer);
-    void listMute(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer);
+    void help(std::string cmd, std::shared_ptr<FLUXARA_DRIFTPeer> peer);
+    void helpMessage(std::string cmd_name, std::shared_ptr<FLUXARA_DRIFTPeer> peer, bool extra_info = false);
+    void spectate(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer);
+    void listServerAddons(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer);
+    void playerHasAddon(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer);
+    void serverHasAddon(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer);
+    void playerAddonScore(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer);
+    void kick(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer);
+    void mute(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer);
+    void unmute(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer);
+    void listMute(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer);
 }
 
 #endif // CHAT_COMMANDS_HPP

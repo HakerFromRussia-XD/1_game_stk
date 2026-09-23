@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -22,14 +22,14 @@
 
 #include <irrString.h>
 
-#include "guiengine/widgets/CGUISTKListBox.hpp"
+#include "guiengine/widgets/CGUIFLUXARA_DRIFTListBox.hpp"
 #include "guiengine/widget.hpp"
 #include "utils/leak_check.hpp"
 #include "utils/ptr_vector.hpp"
 #include "IGUIElement.h"
 
 
-namespace irr { namespace gui { class STKModifiedSpriteBank; } }
+namespace irr { namespace gui { class FLUXARA_DRIFTModifiedSpriteBank; } }
 
 namespace GUIEngine
 {
@@ -54,7 +54,7 @@ namespace GUIEngine
         bool m_use_icons;
         
         /** \brief if m_use_icons is true, this will contain the icon bank */
-        irr::gui::STKModifiedSpriteBank* m_icons;
+        irr::gui::FLUXARA_DRIFTModifiedSpriteBank* m_icons;
                 
         PtrVector< Widget > m_header_elements;
         
@@ -116,7 +116,7 @@ namespace GUIEngine
         irr::core::rect<s32> getListBoxSize() const;
 
     public:
-        typedef irr::gui::CGUISTKListBox::ListItem ListItem;
+        typedef irr::gui::CGUIFLUXARA_DRIFTListBox::ListItem ListItem;
         typedef ListItem::ListCell ListCell;
         
         LEAK_CHECK()
@@ -143,7 +143,7 @@ namespace GUIEngine
           *        you're done with it (but do not delete it when the list widget is still active)
           * \pre may only be called after the widget has been added to the screen with add()
           */
-        void setIcons(irr::gui::STKModifiedSpriteBank* icons);
+        void setIcons(irr::gui::FLUXARA_DRIFTModifiedSpriteBank* icons);
 
         void setLineHeightScale(float scale);
         

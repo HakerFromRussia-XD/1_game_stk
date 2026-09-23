@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2013-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -24,7 +24,7 @@
 #include "network/network_config.hpp"
 #include "network/network_string.hpp"
 #include "network/socket_address.hpp"
-#include "network/stk_ipv6.hpp"
+#include "network/fluxara_drift_ipv6.hpp"
 #include "utils/file_utils.hpp"
 #include "utils/log.hpp"
 #include "utils/time.hpp"
@@ -85,7 +85,7 @@ Network::Network(int peer_count, int channel_limit,
         socklen_t len = sizeof(ss);
         if (getsockname(m_host->socket, (struct sockaddr*)&ss, &len) == -1)
         {
-            Log::error("STKHost", "Error while using getsockname().");
+            Log::error("FLUXARA_DRIFTHost", "Error while using getsockname().");
             m_port = 0;
         }
         else
@@ -176,7 +176,7 @@ int Network::receiveRawPacket(char *buffer, int buf_len,
     while(len < 0 && (count<max_tries || max_tries==-1) )
     {
         count++;
-        StkTime::sleep(1); // wait 1 millisecond between two checks
+        FluxaraDriftTime::sleep(1); // wait 1 millisecond between two checks
         len = recvfrom(m_host->socket, buffer, buf_len, 0,
                        (struct sockaddr*)(&addr), &from_len);
     }
@@ -230,7 +230,7 @@ void Network::openLog()
             ->getUserConfigFile(FileManager::getStdoutName()+".packet");
         m_log_file.setAtomic(FileUtils::fopenU8Path(s, "w+"));
         if (!m_log_file.getData())
-            Log::warn("STKHost", "Network packets won't be logged: no file.");
+            Log::warn("FLUXARA_DRIFTHost", "Network packets won't be logged: no file.");
     }
 }   // openLog
 
@@ -249,7 +249,7 @@ void Network::logPacket(const BareNetworkString &ns, bool incoming)
 
     m_log_file.lock();
     fprintf(m_log_file.getData(), "[%d\t]  %s  ",
-            (int)(StkTime::getRealTime()), arrow);
+            (int)(FluxaraDriftTime::getRealTime()), arrow);
     // Indentation for all lines after the first, so that the dump
     // is nicely aligned.
     std::string indent("                ");
@@ -263,7 +263,7 @@ void Network::closeLog()
     {
         m_log_file.lock();
         fclose(m_log_file.getData());
-        Log::warn("STKHost", "Packet logging file has been closed.");
+        Log::warn("FLUXARA_DRIFTHost", "Packet logging file has been closed.");
         m_log_file.getData() = NULL;
         m_log_file.unlock();
     }

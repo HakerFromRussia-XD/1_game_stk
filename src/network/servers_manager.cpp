@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
 //  This program is free software; you can redistribute it and/or
@@ -18,7 +18,7 @@
 
 #include "network/servers_manager.hpp"
 
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "io/xml_node.hpp"
 #include "network/network.hpp"
@@ -26,8 +26,8 @@
 #include "network/network_string.hpp"
 #include "network/server.hpp"
 #include "network/socket_address.hpp"
-#include "network/stk_host.hpp"
-#include "network/stk_ipv6.hpp"
+#include "network/fluxara_drift_host.hpp"
+#include "network/fluxara_drift_ipv6.hpp"
 #include "online/xml_request.hpp"
 #include "online/request_manager.hpp"
 #include "utils/translation.hpp"
@@ -94,7 +94,7 @@ ServersManager::~ServersManager()
 
 // ----------------------------------------------------------------------------
 /** Returns a WAN update-list-of-servers request. It queries the
- *  STK server for an up-to-date list of servers.
+ *  FLUXARA_DRIFT server for an up-to-date list of servers.
  */
 std::shared_ptr<ServerList> ServersManager::getWANRefreshRequest() const
 {
@@ -113,7 +113,7 @@ std::shared_ptr<ServerList> ServersManager::getWANRefreshRequest() const
         : Online::XMLRequest(/*priority*/100)
         {
             NetworkConfig::queueIPDetection();
-            m_creation_time = StkTime::getMonoTimeMs();
+            m_creation_time = FluxaraDriftTime::getMonoTimeMs();
             m_server_list = server_list;
         }
         // --------------------------------------------------------------------
@@ -121,7 +121,7 @@ std::shared_ptr<ServerList> ServersManager::getWANRefreshRequest() const
         {
             Online::XMLRequest::afterOperation();
             // Wait at most 2 seconds for ip detection
-            uint64_t timeout = StkTime::getMonoTimeMs() - m_creation_time;
+            uint64_t timeout = FluxaraDriftTime::getMonoTimeMs() - m_creation_time;
             if (timeout > 2000)
                 timeout = 0;
             else
@@ -148,8 +148,8 @@ std::shared_ptr<ServerList> ServersManager::getWANRefreshRequest() const
                 int version = 0;
                 si->get("version", &version);
                 assert(version != 0);
-                if (version < stk_config->m_max_server_version ||
-                    version > stk_config->m_max_server_version)
+                if (version < fluxara_drift_config->m_max_server_version ||
+                    version > fluxara_drift_config->m_max_server_version)
                 {
                     Log::verbose("ServersManager", "Skipping a server");
                     continue;
@@ -244,7 +244,7 @@ std::shared_ptr<ServerList> ServersManager::getLANRefreshRequest() const
             {
                 Log::info("Server Discovery", "Broadcasting to %s",
                           bcast_addr.toString().c_str());
-                broadcast->sendRawPacket(std::string("stk-server"), bcast_addr);
+                broadcast->sendRawPacket(std::string("fluxara_drift-server"), bcast_addr);
             }
 
             Log::info("ServersManager", "Sent broadcast message.");
@@ -253,7 +253,7 @@ std::shared_ptr<ServerList> ServersManager::getLANRefreshRequest() const
             char buffer[LEN];
             // Wait for up to 0.5 seconds to receive an answer from
             // any local servers.
-            uint64_t start_time = StkTime::getMonoTimeMs();
+            uint64_t start_time = FluxaraDriftTime::getMonoTimeMs();
             const uint64_t DURATION = 1000;
             int cur_server_id = 0;
             // Use a map with the server name as key to automatically remove
@@ -262,7 +262,7 @@ std::shared_ptr<ServerList> ServersManager::getLANRefreshRequest() const
             // because e.g. a local client would answer as 127.0.0.1 and
             // 192.168.**.
             std::map<irr::core::stringw, std::shared_ptr<Server> > servers_now;
-            while (StkTime::getMonoTimeMs() - start_time < DURATION)
+            while (FluxaraDriftTime::getMonoTimeMs() - start_time < DURATION)
             {
                 SocketAddress sender;
                 int len = broadcast->receiveRawPacket(buffer, LEN, &sender, 1);
@@ -270,8 +270,8 @@ std::shared_ptr<ServerList> ServersManager::getLANRefreshRequest() const
                 {
                     BareNetworkString s(buffer, len);
                     int version = s.getUInt32();
-                    if (version < stk_config->m_max_server_version ||
-                        version > stk_config->m_max_server_version)
+                    if (version < fluxara_drift_config->m_max_server_version ||
+                        version > fluxara_drift_config->m_max_server_version)
                     {
                         Log::verbose("ServersManager", "Skipping a server");
                         continue;
@@ -340,7 +340,7 @@ std::vector<SocketAddress> ServersManager::getDefaultBroadcastAddresses()
 {
     // Add some common LAN addresses
     std::vector<SocketAddress> result;
-    uint16_t port = stk_config->m_server_discovery_port;
+    uint16_t port = fluxara_drift_config->m_server_discovery_port;
     result.emplace_back(std::string("192.168.255.255"), port);
     result.emplace_back(std::string("192.168.0.255"), port);
     result.emplace_back(std::string("192.168.1.255"), port);
@@ -379,7 +379,7 @@ void ServersManager::addAllBroadcastAddresses(const SocketAddress &a, int len,
     {
         unsigned int mask = (1 << len) - 1;
         SocketAddress bcast(a.getIP() | mask,
-            stk_config->m_server_discovery_port);
+            fluxara_drift_config->m_server_discovery_port);
         Log::info("Broadcast", "address %s length %d mask %x --> %s",
             a.toString().c_str(),
             len, mask,
@@ -468,7 +468,7 @@ std::vector<SocketAddress> ServersManager::getBroadcastAddresses(bool ipv6)
                 continue;
             used_scope_id.insert(idx);
             SocketAddress socket_address("ff02::1",
-                stk_config->m_server_discovery_port);
+                fluxara_drift_config->m_server_discovery_port);
             sockaddr_in6* in6 = (sockaddr_in6*)socket_address.getSockaddr();
             in6->sin6_scope_id = idx;
             result.push_back(socket_address);
@@ -545,7 +545,7 @@ std::vector<SocketAddress> ServersManager::getBroadcastAddresses(bool ipv6)
                     continue;
                 used_scope_id.insert(scope_id);
                 SocketAddress socket_address("ff02::1",
-                    stk_config->m_server_discovery_port);
+                    fluxara_drift_config->m_server_discovery_port);
                 in6 = (sockaddr_in6*)socket_address.getSockaddr();
                 in6->sin6_scope_id = scope_id;
                 result.push_back(socket_address);

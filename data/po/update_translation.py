@@ -19,7 +19,7 @@ json_headers = {
 }
 
 def get_translation(lang):
-    payload = '{\"data\":{\"attributes\":{\"callback_url\":null,\"content_encoding\":\"text\",\"file_type\":\"default\",\"mode\":\"default\",\"pseudo\":false},\"relationships\":{\"language\":{\"data\":{\"type\":\"languages\",\"id\":\"l:' + lang + '\"}},\"resource\":{\"data\":{\"type\":\"resources\",\"id\":\"o:supertuxkart:p:supertuxkart:r:supertuxkartpot\"}}},\"type\":\"resource_translations_async_downloads\"}}'
+    payload = '{\"data\":{\"attributes\":{\"callback_url\":null,\"content_encoding\":\"text\",\"file_type\":\"default\",\"mode\":\"default\",\"pseudo\":false},\"relationships\":{\"language\":{\"data\":{\"type\":\"languages\",\"id\":\"l:' + lang + '\"}},\"resource\":{\"data\":{\"type\":\"resources\",\"id\":\"o:fluxaradrift:p:fluxaradrift:r:fluxaradriftpot\"}}},\"type\":\"resource_translations_async_downloads\"}}'
     url = "https://rest.api.transifex.com/resource_translations_async_downloads"
     response = requests.post(url, data=payload, headers=json_headers)
     if not "data" in response.json().keys():

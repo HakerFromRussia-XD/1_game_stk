@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2013-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -55,8 +55,8 @@
 #include "network/race_event_manager.hpp"
 #include "network/server.hpp"
 #include "network/server_config.hpp"
-#include "network/stk_host.hpp"
-#include "network/stk_peer.hpp"
+#include "network/fluxara_drift_host.hpp"
+#include "network/fluxara_drift_peer.hpp"
 #include "race/grand_prix_manager.hpp"
 #include "replay/replay_play.hpp"
 #include "online/online_profile.hpp"
@@ -244,15 +244,15 @@ bool ClientLobby::notifyEventAsynchronous(Event* event)
     else if (event->getType() == EVENT_TYPE_DISCONNECTED)
     {
         // This means we left essentially.
-        // We can't delete STKHost from this thread, since the main
-        // thread might still test if STKHost exists and then call
+        // We can't delete FLUXARA_DRIFTHost from this thread, since the main
+        // thread might still test if FLUXARA_DRIFTHost exists and then call
         // the ProtocolManager, which might already have been deleted.
-        // So only signal that STKHost should exit, which will be tested
+        // So only signal that FLUXARA_DRIFTHost should exit, which will be tested
         // from the main thread.
-        STKHost::get()->disconnectAllPeers(false/*timeout_waiting*/);
-        STKHost::get()->setErrorMessage(
+        FLUXARA_DRIFTHost::get()->disconnectAllPeers(false/*timeout_waiting*/);
+        FLUXARA_DRIFTHost::get()->setErrorMessage(
             m_disconnected_msg.at(event->getPeerDisconnectInfo()));
-        STKHost::get()->requestShutdown();
+        FLUXARA_DRIFTHost::get()->requestShutdown();
     } // disconnection
     return true;
 }   // notifyEventAsynchronous
@@ -289,13 +289,13 @@ void ClientLobby::addAllPlayers(Event* event)
     if (!checkDataSize(event, 1))
     {
         // If recieved invalid message for players leave now
-        STKHost::get()->disconnectAllPeers(false/*timeout_waiting*/);
-        STKHost::get()->requestShutdown();
+        FLUXARA_DRIFTHost::get()->disconnectAllPeers(false/*timeout_waiting*/);
+        FLUXARA_DRIFTHost::get()->requestShutdown();
         return;
     }
     // Timeout is too slow to synchronize, force it to stop and set current
     // time
-    if (!STKHost::get()->getNetworkTimerSynchronizer()->isSynchronised())
+    if (!FLUXARA_DRIFTHost::get()->getNetworkTimerSynchronizer()->isSynchronised())
     {
         if (ServerConfig::m_voting_timeout >= 10.0f)
         {
@@ -305,7 +305,7 @@ void ClientLobby::addAllPlayers(Event* event)
                 "start, maybe you enter the game too quick? (at least 5 "
                 "seconds are required for synchronization.");
         }
-        STKHost::get()->getNetworkTimerSynchronizer()->enableForceSetTimer();
+        FLUXARA_DRIFTHost::get()->getNetworkTimerSynchronizer()->enableForceSetTimer();
     }
 
     NetworkString& data = event->data();
@@ -316,7 +316,7 @@ void ClientLobby::addAllPlayers(Event* event)
     if (!GUIEngine::isNoGraphics())
         TracksScreen::getInstance()->setResult(winner_peer_id, winner_vote);
 
-    std::shared_ptr<STKPeer> peer = event->getPeerSP();
+    std::shared_ptr<FLUXARA_DRIFTPeer> peer = event->getPeerSP();
     peer->cleanPlayerProfiles();
     m_server_send_live_load_world = data.getUInt8() == 1;
 
@@ -374,7 +374,7 @@ void ClientLobby::addAllPlayers(Event* event)
 /* Get list of players from server and see if we are spectating it. */
 std::vector<std::shared_ptr<NetworkPlayerProfile> >
   ClientLobby::decodePlayers(const BareNetworkString& data,
-                             std::shared_ptr<STKPeer> peer,
+                             std::shared_ptr<FLUXARA_DRIFTPeer> peer,
                              bool* is_spectator) const
 {
     std::vector<std::shared_ptr<NetworkPlayerProfile> > players;
@@ -391,7 +391,7 @@ std::vector<std::shared_ptr<NetworkPlayerProfile> >
         KartTeam team = (KartTeam)data.getUInt8();
         std::string country_code;
         data.decodeString(&country_code);
-        if (is_spectator && host_id == STKHost::get()->getMyHostId())
+        if (is_spectator && host_id == FLUXARA_DRIFTHost::get()->getMyHostId())
             *is_spectator = false;
         auto player = std::make_shared<NetworkPlayerProfile>(peer, player_name,
             host_id, kart_color, online_id, handicap, local_id, team, country_code);
@@ -417,8 +417,8 @@ void ClientLobby::update(int ticks)
         NetworkString* ns = getNetworkString(m_type);
         ns->addUInt8(LE_CONNECTION_REQUESTED)
             .addUInt32(ServerConfig::m_server_version).encodeString(ua)
-            .addUInt16((uint16_t)stk_config->m_network_capabilities.size());
-        for (const std::string& cap : stk_config->m_network_capabilities)
+            .addUInt16((uint16_t)fluxara_drift_config->m_network_capabilities.size());
+        for (const std::string& cap : fluxara_drift_config->m_network_capabilities)
             ns->encodeString(cap);
 
         getKartsTracksNetworkString(ns);
@@ -486,7 +486,7 @@ void ClientLobby::update(int ticks)
         if (!m_received_server_result)
         {
             m_received_server_result = true;
-            m_auto_back_to_lobby_time = StkTime::getMonoTimeMs() + 5000;
+            m_auto_back_to_lobby_time = FluxaraDriftTime::getMonoTimeMs() + 5000;
             // In case someone opened paused race dialog or menu in network game
             GUIEngine::ModalDialog::dismiss();
             GUIEngine::ScreenKeyboard::dismiss();
@@ -495,7 +495,7 @@ void ClientLobby::update(int ticks)
             World::getWorld()->enterRaceOverState();
         }
         if (NetworkConfig::get()->isAutoConnect() &&
-            StkTime::getMonoTimeMs() > m_auto_back_to_lobby_time)
+            FluxaraDriftTime::getMonoTimeMs() > m_auto_back_to_lobby_time)
         {
             m_auto_back_to_lobby_time = std::numeric_limits<uint64_t>::max();
             doneWithResults();
@@ -508,7 +508,7 @@ void ClientLobby::update(int ticks)
     case REQUESTING_CONNECTION:
     case CONNECTED:
         if (m_start_live_game_time != std::numeric_limits<uint64_t>::max() &&
-            STKHost::get()->getNetworkTimer() >= m_start_live_game_time)
+            FLUXARA_DRIFTHost::get()->getNetworkTimer() >= m_start_live_game_time)
         {
             finishLiveJoin();
         }
@@ -518,7 +518,7 @@ void ClientLobby::update(int ticks)
             m_auto_started = true;
             NetworkString start(PROTOCOL_LOBBY_ROOM);
             start.addUInt8(LobbyProtocol::LE_REQUEST_BEGIN);
-            STKHost::get()->sendToServer(&start, true);
+            FLUXARA_DRIFTHost::get()->sendToServer(&start, true);
         }
         if (m_background_download.joinable())
         {
@@ -575,7 +575,7 @@ void ClientLobby::finalizeConnectionRequest(NetworkString* header,
         delete header;
         if (encrypt)
         {
-            STKHost::get()->getServerPeerForClient()
+            FLUXARA_DRIFTHost::get()->getServerPeerForClient()
                 ->setCrypto(std::move(crypto));
         }
     }
@@ -686,7 +686,7 @@ void ClientLobby::connectionAccepted(Event* event)
     }
 
     uint32_t host_id = data.getUInt32();
-    STKHost::get()->setMyHostId(host_id);
+    FLUXARA_DRIFTHost::get()->setMyHostId(host_id);
     if (auto sl = LobbyProtocol::getByType<ServerLobby>(PT_CHILD))
         sl->setClientServerHostId(host_id);
 
@@ -883,7 +883,7 @@ void ClientLobby::updatePlayerList(Event* event)
         else
             lp.m_kart_team = team;
         // No handicap for AI peer
-        if (!ai && lp.m_host_id == STKHost::get()->getMyHostId())
+        if (!ai && lp.m_host_id == FLUXARA_DRIFTHost::get()->getMyHostId())
         {
             if (is_peer_server_owner)
                 client_server_owner = true;
@@ -893,7 +893,7 @@ void ClientLobby::updatePlayerList(Event* event)
         data.decodeString(&lp.m_country_code);
         m_lobby_players.push_back(lp);
     }
-    STKHost::get()->setAuthorisedToControl(client_server_owner);
+    FLUXARA_DRIFTHost::get()->setAuthorisedToControl(client_server_owner);
 
     // Notification sound for new player
     if (!m_total_players.empty() &&
@@ -926,7 +926,7 @@ void ClientLobby::handleBadConnection()
 //-----------------------------------------------------------------------------
 void ClientLobby::becomingServerOwner()
 {
-    if (STKHost::get()->isClientServer())
+    if (FLUXARA_DRIFTHost::get()->isClientServer())
         return;
 
     SFXManager::get()->quickSound("wee");
@@ -986,7 +986,7 @@ void ClientLobby::connectionRefused(Event* event)
     switch ((RejectReason)data.getUInt8()) // the second byte
     {
     case RR_BUSY:
-        STKHost::get()->setErrorMessage(
+        FLUXARA_DRIFTHost::get()->setErrorMessage(
             _("Connection refused: Server is busy."));
         break;
     case RR_BANNED:
@@ -1000,30 +1000,30 @@ void ClientLobby::connectionRefused(Event* event)
             msg += L"\n";
             msg += reason;
         }
-        STKHost::get()->setErrorMessage(msg);
+        FLUXARA_DRIFTHost::get()->setErrorMessage(msg);
         break;
     }
     case RR_INCORRECT_PASSWORD:
         m_server->setReconnectWhenQuitLobby(true);
         m_server->setIsPasswordProtected(true);
-        STKHost::get()->setErrorMessage(
+        FLUXARA_DRIFTHost::get()->setErrorMessage(
             _("Connection refused: Server password is incorrect."));
         break;
     case RR_INCOMPATIBLE_DATA:
-        STKHost::get()->setErrorMessage(
+        FLUXARA_DRIFTHost::get()->setErrorMessage(
             _("Connection refused: Game data is incompatible."));
         break;
     case RR_TOO_MANY_PLAYERS:
-        STKHost::get()->setErrorMessage(
+        FLUXARA_DRIFTHost::get()->setErrorMessage(
             _("Connection refused: Server is full."));
         break;
     case RR_INVALID_PLAYER:
-        STKHost::get()->setErrorMessage(
+        FLUXARA_DRIFTHost::get()->setErrorMessage(
             _("Connection refused: Invalid player connecting."));
         break;
     }
-    STKHost::get()->disconnectAllPeers(false/*timeout_waiting*/);
-    STKHost::get()->requestShutdown();
+    FLUXARA_DRIFTHost::get()->disconnectAllPeers(false/*timeout_waiting*/);
+    FLUXARA_DRIFTHost::get()->requestShutdown();
 }   // connectionRefused
 
 //-----------------------------------------------------------------------------
@@ -1048,24 +1048,24 @@ void ClientLobby::startGame(Event* event)
     nim->restoreCompleteState(event->data());
 
     core::stringw err_msg = _("Failed to start the network game.");
-    // Different stk process thread may have different stk host
-    STKHost* stk_host = STKHost::get();
+    // Different fluxara_drift process thread may have different fluxara_drift host
+    FLUXARA_DRIFTHost* fluxara_drift_host = FLUXARA_DRIFTHost::get();
     joinStartGameThread();
-    m_start_game_thread = std::thread([start_time, stk_host, this, err_msg]()
+    m_start_game_thread = std::thread([start_time, fluxara_drift_host, this, err_msg]()
         {
-            const uint64_t cur_time = stk_host->getNetworkTimer();
+            const uint64_t cur_time = fluxara_drift_host->getNetworkTimer();
             if (!(start_time > cur_time))
             {
                 Log::error("ClientLobby", "Network timer is too slow to catch "
                     "up, you must have a poor network.");
-                stk_host->setErrorMessage(err_msg);
-                stk_host->requestShutdown();
+                fluxara_drift_host->setErrorMessage(err_msg);
+                fluxara_drift_host->requestShutdown();
                 return;
             }
             int sleep_time = (int)(start_time - cur_time);
             //Log::info("ClientLobby", "Start game after %dms", sleep_time);
-            StkTime::sleep(sleep_time);
-            //Log::info("ClientLobby", "Started at %lf", StkTime::getRealTime());
+            FluxaraDriftTime::sleep(sleep_time);
+            //Log::info("ClientLobby", "Started at %lf", FluxaraDriftTime::getRealTime());
             m_state.store(RACING);
         });
 }   // startGame
@@ -1169,7 +1169,7 @@ void ClientLobby::raceFinished(Event* event)
         core::stringw kart_name;
         data.decodeStringW(&kart_name);
         lw->setFastestLapTicks(t);
-        lw->setFastestKartName(kart_name);
+        lw->setFastefluxara_driftartName(kart_name);
         RaceManager::get()->configGrandPrixResultFromNetwork(data);
     }
     else if (RaceManager::get()->modeHasLaps())
@@ -1178,7 +1178,7 @@ void ClientLobby::raceFinished(Event* event)
         core::stringw kart_name;
         data.decodeStringW(&kart_name);
         lw->setFastestLapTicks(t);
-        lw->setFastestKartName(kart_name);
+        lw->setFastefluxara_driftartName(kart_name);
     }
 
     if (lw)
@@ -1275,7 +1275,7 @@ void ClientLobby::backToLobby(Event *event)
     case BLR_SERVER_ONWER_QUITED_THE_GAME:
         // I18N: Error message shown when all players will go back to lobby
         // when server owner quited the game
-        if (!STKHost::get()->isClientServer())
+        if (!FLUXARA_DRIFTHost::get()->isClientServer())
             msg = _("Server owner quit the game.");
         break;
     case BLR_SPECTATING_NEXT_GAME:
@@ -1385,7 +1385,7 @@ void ClientLobby::finishLiveJoin()
     if (!w)
         return;
     Log::info("ClientLobby", "Live join started at %lf",
-        StkTime::getRealTime());
+        FluxaraDriftTime::getRealTime());
 
     w->setLiveJoinWorld(false);
     w->endLiveJoinWorld(m_last_live_join_util_ticks);
@@ -1400,14 +1400,14 @@ void ClientLobby::finishLiveJoin()
 }   // finishLiveJoin
 
 //-----------------------------------------------------------------------------
-void ClientLobby::requestKartInfo(uint8_t kart_id)
+void ClientLobby::requefluxara_driftartInfo(uint8_t kart_id)
 {
     NetworkString* ns = getNetworkString(m_type, 1);
     ns->setSynchronous(true);
     ns->addUInt8(LE_KART_INFO).addUInt8(kart_id);
     sendToServer(ns, true/*reliable*/);
     delete ns;
-}   // requestKartInfo
+}   // requefluxara_driftartInfo
 
 //-----------------------------------------------------------------------------
 void ClientLobby::handleKartInfo(Event* event)
@@ -1549,7 +1549,7 @@ void ClientLobby::sendChat(irr::core::stringw text, KartTeam team)
         if (team != KART_TEAM_NONE)
             chat->addUInt8(team);
 
-        STKHost::get()->sendToServer(chat, true);
+        FLUXARA_DRIFTHost::get()->sendToServer(chat, true);
         delete chat;
     }
 }   // sendChat
@@ -1744,12 +1744,12 @@ void ClientLobby::handleClientCommand(const std::string& cmd)
             L"/" + core::stringw(addon->getRevision());
         NetworkingLobby::getInstance()->addMoreServerInfo(ret);
     }
-    else if (argv[0] == "liststkaddon")
+    else if (argv[0] == "listfluxara_driftaddon")
     {
         if (argv.size() > 3)
         {
             NetworkingLobby::getInstance()->addMoreServerInfo(
-                L"Usage: /liststkaddon [option][addon prefix letter(s) to find]");
+                L"Usage: /listfluxara_driftaddon [option][addon prefix letter(s) to find]");
             NetworkingLobby::getInstance()->addMoreServerInfo(
                 L"available options: -kart, -track, -arena.");
         }
@@ -1791,7 +1791,7 @@ void ClientLobby::handleClientCommand(const std::string& cmd)
                 msg = msg.substr(0, msg.size() - 2);
                 NetworkingLobby::getInstance()->addMoreServerInfo(
                     StringUtils::utf8ToWide
-                    (std::string("STK addon: ") + msg));
+                    (std::string("FLUXARA_DRIFT addon: ") + msg));
             }
         }
     }
@@ -1853,8 +1853,8 @@ void ClientLobby::handleClientCommand(const std::string& cmd)
                 {
                     if (skin == "." || skin == "..")
                         continue;
-                    std::string stkskin = skin_folder + skin + "/stkskin.xml";
-                    if (file_manager->fileExists(stkskin))
+                    std::string fluxara_driftskin = skin_folder + skin + "/fluxara_driftskin.xml";
+                    if (file_manager->fileExists(fluxara_driftskin))
                         total_addons.insert(Addon::createAddonId(skin));
                 }
             }
@@ -1986,15 +1986,15 @@ void ClientLobby::doInstallAddonsPack()
                 continue;
             std::string addon_id = Addon::createAddonId(r);
             // We assume the addons pack the user downloaded use the latest
-            // revision from the stk-addons (if exists)
-            if (file_manager->fileExists(tmp_extract + r + "/stkskin.xml"))
+            // revision from the fluxara_drift-addons (if exists)
+            if (file_manager->fileExists(tmp_extract + r + "/fluxara_driftskin.xml"))
             {
                 std::string skins = file_manager->getAddonsFile("skins");
                 file_manager->checkAndCreateDirectoryP(skins);
                 if (file_manager->isDirectory(skins + "/" + r))
                     file_manager->removeDirectory(skins + "/" + r);
                 file_manager->moveDirectoryInto(tmp_extract + r, skins);
-                // Skin is not supported in stk-addons atm
+                // Skin is not supported in fluxara_drift-addons atm
             }
             else if (file_manager->fileExists(tmp_extract + r + "/kart.xml"))
             {

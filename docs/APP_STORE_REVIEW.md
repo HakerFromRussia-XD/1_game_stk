@@ -39,10 +39,10 @@ Recommended review path:
 
 Motorica Signal Lab has its own hub, exercise flow, scoring system, local
 history, Signal Lab course, visual identity, and Motorica Signal Pilot vehicle.
-The standard SuperTuxKart menus, track selection, kart selection, championships
+The standard Fluxara Drift menus, track selection, kart selection, championships
 and progression are not exposed in the standalone experience.
 
-The application uses the open-source SuperTuxKart engine. Upstream licenses,
+The application uses the open-source Fluxara Drift engine. Upstream licenses,
 authors, and the complete corresponding source code are disclosed under
 "About and Open Source". The full upstream game asset catalog is not bundled
 with the standalone application.
@@ -53,11 +53,11 @@ distributed Motorica Start app. This integration is not required to review or
 use Motorica Signal Lab, and all standalone functionality described above is
 available from the app icon.
 
-Source code: https://github.com/HakerFromRussia-XD/1_game_stk
+Source code: https://github.com/HakerFromRussia-XD/1_game_fluxara_drift
 
-Support: https://hakerfromrussia-xd.github.io/1_game_stk/support/stk/
+Support: https://hakerfromrussia-xd.github.io/1_game_fluxara_drift/support/fluxara_drift/
 
-Privacy: https://hakerfromrussia-xd.github.io/1_game_stk/privacy/stk/
+Privacy: https://hakerfromrussia-xd.github.io/1_game_fluxara_drift/privacy/fluxara_drift/
 
 ## Response to the previous Guideline 4.3(a) rejection
 
@@ -65,14 +65,14 @@ Thank you for the previous review. We have substantially redesigned the app in
 response to Guideline 4.3(a). Build 28 is not a resubmission with only metadata
 or cosmetic changes.
 
-The complete upstream SuperTuxKart asset catalog has been removed from the app
+The complete upstream Fluxara Drift asset catalog has been removed from the app
 bundle. Direct launch now presents Motorica Signal Lab, a standalone training
 product with three original exercises, a dedicated Signal Lab course, an
 original Motorica Signal Pilot vehicle, two independent input systems, a
 fully-featured hardware-free signal simulation, exercise-specific scoring, and
 local training history.
 
-SuperTuxKart remains credited as the open-source engine on which the product is
+Fluxara Drift remains credited as the open-source engine on which the product is
 built. Its licenses, authors, and our corresponding source code are available
 inside the app and at the source URL above. We respectfully request a new
 review of the substantially changed standalone experience in build 28.
@@ -92,10 +92,10 @@ Motorica Start или внешнее оборудование.
 
 - App Store version: `1.0`.
 - Build: `28`.
-- Bundle ID: `com.motorica.games.stkttt`.
+- Bundle ID: `com.motorica.games.fluxara_driftttt`.
 - Team: `R7M384QD5A` — MOTORICA RESEARCH LLC.
 - App Group: `group.com.motorica.start.gamecontrolll`.
-- URL scheme: `motorica-stk`.
+- URL scheme: `motorica-fluxara_drift`.
 - App Group is resolved from the single Xcode build setting
   `MOTORICA_GAME_CONTROL_APP_GROUP` in the Info.plist, entitlements, and runtime.
 - The standalone app bundle includes `motorica_signal_lab`,

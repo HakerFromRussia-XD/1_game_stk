@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -20,7 +20,7 @@
 
 #include "config/player_manager.hpp"
 #include "guiengine/CGUISpriteBank.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "guiengine/widgets/bubble_widget.hpp"
 #include "guiengine/widgets/check_box_widget.hpp"
 #include "guiengine/widgets/icon_button_widget.hpp"
@@ -55,7 +55,7 @@ GhostReplayInfoDialog::GhostReplayInfoDialog(unsigned int replay_id,
 
     m_rd = ReplayPlay::get()->getReplayData(m_replay_id);
 
-    loadFromFile("ghost_replay_info_dialog.stkgui");
+    loadFromFile("ghost_replay_info_dialog.fluxara_driftgui");
 
     m_info_widget = getWidget<BubbleWidget>("info");
     if (m_rd.m_info == "")
@@ -72,12 +72,12 @@ GhostReplayInfoDialog::GhostReplayInfoDialog(unsigned int replay_id,
     // temporary icon, will replace it just after (but it will be shown if the given icon is not found)
     m_track_screenshot_widget->m_properties[PROP_ICON] = "gui/icons/main_help.png";
 
-    irr::video::ITexture* image = STKTexManager::getInstance()
+    irr::video::ITexture* image = FLUXARA_DRIFTTexManager::getInstance()
         ->getTexture(track->getScreenshotFile(),
         "While loading screenshot for track '%s':", track->getFilename());
     if(!image)
     {
-        image = STKTexManager::getInstance()->getTexture("main_help.png",
+        image = FLUXARA_DRIFTTexManager::getInstance()->getTexture("main_help.png",
             "While loading screenshot for track '%s':", track->getFilename());
     }
     if (image != NULL)
@@ -89,7 +89,7 @@ GhostReplayInfoDialog::GhostReplayInfoDialog(unsigned int replay_id,
     assert(m_replay_info_widget != NULL);
 
     /* Used to display kart icons for the selected replay(s) */
-    irr::gui::STKModifiedSpriteBank *icon_bank = GhostReplaySelection::getInstance()->getIconBank();
+    irr::gui::FLUXARA_DRIFTModifiedSpriteBank *icon_bank = GhostReplaySelection::getInstance()->getIconBank();
     m_replay_info_widget->setIcons(icon_bank);
 
     updateReplayDisplayedInfo();
@@ -224,7 +224,7 @@ void GhostReplayInfoDialog::updateReplayDisplayedInfo()
         row.push_back(GUIEngine::ListWidget::ListCell
             (rd.m_user_name.empty() ? " " : rd.m_user_name, -1, 5, true));
         row.push_back(GUIEngine::ListWidget::ListCell
-            (rd.m_stk_version.empty() ? " " : rd.m_stk_version, -1, 2, true));
+            (rd.m_fluxara_drift_version.empty() ? " " : rd.m_fluxara_drift_version, -1, 2, true));
 
         m_replay_info_widget->addItem(StringUtils::toString(i), row);
     } // for num_replays_to_list
@@ -264,7 +264,7 @@ GUIEngine::EventPropagation
             else
                 ReplayPlay::get()->setSecondReplayFile(0, /* use a second replay*/ false);
 
-            RaceManager::get()->setRaceGhostKarts(true);
+            RaceManager::get()->setRaceGhofluxara_driftarts(true);
 
             // The race manager automatically adds karts for the ghosts
             // so only set it to the number of human players

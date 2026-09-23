@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -138,7 +138,7 @@ void SoccerAI::update(int ticks)
  *  \param consider_difficulty If take current difficulty into account.
  *  \param find_sta If find \ref SpareTireAI only.
  */
-void SoccerAI::findClosestKart(bool consider_difficulty, bool find_sta)
+void SoccerAI::findClosefluxara_driftart(bool consider_difficulty, bool find_sta)
 {
     float distance = 99999.9f;
     const unsigned int n = m_world->getNumKarts();
@@ -169,7 +169,7 @@ void SoccerAI::findClosestKart(bool consider_difficulty, bool find_sta)
     m_closest_kart_node = m_world->getSectorForKart(m_closest_kart);
     m_closest_kart_point = m_closest_kart->getXYZ();
 
-}   // findClosestKart
+}   // findClosefluxara_driftart
 
 //-----------------------------------------------------------------------------
 /** Find a suitable target to follow, it will first call
@@ -177,11 +177,11 @@ void SoccerAI::findClosestKart(bool consider_difficulty, bool find_sta)
  *  ball and try to score, otherwise it will call \ref tryCollectItem if
  *  needed. After that it will call \ref SoccerWorld::getAttacker to see if
  *  this AI should attack the kart in opposite team which is chasing the ball,
- *  if not go for the closest kart found by \ref findClosestKart.
+ *  if not go for the closest kart found by \ref findClosefluxara_driftart.
  */
 void SoccerAI::findTarget()
 {
-    findClosestKart(true/*consider_difficulty*/, false/*find_sta*/);
+    findClosefluxara_driftart(true/*consider_difficulty*/, false/*find_sta*/);
     // Check if this AI kart is the one who will chase the ball
     if (m_world->getBallChaser(m_cur_team) == (signed)m_kart->getWorldKartId())
     {

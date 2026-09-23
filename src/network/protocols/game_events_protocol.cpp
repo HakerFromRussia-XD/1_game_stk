@@ -12,8 +12,8 @@
 #include "network/protocol_manager.hpp"
 #include "network/rewind_manager.hpp"
 #include "network/socket_address.hpp"
-#include "network/stk_host.hpp"
-#include "network/stk_peer.hpp"
+#include "network/fluxara_drift_host.hpp"
+#include "network/fluxara_drift_peer.hpp"
 #include "race/race_manager.hpp"
 
 #include <stdint.h>

@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -31,7 +31,7 @@
 #  include <android/log.h>
 #endif
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "../../../lib/irrlicht/source/Irrlicht/CIrrDeviceiOS.h"
 #endif
 
@@ -173,11 +173,11 @@ void Log::printMessage(int level, const char *component, const char *format,
         remaining = MAX_LENGTH - index > 0 ? MAX_LENGTH - index : 0;
     }
 
-#ifdef MOBILE_STK
-    // Mobile STK already has timestamp logging in console
+#ifdef MOBILE_FLUXARA_DRIFT
+    // Mobile FLUXARA_DRIFT already has timestamp logging in console
     std::string server_prefix = "Server";
 #else
-    std::string server_prefix = StkTime::getLogTime();
+    std::string server_prefix = FluxaraDriftTime::getLogTime();
 #endif
     if (NetworkConfig::get()->isNetworking() &&
         NetworkConfig::get()->isServer())
@@ -249,7 +249,7 @@ void Log::writeLine(const char *line, int level)
             android_LogPriority alp;
             switch (level)
             {
-                // STK is using the levels slightly different from android
+                // FLUXARA_DRIFT is using the levels slightly different from android
                 // (debug lowest, verbose above it; while android reverses
                 // this order. So to get the same behaviour (e.g. filter
                 // out debug message, but still get verbose, we swap
@@ -262,8 +262,8 @@ void Log::writeLine(const char *line, int level)
             case LL_FATAL:   alp = ANDROID_LOG_FATAL;   break;
             default:         alp = ANDROID_LOG_FATAL;
             }
-            __android_log_print(alp, "SuperTuxKart", "%s", line);
-#elif defined(IOS_STK)
+            __android_log_print(alp, "FluxaraDrift", "%s", line);
+#elif defined(IOS_FLUXARA_DRIFT)
             CIrrDeviceiOS::debugPrint(line);
 #else
             printf("%s", line);
@@ -284,7 +284,7 @@ void Log::writeLine(const char *line, int level)
 #ifdef WIN32
     if (level >= LL_FATAL)
     {
-        MessageBoxA(NULL, line, "SuperTuxKart - Fatal error", MB_OK);
+        MessageBoxA(NULL, line, "FluxaraDrift - Fatal error", MB_OK);
     }
 #endif
 }   // _fluhBuffers

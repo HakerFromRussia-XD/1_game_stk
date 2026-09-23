@@ -725,10 +725,10 @@ static void pvr_srv_geometry_cmd_init(
    }
 
    if (state->flags.is_first_geometry)
-      cmd->flags |= ROGUE_FWIF_TAFLAGS_FIRSTKICK;
+      cmd->flags |= ROGUE_FWIF_TAFLAGS_FIRFLUXARA_DRIFTICK;
 
    if (state->flags.is_last_geometry)
-      cmd->flags |= ROGUE_FWIF_TAFLAGS_LASTKICK;
+      cmd->flags |= ROGUE_FWIF_TAFLAGS_LAFLUXARA_DRIFTICK;
 
    if (state->flags.use_single_core)
       cmd->flags |= ROGUE_FWIF_TAFLAGS_SINGLE_CORE;

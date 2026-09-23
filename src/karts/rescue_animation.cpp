@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -136,8 +136,8 @@ void RescueAnimation::init(const btTransform& rescue_transform,
 {
     m_rescue_transform = rescue_transform;
     float timer = m_kart->getKartProperties()->getRescueDuration();
-    m_end_ticks = m_created_ticks + stk_config->time2Ticks(timer);
-    m_rescue_moment = m_created_ticks + stk_config->time2Ticks(timer * 0.4f);
+    m_end_ticks = m_created_ticks + fluxara_drift_config->time2Ticks(timer);
+    m_rescue_moment = m_created_ticks + fluxara_drift_config->time2Ticks(timer * 0.4f);
     m_velocity = velocity;
 }   // init
 
@@ -163,7 +163,7 @@ void RescueAnimation::update(int ticks)
 {
     if (World::getWorld()->getTicksSinceStart() > m_rescue_moment)
     {
-        float dur = stk_config->ticks2Time(m_end_ticks - m_rescue_moment -
+        float dur = fluxara_drift_config->ticks2Time(m_end_ticks - m_rescue_moment -
             (World::getWorld()->getTicksSinceStart() - m_rescue_moment));
         Vec3 xyz = m_rescue_transform.getOrigin() +
             dur * m_velocity * m_rescue_transform.getBasis().getColumn(1);
@@ -172,7 +172,7 @@ void RescueAnimation::update(int ticks)
     }
     else
     {
-        float dur = stk_config->ticks2Time(
+        float dur = fluxara_drift_config->ticks2Time(
             World::getWorld()->getTicksSinceStart() - m_created_ticks);
         Vec3 xyz = m_created_transform.getOrigin() +
             dur * m_velocity * m_created_transform.getBasis().getColumn(1);

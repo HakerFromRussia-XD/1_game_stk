@@ -3,8 +3,8 @@ uniform sampler2D mask_tex;
 uniform sampler2D color_tex;
 uniform sampler2D ssr_tex;
 
-#stk_include "utils/displace_utils.frag"
-#stk_include "utils/sp_texture_sampling.frag"
+#fluxara_drift_include "utils/displace_utils.frag"
+#fluxara_drift_include "utils/sp_texture_sampling.frag"
 
 uniform vec4 direction;
 uniform int u_ssr;

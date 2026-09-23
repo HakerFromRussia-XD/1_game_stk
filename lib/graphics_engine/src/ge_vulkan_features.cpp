@@ -35,6 +35,7 @@ bool g_supports_shader_draw_parameters = false;
 bool g_supports_s3tc_bc3 = false;
 bool g_supports_bptc_bc7 = false;
 bool g_supports_astc_4x4 = false;
+bool g_supports_astc_6x6 = false;
 bool g_supports_shader_storage_image_extended_format = false;
 }   // GEVulkanFeatures
 
@@ -93,6 +94,10 @@ void GEVulkanFeatures::init(GEVulkanDriver* vk)
     vkGetPhysicalDeviceFormatProperties(vk->getPhysicalDevice(),
         VK_FORMAT_ASTC_4x4_UNORM_BLOCK, &format_properties);
     g_supports_astc_4x4 = format_properties.optimalTilingFeatures & VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT;
+    format_properties = {};
+    vkGetPhysicalDeviceFormatProperties(vk->getPhysicalDevice(),
+        VK_FORMAT_ASTC_6x6_UNORM_BLOCK, &format_properties);
+    g_supports_astc_6x6 = format_properties.optimalTilingFeatures & VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT;
     g_supports_shader_storage_image_extended_format = vk->getPhysicalDeviceFeatures().shaderStorageImageExtendedFormats;
     if (g_supports_shader_storage_image_extended_format)
     {
@@ -368,8 +373,20 @@ bool GEVulkanFeatures::supportsBPTCBC7()
 // ----------------------------------------------------------------------------
 bool GEVulkanFeatures::supportsASTC4x4()
 {
+#ifdef IOS_FLUXARA_DRIFT
+    // iOS uses the prebuilt 6x6 ASTC path.  Runtime 4x4 encoding is not
+    // needed there and is deliberately disabled for stability.
+    return false;
+#else
     return g_supports_astc_4x4 && GECompressorASTC4x4::loaded();
+#endif
 }   // supportsASTC4x4
+
+// ----------------------------------------------------------------------------
+bool GEVulkanFeatures::supportsASTC6x6()
+{
+    return g_supports_astc_6x6;
+}   // supportsASTC6x6
 
 // ----------------------------------------------------------------------------
 bool GEVulkanFeatures::supportsShaderStorageImageExtendedFormats()

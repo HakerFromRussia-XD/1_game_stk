@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -207,7 +207,7 @@ private:
     bool m_has_set_goal_lists;
     GUIEngine::ListWidget* m_blue_goal_list;
     GUIEngine::ListWidget* m_red_goal_list;
-    irr::gui::STKModifiedSpriteBank *m_icon_bank;
+    irr::gui::FLUXARA_DRIFTModifiedSpriteBank *m_icon_bank;
     int m_icon_default_kart;
 
     PtrVector<GUIEngine::Widget, HOLD>  m_gp_progress_widgets;

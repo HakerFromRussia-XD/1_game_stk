@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -57,7 +57,7 @@ using namespace core;
 
 // -----------------------------------------------------------------------------
 
-RegisterScreen::RegisterScreen() : Screen("online/register.stkgui")
+RegisterScreen::RegisterScreen() : Screen("online/register.fluxara_driftgui")
 {
     m_existing_player = NULL;
     m_account_mode    = ACCOUNT_OFFLINE;
@@ -100,7 +100,7 @@ void RegisterScreen::init()
     ribbon->setVisible(m_existing_player == NULL);
     Screen::init();
 
-    // If there is no player (i.e. first start of STK), try to pick
+    // If there is no player (i.e. first start of FLUXARA_DRIFT), try to pick
     // a good default name
     stringw username = "";
     if(m_existing_player)
@@ -109,8 +109,8 @@ void RegisterScreen::init()
     }
     else if (PlayerManager::get()->getNumPlayers() == 0)
     {
-#ifndef MOBILE_STK
-    // For mobile stk always use the name Player as in iOS the following
+#ifndef MOBILE_FLUXARA_DRIFT
+    // For mobile fluxara_drift always use the name Player as in iOS the following
     // getenv return "mobile" for some reason
 #if defined(WIN32)
         std::vector<wchar_t> env;
@@ -177,7 +177,7 @@ void RegisterScreen::setRename(PlayerProfile *player)
 }   // setRename
 
 // -----------------------------------------------------------------------------
-/** Will be called first time STK is started, when the 'internet yes/no' dialog
+/** Will be called first time FLUXARA_DRIFT is started, when the 'internet yes/no' dialog
  *  is closed. Adjust the state of the online checkbox depending on that
  *  answer.
  */
@@ -534,7 +534,7 @@ void RegisterScreen::eventCallback(Widget* widget, const std::string& name,
         else if(button=="cancel")
         {
             // We poop this menu, onEscapePress will handle the special case
-            // of e.g. a fresh start of stk that is aborted.
+            // of e.g. a fresh start of fluxara_drift that is aborted.
             StateManager::get()->popMenu();
             onEscapePressed();
         }
@@ -542,7 +542,7 @@ void RegisterScreen::eventCallback(Widget* widget, const std::string& name,
     else if (name == "password_reset")
     {
         // Open password reset page
-        Online::LinkHelper::openURL(stk_config->m_password_reset_url);
+        Online::LinkHelper::openURL(fluxara_drift_config->m_password_reset_url);
     }
     else if (name == "back")
     {
@@ -559,9 +559,9 @@ bool RegisterScreen::onEscapePressed()
     if (PlayerManager::get()->getNumPlayers() == 0)
     {
         // Must be first time start, and player cancelled player creation
-        // so quit stk. At this stage there are two menus on the stack:
+        // so quit fluxara_drift. At this stage there are two menus on the stack:
         // 1) The UserScreen,  2) RegisterStreen
-        // Popping them both will trigger STK to close.
+        // Popping them both will trigger FLUXARA_DRIFT to close.
         StateManager::get()->popMenu();
         return true;
     }

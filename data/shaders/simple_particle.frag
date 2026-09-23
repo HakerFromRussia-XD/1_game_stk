@@ -6,7 +6,7 @@ in vec2 tc;
 in vec4 pc;
 out vec4 FragColor;
 
-#stk_include "utils/getPosFromUVDepth.frag"
+#fluxara_drift_include "utils/getPosFromUVDepth.frag"
 
 void main(void)
 {

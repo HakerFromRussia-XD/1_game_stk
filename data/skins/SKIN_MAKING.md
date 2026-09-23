@@ -59,16 +59,16 @@ all areas to be rendered. Then you can pass parameter areas="body+left+right+top
 and explicitely specify which parts you want to see. The 4 corner areas are only visible
 when the border that intersect at this corner are enabled.
 
-When there is a common="y" with image tag, the image will be loaded only from data/skins/common in stk-code.
+When there is a common="y" with image tag, the image will be loaded only from data/skins/common in fluxara_drift-code.
 
-Any information not specified in the stkskin.xml file of a theme will be inherited from the specified
+Any information not specified in the fluxara_driftskin.xml file of a theme will be inherited from the specified
 base theme, if any. To specify a base theme, add base_theme="themename" to the `<skin>` tag.
 
 To use an icon theme, place the replacement icons (PNG or SVG) into [skin folder]/data/gui/icons
-STK will prefer these icons first, if not found it will fallback to icons from the base theme(s).
+FLUXARA_DRIFT will prefer these icons first, if not found it will fallback to icons from the base theme(s).
 
 For TTF specify the list like the following, for normal and digit ttf it will be added at the beginning of the
-font list in STK, so those TTF will be used first, and any missing characters will be rendered from the base
+font list in FLUXARA_DRIFT, so those TTF will be used first, and any missing characters will be rendered from the base
 theme font list. For color emoji ttf it will replace the base theme color emoji directly. You are not required
 to specify all types of ttf.
 
@@ -80,6 +80,6 @@ to specify all types of ttf.
 
 # Skin name translation
 
-Translations for skins are handled through SuperTuxKart's main translation process.
+Translations for skins are handled through FluxaraDrift's main translation process.
 The base theme name and variant theme name have to be added to /data/skin_names.xml ;
 they will then be included in the .pot file when update_pot.sh is run.

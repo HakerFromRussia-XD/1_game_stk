@@ -267,7 +267,7 @@ void ClusterFit::Compress4( void* block )
     Vec4 besterror = m_besterror;
     u8 bestindices[16];
     int bestiteration = 0;
-    int besti = 0, bestj = 0, bestk = 0;
+    int besti = 0, bestj = 0, befluxara_drift = 0;
 
     // loop over iterations (we avoid the case that all points in first or last cluster)
     for( int iterationIndex = 0;; )
@@ -326,7 +326,7 @@ void ClusterFit::Compress4( void* block )
                         besterror = error;
                         besti = i;
                         bestj = j;
-                        bestk = k;
+                        befluxara_drift = k;
                         bestiteration = iterationIndex;
                     }
 
@@ -374,9 +374,9 @@ void ClusterFit::Compress4( void* block )
             unordered[order[m]] = 0;
         for( int m = besti; m < bestj; ++m )
             unordered[order[m]] = 2;
-        for( int m = bestj; m < bestk; ++m )
+        for( int m = bestj; m < befluxara_drift; ++m )
             unordered[order[m]] = 3;
-        for( int m = bestk; m < count; ++m )
+        for( int m = befluxara_drift; m < count; ++m )
             unordered[order[m]] = 1;
 
         m_colours->RemapIndices( unordered, bestindices );

@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2025 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2025 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -22,8 +22,8 @@
 #include "network/event.hpp"
 #include "network/game_setup.hpp"
 #include "network/server_config.hpp"
-#include "network/stk_host.hpp"
-#include "network/stk_peer.hpp"
+#include "network/fluxara_drift_host.hpp"
+#include "network/fluxara_drift_peer.hpp"
 #include "utils/log.hpp"
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
@@ -36,7 +36,7 @@ namespace ChatCommands
     *   to support localization of answer messages without client-side string-analysis.
     * - Sending the answer as a normal chat message. This is used with compatibilities
     *   for older clients and for custom commands (i.e. for servers using custom commands) */
-    void answerCommand(CommandAnswers command_id, std::shared_ptr<STKPeer> peer, std::string args)
+    void answerCommand(CommandAnswers command_id, std::shared_ptr<FLUXARA_DRIFTPeer> peer, std::string args)
     {
         NetworkString* answer = ProtocolUtils::getNetworkString(ProtocolType::PROTOCOL_LOBBY_ROOM);
 
@@ -196,7 +196,7 @@ namespace ChatCommands
     }   // getAnswerString
 
     // ----------------------------------------------------------------------------------------
-    void handleServerCommand(ServerLobby* lobby, Event* event, std::shared_ptr<STKPeer> peer)
+    void handleServerCommand(ServerLobby* lobby, Event* event, std::shared_ptr<FLUXARA_DRIFTPeer> peer)
     {
         NetworkString& data = event->data();
         std::string language;
@@ -231,7 +231,7 @@ namespace ChatCommands
     }   // handleServerCommand
 
     // ----------------------------------------------------------------------------------------
-    void help(std::string cmd, std::shared_ptr<STKPeer> peer)
+    void help(std::string cmd, std::shared_ptr<FLUXARA_DRIFTPeer> peer)
     {
         auto argv = StringUtils::split(cmd, ' ');
         // A command name is supplied as an argument, give that command's help info
@@ -243,7 +243,7 @@ namespace ChatCommands
     } // help
 
     // ----------------------------------------------------------------------------------------
-    void helpMessage(std::string cmd_name, std::shared_ptr<STKPeer> peer, bool extra_info)
+    void helpMessage(std::string cmd_name, std::shared_ptr<FLUXARA_DRIFTPeer> peer, bool extra_info)
     {
         if (cmd_name == "help")
         {
@@ -299,7 +299,7 @@ namespace ChatCommands
     } // helpMessage
 
     // ----------------------------------------------------------------------------------------
-    void spectate(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer)
+    void spectate(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer)
     {
         auto argv = StringUtils::split(cmd, ' ');
         if (lobby->getGameSetup()->isGrandPrix() || !ServerConfig::m_live_players)
@@ -335,7 +335,7 @@ namespace ChatCommands
     } // spectate
 
     // ----------------------------------------------------------------------------------------
-    void listServerAddons(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer)
+    void listServerAddons(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer)
     {
         auto argv = StringUtils::split(cmd, ' ');
         bool has_options = argv.size() > 1 &&
@@ -408,7 +408,7 @@ namespace ChatCommands
     } // listServerAddons
 
     // ----------------------------------------------------------------------------------------
-    void playerHasAddon(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer)
+    void playerHasAddon(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer)
     {
         auto argv = StringUtils::split(cmd, ' ');
         std::string part;
@@ -418,7 +418,7 @@ namespace ChatCommands
         std::string player_name;
         if (part.length() > addon_id.length() + 1)
             player_name = part.substr(addon_id.length() + 1);
-        std::shared_ptr<STKPeer> player_peer = STKHost::get()->findPeerByName(
+        std::shared_ptr<FLUXARA_DRIFTPeer> player_peer = FLUXARA_DRIFTHost::get()->findPeerByName(
             StringUtils::utf8ToWide(player_name));
         if (player_name.empty() || !player_peer || addon_id.empty())
         {
@@ -457,7 +457,7 @@ namespace ChatCommands
     } // playerHasAddon
 
     // ----------------------------------------------------------------------------------------
-    void serverHasAddon(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer)
+    void serverHasAddon(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer)
     {
         auto argv = StringUtils::split(cmd, ' ');
 
@@ -482,14 +482,14 @@ namespace ChatCommands
     } // serverHasAddon
 
     // ----------------------------------------------------------------------------------------
-    void playerAddonScore(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer)
+    void playerAddonScore(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer)
     {
         auto argv = StringUtils::split(cmd, ' ');
 
         std::string player_name;
         if (cmd.length() > 17)
             player_name = cmd.substr(17);
-        std::shared_ptr<STKPeer> player_peer = STKHost::get()->findPeerByName(
+        std::shared_ptr<FLUXARA_DRIFTPeer> player_peer = FLUXARA_DRIFTHost::get()->findPeerByName(
             StringUtils::utf8ToWide(player_name));
         if (player_name.empty() || !player_peer)
         {
@@ -508,7 +508,7 @@ namespace ChatCommands
     } // playerAddonScore
 
     // ----------------------------------------------------------------------------------------
-    void kick(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer)
+    void kick(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer)
     {
         auto argv = StringUtils::split(cmd, ' ');
 
@@ -520,7 +520,7 @@ namespace ChatCommands
         std::string player_name;
         if (cmd.length() > 5)
             player_name = cmd.substr(5);
-        std::shared_ptr<STKPeer> player_peer = STKHost::get()->findPeerByName(
+        std::shared_ptr<FLUXARA_DRIFTPeer> player_peer = FLUXARA_DRIFTHost::get()->findPeerByName(
             StringUtils::utf8ToWide(player_name));
 
         if (player_name.empty() || !player_peer || player_peer->isAIPeer())
@@ -535,11 +535,11 @@ namespace ChatCommands
     } // kick
 
     // ----------------------------------------------------------------------------------------
-    void mute(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer)
+    void mute(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer)
     {
         auto argv = StringUtils::split(cmd, ' ');
 
-        std::shared_ptr<STKPeer> player_peer;
+        std::shared_ptr<FLUXARA_DRIFTPeer> player_peer;
         std::string result_msg;
         core::stringw player_name;
 
@@ -547,7 +547,7 @@ namespace ChatCommands
             goto mute_error;
 
         player_name = StringUtils::utf8ToWide(argv[1]);
-        player_peer = STKHost::get()->findPeerByName(player_name);
+        player_peer = FLUXARA_DRIFTHost::get()->findPeerByName(player_name);
 
         if (!player_peer || player_peer == peer)
             goto mute_error;
@@ -573,11 +573,11 @@ mute_error:
     } // mute
 
     // ----------------------------------------------------------------------------------------
-    void unmute(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer)
+    void unmute(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer)
     {
         auto argv = StringUtils::split(cmd, ' ');
 
-        std::shared_ptr<STKPeer> player_peer;
+        std::shared_ptr<FLUXARA_DRIFTPeer> player_peer;
         std::string result_msg;
         core::stringw player_name;
 
@@ -598,7 +598,7 @@ mute_error:
             }
         }
 
-        player_peer = STKHost::get()->findPeerByName(player_name);
+        player_peer = FLUXARA_DRIFTHost::get()->findPeerByName(player_name);
         if (player_peer)
         {
             answerCommand(CA_UNMUTE_NOT_MUTED, peer, argv[1]);
@@ -610,7 +610,7 @@ unmute_error:
     } // unmute
 
     // ----------------------------------------------------------------------------------------
-    void listMute(std::string cmd, ServerLobby* lobby, std::shared_ptr<STKPeer> peer)
+    void listMute(std::string cmd, ServerLobby* lobby, std::shared_ptr<FLUXARA_DRIFTPeer> peer)
     {
         auto argv = StringUtils::split(cmd, ' ');
 

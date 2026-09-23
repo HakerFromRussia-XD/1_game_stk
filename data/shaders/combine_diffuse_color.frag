@@ -13,7 +13,7 @@ uniform vec4 bg_color;
 
 out vec4 o_final_color;
 
-#stk_include "utils/getPosFromUVDepth.frag"
+#fluxara_drift_include "utils/getPosFromUVDepth.frag"
 
 void main()
 {

@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2014-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2014-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -26,7 +26,7 @@ class AssetsAndroid
 {
 private:
     FileManager* m_file_manager;
-    std::string m_stk_dir;
+    std::string m_fluxara_drift_dir;
 
     void extractData();
     bool extractFile(std::string file_name);

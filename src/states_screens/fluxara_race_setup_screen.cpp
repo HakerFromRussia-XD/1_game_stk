@@ -4,7 +4,7 @@
 
 #include "config/player_manager.hpp"
 #include "config/user_config.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "guiengine/widgets/button_widget.hpp"
 #include "guiengine/widgets/icon_button_widget.hpp"
 #include "guiengine/widgets/label_widget.hpp"
@@ -23,7 +23,7 @@
 using namespace GUIEngine;
 
 FluxaraRaceSetupScreen::FluxaraRaceSetupScreen()
-    : Screen("fluxara_race_setup.stkgui")
+    : Screen("fluxara_race_setup.fluxara_driftgui")
 {
 }
 
@@ -49,7 +49,7 @@ void FluxaraRaceSetupScreen::init()
         return;
     }
 
-    m_preview = STKTexManager::getInstance()->getTexture(
+    m_preview = FLUXARA_DRIFTTexManager::getInstance()->getTexture(
         m_track->getScreenshotFile(), "While loading Fluxara track preview:",
         m_track->getFilename());
     const char* files[] = {"race/background", "race/laps-panel", "race/laps-surface",
@@ -84,21 +84,15 @@ void FluxaraRaceSetupScreen::init()
     // the same public Novice setting for the entire grid instead of inheriting
     // an arbitrary difficulty left by a previous manual session.  Public
     // campaign launches continue to use the setting selected on this screen.
-#if 0 // AUTOPLAY ACCEPTANCE — disabled for human play; retain the user's difficulty.
     if (FluxaraModes::autoCampaignValidation())
         m_difficulty = int(RaceManager::DIFFICULTY_EASY);
-#endif
     updateRaceDetails();
 
     getWidget<ButtonWidget>(m_unavailable_reason.empty() ? "start" : "back")->setFocusForPlayer(
         PLAYER_ID_GAME_MASTER);
 
-#if 0 // AUTOPLAY ACCEPTANCE — disabled for human play; retained for a future lab run.
     m_auto_start_delay = FluxaraModes::autoCampaignValidation() &&
                          m_unavailable_reason.empty() ? 0.1f : -1.0f;
-#else
-    m_auto_start_delay = -1.0f;
-#endif
 }
 
 void FluxaraRaceSetupScreen::onUpdate(float dt)
@@ -210,13 +204,15 @@ void FluxaraRaceSetupScreen::eventCallback(Widget*, const std::string& name,
     RaceManager::get()->setMajorMode(RaceManager::MAJOR_MODE_SINGLE);
     RaceManager::get()->setMinorMode(FluxaraModes::nativeMode(m_mode));
     RaceManager::get()->setDifficulty(difficulty);
-    UserConfigParams::m_difficulty = difficulty;
+    if (!FluxaraModes::autoCampaignValidation())
+        UserConfigParams::m_difficulty = difficulty;
     RaceManager::get()->setNumLaps(m_laps);
     RaceManager::get()->setNumKarts(m_ai_karts + 1);
-    if (FluxaraModes::laps(m_mode))
+    if (!FluxaraModes::autoCampaignValidation() && FluxaraModes::laps(m_mode))
         UserConfigParams::m_num_laps = m_laps;
-    UserConfigParams::m_num_karts_per_gamemode[
-        FluxaraModes::nativeMode(m_mode)] = m_ai_karts + 1;
+    if (!FluxaraModes::autoCampaignValidation())
+        UserConfigParams::m_num_karts_per_gamemode[
+            FluxaraModes::nativeMode(m_mode)] = m_ai_karts + 1;
 
     FluxaraKartScreen::getInstance()->setRace(m_track, m_laps,
                                                m_ai_karts + 1, m_mode,

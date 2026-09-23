@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -20,7 +20,7 @@
 #define HEADER_REWIND_MANAGER_HPP
 
 #include "network/rewind_queue.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 
 #include <assert.h>
 #include <atomic>
@@ -151,7 +151,7 @@ public:
     // ------------------------------------------------------------------------
     static bool exists()
     {
-        ProcessType pt = STKProcess::getType();
+        ProcessType pt = FLUXARA_DRIFTProcess::getType();
         return m_rewind_manager[pt] != NULL;
     }   // exists
     // ------------------------------------------------------------------------
@@ -159,7 +159,7 @@ public:
      *  the singleton. */
     static RewindManager *get()
     {
-        ProcessType pt = STKProcess::getType();
+        ProcessType pt = FLUXARA_DRIFTProcess::getType();
         assert(m_rewind_manager[pt]);
         return m_rewind_manager[pt];
     }   // get

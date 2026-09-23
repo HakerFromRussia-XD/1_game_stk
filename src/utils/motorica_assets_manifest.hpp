@@ -9,10 +9,10 @@ namespace MotoricaAssetsManifest
 static const int SCHEMA_VERSION = 1;
 static const char* const ASSET_VERSION = "1";
 static const int MINIMUM_APP_BUILD = 28;
-static const char* const ARCHIVE_URL = "https://github.com/HakerFromRussia-XD/1_game_stk/releases/download/ios-assets-1.0-build28/motorica-stk-full-assets-1.zip";
+static const char* const ARCHIVE_URL = "https://github.com/HakerFromRussia-XD/1_game_fluxara_drift/releases/download/ios-assets-1.0-build28/motorica-fluxara_drift-full-assets-1.zip";
 static const uint64_t SIZE_BYTES = 105149585ull;
 static const char* const SHA256 = "8d9d0c143492c878713069f0b5c73726db98134d178a6f0985457f19218f8d7e";
-static const char* const MARKER = "motorica-stk-assets.1";
+static const char* const MARKER = "motorica-fluxara_drift-assets.1";
 }
 
 #endif

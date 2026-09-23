@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2014-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2014-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -50,13 +50,13 @@ void AssetsAndroid::init()
         return;
 
     bool needs_extract_data = false;
-    const std::string version = std::string("supertuxkart.") + STK_VERSION;
+    const std::string version = std::string("fluxaradrift.") + FLUXARA_DRIFT_VERSION;
 
     // Add some paths to check
     std::vector<std::string> paths;
 
-    if (getenv("SUPERTUXKART_DATADIR"))
-        paths.push_back(getenv("SUPERTUXKART_DATADIR"));
+    if (getenv("FLUXARA_DRIFT_DATADIR"))
+        paths.push_back(getenv("FLUXARA_DRIFT_DATADIR"));
 
     if (SDL_AndroidGetExternalStoragePath() != NULL)
     {
@@ -91,7 +91,7 @@ void AssetsAndroid::init()
 
     std::string app_dir_name = ANDROID_APP_DIR_NAME;
 
-    // Check if STK data for current version is available somewhere
+    // Check if FLUXARA_DRIFT data for current version is available somewhere
     for (std::string path : paths)
     {
         Log::info("AssetsAndroid", "Check data files in: %s", path.c_str());
@@ -104,27 +104,27 @@ void AssetsAndroid::init()
 
         if (m_file_manager->fileExists(path + "/" + app_dir_name + "/data/" + version))
         {
-            m_stk_dir = path + "/" + app_dir_name;
+            m_fluxara_drift_dir = path + "/" + app_dir_name;
             break;
         }
         
-        // Stk is an alias of supertuxkart for compatibility with older version.
-        if (app_dir_name == "supertuxkart" &&
-            m_file_manager->fileExists(path + "/stk/data/" + version))
+        // FluxaraDrift is an alias of fluxaradrift for compatibility with older version.
+        if (app_dir_name == "fluxaradrift" &&
+            m_file_manager->fileExists(path + "/fluxara_drift/data/" + version))
         {
-            m_stk_dir = path + "/stk";
+            m_fluxara_drift_dir = path + "/fluxara_drift";
             break;
         }
     }
     
     // If data for current version is not available, then try to find any other
-    // version, so that we won't accidentaly create second STK directory in
+    // version, so that we won't accidentaly create second FLUXARA_DRIFT directory in
     // different place
-    if (m_stk_dir.size() == 0)
+    if (m_fluxara_drift_dir.size() == 0)
     {
         for (std::string path : paths)
         {
-            Log::info("AssetsAndroid", "Check data files for different STK "
+            Log::info("AssetsAndroid", "Check data files for different FLUXARA_DRIFT "
                                        "version in: %s", path.c_str());
                                        
             if (!isWritable(path))
@@ -135,30 +135,30 @@ void AssetsAndroid::init()
     
             if (m_file_manager->fileExists(path + "/" + app_dir_name + "/.extracted"))
             {
-                m_stk_dir = path + "/" + app_dir_name;
+                m_fluxara_drift_dir = path + "/" + app_dir_name;
                 needs_extract_data = true;
                 break;
             }
     
-            // Stk is an alias of supertuxkart for compatibility with older version.
-            if (app_dir_name == "supertuxkart" &&
-                m_file_manager->fileExists(path + "/stk/.extracted"))
+            // FluxaraDrift is an alias of fluxaradrift for compatibility with older version.
+            if (app_dir_name == "fluxaradrift" &&
+                m_file_manager->fileExists(path + "/fluxara_drift/.extracted"))
             {
-                m_stk_dir = path + "/stk";
+                m_fluxara_drift_dir = path + "/fluxara_drift";
                 needs_extract_data = true;
                 break;
             }
         }
     }
     
-    if (m_stk_dir.size() > 0)
+    if (m_fluxara_drift_dir.size() > 0)
     {
         Log::info("AssetsAndroid", "Data files found in: %s",
-                  m_stk_dir.c_str());
+                  m_fluxara_drift_dir.c_str());
     }
 
     // Create data dir if it's not available anywhere
-    if (m_stk_dir.size() == 0)
+    if (m_fluxara_drift_dir.size() == 0)
     {
         std::string preferred_path = getPreferredPath(paths);
 
@@ -169,7 +169,7 @@ void AssetsAndroid::init()
             {
                 Log::info("AssetsAndroid", "Data directory created in: %s",
                           preferred_path.c_str());
-                m_stk_dir = preferred_path + "/" + app_dir_name;
+                m_fluxara_drift_dir = preferred_path + "/" + app_dir_name;
                 needs_extract_data = true;
             }
         }
@@ -177,7 +177,7 @@ void AssetsAndroid::init()
 
     // If getPreferredPath failed for some reason, then try to use the first
     // available path
-    if (m_stk_dir.size() == 0)
+    if (m_fluxara_drift_dir.size() == 0)
     {
         for (std::string path : paths)
         {
@@ -186,22 +186,22 @@ void AssetsAndroid::init()
             {
                 Log::info("AssetsAndroid", "Data directory created in: %s",
                           path.c_str());
-                m_stk_dir = path + "/" + app_dir_name;
+                m_fluxara_drift_dir = path + "/" + app_dir_name;
                 needs_extract_data = true;
                 break;
             }
         }
     }
 
-    // We can't continue if STK dir has not been found
-    if (m_stk_dir.size() == 0)
+    // We can't continue if FLUXARA_DRIFT dir has not been found
+    if (m_fluxara_drift_dir.size() == 0)
     {
-        Log::fatal("AssetsAndroid", "Fatal error: Couldn't find Supertuxkart "
+        Log::fatal("AssetsAndroid", "Fatal error: Couldn't find FluxaraDrift "
                    "data directory");
     }
 
     // Check if assets were extracted properly
-    if (!m_file_manager->fileExists(m_stk_dir + "/.extracted") &&
+    if (!m_file_manager->fileExists(m_fluxara_drift_dir + "/.extracted") &&
         !needs_extract_data)
     {
         needs_extract_data = true;
@@ -210,15 +210,15 @@ void AssetsAndroid::init()
                   "extracting assets...");
     }
 
-    if (!m_file_manager->checkAndCreateDirectoryP(m_stk_dir + "/home"))
+    if (!m_file_manager->checkAndCreateDirectoryP(m_fluxara_drift_dir + "/home"))
     {
         Log::warn("AssetsAndroid", "Couldn't create home directory");
     }
 
     // Set some useful variables
-    setenv("SUPERTUXKART_DATADIR", m_stk_dir.c_str(), 1);
-    setenv("HOME", (m_stk_dir + "/home").c_str(), 1);
-    setenv("XDG_CONFIG_HOME", (m_stk_dir + "/home").c_str(), 1);
+    setenv("FLUXARA_DRIFT_DATADIR", m_fluxara_drift_dir.c_str(), 1);
+    setenv("HOME", (m_fluxara_drift_dir + "/home").c_str(), 1);
+    setenv("XDG_CONFIG_HOME", (m_fluxara_drift_dir + "/home").c_str(), 1);
 
     // Extract data directory from apk if it's needed
     if (needs_extract_data)
@@ -229,15 +229,15 @@ void AssetsAndroid::init()
             removeData();
             extractData();
 
-            if (!m_file_manager->fileExists(m_stk_dir + "/.extracted"))
+            if (!m_file_manager->fileExists(m_fluxara_drift_dir + "/.extracted"))
             {
                 Log::error("AssetsAndroid", "Fatal error: Assets were not "
                            "extracted properly");
                 setProgressBar(-1);
                 // setProgressBar(-1) will show the error dialog and the
-                // android ui thread will exit stk
+                // android ui thread will exit fluxara_drift
                 while (true)
-                    StkTime::sleep(1);
+                    FluxaraDriftTime::sleep(1);
             }
         }
     }
@@ -257,7 +257,7 @@ void AssetsAndroid::extractData()
     bool success = true;
 
     // Create .nomedia file
-    touchFile(m_stk_dir + "/.nomedia");
+    touchFile(m_fluxara_drift_dir + "/.nomedia");
 
     // Extract base directory first, so that we will be able to open the file
     // with dir names
@@ -269,7 +269,7 @@ void AssetsAndroid::extractData()
         return;
     }
 
-    std::fstream file(m_stk_dir + "/" + dirs_list, std::ios::in);
+    std::fstream file(m_fluxara_drift_dir + "/" + dirs_list, std::ios::in);
 
     if (file.good())
     {
@@ -324,7 +324,7 @@ void AssetsAndroid::extractData()
     // Mark the extraction as successful if everything is ok
     if (success)
     {
-        touchFile(m_stk_dir + "/.extracted");
+        touchFile(m_fluxara_drift_dir + "/.extracted");
         // Dismiss android dialog
         setProgressBar(100);
     }
@@ -396,9 +396,9 @@ bool AssetsAndroid::extractFile(std::string filename)
 
     std::string output_file = filename;
 
-    if (m_stk_dir.length() > 0)
+    if (m_fluxara_drift_dir.length() > 0)
     {
-        output_file = m_stk_dir + "/" + filename;
+        output_file = m_fluxara_drift_dir + "/" + filename;
     }
 
     if (creating_dir)
@@ -464,42 +464,42 @@ bool AssetsAndroid::extractFile(std::string filename)
 }
 
 //-----------------------------------------------------------------------------
-/** A function that removes whole STK data directory
+/** A function that removes whole FLUXARA_DRIFT data directory
  */
 void AssetsAndroid::removeData()
 {
 #ifdef ANDROID
-    if (m_stk_dir.length() == 0)
+    if (m_fluxara_drift_dir.length() == 0)
         return;
         
     std::string app_dir_name = ANDROID_APP_DIR_NAME;
 
     // Make sure that we are not accidentally removing wrong directory
-    if (m_stk_dir.find("/" + app_dir_name) == std::string::npos &&
-        m_stk_dir.find("/stk") == std::string::npos)
+    if (m_fluxara_drift_dir.find("/" + app_dir_name) == std::string::npos &&
+        m_fluxara_drift_dir.find("/fluxara_drift") == std::string::npos)
     {
         Log::error("AssetsAndroid", "Invalid data directory: %s",
-                   m_stk_dir.c_str());
+                   m_fluxara_drift_dir.c_str());
         assert(false);
         return;
     }
 
     std::set<std::string> files;
-    m_file_manager->listFiles(files, m_stk_dir, true);
+    m_file_manager->listFiles(files, m_fluxara_drift_dir, true);
 
     for (std::string file : files)
     {
-        if (file == m_stk_dir + "/." || file == m_stk_dir + "/..")
+        if (file == m_fluxara_drift_dir + "/." || file == m_fluxara_drift_dir + "/..")
             continue;
 
         // Don't delete home directory that contains configuration files
         // and add-ons
-        if (file == m_stk_dir + "/home")
+        if (file == m_fluxara_drift_dir + "/home")
             continue;
 
         // Don't delete .nomedia file. It has a sense to keep it for home
         // directory, i.e. for textures of add-on karts etc.
-        if (file == m_stk_dir + "/.nomedia")
+        if (file == m_fluxara_drift_dir + "/.nomedia")
             continue;
 
         Log::info("AssetsAndroid", "Deleting file: %s", file.c_str());

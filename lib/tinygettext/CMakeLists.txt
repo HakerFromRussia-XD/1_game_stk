@@ -47,7 +47,7 @@ endif(COMMAND cmake_policy)
 ## Reveal library type choice to users
 option(BUILD_SHARED_LIBS "Produce dynamic library instead of static archive" OFF)
 
-# STK addition: disable libiconv
+# FLUXARA_DRIFT addition: disable libiconv
 option(USE_ICONV "Use libiconv" OFF)
 if (USE_ICONV)
 ## Add iconv to include directories

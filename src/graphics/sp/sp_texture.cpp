@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -16,7 +16,7 @@
 //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include "graphics/sp/sp_texture.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "io/file_manager.hpp"
 #include "graphics/sp/sp_base.hpp"
@@ -738,7 +738,7 @@ std::vector<std::pair<core::dimension2du, unsigned> >
         }
     }
 
-    const unsigned tc_flag = squish::kDxt5 | stk_config->m_tc_quality;
+    const unsigned tc_flag = squish::kDxt5 | fluxara_drift_config->m_tc_quality;
     for (auto& size : mipmap_sizes)
     {
         size.second = squish::GetStorageRequirements(

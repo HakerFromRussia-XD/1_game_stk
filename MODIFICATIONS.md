@@ -1,14 +1,14 @@
 # Motorica modifications
 
 This file identifies the prominent changes made by MOTORICA RESEARCH LLC to
-the upstream SuperTuxKart code base. It is not a substitute for the Git
+the upstream Fluxara Drift code base. It is not a substitute for the Git
 history; the complete source and commit history remain authoritative.
 
 ## iOS integration
 
-- Added the `motorica-stk` URL scheme so Motorica Start can open the game.
+- Added the `motorica-fluxara_drift` URL scheme so Motorica Start can open the game.
 - Added local exchange of controller snapshots through an Apple App Group.
-- Added a permanent launch-mode state machine. Only a valid `motorica-stk://`
+- Added a permanent launch-mode state machine. Only a valid `motorica-fluxara_drift://`
   URL enables Motorica Start mode; a recent App Group snapshot or an installed
   asset package cannot silently switch a direct launch.
 - Added Motorica Training Hub for direct launches, with a separate Motorica
@@ -40,8 +40,8 @@ The main implementation is in:
 - `src/utils/extract_mobile_assets.cpp`
 - `tools/motorica_assets/build_assets.py`
 - `motorica-assets-overlay/`
-- `data/SuperTuxKart-Info-iOS.plist`
-- `data/SuperTuxKart-iOS.entitlements`
+- `data/Fluxara Drift-Info-iOS.plist`
+- `data/Fluxara Drift-iOS.entitlements`
 - `cmake/Toolchain-ios-xcode.cmake`
 
 ## Android integration
@@ -60,5 +60,5 @@ The main implementation is in:
 
 ## Upstream
 
-The upstream project is <https://github.com/supertuxkart/stk-code>. This fork
+The upstream project is <https://github.com/fluxaradrift/fluxara_drift-code>. This fork
 is maintained independently and is not endorsed by the upstream project.

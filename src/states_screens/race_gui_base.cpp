@@ -1,7 +1,7 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
-//  Copyright (C) 2006-2015 Joerg Henrichs, SuperTuxKart-Team, Steve Baker
+//  Copyright (C) 2006-2015 Joerg Henrichs, FluxaraDrift-Team, Steve Baker
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -540,7 +540,7 @@ void RaceGUIBase::update(float dt)
         // already 1 second ahead of time when crossing finished line)
         if (k->getNetworkConfirmedFinishTicks() > 0
             && w->getTicksSinceStart() >
-            k->getNetworkConfirmedFinishTicks() + stk_config->time2Ticks(1.0f))
+            k->getNetworkConfirmedFinishTicks() + fluxara_drift_config->time2Ticks(1.0f))
         {
             m_enabled_network_spectator = true;
             cl->setSpectator(true);
@@ -617,11 +617,11 @@ void RaceGUIBase::drawGlobalMusicDescription()
     const int fheight = font->getDimension(L"X").Height;
     
     float race_time =
-        stk_config->ticks2Time(World::getWorld()->getMusicDescriptionTicks());
+        fluxara_drift_config->ticks2Time(World::getWorld()->getMusicDescriptionTicks());
 
     // ---- Manage pulsing effect
     float timeProgression = (float)(race_time) /
-                            (float)(stk_config->m_music_credit_time);
+                            (float)(fluxara_drift_config->m_music_credit_time);
 
     const int x_pulse = (int)(sinf(race_time*9.0f)*fheight/4);
     const int y_pulse = (int)(cosf(race_time*9.0f)*fheight/4);
@@ -1115,7 +1115,7 @@ void RaceGUIBase::drawPlayerIcon(AbstractKart *kart, int x, int y, int w,
                                    icon->getSize());
         video::SColor translucence((unsigned)-1);
         translucence.setAlpha(128);
-        if (kart->isGhostKart())
+        if (kart->isGhofluxara_driftart())
             draw2DImage(icon, pos, rect, NULL, translucence, true);
         else
             draw2DImage(icon, pos, rect, NULL, NULL, true);
@@ -1287,7 +1287,7 @@ void RaceGUIBase::drawPlungerInFace(const Camera *camera, float dt)
         if(m_plunger_move_time < dt && m_plunger_state!=PLUNGER_STATE_FAST)
         {
             const float fast_time = 0.3f;
-            if(kart->getBlockedByPlungerTicks()<stk_config->time2Ticks(fast_time))
+            if(kart->getBlockedByPlungerTicks()<fluxara_drift_config->time2Ticks(fast_time))
             {
                 // First time we reach faste state: select random target point
                 // at top of screen and set speed accordingly

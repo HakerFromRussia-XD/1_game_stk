@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015  Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -18,7 +18,7 @@
 
 #include "karts/max_speed.hpp"
 
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "karts/abstract_kart.hpp"
 #include "karts/kart_properties.hpp"
 #include "network/network_string.hpp"
@@ -45,7 +45,7 @@
  *  - Use of nitro
  *  The speed increases for all those are added after applying the maximum
  *  slowdown fraction.
- *  At the end the maximum is capped by a value specified in stk_config
+ *  At the end the maximum is capped by a value specified in fluxara_drift_config
  *  (to avoid issues with physics etc).
 */
 MaxSpeed::MaxSpeed(AbstractKart *kart)

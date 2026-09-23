@@ -3,7 +3,7 @@
 <scene>
   <track model="stukroche-bay_track.spm" x="0" y="0" z="0"/>
   <sun  fog="true" fog-color="8 12 16" fog-max="0.8999999761581421" fog-start="15.00" fog-end="450.00" xyz="-34.35 100.53 -37.34" sun-specular="33 53 133" sun-diffuse="21 34 90" ambient="75 75 75"/>
-  <sky-box texture="sky-top.png stk_generic_sand_b.png sky-side.png sky-side.png sky-side.png sky-side.png" sh-texture="sky-top.png stk_generic_sand_b.png sky-side.png sky-side.png sky-side.png sky-side.png"/>
+  <sky-box texture="sky-top.png fluxara_drift_generic_sand_b.png sky-side.png sky-side.png sky-side.png sky-side.png" sh-texture="sky-top.png fluxara_drift_generic_sand_b.png sky-side.png sky-side.png sky-side.png sky-side.png"/>
   <camera far="1550.0"/>
   <item id="Empty" x="94.03" y="-19.12" z="67.90" />
   <item id="Empty.001" x="84.02" y="-14.99" z="-0.29" />
@@ -74,90 +74,90 @@
   <start x="89.55" y="-18.65" z="45.31" h="133.33"/>
   <start x="-39.14" y="-18.65" z="96.31" h="151.31"/>
   <start x="-82.09" y="-18.65" z="55.58" h="126.76"/>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy" xyz="91.42 -17.78 -1.13" hpr="0.0 -0.0 0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy" xyz="91.42 -17.78 -1.13" hpr="0.0 -0.0 0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.001" xyz="68.39 -17.78 -15.20" hpr="-0.0 -123.8 -0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.001" xyz="68.39 -17.78 -15.20" hpr="-0.0 -123.8 -0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.002" xyz="70.68 -17.78 24.40" hpr="-0.0 54.5 -0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.002" xyz="70.68 -17.78 24.40" hpr="-0.0 54.5 -0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.003" xyz="73.09 -17.78 -1.26" hpr="0.0 -61.5 0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.003" xyz="73.09 -17.78 -1.26" hpr="0.0 -61.5 0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.004" xyz="87.78 -17.78 -54.84" hpr="-0.0 12.1 -0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.004" xyz="87.78 -17.78 -54.84" hpr="-0.0 12.1 -0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.005" xyz="57.56 -17.78 -52.66" hpr="-0.0 12.1 -0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.005" xyz="57.56 -17.78 -52.66" hpr="-0.0 12.1 -0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.006" xyz="44.43 -17.78 -45.26" hpr="0.0 -47.6 0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.006" xyz="44.43 -17.78 -45.26" hpr="0.0 -47.6 0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.007" xyz="42.39 -17.78 -74.10" hpr="0.0 141.0 0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.007" xyz="42.39 -17.78 -74.10" hpr="0.0 141.0 0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.008" xyz="-19.73 -17.78 -57.89" hpr="0.0 -8.8 0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.008" xyz="-19.73 -17.78 -57.89" hpr="0.0 -8.8 0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.009" xyz="15.38 -17.78 -59.77" hpr="-0.0 -111.1 -0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.009" xyz="15.38 -17.78 -59.77" hpr="-0.0 -111.1 -0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.010" xyz="4.04 -17.78 -36.72" hpr="0.0 -53.6 0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.010" xyz="4.04 -17.78 -36.72" hpr="0.0 -53.6 0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.011" xyz="-79.59 -17.78 -86.65" hpr="-0.0 -171.8 -0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.011" xyz="-79.59 -17.78 -86.65" hpr="-0.0 -171.8 -0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.012" xyz="-136.46 -17.78 -53.75" hpr="0.0 -42.7 0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.012" xyz="-136.46 -17.78 -53.75" hpr="0.0 -42.7 0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.013" xyz="-133.84 -17.78 -11.99" hpr="-0.0 -167.8 -0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.013" xyz="-133.84 -17.78 -11.99" hpr="-0.0 -167.8 -0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.014" xyz="-77.44 -17.78 40.52" hpr="0.0 -58.0 0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.014" xyz="-77.44 -17.78 40.52" hpr="0.0 -58.0 0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.015" xyz="-39.05 -17.78 58.53" hpr="-0.0 -175.3 0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.015" xyz="-39.05 -17.78 58.53" hpr="-0.0 -175.3 0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.016" xyz="-59.06 -17.78 75.66" hpr="0.0 -49.6 -0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.016" xyz="-59.06 -17.78 75.66" hpr="0.0 -49.6 -0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.017" xyz="-12.92 -17.78 100.42" hpr="0.0 61.5 0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.017" xyz="-12.92 -17.78 100.42" hpr="0.0 61.5 0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.018" xyz="324.43 -9.78 26.63" hpr="0.0 -61.5 0.0" scale="1.13 1.12 1.13">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.018" xyz="324.43 -9.78 26.63" hpr="0.0 -61.5 0.0" scale="1.13 1.12 1.13">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.019" xyz="357.15 -9.78 0.98" hpr="0.0 -61.5 0.0" scale="1.13 1.12 1.13">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.019" xyz="357.15 -9.78 0.98" hpr="0.0 -61.5 0.0" scale="1.13 1.12 1.13">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.020" xyz="328.62 -11.86 64.84" hpr="-0.0 -178.2 -0.0" scale="1.13 1.12 1.13">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.020" xyz="328.62 -11.86 64.84" hpr="-0.0 -178.2 -0.0" scale="1.13 1.12 1.13">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.021" xyz="64.51 -11.86 325.04" hpr="-0.0 -178.2 -0.0" scale="1.13 1.12 1.13">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.021" xyz="64.51 -11.86 325.04" hpr="-0.0 -178.2 -0.0" scale="1.13 1.12 1.13">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.022" xyz="93.03 -9.78 261.19" hpr="0.0 -61.5 0.0" scale="1.13 1.12 1.13">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.022" xyz="93.03 -9.78 261.19" hpr="0.0 -61.5 0.0" scale="1.13 1.12 1.13">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.023" xyz="60.32 -9.78 286.84" hpr="0.0 -61.5 0.0" scale="1.13 1.12 1.13">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.023" xyz="60.32 -9.78 286.84" hpr="0.0 -61.5 0.0" scale="1.13 1.12 1.13">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.024" xyz="-381.52 4.72 -99.23" hpr="0.0 -61.5 0.0" scale="1.13 1.12 1.13">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.024" xyz="-381.52 4.72 -99.23" hpr="0.0 -61.5 0.0" scale="1.13 1.12 1.13">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.025" xyz="-348.81 -1.30 -124.88" hpr="0.0 -61.5 0.0" scale="1.13 1.12 1.13">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.025" xyz="-348.81 -1.30 -124.88" hpr="0.0 -61.5 0.0" scale="1.13 1.12 1.13">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.026" xyz="-377.33 -9.12 -61.03" hpr="-0.0 -178.2 -0.0" scale="1.13 1.12 1.13">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.026" xyz="-377.33 -9.12 -61.03" hpr="-0.0 -178.2 -0.0" scale="1.13 1.12 1.13">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.027" xyz="-331.60 -9.45 166.74" hpr="0.0 -51.2 0.0" scale="1.46 1.46 1.46">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.027" xyz="-331.60 -9.45 166.74" hpr="0.0 -51.2 0.0" scale="1.46 1.46 1.46">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.028" xyz="-326.69 -9.21 113.87" hpr="0.0 99.8 0.0" scale="1.46 1.46 1.46">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.028" xyz="-326.69 -9.21 113.87" hpr="0.0 99.8 0.0" scale="1.46 1.46 1.46">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.029" xyz="291.06 -9.21 215.14" hpr="0.0 99.8 0.0" scale="1.46 1.46 1.46">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.029" xyz="291.06 -9.21 215.14" hpr="0.0 99.8 0.0" scale="1.46 1.46 1.46">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.030" xyz="286.15 5.69 268.01" hpr="0.0 -51.2 0.0" scale="1.46 1.46 1.46">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.030" xyz="286.15 5.69 268.01" hpr="0.0 -51.2 0.0" scale="1.46 1.46 1.46">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.031" xyz="61.45 -9.49 -262.77" hpr="0.0 -16.9 0.0" scale="1.46 1.46 1.46">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.031" xyz="61.45 -9.49 -262.77" hpr="0.0 -16.9 0.0" scale="1.46 1.46 1.46">
   </library>
-  <library name="stklib_palmTree_a" id="stklib_palmTree_a_main_proxy.032" xyz="35.74 -7.85 -309.22" hpr="0.0 134.1 0.0" scale="1.46 1.46 1.46">
+  <library name="fluxara_driftlib_palmTree_a" id="fluxara_driftlib_palmTree_a_main_proxy.032" xyz="35.74 -7.85 -309.22" hpr="0.0 134.1 0.0" scale="1.46 1.46 1.46">
   </library>
-  <library name="stklib_umbrellaBeach_a" id="stklib_umbrellaBeach_a_main_proxy" xyz="-11.41 -19.15 84.07" hpr="0.0 -0.0 0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_umbrellaBeach_a" id="fluxara_driftlib_umbrellaBeach_a_main_proxy" xyz="-11.41 -19.15 84.07" hpr="0.0 -0.0 0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_umbrellaBeach_a" id="stklib_umbrellaBeach_a_main_proxy.001" xyz="-9.43 -18.87 64.07" hpr="-17.0 -0.0 0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_umbrellaBeach_a" id="fluxara_driftlib_umbrellaBeach_a_main_proxy.001" xyz="-9.43 -18.87 64.07" hpr="-17.0 -0.0 0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_umbrellaBeach_a" id="stklib_umbrellaBeach_a_main_proxy.002" xyz="6.15 -19.15 56.32" hpr="9.0 -0.0 -0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_umbrellaBeach_a" id="fluxara_driftlib_umbrellaBeach_a_main_proxy.002" xyz="6.15 -19.15 56.32" hpr="9.0 -0.0 -0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_umbrellaBeach_a" id="stklib_umbrellaBeach_a_main_proxy.003" xyz="36.16 -18.52 42.88" hpr="2.4 -0.0 -0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_umbrellaBeach_a" id="fluxara_driftlib_umbrellaBeach_a_main_proxy.003" xyz="36.16 -18.52 42.88" hpr="2.4 -0.0 -0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_umbrellaBeach_a" id="stklib_umbrellaBeach_a_main_proxy.004" xyz="43.34 -18.52 45.71" hpr="-4.9 -0.0 0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_umbrellaBeach_a" id="fluxara_driftlib_umbrellaBeach_a_main_proxy.004" xyz="43.34 -18.52 45.71" hpr="-4.9 -0.0 0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_umbrellaBeach_a" id="stklib_umbrellaBeach_a_main_proxy.005" xyz="88.49 -18.69 11.24" hpr="-0.7 -0.0 0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_umbrellaBeach_a" id="fluxara_driftlib_umbrellaBeach_a_main_proxy.005" xyz="88.49 -18.69 11.24" hpr="-0.7 -0.0 0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_umbrellaBeach_a" id="stklib_umbrellaBeach_a_main_proxy.006" xyz="97.05 -19.12 -16.25" hpr="-10.5 -0.0 0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_umbrellaBeach_a" id="fluxara_driftlib_umbrellaBeach_a_main_proxy.006" xyz="97.05 -19.12 -16.25" hpr="-10.5 -0.0 0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_umbrellaBeach_a" id="stklib_umbrellaBeach_a_main_proxy.007" xyz="-38.28 -19.12 -71.00" hpr="-10.5 -0.0 0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_umbrellaBeach_a" id="fluxara_driftlib_umbrellaBeach_a_main_proxy.007" xyz="-38.28 -19.12 -71.00" hpr="-10.5 -0.0 0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_umbrellaBeach_a" id="stklib_umbrellaBeach_a_main_proxy.008" xyz="-13.75 -19.12 -81.20" hpr="4.3 -0.0 -0.0" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_umbrellaBeach_a" id="fluxara_driftlib_umbrellaBeach_a_main_proxy.008" xyz="-13.75 -19.12 -81.20" hpr="4.3 -0.0 -0.0" scale="0.75 0.75 0.75">
   </library>
-  <library name="stklib_umbrellaBeach_a" id="stklib_umbrellaBeach_a_main_proxy.009" xyz="-43.10 -19.12 -62.06" hpr="4.3 -0.0 8.5" scale="0.75 0.75 0.75">
+  <library name="fluxara_driftlib_umbrellaBeach_a" id="fluxara_driftlib_umbrellaBeach_a_main_proxy.009" xyz="-43.10 -19.12 -62.06" hpr="4.3 -0.0 8.5" scale="0.75 0.75 0.75">
   </library>
 </scene>

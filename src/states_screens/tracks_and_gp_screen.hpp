@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -37,7 +37,7 @@ class TracksAndGPScreen : public GUIEngine::Screen,
 private:
     GUIEngine::TextBoxWidget* m_search_box;
 
-    TracksAndGPScreen() : Screen("tracks_and_gp.stkgui") {}
+    TracksAndGPScreen() : Screen("tracks_and_gp.fluxara_driftgui") {}
 
     /** adds the tracks from the current track group into the tracks ribbon */
     void buildTrackList();

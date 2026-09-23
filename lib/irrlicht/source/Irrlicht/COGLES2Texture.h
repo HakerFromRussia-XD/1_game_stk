@@ -14,7 +14,7 @@
 
 #if defined(_IRR_COMPILE_WITH_SDL_DEVICE_)
 #include "glad/gl.h"
-#elif defined (IOS_STK)
+#elif defined (IOS_FLUXARA_DRIFT)
 #include <OpenGLES/ES2/gl.h>
 #else
 #include <GLES2/gl2.h>
@@ -26,6 +26,7 @@
 
 namespace irr
 {
+namespace io { class IReadFile; }
 namespace video
 {
 
@@ -57,6 +58,12 @@ public:
 
 	//! constructor
 	COGLES2Texture(IImage* surface, const io::path& name, void* mipmapData=0, COGLES2Driver* driver=0);
+
+	//! Creates a GPU-native ASTC texture from an astcenc raw container.  The
+	//! file extension is intentionally irrelevant so existing mesh references
+	//! remain valid after iOS bundle packaging replaces a texture payload.
+	static ITexture* createASTCTexture(io::IReadFile* file, const io::path& name,
+		COGLES2Driver* driver);
 
 	//! destructor
 	virtual ~COGLES2Texture();

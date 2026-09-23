@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2004-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2004-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -236,14 +236,14 @@ public:
     }
     // ------------------------------------------------------------------------
     virtual void saveCompleteState(BareNetworkString* bns,
-                                   STKPeer* peer) OVERRIDE;
+                                   FLUXARA_DRIFTPeer* peer) OVERRIDE;
     // ------------------------------------------------------------------------
     virtual void restoreCompleteState(const BareNetworkString& b) OVERRIDE;
     // ------------------------------------------------------------------------
     virtual bool isGoalPhase() const OVERRIDE
     {
         int diff = m_ticks_back_to_own_goal - getTicksSinceStart();
-        return diff > 0 && diff < stk_config->time2Ticks(3.0f);
+        return diff > 0 && diff < fluxara_drift_config->time2Ticks(3.0f);
     }
     // ------------------------------------------------------------------------
     AbstractKart* getKartAtDrawingPosition(unsigned int p) const OVERRIDE

@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2012-2015  Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -137,7 +137,7 @@ void CheckCannon::update(float dt)
     for (unsigned int i = 0; i < world->getNumKarts(); i++)
     {
         AbstractKart* kart = world->getKart(i);
-        if (kart->getKartAnimation() || kart->isGhostKart() ||
+        if (kart->getKartAnimation() || kart->isGhofluxara_driftart() ||
             kart->isEliminated() || !m_is_active[i])
             continue;
 

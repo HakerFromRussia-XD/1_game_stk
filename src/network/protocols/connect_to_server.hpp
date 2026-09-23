@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2013-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -53,7 +53,7 @@ private:
     std::atomic<ConnectState> m_state;
 
     void getClientServerInfo();
-    bool registerWithSTKServer();
+    bool registerWithFLUXARA_DRIFTServer();
     bool tryConnect(int timeout, int retry, bool another_port = false,
                     bool ipv6 = false);
     static ENetAddress m_server_address;

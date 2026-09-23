@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2019 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2019 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -18,7 +18,7 @@
 #ifndef HEADER_DOWNLOAD_ASSETS_HPP
 #define HEADER_DOWNLOAD_ASSETS_HPP
 
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
 
 #include "guiengine/modaldialog.hpp"
 #include "utils/cpp2011.hpp"
@@ -34,7 +34,7 @@ class DownloadAssets : public GUIEngine::ModalDialog
 private:
     GUIEngine::ProgressBarWidget *m_progress;
     GUIEngine::IconButtonWidget  *m_install_button;
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     bool m_download_paused;
 #endif
 

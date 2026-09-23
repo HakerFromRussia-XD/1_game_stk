@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
 //  Copyright (C) 2006-2015 Eduardo Hernandez Munoz
 //  Copyright (C) 2008-2015 Joerg Henrichs
@@ -224,7 +224,7 @@ unsigned int SkiddingAI::getNextSector(unsigned int index)
  */
 void SkiddingAI::update(int ticks)
 {
-    float dt = stk_config->ticks2Time(ticks);
+    float dt = fluxara_drift_config->ticks2Time(ticks);
 
     // Clear stored items if they were deleted (for example a switched nitro)
     if (m_item_to_collect &&
@@ -325,7 +325,7 @@ void SkiddingAI::update(int ticks)
     }
 
     // Get information that is needed by more than 1 of the handling funcs
-    computeNearestKarts();
+    computeNearefluxara_driftarts();
 
     if (!m_enabled_network_ai)
     {
@@ -385,7 +385,7 @@ void SkiddingAI::handleSteering(float dt)
             // If we are faster, try to predict the point where we will hit
             // the other kart
             if((m_kart_ahead->getSpeed() < m_kart->getSpeed()) &&
-                !m_kart_ahead->isGhostKart())
+                !m_kart_ahead->isGhofluxara_driftart())
             {
                 float time_till_hit = m_distance_ahead
                                     / (m_kart->getSpeed()-m_kart_ahead->getSpeed());
@@ -1193,7 +1193,7 @@ void SkiddingAI::handleItems(const float dt, const Vec3 *aim_point, int last_nod
     case PowerupManager::POWERUP_CAKE:
         {
             // if the kart has a shield, do not break it by using a cake.
-            if((m_kart->getShieldTime() > min_bubble_time) && (stk_config->m_shield_restrict_weapons == true))
+            if((m_kart->getShieldTime() > min_bubble_time) && (fluxara_drift_config->m_shield_restrict_weapons == true))
                 break;
 
             handleCake(item_skill);
@@ -1203,7 +1203,7 @@ void SkiddingAI::handleItems(const float dt, const Vec3 *aim_point, int last_nod
     case PowerupManager::POWERUP_BOWLING:
         {
             // if the kart has a shield, do not break it by using a bowling ball.
-            if((m_kart->getShieldTime() > min_bubble_time) && (stk_config->m_shield_restrict_weapons == true))
+            if((m_kart->getShieldTime() > min_bubble_time) && (fluxara_drift_config->m_shield_restrict_weapons == true))
                 break;
 
             handleBowling(item_skill);
@@ -1218,7 +1218,7 @@ void SkiddingAI::handleItems(const float dt, const Vec3 *aim_point, int last_nod
     case PowerupManager::POWERUP_PLUNGER:
         {
             // if the kart has a shield, do not break it by using a plunger.
-            if((m_kart->getShieldTime() > min_bubble_time) && (stk_config->m_shield_restrict_weapons == true))
+            if((m_kart->getShieldTime() > min_bubble_time) && (fluxara_drift_config->m_shield_restrict_weapons == true))
                 break;
 
             // Leave more time after a plunger, since it will take some
@@ -1267,7 +1267,7 @@ void SkiddingAI::handleItems(const float dt, const Vec3 *aim_point, int last_nod
         } // POWERUP_SWATTER
     case PowerupManager::POWERUP_RUBBERBALL:
         // if the kart has a shield, do not break it by using a swatter.
-        if((m_kart->getShieldTime() > min_bubble_time) && (stk_config->m_shield_restrict_weapons == true))
+        if((m_kart->getShieldTime() > min_bubble_time) && (fluxara_drift_config->m_shield_restrict_weapons == true))
             break;
         // Perhaps some more sophisticated algorithm might be useful.
         // For now: fire if there is a kart ahead (which means that
@@ -1376,7 +1376,7 @@ void SkiddingAI::handleBubblegum(int item_skill,
     //if it is a bomb, wait : we may pass it to another kart before the timer runs out
     if (item_skill == 5 && type == Attachment::ATTACH_BOMB)
     {
-        if (m_kart->getAttachment()->getTicksLeft() < stk_config->time2Ticks(2))
+        if (m_kart->getAttachment()->getTicksLeft() < fluxara_drift_config->time2Ticks(2))
         {
             m_controls->setFire(true);
             m_controls->setLookBack(false);
@@ -1703,7 +1703,7 @@ void SkiddingAI::handleSwatter(int item_skill)
         //if it is a bomb, wait : we may pass it to another kart before the timer runs out
         if (item_skill == 5 && type == Attachment::ATTACH_BOMB)
         {
-            if (m_kart->getAttachment()->getTicksLeft() > stk_config->time2Ticks(3))
+            if (m_kart->getAttachment()->getTicksLeft() > fluxara_drift_config->time2Ticks(3))
             {
                 m_controls->setFire(true);
                 m_controls->setLookBack(false);
@@ -1866,7 +1866,7 @@ void SkiddingAI::handleSwitch(int item_skill,
  *  'closeness' is for now simply based on the position, i.e. if a kart is
  *  more than one lap behind or ahead, it is not considered to be closest.
  */
-void SkiddingAI::computeNearestKarts()
+void SkiddingAI::computeNearefluxara_driftarts()
 {
     int my_position    = m_kart->getPosition();
 
@@ -1948,7 +1948,7 @@ void SkiddingAI::computeNearestKarts()
         target_overall_distance = 999999.9f;
 
     // In higher difficulties and in follow the leader, rubber band towards the first player,
-    // if at all (SuperTux has no rubber banding at all). Boosted AIs also target the 1st player.
+    // if at all (FluxaraDrift has no rubber banding at all). Boosted AIs also target the 1st player.
     else if (   RaceManager::get()->getDifficulty() == RaceManager::DIFFICULTY_HARD
              || RaceManager::get()->getDifficulty() == RaceManager::DIFFICULTY_BEST
              || RaceManager::get()->isFollowMode()
@@ -1979,7 +1979,7 @@ void SkiddingAI::computeNearestKarts()
     }
     // Now convert 'maximum overall distance' to distance to player.
     m_distance_to_player = own_overall_distance - target_overall_distance;
-}   // computeNearestKarts
+}   // computeNearefluxara_driftarts
 
 //-----------------------------------------------------------------------------
 /** Determines if the AI should accelerate or not, and if not if it should brake.
@@ -2053,7 +2053,7 @@ void SkiddingAI::handleAccelerationAndBraking(int ticks)
         return;
     }
 
-    m_controls->setAccel(stk_config->m_ai_acceleration);
+    m_controls->setAccel(fluxara_drift_config->m_ai_acceleration);
 
 }   // handleAccelerationAndBraking
 
@@ -2138,7 +2138,7 @@ void SkiddingAI::handleRaceStart()
         }
         // Each kart starts at a different, random time, and the time is
         // smaller depending on the difficulty.
-        m_start_delay = stk_config->time2Ticks(
+        m_start_delay = fluxara_drift_config->time2Ticks(
                         m_ai_properties->m_min_start_delay
                       + (float) rand() / (float) RAND_MAX
                       * (m_ai_properties->m_max_start_delay -
@@ -2151,11 +2151,11 @@ void SkiddingAI::handleRaceStart()
         // Now check for a false start. If so, add 1 second penalty time.
         if (rand() < (float) RAND_MAX * false_start_probability)
         {
-            m_start_delay+=stk_config->m_penalty_ticks;
+            m_start_delay+=fluxara_drift_config->m_penalty_ticks;
             return;
         }
         m_kart->setStartupBoost(m_kart->getStartupBoostFromStartTicks(
-            m_start_delay + stk_config->time2Ticks(1.0f)));
+            m_start_delay + fluxara_drift_config->time2Ticks(1.0f)));
         m_start_delay = 0;
     }
 }   // handleRaceStart
@@ -2197,7 +2197,7 @@ void SkiddingAI::handleNitroAndZipper(float max_safe_speed)
    
     //Nitro continue to be advantageous during the fadeout (nitro ticks continue to tick in the negatives)
     int nitro_ticks = m_kart->getSpeedIncreaseTicksLeft(MaxSpeed::MS_INCREASE_NITRO);
-    float time_until_fadeout = ( stk_config->ticks2Time(nitro_ticks)
+    float time_until_fadeout = ( fluxara_drift_config->ticks2Time(nitro_ticks)
                        + m_kart->getKartProperties()->getNitroFadeOutTime() );
 
     // Because it takes some time after nitro activation to accelerate to the increased max speed,
@@ -2518,7 +2518,7 @@ void SkiddingAI::checkCrashes(const Vec3& pos )
             {
                 const AbstractKart* kart = m_world->getKart(j);
                 // Ignore eliminated karts
-                if(kart==m_kart||kart->isEliminated()||kart->isGhostKart()) continue;
+                if(kart==m_kart||kart->isEliminated()||kart->isGhofluxara_driftart()) continue;
                 const AbstractKart *other_kart = m_world->getKart(j);
                 // Ignore karts ahead that are faster than this kart.
                 if(m_kart->getVelocityLC().getZ() < other_kart->getVelocityLC().getZ())
@@ -2738,7 +2738,7 @@ void SkiddingAI::findNonCrashingPointNew(Vec3 *result, int *last_node)
         if( steps < 3 ) steps = 3;
 
         // That shouldn't happen, but since we had one instance of
-        // STK hanging, add an upper limit here (usually it's at most
+        // FLUXARA_DRIFT hanging, add an upper limit here (usually it's at most
         // 20 steps)
         if( steps>1000) steps = 1000;
 

@@ -202,8 +202,8 @@ static int parse_reg(const char *str)
 "chsh"                            return TOKEN(T_OP_CHSH);
 "flow_rev"                        return TOKEN(T_OP_FLOW_REV);
 "bkt"                             return TOKEN(T_OP_BKT);
-"stks"                            return TOKEN(T_OP_STKS);
-"stkr"                            return TOKEN(T_OP_STKR);
+"fluxara_drifts"                            return TOKEN(T_OP_FLUXARA_DRIFTS);
+"fluxara_driftr"                            return TOKEN(T_OP_FLUXARA_DRIFTR);
 "xset"                            return TOKEN(T_OP_XSET);
 "xclr"                            return TOKEN(T_OP_XCLR);
 "getlast"                         return TOKEN(T_OP_GETLAST);

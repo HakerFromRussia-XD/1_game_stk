@@ -15,7 +15,6 @@
 #include "guiengine/widgets/model_view_widget.hpp"
 #include "input/device_manager.hpp"
 #include "input/input_manager.hpp"
-#include "input/multitouch_device.hpp"
 #include "io/file_manager.hpp"
 #include "karts/abstract_characteristic.hpp"
 #include "karts/kart_model.hpp"
@@ -28,8 +27,17 @@
 #include "states_screens/fluxara_ui.hpp"
 #include "states_screens/fluxara_event.hpp"
 #include "tracks/track.hpp"
+#ifdef IOS_FLUXARA_DRIFT
+#include "utils/fluxara_orientation_ios.hpp"
+#include "utils/fluxara_device_validation_ios.hpp"
+#endif
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
+
+#include <IrrlichtDevice.h>
+#ifdef IOS_FLUXARA_DRIFT
+#include <SDL.h>
+#endif
 
 #include <cmath>
 #include <algorithm>
@@ -38,7 +46,7 @@ using namespace GUIEngine;
 using namespace irr;
 
 FluxaraKartScreen::FluxaraKartScreen()
-    : Screen("fluxara_kart.stkgui")
+    : Screen("fluxara_kart.fluxara_driftgui")
 {
 }
 
@@ -60,6 +68,8 @@ void FluxaraKartScreen::setRace(Track* track, int laps, int karts,
 void FluxaraKartScreen::init()
 {
     Screen::init();
+    m_kart_dragging = false;
+    m_kart_drag_pointer = -1;
 
     layoutControls();
     const char* garage_files[] = {"garage-nav", "garage-select", "back-surface",
@@ -120,11 +130,7 @@ void FluxaraKartScreen::init()
     getWidget<ButtonWidget>("previous")->setFocusForPlayer(
         PLAYER_ID_GAME_MASTER);
 
-#if 0 // AUTOPLAY ACCEPTANCE — disabled for human play; retained for a future lab run.
     m_auto_start_delay = FluxaraModes::autoCampaignValidation() ? 0.1f : -1.0f;
-#else
-    m_auto_start_delay = -1.0f;
-#endif
 }
 
 void FluxaraKartScreen::updateKartPreview()
@@ -199,56 +205,90 @@ void FluxaraKartScreen::updateKartPreview()
 }
 
 // -----------------------------------------------------------------------------
-void FluxaraKartScreen::updateKartRotation()
+bool FluxaraKartScreen::onPointerInput(const irr::SEvent& event)
 {
     constexpr float idle_rotation_speed = 30.0f;
     ModelViewWidget* view = getWidget<ModelViewWidget>("kart-model");
-    MultitouchDevice* touch = input_manager->getDeviceManager()
-        ->getMultitouchDevice();
-    if (!view || !touch)
+    if (!view)
+        return false;
+
+    int x = 0;
+    int y = 0;
+    int pointer = 0;
+    bool pressed = false;
+    bool moved = false;
+    bool released = false;
+    if (event.EventType == EET_MOUSE_INPUT_EVENT)
     {
-        if (view) view->setRotateContinuously(idle_rotation_speed);
-        return;
+        x = event.MouseInput.X;
+        y = event.MouseInput.Y;
+        pressed = event.MouseInput.Event == EMIE_LMOUSE_PRESSED_DOWN;
+        moved = event.MouseInput.Event == EMIE_MOUSE_MOVED;
+        released = event.MouseInput.Event == EMIE_LMOUSE_LEFT_UP;
+    }
+    else if (event.EventType == EET_TOUCH_INPUT_EVENT)
+    {
+        x = event.TouchInput.X;
+        y = event.TouchInput.Y;
+        pointer = int(event.TouchInput.ID);
+        pressed = event.TouchInput.Event == ETIE_PRESSED_DOWN;
+        moved = event.TouchInput.Event == ETIE_MOVED;
+        released = event.TouchInput.Event == ETIE_LEFT_UP;
+    }
+    else
+    {
+        return false;
     }
 
     if (m_kart_dragging)
     {
-        const MultitouchEvent& event = touch->m_events[m_kart_drag_touch];
-        if (!event.touched)
+        if (pointer != m_kart_drag_pointer)
+            return false;
+
+        if (released)
         {
             m_kart_dragging = false;
-            m_kart_drag_touch = -1;
+            m_kart_drag_pointer = -1;
             view->setRotateContinuously(idle_rotation_speed);
-            return;
+            return true;
         }
 
-        const int delta_x = event.x - m_kart_drag_x;
-        if (delta_x != 0)
+        if (moved)
         {
-            // The preview follows a horizontal finger drag without inertia;
-            // automatic rotation resumes only after the touch is released.
-            view->rotateBy(float(delta_x) * 0.5f);
-            m_kart_drag_x = event.x;
+            const int delta_x = x - m_kart_drag_x;
+            if (delta_x != 0)
+            {
+                // The preview follows a horizontal finger drag without
+                // inertia; automatic rotation resumes on release.
+                // The model view's positive yaw is visually counter-clockwise
+                // on the garage camera, so invert the finger delta: a swipe
+                // right turns the kart right.
+                view->rotateBy(-float(delta_x) * 0.5f);
+                m_kart_drag_x = x;
+            }
         }
-        return;
+        return true;
     }
 
-    for (unsigned int i = 0; i < touch->m_events.size(); ++i)
-    {
-        const MultitouchEvent& event = touch->m_events[i];
-        if (!event.touched || event.x < view->m_x ||
-            event.x >= view->m_x + view->m_w || event.y < view->m_y ||
-            event.y >= view->m_y + view->m_h)
-            continue;
+    if (!pressed)
+        return false;
 
-        m_kart_dragging = true;
-        m_kart_drag_touch = int(i);
-        m_kart_drag_x = event.x;
-        view->setRotateOff();
-        return;
-    }
+    // Let the player catch the kart from the surrounding turntable stage,
+    // not only from its opaque mesh pixels. The band ends before the stats
+    // panel, so swipes through characteristics never spin the preview.
+    const int drag_left = std::max(0, view->m_x - view->m_w / 6);
+    const int drag_right = std::min(int(irr_driver->getActualScreenSize().Width),
+        view->m_x + view->m_w + view->m_w / 6);
+    const int drag_top = std::max(0, view->m_y - view->m_h / 5);
+    const int drag_bottom = view->m_y + view->m_h - view->m_h / 6;
+    if (x < drag_left || x >= drag_right || y < drag_top || y >= drag_bottom)
+        return false;
 
-    view->setRotateContinuously(idle_rotation_speed);
+    m_kart_dragging = true;
+    m_kart_drag_pointer = pointer;
+    m_kart_drag_x = x;
+    view->setRotateOff();
+    return true;
 }
 
 // -----------------------------------------------------------------------------
@@ -264,7 +304,6 @@ void FluxaraKartScreen::onUpdate(float dt)
             return;
         }
     }
-    updateKartRotation();
 }
 
 void FluxaraKartScreen::layoutControls()
@@ -319,6 +358,7 @@ void FluxaraKartScreen::onDraw(float)
     // Garage is the one portrait screen whose 3D model is aligned to painted
     // scenery, so draw its Figma layers in the physical full-bleed canvas.
     const FluxaraUI::Canvas c;
+    if (!c.isStable()) return;
     c.image(m_garage_art[0], 22, 684, 316, 64);
     c.image(m_garage_art[1], 117, 695, 126, 47);
     c.image(m_garage_art[2], 21, 58, 50, 50);
@@ -393,6 +433,27 @@ void FluxaraKartScreen::startRace()
     }
     if(!FluxaraModes::supportedOffline(m_mode)) return;
 
+#ifdef IOS_FLUXARA_DRIFT
+    // Do not render the landscape splash into the portrait drawable. UIKit
+    // would later stretch that completed portrait framebuffer across the
+    // landscape window. Replace the last garage frame with a neutral Fluxara
+    // colour before UIKit rotates it, then pump the real landscape drawable;
+    // RaceManager performs the first artwork render at the correct size.
+    IrrlichtDevice* device = irr_driver->getDevice();
+    device->getVideoDriver()->beginScene(true, true,
+        video::SColor(255, 12, 31, 76));
+    device->getVideoDriver()->endScene();
+    fluxaraRequestPortraitMenu(false);
+    for (unsigned int frame = 0;
+         frame < 8 && fluxaraOrientationTransitionPending(); ++frame)
+    {
+        device->run();
+        irr_driver->handleWindowResize();
+        if (fluxaraOrientationTransitionPending())
+            SDL_Delay(16);
+    }
+#endif
+
     if (StateManager::get()->activePlayerCount() == 0)
     {
         InputDevice* device = input_manager->getDeviceManager()
@@ -405,7 +466,7 @@ void FluxaraKartScreen::startRace()
     RaceManager::get()->setMajorMode(RaceManager::MAJOR_MODE_SINGLE);
     RaceManager::get()->setMinorMode(FluxaraModes::nativeMode(m_mode));
     RaceManager::get()->setWatchingReplay(false);
-    RaceManager::get()->setRaceGhostKarts(false);
+    RaceManager::get()->setRaceGhofluxara_driftarts(false);
     RaceManager::get()->setRecordRace(false);
     if (m_mode == "ghost_geometry")
     {
@@ -424,7 +485,7 @@ void FluxaraKartScreen::startRace()
             {
                 replay->setReplayFile(i);
                 replay->setSecondReplayFile(0, false);
-                RaceManager::get()->setRaceGhostKarts(true);
+                RaceManager::get()->setRaceGhofluxara_driftarts(true);
                 found_matching_ghost = true;
                 break;
             }
@@ -508,6 +569,11 @@ void FluxaraKartScreen::startRace()
     if (!m_event_id.empty() && PlayerManager::getCurrentPlayer())
         PlayerManager::getCurrentPlayer()->beginFluxaraEvent(
             m_event_id, m_track->getIdent());
+
+#ifdef IOS_FLUXARA_DRIFT
+    if (FluxaraModes::autoCampaignValidation())
+        fluxaraLogDeviceValidationMemory("before-load", m_event_id);
+#endif
 
     input_manager->getDeviceManager()->setAssignMode(ASSIGN);
     input_manager->getDeviceManager()->setSinglePlayer(

@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2014-2015  SuperTuxKart Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2014-2015  FluxaraDrift Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -109,9 +109,9 @@ namespace Scripting
         // libmcpp ignores the first argument (like real main which is the exe)
         std::string cmd1 = "mcpp";
         std::string int_version =
-            StringUtils::toString(StringUtils::versionToInt(STK_VERSION));
-        // Preprocessing (atm add stk version)
-        std::string cmd2  = "-DSTK_VERSION=";
+            StringUtils::toString(StringUtils::versionToInt(FLUXARA_DRIFT_VERSION));
+        // Preprocessing (atm add fluxara_drift version)
+        std::string cmd2  = "-DFLUXARA_DRIFT_VERSION=";
         cmd2 += int_version;
         // -P Don't output #line lines.
         std::string cmd3 = "-P";

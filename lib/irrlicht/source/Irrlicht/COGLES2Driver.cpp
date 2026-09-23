@@ -397,7 +397,7 @@ namespace video
 		addAndDropMaterialRenderer(new COGLES2ParallaxMapRenderer(PMVSData, PMFSData, EMT_PARALLAX_MAP_TRANSPARENT_VERTEX_ALPHA, this));
 
 		addAndDropMaterialRenderer(new COGLES2FixedPipelineRenderer(FPVSData, FPFSData, EMT_ONETEXTURE_BLEND, this));
-		addAndDropMaterialRenderer(new COGLES2FixedPipelineRenderer(FPVSData, FPFSData, EMT_STK_GRASS, this));
+		addAndDropMaterialRenderer(new COGLES2FixedPipelineRenderer(FPVSData, FPFSData, EMT_FLUXARA_DRIFT_GRASS, this));
 		delete[] FPVSData;
 		delete[] FPFSData;
 		delete[] NMVSData;
@@ -480,7 +480,7 @@ namespace video
 			const SExposedVideoData& videoData, core::rect<s32>* sourceRect)
 	{
 		CNullDriver::beginScene(backBuffer, zBuffer, color);
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 		CIrrDeviceSDL* sdl = static_cast<CIrrDeviceSDL*>(m_device);
 		const SDL_SysWMinfo& info = sdl->getWMInfo();
 		glBindRenderbuffer(GL_RENDERBUFFER, info.info.uikit.framebuffer);
@@ -1611,6 +1611,13 @@ namespace video
 	}
 
 
+	video::ITexture* COGLES2Driver::createCompressedTextureFromFile(io::IReadFile* file,
+		const io::path& name)
+	{
+		return COGLES2Texture::createASTCTexture(file, name, this);
+	}
+
+
 	//! Sets a material.
 	void COGLES2Driver::setMaterial(const SMaterial& material)
 	{
@@ -1838,7 +1845,7 @@ namespace video
 				continue;
 
 			// This code causes issues on some devices with legacy pipeline
-			// and also mipmaps should be handled in STK texture manager,
+			// and also mipmaps should be handled in FLUXARA_DRIFT texture manager,
 			// so just disable this part of code
 			continue;
 

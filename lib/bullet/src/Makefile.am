@@ -18,7 +18,7 @@ libbulletmath_a_SOURCES	= \
         LinearMath/btSerializer.cpp             LinearMath/btSerializer.h
 
 
-# Certain g++ versions causes stk to crash if btVoronoiSimplexSolver.cpp is
+# Certain g++ versions causes fluxara_drift to crash if btVoronoiSimplexSolver.cpp is
 # compiled with optimisations. Since it's rather difficult to specify certain
 # flags for one file only with auto-tools (you can only specify flags per
 # library, so you have to put this one file into a separate library) we compile

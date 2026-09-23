@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -37,7 +37,7 @@ using namespace Online;
 
 // -----------------------------------------------------------------------------
 
-OptionsScreenUI::OptionsScreenUI() : Screen("options/options_ui.stkgui")
+OptionsScreenUI::OptionsScreenUI() : Screen("options/options_ui.fluxara_driftgui")
 {
     m_inited = false;
 }   // OptionsScreenVideo
@@ -282,10 +282,10 @@ void OptionsScreenUI::loadSkins(const std::set<std::string>& files, bool addon)
 {
     for (auto& f : files)
     {
-        std::string stkskin = f + "/stkskin.xml";
-        if (file_manager->fileExists(stkskin))
+        std::string fluxara_driftskin = f + "/fluxara_driftskin.xml";
+        if (file_manager->fileExists(fluxara_driftskin))
         {
-            XMLNode* root = file_manager->createXMLTree(stkskin);
+            XMLNode* root = file_manager->createXMLTree(fluxara_driftskin);
             if (!root)
                 continue;
 

@@ -33,7 +33,7 @@
 #include <SDL_system.h>
 extern bool Android_isHardwareKeyboardConnected();
 extern void Android_toggleOnScreenKeyboard(bool show, int type, int y);
-extern void Android_fromSTKEditBox(int widget_id, const core::stringw& text, int selection_start, int selection_end, int type);
+extern void Android_fromFLUXARA_DRIFTEditBox(int widget_id, const core::stringw& text, int selection_start, int selection_end, int type);
 #endif
 
 #if !defined(SERVER_ONLY) && defined(_IRR_COMPILE_WITH_SDL_DEVICE_)
@@ -400,8 +400,8 @@ bool CGUIEditBox::OnEvent(const SEvent& event)
                     GUIEngine::ScreenKeyboard::hasSystemScreenKeyboard())
                 {
                     // If user toggle with hacker keyboard with arrows, keep
-                    // using only text from STKEditText
-                    Android_fromSTKEditBox(getID(), Text, m_mark_begin, m_mark_end, m_type);
+                    // using only text from FLUXARA_DRIFTEditText
+                    Android_fromFLUXARA_DRIFTEditBox(getID(), Text, m_mark_begin, m_mark_end, m_type);
                     // Enable auto focus which allows hardware keyboard unicode characters
                     Android_toggleOnScreenKeyboard(true, m_type, CurrentTextRect.LowerRightCorner.Y + 5);
                 }
@@ -669,7 +669,7 @@ bool CGUIEditBox::processKey(const SEvent& event)
                 new_mark_end = 0;
             }
             new_cursor_pos = p;
-            m_force_show_cursor_time = StkTime::getMonoTimeMs() + 200;
+            m_force_show_cursor_time = FluxaraDriftTime::getMonoTimeMs() + 200;
         }
         break;
     case IRR_KEY_HOME:
@@ -687,7 +687,7 @@ bool CGUIEditBox::processKey(const SEvent& event)
                 new_mark_end = 0;
             }
             new_cursor_pos = p;
-            m_force_show_cursor_time = StkTime::getMonoTimeMs() + 200;
+            m_force_show_cursor_time = FluxaraDriftTime::getMonoTimeMs() + 200;
         }
         break;
     case IRR_KEY_RETURN:
@@ -724,7 +724,7 @@ bool CGUIEditBox::processKey(const SEvent& event)
                 new_cursor_pos = m_cursor_pos - 1;
                 correctCursor(new_cursor_pos, true/*left*/);
             }
-            m_force_show_cursor_time = StkTime::getMonoTimeMs() + 200;
+            m_force_show_cursor_time = FluxaraDriftTime::getMonoTimeMs() + 200;
         }
         break;
 
@@ -752,7 +752,7 @@ bool CGUIEditBox::processKey(const SEvent& event)
                 new_cursor_pos = m_cursor_pos + 1;
                 correctCursor(new_cursor_pos, false/*left*/);
             }
-            m_force_show_cursor_time = StkTime::getMonoTimeMs() + 200;
+            m_force_show_cursor_time = FluxaraDriftTime::getMonoTimeMs() + 200;
         }
         break;
     case IRR_KEY_UP:
@@ -791,7 +791,7 @@ bool CGUIEditBox::processKey(const SEvent& event)
                 m_edit_text = sub_str;
                 new_cursor_pos = m_cursor_pos - 1;
             }
-            m_force_show_cursor_time = StkTime::getMonoTimeMs() + 200;
+            m_force_show_cursor_time = FluxaraDriftTime::getMonoTimeMs() + 200;
             new_mark_begin = 0;
             new_mark_end = 0;
             text_changed = true;
@@ -824,7 +824,7 @@ bool CGUIEditBox::processKey(const SEvent& event)
                 m_edit_text = sub_str;
                 text_changed = true;
             }
-            m_force_show_cursor_time = StkTime::getMonoTimeMs() + 200;
+            m_force_show_cursor_time = FluxaraDriftTime::getMonoTimeMs() + 200;
             new_mark_begin = 0;
             new_mark_end = 0;
         }
@@ -1012,7 +1012,7 @@ void CGUIEditBox::draw()
     }
 
     // draw cursor
-    uint64_t time_ms = StkTime::getMonoTimeMs();
+    uint64_t time_ms = FluxaraDriftTime::getMonoTimeMs();
     if (focus &&
         ((time_ms / 600) % 2 == 0 || m_force_show_cursor_time > time_ms))
     {
@@ -1044,7 +1044,7 @@ void CGUIEditBox::setText(const core::stringw& text)
         if (GUIEngine::ScreenKeyboard::shouldUseScreenKeyboard() &&
             GUIEngine::ScreenKeyboard::hasSystemScreenKeyboard())
         {
-            Android_fromSTKEditBox(getID(), Text, m_mark_begin, m_mark_end, m_type);
+            Android_fromFLUXARA_DRIFTEditBox(getID(), Text, m_mark_begin, m_mark_end, m_type);
         }
 #endif
 }
@@ -1143,7 +1143,7 @@ bool CGUIEditBox::processMouse(const SEvent& event)
     case EMIE_LMOUSE_PRESSED_DOWN:
         if (!Environment->hasFocus(this))
         {
-            m_force_show_cursor_time = StkTime::getMonoTimeMs() + 200;
+            m_force_show_cursor_time = FluxaraDriftTime::getMonoTimeMs() + 200;
             MouseMarking = true;
             m_cursor_pos = getCursorPos(event.MouseInput.X, event.MouseInput.Y);
             correctCursor(m_cursor_pos, m_cursor_pos < m_mark_begin);
@@ -1318,7 +1318,7 @@ void CGUIEditBox::inputChar(char32_t c)
             m_cursor_pos++;
         }
 
-        m_force_show_cursor_time = StkTime::getMonoTimeMs() + 200;
+        m_force_show_cursor_time = FluxaraDriftTime::getMonoTimeMs() + 200;
         updateGlyphLayouts();
         setTextMarkers(0, 0);
         calculateScrollPos();
@@ -1420,7 +1420,7 @@ void CGUIEditBox::setTextMarkers(s32 begin, s32 end)
         if (GUIEngine::ScreenKeyboard::shouldUseScreenKeyboard() &&
             GUIEngine::ScreenKeyboard::hasSystemScreenKeyboard())
         {
-            Android_fromSTKEditBox(getID(), Text, m_mark_begin, m_mark_end, m_type);
+            Android_fromFLUXARA_DRIFTEditBox(getID(), Text, m_mark_begin, m_mark_end, m_type);
         }
 #endif
     }
@@ -1592,7 +1592,7 @@ void CGUIEditBox::updateSurrogatePairText()
                     m_cursor_pos = realmbgn + (s32)sub_str.size();
                 }
             }
-            m_force_show_cursor_time = StkTime::getMonoTimeMs() + 200;
+            m_force_show_cursor_time = FluxaraDriftTime::getMonoTimeMs() + 200;
             updateGlyphLayouts();
             setTextMarkers(0, 0);
             if (m_cursor_pos > getTextCount())

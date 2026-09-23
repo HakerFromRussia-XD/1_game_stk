@@ -669,7 +669,7 @@ struct SJoystickInfo
     /** On windows the generic name is useless, since it's always the same
      *  indepentent of what joystick is connected ("Microsoft PC-joystick driver").
      *  We will try to get a better name from the registry, but if this should
-     *  fail this flag is set and used by STK. */
+     *  fail this flag is set and used by FLUXARA_DRIFT. */
     bool HasGenericName;
 
 }; // struct SJoystickInfo

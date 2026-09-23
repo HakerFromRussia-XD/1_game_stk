@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
 //  This program is free software; you can redistribute it and/or
@@ -49,7 +49,7 @@ ChangePasswordDialog::ChangePasswordDialog() : ModalDialog(0.8f, 0.7f)
     m_show_success_dialog = false;
     m_success = false;
 
-    loadFromFile("online/change_password.stkgui");
+    loadFromFile("online/change_password.fluxara_driftgui");
 
     m_current_password_widget = getWidget<TextBoxWidget>("current_password");
     assert(m_current_password_widget != NULL);

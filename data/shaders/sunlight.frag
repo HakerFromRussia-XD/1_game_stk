@@ -12,11 +12,11 @@ out vec4 Diff;
 out vec4 Spec;
 #endif
 
-#stk_include "utils/decodeNormal.frag"
-#stk_include "utils/SpecularBRDF.frag"
-#stk_include "utils/DiffuseBRDF.frag"
-#stk_include "utils/getPosFromUVDepth.frag"
-#stk_include "utils/SunMRP.frag"
+#fluxara_drift_include "utils/decodeNormal.frag"
+#fluxara_drift_include "utils/SpecularBRDF.frag"
+#fluxara_drift_include "utils/DiffuseBRDF.frag"
+#fluxara_drift_include "utils/getPosFromUVDepth.frag"
+#fluxara_drift_include "utils/SunMRP.frag"
 
 void main() {
     vec2 uv = gl_FragCoord.xy / u_screen;

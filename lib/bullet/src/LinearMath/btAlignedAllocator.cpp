@@ -15,7 +15,7 @@ subject to the following restrictions:
 
 #include "btAlignedAllocator.h"
 
-// Disable global variables for STK with multiple physics instance
+// Disable global variables for FLUXARA_DRIFT with multiple physics instance
 //int gNumAlignedAllocs = 0;
 //int gNumAlignedFree = 0;
 //int gTotalBytesAlignedAllocs = 0;//detect memory leaks

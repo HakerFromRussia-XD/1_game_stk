@@ -1,17 +1,17 @@
 # Building from source
 
-In order to build SuperTuxKart from source, you'll need both the code and the assets (See <https://supertuxkart.net/Source_control> for more information):
+In order to build Fluxara Drift from source, you'll need both the code and the assets (See <https://fluxaradrift.net/Source_control> for more information):
 
 ```bash
-git clone https://github.com/supertuxkart/stk-code stk-code
-svn co https://svn.code.sf.net/p/supertuxkart/code/stk-assets stk-assets
+git clone https://github.com/fluxaradrift/fluxara_drift-code fluxara_drift-code
+svn co https://svn.code.sf.net/p/fluxaradrift/code/fluxara_drift-assets fluxara_drift-assets
 ```
 
-## Building SuperTuxKart on Linux
+## Building Fluxara Drift on Linux
 
 ### Dependencies
 
-To build SuperTuxKart from source, you'll need to install the following packages:
+To build Fluxara Drift from source, you'll need to install the following packages:
 
 * OpenAL (recommended: openal-soft-devel)
 * Ogg (libogg-dev)
@@ -83,21 +83,21 @@ libjpeg-turbo-devel sdl2-devel enet-devel libjpeg-turbo-devel bluez-devel curl-d
 
 #### In-game recorder
 
-To build the in-game recorder for STK, you have to install
+To build the in-game recorder for FLUXARA_DRIFT, you have to install
 `libopenglrecorder` from your distribution, or compile it yourself from [here](https://github.com/Benau/libopenglrecorder).
 Compilation instruction is explained there. If you don't need this feature, pass `-DBUILD_RECORDER=off` to CMake.
 
 #### Shaderc for Vulkan support
 
-You need to compile [Shaderc](https://github.com/google/shaderc) for Vulkan support in SuperTuxKart if you are not building for Windows or macOS. If you don't need this feature, pass `-DNO_SHADERC=on` to CMake.
+You need to compile [Shaderc](https://github.com/google/shaderc) for Vulkan support in Fluxara Drift if you are not building for Windows or macOS. If you don't need this feature, pass `-DNO_SHADERC=on` to CMake.
 
 ### Compiling
 
-To compile SuperTuxKart, run the following commands inside the `stk-code` directory:
+To compile Fluxara Drift, run the following commands inside the `fluxara_drift-code` directory:
 
 ```bash
-# go into the stk-code directory
-cd stk-code
+# go into the fluxara_drift-code directory
+cd fluxara_drift-code
 
 # create and enter the cmake_build directory
 mkdir cmake_build
@@ -110,11 +110,11 @@ cmake ..
 make -j$(nproc)
 ```
 
-STK can then be run from the build directory with `bin/supertuxkart`.
+FLUXARA_DRIFT can then be run from the build directory with `bin/fluxaradrift`.
 
 #### Keeping your build up to date
 
-To recompile the latest code without redownloading the entire source, first run the ```svn up``` command inside the 'stk-assets' directory, then run the following commands inside the 'stk-code' directory:
+To recompile the latest code without redownloading the entire source, first run the ```svn up``` command inside the 'fluxara_drift-assets' directory, then run the following commands inside the 'fluxara_drift-code' directory:
 
 ```bash
 git pull
@@ -129,7 +129,7 @@ The `-j$(nproc)` option is an example. For a faster build, use `-jx` instead, wh
 
 #### Further options
 
-To create a debug version of STK, run:
+To create a debug version of FLUXARA_DRIFT, run:
 
 ```bash
 cmake .. -DCMAKE_BUILD_TYPE=Debug
@@ -142,37 +142,37 @@ sudo make install
 ```
 
 The default install location is `/usr/local`, i.e. the data files will
-be written to `/usr/local/share/games/supertuxkart` and the executable
+be written to `/usr/local/share/games/fluxaradrift` and the executable
 will be copied to `/usr/local/bin`. To change the default installation
 location, specify `CMAKE_INSTALL_PREFIX` when running CMake, e.g.:
-`cmake .. -DCMAKE_INSTALL_PREFIX=/opt/stk`.
+`cmake .. -DCMAKE_INSTALL_PREFIX=/opt/fluxara_drift`.
 
-## Building SuperTuxKart on Windows
+## Building Fluxara Drift on Windows
 
-To Build SuperTuxKart on Windows, follow these instructions:
+To Build Fluxara Drift on Windows, follow these instructions:
 
 1. Download and install Visual Studio from here: [Visual Studio - Download](https://www.visualstudio.com/downloads/). The free Visual Studio Community edition works fine. Remember to select "Desktop development with C++" in the installer.
 
-2. If you want the stable version, download the SuperTuxKart source package from the latest stable version of [SuperTuxKart on GitHub](https://github.com/supertuxkart/stk-code/releases) and unpack it.
+2. If you want the stable version, download the Fluxara Drift source package from the latest stable version of [Fluxara Drift on GitHub](https://github.com/fluxaradrift/fluxara_drift-code/releases) and unpack it.
 
-3. If you want the development version, you will need a Git client and an SVN client. More information can be found here: [SuperTuxKart.net - Source Control](https://supertuxkart.net/Source_control).
-Open your file browser and find somewhere you want to put the development version of SuperTuxKart. For example in C:\\Users\\\<Your Username\> as the Git and SVN clients will have write permissions there, and you should create its own directory, for example "SuperTuxKart-dev". Enter that directory, and create a directory inside called "stk-assets", and enter it. If you installed TortoiseSVN, right-click, select TortoiseSVN -> Checkout... and paste the corresponding URL found in [SuperTuxKart.net - Source Control](https://supertuxkart.net/Source_control). While it is downloading the game assets, go back to your file browser and move one level up (if you followed the example that directory would be named "SuperTuxKart-dev"). Right-click again somewhere empty and select "Git clone..." and paste the corresponding link found in [SuperTuxKart.net - Source Control](https://supertuxkart.net/Source_control).
-*Note: Both `stk-code` and `stk-assets` **must** be in the same directory, otherwise the build will likely fail!*
+3. If you want the development version, you will need a Git client and an SVN client. More information can be found here: [FluxaraDrift.net - Source Control](https://fluxaradrift.net/Source_control).
+Open your file browser and find somewhere you want to put the development version of FluxaraDrift. For example in C:\\Users\\\<Your Username\> as the Git and SVN clients will have write permissions there, and you should create its own directory, for example "Fluxara Drift-dev". Enter that directory, and create a directory inside called "fluxara_drift-assets", and enter it. If you installed TortoiseSVN, right-click, select TortoiseSVN -> Checkout... and paste the corresponding URL found in [FluxaraDrift.net - Source Control](https://fluxaradrift.net/Source_control). While it is downloading the game assets, go back to your file browser and move one level up (if you followed the example that directory would be named "Fluxara Drift-dev"). Right-click again somewhere empty and select "Git clone..." and paste the corresponding link found in [FluxaraDrift.net - Source Control](https://fluxaradrift.net/Source_control).
+*Note: Both `fluxara_drift-code` and `fluxara_drift-assets` **must** be in the same directory, otherwise the build will likely fail!*
 
-4. If you got the stable version, download the Windows dependencies package from [SuperTuxKart on GitHub - Dependencies Releases](https://github.com/supertuxkart/dependencies/releases), find the stk-code version there and download the `dependencies(arch).zip` as needed and unpack the archive into the `stk-code` directory.
+4. If you got the stable version, download the Windows dependencies package from [Fluxara Drift on GitHub - Dependencies Releases](https://github.com/fluxaradrift/dependencies/releases), find the fluxara_drift-code version there and download the `dependencies(arch).zip` as needed and unpack the archive into the `fluxara_drift-code` directory.
 
-5. If you got the development version go to SuperTuxKart-dev in your file browser, then visit [SuperTuxKart on GitHub - Dependencies latest preview release](https://github.com/supertuxkart/dependencies/releases/tag/preview)
-and unpack the archive into the `stk-code` directory. Download `i686` if you use Win32 generator of MSVC, `x86_64` for x64, `armv7` for ARM and `aarch64` for ARM64.
+5. If you got the development version go to Fluxara Drift-dev in your file browser, then visit [Fluxara Drift on GitHub - Dependencies latest preview release](https://github.com/fluxaradrift/dependencies/releases/tag/preview)
+and unpack the archive into the `fluxara_drift-code` directory. Download `i686` if you use Win32 generator of MSVC, `x86_64` for x64, `armv7` for ARM and `aarch64` for ARM64.
 
-6. Download CMake from here: [CMake - download page](https://cmake.org/download/), install it; once CMake is installed, double click on the CMake icon on your desktop, and point it towards your `stk-code` directory in the 'Where is the source code' field, and point 'Where to build the binaries' to a new directory called `build` or `bld` inside the stk-code directory.
+6. Download CMake from here: [CMake - download page](https://cmake.org/download/), install it; once CMake is installed, double click on the CMake icon on your desktop, and point it towards your `fluxara_drift-code` directory in the 'Where is the source code' field, and point 'Where to build the binaries' to a new directory called `build` or `bld` inside the fluxara_drift-code directory.
 
 7. Press 'Configure'; CMake will ask you if it is OK to create the aforementioned directory, press `Yes`. CMake will then ask you about your version of Visual Studio.
 
     Confirm your selection; *Please look at the table below to avoid confusion between version numbers and releases of Visual Studio*; CMake will begin creating the required files for the build in the directory. If you want to do a 64-bit build, select the version of Visual Studio you installed with "Win64" appended. Press the 'Generate' button.
 
-8. Navigate to your build directory and open the `SuperTuxKart.sln` file; Visual Studio will now load the solution.
+8. Navigate to your build directory and open the `FluxaraDrift.sln` file; Visual Studio will now load the solution.
 
-9. In the 'Solution Explorer', right click on the `supertuxkart` project and select "Set as StartUp project".
+9. In the 'Solution Explorer', right click on the `fluxaradrift` project and select "Set as StartUp project".
 
 10. Open the 'Build' menu and select 'Build Solution'; or, press the default keyboard shortcut: `CTRL + SHIFT + B` to build the solution.
 
@@ -185,15 +185,15 @@ and unpack the archive into the `stk-code` directory. Download `i686` if you use
 | Visual Studio 2015    | 14      |
 | Visual Studio 2013    | 13      |
 
-## Building SuperTuxKart on Windows (from PowerShell/Command line)
+## Building Fluxara Drift on Windows (from PowerShell/Command line)
 
 1. Download and install Visual Studio from here: [Visual Studio - Download](https://www.visualstudio.com/downloads/), the free Visual Studio Community edition works fine.
 
-2. Download a source package from either [SuperTuxKart on GitHub](https://github.com/supertuxkart/stk-code/releases) or [SuperTuxKart.net - Source Control](https://supertuxkart.net/Source_control)
-NOTE: the `stk-code` and `stk-assets` directories **must** be in the same directory, `stk-assets` is not needed if you download the full source tarball `(SuperTuxKart-version-src.tar.xz)`.
-3. Download the Windows dependencies package from [SuperTuxKart on GitHub - Dependencies latest preview release](https://github.com/supertuxkart/dependencies/releases/tag/preview)
-and unpack the archive into the `stk-code` directory. Download `i686` if you use Win32 generator of MSVC, `x86_64` for x64, `armv7` for ARM and `aarch64` for ARM64.
-4. Download CMake from here: [CMake - download page](https://cmake.org/download/); and install it. Navigate to the `stk-code` directory, and create a directory called "build":
+2. Download a source package from either [Fluxara Drift on GitHub](https://github.com/fluxaradrift/fluxara_drift-code/releases) or [FluxaraDrift.net - Source Control](https://fluxaradrift.net/Source_control)
+NOTE: the `fluxara_drift-code` and `fluxara_drift-assets` directories **must** be in the same directory, `fluxara_drift-assets` is not needed if you download the full source tarball `(Fluxara Drift-version-src.tar.xz)`.
+3. Download the Windows dependencies package from [Fluxara Drift on GitHub - Dependencies latest preview release](https://github.com/fluxaradrift/dependencies/releases/tag/preview)
+and unpack the archive into the `fluxara_drift-code` directory. Download `i686` if you use Win32 generator of MSVC, `x86_64` for x64, `armv7` for ARM and `aarch64` for ARM64.
+4. Download CMake from here: [CMake - download page](https://cmake.org/download/); and install it. Navigate to the `fluxara_drift-code` directory, and create a directory called "build":
 
     ```cmd
     mkdir build
@@ -209,32 +209,32 @@ and unpack the archive into the `stk-code` directory. Download `i686` if you use
 6. Now that CMake finished configuring and creating the necessary files for the build, run the build command in the same directory:
 
     ```cmd
-    msbuild.exe SuperTuxKart.sln
+    msbuild.exe FluxaraDrift.sln
     ```
 
-SuperTuxKart can now be run as `bin\Debug\supertuxkart.exe` or `bin\Release\supertuxkart.exe`.
+Fluxara Drift can now be run as `bin\Debug\fluxaradrift.exe` or `bin\Release\fluxaradrift.exe`.
 
-## Building SuperTuxKart on Windows using LLVM MinGW
+## Building Fluxara Drift on Windows using LLVM MinGW
 
 1. Get the LLVM Mingw archive [here](https://github.com/mstorsjo/llvm-mingw/releases/latest), get the `*-msvcrt-i686.zip or` `*-msvcrt-x86_64.zip` depending on whether you have an Intel / AMD 32 or 64-bit Windows. If you are using ARM64 Windows get the `*-msvcrt-i686.zip` should be fine (untested). After downloading extract it as `C:\llvm-mingw` so `C:\llvm-mingw` contains `bin`, `include`, `lib`, etc.
 2. Get Ninja [here](https://github.com/ninja-build/ninja/releases/latest), download the `ninja-win.zip` and extract the `ninja.exe` from the archive to `C:\llvm-mingw`. If you are not using Intel / AMD 64-bit Windows use [this link](https://packages.msys2.org/package/mingw-w64-i686-ninja) and extract `mingw32\bin\ninja.exe` inside the `tar.zst`.
-3. Download a source package from either [SuperTuxKart on GitHub](https://github.com/supertuxkart/stk-code/releases) or [SuperTuxKart.net - Source Control](https://supertuxkart.net/Source_control)
-NOTE: the `stk-code` and `stk-assets` directories **must** be in the same directory, `stk-assets` is not needed if you download the full source tarball `(SuperTuxKart-version-src.tar.xz)`. Also make sure they lie within the C drive.
-4. Download the Windows dependencies package from [SuperTuxKart on GitHub - Dependencies latest preview release](https://github.com/supertuxkart/dependencies/releases/tag/preview)
-and unpack the archive into the `stk-code` directory. Download `i686` if you compile for Intel / AMD 32-bit, `x86_64` for Intel / AMD 64-bit, `armv7` for ARM 32-bit and `aarch64` for ARM 64-bit version of Windows.
-5. Download CMake from here: [CMake - download page](https://cmake.org/download/), install it; once CMake is installed, double click on the CMake icon on your desktop, and point it towards your `stk-code` directory in the 'Where is the source code' field, and point 'Where to build the binaries' to a new directory called `build` inside the stk-code directory.
+3. Download a source package from either [Fluxara Drift on GitHub](https://github.com/fluxaradrift/fluxara_drift-code/releases) or [FluxaraDrift.net - Source Control](https://fluxaradrift.net/Source_control)
+NOTE: the `fluxara_drift-code` and `fluxara_drift-assets` directories **must** be in the same directory, `fluxara_drift-assets` is not needed if you download the full source tarball `(Fluxara Drift-version-src.tar.xz)`. Also make sure they lie within the C drive.
+4. Download the Windows dependencies package from [Fluxara Drift on GitHub - Dependencies latest preview release](https://github.com/fluxaradrift/dependencies/releases/tag/preview)
+and unpack the archive into the `fluxara_drift-code` directory. Download `i686` if you compile for Intel / AMD 32-bit, `x86_64` for Intel / AMD 64-bit, `armv7` for ARM 32-bit and `aarch64` for ARM 64-bit version of Windows.
+5. Download CMake from here: [CMake - download page](https://cmake.org/download/), install it; once CMake is installed, double click on the CMake icon on your desktop, and point it towards your `fluxara_drift-code` directory in the 'Where is the source code' field, and point 'Where to build the binaries' to a new directory called `build` inside the fluxara_drift-code directory.
 ### For cmake-gui
 6. Press the `Add Entry` button and add the values below:
 * Name: `LLVM_ARCH` Type: `STRING`  Value: `i686`, `x86_64`, `armv7` or `aarch64`
 * Name: `LLVM_PREFIX` Type: `STRING`  Value: `C:/llvm-mingw`
 * Name: `CMAKE_MAKE_PROGRAM` Type: `STRING` Value: `C:/llvm-mingw/ninja.exe`
 * Name: `USE_WIIUSE` Type: `BOOL`  Value: `Empty (unchecked)`
-7. Press 'Configure'; CMake will ask you if it is OK to create the aforementioned directory, press `Yes`. Choose `Ninja` from `Specify the generator for this project`, choose `Specify toolchain file for cross-compiling` then press `Next`. Specify the toolchain file which is located in `stk-code\cmake\Toolchain-llvm-mingw.cmake` and press `Finish`. If no error appears then press 'Generate'
+7. Press 'Configure'; CMake will ask you if it is OK to create the aforementioned directory, press `Yes`. Choose `Ninja` from `Specify the generator for this project`, choose `Specify toolchain file for cross-compiling` then press `Next`. Specify the toolchain file which is located in `fluxara_drift-code\cmake\Toolchain-llvm-mingw.cmake` and press `Finish`. If no error appears then press 'Generate'
 8. Once inside the build directory, run the build command using command line `cmd.exe` or PowerShell:
     ```cmd
     C:\llvm-mingw\ninja.exe
     ```
-SuperTuxKart can now be run as `bin\supertuxkart.exe`.
+Fluxara Drift can now be run as `bin\fluxaradrift.exe`.
 
 ### For PowerShell/Command Prompt
 6. Once inside the build directory, run the CMake command using command line `cmd.exe` or PowerShell:
@@ -248,20 +248,20 @@ SuperTuxKart can now be run as `bin\supertuxkart.exe`.
     C:\llvm-mingw\ninja.exe
     ```
 
-SuperTuxKart can now be run as `bin\supertuxkart.exe`.
+Fluxara Drift can now be run as `bin\fluxaradrift.exe`.
 
-## Building SuperTuxKart on macOS
+## Building Fluxara Drift on macOS
 
 ### Getting Started
 
 Install the developer tools, either from the OS X Install DVD or from Apple's website.
 
-Download `dependencies-macosx.tar.xz` from the `Assets` section [here](https://github.com/supertuxkart/dependencies/releases) and extract it inside the `stk-code` directory, use the `preview` version for git stk-code.
+Download `dependencies-macosx.tar.xz` from the `Assets` section [here](https://github.com/fluxaradrift/dependencies/releases) and extract it inside the `fluxara_drift-code` directory, use the `preview` version for git fluxara_drift-code.
 
-Build STK:
+Build FLUXARA_DRIFT:
 
 ```bash
-cd /path/to/stk-code
+cd /path/to/fluxara_drift-code
 mkdir cmake_build
 cd cmake_build
 cmake .. -DCMAKE_FIND_ROOT_PATH=$(pwd)/../dependencies-macosx -DUSE_CRYPTO_OPENSSL=FALSE
@@ -275,9 +275,9 @@ Add ` -DCMAKE_OSX_DEPLOYMENT_TARGET=10.9` for 10.9 compatibility.
 By default, the executable that is produced is not ready for distribution. Install <https://github.com/auriamg/macdylibbundler> and run:
 
 ```bash
-dylibbundler -od -b -x ./bin/SuperTuxKart.app/Contents/MacOS/supertuxkart -d ./bin/SuperTuxKart.app/Contents/libs/ -p @executable_path/../libs/ -s ../dependencies-macosx/lib
+dylibbundler -od -b -x ./bin/FluxaraDrift.app/Contents/MacOS/fluxaradrift -d ./bin/FluxaraDrift.app/Contents/libs/ -p @executable_path/../libs/ -s ../dependencies-macosx/lib
 ```
 
 Add `-ns` to disable ad-hoc codesigning.
 
-Afterwards, copy the contents of `stk-assets` into `/SuperTuxKart.app/Contents/Resources/data`.
+Afterwards, copy the contents of `fluxara_drift-assets` into `/FluxaraDrift.app/Contents/Resources/data`.

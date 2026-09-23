@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2012-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -115,7 +115,7 @@ ExplosionAnimation::ExplosionAnimation(AbstractKart* kart, bool direct_hit)
     }
 
     float t = m_kart->getKartProperties()->getExplosionInvulnerabilityTime();
-    m_kart->setInvulnerableTicks(stk_config->time2Ticks(t));
+    m_kart->setInvulnerableTicks(fluxara_drift_config->time2Ticks(t));
     m_kart->playCustomSFX(SFXManager::CUSTOM_EXPLODE);
     m_kart->getAttachment()->clear();
     // Clear powerups when direct hit in CTF
@@ -197,9 +197,9 @@ void ExplosionAnimation::init(bool direct_hit, const Vec3& normal,
         RaceManager::MINOR_MODE_CAPTURE_THE_FLAG && direct_hit)
     {
         m_reset_ticks = m_created_ticks +
-            stk_config->time2Ticks(timer * 0.8f);
+            fluxara_drift_config->time2Ticks(timer * 0.8f);
     }
-    m_end_ticks = m_created_ticks + stk_config->time2Ticks(timer);
+    m_end_ticks = m_created_ticks + fluxara_drift_config->time2Ticks(timer);
 
     if (m_reset_ticks != -1)
         m_reset_trans = reset_trans;
@@ -245,7 +245,7 @@ void ExplosionAnimation::init(bool direct_hit, const Vec3& normal,
  */
 void ExplosionAnimation::update(int ticks)
 {
-    float dur = stk_config->ticks2Time(
+    float dur = fluxara_drift_config->ticks2Time(
         World::getWorld()->getTicksSinceStart() - m_created_ticks);
 
     float velocity = m_velocity -

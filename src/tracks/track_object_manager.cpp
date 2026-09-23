@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -20,7 +20,7 @@
 
 #include "animations/ipo.hpp"
 #include "animations/three_d_animation.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "graphics/lod_node.hpp"
 #include "graphics/material_manager.hpp"
 #include "io/xml_node.hpp"
@@ -75,13 +75,13 @@ void TrackObjectManager::init()
         TrackObject* curr = m_all_objects.m_contents_vector[i];
         curr->onWorldReady();
 
-        if (moveable_objects > stk_config->m_max_moveable_objects)
+        if (moveable_objects > fluxara_drift_config->m_max_moveable_objects)
         {
             if (!warned)
             {
                 Log::warn("TrackObjectManager",
                     "Too many moveable objects (>%d) in networking.",
-                    stk_config->m_max_moveable_objects);
+                    fluxara_drift_config->m_max_moveable_objects);
                 warned = true;
             }
             curr->setInitiallyVisible(false);

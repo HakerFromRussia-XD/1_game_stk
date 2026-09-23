@@ -1,4 +1,4 @@
-# CMakeLists.txt for Irrlicht in STK
+# CMakeLists.txt for Irrlicht in FLUXARA_DRIFT
 if(NOT SERVER_ONLY)
     find_package(PNG REQUIRED)
     find_package(JPEG REQUIRED)
@@ -560,14 +560,22 @@ if (NOT SERVER_ONLY AND APPLE AND NOT IOS)
 
 endif()
 
-add_library(stkirrlicht STATIC ${IRRLICHT_SOURCES})
+add_library(fluxara_driftirrlicht STATIC ${IRRLICHT_SOURCES})
 
-target_link_libraries(stkirrlicht ${ZLIB_LIBRARY})
+target_link_libraries(fluxara_driftirrlicht ${ZLIB_LIBRARY})
+
+# The iOS ASTC loader uses the existing encoder library as a software fallback
+# on Simulator GL implementations that do not expose ASTC sampling.
+if(IOS AND LIBASTCENC_LIBRARY AND LIBASTCENC_INCLUDEDIR)
+    target_compile_definitions(fluxara_driftirrlicht PRIVATE ENABLE_LIBASTCENC)
+    target_include_directories(fluxara_driftirrlicht PRIVATE ${LIBASTCENC_INCLUDEDIR})
+    target_link_libraries(fluxara_driftirrlicht ${LIBASTCENC_LIBRARY})
+endif()
 
 if(NOT SERVER_ONLY)
-    target_link_libraries(stkirrlicht ${PNG_LIBRARY} ${JPEG_LIBRARY})
+    target_link_libraries(fluxara_driftirrlicht ${PNG_LIBRARY} ${JPEG_LIBRARY})
 endif()
 
 if(WIN32)
-    target_link_libraries(stkirrlicht)
+    target_link_libraries(fluxara_driftirrlicht)
 endif()

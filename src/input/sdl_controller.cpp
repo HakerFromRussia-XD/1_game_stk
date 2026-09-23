@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2020 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2020 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -36,7 +36,7 @@
 SDLController::SDLController(int device_id)
              : m_gamepad(NULL)
 {
-    m_last_power_level_time = StkTime::getMonoTimeMs();
+    m_last_power_level_time = FluxaraDriftTime::getMonoTimeMs();
     m_irr_event = {};
     m_irr_event.EventType = irr::EET_JOYSTICK_INPUT_EVENT;
     memset(m_prev_axes, 0,
@@ -242,7 +242,7 @@ void SDLController::handleAxisInputSense(const SDL_Event& event)
 void SDLController::checkPowerLevel()
 {
 #if SDL_VERSION_ATLEAST(2, 0, 4)
-    const uint64_t time_now = StkTime::getMonoTimeMs();
+    const uint64_t time_now = FluxaraDriftTime::getMonoTimeMs();
     if (time_now > m_last_power_level_time + 60000)
     {
         m_last_power_level_time = time_now;
@@ -285,7 +285,7 @@ void SDLController::updateAutoCenter(int state)
 #ifdef ANDROID
 void SDLController::handleDirectScanCode(const SDL_Event& event)
 {
-    // Android STK has custom changes in SDL2 to allow gamepad with unknown
+    // Android FLUXARA_DRIFT has custom changes in SDL2 to allow gamepad with unknown
     // button to use scan code directly
     input_manager->dispatchInput(Input::IT_STICKBUTTON,
         m_irr_event.JoystickEvent.Joystick, event.jbutton.button,

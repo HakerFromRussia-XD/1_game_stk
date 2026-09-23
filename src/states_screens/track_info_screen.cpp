@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //            (C) 2014-2015 Joerg Henrichs
 //
@@ -23,7 +23,7 @@
 #include "config/user_config.hpp"
 #include "graphics/irr_driver.hpp"
 #include "graphics/material.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "guiengine/CGUISpriteBank.hpp"
 #include "guiengine/engine.hpp"
 #include "guiengine/screen.hpp"
@@ -56,9 +56,9 @@ using namespace irr::core;
 using namespace GUIEngine;
 
 // ----------------------------------------------------------------------------
-/** Constructor, which loads the corresponding track_info.stkgui file. */
+/** Constructor, which loads the corresponding track_info.fluxara_driftgui file. */
 TrackInfoScreen::TrackInfoScreen()
-          : Screen("track_info.stkgui")
+          : Screen("track_info.fluxara_driftgui")
 {
 }   // TrackInfoScreen
 
@@ -81,7 +81,7 @@ void TrackInfoScreen::loadedFromFile()
     m_option->setState(false);
     m_record_race->setState(false);
 
-    m_icon_bank = new irr::gui::STKModifiedSpriteBank( GUIEngine::getGUIEnv());
+    m_icon_bank = new irr::gui::FLUXARA_DRIFTModifiedSpriteBank( GUIEngine::getGUIEnv());
 
     for (unsigned int i=0; i < kart_properties_manager->getNumberOfKarts(); i++)
     {
@@ -135,7 +135,7 @@ void TrackInfoScreen::init()
 {
     m_record_this_race = false;
 
-    const int max_arena_players = std::min(m_track->getMaxArenaPlayers(), unsigned(stk_config->m_max_karts));
+    const int max_arena_players = std::min(m_track->getMaxArenaPlayers(), unsigned(fluxara_drift_config->m_max_karts));
     const int local_players     = RaceManager::get()->getNumLocalPlayers();
     const bool has_laps         = RaceManager::get()->modeHasLaps();
     const bool has_highscores   = RaceManager::get()->modeHasHighscores();
@@ -158,12 +158,12 @@ void TrackInfoScreen::init()
     // ---- Track screenshot
     GUIEngine::IconButtonWidget* screenshot = getWidget<IconButtonWidget>("screenshot");
 
-    ITexture* image = STKTexManager::getInstance()
+    ITexture* image = FLUXARA_DRIFTTexManager::getInstance()
         ->getTexture(m_track->getScreenshotFile(),
         "While loading screenshot for track '%s':", m_track->getFilename());
     if(!image)
     {
-        image = STKTexManager::getInstance()->getTexture(GUIEngine::getSkin()->getThemedIcon("gui/icons/track_unknown.png"),
+        image = FLUXARA_DRIFTTexManager::getInstance()->getTexture(GUIEngine::getSkin()->getThemedIcon("gui/icons/track_unknown.png"),
             "While loading screenshot for track '%s':", m_track->getFilename());
     }
     if (image != NULL)
@@ -211,7 +211,7 @@ void TrackInfoScreen::init()
             m_ai_blue_spinner->setMax(max_arena_players - local_players);
         }
         else
-            m_ai_kart_spinner->setMax(stk_config->m_max_karts - local_players);
+            m_ai_kart_spinner->setMax(fluxara_drift_config->m_max_karts - local_players);
 
         // A ftl race needs at least three karts to make any sense
         if(RaceManager::get()->isFollowMode())

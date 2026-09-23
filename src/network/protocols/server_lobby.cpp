@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2013-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -46,9 +46,9 @@
 #include "network/race_event_manager.hpp"
 #include "network/server_config.hpp"
 #include "network/socket_address.hpp"
-#include "network/stk_host.hpp"
-#include "network/stk_ipv6.hpp"
-#include "network/stk_peer.hpp"
+#include "network/fluxara_drift_host.hpp"
+#include "network/fluxara_drift_ipv6.hpp"
+#include "network/fluxara_drift_peer.hpp"
 #include "online/online_profile.hpp"
 #include "online/request_manager.hpp"
 #include "online/xml_request.hpp"
@@ -167,8 +167,8 @@ ServerLobby::ServerLobby() : LobbyProtocol()
     updateAddons();
 
     m_rs_state.store(RS_NONE);
-    m_last_success_poll_time.store(StkTime::getMonoTimeMs() + 30000);
-    m_last_unsuccess_poll_time = StkTime::getMonoTimeMs();
+    m_last_success_poll_time.store(FluxaraDriftTime::getMonoTimeMs() + 30000);
+    m_last_unsuccess_poll_time = FluxaraDriftTime::getMonoTimeMs();
     m_server_owner_id.store(-1);
     m_registered_for_once_only = false;
     setHandleDisconnections(true);
@@ -177,7 +177,7 @@ ServerLobby::ServerLobby() : LobbyProtocol()
     if (ServerConfig::m_ranked)
     {
         Log::info("ServerLobby", "This server will submit ranking scores to "
-            "the STK addons server. Don't bother hosting one without the "
+            "the FLUXARA_DRIFT addons server. Don't bother hosting one without the "
             "corresponding permissions, as they would be rejected.");
 
         m_ranking = std::make_shared<Ranking>();
@@ -378,7 +378,7 @@ void ServerLobby::setup()
     m_winner_peer_id = 0;
     m_client_starting_time = 0;
     m_ai_count = 0;
-    auto players = STKHost::get()->getPlayersForNewGame();
+    auto players = FLUXARA_DRIFTHost::get()->getPlayersForNewGame();
     if (m_game_setup->isGrandPrix() && !m_game_setup->isGrandPrixStarted())
     {
         for (auto player : players)
@@ -456,7 +456,7 @@ void ServerLobby::handleChat(Event* event)
     const bool sender_in_game = event->getPeer()->isWaitingForGame();
 
     int64_t last_message = event->getPeer()->getLastMessage();
-    int64_t elapsed_time = (int64_t)StkTime::getMonoTimeMs() - last_message;
+    int64_t elapsed_time = (int64_t)FluxaraDriftTime::getMonoTimeMs() - last_message;
 
     // Read ServerConfig for formula and details
     if (ServerConfig::m_chat_consecutive_interval > 0 &&
@@ -495,7 +495,7 @@ void ServerLobby::handleChat(Event* event)
         // currently written by the server. The server would have
         // to send a warning for interpretation by the client to
         // allow proper translation. Also, this string can only be
-        // triggered with modified STK clients anyways.
+        // triggered with modified FLUXARA_DRIFT clients anyways.
         core::stringw warn = "Don't try to impersonate others!";
         chat->addUInt8(LE_CHAT).encodeString16(warn);
         event->getPeer()->sendPacket(chat, true/*reliable*/);
@@ -521,9 +521,9 @@ void ServerLobby::handleChat(Event* event)
         const bool game_started = m_state.load() != WAITING_FOR_START_GAME;
         core::stringw sender_name =
             event->getPeer()->getPlayerProfiles()[0]->getName();
-        STKHost::get()->sendPacketToAllPeersWith(
+        FLUXARA_DRIFTHost::get()->sendPacketToAllPeersWith(
             [game_started, sender_in_game, target_team, sender_name, this]
-            (STKPeer* p)
+            (FLUXARA_DRIFTPeer* p)
             {
                 if (game_started)
                 {
@@ -569,7 +569,7 @@ void ServerLobby::changeTeam(Event* event)
     NetworkString& data = event->data();
     uint8_t local_id = data.getUInt8();
     auto& player = event->getPeer()->getPlayerProfiles().at(local_id);
-    auto red_blue = STKHost::get()->getAllPlayersTeamInfo();
+    auto red_blue = FLUXARA_DRIFTHost::get()->getAllPlayersTeamInfo();
     // At most 7 players on each team (for live join)
     if (player->getTeam() == KART_TEAM_BLUE)
     {
@@ -594,7 +594,7 @@ void ServerLobby::kickHost(Event* event)
     if (!checkDataSize(event, 4)) return;
     NetworkString& data = event->data();
     uint32_t host_id = data.getUInt32();
-    std::shared_ptr<STKPeer> peer = STKHost::get()->findPeerByHostId(host_id);
+    std::shared_ptr<FLUXARA_DRIFTPeer> peer = FLUXARA_DRIFTHost::get()->findPeerByHostId(host_id);
     // Ignore kicking ai peer if ai handling is on
     if (peer && (!ServerConfig::m_ai_handling || !peer->isAIPeer()))
         peer->kick();
@@ -643,7 +643,7 @@ bool ServerLobby::notifyEventAsynchronous(Event* event)
 
 //-----------------------------------------------------------------------------
 #ifdef ENABLE_SQLITE3
-/* Every 1 minute STK will poll database:
+/* Every 1 minute FLUXARA_DRIFT will poll database:
  * 1. Set disconnected time to now for non-exists host.
  * 2. Clear expired player reports if necessary
  * 3. Kick active peer from ban list
@@ -665,7 +665,7 @@ void ServerLobby::pollDatabase()
     std::vector<DatabaseConnector::OnlineIdBanTableData> online_id_ban_list =
             m_db_connector->getOnlineIdBanTableData();
 
-    for (std::shared_ptr<STKPeer>& p : STKHost::get()->getPeers())
+    for (std::shared_ptr<FLUXARA_DRIFTPeer>& p : FLUXARA_DRIFTHost::get()->getPeers())
     {
         if (p->isAIPeer())
             continue;
@@ -729,7 +729,7 @@ void ServerLobby::pollDatabase()
 
     m_db_connector->clearOldReports();
 
-    auto peers = STKHost::get()->getPeers();
+    auto peers = FLUXARA_DRIFTHost::get()->getPeers();
     std::vector<uint32_t> hosts;
     if (!peers.empty())
     {
@@ -749,7 +749,7 @@ void ServerLobby::writePlayerReport(Event* event)
 #ifdef ENABLE_SQLITE3
     if (!m_db_connector->hasDatabase() || !m_db_connector->hasPlayerReportsTable())
         return;
-    STKPeer* reporter = event->getPeer();
+    FLUXARA_DRIFTPeer* reporter = event->getPeer();
     if (!reporter->hasPlayerProfiles())
         return;
     auto reporter_npp = reporter->getPlayerProfiles()[0];
@@ -760,7 +760,7 @@ void ServerLobby::writePlayerReport(Event* event)
     if (info.empty())
         return;
 
-    auto reporting_peer = STKHost::get()->findPeerByHostId(reporting_host_id);
+    auto reporting_peer = FLUXARA_DRIFTHost::get()->findPeerByHostId(reporting_host_id);
     if (!reporting_peer || !reporting_peer->hasPlayerProfiles())
         return;
     auto reporting_npp = reporting_peer->getPlayerProfiles()[0];
@@ -780,7 +780,7 @@ void ServerLobby::writePlayerReport(Event* event)
 }   // writePlayerReport
 
 //-----------------------------------------------------------------------------
-/** Find out the public IP server or poll STK server asynchronously. */
+/** Find out the public IP server or poll FLUXARA_DRIFT server asynchronously. */
 void ServerLobby::asynchronousUpdate()
 {
     if (m_rs_state.load() == RS_ASYNC_RESET)
@@ -812,7 +812,7 @@ void ServerLobby::asynchronousUpdate()
     if (allowJoinedPlayersWaiting() || (m_game_setup->isGrandPrix() &&
         m_state.load() == WAITING_FOR_START_GAME))
     {
-        // Only poll the STK server if server has been registered.
+        // Only poll the FLUXARA_DRIFT server if server has been registered.
         if (m_server_id_online.load() != 0 &&
             m_state.load() != REGISTER_SELF_ADDRESS)
             checkIncomingConnectionRequests();
@@ -821,12 +821,12 @@ void ServerLobby::asynchronousUpdate()
 
     if (m_server_id_online.load() != 0 &&
         allowJoinedPlayersWaiting() &&
-        StkTime::getMonoTimeMs() > m_last_unsuccess_poll_time &&
-        StkTime::getMonoTimeMs() > m_last_success_poll_time.load() + 30000)
+        FluxaraDriftTime::getMonoTimeMs() > m_last_unsuccess_poll_time &&
+        FluxaraDriftTime::getMonoTimeMs() > m_last_success_poll_time.load() + 30000)
     {
         Log::warn("ServerLobby", "Trying auto server recovery.");
         // For auto server recovery wait 3 seconds for next try
-        m_last_unsuccess_poll_time = StkTime::getMonoTimeMs() + 3000;
+        m_last_unsuccess_poll_time = FluxaraDriftTime::getMonoTimeMs() + 3000;
         registerServer(false/*first_time*/);
     }
 
@@ -835,33 +835,33 @@ void ServerLobby::asynchronousUpdate()
     case SET_PUBLIC_ADDRESS:
     {
         // In case of LAN we don't need our public address or register with the
-        // STK server, so we can directly go to the accepting clients state.
+        // FLUXARA_DRIFT server, so we can directly go to the accepting clients state.
         if (NetworkConfig::get()->isLAN())
         {
             m_state = WAITING_FOR_START_GAME;
             updatePlayerList();
-            STKHost::get()->startListening();
+            FLUXARA_DRIFTHost::get()->startListening();
             return;
         }
         auto ip_type = NetworkConfig::get()->getIPType();
         // Set the IPv6 address first for possible IPv6 only server
         if (isIPv6Socket() && ip_type >= NetworkConfig::IP_V6)
         {
-            STKHost::get()->setPublicAddress(AF_INET6);
+            FLUXARA_DRIFTHost::get()->setPublicAddress(AF_INET6);
         }
         if (ip_type == NetworkConfig::IP_V4 ||
             ip_type == NetworkConfig::IP_DUAL_STACK)
         {
-            STKHost::get()->setPublicAddress(AF_INET);
+            FLUXARA_DRIFTHost::get()->setPublicAddress(AF_INET);
         }
-        if (STKHost::get()->getPublicAddress().isUnset() &&
-            STKHost::get()->getPublicIPv6Address().empty())
+        if (FLUXARA_DRIFTHost::get()->getPublicAddress().isUnset() &&
+            FLUXARA_DRIFTHost::get()->getPublicIPv6Address().empty())
         {
             m_state = ERROR_LEAVE;
         }
         else
         {
-            STKHost::get()->startListening();
+            FLUXARA_DRIFTHost::get()->startListening();
             m_state = REGISTER_SELF_ADDRESS;
         }
         break;
@@ -874,7 +874,7 @@ void ServerLobby::asynchronousUpdate()
             updatePlayerList();
             break;
         }
-        // Register this server with the STK server. This will block
+        // Register this server with the FLUXARA_DRIFT server. This will block
         // this thread, because there is no need for the protocol manager
         // to react to any requests before the server is registered.
         if (m_server_registering.expired() && m_server_id_online.load() == 0)
@@ -885,7 +885,7 @@ void ServerLobby::asynchronousUpdate()
             // Finished registering server
             if (m_server_id_online.load() != 0)
             {
-                // For non grand prix server we only need to register to stk
+                // For non grand prix server we only need to register to fluxara_drift
                 // addons once
                 if (allowJoinedPlayersWaiting())
                     m_registered_for_once_only = true;
@@ -905,12 +905,12 @@ void ServerLobby::asynchronousUpdate()
                 starting_limit = std::min(starting_limit, (int)ServerConfig::m_max_players_in_game);
 
             unsigned players = 0;
-            STKHost::get()->updatePlayers(&players);
+            FLUXARA_DRIFTHost::get()->updatePlayers(&players);
             if (((int)players >= starting_limit ||
                 m_game_setup->isGrandPrixStarted()) &&
                 m_timeout.load() == std::numeric_limits<int64_t>::max())
             {
-                m_timeout.store((int64_t)StkTime::getMonoTimeMs() +
+                m_timeout.store((int64_t)FluxaraDriftTime::getMonoTimeMs() +
                     (int64_t)
                     (ServerConfig::m_start_game_counter * 1000.0f));
             }
@@ -922,7 +922,7 @@ void ServerLobby::asynchronousUpdate()
                     updatePlayerList();
                 m_timeout.store(std::numeric_limits<int64_t>::max());
             }
-            if (m_timeout.load() < (int64_t)StkTime::getMonoTimeMs() ||
+            if (m_timeout.load() < (int64_t)FluxaraDriftTime::getMonoTimeMs() ||
                 (checkPeersReady(true/*ignore_ai_peer*/) &&
                 (int)players >= starting_limit))
             {
@@ -937,7 +937,7 @@ void ServerLobby::asynchronousUpdate()
     {
         requestTerminate();
         m_state = EXITING;
-        STKHost::get()->requestShutdown();
+        FLUXARA_DRIFTHost::get()->requestShutdown();
         break;
     }
     case WAIT_FOR_WORLD_LOADED:
@@ -949,7 +949,7 @@ void ServerLobby::asynchronousUpdate()
             return;
 
         unsigned player_in_game = 0;
-        STKHost::get()->updatePlayers(&player_in_game);
+        FLUXARA_DRIFTHost::get()->updatePlayers(&player_in_game);
         // Reset lobby will be done in main thread
         if ((player_in_game == 1 && ServerConfig::m_ranked) ||
             player_in_game == 0)
@@ -974,7 +974,7 @@ void ServerLobby::asynchronousUpdate()
         if (m_end_voting_period.load() == 0)
             return;
         unsigned player_in_game = 0;
-        STKHost::get()->updatePlayers(&player_in_game);
+        FLUXARA_DRIFTHost::get()->updatePlayers(&player_in_game);
         if ((player_in_game == 1 && ServerConfig::m_ranked) ||
             player_in_game == 0)
         {
@@ -995,15 +995,15 @@ void ServerLobby::asynchronousUpdate()
         if (go_on_race)
         {
             *m_default_vote = winner_vote;
-            m_item_seed = (uint32_t)StkTime::getTimeSinceEpoch();
+            m_item_seed = (uint32_t)FluxaraDriftTime::getTimeSinceEpoch();
             ItemManager::updateRandomSeed(m_item_seed);
             m_game_setup->setRace(winner_vote);
 
             // For spectators that don't have the track, remember their
             // spectate mode and don't load the track
             std::string track_name = winner_vote.m_track_name;
-            auto peers = STKHost::get()->getPeers();
-            std::map<std::shared_ptr<STKPeer>,
+            auto peers = FLUXARA_DRIFTHost::get()->getPeers();
+            std::map<std::shared_ptr<FLUXARA_DRIFTPeer>,
                     AlwaysSpectateMode> previous_spectate_mode;
             for (auto peer : peers)
             {
@@ -1017,7 +1017,7 @@ void ServerLobby::asynchronousUpdate()
                 }
             }
             bool has_always_on_spectators = false;
-            auto players = STKHost::get()
+            auto players = FLUXARA_DRIFTHost::get()
                 ->getPlayersForNewGame(&has_always_on_spectators);
             for (auto& p: previous_spectate_mode)
                 if (p.first)
@@ -1046,14 +1046,14 @@ void ServerLobby::asynchronousUpdate()
             for (unsigned i = 0; i < players.size(); i++)
             {
                 std::shared_ptr<NetworkPlayerProfile>& player = players[i];
-                std::shared_ptr<STKPeer> peer = player->getPeer();
+                std::shared_ptr<FLUXARA_DRIFTPeer> peer = player->getPeer();
                 if (peer)
                     peer->clearAvailableKartIDs();
             }
             for (unsigned i = 0; i < players.size(); i++)
             {
                 std::shared_ptr<NetworkPlayerProfile>& player = players[i];
-                std::shared_ptr<STKPeer> peer = player->getPeer();
+                std::shared_ptr<FLUXARA_DRIFTPeer> peer = player->getPeer();
                 if (peer)
                     peer->addAvailableKartID(i);
             }
@@ -1079,10 +1079,10 @@ void ServerLobby::asynchronousUpdate()
                 false/*live_join*/);
             m_game_setup->setHitCaptureTime(m_battle_hit_capture_limit,
                 m_battle_time_limit);
-            uint16_t flag_return_time = (uint16_t)stk_config->time2Ticks(
+            uint16_t flag_return_time = (uint16_t)fluxara_drift_config->time2Ticks(
                 ServerConfig::m_flag_return_timeout);
             RaceManager::get()->setFlagReturnTicks(flag_return_time);
-            uint16_t flag_deactivated_time = (uint16_t)stk_config->time2Ticks(
+            uint16_t flag_deactivated_time = (uint16_t)fluxara_drift_config->time2Ticks(
                 ServerConfig::m_flag_deactivated_time);
             RaceManager::get()->setFlagDeactivatedTicks(flag_deactivated_time);
             configRemoteKart(players, 0);
@@ -1143,10 +1143,10 @@ NetworkString* ServerLobby::getLoadWorldMessage(
     {
         load_world_message->addUInt32(m_battle_hit_capture_limit)
             .addFloat(m_battle_time_limit);
-        uint16_t flag_return_time = (uint16_t)stk_config->time2Ticks(
+        uint16_t flag_return_time = (uint16_t)fluxara_drift_config->time2Ticks(
             ServerConfig::m_flag_return_timeout);
         load_world_message->addUInt16(flag_return_time);
-        uint16_t flag_deactivated_time = (uint16_t)stk_config->time2Ticks(
+        uint16_t flag_deactivated_time = (uint16_t)fluxara_drift_config->time2Ticks(
             ServerConfig::m_flag_deactivated_time);
         load_world_message->addUInt16(flag_deactivated_time);
     }
@@ -1202,10 +1202,10 @@ bool ServerLobby::worldIsActive() const
 }   // worldIsActive
 
 //-----------------------------------------------------------------------------
-/** \ref STKPeer peer will be reset back to the lobby with reason
+/** \ref FLUXARA_DRIFTPeer peer will be reset back to the lobby with reason
  *  \ref BackLobbyReason blr
  */
-void ServerLobby::rejectLiveJoin(STKPeer* peer, BackLobbyReason blr)
+void ServerLobby::rejectLiveJoin(FLUXARA_DRIFTPeer* peer, BackLobbyReason blr)
 {
     NetworkString* reset = getNetworkString(m_type, 2);
     reset->setSynchronous(true);
@@ -1227,7 +1227,7 @@ void ServerLobby::rejectLiveJoin(STKPeer* peer, BackLobbyReason blr)
  */
 void ServerLobby::liveJoinRequest(Event* event)
 {
-    STKPeer* peer = event->getPeer();
+    FLUXARA_DRIFTPeer* peer = event->getPeer();
     const NetworkString& data = event->data();
 
     if (!canLiveJoinNow())
@@ -1402,7 +1402,7 @@ int ServerLobby::getReservedId(std::shared_ptr<NetworkPlayerProfile>& p,
  */
 void ServerLobby::finishedLoadingLiveJoinClient(Event* event)
 {
-    std::shared_ptr<STKPeer> peer = event->getPeerSP();
+    std::shared_ptr<FLUXARA_DRIFTPeer> peer = event->getPeerSP();
     if (!canLiveJoinNow())
     {
         rejectLiveJoin(peer.get(), BLR_NO_GAME_FOR_LIVE_JOIN);
@@ -1428,7 +1428,7 @@ void ServerLobby::finishedLoadingLiveJoinClient(Event* event)
     World* w = World::getWorld();
     assert(w);
 
-    uint64_t live_join_start_time = STKHost::get()->getNetworkTimer();
+    uint64_t live_join_start_time = FLUXARA_DRIFTHost::get()->getNetworkTimer();
 
     // Instead of using getTicksSinceStart we caculate the current world ticks
     // only from network timer, because if the server hangs in between the
@@ -1436,11 +1436,11 @@ void ServerLobby::finishedLoadingLiveJoinClient(Event* event)
     // 2000 is the time for ready set, remove 3 ticks after for minor
     // correction (make it more looks like getTicksSinceStart if server has no
     // hang
-    int cur_world_ticks = stk_config->time2Ticks(
+    int cur_world_ticks = fluxara_drift_config->time2Ticks(
         (live_join_start_time - m_server_started_at - 2000) / 1000.f) - 3;
     // Give 3 seconds for all peers to get new kart info
     m_last_live_join_util_ticks =
-        cur_world_ticks + stk_config->time2Ticks(3.0f);
+        cur_world_ticks + fluxara_drift_config->time2Ticks(3.0f);
     live_join_start_time -= m_server_delay;
     live_join_start_time += 3000;
 
@@ -1497,7 +1497,7 @@ void ServerLobby::finishedLoadingLiveJoinClient(Event* event)
 
 //-----------------------------------------------------------------------------
 /** Simple finite state machine.  Once this
- *  is known, register the server and its address with the stk server so that
+ *  is known, register the server and its address with the fluxara_drift server so that
  *  client can find it.
  */
 void ServerLobby::update(int ticks)
@@ -1577,11 +1577,11 @@ void ServerLobby::update(int ticks)
         m_rs_state.store(RS_ASYNC_RESET);
     }
 
-    STKHost::get()->updatePlayers();
+    FLUXARA_DRIFTHost::get()->updatePlayers();
     if (m_rs_state.load() == RS_NONE &&
         (m_state.load() > WAITING_FOR_START_GAME ||
         m_game_setup->isGrandPrixStarted()) &&
-        (STKHost::get()->getPlayersInGame() == 0 ||
+        (FLUXARA_DRIFTHost::get()->getPlayersInGame() == 0 ||
         all_players_in_world_disconnected))
     {
         if (RaceEventManager::get() &&
@@ -1621,7 +1621,7 @@ void ServerLobby::update(int ticks)
     // Reset for ranked server if in kart / track selection has only 1 player
     if (ServerConfig::m_ranked &&
         m_state.load() == SELECTING &&
-        STKHost::get()->getPlayersInGame() == 1)
+        FLUXARA_DRIFTHost::get()->getPlayersInGame() == 1)
     {
         NetworkString* back_lobby = getNetworkString(m_type, 2);
         back_lobby->setSynchronous(true);
@@ -1675,14 +1675,14 @@ void ServerLobby::update(int ticks)
         resetPeersReady();
         // Set the delay before the server forces all clients to exit the race
         // result screen and go back to the lobby
-        m_timeout.store((int64_t)StkTime::getMonoTimeMs() + 15000);
+        m_timeout.store((int64_t)FluxaraDriftTime::getMonoTimeMs() + 15000);
         m_state = RESULT_DISPLAY;
         sendMessageToPeers(m_result_ns, /*reliable*/ true);
         Log::info("ServerLobby", "End of game message sent");
         break;
     case RESULT_DISPLAY:
         if (checkPeersReady(true/*ignore_ai_peer*/) ||
-            (int64_t)StkTime::getMonoTimeMs() > m_timeout.load())
+            (int64_t)FluxaraDriftTime::getMonoTimeMs() > m_timeout.load())
         {
             // Send a notification to all clients to exit
             // the race result screen
@@ -1701,9 +1701,9 @@ void ServerLobby::update(int ticks)
 }   // update
 
 //-----------------------------------------------------------------------------
-/** Register this server (i.e. its public address) with the STK server
+/** Register this server (i.e. its public address) with the FLUXARA_DRIFT server
  *  so that clients can find it. It blocks till a response from the
- *  stk server is received (this function is executed from the
+ *  fluxara_drift server is received (this function is executed from the
  *  ProtocolManager thread). The information about this client is added
  *  to the table 'server'.
  */
@@ -1745,12 +1745,12 @@ void ServerLobby::registerServer(bool first_time)
                 Log::info("ServerLobby",
                     "Server %d is now online.", server_id_online);
                 sl->m_server_id_online.store(server_id_online);
-                sl->m_last_success_poll_time.store(StkTime::getMonoTimeMs());
+                sl->m_last_success_poll_time.store(FluxaraDriftTime::getMonoTimeMs());
                 return;
             }
             Log::error("ServerLobby", "%s",
                 StringUtils::wideToUtf8(getInfo()).c_str());
-            // Exit now if failed to register to stk addons for first time
+            // Exit now if failed to register to fluxara_drift addons for first time
             if (m_first_time)
                 sl->m_state.store(ERROR_LEAVE);
         }
@@ -1763,11 +1763,11 @@ void ServerLobby::registerServer(bool first_time)
     auto request = std::make_shared<RegisterServerRequest>(
         std::dynamic_pointer_cast<ServerLobby>(shared_from_this()), first_time);
     NetworkConfig::get()->setServerDetails(request, "create");
-    const SocketAddress& addr = STKHost::get()->getPublicAddress();
+    const SocketAddress& addr = FLUXARA_DRIFTHost::get()->getPublicAddress();
     request->addParameter("address",      addr.getIP()        );
     request->addParameter("port",         addr.getPort()      );
     request->addParameter("private_port",
-                                    STKHost::get()->getPrivatePort()      );
+                                    FLUXARA_DRIFTHost::get()->getPrivatePort()      );
     request->addParameter("name", m_game_setup->getServerNameUtf8());
     request->addParameter("max_players", ServerConfig::m_server_max_players);
     int difficulty = m_difficulty.load();
@@ -1785,21 +1785,21 @@ void ServerLobby::registerServer(bool first_time)
         Log::info("ServerLobby", "Public IPv4 server address %s",
             addr.toString().c_str());
     }
-    if (!STKHost::get()->getPublicIPv6Address().empty())
+    if (!FLUXARA_DRIFTHost::get()->getPublicIPv6Address().empty())
     {
         request->addParameter("address_ipv6",
-            STKHost::get()->getPublicIPv6Address());
+            FLUXARA_DRIFTHost::get()->getPublicIPv6Address());
         Log::info("ServerLobby", "Public IPv6 server address %s",
-            STKHost::get()->getPublicIPv6Address().c_str());
+            FLUXARA_DRIFTHost::get()->getPublicIPv6Address().c_str());
     }
     request->queue();
     m_server_registering = request;
 }   // registerServer
 
 //-----------------------------------------------------------------------------
-/** Unregister this server (i.e. its public address) with the STK server,
+/** Unregister this server (i.e. its public address) with the FLUXARA_DRIFT server,
  *  currently when karts enter kart selection screen it will be done or quit
- *  stk.
+ *  fluxara_drift.
  */
 void ServerLobby::unregisterServer(bool now, std::weak_ptr<ServerLobby> sl)
 {
@@ -1835,7 +1835,7 @@ void ServerLobby::unregisterServer(bool now, std::weak_ptr<ServerLobby> sl)
     auto request = std::make_shared<UnRegisterServerRequest>(sl);
     NetworkConfig::get()->setServerDetails(request, "stop");
 
-    const SocketAddress& addr = STKHost::get()->getPublicAddress();
+    const SocketAddress& addr = FLUXARA_DRIFTHost::get()->getPublicAddress();
     request->addParameter("address", addr.getIP());
     request->addParameter("port", addr.getPort());
     bool ipv6_only = addr.isUnset();
@@ -1847,7 +1847,7 @@ void ServerLobby::unregisterServer(bool now, std::weak_ptr<ServerLobby> sl)
     else
     {
         Log::info("ServerLobby", "Unregister server address %s",
-            STKHost::get()->getValidPublicAddress().c_str());
+            FLUXARA_DRIFTHost::get()->getValidPublicAddress().c_str());
     }
 
     // No need to check for result as server will be auto-cleared anyway
@@ -1896,7 +1896,7 @@ void ServerLobby::startSelection(const Event *event)
     if (!ServerConfig::m_owner_less && ServerConfig::m_team_choosing &&
         RaceManager::get()->teamEnabled())
     {
-        auto red_blue = STKHost::get()->getAllPlayersTeamInfo();
+        auto red_blue = FLUXARA_DRIFTHost::get()->getAllPlayersTeamInfo();
         if ((red_blue.first == 0 || red_blue.second == 0) &&
             red_blue.first + red_blue.second != 1)
         {
@@ -1914,8 +1914,8 @@ void ServerLobby::startSelection(const Event *event)
     }
 
     // Find if there are peers playing the game
-    auto peers = STKHost::get()->getPeers();
-    std::set<STKPeer*> always_spectate_peers;
+    auto peers = FLUXARA_DRIFTHost::get()->getPeers();
+    std::set<FLUXARA_DRIFTPeer*> always_spectate_peers;
     bool has_peer_plays_game = false;
     for (auto peer : peers)
     {
@@ -1930,22 +1930,22 @@ void ServerLobby::startSelection(const Event *event)
     // Disable always spectate peers if no players join the game
     if (!has_peer_plays_game)
     {
-        for (STKPeer* peer : always_spectate_peers)
+        for (FLUXARA_DRIFTPeer* peer : always_spectate_peers)
             peer->setAlwaysSpectate(ASM_NONE);
         always_spectate_peers.clear();
     }
     else
     {
         // We make those always spectate peer waiting for game so it won't
-        // be able to vote, this will be reset in STKHost::getPlayersForNewGame
+        // be able to vote, this will be reset in FLUXARA_DRIFTHost::getPlayersForNewGame
         // This will also allow a correct number of in game players for max
         // arena players handling
-        for (STKPeer* peer : always_spectate_peers)
+        for (FLUXARA_DRIFTPeer* peer : always_spectate_peers)
             peer->setWaitingForGame(true);
     }
 
     unsigned max_player = 0;
-    STKHost::get()->updatePlayers(&max_player);
+    FLUXARA_DRIFTHost::get()->updatePlayers(&max_player);
 
     // Set late coming player to spectate if too many players
     auto spectators_by_limit = getSpectatorsByLimit();
@@ -1984,7 +1984,7 @@ void ServerLobby::startSelection(const Event *event)
     }
 
     max_player = 0;
-    STKHost::get()->updatePlayers(&max_player);
+    FLUXARA_DRIFTHost::get()->updatePlayers(&max_player);
     if (auto ai = m_ai_peer.lock())
     {
         if (supportsAI())
@@ -2132,8 +2132,8 @@ void ServerLobby::startSelection(const Event *event)
         NetworkString* back_lobby = getNetworkString(m_type, 2);
         back_lobby->setSynchronous(true);
         back_lobby->addUInt8(LE_BACK_LOBBY).addUInt8(BLR_SPECTATING_NEXT_GAME);
-        STKHost::get()->sendPacketToAllPeersWith(
-            [always_spectate_peers](STKPeer* peer) {
+        FLUXARA_DRIFTHost::get()->sendPacketToAllPeersWith(
+            [always_spectate_peers](FLUXARA_DRIFTPeer* peer) {
             return always_spectate_peers.find(peer) !=
             always_spectate_peers.end(); }, back_lobby, /*reliable*/true);
         delete back_lobby;
@@ -2159,7 +2159,7 @@ void ServerLobby::startSelection(const Event *event)
 }   // startSelection
 
 //-----------------------------------------------------------------------------
-/** Query the STK server for connection requests. For each connection request
+/** Query the FLUXARA_DRIFT server for connection requests. For each connection request
  *  start a ConnectToPeer protocol.
  */
 void ServerLobby::checkIncomingConnectionRequests()
@@ -2167,8 +2167,8 @@ void ServerLobby::checkIncomingConnectionRequests()
     // First poll every 5 seconds. Return if no polling needs to be done.
     const uint64_t POLL_INTERVAL = 5000;
     static uint64_t last_poll_time = 0;
-    if (StkTime::getMonoTimeMs() < last_poll_time + POLL_INTERVAL ||
-        StkTime::getMonoTimeMs() > m_last_success_poll_time.load() + 30000)
+    if (FluxaraDriftTime::getMonoTimeMs() < last_poll_time + POLL_INTERVAL ||
+        FluxaraDriftTime::getMonoTimeMs() > m_last_success_poll_time.load() + 30000)
         return;
 
     // Keep the port open, it can be sent to anywhere as we will send to the
@@ -2177,16 +2177,16 @@ void ServerLobby::checkIncomingConnectionRequests()
     {
         BareNetworkString data;
         data.addUInt8(0);
-        const SocketAddress* stun_v4 = STKHost::get()->getStunIPv4Address();
-        const SocketAddress* stun_v6 = STKHost::get()->getStunIPv6Address();
+        const SocketAddress* stun_v4 = FLUXARA_DRIFTHost::get()->getStunIPv4Address();
+        const SocketAddress* stun_v6 = FLUXARA_DRIFTHost::get()->getStunIPv6Address();
         if (stun_v4)
-            STKHost::get()->sendRawPacket(data, *stun_v4);
+            FLUXARA_DRIFTHost::get()->sendRawPacket(data, *stun_v4);
         if (stun_v6)
-            STKHost::get()->sendRawPacket(data, *stun_v6);
+            FLUXARA_DRIFTHost::get()->sendRawPacket(data, *stun_v6);
     }
 
-    // Now poll the stk server
-    last_poll_time = StkTime::getMonoTimeMs();
+    // Now poll the fluxara_drift server
+    last_poll_time = FluxaraDriftTime::getMonoTimeMs();
 
     // ========================================================================
     class PollServerRequest : public Online::XMLRequest
@@ -2214,7 +2214,7 @@ void ServerLobby::checkIncomingConnectionRequests()
             auto sl = m_server_lobby.lock();
             if (!sl)
                 return;
-            sl->m_last_success_poll_time.store(StkTime::getMonoTimeMs());
+            sl->m_last_success_poll_time.store(FluxaraDriftTime::getMonoTimeMs());
             if (sl->m_state.load() != WAITING_FOR_START_GAME &&
                 !sl->allowJoinedPlayersWaiting())
             {
@@ -2274,7 +2274,7 @@ void ServerLobby::checkIncomingConnectionRequests()
         ProtocolManager::lock());
     NetworkConfig::get()->setServerDetails(request,
         "poll-connection-requests");
-    const SocketAddress& addr = STKHost::get()->getPublicAddress();
+    const SocketAddress& addr = FLUXARA_DRIFTHost::get()->getPublicAddress();
     request->addParameter("address", addr.getIP()  );
     request->addParameter("port",    addr.getPort());
     request->addParameter("current-players", getLobbyPlayers());
@@ -2439,8 +2439,8 @@ void ServerLobby::clientDisconnected(Event* event)
     }
 
     // Don't show waiting peer disconnect message to in game player
-    STKHost::get()->sendPacketToAllPeersWith([waiting_peer_disconnected]
-        (STKPeer* p)
+    FLUXARA_DRIFTHost::get()->sendPacketToAllPeersWith([waiting_peer_disconnected]
+        (FLUXARA_DRIFTPeer* p)
         {
             if (!p->isValidated())
                 return false;
@@ -2457,7 +2457,7 @@ void ServerLobby::clientDisconnected(Event* event)
 }   // clientDisconnected
 
 //-----------------------------------------------------------------------------
-void ServerLobby::kickPlayerWithReason(STKPeer* peer, const char* reason) const
+void ServerLobby::kickPlayerWithReason(FLUXARA_DRIFTPeer* peer, const char* reason) const
 {
     NetworkString *message = getNetworkString(m_type, 2);
     message->setSynchronous(true);
@@ -2478,7 +2478,7 @@ void ServerLobby::saveIPBanTable(const SocketAddress& addr)
 }   // saveIPBanTable
 
 //-----------------------------------------------------------------------------
-bool ServerLobby::handleAssets(const NetworkString& ns, STKPeer* peer)
+bool ServerLobby::handleAssets(const NetworkString& ns, FLUXARA_DRIFTPeer* peer)
 {
     std::set<std::string> client_karts, client_tracks;
     const unsigned kart_num = ns.getUInt16();
@@ -2596,7 +2596,7 @@ bool ServerLobby::handleAssets(const NetworkString& ns, STKPeer* peer)
             ((float)addon_soccer / (float)m_addon_soccers.size() * 100.0);
     }
 
-    // Save available karts and tracks from clients in STKPeer so if this peer
+    // Save available karts and tracks from clients in FLUXARA_DRIFTPeer so if this peer
     // disconnects later in lobby it won't affect current players
     peer->setAvailableKartsTracks(client_karts, client_tracks);
     peer->setAddonsScores(addons_scores);
@@ -2614,7 +2614,7 @@ bool ServerLobby::handleAssets(const NetworkString& ns, STKPeer* peer)
 //-----------------------------------------------------------------------------
 void ServerLobby::connectionRequested(Event* event)
 {
-    std::shared_ptr<STKPeer> peer = event->getPeerSP();
+    std::shared_ptr<FLUXARA_DRIFTPeer> peer = event->getPeerSP();
     NetworkString& data = event->data();
     if (!checkDataSize(event, 14)) return;
 
@@ -2638,8 +2638,8 @@ void ServerLobby::connectionRequested(Event* event)
 
     // Check server version
     int version = data.getUInt32();
-    if (version < stk_config->m_min_server_version ||
-        version > stk_config->m_max_server_version)
+    if (version < fluxara_drift_config->m_min_server_version ||
+        version > fluxara_drift_config->m_max_server_version)
     {
         NetworkString *message = getNetworkString(m_type, 2);
         message->setSynchronous(true);
@@ -2689,7 +2689,7 @@ void ServerLobby::connectionRequested(Event* event)
         return;
 
     unsigned total_players = 0;
-    STKHost::get()->updatePlayers(NULL, NULL, &total_players);
+    FLUXARA_DRIFTHost::get()->updatePlayers(NULL, NULL, &total_players);
     if (total_players + player_count + m_ai_profiles.size() >
         (unsigned)ServerConfig::m_server_max_players)
     {
@@ -2708,7 +2708,7 @@ void ServerLobby::connectionRequested(Event* event)
     // And no duplicated online id or split screen players in ranked server
     // AIPeer only from lan and only 1 if ai handling
     std::set<uint32_t> all_online_ids =
-        STKHost::get()->getAllPlayerOnlineIds();
+        FLUXARA_DRIFTHost::get()->getAllPlayerOnlineIds();
     bool duplicated_ranked_player =
         all_online_ids.find(online_id) != all_online_ids.end();
 
@@ -2763,7 +2763,7 @@ void ServerLobby::connectionRequested(Event* event)
 }   // connectionRequested
 
 //-----------------------------------------------------------------------------
-void ServerLobby::handleUnencryptedConnection(std::shared_ptr<STKPeer> peer,
+void ServerLobby::handleUnencryptedConnection(std::shared_ptr<FLUXARA_DRIFTPeer> peer,
     BareNetworkString& data, uint32_t online_id,
     const core::stringw& online_name, bool is_pending_connection,
     std::string country_code)
@@ -2794,7 +2794,7 @@ void ServerLobby::handleUnencryptedConnection(std::shared_ptr<STKPeer> peer,
 
     if (is_pending_connection)
     {
-        STKHost::get()->updatePlayers(NULL, NULL, &total_players);
+        FLUXARA_DRIFTHost::get()->updatePlayers(NULL, NULL, &total_players);
         if (total_players + player_count >
             (unsigned)ServerConfig::m_server_max_players)
         {
@@ -2810,7 +2810,7 @@ void ServerLobby::handleUnencryptedConnection(std::shared_ptr<STKPeer> peer,
         }
 
         std::set<uint32_t> all_online_ids =
-            STKHost::get()->getAllPlayerOnlineIds();
+            FLUXARA_DRIFTHost::get()->getAllPlayerOnlineIds();
         bool duplicated_ranked_player =
             all_online_ids.find(online_id) != all_online_ids.end();
         if (ServerConfig::m_ranked && duplicated_ranked_player)
@@ -2834,12 +2834,12 @@ void ServerLobby::handleUnencryptedConnection(std::shared_ptr<STKPeer> peer,
         country_code = m_db_connector->ipv62Country(peer->getAddress());
 #endif
 
-    auto red_blue = STKHost::get()->getAllPlayersTeamInfo();
+    auto red_blue = FLUXARA_DRIFTHost::get()->getAllPlayersTeamInfo();
     for (unsigned i = 0; i < player_count; i++)
     {
         core::stringw name;
         data.decodeStringW(&name);
-        // 30 to make it consistent with stk-addons max user name length
+        // 30 to make it consistent with fluxara_drift-addons max user name length
         if (name.empty())
             name = L"unnamed";
         else if (name.size() > 30)
@@ -2890,14 +2890,14 @@ void ServerLobby::handleUnencryptedConnection(std::shared_ptr<STKPeer> peer,
     else
     {
         auto_start_timer =
-            (m_timeout.load() - (int64_t)StkTime::getMonoTimeMs()) / 1000.0f;
+            (m_timeout.load() - (int64_t)FluxaraDriftTime::getMonoTimeMs()) / 1000.0f;
     }
     message_ack->addUInt8(LE_CONNECTION_ACCEPTED).addUInt32(peer->getHostId())
         .addUInt32(ServerConfig::m_server_version);
 
     message_ack->addUInt16(
-        (uint16_t)stk_config->m_network_capabilities.size());
-    for (const std::string& cap : stk_config->m_network_capabilities)
+        (uint16_t)fluxara_drift_config->m_network_capabilities.size());
+    for (const std::string& cap : fluxara_drift_config->m_network_capabilities)
         message_ack->encodeString(cap);
 
     message_ack->addFloat(auto_start_timer)
@@ -2985,7 +2985,7 @@ void ServerLobby::updatePlayerList(bool update_when_reset_server)
     const bool game_started = m_state.load() != WAITING_FOR_START_GAME &&
         !update_when_reset_server;
 
-    auto all_profiles = STKHost::get()->getAllPlayerProfiles();
+    auto all_profiles = FLUXARA_DRIFTHost::get()->getAllPlayerProfiles();
     size_t all_profiles_size = all_profiles.size();
     for (auto& profile : all_profiles)
     {
@@ -3064,7 +3064,7 @@ void ServerLobby::updatePlayerList(bool update_when_reset_server)
             .addUInt8(profile->getLocalPlayerId())
             .encodeString(profile_name);
 
-        std::shared_ptr<STKPeer> p = profile->getPeer();
+        std::shared_ptr<FLUXARA_DRIFTPeer> p = profile->getPeer();
         uint8_t boolean_combine = 0;
         if (p && p->isWaitingForGame())
             boolean_combine |= 1;
@@ -3091,8 +3091,8 @@ void ServerLobby::updatePlayerList(bool update_when_reset_server)
     }
 
     // Don't send this message to in-game players
-    STKHost::get()->sendPacketToAllPeersWith([game_started]
-        (STKPeer* p)
+    FLUXARA_DRIFTHost::get()->sendPacketToAllPeersWith([game_started]
+        (FLUXARA_DRIFTPeer* p)
         {
             if (!p->isValidated())
                 return false;
@@ -3112,16 +3112,16 @@ void ServerLobby::updateServerOwner()
         return;
     if (!m_server_owner.expired())
         return;
-    auto peers = STKHost::get()->getPeers();
+    auto peers = FLUXARA_DRIFTHost::get()->getPeers();
     if (peers.empty())
         return;
-    std::sort(peers.begin(), peers.end(), [](const std::shared_ptr<STKPeer> a,
-        const std::shared_ptr<STKPeer> b)->bool
+    std::sort(peers.begin(), peers.end(), [](const std::shared_ptr<FLUXARA_DRIFTPeer> a,
+        const std::shared_ptr<FLUXARA_DRIFTPeer> b)->bool
         {
             return a->getHostId() < b->getHostId();
         });
 
-    std::shared_ptr<STKPeer> owner;
+    std::shared_ptr<FLUXARA_DRIFTPeer> owner;
     for (auto peer: peers)
     {
         // Only matching host id can be server owner in case of
@@ -3165,7 +3165,7 @@ void ServerLobby::kartSelectionRequested(Event* event)
         return;
 
     const NetworkString& data = event->data();
-    STKPeer* peer = event->getPeer();
+    FLUXARA_DRIFTPeer* peer = event->getPeer();
     setPlayerKarts(data, peer);
 }   // kartSelectionRequested
 
@@ -3290,7 +3290,7 @@ bool ServerLobby::handleAllVotes(PeerVote* winner_vote,
     auto it = m_peers_votes.begin();
     while (it != m_peers_votes.end())
     {
-        auto peer = STKHost::get()->findPeerByHostId(it->first);
+        auto peer = FLUXARA_DRIFTHost::get()->findPeerByHostId(it->first);
         if (peer == nullptr)
         {
             it = m_peers_votes.erase(it);
@@ -3311,7 +3311,7 @@ bool ServerLobby::handleAllVotes(PeerVote* winner_vote,
 
     // Count number of players
     float cur_players = 0.0f;
-    auto peers = STKHost::get()->getPeers();
+    auto peers = FLUXARA_DRIFTHost::get()->getPeers();
     for (auto peer : peers)
     {
         if (peer->isAIPeer())
@@ -3486,11 +3486,11 @@ void ServerLobby::finishedLoadingWorld()
  */
 void ServerLobby::finishedLoadingWorldClient(Event *event)
 {
-    std::shared_ptr<STKPeer> peer = event->getPeerSP();
+    std::shared_ptr<FLUXARA_DRIFTPeer> peer = event->getPeerSP();
     peer->updateLastActivity();
     m_peers_ready.at(peer) = true;
     Log::info("ServerLobby", "Peer %d has finished loading world at %lf",
-        peer->getHostId(), StkTime::getRealTime());
+        peer->getHostId(), FluxaraDriftTime::getRealTime());
 }   // finishedLoadingWorldClient
 
 //-----------------------------------------------------------------------------
@@ -3502,7 +3502,7 @@ void ServerLobby::playerFinishedResult(Event *event)
     if (m_rs_state.load() == RS_ASYNC_RESET ||
         m_state.load() != RESULT_DISPLAY)
         return;
-    std::shared_ptr<STKPeer> peer = event->getPeerSP();
+    std::shared_ptr<FLUXARA_DRIFTPeer> peer = event->getPeerSP();
     m_peers_ready.at(peer) = true;
 }   // playerFinishedResult
 
@@ -3559,7 +3559,7 @@ void ServerLobby::handlePendingConnection()
 }   // handlePendingConnection
 
 //-----------------------------------------------------------------------------
-bool ServerLobby::decryptConnectionRequest(std::shared_ptr<STKPeer> peer,
+bool ServerLobby::decryptConnectionRequest(std::shared_ptr<FLUXARA_DRIFTPeer> peer,
     BareNetworkString& data, const std::string& key, const std::string& iv,
     uint32_t online_id, const core::stringw& online_name,
     const std::string& country_code)
@@ -3604,7 +3604,7 @@ void ServerLobby::getRankingForPlayer(std::shared_ptr<NetworkPlayerProfile> p)
         Log::error("ServerLobby", "No ranking info found for player %s.",
             StringUtils::wideToUtf8(p->getName()).c_str());
         // Kick the player to avoid his score being reset in case
-        // connection to stk addons is broken
+        // connection to fluxara_drift addons is broken
         auto peer = p->getPeer();
         if (peer)
         {
@@ -3673,7 +3673,7 @@ void ServerLobby::configPeersStartTime()
     }
     // Start up time will be after 2500ms, so even if this packet is sent late
     // (due to packet loss), the start time will still ahead of current time
-    uint64_t start_time = STKHost::get()->getNetworkTimer() + (uint64_t)2500;
+    uint64_t start_time = FLUXARA_DRIFTHost::get()->getNetworkTimer() + (uint64_t)2500;
     powerup_manager->setRandomSeed(start_time);
     NetworkString* ns = getNetworkString(m_type, 10);
     ns->setSynchronous(true);
@@ -3695,17 +3695,17 @@ void ServerLobby::configPeersStartTime()
     m_state = WAIT_FOR_RACE_STARTED;
 
     World::getWorld()->setPhase(WorldStatus::SERVER_READY_PHASE);
-    // Different stk process thread may have different stk host
-    STKHost* stk_host = STKHost::get();
+    // Different fluxara_drift process thread may have different fluxara_drift host
+    FLUXARA_DRIFTHost* fluxara_drift_host = FLUXARA_DRIFTHost::get();
     joinStartGameThread();
-    m_start_game_thread = std::thread([start_time, stk_host, this]()
+    m_start_game_thread = std::thread([start_time, fluxara_drift_host, this]()
         {
-            const uint64_t cur_time = stk_host->getNetworkTimer();
+            const uint64_t cur_time = fluxara_drift_host->getNetworkTimer();
             assert(start_time > cur_time);
             int sleep_time = (int)(start_time - cur_time);
             //Log::info("ServerLobby", "Start game after %dms", sleep_time);
-            StkTime::sleep(sleep_time);
-            //Log::info("ServerLobby", "Started at %lf", StkTime::getRealTime());
+            FluxaraDriftTime::sleep(sleep_time);
+            //Log::info("ServerLobby", "Started at %lf", FluxaraDriftTime::getRealTime());
             m_state.store(RACING);
         });
 }   // configPeersStartTime
@@ -3719,7 +3719,7 @@ bool ServerLobby::allowJoinedPlayersWaiting() const
 //-----------------------------------------------------------------------------
 void ServerLobby::addWaitingPlayersToGame()
 {
-    auto all_profiles = STKHost::get()->getAllPlayerProfiles();
+    auto all_profiles = FLUXARA_DRIFTHost::get()->getAllPlayerProfiles();
     for (auto& profile : all_profiles)
     {
         auto peer = profile->getPeer();
@@ -3772,7 +3772,7 @@ void ServerLobby::resetServer()
 }   // resetServer
 
 //-----------------------------------------------------------------------------
-void ServerLobby::testBannedForIP(STKPeer* peer) const
+void ServerLobby::testBannedForIP(FLUXARA_DRIFTPeer* peer) const
 {
 #ifdef ENABLE_SQLITE3
     if (!m_db_connector->hasDatabase() || !m_db_connector->hasIpBanTable())
@@ -3807,7 +3807,7 @@ void ServerLobby::testBannedForIP(STKPeer* peer) const
 }   // testBannedForIP
 
 //-----------------------------------------------------------------------------
-void ServerLobby::testBannedForIPv6(STKPeer* peer) const
+void ServerLobby::testBannedForIPv6(FLUXARA_DRIFTPeer* peer) const
 {
 #ifdef ENABLE_SQLITE3
     if (!m_db_connector->hasDatabase() || !m_db_connector->hasIpv6BanTable())
@@ -3841,7 +3841,7 @@ void ServerLobby::testBannedForIPv6(STKPeer* peer) const
 }   // testBannedForIPv6
 
 //-----------------------------------------------------------------------------
-void ServerLobby::testBannedForOnlineId(STKPeer* peer,
+void ServerLobby::testBannedForOnlineId(FLUXARA_DRIFTPeer* peer,
                                         uint32_t online_id) const
 {
 #ifdef ENABLE_SQLITE3
@@ -3883,12 +3883,12 @@ float ServerLobby::getStartupBoostOrPenaltyForKart(uint32_t ping,
     AbstractKart* k = World::getWorld()->getKart(kart_id);
     if (k->getStartupBoost() != 0.0f)
         return k->getStartupBoost();
-    uint64_t now = STKHost::get()->getNetworkTimer();
+    uint64_t now = FLUXARA_DRIFTHost::get()->getNetworkTimer();
     uint64_t client_time = now - ping / 2;
     uint64_t server_time = client_time + m_server_delay;
-    int ticks = stk_config->time2Ticks(
+    int ticks = fluxara_drift_config->time2Ticks(
         (float)(server_time - m_server_started_at) / 1000.0f);
-    if (ticks < stk_config->time2Ticks(1.0f))
+    if (ticks < fluxara_drift_config->time2Ticks(1.0f))
     {
         PlayerController* pc =
             dynamic_cast<PlayerController*>(k->getController());
@@ -3956,12 +3956,12 @@ void ServerLobby::handleServerConfiguration(Event* event)
         m_game_mode.load() != new_game_mode))
     {
         Log::info("ServerLobby", "Updating server info with new "
-            "difficulty: %d, game mode: %d to stk-addons.", new_difficulty,
+            "difficulty: %d, game mode: %d to fluxara_drift-addons.", new_difficulty,
             new_game_mode);
         int priority = Online::RequestManager::HTTP_MAX_PRIORITY;
         auto request = std::make_shared<Online::XMLRequest>(priority);
         NetworkConfig::get()->setServerDetails(request, "update-config");
-        const SocketAddress& addr = STKHost::get()->getPublicAddress();
+        const SocketAddress& addr = FLUXARA_DRIFTHost::get()->getPublicAddress();
         request->addParameter("address", addr.getIP());
         request->addParameter("port", addr.getPort());
         request->addParameter("new-difficulty", new_difficulty);
@@ -3972,7 +3972,7 @@ void ServerLobby::handleServerConfiguration(Event* event)
     m_game_mode.store(new_game_mode);
     updateTracksForMode();
 
-    auto peers = STKHost::get()->getPeers();
+    auto peers = FLUXARA_DRIFTHost::get()->getPeers();
     for (auto& peer : peers)
     {
         auto assets = peer->getClientAssets();
@@ -4167,7 +4167,7 @@ void ServerLobby::addLiveJoinPlaceholder(
 }   // addLiveJoinPlaceholder
 
 //-----------------------------------------------------------------------------
-void ServerLobby::setPlayerKarts(const NetworkString& ns, STKPeer* peer) const
+void ServerLobby::setPlayerKarts(const NetworkString& ns, FLUXARA_DRIFTPeer* peer) const
 {
     unsigned player_count = ns.getUInt8();
     for (unsigned i = 0; i < player_count; i++)
@@ -4231,7 +4231,7 @@ void ServerLobby::handleKartInfo(Event* event)
     if (!w)
         return;
 
-    STKPeer* peer = event->getPeer();
+    FLUXARA_DRIFTPeer* peer = event->getPeer();
     const NetworkString& data = event->data();
     uint8_t kart_id = data.getUInt8();
     if (kart_id > RaceManager::get()->getNumPlayers())
@@ -4264,7 +4264,7 @@ void ServerLobby::handleKartInfo(Event* event)
 void ServerLobby::clientInGameWantsToBackLobby(Event* event)
 {
     World* w = World::getWorld();
-    std::shared_ptr<STKPeer> peer = event->getPeerSP();
+    std::shared_ptr<FLUXARA_DRIFTPeer> peer = event->getPeerSP();
 
     if (!w || !worldIsActive() || peer->isWaitingForGame())
     {
@@ -4347,7 +4347,7 @@ void ServerLobby::clientInGameWantsToBackLobby(Event* event)
  */
 void ServerLobby::clientSelectingAssetsWantsToBackLobby(Event* event)
 {
-    std::shared_ptr<STKPeer> peer = event->getPeerSP();
+    std::shared_ptr<FLUXARA_DRIFTPeer> peer = event->getPeerSP();
 
     if (m_state.load() != SELECTING || peer->isWaitingForGame())
     {
@@ -4390,12 +4390,12 @@ void ServerLobby::clientSelectingAssetsWantsToBackLobby(Event* event)
     delete server_info;
 }   // clientSelectingAssetsWantsToBackLobby
 
-std::set<std::shared_ptr<STKPeer>> ServerLobby::getSpectatorsByLimit()
+std::set<std::shared_ptr<FLUXARA_DRIFTPeer>> ServerLobby::getSpectatorsByLimit()
 {
-    std::set<std::shared_ptr<STKPeer>> spectators_by_limit;
+    std::set<std::shared_ptr<FLUXARA_DRIFTPeer>> spectators_by_limit;
 
-    auto peers = STKHost::get()->getPeers();
-    std::set<std::shared_ptr<STKPeer>> always_spectate_peers;
+    auto peers = FLUXARA_DRIFTHost::get()->getPeers();
+    std::set<std::shared_ptr<FLUXARA_DRIFTPeer>> always_spectate_peers;
 
     unsigned player_limit = ServerConfig::m_server_max_players;
     // If the server has an in-game player limit lower than the lobby limit, apply it,
@@ -4408,13 +4408,13 @@ std::set<std::shared_ptr<STKPeer>> ServerLobby::getSpectatorsByLimit()
         player_limit = std::min(player_limit, 10u);
 
     unsigned ingame_players = 0, waiting_players = 0, total_players = 0;
-    STKHost::get()->updatePlayers(&ingame_players, &waiting_players, &total_players);
+    FLUXARA_DRIFTHost::get()->updatePlayers(&ingame_players, &waiting_players, &total_players);
     if (total_players <= player_limit)
         return spectators_by_limit;
 
     std::sort(peers.begin(), peers.end(),
-        [](const std::shared_ptr<STKPeer>& a,
-            const std::shared_ptr<STKPeer>& b)
+        [](const std::shared_ptr<FLUXARA_DRIFTPeer>& a,
+            const std::shared_ptr<FLUXARA_DRIFTPeer>& b)
         { return a->getHostId() < b->getHostId(); });
 
     if (m_state.load() >= RACING)

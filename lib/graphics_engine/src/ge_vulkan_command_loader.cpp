@@ -10,7 +10,6 @@
 #include <mutex>
 #include <stdexcept>
 #include <thread>
-#include <stdexcept>
 
 #include "../source/Irrlicht/os.h"
 
@@ -116,7 +115,26 @@ void GEVulkanCommandLoader::init(GEVulkanDriver* vk)
                     std::function<void()> copied = g_threaded_commands.front();
                     g_threaded_commands.pop_front();
                     ul.unlock();
-                    copied();
+                    // Texture streaming and track loading run here.  An
+                    // exception must never leave a std::thread entry point:
+                    // libc++ calls std::terminate in that case and iOS kills
+                    // the whole process.  Individual resource loaders clean
+                    // up their own state and can retry/fall back; this guard
+                    // also protects every future command added to the queue.
+                    try
+                    {
+                        copied();
+                    }
+                    catch (const std::exception& e)
+                    {
+                        os::Printer::log("Vulkan command loader", e.what(),
+                            ELL_ERROR);
+                    }
+                    catch (...)
+                    {
+                        os::Printer::log("Vulkan command loader",
+                            "Unknown worker exception", ELL_ERROR);
+                    }
                 }
             });
     }

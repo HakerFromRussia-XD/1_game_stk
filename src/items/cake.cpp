@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2007-2015 Joerg Henrichs
 //
 //  Physics improvements and linear intersection algorithm by
@@ -115,7 +115,7 @@ void Cake::onFireFlyable()
     const AbstractKart *closest_kart=NULL;
     Vec3        direction;
     float       kart_dist_squared;
-    getClosestKart(&closest_kart, &kart_dist_squared, &direction,
+    getClosefluxara_driftart(&closest_kart, &kart_dist_squared, &direction,
                    m_owner /* search in front of this kart */, backwards);
 
     // aim at this kart if 1) it's not too far, 2) if the aimed kart's speed

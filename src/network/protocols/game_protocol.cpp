@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2015  Supertuxkart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2015  FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -32,8 +32,8 @@
 #include "network/rewind_info.hpp"
 #include "network/rewind_manager.hpp"
 #include "network/socket_address.hpp"
-#include "network/stk_host.hpp"
-#include "network/stk_peer.hpp"
+#include "network/fluxara_drift_host.hpp"
+#include "network/fluxara_drift_peer.hpp"
 #include "tracks/track.hpp"
 #include "utils/log.hpp"
 #include "utils/time.hpp"
@@ -50,7 +50,7 @@ std::shared_ptr<GameProtocol> GameProtocol::createInstance()
         return NULL;
     }
     auto gm = std::make_shared<GameProtocol>();
-    ProcessType pt = STKProcess::getType();
+    ProcessType pt = FLUXARA_DRIFTProcess::getType();
     m_game_protocol[pt] = gm;
     return gm;
 }   // createInstance
@@ -184,7 +184,7 @@ void GameProtocol::controllerAction(int kart_id, PlayerAction action,
  */
 void GameProtocol::handleControllerAction(Event *event)
 {
-    STKPeer* peer = event->getPeer();
+    FLUXARA_DRIFTPeer* peer = event->getPeer();
     if (NetworkConfig::get()->isServer() && (peer->isWaitingForGame() ||
         peer->getAvailableKartIDs().empty()))
         return;
@@ -244,7 +244,7 @@ void GameProtocol::handleControllerAction(Event *event)
         // is after the server time
         peer->updateLastActivity();
         if (!will_trigger_rewind)
-            STKHost::get()->sendPacketExcept(peer, &data, false);
+            FLUXARA_DRIFTHost::get()->sendPacketExcept(peer, &data, false);
     }   // if server
 
 }   // handleControllerAction

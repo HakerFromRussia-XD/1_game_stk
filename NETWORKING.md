@@ -1,29 +1,29 @@
-# Online networking games for STK
+# Online networking games for FLUXARA_DRIFT
 
 ## Hosting server
-First of all, you can compile STK with `-DSERVER_ONLY=ON` which will produce a GUI-less STK binary optimized for size and memory usage, useful for situation like in VPS.
+First of all, you can compile FLUXARA_DRIFT with `-DSERVER_ONLY=ON` which will produce a GUI-less FLUXARA_DRIFT binary optimized for size and memory usage, useful for situation like in VPS.
 The dependencies for RHEL/CentOS 7 are installed with:
 ```bash
 yum install wget; cd /tmp; wget https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-12.noarch.rpm; rpm -Uvh epel-release*rpm
 yum install gcc-c++ cmake openssl-devel libcurl-devel zlib-devel enet
 ```
 ### Hosting WAN (public internet) server
-You are required to have an stk online account first, go [here](https://online.supertuxkart.net/register.php) for registration.
+You are required to have an fluxara_drift online account first, go [here](https://online.fluxaradrift.net/register.php) for registration.
 
-It is recommended you have a saved user in your computer to allow hosting multiple servers simultaneously with the same account, if you have a fresh STK installation, first run:
+It is recommended you have a saved user in your computer to allow hosting multiple servers simultaneously with the same account, if you have a fresh FLUXARA_DRIFT installation, first run:
 
 If you intend to keep your server always on (24x7) you are required to implement port forward / direct connection with NAT penetration in your network, we will regularly remove any servers not following this rule.
 
-`supertuxkart --init-user --login=your_registered_name --password=your_password`
+`fluxaradrift --init-user --login=your_registered_name --password=your_password`
 
 After that you should see `Done saving user, leaving` in terminal if it successfully logged in.
 
 Than you can just run:
 
-`supertuxkart --server-config=your_config.xml --network-console`
+`fluxaradrift --server-config=your_config.xml --network-console`
 
 It will create that xml configuration file if not found in current directory, you can type `quit` in terminal, than you can edit that file for further configuration as required.
-` --network-console` should not be used if you run supertuxkart server later with systemd service, see issue [#4299](https://github.com/supertuxkart/stk-code/issues/4299).
+` --network-console` should not be used if you run fluxaradrift server later with systemd service, see issue [#4299](https://github.com/fluxaradrift/fluxara_drift-code/issues/4299).
 
 The current server configuration xml looks like this:
 ```xml
@@ -31,15 +31,15 @@ The current server configuration xml looks like this:
 <server-config version="6" >
 
     <!-- Name of server, encode in XML if you want to use unicode characters. -->
-    <server-name value="STK Server" />
+    <server-name value="FLUXARA_DRIFT Server" />
 
-    <!-- Port used in server, if you specify 0, it will use the server port specified in stk_config.xml. If you wish to use a random port, set random-server-port to '1' in user config. STK will automatically switch to a random port if the port you specify fails to be bound. -->
+    <!-- Port used in server, if you specify 0, it will use the server port specified in fluxara_drift_config.xml. If you wish to use a random port, set random-server-port to '1' in user config. FLUXARA_DRIFT will automatically switch to a random port if the port you specify fails to be bound. -->
     <server-port value="0" />
 
     <!-- Game mode in server, 0 is normal race (grand prix), 1 is time trial (grand prix), 3 is normal race, 4 time trial, 6 is soccer, 7 is free-for-all and 8 is capture the flag. Notice: grand prix server doesn't allow for players to join and wait for ongoing game. -->
     <server-mode value="3" />
 
-    <!-- Difficulty in server, 0 is beginner, 1 is intermediate, 2 is expert and 3 is supertux (the most difficult). -->
+    <!-- Difficulty in server, 0 is beginner, 1 is intermediate, 2 is expert and 3 is fluxara_drift (the most difficult). -->
     <server-difficulty value="0" />
 
     <!-- Number of grand prix tracks per game (If grand prix enabled). -->
@@ -48,7 +48,7 @@ The current server configuration xml looks like this:
     <!-- Use goal target in soccer. -->
     <soccer-goal-target value="false" />
 
-    <!-- Enable wan server, which requires you to have an stk-addons account with a saved session. Check init-user command for details. -->
+    <!-- Enable wan server, which requires you to have an fluxara_drift-addons account with a saved session. Check init-user command for details. -->
     <wan-server value="true" />
 
     <!-- Enable network console, which can do for example kickban. -->
@@ -60,7 +60,7 @@ The current server configuration xml looks like this:
     <!-- Password for private server, leave empty for a public server. -->
     <private-server-password value="" />
 
-    <!-- Message of today shown in lobby, you can enter encoded XML words here or a file.txt and let STK load it. -->
+    <!-- Message of today shown in lobby, you can enter encoded XML words here or a file.txt and let FLUXARA_DRIFT load it. -->
     <motd value="" />
 
     <!-- If this value is set to false, the server will ignore chat messages from all players. -->
@@ -75,7 +75,7 @@ The current server configuration xml looks like this:
     <!-- Timeout in seconds for selecting karts and (or) voting tracks in server, you may want to use a lower value if you have track-voting off. -->
     <voting-timeout value="30" />
 
-    <!-- Timeout in seconds for validation of clients in wan, currently STK will use the stk-addons server to share AES key between the client and server. -->
+    <!-- Timeout in seconds for validation of clients in wan, currently FLUXARA_DRIFT will use the fluxara_drift-addons server to share AES key between the client and server. -->
     <validation-timeout value="20" />
 
     <!-- By default WAN server will always validate player and LAN will not, disable it to allow non-validated player in WAN. -->
@@ -84,7 +84,7 @@ The current server configuration xml looks like this:
     <!-- Disable it to turn off all stun related code in server, it allows for saving of server resources if your server is not behind a firewall. -->
     <firewalled-server value="true" />
 
-    <!-- Enable to allow IPv6 connection if you have a public IPv6 address. STK currently uses dual-stack mode which requires server to have both IPv4 and IPv6 and listen to same port. If STK detects your server has no public IPv6 address or port differs between IPv4 and IPv6 then it will use IPv4 only socket. For system which doesn't support dual-stack socket (like OpenBSD) you may fail to be connected by IPv4 clients. You can override the detection in config.xml at supertuxkart config-0.10 folder, with default-ip-type option. -->
+    <!-- Enable to allow IPv6 connection if you have a public IPv6 address. FLUXARA_DRIFT currently uses dual-stack mode which requires server to have both IPv4 and IPv6 and listen to same port. If FLUXARA_DRIFT detects your server has no public IPv6 address or port differs between IPv4 and IPv6 then it will use IPv4 only socket. For system which doesn't support dual-stack socket (like OpenBSD) you may fail to be connected by IPv4 clients. You can override the detection in config.xml at fluxaradrift config-0.10 folder, with default-ip-type option. -->
     <ipv6-connection value="true" />
 
     <!-- No server owner in lobby which can control the starting of game or kick any players. -->
@@ -96,7 +96,7 @@ The current server configuration xml looks like this:
     <!-- Clients below this value will be rejected from joining this server. It's determined by number of official karts in client / number of official karts in server -->
     <official-karts-threshold value="1" />
 
-    <!-- Clients below this value will be rejected from joining this server. It's determined by number of official tracks in client / number of official tracks in server, setting this value too high will prevent android players from joining this server, because STK android apk has some official tracks removed. -->
+    <!-- Clients below this value will be rejected from joining this server. It's determined by number of official tracks in client / number of official tracks in server, setting this value too high will prevent android players from joining this server, because FLUXARA_DRIFT android apk has some official tracks removed. -->
     <official-tracks-threshold value="0.7" />
 
     <!-- Only auto start kart selection when number of connected player is larger than or equals this value, for owner less or ranked server, after start-game-counter reaches 0. -->
@@ -111,7 +111,7 @@ The current server configuration xml looks like this:
     <!-- If strict-players is on, no duplicated online id or split screen players are allowed, which can prevent someone using more than 1 network AI with this server. -->
     <strict-players value="false" />
 
-    <!-- Server will submit ranking to stk-addons server for linear race games, you require permission for that. validating-player, auto-end, strict-player and owner-less will be turned on. -->
+    <!-- Server will submit ranking to fluxara_drift-addons server for linear race games, you require permission for that. validating-player, auto-end, strict-player and owner-less will be turned on. -->
     <ranked value="false" />
 
     <!-- If true, the server owner can config the difficulty and game mode in the GUI of lobby. This option cannot be used with owner-less or grand prix server, and will be automatically turned on if the server was created using the in-game GUI. The changed difficulty and game mode will not be saved in this config file. -->
@@ -159,22 +159,22 @@ The current server configuration xml looks like this:
     <!-- Set how many states the server will send per second, the higher this value, the more bandwidth requires, also each client will trigger more rewind, which clients with slow device may have problem playing this server, use the default value is recommended. -->
     <state-frequency value="10" />
 
-    <!-- Use sql database for handling server stats and maintenance, STK needs to be compiled with sqlite3 supported. -->
+    <!-- Use sql database for handling server stats and maintenance, FLUXARA_DRIFT needs to be compiled with sqlite3 supported. -->
     <sql-management value="false" />
 
-    <!-- Database filename for sqlite to use, it can be shared for all servers created in this machine, and STK will create specific table for each server. You need to create the database yourself first, see NETWORKING.md for details -->
-    <database-file value="stkservers.db" />
+    <!-- Database filename for sqlite to use, it can be shared for all servers created in this machine, and FLUXARA_DRIFT will create specific table for each server. You need to create the database yourself first, see NETWORKING.md for details -->
+    <database-file value="fluxara_driftservers.db" />
 
     <!-- Specified in millisecond for maximum time waiting in sqlite3_busy_handler. You may need a higher value if your database is shared by many servers or having a slow hard disk. -->
     <database-timeout value="1000" />
 
-    <!-- IPv4 ban list table name, you need to create the table first, see NETWORKING.md for details, empty to disable. This table can be shared for all servers if you use the same name. STK can auto kick active peer from ban list (update per minute) whichallows live kicking peer by inserting record to database. -->
+    <!-- IPv4 ban list table name, you need to create the table first, see NETWORKING.md for details, empty to disable. This table can be shared for all servers if you use the same name. FLUXARA_DRIFT can auto kick active peer from ban list (update per minute) whichallows live kicking peer by inserting record to database. -->
     <ip-ban-table value="ip_ban" />
 
-    <!-- IPv6 ban list table name, you need to create the table first, see NETWORKING.md for details, empty to disable. This table can be shared for all servers if you use the same name. STK can auto kick active peer from ban list (update per minute) which allows live kicking peer by inserting record to database. -->
+    <!-- IPv6 ban list table name, you need to create the table first, see NETWORKING.md for details, empty to disable. This table can be shared for all servers if you use the same name. FLUXARA_DRIFT can auto kick active peer from ban list (update per minute) which allows live kicking peer by inserting record to database. -->
     <ipv6-ban-table value="ipv6_ban" />
 
-    <!-- Online ID ban list table name, you need to create the table first, see NETWORKING.md for details, empty to disable. This table can be shared for all servers if you use the same name. STK can auto kick active peer from ban list (update per minute) which allows live kicking peer by inserting record to database. -->
+    <!-- Online ID ban list table name, you need to create the table first, see NETWORKING.md for details, empty to disable. This table can be shared for all servers if you use the same name. FLUXARA_DRIFT can auto kick active peer from ban list (update per minute) which allows live kicking peer by inserting record to database. -->
     <online-id-ban-table value="online_id_ban" />
 
     <!-- Player reports table name, which will be written when a player reports player in the network user dialog, you need to create the table first, see NETWORKING.md for details, empty to disable. This table can be shared for all servers if you use the same name. -->
@@ -183,10 +183,10 @@ The current server configuration xml looks like this:
     <!-- Days to keep player reports, older than that will be auto cleared, 0 to keep them forever. -->
     <player-reports-expired-days value="3" />
 
-    <!-- IP geolocation table, you only need this table if you want to geolocate IP from non-stk-addons connection, as all validated players connecting from stk-addons will provide the location info, you need to create the table first, see NETWORKING.md for details, empty to disable. This table can be shared for all servers if you use the same name. -->
+    <!-- IP geolocation table, you only need this table if you want to geolocate IP from non-fluxara_drift-addons connection, as all validated players connecting from fluxara_drift-addons will provide the location info, you need to create the table first, see NETWORKING.md for details, empty to disable. This table can be shared for all servers if you use the same name. -->
     <ip-geolocation-table value="ip_mapping" />
 
-    <!-- IPv6 geolocation table, you only need this table if you want to geolocate IP from non-stk-addons connection, as all validated players connecting from stk-addons will provide the location info, you need to create the table first, see NETWORKING.md for details, empty to disable. This table can be shared for all servers if you use the same name. -->
+    <!-- IPv6 geolocation table, you only need this table if you want to geolocate IP from non-fluxara_drift-addons connection, as all validated players connecting from fluxara_drift-addons will provide the location info, you need to create the table first, see NETWORKING.md for details, empty to disable. This table can be shared for all servers if you use the same name. -->
     <ipv6-geolocation-table value="ipv6_mapping" />
 
     <!-- If true this server will auto add / remove AI connected with network-ai=x, which will kick N - 1 bot(s) where N is the number of human players. Only use this for non-GP racing server. -->
@@ -199,41 +199,41 @@ The current server configuration xml looks like this:
 
 ```
 
-At the moment STK has a list of STUN servers for NAT penetration which allows players or servers behind a firewall or router to be able to connect to each other, but in case it doesn't work, you have to manually disable the firewall or port forward the port(s) used by STK.
-By default STK servers use port `2759` (UDP). For example, in Ubuntu based distributions, run the following command to disable the firewall on that port:
+At the moment FLUXARA_DRIFT has a list of STUN servers for NAT penetration which allows players or servers behind a firewall or router to be able to connect to each other, but in case it doesn't work, you have to manually disable the firewall or port forward the port(s) used by FLUXARA_DRIFT.
+By default FLUXARA_DRIFT servers use port `2759` (UDP). For example, in Ubuntu based distributions, run the following command to disable the firewall on that port:
 
 `sudo ufw allow 2759`
 
 You may also need to handle the server discovery port `2757` (UDP) for connecting your WAN server in LAN / localhost.
 
-Notice: You don't need to make any firewall or router configuration changes if you connect to the recommended servers (marked with ☆★STK★☆).
+Notice: You don't need to make any firewall or router configuration changes if you connect to the recommended servers (marked with ☆★FLUXARA_DRIFT★☆).
 
 ### Hosting LAN (local internet) server
-Everything is basically the same as WAN one, except you don't need an stk online account, just do:
+Everything is basically the same as WAN one, except you don't need an fluxara_drift online account, just do:
 
-`supertuxkart --server-config=your_config.xml --lan-server=your_server_name --network-console`
+`fluxaradrift --server-config=your_config.xml --lan-server=your_server_name --network-console`
 
 For LAN server it is required that the server and server discovery port is connectable by clients directly, no NAT penetration will be done in LAN.
 
-LAN server can be connected too by typing your server public address (with port) in ```Enter server address``` dialog without relying on stk-addons.
+LAN server can be connected too by typing your server public address (with port) in ```Enter server address``` dialog without relying on fluxara_drift-addons.
 
 ------
 After the first time configuration, you can just start the server with the command:
 
-`supertuxkart --server-config=your_config.xml`, regardless of whether LAN or WAN server is chosen (of course you need to have a saved user for the WAN one), by default your server logging will be saved to the STK configuration directory with a name of `your_config.log`, given that the server configuration filename is `your_config.xml`.
+`fluxaradrift --server-config=your_config.xml`, regardless of whether LAN or WAN server is chosen (of course you need to have a saved user for the WAN one), by default your server logging will be saved to the FLUXARA_DRIFT configuration directory with a name of `your_config.log`, given that the server configuration filename is `your_config.xml`.
 
-You can find out that directory location [here (See Where is the configuration stored?)](https://supertuxkart.net/FAQ)
+You can find out that directory location [here (See Where is the configuration stored?)](https://fluxaradrift.net/FAQ)
 
 ## Testing server
-There is a network AI tester in STK which can use AI on player controller for server hosting linear races game mode, which helps automating the testing for servers, to enable it use it on lan server:
+There is a network AI tester in FLUXARA_DRIFT which can use AI on player controller for server hosting linear races game mode, which helps automating the testing for servers, to enable it use it on lan server:
 
-`supertuxkart --connect-now=x.x.x.x:y --network-ai=n --no-graphics`
+`fluxaradrift --connect-now=x.x.x.x:y --network-ai=n --no-graphics`
 
-Remove `--no-graphics` if you want to see the AI racing. You can also run network AI tester in server-only build of STK.
+Remove `--no-graphics` if you want to see the AI racing. You can also run network AI tester in server-only build of FLUXARA_DRIFT.
 
 With the network AI tester, it's easier to for example simulate high-loaded servers or bad networks (ones with high ping and/or packet loss).
 
-Tested on a Raspberry Pi 3 Model B+, if you have 8 players connected to a server hosted on it, the usage of a single CPU core is ~60% and there are ~60MB of memory usage for game with heavy tracks like Cocoa Temple or Candela City on the server, you can use the above figures to estimate how many STK servers can be hosted on the same computer.
+Tested on a Raspberry Pi 3 Model B+, if you have 8 players connected to a server hosted on it, the usage of a single CPU core is ~60% and there are ~60MB of memory usage for game with heavy tracks like Cocoa Temple or Candela City on the server, you can use the above figures to estimate how many FLUXARA_DRIFT servers can be hosted on the same computer.
 
 For bad network simulation, we recommend `network traffic control` by Linux kernel, see [here](https://wiki.linuxfoundation.org/networking/netem) for details.
 
@@ -241,19 +241,19 @@ You will have the best gaming experience by choosing a server where all players 
 
 ## Server management (Since 1.1)
 
-Currently STK uses sqlite (if building with sqlite3 on) for server management with the following functions at the moment:
+Currently FLUXARA_DRIFT uses sqlite (if building with sqlite3 on) for server management with the following functions at the moment:
 1. Server statistics
 2. IP / online ID ban list
 3. Player reports
 4. IPv4 and IPv6 geolocation
 
-You need to create a database in sqlite first, run `sqlite3 stkservers.db` in the folder where (all) your server_config.xml(s) located.
+You need to create a database in sqlite first, run `sqlite3 fluxara_driftservers.db` in the folder where (all) your server_config.xml(s) located.
 
 A table named `v(server database version)_(your_server_config_filename_without_.xml_extension)_stats` will also be created in your database if one does not exist.:
 ```sql
 CREATE TABLE IF NOT EXISTS (table name above)
 (
-    host_id INTEGER UNSIGNED NOT NULL PRIMARY KEY, -- Unique host id in STKHost of each connection session for a STKPeer
+    host_id INTEGER UNSIGNED NOT NULL PRIMARY KEY, -- Unique host id in FLUXARA_DRIFTHost of each connection session for a FLUXARA_DRIFTPeer
     ip INTEGER UNSIGNED NOT NULL, -- IP decimal of host
     ipv6 TEXT NOT NULL DEFAULT '', -- IPv6 (if exists) in string of host (only created if IPv6 server)
     port INTEGER UNSIGNED NOT NULL, -- Port of host
@@ -261,7 +261,7 @@ CREATE TABLE IF NOT EXISTS (table name above)
     username TEXT NOT NULL, -- First player name in the host (if the host has splitscreen player)
     player_num INTEGER UNSIGNED NOT NULL, -- Number of player(s) from the host, more than 1 if it has splitscreen player
     country_code TEXT NULL DEFAULT NULL, -- 2-letter country code of the host
-    version TEXT NOT NULL, -- SuperTuxKart version of the host
+    version TEXT NOT NULL, -- Fluxara Drift version of the host
     os TEXT NOT NULL, -- Operating system of the host
     connected_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, -- Time when connected
     disconnected_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, -- Time when disconnected (saved when disconnected)
@@ -269,7 +269,7 @@ CREATE TABLE IF NOT EXISTS (table name above)
 ) WITHOUT ROWID;
 ```
 
-STK will also create the following default views from the stats table:
+FLUXARA_DRIFT will also create the following default views from the stats table:
 
 `*_full_stats`
 Full stats with ip in human readable format and time played of each players in minutes.
@@ -301,7 +301,7 @@ CREATE TABLE ip_ban
     ip_end INTEGER UNSIGNED NOT NULL UNIQUE, -- Ending of ip decimal for banning (inclusive)
     starting_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, -- Starting time of this banning entry to be effective
     expired_days REAL NULL DEFAULT NULL, -- Days for this banning to be expired, use NULL for a permanent ban
-    reason TEXT NOT NULL DEFAULT '', -- Banned reason shown in user stk menu, can be empty
+    reason TEXT NOT NULL DEFAULT '', -- Banned reason shown in user fluxara_drift menu, can be empty
     description TEXT NOT NULL DEFAULT '', -- Private description for server admin
     trigger_count INTEGER UNSIGNED NOT NULL DEFAULT 0, -- Number of banning triggered by this ban entry
     last_trigger TIMESTAMP NULL DEFAULT NULL -- Latest time this banning entry was triggered
@@ -312,7 +312,7 @@ CREATE TABLE ipv6_ban
     ipv6_cidr TEXT NOT NULL UNIQUE, -- IPv6 CIDR range for banning (for example 2001::/64), use /128 for a specific ip
     starting_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, -- Starting time of this banning entry to be effective
     expired_days REAL NULL DEFAULT NULL, -- Days for this banning to be expired, use NULL for a permanent ban
-    reason TEXT NOT NULL DEFAULT '', -- Banned reason shown in user stk menu, can be empty
+    reason TEXT NOT NULL DEFAULT '', -- Banned reason shown in user fluxara_drift menu, can be empty
     description TEXT NOT NULL DEFAULT '', -- Private description for server admin
     trigger_count INTEGER UNSIGNED NOT NULL DEFAULT 0, -- Number of banning triggered by this ban entry
     last_trigger TIMESTAMP NULL DEFAULT NULL -- Latest time this banning entry was triggered
@@ -320,10 +320,10 @@ CREATE TABLE ipv6_ban
 
 CREATE TABLE online_id_ban
 (
-    online_id INTEGER UNSIGNED NOT NULL UNIQUE, -- Online id from STK addons database for banning
+    online_id INTEGER UNSIGNED NOT NULL UNIQUE, -- Online id from FLUXARA_DRIFT addons database for banning
     starting_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, -- Starting time of this banning entry to be effective
     expired_days REAL NULL DEFAULT NULL, -- Days for this banning to be expired, use NULL for a permanent ban
-    reason TEXT NOT NULL DEFAULT '', -- Banned reason shown in user stk menu, can be empty
+    reason TEXT NOT NULL DEFAULT '', -- Banned reason shown in user fluxara_drift menu, can be empty
     description TEXT NOT NULL DEFAULT '', -- Private description for server admin
     trigger_count INTEGER UNSIGNED NOT NULL DEFAULT 0, -- Number of banning triggered by this ban entry
     last_trigger TIMESTAMP NULL DEFAULT NULL -- Latest time this banning entry was triggered

@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2012-2015  Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -34,7 +34,7 @@
  *  and will interpolate between those positions depending on the current
  *  time
  */
-class GhostKart : public Kart
+class Ghofluxara_driftart : public Kart
 {
 private:
     /** The transforms to assume at the corresponding time in m_all_times. */
@@ -60,7 +60,7 @@ private:
     void          updateSound(float dt);
 
 public:
-                  GhostKart(const std::string& ident, unsigned int world_kart_id,
+                  Ghofluxara_driftart(const std::string& ident, unsigned int world_kart_id,
                             int position, float color_hue,
                             const ReplayPlay::ReplayData& rd);
     virtual void  update(int ticks) OVERRIDE;
@@ -83,7 +83,7 @@ public:
                                  const ReplayBase::KartReplayEvent &kre);
     // ------------------------------------------------------------------------
     /** Returns whether this kart is a ghost (replay) kart. */
-    virtual bool  isGhostKart() const OVERRIDE { return true; }
+    virtual bool  isGhofluxara_driftart() const OVERRIDE { return true; }
     // ------------------------------------------------------------------------
     /** Ghost can't be hunted. */
     virtual bool  isInvulnerable() const OVERRIDE { return true; }
@@ -113,6 +113,6 @@ public:
     // ------------------------------------------------------------------------
     const ReplayPlay::ReplayData& getReplayData() const
                                                      { return m_replay_data; }
-};   // GhostKart
+};   // Ghofluxara_driftart
 #endif
 

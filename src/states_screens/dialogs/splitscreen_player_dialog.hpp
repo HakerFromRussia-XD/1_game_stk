@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -70,7 +70,7 @@ public:
     SplitscreenPlayerDialog(InputDevice* device)
         : ModalDialog(0.8f,0.8f), m_device(device), m_self_destroy(false)
     {
-        loadFromFile("online/splitscreen_player_dialog.stkgui");
+        loadFromFile("online/splitscreen_player_dialog.fluxara_driftgui");
     }
     // ------------------------------------------------------------------------
     ~SplitscreenPlayerDialog() {}

@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2013-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -20,7 +20,7 @@
 #define LOBBY_PROTOCOL_HPP
 
 #include "network/protocol.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 
 class GameSetup;
 class NetworkPlayerProfile;
@@ -162,7 +162,7 @@ public:
     template<typename Singleton, typename... Types>
         static std::shared_ptr<Singleton> create(Types ...args)
     {
-        ProcessType pt = STKProcess::getType();
+        ProcessType pt = FLUXARA_DRIFTProcess::getType();
         assert(m_lobby[pt].expired());
         auto ret = std::make_shared<Singleton>(args...);
         m_lobby[pt] = ret;
@@ -173,7 +173,7 @@ public:
     /** Returns the singleton client or server lobby protocol. */
     template<class T> static std::shared_ptr<T> get()
     {
-        ProcessType pt = STKProcess::getType();
+        ProcessType pt = FLUXARA_DRIFTProcess::getType();
         if (std::shared_ptr<LobbyProtocol> lp = m_lobby[pt].lock())
         {
             std::shared_ptr<T> new_type = std::dynamic_pointer_cast<T>(lp);

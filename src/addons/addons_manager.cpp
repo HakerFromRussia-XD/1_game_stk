@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Lucas Baudin
 //
 //  This program is free software; you can redistribute it and/or
@@ -99,7 +99,7 @@ void AddonsManager::init(const XMLNode *xml,
 {
     m_has_new_addons = false;
     std::string    addon_list_url("");
-    StkTime::TimeType mtime(0);
+    FluxaraDriftTime::TimeType mtime(0);
     const XMLNode *include = xml->getNode("include");
     std::string filename=file_manager->getAddonsFile("addons.xml");
     // Prevent downloading when .part file created, which is already downloaded
@@ -110,7 +110,7 @@ void AddonsManager::init(const XMLNode *xml,
         setErrorState();
         NewsManager::get()->addNewsMessage(
             NewsManager::NTYPE_MAINMENU,
-            _("Failed to connect to the SuperTuxKart add-ons server."));
+            _("Failed to connect to the FluxaraDrift add-ons server."));
         return;
     }
 
@@ -141,7 +141,7 @@ void AddonsManager::init(const XMLNode *xml,
                        download_request->getDownloadErrorMessage());
             return;
         }
-        UserConfigParams::m_addons_last_updated=StkTime::getTimeSinceEpoch();
+        UserConfigParams::m_addons_last_updated=FluxaraDriftTime::getTimeSinceEpoch();
     }
     else
         Log::info("addons", "Using cached addons.xml.");
@@ -197,28 +197,28 @@ void AddonsManager::initAddons(const XMLNode *xml)
             }
             int index = getAddonIndex(addon.getId());
 
-            int stk_version=0;
-            node->get("format", &stk_version);
+            int fluxara_drift_version=0;
+            node->get("format", &fluxara_drift_version);
             int   testing=-1;
             node->get("testing", &testing);
 
             bool wrong_version=false;
 
             if(addon.getType()=="kart")
-                wrong_version = stk_version <stk_config->m_min_kart_version ||
-                                stk_version >stk_config->m_max_kart_version   ;
+                wrong_version = fluxara_drift_version <fluxara_drift_config->m_min_kart_version ||
+                                fluxara_drift_version >fluxara_drift_config->m_max_kart_version   ;
             else
-                wrong_version = stk_version <stk_config->m_min_track_version ||
-                                stk_version >stk_config->m_max_track_version   ;
+                wrong_version = fluxara_drift_version <fluxara_drift_config->m_min_track_version ||
+                                fluxara_drift_version >fluxara_drift_config->m_max_track_version   ;
             // If the add-on is included, behave like it is a wrong version
             if (addon.testIncluded(addon.getMinIncludeVer(), addon.getMaxIncludeVer()))
                 wrong_version = true;
 
-            // Check which version to use: only for this stk version,
+            // Check which version to use: only for this fluxara_drift version,
             // and not addons that are marked as hidden (testing=0)
             if(wrong_version|| testing==0)
             {
-                // If the version is too old (e.g. after an update of stk)
+                // If the version is too old (e.g. after an update of fluxara_drift)
                 // remove a cached icon.
                 std::string full_path =
                     file_manager->getAddonsFile("icons/"
@@ -640,7 +640,7 @@ bool AddonsManager::uninstall(const Addon &addon)
 // ----------------------------------------------------------------------------
 /** Saves the information about installed addons and cached icons to
  *  addons_installed.xml. If this is not called, information about downloaded
- *  icons is lost (and will trigger a complete redownload when STK is started
+ *  icons is lost (and will trigger a complete redownload when FLUXARA_DRIFT is started
  *  next time).
  */
 void AddonsManager::saveInstalled()
@@ -654,7 +654,7 @@ void AddonsManager::saveInstalled()
     xml_installed << "<?xml version=\"1.0\"?>" << std::endl;
 
     // Get server address from config
-    const std::string server = stk_config->m_server_addons;
+    const std::string server = fluxara_drift_config->m_server_addons;
 
     // Find the third slash (end of the domain)
     std::string::size_type index = server.find('/');

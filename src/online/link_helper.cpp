@@ -1,4 +1,4 @@
-//  SuperTuxKart - A fun racing game with go-karts
+//  FluxaraDrift - A fun racing game with go-karts
 //  Copyright (C) 2017-18 QwertyChouskie
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -40,7 +40,7 @@
 
 #endif
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "../../../lib/irrlicht/source/Irrlicht/CIrrDeviceiOS.h"
 #endif
 
@@ -89,7 +89,7 @@ namespace Online
 
 #if defined(_WIN32)
         ShellExecuteA(NULL, "open", url.c_str(), NULL, NULL, SW_SHOWNORMAL);
-#elif defined(IOS_STK)
+#elif defined(IOS_FLUXARA_DRIFT)
         irr::CIrrDeviceiOS::openURLiOS(url.c_str());
 #elif defined(__APPLE__) || defined(__HAIKU__)
         std::string command = std::string("open ").append(url);

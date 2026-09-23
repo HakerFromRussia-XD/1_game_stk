@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Glenn De Jonghe
 //
 //  This program is free software; you can redistribute it and/or
@@ -24,7 +24,7 @@
 #include "guiengine/widget.hpp"
 #include "guiengine/widgets/ribbon_widget.hpp"
 #include "network/network_config.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "network/server_config.hpp"
 #include "network/servers_manager.hpp"
 #include "states_screens/state_manager.hpp"
@@ -44,7 +44,7 @@ using namespace Online;
 
 // -----------------------------------------------------------------------------
 
-OnlineProfileServers::OnlineProfileServers() : GUIEngine::Screen("online/profile_servers.stkgui")
+OnlineProfileServers::OnlineProfileServers() : GUIEngine::Screen("online/profile_servers.fluxara_driftgui")
 {
 }   // OnlineProfileServers
 
@@ -109,7 +109,7 @@ void OnlineProfileServers::eventCallback(Widget* widget, const std::string& name
 void OnlineProfileServers::doQuickPlay()
 {
     ServerConfig::m_private_server_password = "";
-    STKHost::create();
+    FLUXARA_DRIFTHost::create();
     NetworkingLobby::getInstance()->setJoinedServer(nullptr);
     NetworkingLobby::getInstance()->push();
 }   // doQuickPlay

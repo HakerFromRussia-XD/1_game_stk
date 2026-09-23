@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -38,7 +38,7 @@ GeneralTextFieldDialog::GeneralTextFieldDialog(const core::stringw& title,
                     GUIEngine::MODAL_DIALOG_LOCATION_BOTTOM),
                     m_dm_cb(dm_cb), m_val_cb(val_cb), m_self_destroy(false)
 {
-    loadFromFile("general_text_field_dialog.stkgui");
+    loadFromFile("general_text_field_dialog.fluxara_driftgui");
 
     m_text_field = getWidget<TextBoxWidget>("textfield");
     assert(m_text_field != NULL);

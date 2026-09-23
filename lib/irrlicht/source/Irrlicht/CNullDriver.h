@@ -687,6 +687,12 @@ namespace video
 		//! Creates a texture from a loaded IImage.
 		virtual ITexture* addTexture(const io::path& name, IImage* image, void* mipmapData=0);
 
+		//! Gives device drivers a chance to load a GPU-compressed texture before
+		//! falling back to a CPU-decoded IImage. The default driver has no such
+		//! format, so normal image loading remains unchanged on other platforms.
+		virtual video::ITexture* createCompressedTextureFromFile(io::IReadFile* file,
+			const io::path& name);
+
 		//! returns a device dependent texture from a software surface (IImage)
 		//! THIS METHOD HAS TO BE OVERRIDDEN BY DERIVED DRIVERS WITH OWN TEXTURES
 		virtual video::ITexture* createDeviceDependentTexture(IImage* surface, const io::path& name, void* mipmapData=0);

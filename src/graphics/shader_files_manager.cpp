@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -19,7 +19,7 @@
 
 #include "graphics/shader_files_manager.hpp"
 #include "config/user_config.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "graphics/central_settings.hpp"
 #include "graphics/graphics_restrictions.hpp"
 #include "graphics/sp/sp_base.hpp"
@@ -77,22 +77,22 @@ void ShaderFilesManager::readFile(const std::string& file,
         return;
     }
 
-    const std::string stk_include = "#stk_include";
+    const std::string fluxara_drift_include = "#fluxara_drift_include";
     std::string line;
 
     while (std::getline(stream, line))
     {
-        const std::size_t pos = line.find(stk_include);
+        const std::size_t pos = line.find(fluxara_drift_include);
 
-        // load the custom file pointed by the #stk_include directive
-        // we only look for #stk_include in official shader directory
+        // load the custom file pointed by the #fluxara_drift_include directive
+        // we only look for #fluxara_drift_include in official shader directory
         if (pos != std::string::npos)
         {
             // find the start "
             std::size_t pos = line.find("\"");
             if (pos == std::string::npos)
             {
-                Log::error("ShaderFilesManager", "Invalid #stk_include"
+                Log::error("ShaderFilesManager", "Invalid #fluxara_drift_include"
                     " line: '%s'.", line.c_str());
                 continue;
             }
@@ -103,7 +103,7 @@ void ShaderFilesManager::readFile(const std::string& file,
             pos = filename.find("\"");
             if (pos == std::string::npos)
             {
-                Log::error("ShaderFilesManager", "Invalid #stk_include"
+                Log::error("ShaderFilesManager", "Invalid #fluxara_drift_include"
                     " line: '%s'.", line.c_str());
                 continue;
             }
@@ -150,7 +150,7 @@ ShaderFilesManager::SharedShader ShaderFilesManager::loadShader
     // Some drivers report that the compute shaders extension is available,
     // but they report only OpenGL 3.x version, and thus these extensions
     // must be enabled manually. Otherwise the shaders compilation will fail
-    // because STK tries to use extensions which are available, but disabled
+    // because FLUXARA_DRIFT tries to use extensions which are available, but disabled
     // by default.
     if (type == GL_COMPUTE_SHADER)
     {
@@ -214,7 +214,7 @@ ShaderFilesManager::SharedShader ShaderFilesManager::loadShader
         code << "precision mediump sampler2D;\n";
     }
 #endif
-    code << "#define MAX_BONES " << stk_config->m_max_skinning_bones << "\n";
+    code << "#define MAX_BONES " << fluxara_drift_config->m_max_skinning_bones << "\n";
 
     code << getHeader();
 

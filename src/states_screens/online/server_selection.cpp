@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Lucas Baudin, Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -45,9 +45,9 @@
 using namespace Online;
 bool g_bookmarks_next = false;
 // ----------------------------------------------------------------------------
-/** Constructor, which loads the stkgui file.
+/** Constructor, which loads the fluxara_driftgui file.
  */
-ServerSelection::ServerSelection() : Screen("online/server_selection.stkgui")
+ServerSelection::ServerSelection() : Screen("online/server_selection.fluxara_driftgui")
 {
     m_refreshing_server = false;
     m_refresh_timer = 0.0f;
@@ -82,7 +82,7 @@ void ServerSelection::refresh()
 {
     // If the request was created (i.e. no error, and not re-requested within
     // 5 seconds), clear the list and display the waiting message:
-    if ((int64_t)StkTime::getMonoTimeMs() - m_last_load_time < 5000)
+    if ((int64_t)FluxaraDriftTime::getMonoTimeMs() - m_last_load_time < 5000)
         return;
 
     m_ip_warning_shown = false;
@@ -90,7 +90,7 @@ void ServerSelection::refresh()
     m_reload_widget->setActive(false);
     m_refreshing_server = true;
     m_refresh_timer = 0.0f;
-    m_last_load_time = StkTime::getMonoTimeMs();
+    m_last_load_time = FluxaraDriftTime::getMonoTimeMs();
     m_server_list = NetworkConfig::get()->isWAN() ?
         ServersManager::get()->getWANRefreshRequest() :
         ServersManager::get()->getLANRefreshRequest();
@@ -121,7 +121,7 @@ void ServerSelection::loadedFromFile()
     m_searcher = getWidget<GUIEngine::TextBoxWidget>("searcher");
     assert(m_searcher != NULL);
     m_ipv6->setState(false);
-    m_icon_bank = new irr::gui::STKModifiedSpriteBank(GUIEngine::getGUIEnv());
+    m_icon_bank = new irr::gui::FLUXARA_DRIFTModifiedSpriteBank(GUIEngine::getGUIEnv());
     m_bookmark_widget = getWidget<GUIEngine::IconButtonWidget>("bookmark");
     assert(m_bookmark_widget != NULL);
     m_bookmark_icon = irr_driver->getTexture
@@ -365,9 +365,9 @@ void ServerSelection::eventCallback(GUIEngine::Widget* widget,
                                     const std::string& name,
                                     const int playerID)
 {
-    //I18N: Message shown to user if no IPv4 detected by STK
+    //I18N: Message shown to user if no IPv4 detected by FLUXARA_DRIFT
     auto v4 = _("No IPv4 detected, you may not be able to join any servers.");
-    //I18N: Message shown to user if no IPv6 detected by STK
+    //I18N: Message shown to user if no IPv6 detected by FLUXARA_DRIFT
     auto v6 = _("No IPv6 detected, you may not be able to join any servers.");
     if (name == "back")
     {
@@ -475,7 +475,7 @@ void ServerSelection::onUpdate(float dt)
                 while (it != bookmarks.end())
                 {
                     uint64_t three_days = 60 * 60 * 24 * 3;
-                    uint64_t limit = StkTime::getTimeSinceEpoch() - three_days;
+                    uint64_t limit = FluxaraDriftTime::getTimeSinceEpoch() - three_days;
                     if (all_possible_keys.find(it->first) ==
                         all_possible_keys.end())
                     {
@@ -490,7 +490,7 @@ void ServerSelection::onUpdate(float dt)
                     }
                     else
                     {
-                        it->second = StkTime::getTimeSinceEpoch();
+                        it->second = FluxaraDriftTime::getTimeSinceEpoch();
                         it++;
                     }
                 }

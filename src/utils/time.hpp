@@ -1,6 +1,6 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //
-//  Copyright (C) 2013-2015  SuperTuxKart-Team
+//  Copyright (C) 2013-2015  FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -39,7 +39,7 @@
 #include <string>
 #include <stdio.h>
 
-class StkTime
+class FluxaraDriftTime
 {
 private:
     /** This objects keeps a copy of irrlicht's null-device timer. This is
@@ -47,7 +47,7 @@ private:
     *  (and the sfx threads needs real time at that time). */
     static irr::ITimer *m_timer;
 
-    /** Initalized when STK starts. */
+    /** Initalized when FLUXARA_DRIFT starts. */
     static std::chrono::steady_clock::time_point m_mono_start;
 public:
     typedef time_t TimeType;
@@ -107,7 +107,7 @@ public:
      */
     static double getRealTime(long startAt=0);
     // ------------------------------------------------------------------------
-    /** Returns a time based since the starting of stk (monotonic clock).
+    /** Returns a time based since the starting of fluxara_drift (monotonic clock).
      *  The value is a 64bit unsigned integer in milliseconds.
      */
     static uint64_t getMonoTimeMs()

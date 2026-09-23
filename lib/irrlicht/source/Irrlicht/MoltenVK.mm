@@ -20,9 +20,9 @@ MoltenVK::MoltenVK()
         return;
     const char* paths[3] =
     {
-        // STK release binary path after dylibbundler
+        // FLUXARA_DRIFT release binary path after dylibbundler
         "@executable_path/../libs/libMoltenVK.dylib",
-        // bin/supertuxkart.app/Contents/MacOS/supertuxkart
+        // bin/fluxaradrift.app/Contents/MacOS/fluxaradrift
         "@executable_path/../../../../../dependencies-macosx/lib/libMoltenVK.dylib",
         "NULL"
     };

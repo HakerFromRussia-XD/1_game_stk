@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
 //  This program is free software; you can redistribute it and/or
@@ -63,7 +63,7 @@ void RecoveryDialog::showRecoveryInput()
     if (m_irrlicht_window)
         clearWindow();
     m_phase = Input;
-    loadFromFile("online/recovery_input.stkgui");
+    loadFromFile("online/recovery_input.fluxara_driftgui");
 
     m_username_widget = getWidget<TextBoxWidget>("username");
     assert(m_username_widget != NULL);
@@ -91,7 +91,7 @@ void RecoveryDialog::showRecoveryInfo()
     m_show_recovery_info = false;
     clearWindow();
     m_phase = Info;
-    loadFromFile("online/recovery_info.stkgui");
+    loadFromFile("online/recovery_info.fluxara_driftgui");
 
     m_info_widget = getWidget<LabelWidget>("info");
     assert(m_info_widget != NULL);

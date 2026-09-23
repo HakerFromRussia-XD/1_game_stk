@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2006-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2006-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -22,7 +22,7 @@
 #include "karts/abstract_kart.hpp"
 #include "karts/controller/controller.hpp"
 #include "karts/controller/ghost_controller.hpp"
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "input/motorica_standalone_training.hpp"
 #endif
 #include "network/network_config.hpp"
@@ -44,7 +44,7 @@ void StandardRace::update(int ticks)
 {
     LinearWorld::update(ticks);
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     MotoricaStandaloneTraining* training =
         MotoricaStandaloneTraining::get();
     if (!training->shouldFinish(getTime()))
@@ -57,7 +57,7 @@ void StandardRace::update(int ticks)
             !kart->getController()->isPlayerController())
             continue;
 
-        // The normal STK finish lifecycle records the standalone result,
+        // The normal FLUXARA_DRIFT finish lifecycle records the standalone result,
         // switches to EndController and opens the race result screen.
         kart->finishedRace(getTime());
         break;

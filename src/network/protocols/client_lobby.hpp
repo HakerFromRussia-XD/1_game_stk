@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -146,7 +146,7 @@ private:
     void finishLiveJoin();
     std::vector<std::shared_ptr<NetworkPlayerProfile> >
          decodePlayers(const BareNetworkString& data,
-         std::shared_ptr<STKPeer> peer = nullptr,
+         std::shared_ptr<FLUXARA_DRIFTPeer> peer = nullptr,
          bool* is_spectator = NULL) const;
     void getPlayersAddonKartType(const BareNetworkString& data,
         std::vector<std::shared_ptr<NetworkPlayerProfile> >& players) const;
@@ -176,7 +176,7 @@ public:
     bool isWaitingForGame() const                { return m_waiting_for_game; }
     bool isServerAutoGameTime() const       { return m_server_auto_game_time; }
     virtual bool isRacing() const OVERRIDE { return m_state.load() == RACING; }
-    void requestKartInfo(uint8_t kart_id);
+    void requefluxara_driftartInfo(uint8_t kart_id);
     void setSpectator(bool val)                          { m_spectator = val; }
     bool isSpectator() const
                      { return m_spectator && m_state.load() != RACE_FINISHED; }

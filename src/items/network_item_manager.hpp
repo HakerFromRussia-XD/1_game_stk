@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2018 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -29,7 +29,7 @@
 #include <memory>
 #include <mutex>
 
-class STKPeer;
+class FLUXARA_DRIFTPeer;
 
 /** \ingroup items
  *  The network item manager is responsible for handling all network related
@@ -59,8 +59,8 @@ private:
     std::mutex m_live_players_mutex;
 
     /** Stores on the server the latest confirmed tick from each client. */
-    std::map<std::weak_ptr<STKPeer>, int32_t,
-        std::owner_less<std::weak_ptr<STKPeer> > > m_last_confirmed_item_ticks;
+    std::map<std::weak_ptr<FLUXARA_DRIFTPeer>, int32_t,
+        std::owner_less<std::weak_ptr<FLUXARA_DRIFTPeer> > > m_last_confirmed_item_ticks;
 
     /** List of all items events. */
     Synchronised< std::vector<ItemEventInfo> > m_item_events;
@@ -73,7 +73,7 @@ public:
     NetworkItemManager();
     virtual ~NetworkItemManager();
     virtual void reset() OVERRIDE;
-    virtual void setItemConfirmationTime(std::weak_ptr<STKPeer> peer,
+    virtual void setItemConfirmationTime(std::weak_ptr<FLUXARA_DRIFTPeer> peer,
                                          int ticks) OVERRIDE;
     virtual void  collectedItem(ItemState *item, AbstractKart *kart) OVERRIDE;
     virtual void  switchItems() OVERRIDE;
@@ -95,13 +95,13 @@ public:
     // ------------------------------------------------------------------------
     virtual void undoEvent(BareNetworkString*) OVERRIDE {};
     // ------------------------------------------------------------------------
-    void addLiveJoinPeer(std::weak_ptr<STKPeer> peer)
+    void addLiveJoinPeer(std::weak_ptr<FLUXARA_DRIFTPeer> peer)
     {
         std::lock_guard<std::mutex> lock(m_live_players_mutex);
         m_last_confirmed_item_ticks[peer] = 0;
     }
     // ------------------------------------------------------------------------
-    void erasePeerInGame(std::weak_ptr<STKPeer> peer)
+    void erasePeerInGame(std::weak_ptr<FLUXARA_DRIFTPeer> peer)
     {
         std::lock_guard<std::mutex> lock(m_live_players_mutex);
         m_last_confirmed_item_ticks.erase(peer);

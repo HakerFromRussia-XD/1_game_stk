@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006-2015  Eduardo Hernandez Munoz
 //  Copyright (C) 2009-2015  Joerg Henrichs
 //
@@ -239,7 +239,7 @@ void AIBaseController::crashed(const Material *m)
     // the track again if it is stuck (i.e. time for the push back plus
     // time for the AI to accelerate and hit the terrain again).
     const unsigned int NUM_COLLISION = 3;
-    const int COLLISION_TICKS        = stk_config->time2Ticks(3.0f);
+    const int COLLISION_TICKS        = fluxara_drift_config->time2Ticks(3.0f);
 
     int ticks = World::getWorld()->getTicksSinceStart();
     if(m_collision_ticks.size()==0)
@@ -254,7 +254,7 @@ void AIBaseController::crashed(const Material *m)
     // collisions to happen). The time of 0.2 seconds was experimentally
     // found, typically it takes 0.5 seconds for a kart to be pushed back
     // from the terrain and accelerate to hit the same terrain again.
-    if(5 * (ticks - m_collision_ticks.back()) < stk_config->time2Ticks(1.0f))
+    if(5 * (ticks - m_collision_ticks.back()) < fluxara_drift_config->time2Ticks(1.0f))
         return;
 
     // Remove all outdated entries, i.e. entries that are older than the
@@ -262,7 +262,7 @@ void AIBaseController::crashed(const Material *m)
     // otherwise a collision that happened (say) 10 seconds ago could
     // contribute to a stuck condition.
     while(m_collision_ticks.size()>0 &&
-           ticks - m_collision_ticks[0] > stk_config->time2Ticks(1.0f)
+           ticks - m_collision_ticks[0] > fluxara_drift_config->time2Ticks(1.0f)
                                         + COLLISION_TICKS              )
            m_collision_ticks.erase(m_collision_ticks.begin());
 

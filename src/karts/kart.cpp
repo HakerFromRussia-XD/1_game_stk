@@ -1,7 +1,7 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2016 Steve Baker <sjbaker1@airmail.net>
-//  Copyright (C) 2006-2016 SuperTuxKart-Team, Joerg Henrichs, Steve Baker
+//  Copyright (C) 2006-2016 FluxaraDrift-Team, Joerg Henrichs, Steve Baker
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -38,7 +38,7 @@
 #include "graphics/shadow.hpp"
 #include "graphics/skid_marks.hpp"
 #include "graphics/slip_stream.hpp"
-#include "graphics/stk_text_billboard.hpp"
+#include "graphics/fluxara_drift_text_billboard.hpp"
 #include "graphics/stars.hpp"
 #include "guiengine/scalable_font.hpp"
 #include "io/file_manager.hpp"
@@ -132,7 +132,7 @@ Kart::Kart (const std::string& ident, unsigned int world_kart_id,
 #endif
     m_controller           = NULL;
     m_saved_controller     = NULL;
-    m_consumption_per_tick = stk_config->ticks2Time(1) *
+    m_consumption_per_tick = fluxara_drift_config->ticks2Time(1) *
                              m_kart_properties->getNitroConsumption();
     m_fire_clicked         = 0;
     m_default_suspension_force = 0.0f;
@@ -140,7 +140,7 @@ Kart::Kart (const std::string& ident, unsigned int world_kart_id,
     m_type                 = RaceManager::KT_AI;
     m_flying               = false;
 
-    m_xyz_history_size     = stk_config->time2Ticks(XYZ_HISTORY_TIME);
+    m_xyz_history_size     = fluxara_drift_config->time2Ticks(XYZ_HISTORY_TIME);
 
     Vec3 initial_position = getXYZ();
     for (int i=0;i<m_xyz_history_size;i++)
@@ -313,7 +313,7 @@ Kart::~Kart()
  */
 void Kart::reset()
 {
-    if (m_flying && !isGhostKart())
+    if (m_flying && !isGhofluxara_driftart())
     {
         m_flying = false;
         stopFlying();
@@ -332,7 +332,7 @@ void Kart::reset()
 
     m_min_nitro_ticks = 0;
     m_energy_to_min_ratio = 0;
-    m_consumption_per_tick = stk_config->ticks2Time(1) *
+    m_consumption_per_tick = fluxara_drift_config->ticks2Time(1) *
                              m_kart_properties->getNitroConsumption();
 
     // Reset star effect in case that it is currently being shown.
@@ -609,7 +609,7 @@ void Kart::blockViewWithPlunger()
     if(m_view_blocked_by_plunger<=0 && !isShielded())
     {
         m_view_blocked_by_plunger = (int16_t)
-            stk_config->time2Ticks(m_kart_properties->getPlungerInFaceTime());
+            fluxara_drift_config->time2Ticks(m_kart_properties->getPlungerInFaceTime());
     }
     if(isShielded())
     {
@@ -758,7 +758,7 @@ void Kart::createPhysics()
     // -------------------------
     m_vehicle_raycaster.reset(
         new btKartRaycaster(Physics::get()->getPhysicsWorld(),
-                            stk_config->m_smooth_normals &&
+                            fluxara_drift_config->m_smooth_normals &&
                             Track::getCurrentTrack()->smoothNormals()));
     m_vehicle.reset(new btKart(m_body.get(), m_vehicle_raycaster.get(), this));
 
@@ -964,7 +964,7 @@ void Kart::finishedRace(float time, bool from_server)
             {
                 m_network_finish_check_ticks =
                     World::getWorld()->getTicksSinceStart() +
-                    stk_config->time2Ticks(1.0f);
+                    fluxara_drift_config->time2Ticks(1.0f);
                 EndController* ec = new EndController(this, m_controller);
                 Controller* old_controller = m_controller;
                 setController(ec);
@@ -1046,7 +1046,7 @@ void Kart::finishedRace(float time, bool from_server)
     {
         // Save for music handling in race result gui
         setRaceResult();
-        if (!isGhostKart())
+        if (!isGhofluxara_driftart())
         {
             if (m_saved_controller == NULL)
             {
@@ -1056,7 +1056,7 @@ void Kart::finishedRace(float time, bool from_server)
                 m_saved_controller->finishedRace(time);
         }
         // Skip animation if this kart is eliminated
-        if (m_eliminated || isGhostKart()) return;
+        if (m_eliminated || isGhofluxara_driftart()) return;
 
         m_kart_model->setAnimation(m_race_result ?
             KartModel::AF_WIN_START : KartModel::AF_LOSE_START);
@@ -1163,14 +1163,14 @@ void Kart::collectedItem(ItemState *item_state)
              item_state->getPreviousOwner()->getIdent() == "nolok");
 
         // slow down
-        m_bubblegum_ticks = (int16_t)stk_config->time2Ticks(
+        m_bubblegum_ticks = (int16_t)fluxara_drift_config->time2Ticks(
             m_kart_properties->getBubblegumDuration());
         m_bubblegum_torque_sign =
             ((World::getWorld()->getTicksSinceStart() / 10) % 2 == 0) ?
             true : false;
         m_max_speed->setSlowdown(MaxSpeed::MS_DECREASE_BUBBLE,
             m_kart_properties->getBubblegumSpeedFraction() ,
-            stk_config->time2Ticks(m_kart_properties->getBubblegumFadeInTime()),
+            fluxara_drift_config->time2Ticks(m_kart_properties->getBubblegumFadeInTime()),
             m_bubblegum_ticks);
         if (!RewindManager::get()->isRewinding())
             getNextEmitter()->play(getSmoothedXYZ(), m_goo_sound);
@@ -1196,10 +1196,10 @@ void Kart::collectedItem(ItemState *item_state)
  */
 float Kart::getStartupBoostFromStartTicks(int ticks) const
 {
-    int ticks_since_ready = ticks - stk_config->time2Ticks(1.0f);
+    int ticks_since_ready = ticks - fluxara_drift_config->time2Ticks(1.0f);
     if (ticks_since_ready < 0)
         return 0.0f;
-    float t = stk_config->ticks2Time(ticks_since_ready);
+    float t = fluxara_drift_config->ticks2Time(ticks_since_ready);
     std::vector<float> startup_times = m_kart_properties->getStartupTime();
     for (unsigned int i = 0; i < startup_times.size(); i++)
     {
@@ -1254,7 +1254,7 @@ bool Kart::isNearGround() const
         return false;
     else
         return ((getXYZ().getY() - m_terrain_info->getHoT())
-                 < stk_config->m_near_ground);
+                 < fluxara_drift_config->m_near_ground);
 }   // isNearGround
 
 // ------------------------------------------------------------------------
@@ -1264,7 +1264,7 @@ void Kart::setShieldTime(float t)
 {
     if(isShielded())
     {
-        getAttachment()->setTicksLeft(stk_config->time2Ticks(t));
+        getAttachment()->setTicksLeft(fluxara_drift_config->time2Ticks(t));
     }
 }   // setShieldTime
 
@@ -1293,7 +1293,7 @@ bool Kart::isShielded() const
 float Kart::getShieldTime() const
 {
     if (isShielded())
-        return stk_config->ticks2Time(getAttachment()->getTicksLeft());
+        return fluxara_drift_config->ticks2Time(getAttachment()->getTicksLeft());
     else
         return 0.0f;
 }   // getShieldTime
@@ -1401,11 +1401,11 @@ void Kart::update(int ticks)
     else if (NetworkConfig::get()->roundValuesNow())
         CompressNetworkBody::compress(m_body.get(), m_motion_state.get());
 
-    float dt = stk_config->ticks2Time(ticks);
+    float dt = fluxara_drift_config->ticks2Time(ticks);
     if (!RewindManager::get()->isRewinding())
     {
         m_time_previous_counter += dt;
-        while (m_time_previous_counter > stk_config->ticks2Time(1))
+        while (m_time_previous_counter > fluxara_drift_config->ticks2Time(1))
         {
             m_previous_xyz[0] = getXYZ();
             m_previous_xyz_times[0] = World::getWorld()->getTime();
@@ -1414,7 +1414,7 @@ void Kart::update(int ticks)
                 m_previous_xyz[i] = m_previous_xyz[i-1];
                 m_previous_xyz_times[i] = m_previous_xyz_times[i-1];
             }
-            m_time_previous_counter -= stk_config->ticks2Time(1);
+            m_time_previous_counter -= fluxara_drift_config->ticks2Time(1);
         }
     }
 
@@ -1443,7 +1443,7 @@ void Kart::update(int ticks)
         body->proceedToTransform(hovering);
         setTrans(hovering);
         float time = getKartProperties()->getExplosionInvulnerabilityTime();
-        m_invulnerable_ticks = stk_config->time2Ticks(time);
+        m_invulnerable_ticks = fluxara_drift_config->time2Ticks(time);
     }
 
     // Update the locally maintained speed of the kart (m_speed), which
@@ -1486,7 +1486,7 @@ void Kart::update(int ticks)
         m_speed,  //21
         m_vehicle->getWheelInfo(0).m_steering,  //23
         m_vehicle->getWheelInfo(1).m_steering,  //24
-        StkTime::getRealTime()
+        FluxaraDriftTime::getRealTime()
         );
 #endif
 
@@ -1683,7 +1683,7 @@ void Kart::update(int ticks)
         m_speed,  //24
         m_vehicle->getWheelInfo(0).m_steering,  //26
         m_vehicle->getWheelInfo(1).m_steering,  //27
-        StkTime::getRealTime(),  //29
+        FluxaraDriftTime::getRealTime(),  //29
         m_skidding->getSkidState(), //31
         m_skidding->getSkidFactor(),    //33
         m_max_speed->getCurrentMaxSpeed(),
@@ -1879,8 +1879,8 @@ bool Kart::setSquash(float time, float slowdown)
     }
 
     m_max_speed->setSlowdown(MaxSpeed::MS_DECREASE_SQUASH, slowdown,
-                             stk_config->time2Ticks(0.1f),
-                             stk_config->time2Ticks(time));
+                             fluxara_drift_config->time2Ticks(0.1f),
+                             fluxara_drift_config->time2Ticks(time));
     return true;
 }   // setSquash
 
@@ -1888,7 +1888,7 @@ bool Kart::setSquash(float time, float slowdown)
 void Kart::setSquashGraphics()
 {
 #ifndef SERVER_ONLY
-    if (isGhostKart() || GUIEngine::isNoGraphics()) return;
+    if (isGhofluxara_driftart() || GUIEngine::isNoGraphics()) return;
 
     m_node->setScale(core::vector3df(1.0f, 0.5f, 1.0f));
     if (m_vehicle->getNumWheels() > 0)
@@ -1914,7 +1914,7 @@ void Kart::setSquashGraphics()
 void Kart::unsetSquash()
 {
 #ifndef SERVER_ONLY
-    if (isGhostKart() || GUIEngine::isNoGraphics()) return;
+    if (isGhofluxara_driftart() || GUIEngine::isNoGraphics()) return;
 
     m_node->setScale(core::vector3df(1.0f, 1.0f, 1.0f));
     if (m_vehicle && m_vehicle->getNumWheels() > 0)
@@ -2227,8 +2227,8 @@ void Kart::handleZipper(const Material *material, bool play_sound)
     m_max_speed->instantSpeedIncrease(MaxSpeed::MS_INCREASE_ZIPPER,
                                      max_speed_increase, speed_gain,
                                      engine_force,
-                                     stk_config->time2Ticks(duration),
-                                     stk_config->time2Ticks(fade_out_time));
+                                     fluxara_drift_config->time2Ticks(duration),
+                                     fluxara_drift_config->time2Ticks(fade_out_time));
     // Play custom character sound (weee!)
     int zipper_ticks = World::getWorld()->getTicksSinceStart();
     if (zipper_ticks > m_ticks_last_zipper)
@@ -2294,8 +2294,8 @@ void Kart::updateNitro(int ticks)
         m_max_speed->increaseMaxSpeed(MaxSpeed::MS_INCREASE_NITRO,
             m_kart_properties->getNitroMaxSpeedIncrease(),
             m_kart_properties->getNitroEngineForce(),
-            stk_config->time2Ticks(m_kart_properties->getNitroDuration()*m_energy_to_min_ratio),
-            stk_config->time2Ticks(m_kart_properties->getNitroFadeOutTime()));
+            fluxara_drift_config->time2Ticks(m_kart_properties->getNitroDuration()*m_energy_to_min_ratio),
+            fluxara_drift_config->time2Ticks(m_kart_properties->getNitroFadeOutTime()));
     }
     else
     {
@@ -2403,9 +2403,9 @@ void Kart::crashed(const Material *m, const Vec3 &normal)
             else
                 impulse = Vec3(0, 0, -1); // Arbitrary
             impulse *= m_kart_properties->getCollisionTerrainImpulse();
-            m_bounce_back_ticks = (uint8_t)stk_config->time2Ticks(0.2f);
+            m_bounce_back_ticks = (uint8_t)fluxara_drift_config->time2Ticks(0.2f);
             m_vehicle->setTimedCentralImpulse(
-                (uint16_t)stk_config->time2Ticks(0.1f), impulse);
+                (uint16_t)fluxara_drift_config->time2Ticks(0.1f), impulse);
         }
 
     }
@@ -2453,12 +2453,12 @@ void Kart::crashed(const Material *m, const Vec3 &normal)
         else if (m->getCollisionReaction() == Material::PUSH_BACK)
         {
             // This variable is set to 0.2 in case of a kart-terrain collision
-            if (m_bounce_back_ticks <= (uint8_t)stk_config->time2Ticks(0.2f))
+            if (m_bounce_back_ticks <= (uint8_t)fluxara_drift_config->time2Ticks(0.2f))
             {
                 btVector3 push = m_body->getLinearVelocity().normalized();
                 push[1] = 0.1f;
                 m_body->applyCentralImpulse( -4000.0f*push );
-                m_bounce_back_ticks = (uint8_t)stk_config->time2Ticks(2.0f);
+                m_bounce_back_ticks = (uint8_t)fluxara_drift_config->time2Ticks(2.0f);
             }   // if m_bounce_back_ticks <= 0.2f
         }   // if (m->getCollisionReaction() == Material::PUSH_BACK)
     }   // if(m && m->getCollisionReaction() != Material::NORMAL &&
@@ -2622,8 +2622,8 @@ void Kart::updatePhysics(int ticks)
             m_max_speed->instantSpeedIncrease(MaxSpeed::MS_INCREASE_ZIPPER,
                 0.9f * m_startup_boost, m_startup_boost,
                 /*engine_force*/200.0f,
-                /*duration*/stk_config->time2Ticks(5.0f),
-                /*fade_out_time*/stk_config->time2Ticks(5.0f));
+                /*duration*/fluxara_drift_config->time2Ticks(5.0f),
+                /*fade_out_time*/fluxara_drift_config->time2Ticks(5.0f));
         }
     }
     if (m_bounce_back_ticks > 0)
@@ -2704,7 +2704,7 @@ void Kart::updateEngineSFX(float dt)
 
         // Engine noise is based half in total speed, half in fake gears:
         // With a sawtooth graph like /|/|/| we get 3 even spaced gears,
-        // ignoring the gear settings from stk_config, but providing a
+        // ignoring the gear settings from fluxara_drift_config, but providing a
         // good enough brrrBRRRbrrrBRRR sound effect. Speed factor makes
         // it a "staired sawtooth", so more acoustically rich.
         float f = max_speed > 0 ? m_speed/max_speed : 1.0f;
@@ -2845,7 +2845,7 @@ void Kart::updateEnginePowerAndBrakes(int ticks)
                 applyEngineForce(engine_power-braking_power*3);
                 m_brake_ticks += ticks;
                 // Apply the brakes - include the time dependent brake increase
-                float f = 1.0f + stk_config->ticks2Time(m_brake_ticks)
+                float f = 1.0f + fluxara_drift_config->ticks2Time(m_brake_ticks)
                                * m_kart_properties->getEngineBrakeTimeIncrease();
                 m_vehicle->setAllBrakes(m_kart_properties->getEngineBrakeFactor() * f);
             }
@@ -3191,7 +3191,7 @@ SFXBase* Kart::getNextEmitter()
  *  (typical physical suspension length is around 0.28, while the distance
  *  between wheel and chassis in blender is in the order of 0.10 --> so there
  *  would be an additional distance of around 0.18 between wheel chassis as
- *  designed in blender and in stk - even more if the kart is driving downhill
+ *  designed in blender and in fluxara_drift - even more if the kart is driving downhill
  *  when the suspension extends further to keep contact with the ground).
  *  To make the visuals look closer to what they are in blender, an additional
  *  offset is added: before the start of a race the physics simulation is run
@@ -3431,8 +3431,8 @@ void Kart::setOnScreenText(const core::stringw& text)
         return;
         
     BoldFace* bold_face = font_manager->getFont<BoldFace>();
-    STKTextBillboard* tb =
-        new STKTextBillboard(
+    FLUXARA_DRIFTTextBillboard* tb =
+        new FLUXARA_DRIFTTextBillboard(
         GUIEngine::getSkin()->getColor("font::bottom"),
         GUIEngine::getSkin()->getColor("font::top"),
         getNode(), irr_driver->getSceneManager(), -1,

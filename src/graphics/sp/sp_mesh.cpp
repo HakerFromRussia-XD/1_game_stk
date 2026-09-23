@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -166,8 +166,8 @@ void SPMesh::finalize()
     std::sort(m_buffer.begin(), m_buffer.end(),
         [](const SPMeshBuffer* a, const SPMeshBuffer* b)->bool
         {
-            return a->getSTKMaterial()->getShaderName() <
-                b->getSTKMaterial()->getShaderName();
+            return a->getFLUXARA_DRIFTMaterial()->getShaderName() <
+                b->getFLUXARA_DRIFTMaterial()->getShaderName();
         });
 
     for (unsigned i = 0; i < m_buffer.size(); i++)
@@ -186,8 +186,8 @@ void SPMesh::finalize()
     {
         auto itr_next = itr + 1;
         if (itr_next != m_buffer.end() &&
-            (*itr)->getSTKMaterial()->getShaderName() ==
-            (*itr_next)->getSTKMaterial()->getShaderName())
+            (*itr)->getFLUXARA_DRIFTMaterial()->getShaderName() ==
+            (*itr_next)->getFLUXARA_DRIFTMaterial()->getShaderName())
         {
             if ((*itr)->combineMeshBuffer(*itr_next))
             {

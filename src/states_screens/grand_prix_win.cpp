@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2010-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2010-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -22,7 +22,7 @@
 #include "audio/sfx_manager.hpp"
 #include "challenges/unlock_manager.hpp"
 #include "config/player_manager.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "graphics/irr_driver.hpp"
 #include "graphics/lod_node.hpp"
 #include "guiengine/engine.hpp"
@@ -111,7 +111,7 @@ const float PODIUMS_AND_KARTS_SPEED_Y[3] = { 0.9f, 1.35f, 0.45f };
 
 // -------------------------------------------------------------------------------------
 
-GrandPrixWin::GrandPrixWin() : GrandPrixCutscene("grand_prix_win.stkgui")
+GrandPrixWin::GrandPrixWin() : GrandPrixCutscene("grand_prix_win.fluxara_driftgui")
 {
     for (int i = 0; i < 3; i++)
     {
@@ -458,7 +458,7 @@ void GrandPrixWin::setKarts(const std::pair<std::string, float> idents_arg[3])
 
 MusicInformation* GrandPrixWin::getInGameMenuMusic() const
 {
-    MusicInformation* mi = stk_config->m_gp_win_music;
+    MusicInformation* mi = fluxara_drift_config->m_gp_win_music;
     return mi;
 }
 

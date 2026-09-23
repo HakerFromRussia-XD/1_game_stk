@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015  Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -86,7 +86,7 @@ void ThreeDAnimation::updateWithWorldTicks(bool has_physics)
     if (!m_is_paused)
     {
         int cur_ticks = World::getWorld()->getTicksSinceStart();
-        m_current_time = stk_config->ticks2Time(cur_ticks);
+        m_current_time = fluxara_drift_config->ticks2Time(cur_ticks);
     }
 
     AnimationBase::getAt(m_current_time, &xyz, &m_hpr, &scale);     //updates all IPOs

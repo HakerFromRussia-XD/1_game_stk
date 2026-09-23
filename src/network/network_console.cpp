@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -20,8 +20,8 @@
 #include "network/network_player_profile.hpp"
 #include "network/server_config.hpp"
 #include "network/socket_address.hpp"
-#include "network/stk_host.hpp"
-#include "network/stk_peer.hpp"
+#include "network/fluxara_drift_host.hpp"
+#include "network/fluxara_drift_peer.hpp"
 #include "network/protocols/server_lobby.hpp"
 #include "utils/time.hpp"
 #include "utils/vs.hpp"
@@ -47,9 +47,9 @@ void showHelp()
     std::cout << "Available command:" << std::endl;
     std::cout << "help, Print this." << std::endl;
     std::cout << "quit, Shut down the server." << std::endl;
-    std::cout << "kickall, Kick all players out of STKHost." << std::endl;
-    std::cout << "kick #, kick # peer of STKHost." << std::endl;
-    std::cout << "kickban #, kick and ban # peer of STKHost." << std::endl;
+    std::cout << "kickall, Kick all players out of FLUXARA_DRIFTHost." << std::endl;
+    std::cout << "kick #, kick # peer of FLUXARA_DRIFTHost." << std::endl;
+    std::cout << "kickban #, kick and ban # peer of FLUXARA_DRIFTHost." << std::endl;
     std::cout << "listpeers, List all peers with host ID and IP." << std::endl;
     std::cout << "listban, List IP ban list of server." << std::endl;
     std::cout << "speedstats, Show upload and download speed." << std::endl;
@@ -85,7 +85,7 @@ bool pollCommand()
 #endif
 
 // ----------------------------------------------------------------------------
-void mainLoop(STKHost* host)
+void mainLoop(FLUXARA_DRIFTHost* host)
 {
     VS::setThreadName("NetworkConsole");
 
@@ -131,7 +131,7 @@ void mainLoop(STKHost* host)
         else if (str == "kick" && number != -1 &&
             NetworkConfig::get()->isServer())
         {
-            std::shared_ptr<STKPeer> peer = host->findPeerByHostId(number);
+            std::shared_ptr<FLUXARA_DRIFTPeer> peer = host->findPeerByHostId(number);
             if (peer)
                 peer->kick();
             else
@@ -140,7 +140,7 @@ void mainLoop(STKHost* host)
         else if (str == "kickban" && number != -1 &&
             NetworkConfig::get()->isServer())
         {
-            std::shared_ptr<STKPeer> peer = host->findPeerByHostId(number);
+            std::shared_ptr<FLUXARA_DRIFTPeer> peer = host->findPeerByHostId(number);
             if (peer)
             {
                 peer->kick();

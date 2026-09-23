@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016-2017 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016-2017 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -25,7 +25,7 @@
 #include <vector>
 
 #ifdef _IRR_COMPILE_WITH_ANDROID_DEVICE_
-#include "stk_android_native_app_glue.h"
+#include "fluxara_drift_android_native_app_glue.h"
 #endif
 
 #include "CContextEGL.h"

@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Lucas Baudin, Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -40,7 +40,7 @@ using namespace Online;
 
 // ----------------------------------------------------------------------------
 
-OnlineUserSearch::OnlineUserSearch() : Screen("online/user_search.stkgui")
+OnlineUserSearch::OnlineUserSearch() : Screen("online/user_search.fluxara_driftgui")
 {
     m_search_string      = "";
     m_last_search_string = "";

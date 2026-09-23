@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -370,7 +370,7 @@ std::string SPShaderManager::getShaderFullPath(const std::string& name)
     {
         return cur_location;
     }
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // Downloaded tracks contain only data. Resolve any track-local shader
     // from its reviewed copy in data/packaged-scripts/tracks/<track-id>/.
     // This keeps executable GPU source out of the remote asset archive.

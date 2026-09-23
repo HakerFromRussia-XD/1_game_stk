@@ -1,6 +1,6 @@
 
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015  Steve Baker <sjbaker1@airmail.net>
 //  Copyright (C) 2006-2015  Eduardo Hernandez Munoz
 //  Copyright (C) 2010-2015  Joerg Henrichs
@@ -26,7 +26,7 @@
 // Some debugging features for the AI. For example you can visualise the
 // point the AI is aiming at, or visualise the curve the AI is predicting.
 // It works best with just 1 AI kart, so set the number of karts
-// to 2 in main.cpp with quickstart and run supertuxkart with the arg -N.
+// to 2 in main.cpp with quickstart and run fluxaradrift with the arg -N.
 // Or use --profile-laps=99 and run just one AI. Using the debug camera
 // (top view) is useful, too
 
@@ -206,7 +206,7 @@ private:
     void  handleRescue(const float dt);
     void  handleBraking();
     void  handleNitroAndZipper();
-    void  computeNearestKarts();
+    void  computeNearefluxara_driftarts();
     void  handleItemCollectionAndAvoidance(Vec3 *aim_point,
                                            int last_node);
     bool  handleSelectedItem(Vec3 kart_aim_direction, Vec3 *aim_point);

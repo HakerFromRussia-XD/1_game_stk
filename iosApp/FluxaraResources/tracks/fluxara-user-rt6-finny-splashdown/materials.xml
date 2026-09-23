@@ -13,7 +13,7 @@
     <sfx filename="splash.ogg" min_speed="5.00" max_speed="15.00" min_pitch="0.80" max_pitch="1.20" positional="true" rolloff="0.10"/>
     <particles base="splash.xml" condition="skid drive"/>
   </material>
-  <material name="stktex_generic_waterBlue.png" surface="Y"  shader="displace" ignore="Y">
+  <material name="fluxara_drifttex_generic_waterBlue.png" surface="Y"  shader="displace" ignore="Y">
     <sfx filename="splash.ogg" min_speed="5.00" max_speed="15.00" min_pitch="0.80" max_pitch="1.20" positional="true" rolloff="0.10"/>
     <particles base="splash.xml" condition="skid drive"/>
 	</material>
@@ -30,13 +30,13 @@
     <sfx filename="underwaterdrive.ogg" min_speed="5.00" max_speed="15.00" min_pitch="0.80" max_pitch="1.20" positional="true" rolloff="0.10"/>
     <particles base="water.xml" condition="skid drive"/>
 	</material>
-  <material name="stk_generic_grassB.png" slowdown-time="1.0" max-speed="0.8">
+  <material name="fluxara_drift_generic_grassB.png" slowdown-time="1.0" max-speed="0.8">
     <particles base="smoke_brown.xml" condition="skid"/>
 	</material>
   <material name="sandbackground.png" slowdown-time="0.5" max-speed="0.25">
     <particles base="smoke_yellow.xml" condition="skid drive"/>
 	</material>
-  <material name="stk_generic_sand_b.png" reset="Y"/>
+  <material name="fluxara_drift_generic_sand_b.png" reset="Y"/>
   <material name="portal.png" shader="additive" ignore="Y"/>
-  <material name="stkflag_greenCheckBorard_a.png"/>
+  <material name="fluxara_driftflag_greenCheckBorard_a.png"/>
 </materials>

@@ -6,14 +6,14 @@
 #
 # The script assumes that you know what you are doing. It allows to generate all
 # packages for Google Play Store with single command. If you just want to build 
-# STK for your own use, then use android/make.sh script instead.
+# FLUXARA_DRIFT for your own use, then use android/make.sh script instead.
 
 export BUILD_TYPE=Beta
 export PROJECT_VERSION=git20211004
 export PROJECT_CODE=299
-export STK_STOREPASS="xxx"
-export STK_KEYSTORE="/path/to/stk.keystore"
-export STK_ALIAS="alias"
+export FLUXARA_DRIFT_STOREPASS="xxx"
+export FLUXARA_DRIFT_KEYSTORE="/path/to/fluxara_drift.keystore"
+export FLUXARA_DRIFT_ALIAS="alias"
 
 
 check_error()
@@ -56,10 +56,10 @@ generate_assets()
         return
     fi
 
-    if [ -f "./assets/data/supertuxkart.git" ]; then
-        mv "./assets/data/supertuxkart.git" \
-           "./assets/data/supertuxkart.$PROJECT_VERSION"
-        sed -i "s/data\/supertuxkart.git/data\/supertuxkart.$PROJECT_VERSION/g" \
+    if [ -f "./assets/data/fluxaradrift.git" ]; then
+        mv "./assets/data/fluxaradrift.git" \
+           "./assets/data/fluxaradrift.$PROJECT_VERSION"
+        sed -i "s/data\/fluxaradrift.git/data\/fluxaradrift.$PROJECT_VERSION/g" \
            "./assets/files.txt"
     fi
 
@@ -70,8 +70,8 @@ generate_full_assets()
 {
     echo "Generate zip file with full assets"
 
-    if [ -f "./android-output/stk-assets.zip" ]; then
-        echo "Full assets already found in ./android-output/stk-assets.zip"
+    if [ -f "./android-output/fluxara_drift-assets.zip" ]; then
+        echo "Full assets already found in ./android-output/fluxara_drift-assets.zip"
         return
     fi
 
@@ -97,18 +97,18 @@ generate_full_assets()
     fi
 
     cd ./assets-hq/data
-    zip -r ../../stk-assets.zip ./*
+    zip -r ../../fluxara_drift-assets.zip ./*
     cd ../../
 
     rm ./generate_assets.sh
     
-    if [ ! -f "./stk-assets.zip" ]; then
+    if [ ! -f "./fluxara_drift-assets.zip" ]; then
         echo "Error: Couldn't generate full assets"
         return
     fi
 
-    FULL_ASSETS_SIZE=`du -b ./stk-assets.zip | cut -f1`
-    sed -i "s/stk_assets_size = .*\;/stk_assets_size = $FULL_ASSETS_SIZE\;/g" \
+    FULL_ASSETS_SIZE=`du -b ./fluxara_drift-assets.zip | cut -f1`
+    sed -i "s/fluxara_drift_assets_size = .*\;/fluxara_drift_assets_size = $FULL_ASSETS_SIZE\;/g" \
            "../src/utils/download_assets_size.hpp"
     
     cd ../
@@ -118,8 +118,8 @@ generate_lq_assets()
 {
     echo "Generate zip file with lq assets"
 
-    if [ -f "./android-output/stk-assets-lq.zip" ]; then
-        echo "Full assets already found in ./android-output/stk-assets-lq..zip"
+    if [ -f "./android-output/fluxara_drift-assets-lq.zip" ]; then
+        echo "Full assets already found in ./android-output/fluxara_drift-assets-lq..zip"
         return
     fi
 
@@ -137,12 +137,12 @@ generate_lq_assets()
     fi
 
     cd ./assets-lq/data
-    zip -r ../../stk-assets-lq.zip ./*
+    zip -r ../../fluxara_drift-assets-lq.zip ./*
     cd ../../
 
     rm ./generate_assets.sh
     
-    if [ ! -f "./stk-assets-lq.zip" ]; then
+    if [ ! -f "./fluxara_drift-assets-lq.zip" ]; then
         echo "Error: Couldn't generate lq assets"
         return
     fi
@@ -166,7 +166,7 @@ generate_lq_assets
 generate_full_assets
 generate_assets
 
-if [ -f "./android-output/SuperTuxKart-$PROJECT_VERSION.apk" ]; then
+if [ -f "./android-output/FluxaraDrift-$PROJECT_VERSION.apk" ]; then
     echo "Package for architecture $ARCH1 is already built"
     #exit
 fi
@@ -188,16 +188,16 @@ if [ ! -f ./android/build/outputs/bundle/release/android-release.aab ]; then
 fi
 
 cp ./android/build/outputs/apk/release/android-release.apk \
-   ./android-output/SuperTuxKart-$PROJECT_VERSION.apk
+   ./android-output/FluxaraDrift-$PROJECT_VERSION.apk
 
 cp ./android/build/outputs/bundle/release/android-release.aab \
-   ./android-output/SuperTuxKart-$PROJECT_VERSION.aab
+   ./android-output/FluxaraDrift-$PROJECT_VERSION.aab
 
 SYMBOLS_PATH="./android/build/intermediates/merged_native_libs/release/mergeReleaseNativeLibs/out/lib"
 
 for arch in $(ls "$SYMBOLS_PATH"); do
     cp "$SYMBOLS_PATH/$arch/libmain.so" \
-    ./android-output/SuperTuxKart-$PROJECT_VERSION-$arch-libmain.so
+    ./android-output/FluxaraDrift-$PROJECT_VERSION-$arch-libmain.so
     cp "$SYMBOLS_PATH/$arch/libSDL2.so" \
-    ./android-output/SuperTuxKart-$PROJECT_VERSION-$arch-libSDL2.so
+    ./android-output/FluxaraDrift-$PROJECT_VERSION-$arch-libSDL2.so
 done

@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2011-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -19,7 +19,7 @@
 #ifndef HEADER_SWATTER_HPP
 #define HEADER_SWATTER_HPP
 
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "items/attachment_plugin.hpp"
 #include "utils/cpp2011.hpp"
 #include "utils/no_copy.hpp"

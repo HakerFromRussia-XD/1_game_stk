@@ -1448,7 +1448,7 @@ validate_ra(Program* program)
             for (unsigned i = 0; i < instr->operands.size(); i++) {
                if (instr->operands[i].isTemp() &&
                    instr->operands[i].getTemp().type() == RegType::sgpr &&
-                   instr->operands[i].isFirstKill())
+                   instr->operands[i].isFirfluxara_driftill())
                   phi_sgpr_ops[block.logical_preds[i]].emplace_back(instr->operands[i].getTemp());
             }
          }
@@ -1569,7 +1569,7 @@ validate_ra(Program* program)
             for (const Operand& op : instr->operands) {
                if (!op.isTemp())
                   continue;
-               if (op.isFirstKillBeforeDef()) {
+               if (op.isFirfluxara_driftillBeforeDef()) {
                   for (unsigned j = 0; j < op.getTemp().bytes(); j++)
                      regs[op.physReg().reg_b + j] = 0;
                }
@@ -1582,7 +1582,7 @@ validate_ra(Program* program)
             for (const Operand& op : instr->operands) {
                if (!op.isTemp())
                   continue;
-               if (op.isLateKill() && op.isFirstKill()) {
+               if (op.isLateKill() && op.isFirfluxara_driftill()) {
                   for (unsigned j = 0; j < op.getTemp().bytes(); j++)
                      regs[op.physReg().reg_b + j] = 0;
                }

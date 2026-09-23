@@ -916,7 +916,7 @@ process_block(spill_ctx& ctx, unsigned block_idx, Block* block, RegisterDemand s
          if (!op.isTemp())
             continue;
 
-         if (op.isFirstKill())
+         if (op.isFirfluxara_driftill())
             ctx.program->live.live_in[block_idx].erase(op.tempId());
          ctx.ssa_infos[op.tempId()].num_uses--;
 

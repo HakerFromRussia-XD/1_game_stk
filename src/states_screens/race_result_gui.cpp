@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -28,7 +28,7 @@
 #include "challenges/unlock_manager.hpp"
 #include "config/player_manager.hpp"
 #include "config/player_profile.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "graphics/2dutils.hpp"
 #include "graphics/material.hpp"
@@ -56,7 +56,7 @@
 #include "modes/overworld.hpp"
 #include "modes/soccer_world.hpp"
 #include "network/network_config.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "network/protocols/client_lobby.hpp"
 #include "race/highscores.hpp"
 #include "race/highscore_manager.hpp"
@@ -66,11 +66,12 @@
 #include "states_screens/cutscene_general.hpp"
 #include "states_screens/feature_unlocked.hpp"
 #include "states_screens/main_menu_screen.hpp"
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "input/motorica_game_control_ios.hpp"
 #include "input/motorica_standalone_training.hpp"
 #include "states_screens/fluxara_campaign_screen.hpp"
 #include "utils/fluxara_orientation_ios.hpp"
+#include "utils/fluxara_device_validation_ios.hpp"
 #include "states_screens/fluxara_race_result_screen.hpp"
 #endif
 #include "states_screens/online/networking_lobby.hpp"
@@ -90,7 +91,7 @@
 
 namespace
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 bool useRussianMotoricaResult()
 {
     if (translations == nullptr)
@@ -152,7 +153,7 @@ bool isMotoricaStandaloneRace()
 
 bool isFluxaraRace()
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     Track* track = track_manager->getTrack(RaceManager::get()->getTrackName());
     return track != NULL && track->isInGroup("Fluxara");
 #else
@@ -169,10 +170,10 @@ void resetToMotoricaRoot()
 /** Constructor, initialises internal data structures.
  */
 RaceResultGUI::RaceResultGUI() : Screen(
-#ifdef IOS_STK
-    "fluxara_race_result.stkgui",
+#ifdef IOS_FLUXARA_DRIFT
+    "fluxara_race_result.fluxara_driftgui",
 #else
-    "race_result.stkgui",
+    "race_result.fluxara_driftgui",
 #endif
     /*pause race*/ false)
 {
@@ -185,12 +186,17 @@ RaceResultGUI::RaceResultGUI() : Screen(
  */
 void RaceResultGUI::init()
 {
+#ifdef IOS_FLUXARA_DRIFT
+    const bool fluxara_race = isFluxaraRace();
+#endif
     Screen::init();
-#ifdef IOS_STK
-    if (isFluxaraRace())
+#ifdef IOS_FLUXARA_DRIFT
+    if (fluxara_race)
     {
-        fluxaraRequestPortraitMenu(true);
         FluxaraResults::init(this);
+        // All result layers now exist.  Submit the immediate geometry change
+        // at the same boundary as the first result frame, not before it.
+        fluxaraRequestPortraitMenu(true);
     }
     else
     {
@@ -203,12 +209,8 @@ void RaceResultGUI::init()
     m_animation_state = RR_INIT;
 
     m_timer = 0;
-#if 0 // AUTOPLAY ACCEPTANCE — disabled for human play; retained for a future lab run.
     m_fluxara_auto_advance_delay =
         (isFluxaraRace() && FluxaraModes::autoCampaignValidation()) ? 1.0f : -1.0f;
-#else
-    m_fluxara_auto_advance_delay = -1.0f;
-#endif
 
     getWidget("operations")->setActive(false);
     getWidget("left")->setVisible(false);
@@ -254,24 +256,24 @@ void RaceResultGUI::init()
             if (in_first_place)
             {
                 // At least one player kart is in 1st place.
-                m_race_over_music = stk_config->m_race_win_music;
+                m_race_over_music = fluxara_drift_config->m_race_win_music;
             }
             else
             {
                 // All player karts finished in winning positions, but none in 1st place.
-                m_race_over_music = stk_config->m_race_neutral_music;
+                m_race_over_music = fluxara_drift_config->m_race_neutral_music;
             }
         }
         else
         {
             // No player karts finished in winning positions.
-            m_race_over_music = stk_config->m_race_lose_music;
+            m_race_over_music = fluxara_drift_config->m_race_lose_music;
         }
     }
     else
     {
         // For races with only AI karts and no human players.
-        m_race_over_music = stk_config->m_race_neutral_music;
+        m_race_over_music = fluxara_drift_config->m_race_neutral_music;
     }
 
     if (!m_finish_sound)
@@ -316,7 +318,7 @@ void RaceResultGUI::init()
         scheduleTip();
 
     // Load the kart icons
-    m_icon_bank = new irr::gui::STKModifiedSpriteBank( GUIEngine::getGUIEnv());
+    m_icon_bank = new irr::gui::FLUXARA_DRIFTModifiedSpriteBank( GUIEngine::getGUIEnv());
 
     for(unsigned int i=0; i<kart_properties_manager->getNumberOfKarts(); i++)
     {
@@ -386,7 +388,7 @@ void RaceResultGUI::scheduleTip()
         !RaceManager::get()->isTimeTrialMode())
     {
         RandomGenerator randgen;
-        randgen.seed((int)StkTime::getTimeSinceEpoch());
+        randgen.seed((int)FluxaraDriftTime::getTimeSinceEpoch());
         unsigned int racePowerupTipCount = TipsManager::get()->getTipCount("race-powerup");
         unsigned int raceTipCount = racePowerupTipCount + TipsManager::get()->getTipCount("time-trial");
         unsigned int randvalue = randgen.get(raceTipCount);
@@ -487,7 +489,7 @@ void RaceResultGUI::enableAllButtons()
 
     // Keep the Fluxara result loop inside the campaign: repeat the current
     // event or return to its next unlocked campaign card, never to the
-    // upstream STK race setup.
+    // upstream FLUXARA_DRIFT race setup.
     if (isFluxaraRace())
     {
         middle->setLabel(StringUtils::utf8ToWide("Next circuit"));
@@ -589,7 +591,7 @@ void RaceResultGUI::enableAllButtons()
 void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
     const std::string& name, const int playerID)
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (isFluxaraRace() && name.compare(0,8,"fluxara-") == 0)
     {
         if (name == "fluxara-again")
@@ -633,6 +635,7 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
                 PlayerProfile* player = PlayerManager::getCurrentPlayer();
                 const std::string event_id = player ?
                     player->getLastFluxaraFinishedEvent() : "";
+                fluxaraLogDeviceValidationMemory("result", event_id);
                 if (event_id.empty() || !player->didLastFluxaraEventWin())
                 {
                     // A validation run must not turn an unlocked card into a
@@ -642,6 +645,7 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
                     return;
                 }
                 FluxaraCampaignScreen::getInstance()->showNextAfterEvent(event_id);
+                fluxaraPreservePortraitForNextGameState();
                 StateManager::get()->popMenu();
                 RaceManager::get()->exitRace();
                 RaceManager::get()->setAIKartOverride("");
@@ -651,6 +655,7 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
             }
             // Race state owns the result screen. Pop it before deleting the
             // world; this is also the normal interactive "Next" path.
+            fluxaraPreservePortraitForNextGameState();
             StateManager::get()->popMenu();
             RaceManager::get()->exitRace();
             RaceManager::get()->setAIKartOverride("");
@@ -711,9 +716,9 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
             if (action == "left") // Quit server (return to online lan / wan menu)
             {
                 RaceManager::get()->clearNetworkGrandPrixResult();
-                if (STKHost::existHost())
+                if (FLUXARA_DRIFTHost::existHost())
                 {
-                    STKHost::get()->shutdown();
+                    FLUXARA_DRIFTHost::get()->shutdown();
                 }
                 RaceManager::get()->exitRace();
                 RaceManager::get()->setAIKartOverride("");
@@ -885,7 +890,7 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
             const std::string current_track = RaceManager::get()->getTrackName();
             RaceManager::get()->exitRace();
             RaceManager::get()->setAIKartOverride("");
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
             FluxaraCampaignScreen::getInstance()->showNextAfter(current_track);
             StateManager::get()->resetAndGoToScreen(
                 FluxaraCampaignScreen::getInstance());
@@ -894,7 +899,7 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
         }
         if (action == "right")        // Restart
         {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
             if (motorica_training)
                 MotoricaStandaloneTraining::get()->prepareRepeat();
 #endif
@@ -925,7 +930,7 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
                 ReplayPlay::get()->setReplayFileByUID(last_uid);
 
                 RaceManager::get()->setRecordRace(true);
-                RaceManager::get()->setRaceGhostKarts(true);
+                RaceManager::get()->setRaceGhofluxara_driftarts(true);
 
                 RaceManager::get()->setNumKarts(RaceManager::get()->getNumLocalPlayers());
 
@@ -951,7 +956,7 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
 
             RaceManager::get()->exitRace();
             RaceManager::get()->setAIKartOverride("");
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
             if (motorica_training)
                 MotoricaStandaloneTraining::get()->stop();
             if (fluxara_race)
@@ -963,10 +968,10 @@ void RaceResultGUI::eventCallback(GUIEngine::Widget* widget,
 #endif
             resetToMotoricaRoot();
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
             // A standalone training always ends at the Motorica Hub. The
-            // challenge API marks it as overworld-originated for normal STK
-            // bookkeeping, which must not reopen an STK world here.
+            // challenge API marks it as overworld-originated for normal FLUXARA_DRIFT
+            // bookkeeping, which must not reopen an FLUXARA_DRIFT world here.
             if (motorica_training)
                 return;
 #endif
@@ -1366,7 +1371,7 @@ void RaceResultGUI::nextPhase()
  */
 bool RaceResultGUI::onEscapePressed()
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (isFluxaraRace())
     {
         eventCallback(nullptr,"fluxara-next",PLAYER_ID_GAME_MASTER);
@@ -1385,7 +1390,7 @@ bool RaceResultGUI::onEscapePressed()
 GUIEngine::EventPropagation RaceResultGUI::filterActions(PlayerAction action,
     int deviceID, const unsigned int value, Input::InputType type, int playerId)
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (isFluxaraRace()) return GUIEngine::EVENT_LET;
 #endif
     if (action != PA_FIRE) return GUIEngine::EVENT_LET;
@@ -1421,7 +1426,7 @@ void RaceResultGUI::onUpdate(float dt)
         }
     }
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (m_fluxara_auto_advance_delay >= 0.0f)
     {
         m_fluxara_auto_advance_delay -= dt;
@@ -1455,7 +1460,7 @@ void RaceResultGUI::onUpdate(float dt)
  */
 void RaceResultGUI::onDraw(float dt)
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (isFluxaraRace())
     {
         FluxaraResults::draw(this);
@@ -1678,7 +1683,7 @@ void RaceResultGUI::renderGlobal(float dt)
         displayPostRaceInfo();
     }
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (isMotoricaStandaloneRace())
     {
         const StandaloneTrainingResult& result =
@@ -2258,7 +2263,7 @@ void RaceResultGUI::displayGPProgress()
     assert(result_table != NULL);
 
     video::SColor color = video::SColor(255, 255, 0, 0);
-    // 0.96 from stkgui
+    // 0.96 from fluxara_driftgui
     core::recti dest_rect(
         result_table->m_x + result_table->m_w - m_font->getDimension(msg.c_str()).Width - 5,
         m_top, UserConfigParams::m_width * 0.96f,
@@ -2336,7 +2341,7 @@ int RaceResultGUI::displayHighscores(int x, int y, bool increase_density)
 
     // First draw title
     GUIEngine::getFont()->draw(_("Highscores"),
-        // 0.96 from stkgui
+        // 0.96 from fluxara_driftgui
         core::recti(x, y, UserConfigParams::m_width * 0.96f, y + GUIEngine::getFontHeight()),
         white_color, false, false, NULL, true /* ignoreRTL */);
 
@@ -2464,7 +2469,7 @@ int RaceResultGUI::displayLapDifficulty(int x, int y, bool increase_density)
         core::stringw laps = _("Laps: %i", RaceManager::get()->getNumLaps());
         current_y += int(line_height * 1.6f);
         the_font->draw(laps,
-            // 0.96 from stkgui
+            // 0.96 from fluxara_driftgui
             core::recti(x, current_y, UserConfigParams::m_width * 0.96f, current_y + GUIEngine::getFontHeight()),
             white_color, false, false, nullptr, true);
     }
@@ -2475,12 +2480,12 @@ int RaceResultGUI::displayLapDifficulty(int x, int y, bool increase_density)
     core::stringw difficulty_one;
     core::stringw difficulty_two;
     core::recti diff_ghost_one, diff_ghost_two;
-    if (RaceManager::get()->hasGhostKarts() && ReplayPlay::get()->isSecondReplayEnabled())
+    if (RaceManager::get()->hasGhofluxara_driftarts() && ReplayPlay::get()->isSecondReplayEnabled())
     {
         WorldWithRank* wwr = dynamic_cast<WorldWithRank*>(World::getWorld());
         for (unsigned k = 0; k < wwr->getNumKarts(); k++)
         {
-            GhostKart* gk = dynamic_cast<GhostKart*>(wwr->getKartAtPosition(k + 1));
+            Ghofluxara_driftart* gk = dynamic_cast<Ghofluxara_driftart*>(wwr->getKartAtPosition(k + 1));
             if (!gk)
                 continue;
             const ReplayPlay::ReplayData& rd = gk->getReplayData();
@@ -2517,7 +2522,7 @@ int RaceResultGUI::displayLapDifficulty(int x, int y, bool increase_density)
     core::stringw difficulty_string = _("Difficulty: %s", difficulty_name);
     current_y += line_height;
     the_font->draw(difficulty_string,
-        // 0.96 from stkgui
+        // 0.96 from fluxara_driftgui
         core::recti(x, current_y, UserConfigParams::m_width * 0.96f, current_y + GUIEngine::getFontHeight()),
         white_color, false, false, nullptr, true);
 
@@ -2533,7 +2538,7 @@ int RaceResultGUI::displayLapDifficulty(int x, int y, bool increase_density)
                 StringUtils::timeToString(best_lap_time, time_precision).c_str());
             current_y += line_height;
             the_font->draw(best_lap_string,
-                // 0.96 from stkgui
+                // 0.96 from fluxara_driftgui
                 core::recti(x, current_y, UserConfigParams::m_width * 0.96f, current_y + GUIEngine::getFontHeight()),
                 white_color, false, false, nullptr, true);
 
@@ -2546,7 +2551,7 @@ int RaceResultGUI::displayLapDifficulty(int x, int y, bool increase_density)
                 // Make it closer to the above line
                 current_y += int(line_height * 0.8f);
                 the_font->draw(best_lap_by_string,
-                    // 0.96 from stkgui
+                    // 0.96 from fluxara_driftgui
                     core::recti(x, current_y, UserConfigParams::m_width * 0.96f, current_y + GUIEngine::getFontHeight()),
                     white_color, false, false,
                     nullptr, true);
@@ -2676,7 +2681,7 @@ int RaceResultGUI::displayChallengeInfo(int x, int y, bool increase_density)
     {
         // The translated string might be too long, implement word wrap
         std::vector<irr::gui::GlyphLayout> best_while_slower_layout;
-        text_string = _("Reached Requirements of SuperTux");
+        text_string = _("Reached Requirements of FluxaraDrift");
         the_font->initGlyphLayouts(text_string,
                                    best_while_slower_layout);
         irr::gui::breakGlyphLayouts(best_while_slower_layout,
@@ -2849,7 +2854,7 @@ int RaceResultGUI::getFontHeight() const
 void RaceResultGUI::onResize()
 {
     Screen::onResize();
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (isFluxaraRace()) FluxaraResults::layout(this);
 #endif
     if (!m_gp_progress_widgets.empty())

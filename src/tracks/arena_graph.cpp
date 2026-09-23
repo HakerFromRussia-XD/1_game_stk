@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016 SuperTuxKart Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016 FluxaraDrift Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -395,9 +395,9 @@ void ArenaGraph::unitTesting()
     Track *track = track_manager->getTrack("cave");
     std::string navmesh_file_name=track->getTrackFile("navmesh.xml");
 
-    double s = StkTime::getRealTime();
+    double s = FluxaraDriftTime::getRealTime();
     ArenaGraph* ag = new ArenaGraph(navmesh_file_name);
-    double e = StkTime::getRealTime();
+    double e = FluxaraDriftTime::getRealTime();
     Log::error("Time", "Dijkstra       %lf", e-s);
 
     // Save the Dijkstra results
@@ -406,9 +406,9 @@ void ArenaGraph::unitTesting()
     ag->buildGraph();
 
     // Now compute results with Floyd-Warshall
-    s = StkTime::getRealTime();
+    s = FluxaraDriftTime::getRealTime();
     ag->computeFloydWarshall();
-    e = StkTime::getRealTime();
+    e = FluxaraDriftTime::getRealTime();
     Log::error("Time", "Floyd-Warshall %lf", e-s);
 
     int error_count = 0;

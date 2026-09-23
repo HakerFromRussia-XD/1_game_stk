@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Lionel Fuentes
 //
 //  This program is free software; you can redistribute it and/or
@@ -28,7 +28,7 @@
 #include "graphics/central_settings.hpp"
 #include "graphics/shader_based_renderer.hpp"
 #include "graphics/sp/sp_base.hpp"
-#include "graphics/stk_text_billboard.hpp"
+#include "graphics/fluxara_drift_text_billboard.hpp"
 #include "karts/explosion_animation.hpp"
 #include "graphics/irr_driver.hpp"
 #include "graphics/light.hpp"
@@ -38,7 +38,7 @@
 #include "graphics/sp/sp_shader.hpp"
 #include "graphics/sp/sp_texture_manager.hpp"
 #include "graphics/sp/sp_uniform_assigner.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "guiengine/modaldialog.hpp"
 #include "guiengine/screen_keyboard.hpp"
 #include "guiengine/widgets/label_widget.hpp"
@@ -224,20 +224,20 @@ void addAttachment(Attachment::AttachmentType type)
         {
             kart->getAttachment()
                 ->set(type,
-                      stk_config->time2Ticks(kart->getKartProperties()
+                      fluxara_drift_config->time2Ticks(kart->getKartProperties()
                                                  ->getAnvilDuration()) );
             kart->adjustSpeed(kart->getKartProperties()->getAnvilSpeedFactor());
         }
         else if (type == Attachment::ATTACH_PARACHUTE)
         {
             kart->getAttachment()
-                ->set(type, stk_config->time2Ticks(
+                ->set(type, fluxara_drift_config->time2Ticks(
                 kart->getKartProperties()->getParachuteDuration()));
         }
         else if (type == Attachment::ATTACH_BOMB)
         {
             kart->getAttachment()
-                ->set(type, stk_config->time2Ticks(stk_config->m_bomb_time) );
+                ->set(type, fluxara_drift_config->time2Ticks(fluxara_drift_config->m_bomb_time) );
         }
         else if (type == Attachment::ATTACH_NOTHING)
         {
@@ -588,7 +588,7 @@ bool handleContextMenuAction(s32 cmd_id)
         font_manager->getFont<DigitFace>()->reset();
         font_manager->getFont<RegularFace>()->reset();
 #ifndef SERVER_ONLY
-        STKTextBillboard::updateAllTextBillboards();
+        FLUXARA_DRIFTTextBillboard::updateAllTextBillboards();
 #endif
         break;
     case DEBUG_FPS:
@@ -737,7 +737,7 @@ bool handleContextMenuAction(s32 cmd_id)
         setDebugCamera(kart_num);
         break;
     case DEBUG_GUI_CAM_WHEEL:
-        if (!(World::getWorld()->getKart(kart_num)->isGhostKart()))
+        if (!(World::getWorld()->getKart(kart_num)->isGhofluxara_driftart()))
         {
             CameraDebug::setDebugType(CameraDebug::CM_DEBUG_GROUND);
             setDebugCamera(kart_num);
@@ -1055,14 +1055,14 @@ bool handleContextMenuAction(s32 cmd_id)
                         sptm->dumpAllTextures();
                     else
                     {
-                        for (auto& p : STKTexManager::getInstance()->getAllTextures())
-                            Log::info("STKTexManager", "%s", p.first.c_str());
-                        STKTexManager::getInstance()->dumpTextureUsage();
+                        for (auto& p : FLUXARA_DRIFTTexManager::getInstance()->getAllTextures())
+                            Log::info("FLUXARA_DRIFTTexManager", "%s", p.first.c_str());
+                        FLUXARA_DRIFTTexManager::getInstance()->dumpTextureUsage();
                     }
                     return false;
                 }
                 if (t.empty())
-                    STKTexManager::getInstance()->reloadAllTextures();
+                    FLUXARA_DRIFTTexManager::getInstance()->reloadAllTextures();
                 lw->setText(sptm->reloadTexture(t), true);
 #endif
                 // Don't close the dialog after each run
@@ -1142,7 +1142,7 @@ bool onEvent(const SEvent &event)
             return true;
 
         // Create the menu (only one menu at a time)
-        #if defined(MOBILE_STK) || defined(__SWITCH__)
+        #if defined(MOBILE_FLUXARA_DRIFT) || defined(__SWITCH__)
         #ifdef __SWITCH__
         int x = 100;
         int y = 100;
@@ -1153,7 +1153,7 @@ bool onEvent(const SEvent &event)
         if ( event.EventType == EET_MOUSE_INPUT_EVENT ?
             (event.MouseInput.X < x && event.MouseInput.Y < y) :
             (event.TouchInput.X < x && event.TouchInput.Y < y) &&
-        #else // MOBILE_STK
+        #else // MOBILE_FLUXARA_DRIFT
         if ( event.EventType == EET_MOUSE_INPUT_EVENT &&
             (event.MouseInput.Event == EMIE_RMOUSE_PRESSED_DOWN ||
              event.MouseInput.Event == EMIE_MMOUSE_PRESSED_DOWN) &&
@@ -1374,10 +1374,10 @@ bool onEvent(const SEvent &event)
             sub->addItem(L"Start recording (Ctrl + Print Screen)", DEBUG_START_RECORDING);
             sub->addItem(L"Stop recording (Ctrl + Print Screen)", DEBUG_STOP_RECORDING);
 #else
-            sub->addItem(L"Recording unavailable, STK was compiled without\n"
-                          "recording support.  Please re-compile STK with\n"
+            sub->addItem(L"Recording unavailable, FLUXARA_DRIFT was compiled without\n"
+                          "recording support.  Please re-compile FLUXARA_DRIFT with\n"
                           "libopenglrecorder to enable recording.  If you got\n"
-                          "SuperTuxKart from your distribution's repositories,\n"
+                          "FluxaraDrift from your distribution's repositories,\n"
                           "please use the official binaries, or contact your\n"
                           "distributions's package mantainer.");
 #endif

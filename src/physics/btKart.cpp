@@ -206,7 +206,7 @@ void btKart::updateWheelTransformsWS(btWheelInfo& wheel,
 
 // ----------------------------------------------------------------------------
 /** Updates all wheel transform informations. This is used just after a rewind
- *  to update all m_hardPointWS (which is used by stk to determine the terrain
+ *  to update all m_hardPointWS (which is used by fluxara_drift to determine the terrain
  *  under the kart).
  */
 void btKart::updateAllWheelTransformsWS()
@@ -499,23 +499,23 @@ void btKart::updateVehicle( btScalar step )
         m_chassisBody->applyCentralImpulse(downwards_impulse);
     }
 
-    // Apply additional impulse set by supertuxkart
+    // Apply additional impulse set by fluxaradrift
     // --------------------------------------------
     if(m_ticks_additional_impulse>0)
     {
         // We have fixed timestep
-        float dt = stk_config->ticks2Time(1);
+        float dt = fluxara_drift_config->ticks2Time(1);
         m_chassisBody->applyCentralImpulse(m_additional_impulse*dt);
         m_ticks_additional_impulse--;
     }
 
-    // Apply additional rotation set by supertuxkart
+    // Apply additional rotation set by fluxaradrift
     // ---------------------------------------------
     if(m_ticks_additional_rotation>0)
     {
         btTransform &t = m_chassisBody->getWorldTransform();
         // We have fixed timestep
-        float dt = stk_config->ticks2Time(1);
+        float dt = fluxara_drift_config->ticks2Time(1);
         btQuaternion add_rot(m_additional_rotation * dt,
                              0.0f,
                              0.0f);
@@ -523,7 +523,7 @@ void btKart::updateVehicle( btScalar step )
         m_chassisBody->setWorldTransform(t);
         // Also apply the rotation to the interpolated world transform.
         // This is important (at least if the rotation is only applied
-        // in one frame) since STK will actually use the interpolated
+        // in one frame) since FLUXARA_DRIFT will actually use the interpolated
         // transform, which would otherwise only be updated one frame
         // later, resulting in a one-frame incorrect rotation of the
         // kart, or a strongly 'visual jolt' of the kart

@@ -6,8 +6,8 @@ in vec2 uv;
 in vec4 color;
 out vec4 o_diffuse_color;
 
-#stk_include "utils/rgb_conversion.frag"
-#stk_include "utils/sp_texture_sampling.frag"
+#fluxara_drift_include "utils/rgb_conversion.frag"
+#fluxara_drift_include "utils/sp_texture_sampling.frag"
 
 void main()
 {

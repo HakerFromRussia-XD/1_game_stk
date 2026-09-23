@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2004-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2004-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -40,7 +40,7 @@ protected:
 
     bool m_return_to_garage;
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     /** Prevents the same Motorica point from retriggering immediately after
      *  returning from its race. It is armed again after leaving the point. */
     bool m_motorica_challenge_armed;

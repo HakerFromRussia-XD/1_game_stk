@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -17,6 +17,8 @@
 
 #include "states_screens/dialogs/race_paused_dialog.hpp"
 
+#include <algorithm>
+#include <cmath>
 #include <string>
 
 #include "audio/music_manager.hpp"
@@ -28,6 +30,7 @@
 #include "guiengine/engine.hpp"
 #include "guiengine/layout_manager.hpp"
 #include "guiengine/scalable_font.hpp"
+#include "guiengine/widgets/button_widget.hpp"
 #include "guiengine/widgets/CGUIEditBox.hpp"
 #include "guiengine/widgets/icon_button_widget.hpp"
 #include "guiengine/widgets/ribbon_widget.hpp"
@@ -39,7 +42,7 @@
 #include "network/protocols/client_lobby.hpp"
 #include "network/network_config.hpp"
 #include "network/network_string.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "race/race_manager.hpp"
 #include "states_screens/help/help_screen_1.hpp"
 #include "states_screens/main_menu_screen.hpp"
@@ -50,13 +53,18 @@
 #include "states_screens/state_manager.hpp"
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "input/motorica_game_control_ios.hpp"
 #include "input/motorica_standalone_training.hpp"
 #include "states_screens/fluxara_home_screen.hpp"
+#include "states_screens/fluxara_settings_screen.hpp"
+#include "states_screens/fluxara_ui.hpp"
 #endif
 
 #include <IrrlichtDevice.h>
+#include <IGUIEnvironment.h>
+#include <IGUIElement.h>
+#include <IVideoDriver.h>
 
 #ifndef SERVER_ONLY
 #include <ge_main.hpp>
@@ -67,6 +75,153 @@ using namespace GUIEngine;
 using namespace irr::core;
 using namespace irr::gui;
 
+#ifdef IOS_FLUXARA_DRIFT
+namespace
+{
+/**
+ * The game already renders the live track and HUD underneath a ModalDialog.
+ * This child is deliberately only the translucent veil and Figma's pause
+ * layers; it never replaces the running race with a precomposed screenshot.
+ */
+class FluxaraPauseVisual final : public IGUIElement
+{
+private:
+    irr::video::ITexture* m_art[13];
+
+    static constexpr float kWidth = 844.0f;
+    static constexpr float kHeight = 390.0f;
+
+    irr::core::recti rect(float x, float y, float w, float h) const
+    {
+        const auto size = irr_driver->getActualScreenSize();
+        const float scale = std::min(size.Width / kWidth, size.Height / kHeight);
+        const float left = (size.Width - kWidth * scale) * 0.5f;
+        const float top = (size.Height - kHeight * scale) * 0.5f;
+        return irr::core::recti(int(std::lround(left + x * scale)),
+            int(std::lround(top + y * scale)),
+            int(std::lround(left + (x + w) * scale)),
+            int(std::lround(top + (y + h) * scale)));
+    }
+
+    void image(int index, float x, float y, float w, float h) const
+    {
+        auto* texture = m_art[index];
+        if (!texture) return;
+        const auto source = texture->getSize();
+        draw2DImage(texture, rect(x, y, w, h),
+                    irr::core::recti(0, 0, source.Width, source.Height),
+                    nullptr, irr::video::SColor(255, 255, 255, 255), true);
+    }
+
+    // The play/restart and settings artwork lives in Figma as transparent
+    // sprite sheets.  Keep those original textures intact and select their
+    // Figma bounds here instead of exporting/masking a new per-icon PNG.
+    // This preserves the antialiased blue glow around every contour.
+    void imageSource(int index, float x, float y, float w, float h,
+                     int source_x, int source_y, int source_w,
+                     int source_h) const
+    {
+        auto* texture = m_art[index];
+        if (!texture) return;
+        draw2DImage(texture, rect(x, y, w, h),
+                    irr::core::recti(source_x, source_y,
+                                     source_x + source_w,
+                                     source_y + source_h),
+                    nullptr, irr::video::SColor(255, 255, 255, 255), true);
+    }
+
+    void label(const irr::core::stringw& text, float x, float y, float w,
+               float h, float points) const
+    {
+        const auto size = irr_driver->getActualScreenSize();
+        const float scale = std::min(size.Width / kWidth, size.Height / kHeight);
+        auto* font = GUIEngine::getFont();
+        const float saved = font->getScale();
+        font->setScale(1.0f);
+        const auto sample = font->getDimension(L"M");
+        const auto text_size = font->getDimension(text.c_str());
+        font->setScale(std::min(points * scale / std::max(1u, sample.Height),
+            w * scale / std::max(1u, text_size.Width)));
+        const auto destination = rect(x, y, w, h);
+        auto shadow = destination;
+        shadow += irr::core::position2di(0, std::max(1, int(2 * scale)));
+        font->draw(text.c_str(), shadow, irr::video::SColor(165, 7, 18, 58),
+                   true, true);
+        font->draw(text.c_str(), destination,
+                   irr::video::SColor(255, 255, 255, 255), true, true);
+        font->setScale(saved);
+    }
+
+public:
+    FluxaraPauseVisual(IGUIEnvironment* environment, IGUIElement* parent,
+                       const irr::core::recti& area)
+        : IGUIElement(EGUIET_ELEMENT, environment, parent, -1, area)
+    {
+        const char* files[] = {
+            "pause/panel", "pause/logo", "pause/button-continue",
+            "pause/button-restart", "pause/button-settings", "pause/button-exit",
+            "pause/icons-play-restart", "pause/icons-play-restart",
+            "pause/icons-settings-source",
+            "pause/icon-exit", "pause/checkers-left", "pause/checkers-right",
+            "pause/star"
+        };
+        for (int i = 0; i < 13; ++i)
+            m_art[i] = FluxaraUI::texture(files[i]);
+        setNotClipped(true);
+        setEnabled(false);
+    }
+
+    // This visual fills the entire viewport, but it is artwork only.  Irrlicht
+    // hit-tests visible children before it checks their enabled state, so the
+    // default rectangular hit area swallowed every touch intended for the four
+    // native (invisible) action buttons underneath.
+    bool isPointInside(const irr::core::position2d<irr::s32>&) const override
+    {
+        return false;
+    }
+
+    void draw() override
+    {
+        if (!IsVisible) return;
+        const auto size = irr_driver->getActualScreenSize();
+        // Figma: #030514 at 43% opacity.
+        irr_driver->getVideoDriver()->draw2DRectangle(
+            irr::video::SColor(110, 3, 5, 20),
+            irr::core::recti(0, 0, size.Width, size.Height));
+
+        // Exact 844 x 390 coordinates and exported alpha layers from the
+        // current Figma 347:49 design (the prior Figma revision was shifted).
+        image(0, 283.49f, 58.62f, 271.013f, 288.75f);
+        image(1, 351.96f, 40.47f, 134.063f, 80.438f);
+        image(2, 274.00f, 133.28f, 172.425f, 139.012f);
+        image(3, 408.89f, 133.28f, 138.60f, 137.363f);
+        image(4, 282.66f, 228.57f, 150.975f, 121.688f);
+        image(5, 392.80f, 214.54f, 177.375f, 141.488f);
+        imageSource(6, 341.65f, 172.06f, 37.95f, 37.95f,
+                    20, 17, 124, 134);
+        imageSource(7, 457.98f, 172.06f, 40.425f, 40.425f,
+                    162, 16, 123, 134);
+        imageSource(8, 331.75f, 249.19f, 49.088f, 44.55f,
+                    320, 0, 260, 240);
+        image(9, 457.98f, 246.31f, 54.037f, 54.037f);
+        image(10, 305.76f, 115.54f, 72.188f, 69.30f);
+        image(11, 456.74f, 112.24f, 75.488f, 72.60f);
+        image(12, 328.04f, 118.43f, 41.662f, 41.662f);
+        image(12, 468.29f, 118.43f, 41.662f, 41.662f);
+
+        // Labels deliberately remain runtime text: they use the bundled
+        // Baloo Cyrillic font and localize with the rest of the game.
+        label(_C("fluxara", "PAUSE"), 373.00f, 129.16f, 92.40f, 20.625f, 20.625f);
+        label(_C("fluxara", "CONTINUE"), 317.726f, 217.02f, 85.387f, 10.725f, 11.137f);
+        label(_C("fluxara", "RESTART"), 436.527f, 217.02f, 85.387f, 10.725f, 11.137f);
+        label(_C("fluxara", "SETTINGS"), 313.597f, 300.76f, 85.387f, 10.725f, 11.137f);
+        label(_C("fluxara", "EXIT"), 442.297f, 300.76f, 85.387f, 10.725f, 11.137f);
+        IGUIElement::draw();
+    }
+};
+}
+#endif
+
 // ----------------------------------------------------------------------------
 
 RacePausedDialog::RacePausedDialog(const float percentWidth,
@@ -76,24 +231,34 @@ RacePausedDialog::RacePausedDialog(const float percentWidth,
     m_target_team = KART_TEAM_NONE;
     m_self_destroy = false;
     m_from_overworld = false;
+    m_fluxara_pause = false;
+    m_touch_controls = UserConfigParams::m_multitouch_controls;
     m_vk_pbr_toggle = NULL;
 
     if (dynamic_cast<OverWorld*>(World::getWorld()) != NULL)
     {
-        loadFromFile("overworld_dialog.stkgui");
+        loadFromFile("overworld_dialog.fluxara_driftgui");
         m_from_overworld = true;
     }
     else if (!NetworkConfig::get()->isNetworking())
     {
-        loadFromFile("race_paused_dialog.stkgui");
+#ifdef IOS_FLUXARA_DRIFT
+        m_fluxara_pause = true;
+        loadFromFile("fluxara_pause_dialog.fluxara_driftgui");
+#else
+        loadFromFile("race_paused_dialog.fluxara_driftgui");
+#endif
     }
     else
     {
-        loadFromFile("online/network_ingame_dialog.stkgui");
+        loadFromFile("online/network_ingame_dialog.fluxara_driftgui");
     }
 
-    GUIEngine::RibbonWidget* back_btn = getWidget<RibbonWidget>("backbtnribbon");
-    back_btn->setFocusForPlayer( PLAYER_ID_GAME_MASTER );
+    if (!m_fluxara_pause)
+    {
+        GUIEngine::RibbonWidget* back_btn = getWidget<RibbonWidget>("backbtnribbon");
+        back_btn->setFocusForPlayer( PLAYER_ID_GAME_MASTER );
+    }
 
     if (NetworkConfig::get()->isNetworking())
     {
@@ -137,7 +302,7 @@ RacePausedDialog::RacePausedDialog(const float percentWidth,
         World::getWorld()->schedulePause(WorldStatus::IN_GAME_MENU_PHASE);
     }
 
-    if (dynamic_cast<OverWorld*>(World::getWorld()) == NULL)
+    if (!m_fluxara_pause && dynamic_cast<OverWorld*>(World::getWorld()) == NULL)
     {
         if (RaceManager::get()->isBenchmarking())
         {
@@ -173,7 +338,7 @@ RacePausedDialog::RacePausedDialog(const float percentWidth,
         }
     }
     
-#ifndef MOBILE_STK
+#ifndef MOBILE_FLUXARA_DRIFT
     if (m_text_box && UserConfigParams::m_lobby_chat)
         m_text_box->setFocusForPlayer(PLAYER_ID_GAME_MASTER);
 #endif
@@ -209,9 +374,11 @@ RacePausedDialog::~RacePausedDialog()
 
 void RacePausedDialog::loadedFromFile()
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
+    if (m_fluxara_pause)
+        return;
     // The public iPhone flow must never expose the legacy race setup, help or
-    // options screens from STK. Fluxara settings remain available from Home.
+    // options screens from FLUXARA_DRIFT. Fluxara settings remain available from Home.
     if (!NetworkConfig::get()->isNetworking() &&
         dynamic_cast<OverWorld*>(World::getWorld()) == NULL)
     {
@@ -278,6 +445,38 @@ void RacePausedDialog::onEnterPressedInternal()
 GUIEngine::EventPropagation
            RacePausedDialog::processEvent(const std::string& eventSource)
 {
+    if (m_fluxara_pause)
+    {
+        if (eventSource == "continue")
+        {
+            ModalDialog::dismiss();
+            return GUIEngine::EVENT_BLOCK;
+        }
+        if (eventSource == "restart")
+        {
+            ModalDialog::dismiss();
+            World::getWorld()->scheduleUnpause();
+            RaceManager::get()->rerunRace();
+            return GUIEngine::EVENT_BLOCK;
+        }
+        if (eventSource == "exit")
+        {
+            ModalDialog::dismiss();
+            RaceManager::get()->exitRace();
+            RaceManager::get()->setAIKartOverride("");
+            StateManager::get()->resetAndGoToScreen(
+                FluxaraHomeScreen::getInstance());
+            return GUIEngine::EVENT_BLOCK;
+        }
+        if (eventSource == "settings")
+        {
+            ModalDialog::dismiss();
+            FluxaraSettingsScreen::getInstance()->openFromPausedRace();
+            return GUIEngine::EVENT_BLOCK;
+        }
+        return GUIEngine::EVENT_BLOCK;
+    }
+
     GUIEngine::RibbonWidget* choice_ribbon =
             getWidget<GUIEngine::RibbonWidget>("choiceribbon");
     GUIEngine::RibbonWidget* backbtn_ribbon =
@@ -358,9 +557,9 @@ GUIEngine::EventPropagation
         {
             bool from_overworld = m_from_overworld;
             ModalDialog::dismiss();
-            if (STKHost::existHost())
+            if (FLUXARA_DRIFTHost::existHost())
             {
-                STKHost::get()->shutdown();
+                FLUXARA_DRIFTHost::get()->shutdown();
             }
             RaceManager::get()->exitRace();
             RaceManager::get()->setAIKartOverride("");
@@ -377,7 +576,7 @@ GUIEngine::EventPropagation
             }
             else
             {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
                 StateManager::get()->resetAndGoToScreen(
                     FluxaraHomeScreen::getInstance());
 #else
@@ -437,7 +636,7 @@ GUIEngine::EventPropagation
                 NetworkString back(PROTOCOL_LOBBY_ROOM);
                 back.setSynchronous(true);
                 back.addUInt8(LobbyProtocol::LE_CLIENT_BACK_LOBBY);
-                STKHost::get()->sendToServer(&back, true);
+                FLUXARA_DRIFTHost::get()->sendToServer(&back, true);
             }
             else
             {
@@ -475,6 +674,8 @@ GUIEngine::EventPropagation
 // ----------------------------------------------------------------------------
 void RacePausedDialog::beforeAddingWidgets()
 {
+    if (m_fluxara_pause)
+        return;
     GUIEngine::RibbonWidget* choice_ribbon =
         getWidget<GUIEngine::RibbonWidget>("choiceribbon");
 
@@ -483,7 +684,7 @@ void RacePausedDialog::beforeAddingWidgets()
     if (index != -1)
         choice_ribbon->setItemVisible(index, !showSetupNewRace);
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (isMotoricaStandaloneModeIOS() && m_from_overworld)
     {
         index = choice_ribbon->findItemNamed("selectkart");
@@ -588,6 +789,18 @@ void RacePausedDialog::beforeAddingWidgets()
 // ----------------------------------------------------------------------------
 void RacePausedDialog::init()
 {
+    if (m_fluxara_pause)
+    {
+        m_irrlicht_window->setDrawBackground(false);
+        m_fade_background = false;
+        for (const char* id : {"continue", "restart", "settings", "exit"})
+            FluxaraUI::rasterHitTarget(getWidget<GUIEngine::ButtonWidget>(id));
+#ifdef IOS_FLUXARA_DRIFT
+        new FluxaraPauseVisual(GUIEngine::getGUIEnv(), m_irrlicht_window,
+            irr::core::recti(0, 0, m_area.getWidth(), m_area.getHeight()));
+#endif
+        return;
+    }
     m_touch_controls = UserConfigParams::m_multitouch_controls;
     updateTouchDeviceIcon();
 #ifndef SERVER_ONLY

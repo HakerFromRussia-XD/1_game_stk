@@ -46,7 +46,7 @@ for node in ET.parse(catalog / 'online_assets.xml').getroot():
         latest[key] = node.attrib
 print(json.dumps({'downloaded_tracks': inspect(catalog / 'extracted/tracks'),
                   'downloaded_arenas': inspect(catalog / 'extracted/arenas'),
-                  'original_app_tracks': inspect(Path('/private/tmp/original-stk-pre-fluxara.app/data/tracks')),
+                  'original_app_tracks': inspect(Path('/private/tmp/original-fluxara_drift-pre-fluxara.app/data/tracks')),
                   'manifest_latest_counts': dict(Counter(k[0] for k in latest)),
                   'manifest_arena_v6_v7': sum(k[0] == 'arena' and v.get('format') in {'6', '7'} for k,v in latest.items()),
                   'manifest_arena_v6_v7_approved': sum(k[0] == 'arena' and v.get('format') in {'6', '7'} and bool(int(v.get('status', 0)) & 1) for k,v in latest.items()),

@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2014-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2014-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -30,7 +30,7 @@ using namespace irr;
 #include "guiengine/scalable_font.hpp"
 #include "input/device_manager.hpp"
 #include "input/motorica_game_control.hpp"
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "input/motorica_standalone_training.hpp"
 #endif
 #include "input/multitouch_device.hpp"
@@ -47,7 +47,7 @@ using namespace irr;
 
 #include <IrrlichtDevice.h>
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 namespace
 {
 bool motoricaUseRussian()
@@ -111,7 +111,7 @@ RaceGUIMultitouch::RaceGUIMultitouch(RaceGUIBase* race_gui)
     m_up_tex = NULL;
     m_down_tex = NULL;
     m_screen_tex = NULL;
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     m_fluxara_halo_idle_tex = NULL;
     m_fluxara_halo_pressed_tex = NULL;
 #endif
@@ -186,7 +186,7 @@ void RaceGUIMultitouch::init()
         UserConfigParams::m_multitouch_scale = 0.8f;
     }
     
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // HUD node 93:62 is deliberately a set of independent alpha assets. Its
     // steering wheel comes from the source layer in node 93:179, not a frame
     // export with a coloured background. Do not mix in Android HUD masks.
@@ -235,7 +235,7 @@ void RaceGUIMultitouch::init()
     m_fluxara_powerup_tex[PowerupManager::POWERUP_ANVIL] =
         hud("bonus-anchor.png");
 #endif
-#ifndef IOS_STK
+#ifndef IOS_FLUXARA_DRIFT
     m_steering_wheel_tex = irr_driver->getTexture(FileManager::GUI_ICON,
                                                   "android/steering_wheel.png");
     m_accelerator_tex = irr_driver->getTexture(FileManager::GUI_ICON,
@@ -288,7 +288,7 @@ void RaceGUIMultitouch::createRaceGUI()
     if (m_device == NULL)
         return;
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (MotoricaStandaloneTraining::get()->usesSimulatedSignals())
     {
         const int width = irr_driver->getActualScreenSize().Width;
@@ -320,9 +320,9 @@ void RaceGUIMultitouch::createRaceGUI()
         m_device->activateGyroscope();
     }
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // Exact 844 x 390 layout from Figma node 100:2. The coordinates below
-    // deliberately mirror the approved frame instead of adapting an STK
+    // deliberately mirror the approved frame instead of adapting an FLUXARA_DRIFT
     // three-column touch layout.
     {
         const int screen_width = irr_driver->getActualScreenSize().Width;
@@ -511,7 +511,7 @@ void RaceGUIMultitouch::onCustomButtonPress(unsigned int button_id,
 void RaceGUIMultitouch::onMotoricaSignalButtonPress(unsigned int button_id,
                                                     bool pressed)
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     MotoricaStandaloneTraining* training = MotoricaStandaloneTraining::get();
     switch (button_id)
     {
@@ -580,7 +580,7 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
             video::SColor color((unsigned)-1);
             video::ITexture* btn_texture = m_steering_wheel_tex;
             core::rect<s32> coords(pos_zero, btn_texture->getSize());
-#ifndef IOS_STK
+#ifndef IOS_FLUXARA_DRIFT
             const core::rect<s32>& wheel_pos = btn_pos;
 #else
             // The Figma wheel is already a transparent, padded layer.
@@ -588,7 +588,7 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
 #endif
             draw2DImageRotationColor(btn_texture, wheel_pos, coords, NULL,
                 (button->axis_y >= 0 ? -1 : 1) * steering_axis, color);
-#ifndef IOS_STK
+#ifndef IOS_FLUXARA_DRIFT
             AbstractKart* k = NULL;
             Camera* c = Camera::getActiveCamera();
             if (c)
@@ -606,7 +606,7 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
             }
 #endif
 
-#ifndef IOS_STK
+#ifndef IOS_FLUXARA_DRIFT
             // The level bars are meaningful only while Motorica input is
             // connected. Hiding their disconnected placeholders prevents two
             // legacy dark rails from framing the approved steering control.
@@ -633,7 +633,7 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
             {
                 last_logged_emg_seq = emg_seq;
                 Log::info("MotoricaGameControl",
-                    "[BLE stk-game debug] gui seq=%llu open=%d close=%d connected=%d fill=%d/%d",
+                    "[BLE fluxara_drift-game debug] gui seq=%llu open=%d close=%d connected=%d fill=%d/%d",
                     (unsigned long long)emg_seq, open_level, close_level,
                     emg_connected ? 1 : 0, left_fill, right_fill);
             }
@@ -669,7 +669,7 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
             video::ITexture* btn_texture = m_accelerator_tex;
             core::rect<s32> coords(pos_zero, btn_texture->getSize());
             draw2DImage(btn_texture, btn_pos, coords, NULL, NULL, true);
-#ifndef IOS_STK
+#ifndef IOS_FLUXARA_DRIFT
             AbstractKart* k = NULL;
             Camera* c = Camera::getActiveCamera();
             if (c)
@@ -713,7 +713,7 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
                 else if (powerup->getType() != PowerupManager::POWERUP_NOTHING
                          && !kart->hasFinishedRace())
                 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
                     const unsigned type = unsigned(powerup->getType());
                     btn_texture = type < m_fluxara_powerup_tex.size() ?
                         m_fluxara_powerup_tex[type] : NULL;
@@ -777,14 +777,14 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
 
             if (btn_texture)
             {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
                 video::ITexture* halo = can_be_pressed && button->pressed ?
                     m_fluxara_halo_pressed_tex : m_fluxara_halo_idle_tex;
                 if (halo)
                 {
                     core::rect<s32> halo_coords(pos_zero, halo->getSize());
                     // The Figma halo belongs to the exact 43x43 / 58x58
-                    // control cell.  Do not inherit STK's inflated backdrop:
+                    // control cell.  Do not inherit FLUXARA_DRIFT's inflated backdrop:
                     // it turns a transparent state layer into a 1.4x plate.
                     draw2DImage(halo, btn_pos, halo_coords, NULL,
                                 NULL, true);
@@ -818,7 +818,7 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
 #endif
             }
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
             if (button->type == MultitouchButtonType::BUTTON_CUSTOM &&
                 MotoricaStandaloneTraining::get()->usesSimulatedSignals())
             {
@@ -841,7 +841,7 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
             if (button->type == MultitouchButtonType::BUTTON_NITRO &&
                 m_race_gui != NULL)
             {
-#ifndef IOS_STK
+#ifndef IOS_FLUXARA_DRIFT
                 float scale = UserConfigParams::m_multitouch_scale *
                     (float)(irr_driver->getActualScreenSize().Height) / 760.0f;
 
@@ -871,7 +871,7 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
         }
     }
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     MotoricaStandaloneTraining* training = MotoricaStandaloneTraining::get();
     if (training->isActive())
     {

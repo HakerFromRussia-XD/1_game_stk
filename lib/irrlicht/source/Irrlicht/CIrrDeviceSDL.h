@@ -114,7 +114,7 @@ class MoltenVK;
 
 		SDL_Window* getWindow() const { return Window; }
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 		const SDL_SysWMinfo& getWMInfo() const { return Info; }
 #endif
 

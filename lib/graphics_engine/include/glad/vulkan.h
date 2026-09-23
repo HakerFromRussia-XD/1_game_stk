@@ -11539,12 +11539,12 @@ typedef struct VkPhysicalDeviceMaintenance7PropertiesKHR {
     uint32_t                           maxDescriptorSetUpdateAfterBindTotalBuffersDynamic;
 } VkPhysicalDeviceMaintenance7PropertiesKHR;
 
-typedef struct VkPhysicalDeviceLayeredApiPropertiesListKHR {
+typedef struct VkPhysicalDeviceLayeredApiPropertiesLifluxara_driftHR {
     VkStructureType   sType;
     void *                             pNext;
     uint32_t                           layeredApiCount;
     VkPhysicalDeviceLayeredApiPropertiesKHR *  pLayeredApis;
-} VkPhysicalDeviceLayeredApiPropertiesListKHR;
+} VkPhysicalDeviceLayeredApiPropertiesLifluxara_driftHR;
 
 typedef struct VkPhysicalDeviceMaintenance8FeaturesKHR {
     VkStructureType   sType;
@@ -13173,10 +13173,10 @@ typedef union VkDeviceOrHostAddressKHR {
     void *                       hostAddress;
 } VkDeviceOrHostAddressKHR;
 
-typedef union VkDeviceOrHostAddressConstKHR {
+typedef union VkDeviceOrHostAddressConfluxara_driftHR {
     VkDeviceAddress              deviceAddress;
     const  void *                 hostAddress;
-} VkDeviceOrHostAddressConstKHR;
+} VkDeviceOrHostAddressConfluxara_driftHR;
 
 #if defined(VK_ENABLE_BETA_EXTENSIONS)
 typedef union VkDeviceOrHostAddressConstAMDX {
@@ -13190,18 +13190,18 @@ typedef struct VkAccelerationStructureGeometryTrianglesDataKHR {
     VkStructureType   sType;
     const  void *                    pNext;
     VkFormat                                        vertexFormat;
-    VkDeviceOrHostAddressConstKHR                   vertexData;
+    VkDeviceOrHostAddressConfluxara_driftHR                   vertexData;
     VkDeviceSize                                    vertexStride;
     uint32_t                                        maxVertex;
     VkIndexType                                     indexType;
-    VkDeviceOrHostAddressConstKHR                   indexData;
-    VkDeviceOrHostAddressConstKHR                   transformData;
+    VkDeviceOrHostAddressConfluxara_driftHR                   indexData;
+    VkDeviceOrHostAddressConfluxara_driftHR                   transformData;
 } VkAccelerationStructureGeometryTrianglesDataKHR;
 
 typedef struct VkAccelerationStructureGeometryAabbsDataKHR {
     VkStructureType   sType;
     const  void *                            pNext;
-    VkDeviceOrHostAddressConstKHR           data;
+    VkDeviceOrHostAddressConfluxara_driftHR           data;
     VkDeviceSize                            stride;
 } VkAccelerationStructureGeometryAabbsDataKHR;
 
@@ -13209,20 +13209,20 @@ typedef struct VkAccelerationStructureGeometryInstancesDataKHR {
     VkStructureType   sType;
     const  void *                            pNext;
     VkBool32                                arrayOfPointers;
-    VkDeviceOrHostAddressConstKHR           data;
+    VkDeviceOrHostAddressConfluxara_driftHR           data;
 } VkAccelerationStructureGeometryInstancesDataKHR;
 
 typedef struct VkAccelerationStructureGeometryLinearSweptSpheresDataNV {
     VkStructureType   sType;
     const  void *                          pNext;
     VkFormat                                              vertexFormat;
-    VkDeviceOrHostAddressConstKHR                         vertexData;
+    VkDeviceOrHostAddressConfluxara_driftHR                         vertexData;
     VkDeviceSize                                          vertexStride;
     VkFormat                                              radiusFormat;
-    VkDeviceOrHostAddressConstKHR                         radiusData;
+    VkDeviceOrHostAddressConfluxara_driftHR                         radiusData;
     VkDeviceSize                                          radiusStride;
     VkIndexType                                           indexType;
-    VkDeviceOrHostAddressConstKHR                         indexData;
+    VkDeviceOrHostAddressConfluxara_driftHR                         indexData;
     VkDeviceSize                                          indexStride;
     VkRayTracingLssIndexingModeNV                         indexingMode;
     VkRayTracingLssPrimitiveEndCapsModeNV                 endCapsMode;
@@ -13232,13 +13232,13 @@ typedef struct VkAccelerationStructureGeometrySpheresDataNV {
     VkStructureType   sType;
     const  void *                          pNext;
     VkFormat                                              vertexFormat;
-    VkDeviceOrHostAddressConstKHR                         vertexData;
+    VkDeviceOrHostAddressConfluxara_driftHR                         vertexData;
     VkDeviceSize                                          vertexStride;
     VkFormat                                              radiusFormat;
-    VkDeviceOrHostAddressConstKHR                         radiusData;
+    VkDeviceOrHostAddressConfluxara_driftHR                         radiusData;
     VkDeviceSize                                          radiusStride;
     VkIndexType                                           indexType;
-    VkDeviceOrHostAddressConstKHR                         indexData;
+    VkDeviceOrHostAddressConfluxara_driftHR                         indexData;
     VkDeviceSize                                          indexStride;
 } VkAccelerationStructureGeometrySpheresDataNV;
 
@@ -13303,7 +13303,7 @@ typedef struct VkCopyAccelerationStructureToMemoryInfoKHR {
 typedef struct VkCopyMemoryToAccelerationStructureInfoKHR {
     VkStructureType   sType;
     const  void *                                             pNext;
-    VkDeviceOrHostAddressConstKHR                            src;
+    VkDeviceOrHostAddressConfluxara_driftHR                            src;
     VkAccelerationStructureKHR                               dst;
     VkCopyAccelerationStructureModeKHR                       mode;
 } VkCopyMemoryToAccelerationStructureInfoKHR;
@@ -14424,7 +14424,7 @@ typedef struct VkPhysicalDeviceRayTracingLinearSweptSpheresFeaturesNV {
 typedef struct VkAccelerationStructureGeometryMotionTrianglesDataNV {
     VkStructureType   sType;
     const  void *                    pNext;
-    VkDeviceOrHostAddressConstKHR                   vertexData;
+    VkDeviceOrHostAddressConfluxara_driftHR                   vertexData;
 } VkAccelerationStructureGeometryMotionTrianglesDataNV;
 
 typedef struct VkAccelerationStructureMotionInfoNV {
@@ -14756,9 +14756,9 @@ typedef struct VkMicromapBuildInfoEXT {
     uint32_t                                             usageCountsCount;
     const  VkMicromapUsageEXT *     pUsageCounts;
     const  VkMicromapUsageEXT * const*    ppUsageCounts;
-    VkDeviceOrHostAddressConstKHR                                 data;
+    VkDeviceOrHostAddressConfluxara_driftHR                                 data;
     VkDeviceOrHostAddressKHR                                      scratchData;
-    VkDeviceOrHostAddressConstKHR                                 triangleArray;
+    VkDeviceOrHostAddressConfluxara_driftHR                                 triangleArray;
     VkDeviceSize                                                                        triangleArrayStride;
 } VkMicromapBuildInfoEXT;
 
@@ -14784,7 +14784,7 @@ typedef struct VkCopyMicromapToMemoryInfoEXT {
 typedef struct VkCopyMemoryToMicromapInfoEXT {
     VkStructureType   sType;
     const  void *                                             pNext;
-    VkDeviceOrHostAddressConstKHR                            src;
+    VkDeviceOrHostAddressConfluxara_driftHR                            src;
     VkMicromapEXT                               dst;
     VkCopyMicromapModeEXT                       mode;
 } VkCopyMemoryToMicromapInfoEXT;
@@ -14809,7 +14809,7 @@ typedef struct VkAccelerationStructureTrianglesOpacityMicromapEXT {
     VkStructureType   sType;
     void *                                   pNext;
     VkIndexType                                              indexType;
-    VkDeviceOrHostAddressConstKHR      indexBuffer;
+    VkDeviceOrHostAddressConfluxara_driftHR      indexBuffer;
     VkDeviceSize                                             indexStride;
     uint32_t                                                 baseTriangle;
     uint32_t                                 usageCountsCount;
@@ -14833,14 +14833,14 @@ typedef struct VkAccelerationStructureTrianglesDisplacementMicromapNV {
     void *                                   pNext;
     VkFormat                                                 displacementBiasAndScaleFormat;
     VkFormat                                                 displacementVectorFormat;
-    VkDeviceOrHostAddressConstKHR      displacementBiasAndScaleBuffer;
+    VkDeviceOrHostAddressConfluxara_driftHR      displacementBiasAndScaleBuffer;
     VkDeviceSize                                             displacementBiasAndScaleStride;
-    VkDeviceOrHostAddressConstKHR      displacementVectorBuffer;
+    VkDeviceOrHostAddressConfluxara_driftHR      displacementVectorBuffer;
     VkDeviceSize                                             displacementVectorStride;
-    VkDeviceOrHostAddressConstKHR      displacedMicromapPrimitiveFlags;
+    VkDeviceOrHostAddressConfluxara_driftHR      displacedMicromapPrimitiveFlags;
     VkDeviceSize                                             displacedMicromapPrimitiveFlagsStride;
     VkIndexType                                              indexType;
-    VkDeviceOrHostAddressConstKHR      indexBuffer;
+    VkDeviceOrHostAddressConfluxara_driftHR      indexBuffer;
     VkDeviceSize                                             indexStride;
     uint32_t                                                 baseTriangle;
     uint32_t                                                            usageCountsCount;
@@ -15736,7 +15736,7 @@ typedef struct VkConvertCooperativeVectorMatrixInfoNV {
     VkStructureType   sType;
     const  void *                          pNext;
     size_t                                                srcSize;
-    VkDeviceOrHostAddressConstKHR                         srcData;
+    VkDeviceOrHostAddressConfluxara_driftHR                         srcData;
     size_t *                        pDstSize;
     VkDeviceOrHostAddressKHR                              dstData;
     VkComponentTypeKHR                                    srcComponentType;

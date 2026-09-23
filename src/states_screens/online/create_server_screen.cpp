@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
 //  This program is free software; you can redistribute it and/or
@@ -31,11 +31,11 @@
 #include "network/server_config.hpp"
 #include "network/child_loop.hpp"
 #include "network/socket_address.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "online/online_profile.hpp"
 #include "states_screens/state_manager.hpp"
 #include "states_screens/online/networking_lobby.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
 
@@ -49,7 +49,7 @@ using namespace GUIEngine;
 
 // ----------------------------------------------------------------------------
 
-CreateServerScreen::CreateServerScreen() : Screen("online/create_server.stkgui")
+CreateServerScreen::CreateServerScreen() : Screen("online/create_server.fluxara_driftgui")
 {
 }   // CreateServerScreen
 
@@ -127,7 +127,7 @@ void CreateServerScreen::init()
     assert(gamemode != NULL);
     gamemode->setSelection(m_prev_mode, PLAYER_ID_GAME_MASTER);
     updateMoreOption(m_prev_mode);
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
     m_name_widget->setFocusable(true);
 #endif
 }   // init
@@ -135,7 +135,7 @@ void CreateServerScreen::init()
 // ----------------------------------------------------------------------------
 void CreateServerScreen::beforeAddingWidget()
 {
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
     // This will prevent name text box being focused first which make screen
     // keyboard always open
     m_name_widget->setFocusable(false);
@@ -277,7 +277,7 @@ void CreateServerScreen::updateMoreOption(int game_mode)
 void CreateServerScreen::onUpdate(float delta)
 {
     // If no host has been created, keep on waiting.
-    if(!STKHost::existHost())
+    if(!FLUXARA_DRIFTHost::existHost())
         return;
 
     NetworkingLobby::getInstance()->push();
@@ -285,7 +285,7 @@ void CreateServerScreen::onUpdate(float delta)
 
 // ----------------------------------------------------------------------------
 /** In case of WAN it adds the server to the list of servers. In case of LAN
- *  networking, it registers this game server with the stk server.
+ *  networking, it registers this game server with the fluxara_drift server.
  */
 void CreateServerScreen::createServer()
 {
@@ -335,7 +335,7 @@ void CreateServerScreen::createServer()
 #ifdef USE_GRAPHICS_SERVER
     NetworkConfig::get()->setIsServer(true);
     // In case of a WAN game, we register this server with the
-    // stk server, and will get the server's id when this
+    // fluxara_drift server, and will get the server's id when this
     // request is finished.
     ServerConfig::m_server_max_players = max_players;
     ServerConfig::m_server_name = StringUtils::xmlEncode(name);
@@ -354,7 +354,7 @@ void CreateServerScreen::createServer()
         RaceManager::get()->setMinorMode(RaceManager::MINOR_MODE_NORMAL_RACE);
 
     RaceManager::get()->setReverseTrack(false);
-    auto sl = STKHost::create();
+    auto sl = FLUXARA_DRIFTHost::create();
     assert(sl);
     sl->requestStart();
 #else
@@ -438,7 +438,7 @@ void CreateServerScreen::createServer()
     }
 
     ChildLoop* cl = new ChildLoop(clc);
-    STKHost::create(cl);
+    FLUXARA_DRIFTHost::create(cl);
     NetworkingLobby::getInstance()->setJoinedServer(server);
 #endif
 }   // createServer

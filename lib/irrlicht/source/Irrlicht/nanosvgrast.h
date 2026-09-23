@@ -1448,7 +1448,7 @@ void nsvgRasterize(NSVGrasterizer* r,
 
 	nsvg__unpremultiplyAlpha(dst, w, h, stride);
 
-	// ABGR to ARGB (to be compatible with STK)
+	// ABGR to ARGB (to be compatible with FLUXARA_DRIFT)
 	irr::u32* dB = (irr::u32*)dst;
 	irr::u32 t;
 	for (irr::s32 x = 0; x < w*h; ++x)

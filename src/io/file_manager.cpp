@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
 //  Copyright (C) 2008-2015 Steve Baker, Joerg Henrichs
 //
@@ -89,7 +89,7 @@ std::string              FileManager::m_stdout_dir;
 bool macSetBundlePathIfRelevant(std::string& data_dir)
 {
     Log::debug("[FileManager]", "Checking whether we are using an app bundle... ");
-    // the following code will enable STK to find its data when placed in an
+    // the following code will enable FLUXARA_DRIFT to find its data when placed in an
     // app bundle on mac OS X.
     // returns true if path is set, returns false if path was not set
     char path[1024];
@@ -103,14 +103,14 @@ bool macSetBundlePathIfRelevant(std::string& data_dir)
     CFRelease(main_bundle_URL);
     CFRelease(cf_string_ref);
 
-    // IOS version of stk store data folder directly inside supertuxkart.app
+    // IOS version of fluxara_drift store data folder directly inside fluxaradrift.app
     std::string contents = std::string(path) + "/";
-#ifndef IOS_STK
+#ifndef IOS_FLUXARA_DRIFT
     contents += std::string("Contents");
 #endif
     if(contents.find(".app") != std::string::npos)
     {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
         data_dir = contents;
         return true;
 #else
@@ -169,21 +169,21 @@ FileManager::FileManager()
     // This is esp. useful for Visual Studio, since it's not necessary
     // to define the working directory when debugging, it works automatically.
     std::string root_dir;
-    const std::string version = std::string("supertuxkart.") + STK_VERSION;
+    const std::string version = std::string("fluxaradrift.") + FLUXARA_DRIFT_VERSION;
     if (fileExists(CommandLine::getExecName()))
     {
         exe_path = StringUtils::getPath(CommandLine::getExecName());
     }
     if(exe_path.size()==0 || exe_path[exe_path.size()-1]!='/')
         exe_path += "/";
-    if ( getenv ( "SUPERTUXKART_DATADIR" ) != NULL )
-        root_dir = std::string(getenv("SUPERTUXKART_DATADIR"))+"/data/" ;
+    if ( getenv ( "FLUXARA_DRIFT_DATADIR" ) != NULL )
+        root_dir = std::string(getenv("FLUXARA_DRIFT_DATADIR"))+"/data/" ;
 #ifdef __APPLE__
     else if( macSetBundlePathIfRelevant( root_dir ) ) { root_dir = root_dir + "data/"; }
 #endif
 #ifdef __SWITCH__
-    else if(fileExists("sdmc:/stk-data/", version))
-        root_dir = "sdmc:/stk-data/";
+    else if(fileExists("sdmc:/fluxara_drift-data/", version))
+        root_dir = "sdmc:/fluxara_drift-data/";
     else if(fileExists("romfs:/data/", version))
         root_dir = "romfs:/data/";
 #endif
@@ -193,10 +193,10 @@ FileManager::FileManager()
         root_dir = "../data/" ;
     else if(fileExists("../../data/", version))
         root_dir = "../../data/" ;
-    // Test for old style build environment, with executable in root of stk
+    // Test for old style build environment, with executable in root of fluxara_drift
     else if(fileExists(exe_path+"data/"+version))
         root_dir = (exe_path+"data/").c_str();
-    // Check for windows cmake style: bld/Debug/bin/supertuxkart.exe
+    // Check for windows cmake style: bld/Debug/bin/fluxaradrift.exe
     else if (fileExists(exe_path + "../../../data/"+version))
         root_dir = exe_path + "../../../data/";
     else if (fileExists(exe_path + "../data/"+version))
@@ -206,10 +206,10 @@ FileManager::FileManager()
     }
     else
     {
-#ifdef SUPERTUXKART_DATADIR
-        root_dir = SUPERTUXKART_DATADIR"/data/";
+#ifdef FLUXARA_DRIFT_DATADIR
+        root_dir = FLUXARA_DRIFT_DATADIR"/data/";
 #else
-        root_dir = "/usr/local/share/games/supertuxkart/";
+        root_dir = "/usr/local/share/games/fluxaradrift/";
 #endif
     }
 
@@ -220,40 +220,40 @@ FileManager::FileManager()
         Log::error("FileManager",
                    "Last location checked '%s'.", root_dir.c_str());
         Log::fatal("FileManager",
-                   "Set $SUPERTUXKART_DATADIR to point to the data directory.");
+                   "Set $FLUXARA_DRIFT_DATADIR to point to the data directory.");
         // fatal will exit the application
     }
 
     addRootDirs(root_dir);
 
     std::string assets_dir;
-#ifdef MOBILE_STK
-    m_stk_assets_download_dir = getenv("HOME");
-#ifdef IOS_STK
-    m_stk_assets_download_dir += "/Library/Application Support/SuperTuxKart/stk-assets/";
+#ifdef MOBILE_FLUXARA_DRIFT
+    m_fluxara_drift_assets_download_dir = getenv("HOME");
+#ifdef IOS_FLUXARA_DRIFT
+    m_fluxara_drift_assets_download_dir += "/Library/Application Support/FluxaraDrift/fluxara_drift-assets/";
 #elif defined (ANDROID)
-    m_stk_assets_download_dir += "/stk-assets/";
+    m_fluxara_drift_assets_download_dir += "/fluxara_drift-assets/";
 #else
-#error You must set m_stk_assets_download_dir to appropriate place for your platform
+#error You must set m_fluxara_drift_assets_download_dir to appropriate place for your platform
 #endif
 
 #else
-    if (getenv("SUPERTUXKART_ASSETS_DIR") != NULL)
+    if (getenv("FLUXARA_DRIFT_ASSETS_DIR") != NULL)
     {
-        assets_dir = std::string(getenv("SUPERTUXKART_ASSETS_DIR"));
+        assets_dir = std::string(getenv("FLUXARA_DRIFT_ASSETS_DIR"));
     }
-    else if (fileExists(root_dir + "../../stk-assets"))
+    else if (fileExists(root_dir + "../../fluxara_drift-assets"))
     {
-        assets_dir = root_dir + "../../stk-assets";
+        assets_dir = root_dir + "../../fluxara_drift-assets";
     }
-    else if (fileExists(root_dir + "../../supertuxkart-assets"))
+    else if (fileExists(root_dir + "../../fluxaradrift-assets"))
     {
-        assets_dir = root_dir + "../../supertuxkart-assets";
+        assets_dir = root_dir + "../../fluxaradrift-assets";
     }
-    else if (getenv("SUPERTUXKART_ROOT_PATH") != NULL)
+    else if (getenv("FLUXARA_DRIFT_ROOT_PATH") != NULL)
     {
         //is this needed?
-        assets_dir = std::string(getenv("SUPERTUXKART_ROOT_PATH"));
+        assets_dir = std::string(getenv("FLUXARA_DRIFT_ROOT_PATH"));
     }
 #endif
     if (!assets_dir.empty() && assets_dir != root_dir)
@@ -327,14 +327,14 @@ void FileManager::discoverPaths()
     // This must be done here since otherwise translations will not be found.
     std::vector<bool> dir_found;
     dir_found.resize(ASSET_COUNT, false);
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
     assert(!m_root_dirs.empty());
     bool has_full_assets = ExtractMobileAssets::hasFullAssets();
     bool full_assets_installed =
         ExtractMobileAssets::isFullAssetsInstalled();
     for (unsigned j = ASSET_MIN; j <= BUILTIN_ASSETS; j++)
     {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
         // The standalone IPA contains only Motorica progression. Original
         // challenge, Grand Prix and replay metadata is stored separately in
         // the reviewed bundle and must only become visible in Motorica Start
@@ -350,7 +350,7 @@ void FileManager::discoverPaths()
         }
     }
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (has_full_assets)
     {
         const std::string catalog_root =
@@ -369,12 +369,12 @@ void FileManager::discoverPaths()
     }
 #endif
     // Clear previous assets version to free space
-    if (!full_assets_installed && fileExists(m_stk_assets_download_dir))
-        removeDirectory(m_stk_assets_download_dir);
+    if (!full_assets_installed && fileExists(m_fluxara_drift_assets_download_dir))
+        removeDirectory(m_fluxara_drift_assets_download_dir);
 
-    // Use stk-assets-full for karts, tracks, textures..., otherwise in data/
+    // Use fluxara_drift-assets-full for karts, tracks, textures..., otherwise in data/
     std::string assets_root = has_full_assets ?
-        m_stk_assets_download_dir : m_root_dirs[0];
+        m_fluxara_drift_assets_download_dir : m_root_dirs[0];
     for (unsigned j = LIBRARY; j <= ASSET_MAX; j++)
     {
         if (!dir_found[j] && fileExists(assets_root + m_subdir_name[j]))
@@ -456,7 +456,7 @@ void FileManager::init()
     // Clean up left-over files in addons/tmp that are older than 24h
     // ==============================================================
     // (The 24h delay is useful when debugging a problem with a zip file)
-    // We do when starting STK because for mobile STK destructor of file
+    // We do when starting FLUXARA_DRIFT because for mobile FLUXARA_DRIFT destructor of file
     // manager may never be called if only home button is pressed
     std::set<std::string> allfiles;
     std::string tmp=getAddonsFile("tmp");
@@ -485,7 +485,7 @@ void FileManager::init()
         }
         struct stat mystat;
         FileUtils::statU8Path(full_path, &mystat);
-        StkTime::TimeType current = StkTime::getTimeSinceEpoch();
+        FluxaraDriftTime::TimeType current = FluxaraDriftTime::getTimeSinceEpoch();
         if(current - mystat.st_ctime <24*3600)
         {
             if(UserConfigParams::logAddons())
@@ -518,10 +518,10 @@ void FileManager::addAssetsSearchPath()
     pushModelSearchPath  (m_subdir_name[MODEL]);
     pushMusicSearchPath  (m_subdir_name[MUSIC]);
 
-    // Add more paths from the STK_MUSIC_PATH environment variable
-    if(getenv("SUPERTUXKART_MUSIC_PATH")!=NULL)
+    // Add more paths from the FLUXARA_DRIFT_MUSIC_PATH environment variable
+    if(getenv("FLUXARA_DRIFT_MUSIC_PATH")!=NULL)
     {
-        std::string path=getenv("SUPERTUXKART_MUSIC_PATH");
+        std::string path=getenv("FLUXARA_DRIFT_MUSIC_PATH");
         std::vector<std::string> dirs = StringUtils::splitPath(path);
         for(int i=0;i<(int)dirs.size(); i++)
             pushMusicSearchPath(dirs[i]);
@@ -534,6 +534,7 @@ void FileManager::reinitAfterDownloadAssets()
     m_file_system->removeAllFileArchives();
     m_texture_search_path.clear();
     m_model_search_path.clear();
+    m_model_archive_path_exists.clear();
     m_music_search_path.clear();
     discoverPaths();
     addAssetsSearchPath();
@@ -577,7 +578,7 @@ bool FileManager::fileExists(const std::string& path) const
 #endif
 }   // fileExists
 //-----------------------------------------------------------------------------
-/** Adds paths to the list of stk root directories.
+/** Adds paths to the list of fluxara_drift root directories.
  *  \param roots A ":" separated string of directories to add.
  */
 void FileManager::addRootDirs(const std::string &roots)
@@ -664,7 +665,15 @@ io::path FileManager::createAbsoluteFilename(const std::string &f)
  */
 void FileManager::pushModelSearchPath(const std::string& path)
 {
+    const bool path_exists = fileExists(path);
     m_model_search_path.push_back(path);
+    m_model_archive_path_exists.push_back(path_exists);
+    if (!path_exists)
+    {
+        Log::warn("FileManager", "Skipping missing model search path '%s'.",
+                  path.c_str());
+        return;
+    }
     std::unique_lock<std::recursive_mutex> ul = m_file_system->acquireFileArchivesMutex();
 
     const int n=m_file_system->getFileArchiveCount();
@@ -693,7 +702,15 @@ void FileManager::pushModelSearchPath(const std::string& path)
  */
 void FileManager::pushTextureSearchPath(const std::string& path, const std::string& container_id)
 {
-    m_texture_search_path.push_back(TextureSearchPath(path, container_id));
+    const bool path_exists = fileExists(path);
+    m_texture_search_path.push_back(TextureSearchPath(path, container_id,
+                                                       path_exists));
+    if (!path_exists)
+    {
+        Log::warn("FileManager", "Skipping missing texture search path '%s'.",
+                  path.c_str());
+        return;
+    }
     std::unique_lock<std::recursive_mutex> ul = m_file_system->acquireFileArchivesMutex();
 
     const int n=m_file_system->getFileArchiveCount();
@@ -726,7 +743,8 @@ void FileManager::popTextureSearchPath()
     {
         TextureSearchPath dir = m_texture_search_path.back();
         m_texture_search_path.pop_back();
-        m_file_system->removeFileArchive(createAbsoluteFilename(dir.m_texture_search_path));
+        if (dir.m_archive_path_exists)
+            m_file_system->removeFileArchive(createAbsoluteFilename(dir.m_texture_search_path));
     }
 }   // popTextureSearchPath
 
@@ -739,7 +757,10 @@ void FileManager::popModelSearchPath()
     {
         std::string dir = m_model_search_path.back();
         m_model_search_path.pop_back();
-        m_file_system->removeFileArchive(createAbsoluteFilename(dir));
+        const bool path_exists = m_model_archive_path_exists.back();
+        m_model_archive_path_exists.pop_back();
+        if (path_exists)
+            m_file_system->removeFileArchive(createAbsoluteFilename(dir));
     }
 }   // popModelSearchPath
 
@@ -1025,10 +1046,10 @@ bool FileManager::checkAndCreateDirectoryP(const std::string &path)
  */
 void FileManager::checkAndCreateConfigDir()
 {
-    if(getenv("SUPERTUXKART_SAVEDIR") &&
-        checkAndCreateDirectory(getenv("SUPERTUXKART_SAVEDIR")) )
+    if(getenv("FLUXARA_DRIFT_SAVEDIR") &&
+        checkAndCreateDirectory(getenv("FLUXARA_DRIFT_SAVEDIR")) )
     {
-        m_user_config_dir = getenv("SUPERTUXKART_SAVEDIR");
+        m_user_config_dir = getenv("FLUXARA_DRIFT_SAVEDIR");
     }
     else
     {
@@ -1054,7 +1075,7 @@ void FileManager::checkAndCreateConfigDir()
         else
             m_user_config_dir = ".";
 
-        m_user_config_dir += "/supertuxkart";
+        m_user_config_dir += "/fluxaradrift";
 
 #elif defined(__APPLE__)
 
@@ -1071,7 +1092,7 @@ void FileManager::checkAndCreateConfigDir()
             m_user_config_dir = "";
         }
         m_user_config_dir += "/Library/Application Support/";
-        const std::string CONFIGDIR("SuperTuxKart");
+        const std::string CONFIGDIR("FluxaraDrift");
         m_user_config_dir += CONFIGDIR;
 
 #elif defined(__HAIKU__)
@@ -1086,7 +1107,7 @@ void FileManager::checkAndCreateConfigDir()
             m_user_config_dir = getenv("HOME");
             m_user_config_dir += "/config/settings";
         }
-        m_user_config_dir += "/SuperTuxKart";
+        m_user_config_dir += "/FluxaraDrift";
 
 #else
 
@@ -1119,11 +1140,11 @@ void FileManager::checkAndCreateConfigDir()
                 m_user_config_dir = getenv("HOME");
             }
         }
-        m_user_config_dir += "/supertuxkart";
+        m_user_config_dir += "/fluxaradrift";
 
 #endif
 
-    }   // if(getenv("SUPERTUXKART_SAVEDIR") && checkAndCreateDirectory(...))
+    }   // if(getenv("FLUXARA_DRIFT_SAVEDIR") && checkAndCreateDirectory(...))
 
     if(m_user_config_dir.size()>0 && *m_user_config_dir.rbegin()!='/')
         m_user_config_dir += "/";
@@ -1157,12 +1178,12 @@ void FileManager::checkAndCreateAddonsDir()
     m_addons_dir  = m_user_config_dir+"addons/";
 #elif defined(__APPLE__)
     m_addons_dir  = getenv("HOME");
-    m_addons_dir += "/Library/Application Support/SuperTuxKart/Addons/";
+    m_addons_dir += "/Library/Application Support/FluxaraDrift/Addons/";
 #elif defined(__HAIKU__)
     m_addons_dir  = m_user_config_dir+"addons/";
 #else
-    m_addons_dir = checkAndCreateLinuxDir("XDG_DATA_HOME", "supertuxkart",
-                                          ".local/share", ".stkaddons");
+    m_addons_dir = checkAndCreateLinuxDir("XDG_DATA_HOME", "fluxaradrift",
+                                          ".local/share", ".fluxara_driftaddons");
     m_addons_dir += "addons/";
 #endif
 
@@ -1196,10 +1217,10 @@ void FileManager::checkAndCreateScreenshotDir()
     m_screenshot_dir  = m_user_config_dir+"screenshots/";
 #elif defined(__APPLE__)
     m_screenshot_dir  = getenv("HOME");
-    m_screenshot_dir += "/Library/Application Support/SuperTuxKart/Screenshots/";
+    m_screenshot_dir += "/Library/Application Support/FluxaraDrift/Screenshots/";
 #else
-    m_screenshot_dir  = checkAndCreateLinuxDir("XDG_DATA_HOME", "supertuxkart",
-                                          ".local/share", ".stkscreenshots");
+    m_screenshot_dir  = checkAndCreateLinuxDir("XDG_DATA_HOME", "fluxaradrift",
+                                          ".local/share", ".fluxara_driftscreenshots");
     m_screenshot_dir += "screenshots/";
 #endif
 
@@ -1222,10 +1243,10 @@ void FileManager::checkAndCreateReplayDir()
     m_replay_dir = m_user_config_dir + "replay/";
 #elif defined(__APPLE__)
     m_replay_dir  = getenv("HOME");
-    m_replay_dir += "/Library/Application Support/SuperTuxKart/replay/";
+    m_replay_dir += "/Library/Application Support/FluxaraDrift/replay/";
 #else
-    m_replay_dir = checkAndCreateLinuxDir("XDG_DATA_HOME", "supertuxkart",
-                                          ".local/share", ".supertuxkart");
+    m_replay_dir = checkAndCreateLinuxDir("XDG_DATA_HOME", "fluxaradrift",
+                                          ".local/share", ".fluxaradrift");
     m_replay_dir += "replay/";
 #endif
 
@@ -1248,9 +1269,9 @@ void FileManager::checkAndCreateCachedTexturesDir()
     m_cached_textures_dir = m_user_config_dir + "cached-textures/";
 #elif defined(__APPLE__)
     m_cached_textures_dir = getenv("HOME");
-    m_cached_textures_dir += "/Library/Application Support/SuperTuxKart/CachedTextures/";
+    m_cached_textures_dir += "/Library/Application Support/FluxaraDrift/CachedTextures/";
 #else
-    m_cached_textures_dir = checkAndCreateLinuxDir("XDG_CACHE_HOME", "supertuxkart", ".cache/", ".");
+    m_cached_textures_dir = checkAndCreateLinuxDir("XDG_CACHE_HOME", "fluxaradrift", ".cache/", ".");
     m_cached_textures_dir += "cached-textures/";
 #endif
 
@@ -1273,10 +1294,10 @@ void FileManager::checkAndCreateGPDir()
     m_gp_dir = m_user_config_dir + "grandprix/";
 #elif defined(__APPLE__)
     m_gp_dir  = getenv("HOME");
-    m_gp_dir += "/Library/Application Support/SuperTuxKart/grandprix/";
+    m_gp_dir += "/Library/Application Support/FluxaraDrift/grandprix/";
 #else
-    m_gp_dir = checkAndCreateLinuxDir("XDG_DATA_HOME", "supertuxkart",
-                                          ".local/share", ".supertuxkart");
+    m_gp_dir = checkAndCreateLinuxDir("XDG_DATA_HOME", "fluxaradrift",
+                                          ".local/share", ".fluxaradrift");
     m_gp_dir += "grandprix/";
 #endif
 
@@ -1470,7 +1491,7 @@ std::string FileManager::searchMusic(const std::string& file_name) const
     if(!success)
     {
         // If a music file is not found in any of the music search paths
-        // check all root dirs. This is used by stk_config to load the
+        // check all root dirs. This is used by fluxara_drift_config to load the
         // title music before any music search path is defined)
         path = getAsset(MUSIC, file_name);
         success = fileExists(path);
@@ -1614,9 +1635,9 @@ bool FileManager::removeDirectory(const std::string &name) const
             // used to remove addons), and it limits the damage in case
             // of any bugs - i.e. if name should be "/" or so.
             // We need to remove whole data directory on Android though, i.e.
-            // when we install newer STK version and new assets are extracted.
+            // when we install newer FLUXARA_DRIFT version and new assets are extracted.
             // So enable it only for Android for now.
-            #ifdef MOBILE_STK
+            #ifdef MOBILE_FLUXARA_DRIFT
             removeDirectory(file);
             #else
             if (file.find(m_addons_dir) != std::string::npos)

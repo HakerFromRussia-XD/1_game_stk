@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2004-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2004-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -37,8 +37,8 @@
 #include "network/protocols/game_events_protocol.hpp"
 #include "network/protocols/server_lobby.hpp"
 #include "network/server_config.hpp"
-#include "network/stk_host.hpp"
-#include "network/stk_peer.hpp"
+#include "network/fluxara_drift_host.hpp"
+#include "network/fluxara_drift_peer.hpp"
 #include "race/history.hpp"
 #include "states_screens/race_gui_base.hpp"
 #include "tracks/check_manager.hpp"
@@ -199,7 +199,7 @@ void LinearWorld::update(int ticks)
     if (getPhase() == RACE_PHASE &&
         m_finish_timeout != std::numeric_limits<float>::max())
     {
-        m_finish_timeout -= stk_config->ticks2Time(ticks);
+        m_finish_timeout -= fluxara_drift_config->ticks2Time(ticks);
         if (m_finish_timeout < 0.0f)
         {
             endRaceEarly();
@@ -236,7 +236,7 @@ void LinearWorld::update(int ticks)
     }
     // If one player and a ghost, or two compared ghosts,
     // compute the live time difference
-    if(RaceManager::get()->hasGhostKarts() && RaceManager::get()->getNumberOfKarts() == 2)
+    if(RaceManager::get()->hasGhofluxara_driftarts() && RaceManager::get()->getNumberOfKarts() == 2)
         updateLiveDifference();
 
 #ifdef DEBUG
@@ -287,7 +287,7 @@ void LinearWorld::updateTrackSectors()
         if ((!getTrackSector(n)->isOnRoad() &&
             (!kart->getMaterial() ||
               kart->getMaterial()->isDriveReset()))  &&
-             !kart->isGhostKart())
+             !kart->isGhofluxara_driftart())
             continue;
         getTrackSector(n)->update(kart->getFrontXYZ());
         kart_info.m_overall_distance = kart_info.m_finished_laps
@@ -337,7 +337,7 @@ void LinearWorld::updateGraphics(float dt)
 void LinearWorld::updateLiveDifference()
 {
     // First check that the call requirements are verified
-    assert (RaceManager::get()->hasGhostKarts() && RaceManager::get()->getNumberOfKarts() >= 2);
+    assert (RaceManager::get()->hasGhofluxara_driftarts() && RaceManager::get()->getNumberOfKarts() >= 2);
 
     AbstractKart* ghost_kart = getKart(0);
 
@@ -352,7 +352,7 @@ void LinearWorld::updateLiveDifference()
     // we can't simply multiply the time by -1, as they are assymetrical.
     // When one kart don't increase its distance (rescue, etc),
     // the difference increases linearly for one and jump for the other.
-    if (getKart(1)->isGhostKart())
+    if (getKart(1)->isGhofluxara_driftart())
     {
         ghost_kart = getKart(1);
         second_kart_distance = getOverallDistance(0);
@@ -486,9 +486,9 @@ void LinearWorld::newLap(unsigned int kart_index)
     // This way, even with poor framerate, we get a time significant to the ms
     if(kart_info.m_finished_laps >= RaceManager::get()->getNumLaps() && raceHasLaps())
     {
-        if (kart->isGhostKart())
+        if (kart->isGhofluxara_driftart())
         {
-            GhostKart* gk = dynamic_cast<GhostKart*>(kart);
+            Ghofluxara_driftart* gk = dynamic_cast<Ghofluxara_driftart*>(kart);
             // Old replays don't store distance, so don't use the ghost method
             // Ghosts also don't store the previous positions, so the method
             // for normal karts can't be used.
@@ -529,7 +529,7 @@ void LinearWorld::newLap(unsigned int kart_index)
     {
         // To avoid negative times in countdown mode
         if (getClockMode() == CLOCK_COUNTDOWN)
-            ticks_per_lap = stk_config->time2Ticks(RaceManager::get()->getTimeTarget()) - getTimeTicks();
+            ticks_per_lap = fluxara_drift_config->time2Ticks(RaceManager::get()->getTimeTarget()) - getTimeTicks();
         else
             ticks_per_lap = getTimeTicks();
     }
@@ -665,7 +665,7 @@ void LinearWorld::getKartsDisplayInfo(
         // Don't compare times when crossing the start line first
         if(laps_of_leader>0                                                &&
            (getTimeTicks() - getTicksAtLapForKart(kart->getWorldKartId())  <
-            stk_config->time2Ticks(8)                                      ||
+            fluxara_drift_config->time2Ticks(8)                                      ||
             rank_info.lap != laps_of_leader)                               &&
             raceHasLaps())
         {  // Display for 5 seconds
@@ -759,9 +759,9 @@ float LinearWorld::estimateFinishTimeForKart(AbstractKart* kart)
                         * Track::getCurrentTrack()->getTrackLength();
 
     // For ghost karts, use the replay data rather than estimating
-    if (kart->isGhostKart())
+    if (kart->isGhofluxara_driftart())
     {
-        GhostKart* gk = dynamic_cast<GhostKart*>(kart);
+        Ghofluxara_driftart* gk = dynamic_cast<Ghofluxara_driftart*>(kart);
         // Old replays don't store distance, so don't use the ghost method
         // They'll return a negative time here
         if (gk->getGhostFinishTime() > 0.0f)
@@ -1156,7 +1156,7 @@ void LinearWorld::KartInfo::restoreCompleteState(const BareNetworkString& b)
 }   // restoreCompleteState
 
 // ----------------------------------------------------------------------------
-void LinearWorld::saveCompleteState(BareNetworkString* bns, STKPeer* peer)
+void LinearWorld::saveCompleteState(BareNetworkString* bns, FLUXARA_DRIFTPeer* peer)
 {
     bns->addUInt32(m_fastest_lap_ticks);
     bns->addFloat(m_distance_increase);
@@ -1244,7 +1244,7 @@ void LinearWorld::updateCheckLinesServer(int check_id, int kart_id)
     for (unsigned i = 0; i < cc; i++)
         cm->getCheckStructure(i)->saveIsActive(kart_id, &cl);
 
-    STKHost::get()->sendPacketToAllPeers(&cl, true);
+    FLUXARA_DRIFTHost::get()->sendPacketToAllPeers(&cl, true);
 }   // updateCheckLinesServer
 
 // ----------------------------------------------------------------------------

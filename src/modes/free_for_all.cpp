@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -21,7 +21,7 @@
 #include "network/network_config.hpp"
 #include "network/network_string.hpp"
 #include "network/protocols/game_events_protocol.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "tracks/track.hpp"
 #include "utils/string_utils.hpp"
 
@@ -130,7 +130,7 @@ void FreeForAll::handleScoreInServer(int kart_id, int hitter)
             p.addUInt8((uint8_t)kart_id).addUInt16((int16_t)new_score);
         else
             p.addUInt8((uint8_t)hitter).addUInt16((int16_t)new_score);
-        STKHost::get()->sendPacketToAllPeers(&p, true);
+        FLUXARA_DRIFTHost::get()->sendPacketToAllPeers(&p, true);
     }
 }   // handleScoreInServer
 
@@ -295,7 +295,7 @@ bool FreeForAll::getKartFFAResult(int kart_id) const
 }   // getKartFFAResult
 
 // ----------------------------------------------------------------------------
-void FreeForAll::saveCompleteState(BareNetworkString* bns, STKPeer* peer)
+void FreeForAll::saveCompleteState(BareNetworkString* bns, FLUXARA_DRIFTPeer* peer)
 {
     for (unsigned i = 0; i < m_scores.size(); i++)
         bns->addUInt32(m_scores[i]);

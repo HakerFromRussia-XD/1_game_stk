@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -42,7 +42,7 @@ namespace irr
 {
     namespace gui
     {
-        class STKModifiedSpriteBank;
+        class FLUXARA_DRIFTModifiedSpriteBank;
     }
 }
 
@@ -68,7 +68,7 @@ private:
     *  (going backwards). */
     GUIEngine::ProgressBarWidget *m_timer;
 
-    irr::gui::STKModifiedSpriteBank* m_track_icons;
+    irr::gui::FLUXARA_DRIFTModifiedSpriteBank* m_track_icons;
 
     bool m_network_tracks, m_quit_server;
 
@@ -88,7 +88,7 @@ private:
 
     void voteForPlayer();
 
-    TracksScreen() : Screen("tracks.stkgui")
+    TracksScreen() : Screen("tracks.fluxara_driftgui")
     {
         m_network_tracks = false;
         m_quit_server = false;

@@ -1,7 +1,7 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2006-2016 SuperTuxKart-Team
-//  Modeled after Supertux's configfile.cpp
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2006-2016 FluxaraDrift-Team
+//  Modeled after FluxaraDrift's configfile.cpp
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -32,7 +32,7 @@ static std::vector<UserConfigParam*> all_params;
 #include "config/user_config.hpp"
 
 #include "config/saved_grand_prix.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "guiengine/engine.hpp"
 #include "io/file_manager.hpp"
 #include "io/utf_writer.hpp"
@@ -376,7 +376,7 @@ void IntUserConfigParam::findYourDataInAnAttributeOf(const XMLNode* node)
 }   // findYourDataInAnAttributeOf
 
 // ============================================================================
-TimeUserConfigParam::TimeUserConfigParam(StkTime::TimeType default_value,
+TimeUserConfigParam::TimeUserConfigParam(FluxaraDriftTime::TimeType default_value,
                                          const char* param_name,
                                          const char* comment)
 {
@@ -388,7 +388,7 @@ TimeUserConfigParam::TimeUserConfigParam(StkTime::TimeType default_value,
 }   // TimeUserConfigParam
 
 // ----------------------------------------------------------------------------
-TimeUserConfigParam::TimeUserConfigParam(StkTime::TimeType default_value,
+TimeUserConfigParam::TimeUserConfigParam(FluxaraDriftTime::TimeType default_value,
                                          const char* param_name,
                                          GroupUserConfigParam* group,
                                          const char* comment)
@@ -670,11 +670,11 @@ bool UserConfig::loadConfig()
 {
     const std::string filename = file_manager->getUserConfigFile(m_filename);
     auto root = std::unique_ptr<XMLNode>(file_manager->createXMLTree(filename));
-    if(!root || root->getName() != "stkconfig")
+    if(!root || root->getName() != "fluxara_driftconfig")
     {
         Log::info("UserConfig",
                    "Could not read user config file '%s'.  A new file will be created.", filename.c_str());
-        // Create a default config file - just in case that stk crashes later
+        // Create a default config file - just in case that fluxara_drift crashes later
         // there is a config file that can be modified (to e.g. disable
         // shaders)
         saveConfig();
@@ -731,13 +731,13 @@ void UserConfig::saveConfig()
     const std::string filename = file_manager->getUserConfigFile(m_filename);
     std::stringstream ss;
     ss << "<?xml version=\"1.0\"?>\n";
-    ss << "<stkconfig version=\"" << m_current_config_version
+    ss << "<fluxara_driftconfig version=\"" << m_current_config_version
         << "\" >\n\n";
     for (unsigned i = 0; i < all_params.size(); i++)
     {
         all_params[i]->write(ss);
     }
-    ss << "</stkconfig>\n";
+    ss << "</fluxara_driftconfig>\n";
 
     try
     {

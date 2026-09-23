@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -62,7 +62,7 @@ private:
     // Using the UID guarantees exact matchess
     uint64_t                   m_replay_to_compare_uid;
 
-    irr::gui::STKModifiedSpriteBank *m_icon_bank;
+    irr::gui::FLUXARA_DRIFTModifiedSpriteBank *m_icon_bank;
 
     /** Icon for unknown karts */
     int                        m_icon_unknown_kart;
@@ -72,7 +72,7 @@ private:
     void defaultSort();
 
 public:
-    irr::gui::STKModifiedSpriteBank* getIconBank() { return m_icon_bank; }
+    irr::gui::FLUXARA_DRIFTModifiedSpriteBank* getIconBank() { return m_icon_bank; }
 
     int  getUnknownKartIcon() { return m_icon_unknown_kart; }
 

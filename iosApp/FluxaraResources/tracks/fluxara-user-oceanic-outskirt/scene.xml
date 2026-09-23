@@ -2,7 +2,7 @@
 <!-- Generated with script from SVN rev 17016 -->
 <scene>
   <track model="oceanic-outskirt_track.spm" x="0" y="0" z="0"/>
-  <object id="stklib_oldCarhitbox" type="animation" xyz="-5.84 0.00 382.30" hpr="-0.0 -180.0 0.0" scale="1.00 1.00 1.00" interaction="explode" shape="box" model="box.spm" explode="y" skeletal-animation="false">
+  <object id="fluxara_driftlib_oldCarhitbox" type="animation" xyz="-5.84 0.00 382.30" hpr="-0.0 -180.0 0.0" scale="1.00 1.00 1.00" interaction="explode" shape="box" model="box.spm" explode="y" skeletal-animation="false">
     <curve channel="LocX" interpolation="bezier" extend="cyclic">
       <p c="1.000 -5.837" h1="-10.322 -5.837" h2="12.322 -5.837"/>
       <p c="30.000 -5.837" h1="18.678 -5.837" h2="41.712 -5.837"/>
@@ -185,7 +185,7 @@
     </curve>
   </object>
   <sun  fog="true" fog-color="85 85 85" fog-max="0.30000001192092896" fog-start="50.00" fog-end="300.00" xyz="24.70 372.74 181.00" sun-specular="149 121 93" sun-diffuse="185 126 28" ambient="111 111 111"/>
-  <sky-box texture="blue_sky_top.jpg stk_generic_sand_b.png blue_sky_east.jpg blue_sky_west.jpg blue_sky_south.jpg blue_sky_north.jpg" sh-texture="blue_sky_top.jpg blue_sky_top.jpg blue_sky_ibl.jpg blue_sky_ibl.jpg blue_sky_ibl.jpg blue_sky_ibl.jpg"/>
+  <sky-box texture="blue_sky_top.jpg fluxara_drift_generic_sand_b.png blue_sky_east.jpg blue_sky_west.jpg blue_sky_south.jpg blue_sky_north.jpg" sh-texture="blue_sky_top.jpg blue_sky_top.jpg blue_sky_ibl.jpg blue_sky_ibl.jpg blue_sky_ibl.jpg blue_sky_ibl.jpg"/>
   <camera far="1000.0"/>
   <item id="Empty.000" x="-216.54" y="11.93" z="431.42" />
   <item id="Empty.001" x="-5.64" y="13.06" z="361.45" />
@@ -237,75 +237,75 @@
   <start x="-146.46" y="0.90" z="536.30" h="-180.00"/>
   <start x="-4.62" y="0.90" z="536.30" h="-180.00"/>
   <start x="-75.25" y="0.90" z="464.89" h="-90.00"/>
-  <library name="stklib_bench_a" id="stklib_bench_a_main_proxy" xyz="132.09 0.21 232.27" hpr="0.0 174.5 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_bench_a" id="fluxara_driftlib_bench_a_main_proxy" xyz="132.09 0.21 232.27" hpr="0.0 174.5 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_bench_a" id="stklib_bench_a_main_proxy.001" xyz="139.79 0.21 237.79" hpr="0.0 125.6 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_bench_a" id="fluxara_driftlib_bench_a_main_proxy.001" xyz="139.79 0.21 237.79" hpr="0.0 125.6 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy" xyz="24.47 1.19 274.77" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy" xyz="24.47 1.19 274.77" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.001" xyz="1.10 1.19 281.44" hpr="0.0 92.8 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.001" xyz="1.10 1.19 281.44" hpr="0.0 92.8 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.002" xyz="-17.17 1.19 310.31" hpr="0.0 -74.2 -0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.002" xyz="-17.17 1.19 310.31" hpr="0.0 -74.2 -0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.003" xyz="50.00 1.19 314.04" hpr="0.0 175.6 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.003" xyz="50.00 1.19 314.04" hpr="0.0 175.6 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.004" xyz="72.19 1.19 318.17" hpr="0.0 -70.1 -0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.004" xyz="72.19 1.19 318.17" hpr="0.0 -70.1 -0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.005" xyz="153.26 1.19 259.96" hpr="0.0 -15.4 -0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.005" xyz="153.26 1.19 259.96" hpr="0.0 -15.4 -0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.006" xyz="155.15 1.19 241.81" hpr="0.0 -49.1 -0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.006" xyz="155.15 1.19 241.81" hpr="0.0 -49.1 -0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.007" xyz="149.25 1.19 224.37" hpr="-0.0 -156.9 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.007" xyz="149.25 1.19 224.37" hpr="-0.0 -156.9 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.008" xyz="129.69 1.19 218.72" hpr="0.0 138.7 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.008" xyz="129.69 1.19 218.72" hpr="0.0 138.7 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.009" xyz="155.71 3.32 334.95" hpr="0.0 138.7 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.009" xyz="155.71 3.32 334.95" hpr="0.0 138.7 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.010" xyz="197.62 9.02 311.40" hpr="0.0 138.7 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.010" xyz="197.62 9.02 311.40" hpr="0.0 138.7 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.011" xyz="208.82 8.56 268.98" hpr="0.0 -1.4 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.011" xyz="208.82 8.56 268.98" hpr="0.0 -1.4 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.012" xyz="198.64 9.36 222.31" hpr="0.0 -1.4 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.012" xyz="198.64 9.36 222.31" hpr="0.0 -1.4 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.013" xyz="172.57 9.44 185.66" hpr="0.0 -41.9 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.013" xyz="172.57 9.44 185.66" hpr="0.0 -41.9 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.014" xyz="149.66 9.44 168.48" hpr="0.0 -82.5 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.014" xyz="149.66 9.44 168.48" hpr="0.0 -82.5 0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.015" xyz="120.20 9.44 160.43" hpr="-0.0 -170.6 -0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.015" xyz="120.20 9.44 160.43" hpr="-0.0 -170.6 -0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.016" xyz="72.36 9.44 163.96" hpr="-0.0 111.7 -0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.016" xyz="72.36 9.44 163.96" hpr="-0.0 111.7 -0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.017" xyz="38.32 9.44 188.35" hpr="0.0 -57.5 -0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.017" xyz="38.32 9.44 188.35" hpr="0.0 -57.5 -0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.018" xyz="21.04 7.53 219.97" hpr="-0.0 127.6 -0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.018" xyz="21.04 7.53 219.97" hpr="-0.0 127.6 -0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.019" xyz="81.37 0.08 260.74" hpr="-0.0 127.6 -0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.019" xyz="81.37 0.08 260.74" hpr="-0.0 127.6 -0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.020" xyz="92.12 0.08 322.95" hpr="-0.0 127.6 -0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.020" xyz="92.12 0.08 322.95" hpr="-0.0 127.6 -0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.021" xyz="58.65 6.01 230.81" hpr="-0.0 127.6 -0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.021" xyz="58.65 6.01 230.81" hpr="-0.0 127.6 -0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.022" xyz="19.37 1.31 249.22" hpr="-0.0 127.6 -0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.022" xyz="19.37 1.31 249.22" hpr="-0.0 127.6 -0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_cypress_a" id="stklib_cypress_a_main_proxy.023" xyz="-9.10 4.85 247.45" hpr="-0.0 127.6 -0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_cypress_a" id="fluxara_driftlib_cypress_a_main_proxy.023" xyz="-9.10 4.85 247.45" hpr="-0.0 127.6 -0.0" scale="1.00 1.00 1.00">
   </library>
-  <library name="stklib_modernHousing_a" id="stklib_modernHousing_a_main_proxy" xyz="-40.49 2.00 395.91" hpr="0.0 -0.0 0.0" scale="0.60 0.60 0.60">
+  <library name="fluxara_driftlib_modernHousing_a" id="fluxara_driftlib_modernHousing_a_main_proxy" xyz="-40.49 2.00 395.91" hpr="0.0 -0.0 0.0" scale="0.60 0.60 0.60">
   </library>
-  <library name="stklib_modernHousing_a" id="stklib_modernHousing_a_main_proxy.001" xyz="-40.49 2.00 536.53" hpr="0.0 -0.0 0.0" scale="0.60 0.60 0.60">
+  <library name="fluxara_driftlib_modernHousing_a" id="fluxara_driftlib_modernHousing_a_main_proxy.001" xyz="-40.49 2.00 536.53" hpr="0.0 -0.0 0.0" scale="0.60 0.60 0.60">
   </library>
-  <library name="stklib_modernHousing_a" id="stklib_modernHousing_a_main_proxy.002" xyz="-181.12 2.00 536.53" hpr="0.0 -0.0 0.0" scale="0.60 0.60 0.60">
+  <library name="fluxara_driftlib_modernHousing_a" id="fluxara_driftlib_modernHousing_a_main_proxy.002" xyz="-181.12 2.00 536.53" hpr="0.0 -0.0 0.0" scale="0.60 0.60 0.60">
   </library>
-  <library name="stklib_modernHousing_a" id="stklib_modernHousing_a_main_proxy.003" xyz="-181.12 2.00 395.91" hpr="0.0 -0.0 0.0" scale="0.60 0.60 0.60">
+  <library name="fluxara_driftlib_modernHousing_a" id="fluxara_driftlib_modernHousing_a_main_proxy.003" xyz="-181.12 2.00 395.91" hpr="0.0 -0.0 0.0" scale="0.60 0.60 0.60">
   </library>
-  <library name="stklib_modernHousing_b" id="stklib_modernHousing_b_proxy" xyz="-40.49 2.00 455.22" hpr="0.0 -0.0 0.0" scale="0.30 0.30 0.30">
+  <library name="fluxara_driftlib_modernHousing_b" id="fluxara_driftlib_modernHousing_b_proxy" xyz="-40.49 2.00 455.22" hpr="0.0 -0.0 0.0" scale="0.30 0.30 0.30">
   </library>
-  <library name="stklib_modernHousing_b" id="stklib_modernHousing_b_proxy.001" xyz="-99.81 2.00 536.53" hpr="-0.0 -90.0 0.0" scale="0.30 0.30 0.30">
+  <library name="fluxara_driftlib_modernHousing_b" id="fluxara_driftlib_modernHousing_b_proxy.001" xyz="-99.81 2.00 536.53" hpr="-0.0 -90.0 0.0" scale="0.30 0.30 0.30">
   </library>
-  <library name="stklib_modernHousing_b" id="stklib_modernHousing_b_proxy.002" xyz="-181.12 2.00 477.22" hpr="-0.0 180.0 -0.0" scale="0.30 0.30 0.30">
+  <library name="fluxara_driftlib_modernHousing_b" id="fluxara_driftlib_modernHousing_b_proxy.002" xyz="-181.12 2.00 477.22" hpr="-0.0 180.0 -0.0" scale="0.30 0.30 0.30">
   </library>
-  <library name="stklib_modernHousing_b" id="stklib_modernHousing_b_proxy.003" xyz="-121.81 2.00 395.91" hpr="-0.0 90.0 0.0" scale="0.30 0.30 0.30">
+  <library name="fluxara_driftlib_modernHousing_b" id="fluxara_driftlib_modernHousing_b_proxy.003" xyz="-121.81 2.00 395.91" hpr="-0.0 90.0 0.0" scale="0.30 0.30 0.30">
   </library>
-  <library name="stklib_oldCar_a" id="stklib_oldCar_a_main_proxy" xyz="-5.84 0.00 382.30" hpr="-0.0 -180.0 0.0" scale="1.00 1.00 1.00">
+  <library name="fluxara_driftlib_oldCar_a" id="fluxara_driftlib_oldCar_a_main_proxy" xyz="-5.84 0.00 382.30" hpr="-0.0 -180.0 0.0" scale="1.00 1.00 1.00">
     <curve channel="LocX" interpolation="bezier" extend="cyclic">
       <p c="1.000 -5.837" h1="-10.322 -5.837" h2="12.322 -5.837"/>
       <p c="30.000 -5.837" h1="18.678 -5.837" h2="41.712 -5.837"/>
@@ -487,16 +487,16 @@
       <p c="960.000 180.479" h1="948.288 180.479" h2="971.712 180.479"/>
     </curve>
   </library>
-  <library name="stklib_silvianHouse_a" id="stklib_silvianHouse_a_main_proxy" xyz="116.86 0.80 317.67" hpr="0.0 110.2 0.0" scale="1.01 1.01 1.01">
+  <library name="fluxara_driftlib_silvianHouse_a" id="fluxara_driftlib_silvianHouse_a_main_proxy" xyz="116.86 0.80 317.67" hpr="0.0 110.2 0.0" scale="1.01 1.01 1.01">
   </library>
-  <library name="stklib_silvianHouse_a" id="stklib_silvianHouse_a_main_proxy.001" xyz="104.97 0.80 222.48" hpr="-0.0 -109.2 0.0" scale="1.01 1.01 1.01">
+  <library name="fluxara_driftlib_silvianHouse_a" id="fluxara_driftlib_silvianHouse_a_main_proxy.001" xyz="104.97 0.80 222.48" hpr="-0.0 -109.2 0.0" scale="1.01 1.01 1.01">
   </library>
-  <library name="stklib_silvianHouse_b" id="stklib_silvianHouse_b_main_proxy" xyz="108.87 -0.55 265.39" hpr="0.0 -0.0 0.0" scale="1.01 1.01 1.01">
+  <library name="fluxara_driftlib_silvianHouse_b" id="fluxara_driftlib_silvianHouse_b_main_proxy" xyz="108.87 -0.55 265.39" hpr="0.0 -0.0 0.0" scale="1.01 1.01 1.01">
   </library>
-  <library name="stklib_silvianHouse_b" id="stklib_silvianHouse_b_main_proxy.001" xyz="23.89 -0.56 304.60" hpr="-0.0 -162.2 -0.0" scale="1.01 1.01 1.01">
+  <library name="fluxara_driftlib_silvianHouse_b" id="fluxara_driftlib_silvianHouse_b_main_proxy.001" xyz="23.89 -0.56 304.60" hpr="-0.0 -162.2 -0.0" scale="1.01 1.01 1.01">
   </library>
-  <library name="stklib_silvianHouse_c" id="stklib_silvianHouse_c_main_proxy" xyz="70.27 -0.40 283.81" hpr="0.0 144.8 0.0" scale="1.01 1.01 1.01">
+  <library name="fluxara_driftlib_silvianHouse_c" id="fluxara_driftlib_silvianHouse_c_main_proxy" xyz="70.27 -0.40 283.81" hpr="0.0 144.8 0.0" scale="1.01 1.01 1.01">
   </library>
-  <library name="stklib_silvianHouse_c" id="stklib_silvianHouse_c_main_proxy.001" xyz="148.76 -0.40 301.55" hpr="0.0 110.4 0.0" scale="1.01 1.01 1.01">
+  <library name="fluxara_driftlib_silvianHouse_c" id="fluxara_driftlib_silvianHouse_c_main_proxy.001" xyz="148.76 -0.40 301.55" hpr="0.0 110.4 0.0" scale="1.01 1.01 1.01">
   </library>
 </scene>

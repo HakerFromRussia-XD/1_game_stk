@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2014-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2014-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -57,7 +57,7 @@ namespace
 MultitouchSettingsDialog::MultitouchSettingsDialog(const float w, const float h)
         : ModalDialog(w, h)
 {
-    loadFromFile("android/multitouch_settings.stkgui");
+    loadFromFile("android/multitouch_settings.fluxara_driftgui");
 }
 
 // -----------------------------------------------------------------------------
@@ -200,7 +200,7 @@ GUIEngine::EventPropagation MultitouchSettingsDialog::processEvent(
     
         if (StateManager::get()->getGameState() != GUIEngine::INGAME_MENU)
         {
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
             UserConfigParams::m_multitouch_draw_gui = true;
 #else
             UserConfigParams::m_multitouch_draw_gui.revertToDefaults();

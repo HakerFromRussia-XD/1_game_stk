@@ -429,7 +429,7 @@ void			btDbvt::clear()
 	btAlignedFree(m_free);
 	m_free=0;
 	m_lkhd		=	-1;
-	m_stkStack.clear();
+	m_fluxara_driftStack.clear();
 	m_opath		=	0;
 	
 }
@@ -590,12 +590,12 @@ void			btDbvt::clone(btDbvt& dest,IClone* iclone) const
 	dest.clear();
 	if(m_root!=0)
 	{	
-		btAlignedObjectArray<sStkCLN>	stack;
+		btAlignedObjectArray<sFluxaraDriftCLN>	stack;
 		stack.reserve(m_leaves);
-		stack.push_back(sStkCLN(m_root,0));
+		stack.push_back(sFluxaraDriftCLN(m_root,0));
 		do	{
 			const int		i=stack.size()-1;
-			const sStkCLN	e=stack[i];
+			const sFluxaraDriftCLN	e=stack[i];
 			btDbvtNode*			n=createnode(&dest,e.parent,e.node->volume,e.node->data);
 			stack.pop_back();
 			if(e.parent!=0)
@@ -604,8 +604,8 @@ void			btDbvt::clone(btDbvt& dest,IClone* iclone) const
 				dest.m_root=n;
 			if(e.node->isinternal())
 			{
-				stack.push_back(sStkCLN(e.node->childs[0],n));
-				stack.push_back(sStkCLN(e.node->childs[1],n));
+				stack.push_back(sFluxaraDriftCLN(e.node->childs[0],n));
+				stack.push_back(sFluxaraDriftCLN(e.node->childs[1],n));
 			}
 			else
 			{

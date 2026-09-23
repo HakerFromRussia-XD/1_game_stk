@@ -51,7 +51,7 @@
 
 //! Uncomment this line to compile with the SDL device
 //#define _IRR_COMPILE_WITH_SDL_DEVICE_
-// Always use SDL2 in STK unless server only compilation
+// Always use SDL2 in FLUXARA_DRIFT unless server only compilation
 #if defined(NO_IRR_COMPILE_WITH_SDL_DEVICE_)
 #undef _IRR_COMPILE_WITH_SDL_DEVICE_
 #else

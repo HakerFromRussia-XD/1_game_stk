@@ -2043,7 +2043,7 @@ vn_GetPhysicalDeviceProperties2(VkPhysicalDevice physicalDevice,
    vk_common_GetPhysicalDeviceProperties2(physicalDevice, pProperties);
 
    /* Properly fill maint7 layered api properties. */
-   VkPhysicalDeviceLayeredApiPropertiesListKHR *layered_props_list =
+   VkPhysicalDeviceLayeredApiPropertiesLifluxara_driftHR *layered_props_list =
       vk_find_struct(pProperties->pNext,
                      PHYSICAL_DEVICE_LAYERED_API_PROPERTIES_LIST_KHR);
    if (!layered_props_list)

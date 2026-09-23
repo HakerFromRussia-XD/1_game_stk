@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -43,7 +43,7 @@ std::atomic_bool RewindManager::m_enable_rewind_manager(false);
 /** Creates the singleton. */
 RewindManager *RewindManager::create()
 {
-    ProcessType pt = STKProcess::getType();
+    ProcessType pt = FLUXARA_DRIFTProcess::getType();
     assert(!m_rewind_manager[pt]);
     m_rewind_manager[pt] = new RewindManager();
     return m_rewind_manager[pt];
@@ -53,7 +53,7 @@ RewindManager *RewindManager::create()
 /** Destroys the singleton. */
 void RewindManager::destroy()
 {
-    ProcessType pt = STKProcess::getType();
+    ProcessType pt = FLUXARA_DRIFTProcess::getType();
     assert(m_rewind_manager[pt]);
     delete m_rewind_manager[pt];
     m_rewind_manager[pt] = NULL;
@@ -87,7 +87,7 @@ void RewindManager::reset()
     m_is_rewinding = false;
     m_not_rewound_ticks.store(0);
     m_overall_state_size = 0;
-    m_state_frequency = stk_config->getPhysicsFPS() /
+    m_state_frequency = fluxara_drift_config->getPhysicsFPS() /
         NetworkConfig::get()->getStateFrequency();
 
     if (!m_enable_rewind_manager) return;
@@ -389,7 +389,7 @@ void RewindManager::rewindTo(int rewind_ticks, int now_ticks,
             world->updateWorld(1);
 #undef SHOW_ROLLBACK
 #ifdef SHOW_ROLLBACK
-        irr_driver->update(stk_config->ticks2Time(1));
+        irr_driver->update(fluxara_drift_config->ticks2Time(1));
 #endif
         world->updateTime(1);
 

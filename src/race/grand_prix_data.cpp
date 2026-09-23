@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015  Ingo Ruhnke <grumbel@gmx.de>
 //  Copyright (C) 2006-2015  Joerg Henrichs
 //
@@ -267,12 +267,12 @@ void GrandPrixData::reload()
     {
         Log::error("GrandPrixData",
                    "Error while trying to read xml Grand Prix from file '%s'. "
-                   "Is the file readable for supertuxkart?",
+                   "Is the file readable for fluxaradrift?",
                    m_filename.c_str());
         throw std::runtime_error("File couldn't be read");
     }
 
-    if (root->getName() != "supertuxkart_grand_prix")
+    if (root->getName() != "fluxaradrift_grand_prix")
     {
         Log::error("GrandPrixData",
                    "Error while trying to read Grand Prix file '%s': "
@@ -375,7 +375,7 @@ bool GrandPrixData::writeToFile()
         UTFWriter file(m_filename.c_str(), false);
         if (file.is_open())
         {
-            file << "\n<supertuxkart_grand_prix name=\"" << StringUtils::xmlEncode(m_name)
+            file << "\n<fluxaradrift_grand_prix name=\"" << StringUtils::xmlEncode(m_name)
                  << "\">\n\n";
             for (unsigned int i = 0; i < m_tracks.size(); i++)
             {
@@ -385,7 +385,7 @@ bool GrandPrixData::writeToFile()
                     "\" reverse=\""  << (m_reversed[i] ? L"true" : L"false")
                                       <<  "\" />\n";
             }
-            file << "\n</supertuxkart_grand_prix>\n";
+            file << "\n</fluxaradrift_grand_prix>\n";
 
             file.close();
 

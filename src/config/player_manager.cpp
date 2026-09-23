@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2012-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -103,11 +103,11 @@ void PlayerManager::resumeSavedSession()
 /** Sends a message to the server that the client has been closed, if a
  *  user is signed in.
  */
-void PlayerManager::onSTKQuit()
+void PlayerManager::onFLUXARA_DRIFTQuit()
 {
     if (getCurrentPlayer() && getCurrentPlayer()->isLoggedIn())
         getCurrentPlayer()->requestSignOut();
-}   // onSTKQuit
+}   // onFLUXARA_DRIFTQuit
 
 // ----------------------------------------------------------------------------
 /** Create a signin request.
@@ -213,7 +213,7 @@ void PlayerManager::load()
 // ----------------------------------------------------------------------------
 /** The 2nd loading stage. During this stage achievements and story mode
  *  data is initialised for each player. In case of existing player (i.e. not
- *  first time start of stk) the data is read from the players.xml file,
+ *  first time start of fluxara_drift) the data is read from the players.xml file,
  *  in case of a first time start new/empty data structures for the players
  *  (which were created by default) are created.
  */
@@ -227,7 +227,7 @@ void PlayerManager::initRemainingData()
         m_player_data->getNodes("player", player_nodes);
     for (unsigned int i = 0; i<m_all_players.size(); i++)
     {
-        // On the first time STK is run, there is no player data,
+        // On the first time FLUXARA_DRIFT is run, there is no player data,
         // so just initialise the story and achievement data
         // structures
         if (!m_player_data)
@@ -353,8 +353,8 @@ void PlayerManager::addDefaultPlayer()
 {
     core::stringw username = "Player";
 
-#ifndef MOBILE_STK
-    // For mobile stk always use the name Player as in iOS the following
+#ifndef MOBILE_FLUXARA_DRIFT
+    // For mobile fluxara_drift always use the name Player as in iOS the following
     // getenv return "mobile" for some reason
 #if defined(WIN32)
     std::vector<wchar_t> env;

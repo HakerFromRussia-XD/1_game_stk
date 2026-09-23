@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2015 Joerg Henrichs
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -57,7 +57,7 @@ public:
         if (NetworkConfig::get()->isClient())
         {
             m_controls->setSteer(  m_controls->getSteer()
-                                 * stk_config->m_network_steering_reduction);
+                                 * fluxara_drift_config->m_network_steering_reduction);
         }
     }   // update
 

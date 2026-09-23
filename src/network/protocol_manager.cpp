@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2013-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -23,7 +23,7 @@
 #include "network/protocols/game_protocol.hpp"
 #include "network/protocols/server_lobby.hpp"
 #include "network/socket_address.hpp"
-#include "network/stk_peer.hpp"
+#include "network/fluxara_drift_peer.hpp"
 #include "utils/log.hpp"
 #include "utils/profiler.hpp"
 #include "utils/time.hpp"
@@ -47,9 +47,9 @@ std::shared_ptr<ProtocolManager> ProtocolManager::createInstance()
             "Create only 1 instance of ProtocolManager!");
         return NULL;
     }
-    // This is called in STKHost creation, so its process type will be told
+    // This is called in FLUXARA_DRIFTHost creation, so its process type will be told
     // here
-    ProcessType pt = STKProcess::getType();
+    ProcessType pt = FLUXARA_DRIFTProcess::getType();
     auto pm = std::make_shared<ProtocolManager>();
     pm->m_asynchronous_update_thread = std::thread([pm, pt]()
         {
@@ -57,12 +57,12 @@ std::shared_ptr<ProtocolManager> ProtocolManager::createInstance()
             if (pt == PT_CHILD)
                 thread_name += "_child";
             VS::setThreadName(thread_name.c_str());
-            STKProcess::init(pt);
+            FLUXARA_DRIFTProcess::init(pt);
             while(!pm->m_exit.load())
             {
                 pm->asynchronousUpdate();
                 PROFILER_PUSH_CPU_MARKER("sleep", 0, 255, 255);
-                StkTime::sleep(2);
+                FluxaraDriftTime::sleep(2);
                 PROFILER_POP_CPU_MARKER();
             }
         });
@@ -71,7 +71,7 @@ std::shared_ptr<ProtocolManager> ProtocolManager::createInstance()
         pm->m_game_protocol_thread = std::thread([pm, pt]()
             {
                 VS::setThreadName("CtrlEvents");
-                STKProcess::init(pt);
+                FLUXARA_DRIFTProcess::init(pt);
                 while (true)
                 {
                     std::unique_lock<std::mutex> ul(pm->m_game_protocol_mutex);
@@ -336,7 +336,7 @@ bool ProtocolManager::sendEvent(Event* event,
         }
     }
     const uint64_t TIME_TO_KEEP_EVENTS = 1000;
-    return can_be_deleted || StkTime::getMonoTimeMs() - event->getArrivalTime()
+    return can_be_deleted || FluxaraDriftTime::getMonoTimeMs() - event->getArrivalTime()
                               >= TIME_TO_KEEP_EVENTS;
 }   // sendEvent
 

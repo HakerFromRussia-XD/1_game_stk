@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -22,7 +22,7 @@
 #include "config/player_manager.hpp"
 #include "config/user_config.hpp"
 #include "graphics/irr_driver.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "guiengine/CGUISpriteBank.hpp"
 #include "guiengine/message_queue.hpp"
 #include "guiengine/scalable_font.hpp"
@@ -39,7 +39,7 @@
 #include "network/peer_vote.hpp"
 #include "network/protocols/client_lobby.hpp"
 #include "network/network_config.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "states_screens/state_manager.hpp"
 #include "states_screens/track_info_screen.hpp"
 #include "tracks/track.hpp"
@@ -61,7 +61,7 @@ void TracksScreen::eventCallback(Widget* widget, const std::string& name,
                                  const int playerID)
 {
     if ((name == "lap-spinner" || name == "reverse") &&
-         STKHost::existHost() && m_selected_track != NULL)
+         FLUXARA_DRIFTHost::existHost() && m_selected_track != NULL)
     {
         voteForPlayer();
     }
@@ -78,7 +78,7 @@ void TracksScreen::eventCallback(Widget* widget, const std::string& name,
         // Vote to agree with selection of host id
         uint32_t host_id = -1;
         if (StringUtils::fromString(list->getSelectionInternalName(),
-            host_id) && host_id != STKHost::get()->getMyHostId())
+            host_id) && host_id != FLUXARA_DRIFTHost::get()->getMyHostId())
         {
             const PeerVote* host_vote = cl->getVote(host_id);
             if (host_vote)
@@ -130,7 +130,7 @@ void TracksScreen::eventCallback(Widget* widget, const std::string& name,
 
         if (m_selected_track)
         {
-            if (STKHost::existHost())
+            if (FLUXARA_DRIFTHost::existHost())
             {
                 w2->setBadge(selection, OK_BADGE);
                 voteForPlayer();
@@ -153,7 +153,7 @@ void TracksScreen::eventCallback(Widget* widget, const std::string& name,
         {
             auto cl = LobbyProtocol::get<ClientLobby>();
     
-            const PeerVote* vote = cl->getVote(STKHost::get()->getMyHostId());
+            const PeerVote* vote = cl->getVote(FLUXARA_DRIFTHost::get()->getMyHostId());
             if (vote)
             {
                 DynamicRibbonWidget* w2 = getWidget<DynamicRibbonWidget>("tracks");
@@ -174,7 +174,7 @@ bool TracksScreen::onEscapePressed()
     {
         // Remove this screen
         StateManager::get()->popMenu();
-        STKHost::get()->shutdown();
+        FLUXARA_DRIFTHost::get()->shutdown();
     }
     else if (NetworkConfig::get()->isNetworking())
     {
@@ -199,7 +199,7 @@ void TracksScreen::loadedFromFile()
 {
     m_reversed = NULL;
     m_laps     = NULL;
-    m_track_icons = new gui::STKModifiedSpriteBank(GUIEngine::getGUIEnv());
+    m_track_icons = new gui::FLUXARA_DRIFTModifiedSpriteBank(GUIEngine::getGUIEnv());
 }   // loadedFromFile
 
 // ----------------------------------------------------------------------------
@@ -420,7 +420,7 @@ void TracksScreen::init()
 
     buildTrackList();
     // select old track for the game master (if found)
-    STKTexManager::getInstance()->setTextureErrorMessage(
+    FLUXARA_DRIFTTexManager::getInstance()->setTextureErrorMessage(
               "While loading screenshot in track screen for last track '%s':",
               UserConfigParams::m_last_track);
     if (!tracks_widget->setSelection(UserConfigParams::m_last_track,
@@ -428,7 +428,7 @@ void TracksScreen::init()
     {
         tracks_widget->setSelection(0, PLAYER_ID_GAME_MASTER, true);
     }
-    STKTexManager::getInstance()->unsetTextureErrorMessage();
+    FLUXARA_DRIFTTexManager::getInstance()->unsetTextureErrorMessage();
     if (m_network_tracks)
     {
         // Notice: for arena (battle / soccer) lap and reverse will be mapped to
@@ -458,7 +458,7 @@ void TracksScreen::init()
         m_track_icons->setTargetIconSize(256, 256);
         m_vote_list->setIcons(m_track_icons);
 
-        const PeerVote* vote = cl->getVote(STKHost::get()->getMyHostId());
+        const PeerVote* vote = cl->getVote(FLUXARA_DRIFTHost::get()->getMyHostId());
         if (vote)
         {
             DynamicRibbonWidget* w2 = getWidget<DynamicRibbonWidget>("tracks");
@@ -584,7 +584,7 @@ void TracksScreen::buildTrackList()
 
     // First build a list of all tracks to be displayed
     // (e.g. exclude arenas, ...)
-    bool is_network = (STKHost::existHost());
+    bool is_network = (FLUXARA_DRIFTHost::existHost());
     std::shared_ptr<ClientLobby> clrp;
     if (is_network)
     {
@@ -715,11 +715,11 @@ void TracksScreen::setFocusOnTrack(const std::string& trackName)
 // -----------------------------------------------------------------------------
 void TracksScreen::voteForPlayer()
 {
-    assert(STKHost::existHost());
+    assert(FLUXARA_DRIFTHost::existHost());
 
     assert(m_laps);
     assert(m_reversed);
-    // Remember reverse globally for each stk instance if not arena
+    // Remember reverse globally for each fluxara_drift instance if not arena
     if (!RaceManager::get()->isBattleMode() &&
         RaceManager::get()->getMinorMode() != RaceManager::MINOR_MODE_SOCCER)
     {
@@ -756,9 +756,9 @@ void TracksScreen::voteForPlayer()
         vote.reset();
         vote.skip(2);
         PeerVote pvote(vote);
-        lp->addVote(STKHost::get()->getMyHostId(), pvote);
+        lp->addVote(FLUXARA_DRIFTHost::get()->getMyHostId(), pvote);
     }
-    STKHost::get()->sendToServer(&vote, true);
+    FLUXARA_DRIFTHost::get()->sendToServer(&vote, true);
 }   // voteForPlayer
 
 // -----------------------------------------------------------------------------
@@ -771,7 +771,7 @@ void TracksScreen::onUpdate(float dt)
     {
         int list_id =
             m_vote_list->getItemID(StringUtils::toString(m_winning_index));
-        //if (StkTime::getMonoTimeMs() / 1000 % 2 == 0)
+        //if (FluxaraDriftTime::getMonoTimeMs() / 1000 % 2 == 0)
             m_vote_list->setSelectionID(list_id);
         //else
         //    m_vote_list->unfocused(PLAYER_ID_GAME_MASTER, NULL);
@@ -805,7 +805,7 @@ void TracksScreen::addVote(uint32_t host_id, const PeerVote& vote)
             SFXManager::get()->quickSound("plopp");
         m_index_to_hostid.push_back(host_id);
     }
-    if (host_id == STKHost::get()->getMyHostId() && m_laps && m_reversed)
+    if (host_id == FLUXARA_DRIFTHost::get()->getMyHostId() && m_laps && m_reversed)
     {
         m_laps->setValue(vote.m_num_laps);
         m_reversed->setState(vote.m_reverse);

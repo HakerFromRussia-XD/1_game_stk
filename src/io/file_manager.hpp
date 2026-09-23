@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
 //  Copyright (C) 2008-2015 Steve Baker, Joerg Henrichs
 //
@@ -44,9 +44,15 @@ struct TextureSearchPath
 {
     std::string m_texture_search_path;
     std::string m_container_id;
+    // addFileArchive() resolves the path with realpath() on iOS.  Keep this
+    // marker so that a failed/missing optional track directory still has a
+    // matching pop operation without asking Irrlicht to resolve it again.
+    bool m_archive_path_exists;
 
-    TextureSearchPath(std::string path, std::string container_id) :
-        m_texture_search_path(path), m_container_id(container_id)
+    TextureSearchPath(std::string path, std::string container_id,
+                      bool archive_path_exists = true) :
+        m_texture_search_path(path), m_container_id(container_id),
+        m_archive_path_exists(archive_path_exists)
     {
     }
 };
@@ -58,7 +64,7 @@ struct TextureSearchPath
 class FileManager : public NoCopy
 {
 public:
-    /** The various asset types (and directories) STK might request.
+    /** The various asset types (and directories) FLUXARA_DRIFT might request.
      *  The last entry ASSET_COUNT specifies the number of entries. */
     enum AssetType {ASSET_MIN,
                     CHALLENGE=ASSET_MIN,
@@ -105,14 +111,18 @@ private:
     /** Location of the certificate bundle. */
     std::string       m_cert_bundle_location;
 
-    /** Mobile stk specific to download stk-assets in the first. */
-    std::string       m_stk_assets_download_dir;
+    /** Mobile fluxara_drift specific to download fluxara_drift-assets in the first. */
+    std::string       m_fluxara_drift_assets_download_dir;
 
     std::vector<TextureSearchPath> m_texture_search_path;
 
     std::vector<std::string>
                       m_model_search_path,
                       m_music_search_path;
+    // Kept parallel to m_model_search_path.  Search paths are still retained
+    // for diagnostics, but a missing optional model directory must not reach
+    // Irrlicht's realpath()-backed archive code on iOS.
+    std::vector<bool> m_model_archive_path_exists;
     bool              findFile(std::string& full_path,
                                const std::string& fname,
                                const std::vector<std::string>& search_path)
@@ -243,8 +253,8 @@ public:
         return m_subdir_name[SHADER];
     }
     // ------------------------------------------------------------------------
-    const std::string& getSTKAssetsDownloadDir() const
-                                          { return m_stk_assets_download_dir; }
+    const std::string& getFLUXARA_DRIFTAssetsDownloadDir() const
+                                          { return m_fluxara_drift_assets_download_dir; }
     // ------------------------------------------------------------------------
     const std::string& getCertBundleLocation() const
                                              { return m_cert_bundle_location; }

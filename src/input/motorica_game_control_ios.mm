@@ -1,6 +1,6 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -17,7 +17,7 @@
 namespace
 {
     NSString* const kSnapshotKey = @"snapshot";
-    NSString* const kInstalledGameKey = @"installedGame.stk";
+    NSString* const kInstalledGameKey = @"installedGame.fluxara_drift";
     NSString* const kSeqKey = @"seq";
     NSString* const kTimestampKey = @"timestampMs";
     NSString* const kOpenLevelKey = @"openLevel";
@@ -27,7 +27,7 @@ namespace
     NSString* const kVersionNameKey = @"versionName";
     NSString* const kVersionCodeKey = @"versionCode";
     NSString* const kUpdatedAtMsKey = @"updatedAtMs";
-    NSString* const kLaunchRequestKey = @"launchRequest.stk.v1";
+    NSString* const kLaunchRequefluxara_driftey = @"launchRequest.fluxara_drift.v1";
     NSString* const kLaunchRequestVersionKey = @"version";
     NSString* const kLaunchRequestTokenKey = @"token";
     NSString* const kLaunchRequestSchemeKey = @"scheme";
@@ -108,7 +108,7 @@ namespace
     {
         if (defaults == nil)
             return;
-        [defaults removeObjectForKey:kLaunchRequestKey];
+        [defaults removeObjectForKey:kLaunchRequefluxara_driftey];
         [defaults synchronize];
     }
 
@@ -117,7 +117,7 @@ namespace
         g_launch_mode.store(MotoricaLaunchModeIOS::MotoricaStart);
         startMotoricaGameControlIOS();
         Log::info("MotoricaGameControl",
-            "[BLE stk-game debug] ios Motorica Start mode activated source=%s",
+            "[BLE fluxara_drift-game debug] ios Motorica Start mode activated source=%s",
             source);
     }
 }
@@ -130,7 +130,7 @@ bool consumeMotoricaStartLaunchRequestIOS()
 
     NSUserDefaults* defaults = [[NSUserDefaults alloc]
         initWithSuiteName:app_group];
-    NSDictionary* request = [defaults dictionaryForKey:kLaunchRequestKey];
+    NSDictionary* request = [defaults dictionaryForKey:kLaunchRequefluxara_driftey];
     if (request == nil)
         return false;
 
@@ -146,7 +146,7 @@ bool consumeMotoricaStartLaunchRequestIOS()
         [scheme caseInsensitiveCompare:@"fluxara-drive"] != NSOrderedSame)
     {
         Log::warn("MotoricaGameControl",
-            "[BLE stk-game debug] ios rejected invalid Motorica Start launch lease");
+            "[BLE fluxara_drift-game debug] ios rejected invalid Motorica Start launch lease");
         return false;
     }
 
@@ -158,14 +158,14 @@ bool consumeMotoricaStartLaunchRequestIOS()
     if (age_ms > 5000)
     {
         Log::warn("MotoricaGameControl",
-            "[BLE stk-game debug] ios rejected expired Motorica Start launch lease ageMs=%lld",
+            "[BLE fluxara_drift-game debug] ios rejected expired Motorica Start launch lease ageMs=%lld",
             age_ms);
         return false;
     }
 
     activateMotoricaStartMode("app-group-url-lease");
     Log::info("MotoricaGameControl",
-        "[BLE stk-game debug] ios consumed Motorica Start launch lease token=%s ageMs=%lld",
+        "[BLE fluxara_drift-game debug] ios consumed Motorica Start launch lease token=%s ageMs=%lld",
         [token UTF8String], age_ms);
     return true;
 }
@@ -190,7 +190,7 @@ bool enableMotoricaGameControlForLaunchURLIOS(const char* url)
     clearMotoricaStartLaunchRequest(defaults);
     activateMotoricaStartMode("custom-url");
     Log::info("MotoricaGameControl",
-        "[BLE stk-game debug] ios Motorica Start launch URL accepted: %s",
+        "[BLE fluxara_drift-game debug] ios Motorica Start launch URL accepted: %s",
         url);
     return true;
 }
@@ -216,7 +216,7 @@ void writeMotoricaGameVersionIOS()
     if (app_group == nil)
     {
         Log::error("MotoricaGameControl",
-            "[BLE stk-game debug] ios expected exactly one signed app group while writing game version");
+            "[BLE fluxara_drift-game debug] ios expected exactly one signed app group while writing game version");
         return;
     }
     NSUserDefaults* defaults = [[NSUserDefaults alloc]
@@ -224,7 +224,7 @@ void writeMotoricaGameVersionIOS()
     if (defaults == nil)
     {
         Log::warn("MotoricaGameControl",
-            "[BLE stk-game debug] ios app group unavailable while writing game version: %s",
+            "[BLE fluxara_drift-game debug] ios app group unavailable while writing game version: %s",
             [app_group UTF8String]);
         return;
     }
@@ -255,7 +255,7 @@ void writeMotoricaGameVersionIOS()
     [defaults synchronize];
 
     Log::info("MotoricaGameControl",
-        "[BLE stk-game debug] ios wrote game version bundle=%s versionName=%s versionCode=%lld",
+        "[BLE fluxara_drift-game debug] ios wrote game version bundle=%s versionName=%s versionCode=%lld",
         [bundle_id UTF8String], [version_name UTF8String], version_code);
 }
 
@@ -269,7 +269,7 @@ void showMotoricaConnectionLostDialogIOS()
         if (root == nil)
         {
             Log::warn("MotoricaGameControl",
-                "[BLE stk-game debug] ios connection lost dialog root unavailable");
+                "[BLE fluxara_drift-game debug] ios connection lost dialog root unavailable");
             return;
         }
 
@@ -288,7 +288,7 @@ void showMotoricaConnectionLostDialogIOS()
         g_connection_lost_alert = alert;
         [root presentViewController:alert animated:YES completion:nil];
         Log::info("MotoricaGameControl",
-            "[BLE stk-game debug] ios connection lost dialog shown");
+            "[BLE fluxara_drift-game debug] ios connection lost dialog shown");
     });
 }
 
@@ -301,7 +301,7 @@ void dismissMotoricaConnectionLostDialogIOS()
         g_connection_lost_alert = nil;
         [alert dismissViewControllerAnimated:YES completion:nil];
         Log::info("MotoricaGameControl",
-            "[BLE stk-game debug] ios connection lost dialog dismissed");
+            "[BLE fluxara_drift-game debug] ios connection lost dialog dismissed");
     });
 }
 
@@ -334,7 +334,7 @@ void startMotoricaGameControlIOS()
                 {
                     g_logged_app_group_error = true;
                     Log::warn("MotoricaGameControl",
-                        "[BLE stk-game debug] ios app group unavailable: %s",
+                        "[BLE fluxara_drift-game debug] ios app group unavailable: %s",
                         [motoricaAppGroup() UTF8String]);
                 }
                 return;
@@ -348,7 +348,7 @@ void startMotoricaGameControlIOS()
                 {
                     g_logged_waiting_snapshot = true;
                     Log::info("MotoricaGameControl",
-                        "[BLE stk-game debug] ios waiting for game control snapshot");
+                        "[BLE fluxara_drift-game debug] ios waiting for game control snapshot");
                 }
                 return;
             }
@@ -373,7 +373,7 @@ void startMotoricaGameControlIOS()
             if (!connected || seq <= 3 || seq % 30 == 0)
             {
                 Log::info("MotoricaGameControl",
-                    "[BLE stk-game debug] ios read seq=%llu open=%d close=%d connected=%d timestamp=%llu",
+                    "[BLE fluxara_drift-game debug] ios read seq=%llu open=%d close=%d connected=%d timestamp=%llu",
                     (unsigned long long)seq, open_level, close_level,
                     connected ? 1 : 0, (unsigned long long)timestamp_ms);
             }
@@ -386,7 +386,7 @@ void startMotoricaGameControlIOS()
     dispatch_resume(g_poll_timer);
 
     Log::info("MotoricaGameControl",
-        "[BLE stk-game debug] ios game control poller started");
+        "[BLE fluxara_drift-game debug] ios game control poller started");
 }
 
 #endif

@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -54,12 +54,12 @@ ListWidget::ListWidget() : Widget(WTYPE_LIST)
 
 // -----------------------------------------------------------------------------
 
-void ListWidget::setIcons(STKModifiedSpriteBank* icons)
+void ListWidget::setIcons(FLUXARA_DRIFTModifiedSpriteBank* icons)
 {
     m_use_icons = (icons != NULL);
     m_icons = icons;
 
-    CGUISTKListBox* list = getIrrlichtElement<CGUISTKListBox>();
+    CGUIFLUXARA_DRIFTListBox* list = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>();
     assert(list != NULL);
 
     if (m_use_icons)
@@ -88,7 +88,7 @@ void ListWidget::setLineHeightScale(float scale)
 // -----------------------------------------------------------------------------
 void ListWidget::updateScale()
 {
-    CGUISTKListBox* list = getIrrlichtElement<CGUISTKListBox>();
+    CGUIFLUXARA_DRIFTListBox* list = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>();
     assert(list != NULL);
 
     // determine needed height
@@ -119,7 +119,7 @@ void ListWidget::add()
 {
     IGUISkin * current_skin = GUIEngine::getGUIEnv()->getSkin();
     IGUIFont * current_font = GUIEngine::getGUIEnv()->getBuiltInFont();
-    CGUISTKListBox * list_box = new CGUISTKListBox(
+    CGUIFLUXARA_DRIFTListBox * list_box = new CGUIFLUXARA_DRIFTListBox(
         GUIEngine::getGUIEnv(),
         m_parent ? m_parent : GUIEngine::getGUIEnv()->getRootGUIElement(),
         getNewID(),
@@ -210,7 +210,7 @@ void ListWidget::clear()
     // May only be called AFTER this widget has been add()ed
     assert(m_element != NULL);
 
-    CGUISTKListBox* list = getIrrlichtElement<CGUISTKListBox>();
+    CGUIFLUXARA_DRIFTListBox* list = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>();
     assert(list != NULL);
 
     list->clear();
@@ -250,7 +250,7 @@ void ListWidget::addItem(   const std::string& internal_name,
     newItem.m_contents.push_back(cell);
     newItem.m_word_wrap = (m_properties[PROP_WORD_WRAP] == "true");
 
-    CGUISTKListBox* list = getIrrlichtElement<CGUISTKListBox>();
+    CGUIFLUXARA_DRIFTListBox* list = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>();
     assert(list != NULL);
 
     u32 itemID = list->addItem( newItem );
@@ -278,7 +278,7 @@ void ListWidget::addItem(const std::string& internal_name,
     }
     newItem.m_word_wrap = (m_properties[PROP_WORD_WRAP] == "true");
 
-    CGUISTKListBox* list = getIrrlichtElement<CGUISTKListBox>();
+    CGUIFLUXARA_DRIFTListBox* list = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>();
     assert(list != NULL);
 
     u32 itemID = list->addItem( newItem );
@@ -297,7 +297,7 @@ void ListWidget::renameCell(const int row_index, const int col_index,
     // May only be called AFTER this widget has been add()ed
     assert(m_element != NULL);
 
-    CGUISTKListBox* list = getIrrlichtElement<CGUISTKListBox>();
+    CGUIFLUXARA_DRIFTListBox* list = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>();
     assert(list != NULL);
 
     list->setCell(row_index, col_index, newName.c_str(), icon);
@@ -317,7 +317,7 @@ void ListWidget::renameItem(const int row_index,
 void ListWidget::renameItem(const std::string &internal_name,
                             const irr::core::stringw &newName, const int icon)
 {
-    CGUISTKListBox* list = getIrrlichtElement<CGUISTKListBox>();
+    CGUIFLUXARA_DRIFTListBox* list = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>();
     assert(list != NULL);
     renameCell(list->getRowByInternalName(internal_name), 0, newName, icon);
 }
@@ -327,19 +327,19 @@ void ListWidget::renameItem(const std::string &internal_name,
 std::string ListWidget::getSelectionInternalName()
 {
 
-    CGUISTKListBox* list = getIrrlichtElement<CGUISTKListBox>();
+    CGUIFLUXARA_DRIFTListBox* list = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>();
     assert(list != NULL);
     int selectionID = getSelectionID();
     if (selectionID == -1 || selectionID >= (int)list->getItemCount())
         return "";
-    const CGUISTKListBox::ListItem& item = list->getItem(selectionID);
+    const CGUIFLUXARA_DRIFTListBox::ListItem& item = list->getItem(selectionID);
     return item.m_internal_name;
 }
 
 // -----------------------------------------------------------------------------
 irr::core::stringw ListWidget::getSelectionLabel(const int cell) const
 {
-    const CGUISTKListBox* list = getIrrlichtElement<CGUISTKListBox>();
+    const CGUIFLUXARA_DRIFTListBox* list = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>();
     assert(list != NULL);
     return list->getCellText( list->getSelected(), cell);
 }
@@ -351,7 +351,7 @@ void ListWidget::selectItemWithLabel(const irr::core::stringw& name)
     // Disable focusing header for choosing
     m_choosing_header = false;
 
-    CGUISTKListBox* list = getIrrlichtElement<CGUISTKListBox>();
+    CGUIFLUXARA_DRIFTListBox* list = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>();
     assert(list != NULL);
     return list->setSelectedByCellText( name.c_str() );
 }
@@ -360,7 +360,7 @@ void ListWidget::selectItemWithLabel(const irr::core::stringw& name)
 
 void ListWidget::unfocused(const int playerID, Widget* new_focus)
 {
-    CGUISTKListBox* list = getIrrlichtElement<CGUISTKListBox>();
+    CGUIFLUXARA_DRIFTListBox* list = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>();
 
     // remove selection when leaving list
     if (list != NULL && m_properties[PROP_KEEP_SELECTION] != "true")
@@ -374,7 +374,7 @@ int ListWidget::getSelectionID() const
     // May only be called AFTER this widget has been add()ed
     assert(m_element != NULL);
 
-    return getIrrlichtElement<CGUISTKListBox>()->getSelected();
+    return getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>()->getSelected();
 }
 
 // -----------------------------------------------------------------------------
@@ -387,7 +387,7 @@ void ListWidget::setSelectionID(const int index)
     // Disable focusing header for choosing
     m_choosing_header = false;
 
-    CGUISTKListBox* irritem = getIrrlichtElement<CGUISTKListBox>();
+    CGUIFLUXARA_DRIFTListBox* irritem = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>();
 
     // auto-scroll to item when selecting something, don't auto-scroll when selecting nothing
     if (index != -1)
@@ -410,7 +410,7 @@ int ListWidget::getItemCount() const
     // May only be called AFTER this widget has been add()ed
     assert(m_element != NULL);
 
-    const int count = getIrrlichtElement<CGUISTKListBox>()->getItemCount();
+    const int count = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>()->getItemCount();
 
     return count;
 }
@@ -439,7 +439,7 @@ void ListWidget::markItemRed(const int id, bool red)
     // May only be called AFTER this widget has been add()ed
     assert(m_element != NULL);
 
-    CGUISTKListBox* irritem = getIrrlichtElement<CGUISTKListBox>();
+    CGUIFLUXARA_DRIFTListBox* irritem = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>();
 
     if (red)
     {
@@ -460,7 +460,7 @@ void ListWidget::markItemBlue(const int id, bool blue)
     // May only be called AFTER this widget has been add()ed
     assert(m_element != NULL);
 
-    CGUISTKListBox* irritem = getIrrlichtElement<CGUISTKListBox>();
+    CGUIFLUXARA_DRIFTListBox* irritem = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>();
 
     if (blue)
     {
@@ -481,7 +481,7 @@ void ListWidget::emphasisItem(const int id, bool enable)
     // May only be called AFTER this widget has been add()ed
     assert(m_element != NULL);
 
-    CGUISTKListBox* irritem = getIrrlichtElement<CGUISTKListBox>();
+    CGUIFLUXARA_DRIFTListBox* irritem = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>();
 
     if (enable)
     {
@@ -650,7 +650,7 @@ void ListWidget::pageMove(bool up)
     // if widget is deactivated, do nothing
     if (m_deactivated) return;
 
-    int item_height = getIrrlichtElement<CGUISTKListBox>()->getItemHeight();
+    int item_height = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>()->getItemHeight();
     int items_per_page = (m_h - getHeaderHeight()) / item_height;
     int selectionID = (up) ? getSelectionID() - items_per_page
                            : getSelectionID() + items_per_page;
@@ -683,7 +683,7 @@ void ListWidget::listStart()
 // -----------------------------------------------------------------------------
 int ListWidget::getItemID(const std::string &internalName) const
 {
-    const CGUISTKListBox* list = getIrrlichtElement<CGUISTKListBox>();
+    const CGUIFLUXARA_DRIFTListBox* list = getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>();
     assert(list != NULL);
     return list->getRowByInternalName(internalName);
 }
@@ -692,7 +692,7 @@ int ListWidget::getItemID(const std::string &internalName) const
 void ListWidget::setActive(bool active)
 {
     Widget::setActive(active);
-    getIrrlichtElement<CGUISTKListBox>()->setDisactivated(!active);
+    getIrrlichtElement<CGUIFLUXARA_DRIFTListBox>()->setDisactivated(!active);
 }
 
 // -----------------------------------------------------------------------------

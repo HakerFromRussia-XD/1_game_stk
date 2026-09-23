@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -36,7 +36,7 @@ DebugSliderDialog::DebugSliderDialog() : ModalDialog(0.85f, 0.45f, MODAL_DIALOG_
 {
     m_fade_background = false;
 
-    loadFromFile("debug_slider.stkgui");
+    loadFromFile("debug_slider.fluxara_driftgui");
 }
 
 void DebugSliderDialog::setSliderHook(std::string id, unsigned min, unsigned max, std::function<int()> G, std::function<void(int)> S)

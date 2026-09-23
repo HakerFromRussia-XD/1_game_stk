@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2019 dumaosen
 //
 //  This program is free software; you can redistribute it and/or
@@ -80,7 +80,7 @@ void TipsManager::addTipSet(const XMLNode *input)
         if(node->get("type", &text) && text == "website_info")
         {
             m_all_tip_sets[id].push_back(
-                _("You can visit %s for more information about the game.", "https://supertuxkart.net/"));
+                _("You can visit %s for more information about the game.", "https://fluxaradrift.net/"));
             continue;
         }
 

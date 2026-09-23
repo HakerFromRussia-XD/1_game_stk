@@ -26,7 +26,7 @@ CGUIListBox::CGUIListBox(IGUIEnvironment* environment, IGUIElement* parent,
 : IGUIListBox(environment, parent, id, rectangle), Selected(-1),
 	ItemHeight(0),ItemHeightOverride(0),
 	TotalItemHeight(0), ItemsIconWidth(0), Font(0), IconBank(0),
-	ScrollBar(0), selectTime(0), LastKeyTime(0), Selecting(false), DrawBack(drawBack),
+	ScrollBar(0), selectTime(0), Lafluxara_drifteyTime(0), Selecting(false), DrawBack(drawBack),
 	MoveOverSelect(moveOverSelect), AutoScroll(true), HighlightWhenNotFocused(true)
 {
 	#ifdef _DEBUG
@@ -310,7 +310,7 @@ bool CGUIListBox::OnEvent(const SEvent& event)
 				// change selection based on text as it is typed.
 				u32 now = os::Timer::getTime();
 
-				if (now - LastKeyTime < 500)
+				if (now - Lafluxara_drifteyTime < 500)
 				{
 					// add to key buffer if it isn't a key repeat
 					if (!(KeyBuffer.size() == 1 && KeyBuffer[0] == event.KeyInput.Char))
@@ -324,7 +324,7 @@ bool CGUIListBox::OnEvent(const SEvent& event)
 					KeyBuffer = L" ";
 					KeyBuffer[0] = event.KeyInput.Char;
 				}
-				LastKeyTime = now;
+				Lafluxara_drifteyTime = now;
 
 				// find the selected item, starting at the current selection
 				s32 start = Selected;

@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -21,7 +21,7 @@
 #include "config/player_manager.hpp"
 #include "config/user_config.hpp"
 #include "guiengine/CGUISpriteBank.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "guiengine/widgets/icon_button_widget.hpp"
 #include "guiengine/widgets/label_widget.hpp"
 #include "guiengine/widgets/list_widget.hpp"
@@ -53,7 +53,7 @@ HighScoreInfoDialog::HighScoreInfoDialog(Highscores* highscore, bool is_linear, 
     m_major_mode = major_mode;
     m_curr_time = 0.0f;
 
-    loadFromFile("high_score_info_dialog.stkgui");
+    loadFromFile("high_score_info_dialog.fluxara_driftgui");
 
     m_track_screenshot_widget = getWidget<IconButtonWidget>("track_screenshot");
     m_track_screenshot_widget->setFocusable(false);
@@ -83,12 +83,12 @@ HighScoreInfoDialog::HighScoreInfoDialog(Highscores* highscore, bool is_linear, 
         m_minor_mode = HighScoreSelection::getInstance()->getActiveMode();
     }
 
-    irr::video::ITexture* image = STKTexManager::getInstance()
+    irr::video::ITexture* image = FLUXARA_DRIFTTexManager::getInstance()
         ->getTexture(track->getScreenshotFile(),
         "While loading screenshot for track '%s':", track->getFilename());
     if(!image)
     {
-        image = STKTexManager::getInstance()->getTexture("main_help.png",
+        image = FLUXARA_DRIFTTexManager::getInstance()->getTexture("main_help.png",
             "While loading screenshot for track '%s':", track->getFilename());
     }
     if (image != NULL)
@@ -100,7 +100,7 @@ HighScoreInfoDialog::HighScoreInfoDialog(Highscores* highscore, bool is_linear, 
     assert(m_high_score_list != NULL);
 
     /* Used to display kart icons for the entries */
-    irr::gui::STKModifiedSpriteBank *icon_bank = HighScoreSelection::getInstance()->getIconBank();
+    irr::gui::FLUXARA_DRIFTModifiedSpriteBank *icon_bank = HighScoreSelection::getInstance()->getIconBank();
 
     icon_bank->setScale(1.5f / 128.0f);
     icon_bank->setTargetIconSize(128, 128);

@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -43,7 +43,7 @@
 class Log
 {
 public:
-    /** The various log levels used in STK. */
+    /** The various log levels used in FLUXARA_DRIFT. */
     enum LogLevel { LL_DEBUG,
                     LL_VERBOSE,
                     LL_INFO,

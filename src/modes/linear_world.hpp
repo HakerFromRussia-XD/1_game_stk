@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2004-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2004-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -196,7 +196,7 @@ public:
     /** Returns time for the fastest laps */
     float getFastestLap() const
     {
-        return stk_config->ticks2Time(m_fastest_lap_ticks);
+        return fluxara_drift_config->ticks2Time(m_fastest_lap_ticks);
     }
     // ------------------------------------------------------------------------
     /** Returns the kart name that made the fastest lap time */
@@ -218,7 +218,7 @@ public:
     }
     // ------------------------------------------------------------------------
     /** Network use: set fastest kart name */
-    void setFastestKartName(const stringw& name)
+    void setFastefluxara_driftartName(const stringw& name)
     {
         m_fastest_lap_kart_name = name;
     }
@@ -227,7 +227,7 @@ public:
         OVERRIDE;
     // ------------------------------------------------------------------------
     virtual void saveCompleteState(BareNetworkString* bns,
-                                   STKPeer* peer) OVERRIDE;
+                                   FLUXARA_DRIFTPeer* peer) OVERRIDE;
     // ------------------------------------------------------------------------
     virtual void restoreCompleteState(const BareNetworkString& b) OVERRIDE;
     // ------------------------------------------------------------------------

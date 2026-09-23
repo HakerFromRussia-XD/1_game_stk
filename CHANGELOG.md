@@ -1,11 +1,11 @@
 # Changelog
-This file documents notable changes to SuperTuxKart across versions since its inception.
+This file documents notable changes to Fluxara Drift across versions since its inception.
 
 It should be kept in mind that some versions have a less complete changelog than others, and that this changelog does not list the details of the many small bugfixes and improvements which together make a significant part of the progress between releases.
 
 For similar reasons, and because some features are vastly more complex than others, attributions of main changes should not be taken as a shortcut for overall contribution.
 
-## SuperTuxKart 1.5.1
+## Fluxara Drift 1.5.1
 
 ### Networking
 * Add TV cameras as a camera option when watching soccer games in spectator mode, by LLS
@@ -65,7 +65,7 @@ For similar reasons, and because some features are vastly more complex than othe
 #### Arenas
 * TV spectator cameras for all soccer fields, by LLS and Sven
 
-## SuperTuxKart 1.5 (20. October 2025)
+## Fluxara Drift 1.5 (20. October 2025)
 
 ### Networking
 * Improve the track-voting logic when no majority is achieved, by kimden
@@ -178,7 +178,7 @@ For similar reasons, and because some features are vastly more complex than othe
 * New music for Las Dunas Arena/Las Dunas Soccer, by ALBatross
 
 
-## SuperTuxKart 1.4 (31. October 2022)
+## Fluxara Drift 1.4 (31. October 2022)
 ### General
 * Enable ARMv7 build for Windows, by Benau
 * Restore macOS <= 10.14 support, by Benau
@@ -225,7 +225,7 @@ For similar reasons, and because some features are vastly more complex than othe
 * Updated Battle Island and Cave X, by Typhon306
 
 
-## SuperTuxKart 1.3 (28. September 2021)
+## Fluxara Drift 1.3 (28. September 2021)
 ### Networking
 * Server bookmarks, by Benau
 * Background download of addon packs, by Benau
@@ -281,7 +281,7 @@ For similar reasons, and because some features are vastly more complex than othe
 * Improved Las Dunas Soccer, by Benau
 
 
-## SuperTuxKart 1.2 (27. August 2020)
+## Fluxara Drift 1.2 (27. August 2020)
 
 ### Networking
 * Add support for IPv6 LAN servers, by Benau
@@ -336,7 +336,7 @@ For similar reasons, and because some features are vastly more complex than othe
 * Improved Beastie animation, by D_ft Kid
 
 
-## SuperTuxKart 1.1 (4. January 2020)
+## Fluxara Drift 1.1 (4. January 2020)
 
 ### Networking
 * Add support for IPv6 clients and servers, by Benau
@@ -357,7 +357,7 @@ For similar reasons, and because some features are vastly more complex than othe
 ### Race gameplay and physics
 * Random spawn point in local battle mode, by Aleman778
 * Add an option to show everyone's items with the left characters icons, by Fouks
-* Allow to choose the number of AI per team in soccer, by risostk
+* Allow to choose the number of AI per team in soccer, by risofluxara_drift
 * In CTF mode, fix a bug that prevented scoring a point when the team's flag was in its immunity state, by Alayan
 * Fix a bug that could result in the finish time being shown as 0:00:00, by Alayan
 * Fix a bug that made AIs, in multiplayer and low difficulty, rubber-band towards the wrong player, by Alayan. Each player now correctly has its AIs, helping a weaker player to not be condemned to the last position.
@@ -382,9 +382,9 @@ For similar reasons, and because some features are vastly more complex than othe
 * Add a continue button to cutscenes (mostly useful for touchscreen devices), by deveee
 * Request the use of the performance GPU on Optimus systems, by deveee
 * Fixed plural forms for translations in several languages, by deveee
-* Close STK if Wayland crashes, by mstoeckl
+* Close FLUXARA_DRIFT if Wayland crashes, by mstoeckl
 * Support nested directories for addons, by Benau
-* Scripting preprocessing for STK version, by Benau
+* Scripting preprocessing for FLUXARA_DRIFT version, by Benau
 * Updated Wiiuse library to 0.15.5
 * Various tweaks and bugfixes, including crash fixes
 
@@ -398,7 +398,7 @@ For similar reasons, and because some features are vastly more complex than othe
 * Various bugfixes by deveee, dos1
 * Screen keyboard handling improvements, by deveee and Benau
 * Allow copying text from the edit box, by Benau
-* STK for Android now targets the version 29 of the API (Android 10.0), up from 26 (Android 8.0)
+* FLUXARA_DRIFT for Android now targets the version 29 of the API (Android 10.0), up from 26 (Android 8.0)
 #### iOS
 * Add iOS support, by Benau
     * The Android code has been widely put to use for iOS
@@ -439,7 +439,7 @@ For similar reasons, and because some features are vastly more complex than othe
  * Pumpkin Park, by Samuncle
 
 
-## SuperTuxKart 1.0 (20. April 2019)
+## Fluxara Drift 1.0 (20. April 2019)
 ### Networking
 * Networking support for normal race, time trial, free for all, capture the flag and soccer by Benau and hiker :
     * Access to a global server list, possibility to also create a LAN server
@@ -478,7 +478,7 @@ For similar reasons, and because some features are vastly more complex than othe
 
 ### General
 * Option to disable light scattering (for improved FPS), used in graphics level 3, by Partmedia
-* Unlockable SuperTux challenges in Story Mode by Alayan
+* Unlockable FluxaraDrift challenges in Story Mode by Alayan
 * Require the completion of all other challenges before the final challenges in Story Mode (fixes the 'Gate Skip'), by Alayan
 * Improvements to ghost replays (more data saved, live time difference, replay comparison, egg hunt replays) by Alayan
 * Kart color customization by Benau
@@ -490,7 +490,7 @@ For similar reasons, and because some features are vastly more complex than othe
 * Updated standard replays by Alayan
 * Visual improvements (new skidding particles, better rescue, bubblegum flashing before ending)
 * Audio improvements (crash sound depending on speed/direction, no crash sound on rescue walls, sound cue in nitro challenges)
-* Fix STK incorrectly connecting to the server when the internet option is disabled, by Auria
+* Fix FLUXARA_DRIFT incorrectly connecting to the server when the internet option is disabled, by Auria
 * Include a new set of standard replays, by Alayan
 * Updated WiiUse library
 * Many bugfixes
@@ -527,11 +527,11 @@ For similar reasons, and because some features are vastly more complex than othe
 * Black Forest, by Sven Andreas Belting (replacing Green Valley)
 * Ravenbridge Mansion, by Samuncle (replacing Blackhill Mansion)
 * Unwanted shortcuts and exploits found by several players and fixed mostly by Auria in many tracks :
-    * Antediluvian Abysses, Around the Lighthouse, Fort Magma, Grand Paradisio Island, Hacienda, Minigolf, Nessie's Pond, Northern Resort, The Old Mine, Oliver's Math Class, Shifting Sands, STK Enterprise, XR591
+    * Antediluvian Abysses, Around the Lighthouse, Fort Magma, Grand Paradisio Island, Hacienda, Minigolf, Nessie's Pond, Northern Resort, The Old Mine, Oliver's Math Class, Shifting Sands, FLUXARA_DRIFT Enterprise, XR591
 * Smoothness issues causing collisions and kart slowdown fixed by Auria :
     * Nessie's Pond, Old Mine, Shifting Sands, Volcano Island, XR591
 * Item (boxes, nitro, bananas) positions improvement by Alayan and theThomasPat :
-    * Around the Lighthouse, Black Forest, Candela City, Hacienda, Minigolf, Northern Resort, Oliver's Math Class, STK Enterprise, The Old Mine, Volcano Island, Zen Garden
+    * Around the Lighthouse, Black Forest, Candela City, Hacienda, Minigolf, Northern Resort, Oliver's Math Class, FLUXARA_DRIFT Enterprise, The Old Mine, Volcano Island, Zen Garden
 * Terrain slowdown works again as intended on several tracks where it was missing
     
 #### Arenas
@@ -543,7 +543,7 @@ For similar reasons, and because some features are vastly more complex than othe
 * New version of Kiki, by Benau
 
 
-## SuperTuxKart 0.9.3 (28. October 2017)
+## Fluxara Drift 0.9.3 (28. October 2017)
 * Reduced RAM and VRAM usage, reducing load times, by Auria and Benau
 * New mesh format (SPM) optimized for space and hardware skinning, by Benau
 * Code refactoring of both render pipelines, by Benau and Elderme
@@ -580,7 +580,7 @@ For similar reasons, and because some features are vastly more complex than othe
 * Las Dunas Arena, by Samuncle
 
 
-## SuperTuxKart 0.9.2 (1. July 2016)
+## Fluxara Drift 0.9.2 (1. July 2016)
 * Ghost replay races by Benau
 * Battle mode AI by Benau
 * Soccer mode AI by Benau
@@ -601,7 +601,7 @@ For similar reasons, and because some features are vastly more complex than othe
 * New icy soccer field, by Samuncle and Benau
 
 
-## SuperTuxKart 0.9.1 (17. October 2015)
+## Fluxara Drift 0.9.1 (17. October 2015)
 * Many bug fixes
 * Started to use scripting in tracks
 * Significant audio performance improvements
@@ -618,7 +618,7 @@ For similar reasons, and because some features are vastly more complex than othe
     * Subsea
 
 
-## SuperTuxKart 0.9 (24. April 2015)
+## Fluxara Drift 0.9 (24. April 2015)
 * Fully shader-based rendering engine
 * Online login which allows to:
     * connect with friends and see when they are playing
@@ -647,11 +647,11 @@ For similar reasons, and because some features are vastly more complex than othe
 * Nicer new name for a track: Nessie's Pond (previously Scotland)
 
 
-## SuperTuxKart 0.8.1 (26. November 2013)
+## Fluxara Drift 0.8.1 (26. November 2013)
 * New Soccer mode
 * New Egg Hunt mode
 * Added Tutorial
-* Added new Supertux difficulty
+* Added new FluxaraDrift difficulty
 * New bubblegum shield weapon
 * Add ability to save and resume Grand Prix
 * Improve skid marks and nitro effects
@@ -668,7 +668,7 @@ For similar reasons, and because some features are vastly more complex than othe
 * Updated Beastie and Konqi
 * Removal of Mozilla
 #### Tracks
-* STK Enterprise by Rubberduck (replaces Star Track)
+* FLUXARA_DRIFT Enterprise by Rubberduck (replaces Star Track)
 * Redesign of Minigolf, by Rubberduck
 * New longer track layout and improved graphics for 'Around the Lighthouse', by Samuncle
 * Gameplay and graphical updates to several tracks :
@@ -678,7 +678,7 @@ For similar reasons, and because some features are vastly more complex than othe
 * Updated nitro models
 
 
-## SuperTuxKart 0.8 (11. December 2012)
+## Fluxara Drift 0.8 (11. December 2012)
 * Story mode and new challenge set
 * Improved AI
 * Skidding and better collision physics
@@ -698,7 +698,7 @@ For similar reasons, and because some features are vastly more complex than othe
     * Amazonian Journey
     
 
-## SuperTuxKart 0.7.3 (2. November 2011)
+## Fluxara Drift 0.7.3 (2. November 2011)
 * New graphical effects
 * 3 Strikes Battles now displays lives as spare tires
 * Improved bubble gum
@@ -729,7 +729,7 @@ For similar reasons, and because some features are vastly more complex than othe
 * Added Thunderbird as race referee
 
 
-## SuperTuxKart 0.7.2 (15. July 2011)
+## Fluxara Drift 0.7.2 (15. July 2011)
 * Added in-game addon manager
 * Fixed major memory leaks
 * Show when you get a highscore
@@ -744,12 +744,12 @@ For similar reasons, and because some features are vastly more complex than othe
 * Improved Star Track UFO, by Rudy
 
 
-## SuperTuxKart 0.7.1b (21. April 2011)
+## Fluxara Drift 0.7.1b (21. April 2011)
 * Fix circular dependency in challenges
 * Updated translations
 
 
-## SuperTuxKart 0.7.1 (15. April 2011)
+## Fluxara Drift 0.7.1 (15. April 2011)
 * Particle (smoke, splash, fire) and weather effects
 * Added internet news
 * Temporary invincibility after being hit
@@ -780,7 +780,7 @@ For similar reasons, and because some features are vastly more complex than othe
   * Bovine Barnyard (previously Farm), Northern Resort (previously Snow Mountain), Coyote Canyon (previously Canyon)
 
 
-## SuperTuxKart 0.7 (December 2010)
+## Fluxara Drift 0.7 (December 2010)
 Too many to list them all. (2026 maintainer's note : ?!?)
 
 Main points:
@@ -810,12 +810,12 @@ Main points:
 * Removal of Race Track
 
 
-## SuperTuxKart 0.6.2a (October 2009)
-* Bugfix: STK would crash while trying to save the config file
+## Fluxara Drift 0.6.2a (October 2009)
+* Bugfix: FLUXARA_DRIFT would crash while trying to save the config file
           on Windows Vista.
 
 
-## SuperTuxKart 0.6.2 (July 2009)
+## Fluxara Drift 0.6.2 (July 2009)
 * Bugfix: Game could crash in rare circumstances.
 * Bugfix: Restarting a GP (with the in-race menu ESC) would not subtract already allocated points.
 * Bugfix: A race could be finished with an invalid shortcut.
@@ -832,11 +832,11 @@ Main points:
 * New Nolok
 
 
-## SuperTuxKart 0.6.1a (February 2009)
+## Fluxara Drift 0.6.1a (February 2009)
 * Bugfix: battle mode would not display track groups.
 
 
-## SuperTuxKart 0.6.1 (February 2009)
+## Fluxara Drift 0.6.1 (February 2009)
 * New music for Snow Mountain.
 * Fixed bug in track selection screen that could cause a crash when track groups were used.
 * Fixed crash in character selection that could happen if an old user config file existed.
@@ -853,7 +853,7 @@ Main points:
 * Cave
 
 
-## SuperTuxKart 0.6 (22. January 2009)
+## Fluxara Drift 0.6 (22. January 2009)
 * New look for bananas
 * New game mode : 3-Strikes Battle
 * Improved user interface
@@ -901,7 +901,7 @@ Main points:
 * Removal of Volcano
 
 
-## SuperTuxKart 0.5 (May 2008)
+## Fluxara Drift 0.5 (May 2008)
 * Complete Challenges to unlock game modes, new tracks and a skidding preview
 * New Follow-the-Leader game mode
 * New Grand Prix
@@ -925,7 +925,7 @@ Main points:
   * Star Track
 * Removal of Gown's Bow
 
-## SuperTuxKart 0.4 (February 2008)
+## Fluxara Drift 0.4 (February 2008)
 * New physics handling using the bullet physics engine
 * Improved AI
 * New GUI handling, including resolution switching GUI
@@ -941,7 +941,7 @@ Main points:
 * Improvements to 'Around the Lighthouse'
 
 
-## SuperTuxKart 0.3 (May 2007)
+## Fluxara Drift 0.3 (May 2007)
 * Highscore lists	
 * Shortcut detection 	
 * Improved AI
@@ -971,7 +971,7 @@ Main points:
   - And others
 
 ### Tracks and modeling
-*As 0.3 is the first release of SuperTuxKart's proper development history that is still easily found, all available tracks and karts are listed here although they are not new to this specific version unless specifically noted.*
+*As 0.3 is the first release of Fluxara Drift's proper development history that is still easily found, all available tracks and karts are listed here although they are not new to this specific version unless specifically noted.*
 
 #### Karts
 * Dino
@@ -1000,7 +1000,7 @@ Main points:
 * Volcano
 * The Island (new with 0.3)
 
-## SuperTuxKart 0.2 (22. Sep 2006)
+## Fluxara Drift 0.2 (22. Sep 2006)
   * Significant performance improvement by using display lists
   * Improved AI
   * Support for different grand prixs
@@ -1019,7 +1019,7 @@ Main points:
   * Items were added to all tracks
 
 
-## SuperTuxKart 0.1 (04. May 2006)  (not officially released)
+## Fluxara Drift 0.1 (04. May 2006)  (not officially released)
   * Significant speedup by using a new HOT and collision algorithm --> all tracks are now playable
   * Removed all SDL dependencies, only PLIB is needed
   * Single and multi-window menu can be used
@@ -1028,7 +1028,7 @@ Main points:
   * Added profile option to support automatic profiling
 
 
-## SuperTuxKart 0.0.0 (22. Dec 2004)
+## Fluxara Drift 0.0.0 (22. Dec 2004)
   * new tracks
   * new characters and karts
   * new user-interface

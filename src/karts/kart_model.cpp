@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2008-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -22,7 +22,7 @@
 #include <SMesh.h>
 #include <ISceneManager.h>
 
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "graphics/central_settings.hpp"
 #include "graphics/b3d_mesh_loader.hpp"
@@ -675,7 +675,7 @@ bool KartModel::loadModels(const KartProperties &kart_properties)
         }
         // Pre-upload gl meshes and textures for kart screen
         spmb->uploadGLMesh();
-        std::vector<Material*> mbs = spmb->getAllSTKMaterials();
+        std::vector<Material*> mbs = spmb->getAllFLUXARA_DRIFTMaterials();
         for (Material* m : mbs)
         {
             m_support_colorization =
@@ -730,7 +730,7 @@ bool KartModel::loadModels(const KartProperties &kart_properties)
                 mb->uploadGLMesh();
                 if (obj.m_properties.m_moving_texture)
                 {
-                    for (unsigned k = 0; k < mb->getAllSTKMaterials().size();
+                    for (unsigned k = 0; k < mb->getAllFLUXARA_DRIFTMaterials().size();
                         k++)
                     {
                         mb->enableTextureMatrix(k);
@@ -842,7 +842,7 @@ void KartModel::loadNitroEmitterInfo(const XMLNode &node,
     if(!emitter_node)
     {
         // Only print the warning if a model filename is given. Otherwise the
-        // stk_config file is read (which has no model information).
+        // fluxara_drift_config file is read (which has no model information).
         if(m_model_filename!="")
         {
             Log::error("Kart_Model", "Missing nitro emitter information for model"
@@ -1231,7 +1231,7 @@ void KartModel::OnAnimationEnd(scene::IAnimatedMeshSceneNode *node)
 // ----------------------------------------------------------------------------
 void KartModel::setDefaultSuspension()
 {
-    GhostKart* gk = dynamic_cast<GhostKart*>(m_kart);
+    Ghofluxara_driftart* gk = dynamic_cast<Ghofluxara_driftart*>(m_kart);
     if (gk)
     {
         for (int i = 0; i < 4; i++)
@@ -1270,7 +1270,7 @@ void KartModel::update(float dt, float distance, float steer, float speed,
         if (!m_kart || !m_wheel_node[i]) continue;
 #ifdef DEBUG
         if (UserConfigParams::m_physics_debug &&
-            !m_kart->isGhostKart())
+            !m_kart->isGhofluxara_driftart())
         {
             const btWheelInfo &wi = m_kart->getVehicle()->getWheelInfo(i);
             // Make wheels that are not touching the ground invisible
@@ -1280,7 +1280,7 @@ void KartModel::update(float dt, float distance, float steer, float speed,
         core::vector3df pos =  m_wheel_graphics_position[i].toIrrVector();
 
         float suspension_length = m_default_physics_suspension[i];
-        GhostKart* gk = dynamic_cast<GhostKart*>(m_kart);
+        Ghofluxara_driftart* gk = dynamic_cast<Ghofluxara_driftart*>(m_kart);
         // Prevent using suspension length uninitialized
         if ( !gk || gt_replay_index != -1)
         {
@@ -1568,7 +1568,7 @@ bool KartModel::handleSpotlight(GE::GESPM* spm)
         std::string t;
         if (m.getTexture(0))
             t = m.getTexture(0)->getFullPath().c_str();
-        if (t.find("stk_conelight_a.png") != std::string::npos)
+        if (t.find("fluxara_drift_conelight_a.png") != std::string::npos)
         {
             spotlight = true;
             spm->removeMeshBuffer(i);
@@ -1588,11 +1588,11 @@ bool KartModel::handleSPSpotlight(SP::SPMesh* spm)
     for (int i = count - 1; i >= 0; i--)
     {
         SP::SPMeshBuffer* b = static_cast<SP::SPMeshBuffer*>(spm->getMeshBuffer(i));
-        const auto& materials = b->getAllSTKMaterials();
+        const auto& materials = b->getAllFLUXARA_DRIFTMaterials();
         for (unsigned i = 0; i < materials.size(); i++)
         {
             Material* m = materials[i];
-            if (m && m->getSamplerPath(0).find("stk_conelight_a.png") != std::string::npos)
+            if (m && m->getSamplerPath(0).find("fluxara_drift_conelight_a.png") != std::string::npos)
             {
                 spotlight = true;
                 b->disableForMaterial(i);

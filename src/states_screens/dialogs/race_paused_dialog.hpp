@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -45,6 +45,9 @@ private:
     KartTeam m_target_team;
     bool m_self_destroy;
     bool m_from_overworld;
+    // Local iPhone races use the Fluxara raster pause composition instead of
+    // the inherited FLUXARA_DRIFT ribbon dialog.
+    bool m_fluxara_pause;
     int m_touch_controls;
 
     GUIEngine::TextBoxWidget* m_text_box;

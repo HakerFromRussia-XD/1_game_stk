@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015  Marianne Gagnon
 //            (C) 2014-2015  Joerg Henrichs, konstin
 //
@@ -22,7 +22,7 @@
 #include "challenges/unlock_manager.hpp"
 #include "config/player_manager.hpp"
 #include "config/saved_grand_prix.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "graphics/irr_driver.hpp"
 #include "graphics/material.hpp"
 #include "guiengine/engine.hpp"
@@ -56,7 +56,7 @@ using namespace GUIEngine;
 /** Constructor, initialised some variables which might be used before
  *  loadedFromFile is called.
  */
-GPInfoScreen::GPInfoScreen() : Screen("gp_info.stkgui")
+GPInfoScreen::GPInfoScreen() : Screen("gp_info.fluxara_driftgui")
 {
     m_curr_time = 0.0f;
     // Necessary to test if loadedFroMFile() was executed (in setGP)
@@ -65,7 +65,7 @@ GPInfoScreen::GPInfoScreen() : Screen("gp_info.stkgui")
 }   // GPInfoScreen
 
 // ----------------------------------------------------------------------------
-/** Called when the stkgui file is read. It stores the pointer to various
+/** Called when the fluxara_driftgui file is read. It stores the pointer to various
  *  widgets and adds the right names for reverse mode.
  */
 void GPInfoScreen::loadedFromFile()
@@ -93,7 +93,7 @@ void GPInfoScreen::loadedFromFile()
 
     m_highscore_list = getWidget<ListWidget>("highscore-entries");
 
-    m_icon_bank = new irr::gui::STKModifiedSpriteBank(GUIEngine::getGUIEnv());
+    m_icon_bank = new irr::gui::FLUXARA_DRIFTModifiedSpriteBank(GUIEngine::getGUIEnv());
     for(unsigned int i=0; i < kart_properties_manager->getNumberOfKarts(); i++)
     {
         const KartProperties* prop = kart_properties_manager->getKartById(i);
@@ -224,7 +224,7 @@ void GPInfoScreen::init()
         
         m_ai_kart_spinner->setActive(true);
         m_ai_kart_spinner->setValue(num_ai);
-        m_ai_kart_spinner->setMax(stk_config->m_max_karts - local_players);
+        m_ai_kart_spinner->setMax(fluxara_drift_config->m_max_karts - local_players);
         m_ai_kart_spinner->setMin(min_ai);
     }   // has_AI
 
@@ -341,7 +341,7 @@ void GPInfoScreen::addScreenshot()
     screenshot->m_properties[PROP_ICON] = "gui/icons/main_help.png";
 
     const Track *track = track_manager->getTrack(m_gp.getTrackId(0));
-    video::ITexture* image = STKTexManager::getInstance()
+    video::ITexture* image = FLUXARA_DRIFTTexManager::getInstance()
         ->getTexture(track->getScreenshotFile(),
         "While loading screenshot for track '%s':", track->getFilename());
     if (image != NULL)

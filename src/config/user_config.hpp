@@ -1,7 +1,7 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2006-2015 SuperTuxKart-Team
-//  Modelled after Supertux's configfile.h
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2006-2015 FluxaraDrift-Team
+//  Modelled after FluxaraDrift's configfile.h
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -228,14 +228,14 @@ public:
 // ============================================================================
 class TimeUserConfigParam : public UserConfigParam
 {
-    StkTime::TimeType m_value;
-    StkTime::TimeType m_default_value;
+    FluxaraDriftTime::TimeType m_value;
+    FluxaraDriftTime::TimeType m_default_value;
 
 public:
 
-    TimeUserConfigParam(StkTime::TimeType default_value, const char* param_name,
+    TimeUserConfigParam(FluxaraDriftTime::TimeType default_value, const char* param_name,
                         const char* comment = NULL);
-    TimeUserConfigParam(StkTime::TimeType default_value, const char* param_name,
+    TimeUserConfigParam(FluxaraDriftTime::TimeType default_value, const char* param_name,
                         GroupUserConfigParam* group, const char* comment=NULL);
 
     void write(std::stringstream& stream) const;
@@ -244,10 +244,10 @@ public:
 
     irr::core::stringc toString() const;
     void revertToDefaults()               { m_value = m_default_value;        }
-    operator StkTime::TimeType() const       { return m_value;                   }
-    StkTime::TimeType& operator=(const StkTime::TimeType& v)
+    operator FluxaraDriftTime::TimeType() const       { return m_value;                   }
+    FluxaraDriftTime::TimeType& operator=(const FluxaraDriftTime::TimeType& v)
                                           { m_value = v; return m_value;      }
-    StkTime::TimeType& operator=(const TimeUserConfigParam& v)
+    FluxaraDriftTime::TimeType& operator=(const TimeUserConfigParam& v)
                                           { m_value = (int)v; return m_value; }
 };   // TimeUserConfigParam
 
@@ -468,7 +468,7 @@ namespace UserConfigParams
     PARAM_PREFIX IntUserConfigParam          m_difficulty
             PARAM_DEFAULT(  IntUserConfigParam(0, "difficulty",
                             &m_race_setup_group,
-                        "Default race difficulty. 0=easy, 1=medium, 2=hard, 3=supertux") );
+                        "Default race difficulty. 0=easy, 1=medium, 2=hard, 3=fluxara_drift") );
     PARAM_PREFIX IntUserConfigParam          m_game_mode
             PARAM_DEFAULT(  IntUserConfigParam(0, "game_mode",
                             &m_race_setup_group,
@@ -599,7 +599,7 @@ namespace UserConfigParams
     PARAM_PREFIX IntUserConfigParam         m_screen_keyboard
             PARAM_DEFAULT( IntUserConfigParam(0, "screen_keyboard_status",
             &m_multitouch_group,
-            "STK screen keyboard status: 0 = disabled, 1 = enabled") );
+            "FLUXARA_DRIFT screen keyboard status: 0 = disabled, 1 = enabled") );
 
     // ---- GP start order
     PARAM_PREFIX GroupUserConfigParam        m_gp_start_order
@@ -735,7 +735,7 @@ namespace UserConfigParams
         &m_video_group, "Render video driver to use, at the moment opengl, vulkan or directx9 is supported.") );
 #endif
 
-#if defined(MOBILE_STK)
+#if defined(MOBILE_FLUXARA_DRIFT)
     PARAM_PREFIX BoolUserConfigParam        m_vulkan_fullscreen_desktop
         PARAM_DEFAULT(BoolUserConfigParam(false, "vulkan_fullscreen_desktop",
         &m_video_group, "Use SDL_WINDOW_FULLSCREEN_DESKTOP for vulkan device"));
@@ -873,7 +873,7 @@ namespace UserConfigParams
         "Last 5 IP addresses that user entered",
         {{ "server-address", "address", "last-connection" }}, {}));
 
-    // These stk domains have only a record to each ipv6 stun below,
+    // These fluxara_drift domains have only a record to each ipv6 stun below,
     // so we can use this to know ipv4 address of nat64 gateway (if any)
     PARAM_PREFIX StringToUIntUserConfigParam m_stun_servers_v4
         PARAM_DEFAULT(StringToUIntUserConfigParam("ipv4-stun-servers",
@@ -881,8 +881,8 @@ namespace UserConfigParams
         "(ipv4 only) with port", {{ "stun-server", "address", "ping" }},
             {
                  { "stunv4.linuxreviews.org:3478", 0u },
-                 { "stunv4.7.supertuxkart.net:3478", 0u },
-                 { "stunv4.8.supertuxkart.net:3478", 0u }
+                 { "stunv4.7.fluxaradrift.net:3478", 0u },
+                 { "stunv4.8.fluxaradrift.net:3478", 0u }
              }
          ));
 
@@ -892,7 +892,7 @@ namespace UserConfigParams
         "(including ipv6) with port", {{ "stun-server", "address", "ping" }},
             {
                  { "stun.linuxreviews.org:3478", 0u },
-                 { "stun.supertuxkart.net:3478", 0u },
+                 { "stun.fluxaradrift.net:3478", 0u },
                  { "stun.stunprotocol.org:3478", 0u }
              }
          ));
@@ -909,11 +909,11 @@ namespace UserConfigParams
     PARAM_PREFIX BoolUserConfigParam m_random_client_port
         PARAM_DEFAULT(BoolUserConfigParam(true, "random-client-port",
         &m_network_group, "Use random port for client connection "
-        "(check stk_config.xml for default value)"));
+        "(check fluxara_drift_config.xml for default value)"));
     PARAM_PREFIX BoolUserConfigParam m_random_server_port
         PARAM_DEFAULT(BoolUserConfigParam(false, "random-server-port",
         &m_network_group, "Use random port for server connection "
-        "(check stk_config.xml for default value)"));
+        "(check fluxara_drift_config.xml for default value)"));
     PARAM_PREFIX BoolUserConfigParam m_lobby_chat
         PARAM_DEFAULT(BoolUserConfigParam(true, "lobby-chat",
         &m_network_group, "Enable chatting in networking lobby, if off than "
@@ -1463,7 +1463,7 @@ namespace UserConfigParams
 
 // ============================================================================
 /**
-  * \brief Class for managing general STK user configuration data.
+  * \brief Class for managing general FLUXARA_DRIFT user configuration data.
   * \ingroup config
   */
 class UserConfig : public NoCopy

@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //
 //  Copyright (C) 2013-2015 Lionel Fuentes
 //
@@ -100,15 +100,15 @@
             else
                 getCallStack(callstack);
 
-            std::string msg =   "SuperTuxKart crashed!\n"
+            std::string msg =   "FluxaraDrift crashed!\n"
                                 "If you continue to encounter this issue, please hit Ctrl+C to copy this error "
                                 "to the clipboard and report the problem to the developers on our bug tracker:\n"
-                                "https://github.com/supertuxkart/stk-code/issues\n"
+                                "https://github.com/fluxaradrift/fluxara_drift-code/issues\n"
                                 "\n"
                                 "Call stack:\n";
             msg += callstack;
             Log::error("StackTrace", "%s", msg.c_str());
-            MessageBoxA(NULL, msg.c_str(), "SuperTuxKart crashed!", MB_ICONERROR | MB_OK);
+            MessageBoxA(NULL, msg.c_str(), "FluxaraDrift crashed!", MB_ICONERROR | MB_OK);
         }   // winCrashHandler
 
         // --------------------------------------------------------------------
@@ -365,9 +365,9 @@
 
     namespace CrashReporting
     {
-        // BFD of current running STK binary, only can be useful
+        // BFD of current running FLUXARA_DRIFT binary, only can be useful
         // if compiled with debug symbols
-        static bfd *m_stk_bfd = NULL;
+        static bfd *m_fluxara_drift_bfd = NULL;
 
         // Symbol table
         static asymbol **m_syms = NULL;
@@ -391,31 +391,31 @@
             if (m_found)
                 return;
 
-            if ((bfd_get_section_flags(m_stk_bfd, section) & SEC_ALLOC) == 0)
+            if ((bfd_get_section_flags(m_fluxara_drift_bfd, section) & SEC_ALLOC) == 0)
                 return;
 
-            vma = bfd_get_section_vma(m_stk_bfd, section);
+            vma = bfd_get_section_vma(m_fluxara_drift_bfd, section);
             if (m_adress < vma)
                 return;
 
-            size = bfd_section_size(m_stk_bfd, section);
+            size = bfd_section_size(m_fluxara_drift_bfd, section);
             if (m_adress >= vma + size)
                 return;
 
-            m_found = bfd_find_nearest_line(m_stk_bfd, section, m_syms,
+            m_found = bfd_find_nearest_line(m_fluxara_drift_bfd, section, m_syms,
                 m_adress - vma, &m_file_name, &m_function_name, &m_line);
         }
 
         void signalHandler(int signal_no)
         {
-            if (m_stk_bfd == NULL)
+            if (m_fluxara_drift_bfd == NULL)
             {
                 Log::warn("CrashReporting", "Failed loading or missing BFD of "
-                          "STK binary, no backtrace available when reporting");
+                          "FLUXARA_DRIFT binary, no backtrace available when reporting");
                 exit(0);
             }
 
-            Log::error("CrashReporting", "STK has crashed! Backtrace info:");
+            Log::error("CrashReporting", "FLUXARA_DRIFT has crashed! Backtrace info:");
             std::string stack;
             getCallStack(stack);
 
@@ -428,7 +428,7 @@
             exit(0);
         }
 
-        void loadSTKBFD()
+        void loadFLUXARA_DRIFTBFD()
         {
             char *path = NULL;
 #if defined(__linux__)
@@ -455,23 +455,23 @@
             }
             path[len] = 0;
 #endif
-            m_stk_bfd = bfd_openr(path, NULL);
+            m_fluxara_drift_bfd = bfd_openr(path, NULL);
             free((void*)path);
 
-            if (m_stk_bfd == NULL)
+            if (m_fluxara_drift_bfd == NULL)
             {
                 return;
             }
 
-            if (bfd_check_format(m_stk_bfd, bfd_archive))
+            if (bfd_check_format(m_fluxara_drift_bfd, bfd_archive))
             {
-                m_stk_bfd = NULL;
+                m_fluxara_drift_bfd = NULL;
                 return;
             }
 
-            if (!bfd_check_format(m_stk_bfd, bfd_object))
+            if (!bfd_check_format(m_fluxara_drift_bfd, bfd_object))
             {
-                m_stk_bfd = NULL;
+                m_fluxara_drift_bfd = NULL;
                 return;
             }
 
@@ -479,23 +479,23 @@
             unsigned int size = 0;
             long symcount = 0;
 
-            if ((bfd_get_file_flags(m_stk_bfd) & HAS_SYMS) == 0)
+            if ((bfd_get_file_flags(m_fluxara_drift_bfd) & HAS_SYMS) == 0)
             {
-                m_stk_bfd = NULL;
+                m_fluxara_drift_bfd = NULL;
                 return;
             }
 
-            symcount = bfd_read_minisymbols(m_stk_bfd, false, (void**)&m_syms,
+            symcount = bfd_read_minisymbols(m_fluxara_drift_bfd, false, (void**)&m_syms,
                 &size);
             if (symcount == 0)
             {
-                symcount = bfd_read_minisymbols(m_stk_bfd, true/* dynamic*/,
+                symcount = bfd_read_minisymbols(m_fluxara_drift_bfd, true/* dynamic*/,
                     (void**)&m_syms, &size);
             }
 
             if (symcount < 0)
             {
-                m_stk_bfd = NULL;
+                m_fluxara_drift_bfd = NULL;
                 m_syms = NULL;
                 return;
             }
@@ -503,7 +503,7 @@
 
         void installHandlers()
         {
-            loadSTKBFD();
+            loadFLUXARA_DRIFTBFD();
             struct sigaction sa = {{0}};
             sa.sa_handler = &signalHandler;
             sigemptyset(&sa.sa_mask);
@@ -514,7 +514,7 @@
 
         void getCallStack(std::string& callstack)
         {
-            if (m_stk_bfd == NULL) return;
+            if (m_fluxara_drift_bfd == NULL) return;
 
             void *trace[16];
             int i, trace_size = 0;
@@ -527,7 +527,7 @@
                 m_function_name = NULL;
                 m_line = 0;
 
-                bfd_map_over_sections(m_stk_bfd, findAddressInSection, NULL);
+                bfd_map_over_sections(m_fluxara_drift_bfd, findAddressInSection, NULL);
                 if (m_found && m_file_name != NULL)
                 {
                     callstack = callstack + m_file_name + ":" +

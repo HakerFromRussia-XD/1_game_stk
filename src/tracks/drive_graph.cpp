@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -471,7 +471,7 @@ void DriveGraph::setDefaultStartPositions(AlignedArray<btTransform>
                 x_pos += sidewards_distance;
             distance_from_start += forwards_distance;
         }
-    }   // for i<stk_config->m_max_karts
+    }   // for i<fluxara_drift_config->m_max_karts
 }   // setStartPositions
 
 // -----------------------------------------------------------------------------

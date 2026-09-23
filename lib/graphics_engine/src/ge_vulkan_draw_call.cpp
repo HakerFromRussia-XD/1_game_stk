@@ -161,7 +161,7 @@ void ObjectData::init(const irr::scene::SParticle& particle, int material_id,
     float scale_x = particle.size.Width / 2.0f;
     if (flips)
     {
-        // Following stk_particle.cpp
+        // Following fluxara_drift_particle.cpp
         const unsigned particle_index = particle.startTime;
         const float lifetime = particle.startSize.Width;
         const float pi = 3.14159265358979323846f;

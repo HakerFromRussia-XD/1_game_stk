@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -45,7 +45,7 @@ PlayerRankingsDialog::PlayerRankingsDialog(uint32_t online_id,
                     : ModalDialog(0.8f,0.9f), m_online_id(online_id),
                       m_name(name), m_self_destroy(false)
 {
-    loadFromFile("online/player_rankings_dialog.stkgui");
+    loadFromFile("online/player_rankings_dialog.fluxara_driftgui");
     m_top_ten = getWidget<ListWidget>("top-ten");
     assert(m_top_ten != NULL);
 
@@ -171,12 +171,12 @@ GUIEngine::EventPropagation
         }
         else if (selection == m_refresh_widget->m_properties[PROP_ID])
         {
-            static uint64_t timer = StkTime::getMonoTimeMs();
+            static uint64_t timer = FluxaraDriftTime::getMonoTimeMs();
             // 1 minute per refresh
-            if (StkTime::getMonoTimeMs() < timer + 60000)
+            if (FluxaraDriftTime::getMonoTimeMs() < timer + 60000)
                 return GUIEngine::EVENT_BLOCK;
 
-            timer = StkTime::getMonoTimeMs();
+            timer = FluxaraDriftTime::getMonoTimeMs();
             m_ranking_callback =
                 RankingCallback::getRankingCallback(m_name, m_online_id);
             m_ranking_callback->queue();

@@ -787,7 +787,7 @@ namespace scene
 		/** \return The node's scene manager. */
 		virtual ISceneManager* getSceneManager(void) const { return SceneManager; }
 
-		//! STK addition to optimize updateAbsolutePosition, only do that if changed transformation.
+		//! FLUXARA_DRIFT addition to optimize updateAbsolutePosition, only do that if changed transformation.
 		bool getNeedsUpdateAbsTrans() const { return NeedsUpdateAbsTrans; }
 		bool getUpdatedAbsTrans() const { return UpdatedAbsTrans; }
 		void setNeedsUpdateAbsTrans(bool val) { NeedsUpdateAbsTrans = val; }

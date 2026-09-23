@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2012-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -47,8 +47,8 @@ void EasterEggHunt::init()
     m_display_rank = false;
 
     unsigned int gk = 0;
-    if (RaceManager::get()->hasGhostKarts())
-        gk = ReplayPlay::get()->getNumGhostKart();
+    if (RaceManager::get()->hasGhofluxara_driftarts())
+        gk = ReplayPlay::get()->getNumGhofluxara_driftart();
     // check for possible problems if AI karts were incorrectly added
     if((getNumKarts() - gk) > RaceManager::get()->getNumPlayers())
     {
@@ -248,9 +248,9 @@ void EasterEggHunt::terminateRace()
 float EasterEggHunt::estimateFinishTimeForKart(AbstractKart* kart)
 {
     // For ghost karts, use the replay data
-    if (kart->isGhostKart())
+    if (kart->isGhofluxara_driftart())
     {
-        GhostKart* gk = dynamic_cast<GhostKart*>(kart);
+        Ghofluxara_driftart* gk = dynamic_cast<Ghofluxara_driftart*>(kart);
         return gk->getGhostFinishTime();
     }
 

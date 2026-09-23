@@ -2248,7 +2248,7 @@ Iván Briano (21):
 - intel/brw: add fetch_viewport_index function
 - intel/brw: always read LAYER/VIEWPORT from the FS payload
 - vulkan/runtime: pColorAttachmentInputIndices is allowed to be NULL
-- vulkan/properties: handle LayeredApiPropertiesListKHR
+- vulkan/properties: handle LayeredApiPropertiesLifluxara_driftHR
 - anv: enable VK_KHR_maintenance7
 - anv: get scratch surface from the correct pool
 - anv: set MOCS for protected memory when needed

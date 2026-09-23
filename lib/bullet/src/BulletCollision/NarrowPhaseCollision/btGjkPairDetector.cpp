@@ -36,7 +36,7 @@ subject to the following restrictions:
 //must be above the machine epsilon
 #define REL_ERROR2 btScalar(1.0e-6)
 
-// Disable global variables for STK with multiple physics instance
+// Disable global variables for FLUXARA_DRIFT with multiple physics instance
 //temp globals, to improve GJK/EPA/penetration calculations
 //int gNumDeepPenetrationChecks = 0;
 //int gNumGjkChecks = 0;

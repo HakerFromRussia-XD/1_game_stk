@@ -15,7 +15,7 @@
 using namespace GUIEngine;
 
 FluxaraHomeScreen::FluxaraHomeScreen()
-    : Screen("fluxara_home.stkgui")
+    : Screen("fluxara_home.fluxara_driftgui")
 {
 }
 
@@ -59,6 +59,11 @@ void FluxaraHomeScreen::onResize()
 void FluxaraHomeScreen::onDraw(float)
 {
     const FluxaraUI::Canvas c;
+    if (!c.isStable())
+    {
+        FluxaraUI::transitionBackdrop(m_art[0]);
+        return;
+    }
     c.image(m_art[0], 0, 0, 360, 780, true);
     c.image(m_art[1], 10, 77, 340, 204);
     c.image(m_art[2], 71, 651, 109, 109);

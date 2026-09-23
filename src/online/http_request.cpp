@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -17,7 +17,7 @@
 #include "online/http_request.hpp"
 
 #include "config/user_config.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "io/file_manager.hpp"
 #include "online/request_manager.hpp"
 #include "utils/constants.hpp"
@@ -104,9 +104,9 @@ namespace Online
                                 const std::string &action)
     {
         // Old (0.8.1) API: send to client-user.php, and add action as a parameter
-        if (stk_config->m_server_api_version == 1)
+        if (fluxara_drift_config->m_server_api_version == 1)
         {
-            const std::string final_url = stk_config->m_server_api + "client-user.php";
+            const std::string final_url = fluxara_drift_config->m_server_api + "client-user.php";
             setURL(final_url);
             if (action == "change-password")
                 addParameter("action", "change_password");
@@ -117,8 +117,8 @@ namespace Online
         }
         else
         {
-            const std::string final_url = stk_config->m_server_api +
-                + "v" + StringUtils::toString(stk_config->m_server_api_version)
+            const std::string final_url = fluxara_drift_config->m_server_api +
+                + "v" + StringUtils::toString(fluxara_drift_config->m_server_api_version)
                 + "/" + path // eg: /user/, /server/
                 + action + "/"; // eg: connect/, pool/, get-server-list/
 
@@ -133,7 +133,7 @@ namespace Online
      */
      void HTTPRequest::setAddonsURL(const std::string& path)
      {
-        setURL(stk_config->m_server_addons + "/" + path);
+        setURL(fluxara_drift_config->m_server_addons + "/" + path);
      }   // set AddonsURL
 
      // ------------------------------------------------------------------------

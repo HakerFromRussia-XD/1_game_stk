@@ -902,7 +902,7 @@ plus:
             mkdep |= MD_MKDEP;
             break;
 
-// CPU code useless in STK
+// CPU code useless in FLUXARA_DRIFT
 #if 0 //SYS_FAMILY == SYS_UNIX
         case 'm':
             if (str_eq( mcpp_optarg, "64")) {               /* -m64 */
@@ -1291,7 +1291,7 @@ Version:
                         /* Search framework[] next to the directory */
 #endif
 
-#if 0 // CPU code useless in STK
+#if 0 // CPU code useless in FLUXARA_DRIFT
 #if COMPILER == GNUC && SYSTEM == SYS_MAC
     if (arch[ 0]) {             /* -arch option has been specified  */
         if (((str_eq( CPU, "i386") || str_eq( CPU, "x86_64"))
@@ -1377,7 +1377,7 @@ static void version( void)
 /* Write messages here, for example, "MySomeTool with ".    */
 #endif
 
-        "MCPP V.2.7.2-stk (", DATE, ") "
+        "MCPP V.2.7.2-fluxara_drift (", DATE, ") "
 #if     COMPILER == INDEPENDENT
             , "compiler-independent-build "
 #else
@@ -1815,7 +1815,7 @@ static void     chk_opts(
                 /* Set function pointer to macro expansion routine  */
 }
 
-// CPU code useless in STK
+// CPU code useless in FLUXARA_DRIFT
 #if 0//COMPILER != GNUC
 
 static void init_cpu_macro (

@@ -20,6 +20,6 @@ Ace and Halo remain unchanged. The thirteen additions preserve all model, animat
 
 Models, wheel-model references and declared icons exist. Runtime selection, animation and racing need simulator verification. Some source packages intentionally declare nonexistent shadow filenames; these are inherited and listed in the source descriptors.
 
-Static SPM audit parsed all 58 new SPM files. Five shared stock textures resolve in the existing Debug simulator app's data/textures: gfxGlow_red_a.png, gfxGlow_blue_a.png, gfxGlow_White_a.png, gfx_distord_AlphaTested.png, stk_conelight_a.png. Other SPM material textures resolve inside the copied kart folders. This verifies dependency presence, not runtime rendering.
+Static SPM audit parsed all 58 new SPM files. Five shared stock textures resolve in the existing Debug simulator app's data/textures: gfxGlow_red_a.png, gfxGlow_blue_a.png, gfxGlow_White_a.png, gfx_distord_AlphaTested.png, fluxara_drift_conelight_a.png. Other SPM material textures resolve inside the copied kart folders. This verifies dependency presence, not runtime rendering.
 
 Original license texts remain next to each asset. GPL/CC license labels are source declarations, not a publication clearance finding.

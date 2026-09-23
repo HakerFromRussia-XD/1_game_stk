@@ -72,7 +72,7 @@ void GEMaterialManager::init()
     def_mappings[irr::video::EMT_NORMAL_MAP_SOLID] = "normalmap";
     def_mappings[irr::video::EMT_SOLID_2_LAYER] = "decal";
     def_mappings[irr::video::EMT_TRANSPARENT_ALPHA_CHANNEL_REF] = "alphatest";
-    def_mappings[irr::video::EMT_STK_GRASS] = "grass";
+    def_mappings[irr::video::EMT_FLUXARA_DRIFT_GRASS] = "grass";
     def_mappings[irr::video::EMT_TRANSPARENT_ALPHA_CHANNEL] = "alphablend";
     def_mappings[irr::video::EMT_TRANSPARENT_ADD_COLOR] = "additive";
     uint32_t mapping_cursor = 0;

@@ -9,7 +9,19 @@ void fluxaraPrepareInitialOrientation(bool portrait);
 // final orientation hint, after the engine's platform defaults are applied.
 bool fluxaraInitialOrientationIsPortrait();
 
-// Called by the game state manager. UIKit work is dispatched to the main queue.
+// Called at the route boundary. UIKit geometry is submitted immediately on its
+// main thread before the destination screen is built.
 void fluxaraRequestPortraitMenu(bool portrait);
+
+// UIKit applies geometry asynchronously.  Until Irrlicht has recreated its
+// render target for that geometry, portrait art must not be drawn through the
+// previous landscape framebuffer.
+bool fluxaraOrientationTransitionPending();
+void fluxaraNotifyRenderTargetSize(unsigned int width, unsigned int height);
+
+// Results are a portrait in-game menu.  When it is popped straight into the
+// portrait campaign, suppress exactly the intermediate GAME/landscape request.
+void fluxaraPreservePortraitForNextGameState();
+bool fluxaraPreservePortraitDuringState(bool destination_is_menu);
 
 #endif

@@ -15,11 +15,11 @@
 #include "states_screens/fluxara_home_screen.hpp"
 #include "states_screens/state_manager.hpp"
 #include "states_screens/fluxara_ui.hpp"
+#ifdef IOS_FLUXARA_DRIFT
+#include "utils/fluxara_device_validation_ios.hpp"
+#endif
 #include "tracks/track.hpp"
 #include "tracks/track_manager.hpp"
-#ifdef IOS_STK
-#include "utils/fluxara_orientation_ios.hpp"
-#endif
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
 
@@ -29,7 +29,7 @@
 using namespace GUIEngine;
 
 FluxaraCampaignScreen::FluxaraCampaignScreen()
-    : Screen("fluxara_campaign.stkgui")
+    : Screen("fluxara_campaign.fluxara_driftgui")
 {
 }
 
@@ -39,12 +39,6 @@ void FluxaraCampaignScreen::loadedFromFile()
 
 void FluxaraCampaignScreen::init()
 {
-#ifdef IOS_STK
-    // Result GUI returns directly to this screen while StateManager is still
-    // in GAME.  Requesting portrait here keeps the campaign list upright
-    // instead of waiting for a MENU state transition that never happens.
-    fluxaraRequestPortraitMenu(true);
-#endif
     Screen::init();
     const char* files[] = {"race/background", "home/back-surface", "home/icon-back",
         "race/campaign-plate", "race/circuit-card", "race/summit-card"};
@@ -54,6 +48,7 @@ void FluxaraCampaignScreen::init()
     m_tracks.clear();
     m_events.clear();
     m_segments.clear();
+    m_progress_cached = false;
     const std::string manifest = file_manager->getAsset("fluxara-campaign.xml");
     std::unique_ptr<XMLNode> campaign(manifest.empty() ? nullptr : file_manager->createXMLTree(manifest));
     if (campaign)
@@ -87,6 +82,10 @@ void FluxaraCampaignScreen::init()
 
     if (!m_next_after_event.empty())
     {
+#ifdef IOS_FLUXARA_DRIFT
+        if (FluxaraModes::autoCampaignValidation())
+            fluxaraLogDeviceValidationMemory("after-unload", m_next_after_event);
+#endif
         const std::vector<FluxaraEvent>::iterator current = std::find_if(
             m_events.begin(), m_events.end(), [this](const FluxaraEvent& event)
             {
@@ -165,19 +164,19 @@ void FluxaraCampaignScreen::init()
     }
     else if (m_selected_track >= m_tracks.size())
         m_selected_track = 0;
+    // The count is stable while this screen is visible. Caching avoids
+    // repeatedly rebuilding the 50-event ID list during every scroll frame.
+    m_completed_count = completedCount();
+    m_progress_cached = true;
     populateTrackList();
 
     // The emulator-only campaign pass follows the normal screen sequence;
     // it simply supplies the same Start action after each selected card.
     // Do not push another screen from init(): the menu stack must first be
     // complete, otherwise the result screen can pop the application itself.
-#if 0 // AUTOPLAY ACCEPTANCE — disabled for human play; retained for a future lab run.
     m_auto_start_delay = FluxaraModes::autoCampaignValidation() &&
         !FluxaraModes::autoCampaignFailed() &&
         !FluxaraModes::autoCampaignFinished() ? 0.1f : -1.0f;
-#else
-    m_auto_start_delay = -1.0f;
-#endif
 }
 
 void FluxaraCampaignScreen::populateTrackList()
@@ -187,7 +186,7 @@ void FluxaraCampaignScreen::populateTrackList()
     for (unsigned i = 0; i < m_tracks.size(); ++i)
         list->addItem(m_events[i].id, L"");
 
-    auto* box = list->getIrrlichtElement<irr::gui::CGUISTKListBox>();
+    auto* box = list->getIrrlichtElement<irr::gui::CGUIFLUXARA_DRIFTListBox>();
     box->setDrawBackground(false);
     box->setItemHeight(std::max(1, int(std::lround(276.0f * FluxaraUI::Canvas().scale))));
     m_cards.assign(m_tracks.size(), nullptr);
@@ -198,6 +197,7 @@ void FluxaraCampaignScreen::populateTrackList()
                                          unsigned(m_tracks.size() - 1));
         box->getScrollBar()->setPos(target * box->getItemHeight());
     }
+    box->setTouchInertiaEnabled(true);
     m_last_scroll_pos = box->getScrollBar()->getPos();
     m_scroll_idle_time = 1.0f;
 }
@@ -209,7 +209,7 @@ void FluxaraCampaignScreen::layoutControls()
     c.move(getWidget<ButtonWidget>("back"),21,58,50,50);
     ListWidget* list = getWidget<ListWidget>("tracks");
     c.move(list,20,124,320,644);
-    if (auto* box = list->getIrrlichtElement<irr::gui::CGUISTKListBox>())
+    if (auto* box = list->getIrrlichtElement<irr::gui::CGUIFLUXARA_DRIFTListBox>())
         box->setItemHeight(std::max(1, int(std::lround(276.0f * c.scale))));
 }
 
@@ -222,6 +222,14 @@ void FluxaraCampaignScreen::onResize()
 void FluxaraCampaignScreen::onDraw(float)
 {
     const FluxaraUI::Canvas c;
+    if (!c.isStable())
+    {
+        const auto size = irr_driver->getActualScreenSize();
+        GL32_draw2DRectangle(irr::video::SColor(255,12,31,76),
+            irr::core::recti(0, 0, size.Width, size.Height));
+        FluxaraUI::transitionBackdrop(m_art[0], 77);
+        return;
+    }
     const auto title = [&c](const wchar_t* text)
     {
         auto* font = GUIEngine::getFont();
@@ -232,9 +240,9 @@ void FluxaraCampaignScreen::onDraw(float)
         const auto destination = c.rect(88, 69, 190, 38);
         auto shadow = destination;
         shadow += irr::core::position2di(0, std::max(1, int(2 * c.scale)));
-        font->draw(text, shadow, irr::video::SColor(128,5,13,46), false, true);
+        font->draw(text, shadow, irr::video::SColor(128,5,13,46), true, true);
         font->draw(text, destination, irr::video::SColor(255,255,240,209),
-                   false, true);
+                   true, true);
         font->setScale(saved);
     };
     GL32_draw2DRectangle(irr::video::SColor(255,12,31,76),c.rect(0,0,360,780));
@@ -242,8 +250,8 @@ void FluxaraCampaignScreen::onDraw(float)
     c.image(m_art[1],21,58,50,50); c.image(m_art[2],32,68,25,31);
     title(_C("fluxara", "CAMPAIGN").c_str());
     ListWidget* list = getWidget<ListWidget>("tracks");
-    auto* box = list->getIrrlichtElement<irr::gui::CGUISTKListBox>();
-    const float scroll = box->getScrollBar()->getPos() / c.scale;
+    auto* box = list->getIrrlichtElement<irr::gui::CGUIFLUXARA_DRIFTListBox>();
+    const float scroll = box->getTouchScrollPosition() / c.scale;
     const irr::core::recti clip = c.rect(20,124,320,644);
     for (unsigned i=0;i<m_tracks.size();++i)
     {
@@ -284,7 +292,7 @@ void FluxaraCampaignScreen::onDraw(float)
 void FluxaraCampaignScreen::onUpdate(float dt)
 {
     auto* box = getWidget<ListWidget>("tracks")->
-        getIrrlichtElement<irr::gui::CGUISTKListBox>();
+        getIrrlichtElement<irr::gui::CGUIFLUXARA_DRIFTListBox>();
     const int scroll_pos = box->getScrollBar()->getPos();
     if (scroll_pos != m_last_scroll_pos)
     {
@@ -337,7 +345,7 @@ void FluxaraCampaignScreen::eventCallback(Widget* widget,
     if (name == "tracks")
     {
         ListWidget* list = getWidget<ListWidget>("tracks");
-        auto* box = list->getIrrlichtElement<irr::gui::CGUISTKListBox>();
+        auto* box = list->getIrrlichtElement<irr::gui::CGUIFLUXARA_DRIFTListBox>();
         const int selected = list->getSelectionID();
         list->setSelectionID(-1);
         const int scroll_pos = box->getScrollBar()->getPos();
@@ -383,6 +391,8 @@ const FluxaraSegment* FluxaraCampaignScreen::segmentFor(unsigned selected) const
 
 unsigned int FluxaraCampaignScreen::completedCount() const
 {
+    if (m_progress_cached)
+        return m_completed_count;
     const PlayerProfile* player = PlayerManager::getCurrentPlayer();
     if (!player)
         return 0;

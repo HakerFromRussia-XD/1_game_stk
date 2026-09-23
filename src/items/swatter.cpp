@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2011-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -71,7 +71,7 @@ Swatter::Swatter(AbstractKart *kart, int16_t bomb_ticks, int ticks,
     m_bomb_remaining   = bomb_ticks;
     m_scene_node       = NULL;
     m_bomb_scene_node  = NULL;
-    m_swatter_duration = stk_config->time2Ticks(
+    m_swatter_duration = fluxara_drift_config->time2Ticks(
         kart->getKartProperties()->getSwatterDuration());
     if (m_bomb_remaining != -1)
     {
@@ -79,7 +79,7 @@ Swatter::Swatter(AbstractKart *kart, int16_t bomb_ticks, int ticks,
         // so 40 / 25 * 120
         m_discard_ticks =
             World::getWorld()->getTicksSinceStart() +
-            stk_config->time2Ticks(40.0f / 25.0f);
+            fluxara_drift_config->time2Ticks(40.0f / 25.0f);
     }
     m_swat_sound = NULL;
     m_swatter_animation_ticks = 0;
@@ -130,7 +130,7 @@ void Swatter::updateGraphics(float dt)
             m_bomb_scene_node->setName(debug_name.c_str());
 #endif
             m_bomb_scene_node->setParent(m_kart->getNode());
-            float time_left = stk_config->ticks2Time(m_bomb_remaining);
+            float time_left = fluxara_drift_config->ticks2Time(m_bomb_remaining);
             if (time_left <= (m_bomb_scene_node->getEndFrame() -
                 m_bomb_scene_node->getStartFrame() - 1))
             {
@@ -141,9 +141,9 @@ void Swatter::updateGraphics(float dt)
             m_bomb_scene_node->setAnimationSpeed(0.0f);
         }
 
-        float swat_bomb_frame = stk_config->ticks2Time(
+        float swat_bomb_frame = fluxara_drift_config->ticks2Time(
             World::getWorld()->getTicksSinceStart() -
-            (m_discard_ticks - stk_config->time2Ticks(40.0f / 25.0f)))
+            (m_discard_ticks - fluxara_drift_config->time2Ticks(40.0f / 25.0f)))
             * 25.0f;
 
         if (swat_bomb_frame >= (float)m_scene_node->getEndFrame())
@@ -250,8 +250,8 @@ bool Swatter::updateAndTestFinished()
             {
                 // Avoid swatter near the start and the end lifetime of swatter
                 // to make sure all clients know the existence of swatter each other
-                if (m_swatter_duration - m_attachment->getTicksLeft() < stk_config->time2Ticks(0.5f) ||
-                    m_attachment->getTicksLeft() < stk_config->time2Ticks(0.75f) ) // ~0.167f and ~0.5f below
+                if (m_swatter_duration - m_attachment->getTicksLeft() < fluxara_drift_config->time2Ticks(0.5f) ||
+                    m_attachment->getTicksLeft() < fluxara_drift_config->time2Ticks(0.75f) ) // ~0.167f and ~0.5f below
                     return false;
 
                 chooseTarget();
@@ -273,12 +273,12 @@ bool Swatter::updateAndTestFinished()
                 float min_dist2
                      = m_kart->getKartProperties()->getSwatterDistance();
 
-                if (dist2 < min_dist2 && !m_kart->isGhostKart())
+                if (dist2 < min_dist2 && !m_kart->isGhofluxara_driftart())
                 {
                     // Start squashing
                     m_animation_phase = SWATTER_TO_TARGET;
                     m_swatter_animation_ticks =
-                        m_attachment->getTicksLeft() - stk_config->time2Ticks(0.166666672f);
+                        m_attachment->getTicksLeft() - fluxara_drift_config->time2Ticks(0.166666672f);
                 }
             }
             break;
@@ -286,13 +286,13 @@ bool Swatter::updateAndTestFinished()
             {
                 // Did we just finish the first part of the movement?
                 if (m_attachment->getTicksLeft() < m_swatter_animation_ticks &&
-                    m_attachment->getTicksLeft() > stk_config->time2Ticks(0.5f))
+                    m_attachment->getTicksLeft() > fluxara_drift_config->time2Ticks(0.5f))
                 {
                     // Squash the karts and items around and
                     // change the current phase
                     squashThingsAround();
                     m_animation_phase = SWATTER_FROM_TARGET;
-                    const int end_ticks = ticks_start + stk_config->time2Ticks(0.5f);
+                    const int end_ticks = ticks_start + fluxara_drift_config->time2Ticks(0.5f);
                     if (RaceManager::get()->isBattleMode() ||
                         RaceManager::get()->isSoccerMode())
                     {
@@ -302,7 +302,7 @@ bool Swatter::updateAndTestFinished()
                         m_discard_ticks = end_ticks;
                     }
                     m_swatter_animation_ticks =
-                        m_attachment->getTicksLeft() - stk_config->time2Ticks(0.5f);
+                        m_attachment->getTicksLeft() - fluxara_drift_config->time2Ticks(0.5f);
                 }
             }
             break;
@@ -365,7 +365,7 @@ void Swatter::chooseTarget()
 void Swatter::pointToTarget()
 {
 #ifndef SERVER_ONLY
-    if (m_kart->isGhostKart() || !m_scene_node)
+    if (m_kart->isGhofluxara_driftart() || !m_scene_node)
         return;
 
     if (!m_closest_kart)
@@ -390,7 +390,7 @@ void Swatter::pointToTarget()
  */
 void Swatter::squashThingsAround()
 {
-    if (m_kart->isGhostKart()) return;
+    if (m_kart->isGhofluxara_driftart()) return;
 
     const KartProperties *kp = m_kart->getKartProperties();
 

@@ -6,6 +6,8 @@
 #include "modes/world.hpp"
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
+#include <algorithm>
+#include <cmath>
 
 namespace FluxaraResults
 {
@@ -16,8 +18,15 @@ irr::video::ITexture* art[18] = {};
 void layout(GUIEngine::Screen* screen)
 {
     const FluxaraUI::Canvas c;
+    const auto size = irr_driver->getActualScreenSize();
+    const bool portrait = size.Height >= size.Width;
     for (const char* id : {"fluxara-again", "fluxara-next"})
+    {
         FluxaraUI::rasterHitTarget(screen->getWidget<GUIEngine::ButtonWidget>(id));
+        // The screen is held until Irrlicht owns the portrait framebuffer.
+        // Never expose controls at stale landscape coordinates in between.
+        screen->getWidget(id)->setVisible(portrait);
+    }
     // Figma 19:8: the complete coral action surface is 276 x 99.  The
     // invisible hit target must cover the same area, including its lower
     // rounded portion.
@@ -43,8 +52,18 @@ void init(GUIEngine::Screen* screen)
 }
 void draw(GUIEngine::Screen* screen)
 {
-    const FluxaraUI::Canvas c;
     const auto size=irr_driver->getActualScreenSize();
+    const FluxaraUI::Canvas c;
+    // The screen is already on the stack when UIKit delivers its resize.
+    // Showing a portrait canvas through the old landscape framebuffer makes
+    // it appear as the narrow strip seen on Home and Results.
+    if (!c.isStable() || size.Width > size.Height)
+    {
+        GL32_draw2DRectangle(irr::video::SColor(255,12,31,76),
+            irr::core::recti(0, 0, size.Width, size.Height));
+        FluxaraUI::transitionBackdrop(art[0], 77);
+        return;
+    }
     GL32_draw2DRectangle(irr::video::SColor(255,12,31,76),
         irr::core::recti(0,0,size.Width,size.Height));
     c.image(art[0],0,0,360,780,true,77);

@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -78,7 +78,7 @@ private:
     virtual bool  canSkid(float steer_fraction) OVERRIDE
                 { return m_mini_skid && !(m_overtake_ball || m_chasing_ball); }
     // ------------------------------------------------------------------------
-    virtual void  findClosestKart(bool consider_difficulty,
+    virtual void  findClosefluxara_driftart(bool consider_difficulty,
                                   bool find_sta) OVERRIDE;
     // ------------------------------------------------------------------------
     virtual void  findTarget() OVERRIDE;

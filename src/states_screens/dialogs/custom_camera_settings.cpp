@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -44,7 +44,7 @@ CustomCameraSettingsDialog::CustomCameraSettingsDialog(const float w, const floa
         ModalDialog(w, h)
 {
     m_self_destroy = false;
-    loadFromFile("custom_camera_settings.stkgui");
+    loadFromFile("custom_camera_settings.fluxara_driftgui");
 }
 
 // -----------------------------------------------------------------------------

@@ -1,7 +1,7 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //
 //  Copyright (C) 2004-2015 Ingo Ruhnke <grumbel@gmx.de>
-//  Copyright (C) 2006-2015 SuperTuxKart-Team
+//  Copyright (C) 2006-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -22,7 +22,7 @@
 #include "challenges/unlock_manager.hpp"
 #include "config/player_manager.hpp"
 #include "config/player_profile.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "graphics/irr_driver.hpp"
 #include "graphics/material_manager.hpp"
@@ -43,8 +43,8 @@
 #ifndef SERVER_ONLY
 #include <ge_main.hpp>
 #include <ge_vulkan_driver.hpp>
-#include "graphics/stk_tex_manager.hpp"
-#include "utils/stk_process.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
+#include "utils/fluxara_drift_process.hpp"
 #endif
 
 KartPropertiesManager *kart_properties_manager=0;
@@ -200,7 +200,7 @@ void KartPropertiesManager::loadAllKarts(bool loading_icon)
 {
     m_all_kart_dirs.clear();
     std::vector<std::string>::const_iterator dir;
-    if (stk_config->m_min_kart_version > stk_config->m_max_kart_version)
+    if (fluxara_drift_config->m_min_kart_version > fluxara_drift_config->m_max_kart_version)
     {
         Log::fatal("KartPropertiesManager", "The max kart version "
             "is smaller than the min kart version!");
@@ -725,7 +725,7 @@ void KartPropertiesManager::onDemandLoadKartTextures(
                                                             bool unload_unused)
 {
 #ifndef SERVER_ONLY
-    if (STKProcess::getType() != PT_MAIN || kart_list.empty())
+    if (FLUXARA_DRIFTProcess::getType() != PT_MAIN || kart_list.empty())
         return;
 
     GE::GEVulkanDriver* gevd = GE::getVKDriver();
@@ -754,7 +754,7 @@ void KartPropertiesManager::onDemandLoadKartTextures(
     }
 
     bool unloaded_unused = false;
-    for (auto tex : STKTexManager::getInstance()->getAllTextures())
+    for (auto tex : FLUXARA_DRIFTTexManager::getInstance()->getAllTextures())
     {
         if (!tex.second || !tex.second->useOnDemandLoad())
             continue;

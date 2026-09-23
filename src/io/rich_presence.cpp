@@ -12,16 +12,16 @@
 #include "karts/abstract_kart.hpp"
 #include "karts/kart_model.hpp"
 #include "karts/kart_properties.hpp"
-#define STK_UTF8_GETTEXT 1
+#define FLUXARA_DRIFT_UTF8_GETTEXT 1
 #include "utils/translation.hpp"
-#undef STK_UTF8_GETTEXT
+#undef FLUXARA_DRIFT_UTF8_GETTEXT
 #include "network/protocols/client_lobby.hpp"
 #include "network/protocols/lobby_protocol.hpp"
 #include "network/server.hpp"
 #include "online/request_manager.hpp"
 #include "online/http_request.hpp"
 
-#if defined(__SWITCH__) || defined(MOBILE_STK) || defined(SERVER_ONLY)
+#if defined(__SWITCH__) || defined(MOBILE_FLUXARA_DRIFT) || defined(SERVER_ONLY)
 #define DISABLE_RPC
 #endif
 
@@ -103,7 +103,7 @@ void RichPresence::terminate()
 #else
 #define UNCLEAN m_socket != -1
 #endif
-    if(m_thread != nullptr && STKProcess::getType() == PT_MAIN)
+    if(m_thread != nullptr && FLUXARA_DRIFTProcess::getType() == PT_MAIN)
     {
         m_thread->join();
         delete m_thread;
@@ -402,7 +402,7 @@ void RichPresence::ensureCache()
 void RichPresence::update(bool force)
 {
 #ifndef DISABLE_RPC
-    if (STKProcess::getType() != PT_MAIN)
+    if (FLUXARA_DRIFTProcess::getType() != PT_MAIN)
     {
         // Don't update on server thread
         return;
@@ -443,7 +443,7 @@ void RichPresence::update(bool force)
         if (PlayerManager::getCurrentOnlineState() == PlayerProfile::OS_GUEST ||
             PlayerManager::getCurrentOnlineState() == PlayerProfile::OS_SIGNED_IN)
         {
-            playerName = StringUtils::wideToUtf8(player->getLastOnlineName()) + "@stk";
+            playerName = StringUtils::wideToUtf8(player->getLastOnlineName()) + "@fluxara_drift";
         }
         else
         {
@@ -460,7 +460,7 @@ void RichPresence::update(bool force)
     std::string minorModeName = StringUtils::wideToUtf8(raceManager->getNameOf(
         raceManager->getMinorMode()));
     // Discord takes the time when we started as unix timestamp
-    uint64_t since = (now * 1000) - StkTime::getMonoTimeMs();
+    uint64_t since = (now * 1000) - FluxaraDriftTime::getMonoTimeMs();
     if (world)
     {
         since += world->getStart();
@@ -579,7 +579,7 @@ void RichPresence::update(bool force)
     }
     else
     {
-        assets.add("large_text", "SuperTuxKart");
+        assets.add("large_text", "FluxaraDrift");
         assets.add("large_image", "logo");
         assets.add("small_text", playerName);
         // std::string filename = std::string(basename(player->getIconFilename().c_str()));

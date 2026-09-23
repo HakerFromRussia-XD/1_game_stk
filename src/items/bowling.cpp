@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2007-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -88,7 +88,7 @@ bool Bowling::updateAndDelete(int ticks)
     const AbstractKart *kart=0;
     Vec3        direction;
     float       minDistance;
-    getClosestKart(&kart, &minDistance, &direction);
+    getClosefluxara_driftart(&kart, &minDistance, &direction);
     if(kart && minDistance<m_st_max_distance_squared)   // move bowling towards kart
     {
         // limit angle, so that the bowling ball does not turn
@@ -235,5 +235,5 @@ void Bowling::onFireFlyable()
     setAdjustUpVelocity(false);
 
     // should not live forever, auto-destruct after 20 seconds
-    m_max_lifespan = stk_config->time2Ticks(20);
+    m_max_lifespan = fluxara_drift_config->time2Ticks(20);
 }   // onFireFlyable

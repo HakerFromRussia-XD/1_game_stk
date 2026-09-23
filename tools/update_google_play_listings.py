@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Usage: ./tools/update_google_play_listings.py /path/to/account_file.json
-Pass --beta at the end to generate listings for beta version of stk
+Pass --beta at the end to generate listings for beta version of fluxara_drift
 """
 
 import sys
@@ -89,7 +89,7 @@ lang_dict = {
 'zu': 'zu', # Zulu
 }
 
-package = 'org.supertuxkart.stk'
+package = 'org.fluxaradrift.fluxara_drift'
 account_file = sys.argv[1]
 is_beta = False
 if len(sys.argv) == 3 and sys.argv[2] == '--beta':
@@ -118,7 +118,7 @@ for lang in os.listdir('./google_play_msg'):
         packageName = package,
         body = {
         'language': language_name,
-        'title': 'SuperTuxKart Beta' if is_beta else 'SuperTuxKart',
+        'title': 'FluxaraDrift Beta' if is_beta else 'FluxaraDrift',
         'fullDescription':
             open('./google_play_msg/' + lang + ('/full_beta.txt'
             if is_beta else '/full.txt'), 'r').read(),

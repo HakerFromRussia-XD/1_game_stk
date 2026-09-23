@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
 //  This program is free software; you can redistribute it and/or
@@ -37,16 +37,16 @@ using namespace Online;
 RegistrationDialog::RegistrationDialog() :
         ModalDialog(0.8f,0.9f)
 {
-    loadFromFile("online/registration_terms.stkgui");
+    loadFromFile("online/registration_terms.fluxara_driftgui");
     LabelWidget* terms_widget = getWidget<LabelWidget>("terms");
 
     core::stringw terms = _("Please read the terms and conditions "
-        "for SuperTuxKart at '%s'. You must agree "
-        "to these terms in order to register an account for STK. "
+        "for FluxaraDrift at '%s'. You must agree "
+        "to these terms in order to register an account for FLUXARA_DRIFT. "
         "If you have any questions or comments regarding these "
         "terms, one of the members of the development team would gladly "
         "assist you.",
-        "https://terms.supertuxkart.net");
+        "https://terms.fluxaradrift.net");
     terms_widget->setText(terms, false);
 
    // showRegistrationTerms();

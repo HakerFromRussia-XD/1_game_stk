@@ -19,7 +19,7 @@ class btDynamicsWorld;
 #include "BulletDynamics/Vehicle/btWheelInfo.h"
 #include "BulletDynamics/Dynamics/btActionInterface.h"
 
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 
 class btVehicleTuning;
 class Kart;
@@ -105,7 +105,7 @@ private:
     /** Index of the forward axis. */
     int                 m_indexForwardAxis;
 
-    /** The STK kart object which uses this vehicle. This is mostly used to
+    /** The FLUXARA_DRIFT kart object which uses this vehicle. This is mostly used to
      *  get access to the kart properties, which also define physics
      *  properties. */
     Kart               *m_kart;
@@ -136,7 +136,7 @@ public:
     /** Constructor to create a car from an existing rigidbody.
      *  \param chassis The rigid body to use as chassis.
      *  \param raycaster The raycast object to use.
-     *  \paran kart The STK kart object that uses this vehicle
+     *  \paran kart The FLUXARA_DRIFT kart object that uses this vehicle
      *         (this is used to get access to the kart properties).
      */
                        btKart(btRigidBody* chassis,
@@ -250,7 +250,7 @@ public:
         if (t > 0)
         {
             m_additional_rotation =
-                rot_in_y_axis / (stk_config->ticks2Time(t));
+                rot_in_y_axis / (fluxara_drift_config->ticks2Time(t));
         }
         m_ticks_additional_rotation = t;
     }   // setTimedTorque

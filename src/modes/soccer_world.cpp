@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2006-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2006-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -32,8 +32,8 @@
 #include "network/network_config.hpp"
 #include "network/network_string.hpp"
 #include "network/protocols/game_events_protocol.hpp"
-#include "network/stk_host.hpp"
-#include "network/stk_peer.hpp"
+#include "network/fluxara_drift_host.hpp"
+#include "network/fluxara_drift_peer.hpp"
 #include "physics/physics.hpp"
 #include "states_screens/race_gui_base.hpp"
 #include "tracks/check_goal.hpp"
@@ -494,7 +494,7 @@ void SoccerWorld::onCheckGoalTriggered(bool first_goal)
     if (getTicksSinceStart() < m_ticks_back_to_own_goal)
         return;
     m_ticks_back_to_own_goal = getTicksSinceStart() +
-        stk_config->time2Ticks(3.0f);
+        fluxara_drift_config->time2Ticks(3.0f);
     m_goal_sound->play();
     m_ball->reset();
     m_ball->setEnabled(false);
@@ -581,7 +581,7 @@ void SoccerWorld::onCheckGoalTriggered(bool first_goal)
             NetworkString p_1_1 = p;
             p_1_1.encodeString(sd.m_country_code)
                 .addUInt8(sd.m_handicap_level);
-            auto peers = STKHost::get()->getPeers();
+            auto peers = FLUXARA_DRIFTHost::get()->getPeers();
             for (auto& peer : peers)
             {
                 if (peer->isValidated() && !peer->isWaitingForGame())
@@ -664,7 +664,7 @@ void SoccerWorld::handlePlayerGoalFromServer(const NetworkString& ns)
         msg = _("%s scored a goal!", sd.m_player);
     else
         msg = _("Oops, %s made an own goal!", sd.m_player);
-    float time = stk_config->ticks2Time(ticks_back_to_own_goal - ticks_now);
+    float time = fluxara_drift_config->ticks2Time(ticks_back_to_own_goal - ticks_now);
     // May happen if this message is added when spectate started
     if (time > 3.0f)
         time = 3.0f;
@@ -819,20 +819,20 @@ void SoccerWorld::updateBallPosition(int ticks)
         {
             m_ball_invalid_timer += ticks;
             // Reset the ball and karts if out of navmesh after 2 seconds
-            if (m_ball_invalid_timer >= stk_config->time2Ticks(2.0f))
+            if (m_ball_invalid_timer >= fluxara_drift_config->time2Ticks(2.0f))
             {
                 if (is_server)
                 {
                     // Reset the ball 2 seconds in the future to make sure it's
                     // after all clients time
                     m_reset_ball_ticks = getTicksSinceStart() +
-                        stk_config->time2Ticks(2.0f);
+                        fluxara_drift_config->time2Ticks(2.0f);
 
                     NetworkString p(PROTOCOL_GAME_EVENTS);
                     p.setSynchronous(true);
                     p.addUInt8(GameEventsProtocol::GE_RESET_BALL)
                         .addTime(m_reset_ball_ticks);
-                    STKHost::get()->sendPacketToAllPeers(&p, true);
+                    FLUXARA_DRIFTHost::get()->sendPacketToAllPeers(&p, true);
                 }
                 else if (!NetworkConfig::get()->isNetworking())
                 {
@@ -1070,7 +1070,7 @@ void SoccerWorld::enterRaceOverState()
 }   // enterRaceOverState
 
 // ----------------------------------------------------------------------------
-void SoccerWorld::saveCompleteState(BareNetworkString* bns, STKPeer* peer)
+void SoccerWorld::saveCompleteState(BareNetworkString* bns, FLUXARA_DRIFTPeer* peer)
 {
     const unsigned red_scorers = (unsigned)m_red_scorers.size();
     bns->addUInt32(red_scorers);

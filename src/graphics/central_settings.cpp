@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2014-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2014-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -449,8 +449,8 @@ bool CentralVideoSettings::isShadowEnabled() const
 
 bool CentralVideoSettings::isTextureCompressionEnabled() const
 {
-#ifdef MOBILE_STK
-    // MOBILE_STK currently doesn't handle libsquish in SP
+#ifdef MOBILE_FLUXARA_DRIFT
+    // MOBILE_FLUXARA_DRIFT currently doesn't handle libsquish in SP
     return false;
 #else
     return supportsTextureCompression() && UserConfigParams::m_texture_compression;

@@ -1,13 +1,13 @@
 # Third-party and asset notices
 
-SuperTuxKart for Motorica is a modified distribution of the open-source
-SuperTuxKart project. MOTORICA RESEARCH LLC does not claim ownership of the
-upstream SuperTuxKart code, characters, artwork, music, sounds, models, or
+Fluxara Drift for Motorica is a modified distribution of the open-source
+Fluxara Drift project. MOTORICA RESEARCH LLC does not claim ownership of the
+upstream Fluxara Drift code, characters, artwork, music, sounds, models, or
 third-party libraries.
 
-## SuperTuxKart program code
+## Fluxara Drift program code
 
-- Upstream: <https://github.com/supertuxkart/stk-code>
+- Upstream: <https://github.com/fluxaradrift/fluxara_drift-code>
 - License: GNU General Public License, version 3 or later
 - Local license text: [`COPYING`](COPYING)
 - Credits: [`data/CREDITS`](data/CREDITS)
@@ -41,8 +41,8 @@ including:
 - [`lib/tinygettext/LICENSE.md`](lib/tinygettext/LICENSE.md)
 
 The iOS build also links open-source dependency archives prepared from the
-SuperTuxKart dependency sources. See the upstream dependency releases and
-source references at <https://github.com/supertuxkart/dependencies>.
+Fluxara Drift dependency sources. See the upstream dependency releases and
+source references at <https://github.com/fluxaradrift/dependencies>.
 
 This index is provided for convenience and does not replace the license files
 distributed with each component.

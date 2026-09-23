@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -179,7 +179,7 @@ EventPropagation TextBoxWidget::focused(const int playerID)
 {
     assert(playerID == 0); // No support for multiple players in text areas!
 
-    // special case : to work, the text box must receive "irrLicht focus", STK focus is not enough
+    // special case : to work, the text box must receive "irrLicht focus", FLUXARA_DRIFT focus is not enough
     GUIEngine::getGUIEnv()->setFocus(m_element);
     setWithinATextBox(true);
     return EVENT_LET;
@@ -263,7 +263,7 @@ EventPropagation TextBoxWidget::leftPressed (const int playerID)
 #ifdef ANDROID
 #include "jni.h"
 
-extern "C" JNIEXPORT void JNICALL editText2STKEditbox(JNIEnv* env, jclass cls, jint widget_id, jstring text, jint start, jint end, jint composing_start, jint composing_end)
+extern "C" JNIEXPORT void JNICALL editText2FLUXARA_DRIFTEditbox(JNIEnv* env, jclass cls, jint widget_id, jstring text, jint start, jint end, jint composing_start, jint composing_end)
 {
     if (text == NULL)
         return;
@@ -351,7 +351,7 @@ extern "C" JNIEXPORT void JNICALL handleActionNext(JNIEnv* env, jclass cls, jint
             // First test for onEnterPressed, if true then close keyboard
             if (eb->handleEnterPressed())
             {
-                // If hardware keyboard connected don't out focus stk edittext
+                // If hardware keyboard connected don't out focus fluxara_drift edittext
                 if (has_hardware_keyboard)
                     tb->setText(L"");
                 else

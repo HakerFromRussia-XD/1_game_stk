@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Lucas Baudin, Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -41,7 +41,7 @@
 using namespace Online;
 // ----------------------------------------------------------------------------
 
-AddonsScreen::AddonsScreen() : Screen("addons_screen.stkgui")
+AddonsScreen::AddonsScreen() : Screen("addons_screen.fluxara_driftgui")
 {
     m_selected_index = -1;
 
@@ -84,7 +84,7 @@ void AddonsScreen::loadedFromFile()
     video::ITexture* icon6 = irr_driver->getTexture( file_manager->getAsset(FileManager::GUI_ICON,
                                                      "loading.png"));
 
-    m_icon_bank = new irr::gui::STKModifiedSpriteBank( GUIEngine::getGUIEnv());
+    m_icon_bank = new irr::gui::FLUXARA_DRIFTModifiedSpriteBank( GUIEngine::getGUIEnv());
     m_icon_installed     = m_icon_bank->addTextureAsSprite(icon1);
     m_icon_not_installed = m_icon_bank->addTextureAsSprite(icon2);
     m_icon_bank->addTextureAsSprite(icon4);
@@ -228,8 +228,8 @@ void AddonsScreen::loadList()
     GUIEngine::SpinnerWidget* w_filter_date =
                         getWidget<GUIEngine::SpinnerWidget>("filter_date");
     int date_index = w_filter_date->getValue();
-    StkTime::TimeType date = StkTime::getTimeSinceEpoch();
-    date = StkTime::addInterval(date,
+    FluxaraDriftTime::TimeType date = FluxaraDriftTime::getTimeSinceEpoch();
+    date = FluxaraDriftTime::addInterval(date,
                 -m_date_filters[date_index].year,
                 -m_date_filters[date_index].month,
                 -m_date_filters[date_index].day);
@@ -275,7 +275,7 @@ void AddonsScreen::loadList()
             continue;
 
         // Filter by date.
-        if (date_index != 0 && StkTime::compareTime(date, addon.getDate()) > 0)
+        if (date_index != 0 && FluxaraDriftTime::compareTime(date, addon.getDate()) > 0)
             continue;
 
         // Filter by name, designer and description.
@@ -313,7 +313,7 @@ void AddonsScreen::loadList()
                     core::stringc(addon->getDateAsString().c_str())).c_str();
         }
 
-       //FIXME I'd like to move this to CGUISTKListBox.cpp
+       //FIXME I'd like to move this to CGUIFLUXARA_DRIFTListBox.cpp
 
        /* gui::IGUIFont* font = GUIEngine::getFont();
 
@@ -537,7 +537,7 @@ void AddonsScreen::onUpdate(float dt)
             new MessageDialog( _("Sorry, an error occurred while contacting "
                                  "the add-ons website. Make sure you are "
                                  "connected to the Internet and that "
-                                 "SuperTuxKart is not blocked by a firewall"));
+                                 "FluxaraDrift is not blocked by a firewall"));
             loadList();
         }
         else if (addons_manager->onlineReady())

@@ -148,7 +148,7 @@ typedef clEnqueueCommandBufferKHR_t *
 clEnqueueCommandBufferKHR_fn ;
 
 typedef cl_int CL_API_CALL
-clCommandBarrierWithWaitListKHR_t(
+clCommandBarrierWithWaitLifluxara_driftHR_t(
     cl_command_buffer_khr command_buffer,
     cl_command_queue command_queue,
     const cl_command_properties_khr* properties,
@@ -157,8 +157,8 @@ clCommandBarrierWithWaitListKHR_t(
     cl_sync_point_khr* sync_point,
     cl_mutable_command_khr* mutable_handle);
 
-typedef clCommandBarrierWithWaitListKHR_t *
-clCommandBarrierWithWaitListKHR_fn ;
+typedef clCommandBarrierWithWaitLifluxara_driftHR_t *
+clCommandBarrierWithWaitLifluxara_driftHR_fn ;
 
 typedef cl_int CL_API_CALL
 clCommandCopyBufferKHR_t(
@@ -349,7 +349,7 @@ clEnqueueCommandBufferKHR(
     cl_event* event) ;
 
 extern CL_API_ENTRY cl_int CL_API_CALL
-clCommandBarrierWithWaitListKHR(
+clCommandBarrierWithWaitLifluxara_driftHR(
     cl_command_buffer_khr command_buffer,
     cl_command_queue command_queue,
     const cl_command_properties_khr* properties,

@@ -17,14 +17,75 @@ extern "C"
 }
 
 #include <cassert>
+#include <cstring>
 #include <cstdio>
 #include <IAttributes.h>
 #include <IImageLoader.h>
+#include <IReadFile.h>
 #include <limits>
 #include <stdexcept>
+#include <vector>
 
 namespace GE
 {
+namespace
+{
+// ASTC stores its dimensions as little-endian 24-bit fields after a 16-byte
+// header. iOS packaging keeps that header and replaces only the PNG/JPEG body.
+constexpr uint8_t ASTC_MAGIC[] = { 0x13, 0xab, 0xa1, 0x5c };
+
+uint32_t readASTC24(const uint8_t* value)
+{
+    return uint32_t(value[0]) | (uint32_t(value[1]) << 8) |
+        (uint32_t(value[2]) << 16);
+}
+
+bool readASTC6x6(const io::path& path, core::dimension2du* size,
+                 std::vector<uint8_t>* payload)
+{
+    io::IReadFile* file = io::createReadFile(path);
+    if (!file)
+        return false;
+
+    uint8_t header[16] = {};
+    const bool header_read = file->read(header, sizeof(header)) ==
+        (s32)sizeof(header);
+    if (!header_read || memcmp(header, ASTC_MAGIC, sizeof(ASTC_MAGIC)) != 0)
+    {
+        file->drop();
+        return false;
+    }
+
+    const uint32_t width = readASTC24(header + 7);
+    const uint32_t height = readASTC24(header + 10);
+    const uint32_t depth = readASTC24(header + 13);
+    const uint64_t payload_size = uint64_t((width + 5) / 6) *
+        uint64_t((height + 5) / 6) * 16;
+    const uint64_t expected_size = 16 + payload_size;
+    const bool valid = header[4] == 6 && header[5] == 6 && header[6] == 1 &&
+        width != 0 && height != 0 && depth == 1 &&
+        expected_size == (uint64_t)file->getSize() &&
+        payload_size <= std::numeric_limits<size_t>::max();
+    if (!valid)
+    {
+        file->drop();
+        return false;
+    }
+
+    payload->resize((size_t)payload_size);
+    const bool payload_read = file->read(payload->data(),
+        (s32)payload_size) == (s32)payload_size;
+    file->drop();
+    if (!payload_read)
+    {
+        payload->clear();
+        return false;
+    }
+    *size = core::dimension2du(width, height);
+    return true;
+}
+}   // anonymous namespace
+
 GEVulkanTexture::GEVulkanTexture(const std::string& path,
                          std::function<void(video::IImage*)> image_mani)
                : video::ITexture(path.c_str()), m_image_mani(image_mani),
@@ -151,8 +212,13 @@ bool GEVulkanTexture::createTextureImage(uint8_t* texture_data,
     VkDeviceSize mipmap_data_size = 0;
     GEMipmapGenerator* mipmap_generator = NULL;
 
+    const bool precompressed_astc =
+        m_internal_format == VK_FORMAT_ASTC_6x6_UNORM_BLOCK;
     unsigned channels = (isSingleChannel() ? 1 : 4);
-    VkDeviceSize image_size = m_size.Width * m_size.Height * channels;
+    VkDeviceSize image_size = precompressed_astc ?
+        VkDeviceSize((m_size.Width + 5) / 6) *
+        VkDeviceSize((m_size.Height + 5) / 6) * 16 :
+        VkDeviceSize(m_size.Width) * m_size.Height * channels;
     if (generate_hq_mipmap)
     {
         const bool normal_map = (std::string(NamedPath.getPtr()).find(
@@ -533,50 +599,128 @@ void GEVulkanTexture::clearVulkanData()
 // ----------------------------------------------------------------------------
 void GEVulkanTexture::reloadInternal(const core::dimension2du& max_size)
 {
-    if (m_disable_reload)
-        return;
-
-    clearVulkanData();
-
-    video::IImage* texture_image = getResizedImageFullPath(m_full_path,
-        max_size, &m_orig_size);
-    if (texture_image == NULL)
+    // Callers lock these three mutexes before queueing this function.  Keep
+    // their release exception-safe: a malformed texture must become a
+    // missing/placeholder texture, never strand a loader or terminate iOS.
+    bool size_locked = true;
+    bool image_view_locked = true;
+    bool loading_locked = true;
+    const auto unlock_size = [&]()
     {
-        if (m_ondemand_load)
+        if (size_locked)
         {
-            printf("Missing texture_image in getResizedImageFullPath when "
-                "reloadInternal during ondemand loading for %s\n",
-                m_full_path.c_str());
             m_size_lock.unlock();
+            size_locked = false;
+        }
+    };
+    const auto unlock_image_view = [&]()
+    {
+        if (image_view_locked)
+        {
             m_image_view_lock.unlock();
+            image_view_locked = false;
+        }
+    };
+    const auto unlock_loading = [&]()
+    {
+        if (loading_locked)
+        {
             m_thread_loading_lock.unlock();
+            loading_locked = false;
+        }
+    };
+    const auto unlock_all = [&]()
+    {
+        unlock_size();
+        unlock_image_view();
+        unlock_loading();
+    };
+
+    try
+    {
+        if (m_disable_reload)
+        {
+            unlock_all();
             return;
         }
-        else
+
+        clearVulkanData();
+
+        core::dimension2du astc_size;
+        std::vector<uint8_t> astc_payload;
+        if (readASTC6x6(m_full_path, &astc_size, &astc_payload))
         {
-            throw std::runtime_error(
-                "Missing texture_image in getResizedImageFullPath");
+            if (m_image_mani || !GEVulkanFeatures::supportsASTC6x6() ||
+                astc_size.Width > max_size.Width || astc_size.Height > max_size.Height)
+            {
+                printf("Unsupported raw ASTC 6x6 texture: %s\n",
+                    m_full_path.c_str());
+                m_ondemand_loading.store(false);
+                unlock_all();
+                return;
+            }
+
+            m_orig_size = m_size = astc_size;
+            // The package contains one ASTC level. Vulkan must not advertise
+            // generated levels that have no compressed data behind them.
+            m_has_mipmaps = false;
+            m_internal_format = VK_FORMAT_ASTC_6x6_UNORM_BLOCK;
+            unlock_size();
+            const bool uploaded = createTextureImage(astc_payload.data(), false) &&
+                createImageView(VK_IMAGE_ASPECT_COLOR_BIT);
+            unlock_image_view();
+            unlock_loading();
+            if (!uploaded)
+                printf("Could not upload raw ASTC 6x6 texture: %s\n",
+                    m_full_path.c_str());
+            return;
         }
+
+        video::IImage* texture_image = getResizedImageFullPath(m_full_path,
+            max_size, &m_orig_size);
+        if (texture_image == NULL)
+        {
+            printf("Missing texture_image in getResizedImageFullPath%s for %s\n",
+                m_ondemand_load ? " during ondemand loading" : "",
+                m_full_path.c_str());
+            m_ondemand_loading.store(false);
+            unlock_all();
+            return;
+        }
+
+        m_size = texture_image->getDimension();
+        if (m_size.Width < 4 || m_size.Height < 4)
+            m_has_mipmaps = false;
+        else
+            m_has_mipmaps = true;
+        unlock_size();
+
+        if (m_image_mani)
+            m_image_mani(texture_image);
+
+        uint8_t* data = (uint8_t*)texture_image->lock();
+        bgraConversion(data);
+        upload(data, m_has_mipmaps/*generate_hq_mipmap*/);
+        unlock_image_view();
+
+        texture_image->unlock();
+        texture_image->drop();
+        unlock_loading();
     }
-
-    m_size = texture_image->getDimension();
-    if (m_size.Width < 4 || m_size.Height < 4)
-        m_has_mipmaps = false;
-    else
-        m_has_mipmaps = true;
-    m_size_lock.unlock();
-
-    if (m_image_mani)
-        m_image_mani(texture_image);
-
-    uint8_t* data = (uint8_t*)texture_image->lock();
-    bgraConversion(data);
-    upload(data, m_has_mipmaps/*generate_hq_mipmap*/);
-    m_image_view_lock.unlock();
-
-    texture_image->unlock();
-    texture_image->drop();
-    m_thread_loading_lock.unlock();
+    catch (const std::exception& e)
+    {
+        printf("Texture load failed for %s: %s\n", m_full_path.c_str(),
+            e.what());
+        m_ondemand_loading.store(false);
+        unlock_all();
+    }
+    catch (...)
+    {
+        printf("Texture load failed for %s: unknown exception\n",
+            m_full_path.c_str());
+        m_ondemand_loading.store(false);
+        unlock_all();
+    }
 }   // reloadInternal
 
 // ----------------------------------------------------------------------------

@@ -9,6 +9,9 @@
 #include "guiengine/scalable_font.hpp"
 #include "guiengine/widget.hpp"
 #include "io/file_manager.hpp"
+#ifdef IOS_FLUXARA_DRIFT
+#include "utils/fluxara_orientation_ios.hpp"
+#endif
 #include <IGUIButton.h>
 #include <IVideoDriver.h>
 #include <SMaterial.h>
@@ -27,7 +30,7 @@ inline void rasterHitTarget(GUIEngine::Widget* widget)
 }
 inline irr::video::ITexture* nativeTexture(const std::string& path)
 {
-    // STK normally caps textures at 512 px unless the global HD option is
+    // FLUXARA_DRIFT normally caps textures at 512 px unless the global HD option is
     // enabled.  Fluxara UI rasters are screen-space artwork, not world
     // textures, so loading them through that cap makes a portrait background
     // roughly 288 x 512 on a Retina screen.  Raise the limit only while the
@@ -48,16 +51,58 @@ inline irr::video::ITexture* texture(const std::string& path)
         "gui/fluxara/" + path + ".png"));
 }
 
+// UIKit changes its drawable asynchronously.  During that short interval a
+// 360x780 composition must stay hidden: rendering it through the old
+// landscape target produces a narrow, distorted screen.  A background has no
+// interactive geometry, however, so it can safely fill the old target and
+// avoids exposing Irrlicht's default purple clear colour.
+inline void transitionBackdrop(irr::video::ITexture* texture,
+                               unsigned alpha = 255)
+{
+    if (!texture) return;
+    const auto target = irr_driver->getActualScreenSize();
+    const auto source = texture->getSize();
+    if (target.Width == 0 || target.Height == 0 ||
+        source.Width == 0 || source.Height == 0)
+        return;
+
+    const float target_aspect = float(target.Width) / float(target.Height);
+    const float source_aspect = float(source.Width) / float(source.Height);
+    irr::core::recti crop(0, 0, source.Width, source.Height);
+    if (source_aspect > target_aspect)
+    {
+        const int width = int(std::lround(source.Height * target_aspect));
+        const int x = int(source.Width - width) / 2;
+        crop = irr::core::recti(x, 0, x + width, source.Height);
+    }
+    else
+    {
+        const int height = int(std::lround(source.Width / target_aspect));
+        const int y = int(source.Height - height) / 2;
+        crop = irr::core::recti(0, y, source.Width, y + height);
+    }
+    draw2DImage(texture, irr::core::recti(0, 0, target.Width, target.Height),
+                crop, nullptr, irr::video::SColor(alpha, 255, 255, 255),
+                true);
+}
+
 struct Canvas
 {
     float scale, x, y;
+    bool stable;
     Canvas()
     {
         const auto size = irr_driver->getActualScreenSize();
         scale = std::min(size.Width / 360.0f, size.Height / 780.0f);
         x = (size.Width - 360 * scale) * .5f;
         y = (size.Height - 780 * scale) * .5f;
+#ifdef IOS_FLUXARA_DRIFT
+        stable = !fluxaraOrientationTransitionPending();
+#else
+        stable = true;
+#endif
     }
+    bool isStable() const { return stable; }
     irr::core::recti rect(float left, float top, float width, float height) const
     {
         return irr::core::recti(int(std::lround(x + left * scale)),
@@ -74,7 +119,7 @@ struct Canvas
                bool cover = false, unsigned alpha = 255,
                const irr::core::recti* clip = nullptr) const
     {
-        if (!t) return;
+        if (!stable || !t) return;
         // iOS can upload an NPOT raster into a differently proportioned GPU
         // texture. Sample the entire uploaded texture, but use the source
         // artwork's dimensions for layout so buttons keep their approved
@@ -115,7 +160,7 @@ struct Canvas
                       float width, float height, float radius,
                       const irr::core::recti* clip = nullptr) const
     {
-        if (!t) return;
+        if (!stable || !t) return;
         const auto texture_size = t->getSize();
         auto layout_size = t->getOriginalSize();
         if (texture_size.Width == 0 || texture_size.Height == 0) return;
@@ -200,8 +245,9 @@ struct Canvas
                float width, float height, float point_size,
                const irr::core::recti* clip = nullptr) const
     {
+        if (!stable) return;
         // Fluxara's Figma type is the skin's normal Baloo face.  The upstream
-        // title face is a synthetic BoldFace with an STK-style dark outline;
+        // title face is a synthetic BoldFace with an FLUXARA_DRIFT-style dark outline;
         // using it here would leak that treatment into every Fluxara screen.
         auto* font = GUIEngine::getFont();
         const float saved = font->getScale();

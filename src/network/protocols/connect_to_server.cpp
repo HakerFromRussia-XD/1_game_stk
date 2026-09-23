@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2013-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -32,9 +32,9 @@
 #include "network/server.hpp"
 #include "network/child_loop.hpp"
 #include "network/socket_address.hpp"
-#include "network/stk_ipv6.hpp"
-#include "network/stk_host.hpp"
-#include "network/stk_peer.hpp"
+#include "network/fluxara_drift_ipv6.hpp"
+#include "network/fluxara_drift_host.hpp"
+#include "network/fluxara_drift_peer.hpp"
 #include "online/xml_request.hpp"
 #include "states_screens/online/networking_lobby.hpp"
 #include "utils/time.hpp"
@@ -115,7 +115,7 @@ void ConnectToServer::setup()
         m_state = GOT_SERVER_ADDRESS;
         // For graphical client server the IPv6 socket is handled by server
         // process
-        if (!STKHost::get()->isClientServer())
+        if (!FLUXARA_DRIFTHost::get()->isClientServer())
         {
             if (m_server->useIPV6Connection())
                 setIPv6Socket(1);
@@ -133,20 +133,20 @@ void ConnectToServer::getClientServerInfo()
     assert(m_server);
     // Allow up to 10 seconds for the separate process to fully start-up
     bool started = false;
-    uint64_t timeout = StkTime::getMonoTimeMs() + 10000;
+    uint64_t timeout = FluxaraDriftTime::getMonoTimeMs() + 10000;
     uint16_t port = 0;
     unsigned server_id = 0;
-    ChildLoop* sl = STKHost::get()->getChildLoop();
+    ChildLoop* sl = FLUXARA_DRIFTHost::get()->getChildLoop();
     assert(sl);
     while (!ProtocolManager::lock()->isExiting() &&
-        StkTime::getMonoTimeMs() < timeout)
+        FluxaraDriftTime::getMonoTimeMs() < timeout)
     {
         port = sl->getPort();
         server_id = sl->getServerOnlineId();
         started = port != 0;
         if (started)
             break;
-        StkTime::sleep(1);
+        FluxaraDriftTime::sleep(1);
     }
     if (!started)
     {
@@ -177,7 +177,7 @@ void ConnectToServer::getClientServerInfo()
 // ----------------------------------------------------------------------------
 void ConnectToServer::asynchronousUpdate()
 {
-    if (STKHost::get()->isClientServer() &&
+    if (FLUXARA_DRIFTHost::get()->isClientServer() &&
         m_server->getAddress().getPort() == 0)
     {
         getClientServerInfo();
@@ -195,7 +195,7 @@ void ConnectToServer::asynchronousUpdate()
                 {
                     if (ProtocolManager::lock()->isExiting())
                         return;
-                    StkTime::sleep(1);
+                    FluxaraDriftTime::sleep(1);
                 }
                 auto& servers = server_list->m_servers;
 
@@ -226,9 +226,9 @@ void ConnectToServer::asynchronousUpdate()
                 }
                 else
                 {
-                    // Shutdown STKHost (go back to online menu too)
-                    STKHost::get()->setErrorMessage(_("No quick play server available."));
-                    STKHost::get()->requestShutdown();
+                    // Shutdown FLUXARA_DRIFTHost (go back to online menu too)
+                    FLUXARA_DRIFTHost::get()->setErrorMessage(_("No quick play server available."));
+                    FLUXARA_DRIFTHost::get()->requestShutdown();
                     m_state = EXITING;
                     return;
                 }
@@ -243,10 +243,10 @@ void ConnectToServer::asynchronousUpdate()
             // the IPv4 address to NAT64 one in GOT_SERVER_ADDRESS
             bool ipv6_socket = m_server->useIPV6Connection() ||
                 NetworkConfig::get()->getIPType() == NetworkConfig::IP_V6_NAT64;
-            if (STKHost::get()->getNetwork()->isIPv6Socket() != ipv6_socket)
+            if (FLUXARA_DRIFTHost::get()->getNetwork()->isIPv6Socket() != ipv6_socket)
             {
                 // Free the bound socket first
-                delete STKHost::get()->getNetwork();
+                delete FLUXARA_DRIFTHost::get()->getNetwork();
                 setIPv6Socket(ipv6_socket ? 1 : 0);
                 ENetAddress addr = {};
                 addr.port = NetworkConfig::get()->getClientPort();
@@ -254,17 +254,17 @@ void ConnectToServer::asynchronousUpdate()
                     /*channel_limit*/EVENT_CHANNEL_COUNT,
                     /*max_in_bandwidth*/0, /*max_out_bandwidth*/0, &addr,
                     true/*change_port_if_bound*/);
-                STKHost::get()->replaceNetwork(new_network);
+                FLUXARA_DRIFTHost::get()->replaceNetwork(new_network);
             }
 
             if (m_server->supportsEncryption())
             {
-                STKHost::get()->setPublicAddress(
+                FLUXARA_DRIFTHost::get()->setPublicAddress(
                     m_server->useIPV6Connection() ? AF_INET6 : AF_INET);
-                if (STKHost::get()->getValidPublicAddress().empty() ||
-                    registerWithSTKServer() == false)
+                if (FLUXARA_DRIFTHost::get()->getValidPublicAddress().empty() ||
+                    registerWithFLUXARA_DRIFTServer() == false)
                 {
-                    // Set to DONE will stop STKHost is not connected
+                    // Set to DONE will stop FLUXARA_DRIFTHost is not connected
                     m_state = DONE;
                     break;
                 }
@@ -289,7 +289,7 @@ void ConnectToServer::asynchronousUpdate()
                 {
                     Log::error("ConnectToServer", "Failed to synthesize IPv6 "
                         "address from %s", addr_string.c_str());
-                    STKHost::get()->requestShutdown();
+                    FLUXARA_DRIFTHost::get()->requestShutdown();
                     m_state = EXITING;
                     return;
                 }
@@ -308,10 +308,10 @@ void ConnectToServer::asynchronousUpdate()
                     return;
             }
 
-            if (!STKHost::get()->getPublicAddress().isUnset() &&
-                !STKHost::get()->isClientServer() &&
+            if (!FLUXARA_DRIFTHost::get()->getPublicAddress().isUnset() &&
+                !FLUXARA_DRIFTHost::get()->isClientServer() &&
                 m_server->getAddress().getIP() ==
-                STKHost::get()->getPublicAddress().getIP())
+                FLUXARA_DRIFTHost::get()->getPublicAddress().getIP())
             {
                 Log::info("ConnectToServer", "Server is in the same lan");
                 std::string str_msg("connection-request");
@@ -324,8 +324,8 @@ void ConnectToServer::asynchronousUpdate()
                 {
                     for (int i = 0; i < 5; i++)
                     {
-                        STKHost::get()->sendRawPacket(message, addr);
-                        StkTime::sleep(1);
+                        FLUXARA_DRIFTHost::get()->sendRawPacket(message, addr);
+                        FluxaraDriftTime::sleep(1);
                     }
                 }
             }
@@ -362,20 +362,20 @@ void ConnectToServer::update(int ticks)
         case DONE:
         {
             // lobby room protocol if we're connected only
-            if (STKHost::get()->getPeerCount() > 0 &&
-                STKHost::get()->getServerPeerForClient()->isConnected())
+            if (FLUXARA_DRIFTHost::get()->getPeerCount() > 0 &&
+                FLUXARA_DRIFTHost::get()->getServerPeerForClient()->isConnected())
             {
                 m_server->saveServer();
                 // Let main thread create ClientLobby for better
                 // synchronization with GUI
                 NetworkConfig::get()->clearActivePlayersForClient();
                 auto cl = LobbyProtocol::create<ClientLobby>(m_server);
-                STKHost::get()->startListening();
+                FLUXARA_DRIFTHost::get()->startListening();
                 cl->requestStart();
             }
-            if (STKHost::get()->getPeerCount() == 0)
+            if (FLUXARA_DRIFTHost::get()->getPeerCount() == 0)
             {
-                // Shutdown STKHost (go back to online menu too)
+                // Shutdown FLUXARA_DRIFTHost (go back to online menu too)
                 core::stringw err =
                     _("Cannot connect to server %s.", m_server->getName());
                 if (!m_error_msg.empty())
@@ -383,8 +383,8 @@ void ConnectToServer::update(int ticks)
                     err += L"\n";
                     err += m_error_msg;
                 }
-                STKHost::get()->setErrorMessage(err);
-                STKHost::get()->requestShutdown();
+                FLUXARA_DRIFTHost::get()->setErrorMessage(err);
+                FLUXARA_DRIFTHost::get()->requestShutdown();
             }
             requestTerminate();
             m_state = EXITING;
@@ -404,7 +404,7 @@ int ConnectToServer::interceptCallback(ENetHost* host, ENetEvent* event)
     if (m_done_intecept)
         return 0;
     // The first two bytes of a valid ENet protocol packet will never be 0xFFFF
-    // and then try decode the string "aloha-stk"
+    // and then try decode the string "aloha-fluxara_drift"
     if (host->receivedDataLength == 12 &&
         host->receivedData[0] == 0xFF && host->receivedData[1]  == 0xFF &&
         host->receivedData[2] == 0x09 && host->receivedData[3] == 'a' &&
@@ -443,7 +443,7 @@ bool ConnectToServer::tryConnect(int timeout, int retry, bool another_port,
     Network* nw = another_port ? new Network(/*peer_count*/1,
         /*channel_limit*/EVENT_CHANNEL_COUNT,
         /*max_in_bandwidth*/0, /*max_out_bandwidth*/0, &ea,
-        true/*change_port_if_bound*/) : STKHost::get()->getNetwork();
+        true/*change_port_if_bound*/) : FLUXARA_DRIFTHost::get()->getNetwork();
     assert(nw);
 
     m_done_intecept = false;
@@ -478,7 +478,7 @@ bool ConnectToServer::tryConnect(int timeout, int retry, bool another_port,
                 Log::info("ConnectToServer", "Connected to %s",
                     connecting_address.c_str());
                 nw->getENetHost()->intercept = NULL;
-                STKHost::get()->initClientNetwork(event, nw);
+                FLUXARA_DRIFTHost::get()->initClientNetwork(event, nw);
                 m_state = DONE;
                 return true;
             }
@@ -492,19 +492,19 @@ bool ConnectToServer::tryConnect(int timeout, int retry, bool another_port,
 }   // tryConnect
 
 // ----------------------------------------------------------------------------
-/** Register this client with the STK server.
+/** Register this client with the FLUXARA_DRIFT server.
  */
-bool ConnectToServer::registerWithSTKServer()
+bool ConnectToServer::registerWithFLUXARA_DRIFTServer()
 {
     // Our public address is now known, register details with
-    // STK server
-    const SocketAddress& addr = STKHost::get()->getPublicAddress();
+    // FLUXARA_DRIFT server
+    const SocketAddress& addr = FLUXARA_DRIFTHost::get()->getPublicAddress();
     auto request = std::make_shared<Online::XMLRequest>();
     NetworkConfig::get()->setServerDetails(request, "join-server-key");
     request->addParameter("server-id", m_server->getServerId());
     request->addParameter("address", addr.getIP());
     request->addParameter("address-ipv6",
-        STKHost::get()->getPublicIPv6Address());
+        FLUXARA_DRIFTHost::get()->getPublicIPv6Address());
     request->addParameter("port", addr.getPort());
 
     Crypto::initClientAES();
@@ -512,10 +512,10 @@ bool ConnectToServer::registerWithSTKServer()
     request->addParameter("aes-iv", Crypto::getClientIV());
 
     Log::info("ConnectToServer", "Registering addr %s",
-        STKHost::get()->getValidPublicAddress().c_str());
+        FLUXARA_DRIFTHost::get()->getValidPublicAddress().c_str());
 
     // This can be done blocking: till we are registered with the
-    // stk server, there is no need to to react to any other
+    // fluxara_drift server, there is no need to to react to any other
     // network requests
     request->executeNow();
 
@@ -534,7 +534,7 @@ bool ConnectToServer::registerWithSTKServer()
             StringUtils::wideToUtf8(m_error_msg).c_str());
         return false;
     }
-}   // registerWithSTKServer
+}   // registerWithFLUXARA_DRIFTServer
 
 #ifdef ANDROID
 auto get_txt_record = [](const core::stringw& name)->std::vector<std::string>
@@ -635,13 +635,13 @@ auto get_txt_record = [](const core::stringw& name)->std::vector<std::string>
 // ----------------------------------------------------------------------------
 bool ConnectToServer::detectPort()
 {
-    // DNS txt record lookup, we will do stk-server-port server discovery port
+    // DNS txt record lookup, we will do fluxara_drift-server-port server discovery port
     // too to get an updated sever address, in case it's differ then the
     // A / AAAA record (possible in LAN environment with multiple IPs assigned)
     int port_from_dns = 0;
     auto get_port = [](const std::string& txt_record)->int
     {
-        const char* match = "stk-server-port=";
+        const char* match = "fluxara_drift-server-port=";
         size_t len = strlen(match);
         auto it = txt_record.find(match);
         if (it != std::string::npos && it + len < txt_record.size())
@@ -832,13 +832,13 @@ cleanup:
         /*channel_limit*/EVENT_CHANNEL_COUNT,
         /*max_in_bandwidth*/0, /*max_out_bandwidth*/0, &ea,
         true/*change_port_if_bound*/));
-    BareNetworkString s(std::string("stk-server-port"));
+    BareNetworkString s(std::string("fluxara_drift-server-port"));
     SocketAddress address;
     if (m_server->useIPV6Connection())
         address = *m_server->getIPV6Address();
     else
         address = m_server->getAddress();
-    address.setPort(stk_config->m_server_discovery_port);
+    address.setPort(fluxara_drift_config->m_server_discovery_port);
     nw->sendRawPacket(s, address);
     SocketAddress sender;
     const int LEN = 2048;
@@ -850,7 +850,7 @@ cleanup:
         uint16_t port = server_port.getUInt16();
         sender.setPort(port);
         // Use the DNS detected port over direct socket one, because only
-        // one direct socket exists in a host even they have many stk servers
+        // one direct socket exists in a host even they have many fluxara_drift servers
         if (port_from_dns != 0)
             sender.setPort((uint16_t)port_from_dns);
         // We replace the server address with sender with the detected port
@@ -881,8 +881,8 @@ cleanup:
         const core::stringw& n = m_server->getName();
         //I18N: Show the failed detect port server name
         core::stringw e = _("Failed to detect port number for server %s.", n);
-        STKHost::get()->setErrorMessage(e);
-        STKHost::get()->requestShutdown();
+        FLUXARA_DRIFTHost::get()->setErrorMessage(e);
+        FLUXARA_DRIFTHost::get()->requestShutdown();
         m_state = EXITING;
         return false;
     }

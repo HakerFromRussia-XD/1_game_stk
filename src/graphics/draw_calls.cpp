@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -18,14 +18,14 @@
 #ifndef SERVER_ONLY
 #include "graphics/draw_calls.hpp"
 
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "graphics/cpu_particle_manager.hpp"
 #include "graphics/irr_driver.hpp"
 #include "graphics/lod_node.hpp"
 #include "graphics/shaders.hpp"
-#include "graphics/stk_particle.hpp"
-#include "graphics/stk_text_billboard.hpp"
+#include "graphics/fluxara_drift_particle.hpp"
+#include "graphics/fluxara_drift_text_billboard.hpp"
 #include "graphics/text_billboard_drawer.hpp"
 #include "graphics/sp/sp_base.hpp"
 #include "graphics/sp/sp_mesh_node.hpp"
@@ -169,7 +169,7 @@ void DrawCalls::parseSceneManager(core::array<scene::ISceneNode*> &List,
             SP::SPMeshNode* node = static_cast<SP::SPMeshNode*>(List[i]);
             SP::addObject(node);
         }
-        else if (STKParticle *node = dynamic_cast<STKParticle*>(List[i]))
+        else if (FLUXARA_DRIFTParticle *node = dynamic_cast<FLUXARA_DRIFTParticle*>(List[i]))
         {
             node->updateAbsolutePosition();
             if (!isCulledPrecise(cam, List[i], irr_driver->getBoundingBoxesViz()))
@@ -184,8 +184,8 @@ void DrawCalls::parseSceneManager(core::array<scene::ISceneNode*> &List,
                 CPUParticleManager::getInstance()->addBillboardNode(node);
             continue;
         }
-        else if (STKTextBillboard *tb =
-            dynamic_cast<STKTextBillboard*>(List[i]))
+        else if (FLUXARA_DRIFTTextBillboard *tb =
+            dynamic_cast<FLUXARA_DRIFTTextBillboard*>(List[i]))
         {
             tb->updateAbsolutePosition();
             if (!isCulledPrecise(cam, List[i], irr_driver->getBoundingBoxesViz()))
@@ -206,7 +206,7 @@ DrawCalls::DrawCalls()
 DrawCalls::~DrawCalls()
 {
     CPUParticleManager::kill();
-    STKParticle::destroyFlipsBuffer();
+    FLUXARA_DRIFTParticle::destroyFlipsBuffer();
 } //~DrawCalls
 
 // ----------------------------------------------------------------------------

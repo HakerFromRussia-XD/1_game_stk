@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -35,7 +35,7 @@ using namespace Online;
 
 // -----------------------------------------------------------------------------
 
-OptionsScreenLanguage::OptionsScreenLanguage() : Screen("options/options_language.stkgui")
+OptionsScreenLanguage::OptionsScreenLanguage() : Screen("options/options_language.fluxara_driftgui")
 {
     m_inited = false;
 }   // OptionsScreenLanguage
@@ -117,8 +117,8 @@ void OptionsScreenLanguage::eventCallback(Widget* widget, const std::string& nam
     else if (name == "language")
     {
         ListWidget* list_widget = getWidget<ListWidget>("language");
-        irr::gui::CGUISTKListBox* box =
-            list_widget->getIrrlichtElement<irr::gui::CGUISTKListBox>();
+        irr::gui::CGUIFLUXARA_DRIFTListBox* box =
+            list_widget->getIrrlichtElement<irr::gui::CGUIFLUXARA_DRIFTListBox>();
         int old_pos = box->getScrollBar()->getPos();
         std::string selection = list_widget->getSelectionInternalName();
 
@@ -158,7 +158,7 @@ void OptionsScreenLanguage::eventCallback(Widget* widget, const std::string& nam
         // Menu is deleted so we need a new screen instance
         OptionsScreenLanguage* os = OptionsScreenLanguage::getInstance();
         list_widget = os->getWidget<ListWidget>("language");
-        box = list_widget->getIrrlichtElement<irr::gui::CGUISTKListBox>();
+        box = list_widget->getIrrlichtElement<irr::gui::CGUIFLUXARA_DRIFTListBox>();
         box->getScrollBar()->setPos(old_pos);
         // Update tips for new translation
         TipsManager::destroy();

@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -38,7 +38,7 @@ class PlayerProfile;
 
 /**
   * \brief The user management screen. The screen cames in two variations:
-  *  either as a stand-alone screen before the main menu (on first time STK
+  *  either as a stand-alone screen before the main menu (on first time FLUXARA_DRIFT
   *  is started, or it the user is not remembered), but also as tab in the
   *  options menu. To implement this, we use one common base class that
   *  implements nearly all functionality, and derive to classes - one for
@@ -141,7 +141,7 @@ class UserScreen : public BaseUserScreen,
                    public GUIEngine::ScreenSingleton<UserScreen>
 {
 private:
-    UserScreen() : BaseUserScreen("user_screen.stkgui")
+    UserScreen() : BaseUserScreen("user_screen.fluxara_driftgui")
     {};
 public:
     friend class GUIEngine::ScreenSingleton<UserScreen>;
@@ -152,7 +152,7 @@ class TabbedUserScreen : public BaseUserScreen,
                          public GUIEngine::ScreenSingleton<TabbedUserScreen>
 {
 private:
-    TabbedUserScreen() : BaseUserScreen("options/user_screen_tab.stkgui")
+    TabbedUserScreen() : BaseUserScreen("options/user_screen_tab.fluxara_driftgui")
     {}
 
 public:

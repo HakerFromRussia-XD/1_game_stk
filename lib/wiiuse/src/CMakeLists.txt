@@ -2,7 +2,7 @@ if(NOT MSVC)
 	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra")
 endif()
 
-# Modified for STK to avoid compiler warnings with MinGW
+# Modified for FLUXARA_DRIFT to avoid compiler warnings with MinGW
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 set(SOURCES
@@ -86,7 +86,7 @@ set_property(TARGET
 	PUBLIC_HEADER
 	${API})
 
-# Modified for STK, see https://github.com/supertuxkart/stk-code/commit/15e741fa0490f55718bd7f009ef83f0540b9d0a1#diff-a3e272598233e89e4b577a434cc2a89d
+# Modified for FLUXARA_DRIFT, see https://github.com/fluxaradrift/fluxara_drift-code/commit/15e741fa0490f55718bd7f009ef83f0540b9d0a1#diff-a3e272598233e89e4b577a434cc2a89d
 if(MSVC)
 	set_property(TARGET wiiuse APPEND PROPERTY
 	  COMPILE_DEFINITIONS $<$<CONFIG:Debug>:WITH_WIIUSE_DEBUG>

@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -62,7 +62,7 @@ namespace irr
 }
 
 /** An abstract class which contains functions which convert vector fonts into
- *  bitmap and render them in STK. To make STK draw characters with different
+ *  bitmap and render them in FLUXARA_DRIFT. To make FLUXARA_DRIFT draw characters with different
  *  render option (like scaling, shadow) using a same FontWithFace, you need
  *  to wrap this with \ref irr::gui::ScalableFont and configure the
  *  \ref FontSettings for it.
@@ -71,7 +71,7 @@ namespace irr
 class FontWithFace : public NoCopy
 {
 public:
-    /** A class for \ref STKTextBillboard to get font info to render billboard
+    /** A class for \ref FLUXARA_DRIFTTextBillboard to get font info to render billboard
      *  text. */
     class FontCharCollector
     {

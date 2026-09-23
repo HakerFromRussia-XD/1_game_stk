@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2004-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2004-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -17,7 +17,7 @@
 
 #include "profiler.hpp"
 
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "graphics/glwrap.hpp"
 #include "graphics/irr_driver.hpp"
@@ -662,20 +662,20 @@ void Profiler::computeStableFPS()
 
 void Profiler::startBenchmark()
 {
-    if (stk_config->m_benchmark_files.empty())
+    if (fluxara_drift_config->m_benchmark_files.empty())
     {
         Log::error("OptionsScreenVideo", "No benchmark replay available!");
         return;
     }
 
-    const std::string bench_file = stk_config->m_active_benchmark_file;
+    const std::string bench_file = fluxara_drift_config->m_active_benchmark_file;
     const bool result = ReplayPlay::get()->addReplayFile(file_manager
         ->getAsset(FileManager::REPLAY, bench_file), true /*custom_replay */);
 
     if (!result)
         Log::fatal("OptionsScreenVideo", "Can't open replay %s for benchmarking!", bench_file.c_str());
 
-    RaceManager::get()->setRaceGhostKarts(true);
+    RaceManager::get()->setRaceGhofluxara_driftarts(true);
     RaceManager::get()->setMinorMode(RaceManager::MINOR_MODE_TIME_TRIAL);
     ReplayPlay::ReplayData bench_rd = ReplayPlay::get()->getCurrentReplayData();
     RaceManager::get()->setReverseTrack(bench_rd.m_reverse);

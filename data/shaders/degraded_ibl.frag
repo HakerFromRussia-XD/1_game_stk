@@ -9,10 +9,10 @@ out vec4 Diff;
 out vec4 Spec;
 #endif
 
-#stk_include "utils/decodeNormal.frag"
-#stk_include "utils/getPosFromUVDepth.frag"
-#stk_include "utils/DiffuseIBL.frag"
-#stk_include "utils/SpecularIBL.frag"
+#fluxara_drift_include "utils/decodeNormal.frag"
+#fluxara_drift_include "utils/getPosFromUVDepth.frag"
+#fluxara_drift_include "utils/DiffuseIBL.frag"
+#fluxara_drift_include "utils/SpecularIBL.frag"
 
 void main(void)
 {

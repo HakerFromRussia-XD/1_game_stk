@@ -11,7 +11,7 @@ Static candidates with retained source URLs/licenses/previews. No game import or
 | soccer | 80 | `track/orbital-simulation---soccer`, `track/moria-s-race-soccer`, `track/the-court`, `track/a-secret--soccer-`, `track/tournament-field` |
 | follow_leader | 307 | `track/dp-motorsports-land-ii`, `track/strandvoort`, `track/rt6-finny-splashdown`, `track/maple-overpass`, `track/green-valley` |
 | ghost_geometry | 307 | `track/lap-catch`, `track/the-valley-of-liquorice`, `track/maple-overpass---short`, `track/subsea`, `track/carnaval-del-cacao` |
-| lap_trial | 307 | `track/motorsport-land`, `track/paradise-peaks`, `track/icy-racing-maze`, `track/supertux-raceway`, `track/green-hill_1` |
+| lap_trial | 307 | `track/motorsport-land`, `track/paradise-peaks`, `track/icy-racing-maze`, `track/fluxara_drift-raceway`, `track/green-hill_1` |
 | normal | 307 | `track/ancient-summits`, `track/high-in-the-sky`, `track/lost-chasm`, `track/old-amazon-jungle`, `track/volcan-island` |
 | time_trial | 307 | `track/volcano-remake`, `track/rt7-retro`, `track/shifting-sands-rework`, `track/clash-o-8`, `track/sao-paulo` |
 | grand_prix_geometry | 307 | `track/ancient-summits`, `track/high-in-the-sky`, `track/lost-chasm`, `track/old-amazon-jungle`, `track/volcan-island` |

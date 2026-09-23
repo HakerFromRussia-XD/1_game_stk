@@ -62,7 +62,7 @@ void CAnimatedMeshSceneNode::setCurrentFrame(f32 frame)
 	// if you pass an out of range value, we just clamp it
 	CurrentFrameNr = core::clamp ( frame, (f32)StartFrame, (f32)EndFrame );
 
-	// STK calls setCurrentFrame each frame for steering animation
+	// FLUXARA_DRIFT calls setCurrentFrame each frame for steering animation
 	//beginTransition(); //transit to this frame if enabled
 }
 

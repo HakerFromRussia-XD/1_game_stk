@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2007-2015 Joerg Henrichs
 //
 //  Linear item-kart intersection function written by
@@ -248,7 +248,7 @@ void Flyable::removePhysics()
  *  behind). Useful e.g. for throwing projectiles in front only.
  */
 
-void Flyable::getClosestKart(const AbstractKart **minKart,
+void Flyable::getClosefluxara_driftart(const AbstractKart **minKart,
                              float *minDistSquared, Vec3 *minDelta,
                              const AbstractKart* inFrontOf,
                              const bool backwards) const
@@ -313,7 +313,7 @@ void Flyable::getClosestKart(const AbstractKart **minKart,
         }
     }  // for i<getNumKarts
 
-}   // getClosestKart
+}   // getClosefluxara_driftart
 
 //-----------------------------------------------------------------------------
 /** Returns information on the parameters needed to hit a target kart moving
@@ -538,7 +538,7 @@ bool Flyable::isOwnerImmunity(const AbstractKart* kart_hit) const
 {
     return m_owner_has_temporary_immunity &&
         kart_hit == m_owner            &&
-        (int)m_ticks_since_thrown < stk_config->time2Ticks(2.0f);
+        (int)m_ticks_since_thrown < fluxara_drift_config->time2Ticks(2.0f);
 }   // isOwnerImmunity
 
 // ----------------------------------------------------------------------------
@@ -583,7 +583,7 @@ void Flyable::explode(AbstractKart *kart_hit, PhysicalObject *object,
             world->getKartTeam(m_owner->getWorldKartId()))
             continue;
 
-        if (kart->isGhostKart()) continue;
+        if (kart->isGhofluxara_driftart()) continue;
 
         // If no secondary hits should be done, only hit the
         // direct hit kart.

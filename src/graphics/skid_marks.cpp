@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Ingo Ruhnke <grumbel@gmx.de>
 //  Copyright (C) 2013-2015 Joerg Henrichs
 //
@@ -19,7 +19,7 @@
 
 #include "graphics/skid_marks.hpp"
 
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "graphics/central_settings.hpp"
 #include "graphics/irr_driver.hpp"
 #include "graphics/material.hpp"
@@ -97,12 +97,12 @@ void SkidMarks::update(float dt, bool force_skid_marks,
         return;
 
     // Don't add skid mark quads too frequently which breaks fade-out effect
-    const float min_dt = stk_config->ticks2Time(1);
+    const float min_dt = fluxara_drift_config->ticks2Time(1);
     m_dt += dt;
     if (m_dt < min_dt)
         return;
 
-    float f = m_dt / stk_config->m_skid_fadeout_time;
+    float f = m_dt / fluxara_drift_config->m_skid_fadeout_time;
     m_dt = 0.0f;
     auto it = m_left.begin();
     // Don't clean the current skidmarking
@@ -210,12 +210,12 @@ void SkidMarks::update(float dt, bool force_skid_marks,
     const int cleaning_threshold =
         core::clamp(int(World::getWorld()->getNumKarts()), 5, 15);
     while ((int)m_left.size() >=
-        stk_config->m_max_skidmarks / cleaning_threshold)
+        fluxara_drift_config->m_max_skidmarks / cleaning_threshold)
     {
         m_left.erase(m_left.begin());
     }
     while ((int)m_right.size() >=
-        stk_config->m_max_skidmarks / cleaning_threshold)
+        fluxara_drift_config->m_max_skidmarks / cleaning_threshold)
     {
         m_right.erase(m_right.begin());
     }

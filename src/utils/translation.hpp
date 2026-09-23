@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -31,23 +31,23 @@
 #include "tinygettext/tinygettext.hpp"
 #endif
 
-#ifdef STK_UTF8_GETTEXT
-#define STK_GETTEXT gettext
-#define STK_NGETTEXT ngettext
+#ifdef FLUXARA_DRIFT_UTF8_GETTEXT
+#define FLUXARA_DRIFT_GETTEXT gettext
+#define FLUXARA_DRIFT_NGETTEXT ngettext
 #else
-#define STK_GETTEXT w_gettext
-#define STK_NGETTEXT w_ngettext
+#define FLUXARA_DRIFT_GETTEXT w_gettext
+#define FLUXARA_DRIFT_NGETTEXT w_ngettext
 #endif
 
-#  define _(String, ...)        (StringUtils::insertValues(translations->STK_GETTEXT(String), ##__VA_ARGS__))
+#  define _(String, ...)        (StringUtils::insertValues(translations->FLUXARA_DRIFT_GETTEXT(String), ##__VA_ARGS__))
 #undef _C
 #undef _P
 // Allows to use different translations for the same string in different contexts
-#  define _C(Ctx, String, ...)  (StringUtils::insertValues(translations->STK_GETTEXT(String, Ctx), ##__VA_ARGS__))
+#  define _C(Ctx, String, ...)  (StringUtils::insertValues(translations->FLUXARA_DRIFT_GETTEXT(String, Ctx), ##__VA_ARGS__))
 // Allows to use different plural forms based on the number of things being talked about
-#  define _P(Singular, Plural, Num, ...) (StringUtils::insertValues(translations->STK_NGETTEXT(Singular, Plural, Num), ##__VA_ARGS__))
+#  define _P(Singular, Plural, Num, ...) (StringUtils::insertValues(translations->FLUXARA_DRIFT_NGETTEXT(Singular, Plural, Num), ##__VA_ARGS__))
 // Allows to combine contextual translation and plural forms
-#  define _CP(Ctx, Singular, Plural, Num, ...) (StringUtils::insertValues(translations->STK_NGETTEXT(Singular, Plural, Num, Ctx), ##__VA_ARGS__))
+#  define _CP(Ctx, Singular, Plural, Num, ...) (StringUtils::insertValues(translations->FLUXARA_DRIFT_NGETTEXT(Singular, Plural, Num, Ctx), ##__VA_ARGS__))
 #  define gettext_noop(String)  (String)
 #  define N_(String)            (gettext_noop (String))
 // libintl defines its own fprintf, which doesn't work properly

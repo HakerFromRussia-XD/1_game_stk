@@ -1,23 +1,23 @@
 cmake_minimum_required(VERSION 3.12...4.0)
 
-# root CMakeLists for the SuperTuxKart project
-project(SuperTuxKart)
+# root CMakeLists for the FluxaraDrift project
+project(FluxaraDrift)
 set(PROJECT_VERSION "git")
 
-# STK_VERSION is consumed by src/utils/constants.cpp only.  Keeping the
+# FLUXARA_DRIFT_BUILD_VERSION is consumed by src/utils/constants.cpp only. Keeping the
 # generated value in the global compiler command invalidates every object when
 # the version changes (including every UI-only iOS iteration).  Keep the
 # definition source-local so a version update recompiles only constants.cpp.
 set_source_files_properties(src/utils/constants.cpp
-    PROPERTIES COMPILE_DEFINITIONS "SUPERTUXKART_VERSION=\"${PROJECT_VERSION}\"")
+    PROPERTIES COMPILE_DEFINITIONS "FLUXARA_DRIFT_BUILD_VERSION=\"${PROJECT_VERSION}\"")
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake")
 include(CMakeDependentOption)
 
-include(BuildTypeSTKRelease)
+include(BuildTypeFLUXARA_DRIFTRelease)
 if(NOT CMAKE_BUILD_TYPE)
-    message(STATUS "No build type selected, default to STKRelease")
-    set(CMAKE_BUILD_TYPE "STKRelease")
+    message(STATUS "No build type selected, default to FLUXARA_DRIFTRelease")
+    set(CMAKE_BUILD_TYPE "FLUXARA_DRIFTRelease")
 endif()
 
 CMAKE_DEPENDENT_OPTION(USE_SWITCH "Build targeting switch" OFF "NOT NINTENDO_SWITCH" ON)
@@ -27,7 +27,7 @@ if(WIN32)
 endif()
 
 option(SERVER_ONLY "Create a server only (i.e. no graphics or sound)" OFF)
-option(CHECK_ASSETS "Check if assets are installed in ../stk-assets" ON)
+option(CHECK_ASSETS "Check if assets are installed in ../fluxara_drift-assets" ON)
 option(USE_SYSTEM_ANGELSCRIPT "Use system angelscript instead of built-in angelscript. If you enable this option, make sure to use a compatible version." OFF)
 option(USE_SYSTEM_ENET "Use system ENet instead of the built-in version, when available." ON)
 option(USE_SYSTEM_MCPP "Use system mcpp instead of the built-in version, when available." ON)
@@ -41,7 +41,7 @@ if(APPLE)
         "NOT IOS;NOT SERVER_ONLY" OFF)
 endif()
 
-CMAKE_DEPENDENT_OPTION(USE_CRYPTO_OPENSSL "Use OpenSSL instead of MbedTLS for cryptography in STK." ON
+CMAKE_DEPENDENT_OPTION(USE_CRYPTO_OPENSSL "Use OpenSSL instead of MbedTLS for cryptography in FLUXARA_DRIFT." ON
     "NOT USE_SWITCH;NOT WIN32" OFF)
 CMAKE_DEPENDENT_OPTION(BUILD_RECORDER "Build opengl recorder" ON
     "NOT SERVER_ONLY;NOT APPLE;NOT USE_SWITCH" OFF)
@@ -53,6 +53,19 @@ CMAKE_DEPENDENT_OPTION(USE_DNS_C "Build bundled dns resolver" OFF "NOT CYGWIN;NO
 CMAKE_DEPENDENT_OPTION(USE_MOJOAL "Use bundled MojoAL instead of system OpenAL" OFF "NOT APPLE" ON)
 CMAKE_DEPENDENT_OPTION(HAVE_OPUS "Enable Opus audio codec support (requires libopusfile)" OFF
     "NOT SERVER_ONLY" OFF)
+
+# Preserve the reviewed source audio during the lossless iOS phase.  The
+# optional host-side OGG-to-Opus conversion requires a Mac codec toolchain and
+# must not turn a device build into an architecture-dependent packaging step.
+# Existing .opus assets continue to use the vendored runtime decoder.
+if(IOS)
+    option(FLUXARA_IOS_ENABLE_OPUS_AUDIO
+        "Re-encode Fluxara iOS bundle audio to Opus" OFF)
+    if(FLUXARA_IOS_ENABLE_OPUS_AUDIO)
+        set(HAVE_OPUS ON CACHE BOOL
+            "Enable the vendored Fluxara iOS Opus decoder" FORCE)
+    endif()
+endif()
 
 if (DLOPEN_MOLTENVK)
     ADD_DEFINITIONS(-DDLOPEN_MOLTENVK)
@@ -85,15 +98,15 @@ if(APPLE AND NOT IOS)
 endif()
 
 if (IOS)
-    ADD_DEFINITIONS(-DMOBILE_STK)
-    ADD_DEFINITIONS(-DIOS_STK)
+    ADD_DEFINITIONS(-DMOBILE_FLUXARA_DRIFT)
+    ADD_DEFINITIONS(-DIOS_FLUXARA_DRIFT)
     # Fluxara's approved portrait menus and landscape race HUD target iPhone.
     set(CMAKE_XCODE_ATTRIBUTE_TARGETED_DEVICE_FAMILY "1")
     option(USE_GLES2 "Use OpenGL ES2 renderer" ON)
 endif()
 
 if((UNIX AND NOT APPLE) AND NOT SERVER_ONLY)
-    if((${CMAKE_SYSTEM_PROCESSOR} MATCHES "arm") OR 
+    if((${CMAKE_SYSTEM_PROCESSOR} MATCHES "arm") OR
        (${CMAKE_SYSTEM_PROCESSOR} MATCHES "aarch64") OR
        (${CMAKE_SYSTEM_PROCESSOR} MATCHES "riscv64"))
         option(USE_GLES2 "Use OpenGL ES2 renderer" ON)
@@ -127,7 +140,7 @@ endif()
 if(USE_ASAN)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -fno-omit-frame-pointer")
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fsanitize=address -fno-omit-frame-pointer")
-    ADD_DEFINITIONS(-DASAN_STK)
+    ADD_DEFINITIONS(-DASAN_FLUXARA_DRIFT)
 endif()
 if(USE_TSAN)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=thread -fno-omit-frame-pointer")
@@ -138,8 +151,8 @@ if(USE_USAN)
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fsanitize=undefined -fno-omit-frame-pointer")
 endif()
 
-set(STK_SOURCE_DIR "src")
-set(STK_DATA_DIR "${PROJECT_SOURCE_DIR}/data")
+set(FLUXARA_DRIFT_SOURCE_DIR "src")
+set(FLUXARA_DRIFT_DATA_DIR "${PROJECT_SOURCE_DIR}/data")
 
 # CMAKE_RUNTIME_OUTPUT_DIRECTORY removes dSYMs in Xcode archive
 if(NOT CMAKE_GENERATOR MATCHES "Xcode")
@@ -147,9 +160,9 @@ if(NOT CMAKE_GENERATOR MATCHES "Xcode")
 endif()
 
 # Define install paths
-set(STK_INSTALL_BINARY_DIR "bin" CACHE
+set(FLUXARA_DRIFT_INSTALL_BINARY_DIR "bin" CACHE
     STRING "Install executable to this directory, absolute or relative to CMAKE_INSTALL_PREFIX")
-set(STK_INSTALL_DATA_DIR "share/supertuxkart" CACHE
+set(FLUXARA_DRIFT_INSTALL_DATA_DIR "share/fluxaradrift" CACHE
     STRING "Install data folder to this directory, absolute or relative to CMAKE_INSTALL_PREFIX")
 
 # Define dependencies path
@@ -172,7 +185,7 @@ if(WIN32)
     ADD_DEFINITIONS(-DUNICODE)
     ADD_DEFINITIONS(-D_UNICODE)
     if(NOT IS_DIRECTORY "${PROJECT_SOURCE_DIR}/${DEPENDENCIES}")
-        message(FATAL_ERROR "Dependencies directory not found, make sure dependencies-win-(arch) exists inside stk-code directory.")
+        message(FATAL_ERROR "Dependencies directory not found, make sure dependencies-win-(arch) exists inside fluxara_drift-code directory.")
     endif()
 endif()
 
@@ -349,7 +362,7 @@ if (NOT SERVER_ONLY)
     find_path(SDL2_INCLUDEDIR NAMES SDL.h PATH_SUFFIXES SDL2 include/SDL2 include PATHS)
     if (NOT SDL2_LIBRARY OR NOT SDL2_INCLUDEDIR)
         message(FATAL_ERROR "SDL2 not found. "
-            "SDL2 is required to handle gamepad in SuperTuxKart.")
+            "SDL2 is required to handle gamepad in FluxaraDrift.")
     else()
         include_directories("${SDL2_INCLUDEDIR}")
         MESSAGE(STATUS "Use system SDL2: ${SDL2_LIBRARY}")
@@ -389,7 +402,7 @@ if(USE_WIIUSE)
 endif()
 
 # Set include paths
-include_directories(${STK_SOURCE_DIR})
+include_directories(${FLUXARA_DRIFT_SOURCE_DIR})
 
 if(APPLE AND NOT IOS)
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -arch ${ARCHFLAGS}")
@@ -451,10 +464,39 @@ if(NOT SERVER_ONLY)
     find_package(OggVorbis REQUIRED)
     include_directories(${OGGVORBIS_INCLUDE_DIRS})
 
-    # Opus (optional)
+    # Opus. Fluxara iOS vendors the decoder to keep the shipped bundle
+    # self-contained; other targets retain the existing optional system path.
     if(HAVE_OPUS)
-        find_library(OPUSFILE_LIBRARY NAMES opusfile)
-        find_path(OPUSFILE_INCLUDEDIR NAMES opusfile.h PATH_SUFFIXES opus)
+        if(IOS)
+            # Opus upstream's feature probes otherwise create executable
+            # simulator targets while CMake configures an iOS project.  Static
+            # try-compile is sufficient for compile-time feature detection and
+            # never launches a target during a package configuration.
+            # Apple Clang compiles C99 variable-length arrays for arm64. Set
+            # the known iPhone capability explicitly so a failed Xcode probe
+            # cannot select Opus's non-threadsafe pseudostack fallback.
+            set(VLA_SUPPORTED 1)
+            set(OPUS_VAR_ARRAYS ON CACHE BOOL
+                "Use C99 VLA stack allocation in Fluxara iOS Opus" FORCE)
+            set(OPUS_USE_ALLOCA OFF CACHE BOOL
+                "Do not select alloca when iOS VLA is available" FORCE)
+            set(OPUS_NONTHREADSAFE_PSEUDOSTACK OFF CACHE BOOL
+                "Never use the non-threadsafe Opus iOS pseudostack" FORCE)
+            set(_fluxara_saved_try_compile_target_type "${CMAKE_TRY_COMPILE_TARGET_TYPE}")
+            set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+            add_subdirectory("${PROJECT_SOURCE_DIR}/lib/opus")
+            add_subdirectory("${PROJECT_SOURCE_DIR}/lib/opusfile")
+            if(_fluxara_saved_try_compile_target_type)
+                set(CMAKE_TRY_COMPILE_TARGET_TYPE "${_fluxara_saved_try_compile_target_type}")
+            else()
+                unset(CMAKE_TRY_COMPILE_TARGET_TYPE)
+            endif()
+            set(OPUSFILE_LIBRARY fluxara_opusfile)
+            set(OPUSFILE_INCLUDEDIR "${PROJECT_SOURCE_DIR}/lib/opusfile/include")
+        else()
+            find_library(OPUSFILE_LIBRARY NAMES opusfile)
+            find_path(OPUSFILE_INCLUDEDIR NAMES opusfile.h PATH_SUFFIXES opus)
+        endif()
         if(NOT OPUSFILE_LIBRARY OR NOT OPUSFILE_INCLUDEDIR)
             message(FATAL_ERROR "OpusFile not found. "
                 "OpusFile is required when HAVE_OPUS is enabled. "
@@ -469,7 +511,7 @@ if(NOT SERVER_ONLY)
     add_definitions(-DENABLE_SOUND)
 endif()
 
-# Text handling in STK (We use freetype, harfbuzz and SheenBidifor i18n text handling)
+# Text handling in FLUXARA_DRIFT (We use freetype, harfbuzz and SheenBidifor i18n text handling)
 if (NOT SERVER_ONLY)
     # SheenBidi
     add_subdirectory("${PROJECT_SOURCE_DIR}/lib/sheenbidi")
@@ -482,7 +524,7 @@ if (NOT SERVER_ONLY)
         include_directories(${FREETYPE_INCLUDE_DIRS})
     else()
         message(FATAL_ERROR "Freetype not found. "
-            "Freetype is required to display characters in SuperTuxKart.")
+            "Freetype is required to display characters in FluxaraDrift.")
     endif()
 
     # Harfbuzz
@@ -490,7 +532,7 @@ if (NOT SERVER_ONLY)
     find_path(HARFBUZZ_INCLUDEDIR NAMES harfbuzz/hb.h hb.h PATHS)
     if (NOT HARFBUZZ_LIBRARY OR NOT HARFBUZZ_INCLUDEDIR)
         message(FATAL_ERROR "Harfbuzz not found. "
-            "Harfbuzz is required to display characters in SuperTuxKart.")
+            "Harfbuzz is required to display characters in FluxaraDrift.")
     else()
         include_directories("${HARFBUZZ_INCLUDEDIR}")
         MESSAGE(STATUS "Use system harfbuzz: ${HARFBUZZ_LIBRARY}")
@@ -533,7 +575,7 @@ endif()
 
 if(MSVC)
     # VS will automatically add NDEBUG for release mode, but only _DEBUG in debug mode.
-    # Since STK uses DEBUG, this is added for debug compilation only:
+    # Since FLUXARA_DRIFT uses DEBUG, this is added for debug compilation only:
     add_compile_definitions($<$<CONFIG:Debug>:DEBUG>)
 else()
     # All non VS generators used create only a single compile mode, so
@@ -547,35 +589,37 @@ endif()
 
 
 if(WIN32)
-    configure_file("${STK_SOURCE_DIR}/../tools/windows_installer/icon_rc.template" "${PROJECT_BINARY_DIR}/tmp/icon.rc")
+    configure_file("${FLUXARA_DRIFT_SOURCE_DIR}/../tools/windows_installer/icon_rc.template" "${PROJECT_BINARY_DIR}/tmp/icon.rc")
 endif()
 
-# Provides list of source and header files (STK_SOURCES and STK_HEADERS)
+# Provides list of source and header files (FLUXARA_DRIFT_SOURCES and FLUXARA_DRIFT_HEADERS)
 include(sources.cmake)
 
 # The Fluxara public-flow controllers belong solely to the iPhone product.
 # Keep them out of the shared source list so Android does not compile or ship
 # this UI path at all.
-list(FILTER STK_SOURCES EXCLUDE REGEX "^src/states_screens/fluxara_.*_screen\\.cpp$")
+list(FILTER FLUXARA_DRIFT_SOURCES EXCLUDE REGEX "^src/states_screens/fluxara_.*_screen\\.cpp$")
 
 if (IOS)
     # The retired Motorica hub/about screens are neither reachable nor part of
     # Fluxara Drift.  Keep their legacy product text out of the iOS binary.
-    list(FILTER STK_SOURCES EXCLUDE REGEX
+    list(FILTER FLUXARA_DRIFT_SOURCES EXCLUDE REGEX
         "^src/states_screens/motorica_(hub|about)_screen\\.cpp$")
-    set(STK_SOURCES
-        ${STK_SOURCES}
+    set(FLUXARA_DRIFT_SOURCES
+        ${FLUXARA_DRIFT_SOURCES}
         src/input/motorica_game_control_ios.mm
-        src/utils/fluxara_orientation_ios.mm)
+        src/utils/fluxara_orientation_ios.mm
+        src/utils/fluxara_device_validation_ios.mm)
     set_source_files_properties(src/input/motorica_game_control_ios.mm
         src/utils/fluxara_orientation_ios.mm
+        src/utils/fluxara_device_validation_ios.mm
         PROPERTIES COMPILE_FLAGS "-x objective-c++" LANGUAGE CXX)
 endif()
 
 if (USE_APPLE_NETWORK_LIBRARIES)
     add_definitions(-DAPPLE_NETWORK_LIBRARIES)
-    set(STK_SOURCES
-        ${STK_SOURCES}
+    set(FLUXARA_DRIFT_SOURCES
+        ${FLUXARA_DRIFT_SOURCES}
         src/online/http_request_urlsession.mm
         src/network/crypto_cryptokit.mm)
     set_source_files_properties(src/online/http_request_urlsession.mm PROPERTIES COMPILE_FLAGS "-x objective-c++")
@@ -599,31 +643,31 @@ endif()
 
 # Generate source groups useful for MSVC project explorer
 include(cmake/SourceGroupFunctions.cmake)
-source_group_hierarchy(STK_SOURCES STK_HEADERS)
+source_group_hierarchy(FLUXARA_DRIFT_SOURCES FLUXARA_DRIFT_HEADERS)
 
 
 if(APPLE AND NOT IOS)
     # icon files to copy in the bundle
-    set(OSX_ICON_FILES ${PROJECT_SOURCE_DIR}/data/supertuxkart.icns)
+    set(OSX_ICON_FILES ${PROJECT_SOURCE_DIR}/data/fluxaradrift.icns)
     set_source_files_properties(${OSX_ICON_FILES} PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
-    set(STK_SOURCES ${STK_SOURCES} ${OSX_ICON_FILES})
+    set(FLUXARA_DRIFT_SOURCES ${FLUXARA_DRIFT_SOURCES} ${OSX_ICON_FILES})
 
     # build the executable and create an app bundle
-    add_executable(supertuxkart MACOSX_BUNDLE ${STK_SOURCES})
+    add_executable(fluxaradrift MACOSX_BUNDLE ${FLUXARA_DRIFT_SOURCES})
 
     find_library(APPKIT_LIBRARY AppKit)
-    target_link_libraries(supertuxkart ${APPKIT_LIBRARY})
+    target_link_libraries(fluxaradrift ${APPKIT_LIBRARY})
 
     # configure CMake to use a custom Info.plist
-    set_target_properties(supertuxkart PROPERTIES
-        MACOSX_BUNDLE_INFO_PLIST ${PROJECT_SOURCE_DIR}/data/SuperTuxKart-Info.plist)
+    set_target_properties(fluxaradrift PROPERTIES
+        MACOSX_BUNDLE_INFO_PLIST ${PROJECT_SOURCE_DIR}/data/FluxaraDrift-Info.plist)
 
     if(CMAKE_GENERATOR MATCHES "Xcode")
-        add_custom_command(TARGET supertuxkart POST_BUILD
-            COMMAND ln -f -s ${PROJECT_SOURCE_DIR}/data ${CMAKE_BINARY_DIR}/\${CONFIGURATION}/supertuxkart.app/Contents/Resources)
+        add_custom_command(TARGET fluxaradrift POST_BUILD
+            COMMAND ln -f -s ${PROJECT_SOURCE_DIR}/data ${CMAKE_BINARY_DIR}/\${CONFIGURATION}/fluxaradrift.app/Contents/Resources)
     else()
-        add_custom_command(TARGET supertuxkart POST_BUILD
-            COMMAND ln -f -s ${PROJECT_SOURCE_DIR}/data ${CMAKE_BINARY_DIR}/bin/supertuxkart.app/Contents/Resources)
+        add_custom_command(TARGET fluxaradrift POST_BUILD
+            COMMAND ln -f -s ${PROJECT_SOURCE_DIR}/data ${CMAKE_BINARY_DIR}/bin/fluxaradrift.app/Contents/Resources)
     endif()
 else()
     if (NOT WIN32)
@@ -632,47 +676,54 @@ else()
     endif()
 
     # Set data dir (absolute or relative to CMAKE_INSTALL_PREFIX)
-    if(NOT STK_INSTALL_DATA_DIR_ABSOLUTE)
-        get_filename_component(STK_INSTALL_DATA_DIR_ABSOLUTE ${STK_INSTALL_DATA_DIR} ABSOLUTE)
-        if(${STK_INSTALL_DATA_DIR_ABSOLUTE} STREQUAL ${STK_INSTALL_DATA_DIR})
-            add_definitions(-DSUPERTUXKART_DATADIR=\"${STK_INSTALL_DATA_DIR_ABSOLUTE}\")
+    if(NOT FLUXARA_DRIFT_INSTALL_DATA_DIR_ABSOLUTE)
+        get_filename_component(FLUXARA_DRIFT_INSTALL_DATA_DIR_ABSOLUTE ${FLUXARA_DRIFT_INSTALL_DATA_DIR} ABSOLUTE)
+        if(${FLUXARA_DRIFT_INSTALL_DATA_DIR_ABSOLUTE} STREQUAL ${FLUXARA_DRIFT_INSTALL_DATA_DIR})
+            add_definitions(-DFLUXARA_DRIFT_DATADIR=\"${FLUXARA_DRIFT_INSTALL_DATA_DIR_ABSOLUTE}\")
         else()
-            add_definitions(-DSUPERTUXKART_DATADIR=\"${CMAKE_INSTALL_PREFIX}/${STK_INSTALL_DATA_DIR}\")
+            add_definitions(-DFLUXARA_DRIFT_DATADIR=\"${CMAKE_INSTALL_PREFIX}/${FLUXARA_DRIFT_INSTALL_DATA_DIR}\")
         endif()
     else()
-        add_definitions(-DSUPERTUXKART_DATADIR=\"${STK_INSTALL_DATA_DIR_ABSOLUTE}\")
+        add_definitions(-DFLUXARA_DRIFT_DATADIR=\"${FLUXARA_DRIFT_INSTALL_DATA_DIR_ABSOLUTE}\")
     endif()
 
     # Build the final executable
     if (IOS)
-        file(GLOB IOS_ASSETS_FILES ${IOS_ASSETS} ${IOS_LAUNCHSCREEN} ${IOS_IMAGES_XCASSETS})
+        # Do not add the generated upstream data snapshot as an opaque Xcode
+        # resource.  PrepareFluxaraIosRuntimeData.sh copies the audited
+        # runtime allowlist below, before Fluxara overlays its own content.
+        file(GLOB IOS_ASSETS_FILES ${IOS_LAUNCHSCREEN} ${IOS_IMAGES_XCASSETS})
         set_source_files_properties(${IOS_ASSETS_FILES} PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
         # The iOS asset bundle is a curated snapshot. Keep the public entry
         # screen and visual design system iOS-only, so Android assets and UI
         # remain unchanged.
         set(FLUXARA_IOS_SCREENS
-            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_home.stkgui
-            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_campaign.stkgui
-            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_race_setup.stkgui
-            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_kart.stkgui
-            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_race_result.stkgui
-            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_settings.stkgui)
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_home.fluxara_driftgui
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_campaign.fluxara_driftgui
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_race_setup.fluxara_driftgui
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_kart.fluxara_driftgui
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_race_result.fluxara_driftgui
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/fluxara_settings.fluxara_driftgui)
         set_source_files_properties(${FLUXARA_IOS_SCREENS} PROPERTIES
             MACOSX_PACKAGE_LOCATION Resources/data/gui/screens)
-        # The generated asset snapshot still contains upstream STK screen
+        set(FLUXARA_IOS_DIALOGS
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/dialogs/fluxara_pause_dialog.fluxara_driftgui)
+        set_source_files_properties(${FLUXARA_IOS_DIALOGS} PROPERTIES
+            MACOSX_PACKAGE_LOCATION Resources/data/gui/dialogs)
+        # The generated asset snapshot still contains upstream FLUXARA_DRIFT screen
         # definitions.  Fluxara owns the complete public navigation flow, so
         # retain only its six explicit screens in the iOS product.  This list
         # is built from the snapshot at configure time instead of deleting
         # anything from the shared source checkout.
         file(GLOB FLUXARA_IOS_UPSTREAM_SCREEN_FILES
-            "${IOS_ASSETS}/gui/screens/*.stkgui")
+            "${IOS_ASSETS}/gui/screens/*.fluxara_driftgui")
         set(FLUXARA_IOS_LEGACY_SCREEN_DESTINATIONS)
         foreach(FLUXARA_IOS_UPSTREAM_SCREEN_FILE IN LISTS
                 FLUXARA_IOS_UPSTREAM_SCREEN_FILES)
             get_filename_component(FLUXARA_IOS_UPSTREAM_SCREEN_NAME
                 "${FLUXARA_IOS_UPSTREAM_SCREEN_FILE}" NAME)
             list(APPEND FLUXARA_IOS_LEGACY_SCREEN_DESTINATIONS
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/${FLUXARA_IOS_UPSTREAM_SCREEN_NAME}")
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/screens/${FLUXARA_IOS_UPSTREAM_SCREEN_NAME}")
         endforeach()
         set(FLUXARA_IOS_SOURCES
             ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_home_screen.cpp
@@ -682,7 +733,7 @@ else()
             ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_race_result_screen.cpp
             ${PROJECT_SOURCE_DIR}/src/states_screens/fluxara_settings_screen.cpp)
         set(FLUXARA_IOS_SKIN
-            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/stkskin.xml
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/fluxara_driftskin.xml
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/background.png
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/background-v2.png
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/action_card.png
@@ -750,121 +801,243 @@ else()
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/NOTICE-THIRD-PARTY.txt)
         set_source_files_properties(${FLUXARA_IOS_NOTICES} PROPERTIES
             MACOSX_PACKAGE_LOCATION Resources)
-        add_executable(supertuxkart ${STK_SOURCES} ${STK_RESOURCES} ${STK_HEADERS}
-            ${IOS_ASSETS_FILES} ${FLUXARA_IOS_SOURCES})
-        # Xcode copies the generated mobile data snapshot as one directory.
-        # That operation can replace the whole destination after individual
-        # resource rules have already been considered up to date. Overlay the
-        # curated Fluxara bundle once, at the end, so clean and incremental
-        # builds always contain the exact same screens, karts and tracks.
+        add_executable(fluxaradrift ${FLUXARA_DRIFT_SOURCES} ${FLUXARA_DRIFT_RESOURCES} ${FLUXARA_DRIFT_HEADERS}
+            ${IOS_ASSETS_FILES} ${FLUXARA_IOS_SOURCES} ${FLUXARA_IOS_DIALOGS})
+        add_custom_target(fluxara_campaign_static_audit
+            COMMAND ${CMAKE_COMMAND} -E env "IOS_ASSETS=${IOS_ASSETS}"
+                /usr/bin/ruby
+                ${PROJECT_SOURCE_DIR}/cmake/fluxara_campaign_static_audit.rb
+            WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+            COMMENT "Audit Fluxara campaign resource declarations")
+        # Keep the exhaustive XML audit available on demand.  It is not a
+        # build prerequisite: running it for every one-file iPhone iteration
+        # delays packaging without changing the executable or bundle.
+        set(FLUXARA_IOS_FINALIZE_ENV)
+        set(FLUXARA_IOS_AUDIT_ENV)
+        # The current iPhone renderer is Vulkan.  Its texture loader consumes
+        # image files through IImage and cannot read raw ASTC payloads written
+        # under .png/.jpg names by CompressFluxaraIosTextures.rb.  Keep source
+        # image formats in the device bundle until a Vulkan-aware ASTC loader
+        # and unambiguous ASTC asset names are implemented.
+        option(FLUXARA_IOS_ENABLE_ASTC_TEXTURES
+            "Compress Fluxara track textures into ASTC in iOS bundles" OFF)
+        # Build the encoder on the Mac, outside the iPhone app target. Xcode
+        # exports its iPhoneOS SDK to every custom phase, so explicitly clear
+        # that environment before configuring the native packaging tool.
+        if (FLUXARA_IOS_ENABLE_ASTC_TEXTURES)
+            set(FLUXARA_ASTCENC_HOST_DIR "${CMAKE_BINARY_DIR}/fluxara-astcenc-host")
+            # On Apple Silicon the ASTC project's "native" artifact is
+            # actually forced to x86_64 by its own CMake file. Select NEON
+            # explicitly so packaging runs as a native arm64 process instead
+            # of paying the Rosetta cost for every texture.
+            set(FLUXARA_ASTCENC_HOST "${FLUXARA_ASTCENC_HOST_DIR}/Source/astcenc-neon")
+            add_custom_command(
+                OUTPUT "${FLUXARA_ASTCENC_HOST}"
+                COMMAND ${CMAKE_COMMAND} -E env
+                    --unset=SDKROOT --unset=PLATFORM_NAME
+                    --unset=EFFECTIVE_PLATFORM_NAME
+                    --unset=IPHONEOS_DEPLOYMENT_TARGET
+                    --unset=ARCHS --unset=VALID_ARCHS
+                    ${CMAKE_COMMAND} -G "Unix Makefiles"
+                    -S "${PROJECT_SOURCE_DIR}/lib/astc-encoder"
+                    -B "${FLUXARA_ASTCENC_HOST_DIR}"
+                    -DCMAKE_OSX_SYSROOT=macosx
+                    -DCMAKE_OSX_ARCHITECTURES=arm64
+                    -DCMAKE_CXX_FLAGS=-Wno-error=overriding-option
+                    -DASTCENC_UNITTEST=OFF -DASTCENC_DIAGNOSTICS=OFF
+                    -DASTCENC_UNIVERSAL_BUILD=OFF
+                    -DASTCENC_ISA_NATIVE=OFF -DASTCENC_ISA_NEON=ON
+                    -DASTCENC_CLI=ON
+                COMMAND ${CMAKE_COMMAND} -E env
+                    --unset=SDKROOT --unset=PLATFORM_NAME
+                    --unset=EFFECTIVE_PLATFORM_NAME
+                    --unset=IPHONEOS_DEPLOYMENT_TARGET
+                    --unset=ARCHS --unset=VALID_ARCHS
+                    ${CMAKE_COMMAND} --build "${FLUXARA_ASTCENC_HOST_DIR}"
+                    --target astcenc-neon --parallel 4
+                DEPENDS
+                    "${PROJECT_SOURCE_DIR}/lib/astc-encoder/CMakeLists.txt"
+                    "${PROJECT_SOURCE_DIR}/lib/astc-encoder/Source/CMakeLists.txt"
+                COMMENT "Build host ASTC encoder for Fluxara iOS packaging")
+            add_custom_target(fluxara_ios_astc_encoder DEPENDS "${FLUXARA_ASTCENC_HOST}")
+            add_dependencies(fluxaradrift fluxara_ios_astc_encoder)
+            list(APPEND FLUXARA_IOS_FINALIZE_ENV
+                "FLUXARA_IOS_TEXTURE_FORMAT=astc"
+                "FLUXARA_ASTCENC=${FLUXARA_ASTCENC_HOST}"
+                "FLUXARA_ASTC_PRESET=fast"
+                "FLUXARA_ASTC_CACHE=${CMAKE_BINARY_DIR}/fluxara-astc-cache")
+            list(APPEND FLUXARA_IOS_AUDIT_ENV "FLUXARA_IOS_EXPECT_ASTC=1")
+        endif()
+        if (FLUXARA_IOS_ENABLE_OPUS_AUDIO)
+            if (NOT HAVE_OPUS)
+                message(FATAL_ERROR "Fluxara Opus packaging requires -DHAVE_OPUS=ON so every converted bundle asset has a runtime decoder.")
+            endif()
+            find_program(FLUXARA_SOX NAMES sox REQUIRED)
+            find_program(FLUXARA_PKG_CONFIG NAMES pkg-config REQUIRED)
+            set(FLUXARA_OPUS_TOOL_DIR "${CMAKE_BINARY_DIR}/fluxara-opus-tools")
+            set(FLUXARA_WAV_TO_OPUS "${FLUXARA_OPUS_TOOL_DIR}/wav-to-opus")
+            add_custom_command(
+                OUTPUT "${FLUXARA_WAV_TO_OPUS}"
+                COMMAND /bin/sh ${PROJECT_SOURCE_DIR}/cmake/BuildFluxaraOpusTool.sh
+                    ${PROJECT_SOURCE_DIR}/cmake/FluxaraWavToOpus.c
+                    ${FLUXARA_WAV_TO_OPUS}
+                DEPENDS ${PROJECT_SOURCE_DIR}/cmake/FluxaraWavToOpus.c
+                    ${PROJECT_SOURCE_DIR}/cmake/BuildFluxaraOpusTool.sh
+                COMMENT "Build host Ogg/Opus encoder for Fluxara iOS packaging")
+            add_custom_target(fluxara_ios_opus_encoder DEPENDS "${FLUXARA_WAV_TO_OPUS}")
+            add_dependencies(fluxaradrift fluxara_ios_opus_encoder)
+            list(APPEND FLUXARA_IOS_FINALIZE_ENV
+                "FLUXARA_IOS_AUDIO_FORMAT=opus"
+                "FLUXARA_SOX=${FLUXARA_SOX}"
+                "FLUXARA_WAV_TO_OPUS=${FLUXARA_WAV_TO_OPUS}"
+                "FLUXARA_OPUS_CACHE=${CMAKE_BINARY_DIR}/fluxara-opus-cache")
+            list(APPEND FLUXARA_IOS_AUDIT_ENV "FLUXARA_IOS_EXPECT_OPUS=1")
+        endif()
+        set(FLUXARA_IOS_FINALIZE_COMMAND
+            COMMAND ${CMAKE_COMMAND} -E env ${FLUXARA_IOS_FINALIZE_ENV}
+                /bin/sh ${PROJECT_SOURCE_DIR}/cmake/FinalizeFluxaraIosBundle.sh
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>")
+        set(FLUXARA_IOS_PACKAGE_AUDIT_COMMAND
+            COMMAND ${CMAKE_COMMAND} -E env ${FLUXARA_IOS_AUDIT_ENV}
+                /bin/sh ${PROJECT_SOURCE_DIR}/cmake/fluxara_ios_package_audit.sh
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>")
+        # Copy the audited base-data allowlist first, then overlay the curated
+        # Fluxara bundle. This keeps source assets intact while preventing the
+        # iOS product from inheriting upstream authoring and locale payloads.
         # copy_directory recopies the entire curated bundle on every link
         # (thousands of files), turning a two-file UI edit into a multi-minute
         # iteration. rsync preserves the overlay semantics while transferring
         # only files whose size or timestamp changed.
-        add_custom_command(TARGET supertuxkart POST_BUILD
+        add_custom_command(TARGET fluxaradrift POST_BUILD
+            COMMAND /bin/sh
+                ${PROJECT_SOURCE_DIR}/cmake/PrepareFluxaraIosRuntimeData.sh
+                "${IOS_ASSETS}"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data"
             COMMAND /usr/bin/rsync -a
                 "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/"
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/screens/"
+            COMMAND /usr/bin/rsync -a
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/dialogs/"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/dialogs/"
             COMMAND /usr/bin/rsync -a
                 "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/fluxara/"
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/fluxara/"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/fluxara/"
             COMMAND /usr/bin/rsync -a
                 "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/skins/fluxara/"
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/skins/fluxara/"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/skins/fluxara/"
             COMMAND /usr/bin/rsync -a
                 "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/karts/"
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/karts/"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/karts/"
             COMMAND /usr/bin/rsync -a
                 "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/tracks/"
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/tracks/"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/tracks/"
+            # Capture the Flag meshes are shared by every CTF track. Overlay
+            # their two team textures after the audited base snapshot so no
+            # arena can reveal the inherited FLUXARA_DRIFT wordmark.
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/models/red_flag.jpg"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/models/red_flag.jpg"
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/models/blue_flag.jpg"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/models/blue_flag.jpg"
             # rsync keeps the shared source intact, including its old preview
             # circuit.  Remove that exact unreachable directory from the
             # generated Fluxara bundle after the overlay.
             COMMAND ${CMAKE_COMMAND} -E rm -rf
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/tracks/fluxara-circuit"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/tracks/fluxara-circuit"
             COMMAND ${CMAKE_COMMAND} -E copy_if_different
                 "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/fluxara-campaign.xml"
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/fluxara-campaign.xml"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/fluxara-campaign.xml"
             COMMAND ${CMAKE_COMMAND} -E copy_if_different
                 "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/NOTICE-THIRD-PARTY.txt"
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/NOTICE-THIRD-PARTY.txt"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/NOTICE-THIRD-PARTY.txt"
             # The generated asset snapshot is copied before the custom
             # Fluxara sources.  Keep the selected language catalogue in the
             # final bundle as well, otherwise a fresh Russian translation can
             # silently be replaced by the stale snapshot.
             COMMAND ${CMAKE_COMMAND} -E copy_if_different
                 "${PROJECT_SOURCE_DIR}/data/po/ru.po"
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/po/ru.po")
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/po/ru.po"
+            # Keep only the approved final garage art and font. The retained
+            # Baloo Cyrillic face includes the Latin glyphs used by the UI.
+            COMMAND ${CMAKE_COMMAND} -E rm -f
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/fluxara/home/garage-background.png"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/fluxara/home/garage-background-figma.png"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/fluxara/home/garage-background-outpaint-v1.png"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/fluxara/home/garage-background-outpaint-v2.png"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/fluxara/home/garage-floor-extension-v1.png"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/skins/fluxara/data/ttf/Baloo2-ExtraBold.ttf"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/skins/fluxara/data/ttf/Baloo2-ExtraBold-Cyrillic.ttf")
         # The generated mobile asset snapshot may contain the retired
         # Motorica-only content. Fluxara ships its curated content instead.
-        # Xcode signs before this post-build overlay.  Simulator bundles need
-        # an ad-hoc signature after the overlay; physical-device bundles must
-        # retain Xcode's provisioned Developer signature.
-        set(FLUXARA_IOS_FINAL_SIGN_COMMAND)
-        if (FLUXARA_IOS_PLATFORM STREQUAL "iphonesimulator")
-            list(APPEND FLUXARA_IOS_FINAL_SIGN_COMMAND
-                COMMAND /usr/bin/codesign --force --sign -
-                "$<TARGET_BUNDLE_DIR:supertuxkart>")
-        endif()
-        add_custom_command(TARGET supertuxkart POST_BUILD
+        add_custom_command(TARGET fluxaradrift POST_BUILD
             COMMAND ${CMAKE_COMMAND} -E rm -rf
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/tracks/motorica_signal_lab"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/tracks/motorica_signal_lab"
             COMMAND ${CMAKE_COMMAND} -E rm -rf
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/karts/motorica_signal_pilot"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/karts/motorica_signal_pilot"
             COMMAND ${CMAKE_COMMAND} -E rm -rf
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/motorica-start-full"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/motorica-start-full"
             # iOS loads the independent Figma HUD assets above.  The Android
-            # wheel masks, slider and blurred STK button plates are not a
+            # wheel masks, slider and blurred FLUXARA_DRIFT button plates are not a
             # fallback on this target and must not ship in Fluxara's bundle.
             COMMAND ${CMAKE_COMMAND} -E rm -rf
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/icons/android"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/icons/android"
             # Fluxara exposes neither the upstream Help, Online nor Options
             # navigation trees.  Keep generic engine dialogs for the moment
             # (pause/confirmation still need their Fluxara replacements), but
-            # do not ship these unreachable STK screen families.
+            # do not ship these unreachable FLUXARA_DRIFT screen families.
             COMMAND ${CMAKE_COMMAND} -E rm -rf
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/help"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/screens/help"
             COMMAND ${CMAKE_COMMAND} -E rm -rf
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/online"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/screens/online"
             COMMAND ${CMAKE_COMMAND} -E rm -rf
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/options"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/screens/options"
             COMMAND ${CMAKE_COMMAND} -E rm -rf
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/dialogs/online"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/dialogs/online"
             COMMAND ${CMAKE_COMMAND} -E rm -rf
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/icons/online"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/icons/online"
             COMMAND ${CMAKE_COMMAND} -E rm -f
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/music/motorica_signal_lab.music"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/music/motorica_signal_lab.music"
             COMMAND ${CMAKE_COMMAND} -E rm -f
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/music/motorica_signal_lab.ogg"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/music/motorica_signal_lab.ogg"
             COMMAND ${CMAKE_COMMAND} -E rm -f
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/music/motorica_signal_lab_license.txt"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/music/motorica_signal_lab_license.txt"
             COMMAND ${CMAKE_COMMAND} -E rm -rf
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/packaged-scripts/tracks/motorica_signal_lab"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/packaged-scripts/tracks/motorica_signal_lab"
             COMMAND ${CMAKE_COMMAND} -E rm -f
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/motorica_hub.stkgui"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/screens/motorica_hub.fluxara_driftgui"
             COMMAND ${CMAKE_COMMAND} -E rm -f
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/motorica_exercise.stkgui"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/screens/motorica_exercise.fluxara_driftgui"
             COMMAND ${CMAKE_COMMAND} -E rm -f
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/motorica_history.stkgui"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/screens/motorica_history.fluxara_driftgui"
             COMMAND ${CMAKE_COMMAND} -E rm -f
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/gui/screens/motorica_about.stkgui"
-            # Do not leave an unreachable STK menu behind as an accidental
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/screens/motorica_about.fluxara_driftgui"
+            # Do not leave an unreachable FLUXARA_DRIFT menu behind as an accidental
             # fallback or an App Store bundle residue.  The Fluxara screen
             # overlay is already copied above, so this removes only the
             # upstream snapshot files collected at configure time.
             COMMAND ${CMAKE_COMMAND} -E rm -f
                 ${FLUXARA_IOS_LEGACY_SCREEN_DESTINATIONS}
             COMMAND ${CMAKE_COMMAND} -E rm -f
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/challenges/motorica_precision.challenge"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/challenges/motorica_precision.challenge"
             COMMAND ${CMAKE_COMMAND} -E rm -f
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/challenges/motorica_reaction.challenge"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/challenges/motorica_reaction.challenge"
             COMMAND ${CMAKE_COMMAND} -E rm -f
-                "$<TARGET_BUNDLE_DIR:supertuxkart>/data/challenges/motorica_signal_hold.challenge"
-            ${FLUXARA_IOS_FINAL_SIGN_COMMAND})
-        set_target_properties(supertuxkart PROPERTIES
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/challenges/motorica_signal_hold.challenge"
+            ${FLUXARA_IOS_FINALIZE_COMMAND}
+            ${FLUXARA_IOS_PACKAGE_AUDIT_COMMAND})
+        # Xcode signs before CMake's post-build resource overlay.  Run a
+        # separate final command after that overlay to seal the exact payload
+        # which is installed on a physical device.
+        if (FLUXARA_IOS_PLATFORM STREQUAL "iphoneos")
+            add_custom_command(TARGET fluxaradrift POST_BUILD
+                COMMAND /bin/sh ${PROJECT_SOURCE_DIR}/cmake/ResignFluxaraIosBundle.sh
+                    "$<TARGET_BUNDLE_DIR:fluxaradrift>")
+        endif()
+        set_target_properties(fluxaradrift PROPERTIES
             OUTPUT_NAME "Fluxara Drift"
             XCODE_GENERATE_SCHEME TRUE
-            MACOSX_BUNDLE_INFO_PLIST ${PROJECT_SOURCE_DIR}/data/SuperTuxKart-Info-iOS.plist
+            MACOSX_BUNDLE_INFO_PLIST ${PROJECT_SOURCE_DIR}/data/FluxaraDrift-Info-iOS.plist
             XCODE_ATTRIBUTE_SDKROOT ${FLUXARA_IOS_PLATFORM}
             XCODE_ATTRIBUTE_SUPPORTED_PLATFORMS ${FLUXARA_IOS_PLATFORM}
             XCODE_ATTRIBUTE_IPHONEOS_DEPLOYMENT_TARGET 15.0
@@ -873,7 +1046,7 @@ else()
             XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER ${CMAKE_XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER}
             XCODE_ATTRIBUTE_DEVELOPMENT_TEAM ${CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM}
             XCODE_ATTRIBUTE_FLUXARA_INPUT_BRIDGE_APP_GROUP ${CMAKE_XCODE_ATTRIBUTE_FLUXARA_INPUT_BRIDGE_APP_GROUP}
-            XCODE_ATTRIBUTE_CODE_SIGN_ENTITLEMENTS ${PROJECT_SOURCE_DIR}/data/SuperTuxKart-iOS.entitlements
+            XCODE_ATTRIBUTE_CODE_SIGN_ENTITLEMENTS ${PROJECT_SOURCE_DIR}/data/FluxaraDrift-iOS.entitlements
             XCODE_ATTRIBUTE_DEBUG_INFORMATION_FORMAT "dwarf-with-dsym"
             XCODE_ATTRIBUTE_ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS NO
             XCODE_ATTRIBUTE_ASSETCATALOG_COMPILER_APPICON_NAME "AppIcon")
@@ -882,26 +1055,36 @@ else()
                 "${CMAKE_BINARY_DIR}/${PROJECT_NAME}.xcodeproj/xcshareddata/xcschemes")
             file(MAKE_DIRECTORY "${MOTORICA_IOS_SCHEME_DIR}")
             file(REMOVE "${MOTORICA_IOS_SCHEME_DIR}/Motorica Signal LAB.xcscheme")
+            file(RELATIVE_PATH FLUXARA_XCODE_CONTAINER
+                "${PROJECT_SOURCE_DIR}"
+                "${CMAKE_BINARY_DIR}/${PROJECT_NAME}.xcodeproj")
             configure_file(
                 "${PROJECT_SOURCE_DIR}/cmake/FluxaraDrift.xcscheme"
                 "${MOTORICA_IOS_SCHEME_DIR}/Fluxara Drift.xcscheme"
-                COPYONLY)
-            add_custom_command(TARGET supertuxkart POST_BUILD
+                @ONLY)
+            # Keep the destructive campaign soak invocation in a dedicated
+            # Xcode scheme.  Reconfiguring the project then cannot erase its
+            # arguments from a developer's normal Fluxara Drift launch scheme.
+            configure_file(
+                "${PROJECT_SOURCE_DIR}/cmake/FluxaraDeviceValidation.xcscheme"
+                "${MOTORICA_IOS_SCHEME_DIR}/Fluxara Device Validation.xcscheme"
+                @ONLY)
+            add_custom_command(TARGET fluxaradrift POST_BUILD
                 COMMAND /bin/sh ${PROJECT_SOURCE_DIR}/cmake/CopyIosDsymToArchive.sh
-                COMMENT "Copy supertuxkart dSYM into Xcode archive")
-            get_all_targets(supertuxkart_targets ${CMAKE_CURRENT_LIST_DIR})
-            foreach(target IN LISTS supertuxkart_targets)
-                if (NOT target MATCHES "supertuxkart")
+                COMMENT "Copy fluxaradrift dSYM into Xcode archive")
+            get_all_targets(fluxaradrift_targets ${CMAKE_CURRENT_LIST_DIR})
+            foreach(target IN LISTS fluxaradrift_targets)
+                if (NOT target MATCHES "fluxaradrift")
                     set_target_properties(${target} PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib$(EFFECTIVE_PLATFORM_NAME)/${target})
                 endif()
                 configure_xcode_defaults(${target})
             endforeach()
         endif()
     else()
-        add_executable(supertuxkart ${STK_SOURCES} ${STK_RESOURCES} ${STK_HEADERS})
+        add_executable(fluxaradrift ${FLUXARA_DRIFT_SOURCES} ${FLUXARA_DRIFT_RESOURCES} ${FLUXARA_DRIFT_HEADERS})
     endif()
     if (NOT WIN32)
-        target_link_libraries(supertuxkart ${PTHREAD_LIBRARY})
+        target_link_libraries(fluxaradrift ${PTHREAD_LIBRARY})
     endif()
 endif()
 
@@ -919,7 +1102,7 @@ if(USE_SQLITE3)
         add_definitions(-DENABLE_SQLITE3)
         # include_directories conflicts with cryptokit_wrapper
         #include_directories("${SQLITE3_INCLUDEDIR}")
-        target_include_directories(supertuxkart PRIVATE "${SQLITE3_INCLUDEDIR}")
+        target_include_directories(fluxaradrift PRIVATE "${SQLITE3_INCLUDEDIR}")
         MESSAGE(STATUS "Use system libsqlite3: ${SQLITE3_LIBRARY}")
     endif()
 endif()
@@ -936,7 +1119,7 @@ int main() {
 }
 " NO_LIBATOMIC_NEEDED)
 if (NOT NO_LIBATOMIC_NEEDED)
-    target_link_libraries(supertuxkart atomic)
+    target_link_libraries(fluxaradrift atomic)
 endif()
 
 # OpenSSL or MbedTLS
@@ -962,29 +1145,29 @@ if (NOT USE_APPLE_NETWORK_LIBRARIES)
     endif()
 
     if (USE_CRYPTO_OPENSSL)
-        message(STATUS "OpenSSL will be used for cryptography in STK.")
+        message(STATUS "OpenSSL will be used for cryptography in FLUXARA_DRIFT.")
         add_definitions(-DENABLE_CRYPTO_OPENSSL)
     else()
-        message(STATUS "MbedTLS will be used for cryptography in STK.")
+        message(STATUS "MbedTLS will be used for cryptography in FLUXARA_DRIFT.")
         add_definitions(-DENABLE_CRYPTO_MBEDTLS)
     endif()
 endif()
 
 # Common library dependencies
-target_link_libraries(supertuxkart
+target_link_libraries(fluxaradrift
     bulletdynamics
     bulletcollision
     bulletmath
     ${ENET_LIBRARIES}
-    stkirrlicht
+    fluxara_driftirrlicht
     ${Angelscript_LIBRARIES}
     ${MCPP_LIBRARY}
     )
 
 if (USE_APPLE_NETWORK_LIBRARIES)
-    target_link_libraries(supertuxkart "-framework Foundation -framework CryptoKit" cryptokit_wrapper)
+    target_link_libraries(fluxaradrift "-framework Foundation -framework CryptoKit" cryptokit_wrapper)
 else()
-    target_link_libraries(supertuxkart ${CURL_LIBRARIES})
+    target_link_libraries(fluxaradrift ${CURL_LIBRARIES})
 endif()
 
 if (USE_SWITCH)
@@ -995,7 +1178,7 @@ if (USE_SWITCH)
   find_library(ZLIB_LIBRARY NAMES z libz REQUIRED)
   find_library(PNG_LIBRARY NAMES png libpng REQUIRED)
   find_library(BZ2_LIBRARY NAMES bz2 libbz2 REQUIRED)
-  target_link_libraries(supertuxkart
+  target_link_libraries(fluxaradrift
     ${NX_LIBRARY}
     ${ZLIB_LIBRARY}
     ${FREETYPE_LIBRARIES}
@@ -1015,43 +1198,43 @@ endif()
 
 if(NOT SERVER_ONLY)
     if (USE_MOJOAL)
-        target_link_libraries(supertuxkart mojoal ${LIBSAMPLERATE_LIBRARY})
+        target_link_libraries(fluxaradrift mojoal ${LIBSAMPLERATE_LIBRARY})
     else()
-        target_link_libraries(supertuxkart ${OPENAL_LIBRARY})
+        target_link_libraries(fluxaradrift ${OPENAL_LIBRARY})
     endif()
 endif()
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "SunOS")
-	target_link_libraries(supertuxkart nsl socket vorbisfile)
+	target_link_libraries(fluxaradrift nsl socket vorbisfile)
 endif()
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "Haiku")
-	target_link_libraries(supertuxkart be network vorbisfile)
+	target_link_libraries(fluxaradrift be network vorbisfile)
 endif()
 
 if (USE_DNS_C)
-    target_link_libraries(supertuxkart dnsc)
+    target_link_libraries(fluxaradrift dnsc)
 else()
-    target_link_libraries(supertuxkart ${LIBRESOLV_LIBRARY})
+    target_link_libraries(fluxaradrift ${LIBRESOLV_LIBRARY})
 endif()
 
 if (USE_SQLITE3)
-    target_link_libraries(supertuxkart ${SQLITE3_LIBRARY})
+    target_link_libraries(fluxaradrift ${SQLITE3_LIBRARY})
 endif()
 
 if (USE_CRYPTO_OPENSSL)
-    target_link_libraries(supertuxkart ${OPENSSL_CRYPTO_LIBRARY})
+    target_link_libraries(fluxaradrift ${OPENSSL_CRYPTO_LIBRARY})
 elseif(NOT USE_APPLE_NETWORK_LIBRARIES)
-    target_link_libraries(supertuxkart ${MBEDCRYPTO_LIBRARY})
+    target_link_libraries(fluxaradrift ${MBEDCRYPTO_LIBRARY})
 endif()
 
 if(NOT SERVER_ONLY)
     if (APPLE AND NOT DLOPEN_MOLTENVK)
         find_library(MOLTENVK_LIBRARY NAMES MoltenVK libMoltenVK REQUIRED)
-        target_link_libraries(supertuxkart "-framework Metal -weak_framework IOSurface -framework QuartzCore ${MOLTENVK_LIBRARY}")
+        target_link_libraries(fluxaradrift "-framework Metal -weak_framework IOSurface -framework QuartzCore ${MOLTENVK_LIBRARY}")
     endif()
     if (IOS)
-        target_link_libraries(supertuxkart "-weak_framework CoreHaptics -framework QuartzCore -framework CoreGraphics -framework AVFoundation -framework AudioToolbox -framework Metal -framework GameController -framework OpenGLES -framework UIKit -framework CoreAudio -framework Foundation -framework GLKit")
+        target_link_libraries(fluxaradrift "-weak_framework CoreHaptics -framework QuartzCore -framework CoreGraphics -framework AVFoundation -framework AudioToolbox -framework Metal -framework GameController -framework OpenGLES -framework UIKit -framework CoreAudio -framework Foundation -framework GLKit")
         # tvOS doesn't have CoreMotion framwork
         include(CheckCSourceCompiles)
         set(prev_req_lib ${CMAKE_REQUIRED_LIBRARIES})
@@ -1059,11 +1242,11 @@ if(NOT SERVER_ONLY)
         check_c_source_compiles("int main() { return 0; }" COREMOTION_EXISTS)
         set(CMAKE_REQUIRED_LIBRARIES ${prev_req_lib})
         if (COREMOTION_EXISTS)
-            target_link_libraries(supertuxkart "-framework CoreMotion")
+            target_link_libraries(fluxaradrift "-framework CoreMotion")
         endif()
     endif()
 
-    target_link_libraries(supertuxkart
+    target_link_libraries(fluxaradrift
         ${SQUISH_LIBRARY}
         ${JPEG_LIBRARIES}
         ${OGGVORBIS_LIBRARIES}
@@ -1075,33 +1258,33 @@ if(NOT SERVER_ONLY)
         ${SDL2_LIBRARY}
         tinygettext)
     if(HAVE_OPUS)
-        target_link_libraries(supertuxkart ${OPUSFILE_LIBRARY})
+        target_link_libraries(fluxaradrift ${OPUSFILE_LIBRARY})
     endif()
     if (NOT NO_SHADERC)
-        target_link_libraries(supertuxkart ${SHADERC_LIBRARY})
+        target_link_libraries(fluxaradrift ${SHADERC_LIBRARY})
     endif()
 endif()
 
 if(UNIX AND NOT APPLE)
     if(USE_LIBBFD)
-        target_link_libraries(supertuxkart ${LIBBFD_LIBRARIES})
+        target_link_libraries(fluxaradrift ${LIBBFD_LIBRARIES})
         if (CMAKE_SYSTEM_NAME MATCHES "BSD")
-            target_link_libraries(supertuxkart  execinfo)
+            target_link_libraries(fluxaradrift  execinfo)
         endif()
     endif()
     if(USE_ASAN)
-        target_link_libraries(supertuxkart "-fsanitize=address")
+        target_link_libraries(fluxaradrift "-fsanitize=address")
     endif()
     if(USE_TSAN)
-        target_link_libraries(supertuxkart "-fsanitize=thread")
+        target_link_libraries(fluxaradrift "-fsanitize=thread")
     endif()
     if(USE_USAN)
-        target_link_libraries(supertuxkart "-fsanitize=undefined")
+        target_link_libraries(fluxaradrift "-fsanitize=undefined")
     endif()
 endif()
 
 if(BUILD_RECORDER)
-    target_link_libraries(supertuxkart ${OPENGLRECORDER_LIBRARY})
+    target_link_libraries(fluxaradrift ${OPENGLRECORDER_LIBRARY})
 endif()
 
 # FreeBSD does not search in /usr/local/lib, but at least Freetype is installed there :(
@@ -1110,7 +1293,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
 endif()
 
 if(HAIKU)
-    target_link_libraries(supertuxkart -lbe -lnetwork)
+    target_link_libraries(fluxaradrift -lbe -lnetwork)
 endif()
 
 # Wiiuse
@@ -1118,48 +1301,48 @@ endif()
 if(USE_WIIUSE)
     if(APPLE)
         find_library(BLUETOOTH_LIBRARY NAMES IOBluetooth PATHS /Developer/Library/Frameworks/IOBluetooth.framework)
-        target_link_libraries(supertuxkart wiiuse ${BLUETOOTH_LIBRARY})
+        target_link_libraries(fluxaradrift wiiuse ${BLUETOOTH_LIBRARY})
     elseif(WIN32)
         add_definitions(-DWIIUSE_STATIC)
         if(WIIUSE_BUILD)
-            target_link_libraries(supertuxkart wiiuse)
+            target_link_libraries(fluxaradrift wiiuse)
         else()
-            target_link_libraries(supertuxkart ${PROJECT_SOURCE_DIR}/${DEPENDENCIES}/lib/wiiuse.lib)
+            target_link_libraries(fluxaradrift ${PROJECT_SOURCE_DIR}/${DEPENDENCIES}/lib/wiiuse.lib)
         endif()
     else()
-        target_link_libraries(supertuxkart ${WIIUSE_LIBRARIES})
+        target_link_libraries(fluxaradrift ${WIIUSE_LIBRARIES})
     endif()
     add_definitions(-DENABLE_WIIUSE)
 
 endif()
 
 if(MSVC OR MINGW)
-  target_link_libraries(supertuxkart iphlpapi.lib)
-  add_custom_command(TARGET supertuxkart POST_BUILD
+  target_link_libraries(fluxaradrift iphlpapi.lib)
+  add_custom_command(TARGET fluxaradrift POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         "${PROJECT_SOURCE_DIR}/${DEPENDENCIES}/bin"
-        $<TARGET_FILE_DIR:supertuxkart>)
-  add_custom_target(stkshaders SOURCES ${STK_SHADERS})
+        $<TARGET_FILE_DIR:fluxaradrift>)
+  add_custom_target(fluxara_driftshaders SOURCES ${FLUXARA_DRIFT_SHADERS})
 endif()
 
 if(MSVC)
   SET(CMAKE_SHARED_LINKER_FLAGS /MANIFEST:NO)
   add_custom_command(
-    TARGET supertuxkart POST_BUILD COMMAND "mt.exe" 
-    -manifest \"${PROJECT_SOURCE_DIR}\\windows\\dpi_aware.manifest\" 
-    -inputresource:\"$<TARGET_FILE:supertuxkart>\"\;\#1
-    -outputresource:\"$<TARGET_FILE:supertuxkart>\"\;\#1)
+    TARGET fluxaradrift POST_BUILD COMMAND "mt.exe"
+    -manifest \"${PROJECT_SOURCE_DIR}\\windows\\dpi_aware.manifest\"
+    -inputresource:\"$<TARGET_FILE:fluxaradrift>\"\;\#1
+    -outputresource:\"$<TARGET_FILE:fluxaradrift>\"\;\#1)
 endif()
 
 if(MINGW)
   SET(CMAKE_SHARED_LINKER_FLAGS /MANIFEST:NO)
-  target_sources(supertuxkart PRIVATE windows/windows_config.rc)
+  target_sources(fluxaradrift PRIVATE windows/windows_config.rc)
 endif()
 
 if(MINGW)
-    target_link_libraries(supertuxkart -ldxguid -ldnsapi)
+    target_link_libraries(fluxaradrift -ldxguid -ldnsapi)
     if (NOT CMAKE_BUILD_TYPE MATCHES Debug)
-        target_link_libraries(supertuxkart -mwindows)
+        target_link_libraries(fluxaradrift -mwindows)
     endif()
     find_file(LIBGCC NAMES "libgcc_s_dw2-1.dll" "libgcc_s_sjlj-1.dll" "libgcc_s_seh-1.dll" PATHS ${CMAKE_FIND_ROOT_PATH})
     if (LIBGCC)
@@ -1184,7 +1367,7 @@ if (NOT APPLE)
     if (GAMERZILLA_LIBRARIES)
         message(STATUS "Gamerzilla found")
         include_directories(${GAMERZILLA_INCLUDE_DIRS})
-        target_link_libraries(supertuxkart ${GAMERZILLA_LIBRARIES})
+        target_link_libraries(fluxaradrift ${GAMERZILLA_LIBRARIES})
         add_definitions(-DGAMERZILLA)
     endif()
 endif()
@@ -1194,7 +1377,7 @@ if(NOT IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/data)
   message( FATAL_ERROR "${CMAKE_CURRENT_SOURCE_DIR}/data folder doesn't exist" )
 endif()
 
-# ==== Checking if stk-assets folder exists ====
+# ==== Checking if fluxara_drift-assets folder exists ====
 if(CHECK_ASSETS)
   if((IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/data/karts) AND
        (IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/data/library) AND
@@ -1203,39 +1386,39 @@ if(CHECK_ASSETS)
        (IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/data/textures) AND
        (IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/data/tracks))
     message(STATUS "Assets found in data directory")
-  elseif(IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../stk-assets)
-    set(STK_ASSETS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../stk-assets/)
+  elseif(IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../fluxara_drift-assets)
+    set(FLUXARA_DRIFT_ASSETS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../fluxara_drift-assets/)
     message(STATUS "Assets found")
-  elseif(IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../supertuxkart-assets)
-    set(STK_ASSETS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../supertuxkart-assets/)
+  elseif(IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../fluxaradrift-assets)
+    set(FLUXARA_DRIFT_ASSETS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../fluxaradrift-assets/)
     message(STATUS "Assets found")
   else()
     set (CUR_DIR ${CMAKE_CURRENT_SOURCE_DIR})
     get_filename_component(PARENT_DIR ${CUR_DIR} PATH)
-    message( FATAL_ERROR "${PARENT_DIR}/stk-assets folder doesn't exist. "
-      "Please download the stk-assets, or disable this test with -DCHECK_ASSETS=off." )
+    message( FATAL_ERROR "${PARENT_DIR}/fluxara_drift-assets folder doesn't exist. "
+      "Please download the fluxara_drift-assets, or disable this test with -DCHECK_ASSETS=off." )
   endif()
 endif()
 
 
 # ==== Install target ====
-install(TARGETS supertuxkart RUNTIME DESTINATION ${STK_INSTALL_BINARY_DIR} BUNDLE DESTINATION .)
-install(DIRECTORY ${STK_DATA_DIR} DESTINATION ${STK_INSTALL_DATA_DIR} PATTERN ".svn" EXCLUDE PATTERN ".git" EXCLUDE)
-if(STK_ASSETS_DIR AND CHECK_ASSETS)
-  install(DIRECTORY ${STK_ASSETS_DIR} DESTINATION ${STK_INSTALL_DATA_DIR}/data PATTERN ".svn" EXCLUDE PATTERN ".git" EXCLUDE)
+install(TARGETS fluxaradrift RUNTIME DESTINATION ${FLUXARA_DRIFT_INSTALL_BINARY_DIR} BUNDLE DESTINATION .)
+install(DIRECTORY ${FLUXARA_DRIFT_DATA_DIR} DESTINATION ${FLUXARA_DRIFT_INSTALL_DATA_DIR} PATTERN ".svn" EXCLUDE PATTERN ".git" EXCLUDE)
+if(FLUXARA_DRIFT_ASSETS_DIR AND CHECK_ASSETS)
+  install(DIRECTORY ${FLUXARA_DRIFT_ASSETS_DIR} DESTINATION ${FLUXARA_DRIFT_INSTALL_DATA_DIR}/data PATTERN ".svn" EXCLUDE PATTERN ".git" EXCLUDE)
 endif()
-install(FILES ${STK_DATA_DIR}/supertuxkart.desktop DESTINATION share/applications)
-install(FILES data/supertuxkart_16.png DESTINATION share/icons/hicolor/16x16/apps RENAME supertuxkart.png)
-install(FILES data/supertuxkart_32.png DESTINATION share/icons/hicolor/32x32/apps RENAME supertuxkart.png)
-install(FILES data/supertuxkart_48.png DESTINATION share/icons/hicolor/48x48/apps RENAME supertuxkart.png)
-install(FILES data/supertuxkart_64.png DESTINATION share/icons/hicolor/64x64/apps RENAME supertuxkart.png)
-install(FILES data/supertuxkart_128.png DESTINATION share/icons/hicolor/128x128/apps RENAME supertuxkart.png)
-install(FILES data/supertuxkart_256.png DESTINATION share/icons/hicolor/256x256/apps RENAME supertuxkart.png)
-install(FILES data/supertuxkart_512.png DESTINATION share/icons/hicolor/512x512/apps RENAME supertuxkart.png)
-install(FILES data/supertuxkart_1024.png DESTINATION share/icons/hicolor/1024x1024/apps RENAME supertuxkart.png)
-install(FILES data/net.supertuxkart.SuperTuxKart.metainfo.xml DESTINATION share/metainfo)
+install(FILES ${FLUXARA_DRIFT_DATA_DIR}/fluxaradrift.desktop DESTINATION share/applications)
+install(FILES data/fluxaradrift_16.png DESTINATION share/icons/hicolor/16x16/apps RENAME fluxaradrift.png)
+install(FILES data/fluxaradrift_32.png DESTINATION share/icons/hicolor/32x32/apps RENAME fluxaradrift.png)
+install(FILES data/fluxaradrift_48.png DESTINATION share/icons/hicolor/48x48/apps RENAME fluxaradrift.png)
+install(FILES data/fluxaradrift_64.png DESTINATION share/icons/hicolor/64x64/apps RENAME fluxaradrift.png)
+install(FILES data/fluxaradrift_128.png DESTINATION share/icons/hicolor/128x128/apps RENAME fluxaradrift.png)
+install(FILES data/fluxaradrift_256.png DESTINATION share/icons/hicolor/256x256/apps RENAME fluxaradrift.png)
+install(FILES data/fluxaradrift_512.png DESTINATION share/icons/hicolor/512x512/apps RENAME fluxaradrift.png)
+install(FILES data/fluxaradrift_1024.png DESTINATION share/icons/hicolor/1024x1024/apps RENAME fluxaradrift.png)
+install(FILES data/net.fluxaradrift.FluxaraDrift.metainfo.xml DESTINATION share/metainfo)
 
 if(MINGW)
-    install(DIRECTORY ${CMAKE_BINARY_DIR}/bin/ DESTINATION ${STK_INSTALL_BINARY_DIR}
+    install(DIRECTORY ${CMAKE_BINARY_DIR}/bin/ DESTINATION ${FLUXARA_DRIFT_INSTALL_BINARY_DIR}
             FILES_MATCHING PATTERN "*.dll")
 endif()

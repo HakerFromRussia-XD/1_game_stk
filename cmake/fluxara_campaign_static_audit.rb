@@ -10,6 +10,15 @@ root = File.expand_path("..", __dir__)
 resources = File.join(root, "iosApp", "FluxaraResources")
 manifest = File.join(resources, "fluxara-campaign.xml")
 abort "missing campaign manifest: #{manifest}" unless File.file?(manifest)
+ios_assets = ENV.fetch("IOS_ASSETS",
+  File.join(root, "build-motorica-ios-assets", "assets", "data"))
+music_root = File.join(ios_assets, "music")
+shared_roots = [
+  music_root,
+  File.join(ios_assets, "textures"),
+  File.join(ios_assets, "library"),
+  File.join(ios_assets, "models")
+].freeze
 
 SUPPORTED = Set.new(%w[
   normal time_trial follow_leader lap_trial three_strikes free_for_all
@@ -34,6 +43,77 @@ end
 def scene_path(track_directory)
   ["scene.xml", "track.xml"].map { |name| File.join(track_directory, name) }
     .find { |path| File.file?(path) }
+end
+
+def resource_path(directory, resource, shared_roots = [])
+  return false if resource.nil? || resource.empty?
+
+  local = File.join(directory, resource)
+  return local if File.file?(local)
+
+  shared_roots.each do |root|
+    direct = File.join(root, resource)
+    return direct if File.file?(direct)
+
+    found = Dir.glob(File.join(root, "**", resource)).find { |path| File.file?(path) }
+    return found if found
+  end
+  nil
+end
+
+def scene_resources(scene, attribute, extensions)
+  values = []
+  scene.elements.each("//*") do |element|
+    raw = element.attributes[attribute]
+    next unless raw
+
+    candidates = attribute == "texture" ? raw.split(/\s+/) : [raw]
+    candidates.each do |value|
+      values << value if extensions.include?(File.extname(value).downcase)
+    end
+  end
+  values.uniq
+end
+
+def audit_scene_libraries(scene, track_directory, ios_assets, event_id, errors)
+  pending = scene.elements.to_a("//library").map do |library|
+    library.attributes["name"].to_s
+  end
+  visited_nodes = Set.new
+
+  until pending.empty?
+    name = pending.shift
+    if name.empty?
+      errors << "#{event_id}: library declaration has no name"
+      next
+    end
+
+    # Track-local definitions take precedence in the runtime loader, then the
+    # curated shared data/library snapshot.  Mirror that exact resolution
+    # order so an iPhone-only realpath() abort cannot be hidden by the audit.
+    local_node = File.join(track_directory, "library", name, "node.xml")
+    shared_node = File.join(ios_assets, "library", name, "node.xml")
+    node_path = if File.file?(local_node)
+                  local_node
+                elsif File.file?(shared_node)
+                  shared_node
+                end
+    unless node_path
+      errors << "#{event_id}: missing library node #{name}/node.xml"
+      next
+    end
+    next unless visited_nodes.add?(node_path)
+
+    document(node_path).elements.each("//library") do |nested|
+      pending << nested.attributes["name"].to_s
+    end
+  end
+end
+
+def music_payload_exists?(music_path)
+  music = document(music_path)
+  payload = music.root.attributes["file"].to_s
+  !payload.empty? && File.file?(File.join(File.dirname(music_path), payload))
 end
 
 campaign = document(manifest)
@@ -73,6 +153,34 @@ events.each do |event|
   end
   track = document(track_path)
   scene = scene_path(directory)
+  screenshot = track_attribute(track, "screenshot").to_s
+  errors << "#{id}: screenshot is missing" unless resource_path(directory, screenshot)
+
+  music_name = track_attribute(track, "music").to_s
+  music_path = resource_path(directory, music_name, [music_root])
+  unless music_path
+    errors << "#{id}: missing music declaration #{music_name.inspect}"
+  else
+    errors << "#{id}: music payload is missing for #{music_name}" unless
+      music_payload_exists?(music_path)
+  end
+
+  if scene
+    scene_document = document(scene)
+    # A <library> can refer to another library from node.xml.  Check the
+    # complete closure, not only direct scene references.
+    audit_scene_libraries(scene_document, directory, ios_assets, id, errors)
+    scene_resources(scene_document, "model", %w[.spm .b3d .obj]).each do |model|
+      errors << "#{id}: scene model is missing: #{model}" unless
+        resource_path(directory, model, shared_roots)
+    end
+    scene_resources(scene_document, "texture", %w[.png .jpg .jpeg .dds]).each do |texture|
+      errors << "#{id}: scene texture is missing: #{texture}" unless
+        resource_path(directory, texture, shared_roots)
+    end
+  else
+    errors << "#{id}: scene declaration is missing"
+  end
 
   case mode
   when *ARENA
@@ -110,6 +218,18 @@ karts = Dir.glob(File.join(resources, "karts", "fluxara-*"))
   .count { |path| File.directory?(path) }
 errors << "expected 15 Fluxara karts, got #{karts}" unless karts == 15
 
+Dir.glob(File.join(resources, "karts", "fluxara-*", "kart.xml")).sort.each do |kart_path|
+  kart = document(kart_path)
+  directory = File.dirname(kart_path)
+  name = File.basename(directory)
+  %w[model-file icon-file minimap-icon-file].each do |attribute|
+    resource = kart.root.attributes[attribute].to_s
+    errors << "#{name}: missing #{attribute}" if resource.empty?
+    errors << "#{name}: missing #{attribute} resource #{resource}" unless
+      resource.empty? || resource_path(directory, resource, shared_roots)
+  end
+end
+
 source = File.read(File.join(root, "src", "states_screens", "fluxara_event.hpp"))
 errors << "offline CTF opponents are disabled" unless
   source.include?("mode!=\"ghost_geometry\" && mode!=\"egg_hunt\"")
@@ -127,5 +247,5 @@ unless errors.empty?
 end
 
 puts "FLUXARA_CAMPAIGN_STATIC_AUDIT events=#{events.size} tracks=#{tracks.size} " \
-     "karts=#{karts} modes=#{modes.sort.map { |mode, count| "#{mode}:#{count}" }.join(',')} " \
-     "ctf=5 ghost-seed=5 status=ok"
+    "karts=#{karts} modes=#{modes.sort.map { |mode, count| "#{mode}:#{count}" }.join(',')} " \
+    "ctf=5 ghost-seed=5 resources=track-preview-music-scene-kart status=ok"

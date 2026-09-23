@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2006-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2006-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -18,7 +18,7 @@
 
 #include "tracks/track_manager.hpp"
 
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "graphics/irr_driver.hpp"
 #include "io/file_manager.hpp"
 #include "tracks/track.hpp"
@@ -219,15 +219,15 @@ bool TrackManager::loadTrack(const std::string& dirname)
         return false;
     }
 
-    if (track->getVersion()<stk_config->m_min_track_version ||
-        track->getVersion()>stk_config->m_max_track_version)
+    if (track->getVersion()<fluxara_drift_config->m_min_track_version ||
+        track->getVersion()>fluxara_drift_config->m_max_track_version)
     {
         Log::warn("TrackManager", "Track '%s' is not supported "
                         "by this binary, ignored. (Track is version %i, this "
                         "executable supports from %i to %i).",
                   track->getIdent().c_str(), track->getVersion(),
-                  stk_config->m_min_track_version,
-                  stk_config->m_max_track_version);
+                  fluxara_drift_config->m_min_track_version,
+                  fluxara_drift_config->m_max_track_version);
         delete track;
         return false;
     }

@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2008-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -25,7 +25,7 @@
 #include "modes/world.hpp"
 #include "race/race_manager.hpp"
 #include "states_screens/state_manager.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 #include "utils/profiler.hpp"
 #include "utils/string_utils.hpp"
 #include "utils/vs.hpp"
@@ -167,7 +167,7 @@ SFXManager::~SFXManager()
 void SFXManager::queue(SFXCommands command,  SFXBase *sfx)
 {
 #ifdef ENABLE_SOUND
-    if (!UserConfigParams::m_enable_sound || STKProcess::getType() != PT_MAIN)
+    if (!UserConfigParams::m_enable_sound || FLUXARA_DRIFTProcess::getType() != PT_MAIN)
         return;
 
     SFXCommand *sfx_command = new SFXCommand(command, sfx);
@@ -186,7 +186,7 @@ void SFXManager::queue(SFXCommands command,  SFXBase *sfx)
 void SFXManager::queue(SFXCommands command, SFXBase *sfx, float f)
 {
 #ifdef ENABLE_SOUND
-    if (!UserConfigParams::m_enable_sound || STKProcess::getType() != PT_MAIN)
+    if (!UserConfigParams::m_enable_sound || FLUXARA_DRIFTProcess::getType() != PT_MAIN)
         return;
 
     SFXCommand *sfx_command = new SFXCommand(command, sfx, f);
@@ -205,7 +205,7 @@ void SFXManager::queue(SFXCommands command, SFXBase *sfx, float f)
 void SFXManager::queue(SFXCommands command, SFXBase *sfx, const Vec3 &p)
 {
 #ifdef ENABLE_SOUND
-    if (!UserConfigParams::m_enable_sound || STKProcess::getType() != PT_MAIN)
+    if (!UserConfigParams::m_enable_sound || FLUXARA_DRIFTProcess::getType() != PT_MAIN)
         return;
 
     SFXCommand *sfx_command = new SFXCommand(command, sfx, p);
@@ -218,7 +218,7 @@ void SFXManager::queue(SFXCommands command, SFXBase *sfx, const Vec3 &p)
 void SFXManager::queue(SFXCommands command, SFXBase *sfx, const Vec3 &p, SFXBuffer* buffer)
 {
 #ifdef ENABLE_SOUND
-    if (!UserConfigParams::m_enable_sound || STKProcess::getType() != PT_MAIN)
+    if (!UserConfigParams::m_enable_sound || FLUXARA_DRIFTProcess::getType() != PT_MAIN)
         return;
 
     SFXCommand *sfx_command = new SFXCommand(command, sfx, p);
@@ -240,7 +240,7 @@ void SFXManager::queue(SFXCommands command, SFXBase *sfx, float f,
                        const Vec3 &p)
 {
 #ifdef ENABLE_SOUND
-    if (!UserConfigParams::m_enable_sound || STKProcess::getType() != PT_MAIN)
+    if (!UserConfigParams::m_enable_sound || FLUXARA_DRIFTProcess::getType() != PT_MAIN)
         return;
 
     SFXCommand *sfx_command = new SFXCommand(command, sfx, f, p);
@@ -255,7 +255,7 @@ void SFXManager::queue(SFXCommands command, SFXBase *sfx, float f,
 void SFXManager::queue(SFXCommands command, MusicInformation *mi)
 {
 #ifdef ENABLE_SOUND
-    if (!UserConfigParams::m_enable_sound || STKProcess::getType() != PT_MAIN)
+    if (!UserConfigParams::m_enable_sound || FLUXARA_DRIFTProcess::getType() != PT_MAIN)
         return;
 
     SFXCommand *sfx_command = new SFXCommand(command, mi);
@@ -271,7 +271,7 @@ void SFXManager::queue(SFXCommands command, MusicInformation *mi)
 void SFXManager::queue(SFXCommands command, MusicInformation *mi, float f)
 {
 #ifdef ENABLE_SOUND
-    if (!UserConfigParams::m_enable_sound || STKProcess::getType() != PT_MAIN)
+    if (!UserConfigParams::m_enable_sound || FLUXARA_DRIFTProcess::getType() != PT_MAIN)
         return;
 
     SFXCommand *sfx_command = new SFXCommand(command, mi, f);
@@ -287,7 +287,7 @@ void SFXManager::queue(SFXCommands command, MusicInformation *mi, float f)
 void SFXManager::queueCommand(SFXCommand *command)
 {
 #ifdef ENABLE_SOUND
-    if (!UserConfigParams::m_enable_sound || STKProcess::getType() != PT_MAIN)
+    if (!UserConfigParams::m_enable_sound || FLUXARA_DRIFTProcess::getType() != PT_MAIN)
         return;
         
     m_sfx_commands.lock();
@@ -468,9 +468,9 @@ void SFXManager::mainLoop(void *obj)
         {
             // Wait some time to let other threads run, then queue an
             // update event to keep music playing.
-            uint64_t t = StkTime::getMonoTimeMs();
-            StkTime::sleep(1);
-            t = StkTime::getMonoTimeMs() - t;
+            uint64_t t = FluxaraDriftTime::getMonoTimeMs();
+            FluxaraDriftTime::sleep(1);
+            t = FluxaraDriftTime::getMonoTimeMs() - t;
             me->queue(SFX_UPDATE, (SFXBase*)NULL, float(t / 1000.0));
         }
         ul = me->m_sfx_commands.acquireMutex();
@@ -479,7 +479,7 @@ void SFXManager::mainLoop(void *obj)
 
     // Signal that the sfx manager can now be deleted.
     // We signal this even before cleaning up memory, since there is no
-    // need to keep the user waiting for STK to exit.
+    // need to keep the user waiting for FLUXARA_DRIFT to exit.
     me->setCanBeDeleted();
 
 #ifndef __SWITCH__
@@ -536,7 +536,7 @@ void SFXManager::toggleSound(const bool on)
  */
 bool SFXManager::sfxAllowed()
 {
-    if (STKProcess::getType() != PT_MAIN)
+    if (FLUXARA_DRIFTProcess::getType() != PT_MAIN)
         return false;
     if(!UserConfigParams::m_sfx || !m_initialized)
         return false;
@@ -702,7 +702,7 @@ SFXBase* SFXManager::createSoundSource(SFXBuffer* buffer,
     SFXBase* sfx = NULL;
     
 #ifdef ENABLE_SOUND
-    if (UserConfigParams::m_enable_sound && STKProcess::getType() == PT_MAIN)
+    if (UserConfigParams::m_enable_sound && FLUXARA_DRIFTProcess::getType() == PT_MAIN)
     {
         //assert( alIsBuffer(buffer->getBufferID()) ); crashes on server
         sfx = new SFXOpenAL(buffer, positional, buffer->getGain(), owns_buffer);
@@ -828,11 +828,11 @@ void SFXManager::reallyUpdateNow(SFXCommand *current)
     if (m_last_update_time == std::numeric_limits<uint64_t>::max())
     {
         // first time
-        m_last_update_time = StkTime::getMonoTimeMs();
+        m_last_update_time = FluxaraDriftTime::getMonoTimeMs();
     }
 
     uint64_t previous_update_time = m_last_update_time;
-    m_last_update_time = StkTime::getMonoTimeMs();
+    m_last_update_time = FluxaraDriftTime::getMonoTimeMs();
     float dt = float(m_last_update_time - previous_update_time) / 1000.0f;
 
     assert(current->m_command==SFX_UPDATE);

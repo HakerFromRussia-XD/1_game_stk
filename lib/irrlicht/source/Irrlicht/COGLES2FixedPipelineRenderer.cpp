@@ -131,7 +131,7 @@ bool COGLES2FixedPipelineRenderer::OnRender(IMaterialRendererServices* service, 
 		case EMT_TRANSPARENT_REFLECTION_2_LAYER:
 			materialType = 9;
 			break;
-		case EMT_STK_GRASS:
+		case EMT_FLUXARA_DRIFT_GRASS:
 			materialType = 10;
 			break;
 		case EMT_ONETEXTURE_BLEND:

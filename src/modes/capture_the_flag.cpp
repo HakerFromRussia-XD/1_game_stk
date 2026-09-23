@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -29,7 +29,7 @@
 #include "network/network_string.hpp"
 #include "network/protocols/game_events_protocol.hpp"
 #include "network/server_config.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "physics/triangle_mesh.hpp"
 #include "states_screens/race_gui.hpp"
 #include "tracks/track.hpp"
@@ -179,7 +179,7 @@ void CaptureTheFlag::updateGraphics(float dt)
     // a point has been scored recently
     const bool scored_recently =
         getTicksSinceStart() > m_last_captured_flag_ticks &&
-        getTicksSinceStart() - m_last_captured_flag_ticks < stk_config->time2Ticks(2.0f);
+        getTicksSinceStart() - m_last_captured_flag_ticks < fluxara_drift_config->time2Ticks(2.0f);
     if (m_red_flag_status != m_red_flag->getStatus())
     {
         if (m_red_flag->getHolder() != -1)
@@ -229,7 +229,7 @@ void CaptureTheFlag::update(int ticks)
     for (auto it = m_swatter_reset_kart_ticks.begin();
          it != m_swatter_reset_kart_ticks.end();)
     {
-        if (it->second < getTicksSinceStart() - stk_config->time2Ticks(8.0f))
+        if (it->second < getTicksSinceStart() - fluxara_drift_config->time2Ticks(8.0f))
         {
             it = m_swatter_reset_kart_ticks.erase(it);
         }
@@ -346,7 +346,7 @@ void CaptureTheFlag::checkScoring(FlagColor color)
                     .addUInt16((int16_t)new_kart_score)
                     .addUInt8((uint8_t)new_red_score)
                     .addUInt8((uint8_t)new_blue_score);
-                STKHost::get()->sendPacketToAllPeers(&p, true);
+                FLUXARA_DRIFTHost::get()->sendPacketToAllPeers(&p, true);
             }
             ctfScored(active_holder, (red_active) ? false : true /*red_team_scored*/,
                 new_kart_score, new_red_score, new_blue_score);
@@ -543,7 +543,7 @@ const std::string& CaptureTheFlag::getIdent() const
 }   // getIdent
 
 // ----------------------------------------------------------------------------
-void CaptureTheFlag::saveCompleteState(BareNetworkString* bns, STKPeer* peer)
+void CaptureTheFlag::saveCompleteState(BareNetworkString* bns, FLUXARA_DRIFTPeer* peer)
 {
     FreeForAll::saveCompleteState(bns, peer);
     bns->addUInt32(m_red_scores).addUInt32(m_blue_scores);

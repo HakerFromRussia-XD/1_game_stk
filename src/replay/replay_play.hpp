@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2012-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -30,7 +30,7 @@
 
 using namespace irr;
 
-class GhostKart;
+class Ghofluxara_driftart;
 
 /**
   * \ingroup replay
@@ -60,7 +60,7 @@ public:
         std::string                m_track_name;
         Track*                     m_track;
         std::string                m_minor_mode;
-        core::stringw              m_stk_version;
+        core::stringw              m_fluxara_drift_version;
         core::stringw              m_user_name;
         core::stringw              m_info;
         std::vector<std::string>   m_kart_list;
@@ -100,7 +100,7 @@ public:
                     return m_user_name < r.m_user_name;
                     break;
                 case SO_VERSION:
-                    return m_stk_version < r.m_stk_version;
+                    return m_fluxara_drift_version < r.m_fluxara_drift_version;
                     break;
             }   // switch
             return true;
@@ -123,7 +123,7 @@ private:
     bool                     m_loaded_all_replays;
 
     /** All ghost karts. */
-    std::vector<std::shared_ptr<GhostKart> > m_ghost_karts;
+    std::vector<std::shared_ptr<Ghofluxara_driftart> > m_ghost_karts;
 
           ReplayPlay();
          ~ReplayPlay();
@@ -172,9 +172,9 @@ public:
     // ------------------------------------------------------------------------
     const bool hasLoadedAllReplays() const { return m_loaded_all_replays; }
     // ------------------------------------------------------------------------
-    std::shared_ptr<GhostKart> getGhostKart(int n) { return m_ghost_karts[n]; }
+    std::shared_ptr<Ghofluxara_driftart> getGhofluxara_driftart(int n) { return m_ghost_karts[n]; }
     // ------------------------------------------------------------------------
-    const unsigned int getNumGhostKart() const
+    const unsigned int getNumGhofluxara_driftart() const
     {
         assert(m_replay_file_list.size() > 0);
         unsigned int num =
@@ -187,9 +187,9 @@ public:
         num = (m_second_replay_enabled) ? num + second_file_num : num;
 
         return num;
-    }   // getNumGhostKart
+    }   // getNumGhofluxara_driftart
     // ------------------------------------------------------------------------
-    const std::string& getGhostKartName(unsigned int n) const
+    const std::string& getGhofluxara_driftartName(unsigned int n) const
     {
         assert(m_replay_file_list.size() > 0);
 

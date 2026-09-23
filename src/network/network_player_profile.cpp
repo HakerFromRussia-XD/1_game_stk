@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2013-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -18,7 +18,7 @@
 
 #include "network/network_player_profile.hpp"
 #include "network/network_config.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 
 // ----------------------------------------------------------------------------
 /** Returns true if this player is local, i.e. running on this computer. This
@@ -29,5 +29,5 @@ bool NetworkPlayerProfile::isLocalPlayer() const
 {
     // Server never has local player atm
     return NetworkConfig::get()->isClient() &&
-        m_host_id == STKHost::get()->getMyHostId();
+        m_host_id == FLUXARA_DRIFTHost::get()->getMyHostId();
 }   // isLocalPlayer

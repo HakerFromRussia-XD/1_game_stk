@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2015  Supertuxkart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2015  FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -24,7 +24,7 @@
 
 #include "input/input.hpp"                // for PlayerAction
 #include "utils/cpp2011.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 
 #include <cstdlib>
 #include <mutex>
@@ -34,7 +34,7 @@
 class BareNetworkString;
 class NetworkItemManager;
 class NetworkString;
-class STKPeer;
+class FLUXARA_DRIFTPeer;
 
 class GameProtocol : public Protocol
                    , public EventRewinder
@@ -128,13 +128,13 @@ public:
     // ------------------------------------------------------------------------
     static bool emptyInstance()
     {
-        ProcessType pt = STKProcess::getType();
+        ProcessType pt = FLUXARA_DRIFTProcess::getType();
         return m_game_protocol[pt].expired();
     }   // emptyInstance
     // ------------------------------------------------------------------------
     static std::shared_ptr<GameProtocol> lock()
     {
-        ProcessType pt = STKProcess::getType();
+        ProcessType pt = FLUXARA_DRIFTProcess::getType();
         return m_game_protocol[pt].lock();
     }   // lock
     // ------------------------------------------------------------------------

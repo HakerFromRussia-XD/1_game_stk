@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
 //  Copyright (C) 2010-2015 Steve Baker, Joerg Henrichs
 //
@@ -26,12 +26,12 @@
 #include "audio/sfx_base.hpp"
 #include "audio/sfx_buffer.hpp"
 #include "config/user_config.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "guiengine/engine.hpp"
 #include "graphics/central_settings.hpp"
 #include "graphics/irr_driver.hpp"
 #include "graphics/particle_kind_manager.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "io/file_manager.hpp"
 #include "io/xml_node.hpp"
 #include "race/race_manager.hpp"
@@ -162,9 +162,9 @@ Material::Material(const XMLNode *node, bool deprecated)
     node->get("ignore",              &m_ignore             );
 
     node->get("max-speed",           &m_max_speed_fraction );
-    float f = stk_config->ticks2Time(m_slowdown_ticks);
+    float f = fluxara_drift_config->ticks2Time(m_slowdown_ticks);
     node->get("slowdown-time",       &f                    );
-    m_slowdown_ticks = stk_config->time2Ticks(f);
+    m_slowdown_ticks = fluxara_drift_config->time2Ticks(f);
     node->get("colorizable",         &m_colorizable        );
     node->get("colorization-factor", &m_colorization_factor);
     node->get("hue-settings",        &m_hue_settings       );
@@ -516,7 +516,7 @@ void Material::init()
     m_colorization_factor       = 0.0f;
     m_colorization_mask         = "";
     m_max_speed_fraction        = 1.0f;
-    m_slowdown_ticks            = stk_config->time2Ticks(1.0f);
+    m_slowdown_ticks            = fluxara_drift_config->time2Ticks(1.0f);
     m_sfx_name                  = "";
     m_sfx_min_speed             = 0.0f;
     m_sfx_max_speed             = 30;
@@ -560,7 +560,7 @@ void Material::install(std::function<void(video::IImage*)> image_mani,
     }
     else
     {
-        m_texture = STKTexManager::getInstance()->getTexture(m_sampler_path[0],
+        m_texture = FLUXARA_DRIFTTexManager::getInstance()->getTexture(m_sampler_path[0],
             image_mani);
     }
 
@@ -596,7 +596,7 @@ void Material::install(std::function<void(video::IImage*)> image_mani,
             continue;
         GE::getGEConfig()->m_ondemand_load_texture_paths.insert(
             m_sampler_path[i]);
-        m_vk_textures[i - 2] = STKTexManager::getInstance()->getTexture(
+        m_vk_textures[i - 2] = FLUXARA_DRIFTTexManager::getInstance()->getTexture(
             m_sampler_path[i]);
         GE::getGEConfig()->m_ondemand_load_texture_paths.erase(m_sampler_path[i]);
         if (m_vk_textures[i - 2])
@@ -610,7 +610,7 @@ Material::~Material()
 {
     unloadTexture();
 
-    // If a special sfx is installed (that isn't part of stk itself), the
+    // If a special sfx is installed (that isn't part of fluxara_drift itself), the
     // entry needs to be removed from the sfx_manager's mapping, since other
     // tracks might use the same name.
     if(m_sfx_name!="" && m_sfx_name==m_texname)
@@ -693,10 +693,28 @@ void Material::initCustomSFX(const XMLNode *sfx)
 
     if(!SFXManager::get()->soundExist(m_sfx_name))
     {
-
-        // The directory for the track was added to the model search path
-        // so just misuse the searchModel function
-        std::string path = file_manager->searchModel(filename);
+        // Track-local terrain effects are normally found through the model
+        // path.  Fluxara's iOS packager may deduplicate byte-identical SFX
+        // into data/sfx, which is intentionally not a model search path.
+        // Resolve that documented fallback explicitly instead of letting a
+        // missing local copy throw out of track loading and abort the app.
+        std::string path;
+        try
+        {
+            path = file_manager->searchModel(filename);
+        }
+        catch (const std::runtime_error&)
+        {
+            path = file_manager->getAsset(FileManager::SFX, filename);
+            if (!file_manager->fileExists(path))
+            {
+                Log::warn("Material", "Terrain SFX '%s' is missing; ignored.",
+                          filename.c_str());
+                return;
+            }
+            Log::verbose("Material", "Terrain SFX '%s' resolved from shared SFX.",
+                         filename.c_str());
+        }
         path = StringUtils::getPath(path);
         SFXBuffer* buffer = SFXManager::get()->loadSingleSfx(sfx, path);
 
@@ -922,7 +940,7 @@ void  Material::setMaterialProperties(video::SMaterial *m, scene::IMeshBuffer* m
     else if (m_shader_name == "grass")
     {
 #ifdef USE_GLES2
-        m->MaterialType = video::EMT_STK_GRASS;
+        m->MaterialType = video::EMT_FLUXARA_DRIFT_GRASS;
 #else
         m->MaterialType = video::EMT_TRANSPARENT_ALPHA_CHANNEL_REF;
 

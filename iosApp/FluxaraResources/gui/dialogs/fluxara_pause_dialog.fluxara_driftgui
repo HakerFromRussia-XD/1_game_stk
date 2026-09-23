@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fluxara_driftgui>
+    <!-- Interactive surfaces only. The final Figma 347:49 art is drawn by
+         FluxaraPauseVisual over the live race and remains independently
+         localized at runtime. -->
+    <!-- Figma 347:49 button interiors. They are deliberately smaller than
+         artwork overlap regions, so the centre of each visible button is
+         always routed to its own action. -->
+    <button id="continue" x="32.5%" y="34%" width="16.5%" height="23%" raw_text="Continue" />
+    <button id="restart" x="49%" y="34%" width="17%" height="23%" raw_text="Restart" />
+    <button id="settings" x="33.5%" y="57%" width="15%" height="29%" raw_text="Settings" />
+    <button id="exit" x="46.5%" y="54%" width="22%" height="32%" raw_text="Exit" />
+</fluxara_driftgui>

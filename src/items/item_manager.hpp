@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -38,7 +38,7 @@
 #include <vector>
 
 class Kart;
-class STKPeer;
+class FLUXARA_DRIFTPeer;
 
 /**
   * \ingroup items
@@ -155,7 +155,7 @@ public:
     bool           areItemsSwitched() { return (m_switch_ticks > 0); }
     // ------------------------------------------------------------------------
     /** Only used in the NetworkItemManager. */
-    virtual void setItemConfirmationTime(std::weak_ptr<STKPeer> peer,
+    virtual void setItemConfirmationTime(std::weak_ptr<FLUXARA_DRIFTPeer> peer,
                                          int ticks)
     {
         assert(false);

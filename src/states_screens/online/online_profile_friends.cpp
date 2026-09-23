@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
 //  This program is free software; you can redistribute it and/or
@@ -47,7 +47,7 @@ bool OnlineProfileFriends::m_sort_default    = true;
 /** Constructor for a display of all friends.
  */
 OnlineProfileFriends::OnlineProfileFriends()
-                    : OnlineProfileBase("online/profile_friends.stkgui")
+                    : OnlineProfileBase("online/profile_friends.fluxara_driftgui")
 {
 }   // OnlineProfileFriends
 

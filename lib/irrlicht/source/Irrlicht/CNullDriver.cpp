@@ -472,18 +472,33 @@ ITexture* CNullDriver::getTexture(io::IReadFile* file)
 //! opens the file and loads it into the surface
 video::ITexture* CNullDriver::loadTextureFromFile(io::IReadFile* file, const io::path& hashName )
 {
-	ITexture* texture = 0;
-	IImage* image = createImageFromFile(file);
+	const io::path texture_name = hashName.size() ? hashName : file->getFileName();
+	file->seek(0);
+	ITexture* texture = createCompressedTextureFromFile(file, texture_name);
+	// A compressed loader probes the raw header.  Always rewind before the
+	// regular image-loader chain so PNG/JPEG loaders see their own signature.
+	file->seek(0);
+	IImage* image = texture ? 0 : createImageFromFile(file);
 
 	if (image)
 	{
 		// create texture from surface
-		texture = createDeviceDependentTexture(image, hashName.size() ? hashName : file->getFileName() );
+		texture = createDeviceDependentTexture(image, texture_name);
 		os::Printer::log("Loaded texture", file->getFileName());
 		image->drop();
 	}
 
 	return texture;
+}
+
+
+//! default implementation: software-only drivers have no compressed loader
+ITexture* CNullDriver::createCompressedTextureFromFile(io::IReadFile* file,
+	const io::path& name)
+{
+	(void)file;
+	(void)name;
+	return 0;
 }
 
 

@@ -1,4 +1,4 @@
-# CMakeLists.txt for Bullet in STK
+# CMakeLists.txt for Bullet in FLUXARA_DRIFT
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src/)
 
@@ -28,7 +28,7 @@ add_library(bulletmath STATIC
 	)
 
 # TODO: original comment:
-# Certain g++ versions causes stk to crash if btVoronoiSimplexSolver.cpp is
+# Certain g++ versions causes fluxara_drift to crash if btVoronoiSimplexSolver.cpp is
 # compiled with optimisations. Since it's rather difficult to specify certain
 # flags for one file only with auto-tools (you can only specify flags per
 # library, so you have to put this one file into a separate library) we compile

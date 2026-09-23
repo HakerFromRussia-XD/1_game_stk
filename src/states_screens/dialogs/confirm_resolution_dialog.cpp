@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -34,7 +34,7 @@ using namespace irr::core;
 
 ConfirmResolutionDialog::ConfirmResolutionDialog(bool unsupported_res) : ModalDialog(0.6f, 0.6f)
 {
-    loadFromFile("confirm_resolution_dialog.stkgui");
+    loadFromFile("confirm_resolution_dialog.fluxara_driftgui");
     m_remaining_time = 10.99f;
     m_unsupported_resolution = unsupported_res;
     if (m_unsupported_resolution)

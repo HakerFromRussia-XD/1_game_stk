@@ -22,7 +22,7 @@ def main():
     parser.add_argument('--apply', action='store_true')
     parser.add_argument('--audit-only', action='store_true', help='Refresh manifest for existing imports without repeating copy/hash verification')
     parser.add_argument('--roster', type=Path, default=Path('docs/fluxara-content/user-mode-candidates.json'))
-    parser.add_argument('--shared', type=Path, default=Path('../stk-assets'))
+    parser.add_argument('--shared', type=Path, default=Path('../fluxara_drift-assets'))
     args = parser.parse_args()
     roster = json.loads(args.roster.read_text())
     destination = Path('iosApp/FluxaraResources/tracks')

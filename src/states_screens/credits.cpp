@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -96,8 +96,8 @@ bool CreditsScreen::getLineAsWide(std::ifstream& file, core::stringw* out)
     std::string line;
     std::getline(file, line);
 
-    // Replace "STKVERSION" with the actual version number
-    line = StringUtils::findAndReplace(line, "$STKVERSION$", STK_VERSION);
+    // Replace "FLUXARA_DRIFTVERSION" with the actual version number
+    line = StringUtils::findAndReplace(line, "$FLUXARA_DRIFTVERSION$", FLUXARA_DRIFT_VERSION);
 
     *out = StringUtils::utf8ToWide(line);
     return file.good();
@@ -111,7 +111,7 @@ bool CreditsScreen::getLineAsWide(std::ifstream& file, core::stringw* out)
 #pragma mark CreditsScreen
 #endif
 
-CreditsScreen::CreditsScreen() : Screen("credits.stkgui")
+CreditsScreen::CreditsScreen() : Screen("credits.fluxara_driftgui")
 {
     m_is_victory_music = false;
 }   // CreditsScreen
@@ -219,8 +219,8 @@ void CreditsScreen::init()
 {
     Screen::init();
 
-    GUIEngine::ButtonWidget *link = getWidget<GUIEngine::ButtonWidget>("stk-website");
-    link->setText("supertuxkart.net");
+    GUIEngine::ButtonWidget *link = getWidget<GUIEngine::ButtonWidget>("fluxara_drift-website");
+    link->setText("fluxaradrift.net");
     onResize(); // Ensure the icon-button is properly sized
 
     reset();
@@ -411,12 +411,12 @@ void CreditsScreen::eventCallback(GUIEngine::Widget* widget,
     if (name == "donate")
     {
         // Open donation page
-        Online::LinkHelper::openURL(stk_config->m_donate_url);
+        Online::LinkHelper::openURL(fluxara_drift_config->m_donate_url);
     }
-    if (name == "stk-website")
+    if (name == "fluxara_drift-website")
     {
-        // Open stk website main page
-        Online::LinkHelper::openURL(stk_config->m_stk_website_url);
+        // Open fluxara_drift website main page
+        Online::LinkHelper::openURL(fluxara_drift_config->m_fluxara_drift_website_url);
     }
 }
 

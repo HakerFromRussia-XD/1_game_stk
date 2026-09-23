@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -18,7 +18,7 @@
 
 #include "physics/physical_object.hpp"
 
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "graphics/central_settings.hpp"
 #include "graphics/irr_driver.hpp"
 #include "graphics/material.hpp"
@@ -403,7 +403,7 @@ void PhysicalObject::init(const PhysicalObject::Settings& settings)
                 video::S3DVertexSkinnedMesh* mbVertices = (video::S3DVertexSkinnedMesh*)mb->getVertices();
                 for (unsigned int j = 0; j < mb->getIndexCount(); j += 3)
                 {
-                    Material* material = spmb->getSTKMaterial(j);
+                    Material* material = spmb->getFLUXARA_DRIFTMaterial(j);
                     if (material->isIgnore())
                     {
                         continue;
@@ -723,7 +723,7 @@ void PhysicalObject::handleExplosion(const Vec3& pos, bool direct_hit)
 
     if(direct_hit)
     {
-        btVector3 impulse(0.0f, 0.0f, stk_config->m_explosion_impulse_objects);
+        btVector3 impulse(0.0f, 0.0f, fluxara_drift_config->m_explosion_impulse_objects);
         m_body->applyCentralImpulse(impulse);
     }
     else  // only affected by a distant explosion
@@ -740,7 +740,7 @@ void PhysicalObject::handleExplosion(const Vec3& pos, bool direct_hit)
         // = diff*impulseSize/len(diff)^3
         // We use diff*impulseSize/len(diff)^2 here, this makes the impulse
         // somewhat larger, which is actually more fun :)
-        btVector3 impulse=diff*stk_config->m_explosion_impulse_objects/len2;
+        btVector3 impulse=diff*fluxara_drift_config->m_explosion_impulse_objects/len2;
         m_body->applyCentralImpulse(impulse);
     }
     m_body->activate();
@@ -815,7 +815,7 @@ void PhysicalObject::addForRewind()
     Rewinder::setUniqueIdentity(
         {
             RN_PHYSICAL_OBJ,
-            // We have max moveable physical object defined in stk_config,
+            // We have max moveable physical object defined in fluxara_drift_config,
             // which is 15 at the moment
             static_cast<char>(Track::getCurrentTrack()->getPhysicalObjectUID())
         });

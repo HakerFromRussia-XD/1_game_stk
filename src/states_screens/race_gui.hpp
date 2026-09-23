@@ -1,7 +1,7 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
-//  Copyright (C) 2006-2015 Joerg Henrichs, SuperTuxKart-Team, Steve Baker
+//  Copyright (C) 2006-2015 Joerg Henrichs, FluxaraDrift-Team, Steve Baker
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -105,7 +105,7 @@ private:
     irr::video::ITexture *m_speed_meter_icon;
     irr::video::ITexture *m_speed_bar_icon;
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     /** Exact Figma 100:2 surfaces for the race counters and minimap. */
     irr::video::ITexture *m_fluxara_counter_small;
     irr::video::ITexture *m_fluxara_counter_time;

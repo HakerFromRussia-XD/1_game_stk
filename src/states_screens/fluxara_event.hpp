@@ -4,6 +4,7 @@
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
 #include <irrString.h>
+#include <map>
 #include <string>
 
 struct FluxaraEvent
@@ -66,6 +67,17 @@ inline bool& autoCampaignFinished()
 {
     static bool finished = false;
     return finished;
+}
+// Device soak progress is deliberately process-local, so it can unlock the
+// next validation event without ever modifying the player's saved campaign.
+inline std::map<std::string, unsigned int>& validationCups()
+{
+    static std::map<std::string, unsigned int> cups;
+    return cups;
+}
+inline void resetValidationCups()
+{
+    validationCups().clear();
 }
 inline RaceManager::MinorRaceModeType nativeMode(const std::string& mode)
 {

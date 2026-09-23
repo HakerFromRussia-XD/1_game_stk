@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -32,7 +32,7 @@
 #include "network/network_config.hpp"
 #include "network/network_string.hpp"
 #include "network/rewind_manager.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 #include "utils/string_utils.hpp"
 
 #include <typeinfo>
@@ -42,21 +42,21 @@ ProjectileManager* g_projectile_manager[PT_COUNT];
 //---------------------------------------------------------------------------------------------
 ProjectileManager* ProjectileManager::get()
 {
-    ProcessType type = STKProcess::getType();
+    ProcessType type = FLUXARA_DRIFTProcess::getType();
     return g_projectile_manager[type];
 }   // get
 
 //---------------------------------------------------------------------------------------------
 void ProjectileManager::create()
 {
-    ProcessType type = STKProcess::getType();
+    ProcessType type = FLUXARA_DRIFTProcess::getType();
     g_projectile_manager[type] = new ProjectileManager();
 }   // create
 
 //---------------------------------------------------------------------------------------------
 void ProjectileManager::destroy()
 {
-    ProcessType type = STKProcess::getType();
+    ProcessType type = FLUXARA_DRIFTProcess::getType();
     delete g_projectile_manager[type];
     g_projectile_manager[type] = NULL;
 }   // destroy

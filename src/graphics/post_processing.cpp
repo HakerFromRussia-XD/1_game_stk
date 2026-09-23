@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2011-2015 the SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2011-2015 the FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -29,7 +29,7 @@
 #include "graphics/glwrap.hpp"
 #include "graphics/rtts.hpp"
 #include "graphics/shared_gpu_objects.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "graphics/texture_shader.hpp"
 #include "graphics/weather.hpp"
 #include "graphics/sp/sp_dynamic_draw_call.hpp"
@@ -721,7 +721,7 @@ PostProcessing::PostProcessing()
         Log::fatal("postprocessing", "Failed to load the areamap");
         return;
     }
-    STKTexManager::getInstance()->addTexture(m_areamap);
+    FLUXARA_DRIFTTexManager::getInstance()->addTexture(m_areamap);
     areamap->drop();
 
     // For preloading shaders

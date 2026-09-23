@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -71,7 +71,7 @@ public:
         m_socket_closed = false;
         m_thread = std::thread([addr, ipv4, sa, this]()
         {
-            uint64_t t = StkTime::getMonoTimeMs();
+            uint64_t t = FluxaraDriftTime::getMonoTimeMs();
             if (connect(m_socket, sa.getSockaddr(), sa.getSocklen()) == -1)
                 m_connected.store(false);
             else
@@ -84,7 +84,7 @@ public:
 #endif
             m_socket_closed.store(true);
             Log::debug("StunDetection", "Took %dms for %s.",
-                (int)(StkTime::getMonoTimeMs() - t),
+                (int)(FluxaraDriftTime::getMonoTimeMs() - t),
                 (addr + (ipv4 ? " (IPv4)" : " (IPv6)")).c_str());
         });
     }

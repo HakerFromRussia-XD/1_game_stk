@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2007-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -30,12 +30,12 @@ class ThreeDAnimation;
 class TriangleMesh;
 
 /** A UserPointer is stored as a user pointer in all bullet bodies. This
- *  allows easily finding the appropriate STK object for a bullet body.
+ *  allows easily finding the appropriate FLUXARA_DRIFT object for a bullet body.
  */
 class UserPointer
 {
 public:
-    /** List of all possibles STK objects that are represented in the
+    /** List of all possibles FLUXARA_DRIFT objects that are represented in the
      *  physics. */
     enum   UserPointerType {UP_UNDEF, UP_KART, UP_FLYABLE, UP_TRACK,
                             UP_PHYSICAL_OBJECT, UP_ANIMATION};

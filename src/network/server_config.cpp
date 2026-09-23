@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -36,12 +36,12 @@ static std::vector<UserConfigParam*> g_server_params;
 #define SERVER_CFG_DEFAULT(X) = X
 
 #include "network/server_config.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "io/file_manager.hpp"
 #include "network/game_setup.hpp"
 #include "network/network_config.hpp"
 #include "network/protocols/lobby_protocol.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "race/race_manager.hpp"
 #include "utils/string_utils.hpp"
 
@@ -151,8 +151,8 @@ void loadServerConfigXML(const XMLNode* root, bool default_config)
 
     int config_file_version = -1;
     if (root->get("version", &config_file_version) < 1 ||
-        config_file_version < stk_config->m_min_server_version ||
-        config_file_version > stk_config->m_max_server_version)
+        config_file_version < fluxara_drift_config->m_min_server_version ||
+        config_file_version > fluxara_drift_config->m_max_server_version)
     {
         Log::info("ServerConfig", "Your config file was not compatible, "
             "so it was deleted and a new one will be created.");
@@ -284,7 +284,7 @@ void loadServerLobbyFromConfig()
     if (unsupportedGameMode())
         Log::fatal("ServerConfig", "Unsupported game mode");
 
-    if (stk_config->time2Ticks(m_flag_return_timeout) > 65535 ||
+    if (fluxara_drift_config->time2Ticks(m_flag_return_timeout) > 65535 ||
         m_flag_return_timeout <= 0.0f)
     {
         float timeout = m_flag_return_timeout;
@@ -294,7 +294,7 @@ void loadServerLobbyFromConfig()
         m_flag_return_timeout.revertToDefaults();
     }
 
-    if (stk_config->time2Ticks(m_flag_deactivated_time) > 2047 ||
+    if (fluxara_drift_config->time2Ticks(m_flag_deactivated_time) > 2047 ||
         m_flag_deactivated_time < 0.0f)
     {
         float timeout = m_flag_deactivated_time;
@@ -306,11 +306,11 @@ void loadServerLobbyFromConfig()
 
     int frequency_in_config = m_state_frequency;
     if (frequency_in_config <= 0 ||
-        frequency_in_config > stk_config->getPhysicsFPS())
+        frequency_in_config > fluxara_drift_config->getPhysicsFPS())
     {
         Log::warn("ServerConfig", "Invalid %d state frequency which is larger "
             "than physics FPS %d, use default value.",
-            frequency_in_config, stk_config->getPhysicsFPS());
+            frequency_in_config, fluxara_drift_config->getPhysicsFPS());
         m_state_frequency.revertToDefaults();
     }
     NetworkConfig::get()->setStateFrequency(m_state_frequency);
@@ -376,7 +376,7 @@ void loadServerLobbyFromConfig()
     const bool is_battle = RaceManager::get()->isBattleMode();
 
     std::shared_ptr<LobbyProtocol> server_lobby;
-    server_lobby = STKHost::create();
+    server_lobby = FLUXARA_DRIFTHost::create();
 
     if (is_soccer)
     {

@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -17,7 +17,7 @@
 
 #ifndef SERVER_ONLY
 
-#include "graphics/stk_text_billboard.hpp"
+#include "graphics/fluxara_drift_text_billboard.hpp"
 #include "graphics/texture_shader.hpp"
 
 #include <unordered_set>
@@ -26,9 +26,9 @@
 namespace TextBillboardDrawer
 {
 // ----------------------------------------------------------------------------
-std::unordered_map<video::ITexture*, std::vector<STKTextBillboard*> > g_tbs;
+std::unordered_map<video::ITexture*, std::vector<FLUXARA_DRIFTTextBillboard*> > g_tbs;
 // ----------------------------------------------------------------------------
-std::unordered_set<STKTextBillboard*> g_tbs_update;
+std::unordered_set<FLUXARA_DRIFTTextBillboard*> g_tbs_update;
 // ============================================================================
 /** A Shader to render text billboard.
 */
@@ -47,7 +47,7 @@ public:
 };   // TBRenderer
 
 // ============================================================================
-void addTextBillboard(STKTextBillboard* tb)
+void addTextBillboard(FLUXARA_DRIFTTextBillboard* tb)
 {
     g_tbs_update.insert(tb);
     const auto& tex = tb->getAllTBTextures();
@@ -90,7 +90,7 @@ void reset()
 // ----------------------------------------------------------------------------
 void updateAll()
 {
-    for (STKTextBillboard* tb : g_tbs_update)
+    for (FLUXARA_DRIFTTextBillboard* tb : g_tbs_update)
     {
         tb->updateGLInstanceData();
     }

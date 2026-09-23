@@ -2,7 +2,7 @@
 #
 # (C) 2018 Dawid Gan, under the GPLv3
 #
-# A script that manages STK servers
+# A script that manages FLUXARA_DRIFT servers
 #
 
 export SELF_PID=$$
@@ -25,9 +25,9 @@ export DATETIME="$(date +%Y%m%d%H%M%S)"
 #     run_server.sh stop
 #
 # By default the script works with following directories structure
-# --- stk-server/
+# --- fluxara_drift-server/
 # ----- data/
-# ----- supertuxkart
+# ----- fluxaradrift
 # ----- run_server.sh
 
 
@@ -36,24 +36,24 @@ export DATETIME="$(date +%Y%m%d%H%M%S)"
 ### General ###
 
 # Server name, make sure that it's unique
-export SERVER_NAME="STK Server"
+export SERVER_NAME="FLUXARA_DRIFT Server"
 
-# Login for STK account
+# Login for FLUXARA_DRIFT account
 export LOGIN="xxx"
 
-# Password for STK account
+# Password for FLUXARA_DRIFT account
 export PASS="yyy"
 
 ### Paths ###
 
-# A path for STK server binary file
-export CMD="$DIRNAME/supertuxkart"
+# A path for FLUXARA_DRIFT server binary file
+export CMD="$DIRNAME/fluxaradrift"
 
 # A path in which "data" directory is placed
-export SUPERTUXKART_DATADIR="$DIRNAME"
+export FLUXARA_DRIFT_DATADIR="$DIRNAME"
 
-# A path for STK assets
-export SUPERTUXKART_ASSETS_DIR="$DIRNAME/data/"
+# A path for FLUXARA_DRIFT assets
+export FLUXARA_DRIFT_ASSETS_DIR="$DIRNAME/data/"
 
 # A path to config template for additional options
 export CONFIG_FILE="$DIRNAME/config_template.xml"
@@ -62,10 +62,10 @@ export CONFIG_FILE="$DIRNAME/config_template.xml"
 export SERVER_CONFIG="$DIRNAME/server_config_template.xml"
 
 # A path for configuration files
-export HOME="/tmp/stk-server/.config"
+export HOME="/tmp/fluxara_drift-server/.config"
 
 # A path where logs will be saved
-export STDOUT_DIR="/tmp/stk-server/"
+export STDOUT_DIR="/tmp/fluxara_drift-server/"
 
 ### Daemon mode ###
 
@@ -243,8 +243,8 @@ init_servers()
 
     sleep 5
 
-    find "$HOME/.config/supertuxkart" -mindepth 1 -maxdepth 1 -type d -exec cp "$CONFIG_FILE" "{}/config.xml" \;
-    find "$HOME/.config/supertuxkart" -mindepth 1 -maxdepth 1 -type d -exec cp "$SERVER_CONFIG" "{}/server_config.xml" \;
+    find "$HOME/.config/fluxaradrift" -mindepth 1 -maxdepth 1 -type d -exec cp "$CONFIG_FILE" "{}/config.xml" \;
+    find "$HOME/.config/fluxaradrift" -mindepth 1 -maxdepth 1 -type d -exec cp "$SERVER_CONFIG" "{}/server_config.xml" \;
 }
 
 stop_servers()
@@ -252,14 +252,14 @@ stop_servers()
     echo "Info: Stop servers"
 
     for PID in $(pidof -x "$CMD"); do
-        echo "Info: Killing the STK server $PID"
+        echo "Info: Killing the FLUXARA_DRIFT server $PID"
         kill -15 $PID
     done
 
     sleep 10
 
     for PID in $(pidof -x "$CMD"); do
-        echo "Info: Force killing the STK server $PID"
+        echo "Info: Force killing the FLUXARA_DRIFT server $PID"
         kill -9 $PID
     done
 }
@@ -312,17 +312,17 @@ start()
     fi
     
     if [ ! -f "$CMD" ]; then
-        show_message "Error: Couldn't find STK executable in CMD: $CMD"
+        show_message "Error: Couldn't find FLUXARA_DRIFT executable in CMD: $CMD"
         exit    
     fi
     
-    if [ ! -d "$SUPERTUXKART_DATADIR/data" ]; then
-        show_message "Error: Couldn't find data directory in SUPERTUXKART_DATADIR: $SUPERTUXKART_DATADIR"
+    if [ ! -d "$FLUXARA_DRIFT_DATADIR/data" ]; then
+        show_message "Error: Couldn't find data directory in FLUXARA_DRIFT_DATADIR: $FLUXARA_DRIFT_DATADIR"
         exit    
     fi
     
-    if [ ! -d "$SUPERTUXKART_ASSETS_DIR/tracks" ]; then
-        show_message "Error: Couldn't find assets directories in SUPERTUXKART_ASSETS_DIR: $SUPERTUXKART_ASSETS_DIR"
+    if [ ! -d "$FLUXARA_DRIFT_ASSETS_DIR/tracks" ]; then
+        show_message "Error: Couldn't find assets directories in FLUXARA_DRIFT_ASSETS_DIR: $FLUXARA_DRIFT_ASSETS_DIR"
         exit    
     fi
 
@@ -371,7 +371,7 @@ startdaemon()
         sleep $SLEEP_TIME
     done
 
-    $MESSAGE_CMD "Error: Closing STK server"
+    $MESSAGE_CMD "Error: Closing FLUXARA_DRIFT server"
 }
 
 stop()

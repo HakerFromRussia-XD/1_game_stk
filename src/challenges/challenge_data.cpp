@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2008-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -81,7 +81,7 @@ ChallengeData::ChallengeData(const std::string& filename)
     if(!unlock_manager->isSupportedVersion(*this))
     {
         Log::warn("ChallengeData", "Challenge <%s> is older "
-                  "or newer than this version of STK, will be ignored.\n",
+                  "or newer than this version of FLUXARA_DRIFT, will be ignored.\n",
                   filename.c_str());
         return;
     }
@@ -340,8 +340,8 @@ void ChallengeData::error(const char *id) const
 
 // ----------------------------------------------------------------------------
 /** Checks if this challenge is valid, i.e. contains a valid track or a valid
- *  GP. If incorrect data are found, STK is aborted with an error message.
- *  (otherwise STK aborts when trying to do this challenge, which is worse).
+ *  GP. If incorrect data are found, FLUXARA_DRIFT is aborted with an error message.
+ *  (otherwise FLUXARA_DRIFT aborts when trying to do this challenge, which is worse).
  */
 void ChallengeData::check() const
 {
@@ -467,7 +467,7 @@ void ChallengeData::setRace(RaceManager::Difficulty d) const
             true/*custom_replay*/);
         if (!result)
             Log::fatal("ChallengeData", "Can't open replay for challenge!");
-        RaceManager::get()->setRaceGhostKarts(true);
+        RaceManager::get()->setRaceGhofluxara_driftarts(true);
     }
 
     if (m_ai_kart_ident[d] != "")
@@ -484,7 +484,7 @@ void ChallengeData::setRace(RaceManager::Difficulty d) const
 /** Returns true if this (non-GP) challenge is fulfilled.
  *  \param check_best : if true, check if the requirement
  *         for the best difficulty are met at a lower one.
- *         (requires SuperTux challenges to have a time
+ *         (requires FluxaraDrift challenges to have a time
  ù          requirement to make sense)
  */
 bool ChallengeData::isChallengeFulfilled(bool check_best) const

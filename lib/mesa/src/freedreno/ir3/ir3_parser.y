@@ -481,8 +481,8 @@ static void print_token(FILE *file, int type, YYSTYPE value)
 %token <tok> T_OP_CHSH
 %token <tok> T_OP_FLOW_REV
 %token <tok> T_OP_BKT
-%token <tok> T_OP_STKS
-%token <tok> T_OP_STKR
+%token <tok> T_OP_FLUXARA_DRIFTS
+%token <tok> T_OP_FLUXARA_DRIFTR
 %token <tok> T_OP_XSET
 %token <tok> T_OP_XCLR
 %token <tok> T_OP_GETLAST
@@ -984,8 +984,8 @@ cat0_instr:        T_OP_NOP        { new_instr(OPC_NOP); }
 |                  T_OP_CHSH       { new_instr(OPC_CHSH); }
 |                  T_OP_FLOW_REV   { new_instr(OPC_FLOW_REV); }
 |                  T_OP_BKT        { new_instr(OPC_BKT); }      cat0_immed
-|                  T_OP_STKS       { new_instr(OPC_STKS); }
-|                  T_OP_STKR       { new_instr(OPC_STKR); }
+|                  T_OP_FLUXARA_DRIFTS       { new_instr(OPC_FLUXARA_DRIFTS); }
+|                  T_OP_FLUXARA_DRIFTR       { new_instr(OPC_FLUXARA_DRIFTR); }
 |                  T_OP_XSET       { new_instr(OPC_XSET); }
 |                  T_OP_XCLR       { new_instr(OPC_XCLR); }
 |                  T_OP_GETONE     { new_instr(OPC_GETONE); }   cat0_immed

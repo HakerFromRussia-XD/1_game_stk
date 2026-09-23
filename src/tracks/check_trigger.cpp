@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2019 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2019 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -31,7 +31,7 @@ CheckTrigger::CheckTrigger(const Vec3& center, float distance,
               m_center(center), m_distance2(distance * distance),
               m_triggering_function(triggering_function)
 {
-    m_last_triggered_time = StkTime::getMonoTimeMs();
+    m_last_triggered_time = FluxaraDriftTime::getMonoTimeMs();
 }   // CheckSphere
 
 // ----------------------------------------------------------------------------
@@ -43,12 +43,12 @@ bool CheckTrigger::isTriggered(const Vec3 &old_pos, const Vec3 &new_pos,
     // kart_id will be -1 if called by CheckManager::getChecklineTriggering
     if (kart_id < 0 || kart_id >= (int)World::getWorld()->getNumKarts())
         return false;
-    if (m_last_triggered_time + 2000 > StkTime::getMonoTimeMs())
+    if (m_last_triggered_time + 2000 > FluxaraDriftTime::getMonoTimeMs())
         return false;
     AbstractKart* k = World::getWorld()->getKart(kart_id);
     if ((k->getXYZ() - m_center).length2() < m_distance2)
     {
-        m_last_triggered_time = StkTime::getMonoTimeMs();
+        m_last_triggered_time = FluxaraDriftTime::getMonoTimeMs();
         return true;
     }
     return false;

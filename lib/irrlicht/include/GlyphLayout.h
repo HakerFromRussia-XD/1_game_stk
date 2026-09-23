@@ -60,7 +60,7 @@ std::vector<u8> draw_flags;
 //! used to sorting back the visual order after line breaking
 u32 original_index;
 u16 flags;
-//! this is the face_idx used in stk face ttf
+//! this is the face_idx used in fluxara_drift face ttf
 u16 face_idx;
 //! original string, which is used to map with cluster above
 std::shared_ptr<std::u32string> orig_string;

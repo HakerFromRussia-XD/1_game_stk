@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2019 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2019 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -15,7 +15,7 @@
 //  along with this program; if not, write to the Free Software
 //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
 
 #include "states_screens/dialogs/download_assets.hpp"
 
@@ -54,16 +54,16 @@ private:
             return;
         m_extraction_error =
             !ExtractMobileAssets::extract(getFileName(),
-            file_manager->getSTKAssetsDownloadDir());
+            file_manager->getFLUXARA_DRIFTAssetsDownloadDir());
     }
 public:
     DownloadAssetsRequest()
-    : HTTPRequest("stk-assets.zip", /*priority*/5)
+    : HTTPRequest("fluxara_drift-assets.zip", /*priority*/5)
     {
         m_extraction_error = true;
-        std::string download_url = stk_config->m_assets_download_url;
-        download_url += STK_VERSION;
-        download_url += "/stk-assets.zip";
+        std::string download_url = fluxara_drift_config->m_assets_download_url;
+        download_url += FLUXARA_DRIFT_VERSION;
+        download_url += "/fluxara_drift-assets.zip";
         setURL(download_url);
         setDownloadAssetsRequest(true);
     }
@@ -77,9 +77,9 @@ public:
                 file_manager->removeFile(zip);
             if (file_manager->fileExists(zip_part))
                 file_manager->removeFile(zip_part);
-#ifndef IOS_STK
+#ifndef IOS_FLUXARA_DRIFT
             file_manager->removeDirectory(
-                file_manager->getSTKAssetsDownloadDir());
+                file_manager->getFLUXARA_DRIFTAssetsDownloadDir());
 #endif
         }
     }
@@ -91,11 +91,11 @@ public:
 */
 DownloadAssets::DownloadAssets()
               : ModalDialog(0.8f, 0.8f)
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
               , m_download_paused(false)
 #endif
 {
-    loadFromFile("addons_loading.stkgui");
+    loadFromFile("addons_loading.fluxara_driftgui");
     m_install_button   = getWidget<IconButtonWidget> ("install" );
     m_progress         = getWidget<ProgressBarWidget>("progress");
 
@@ -118,10 +118,10 @@ DownloadAssets::DownloadAssets()
 
     // I18N: In download assets dialog
     core::stringw msg;
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     msg = _("Fluxara Drift includes its selected circuits and karts in the app.");
 #else
-    msg = _("SuperTuxKart will download full assets "
+    msg = _("FluxaraDrift will download full assets "
         "(including high quality textures and music) for better "
         "gaming experience, this will use your mobile data if you don't have "
         "a wifi connection.");
@@ -130,7 +130,7 @@ DownloadAssets::DownloadAssets()
     if (SDL_IsAndroidTV())
     {
         // I18N: In download assets dialog
-        msg = _("SuperTuxKart will download full assets "
+        msg = _("FluxaraDrift will download full assets "
             "(including high quality textures and music) for better "
             "gaming experience.");
     }
@@ -141,7 +141,7 @@ DownloadAssets::DownloadAssets()
 // ----------------------------------------------------------------------------
 DownloadAssets::~DownloadAssets()
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (RequestManager::isRunning())
         RequestManager::get()->setPaused(false);
 #endif
@@ -248,7 +248,7 @@ void DownloadAssets::startDownload()
  **/
 void DownloadAssets::stopDownload()
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     m_download_paused = false;
     if (RequestManager::isRunning())
         RequestManager::get()->setPaused(false);
@@ -268,7 +268,7 @@ void DownloadAssets::stopDownload()
  */
 void DownloadAssets::doInstall()
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     m_download_paused = false;
     if (RequestManager::isRunning())
         RequestManager::get()->setPaused(false);

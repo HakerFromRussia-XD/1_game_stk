@@ -4,7 +4,7 @@
 
 #include "graphics/b3d_mesh_loader.hpp"
 #include "graphics/central_settings.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "graphics/material.hpp"
 #include "graphics/material_manager.hpp"
 #include "graphics/mesh_tools.hpp"
@@ -109,10 +109,10 @@ scene::IAnimatedMesh* B3DMeshLoader::createMesh(io::IReadFile* f)
             ge_spm->addMeshBuffer(gebuf);
             std::swap(gebuf->getVerticesVector(), spbuf->getVerticesRef());
             std::swap(gebuf->getIndicesVector(), spbuf->getIndicesRef());
-            Material* stk_material = spbuf->getSTKMaterial(0);
-            stk_material->setMaterialProperties(&gebuf->getMaterial(), gebuf);
+            Material* fluxara_drift_material = spbuf->getFLUXARA_DRIFTMaterial(0);
+            fluxara_drift_material->setMaterialProperties(&gebuf->getMaterial(), gebuf);
             gebuf->getMaterial().TextureLayer[0].Texture =
-                stk_material->getTexture();
+                fluxara_drift_material->getTexture();
             gebuf->recalculateBoundingBox();
         }
         ge_spm->m_bind_frame = spm->m_bind_frame;
@@ -254,7 +254,7 @@ SP::SPMesh* B3DMeshLoader::toSPM(scene::CSkinnedMesh* mesh)
             tex_name_1 = m_texture_string.at(all_buf[b]).first;
             tex_name_2 = m_texture_string.at(all_buf[b]).second;
         }
-        spmb->setSTKMaterial(material_manager->getMaterialSPM
+        spmb->setFLUXARA_DRIFTMaterial(material_manager->getMaterialSPM
             (tex_name_1, tex_name_2));
         spm->addSPMeshBuffer(spmb);
     }
@@ -263,7 +263,7 @@ SP::SPMesh* B3DMeshLoader::toSPM(scene::CSkinnedMesh* mesh)
     std::sort(spm->m_buffer.begin(), spm->m_buffer.end(),
         [](const SP::SPMeshBuffer* a, const SP::SPMeshBuffer* b)->bool
         {
-            return a->getSTKMaterial() < b->getSTKMaterial();
+            return a->getFLUXARA_DRIFTMaterial() < b->getFLUXARA_DRIFTMaterial();
         });
 
     auto itr = spm->m_buffer.begin();
@@ -271,7 +271,7 @@ SP::SPMesh* B3DMeshLoader::toSPM(scene::CSkinnedMesh* mesh)
     {
         auto itr_next = itr + 1;
         if (itr_next != spm->m_buffer.end() &&
-            (*itr)->getSTKMaterial() == (*itr_next)->getSTKMaterial())
+            (*itr)->getFLUXARA_DRIFTMaterial() == (*itr_next)->getFLUXARA_DRIFTMaterial())
         {
             if ((*itr)->combineMeshBuffer(*itr_next,
                 false/*different_material*/))
@@ -1366,7 +1366,7 @@ void B3DMeshLoader::loadTextures(SB3dMaterial& material, scene::IMeshBuffer* mb)
                 {
                     image_mani = m->getMaskImageMani();
                     if (image_mani)
-                        STKTexManager::getInstance()->getTexture(full_path.c_str(), image_mani);
+                        FLUXARA_DRIFTTexManager::getInstance()->getTexture(full_path.c_str(), image_mani);
                 }
             }
 #endif
@@ -1388,7 +1388,7 @@ void B3DMeshLoader::loadTextures(SB3dMaterial& material, scene::IMeshBuffer* mb)
             else
 #endif
             {
-                video::ITexture* tex = STKTexManager::getInstance()->getTexture
+                video::ITexture* tex = FLUXARA_DRIFTTexManager::getInstance()->getTexture
                     (full_path.c_str());
                 material.Material.setTexture(i, tex);
             }

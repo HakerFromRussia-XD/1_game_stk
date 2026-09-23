@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2019 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2019 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -116,7 +116,7 @@ public:
 */
 AddonsPack::AddonsPack(const std::string& url) : ModalDialog(0.8f, 0.8f)
 {
-    loadFromFile("addons_loading.stkgui");
+    loadFromFile("addons_loading.fluxara_driftgui");
     getWidget<IconButtonWidget>("install")->setVisible(false);
     m_size = getWidget<LabelWidget>("size");
     m_size->setVisible(false);
@@ -336,7 +336,7 @@ void AddonsPack::uninstallByName(const std::string& name,
         return;
     }
     std::string skin_folder = file_manager->getAddonsFile("skins/") + name;
-    std::string skin_file = skin_folder + "/stkskin.xml";
+    std::string skin_file = skin_folder + "/fluxara_driftskin.xml";
     if (file_manager->fileExists(skin_file))
     {
         if (!force_clear &&

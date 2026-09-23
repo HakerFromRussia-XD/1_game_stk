@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
 //  Copyright (C) 2006-2015 Joerg Henrichs, Steve Baker
 //
@@ -20,7 +20,7 @@
 #include <math.h>
 #include "karts/moveable.hpp"
 
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "graphics/irr_driver.hpp"
 #include "graphics/material.hpp"
 #include "graphics/material_manager.hpp"
@@ -193,7 +193,7 @@ void Moveable::createBody(float mass, btTransform& trans,
     btRigidBody::btRigidBodyConstructionInfo info(mass, m_motion_state.get(),
                                                   shape, inertia);
     info.m_restitution = restitution;
-    info.m_friction = stk_config->m_default_moveable_friction;
+    info.m_friction = fluxara_drift_config->m_default_moveable_friction;
 
     // Then create a rigid body
     // ------------------------

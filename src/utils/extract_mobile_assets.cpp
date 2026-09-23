@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2019 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2019 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -15,7 +15,7 @@
 //  along with this program; if not, write to the Free Software
 //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
 
 #include "utils/extract_mobile_assets.hpp"
 #include "addons/zip.hpp"
@@ -31,7 +31,7 @@
 // ----------------------------------------------------------------------------
 bool ExtractMobileAssets::hasFullAssets()
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     // Fluxara ships its complete curated catalog in the app bundle.
     return false;
 #else
@@ -42,13 +42,13 @@ bool ExtractMobileAssets::hasFullAssets()
 // ----------------------------------------------------------------------------
 bool ExtractMobileAssets::isFullAssetsInstalled()
 {
-    const std::string& dir = file_manager->getSTKAssetsDownloadDir();
+    const std::string& dir = file_manager->getFLUXARA_DRIFTAssetsDownloadDir();
     if (dir.empty())
         return false;
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     return false;
 #else
-    return file_manager->fileExists(dir + "stk-assets." + STK_VERSION);
+    return file_manager->fileExists(dir + "fluxara_drift-assets." + FLUXARA_DRIFT_VERSION);
 #endif
 }   // isFullAssetsInstalled
 
@@ -59,17 +59,17 @@ bool ExtractMobileAssets::extract(const std::string& zip_file,
     if (!file_manager->fileExists(zip_file))
         return false;
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     file_manager->removeFile(zip_file);
     return false;
 #else
     bool succeed = false;
-    // Remove previous stk-assets version and create a new one
+    // Remove previous fluxara_drift-assets version and create a new one
     file_manager->removeDirectory(dst);
     file_manager->checkAndCreateDirectory(dst);
     if (extract_zip(zip_file, dst, true/*recursive*/))
     {
-        std::string extract_ok = dst + "stk-assets." + STK_VERSION;
+        std::string extract_ok = dst + "fluxara_drift-assets." + FLUXARA_DRIFT_VERSION;
         FILE* fp = fopen(extract_ok.c_str(), "wb");
         if (!fp)
         {
@@ -106,17 +106,17 @@ void ExtractMobileAssets::reinit()
 // ----------------------------------------------------------------------------
 void ExtractMobileAssets::uninstall()
 {
-    // Remove the version file in stk-assets folder first, so if it crashes /
+    // Remove the version file in fluxara_drift-assets folder first, so if it crashes /
     // restarted by mobile it will auto discard downloaded assets
-#ifdef IOS_STK
-    file_manager->removeDirectory(file_manager->getSTKAssetsDownloadDir());
+#ifdef IOS_FLUXARA_DRIFT
+    file_manager->removeDirectory(file_manager->getFLUXARA_DRIFTAssetsDownloadDir());
     reinit();
     return;
 #else
-    file_manager->removeFile(file_manager->getSTKAssetsDownloadDir() +
-        "stk-assets." + STK_VERSION);
+    file_manager->removeFile(file_manager->getFLUXARA_DRIFTAssetsDownloadDir() +
+        "fluxara_drift-assets." + FLUXARA_DRIFT_VERSION);
 #endif
-    file_manager->removeDirectory(file_manager->getSTKAssetsDownloadDir());
+    file_manager->removeDirectory(file_manager->getFLUXARA_DRIFTAssetsDownloadDir());
     reinit();
 }   // uninstall
 

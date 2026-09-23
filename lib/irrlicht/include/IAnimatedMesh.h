@@ -50,7 +50,7 @@ namespace scene
 		//! Halflife MDL model file
 		EAMT_MDL_HALFLIFE,
 
-		//! STK .spm file
+		//! FLUXARA_DRIFT .spm file
 		EAMT_SPM,
 
 		//! generic skinned mesh

@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //
 //  Copyright (C) 2013-2015 Joerg Henrichs, Marianne Gagnon
 //
@@ -29,7 +29,7 @@
 #include "graphics/material_manager.hpp"
 #include "graphics/particle_emitter.hpp"
 #include "graphics/particle_kind_manager.hpp"
-#include "graphics/stk_particle.hpp"
+#include "graphics/fluxara_drift_particle.hpp"
 #include "graphics/sp/sp_shader_manager.hpp"
 #include "io/file_manager.hpp"
 #include "io/xml_node.hpp"
@@ -47,7 +47,7 @@
 #include "tracks/track.hpp"
 #include "tracks/track_manager.hpp"
 #include "tracks/track_object_manager.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 #include "utils/string_utils.hpp"
 
 #include <IBillboardSceneNode.h>
@@ -308,7 +308,7 @@ TrackObjectPresentationLibraryNode::TrackObjectPresentationLibraryNode(
 void TrackObjectPresentationLibraryNode::update(float dt)
 {
     // Child process currently has no scripting engine
-    if (STKProcess::getType() == PT_CHILD)
+    if (FLUXARA_DRIFTProcess::getType() == PT_CHILD)
         return;
 
     if (!m_start_executed)
@@ -1209,8 +1209,8 @@ TrackObjectPresentationActionTrigger::TrackObjectPresentationActionTrigger(
 // ----------------------------------------------------------------------------
 void TrackObjectPresentationActionTrigger::onTriggerItemApproached(int kart_id)
 {
-    if (m_reenable_timeout > StkTime::getMonoTimeMs() ||
-        STKProcess::getType() == PT_CHILD)
+    if (m_reenable_timeout > FluxaraDriftTime::getMonoTimeMs() ||
+        FLUXARA_DRIFTProcess::getType() == PT_CHILD)
     {
         return;
     }

@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Lucas Baudin, Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -162,7 +162,7 @@ void Addon::writeXML(std::ofstream *out_stream)
 // ----------------------------------------------------------------------------
 std::string Addon::getDateAsString() const
 {
-    return StkTime::toString(m_date);
+    return FluxaraDriftTime::toString(m_date);
 }   // getDateAsString
 
 // ----------------------------------------------------------------------------
@@ -171,7 +171,7 @@ bool Addon::testIncluded(const std::string &min_ver, const std::string &max_ver)
     if (min_ver.length() == 0 || max_ver.length() == 0)
         return false;
 
-    int current_version = StringUtils::versionToInt(STK_VERSION);
+    int current_version = StringUtils::versionToInt(FLUXARA_DRIFT_VERSION);
     int min_version = StringUtils::versionToInt(min_ver);
     int max_version = StringUtils::versionToInt(max_ver);
 

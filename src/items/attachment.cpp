@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -22,7 +22,7 @@
 #include "achievements/achievements_status.hpp"
 #include "audio/sfx_base.hpp"
 #include "config/player_manager.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "graphics/explosion.hpp"
 #include "graphics/irr_driver.hpp"
@@ -65,7 +65,7 @@ Attachment::Attachment(AbstractKart* kart)
         return;
     // If we attach a NULL mesh, we get a NULL scene node back. So we
     // have to attach some kind of mesh, but make it invisible.
-    if (kart->isGhostKart())
+    if (kart->isGhofluxara_driftart())
         m_node = irr_driver->addAnimatedMesh(
             attachment_manager->getMesh(Attachment::ATTACH_BOMB), "bomb",
             NULL, std::make_shared<GE::GERenderInfo>(0.0f, true));
@@ -137,7 +137,7 @@ void Attachment::set(AttachmentType type, int ticks,
     m_ticks_left       = ticks;
     m_previous_owner   = current_kart;
     m_scaling_end_ticks = World::getWorld()->getTicksSinceStart() +
-        stk_config->time2Ticks(0.7f);
+        fluxara_drift_config->time2Ticks(0.7f);
 
     m_initial_speed = 0;
     // A parachute can be attached as result of the usage of an item. In this
@@ -330,7 +330,7 @@ void Attachment::hitBanana(ItemState *item_state)
         // the kart the same penalty twice.
         int ticks =
             std::max(item_state->getTicksTillReturn(),
-                     stk_config->time2Ticks(kp->getExplosionDuration() + 2.0f));
+                     fluxara_drift_config->time2Ticks(kp->getExplosionDuration() + 2.0f));
         item_state->setTicksTillReturn(ticks);
         break;
         }
@@ -361,7 +361,7 @@ void Attachment::hitBanana(ItemState *item_state)
         {
         case ATTACH_PARACHUTE:
         {
-            int parachute_ticks = stk_config->time2Ticks(
+            int parachute_ticks = fluxara_drift_config->time2Ticks(
                 kp->getParachuteDuration()) + leftover_ticks;
             set(ATTACH_PARACHUTE, parachute_ticks);
             int initial_speed_round = (int)(m_kart->getSpeed() * 100.0f);
@@ -374,7 +374,7 @@ void Attachment::hitBanana(ItemState *item_state)
             break;
         }
         case ATTACH_ANVIL:
-            set(ATTACH_ANVIL, stk_config->time2Ticks(kp->getAnvilDuration())
+            set(ATTACH_ANVIL, fluxara_drift_config->time2Ticks(kp->getAnvilDuration())
                 + leftover_ticks                                      );
             // if ( m_kart == m_kart[0] )
             //   sound -> playSfx ( SOUND_SHOOMF ) ;
@@ -383,7 +383,7 @@ void Attachment::hitBanana(ItemState *item_state)
             m_kart->adjustSpeed(kp->getAnvilSpeedFactor());
             break;
         case ATTACH_BOMB:
-            set( ATTACH_BOMB, stk_config->time2Ticks(stk_config->m_bomb_time)
+            set( ATTACH_BOMB, fluxara_drift_config->time2Ticks(fluxara_drift_config->m_bomb_time)
                             + leftover_ticks                                 );
             break;
         default:
@@ -425,8 +425,8 @@ void Attachment::handleCollisionWithKart(AbstractKart *other)
                 // Don't move if this bomb was from other kart originally
                 other->getAttachment()
                     ->set(ATTACH_BOMB,
-                          getTicksLeft()+stk_config->time2Ticks(
-                                           stk_config->m_bomb_time_increase),
+                          getTicksLeft()+fluxara_drift_config->time2Ticks(
+                                           fluxara_drift_config->m_bomb_time_increase),
                           m_kart);
                 other->playCustomSFX(SFXManager::CUSTOM_ATTACH);
                 clear();
@@ -445,7 +445,7 @@ void Attachment::handleCollisionWithKart(AbstractKart *other)
         }
         set(ATTACH_BOMB,
             other->getAttachment()->getTicksLeft()+
-               stk_config->time2Ticks(stk_config->m_bomb_time_increase),
+               fluxara_drift_config->time2Ticks(fluxara_drift_config->m_bomb_time_increase),
             other);
         other->getAttachment()->clear();
         m_kart->playCustomSFX(SFXManager::CUSTOM_ATTACH);
@@ -555,7 +555,7 @@ void Attachment::update(int ticks)
                 m_bubble_explode_sound->setPosition(m_kart->getXYZ());
                 m_bubble_explode_sound->play();
             }
-            if (!m_kart->isGhostKart())
+            if (!m_kart->isGhofluxara_driftart())
                 Track::getCurrentTrack()->getItemManager()->dropNewItem(Item::ITEM_BUBBLEGUM, m_kart);
         }
         break;
@@ -613,7 +613,7 @@ void Attachment::updateGraphics(float dt)
                         m_type == ATTACH_NOLOK_BUBBLEGUM_SHIELD;
         float wanted_node_scale = is_shield ?
             std::max(1.0f, m_kart->getHighestPoint() * 1.1f) : 1.0f;
-        float scale_ratio = stk_config->ticks2Time(m_scaling_end_ticks -
+        float scale_ratio = fluxara_drift_config->ticks2Time(m_scaling_end_ticks -
             World::getWorld()->getTicksSinceStart()) / 0.7f;
         if (scale_ratio > 0.0f)
         {
@@ -651,16 +651,16 @@ void Attachment::updateGraphics(float dt)
             m_node->setScale(core::vector3df(
                 wanted_node_scale, wanted_node_scale, wanted_node_scale));
         }
-        int slow_flashes = stk_config->time2Ticks(3.0f);
+        int slow_flashes = fluxara_drift_config->time2Ticks(3.0f);
         if (is_shield && m_ticks_left < slow_flashes)
         {
             // Bubble gum flashing when close to dropping
-            int ticks_per_flash = stk_config->time2Ticks(0.2f);
+            int ticks_per_flash = fluxara_drift_config->time2Ticks(0.2f);
 
-            int fast_flashes = stk_config->time2Ticks(0.5f);
+            int fast_flashes = fluxara_drift_config->time2Ticks(0.5f);
             if (m_ticks_left < fast_flashes)
             {
-                ticks_per_flash = stk_config->time2Ticks(0.07f);
+                ticks_per_flash = fluxara_drift_config->time2Ticks(0.07f);
             }
 
             int division = (m_ticks_left / ticks_per_flash);
@@ -684,7 +684,7 @@ void Attachment::updateGraphics(float dt)
         // Mesh animation frames are 1 to 61 frames (60 steps)
         // The idea is change second by second, counterclockwise 60 to 0 secs
         // If longer times needed, it should be a surprise "oh! bomb activated!"
-        float time_left = stk_config->ticks2Time(m_ticks_left);
+        float time_left = fluxara_drift_config->ticks2Time(m_ticks_left);
         if (time_left <= (m_node->getEndFrame() - m_node->getStartFrame() - 1))
         {
             m_node->setCurrentFrame(m_node->getEndFrame()

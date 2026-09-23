@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2017 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2017 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -24,7 +24,7 @@
 #include "graphics/material.hpp"
 #include "graphics/material_manager.hpp"
 #include "graphics/mesh_tools.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "utils/constants.hpp"
 #include "mini_glm.hpp"
 #include "utils/string_utils.hpp"
@@ -178,7 +178,7 @@ scene::IAnimatedMesh* SPMeshLoader::createMesh(io::IReadFile* f)
                 if (m)
                     image_mani = m->getMaskImageMani();
 #endif
-                video::ITexture* tex = STKTexManager::getInstance()
+                video::ITexture* tex = FLUXARA_DRIFTTexManager::getInstance()
                     ->getTexture(tex_name_1, image_mani);
                 if (tex != NULL)
                 {
@@ -192,7 +192,7 @@ scene::IAnimatedMesh* SPMeshLoader::createMesh(io::IReadFile* f)
                 {
                     tex_name_2 = full_path;
                 }
-                textures[1] = STKTexManager::getInstance()->getTexture
+                textures[1] = FLUXARA_DRIFTTexManager::getInstance()->getTexture
                     (tex_name_2);
             }
 
@@ -436,7 +436,7 @@ void SPMeshLoader::decompressSPM(irr::io::IReadFile* spm,
         }
     }
     mb->setIndices(indices);
-    mb->setSTKMaterial(m);
+    mb->setFLUXARA_DRIFTMaterial(m);
 
 }   // decompressSPM
 

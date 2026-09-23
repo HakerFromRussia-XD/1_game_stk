@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Joerg Henrichs, Marianne Gagnon
 //
 //  This program is free software; you can redistribute it and/or
@@ -228,7 +228,7 @@ void TrackObject::init(const XMLNode &xml_node, scene::ISceneNode* parent,
                     }
                     continue;
                 }
-                std::vector<Material*> mbs = mb->getAllSTKMaterials();
+                std::vector<Material*> mbs = mb->getAllFLUXARA_DRIFTMaterials();
                 for (Material* m : mbs)
                 {
                     if (m->isColorizable() && m->hasRandomHue())
@@ -556,7 +556,7 @@ void TrackObject::resetAfterRewind()
     btTransform new_trans;
     m_physical_object->getMotionState()->getWorldTransform(new_trans);
     m_physical_object->getBody()->setCenterOfMassTransform(new_trans);
-    m_physical_object->getBody()->saveKinematicState(stk_config->ticks2Time(1));
+    m_physical_object->getBody()->saveKinematicState(fluxara_drift_config->ticks2Time(1));
 }   // resetAfterRewind
 
 // ----------------------------------------------------------------------------

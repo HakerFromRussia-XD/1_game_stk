@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2005 Steve Baker <sjbaker1@airmail.net>
 //  Copyright (C) 2006-2007 Eduardo Hernandez Munoz
 //  Copyright (C) 2010-2015 Joerg Henrichs
@@ -37,7 +37,7 @@ protected:
     ThreeStrikesBattle* m_tsb_world;
 
     // ------------------------------------------------------------------------
-    virtual void  findClosestKart(bool consider_difficulty,
+    virtual void  findClosefluxara_driftart(bool consider_difficulty,
                                   bool find_sta) OVERRIDE;
     // ------------------------------------------------------------------------
     virtual int   getCurrentNode() const OVERRIDE;

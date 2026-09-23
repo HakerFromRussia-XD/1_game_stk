@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2013-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2013-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -49,7 +49,7 @@ std::weak_ptr<LobbyProtocol> LobbyProtocol::m_lobby[PT_COUNT];
 
 LobbyProtocol::LobbyProtocol()
              : Protocol(PROTOCOL_LOBBY_ROOM),
-               m_process_type(STKProcess::getType())
+               m_process_type(FLUXARA_DRIFTProcess::getType())
 {
     resetGameStartedProgress();
     m_game_setup = new GameSetup();
@@ -186,7 +186,7 @@ void LobbyProtocol::setup()
 void LobbyProtocol::startVotingPeriod(float max_time)
 {
     m_max_voting_time = uint64_t(max_time*1000);
-    m_end_voting_period.store(StkTime::getMonoTimeMs() + m_max_voting_time);
+    m_end_voting_period.store(FluxaraDriftTime::getMonoTimeMs() + m_max_voting_time);
 }   // startVotingPeriod
 
 //-----------------------------------------------------------------------------
@@ -194,9 +194,9 @@ void LobbyProtocol::startVotingPeriod(float max_time)
 float LobbyProtocol::getRemainingVotingTime()
 {
     if (m_end_voting_period.load() == 0 ||
-        StkTime::getMonoTimeMs() >= m_end_voting_period.load())
+        FluxaraDriftTime::getMonoTimeMs() >= m_end_voting_period.load())
         return 0.0f;
-    uint64_t t = m_end_voting_period.load() - StkTime::getMonoTimeMs();
+    uint64_t t = m_end_voting_period.load() - FluxaraDriftTime::getMonoTimeMs();
     return t / 1000.0f;
 }   // getRemainingVotingTime
 
@@ -205,7 +205,7 @@ float LobbyProtocol::getRemainingVotingTime()
 bool LobbyProtocol::isVotingOver()
 {
     return m_end_voting_period.load() != 0 &&
-        m_end_voting_period.load() < StkTime::getMonoTimeMs();
+        m_end_voting_period.load() < FluxaraDriftTime::getMonoTimeMs();
 }   // isVotingOver
 
 //-----------------------------------------------------------------------------

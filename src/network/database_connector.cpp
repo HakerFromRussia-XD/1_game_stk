@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2024 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2024 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -23,9 +23,9 @@
 #include "network/network_player_profile.hpp"
 #include "network/server_config.hpp"
 #include "network/socket_address.hpp"
-#include "network/stk_host.hpp"
-#include "network/stk_ipv6.hpp"
-#include "network/stk_peer.hpp"
+#include "network/fluxara_drift_host.hpp"
+#include "network/fluxara_drift_ipv6.hpp"
+#include "network/fluxara_drift_peer.hpp"
 #include "utils/log.hpp"
 
 //-----------------------------------------------------------------------------
@@ -86,7 +86,7 @@ std::function<void(sqlite3_stmt* stmt)> BinderCollection::getBindFunction() cons
 /** Opens the database, sets its busy handler and variables related to it. */
 void DatabaseConnector::initDatabase()
 {
-    m_last_poll_db_time = StkTime::getMonoTimeMs();
+    m_last_poll_db_time = FluxaraDriftTime::getMonoTimeMs();
     m_db = NULL;
     m_ip_ban_table_exists = false;
     m_ipv6_ban_table_exists = false;
@@ -141,7 +141,7 @@ void DatabaseConnector::initDatabase()
 /** Closes the database. */
 void DatabaseConnector::destroyDatabase()
 {
-    auto peers = STKHost::get()->getPeers();
+    auto peers = FLUXARA_DRIFTHost::get()->getPeers();
     for (auto& peer : peers)
         writeDisconnectInfoTable(peer.get());
     if (m_db != NULL)
@@ -346,7 +346,7 @@ void DatabaseConnector::insideIPv6CIDRSQL(sqlite3_context* context, int argc,
 // ----------------------------------------------------------------------------
 /*
 Copy below code so it can be use as loadable extension to be used in sqlite3
-command interface (together with andIPv6 and insideIPv6CIDR from stk_ipv6)
+command interface (together with andIPv6 and insideIPv6CIDR from fluxara_drift_ipv6)
 
 #include "sqlite3ext.h"
 SQLITE_EXTENSION_INIT1
@@ -368,7 +368,7 @@ sqlite3_extension_init(sqlite3* db, char** pzErrMsg,
  *   database peer's disconnection time and statistics (ping and packet loss).
  *  \param peer Disconnecting peer.
  */
-void DatabaseConnector::writeDisconnectInfoTable(STKPeer* peer)
+void DatabaseConnector::writeDisconnectInfoTable(FLUXARA_DRIFTPeer* peer)
 {
     if (m_server_stats_table.empty())
         return;
@@ -397,7 +397,7 @@ void DatabaseConnector::initServerStatsTable()
 
     std::ostringstream oss;
     oss << "CREATE TABLE IF NOT EXISTS " << table_name << " (\n"
-        "    host_id INTEGER UNSIGNED NOT NULL PRIMARY KEY, -- Unique host id in STKHost of each connection session for a STKPeer\n"
+        "    host_id INTEGER UNSIGNED NOT NULL PRIMARY KEY, -- Unique host id in FLUXARA_DRIFTHost of each connection session for a FLUXARA_DRIFTPeer\n"
         "    ip INTEGER UNSIGNED NOT NULL, -- IP decimal of host\n";
     if (ServerConfig::m_ipv6_connection)
         oss << "    ipv6 TEXT NOT NULL DEFAULT '', -- IPv6 (if exists) in string of host\n";
@@ -406,7 +406,7 @@ void DatabaseConnector::initServerStatsTable()
         "    username TEXT NOT NULL, -- First player name in the host (if the host has splitscreen player)\n"
         "    player_num INTEGER UNSIGNED NOT NULL, -- Number of player(s) from the host, more than 1 if it has splitscreen player\n"
         "    country_code TEXT NULL DEFAULT NULL, -- 2-letter country code of the host\n"
-        "    version TEXT NOT NULL, -- SuperTuxKart version of the host\n"
+        "    version TEXT NOT NULL, -- FluxaraDrift version of the host\n"
         "    os TEXT NOT NULL, -- Operating system of the host\n"
         "    connected_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, -- Time when connected\n"
         "    disconnected_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, -- Time when disconnected (saved when disconnected)\n"
@@ -559,9 +559,9 @@ void DatabaseConnector::initServerStatsTable()
         m_server_stats_table = "";
     }
 
-    STKHost::get()->setNextHostId(last_host_id);
+    FLUXARA_DRIFTHost::get()->setNextHostId(last_host_id);
 
-    // Update disconnected time (if stk crashed it will not be written)
+    // Update disconnected time (if fluxara_drift crashed it will not be written)
     query = StringUtils::insertValues(
         "UPDATE %s SET disconnected_time = datetime('now') "
         "WHERE connected_time = disconnected_time;",
@@ -579,8 +579,8 @@ void DatabaseConnector::initServerStatsTable()
  *  \return True if the database query succeeded.
  */
 bool DatabaseConnector::writeReport(
-       STKPeer* reporter, std::shared_ptr<NetworkPlayerProfile> reporter_npp,
-       STKPeer* reporting, std::shared_ptr<NetworkPlayerProfile> reporting_npp,
+       FLUXARA_DRIFTPeer* reporter, std::shared_ptr<NetworkPlayerProfile> reporter_npp,
+       FLUXARA_DRIFTPeer* reporting, std::shared_ptr<NetworkPlayerProfile> reporting_npp,
        irr::core::stringw& info)
 {
     std::string query;
@@ -900,7 +900,7 @@ void DatabaseConnector::saveAddressToIpBanTable(const SocketAddress& addr)
  *  \param player_count Number of players joining using a single peer.
  *  \param country_code Country code deduced by global or local IP mapping.
  */
-void DatabaseConnector::onPlayerJoinQueries(std::shared_ptr<STKPeer> peer,
+void DatabaseConnector::onPlayerJoinQueries(std::shared_ptr<FLUXARA_DRIFTPeer> peer,
         uint32_t online_id, unsigned player_count, const std::string& country_code)
 {
     if (m_server_stats_table.empty() || peer->isAIPeer())

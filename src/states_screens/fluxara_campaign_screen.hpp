@@ -28,6 +28,8 @@ private:
     // A stable campaign ID can arrive from the iOS launch bridge before the
     // screen has parsed its manifest.  Keep it until init() resolves it.
     std::string m_focus_event_id;
+    unsigned int m_completed_count = 0;
+    bool m_progress_cached = false;
     int m_last_scroll_pos = 0;
     float m_scroll_idle_time = 1.0f;
     float m_auto_start_delay = -1.0f;

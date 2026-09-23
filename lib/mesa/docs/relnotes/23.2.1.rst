@@ -1467,7 +1467,7 @@ Dylan Baker (57):
 Emma Anholt (124):
 
 - zink: Avoid infinite loop finding no var in update_so_info.
-- ci/crocus: Update checksum for STK.
+- ci/crocus: Update checksum for FLUXARA_DRIFT.
 - symbol_table: Store the symbol name in the same allocation as the symbol entry.
 - symbol_table: Don't maintain the HT as we're destroying the table.
 - symbol_table: Don't bother resetting the key on popping scope.

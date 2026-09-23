@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2007-2015 Joerg Henrichs
 //
 //  Linear item-kart intersection function written by
@@ -160,7 +160,7 @@ protected:
     /* For debugging purpose */
     int               m_created_ticks;
 
-    void              getClosestKart(const AbstractKart **minKart,
+    void              getClosefluxara_driftart(const AbstractKart **minKart,
                                      float *minDistSquared,
                                      Vec3 *minDelta,
                                      const AbstractKart* inFrontOf=NULL,

@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2011-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -17,7 +17,7 @@
 //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include "graphics/referee.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "graphics/central_settings.hpp"
 #include "graphics/irr_driver.hpp"
 #include "graphics/light.hpp"
@@ -102,7 +102,7 @@ void Referee::init()
         SP::SPMeshBuffer* spmb = dynamic_cast<SP::SPMeshBuffer*>(mb);
         if (spmb)
         {
-            auto ret = spmb->getAllSTKMaterials();
+            auto ret = spmb->getAllFLUXARA_DRIFTMaterials();
             for (unsigned j = 0; j < ret.size(); j++)
             {
                 std::string name =
@@ -314,7 +314,7 @@ void Referee::selectReadySetGo(int rsg)
  */
 void Referee::setAnimationFrameWithCreatedTicks(int created_ticks)
 {
-    float dur = stk_config->ticks2Time(
+    float dur = fluxara_drift_config->ticks2Time(
         World::getWorld()->getTicksSinceStart() - created_ticks);
     dur *= 25.0f;
     float ref_dur = (float)(m_st_last_rescue_frame - m_st_first_rescue_frame);

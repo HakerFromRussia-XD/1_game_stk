@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2018 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2018 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -35,16 +35,16 @@ SPDynamicDrawCall::SPDynamicDrawCall(scene::E_PRIMITIVE_TYPE pt,
 #ifndef SERVER_ONLY
     m_primitive_type = pt;
     m_shaders[0] = shader;
-    m_stk_material[0] = std::make_tuple(0u, 0u, m);
-    m_textures.resize(m_stk_material.size());
+    m_fluxara_drift_material[0] = std::make_tuple(0u, 0u, m);
+    m_textures.resize(m_fluxara_drift_material.size());
     for (unsigned j = 0; j < 6; j++)
     {
         m_textures[0][j] = SPTextureManager::get()->getTexture(
             m_shaders[0] && m_shaders[0]->hasTextureLayer(j) ?
-            std::get<2>(m_stk_material[0])->getSamplerPath(j) : "",
-            j == 0 ? std::get<2>(m_stk_material[0]) : NULL,
+            std::get<2>(m_fluxara_drift_material[0])->getSamplerPath(j) : "",
+            j == 0 ? std::get<2>(m_fluxara_drift_material[0]) : NULL,
             m_shaders[0] && m_shaders[0]->isSrgbForTextureLayer(j),
-            std::get<2>(m_stk_material[0])->getContainerId());
+            std::get<2>(m_fluxara_drift_material[0])->getContainerId());
     }
     m_tex_cmp[m_textures[0][0]->getPath() + m_textures[0][1]->getPath()] = 0;
     m_pitch = 48;
@@ -147,7 +147,7 @@ SPDynamicDrawCall::SPDynamicDrawCall(scene::E_PRIMITIVE_TYPE pt,
 bool SPDynamicDrawCall::initTextureDyDc()
 {
 #ifndef SERVER_ONLY
-    for (unsigned i = 0; i < m_stk_material.size(); i++)
+    for (unsigned i = 0; i < m_fluxara_drift_material.size(); i++)
     {
         for (unsigned j = 0; j < 6; j++)
         {

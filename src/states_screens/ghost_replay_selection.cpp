@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -40,9 +40,9 @@
 using namespace GUIEngine;
 
 // ----------------------------------------------------------------------------
-/** Constructor, which loads the stkgui file.
+/** Constructor, which loads the fluxara_driftgui file.
  */
-GhostReplaySelection::GhostReplaySelection() : Screen("ghost_replay_selection.stkgui")
+GhostReplaySelection::GhostReplaySelection() : Screen("ghost_replay_selection.fluxara_driftgui")
 {
     m_is_comparing = false;
     m_replay_to_compare_uid = 0;
@@ -130,7 +130,7 @@ void GhostReplaySelection::loadedFromFile()
     m_active_mode = RaceManager::MINOR_MODE_TIME_TRIAL;
     m_active_mode_is_linear = true;
     
-    m_icon_bank = new irr::gui::STKModifiedSpriteBank( GUIEngine::getGUIEnv());
+    m_icon_bank = new irr::gui::FLUXARA_DRIFTModifiedSpriteBank( GUIEngine::getGUIEnv());
 
     for(unsigned int i=0; i<kart_properties_manager->getNumberOfKarts(); i++)
     {
@@ -216,8 +216,8 @@ void GhostReplaySelection::loadList()
                 (RaceManager::Difficulty)rd.m_difficulty)
                 continue;
 
-            core::stringw current_version = STK_VERSION;
-            if (m_same_version && current_version != rd.m_stk_version)
+            core::stringw current_version = FLUXARA_DRIFT_VERSION;
+            if (m_same_version && current_version != rd.m_fluxara_drift_version)
                 continue;
 
             if (!m_multiplayer && (rd.m_kart_list.size() > 1))
@@ -316,8 +316,8 @@ void GhostReplaySelection::loadList()
             (RaceManager::Difficulty)rd.m_difficulty)
             continue;
 
-        core::stringw current_version = STK_VERSION;
-        if (m_same_version && current_version != rd.m_stk_version)
+        core::stringw current_version = FLUXARA_DRIFT_VERSION;
+        if (m_same_version && current_version != rd.m_fluxara_drift_version)
             continue;
 
         if (!m_multiplayer && (rd.m_kart_list.size() > 1))
@@ -400,7 +400,7 @@ void GhostReplaySelection::loadList()
                 (StringUtils::toWString(rd.m_kart_list.size()), -1, 3, true));
         if (!m_same_version)
             row.push_back(GUIEngine::ListWidget::ListCell
-                (rd.m_stk_version.empty() ? " " : rd.m_stk_version, -1, 3, true));
+                (rd.m_fluxara_drift_version.empty() ? " " : rd.m_fluxara_drift_version, -1, 3, true));
         m_replay_list_widget->addItem(StringUtils::toString(i), row);
     }
 }   // loadList

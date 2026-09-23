@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //            (C) 2014-2015 Joerg Henrichs
 //
@@ -38,13 +38,13 @@ WebAchievementsStatus::WebAchievementsStatus(int version, std::map<uint32_t, Ach
     GamerzillaStart(false, (file_manager->getUserConfigDir() + "gamerzilla/").c_str());
     Gamerzilla g;
     std::string path = file_manager->getAsset("gamerzilla/");
-    std::string main_image = path + "supertuxkart.png";
+    std::string main_image = path + "fluxaradrift.png";
     std::string true_image = path + "achievement1.png";
     std::string false_image = path + "achievement0.png";
     GamerzillaInitGame(&g);
     g.version = version;
-    g.short_name = strdup("supertuxkart");
-    g.name = strdup("SuperTuxKart");
+    g.short_name = strdup("fluxaradrift");
+    g.name = strdup("FluxaraDrift");
     g.image = strdup(main_image.c_str());
     for (auto const &i : info)
     {

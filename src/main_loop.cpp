@@ -1,7 +1,7 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Ingo Ruhnke <grumbel@gmx.de>
-//  Copyright (C) 2006-2015 SuperTuxKart-Team
+//  Copyright (C) 2006-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -19,7 +19,7 @@
 
 #include "main_loop.hpp"
 
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
 #include "addons/addons_manager.hpp"
 #endif
 #include "audio/music_manager.hpp"
@@ -45,7 +45,7 @@
 #include "network/race_event_manager.hpp"
 #include "network/rewind_manager.hpp"
 #include "network/server.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "online/request_manager.hpp"
 #include "race/history.hpp"
 #include "race/race_manager.hpp"
@@ -53,7 +53,7 @@
 #include "states_screens/online/server_selection.hpp"
 #include "states_screens/main_menu_screen.hpp"
 #include "states_screens/state_manager.hpp"
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "states_screens/fluxara_event.hpp"
 #include "states_screens/race_result_gui.hpp"
 #endif
@@ -125,7 +125,7 @@ MainLoop::MainLoop(unsigned parent_pid, bool download_assets)
         wx.lpszClassName = class_name.c_str();
         if (RegisterClassEx(&wx))
         {
-            CreateWindowEx(0, class_name.c_str(), L"stk_server_only",
+            CreateWindowEx(0, class_name.c_str(), L"fluxara_drift_server_only",
                 0, 0, 0, 0, 0, HWND_MESSAGE, NULL, NULL, NULL);
         }
     }
@@ -137,7 +137,7 @@ MainLoop::~MainLoop()
 {
 }   // ~MainLoop
 
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
 extern "C" void update_swap_interval(int swap_interval);
 //-----------------------------------------------------------------------------
 extern "C" void pause_mainloop()
@@ -151,7 +151,7 @@ extern "C" void pause_mainloop()
     PlayerManager::get()->save();
     if (addons_manager->hasDownloadedIcons())
         addons_manager->saveInstalled();
-    // Make sure the new addon arrow is gone when stk is killed in background
+    // Make sure the new addon arrow is gone when fluxara_drift is killed in background
     // user_config saves the latest addon time
     if (addons_manager->hasNewAddons())
         user_config->saveConfig();
@@ -201,7 +201,7 @@ double MainLoop::getLimitedDt()
 {
     m_prev_time = m_curr_time;
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (m_paused.load())
     {
         // When iOS apps entering background it should not run any
@@ -238,7 +238,7 @@ double MainLoop::getLimitedDt()
         m_prev_time = m_curr_time;
         // If system time adjusted backwards, return fixed dt and
         // resynchronize network timer if exists in client
-        if (STKHost::existHost())
+        if (FLUXARA_DRIFTHost::existHost())
         {
 #ifndef SERVER_ONLY
             if (UserConfigParams::m_artist_debug_mode &&
@@ -251,9 +251,9 @@ double MainLoop::getLimitedDt()
 #endif
             Log::error("MainLoop", "System clock running backwards in"
                 " networking game.");
-            if (STKHost::get()->getNetworkTimerSynchronizer())
+            if (FLUXARA_DRIFTHost::get()->getNetworkTimerSynchronizer())
             {
-                STKHost::get()->getNetworkTimerSynchronizer()
+                FLUXARA_DRIFTHost::get()->getNetworkTimerSynchronizer()
                     ->resynchroniseTimer();
             }
         }
@@ -262,15 +262,15 @@ double MainLoop::getLimitedDt()
     // On a server (i.e. without graphics) the frame rate can be under
     // 1 ms, i.e. dt = 0. Additionally, the resolution of a sleep
     // statement is not that precise either: if the sleep statement
-    // would be consistent < 1ms, but the stk time would increase by
-    // 1 ms, the stk clock would be desynchronised from real time
+    // would be consistent < 1ms, but the fluxara_drift time would increase by
+    // 1 ms, the fluxara_drift clock would be desynchronised from real time
     // (it would go faster), resulting in synchronisation problems
     // with clients (server time is supposed to be behind client time).
     // So we play it safe by adding a loop to make sure at least 1ms
     // (minimum time that can be handled by the integer timer) delay here.
     while (dt == 0)
     {
-        StkTime::sleep(1);
+        FluxaraDriftTime::sleep(1);
         m_curr_time = std::chrono::steady_clock::now();
         if (m_prev_time > m_curr_time)
         {
@@ -334,7 +334,7 @@ void MainLoop::updateRace(int ticks, bool fast_forward)
 
 //-----------------------------------------------------------------------------
 /** Run the actual main loop.
- *  The sequence in which various parts of STK are updated is:
+ *  The sequence in which various parts of FLUXARA_DRIFT are updated is:
  *  - Determine next time step size (`getLimitedDt`). This takes maximum fps
  *    into account (i.e. sleep if the fps would be too high), and will actually
  *    slow down the in-game clock if the fps are too low (if more than 3/60 of
@@ -387,10 +387,10 @@ void MainLoop::updateRace(int ticks, bool fast_forward)
  *    input handling follows late)
  *  - Updates the wiimote manager. This will read the data of all wiimotes
  *    and feed the corresponding events to the irrlicht event system.
- *  - Updates the STK internal gui engine. This updates all widgets, and
+ *  - Updates the FLUXARA_DRIFT internal gui engine. This updates all widgets, and
  *    e.g. takes care of the rotation of the karts in the KartSelection
  *    screen using the ModelViewWidget.
- *  - Updates STK's irrlicht driver `IrrDriver::update()`:
+ *  - Updates FLUXARA_DRIFT's irrlicht driver `IrrDriver::update()`:
  *    - Calls Irrlicht's `beginScene()` .
  *    - Renders the scene (several times with different viewport if
  *      split screen is being used)
@@ -462,15 +462,15 @@ void MainLoop::run()
         TimePoint frame_start = std::chrono::steady_clock::now();
 
         left_over_time += getLimitedDt();
-        int num_steps   = stk_config->time2Ticks(left_over_time);
-        float dt = stk_config->ticks2Time(1);
+        int num_steps   = fluxara_drift_config->time2Ticks(left_over_time);
+        float dt = fluxara_drift_config->ticks2Time(1);
         left_over_time -= num_steps * dt;
 
         // Shutdown next frame if shutdown request is sent while loading the
         // world
         bool was_server = NetworkConfig::get()->isNetworking() &&
             NetworkConfig::get()->isServer();
-        if ((STKHost::existHost() && STKHost::get()->requestedShutdown()) ||
+        if ((FLUXARA_DRIFTHost::existHost() && FLUXARA_DRIFTHost::get()->requestedShutdown()) ||
             m_request_abort)
         {
             bool was_lan = NetworkConfig::get()->isLAN();
@@ -480,7 +480,7 @@ void MainLoop::run()
                 if (cl->getJoinedServer()->reconnectWhenQuitLobby())
                     rejoin_server = cl->getJoinedServer();
             }
-            bool exist_host = STKHost::existHost();
+            bool exist_host = FLUXARA_DRIFTHost::existHost();
             core::stringw msg = _("Server connection timed out.");
 
             if (!m_request_abort)
@@ -488,16 +488,16 @@ void MainLoop::run()
                 if (!GUIEngine::isNoGraphics())
                 {
                     SFXManager::get()->quickSound("anvil");
-                    if (!STKHost::get()->getErrorMessage().empty())
+                    if (!FLUXARA_DRIFTHost::get()->getErrorMessage().empty())
                     {
-                        msg = STKHost::get()->getErrorMessage();
+                        msg = FLUXARA_DRIFTHost::get()->getErrorMessage();
                     }
                 }
             }
 
             if (exist_host == true)
             {
-                STKHost::get()->shutdown();
+                FLUXARA_DRIFTHost::get()->shutdown();
             }
 
 #ifndef SERVER_ONLY
@@ -524,7 +524,7 @@ void MainLoop::run()
             else if (!exist_host && !GUIEngine::isNoGraphics())
             {
                 // Avoid leaking widgets (model view especially) when closing
-                // STK, it crashes when vulkan validation is on if closing
+                // FLUXARA_DRIFT, it crashes when vulkan validation is on if closing
                 // during kart selection screen
                 MainMenuScreen* mms = MainMenuScreen::getInstance();
                 if (GUIEngine::getCurrentScreen() != mms)
@@ -560,7 +560,7 @@ void MainLoop::run()
             }
         }
 
-        if (was_server && !STKHost::existHost())
+        if (was_server && !FLUXARA_DRIFTHost::existHost())
             m_abort = true;
 
         if (!m_abort)
@@ -581,7 +581,7 @@ void MainLoop::run()
                 PROFILER_PUSH_CPU_MARKER("Input/GUI", 0x7F, 0x00, 0x00);
                 input_manager->update(frame_duration);
                 GUIEngine::update(frame_duration);
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
                 // The result GUI schedules this during its update. Execute
                 // the ordinary Next callback only after that update returns.
                 if (FluxaraModes::autoCampaignReplayPending())
@@ -642,7 +642,7 @@ void MainLoop::run()
             // when leave / come back from android home button
             bool fast_forward = NetworkConfig::get()->isNetworking() &&
                 NetworkConfig::get()->isClient() &&
-                num_steps > stk_config->time2Ticks(1.0f);
+                num_steps > fluxara_drift_config->time2Ticks(1.0f);
             for (int i = 0; i < num_steps; i++)
             {
                 if (World::getWorld() && history->replayHistory())
@@ -795,8 +795,8 @@ void MainLoop::renderGUI(int phase, int loop_index, int loop_size)
 }   // renderGUI
 /* EOF */
 
-#ifdef IOS_STK
-// For iOS STK we need to make sure no rendering command is executed after pause
+#ifdef IOS_FLUXARA_DRIFT
+// For iOS FLUXARA_DRIFT we need to make sure no rendering command is executed after pause
 // so we need a handle_app_event callback
 #include "SDL_events.h"
 extern "C" int handle_app_event(void* userdata, SDL_Event* event)

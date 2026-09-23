@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2020 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2020 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -25,11 +25,11 @@
 #include "network/protocols/server_lobby.hpp"
 #include "network/race_event_manager.hpp"
 #include "network/server_config.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "race/race_manager.hpp"
 #include "states_screens/state_manager.hpp"
 #include "utils/log.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 #include "utils/time.hpp"
 #include "utils/vs.hpp"
 
@@ -41,7 +41,7 @@ float ChildLoop::getLimitedDt()
     float dt = 0;
     while (1)
     {
-        m_curr_time = StkTime::getMonoTimeMs();
+        m_curr_time = FluxaraDriftTime::getMonoTimeMs();
         if (m_prev_time > m_curr_time)
         {
             m_prev_time = m_curr_time;
@@ -49,8 +49,8 @@ float ChildLoop::getLimitedDt()
         dt = (float)(m_curr_time - m_prev_time);
         while (dt == 0)
         {
-            StkTime::sleep(1);
-            m_curr_time = StkTime::getMonoTimeMs();
+            FluxaraDriftTime::sleep(1);
+            m_curr_time = FluxaraDriftTime::getMonoTimeMs();
             if (m_prev_time > m_curr_time)
             {
                 Log::error("MainLopp", "System clock keeps backwards!");
@@ -69,7 +69,7 @@ float ChildLoop::getLimitedDt()
         int wait_time = 1000 / max_fps - 1000 / current_fps;
         if (wait_time < 1) wait_time = 1;
 
-        StkTime::sleep(wait_time);
+        FluxaraDriftTime::sleep(wait_time);
     }   // while(1)
     dt *= 0.001f;
     return dt;
@@ -79,7 +79,7 @@ float ChildLoop::getLimitedDt()
 void ChildLoop::run()
 {
     VS::setThreadName("ChildLoop");
-    STKProcess::init(PT_CHILD);
+    FLUXARA_DRIFTProcess::init(PT_CHILD);
 
     GUIEngine::disableGraphics();
     RaceManager::create();
@@ -111,28 +111,28 @@ void ChildLoop::run()
     ServerConfig::loadServerLobbyFromConfig();
     StateManager::get()->enterMenuState();
 
-    m_curr_time = StkTime::getMonoTimeMs();
+    m_curr_time = FluxaraDriftTime::getMonoTimeMs();
     float left_over_time = 0;
     while (!m_abort)
     {
-        if (STKHost::existHost() && STKHost::get()->requestedShutdown())
+        if (FLUXARA_DRIFTHost::existHost() && FLUXARA_DRIFTHost::get()->requestedShutdown())
             break;
 
         // Tell the main process port and server id
-        if (m_port == 0 && STKHost::existHost())
+        if (m_port == 0 && FLUXARA_DRIFTHost::existHost())
         {
             auto sl = LobbyProtocol::get<ServerLobby>();
             if (sl &&
                 sl->getCurrentState() >= ServerLobby::WAITING_FOR_START_GAME)
             {
-                m_port = STKHost::get()->getPrivatePort();
+                m_port = FLUXARA_DRIFTHost::get()->getPrivatePort();
                 m_server_online_id = sl->getServerIdOnline();
             }
         }
 
         left_over_time += getLimitedDt();
-        int num_steps = stk_config->time2Ticks(left_over_time);
-        float dt = stk_config->ticks2Time(1);
+        int num_steps = fluxara_drift_config->time2Ticks(left_over_time);
+        float dt = fluxara_drift_config->ticks2Time(1);
         left_over_time -= num_steps * dt;
 
         for (int i = 0; i < num_steps; i++)
@@ -162,8 +162,8 @@ void ChildLoop::run()
         }
     }
 
-    if (STKHost::existHost())
-        STKHost::get()->shutdown();
+    if (FLUXARA_DRIFTHost::existHost())
+        FLUXARA_DRIFTHost::get()->shutdown();
     if (World::getWorld())
         RaceManager::get()->exitRace();
 

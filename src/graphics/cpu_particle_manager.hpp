@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2017 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2017 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -54,7 +54,7 @@ struct CPUParticle
 };
 
 
-class STKParticle;
+class FLUXARA_DRIFTParticle;
 class Material;
 
 class CPUParticleManager : public Singleton<CPUParticleManager>, NoCopy
@@ -75,7 +75,7 @@ private:
         }
     };
 
-    std::unordered_map<std::string, std::vector<STKParticle*> >
+    std::unordered_map<std::string, std::vector<FLUXARA_DRIFTParticle*> >
         m_particles_queue;
 
     std::unordered_map<std::string, std::vector<scene::IBillboardSceneNode*> >
@@ -107,7 +107,7 @@ public:
         m_particle_quad = 0;
     }
     // ------------------------------------------------------------------------
-    void addParticleNode(STKParticle* node);
+    void addParticleNode(FLUXARA_DRIFTParticle* node);
     // ------------------------------------------------------------------------
     void addBillboardNode(scene::IBillboardSceneNode* node);
     // ------------------------------------------------------------------------

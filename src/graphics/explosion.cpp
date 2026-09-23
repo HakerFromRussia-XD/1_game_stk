@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Steve Baker <sjbaker1@airmail.net>
 //
 //  This program is free software; you can redistribute it and/or
@@ -20,14 +20,14 @@
 
 #include "audio/sfx_base.hpp"
 #include "audio/sfx_manager.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "graphics/irr_driver.hpp"
 #include "graphics/material.hpp"
 #include "graphics/material_manager.hpp"
 #include "graphics/particle_emitter.hpp"
 #include "graphics/particle_kind_manager.hpp"
-#include "graphics/stk_particle.hpp"
+#include "graphics/fluxara_drift_particle.hpp"
 #include "items/projectile_manager.hpp"
 #include "race/race_manager.hpp"
 #include "utils/vec3.hpp"
@@ -39,14 +39,14 @@ Explosion::Explosion(const Vec3& coord, const char* explosion_sound, const char 
 {
     // short emision time, explosion, not constant flame
 
-    m_explosion_ticks = stk_config->time2Ticks(2.0f);
-    m_remaining_ticks = stk_config->time2Ticks(0.1f);
+    m_explosion_ticks = fluxara_drift_config->time2Ticks(2.0f);
+    m_remaining_ticks = fluxara_drift_config->time2Ticks(0.1f);
     m_emission_frames = 0;
 
 #ifndef SERVER_ONLY
     std::string filename = particle_file;
 
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
     // Use a lower quality effect on mobile for better performance
     if (filename == "explosion.xml" ||
         filename == "explosion_bomb.xml" ||

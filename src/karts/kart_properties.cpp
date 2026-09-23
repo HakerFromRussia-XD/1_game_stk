@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2006-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2006-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -21,12 +21,12 @@
 #include "audio/sfx_manager.hpp"
 #include "addons/addon.hpp"
 #include "audio/sfx_manager.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/player_manager.hpp"
 #include "graphics/central_settings.hpp"
 #include "graphics/material_manager.hpp"
 #include "graphics/shader_files_manager.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "graphics/sp/sp_shader_manager.hpp"
 #include "graphics/sp/sp_texture_manager.hpp"
 #include "io/file_manager.hpp"
@@ -66,8 +66,8 @@ std::string KartProperties::getHandicapAsString(HandicapLevel h)
 }
 
 /** The constructor initialises all values with invalid values. It can later
- *  then be checked (for STKConfig) that all values are indeed defined.
- *  Otherwise the defaults are taken from STKConfig (and since they are all
+ *  then be checked (for FLUXARA_DRIFTConfig) that all values are indeed defined.
+ *  Otherwise the defaults are taken from FLUXARA_DRIFTConfig (and since they are all
  *  defined, it is guaranteed that each kart has well defined physics values).
  */
 KartProperties::KartProperties(const std::string &filename)
@@ -100,7 +100,7 @@ KartProperties::KartProperties(const std::string &filename)
     m_shape                      = 32;  // close enough to a circle.
     m_engine_sfx_type            = "engine_small";
     m_nitro_min_consumption      = 64;
-    // The default constructor for stk_config uses filename=""
+    // The default constructor for fluxara_drift_config uses filename=""
     if (filename != "")
     {
         load(filename, "kart");
@@ -231,7 +231,7 @@ std::vector<std::string> KartProperties::handleOnDemandLoadTexture()
  */
 void KartProperties::load(const std::string &filename, const std::string &node)
 {
-    // Get the default values from STKConfig. This will also allocate any
+    // Get the default values from FLUXARA_DRIFTConfig. This will also allocate any
     // pointers used in KartProperties
 
     const XMLNode* root = new XMLNode(filename);
@@ -242,18 +242,18 @@ void KartProperties::load(const std::string &filename, const std::string &node)
         // Handle the case that kart_type might be incorrect
         try
         {
-            copyFrom(&stk_config->getKartProperties(kart_type));
+            copyFrom(&fluxara_drift_config->getKartProperties(kart_type));
         }
         catch (std::out_of_range &)
         {
-            copyFrom(&stk_config->getDefaultKartProperties());
+            copyFrom(&fluxara_drift_config->getDefaultKartProperties());
         }   // try .. catch
     }
     else
-        copyFrom(&stk_config->getDefaultKartProperties());
+        copyFrom(&fluxara_drift_config->getDefaultKartProperties());
 
     // m_kart_model must be initialised after assigning the default
-    // values from stk_config (otherwise all kart_properties will
+    // values from fluxara_drift_config (otherwise all kart_properties will
     // share the same KartModel
     m_kart_model = std::make_shared<KartModel>(/*is_master*/true);
 
@@ -307,7 +307,7 @@ void KartProperties::load(const std::string &filename, const std::string &node)
     file_manager->pushModelSearchPath(m_root);
     file_manager->pushTextureSearchPath(m_root, unique_id);
 
-    STKTexManager::getInstance()
+    FLUXARA_DRIFTTexManager::getInstance()
         ->setTextureErrorMessage("Error while loading kart '%s':", m_name);
 
     // load the kart icon file
@@ -355,12 +355,12 @@ void KartProperties::load(const std::string &filename, const std::string &node)
                 m_minimap_icon_file = m_root + relative_minimap_icon;
             }
         }
-        m_minimap_icon = STKTexManager::getInstance()->getTexture(m_minimap_icon_file);
+        m_minimap_icon = FLUXARA_DRIFTTexManager::getInstance()->getTexture(m_minimap_icon_file);
     }
     else
         m_minimap_icon = NULL;
 
-    STKTexManager::getInstance()->unsetTextureErrorMessage();
+    FLUXARA_DRIFTTexManager::getInstance()->unsetTextureErrorMessage();
     file_manager->popTextureSearchPath();
     file_manager->popModelSearchPath();
     m_models_pending = true;
@@ -388,7 +388,7 @@ void KartProperties::ensureModelsLoaded() const
     file_manager->pushTextureSearchPath(m_root, unique_id);
     auto cleanup = [&]()
     {
-        STKTexManager::getInstance()->unsetTextureErrorMessage();
+        FLUXARA_DRIFTTexManager::getInstance()->unsetTextureErrorMessage();
         file_manager->popTextureSearchPath();
         file_manager->popModelSearchPath();
 #ifndef SERVER_ONLY
@@ -404,7 +404,7 @@ void KartProperties::ensureModelsLoaded() const
     if (CVS->isGLSL())
         SP::SPShaderManager::get()->loadSPShaders(m_root);
 #endif
-    STKTexManager::getInstance()->setTextureErrorMessage(
+    FLUXARA_DRIFTTexManager::getInstance()->setTextureErrorMessage(
         "Error while loading kart '%s':", m_name);
     material_manager->addSharedMaterial(m_root + "materials.xml");
     const bool success = m_kart_model->loadModels(*this);
@@ -516,19 +516,19 @@ void KartProperties::combineCharacteristics(HandicapLevel handicap)
 //-----------------------------------------------------------------------------
 /** Actually reads in the data from the xml file.
  *  \param root Root of the xml tree.
- *  \param called_from_stk_config This function can be called in different contexts.
- * When it's called from stk_config to load default parameters, there is no point
- * in performing a version check, and trying to check stk_config while it's still
+ *  \param called_from_fluxara_drift_config This function can be called in different contexts.
+ * When it's called from fluxara_drift_config to load default parameters, there is no point
+ * in performing a version check, and trying to check fluxara_drift_config while it's still
  * being initialized would cause issues. On the other hand, when we load a kart's XML,
- * we need to check in stk_config the min and max supported versions.
+ * we need to check in fluxara_drift_config the min and max supported versions.
  */
-void KartProperties::getAllData(const XMLNode * root, bool called_from_stk_config)
+void KartProperties::getAllData(const XMLNode * root, bool called_from_fluxara_drift_config)
 {
     root->get("version",           &m_version);
 
     // If the version of the kart file is not supported, ignore this .kart file
-    if (!called_from_stk_config && (m_version < stk_config->m_min_kart_version ||
-                                    m_version > stk_config->m_max_kart_version))
+    if (!called_from_fluxara_drift_config && (m_version < fluxara_drift_config->m_min_kart_version ||
+                                    m_version > fluxara_drift_config->m_max_kart_version))
     {
         throw std::runtime_error("version");
     }
@@ -603,8 +603,10 @@ void KartProperties::getAllData(const XMLNode * root, bool called_from_stk_confi
         {
             skid_node->get("name", &custom_skid_sound);
             std::string full_path = m_root + custom_skid_sound;
+            const std::string skid_extension =
+                StringUtils::getExtension(custom_skid_sound);
             if (file_manager->fileExists(full_path) &&
-                StringUtils::getExtension(custom_skid_sound) == "ogg")
+                (skid_extension == "ogg" || skid_extension == "opus"))
             {
                 m_skid_sound = m_ident + "_skid";
                 // Default values for skid sound option if not found
@@ -630,8 +632,9 @@ void KartProperties::getAllData(const XMLNode * root, bool called_from_stk_confi
         {
             sounds_node->get("file", &s);
             std::string full_path = m_root + s;
+            const std::string engine_extension = StringUtils::getExtension(s);
             if (file_manager->fileExists(full_path) &&
-                StringUtils::getExtension(s) == "ogg")
+                (engine_extension == "ogg" || engine_extension == "opus"))
             {
                 m_engine_sfx_type = m_ident + "_engine";
                 // Default values for engine sound if not found
@@ -706,7 +709,7 @@ void KartProperties::getAllData(const XMLNode * root, bool called_from_stk_confi
 
 // ----------------------------------------------------------------------------
 /** Checks if all necessary physics values are indeed defines. This helps
- *  finding bugs early, e.g. missing default in stk_config.dat file.
+ *  finding bugs early, e.g. missing default in fluxara_drift_config.dat file.
  *  \param filename File from which the data was read (only used to print
  *                  meaningful error messages).
  */

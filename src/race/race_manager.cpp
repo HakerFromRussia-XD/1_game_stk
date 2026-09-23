@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2006-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2006-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -25,7 +25,7 @@
 #include "challenges/unlock_manager.hpp"
 #include "config/player_manager.hpp"
 #include "config/saved_grand_prix.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "config/user_config.hpp"
 #include "graphics/irr_driver.hpp"
 #include "guiengine/message_queue.hpp"
@@ -62,7 +62,7 @@
 #include "tracks/track_manager.hpp"
 #include "utils/profiler.hpp"
 #include "utils/ptr_vector.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
 #include "io/rich_presence.hpp"
@@ -90,21 +90,21 @@ RaceManager* g_race_manager[PT_COUNT];
 //---------------------------------------------------------------------------------------------
 RaceManager* RaceManager::get()
 {
-    ProcessType type = STKProcess::getType();
+    ProcessType type = FLUXARA_DRIFTProcess::getType();
     return g_race_manager[type];
 }   // get
 
 //---------------------------------------------------------------------------------------------
 void RaceManager::create()
 {
-    ProcessType type = STKProcess::getType();
+    ProcessType type = FLUXARA_DRIFTProcess::getType();
     g_race_manager[type] = new RaceManager();
 }   // create
 
 //---------------------------------------------------------------------------------------------
 void RaceManager::destroy()
 {
-    ProcessType type = STKProcess::getType();
+    ProcessType type = FLUXARA_DRIFTProcess::getType();
     delete g_race_manager[type];
     g_race_manager[type] = NULL;
 }   // destroy
@@ -134,15 +134,15 @@ RaceManager::RaceManager()
     m_have_kart_last_position_on_overworld = false;
     m_num_local_players = 0;
     m_hit_capture_limit = 0;
-    m_flag_return_ticks = stk_config->time2Ticks(20.0f);
-    m_flag_deactivated_ticks = stk_config->time2Ticks(3.0f);
+    m_flag_return_ticks = fluxara_drift_config->time2Ticks(20.0f);
+    m_flag_deactivated_ticks = fluxara_drift_config->time2Ticks(3.0f);
     m_skipped_tracks_in_gp = 0;
     m_gp_time_target = 0.0f;
     setMaxGoal(0);
     setTimeTarget(0.0f);
     setReverseTrack(false);
     setRecordRace(false);
-    setRaceGhostKarts(false);
+    setRaceGhofluxara_driftarts(false);
     setWatchingReplay(false);
     setBenchmarking(false);
     m_scheduled_benchmark = false;
@@ -390,7 +390,7 @@ void RaceManager::startNew(bool from_overworld)
 {
     m_num_ghost_karts = 0;
     if (m_has_ghost_karts)
-        m_num_ghost_karts = ReplayPlay::get()->getNumGhostKart();
+        m_num_ghost_karts = ReplayPlay::get()->getNumGhofluxara_driftart();
 
     m_started_from_overworld = from_overworld;
     if (m_started_from_overworld) m_continue_saved_gp = false;
@@ -441,7 +441,7 @@ void RaceManager::startNew(bool from_overworld)
     }   // if grand prix
 
     // command line parameters: negative numbers=all karts
-    if(m_num_karts < 0 ) m_num_karts = stk_config->m_max_karts;
+    if(m_num_karts < 0 ) m_num_karts = fluxara_drift_config->m_max_karts;
     if((size_t)m_num_karts < m_player_karts.size())
         m_num_karts = (int)m_player_karts.size();
 
@@ -470,7 +470,7 @@ void RaceManager::startNew(bool from_overworld)
     {
         for(unsigned int i = 0; i < m_num_ghost_karts; i++)
         {
-            m_kart_status.push_back(KartStatus(ReplayPlay::get()->getGhostKartName(i),
+            m_kart_status.push_back(KartStatus(ReplayPlay::get()->getGhofluxara_driftartName(i),
                 i, -1, -1, init_gp_rank, KT_GHOST, HANDICAP_NONE));
             init_gp_rank ++;
         }
@@ -553,7 +553,7 @@ void RaceManager::startNextRace()
     // Throttles GPU while boosting CPU
     appletSetCpuBoostMode(ApmCpuBoostMode_FastLoad);
 #endif
-    ProcessType type = STKProcess::getType();
+    ProcessType type = FLUXARA_DRIFTProcess::getType();
     main_loop->renderGUI(0);
     // Uncomment to debug audio leaks
     // sfx_manager->dump();
@@ -749,7 +749,7 @@ void RaceManager::startNextRace()
  */
 void RaceManager::next()
 {
-    if (STKProcess::getType() == PT_MAIN)
+    if (FLUXARA_DRIFTProcess::getType() == PT_MAIN)
         PropertyAnimator::get()->clear();
     World::deleteWorld();
     m_num_finished_karts   = 0;
@@ -923,7 +923,7 @@ void RaceManager::exitRace(bool delete_world)
     // Only display the grand prix result screen if all tracks
     // were finished, and not when a race is aborted.
     MessageQueue::discardStatic();
-    ProcessType type = STKProcess::getType();
+    ProcessType type = FLUXARA_DRIFTProcess::getType();
 
     if ( m_major_mode==MAJOR_MODE_GRAND_PRIX &&
          m_track_number==(int)m_tracks.size()   )
@@ -1192,7 +1192,7 @@ void RaceManager::startWatchingReplay(const std::string &track_ident,
     setNumLaps(num_laps);
     setMajorMode(RaceManager::MAJOR_MODE_SINGLE);
     setCoinTarget(0);
-    m_num_karts = ReplayPlay::get()->getNumGhostKart();
+    m_num_karts = ReplayPlay::get()->getNumGhofluxara_driftart();
     m_kart_status.clear();
 
     Log::verbose("RaceManager", "%u ghost kart(s) for watching replay only\n",
@@ -1202,7 +1202,7 @@ void RaceManager::startWatchingReplay(const std::string &track_ident,
 
     for(int i = 0; i < m_num_karts; i++)
     {
-        m_kart_status.push_back(KartStatus(ReplayPlay::get()->getGhostKartName(i),
+        m_kart_status.push_back(KartStatus(ReplayPlay::get()->getGhofluxara_driftartName(i),
             i, -1, -1, init_gp_rank, KT_GHOST, HANDICAP_NONE));
         init_gp_rank ++;
     }
@@ -1319,7 +1319,7 @@ core::stringw RaceManager::getDifficultyName(Difficulty diff) const
         case RaceManager::DIFFICULTY_EASY:   return _("Novice");   break;
         case RaceManager::DIFFICULTY_MEDIUM: return _("Intermediate"); break;
         case RaceManager::DIFFICULTY_HARD:   return _("Expert");   break;
-        case RaceManager::DIFFICULTY_BEST:   return _("SuperTux");   break;
+        case RaceManager::DIFFICULTY_BEST:   return _("FluxaraDrift");   break;
         default:    Log::error("RaceManager", "Difficulty level '%u' is unknown.", diff);
                     // Uncomment to generate a crash and backtrace, if the cause of the
                     // incorrect difficulty level is unknown (i.e. not online servers' settings)

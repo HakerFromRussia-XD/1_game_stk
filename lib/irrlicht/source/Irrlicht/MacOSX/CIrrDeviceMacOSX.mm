@@ -501,7 +501,7 @@ CIrrDeviceMacOSX::CIrrDeviceMacOSX(const SIrrlichtCreationParameters& param)
 			[NSApp setMainMenu:mainMenu];
 			NSMenuItem* menuItem = [mainMenu addItemWithTitle:@"" action:nil keyEquivalent:@""];
 			NSMenu* menu = [[NSMenu alloc] initWithTitle:@""];
-			[menu addItemWithTitle:@"Quit SuperTuxKart" action:@selector(terminate:) keyEquivalent:@"q"];
+			[menu addItemWithTitle:@"Quit FluxaraDrift" action:@selector(terminate:) keyEquivalent:@"q"];
 			[menuItem setSubmenu:[menu autorelease]];
 			[NSApp finishLaunching];
 		}
@@ -1012,11 +1012,11 @@ bool CIrrDeviceMacOSX::run()
 		switch([(NSEvent *)event type])
 		{
 			case NSKeyDown:
-				postKeyEvent(event,ievent,true);
+				pofluxara_drifteyEvent(event,ievent,true);
 				break;
 
 			case NSKeyUp:
-				postKeyEvent(event,ievent,false);
+				pofluxara_drifteyEvent(event,ievent,false);
 				break;
 
 			case NSFlagsChanged:
@@ -1261,7 +1261,7 @@ void CIrrDeviceMacOSX::charToKeys(void* str, irr::u32& character, irr::u32& key_
 }
 
 
-void CIrrDeviceMacOSX::postKeyEvent(void *event,irr::SEvent &ievent,bool pressed)
+void CIrrDeviceMacOSX::pofluxara_drifteyEvent(void *event,irr::SEvent &ievent,bool pressed)
 {
 	NSString* str;
 	NSString* str_im;

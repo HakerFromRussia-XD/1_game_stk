@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2016 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2016 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -108,7 +108,7 @@ void ArenaAI::update(int ticks)
     }
 
     // If the kart needs to be rescued, do it now (and nothing else)
-    if (m_ticks_since_off_road > stk_config->time2Ticks(5.0f) &&
+    if (m_ticks_since_off_road > fluxara_drift_config->time2Ticks(5.0f) &&
         m_kart->isOnGround()                                     )
     {
         m_ticks_since_off_road = 0;
@@ -122,7 +122,7 @@ void ArenaAI::update(int ticks)
         AIBaseController::update(ticks);
         return;
     }
-    float dt = stk_config->ticks2Time(ticks);
+    float dt = fluxara_drift_config->ticks2Time(ticks);
     checkIfStuck(dt);
     if (gettingUnstuck(ticks))
         return;
@@ -357,7 +357,7 @@ void ArenaAI::configSpeed()
     else
     {
         // Otherwise accelerate
-        m_controls->setAccel(stk_config->m_ai_acceleration * handicap);
+        m_controls->setAccel(fluxara_drift_config->m_ai_acceleration * handicap);
     }
 }   // configSpeed
 
@@ -395,13 +395,13 @@ bool ArenaAI::gettingUnstuck(int ticks)
     if (!m_is_stuck || m_is_uturn) return false;
 
     resetAfterStop();
-    float dt = stk_config->ticks2Time(ticks);
+    float dt = fluxara_drift_config->ticks2Time(ticks);
     setSteering(0.0f, dt);
     m_controls->setBrake(true);
 
     m_ticks_since_reversing += ticks;
 
-    if (m_ticks_since_reversing >= stk_config->time2Ticks(1.0f))
+    if (m_ticks_since_reversing >= fluxara_drift_config->time2Ticks(1.0f))
     {
         m_is_stuck = false;
         m_ticks_since_reversing = 0;
@@ -424,7 +424,7 @@ void ArenaAI::useItems(const float dt)
         return;
 
     // Find a closest kart again, this time we ignore difficulty
-    findClosestKart(false/*consider_difficulty*/, false/*find_sta*/);
+    findClosefluxara_driftart(false/*consider_difficulty*/, false/*find_sta*/);
     if (!m_closest_kart) return;
 
     Vec3 closest_kart_point_lc =
@@ -630,7 +630,7 @@ void ArenaAI::tryCollectItem(Vec3* aim_point, int* target_node) const
 //-----------------------------------------------------------------------------
 /** Determine if AI should skid: When it's close to target, but not straight
  *  ahead, in front of it, same steering side and with suitable difficulties
- *  which are in expert and supertux only.
+ *  which are in expert and fluxara_drift only.
  */
 void ArenaAI::doSkiddingTest()
 {

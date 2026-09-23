@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015 Marc Coll
 //
 //  This program is free software; you can redistribute it and/or
@@ -18,7 +18,7 @@
 #include "states_screens/edit_track_screen.hpp"
 
 #include "config/player_manager.hpp"
-#include "graphics/stk_tex_manager.hpp"
+#include "graphics/fluxara_drift_tex_manager.hpp"
 #include "guiengine/widgets/button_widget.hpp"
 #include "guiengine/widgets/check_box_widget.hpp"
 #include "guiengine/widgets/dynamic_ribbon_widget.hpp"
@@ -39,7 +39,7 @@ const char* EditTrackScreen::ALL_TRACKS_GROUP_ID = "all";
 
 // -----------------------------------------------------------------------------
 EditTrackScreen::EditTrackScreen()
-    : Screen("edit_track.stkgui"), m_track_group("standard"),
+    : Screen("edit_track.fluxara_driftgui"), m_track_group("standard"),
     m_track(NULL), m_laps(0), m_reverse(false), m_result(false)
 {
 
@@ -300,12 +300,12 @@ void EditTrackScreen::selectTrack(const std::string& id)
         // Display the track's preview picture in a box,
         // so that the current selection remains obvious even
         // if the player doesn't notice the track name in title
-        irr::video::ITexture* image = STKTexManager::getInstance()
+        irr::video::ITexture* image = FLUXARA_DRIFTTexManager::getInstance()
             ->getTexture(m_track->getScreenshotFile(),
             "While loading screenshot for track '%s':", m_track->getFilename());
         if(!image)
         {
-            image = STKTexManager::getInstance()->getTexture(GUIEngine::getSkin()->getThemedIcon("gui/icons/track_unknown.png"),
+            image = FLUXARA_DRIFTTexManager::getInstance()->getTexture(GUIEngine::getSkin()->getThemedIcon("gui/icons/track_unknown.png"),
                 "While loading screenshot for track '%s':", m_track->getFilename());
         }
         if (image != NULL)

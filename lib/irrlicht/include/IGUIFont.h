@@ -127,7 +127,7 @@ public:
 	virtual f32 getInverseShaping() const = 0;
 	virtual f32 getScale() const = 0;
 	virtual void setScale(f32 scale) = 0;
-	//! Return FontWithFace properties from stk-code, override later in scalable font. */
+	//! Return FontWithFace properties from fluxara_drift-code, override later in scalable font. */
 	virtual s32 getFaceFontMaxHeight() const { return getDimension(L"X").Height; }
 	virtual s32 getFaceGlyphMaxHeight() const { return getDimension(L"X").Height; }
 };

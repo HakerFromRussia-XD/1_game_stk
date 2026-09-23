@@ -15,7 +15,7 @@
 #include "states_screens/state_manager.hpp"
 #include "utils/string_utils.hpp"
 #include "utils/translation.hpp"
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 #include "input/motorica_game_control_ios.hpp"
 #include "input/motorica_standalone_training.hpp"
 #endif
@@ -48,7 +48,7 @@ void setText(Screen* screen, const char* id,
     screen->getWidget(id)->setText(text(russian, english));
 }
 
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
 const char* challengeForExercise(StandaloneExerciseID exercise)
 {
     switch (exercise)
@@ -113,7 +113,7 @@ StandaloneExerciseID exerciseFromHistoryId(const std::string& id)
 }
 
 MotoricaHubScreen::MotoricaHubScreen()
-    : Screen("motorica_hub.stkgui")
+    : Screen("motorica_hub.fluxara_driftgui")
 {
 }
 
@@ -155,7 +155,7 @@ void MotoricaHubScreen::init()
 void MotoricaHubScreen::eventCallback(Widget*, const std::string& name,
                                       const int)
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     if (name == "precision" || name == "reaction" || name == "signal_hold")
     {
         StandaloneExerciseID exercise = StandaloneExerciseID::Precision;
@@ -202,7 +202,7 @@ bool MotoricaHubScreen::onEscapePressed()
 }
 
 MotoricaExerciseScreen::MotoricaExerciseScreen()
-    : Screen("motorica_exercise.stkgui")
+    : Screen("motorica_exercise.fluxara_driftgui")
 {
 }
 
@@ -213,7 +213,7 @@ void MotoricaExerciseScreen::loadedFromFile()
 void MotoricaExerciseScreen::init()
 {
     Screen::init();
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     MotoricaStandaloneTraining* training = MotoricaStandaloneTraining::get();
     getWidget("exercise_title")->setText(exerciseName(training->getExercise()));
     getWidget("exercise_description")->setText(
@@ -250,7 +250,7 @@ void MotoricaExerciseScreen::init()
 
 void MotoricaExerciseScreen::updateVisibleControls()
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     const bool simulated = getWidget<SpinnerWidget>("input_source")->getValue() == 1;
     const bool manual = getWidget<SpinnerWidget>("demo_mode")->getValue() == 0;
     getWidget("demo_label")->setVisible(simulated);
@@ -267,7 +267,7 @@ void MotoricaExerciseScreen::updateVisibleControls()
 void MotoricaExerciseScreen::eventCallback(Widget*, const std::string& name,
                                            const int)
 {
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     MotoricaStandaloneTraining* training = MotoricaStandaloneTraining::get();
     if (name == "back")
     {
@@ -315,7 +315,7 @@ void MotoricaExerciseScreen::eventCallback(Widget*, const std::string& name,
 }
 
 MotoricaHistoryScreen::MotoricaHistoryScreen()
-    : Screen("motorica_history.stkgui")
+    : Screen("motorica_history.fluxara_driftgui")
 {
 }
 
@@ -329,7 +329,7 @@ void MotoricaHistoryScreen::init()
     setText(this, "history_title", "История тренировок", "Training History");
     ListWidget* list = getWidget<ListWidget>("history_list");
     list->clear();
-#ifdef IOS_STK
+#ifdef IOS_FLUXARA_DRIFT
     std::vector<StandaloneTrainingResult> history =
         MotoricaStandaloneTraining::get()->loadHistory();
     std::reverse(history.begin(), history.end());

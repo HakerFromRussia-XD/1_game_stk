@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
@@ -502,7 +502,7 @@ namespace GUIEngine
 
         /**
           * Sets the text of a widget from a wchar_t.
-          * Handy for many constant strings used in stk.
+          * Handy for many constant strings used in fluxara_drift.
           *
           * \note Not all widgets use strings, so some widgets may ignore this text property
           * \note Changing the text property will only take effect the next time this widget
@@ -678,7 +678,7 @@ namespace GUIEngine
 
         /**
          * \brief adds a particular badge to this widget.
-         * The STK widget toolkit has support for "badges". Badges are icon overlays displayed
+         * The FLUXARA_DRIFT widget toolkit has support for "badges". Badges are icon overlays displayed
          * on the corner of a widget; they are useful to convey information visually.
          */
         void setBadge(BadgeType badge_bit)

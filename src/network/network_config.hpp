@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -23,7 +23,7 @@
 #define HEADER_NETWORK_CONFIG
 
 #include "race/race_manager.hpp"
-#include "utils/stk_process.hpp"
+#include "utils/fluxara_drift_process.hpp"
 #include "utils/no_copy.hpp"
 
 #include "irrString.h"
@@ -75,7 +75,7 @@ private:
     std::atomic<NetworkType> m_network_type;
 
     /** If set it allows clients to connect directly to this server without
-     *  using the stk server in between. It requires obviously that this
+     *  using the fluxara_drift server in between. It requires obviously that this
      *  server is accessible (through the firewall) from the outside. */
     bool m_is_public_server;
 
@@ -88,7 +88,7 @@ private:
 
     bool m_done_adding_network_players;
 
-    /** True if this STK instance is an AI instance which is used for server
+    /** True if this FLUXARA_DRIFT instance is an AI instance which is used for server
      *  AI. (usually used together with ai-handling in server config) */
     bool m_network_ai_instance;
 
@@ -124,7 +124,7 @@ private:
     std::set<std::string> m_server_capabilities;
 
     /** For IPv6 only network we try to detect the NAT64 prefix so we can
-     *  use it to connect to ipv4 only servers. STK assumes that for all ipv4
+     *  use it to connect to ipv4 only servers. FLUXARA_DRIFT assumes that for all ipv4
      *  addresses they use the same prefix for each initIPTest. */
     std::string m_nat64_prefix;
     std::array<uint32_t, 8> m_nat64_prefix_data;
@@ -138,7 +138,7 @@ public:
     /** Singleton get, which creates this object if necessary. */
     static NetworkConfig *get()
     {
-        ProcessType type = STKProcess::getType();
+        ProcessType type = FLUXARA_DRIFTProcess::getType();
         if (!m_network_config[type])
             m_network_config[type] = new NetworkConfig();
         return m_network_config[type];
@@ -149,17 +149,17 @@ public:
         return m_network_config[type];
     }   // get
     // ------------------------------------------------------------------------
-    static void clearDetectIPThread(bool quit_stk);
+    static void clearDetectIPThread(bool quit_fluxara_drift);
     // ------------------------------------------------------------------------
     static void queueIPDetection();
     // ------------------------------------------------------------------------
     static void destroy()
     {
-        ProcessType type = STKProcess::getType();
+        ProcessType type = FLUXARA_DRIFTProcess::getType();
         delete m_network_config[type];   // It's ok to delete NULL
         m_network_config[type] = NULL;
         if (type == PT_MAIN)
-            clearDetectIPThread(true/*quit_stk*/);
+            clearDetectIPThread(true/*quit_fluxara_drift*/);
     }   // destroy
     // ------------------------------------------------------------------------
     static void clear()

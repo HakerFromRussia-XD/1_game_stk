@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo "Searching for unused stkgui files"
+echo "Searching for unused fluxara_driftgui files"
 echo "---------------------------------"
 cd data/gui
 l=""
-for i in $(find . -iname "*.stkgui"); do 
+for i in $(find . -iname "*.fluxara_driftgui"); do
     s=$(basename $i)
     x=$(find ../../src/states_screens -type f -exec grep -H $s \{} \; | wc -l)
     echo -n "."

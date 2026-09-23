@@ -15,8 +15,8 @@
     <sfx filename="sand.ogg" min_speed="1.00" max_speed="25.00" min_pitch="0.1" max_pitch="0.6" positional="true" rolloff="0.10"/>
     <particles base="smoke_brown.xml" condition="skid drive"/>
  </material>
- <material name="stklib_fitchBarrel_ao_a.png" gloss-map="gloss.png"/>
- <material name="stk_generic_bordePinkA.png">
+ <material name="fluxara_driftlib_fitchBarrel_ao_a.png" gloss-map="gloss.png"/>
+ <material name="fluxara_drift_generic_bordePinkA.png">
     <sfx filename="kerb.ogg" min_speed="1.00" max_speed="25.00" min_pitch="0.80" max_pitch="0.85" positional="true" rolloff="0.10"/>
     <particles base="smoke_brown.xml" condition="skid drive"/>
  </material>

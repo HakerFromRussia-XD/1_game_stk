@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006-2015 Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -17,7 +17,7 @@
 //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include "items/powerup_manager.hpp"
-#include "config/stk_config.hpp"
+#include "config/fluxara_drift_config.hpp"
 #include "graphics/irr_driver.hpp"
 #include "graphics/sp/sp_base.hpp"
 #include "graphics/material.hpp"
@@ -617,8 +617,8 @@ PowerupManager::PowerupType PowerupManager::getRandomPowerup(unsigned int pos,
 
     // Prevents early explosive items
     if (World::getWorld() &&
-        stk_config->ticks2Time(World::getWorld()->getTicksSinceStart()) <
-                                      stk_config->m_no_explosive_items_timeout)
+        fluxara_drift_config->ticks2Time(World::getWorld()->getTicksSinceStart()) <
+                                      fluxara_drift_config->m_no_explosive_items_timeout)
     {
         if (powerup == POWERUP_CAKE || powerup == POWERUP_RUBBERBALL)
             powerup = POWERUP_BOWLING;

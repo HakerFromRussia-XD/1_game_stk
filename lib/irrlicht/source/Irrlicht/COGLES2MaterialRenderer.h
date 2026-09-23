@@ -14,7 +14,7 @@
 
 #if defined(_IRR_COMPILE_WITH_SDL_DEVICE_)
 #include "glad/gl.h"
-#elif defined (IOS_STK)
+#elif defined (IOS_FLUXARA_DRIFT)
 #include <OpenGLES/ES2/gl.h>
 #include <OpenGLES/ES2/glext.h>
 #else

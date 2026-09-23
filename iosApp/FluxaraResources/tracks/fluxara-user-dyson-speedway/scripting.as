@@ -1,4 +1,4 @@
-/* 
+/*
 * Author: RX1
 * Version: 1.000
 * License: CC-BY-SA 4.0 (see ./License.txt)
@@ -74,12 +74,12 @@ Vec3 positionToTeleportBotBackTo;
 
 // ------------------------------ Version related -----------------------------
 bool isOlderV1_3(Track::TrackObject@ obj) {
-	int version = Utils::versionToInt(Utils::getSTKVersion());
+	int version = Utils::versionToInt(Utils::getFLUXARA_DRIFTVersion());
 	return version < 10300000;
 }
 
 bool isV1_3OrNewer(Track::TrackObject@ obj) {
-	int version = Utils::versionToInt(Utils::getSTKVersion());
+	int version = Utils::versionToInt(Utils::getFLUXARA_DRIFTVersion());
 	return version >= 10300000;
 }
 // ----------------------------------------------------------------------------
@@ -259,7 +259,7 @@ void onStart() {
 		Track::getTrackObject("", "EEMedFinalBox").setEnabled(true);
 		Track::getTrackObject("", "EEHardFinalBox").setEnabled(true);
 		Track::getTrackObject("", "EESpecialCylinderDoor").setEnabled(true);
-		
+
 		// activates other lock objects
 		Track::getTrackObject("", "CannonEETopLockInvis").setEnabled(true);
 		Track::getTrackObject("", "CannonEETopLockInvis.001").setEnabled(true);
@@ -318,7 +318,7 @@ void onStart() {
 
 
 // --------------------- section 2 sphere collisions --------------------------
-/* requires an objects on colission function call - 
+/* requires an objects on colission function call -
 so it can't be used in combination with texture based effects, which work with "object" type none only
 void onBlueSphereKartCollision(int idKart, const string library_instance_id, const string obj_id) {
 	Track::getTrackObject("", "blue_sphere_shock_emitter").getSoundEmitter().playOnce();
@@ -414,7 +414,7 @@ void displayEEStartMessage() {
 	}
 	isWaitingForDisplayEEStartMessage = false;
 
-	// STK v.1.2: Not working; specify trigger in Blender instead (Type: action trigger - SuperTuxKart Object Properties)
+	// FLUXARA_DRIFT v.1.2: Not working; specify trigger in Blender instead (Type: action trigger - FluxaraDrift Object Properties)
 	//Vec3 triggerLocation = Track::getTrackObject("", "CannonEETopLockInvis").getCenterPosition();
 	//Vec3 triggerLocation = Track::getTrackObject("", "CannonEETopLockInvis").getOrigin();
 	//float distance = 3.00f;
@@ -439,7 +439,7 @@ void eeFinalMedUnlockMsg(int idKart) {
 	string eggs = eggsOrEgg(numOfEggs);
 	if (numOfEggs > 0)
 		GUI::displayOverlayMessage("You need " + numOfEggs + " more medium " + eggs + "\nto unlock the final medium egg.");
-	else 
+	else
 		GUI::displayOverlayMessage("To unlock the final medium egg\nyou first have to get the final easy egg.");
 }
 
@@ -448,7 +448,7 @@ void eeFinalHardUnlockMsg(int idKart) {
 	string eggs = eggsOrEgg(numOfEggs);
 	if (numOfEggs > 0)
 		GUI::displayOverlayMessage("You need " + numOfEggs + " more hard " + eggs + "\nto unlock the final hard egg.");
-	else 
+	else
 		GUI::displayOverlayMessage("To unlock the final hard egg\nyou first have to get the final easy and medium eggs.");
 }
 
@@ -464,7 +464,7 @@ void eeFinalHardSpaceUnlockMsg(int idKart) {
 string eggsOrEgg(int eggsLeft) {
 	if (eggsLeft > 1)
 		return "eggs";
-	else 
+	else
 		return "egg";
 }
 
@@ -472,11 +472,11 @@ void updateEEScore() {
 	string customEECount = "Easy: " + eeCountEasy + "/" + eeNumberOfEasy + "     ";
 	if (Track::getDifficulty() > 0)
 		customEECount = customEECount + "Med.: " + eeCountMed + "/" + eeNumberOfMed + "     ";
-	else 
+	else
 		customEECount = customEECount + "Med.: -/-     ";
 	if (Track::getDifficulty() > 1)
 		customEECount = customEECount + "Hard: " + eeCountHard + "/" + eeNumberOfHard;
-	else 
+	else
 		customEECount = customEECount + "Hard: -/-";
 
 	GUI::discardStaticMessage();
@@ -493,19 +493,19 @@ void EETriggerEasyDefault() {
 	score += eeScoreEasy;
     Audio::playSound("grab_collectable");
 
-	if (eeCountEasy % 6 == 0) 
+	if (eeCountEasy % 6 == 0)
 		GUI::displayOverlayMessage("Easy egg collected.");
-	else if (eeCountEasy % 6 == 1) 
+	else if (eeCountEasy % 6 == 1)
 		GUI::displayOverlayMessage("Easy egg collected. Got it!");
-	else if (eeCountEasy % 6 == 2) 
+	else if (eeCountEasy % 6 == 2)
 		GUI::displayOverlayMessage("Easy egg collected.");
-	else if (eeCountEasy % 6 == 3) 
+	else if (eeCountEasy % 6 == 3)
 		GUI::displayOverlayMessage("Easy egg collected. Next!");
-	else if (eeCountEasy % 6 == 4) 
+	else if (eeCountEasy % 6 == 4)
 		GUI::displayOverlayMessage("Easy egg collected. Keep going!");
-	else 
+	else
 		GUI::displayOverlayMessage("Easy egg collected.");
-	
+
 	eeCountEasy++;
 	updateEEScore();
 
@@ -528,17 +528,17 @@ void EETriggerMedDefault() {
 	score += eeScoreMed;
     Audio::playSound("grab_collectable");
 
-	if (eeCountMed % 6 == 0) 
+	if (eeCountMed % 6 == 0)
 		GUI::displayOverlayMessage("Medium egg collected. Well done!");
-	else if (eeCountMed % 6 == 1) 
+	else if (eeCountMed % 6 == 1)
 		GUI::displayOverlayMessage("Medium egg collected. Nice!");
-	else if (eeCountMed % 6 == 2) 
+	else if (eeCountMed % 6 == 2)
 		GUI::displayOverlayMessage("Medium egg collected. Thumbs up!");
-	else if (eeCountMed % 6 == 3) 
+	else if (eeCountMed % 6 == 3)
 		GUI::displayOverlayMessage("Medium egg collected. Sweet!");
-	else if (eeCountMed % 6 == 4) 
+	else if (eeCountMed % 6 == 4)
 		GUI::displayOverlayMessage("Medium egg collected. YES!");
-	else 
+	else
 		GUI::displayOverlayMessage("Medium egg collected. Good job!");
 
 	eeCountMed++;
@@ -550,7 +550,7 @@ void EETriggerMedDefault() {
 		if (isFinalEasyUnlocked) {
 			Utils::setTimeout("eeFinalMedUnlock", 5.05);
 
-			if (!isFinalHardUnlocked && eeCountHard >= eeNumberOfHard) 
+			if (!isFinalHardUnlocked && eeCountHard >= eeNumberOfHard)
 				Utils::setTimeout("eeFinalHardUnlock", 10.0);
 		}
 	}
@@ -562,17 +562,17 @@ void EETriggerHardDefault() {
 
 	if (eeCountHard % 7 == 0)
 		GUI::displayOverlayMessage("Hard egg collected! AWESOME!!!");
-	else if (eeCountHard % 7 == 1) 
+	else if (eeCountHard % 7 == 1)
 		GUI::displayOverlayMessage("Hard egg collected! FANTASTIC!");
-	else if (eeCountHard % 7 == 2) 
+	else if (eeCountHard % 7 == 2)
 		GUI::displayOverlayMessage("Hard egg collected! SUPERB!!");
-	else if (eeCountHard % 7 == 3) 
+	else if (eeCountHard % 7 == 3)
 		GUI::displayOverlayMessage("Hard egg collected! SPLENDID!!!");
-	else if (eeCountHard % 7 == 4) 
+	else if (eeCountHard % 7 == 4)
 		GUI::displayOverlayMessage("Hard egg collected! MAGNIFICANT!");
-	else if (eeCountHard % 7 == 5) 
+	else if (eeCountHard % 7 == 5)
 		GUI::displayOverlayMessage("Hard egg collected! HOLY ****!");
-	else 
+	else
 		GUI::displayOverlayMessage("Hard egg collected! TERRIFIC!!");
 
 	eeCountHard++;
@@ -693,7 +693,7 @@ void vortexJumpCountTrigger(int idKart) {
 			Track::setTriggerReenableTimeout("VortexJumpCountTrigger", "", 1000000);
 			GUI::displayMessage(vortexLaunchText);
 			GUI::displayOverlayMessage("Vortex Ramps activated");
-		} 
+		}
 		else if (vortexJumpCount < maxVortexJumps)
 			GUI::displayMessage(vortexLaunchText);
 	}
@@ -701,8 +701,8 @@ void vortexJumpCountTrigger(int idKart) {
 
 // enables / disables easter egg hunt triggers
 /*
-* STK v1.2: Because Track::enableTrigger(triggerId) Track::disableTrigger(triggerId) doesn't work, 
-* triggers can ONLY be DISABLED explictly by setTriggerReenableTimeout. 
+* FLUXARA_DRIFT v1.2: Because Track::enableTrigger(triggerId) Track::disableTrigger(triggerId) doesn't work,
+* triggers can ONLY be DISABLED explictly by setTriggerReenableTimeout.
 * All triggers are enabled by default and those not needed must be explicitly disabled.
 */
 void eeSetAllTriggers(bool enabled) {
@@ -754,17 +754,17 @@ void eeSetAllXTriggers(bool enabled, string triggerIdPrefix, int numberOfEEs) {
 	for (int i = 1; i <= numberOfEEs; i++) {
 		if (i < 10)
 			triggerId = triggerIdPrefix + "0" + i;
-		else 
+		else
 			triggerId = triggerIdPrefix + i;
 
-		/* STK v1.2: doesn't work:
+		/* FLUXARA_DRIFT v1.2: doesn't work:
 		if (enabled)
-			Track::enableTrigger(triggerId);		
-		else 
+			Track::enableTrigger(triggerId);
+		else
 			Track::disableTrigger(triggerId);
 		*/
 
-		// workaround (STK v1.2):
+		// workaround (FLUXARA_DRIFT v1.2):
 		if (!enabled)
 			Track::setTriggerReenableTimeout(triggerId, "", 1000000);
 	}
@@ -874,9 +874,9 @@ void setTeleporters(bool enable) {
 	int numberOfTeleporters = 6;
 	int timeout = 3;
 
-	if (enable) 
+	if (enable)
 		timeout = 3;
-	else 
+	else
 		timeout = 1000000;
 
 	for (int i = 1; i <= numberOfTeleporters; i++) {
@@ -893,7 +893,7 @@ void setTeleporter(int teleporterNumber, int timeout, bool enable) {
 /* also triggers initial special long run teleporter activation */
 void specialTele1() {
 	// already activated
-	if (specialTeleAct) 
+	if (specialTeleAct)
 		return;
 
 	// initial special tele activation
@@ -978,7 +978,7 @@ void eeTriggerEasy01(int idKart) {
 	Track::getTrackObject("", "EEEasyNew01").setEnabled(false);
 	if (instantEggBonus <= 0) {
 		EETriggerEasyDefault();
-	} 
+	}
 	else {
 		GUI::clearOverlayMessages();
 		EETriggerEasyDefault();
@@ -1131,7 +1131,7 @@ void refrigerationBonus() {
 	if (!doubleRefrigeration) {
 		addEEBonus(eeBonusEasy, "Refrigeration Bonus");
 		doubleRefrigeration = true;
-	} 
+	}
 	else {
 		addEEBonus(eeBonusEasy * 2, "Double Refrigeration Bonus");
 	}
@@ -1141,7 +1141,7 @@ void forceFieldSliderBonus() {
 	if (!doubleForceFieldSlider) {
 		addEEBonus(eeBonusEasy, "Force Field Slider Bonus");
 		doubleForceFieldSlider = true;
-	} 
+	}
 	else {
 		addEEBonus(eeBonusEasy * 2, "Double Force Field Slider Bonus");
 	}
@@ -1257,7 +1257,7 @@ void darkSideBonus() {
 	if (!doubleDarkSide) {
 		addEEBonus(eeBonusMed * 2, "Dark Side Bonus");
 		doubleDarkSide = true;
-	} 
+	}
 	else {
 		addEEBonus(eeBonusMed * 4, "Double Dark Side Bonus");
 	}
@@ -1272,7 +1272,7 @@ void eeFriedBananaHelp(int idKart) {
 }
 
 void sendFriedBananaHelp() {
-	if (foundFriedEgg) 
+	if (foundFriedEgg)
 		return;
 
 	switch (Utils::randomInt(0, 2)) {
@@ -1396,7 +1396,7 @@ void eeTriggerHardSpace09(int idKart, const string library_instance_id, const st
 	if (!doubleStargazer) {
 		addEEBonus(eeBonusHard, "Stargazer Bonus");
 		doubleStargazer = true;
-	} 
+	}
 	else {
 		addEEBonus(eeBonusHard * 2, "Double Stargazer Bonus");
 	}
@@ -1520,7 +1520,7 @@ int determineTimeBonus(int bonusTimeLimit) {
 	int timeResult = bonusTimeLimit - timePassed;
 	if (timeResult > 0)
 		return eeTimeBonusPerSec * timeResult;
-	else 
+	else
 		return 0;
 }
 
@@ -1534,7 +1534,7 @@ void displayFinalScore(int completionBonus, int timeBonusLimit, string difficult
 	string extraMsg = "";
 	string bEqLSign = "<";
 	string final = "Final";
-	if (timeBonus <= 0) 
+	if (timeBonus <= 0)
 		bEqLSign = ">=";
 	if (difficulty == "Hard") {
 		extraMsg = "      >>>      Now get the final Space Egg to complete your run!";
@@ -1542,11 +1542,11 @@ void displayFinalScore(int completionBonus, int timeBonusLimit, string difficult
 	}
 
 	GUI::displayModalMessage(
-			"Dyson Speedway Egg Hunt  ( " + difficulty + " )  -  Results\n\n" + 
+			"Dyson Speedway Egg Hunt  ( " + difficulty + " )  -  Results\n\n" +
 			"Collection Score      " + oldScore + "\n" +
 			"Completion Bonus  ( " + difficulty + " )      " + completionBonus + "\n" +
 			"Time Bonus  (" + timePassed + " Sec " + bEqLSign + " " + min + " Min )      " + timeBonus + "\n\n" +
-			final + " score      " + score + 
+			final + " score      " + score +
 			extraMsg);
 }
 // ----------------------------------------------------------------------------

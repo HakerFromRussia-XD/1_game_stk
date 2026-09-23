@@ -1,6 +1,6 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //
-//  Copyright (C) 2012-2015 SuperTuxKart-Team
+//  Copyright (C) 2012-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -49,7 +49,7 @@
 #include "states_screens/main_menu_screen.hpp"
 #include "states_screens/online/networking_lobby.hpp"
 #include "states_screens/options/options_screen_device.hpp"
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
 #include "states_screens/race_gui_multitouch.hpp"
 #endif
 #include "states_screens/state_manager.hpp"
@@ -164,13 +164,13 @@ void InputManager::addJoystick()
 // -----------------------------------------------------------------------------
 #ifndef SERVER_ONLY
 // For CIrrDeviceSDL
-#if defined(ANDROID) || defined(IOS_STK)
+#if defined(ANDROID) || defined(IOS_FLUXARA_DRIFT)
 extern "C" bool handle_motorica_game_control_event(SDL_Event& event);
 #endif
 
 extern "C" void handle_joystick(SDL_Event& event)
 {
-#if defined(ANDROID) || defined(IOS_STK)
+#if defined(ANDROID) || defined(IOS_FLUXARA_DRIFT)
     if (handle_motorica_game_control_event(event))
         return;
 #endif
@@ -651,7 +651,7 @@ void InputManager::dispatchInput(Input::InputType type, int deviceID,
         {
              GamePadDevice *gPad = m_device_manager->getGamePadFromIrrID(deviceID);
              // This can happen in case of automatically ignored accelerator
-             // devices, which are not part of stk's gamepad mapping.
+             // devices, which are not part of fluxara_drift's gamepad mapping.
              if (!gPad) return;
              DeviceConfig *conf = gPad->getConfiguration();
              if (!conf->isEnabled())
@@ -861,7 +861,7 @@ void InputManager::dispatchInput(Input::InputType type, int deviceID,
 
             Controller* controller = pk->getController();
             if (controller != NULL) controller->action(action, abs(value));
-#ifdef MOBILE_STK
+#ifdef MOBILE_FLUXARA_DRIFT
             if (type == Input::IT_STICKBUTTON || type == Input::IT_STICKMOTION)
             {
                 if (UserConfigParams::m_multitouch_draw_gui &&
@@ -1409,7 +1409,7 @@ void InputManager::setMode(InputDriverMode new_mode)
                     m_sensed_input_high_kbd.clear();
 
                     // The order is deliberate just in case someone starts
-                    // to make STK multithreaded: m_sensed_input must not be
+                    // to make FLUXARA_DRIFT multithreaded: m_sensed_input must not be
                     // 0 when mode == INPUT_SENSE_PREFER_{AXIS,BUTTON}.
                     m_mode = MENU;
 

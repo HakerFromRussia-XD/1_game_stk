@@ -1,4 +1,4 @@
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
 //  This program is free software; you can redistribute it and/or
@@ -46,7 +46,7 @@
 #include "network/protocols/game_protocol.hpp"
 #include "network/protocols/client_lobby.hpp"
 #include "network/server.hpp"
-#include "network/stk_host.hpp"
+#include "network/fluxara_drift_host.hpp"
 #include "network/network_timer_synchronizer.hpp"
 #include "online/link_helper.hpp"
 #include "states_screens/dialogs/addons_pack.hpp"
@@ -67,7 +67,7 @@ using namespace GUIEngine;
 
 /** This is the lobby screen that is shown on all clients, but not on the
  *  server. It shows currently connected clients, and allows the 'master'
- *  client (i.e. the stk instance that created the server) to control the
+ *  client (i.e. the fluxara_drift instance that created the server) to control the
  *  server. This especially means that it can initialise the actual start
  *  of the racing.
  *  This class is responsible for creating the ActivePlayers data structure
@@ -77,7 +77,7 @@ using namespace GUIEngine;
  *  data structure in LobbyProtocol::loadWorld().
  */
 // ----------------------------------------------------------------------------
-NetworkingLobby::NetworkingLobby() : Screen("online/networking_lobby.stkgui")
+NetworkingLobby::NetworkingLobby() : Screen("online/networking_lobby.fluxara_driftgui")
 {
     m_server_info_height = 0;
     m_header_text_width = 0;
@@ -136,7 +136,7 @@ void NetworkingLobby::loadedFromFile()
     m_emoji_button = getWidget<ButtonWidget>("emoji");
     assert(m_emoji_button != NULL);
 
-    m_icon_bank = new irr::gui::STKModifiedSpriteBank(GUIEngine::getGUIEnv());
+    m_icon_bank = new irr::gui::FLUXARA_DRIFTModifiedSpriteBank(GUIEngine::getGUIEnv());
     video::ITexture* icon_1 = irr_driver->getTexture
         (file_manager->getAsset(FileManager::GUI_ICON, "crown.png"));
     video::ITexture* icon_2 = irr_driver->getTexture
@@ -698,7 +698,7 @@ void NetworkingLobby::filterGlyphLayoutsForScroll()
 void NetworkingLobby::onUpdate(float delta)
 {
     m_addon_install = NULL;
-    if (NetworkConfig::get()->isServer() || !STKHost::existHost())
+    if (NetworkConfig::get()->isServer() || !FLUXARA_DRIFTHost::existHost())
         return;
 
     if (m_header->getText() != m_header_text)
@@ -761,9 +761,9 @@ void NetworkingLobby::onUpdate(float delta)
     m_config_button->setImage(m_config_texture);
     m_client_live_joinable = false;
 
-    if (m_player_list && StkTime::getMonoTimeMs() > m_ping_update_timer)
+    if (m_player_list && FluxaraDriftTime::getMonoTimeMs() > m_ping_update_timer)
     {
-        m_ping_update_timer = StkTime::getMonoTimeMs() + 2000;
+        m_ping_update_timer = FluxaraDriftTime::getMonoTimeMs() + 2000;
         updatePlayerPings();
     }
 
@@ -857,7 +857,7 @@ void NetworkingLobby::onUpdate(float delta)
             RaceEventManager::get()->protocolStopped();
         bool no_gp = GameProtocol::emptyInstance();
         if (t &&
-            STKHost::get()->getNetworkTimerSynchronizer()->isSynchronised() &&
+            FLUXARA_DRIFTHost::get()->getNetworkTimerSynchronizer()->isSynchronised() &&
             cl->isServerLiveJoinable() && no_gep && no_gp)
         {
             m_client_live_joinable = true;
@@ -906,7 +906,7 @@ void NetworkingLobby::onUpdate(float delta)
         if (cur_player >= m_min_start_game_players &&
             m_cur_starting_timer == std::numeric_limits<int64_t>::max())
         {
-            m_cur_starting_timer = (int64_t)StkTime::getMonoTimeMs() +
+            m_cur_starting_timer = (int64_t)FluxaraDriftTime::getMonoTimeMs() +
                 (int64_t)(m_start_timeout * 1000.0);
         }
         else if (cur_player < m_min_start_game_players)
@@ -925,7 +925,7 @@ void NetworkingLobby::onUpdate(float delta)
         if (m_cur_starting_timer != std::numeric_limits<int64_t>::max())
         {
             int64_t remain = (m_cur_starting_timer -
-                (int64_t)StkTime::getMonoTimeMs()) / 1000;
+                (int64_t)FluxaraDriftTime::getMonoTimeMs()) / 1000;
             if (remain < 0)
                 remain = 0;
             //I18N: In the networking lobby, display the starting timeout
@@ -979,10 +979,10 @@ void NetworkingLobby::onUpdate(float delta)
         m_start_button->setVisible(false);
     }
 
-    m_config_button->setVisible(STKHost::get()->isAuthorisedToControl() &&
+    m_config_button->setVisible(FLUXARA_DRIFTHost::get()->isAuthorisedToControl() &&
         m_server_configurable);
 
-    if (STKHost::get()->isAuthorisedToControl() ||
+    if (FLUXARA_DRIFTHost::get()->isAuthorisedToControl() ||
         (m_has_auto_start_in_server &&
         m_cur_starting_timer != std::numeric_limits<int64_t>::max()))
     {
@@ -994,7 +994,7 @@ void NetworkingLobby::onUpdate(float delta)
 // ----------------------------------------------------------------------------
 void NetworkingLobby::updatePlayerPings()
 {
-    auto peer_pings = STKHost::get()->getPeerPings();
+    auto peer_pings = FLUXARA_DRIFTHost::get()->getPeerPings();
     for (auto& p : m_player_names)
     {
         core::stringw name_with_ping = p.second.m_user_name;
@@ -1074,7 +1074,7 @@ void NetworkingLobby::eventCallback(Widget* widget, const std::string& name,
             m_player_names.at(m_player_list->getSelectionInternalName());
         // For client server AI it doesn't make any sense to open the dialog
         // There is no way to kick or add handicap to them
-        if (STKHost::get()->isClientServer() > 0 && lp.isAI())
+        if (FLUXARA_DRIFTHost::get()->isClientServer() > 0 && lp.isAI())
             return;
         new NetworkPlayerDialog(host_online_local_ids[0],
             host_online_local_ids[1], host_online_local_ids[2],
@@ -1107,7 +1107,7 @@ void NetworkingLobby::eventCallback(Widget* widget, const std::string& name,
             // Send a message to the server to start
             NetworkString start(PROTOCOL_LOBBY_ROOM);
             start.addUInt8(LobbyProtocol::LE_REQUEST_BEGIN);
-            STKHost::get()->sendToServer(&start, true);
+            FLUXARA_DRIFTHost::get()->sendToServer(&start, true);
         }
     }
     else if (name == m_config_button->m_properties[PROP_ID])
@@ -1127,7 +1127,7 @@ void NetworkingLobby::eventCallback(Widget* widget, const std::string& name,
             start.addUInt8(LobbyProtocol::LE_LIVE_JOIN)
                 // is spectating
                 .addUInt8(1);
-            STKHost::get()->sendToServer(&start, true);
+            FLUXARA_DRIFTHost::get()->sendToServer(&start, true);
             return;
         }
         if (cl)
@@ -1205,7 +1205,7 @@ bool NetworkingLobby::onEscapePressed()
     
     input_manager->getDeviceManager()->mapFireToSelect(false);
     input_manager->getDeviceManager()->setAssignMode(NO_ASSIGN);
-    STKHost::get()->shutdown();
+    FLUXARA_DRIFTHost::get()->shutdown();
     return true; // close the screen
 }   // onEscapePressed
 
@@ -1229,7 +1229,7 @@ void NetworkingLobby::updatePlayers()
     if (players.empty())
         return;
 
-    irr::gui::STKModifiedSpriteBank* icon_bank = m_icon_bank;
+    irr::gui::FLUXARA_DRIFTModifiedSpriteBank* icon_bank = m_icon_bank;
     for (unsigned i = 0; i < players.size(); i++)
     {
         const LobbyPlayer& player = players[i];
@@ -1342,7 +1342,7 @@ void NetworkingLobby::initAutoStartTimer(bool grand_prix_started,
 void NetworkingLobby::setStartingTimerTo(float t)
 {
     m_cur_starting_timer =
-        (int64_t)StkTime::getMonoTimeMs() + (int64_t)(t * 1000.0f);
+        (int64_t)FluxaraDriftTime::getMonoTimeMs() + (int64_t)(t * 1000.0f);
 }   // setStartingTimerTo
 
 // ----------------------------------------------------------------------------

@@ -1,5 +1,5 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
+//  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015  Joerg Henrichs
 //
 //  This program is free software; you can redistribute it and/or
@@ -546,7 +546,7 @@ SP::SPMesh* SlipStream::createMeshSP(unsigned material_id, bool bonus_mesh)
     buffer->setIndices(indices);
     Material* material = material_manager->getMaterialSPM(
         g_slipstream_textures[material_id], "");
-    buffer->setSTKMaterial(material);
+    buffer->setFLUXARA_DRIFTMaterial(material);
     buffer->uploadGLMesh();
 
     spm = new SP::SPMesh();
@@ -858,7 +858,7 @@ void SlipStream::update(int ticks)
 
     // Low level AIs and ghost karts should not do any slipstreaming.
     if (m_kart->getController()->disableSlipstreamBonus()
-        || m_kart->isGhostKart())
+        || m_kart->isGhofluxara_driftart())
     {
         hideAllNodes();
         return;
@@ -871,7 +871,7 @@ void SlipStream::update(int ticks)
         updateQuad();
     }
 
-    float dt = stk_config->ticks2Time(ticks);
+    float dt = fluxara_drift_config->ticks2Time(ticks);
 #ifndef SERVER_ONLY
     if (!GUIEngine::isNoGraphics())
     {
@@ -934,7 +934,7 @@ void SlipStream::update(int ticks)
         // rescued or exploding, a ghost kart or an eliminated kart
         if(m_target_kart==m_kart               ||
             m_target_kart->getKartAnimation()  ||
-            m_target_kart->isGhostKart()       ||
+            m_target_kart->isGhofluxara_driftart()       ||
             m_target_kart->isEliminated()        )
         {
             if (m_previous_target_id >= 0 && (int) i==m_previous_target_id)
@@ -1065,7 +1065,7 @@ void SlipStream::update(int ticks)
 
         m_slipstream_time = 0.0f;
         m_bonus_active = true;
-        m_speed_increase_duration = stk_config->time2Ticks(m_bonus_time);
+        m_speed_increase_duration = fluxara_drift_config->time2Ticks(m_bonus_time);
         m_speed_increase_ticks = World::getWorld()->getTicksSinceStart();
     }
 
@@ -1140,7 +1140,7 @@ void SlipStream::updateSpeedIncrease()
         const KartProperties* kp = m_kart->getKartProperties();
         float speed_increase = kp->getSlipstreamMaxSpeedIncrease();
         float add_power = kp->getSlipstreamAddPower();
-        int fade_out = stk_config->time2Ticks(kp->getSlipstreamFadeOutTime());
+        int fade_out = fluxara_drift_config->time2Ticks(kp->getSlipstreamFadeOutTime());
         m_kart->instantSpeedIncrease(
             MaxSpeed::MS_INCREASE_SLIPSTREAM, speed_increase,
             speed_increase, add_power, m_speed_increase_duration, fade_out);

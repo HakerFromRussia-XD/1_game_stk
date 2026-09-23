@@ -1,6 +1,6 @@
 //
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2010-2015 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2010-2015 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -115,7 +115,7 @@ public:
     int getNumCompletedChallenges  () const { return (m_easy_challenges + m_medium_challenges +
                                                       m_hard_challenges + m_best_challenges); }
     // ----------------------------------------------------------------------------------------
-    /** Returns the number of challenges with the superTux time beaten in a lower difficulty. */
+    /** Returns the number of challenges with the fluxaraDrift time beaten in a lower difficulty. */
     int getNumReqMetInLowerDiff  () const;
     // ----------------------------------------------------------------------------------------
     /** Returns the number of points accumulated. */

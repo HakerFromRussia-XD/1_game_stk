@@ -77,6 +77,8 @@ protected:
             return VK_FORMAT_R8G8B8A8_SRGB;
         else if (format == VK_FORMAT_ASTC_4x4_UNORM_BLOCK)
             return VK_FORMAT_ASTC_4x4_SRGB_BLOCK;
+        else if (format == VK_FORMAT_ASTC_6x6_UNORM_BLOCK)
+            return VK_FORMAT_ASTC_6x6_SRGB_BLOCK;
         else if (format == VK_FORMAT_BC7_UNORM_BLOCK)
             return VK_FORMAT_BC7_SRGB_BLOCK;
         else if (format == VK_FORMAT_BC3_UNORM_BLOCK)

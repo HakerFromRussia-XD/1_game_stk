@@ -65,7 +65,7 @@ namespace irr
 		Does not need X11 or other graphical subsystems.
 		May support hw-acceleration via OpenGL-ES */
 		EIDT_ANDROID,
-		//! A device for STK server only compilation
+		//! A device for FLUXARA_DRIFT server only compilation
 		EIDT_SERVER,
 	};
 

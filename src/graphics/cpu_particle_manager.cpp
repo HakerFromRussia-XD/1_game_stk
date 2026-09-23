@@ -1,5 +1,5 @@
-//  SuperTuxKart - a fun racing game with go-kart
-//  Copyright (C) 2017 SuperTuxKart-Team
+//  FluxaraDrift - a fun racing game with go-kart
+//  Copyright (C) 2017 FluxaraDrift-Team
 //
 //  This program is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU General Public License
@@ -17,7 +17,7 @@
 
 
 #include "graphics/cpu_particle_manager.hpp"
-#include "graphics/stk_particle.hpp"
+#include "graphics/fluxara_drift_particle.hpp"
 #include "graphics/irr_driver.hpp"
 #include "graphics/material.hpp"
 #include "graphics/material_manager.hpp"
@@ -69,7 +69,7 @@ public:
 };   // AlphaTestParticleRenderer
 
 // ============================================================================
-void CPUParticleManager::addParticleNode(STKParticle* node)
+void CPUParticleManager::addParticleNode(FLUXARA_DRIFTParticle* node)
 {
     if (node->getMaterialCount() != 1)
     {
@@ -186,7 +186,7 @@ CPUParticleManager::GLParticle::GLParticle(bool flips)
     glVertexAttribPointer(3, 2, GL_FLOAT, GL_FALSE, 16, (void*)8);
     if (flips)
     {
-        glBindBuffer(GL_ARRAY_BUFFER, STKParticle::getFlipsBuffer());
+        glBindBuffer(GL_ARRAY_BUFFER, FLUXARA_DRIFTParticle::getFlipsBuffer());
         glEnableVertexAttribArray(6);
         glVertexAttribPointer(6, 1, GL_FLOAT, GL_FALSE, 4, 0);
         glVertexAttribDivisor(6, 1);
@@ -259,7 +259,7 @@ void CPUParticleManager::generateAll()
         }
         if (isFlipsMaterial(p.first))
         {
-            STKParticle::updateFlips(unsigned
+            FLUXARA_DRIFTParticle::updateFlips(unsigned
                 (m_particles_queue.at(p.first).size() *
                 m_particles_queue.at(p.first)[0]->getMaxCount()));
         }

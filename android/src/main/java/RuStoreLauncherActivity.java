@@ -1,4 +1,4 @@
-package com.motorica.games.stk;
+package com.motorica.games.fluxara_drift;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -18,7 +18,7 @@ public class RuStoreLauncherActivity extends Activity
             PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
             PackageManager.DONT_KILL_APP);
 
-        startActivity(new Intent(this, SuperTuxKartActivity.class));
+        startActivity(new Intent(this, FluxaraDriftActivity.class));
         finish();
     }
 }

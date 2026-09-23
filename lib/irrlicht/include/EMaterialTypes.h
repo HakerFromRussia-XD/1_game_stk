@@ -194,8 +194,8 @@ namespace video
 		/** Using only first texture. Generic blending method. */
 		EMT_ONETEXTURE_BLEND,
 
-		//! Alphatest material for grass without using vertex color in stk.
-		EMT_STK_GRASS,
+		//! Alphatest material for grass without using vertex color in fluxara_drift.
+		EMT_FLUXARA_DRIFT_GRASS,
 
 		//! This value is used in GEMaterialManager to save the default GEMaterial map.
 		EMT_MATERIAL_COUNT
@@ -228,7 +228,7 @@ namespace video
 		"parallaxmap_trans_add",
 		"parallaxmap_trans_vertexalpha",
 		"onetexture_blend",
-		"stk_grass",
+		"fluxara_drift_grass",
 		0
 	};
 
