@@ -78,6 +78,46 @@ using namespace irr::gui;
 #ifdef IOS_FLUXARA_DRIFT
 namespace
 {
+// Fluxara's pause artwork and hit frames are defined on the complete 844 x
+// 390 race viewport.  The inherited pause dialog is only 80 x 60 percent of
+// that viewport, which clips native child buttons at its edges.  Keep every
+// other inherited dialog size untouched; only the local Fluxara race pause
+// receives a full-screen input container.
+bool useFluxaraFullscreenPauseContainer()
+{
+    return World::getWorld() != nullptr &&
+           dynamic_cast<OverWorld*>(World::getWorld()) == nullptr &&
+           !NetworkConfig::get()->isNetworking();
+}
+
+// Keep the pause menu's control selector on exactly the same three-mode cycle
+// as the inherited pause ribbon.  The chosen value is committed and the HUD
+// recreated when this dialog closes.
+void cycleTouchControls(int& controls)
+{
+    if (controls == MULTITOUCH_CONTROLS_STEERING_WHEEL)
+        controls = MULTITOUCH_CONTROLS_ACCELEROMETER;
+    else if (controls == MULTITOUCH_CONTROLS_ACCELEROMETER)
+        controls = MULTITOUCH_CONTROLS_GYROSCOPE;
+    else
+        controls = MULTITOUCH_CONTROLS_STEERING_WHEEL;
+}
+
+irr::core::stringw controlModeLabel(int controls)
+{
+    switch (controls)
+    {
+    case MULTITOUCH_CONTROLS_ACCELEROMETER:
+        return _C("fluxara", "TILT");
+    case MULTITOUCH_CONTROLS_GYROSCOPE:
+        return _C("fluxara", "GYROSCOPE");
+    case MULTITOUCH_CONTROLS_UNDEFINED:
+    case MULTITOUCH_CONTROLS_STEERING_WHEEL:
+    default:
+        return _C("fluxara", "STEERING WHEEL");
+    }
+}
+
 /**
  * The game already renders the live track and HUD underneath a ModalDialog.
  * This child is deliberately only the translucent veil and Figma's pause
@@ -87,6 +127,7 @@ class FluxaraPauseVisual final : public IGUIElement
 {
 private:
     irr::video::ITexture* m_art[13];
+    const int* m_touch_controls;
 
     static constexpr float kWidth = 844.0f;
     static constexpr float kHeight = 390.0f;
@@ -111,6 +152,36 @@ private:
         draw2DImage(texture, rect(x, y, w, h),
                     irr::core::recti(0, 0, source.Width, source.Height),
                     nullptr, irr::video::SColor(255, 255, 255, 255), true);
+    }
+
+    // Match Figma's object-cover exactly.  The yellow pause surface is a
+    // square source but its Figma frame is rectangular; drawing the full
+    // square stretches its bevels.  Crop the source centrally before the
+    // scale, preserving the original button geometry.
+    void imageCover(int index, float x, float y, float w, float h) const
+    {
+        auto* texture = m_art[index];
+        if (!texture) return;
+        const auto source = texture->getSize();
+        const float source_ratio = float(source.Width) / float(source.Height);
+        const float target_ratio = w / h;
+        irr::core::recti source_rect(0, 0, source.Width, source.Height);
+        if (source_ratio > target_ratio)
+        {
+            const int visible_width = int(std::lround(source.Height * target_ratio));
+            const int left = (source.Width - visible_width) / 2;
+            source_rect = irr::core::recti(left, 0, left + visible_width,
+                                            source.Height);
+        }
+        else if (source_ratio < target_ratio)
+        {
+            const int visible_height = int(std::lround(source.Width / target_ratio));
+            const int top = (source.Height - visible_height) / 2;
+            source_rect = irr::core::recti(0, top, source.Width,
+                                            top + visible_height);
+        }
+        draw2DImage(texture, rect(x, y, w, h), source_rect, nullptr,
+                    irr::video::SColor(255, 255, 255, 255), true);
     }
 
     // The play/restart and settings artwork lives in Figma as transparent
@@ -154,8 +225,10 @@ private:
 
 public:
     FluxaraPauseVisual(IGUIEnvironment* environment, IGUIElement* parent,
-                       const irr::core::recti& area)
-        : IGUIElement(EGUIET_ELEMENT, environment, parent, -1, area)
+                       const irr::core::recti& area,
+                       const int* touch_controls)
+        : IGUIElement(EGUIET_ELEMENT, environment, parent, -1, area),
+          m_touch_controls(touch_controls)
     {
         const char* files[] = {
             "pause/panel", "pause/logo", "pause/button-continue",
@@ -195,7 +268,8 @@ public:
         image(1, 351.96f, 40.47f, 134.063f, 80.438f);
         image(2, 274.00f, 133.28f, 172.425f, 139.012f);
         image(3, 408.89f, 133.28f, 138.60f, 137.363f);
-        image(4, 282.66f, 228.57f, 150.975f, 121.688f);
+        // Figma node 347:92 is object-cover, not a stretched square.
+        imageCover(4, 282.66f, 228.57f, 150.975f, 121.688f);
         image(5, 392.80f, 214.54f, 177.375f, 141.488f);
         imageSource(6, 341.65f, 172.06f, 37.95f, 37.95f,
                     20, 17, 124, 134);
@@ -214,7 +288,8 @@ public:
         label(_C("fluxara", "PAUSE"), 373.00f, 129.16f, 92.40f, 20.625f, 20.625f);
         label(_C("fluxara", "CONTINUE"), 317.726f, 217.02f, 85.387f, 10.725f, 11.137f);
         label(_C("fluxara", "RESTART"), 436.527f, 217.02f, 85.387f, 10.725f, 11.137f);
-        label(_C("fluxara", "SETTINGS"), 313.597f, 300.76f, 85.387f, 10.725f, 11.137f);
+        label(controlModeLabel(*m_touch_controls), 313.597f, 300.76f,
+              85.387f, 10.725f, 11.137f);
         label(_C("fluxara", "EXIT"), 442.297f, 300.76f, 85.387f, 10.725f, 11.137f);
         IGUIElement::draw();
     }
@@ -226,7 +301,12 @@ public:
 
 RacePausedDialog::RacePausedDialog(const float percentWidth,
                                    const float percentHeight) :
+#ifdef IOS_FLUXARA_DRIFT
+    ModalDialog(useFluxaraFullscreenPauseContainer() ? 1.0f : percentWidth,
+                useFluxaraFullscreenPauseContainer() ? 1.0f : percentHeight)
+#else
     ModalDialog(percentWidth, percentHeight)
+#endif
 {
     m_target_team = KART_TEAM_NONE;
     m_self_destroy = false;
@@ -470,8 +550,7 @@ GUIEngine::EventPropagation
         }
         if (eventSource == "settings")
         {
-            ModalDialog::dismiss();
-            FluxaraSettingsScreen::getInstance()->openFromPausedRace();
+            cycleTouchControls(m_touch_controls);
             return GUIEngine::EVENT_BLOCK;
         }
         return GUIEngine::EVENT_BLOCK;
@@ -797,7 +876,8 @@ void RacePausedDialog::init()
             FluxaraUI::rasterHitTarget(getWidget<GUIEngine::ButtonWidget>(id));
 #ifdef IOS_FLUXARA_DRIFT
         new FluxaraPauseVisual(GUIEngine::getGUIEnv(), m_irrlicht_window,
-            irr::core::recti(0, 0, m_area.getWidth(), m_area.getHeight()));
+            irr::core::recti(0, 0, m_area.getWidth(), m_area.getHeight()),
+            &m_touch_controls);
 #endif
         return;
     }

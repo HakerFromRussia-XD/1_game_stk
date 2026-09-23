@@ -3,11 +3,12 @@
     <!-- Interactive surfaces only. The final Figma 347:49 art is drawn by
          FluxaraPauseVisual over the live race and remains independently
          localized at runtime. -->
-    <!-- Figma 347:49 button interiors. They are deliberately smaller than
-         artwork overlap regions, so the centre of each visible button is
-         always routed to its own action. -->
-    <button id="continue" x="32.5%" y="34%" width="16.5%" height="23%" raw_text="Continue" />
-    <button id="restart" x="49%" y="34%" width="17%" height="23%" raw_text="Restart" />
-    <button id="settings" x="33.5%" y="57%" width="15%" height="29%" raw_text="Settings" />
-    <button id="exit" x="46.5%" y="54%" width="22%" height="32%" raw_text="Exit" />
+    <!-- Full Figma 347:49 visual button frames.  These are transparent
+         interaction layers: every visible portion of a surface is tappable. -->
+    <button id="continue" x="32.4645%" y="34.1744%" width="20.4295%" height="35.6441%" raw_text="Continue" />
+    <button id="restart" x="48.4467%" y="34.1744%" width="16.4218%" height="35.2213%" raw_text="Restart" />
+    <button id="settings" x="33.4905%" y="58.6077%" width="17.8870%" height="31.2010%" raw_text="Controls" />
+    <!-- Exit is the topmost lower-right Figma layer, so it owns the small
+         overlap where its painted surface is visually above Controls. -->
+    <button id="exit" x="46.5403%" y="55.0103%" width="21.0160%" height="36.2790%" raw_text="Exit" />
 </fluxara_driftgui>
