@@ -7,10 +7,12 @@
 #include "states_screens/fluxara_event.hpp"
 
 #include <string>
+#include <memory>
 #include <vector>
 
 namespace GUIEngine { class Widget; }
 namespace irr { namespace video { class ITexture; } }
+namespace Online { class HTTPRequest; }
 
 class FluxaraCampaignScreen : public GUIEngine::Screen,
                              public GUIEngine::ScreenSingleton<FluxaraCampaignScreen>
@@ -30,14 +32,25 @@ private:
     std::string m_focus_event_id;
     unsigned int m_completed_count = 0;
     bool m_progress_cached = false;
-    int m_last_scroll_pos = 0;
-    float m_scroll_idle_time = 1.0f;
     float m_auto_start_delay = -1.0f;
     irr::video::ITexture* m_art[6] = {};
+    irr::video::ITexture* m_download_base = nullptr;
+    irr::video::ITexture* m_download_arrow = nullptr;
     std::vector<irr::video::ITexture*> m_cards;
+    // A card remains visible even while its map is not in the IPA.  The
+    // catalog provides the human title and the immutable HTTPS pack URL.
+    std::vector<std::string> m_titles;
+    std::vector<std::string> m_download_urls;
+    std::vector<double> m_download_sizes;
+    std::shared_ptr<Online::HTTPRequest> m_download_request;
+    std::string m_downloading_track;
     void layoutControls();
     void populateTrackList();
+    void releaseCardTextures();
+    void loadCardTexture(unsigned selected);
+    void activateSelectedTrack();
     void openTrack(unsigned selected);
+    void startDownload(unsigned selected);
     const FluxaraSegment* segmentFor(unsigned selected) const;
     unsigned int completedCount() const;
     bool isEventUnlocked(unsigned selected) const;

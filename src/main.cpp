@@ -2824,8 +2824,7 @@ int main(int argc, char *argv[])
                 // root. Its ordinary Next route pops the result/campaign
                 // menu before returning to Campaign; without this retained
                 // Home base that pop ends the iOS main loop.
-                if (FluxaraModes::autoCampaignValidation())
-                    FluxaraHomeScreen::getInstance()->push();
+                FluxaraHomeScreen::getInstance()->push();
                 // Motorica Start and the direct iOS bridge use stable
                 // campaign IDs, never list offsets or display names.  Resolve
                 // it after the manifest is loaded so a restart preserves the

@@ -88,6 +88,18 @@ bool ExtractMobileAssets::extract(const std::string& zip_file,
 }   // extract
 
 // ----------------------------------------------------------------------------
+void ExtractMobileAssets::reloadTracksAfterDownload()
+{
+    // The add-ons tracks directory is registered during normal startup and is
+    // an ordinary filesystem directory, so the new pack is visible to the
+    // existing TrackManager without rebuilding Irrlicht's device.  Calling
+    // reinit() here requests a renderer restart while Campaign still owns
+    // menu textures; on iOS that dereferenced those stale textures and
+    // terminated immediately after a successful download.
+    track_manager->loadTrackList();
+}   // reloadTracksAfterDownload
+
+// ----------------------------------------------------------------------------
 void ExtractMobileAssets::reinit()
 {
     file_manager->reinitAfterDownloadAssets();

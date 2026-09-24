@@ -1908,8 +1908,11 @@ void GEVulkanDriver::draw2DVertexPrimitiveList(const void* vertices,
                                                scene::E_PRIMITIVE_TYPE pType,
                                                E_INDEX_TYPE iType)
 {
+    // Colour-only UI primitives still need a sampler in the 2D shader.
+    // As with draw2DRectangle, use white so vertex colours/alpha survive.
     const GEVulkanTexture* texture =
-        dynamic_cast<const GEVulkanTexture*>(Material.getTexture(0));
+        dynamic_cast<const GEVulkanTexture*>(Material.getTexture(0)
+            ? Material.getTexture(0) : m_white_texture);
     if (!texture)
         return;
     if (vType != EVT_STANDARD || iType != EIT_16BIT)

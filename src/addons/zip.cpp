@@ -86,13 +86,13 @@ static bool isSafeArchivePath(std::string path, bool data_only)
 
     size_t dot = path.find_last_of('.');
     if (dot == std::string::npos)
-        return false;
+        return StringUtils::hasSuffix(path, "_dds_img");
     std::string extension = path.substr(dot);
     std::transform(extension.begin(), extension.end(), extension.begin(),
         [](unsigned char c) { return (char)std::tolower(c); });
     static const std::set<std::string> allowed = {
-        ".jpg", ".jpeg", ".music", ".ogg", ".png", ".spm",
-        ".txt", ".xml"
+        ".b3d", ".dds", ".jpg", ".jpeg", ".music", ".ogg",
+        ".png", ".spm", ".txt", ".xml"
     };
     return allowed.find(extension) != allowed.end();
 }

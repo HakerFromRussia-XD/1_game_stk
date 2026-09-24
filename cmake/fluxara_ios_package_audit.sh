@@ -129,12 +129,40 @@ campaign_track_count=$(printf '%s\n' "$campaign_tracks" | sed '/^$/d' | wc -l | 
     echo "expected 50 unique Fluxara campaign tracks, found $campaign_track_count" >&2
     exit 65
 }
-for track in $campaign_tracks; do
+catalog="$data/fluxara-track-catalog.xml"
+[ -f "$catalog" ] || { echo "missing Fluxara track-pack catalog" >&2; exit 65; }
+starter_tracks=$(/usr/bin/ruby -rrexml/document -e '
+  campaign = REXML::Document.new(File.read(ARGV.fetch(0)))
+  puts campaign.elements.to_a("campaign/event").take(10).map {
+    |event| event.attributes["track"].to_s
+  }.sort
+' "$data/fluxara-campaign.xml")
+starter_count=$(printf '%s\n' "$starter_tracks" | sed '/^$/d' | wc -l | tr -d ' ')
+[ "$starter_count" = 10 ] || { echo "expected 10 starter tracks" >&2; exit 65; }
+[ "$tracks" = 10 ] || { echo "expected 10 bundled Fluxara tracks, found $tracks" >&2; exit 65; }
+for track in $starter_tracks; do
     [ -d "$data/tracks/$track" ] || {
-        echo "campaign track is missing from bundle: $track" >&2
+        echo "starter track is missing from bundle: $track" >&2
         exit 65
     }
 done
+/usr/bin/ruby -rrexml/document -e '
+  campaign_path, catalog_path, data = ARGV
+  campaign = REXML::Document.new(File.read(campaign_path))
+  catalog = REXML::Document.new(File.read(catalog_path))
+  entries = catalog.elements.to_a("fluxara-track-catalog/track")
+  by_id = entries.to_h { |entry| [entry.attributes["id"].to_s, entry] }
+  tracks = campaign.elements.to_a("campaign/event").map {
+    |event| event.attributes["track"].to_s
+  }
+  abort "catalog does not describe every campaign track" unless by_id.keys.sort == tracks.sort
+  tracks.drop(10).each do |id|
+    entry = by_id.fetch(id)
+    url = entry.attributes["url"].to_s
+    abort "missing HTTPS package URL for #{id}" unless url.start_with?("https://")
+    abort "unexpected bundled remote track #{id}" if File.directory?(File.join(data, "tracks", id))
+  end
+' "$data/fluxara-campaign.xml" "$catalog" "$data" || exit 65
 [ "$karts" = 15 ] || { echo "expected 15 Fluxara karts, found $karts" >&2; exit 65; }
 
 garage="$data/gui/fluxara/home"
@@ -457,4 +485,4 @@ else
     opus_saved_bytes=0
 fi
 
-echo "FLUXARA_IOS_PACKAGE_AUDIT hud=27 screens=$fluxara_screens tracks=$tracks campaign-tracks=$campaign_track_count karts=$karts locales=ru,en-fallback dedup-rows=$dedup_rows dedup-saved-bytes=$dedup_saved_bytes astc-rows=$astc_rows astc-saved-bytes=$astc_saved_bytes astc-validated=$astc_validation models-validated=$model_validation terrain-sfx-validated=$material_sfx_validation opus-rows=$opus_rows opus-saved-bytes=$opus_saved_bytes retired-ogg=${retained_ogg:-0} retired-ui=0 bundle=$bundle"
+echo "FLUXARA_IOS_PACKAGE_AUDIT hud=27 screens=$fluxara_screens starter-tracks=$tracks downloadable-tracks=40 campaign-tracks=$campaign_track_count karts=$karts locales=ru,en-fallback dedup-rows=$dedup_rows dedup-saved-bytes=$dedup_saved_bytes astc-rows=$astc_rows astc-saved-bytes=$astc_saved_bytes astc-validated=$astc_validation models-validated=$model_validation terrain-sfx-validated=$material_sfx_validation opus-rows=$opus_rows opus-saved-bytes=$opus_saved_bytes retired-ogg=${retained_ogg:-0} retired-ui=0 bundle=$bundle"

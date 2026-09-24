@@ -199,11 +199,23 @@ void Online::HTTPRequest::operation()
             }
             else if (bytesReceived > 0)
             {
-                // We're receiving data but don't know the total size
-                // Use a slow-growing progress that never reaches 1.0
-                float unknownProgress = 1.0f - exp(-bytesReceived / 1024.0f / 1024.0f); // Asymptotic to 1.0
-                unknownProgress = std::min(unknownProgress, 0.99f); // Cap at 99%
-                setProgress(unknownProgress);
+                // GitHub release redirects can omit Content-Length.  Data
+                // packs pass their declared archive size as the initial
+                // total, so their circular UI remains informative instead
+                // of looking permanently empty during a valid download.
+                const double known_total = getTotalSize();
+                if (known_total > 0.0)
+                {
+                    float progress = float((double)bytesReceived / known_total);
+                    setProgress(std::min(progress, 0.99f));
+                }
+                else
+                {
+                    // Generic requests without a trusted size keep the
+                    // existing bounded progress approximation.
+                    float unknownProgress = 1.0f - exp(-bytesReceived / 1024.0f / 1024.0f);
+                    setProgress(std::min(unknownProgress, 0.99f));
+                }
             }
         }
         const bool manager_running = RequestManager::isRunning();

@@ -6,7 +6,7 @@
   <segment id="master" title="MASTER CUP" unlock-completed="18" />
   <segment id="legend" title="LEGEND CUP" unlock-completed="24" />
 
-  <event id="main-capture_the_flag-classic-pool" segment="rookie" mode="capture_the_flag" track="fluxara-user-classic-pool" requires-offline-ctf="true" />
+  <event id="main-normal-fluxara-canyon" segment="rookie" mode="normal" track="fluxara-canyon" />
   <event id="main-free_for_all-ski-dash" segment="rookie" mode="free_for_all" track="fluxara-user-ski-dash" />
   <event id="main-three_strikes-dust-cross-split-combat" segment="rookie" mode="three_strikes" track="fluxara-user-dust-cross-split-combat" />
   <event id="main-egg_hunt-spell-lab" segment="rookie" mode="egg_hunt" track="fluxara-user-spell-lab" />
@@ -25,7 +25,7 @@
   <event id="main-follow_leader-strandvoort" segment="rising" mode="follow_leader" track="fluxara-user-strandvoort" />
   <event id="main-ghost_geometry-the-valley-of-liquorice" segment="rising" mode="ghost_geometry" track="fluxara-user-the-valley-of-liquorice" requires-replay="true" />
   <event id="main-lap_trial-paradise-peaks" segment="rising" mode="lap_trial" track="fluxara-user-paradise-peaks" />
-  <event id="main-normal-high-in-the-sky" segment="rising" mode="normal" track="fluxara-canyon" />
+  <event id="main-capture_the_flag-classic-pool" segment="rising" mode="capture_the_flag" track="fluxara-user-classic-pool" requires-offline-ctf="true" />
   <event id="main-time_trial-rt7-retro" segment="rising" mode="time_trial" track="fluxara-user-rt7-retro" />
 
   <event id="main-capture_the_flag-the-savanna-of-africa" segment="pro" mode="capture_the_flag" track="fluxara-user-the-savanna-of-africa" requires-offline-ctf="true" />

@@ -142,7 +142,12 @@ namespace Online
      */
     bool HTTPRequest::isAllowedToAdd() const
     {
-        return Request::isAllowedToAdd() && m_url.substr(0, 5) == "http:";
+        // Downloadable Fluxara circuit packs are served over HTTPS.  The old
+        // test predated that transport and silently rejected those requests
+        // before they reached the network queue.
+        const bool is_http = m_url.compare(0, 7, "http://") == 0;
+        const bool is_https = m_url.compare(0, 8, "https://") == 0;
+        return Request::isAllowedToAdd() && (is_http || is_https);
     }   // isAllowedToAdd
 
     // ------------------------------------------------------------------------

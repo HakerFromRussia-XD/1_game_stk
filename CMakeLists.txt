@@ -772,6 +772,20 @@ else()
                 list(APPEND FLUXARA_IOS_KART ${FLUXARA_IOS_KART_FILES})
             endif()
         endforeach()
+        # The app starts with the Rookie Cup's ten circuits only.  Every later
+        # campaign circuit is a data-only track pack installed into the
+        # writable add-ons folder; do not quietly add it back to the IPA here.
+        set(FLUXARA_IOS_STARTER_TRACKS
+            fluxara-canyon
+            fluxara-user-ski-dash
+            fluxara-user-dust-cross-split-combat
+            fluxara-user-spell-lab
+            fluxara-user-orbital-simulation---soccer
+            fluxara-user-dp-motorsports-land-ii
+            fluxara-user-lap-catch
+            fluxara-user-motorsport-land
+            fluxara-summit-run
+            fluxara-user-volcano-remake)
         file(GLOB FLUXARA_IOS_TRACK_DIRS LIST_DIRECTORIES true
             ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/tracks/*)
         set(FLUXARA_IOS_TRACK)
@@ -779,11 +793,9 @@ else()
             if(IS_DIRECTORY ${FLUXARA_IOS_TRACK_DIR})
                 get_filename_component(FLUXARA_IOS_TRACK_IDENT
                     ${FLUXARA_IOS_TRACK_DIR} NAME)
-                # The curated campaign is the iOS catalogue.  This legacy
-                # preview circuit is not referenced by fluxara-campaign.xml;
-                # keep it in the shared source checkout, but do not ship an
-                # unreachable 51st track in Fluxara Drift.
-                if(FLUXARA_IOS_TRACK_IDENT STREQUAL "fluxara-circuit")
+                list(FIND FLUXARA_IOS_STARTER_TRACKS
+                    ${FLUXARA_IOS_TRACK_IDENT} FLUXARA_IOS_STARTER_INDEX)
+                if(FLUXARA_IOS_STARTER_INDEX EQUAL -1)
                     continue()
                 endif()
                 file(GLOB FLUXARA_IOS_TRACK_FILES ${FLUXARA_IOS_TRACK_DIR}/*)
@@ -794,7 +806,8 @@ else()
             endif()
         endforeach()
         set(FLUXARA_IOS_CAMPAIGN
-            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/fluxara-campaign.xml)
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/fluxara-campaign.xml
+            ${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/fluxara-track-catalog.xml)
         set_source_files_properties(${FLUXARA_IOS_CAMPAIGN} PROPERTIES
             MACOSX_PACKAGE_LOCATION Resources/data)
         set(FLUXARA_IOS_NOTICES
@@ -814,11 +827,8 @@ else()
         # delays packaging without changing the executable or bundle.
         set(FLUXARA_IOS_FINALIZE_ENV)
         set(FLUXARA_IOS_AUDIT_ENV)
-        # The current iPhone renderer is Vulkan.  Its texture loader consumes
-        # image files through IImage and cannot read raw ASTC payloads written
-        # under .png/.jpg names by CompressFluxaraIosTextures.rb.  Keep source
-        # image formats in the device bundle until a Vulkan-aware ASTC loader
-        # and unambiguous ASTC asset names are implemented.
+        # Vulkan recognizes the ASTC 6x6 header inside package-owned track
+        # textures, including those registered for deferred loading.
         option(FLUXARA_IOS_ENABLE_ASTC_TEXTURES
             "Compress Fluxara track textures into ASTC in iOS bundles" OFF)
         # Build the encoder on the Mac, outside the iPhone app target. Xcode
@@ -928,9 +938,18 @@ else()
             COMMAND /usr/bin/rsync -a
                 "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/karts/"
                 "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/karts/"
-            COMMAND /usr/bin/rsync -a
-                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/tracks/"
-                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/tracks/"
+            COMMAND /bin/sh
+                ${PROJECT_SOURCE_DIR}/cmake/PrepareFluxaraIosStarterTracks.sh
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/tracks"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/tracks"
+            COMMAND /bin/sh
+                ${PROJECT_SOURCE_DIR}/cmake/PrepareFluxaraCampaignPreviews.sh
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/tracks"
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/fluxara-campaign.xml"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/fluxara/campaign-previews"
+            COMMAND /bin/sh
+                ${PROJECT_SOURCE_DIR}/cmake/OptimizeFluxaraIosGui.sh
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>"
             # Capture the Flag meshes are shared by every CTF track. Overlay
             # their two team textures after the audited base snapshot so no
             # arena can reveal the inherited FLUXARA_DRIFT wordmark.
@@ -940,14 +959,12 @@ else()
             COMMAND ${CMAKE_COMMAND} -E copy_if_different
                 "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/models/blue_flag.jpg"
                 "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/models/blue_flag.jpg"
-            # rsync keeps the shared source intact, including its old preview
-            # circuit.  Remove that exact unreachable directory from the
-            # generated Fluxara bundle after the overlay.
-            COMMAND ${CMAKE_COMMAND} -E rm -rf
-                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/tracks/fluxara-circuit"
             COMMAND ${CMAKE_COMMAND} -E copy_if_different
                 "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/fluxara-campaign.xml"
                 "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/fluxara-campaign.xml"
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/fluxara-track-catalog.xml"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/fluxara-track-catalog.xml"
             COMMAND ${CMAKE_COMMAND} -E copy_if_different
                 "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/NOTICE-THIRD-PARTY.txt"
                 "$<TARGET_BUNDLE_DIR:fluxaradrift>/NOTICE-THIRD-PARTY.txt"

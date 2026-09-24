@@ -27,6 +27,9 @@ namespace ExtractMobileAssets
 bool hasFullAssets();
 bool isFullAssetsInstalled();
 bool extract(const std::string& zip_file, const std::string& dst);
+// Refresh just the track catalogue after a data-only circuit pack arrives.
+// This deliberately does not recreate the iOS rendering device.
+void reloadTracksAfterDownload();
 void reinit();
 void uninstall();
 } // namespace FileUtils

@@ -427,11 +427,15 @@ bool CGUIFLUXARA_DRIFTListBox::OnEvent(const SEvent& event)
                         Moving = false;
                     }
 
-                    // UIKit's pan recognizer waits for roughly ten points,
-                    // rather than a fraction of a list row. Derive the same
-                    // physical slop from this element's current height.
+                    // UIKit treats a small, natural finger drift as a tap.
+                    // On high-density iPhones the mouse events reach us in
+                    // backing pixels, so the earlier 1/64 height threshold
+                    // could classify a card tap as a scroll before the list
+                    // had emitted its selection event.  Keep scrolling
+                    // responsive, but give a tap the same roughly 13-point
+                    // tolerance as the native control.
                     const s32 drag_threshold = m_touch_inertia_enabled ?
-                        std::max(12, AbsoluteRect.getHeight() / 64) :
+                        std::max(18, AbsoluteRect.getHeight() / 48) :
                         std::max(1, m_item_height / 3);
                     if (Selecting && std::abs(event.MouseInput.Y - MousePosY) >
                         drag_threshold)

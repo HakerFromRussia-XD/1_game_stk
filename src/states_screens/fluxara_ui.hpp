@@ -28,7 +28,8 @@ inline void rasterHitTarget(GUIEngine::Widget* widget)
     button->setDrawBorder(false);
     button->setText(L"");
 }
-inline irr::video::ITexture* nativeTexture(const std::string& path)
+inline irr::video::ITexture* textureWithMaximum(const std::string& path,
+                                                unsigned maximum_size)
 {
     // FLUXARA_DRIFT normally caps textures at 512 px unless the global HD option is
     // enabled.  Fluxara UI rasters are screen-space artwork, not world
@@ -39,11 +40,22 @@ inline irr::video::ITexture* nativeTexture(const std::string& path)
     auto& attributes = irr_driver->getVideoDriver()->getNonConstDriverAttributes();
     const irr::core::dimension2du previous =
         attributes.getAttributeAsDimension2d("MAX_TEXTURE_SIZE");
-    attributes.setAttribute("MAX_TEXTURE_SIZE",
-                            irr::core::dimension2du(4096, 4096));
+    attributes.setAttribute("MAX_TEXTURE_SIZE", irr::core::dimension2du(
+        maximum_size, maximum_size));
     irr::video::ITexture* result = irr_driver->getTexture(path);
     attributes.setAttribute("MAX_TEXTURE_SIZE", previous);
     return result;
+}
+inline irr::video::ITexture* nativeTexture(const std::string& path)
+{
+    return textureWithMaximum(path, 4096);
+}
+// A campaign card needs only a compact thumbnail.  Keep it at the engine's
+// normal 512-pixel limit so a newly visible remote card cannot stall a touch
+// scroll with a Retina-size PNG decode/upload.
+inline irr::video::ITexture* campaignPreviewTexture(const std::string& path)
+{
+    return textureWithMaximum(path, 512);
 }
 inline irr::video::ITexture* texture(const std::string& path)
 {
@@ -235,6 +247,71 @@ struct Canvas
             glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         }
         draw2DVertexPrimitiveList(t, vertices.data(),
+            static_cast<irr::u32>(vertices.size()), indices.data(),
+            static_cast<irr::u32>(indices.size() - 2), irr::video::EVT_STANDARD,
+            irr::scene::EPT_TRIANGLE_FAN, irr::video::EIT_16BIT);
+        if (CVS->isGLSL()) glDisable(GL_BLEND);
+        if (clip) irr_driver->getVideoDriver()->disableScissorTest();
+    }
+    // Match an artwork card's mask when an effect is composited above it.
+    // A rectangular dimmer would leak square corners beyond roundedImage().
+    void roundedRectangle(const irr::video::SColor& color, float left,
+                          float top, float width, float height, float radius,
+                          const irr::core::recti* clip = nullptr) const
+    {
+        if (!stable) return;
+        const irr::core::recti destination = rect(left, top, width, height);
+        const float l = float(destination.UpperLeftCorner.X);
+        const float t0 = float(destination.UpperLeftCorner.Y);
+        const float r = float(destination.LowerRightCorner.X);
+        const float b = float(destination.LowerRightCorner.Y);
+        const float corner = std::min(radius * scale,
+            std::min((r - l) * .5f, (b - t0) * .5f));
+
+        std::vector<irr::video::S3DVertex> vertices;
+        std::vector<irr::u16> indices;
+        vertices.reserve(38);
+        indices.reserve(39);
+        const auto append = [&vertices, &color](float px, float py)
+        {
+            vertices.emplace_back(px, py, 0.0f, 0.0f, 0.0f, 0.0f,
+                                  color, 0.0f, 0.0f);
+        };
+        append((l + r) * .5f, (t0 + b) * .5f);
+        const float centers[][2] = {
+            {r - corner, t0 + corner}, {r - corner, b - corner},
+            {l + corner, b - corner}, {l + corner, t0 + corner}
+        };
+        constexpr int segments = 8;
+        constexpr float pi = 3.14159265358979323846f;
+        for (int quadrant = 0; quadrant < 4; ++quadrant)
+        {
+            const float start = (-90.0f + quadrant * 90.0f) * pi / 180.0f;
+            for (int step = 0; step <= segments; ++step)
+            {
+                const float angle = start +
+                    (pi * .5f * float(step) / float(segments));
+                append(centers[quadrant][0] + std::cos(angle) * corner,
+                       centers[quadrant][1] + std::sin(angle) * corner);
+            }
+        }
+        indices.push_back(0);
+        for (irr::u16 i = 1; i < vertices.size(); ++i)
+            indices.push_back(i);
+        indices.push_back(1);
+
+        irr::video::SMaterial material;
+        material.setTexture(0, nullptr);
+        material.MaterialType = irr::video::EMT_TRANSPARENT_VERTEX_ALPHA;
+        material.ZWriteEnable = false;
+        irr_driver->getVideoDriver()->setMaterial(material);
+        if (clip) irr_driver->getVideoDriver()->enableScissorTest(*clip);
+        if (CVS->isGLSL())
+        {
+            glEnable(GL_BLEND);
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        }
+        draw2DVertexPrimitiveList(nullptr, vertices.data(),
             static_cast<irr::u32>(vertices.size()), indices.data(),
             static_cast<irr::u32>(indices.size() - 2), irr::video::EVT_STANDARD,
             irr::scene::EPT_TRIANGLE_FAN, irr::video::EIT_16BIT);
