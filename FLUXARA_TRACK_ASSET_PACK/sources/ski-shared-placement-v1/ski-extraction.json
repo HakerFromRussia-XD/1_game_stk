@@ -1,0 +1,2252 @@
+{
+  "trackId": "fluxara-user-ski-dash",
+  "stage": "Integrated; preservation, native, shared material, built/installed and actual runtime evidence saved",
+  "sourceBytes": 26043936,
+  "candidateTrackBytes": 23088238,
+  "allNewSharedBytes": 2438547,
+  "totalCandidateBytes": 25526881,
+  "weightNotIncreased": true,
+  "coordinateInstances": 74,
+  "uniqueModels": 2,
+  "extractedTriangles": 4176,
+  "remainderVertexRecordsAndTriangleOrderExact": true,
+  "routeMeshesUnchanged": true,
+  "originalSceneNodesUnchanged": false,
+  "rejectedNativeSourceObjects": [
+    "SkiDash_SnowCliff_04_Rock",
+    "SkiDash_SnowCliff_07_Rock",
+    "SkiDash_SnowCliff_08_Rock",
+    "SkiDash_SnowCliff_05_Rock",
+    "SkiDash_SnowCliff_06_Rock",
+    "SkiDash_SnowCliff_04_Cap",
+    "SkiDash_SnowCliff_07_Cap",
+    "SkiDash_SnowCliff_08_Cap",
+    "SkiDash_SnowCliff_05_Cap",
+    "SkiDash_SnowCliff_06_Cap",
+    "SkiDash_EdgeBunting_06",
+    "SkiDash_EdgeBunting_09",
+    "SkiDash_Icicles_SnowCliff_04",
+    "SkiDash_Icicles_SnowCliff_07",
+    "SkiDash_Icicles_SnowCliff_08",
+    "SkiDash_Icicles_EdgeCliff_00",
+    "SkiDash_Icicles_EdgeCliff_03",
+    "SkiDash_Icicles_EdgeCliff_06",
+    "SkiDash_Icicles_EdgeCliff_09",
+    "SkiDash_Icicles_SnowCliff_05",
+    "SkiDash_Icicles_EdgeCliff_01",
+    "SkiDash_Icicles_EdgeCliff_04",
+    "SkiDash_Icicles_EdgeCliff_07",
+    "SkiDash_Icicles_SnowCliff_06",
+    "SkiDash_Icicles_EdgeCliff_02",
+    "SkiDash_Icicles_EdgeCliff_05",
+    "SkiDash_Icicles_EdgeCliff_08"
+  ],
+  "prototypes": [
+    {
+      "library": "fluxara_driftlib_ski_reuse_a3fa2c58c247",
+      "sourceObject": "SkiDash_EdgeBunting_01",
+      "instances": 3,
+      "triangles": 1392,
+      "localBounds": [
+        -4.9599995613098145,
+        0.0,
+        -0.16000309586524963,
+        4.9599995613098145,
+        4.800000190734863,
+        0.160004660487175
+      ],
+      "model": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/new-library/fluxara_driftlib_ski_reuse_a3fa2c58c247/fluxara_driftlib_ski_reuse_a3fa2c58c247_main.spm",
+      "nativeMesh": "SkiDash_BuntingSpan_v1"
+    },
+    {
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "sourceObject": "Existing 71 coordinate trees",
+      "instances": 71,
+      "triangles": 3972,
+      "localBounds": [
+        -3.9230828285217285,
+        -1.0729124546051025,
+        -3.7340526580810547,
+        4.078174114227295,
+        11.199999809265137,
+        3.6235742568969727
+      ],
+      "model": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/new-library/fluxara_driftlib_ski_branchless_fir_v12/ski-dash-branchless-fir-v12.spm",
+      "geometryVertexIndexBytesExact": true,
+      "texturePixelsExact": true
+    }
+  ],
+  "textures": [
+    {
+      "original": "fluxara_canyon_atlas.png",
+      "alias": "fluxara_pool_98a9a21bb827.png",
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/before/fluxara_canyon_atlas.png",
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/new-textures/fluxara_pool_98a9a21bb827.png",
+      "bytes": 218457,
+      "sha256": "98a9a21bb82714e2b7123fa37729eb40165e3aeb026f571e1855967a0444034a",
+      "previouslyPackaged": false,
+      "previouslyPackagedPath": null
+    },
+    {
+      "original": "ski_dash_tree_evergreen.png",
+      "alias": "fluxara_pool_2438389de21b.png",
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/before/ski_dash_tree_evergreen.png",
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/new-textures/fluxara_pool_2438389de21b.png",
+      "bytes": 3655,
+      "sha256": "2438389de21b6b67d6ba7ba66c6ce1037408851d7474b9f3bbcae45cac14a1b4",
+      "previouslyPackaged": false,
+      "previouslyPackagedPath": null
+    },
+    {
+      "original": "ski_dash_tree_snowcap.png",
+      "alias": "fluxara_pool_daa38ed6eaa7.png",
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/before/ski_dash_tree_snowcap.png",
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/new-textures/fluxara_pool_daa38ed6eaa7.png",
+      "bytes": 2881,
+      "sha256": "daa38ed6eaa73c7bde3d549d5a472d444de73d9eae1bb39f994ceb1181ce8b6e",
+      "previouslyPackaged": false,
+      "previouslyPackagedPath": null
+    },
+    {
+      "original": "stktex_treeBark_a.png",
+      "alias": "fluxara_pool_39f25fc1f2cf.png",
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/before/stktex_treeBark_a.png",
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/new-textures/fluxara_pool_39f25fc1f2cf.png",
+      "bytes": 2108218,
+      "sha256": "39f25fc1f2cfb39d45fc77a5517630dc29c42569317764d8c5dbacf669611dab",
+      "previouslyPackaged": false,
+      "previouslyPackagedPath": null
+    }
+  ],
+  "placements": [
+    {
+      "id": "PoolReuse_SkiDash_EdgeBunting_01",
+      "sourceObject": "SkiDash_EdgeBunting_01",
+      "library": "fluxara_driftlib_ski_reuse_a3fa2c58c247",
+      "xyz": [
+        145.0,
+        13.113879203796387,
+        -18.0
+      ],
+      "hpr": [
+        -0.0,
+        -89.999995674289,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sourceMatrix": [
+        [
+          -4.371138828673793e-08,
+          -1.0,
+          0.0,
+          145.0
+        ],
+        [
+          1.0,
+          -4.371138828673793e-08,
+          0.0,
+          -18.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          13.113879203796387
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldGeometryMatchesOriginalScenery": {
+        "localPositionError": 0,
+        "worldPositionError": 0,
+        "localNormalError": 0,
+        "triangleTopologyAndUVColorExact": true
+      }
+    },
+    {
+      "id": "PoolReuse_SkiDash_EdgeBunting_03",
+      "sourceObject": "SkiDash_EdgeBunting_03",
+      "library": "fluxara_driftlib_ski_reuse_a3fa2c58c247",
+      "xyz": [
+        145.0,
+        15.9856595993042,
+        154.0
+      ],
+      "hpr": [
+        -0.0,
+        -89.999995674289,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sourceMatrix": [
+        [
+          -4.371138828673793e-08,
+          -1.0,
+          0.0,
+          145.0
+        ],
+        [
+          1.0,
+          -4.371138828673793e-08,
+          0.0,
+          154.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          15.9856595993042
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldGeometryMatchesOriginalScenery": {
+        "localPositionError": 1.535204501124099e-05,
+        "worldPositionError": 1.52587890625e-05,
+        "localNormalError": 0.0033798646977973735,
+        "triangleTopologyAndUVColorExact": false,
+        "uvAndColorPerVertexExact": true,
+        "bidirectionalSurfaceDistance": 0.0003879859868902713,
+        "sameSurfaceWithAlternativeTriangulation": true
+      }
+    },
+    {
+      "id": "PoolReuse_SkiDash_EdgeBunting_07",
+      "sourceObject": "SkiDash_EdgeBunting_07",
+      "library": "fluxara_driftlib_ski_reuse_a3fa2c58c247",
+      "xyz": [
+        10.0,
+        19.35868263244629,
+        181.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sourceMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          10.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          181.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          19.35868263244629
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldGeometryMatchesOriginalScenery": {
+        "localPositionError": 2.1465957615873776e-06,
+        "worldPositionError": 2.6973983046972182e-06,
+        "localNormalError": 0.004368381604783695,
+        "triangleTopologyAndUVColorExact": false,
+        "uvAndColorPerVertexExact": true,
+        "bidirectionalSurfaceDistance": 0.00032043628743849695,
+        "sameSurfaceWithAlternativeTriangulation": true
+      }
+    },
+    {
+      "id": "SkiDash_ClifftopFir_01_0",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        141.9,
+        13.168635,
+        -19.8
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.43,
+        0.43,
+        0.43
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_01_0\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"141.900000 13.168635 -19.800000\" hpr=\"0 0 0\" scale=\"0.43 0.43 0.43\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_01_1",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        147.6,
+        13.243719,
+        -18.6
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.56,
+        0.56,
+        0.56
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_01_1\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"147.600000 13.243719 -18.600000\" hpr=\"0 0 0\" scale=\"0.56 0.56 0.56\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_01_2",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        144.7,
+        13.235316,
+        -14.7
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_01_2\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"144.700000 13.235316 -14.700000\" hpr=\"0 0 0\" scale=\"0.35 0.35 0.35\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_02_0",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        142.9,
+        22.782935,
+        108.2
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.43,
+        0.43,
+        0.43
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_02_0\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"142.900000 22.782935 108.200000\" hpr=\"0 0 0\" scale=\"0.43 0.43 0.43\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_02_1",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        148.6,
+        22.877531,
+        109.4
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.56,
+        0.56,
+        0.56
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_02_1\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"148.600000 22.877531 109.400000\" hpr=\"0 0 0\" scale=\"0.56 0.56 0.56\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_02_2",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        145.7,
+        22.80876,
+        113.3
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_02_2\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"145.700000 22.808760 113.300000\" hpr=\"0 0 0\" scale=\"0.35 0.35 0.35\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_03_0",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        141.9,
+        16.339342,
+        152.2
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.43,
+        0.43,
+        0.43
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_03_0\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"141.900000 16.339342 152.200000\" hpr=\"0 0 0\" scale=\"0.43 0.43 0.43\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_03_1",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        147.6,
+        16.417113,
+        153.4
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.56,
+        0.56,
+        0.56
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_03_1\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"147.600000 16.417113 153.400000\" hpr=\"0 0 0\" scale=\"0.56 0.56 0.56\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_03_2",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        144.7,
+        16.412222,
+        157.3
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_03_2\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"144.700000 16.412222 157.300000\" hpr=\"0 0 0\" scale=\"0.35 0.35 0.35\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_05_0",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        38.9,
+        18.544249,
+        -146.8
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.43,
+        0.43,
+        0.43
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_05_0\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"38.900000 18.544249 -146.800000\" hpr=\"0 0 0\" scale=\"0.43 0.43 0.43\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_05_1",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        44.6,
+        18.633967,
+        -145.6
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.56,
+        0.56,
+        0.56
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_05_1\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"44.600000 18.633967 -145.600000\" hpr=\"0 0 0\" scale=\"0.56 0.56 0.56\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_05_2",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        41.7,
+        18.514456,
+        -141.7
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_05_2\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"41.700000 18.514456 -141.700000\" hpr=\"0 0 0\" scale=\"0.35 0.35 0.35\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_06_0",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        77.9,
+        13.183852,
+        -146.8
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.43,
+        0.43,
+        0.43
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_06_0\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"77.900000 13.183852 -146.800000\" hpr=\"0 0 0\" scale=\"0.43 0.43 0.43\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_06_1",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        83.6,
+        13.252051,
+        -145.6
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.56,
+        0.56,
+        0.56
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_06_1\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"83.600000 13.252051 -145.600000\" hpr=\"0 0 0\" scale=\"0.56 0.56 0.56\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_06_2",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        80.7,
+        13.220297,
+        -141.7
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_06_2\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"80.700000 13.220297 -141.700000\" hpr=\"0 0 0\" scale=\"0.35 0.35 0.35\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_07_0",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        6.9,
+        19.604159,
+        179.2
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.43,
+        0.43,
+        0.43
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_07_0\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"6.900000 19.604159 179.200000\" hpr=\"0 0 0\" scale=\"0.43 0.43 0.43\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_07_1",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        12.6,
+        19.684668,
+        180.4
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.56,
+        0.56,
+        0.56
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_07_1\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"12.600000 19.684668 180.400000\" hpr=\"0 0 0\" scale=\"0.56 0.56 0.56\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_07_2",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        9.7,
+        19.592863,
+        184.3
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_07_2\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"9.700000 19.592863 184.300000\" hpr=\"0 0 0\" scale=\"0.35 0.35 0.35\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_08_0",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        57.9,
+        14.26182,
+        179.2
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.43,
+        0.43,
+        0.43
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_08_0\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"57.900000 14.261820 179.200000\" hpr=\"0 0 0\" scale=\"0.43 0.43 0.43\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_08_1",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        63.6,
+        14.345988,
+        180.4
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.56,
+        0.56,
+        0.56
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_08_1\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"63.600000 14.345988 180.400000\" hpr=\"0 0 0\" scale=\"0.56 0.56 0.56\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_08_2",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        60.7,
+        14.258944,
+        184.3
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_08_2\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"60.700000 14.258944 184.300000\" hpr=\"0 0 0\" scale=\"0.35 0.35 0.35\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_09_0",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        100.9,
+        20.627924,
+        180.2
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.43,
+        0.43,
+        0.43
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_09_0\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"100.900000 20.627924 180.200000\" hpr=\"0 0 0\" scale=\"0.43 0.43 0.43\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_09_1",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        106.6,
+        20.709387,
+        181.4
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.56,
+        0.56,
+        0.56
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_09_1\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"106.600000 20.709387 181.400000\" hpr=\"0 0 0\" scale=\"0.56 0.56 0.56\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_09_2",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        103.7,
+        20.671465,
+        185.3
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_09_2\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"103.700000 20.671465 185.300000\" hpr=\"0 0 0\" scale=\"0.35 0.35 0.35\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_Upper_v32_00",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -46.000004,
+        33.54645,
+        68.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_Upper_v32_00\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-46.000004 33.546450 68.000000\" hpr=\"0 0 0\" scale=\"0.65 0.65 0.65\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_Upper_v32_01",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -39.000004,
+        33.724539,
+        69.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_Upper_v32_01\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-39.000004 33.724539 69.000000\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_Upper_v32_02",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -44.0,
+        32.990977,
+        73.000008
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_Upper_v32_02\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-44.000000 32.990977 73.000008\" hpr=\"0 0 0\" scale=\"0.55 0.55 0.55\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_Upper_v32_03",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -27.0,
+        66.75331,
+        70.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_Upper_v32_03\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-27.000000 66.753310 70.000000\" hpr=\"0 0 0\" scale=\"0.65 0.65 0.65\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_Upper_v32_04",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -20.0,
+        66.908598,
+        71.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_Upper_v32_04\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-20.000000 66.908598 71.000000\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_Upper_v32_05",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -25.0,
+        66.8748,
+        75.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_Upper_v32_05\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-25.000000 66.874800 75.000000\" hpr=\"0 0 0\" scale=\"0.55 0.55 0.55\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_Upper_v32_06",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -18.0,
+        65.558981,
+        77.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_Upper_v32_06\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-18.000000 65.558981 77.000000\" hpr=\"0 0 0\" scale=\"0.6 0.6 0.6\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_Upper_v32_07",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -29.000002,
+        65.378531,
+        77.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.7,
+        0.7,
+        0.7
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_Upper_v32_07\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-29.000002 65.378531 77.000000\" hpr=\"0 0 0\" scale=\"0.7 0.7 0.7\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_Upper_v32_08",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -52.999996,
+        79.665862,
+        43.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_Upper_v32_08\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-52.999996 79.665862 43.000000\" hpr=\"0 0 0\" scale=\"0.65 0.65 0.65\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_Upper_v32_09",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -45.999996,
+        79.82675,
+        44.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_Upper_v32_09\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-45.999996 79.826750 44.000000\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_Upper_v32_10",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -51.0,
+        79.769827,
+        48.000004
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_Upper_v32_10\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-51.000000 79.769827 48.000004\" hpr=\"0 0 0\" scale=\"0.55 0.55 0.55\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_Upper_v32_11",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -44.0,
+        79.079337,
+        50.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_Upper_v32_11\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-44.000000 79.079337 50.000000\" hpr=\"0 0 0\" scale=\"0.6 0.6 0.6\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_Upper_v32_12",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -55.0,
+        79.027838,
+        50.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.7,
+        0.7,
+        0.7
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_Upper_v32_12\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-55.000000 79.027838 50.000000\" hpr=\"0 0 0\" scale=\"0.7 0.7 0.7\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_00_00",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -181.0,
+        22.177397,
+        -122.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_00_00\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-181.000000 22.177397 -122.000000\" hpr=\"0 0 0\" scale=\"0.65 0.65 0.65\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_00_01",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -175.0,
+        22.226458,
+        -120.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_00_01\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-175.000000 22.226458 -120.000000\" hpr=\"0 0 0\" scale=\"0.85 0.85 0.85\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_00_02",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -179.0,
+        22.200743,
+        -115.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_00_02\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-179.000000 22.200743 -115.000000\" hpr=\"0 0 0\" scale=\"0.55 0.55 0.55\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_01_00",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -184.0,
+        29.229292,
+        -80.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_01_00\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-184.000000 29.229292 -80.000000\" hpr=\"0 0 0\" scale=\"0.65 0.65 0.65\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_01_01",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -178.0,
+        29.272482,
+        -78.000008
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_01_01\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-178.000000 29.272482 -78.000008\" hpr=\"0 0 0\" scale=\"0.85 0.85 0.85\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_01_02",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -182.0,
+        29.22843,
+        -73.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_01_02\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-182.000000 29.228430 -73.000000\" hpr=\"0 0 0\" scale=\"0.55 0.55 0.55\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_02_00",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -184.0,
+        25.177412,
+        -36.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_02_00\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-184.000000 25.177412 -36.000000\" hpr=\"0 0 0\" scale=\"0.65 0.65 0.65\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_02_01",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -178.0,
+        25.226423,
+        -34.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_02_01\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-178.000000 25.226423 -34.000000\" hpr=\"0 0 0\" scale=\"0.85 0.85 0.85\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_02_02",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -182.0,
+        25.200758,
+        -29.000002
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_02_02\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-182.000000 25.200758 -29.000002\" hpr=\"0 0 0\" scale=\"0.55 0.55 0.55\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_03_00",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -184.0,
+        33.229309,
+        9.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_03_00\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-184.000000 33.229309 9.000000\" hpr=\"0 0 0\" scale=\"0.65 0.65 0.65\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_03_01",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -178.0,
+        33.272514,
+        11.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_03_01\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-178.000000 33.272514 11.000000\" hpr=\"0 0 0\" scale=\"0.85 0.85 0.85\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_03_02",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -182.0,
+        33.228432,
+        16.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_03_02\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-182.000000 33.228432 16.000000\" hpr=\"0 0 0\" scale=\"0.55 0.55 0.55\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_04_00",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -181.0,
+        41.177433,
+        53.000004
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_04_00\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-181.000000 41.177433 53.000004\" hpr=\"0 0 0\" scale=\"0.65 0.65 0.65\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_04_01",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -175.0,
+        41.226479,
+        55.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_04_01\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-175.000000 41.226479 55.000000\" hpr=\"0 0 0\" scale=\"0.85 0.85 0.85\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_04_02",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -179.0,
+        41.200745,
+        60.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_04_02\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-179.000000 41.200745 60.000000\" hpr=\"0 0 0\" scale=\"0.55 0.55 0.55\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_05_00",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -183.000015,
+        51.229294,
+        97.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_05_00\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-183.000015 51.229294 97.000000\" hpr=\"0 0 0\" scale=\"0.65 0.65 0.65\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_05_01",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -177.0,
+        51.272499,
+        99.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_05_01\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-177.000000 51.272499 99.000000\" hpr=\"0 0 0\" scale=\"0.85 0.85 0.85\" interaction=\"ghost\" />\n  ",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_ClifftopFir_West_v33_05_02",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -181.0,
+        51.228451,
+        104.000008
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "originalXml": "<object id=\"SkiDash_ClifftopFir_West_v33_05_02\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-181.000000 51.228451 104.000008\" hpr=\"0 0 0\" scale=\"0.55 0.55 0.55\" interaction=\"ghost\" />\n",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_RelocatedFir_01",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        135.99998474,
+        68.00027649,
+        76.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_RelocatedFir_01\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"135.99998474 68.00027649 76.00000000\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_RelocatedFir_02",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        139.0,
+        65.14045898,
+        64.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_RelocatedFir_02\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"139.00000000 65.14045898 64.00000000\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_RelocatedFir_03",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        137.0,
+        47.72763626,
+        48.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_RelocatedFir_03\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"137.00000000 47.72763626 48.00000000\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_RelocatedFir_04",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        135.99998474,
+        68.0848407,
+        85.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_RelocatedFir_04\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"135.99998474 68.08484070 85.00000000\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_RelocatedFir_05",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        134.0,
+        48.72630493,
+        39.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_RelocatedFir_05\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"134.00000000 48.72630493 39.00000000\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_RelocatedFir_06",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        146.0,
+        49.57951157,
+        51.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_RelocatedFir_06\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"146.00000000 49.57951157 51.00000000\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_RelocatedFir_07",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -48.99999619,
+        77.44373505,
+        34.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_RelocatedFir_07\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"-48.99999619 77.44373505 34.00000000\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_RelocatedFir_08",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        126.0,
+        50.35622589,
+        117.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_RelocatedFir_08\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"126.00000000 50.35622589 117.00000000\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_RelocatedFir_09",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        135.0,
+        52.60217468,
+        117.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_RelocatedFir_09\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"135.00000000 52.60217468 117.00000000\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_RelocatedFir_10",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        123.00000763,
+        52.32782928,
+        126.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_RelocatedFir_10\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"123.00000763 52.32782928 126.00000000\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_RelocatedFir_11",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        107.0,
+        32.82901566,
+        167.00001526
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_RelocatedFir_11\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"107.00000000 32.82901566 167.00001526\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_RelocatedFir_12",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        116.00000763,
+        33.54928772,
+        167.00001526
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_RelocatedFir_12\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"116.00000763 33.54928772 167.00001526\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_RelocatedFir_13",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        144.99998474,
+        70.08796112,
+        73.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_RelocatedFir_13\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"144.99998474 70.08796112 73.00000000\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_RelocatedFir_14",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        144.99998474,
+        70.57592957,
+        82.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_RelocatedFir_14\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"144.99998474 70.57592957 82.00000000\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_RelocatedFir_15",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        139.0,
+        68.41581146,
+        94.00000763
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_RelocatedFir_15\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"139.00000000 68.41581146 94.00000763\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />",
+      "existingCoordinateInstance": true
+    },
+    {
+      "id": "SkiDash_RelocatedFir_16",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        134.0,
+        46.51047318,
+        30.0
+      ],
+      "hpr": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "originalXml": "<object id=\"SkiDash_RelocatedFir_16\" type=\"static\" model=\"ski-dash-branchless-fir-v12.spm\" xyz=\"134.00000000 46.51047318 30.00000000\" hpr=\"0 0 0\" scale=\"0.8 0.8 0.8\" interaction=\"ghost\" />",
+      "existingCoordinateInstance": true
+    }
+  ],
+  "previousCoordinateInstancesPromotedToRuntimePool": 71,
+  "decorativeFirTagChangesOnly": true,
+  "extraCoordinatePlacements": [
+    {
+      "id": "SkiDash_SharedEnrichment_000",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        145.35009739481617,
+        19.230214996337892,
+        -49.713376867267684
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5675079980581516,
+        0.5675079980581516,
+        0.5675079980581516
+      ],
+      "support": "SkiDash_EdgeCliff_00_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        18.013551712036133,
+        19.75019073486328
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    },
+    {
+      "id": "SkiDash_SharedEnrichment_001",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        147.14341190600726,
+        19.693899078369142,
+        -56.12054805287939
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.43392695051462526,
+        0.43392695051462526,
+        0.43392695051462526
+      ],
+      "support": "SkiDash_EdgeCliff_00_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        19.55859375,
+        19.94000244140625
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    },
+    {
+      "id": "SkiDash_SharedEnrichment_002",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        146.43434699893328,
+        12.656141204833984,
+        -24.28987534020249
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4301400270948269,
+        0.4301400270948269,
+        0.4301400270948269
+      ],
+      "support": "SkiDash_EdgeCliff_01_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        11.85464859008789,
+        13.247235298156738
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    },
+    {
+      "id": "SkiDash_SharedEnrichment_003",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        140.65684572477488,
+        12.760916633605957,
+        -14.734231398719167
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.45777174585845903,
+        0.45777174585845903,
+        0.45777174585845903
+      ],
+      "support": "SkiDash_EdgeCliff_01_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        11.827319145202637,
+        13.293776512145996
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    },
+    {
+      "id": "SkiDash_SharedEnrichment_004",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        146.37678067433646,
+        22.600637359619142,
+        104.58463308219896
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.522761110882855,
+        0.522761110882855,
+        0.522761110882855
+      ],
+      "support": "SkiDash_EdgeCliff_02_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        21.774797439575195,
+        22.949810028076172
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    },
+    {
+      "id": "SkiDash_SharedEnrichment_005",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        140.72231462536615,
+        15.88729850769043,
+        156.71998169280195
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4460595212496097,
+        0.4460595212496097,
+        0.4460595212496097
+      ],
+      "support": "SkiDash_EdgeCliff_03_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        14.763224601745605,
+        16.49095344543457
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    },
+    {
+      "id": "SkiDash_SharedEnrichment_006",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        -3.8917793663726474,
+        13.173591537475586,
+        -145.0084706347143
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5641368622128455,
+        0.5641368622128455,
+        0.5641368622128455
+      ],
+      "support": "SkiDash_EdgeCliff_04_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        12.398154258728027,
+        13.432184219360352
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    },
+    {
+      "id": "SkiDash_SharedEnrichment_007",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        1.4386389405099784,
+        13.307166023254394,
+        -146.0356869710163
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.46247794649699037,
+        0.46247794649699037,
+        0.46247794649699037
+      ],
+      "support": "SkiDash_EdgeCliff_04_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        13.236122131347656,
+        13.520000457763672
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    },
+    {
+      "id": "SkiDash_SharedEnrichment_008",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        4.8284085987733825,
+        19.261976165771486,
+        183.6184077671238
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5085804644437989,
+        0.5085804644437989,
+        0.5085804644437989
+      ],
+      "support": "SkiDash_EdgeCliff_07_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        18.391183853149414,
+        19.715530395507812
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    },
+    {
+      "id": "SkiDash_SharedEnrichment_009",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        56.279833595205055,
+        13.7884720993042,
+        184.26162110490068
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5320700264103273,
+        0.5320700264103273,
+        0.5320700264103273
+      ],
+      "support": "SkiDash_EdgeCliff_08_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        12.589982986450195,
+        14.373494148254395
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    },
+    {
+      "id": "SkiDash_SharedEnrichment_010",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        61.78676269912186,
+        13.715973777770996,
+        175.08156156417894
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.43541414088737296,
+        0.43541414088737296,
+        0.43541414088737296
+      ],
+      "support": "SkiDash_EdgeCliff_08_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        12.860492706298828,
+        14.319754600524902
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    },
+    {
+      "id": "SkiDash_SharedEnrichment_011",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        105.22952127114823,
+        20.128219528198244,
+        176.79290454688086
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.42202112560353294,
+        0.42202112560353294,
+        0.42202112560353294
+      ],
+      "support": "SkiDash_EdgeCliff_09_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        19.257585525512695,
+        20.729421615600586
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    },
+    {
+      "id": "SkiDash_SharedEnrichment_012",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        155.50309839800812,
+        51.08278839111328,
+        36.30297134629793
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5383148445723658,
+        0.5383148445723658,
+        0.5383148445723658
+      ],
+      "support": "SkiDash_SnowCliff_04_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        50.87794876098633,
+        51.33917999267578
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    },
+    {
+      "id": "SkiDash_SharedEnrichment_013",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        140.42923161290486,
+        50.28067581176758,
+        31.02748609723259
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4856004398386202,
+        0.4856004398386202,
+        0.4856004398386202
+      ],
+      "support": "SkiDash_SnowCliff_04_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        49.690826416015625,
+        51.030113220214844
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    },
+    {
+      "id": "SkiDash_SharedEnrichment_014",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        152.25944094796137,
+        70.30854217529297,
+        88.18484910659463
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4039083494009487,
+        0.4039083494009487,
+        0.4039083494009487
+      ],
+      "support": "SkiDash_SnowCliff_05_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        70.25115966796875,
+        70.52592468261719
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    },
+    {
+      "id": "SkiDash_SharedEnrichment_015",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        150.66178864137464,
+        68.36636535644531,
+        100.73550092740703
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.41734359607641236,
+        0.41734359607641236,
+        0.41734359607641236
+      ],
+      "support": "SkiDash_SnowCliff_05_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        67.92658233642578,
+        68.96614837646484
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    },
+    {
+      "id": "SkiDash_SharedEnrichment_016",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        133.81937982352167,
+        54.21736328125,
+        137.17289182709325
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5662962738671109,
+        0.5662962738671109,
+        0.5662962738671109
+      ],
+      "support": "SkiDash_SnowCliff_06_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        53.836631774902344,
+        54.460472106933594
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    },
+    {
+      "id": "SkiDash_SharedEnrichment_017",
+      "library": "fluxara_driftlib_ski_branchless_fir_v12",
+      "xyz": [
+        130.13805729937124,
+        52.478269500732424,
+        142.16170719682347
+      ],
+      "hpr": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4258431847998646,
+        0.4258431847998646,
+        0.4258431847998646
+      ],
+      "support": "SkiDash_SnowCliff_06_Cap",
+      "footprintSamples": 13,
+      "groundHeightRange": [
+        51.32794952392578,
+        53.12746810913086
+      ],
+      "boundsOutsideExpandedNavmesh": true
+    }
+  ],
+  "newTreeInstances": 18,
+  "newGeometryOrTextureBytesForEnrichment": 0,
+  "newInstanceTriangles": 71496,
+  "existingSharedLibraryMaterialByteDelta": 96
+}

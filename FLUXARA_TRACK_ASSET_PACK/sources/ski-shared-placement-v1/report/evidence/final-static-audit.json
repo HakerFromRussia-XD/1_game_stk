@@ -1,0 +1,41 @@
+{
+  "houses": 16,
+  "relocatedFirs": 16,
+  "totalFirs": 93,
+  "allOtherSceneElementsPreserved": true,
+  "originalHouseTransformsExact": true,
+  "originalAtmosphereElementsExact": true,
+  "originalAuroraTextureExact": true,
+  "auroraGeometryAnimationExactWithEdgeColorFade": true,
+  "auroraAdaptationReport": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/aurora-soft-edge-validation.json",
+  "trackOnlyNightFlagChanged": true,
+  "coreGeometrySha256": "7b27d33521bb2c4b9dd1946e3124293fe5572c002d6a808fe7640a1d8dcfb59c",
+  "finalAndIntegratedMatch": true,
+  "treeRuntimeBlenderBoundsMaxErrorMeters": 7.247924799003158e-06,
+  "files": {
+    "Ski Dash.blend": {
+      "bytes": 48548444,
+      "sha256": "275d8734b75b1670ac80381e097082fbdce4edb6e9d4af400f4a367ef9e0a022"
+    },
+    "scene.xml": {
+      "bytes": 21106,
+      "sha256": "f798788075beb7c6e2eabf26bf326089943e6beac0df54f443e7940c5ec486bf"
+    },
+    "track.xml": {
+      "bytes": 315,
+      "sha256": "d0be56c129ba540ca84f9969799bd30cc9c703ff2005b5c8cc589111f5b3ad22"
+    },
+    "ski-dash_winter_scenery.spm": {
+      "bytes": 5747767,
+      "sha256": "73894727a9f9a26b0f5fb34d8ce8ca28f204d7b9bf86b1b4550f672e2a8d3097"
+    },
+    "aurora.png": {
+      "bytes": 38626,
+      "sha256": "8de4a39cf0b5d33476fc604bc02eb4e1ae61b8ad55822db62ba575ec85796644"
+    },
+    "aurora.spm": {
+      "bytes": 37952,
+      "sha256": "1c8af7b6cf98a4e71eee73e11d8cb0e70ab083c97a29b61a3d409a9af56a1ff1"
+    }
+  }
+}

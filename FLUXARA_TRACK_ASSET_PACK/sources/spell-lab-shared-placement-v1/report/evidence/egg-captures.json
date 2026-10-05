@@ -1,0 +1,40 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/spell-lab-rework/egg-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/spell-lab-rework/egg-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-user-spell-lab",
+    "--mode=8",
+    "--numkarts=1",
+    "--laps=1",
+    "--kart=fluxara-ace",
+    "--seed=9"
+  ],
+  "pid": 52979,
+  "screenshots": [
+    {
+      "seconds": 10,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/spell-lab-rework/screenshots/egg-hunt-10s.png"
+    },
+    {
+      "seconds": 30,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/spell-lab-rework/screenshots/egg-hunt-30s.png"
+    },
+    {
+      "seconds": 50,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/spell-lab-rework/screenshots/egg-hunt-50s.png"
+    }
+  ],
+  "terminated": true,
+  "video": "/Users/motoricallc/Downloads/stk-code-master/output/spell-lab-rework/screenshots/spell-lab-egg-hunt.mp4",
+  "scope": "50 second Egg Hunt smoke test, AI control; does not prove collecting every egg"
+}

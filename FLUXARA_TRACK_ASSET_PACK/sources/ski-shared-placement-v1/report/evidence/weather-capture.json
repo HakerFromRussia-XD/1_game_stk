@@ -1,0 +1,30 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/weather-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/weather-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--track=fluxara-user-ski-dash",
+    "--mode=2",
+    "--battle-mode=0",
+    "--numkarts=3",
+    "--kart=fluxara-ace"
+  ],
+  "normalLocalPlayerController": true,
+  "manualInputApplied": false,
+  "video": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/screenshots/night-atmosphere.mp4",
+  "screenshots": [
+    "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/screenshots/snowfall-8s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/screenshots/snowfall-16s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/screenshots/snowfall-20s.png"
+  ],
+  "pid": 45396,
+  "terminated": true
+}

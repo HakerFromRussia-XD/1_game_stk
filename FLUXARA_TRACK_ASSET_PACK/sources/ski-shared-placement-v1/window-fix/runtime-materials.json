@@ -1,0 +1,137 @@
+{
+  "scope": "Both shared house variants on every map that reuses these runtime libraries, explicitly requested by user",
+  "shader": "unlit",
+  "rows": [
+    {
+      "library": "fluxara_driftlib_old_house_a",
+      "texture": "fluxara_cottage_windows.png",
+      "beforeMaterialsSha256": "de08cbcc08f721b7016c047c5c4e39abccd21e85ab01e116741001f8a0d1aabe",
+      "afterMaterialsSha256": "e04c676bb9210b776d75386b76973b6e3a21b5ff78d5445a6d7c74b0d89481e9",
+      "materialByteDelta": 39,
+      "unchangedFiles": {
+        "fluxara_chalet_wood.png": "169dfe3443c8246184216bd691bbdbebfb914ef4dcde3a572d75739284997d35",
+        "fluxara_chalet_stone.png": "2cf6867fa7a71be9827fe149135288b1ae3df067aca04d55fb361f632ba4a26b",
+        "fluxara_driftlib_old_house_a_main.spm": "e5e39259f47d7d9c1fb7038b08fa0de0aec6c6a0168f9fb4e4cb59157d6a486e",
+        "fluxara_driftlib_old_house_a_physics.spm": "f62891da5e125dffbe2bab72ffe414a7ab11e2991862e62f7aaabd0f89a992ff",
+        "node.xml": "ac40d0eb87899cb751c812e5f0164066abe82824b53fda6a9c711c4232f64962",
+        "fluxara_driftlib_old_house_a_physics_stairs.spm": "eb0d6ca0915058ab23c2734d782f24297be3542fe31aaadf0b6aee51101a6921",
+        "fluxara_cottage_roof.png": "489baffcc6da666db236e693c09a68880751ed9521b291cb99805a52d3f383a9",
+        "fluxara_cottage_windows.png": "4e2e7ff08a63a94980bec012d0aff575d361f98cfafd73166849990e7d7e7cd0",
+        "fluxara_harvester_navy.png": "86222e8e7b14957bcb48b6e1208f3790f6a0895a06c221b355686486088cb8ab",
+        "fluxara_cottage_door.png": "e382009f79bf3f609a9d56748d9538226e9a1042900d6fe838d8b302ec6b801c"
+      },
+      "geometryAndTexturesUnchanged": true,
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_old_house_a/materials.xml"
+    },
+    {
+      "library": "fluxara_driftlib_woodLodge_a",
+      "texture": "fluxara_chalet_window.png",
+      "beforeMaterialsSha256": "003b7316144a97af197737d733e9f914962d2a54d48fd02dfa2253853f2993a1",
+      "afterMaterialsSha256": "c30c4a6c4a543586412d06d31d8f4cb8520677e82153f81bffbe2ff5035f6536",
+      "materialByteDelta": 57,
+      "unchangedFiles": {
+        "fluxara_chalet_wood.png": "169dfe3443c8246184216bd691bbdbebfb914ef4dcde3a572d75739284997d35",
+        "fluxara_chalet_stone.png": "2cf6867fa7a71be9827fe149135288b1ae3df067aca04d55fb361f632ba4a26b",
+        "fluxara_chalet_window.png": "4e4be6a7502ae2aa519ffc22338ff739a82e50dc658fe58058462bcbc5d06120",
+        "fluxara_driftlib_woodLodge_a_main_limit.spm": "0230393fe2e843480ab90701ae4e2fa2452cfd724a209979912a405f204eb18f",
+        "node.xml": "87e32d11fff8cc4c4dcc14eb0467d5110d163d998b23cbcc1728bbe9a2164012",
+        "ski_dash_tree_snowcap.png": "daa38ed6eaa73c7bde3d549d5a472d444de73d9eae1bb39f994ceb1181ce8b6e",
+        "fluxara_driftlib_woodLodge_a_main.spm": "d8b990cc4ed2133ebc8de7aa67b65cb95afb7b2eb228dd69b4287a27cd928cf6"
+      },
+      "geometryAndTexturesUnchanged": true,
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_woodLodge_a/materials.xml"
+    }
+  ],
+  "materialByteDelta": 96,
+  "newMeshBytes": 0,
+  "newTextureBytes": 0,
+  "sharedPoolMaterialIds": [
+    "shared-chalet-fluxara_chalet_window-v1-material",
+    "shared-timber-cottage-material-4-v1",
+    "lap-v1-material-751e8a0ae07a",
+    "lap-v1-material-0a3814bb3201"
+  ],
+  "blenderSourcesUpdated": [
+    {
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-ski-dash-final/Ski Dash.blend",
+      "materials": [
+        "fluxara_chalet_window",
+        "fluxara_cottage_windows"
+      ],
+      "geometryAndTransformsUnchanged": true,
+      "bytes": 51768014,
+      "sha256": "735bde02fb55710608bf640c9284e33e26acb58ff10236a348357b751a1b606e"
+    },
+    {
+      "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend",
+      "materials": [
+        "fluxara_chalet_window",
+        "fluxara_cottage_windows",
+        "LCV1_fluxara_chalet_window.png",
+        "LCV1_fluxara_cottage_windows.png"
+      ],
+      "geometryAndTransformsUnchanged": true,
+      "bytes": 431175949,
+      "sha256": "0807488014415e318f661f1eba60b33a8c9ff11994587c66c9f8e269cadfe89b"
+    },
+    {
+      "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/shared/fluxara_timber_cottage_v1/Fluxara Timber Cottage.blend",
+      "materials": [
+        "fluxara_cottage_windows"
+      ],
+      "geometryAndTransformsUnchanged": true,
+      "bytes": 804953,
+      "sha256": "0bbc708fc89806d4da7ab4b311462c398a8eb08162ed5176c28289630ffb5f9f"
+    },
+    {
+      "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/shared/fluxara_snowy_chalet_v1/Fluxara Snowy Wood Chalet.blend",
+      "materials": [
+        "fluxara_chalet_window"
+      ],
+      "geometryAndTransformsUnchanged": true,
+      "bytes": 809436,
+      "sha256": "dc1e0f6ef0aed08081d92ea5599fabd655682d36bd845682fc49772317761299"
+    },
+    {
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/shared-object-redesign/wood-lodge/candidate/Fluxara Snowy Wood Chalet.blend",
+      "materials": [
+        "fluxara_chalet_window"
+      ],
+      "geometryAndTransformsUnchanged": true,
+      "bytes": 809436,
+      "sha256": "ebda3c77dccd2f46a31bac79c34777e7adaeb2b06ef00e93983b9e5fd6e3b17a"
+    },
+    {
+      "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/lap-catch-reference-v1/Lap Catch Visual Library.blend",
+      "materials": [
+        "LCV1_fluxara_chalet_window.png",
+        "LCV1_fluxara_cottage_windows.png"
+      ],
+      "geometryAndTransformsUnchanged": true,
+      "bytes": 5891818,
+      "sha256": "005691c7a7098d65b871b30a36293f0e28f95414e101ec48f939611ed88a508c"
+    },
+    {
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-lap-catch-final/Lap Catch.blend",
+      "materials": [
+        "LCV1_fluxara_chalet_window.png",
+        "LCV1_fluxara_cottage_windows.png"
+      ],
+      "geometryAndTransformsUnchanged": true,
+      "bytes": 30323482,
+      "sha256": "b14a7b1e72da7d07386a384c897ffa4ee453cd230278bb4bfbeac2a94888f1ef"
+    }
+  ],
+  "runtimeVerification": [
+    {
+      "library": "fluxara_driftlib_old_house_a",
+      "windowShaderUnlitSourceBuiltInstalled": true,
+      "meshTextureColliderEmitterAndNodeByteExact": true
+    },
+    {
+      "library": "fluxara_driftlib_woodLodge_a",
+      "windowShaderUnlitSourceBuiltInstalled": true,
+      "meshTextureColliderEmitterAndNodeByteExact": true
+    }
+  ]
+}

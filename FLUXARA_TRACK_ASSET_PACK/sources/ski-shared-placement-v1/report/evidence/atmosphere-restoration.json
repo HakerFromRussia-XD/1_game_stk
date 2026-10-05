@@ -1,0 +1,30 @@
+{
+  "source": "/Users/motoricallc/Downloads/fluxara-drift/track-reworks/dust-cross-split-combat/runtime-sim/Fluxara Drift.app/data/tracks/fluxara-user-ski-dash",
+  "restoredXml": [
+    "<object id=\"aurora\" type=\"animation\" xyz=\"-30.88 65.80 -556.61\" hpr=\"0.0 -0.0 0.0\" scale=\"1.07 1.07 1.07\" interaction=\"ghost\" model=\"aurora.spm\" skeletal-animation=\"false\">\n    <animated-texture name=\"aurora.png\" dx=\"0.20000\" dy=\"-0.10000\" />\n    <curve channel=\"LocX\" interpolation=\"linear\" extend=\"cyclic\">\n      <p c=\"1.000 -30.885\" />\n      <p c=\"400.000 -30.885\" />\n    </curve>\n    <curve channel=\"LocZ\" interpolation=\"linear\" extend=\"cyclic\">\n      <p c=\"1.000 -556.609\" />\n      <p c=\"2196.000 730.597\" />\n    </curve>\n  </object>\n  ",
+    "<sun fog=\"true\" fog-color=\"2 3 7\" fog-max=\"0.30000001192092896\" fog-start=\"10.00\" fog-end=\"100.00\" xyz=\"84.27 154.08 -99.81\" sun-specular=\"67 50 141\" sun-diffuse=\"33 50 70\" ambient=\"85 85 85\" />\n  ",
+    "<weather particles=\"snow.xml\" />\n  ",
+    "<sky-box texture=\"winter_sky_6.jpg winter_sky_5.jpg winter_sky_2.jpg winter_sky_4.jpg winter_sky_3.jpg winter_sky_1.jpg\" sh-texture=\"winter_sky_6_top.jpg winter_sky_ibl_bot.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg\" />\n  ",
+    "<lightshaft xyz=\"183.55 162.42 -200.57\" id=\"Sun\" opacity=\"0.40\" color=\"60 130 255\" />\n  "
+  ],
+  "originalAuroraMeshAndTextureByteExact": false,
+  "auroraTexture": {
+    "path": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-ski-dash-final/aurora.png",
+    "bytes": 38626,
+    "sha256": "8de4a39cf0b5d33476fc604bc02eb4e1ae61b8ad55822db62ba575ec85796644"
+  },
+  "nightMode": true,
+  "weatherDependencies": [
+    {
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/gfx/snow.xml",
+      "sha256": "ec194895c3ea2cc74a10cfb1eced915127d2f963076f378a3e3ca9cf7679ef9d"
+    },
+    {
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/snowflake.png",
+      "sha256": "d8c7c78a869fe99bca9f86df5d8b6b3ad1b50d580e36e87f156b3c322c2f5867"
+    }
+  ],
+  "runtimeVerification": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/runtime-review.json",
+  "originalAuroraGeometryAndTexturePreserved": true,
+  "appearanceAdaptation": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/aurora-soft-edge-validation.json"
+}

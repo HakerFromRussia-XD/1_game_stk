@@ -1,0 +1,18 @@
+from pathlib import Path
+import json,hashlib,shutil,xml.etree.ElementTree as E
+r=Path(__file__).resolve().parent;repo=Path('/Users/motoricallc/Downloads/fluxara-drift');pack=repo/'FLUXARA_TRACK_ASSET_PACK';pp=repo/'FLUXARA_TRACK_ASSET_POOL.json';lp=r.parent.parent/'fluxara-user-ski-dash.asset-ledger.json';pool=json.load(open(pp));reg=json.load(open(r/'asset-registration.json'));a=json.load(open(r/'ski-extraction.json'));prefix='ski-shared-v1-';canon=pack/'blender/FLUXARA_Track_Asset_Library.blend';src=pack/'sources/ski-shared-placement-v1';info=lambda p:{'path':str(p),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
+textures=[{'id':prefix+'texture-'+hashlib.sha256(n.encode()).hexdigest()[:12],'displayName':n,'kind':'texture','sourceMap':a['trackId'],'reuseTier':'direct','canonicalPackPath':q['packPath'],'physicalSourcePath':q['source'],'file':info(Path(q['packPath'])),'categories':['winter'],'reason':'Original pixels, SHA-named runtime alias prevents conflicting same-name textures','uses':[{'trackId':a['trackId'],'status':'Integrated coordinate-storage phase'}]} for n,q in reg['textures'].items()];tm={q['displayName']:q['id'] for q in textures};materials=[{**q,'displayName':q['name'],'kind':'material','sourceMap':a['trackId'],'reuseTier':'direct','canonicalPackPath':str(canon)+'#Material/'+q['name'],'physicalSourcePath':reg['visualLibrary'],'dependencies':[tm[n] for n in q['textures']],'categories':['winter'],'uses':[{'trackId':a['trackId'],'status':'Integrated coordinate-storage phase'}]} for q in reg['materials']];mm={q['name']:q['id'] for q in materials};objects=[{**q,'displayName':q['name'],'kind':'reusable-visual-object','sourceMap':a['trackId'],'reuseTier':'direct','canonicalPackPath':str(canon)+'#Object/'+q['name'],'physicalSourcePath':q['sourceModel'],'file':info(Path(q['sourceModel'])),'dependencies':[mm[n] for n in q['materials']],'categories':['winter'],'reason':'Actual exported reusable model; coordinate instances retain source transforms','uses':[{'trackId':a['trackId'],'status':'Integrated coordinate-storage phase'}]} for q in reg['objects']]
+for k,values in [('objects',objects),('materials',materials),('textures',textures)]:pool[k]=[q for q in pool[k] if not q['id'].startswith(prefix)]+values
+ci=info(canon)
+def refresh(v):
+ if isinstance(v,dict):
+  if v.get('path')==str(canon) and 'sha256' in v:v.update(ci)
+  for x in list(v.values()):refresh(x)
+ elif isinstance(v,list):
+  for x in v:refresh(x)
+refresh(pool);pool['physicalPack']['blenderLibrary']=ci;ids=[q['id'] for k in ['objects','materials','textures'] for q in pool[k]];assert len(ids)==len(set(ids));assets=objects+materials+textures
+for q in assets:
+ assert Path(q['canonicalPackPath'].split('#')[0]).is_file();assert Path(q['physicalSourcePath'].split('#')[0]).is_file();assert all(n in ids for n in q.get('dependencies',[]))
+if not (r/'pool-before.json').exists():shutil.copy2(pp,r/'pool-before.json')
+if not (r/'ledger-before.json').exists():shutil.copy2(lp,r/'ledger-before.json')
+pp.write_text(json.dumps(pool,ensure_ascii=False,indent=2)+'\n');ledger=json.load(open(lp));ledger['coordinateReusePhase']={'assets':assets,'placements':a['placements']+a['extraCoordinatePlacements'],'finalBlend':reg['finalBlend'],'preservation':json.load(open(r/'preservation-audit.json')),'runtimeValidation':'Pending','report':None,'approval':'Previously remade visual style retained; added trees have no new user acceptance recorded'};lp.write_text(json.dumps(ledger,ensure_ascii=False,indent=2)+'\n');(r/'pool-audit.json').write_text(json.dumps({'newAssets':len(assets),'totalPoolIds':len(ids),'allPhysicalPathsExist':True,'unresolvedDependencies':[],'canonical':ci},indent=2));print('SKI_POOL_REGISTERED',len(assets),len(ids))

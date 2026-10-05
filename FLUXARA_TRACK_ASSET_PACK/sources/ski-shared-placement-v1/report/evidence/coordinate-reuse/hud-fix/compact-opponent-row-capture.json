@@ -1,0 +1,41 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/hud-fix/compact-opponent-row-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/hud-fix/compact-opponent-row-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--fluxara-event=main-free_for_all-ski-dash",
+    "--mode=2",
+    "--time-limit=90",
+    "--capture-limit=999",
+    "--numkarts=7",
+    "--kart=fluxara-ace",
+    "--seed=9"
+  ],
+  "screenshots": [
+    {
+      "seconds": 12,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/hud-fix/screenshots/compact-opponent-row-12s.png"
+    },
+    {
+      "seconds": 40,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/hud-fix/screenshots/compact-opponent-row-40s.png"
+    },
+    {
+      "seconds": 70,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/hud-fix/screenshots/compact-opponent-row-70s.png"
+    },
+    {
+      "seconds": 130,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/hud-fix/screenshots/compact-opponent-row-130s.png"
+    }
+  ]
+}

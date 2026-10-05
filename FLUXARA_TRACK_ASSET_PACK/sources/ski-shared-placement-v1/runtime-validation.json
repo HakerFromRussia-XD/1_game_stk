@@ -1,0 +1,19 @@
+{
+  "platform": "iOS Simulator, explicit iphonesimulator",
+  "event": "main-free_for_all-ski-dash",
+  "commandEvidence": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/hud-fix/compact-numeric-row-capture.json",
+  "customTimerSeconds": 90,
+  "naturalResultsScreenAt130sVisuallyInspected": true,
+  "inspectionCameraBothHouseVariantsVisuallyInspected": true,
+  "gameplay40sCompactHudVisuallyInspected": true,
+  "compactSingleRowAllSixOpponentsVisuallyInspected": true,
+  "translucentCounterAndMinimapPanelsWithRosterPreviewAndScores": true,
+  "forcedWin": false,
+  "limitations": [
+    "Custom finite FFA probe; not verification of the default campaign timer.",
+    "Inspection cameras show both house variants; gameplay camera does not expose every window.",
+    "No FPS benchmark or new user art acceptance recorded.",
+    "Earlier explicit --track probes ran Three Strikes and are not FFA timer proof.",
+    "The 70s numeric HUD capture fell during the existing portrait result transition and is archived as transitional evidence, not a final gameplay screenshot."
+  ]
+}

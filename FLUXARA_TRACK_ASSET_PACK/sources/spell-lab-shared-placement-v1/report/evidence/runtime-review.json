@@ -1,0 +1,16 @@
+{
+  "referenceMatch": [
+    "Colored flasks, transparent tubes and star platforms retained at original dimensions",
+    "Shared daylight sky, warm ivory boundary walls, stone platform cladding",
+    "36 pooled stylized trees, 10 purple-roof towers, 12 arches"
+  ],
+  "limitations": [
+    "Original gravity spiral and route structure retained; not a 1:1 reconstruction of reference road layout",
+    "Fixed-pipeline simulator rendering has simpler glass, shadows and lighting than the illustrative reference",
+    "Egg Hunt launch and movement verified; collecting all eggs on every difficulty not verified",
+    "Existing translation, missing benchmark replay and kart-class warnings remain; no new missing track textures in capture logs"
+  ],
+  "route": "One normal-mode lap reached finished race screen by 100s",
+  "eggHunt": "50-second separate --mode=8 runtime capture",
+  "baselineInspectionCrash": "Temporary cutscene probe with original race checks crashed because cutscene has no DriveGraph. Fixed inspection probe only: omit checks and callbacks. Production scene/code untouched."
+}

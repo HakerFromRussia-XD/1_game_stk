@@ -1,0 +1,52 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/final-normal-lap-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/final-normal-lap-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-summit-run",
+    "--mode=0",
+    "--laps=1",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--seed=4"
+  ],
+  "screenshots": [
+    {
+      "seconds": 12,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-normal-lap-12s.png"
+    },
+    {
+      "seconds": 25,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-normal-lap-25s.png"
+    },
+    {
+      "seconds": 40,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-normal-lap-40s.png"
+    },
+    {
+      "seconds": 60,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-normal-lap-60s.png"
+    },
+    {
+      "seconds": 80,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-normal-lap-80s.png"
+    },
+    {
+      "seconds": 120,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-normal-lap-120s.png"
+    },
+    {
+      "seconds": 150,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-normal-lap-150s.png"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "model": "volcano_track.spm",
+    "buffers": [
+      {
+        "buffer": 2,
+        "vertices": 2371,
+        "triangles": 2210,
+        "changedNormals": 2371,
+        "shaderTexture": "vr_moss_palette.jpg",
+        "uv": [
+          0.25,
+          0.5
+        ]
+      }
+    ],
+    "positionsIndicesColoursAndBoundsRetained": true,
+    "method": "Area-weighted smooth normals across coincident decorative cliff vertices; existing palette stone cell via UVs. No new pixel files."
+  },
+  {
+    "model": "vulcan_01.spm",
+    "buffers": [
+      {
+        "buffer": 0,
+        "vertices": 1544,
+        "triangles": 1266,
+        "changedNormals": 1544,
+        "shaderTexture": "vr_moss_palette.jpg",
+        "uv": [
+          0.25,
+          0.5
+        ]
+      }
+    ],
+    "positionsIndicesColoursAndBoundsRetained": true,
+    "method": "Area-weighted smooth normals across coincident decorative cliff vertices; existing palette stone cell via UVs. No new pixel files."
+  },
+  {
+    "model": "vulcan_02.spm",
+    "buffers": [
+      {
+        "buffer": 0,
+        "vertices": 1587,
+        "triangles": 1291,
+        "changedNormals": 1587,
+        "shaderTexture": "vr_moss_palette.jpg",
+        "uv": [
+          0.25,
+          0.5
+        ]
+      }
+    ],
+    "positionsIndicesColoursAndBoundsRetained": true,
+    "method": "Area-weighted smooth normals across coincident decorative cliff vertices; existing palette stone cell via UVs. No new pixel files."
+  },
+  {
+    "model": "vulcan_03.spm",
+    "buffers": [
+      {
+        "buffer": 0,
+        "vertices": 1602,
+        "triangles": 1291,
+        "changedNormals": 1602,
+        "shaderTexture": "vr_moss_palette.jpg",
+        "uv": [
+          0.25,
+          0.5
+        ]
+      }
+    ],
+    "positionsIndicesColoursAndBoundsRetained": true,
+    "method": "Area-weighted smooth normals across coincident decorative cliff vertices; existing palette stone cell via UVs. No new pixel files."
+  }
+]

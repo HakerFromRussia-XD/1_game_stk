@@ -1,0 +1,89 @@
+{
+  "screenshots": [
+    {
+      "view": "gardens",
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/spell-lab-shared-placement/delivery-v1/screenshots/candidate/gardens.jpg",
+      "camera": [
+        -200,
+        210,
+        -80
+      ],
+      "target": [
+        0,
+        125,
+        -220
+      ],
+      "kind": "Static game-engine photograph, not driving test",
+      "command": [
+        "xcrun",
+        "simctl",
+        "launch",
+        "--terminate-running-process",
+        "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/spell-lab-shared-placement/delivery-v1/gardens-stdout.log",
+        "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/spell-lab-shared-placement/delivery-v1/gardens-stderr.log",
+        "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+        "io.fluxara.drift",
+        "--no-sound",
+        "--cutscene=fluxara-spell-shared-picture-gardens"
+      ]
+    },
+    {
+      "view": "overview",
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/spell-lab-shared-placement/delivery-v1/screenshots/candidate/overview.jpg",
+      "camera": [
+        500,
+        410,
+        200
+      ],
+      "target": [
+        30,
+        90,
+        -240
+      ],
+      "kind": "Static game-engine photograph, not driving test",
+      "command": [
+        "xcrun",
+        "simctl",
+        "launch",
+        "--terminate-running-process",
+        "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/spell-lab-shared-placement/delivery-v1/overview-stdout.log",
+        "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/spell-lab-shared-placement/delivery-v1/overview-stderr.log",
+        "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+        "io.fluxara.drift",
+        "--no-sound",
+        "--cutscene=fluxara-spell-shared-picture-overview"
+      ]
+    },
+    {
+      "view": "garden-close",
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/spell-lab-shared-placement/delivery-v1/screenshots/candidate/garden-close.jpg",
+      "camera": [
+        -263,
+        169,
+        -285
+      ],
+      "target": [
+        -332,
+        148,
+        -300
+      ],
+      "kind": "Static game-engine photograph, not driving test",
+      "command": [
+        "xcrun",
+        "simctl",
+        "launch",
+        "--terminate-running-process",
+        "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/spell-lab-shared-placement/delivery-v1/garden-close-stdout.log",
+        "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/spell-lab-shared-placement/delivery-v1/garden-close-stderr.log",
+        "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+        "io.fluxara.drift",
+        "--no-sound",
+        "--cutscene=fluxara-spell-shared-picture-garden-close"
+      ]
+    }
+  ],
+  "newDrivingTestPerformed": false,
+  "temporaryProbeResourcesRemoved": true,
+  "existingProductionResourcesPreserved": true,
+  "newBuildPerformed": false
+}

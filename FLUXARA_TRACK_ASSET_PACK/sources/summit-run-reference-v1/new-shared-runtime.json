@@ -1,0 +1,38 @@
+{
+  "libraries": [
+    {
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/summit-run-reference-v1/runtime-library/fluxara_driftlib_summit_snow_fir_v1",
+      "bytes": 147564,
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/shared/fluxara_reused_winter_fir_b_v1/library/fluxara_driftlib_pinetree_b",
+      "reuseTier": "adapt",
+      "adaptation": "Unchanged approved winter fir geometry/textures, wrapper aligns original tree envelope; original tree collider remains separately"
+    },
+    {
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/summit-run-reference-v1/runtime-library/fluxara_driftlib_alpine_snow_column_v1",
+      "bytes": 1598,
+      "triangles": 60,
+      "reuseTier": "authored",
+      "source": "Figma 378:49 snow-capped roadside rock columns; existing alpine mesa prototypes are over 2700 triangles each and do not fit this small detail budget",
+      "textureSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/dp-motorsports-reference-v2/dp_palette.png"
+    },
+    {
+      "library": "fluxara_driftlib_alpine_coral_barrier_v1",
+      "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/summit-run-reference-v1/runtime-library/fluxara_driftlib_alpine_coral_barrier_v1",
+      "bytes": 6914,
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/ski-dash-clean-barrier-v2/fluxara_driftlib_skiDashBarrier_a_main.spm",
+      "reuseTier": "adapt",
+      "adaptation": "Pooled red-white barrier geometry and vertex colors retained; only UV/texture name uses existing white palette swatch"
+    },
+    {
+      "library": "fluxara_driftlib_summit_cascade_v1",
+      "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/summit-run-reference-v1/runtime-library/fluxara_driftlib_summit_cascade_v1",
+      "bytes": 66160,
+      "source": "Reference waterfall geometry conformed to the existing snow-cliff surface; pooled flow texture reused",
+      "reuseTier": "authored",
+      "triangles": 24,
+      "textureSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/lap-catch-reference-v1/fluxara_water_flow.png"
+    }
+  ]
+}

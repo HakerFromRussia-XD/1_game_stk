@@ -1,0 +1,12 @@
+{
+  "checks": [
+    "Repeated unchanged build keeps version",
+    "Track update increments both versions once",
+    "Configure and packaging do not double increment",
+    "Shared texture change increments version",
+    "Bundle plist and revision manifest match"
+  ],
+  "passed": true,
+  "isolatedFixture": true,
+  "productionVersionUnchangedByChecks": true
+}

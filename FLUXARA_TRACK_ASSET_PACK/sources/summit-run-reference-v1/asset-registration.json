@@ -1,0 +1,5421 @@
+{
+  "objects": [
+    {
+      "id": "summit-v1-6d6d84e5f10ad311",
+      "name": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "sourceModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_summit_snow_fir_v1/fluxara_driftlib_pinetree_b_high.spm",
+      "triangles": 190,
+      "materials": [
+        "SRV1_fir_reuse_b_foliage.png"
+      ]
+    },
+    {
+      "id": "summit-v1-6cbc90097b80e70f",
+      "name": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "sourceModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_summit_snow_fir_v1/fluxara_driftlib_pinetree_b_high.spm",
+      "triangles": 302,
+      "materials": [
+        "SRV1_fir_reuse_b_snow.png"
+      ]
+    },
+    {
+      "id": "summit-v1-28e93a0804496e62",
+      "name": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "sourceModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_summit_snow_fir_v1/fluxara_driftlib_pinetree_b_high.spm",
+      "triangles": 8,
+      "materials": [
+        "SRV1_fir_reuse_bark_224.png"
+      ]
+    },
+    {
+      "id": "summit-v1-a4cb81e2ad8b1923",
+      "name": "SR_Prototype_alpine_snow_column_main_0",
+      "sourceModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_alpine_snow_column_v1/alpine_snow_column_main.spm",
+      "triangles": 60,
+      "materials": [
+        "SRV1_dp_palette.png"
+      ]
+    },
+    {
+      "id": "summit-v1-16b4e75dc5fe11ff",
+      "name": "SR_Prototype_fluxara_driftlib_circuit_turn_left_v2_main_0",
+      "sourceModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_circuit_turn_left_v2/fluxara_driftlib_circuit_turn_left_v2_main.spm",
+      "triangles": 34,
+      "materials": [
+        "SRV1_dp_palette.png.001"
+      ]
+    },
+    {
+      "id": "summit-v1-c302d1b31a0a39a7",
+      "name": "SR_Prototype_fluxara_driftlib_circuit_turn_left_v2_main_1",
+      "sourceModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_circuit_turn_left_v2/fluxara_driftlib_circuit_turn_left_v2_main.spm",
+      "triangles": 2,
+      "materials": [
+        "SRV1_dp_turn_left.png"
+      ]
+    },
+    {
+      "id": "summit-v1-e4fcc0d05784997a",
+      "name": "SR_Prototype_fluxara_driftlib_circuit_turn_right_v2_main_0",
+      "sourceModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_circuit_turn_right_v2/fluxara_driftlib_circuit_turn_right_v2_main.spm",
+      "triangles": 34,
+      "materials": [
+        "SRV1_dp_palette.png.002"
+      ]
+    },
+    {
+      "id": "summit-v1-66b4e965a9f3457e",
+      "name": "SR_Prototype_fluxara_driftlib_circuit_turn_right_v2_main_1",
+      "sourceModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_circuit_turn_right_v2/fluxara_driftlib_circuit_turn_right_v2_main.spm",
+      "triangles": 2,
+      "materials": [
+        "SRV1_dp_turn_right.png"
+      ]
+    },
+    {
+      "id": "summit-v1-6dcf9759febc46e0",
+      "name": "SR_Prototype_fluxara_driftlib_circuit_pennants_v2_main_0",
+      "sourceModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_circuit_pennants_v2/fluxara_driftlib_circuit_pennants_v2_main.spm",
+      "triangles": 45,
+      "materials": [
+        "SRV1_dp_palette.png.003"
+      ]
+    },
+    {
+      "id": "summit-v1-a8d5dbb557bfb339",
+      "name": "SR_Prototype_alpine_coral_barrier_main_0",
+      "sourceModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_alpine_coral_barrier_v1/alpine_coral_barrier_main.spm",
+      "triangles": 300,
+      "materials": [
+        "SRV1_dp_palette.png.004"
+      ]
+    },
+    {
+      "id": "summit-v1-8bbe0d0cfd62011e",
+      "name": "SR_Prototype_summit_cascade_main_0",
+      "sourceModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_summit_cascade_v1/summit_cascade_main.spm",
+      "triangles": 24,
+      "materials": [
+        "SRV1_fluxara_water_flow.png"
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "summit-v1-material-55ce79d95a87",
+      "name": "SRV1_wooden.png.002",
+      "oldName": "wooden.png.002",
+      "textures": [
+        "wooden.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-d6c49227fe24",
+      "name": "SRV1_rock_brown.jpg",
+      "oldName": "rock_brown.jpg",
+      "textures": [
+        "rock_brown.jpg"
+      ]
+    },
+    {
+      "id": "summit-v1-material-7640f6aa57f3",
+      "name": "SRV1_Ice_001_COLOR.png.001",
+      "oldName": "Ice_001_COLOR.png.001",
+      "textures": [
+        "Ice_001_COLOR.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-3dc40eb1739b",
+      "name": "SRV1_stk_generic_snow_a.png",
+      "oldName": "stk_generic_snow_a.png",
+      "textures": [
+        "stk_generic_snow_a.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-5472c0f3dd69",
+      "name": "SRV1_grassded.png",
+      "oldName": "grassded.png",
+      "textures": [
+        "grassded.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-91941828d070",
+      "name": "SRV1_stk_generic_ice_alpha_custom.png",
+      "oldName": "stk_generic_ice_alpha_custom.png",
+      "textures": [
+        "stk_generic_ice_alpha_custom.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-10f4d86cb02a",
+      "name": "SRV1_rock_grey.jpg",
+      "oldName": "rock_grey.jpg",
+      "textures": [
+        "rock_grey.jpg"
+      ]
+    },
+    {
+      "id": "summit-v1-material-623de848735d",
+      "name": "SRV1_Ice_001_COLOR.png",
+      "oldName": "Ice_001_COLOR.png",
+      "textures": [
+        "Ice_001_COLOR.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-4683b309a331",
+      "name": "SRV1_snowrock.jpg",
+      "oldName": "snowrock.jpg",
+      "textures": [
+        "snowrock.jpg"
+      ]
+    },
+    {
+      "id": "summit-v1-material-d6baaa86f1d7",
+      "name": "SRV1_transparence.png",
+      "oldName": "transparence.png",
+      "textures": [
+        "transparence.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-e32e2891b0d6",
+      "name": "SRV1_sr_balloon_fabric.png",
+      "oldName": "sr_balloon_fabric.png",
+      "textures": [
+        "sr_balloon_fabric.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-731574cb7d18",
+      "name": "SRV1_dp_turn_left.png",
+      "oldName": "dp_turn_left.png",
+      "textures": [
+        "dp_turn_left.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-6eda65bc0e47",
+      "name": "SRV1_Water_001_COLOR.png",
+      "oldName": "Water_001_COLOR.png",
+      "textures": [
+        "Water_001_COLOR.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-9e0979425b84",
+      "name": "SRV1_fir_reuse_b_foliage.png",
+      "oldName": "fir_reuse_b_foliage.png",
+      "textures": [
+        "fir_reuse_b_foliage.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-279c3b962702",
+      "name": "SRV1_dp_palette.png.001",
+      "oldName": "dp_palette.png.001",
+      "textures": [
+        "dp_palette.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-677b45b26532",
+      "name": "SRV1_fluxara_water_flow.png",
+      "oldName": "fluxara_water_flow.png",
+      "textures": [
+        "fluxara_water_flow.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-a0d39772330b",
+      "name": "SRV1_fir_reuse_bark_224.png",
+      "oldName": "fir_reuse_bark_224.png",
+      "textures": [
+        "fir_reuse_bark_224.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-ba7c0203cd0c",
+      "name": "SRV1_dp_palette.png.003",
+      "oldName": "dp_palette.png.003",
+      "textures": [
+        "dp_palette.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-1804823ddc69",
+      "name": "SRV1_blueZipper.png",
+      "oldName": "blueZipper.png",
+      "textures": [
+        "blueZipper.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-e063895e01d7",
+      "name": "SRV1_wooden.png.001",
+      "oldName": "wooden.png.001",
+      "textures": [
+        "wooden.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-f70ad286a1a6",
+      "name": "SRV1_ice.png",
+      "oldName": "ice.png",
+      "textures": [
+        "ice.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-3d26254df8bd",
+      "name": "SRV1_wooden.png",
+      "oldName": "wooden.png",
+      "textures": [
+        "wooden.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-397a99fceb9c",
+      "name": "SRV1_fir_reuse_b_snow.png",
+      "oldName": "fir_reuse_b_snow.png",
+      "textures": [
+        "fir_reuse_b_snow.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-f3637396ca1c",
+      "name": "SRV1_tree_1.png",
+      "oldName": "tree_1.png",
+      "textures": [
+        "tree_1.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-c654224e85c0",
+      "name": "SRV1_dp_palette.png.004",
+      "oldName": "dp_palette.png.004",
+      "textures": [
+        "dp_palette.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-c865b9ade521",
+      "name": "SRV1_rock.jpg",
+      "oldName": "rock.jpg",
+      "textures": [
+        "rock.jpg"
+      ]
+    },
+    {
+      "id": "summit-v1-material-fc492bd270b9",
+      "name": "SRV1_dp_palette.png",
+      "oldName": "dp_palette.png",
+      "textures": [
+        "dp_palette.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-74f4533158bb",
+      "name": "SRV1_dp_palette.png.002",
+      "oldName": "dp_palette.png.002",
+      "textures": [
+        "dp_palette.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-aca6d3a24ef6",
+      "name": "SRV1_snowoodbridge.jpg",
+      "oldName": "snowoodbridge.jpg",
+      "textures": [
+        "snowoodbridge.jpg"
+      ]
+    },
+    {
+      "id": "summit-v1-material-8f2c18fe881b",
+      "name": "SRV1_dp_turn_right.png",
+      "oldName": "dp_turn_right.png",
+      "textures": [
+        "dp_turn_right.png"
+      ]
+    },
+    {
+      "id": "summit-v1-material-5c62250e7625",
+      "name": "SRV1_rock.jpg.001",
+      "oldName": "rock.jpg.001",
+      "textures": [
+        "rock.jpg"
+      ]
+    },
+    {
+      "id": "summit-v1-material-9aa2e7047020",
+      "name": "SRV1_sr_balloon_fabric.png.001",
+      "oldName": "sr_balloon_fabric.png.001",
+      "textures": [
+        "sr_balloon_fabric.png"
+      ]
+    }
+  ],
+  "textures": {
+    "blueZipper.png": {
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/candidate/blueZipper.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/blueZipper.png",
+      "bytes": 99998,
+      "sha256": "0d96d94bbf85be6fae566ecf720ced84fe4e25d0e63890cfd681dd7e07c7ed8a"
+    },
+    "rock.jpg": {
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/candidate/rock.jpg",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/rock.jpg",
+      "bytes": 316,
+      "sha256": "65c2766c45b713eaf2fd930318e91b3a491c3ddfb96664a7b5d259a7828e5952"
+    },
+    "ice.png": {
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/candidate/ice.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/ice.png",
+      "bytes": 365416,
+      "sha256": "ab35106e16b7367c94c134df75157ab348a5936b98b14a7863dcca73e522a4e0"
+    },
+    "Ice_001_COLOR.png": {
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/candidate/Ice_001_COLOR.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/Ice_001_COLOR.png",
+      "bytes": 365416,
+      "sha256": "ab35106e16b7367c94c134df75157ab348a5936b98b14a7863dcca73e522a4e0"
+    },
+    "grassded.png": {
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/candidate/grassded.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/grassded.png",
+      "bytes": 272064,
+      "sha256": "8e168e7390acafe403a454915e005729eb1c7643f888914b7e25298af1fafa0a"
+    },
+    "rock_brown.jpg": {
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/candidate/rock_brown.jpg",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/rock_brown.jpg",
+      "bytes": 317,
+      "sha256": "b53164f73a5dbe4587ebc6aa5209144b331db604f9ee663be17ed12d9560ec5f"
+    },
+    "rock_grey.jpg": {
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/candidate/rock_grey.jpg",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/rock_grey.jpg",
+      "bytes": 318,
+      "sha256": "5aefcfae1e08bcd49a1e01aff60d9240af289047d36b3b91503f86520cc5274c"
+    },
+    "snowoodbridge.jpg": {
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/candidate/snowoodbridge.jpg",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/snowoodbridge.jpg",
+      "bytes": 56517,
+      "sha256": "6a026faa234a8ceb00ff4bd09790248cca4406b0fd223c63d96500b1a76eeb1b"
+    },
+    "snowrock.jpg": {
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/candidate/snowrock.jpg",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/snowrock.jpg",
+      "bytes": 511,
+      "sha256": "cb4666afa8d4528781238750c360abe6b8f6b361a2ff299f9fa66cfd6096d979"
+    },
+    "stk_generic_ice_alpha_custom.png": {
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/candidate/fluxara_drift_generic_ice_alpha_custom.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/stk_generic_ice_alpha_custom.png",
+      "bytes": 365416,
+      "sha256": "ab35106e16b7367c94c134df75157ab348a5936b98b14a7863dcca73e522a4e0"
+    },
+    "transparence.png": {
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/build-ios-shared-props-simulator/Debug-iphonesimulator/Fluxara Drift.app/data/textures/transparence.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/transparence.png",
+      "bytes": 118,
+      "sha256": "b92e8c362050c47993fadf28e742d1765604335264f11136a70ccb55deca594e"
+    },
+    "wooden.png": {
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/candidate/wooden.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/wooden.png",
+      "bytes": 501708,
+      "sha256": "72f648aa2b74161de95e8c39b06dde2bc0dda6025f16fe9a697fab2614890c64"
+    },
+    "Water_001_COLOR.png": {
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/candidate/Water_001_COLOR.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/Water_001_COLOR.png",
+      "bytes": 65112,
+      "sha256": "68ac94843ba81a1614769bd070210d2ede0598051719bb5014ce3d7811699a79"
+    },
+    "stk_generic_snow_a.png": {
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/candidate/fluxara_drift_generic_snow_a.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/stk_generic_snow_a.png",
+      "bytes": 272064,
+      "sha256": "8e168e7390acafe403a454915e005729eb1c7643f888914b7e25298af1fafa0a"
+    },
+    "fir_reuse_b_foliage.png": {
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_summit_snow_fir_v1/fir_reuse_b_foliage.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/fir_reuse_b_foliage.png",
+      "bytes": 3655,
+      "sha256": "2438389de21b6b67d6ba7ba66c6ce1037408851d7474b9f3bbcae45cac14a1b4"
+    },
+    "fir_reuse_b_snow.png": {
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_summit_snow_fir_v1/fir_reuse_b_snow.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/fir_reuse_b_snow.png",
+      "bytes": 2881,
+      "sha256": "daa38ed6eaa73c7bde3d549d5a472d444de73d9eae1bb39f994ceb1181ce8b6e"
+    },
+    "fir_reuse_bark_224.png": {
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_summit_snow_fir_v1/fir_reuse_bark_224.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/fir_reuse_bark_224.png",
+      "bytes": 110471,
+      "sha256": "43b3203bbcaec1003f9b3e2068c641d6bb0c368043626e777dae5397a1b812bc"
+    },
+    "dp_palette.png": {
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/build-ios-shared-props-simulator/Debug-iphonesimulator/Fluxara Drift.app/data/textures/dp_palette.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/dp_palette.png",
+      "bytes": 2359,
+      "sha256": "ec1efcdc37f6730f5ea304e62bcd912d454385082e6065ba70c84b43886477cb"
+    },
+    "dp_turn_left.png": {
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_circuit_turn_left_v2/dp_turn_left.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/dp_turn_left.png",
+      "bytes": 2147,
+      "sha256": "98b4520f8b05587edbd9260d62710dd3df9642bb4143708d9f5c2542b3d8006e"
+    },
+    "dp_turn_right.png": {
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_circuit_turn_right_v2/dp_turn_right.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/dp_turn_right.png",
+      "bytes": 2156,
+      "sha256": "99bd7234c86263bf4a116f7d2a87244b8b3a52e4e07d1ef78ed9b0b687d51d03"
+    },
+    "fluxara_water_flow.png": {
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_summit_cascade_v1/fluxara_water_flow.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/fluxara_water_flow.png",
+      "bytes": 65112,
+      "sha256": "68ac94843ba81a1614769bd070210d2ede0598051719bb5014ce3d7811699a79"
+    },
+    "sr_balloon_fabric.png": {
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/candidate/sr_balloon_fabric.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/sr_balloon_fabric.png",
+      "bytes": 596,
+      "sha256": "25f963fcea4c9cd9d6a42eaebb42a3a553a154b194c8bed4d7031c3420a69781"
+    },
+    "tree_1.png": {
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/candidate/tree_1.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/tree_1.png",
+      "bytes": 115373,
+      "sha256": "5898232e55b6f2b604c1f041d98a955f2a7701895a41f3016c9e6e0296d6e3d0"
+    },
+    "screenshot.png": {
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/summit-run-reference-v1/screenshots/preview-ice.png",
+      "packPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/summit-run-reference-v1/screenshot.png",
+      "bytes": 538260,
+      "sha256": "7495f6d363556ac367add5e7d47ff2a58a425cb03e4bef481499d09547a86c1e"
+    }
+  },
+  "nativeSharedInstances": [
+    {
+      "name": "SR_OriginalFir_000_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.8406426906585693,
+          -2.856433629989624,
+          0.0,
+          44.99770736694336
+        ],
+        [
+          2.6768863201141357,
+          3.0311734676361084,
+          0.0,
+          -87.77831268310547
+        ],
+        [
+          0.0,
+          0.0,
+          2.151520013809204,
+          29.888038635253906
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_000_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.8406426906585693,
+          -2.856433629989624,
+          0.0,
+          44.99770736694336
+        ],
+        [
+          2.6768863201141357,
+          3.0311734676361084,
+          0.0,
+          -87.77831268310547
+        ],
+        [
+          0.0,
+          0.0,
+          2.151520013809204,
+          29.888038635253906
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_000_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.8406426906585693,
+          -2.856433629989624,
+          0.0,
+          44.99770736694336
+        ],
+        [
+          2.6768863201141357,
+          3.0311734676361084,
+          0.0,
+          -87.77831268310547
+        ],
+        [
+          0.0,
+          0.0,
+          2.151520013809204,
+          29.888038635253906
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_001_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          0.43199586868286133,
+          2.245676279067993,
+          0.0,
+          32.59130859375
+        ],
+        [
+          -2.1045193672180176,
+          0.4609712064266205,
+          0.0,
+          -75.78734588623047
+        ],
+        [
+          0.0,
+          0.0,
+          1.1842399835586548,
+          30.950979232788086
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_001_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          0.43199586868286133,
+          2.245676279067993,
+          0.0,
+          32.59130859375
+        ],
+        [
+          -2.1045193672180176,
+          0.4609712064266205,
+          0.0,
+          -75.78734588623047
+        ],
+        [
+          0.0,
+          0.0,
+          1.1842399835586548,
+          30.950979232788086
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_001_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          0.43199586868286133,
+          2.245676279067993,
+          0.0,
+          32.59130859375
+        ],
+        [
+          -2.1045193672180176,
+          0.4609712064266205,
+          0.0,
+          -75.78734588623047
+        ],
+        [
+          0.0,
+          0.0,
+          1.1842399835586548,
+          30.950979232788086
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_002_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          0.4436216652393341,
+          2.3061115741729736,
+          0.46438726782798767,
+          44.58664321899414
+        ],
+        [
+          -2.3133649826049805,
+          0.5067164897918701,
+          0.0,
+          -100.93441009521484
+        ],
+        [
+          -0.16940262913703918,
+          -0.8806183338165283,
+          1.2161099910736084,
+          32.59974670410156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_002_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          0.4436216652393341,
+          2.3061115741729736,
+          0.46438726782798767,
+          44.58664321899414
+        ],
+        [
+          -2.3133649826049805,
+          0.5067164897918701,
+          0.0,
+          -100.93441009521484
+        ],
+        [
+          -0.16940262913703918,
+          -0.8806183338165283,
+          1.2161099910736084,
+          32.59974670410156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_002_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          0.4436216652393341,
+          2.3061115741729736,
+          0.46438726782798767,
+          44.58664321899414
+        ],
+        [
+          -2.3133649826049805,
+          0.5067164897918701,
+          0.0,
+          -100.93441009521484
+        ],
+        [
+          -0.16940262913703918,
+          -0.8806183338165283,
+          1.2161099910736084,
+          32.59974670410156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_003_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.131999969482422,
+          0.0,
+          0.0,
+          41.84969711303711
+        ],
+        [
+          0.0,
+          2.2749998569488525,
+          0.0,
+          -120.16099548339844
+        ],
+        [
+          0.0,
+          0.0,
+          1.1751999855041504,
+          35.745399475097656
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_003_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.131999969482422,
+          0.0,
+          0.0,
+          41.84969711303711
+        ],
+        [
+          0.0,
+          2.2749998569488525,
+          0.0,
+          -120.16099548339844
+        ],
+        [
+          0.0,
+          0.0,
+          1.1751999855041504,
+          35.745399475097656
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_003_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.131999969482422,
+          0.0,
+          0.0,
+          41.84969711303711
+        ],
+        [
+          0.0,
+          2.2749998569488525,
+          0.0,
+          -120.16099548339844
+        ],
+        [
+          0.0,
+          0.0,
+          1.1751999855041504,
+          35.745399475097656
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_004_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          0.6302443742752075,
+          1.6156178712844849,
+          0.0,
+          36.3704948425293
+        ],
+        [
+          -1.5140646696090698,
+          0.6725168228149414,
+          0.0,
+          -132.97288513183594
+        ],
+        [
+          0.0,
+          0.0,
+          0.9039999842643738,
+          35.92799758911133
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_004_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          0.6302443742752075,
+          1.6156178712844849,
+          0.0,
+          36.3704948425293
+        ],
+        [
+          -1.5140646696090698,
+          0.6725168228149414,
+          0.0,
+          -132.97288513183594
+        ],
+        [
+          0.0,
+          0.0,
+          0.9039999842643738,
+          35.92799758911133
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_004_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          0.6302443742752075,
+          1.6156178712844849,
+          0.0,
+          36.3704948425293
+        ],
+        [
+          -1.5140646696090698,
+          0.6725168228149414,
+          0.0,
+          -132.97288513183594
+        ],
+        [
+          0.0,
+          0.0,
+          0.9039999842643738,
+          35.92799758911133
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_005_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.6140809059143066,
+          0.30989813804626465,
+          0.0,
+          47.201080322265625
+        ],
+        [
+          -0.2904188334941864,
+          -1.7223423719406128,
+          0.0,
+          -131.22091674804688
+        ],
+        [
+          0.0,
+          0.0,
+          0.9039999842643738,
+          35.45800018310547
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_005_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.6140809059143066,
+          0.30989813804626465,
+          0.0,
+          47.201080322265625
+        ],
+        [
+          -0.2904188334941864,
+          -1.7223423719406128,
+          0.0,
+          -131.22091674804688
+        ],
+        [
+          0.0,
+          0.0,
+          0.9039999842643738,
+          35.45800018310547
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_005_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.6140809059143066,
+          0.30989813804626465,
+          0.0,
+          47.201080322265625
+        ],
+        [
+          -0.2904188334941864,
+          -1.7223423719406128,
+          0.0,
+          -131.22091674804688
+        ],
+        [
+          0.0,
+          0.0,
+          0.9039999842643738,
+          35.45800018310547
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_006_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -2.1467275619506836,
+          0.4121645390987396,
+          0.0,
+          51.81033706665039
+        ],
+        [
+          -0.3862570524215698,
+          -2.290715456008911,
+          0.0,
+          -145.5613250732422
+        ],
+        [
+          0.0,
+          0.0,
+          1.2023199796676636,
+          36.032142639160156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_006_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -2.1467275619506836,
+          0.4121645390987396,
+          0.0,
+          51.81033706665039
+        ],
+        [
+          -0.3862570524215698,
+          -2.290715456008911,
+          0.0,
+          -145.5613250732422
+        ],
+        [
+          0.0,
+          0.0,
+          1.2023199796676636,
+          36.032142639160156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_006_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -2.1467275619506836,
+          0.4121645390987396,
+          0.0,
+          51.81033706665039
+        ],
+        [
+          -0.3862570524215698,
+          -2.290715456008911,
+          0.0,
+          -145.5613250732422
+        ],
+        [
+          0.0,
+          0.0,
+          1.2023199796676636,
+          36.032142639160156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_007_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.5336003303527832,
+          -1.0465621948242188,
+          0.0,
+          73.13158416748047
+        ],
+        [
+          0.9807782173156738,
+          -1.6364638805389404,
+          0.0,
+          -152.45599365234375
+        ],
+        [
+          0.0,
+          0.0,
+          1.003440022468567,
+          36.4793815612793
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_007_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.5336003303527832,
+          -1.0465621948242188,
+          0.0,
+          73.13158416748047
+        ],
+        [
+          0.9807782173156738,
+          -1.6364638805389404,
+          0.0,
+          -152.45599365234375
+        ],
+        [
+          0.0,
+          0.0,
+          1.003440022468567,
+          36.4793815612793
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_007_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.5336003303527832,
+          -1.0465621948242188,
+          0.0,
+          73.13158416748047
+        ],
+        [
+          0.9807782173156738,
+          -1.6364638805389404,
+          0.0,
+          -152.45599365234375
+        ],
+        [
+          0.0,
+          0.0,
+          1.003440022468567,
+          36.4793815612793
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_008_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.785249948501587,
+          2.1231486797332764,
+          0.0,
+          88.1567153930664
+        ],
+        [
+          -1.9896936416625977,
+          -1.9049923419952393,
+          0.0,
+          -156.03106689453125
+        ],
+        [
+          0.0,
+          0.0,
+          1.4735199213027954,
+          36.76953887939453
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_008_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.785249948501587,
+          2.1231486797332764,
+          0.0,
+          88.1567153930664
+        ],
+        [
+          -1.9896936416625977,
+          -1.9049923419952393,
+          0.0,
+          -156.03106689453125
+        ],
+        [
+          0.0,
+          0.0,
+          1.4735199213027954,
+          36.76953887939453
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_008_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.785249948501587,
+          2.1231486797332764,
+          0.0,
+          88.1567153930664
+        ],
+        [
+          -1.9896936416625977,
+          -1.9049923419952393,
+          0.0,
+          -156.03106689453125
+        ],
+        [
+          0.0,
+          0.0,
+          1.4735199213027954,
+          36.76953887939453
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_009_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -0.05709312856197357,
+          -1.8364895582199097,
+          0.0,
+          99.6900405883789
+        ],
+        [
+          1.721053123474121,
+          -0.060922544449567795,
+          0.0,
+          -155.3583984375
+        ],
+        [
+          0.0,
+          0.0,
+          0.949199914932251,
+          36.30590057373047
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_009_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -0.05709312856197357,
+          -1.8364895582199097,
+          0.0,
+          99.6900405883789
+        ],
+        [
+          1.721053123474121,
+          -0.060922544449567795,
+          0.0,
+          -155.3583984375
+        ],
+        [
+          0.0,
+          0.0,
+          0.949199914932251,
+          36.30590057373047
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_009_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -0.05709312856197357,
+          -1.8364895582199097,
+          0.0,
+          99.6900405883789
+        ],
+        [
+          1.721053123474121,
+          -0.060922544449567795,
+          0.0,
+          -155.3583984375
+        ],
+        [
+          0.0,
+          0.0,
+          0.949199914932251,
+          36.30590057373047
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_010_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.699907898902893,
+          -0.8304802179336548,
+          0.0,
+          116.61885833740234
+        ],
+        [
+          0.7782785892486572,
+          -1.813926100730896,
+          0.0,
+          -157.6681671142578
+        ],
+        [
+          0.0,
+          0.0,
+          1.03056001663208,
+          36.35612106323242
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_010_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.699907898902893,
+          -0.8304802179336548,
+          0.0,
+          116.61885833740234
+        ],
+        [
+          0.7782785892486572,
+          -1.813926100730896,
+          0.0,
+          -157.6681671142578
+        ],
+        [
+          0.0,
+          0.0,
+          1.03056001663208,
+          36.35612106323242
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_010_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.699907898902893,
+          -0.8304802179336548,
+          0.0,
+          116.61885833740234
+        ],
+        [
+          0.7782785892486572,
+          -1.813926100730896,
+          0.0,
+          -157.6681671142578
+        ],
+        [
+          0.0,
+          0.0,
+          1.03056001663208,
+          36.35612106323242
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_011_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.5636049509048462,
+          -1.7459657192230225,
+          0.0,
+          140.6656494140625
+        ],
+        [
+          1.6362193822860718,
+          -1.6684808731079102,
+          0.0,
+          -156.15884399414062
+        ],
+        [
+          0.0,
+          0.0,
+          1.2475199699401855,
+          36.49003982543945
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_011_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.5636049509048462,
+          -1.7459657192230225,
+          0.0,
+          140.6656494140625
+        ],
+        [
+          1.6362193822860718,
+          -1.6684808731079102,
+          0.0,
+          -156.15884399414062
+        ],
+        [
+          0.0,
+          0.0,
+          1.2475199699401855,
+          36.49003982543945
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_011_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.5636049509048462,
+          -1.7459657192230225,
+          0.0,
+          140.6656494140625
+        ],
+        [
+          1.6362193822860718,
+          -1.6684808731079102,
+          0.0,
+          -156.15884399414062
+        ],
+        [
+          0.0,
+          0.0,
+          1.2475199699401855,
+          36.49003982543945
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_012_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          0.7287954092025757,
+          -1.7800345420837402,
+          0.0,
+          154.09239196777344
+        ],
+        [
+          1.6681466102600098,
+          0.7776780724525452,
+          0.0,
+          -159.933349609375
+        ],
+        [
+          0.0,
+          0.0,
+          1.003440022468567,
+          36.33938217163086
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_012_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          0.7287954092025757,
+          -1.7800345420837402,
+          0.0,
+          154.09239196777344
+        ],
+        [
+          1.6681466102600098,
+          0.7776780724525452,
+          0.0,
+          -159.933349609375
+        ],
+        [
+          0.0,
+          0.0,
+          1.003440022468567,
+          36.33938217163086
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_012_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          0.7287954092025757,
+          -1.7800345420837402,
+          0.0,
+          154.09239196777344
+        ],
+        [
+          1.6681466102600098,
+          0.7776780724525452,
+          0.0,
+          -159.933349609375
+        ],
+        [
+          0.0,
+          0.0,
+          1.003440022468567,
+          36.33938217163086
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_013_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          1.7585136890411377,
+          -2.0767223834991455,
+          0.040385860949754715,
+          171.9744110107422
+        ],
+        [
+          1.9469445943832397,
+          1.8771946430206299,
+          0.0,
+          -156.53076171875
+        ],
+        [
+          -0.0491197295486927,
+          0.058008112013339996,
+          1.445836067199707,
+          36.62335968017578
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_013_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          1.7585136890411377,
+          -2.0767223834991455,
+          0.040385860949754715,
+          171.9744110107422
+        ],
+        [
+          1.9469445943832397,
+          1.8771946430206299,
+          0.0,
+          -156.53076171875
+        ],
+        [
+          -0.0491197295486927,
+          0.058008112013339996,
+          1.445836067199707,
+          36.62335968017578
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_013_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          1.7585136890411377,
+          -2.0767223834991455,
+          0.040385860949754715,
+          171.9744110107422
+        ],
+        [
+          1.9469445943832397,
+          1.8771946430206299,
+          0.0,
+          -156.53076171875
+        ],
+        [
+          -0.0491197295486927,
+          0.058008112013339996,
+          1.445836067199707,
+          36.62335968017578
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_014_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.089937925338745,
+          0.4496704041957855,
+          0.0,
+          39.77589797973633
+        ],
+        [
+          -0.4214054048061371,
+          2.230116844177246,
+          0.0,
+          -62.3967170715332
+        ],
+        [
+          0.0,
+          0.0,
+          1.1751999855041504,
+          29.4054012298584
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_014_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.089937925338745,
+          0.4496704041957855,
+          0.0,
+          39.77589797973633
+        ],
+        [
+          -0.4214054048061371,
+          2.230116844177246,
+          0.0,
+          -62.3967170715332
+        ],
+        [
+          0.0,
+          0.0,
+          1.1751999855041504,
+          29.4054012298584
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_014_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.089937925338745,
+          0.4496704041957855,
+          0.0,
+          39.77589797973633
+        ],
+        [
+          -0.4214054048061371,
+          2.230116844177246,
+          0.0,
+          -62.3967170715332
+        ],
+        [
+          0.0,
+          0.0,
+          1.1751999855041504,
+          29.4054012298584
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_015_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          1.318368911743164,
+          0.8859068751335144,
+          0.0,
+          36.62910079956055
+        ],
+        [
+          -0.8302212953567505,
+          1.4067960977554321,
+          0.0,
+          -54.93832015991211
+        ],
+        [
+          0.0,
+          0.0,
+          0.8587999939918518,
+          29.210100173950195
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_015_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          1.318368911743164,
+          0.8859068751335144,
+          0.0,
+          36.62910079956055
+        ],
+        [
+          -0.8302212953567505,
+          1.4067960977554321,
+          0.0,
+          -54.93832015991211
+        ],
+        [
+          0.0,
+          0.0,
+          0.8587999939918518,
+          29.210100173950195
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_015_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          1.318368911743164,
+          0.8859068751335144,
+          0.0,
+          36.62910079956055
+        ],
+        [
+          -0.8302212953567505,
+          1.4067960977554321,
+          0.0,
+          -54.93832015991211
+        ],
+        [
+          0.0,
+          0.0,
+          0.8587999939918518,
+          29.210100173950195
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_016_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.4559345245361328,
+          -1.4898383617401123,
+          0.0,
+          37.238311767578125
+        ],
+        [
+          1.3961913585662842,
+          -1.5535887479782104,
+          0.0,
+          -42.078426361083984
+        ],
+        [
+          0.0,
+          0.0,
+          1.1119199991226196,
+          29.466341018676758
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_016_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.4559345245361328,
+          -1.4898383617401123,
+          0.0,
+          37.238311767578125
+        ],
+        [
+          1.3961913585662842,
+          -1.5535887479782104,
+          0.0,
+          -42.078426361083984
+        ],
+        [
+          0.0,
+          0.0,
+          1.1119199991226196,
+          29.466341018676758
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_016_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.4559345245361328,
+          -1.4898383617401123,
+          0.0,
+          37.238311767578125
+        ],
+        [
+          1.3961913585662842,
+          -1.5535887479782104,
+          0.0,
+          -42.078426361083984
+        ],
+        [
+          0.0,
+          0.0,
+          1.1119199991226196,
+          29.466341018676758
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_017_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.8406426906585693,
+          -2.856433629989624,
+          0.0,
+          -65.79228973388672
+        ],
+        [
+          2.6768863201141357,
+          3.0311734676361084,
+          0.0,
+          152.62168884277344
+        ],
+        [
+          0.0,
+          0.0,
+          2.151520013809204,
+          -0.3819599151611328
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_017_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.8406426906585693,
+          -2.856433629989624,
+          0.0,
+          -65.79228973388672
+        ],
+        [
+          2.6768863201141357,
+          3.0311734676361084,
+          0.0,
+          152.62168884277344
+        ],
+        [
+          0.0,
+          0.0,
+          2.151520013809204,
+          -0.3819599151611328
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_017_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.8406426906585693,
+          -2.856433629989624,
+          0.0,
+          -65.79228973388672
+        ],
+        [
+          2.6768863201141357,
+          3.0311734676361084,
+          0.0,
+          152.62168884277344
+        ],
+        [
+          0.0,
+          0.0,
+          2.151520013809204,
+          -0.3819599151611328
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_018_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.9071521759033203,
+          -0.546991765499115,
+          0.0,
+          -42.7661247253418
+        ],
+        [
+          0.5126094222068787,
+          3.102144241333008,
+          0.0,
+          141.48971557617188
+        ],
+        [
+          0.0,
+          0.0,
+          1.6271998882293701,
+          0.6543999910354614
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_018_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.9071521759033203,
+          -0.546991765499115,
+          0.0,
+          -42.7661247253418
+        ],
+        [
+          0.5126094222068787,
+          3.102144241333008,
+          0.0,
+          141.48971557617188
+        ],
+        [
+          0.0,
+          0.0,
+          1.6271998882293701,
+          0.6543999910354614
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_018_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.9071521759033203,
+          -0.546991765499115,
+          0.0,
+          -42.7661247253418
+        ],
+        [
+          0.5126094222068787,
+          3.102144241333008,
+          0.0,
+          141.48971557617188
+        ],
+        [
+          0.0,
+          0.0,
+          1.6271998882293701,
+          0.6543999910354614
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_019_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          3.886705160140991,
+          -0.028954776003956795,
+          0.0,
+          -16.964946746826172
+        ],
+        [
+          0.027134761214256287,
+          4.147398948669434,
+          0.0,
+          146.765625
+        ],
+        [
+          0.0,
+          0.0,
+          2.14247989654541,
+          0.4724600315093994
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_019_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          3.886705160140991,
+          -0.028954776003956795,
+          0.0,
+          -16.964946746826172
+        ],
+        [
+          0.027134761214256287,
+          4.147398948669434,
+          0.0,
+          146.765625
+        ],
+        [
+          0.0,
+          0.0,
+          2.14247989654541,
+          0.4724600315093994
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_019_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          3.886705160140991,
+          -0.028954776003956795,
+          0.0,
+          -16.964946746826172
+        ],
+        [
+          0.027134761214256287,
+          4.147398948669434,
+          0.0,
+          146.765625
+        ],
+        [
+          0.0,
+          0.0,
+          2.14247989654541,
+          0.4724600315093994
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_020_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          3.886705160140991,
+          -0.028954776003956795,
+          0.0,
+          48.37505340576172
+        ],
+        [
+          0.027134761214256287,
+          4.147398948669434,
+          0.0,
+          188.0956268310547
+        ],
+        [
+          0.0,
+          0.0,
+          2.14247989654541,
+          0.4724600315093994
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_020_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          3.886705160140991,
+          -0.028954776003956795,
+          0.0,
+          48.37505340576172
+        ],
+        [
+          0.027134761214256287,
+          4.147398948669434,
+          0.0,
+          188.0956268310547
+        ],
+        [
+          0.0,
+          0.0,
+          2.14247989654541,
+          0.4724600315093994
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_020_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          3.886705160140991,
+          -0.028954776003956795,
+          0.0,
+          48.37505340576172
+        ],
+        [
+          0.027134761214256287,
+          4.147398948669434,
+          0.0,
+          188.0956268310547
+        ],
+        [
+          0.0,
+          0.0,
+          2.14247989654541,
+          0.4724600315093994
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_021_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          1.8724801540374756,
+          3.634481430053711,
+          0.0,
+          33.82438278198242
+        ],
+        [
+          -3.4060285091400146,
+          1.9980733394622803,
+          0.0,
+          202.26168823242188
+        ],
+        [
+          0.0,
+          0.0,
+          2.14247989654541,
+          0.4724600315093994
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_021_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          1.8724801540374756,
+          3.634481430053711,
+          0.0,
+          33.82438278198242
+        ],
+        [
+          -3.4060285091400146,
+          1.9980733394622803,
+          0.0,
+          202.26168823242188
+        ],
+        [
+          0.0,
+          0.0,
+          2.14247989654541,
+          0.4724600315093994
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_021_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          1.8724801540374756,
+          3.634481430053711,
+          0.0,
+          33.82438278198242
+        ],
+        [
+          -3.4060285091400146,
+          1.9980733394622803,
+          0.0,
+          202.26168823242188
+        ],
+        [
+          0.0,
+          0.0,
+          2.14247989654541,
+          0.4724600315093994
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_022_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          1.831429123878479,
+          1.3888264894485474,
+          0.0,
+          15.744173049926758
+        ],
+        [
+          -1.301528811454773,
+          1.9542689323425293,
+          0.0,
+          219.8861846923828
+        ],
+        [
+          0.0,
+          0.0,
+          1.2384799718856812,
+          -0.08553999662399292
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_022_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          1.831429123878479,
+          1.3888264894485474,
+          0.0,
+          15.744173049926758
+        ],
+        [
+          -1.301528811454773,
+          1.9542689323425293,
+          0.0,
+          219.8861846923828
+        ],
+        [
+          0.0,
+          0.0,
+          1.2384799718856812,
+          -0.08553999662399292
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_022_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          1.831429123878479,
+          1.3888264894485474,
+          0.0,
+          15.744173049926758
+        ],
+        [
+          -1.301528811454773,
+          1.9542689323425293,
+          0.0,
+          219.8861846923828
+        ],
+        [
+          0.0,
+          0.0,
+          1.2384799718856812,
+          -0.08553999662399292
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_023_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.0586864948272705,
+          1.5611627101898193,
+          0.0,
+          35.831260681152344
+        ],
+        [
+          -1.4630323648452759,
+          2.1967692375183105,
+          0.0,
+          229.88294982910156
+        ],
+        [
+          0.0,
+          0.0,
+          1.3921599388122559,
+          0.01932007074356079
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_023_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.0586864948272705,
+          1.5611627101898193,
+          0.0,
+          35.831260681152344
+        ],
+        [
+          -1.4630323648452759,
+          2.1967692375183105,
+          0.0,
+          229.88294982910156
+        ],
+        [
+          0.0,
+          0.0,
+          1.3921599388122559,
+          0.01932007074356079
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_023_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.0586864948272705,
+          1.5611627101898193,
+          0.0,
+          35.831260681152344
+        ],
+        [
+          -1.4630323648452759,
+          2.1967692375183105,
+          0.0,
+          229.88294982910156
+        ],
+        [
+          0.0,
+          0.0,
+          1.3921599388122559,
+          0.01932007074356079
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_024_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.4196252822875977,
+          1.8348729610443115,
+          0.0,
+          6.1731038093566895
+        ],
+        [
+          -1.7195380926132202,
+          2.5819172859191895,
+          0.0,
+          248.36131286621094
+        ],
+        [
+          0.0,
+          0.0,
+          1.6362398862838745,
+          0.1599799394607544
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_024_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.4196252822875977,
+          1.8348729610443115,
+          0.0,
+          6.1731038093566895
+        ],
+        [
+          -1.7195380926132202,
+          2.5819172859191895,
+          0.0,
+          248.36131286621094
+        ],
+        [
+          0.0,
+          0.0,
+          1.6362398862838745,
+          0.1599799394607544
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_024_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          2.4196252822875977,
+          1.8348729610443115,
+          0.0,
+          6.1731038093566895
+        ],
+        [
+          -1.7195380926132202,
+          2.5819172859191895,
+          0.0,
+          248.36131286621094
+        ],
+        [
+          0.0,
+          0.0,
+          1.6362398862838745,
+          0.1599799394607544
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_025_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -3.857828140258789,
+          -0.5054528117179871,
+          0.0,
+          -129.20004272460938
+        ],
+        [
+          0.4736815094947815,
+          -4.116584777832031,
+          0.0,
+          96.51382446289062
+        ],
+        [
+          0.0,
+          0.0,
+          2.14247989654541,
+          0.4724600315093994
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_025_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -3.857828140258789,
+          -0.5054528117179871,
+          0.0,
+          -129.20004272460938
+        ],
+        [
+          0.4736815094947815,
+          -4.116584777832031,
+          0.0,
+          96.51382446289062
+        ],
+        [
+          0.0,
+          0.0,
+          2.14247989654541,
+          0.4724600315093994
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_025_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -3.857828140258789,
+          -0.5054528117179871,
+          0.0,
+          -129.20004272460938
+        ],
+        [
+          0.4736815094947815,
+          -4.116584777832031,
+          0.0,
+          96.51382446289062
+        ],
+        [
+          0.0,
+          0.0,
+          2.14247989654541,
+          0.4724600315093994
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_026_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -2.9487228393554688,
+          0.14838509261608124,
+          0.0,
+          -102.93231964111328
+        ],
+        [
+          -0.13905802369117737,
+          -3.14650297164917,
+          0.0,
+          98.44412994384766
+        ],
+        [
+          0.0,
+          0.0,
+          1.6271998882293701,
+          0.6543999910354614
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_026_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -2.9487228393554688,
+          0.14838509261608124,
+          0.0,
+          -102.93231964111328
+        ],
+        [
+          -0.13905802369117737,
+          -3.14650297164917,
+          0.0,
+          98.44412994384766
+        ],
+        [
+          0.0,
+          0.0,
+          1.6271998882293701,
+          0.6543999910354614
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_026_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -2.9487228393554688,
+          0.14838509261608124,
+          0.0,
+          -102.93231964111328
+        ],
+        [
+          -0.13905802369117737,
+          -3.14650297164917,
+          0.0,
+          98.44412994384766
+        ],
+        [
+          0.0,
+          0.0,
+          1.6271998882293701,
+          0.6543999910354614
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_027_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -3.161754608154297,
+          2.4422411918640137,
+          0.0,
+          -81.5199966430664
+        ],
+        [
+          -2.288728713989258,
+          -3.373823404312134,
+          0.0,
+          84.44409942626953
+        ],
+        [
+          0.0,
+          0.0,
+          2.151520013809204,
+          -0.3819599151611328
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_027_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -3.161754608154297,
+          2.4422411918640137,
+          0.0,
+          -81.5199966430664
+        ],
+        [
+          -2.288728713989258,
+          -3.373823404312134,
+          0.0,
+          84.44409942626953
+        ],
+        [
+          0.0,
+          0.0,
+          2.151520013809204,
+          -0.3819599151611328
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_027_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -3.161754608154297,
+          2.4422411918640137,
+          0.0,
+          -81.5199966430664
+        ],
+        [
+          -2.288728713989258,
+          -3.373823404312134,
+          0.0,
+          84.44409942626953
+        ],
+        [
+          0.0,
+          0.0,
+          2.151520013809204,
+          -0.3819599151611328
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_028_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -3.161754608154297,
+          2.4422411918640137,
+          0.0,
+          -205.12998962402344
+        ],
+        [
+          -2.288728713989258,
+          -3.373823404312134,
+          0.0,
+          -103.11589813232422
+        ],
+        [
+          0.0,
+          0.0,
+          2.151520013809204,
+          5.508039951324463
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_028_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -3.161754608154297,
+          2.4422411918640137,
+          0.0,
+          -205.12998962402344
+        ],
+        [
+          -2.288728713989258,
+          -3.373823404312134,
+          0.0,
+          -103.11589813232422
+        ],
+        [
+          0.0,
+          0.0,
+          2.151520013809204,
+          5.508039951324463
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_028_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -3.161754608154297,
+          2.4422411918640137,
+          0.0,
+          -205.12998962402344
+        ],
+        [
+          -2.288728713989258,
+          -3.373823404312134,
+          0.0,
+          -103.11589813232422
+        ],
+        [
+          0.0,
+          0.0,
+          2.151520013809204,
+          5.508039951324463
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_029_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -2.099255323410034,
+          -0.6338727474212646,
+          0.14552895724773407,
+          -200.63734436035156
+        ],
+        [
+          0.5983629822731018,
+          -2.2564010620117188,
+          0.0,
+          -32.63944625854492
+        ],
+        [
+          0.2540377974510193,
+          0.07670702040195465,
+          1.2025865316390991,
+          3.822347402572632
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_029_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -2.099255323410034,
+          -0.6338727474212646,
+          0.14552895724773407,
+          -200.63734436035156
+        ],
+        [
+          0.5983629822731018,
+          -2.2564010620117188,
+          0.0,
+          -32.63944625854492
+        ],
+        [
+          0.2540377974510193,
+          0.07670702040195465,
+          1.2025865316390991,
+          3.822347402572632
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_029_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -2.099255323410034,
+          -0.6338727474212646,
+          0.14552895724773407,
+          -200.63734436035156
+        ],
+        [
+          0.5983629822731018,
+          -2.2564010620117188,
+          0.0,
+          -32.63944625854492
+        ],
+        [
+          0.2540377974510193,
+          0.07670702040195465,
+          1.2025865316390991,
+          3.822347402572632
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_030_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -2.048297882080078,
+          0.6982876658439636,
+          0.249994158744812,
+          -172.77032470703125
+        ],
+        [
+          -0.5539477467536926,
+          -2.2093212604522705,
+          0.2676829397678375,
+          -191.59085083007812
+        ],
+        [
+          0.5718950033187866,
+          0.36099761724472046,
+          1.1546608209609985,
+          3.7234854698181152
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_030_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -2.048297882080078,
+          0.6982876658439636,
+          0.249994158744812,
+          -172.77032470703125
+        ],
+        [
+          -0.5539477467536926,
+          -2.2093212604522705,
+          0.2676829397678375,
+          -191.59085083007812
+        ],
+        [
+          0.5718950033187866,
+          0.36099761724472046,
+          1.1546608209609985,
+          3.7234854698181152
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_030_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -2.048297882080078,
+          0.6982876658439636,
+          0.249994158744812,
+          -172.77032470703125
+        ],
+        [
+          -0.5539477467536926,
+          -2.2093212604522705,
+          0.2676829397678375,
+          -191.59085083007812
+        ],
+        [
+          0.5718950033187866,
+          0.36099761724472046,
+          1.1546608209609985,
+          3.7234854698181152
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_031_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -2.399871349334717,
+          0.8181430697441101,
+          0.2929036021232605,
+          -162.5408172607422
+        ],
+        [
+          -0.6490283608436584,
+          -2.5885329246520996,
+          0.31362852454185486,
+          -197.9897918701172
+        ],
+        [
+          0.6700561046600342,
+          0.4229598939418793,
+          1.352849006652832,
+          3.3170688152313232
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_031_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -2.399871349334717,
+          0.8181430697441101,
+          0.2929036021232605,
+          -162.5408172607422
+        ],
+        [
+          -0.6490283608436584,
+          -2.5885329246520996,
+          0.31362852454185486,
+          -197.9897918701172
+        ],
+        [
+          0.6700561046600342,
+          0.4229598939418793,
+          1.352849006652832,
+          3.3170688152313232
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_OriginalFir_031_fluxara_driftlib_pinetree_b_high.spm_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -2.399871349334717,
+          0.8181430697441101,
+          0.2929036021232605,
+          -162.5408172607422
+        ],
+        [
+          -0.6490283608436584,
+          -2.5885329246520996,
+          0.31362852454185486,
+          -197.9897918701172
+        ],
+        [
+          0.6700561046600342,
+          0.4229598939418793,
+          1.352849006652832,
+          3.3170688152313232
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0032_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          -1.7016992568969727,
+          -1.5453665256500244,
+          0.0,
+          69.49800109863281
+        ],
+        [
+          1.4852910041809082,
+          -1.7705278396606445,
+          0.0,
+          -8.022000312805176
+        ],
+        [
+          0.0,
+          0.0,
+          3.571342706680298,
+          2.3742847442626953
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0033_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          2.4094488620758057,
+          0.4696846008300781,
+          0.0,
+          67.89616394042969
+        ],
+        [
+          -0.4751294255256653,
+          2.3818373680114746,
+          0.0,
+          7.061450004577637
+        ],
+        [
+          0.0,
+          0.0,
+          3.5258326530456543,
+          2.7158374786376953
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0034_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          -1.84968900680542,
+          -1.1984705924987793,
+          0.0,
+          67.38147735595703
+        ],
+        [
+          1.1765953302383423,
+          -1.8840785026550293,
+          0.0,
+          18.656524658203125
+        ],
+        [
+          0.0,
+          0.0,
+          4.122055530548096,
+          -0.05088622868061066
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0035_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          -2.3911068439483643,
+          0.057959165424108505,
+          0.0,
+          59.62871170043945
+        ],
+        [
+          -0.05739477276802063,
+          -2.4146199226379395,
+          0.0,
+          25.034818649291992
+        ],
+        [
+          0.0,
+          0.0,
+          4.0086283683776855,
+          0.15529052913188934
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0036_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          -1.26975679397583,
+          -1.6309016942977905,
+          0.0,
+          46.84669876098633
+        ],
+        [
+          1.6345943212509155,
+          -1.2668883800506592,
+          0.0,
+          27.63628387451172
+        ],
+        [
+          0.0,
+          0.0,
+          3.701206922531128,
+          0.27275270223617554
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0037_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          -1.9722840785980225,
+          0.7320352792739868,
+          0.0,
+          31.501895904541016
+        ],
+        [
+          -0.6036286354064941,
+          -2.3918371200561523,
+          0.0,
+          28.091018676757812
+        ],
+        [
+          0.0,
+          0.0,
+          3.1274924278259277,
+          0.43425169587135315
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0038_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          -2.1347241401672363,
+          -0.9478890895843506,
+          0.0,
+          -96.24325561523438
+        ],
+        [
+          0.9053696990013123,
+          -2.234978437423706,
+          0.0,
+          28.086084365844727
+        ],
+        [
+          0.0,
+          0.0,
+          3.575016975402832,
+          4.886552810668945
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0039_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          2.5563366413116455,
+          -0.07850640267133713,
+          0.0,
+          -110.77715301513672
+        ],
+        [
+          0.07975725829601288,
+          2.516244649887085,
+          0.0,
+          27.354022979736328
+        ],
+        [
+          0.0,
+          0.0,
+          3.710062265396118,
+          4.920000076293945
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0040_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          1.8521555662155151,
+          -1.4819633960723877,
+          0.0,
+          -117.7777099609375
+        ],
+        [
+          1.4676240682601929,
+          1.870252013206482,
+          0.0,
+          20.12026596069336
+        ],
+        [
+          0.0,
+          0.0,
+          4.113471031188965,
+          4.926469802856445
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0041_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          -2.422072649002075,
+          0.28160443902015686,
+          0.0,
+          -125.3705062866211
+        ],
+        [
+          -0.2811710834503174,
+          -2.4258055686950684,
+          0.0,
+          12.124052047729492
+        ],
+        [
+          0.0,
+          0.0,
+          4.682305335998535,
+          4.920000076293945
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0042_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          2.144282817840576,
+          0.5610871315002441,
+          0.0,
+          -127.52425384521484
+        ],
+        [
+          -0.5498225092887878,
+          2.1882143020629883,
+          0.0,
+          3.956731081008911
+        ],
+        [
+          0.0,
+          0.0,
+          4.216182231903076,
+          4.92003059387207
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0043_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          2.0963175296783447,
+          0.7097649574279785,
+          0.0,
+          -134.5850067138672
+        ],
+        [
+          -0.637252151966095,
+          2.334857225418091,
+          0.0,
+          -27.429000854492188
+        ],
+        [
+          0.0,
+          0.0,
+          3.898451566696167,
+          4.91996955871582
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0044_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          1.090760350227356,
+          2.164787530899048,
+          0.0,
+          -134.5850067138672
+        ],
+        [
+          -2.0204927921295166,
+          1.1686577796936035,
+          0.0,
+          -75.42900085449219
+        ],
+        [
+          0.0,
+          0.0,
+          4.157318115234375,
+          4.91996955871582
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0045_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          0.658972442150116,
+          -1.962141752243042,
+          0.0,
+          -126.34100341796875
+        ],
+        [
+          2.336876392364502,
+          0.5533015727996826,
+          0.0,
+          -91.42900085449219
+        ],
+        [
+          0.0,
+          0.0,
+          4.208298206329346,
+          4.92143440246582
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0046_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          1.4538331031799316,
+          -1.7536264657974243,
+          0.0,
+          -126.34100341796875
+        ],
+        [
+          1.6870495080947876,
+          1.5112066268920898,
+          0.0,
+          -107.42900085449219
+        ],
+        [
+          0.0,
+          0.0,
+          3.111368417739868,
+          5.03013801574707
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0047_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          0.3725927174091339,
+          -2.45503306388855,
+          0.0,
+          -100.06887817382812
+        ],
+        [
+          2.2992265224456787,
+          0.39784136414527893,
+          0.0,
+          -140.0290069580078
+        ],
+        [
+          0.0,
+          0.0,
+          4.30683708190918,
+          9.85594367980957
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0048_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          -1.4594261646270752,
+          1.5079286098480225,
+          0.0,
+          -84.21890258789062
+        ],
+        [
+          -1.4214156866073608,
+          -1.5482524633407593,
+          0.0,
+          -143.7860565185547
+        ],
+        [
+          0.0,
+          0.0,
+          4.671044826507568,
+          7.588762283325195
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0049_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          -0.23105734586715698,
+          2.2097833156585693,
+          0.0,
+          -68.86782836914062
+        ],
+        [
+          -2.013183832168579,
+          -0.25362148880958557,
+          0.0,
+          -143.7895965576172
+        ],
+        [
+          0.0,
+          0.0,
+          4.581999778747559,
+          12.097307205200195
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0050_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          -1.9542922973632812,
+          1.4387600421905518,
+          0.0,
+          28.16913604736328
+        ],
+        [
+          -1.3077551126480103,
+          -2.15006422996521,
+          0.0,
+          -144.1532440185547
+        ],
+        [
+          0.0,
+          0.0,
+          4.327302932739258,
+          35.02931213378906
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_snow-column_0051_AlpineSnowColumn_SR_Prototype_alpine_snow_c",
+      "prototype": "SR_Prototype_alpine_snow_column_main_0",
+      "library": "fluxara_driftlib_alpine_snow_column_v1",
+      "matrix": [
+        [
+          -0.20232148468494415,
+          2.2060980796813965,
+          0.0,
+          16.80608367919922
+        ],
+        [
+          -2.336371898651123,
+          -0.19104023277759552,
+          0.0,
+          -120.49757385253906
+        ],
+        [
+          0.0,
+          0.0,
+          3.9323220252990723,
+          31.28306770324707
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_extra-fir_0052_fluxara_driftlib_pinetree_b_high.spm_SR_Proto",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.5140039920806885,
+          0.8754392266273499,
+          0.0,
+          69.78874206542969
+        ],
+        [
+          -0.8204116225242615,
+          -1.6155531406402588,
+          0.0,
+          48.480621337890625
+        ],
+        [
+          0.0,
+          0.0,
+          0.949199914932251,
+          0.5859000086784363
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_extra-fir_0052_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.5140039920806885,
+          0.8754392266273499,
+          0.0,
+          69.78874206542969
+        ],
+        [
+          -0.8204116225242615,
+          -1.6155531406402588,
+          0.0,
+          48.480621337890625
+        ],
+        [
+          0.0,
+          0.0,
+          0.949199914932251,
+          0.5859000086784363
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_extra-fir_0052_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.5140039920806885,
+          0.8754392266273499,
+          0.0,
+          69.78874206542969
+        ],
+        [
+          -0.8204116225242615,
+          -1.6155531406402588,
+          0.0,
+          48.480621337890625
+        ],
+        [
+          0.0,
+          0.0,
+          0.949199914932251,
+          0.5859000086784363
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_extra-fir_0053_fluxara_driftlib_pinetree_b_high.spm_SR_Proto",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          0.3151313066482544,
+          -1.8064688444137573,
+          0.0,
+          -139.38973999023438
+        ],
+        [
+          1.692919373512268,
+          0.3362681567668915,
+          0.0,
+          46.07801818847656
+        ],
+        [
+          0.0,
+          0.0,
+          0.949199914932251,
+          3.335167646408081
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_extra-fir_0053_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          0.3151313066482544,
+          -1.8064688444137573,
+          0.0,
+          -139.38973999023438
+        ],
+        [
+          1.692919373512268,
+          0.3362681567668915,
+          0.0,
+          46.07801818847656
+        ],
+        [
+          0.0,
+          0.0,
+          0.949199914932251,
+          3.335167646408081
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_extra-fir_0053_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          0.3151313066482544,
+          -1.8064688444137573,
+          0.0,
+          -139.38973999023438
+        ],
+        [
+          1.692919373512268,
+          0.3362681567668915,
+          0.0,
+          46.07801818847656
+        ],
+        [
+          0.0,
+          0.0,
+          0.949199914932251,
+          3.335167646408081
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_extra-fir_0054_fluxara_driftlib_pinetree_b_high.spm_SR_Proto",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_0",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.5539803504943848,
+          -0.7916710376739502,
+          0.0,
+          -163.35789489746094
+        ],
+        [
+          0.741908848285675,
+          -1.6582107543945312,
+          0.0,
+          5.3159098625183105
+        ],
+        [
+          0.0,
+          0.0,
+          0.949199914932251,
+          4.874931812286377
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_extra-fir_0054_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_1",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.5539803504943848,
+          -0.7916710376739502,
+          0.0,
+          -163.35789489746094
+        ],
+        [
+          0.741908848285675,
+          -1.6582107543945312,
+          0.0,
+          5.3159098625183105
+        ],
+        [
+          0.0,
+          0.0,
+          0.949199914932251,
+          4.874931812286377
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_extra-fir_0054_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_pinetree_b_high_2",
+      "library": "fluxara_driftlib_summit_snow_fir_v1",
+      "matrix": [
+        [
+          -1.5539803504943848,
+          -0.7916710376739502,
+          0.0,
+          -163.35789489746094
+        ],
+        [
+          0.741908848285675,
+          -1.6582107543945312,
+          0.0,
+          5.3159098625183105
+        ],
+        [
+          0.0,
+          0.0,
+          0.949199914932251,
+          4.874931812286377
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_turn_0055_fluxara_driftlib_circuit_turn_left_v2_mesh_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_turn_left_v2_main_0",
+      "library": "fluxara_driftlib_circuit_turn_left_v2",
+      "matrix": [
+        [
+          2.319603443145752,
+          -0.6001823544502258,
+          0.0,
+          59.51203536987305
+        ],
+        [
+          1.74052894115448,
+          0.7998632192611694,
+          0.0,
+          24.75843620300293
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          0.48834228515625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_turn_0055_fluxara_driftlib_circuit_turn_left_v2_mesh_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_turn_left_v2_main_1",
+      "library": "fluxara_driftlib_circuit_turn_left_v2",
+      "matrix": [
+        [
+          2.319603443145752,
+          -0.6001823544502258,
+          0.0,
+          59.51203536987305
+        ],
+        [
+          1.74052894115448,
+          0.7998632192611694,
+          0.0,
+          24.75843620300293
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          0.48834228515625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_turn_0056_fluxara_driftlib_circuit_turn_left_v2_mesh_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_turn_left_v2_main_0",
+      "library": "fluxara_driftlib_circuit_turn_left_v2",
+      "matrix": [
+        [
+          -0.1551087349653244,
+          -0.998568594455719,
+          0.0,
+          -110.70420837402344
+        ],
+        [
+          2.8958489894866943,
+          -0.053485769778490067,
+          0.0,
+          27.063024520874023
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_turn_0056_fluxara_driftlib_circuit_turn_left_v2_mesh_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_turn_left_v2_main_1",
+      "library": "fluxara_driftlib_circuit_turn_left_v2",
+      "matrix": [
+        [
+          -0.1551087349653244,
+          -0.998568594455719,
+          0.0,
+          -110.70420837402344
+        ],
+        [
+          2.8958489894866943,
+          -0.053485769778490067,
+          0.0,
+          27.063024520874023
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_turn_0057_fluxara_driftlib_circuit_turn_left_v2_mesh_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_turn_left_v2_main_0",
+      "library": "fluxara_driftlib_circuit_turn_left_v2",
+      "matrix": [
+        [
+          -2.899218797683716,
+          -0.023211929947137833,
+          0.0,
+          -128.727783203125
+        ],
+        [
+          0.06731460243463516,
+          -0.9997305870056152,
+          0.0,
+          -137.5664825439453
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_turn_0057_fluxara_driftlib_circuit_turn_left_v2_mesh_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_turn_left_v2_main_1",
+      "library": "fluxara_driftlib_circuit_turn_left_v2",
+      "matrix": [
+        [
+          -2.899218797683716,
+          -0.023211929947137833,
+          0.0,
+          -128.727783203125
+        ],
+        [
+          0.06731460243463516,
+          -0.9997305870056152,
+          0.0,
+          -137.5664825439453
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_turn_0058_fluxara_driftlib_circuit_turn_left_v2_mesh_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_turn_left_v2_main_0",
+      "library": "fluxara_driftlib_circuit_turn_left_v2",
+      "matrix": [
+        [
+          0.041804421693086624,
+          0.9998961091041565,
+          0.0,
+          -8.979968070983887
+        ],
+        [
+          -2.8996987342834473,
+          0.014415317215025425,
+          0.0,
+          -143.18112182617188
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          28.70599365234375
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_turn_0058_fluxara_driftlib_circuit_turn_left_v2_mesh_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_turn_left_v2_main_1",
+      "library": "fluxara_driftlib_circuit_turn_left_v2",
+      "matrix": [
+        [
+          0.041804421693086624,
+          0.9998961091041565,
+          0.0,
+          -8.979968070983887
+        ],
+        [
+          -2.8996987342834473,
+          0.014415317215025425,
+          0.0,
+          -143.18112182617188
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          28.70599365234375
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_turn_0059_fluxara_driftlib_circuit_turn_right_v2_mesh_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_turn_right_v2_main_0",
+      "library": "fluxara_driftlib_circuit_turn_right_v2",
+      "matrix": [
+        [
+          -0.8670061826705933,
+          -0.9542632699012756,
+          0.0,
+          -58.52741241455078
+        ],
+        [
+          2.7673635482788086,
+          -0.2989676296710968,
+          0.0,
+          -121.55752563476562
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          43.86737060546875
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_turn_0059_fluxara_driftlib_circuit_turn_right_v2_mesh_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_turn_right_v2_main_1",
+      "library": "fluxara_driftlib_circuit_turn_right_v2",
+      "matrix": [
+        [
+          -0.8670061826705933,
+          -0.9542632699012756,
+          0.0,
+          -58.52741241455078
+        ],
+        [
+          2.7673635482788086,
+          -0.2989676296710968,
+          0.0,
+          -121.55752563476562
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          43.86737060546875
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_turn_0060_fluxara_driftlib_circuit_turn_right_v2_mesh_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_turn_right_v2_main_0",
+      "library": "fluxara_driftlib_circuit_turn_right_v2",
+      "matrix": [
+        [
+          2.117182731628418,
+          0.6833798289299011,
+          0.0,
+          -76.70161437988281
+        ],
+        [
+          -1.9818015098571777,
+          0.7300630211830139,
+          0.0,
+          5.14440393447876
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          45.14080810546875
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_turn_0060_fluxara_driftlib_circuit_turn_right_v2_mesh_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_turn_right_v2_main_1",
+      "library": "fluxara_driftlib_circuit_turn_right_v2",
+      "matrix": [
+        [
+          2.117182731628418,
+          0.6833798289299011,
+          0.0,
+          -76.70161437988281
+        ],
+        [
+          -1.9818015098571777,
+          0.7300630211830139,
+          0.0,
+          5.14440393447876
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          45.14080810546875
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_turn_0061_fluxara_driftlib_circuit_turn_left_v2_mesh_SR_Prot",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_turn_left_v2_main_0",
+      "library": "fluxara_driftlib_circuit_turn_left_v2",
+      "matrix": [
+        [
+          -2.882007598876953,
+          0.11122118681669235,
+          0.0,
+          62.30491638183594
+        ],
+        [
+          -0.3225414454936981,
+          -0.9937956929206848,
+          0.0,
+          -66.19972229003906
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          27.644073486328125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_turn_0061_fluxara_driftlib_circuit_turn_left_v2_mesh_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_turn_left_v2_main_1",
+      "library": "fluxara_driftlib_circuit_turn_left_v2",
+      "matrix": [
+        [
+          -2.882007598876953,
+          0.11122118681669235,
+          0.0,
+          62.30491638183594
+        ],
+        [
+          -0.3225414454936981,
+          -0.9937956929206848,
+          0.0,
+          -66.19972229003906
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          27.644073486328125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_turn_0062_fluxara_driftlib_circuit_turn_right_v2_mesh_SR_Pro",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_turn_right_v2_main_0",
+      "library": "fluxara_driftlib_circuit_turn_right_v2",
+      "matrix": [
+        [
+          -0.0833258107304573,
+          0.9995871186256409,
+          0.0,
+          187.2305908203125
+        ],
+        [
+          -2.8988027572631836,
+          -0.028733037412166595,
+          0.0,
+          -88.14923858642578
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          20.464813232421875
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_turn_0062_fluxara_driftlib_circuit_turn_right_v2_mesh_SR_Pr",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_turn_right_v2_main_1",
+      "library": "fluxara_driftlib_circuit_turn_right_v2",
+      "matrix": [
+        [
+          -0.0833258107304573,
+          0.9995871186256409,
+          0.0,
+          187.2305908203125
+        ],
+        [
+          -2.8988027572631836,
+          -0.028733037412166595,
+          0.0,
+          -88.14923858642578
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          20.464813232421875
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_pennants_0063_fluxara_driftlib_circuit_pennants_v2_mesh_SR_P",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_pennants_v2_main_0",
+      "library": "fluxara_driftlib_circuit_pennants_v2",
+      "matrix": [
+        [
+          -0.7385916709899902,
+          -0.9966269135475159,
+          0.0,
+          62.49800109863281
+        ],
+        [
+          8.969642639160156,
+          -0.08206573873758316,
+          0.0,
+          -8.022000312805176
+        ],
+        [
+          0.0,
+          0.0,
+          3.9000000953674316,
+          12.190673828125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_pennants_0064_fluxara_driftlib_circuit_pennants_v2_mesh_SR_P",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_pennants_v2_main_0",
+      "library": "fluxara_driftlib_circuit_pennants_v2",
+      "matrix": [
+        [
+          -3.7628984451293945,
+          -0.9084010720252991,
+          0.0,
+          60.910614013671875
+        ],
+        [
+          8.175609588623047,
+          -0.4180998206138611,
+          0.0,
+          6.611909866333008
+        ],
+        [
+          0.0,
+          0.0,
+          3.9000000953674316,
+          9.9398193359375
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_pennants_0065_fluxara_driftlib_circuit_pennants_v2_mesh_SR_P",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_pennants_v2_main_0",
+      "library": "fluxara_driftlib_circuit_pennants_v2",
+      "matrix": [
+        [
+          -6.888726711273193,
+          -0.6435381174087524,
+          0.0,
+          61.35441589355469
+        ],
+        [
+          5.791842937469482,
+          -0.7654140591621399,
+          0.0,
+          15.096395492553711
+        ],
+        [
+          0.0,
+          0.0,
+          3.9000000953674316,
+          5.9710693359375
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_pennants_0066_fluxara_driftlib_circuit_pennants_v2_mesh_SR_P",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_pennants_v2_main_0",
+      "library": "fluxara_driftlib_circuit_pennants_v2",
+      "matrix": [
+        [
+          -8.369085311889648,
+          -0.3678164780139923,
+          0.0,
+          56.90629959106445
+        ],
+        [
+          3.3103482723236084,
+          -0.9298983812332153,
+          0.0,
+          18.585905075073242
+        ],
+        [
+          0.0,
+          0.0,
+          3.9000000953674316,
+          6.40728759765625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_pennants_0067_fluxara_driftlib_circuit_pennants_v2_mesh_SR_P",
+      "prototype": "SR_Prototype_fluxara_driftlib_circuit_pennants_v2_main_0",
+      "library": "fluxara_driftlib_circuit_pennants_v2",
+      "matrix": [
+        [
+          -8.995903015136719,
+          -0.030168874189257622,
+          0.0,
+          46.43706130981445
+        ],
+        [
+          0.27151986956596375,
+          -0.9995447993278503,
+          0.0,
+          20.648279190063477
+        ],
+        [
+          0.0,
+          0.0,
+          3.9000000953674316,
+          7.7813720703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_coral-barrier_0068_AlpineCoralBarrier_SR_Prototype_alpine_co",
+      "prototype": "SR_Prototype_alpine_coral_barrier_main_0",
+      "library": "fluxara_driftlib_alpine_coral_barrier_v1",
+      "matrix": [
+        [
+          -0.7654140591621399,
+          -0.5148305296897888,
+          0.0,
+          83.05192565917969
+        ],
+        [
+          0.6435381174087524,
+          -0.6123312711715698,
+          0.0,
+          27.91291046142578
+        ],
+        [
+          0.0,
+          0.0,
+          0.3499999940395355,
+          -0.002030520001426339
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_coral-barrier_0069_AlpineCoralBarrier_SR_Prototype_alpine_co",
+      "prototype": "SR_Prototype_alpine_coral_barrier_main_0",
+      "library": "fluxara_driftlib_alpine_coral_barrier_v1",
+      "matrix": [
+        [
+          -0.9298983812332153,
+          -0.2942532002925873,
+          0.0,
+          66.70685577392578
+        ],
+        [
+          0.3678164780139923,
+          -0.7439187169075012,
+          0.0,
+          41.801692962646484
+        ],
+        [
+          0.0,
+          0.0,
+          0.3499999940395355,
+          -0.0020000000949949026
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_coral-barrier_0070_AlpineCoralBarrier_SR_Prototype_alpine_co",
+      "prototype": "SR_Prototype_alpine_coral_barrier_main_0",
+      "library": "fluxara_driftlib_alpine_coral_barrier_v1",
+      "matrix": [
+        [
+          -0.9995447993278503,
+          -0.024135099723935127,
+          0.0,
+          48.24770736694336
+        ],
+        [
+          0.030168874189257622,
+          -0.7996358275413513,
+          0.0,
+          51.536033630371094
+        ],
+        [
+          0.0,
+          0.0,
+          0.3499999940395355,
+          -0.28917041420936584
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_coral-barrier_0071_AlpineCoralBarrier_SR_Prototype_alpine_co",
+      "prototype": "SR_Prototype_alpine_coral_barrier_main_0",
+      "library": "fluxara_driftlib_alpine_coral_barrier_v1",
+      "matrix": [
+        [
+          -0.9999998807907104,
+          -0.00042526880861259997,
+          0.0,
+          31.59872055053711
+        ],
+        [
+          0.0005315860034897923,
+          -0.7999998927116394,
+          0.0,
+          52.046974182128906
+        ],
+        [
+          0.0,
+          0.0,
+          0.3499999940395355,
+          -0.42952075600624084
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "SR_Cascade_001_SummitCascade_SR_Prototype_summit_cascade_main_0",
+      "prototype": "SR_Prototype_summit_cascade_main_0",
+      "library": "fluxara_driftlib_summit_cascade_v1",
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -102.76080322265625
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -64.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          36.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "runtimeLibrarySources": {
+    "fluxara_driftlib_summit_snow_fir_v1": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_summit_snow_fir_v1",
+    "fluxara_driftlib_alpine_snow_column_v1": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_alpine_snow_column_v1",
+    "fluxara_driftlib_circuit_turn_left_v2": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_circuit_turn_left_v2",
+    "fluxara_driftlib_circuit_turn_right_v2": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_circuit_turn_right_v2",
+    "fluxara_driftlib_circuit_pennants_v2": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_circuit_pennants_v2",
+    "fluxara_driftlib_alpine_coral_barrier_v1": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_alpine_coral_barrier_v1",
+    "fluxara_driftlib_summit_cascade_v1": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_summit_cascade_v1"
+  },
+  "visualLibrary": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/summit-run-reference-v1/Summit Run Visual Library.blend",
+  "finalBlend": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-summit-run-final/Summit Run.blend",
+  "protectedQuads": 131,
+  "nativeOriginalObjects": [
+    {
+      "name": "SR_OriginalObject_0_0",
+      "model": "Balloon.spm",
+      "matrix": [
+        [
+          0.05110259726643562,
+          2.934478282928467,
+          -6.716779708862305,
+          -39.9900016784668
+        ],
+        [
+          -7.3298211097717285,
+          0.022913053631782532,
+          -0.04575631022453308,
+          -180.02000427246094
+        ],
+        [
+          0.0026781735941767693,
+          6.716934680938721,
+          2.9345664978027344,
+          116.19999694824219
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sourceXml": "<object id=\"Balloon\" type=\"animation\" xyz=\"-39.99 116.20 -180.02\" hpr=\"-63.4 89.6 3.0\" scale=\"7.33 7.33 7.33\" interaction=\"none\" model=\"Balloon.spm\" skeletal-animation=\"false\">\n    <curve channel=\"LocX\" interpolation=\"bezier\" extend=\"cyclic\">\n      <p c=\"0.172 -40.000\" h1=\"-51.067 -40.000\" h2=\"51.412 -40.000\" />\n      <p c=\"169.894 99.158\" h1=\"103.758 99.158\" h2=\"310.133 99.158\" />\n      <p c=\"529.782 -151.640\" h1=\"389.314 -151.640\" h2=\"588.448 -151.640\" />\n      <p c=\"680.088 -40.000\" h1=\"632.980 -40.000\" h2=\"727.196 -40.000\" />\n    </curve>\n    <curve channel=\"LocZ\" interpolation=\"bezier\" extend=\"cyclic\">\n      <p c=\"0.896 -180.019\" h1=\"-131.535 -180.008\" h2=\"103.519 -180.027\" />\n      <p c=\"340.106 98.386\" h1=\"207.675 98.386\" h2=\"472.816 98.386\" />\n      <p c=\"680.029 -179.989\" h1=\"578.468 -179.987\" h2=\"812.522 -179.992\" />\n    </curve>\n    <curve channel=\"RotX\" interpolation=\"bezier\" extend=\"cyclic\">\n      <p c=\"0.422 -66.375\" h1=\"-175.490 -66.375\" h2=\"176.334 -66.375\" />\n      <p c=\"451.004 -66.334\" h1=\"275.091 -66.334\" h2=\"626.916 -66.334\" />\n    </curve>\n    <curve channel=\"RotZ\" interpolation=\"bezier\" extend=\"cyclic\">\n      <p c=\"0.762 0.023\" h1=\"-142.680 0.023\" h2=\"144.205 0.023\" />\n      <p c=\"368.177 0.065\" h1=\"224.734 0.065\" h2=\"511.620 0.065\" />\n    </curve>\n    <curve channel=\"RotY\" interpolation=\"linear\" extend=\"cyclic\">\n      <p c=\"0.013 90.084\" />\n      <p c=\"679.984 -269.997\" />\n    </curve>\n  </object>\n  "
+    },
+    {
+      "name": "SR_OriginalObject_0_1",
+      "model": "Balloon.spm",
+      "matrix": [
+        [
+          0.05110259726643562,
+          2.934478282928467,
+          -6.716779708862305,
+          -39.9900016784668
+        ],
+        [
+          -7.3298211097717285,
+          0.022913053631782532,
+          -0.04575631022453308,
+          -180.02000427246094
+        ],
+        [
+          0.0026781735941767693,
+          6.716934680938721,
+          2.9345664978027344,
+          116.19999694824219
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sourceXml": "<object id=\"Balloon\" type=\"animation\" xyz=\"-39.99 116.20 -180.02\" hpr=\"-63.4 89.6 3.0\" scale=\"7.33 7.33 7.33\" interaction=\"none\" model=\"Balloon.spm\" skeletal-animation=\"false\">\n    <curve channel=\"LocX\" interpolation=\"bezier\" extend=\"cyclic\">\n      <p c=\"0.172 -40.000\" h1=\"-51.067 -40.000\" h2=\"51.412 -40.000\" />\n      <p c=\"169.894 99.158\" h1=\"103.758 99.158\" h2=\"310.133 99.158\" />\n      <p c=\"529.782 -151.640\" h1=\"389.314 -151.640\" h2=\"588.448 -151.640\" />\n      <p c=\"680.088 -40.000\" h1=\"632.980 -40.000\" h2=\"727.196 -40.000\" />\n    </curve>\n    <curve channel=\"LocZ\" interpolation=\"bezier\" extend=\"cyclic\">\n      <p c=\"0.896 -180.019\" h1=\"-131.535 -180.008\" h2=\"103.519 -180.027\" />\n      <p c=\"340.106 98.386\" h1=\"207.675 98.386\" h2=\"472.816 98.386\" />\n      <p c=\"680.029 -179.989\" h1=\"578.468 -179.987\" h2=\"812.522 -179.992\" />\n    </curve>\n    <curve channel=\"RotX\" interpolation=\"bezier\" extend=\"cyclic\">\n      <p c=\"0.422 -66.375\" h1=\"-175.490 -66.375\" h2=\"176.334 -66.375\" />\n      <p c=\"451.004 -66.334\" h1=\"275.091 -66.334\" h2=\"626.916 -66.334\" />\n    </curve>\n    <curve channel=\"RotZ\" interpolation=\"bezier\" extend=\"cyclic\">\n      <p c=\"0.762 0.023\" h1=\"-142.680 0.023\" h2=\"144.205 0.023\" />\n      <p c=\"368.177 0.065\" h1=\"224.734 0.065\" h2=\"511.620 0.065\" />\n    </curve>\n    <curve channel=\"RotY\" interpolation=\"linear\" extend=\"cyclic\">\n      <p c=\"0.013 90.084\" />\n      <p c=\"679.984 -269.997\" />\n    </curve>\n  </object>\n  "
+    },
+    {
+      "name": "SR_OriginalObject_0_2",
+      "model": "Balloon.spm",
+      "matrix": [
+        [
+          0.05110259726643562,
+          2.934478282928467,
+          -6.716779708862305,
+          -39.9900016784668
+        ],
+        [
+          -7.3298211097717285,
+          0.022913053631782532,
+          -0.04575631022453308,
+          -180.02000427246094
+        ],
+        [
+          0.0026781735941767693,
+          6.716934680938721,
+          2.9345664978027344,
+          116.19999694824219
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sourceXml": "<object id=\"Balloon\" type=\"animation\" xyz=\"-39.99 116.20 -180.02\" hpr=\"-63.4 89.6 3.0\" scale=\"7.33 7.33 7.33\" interaction=\"none\" model=\"Balloon.spm\" skeletal-animation=\"false\">\n    <curve channel=\"LocX\" interpolation=\"bezier\" extend=\"cyclic\">\n      <p c=\"0.172 -40.000\" h1=\"-51.067 -40.000\" h2=\"51.412 -40.000\" />\n      <p c=\"169.894 99.158\" h1=\"103.758 99.158\" h2=\"310.133 99.158\" />\n      <p c=\"529.782 -151.640\" h1=\"389.314 -151.640\" h2=\"588.448 -151.640\" />\n      <p c=\"680.088 -40.000\" h1=\"632.980 -40.000\" h2=\"727.196 -40.000\" />\n    </curve>\n    <curve channel=\"LocZ\" interpolation=\"bezier\" extend=\"cyclic\">\n      <p c=\"0.896 -180.019\" h1=\"-131.535 -180.008\" h2=\"103.519 -180.027\" />\n      <p c=\"340.106 98.386\" h1=\"207.675 98.386\" h2=\"472.816 98.386\" />\n      <p c=\"680.029 -179.989\" h1=\"578.468 -179.987\" h2=\"812.522 -179.992\" />\n    </curve>\n    <curve channel=\"RotX\" interpolation=\"bezier\" extend=\"cyclic\">\n      <p c=\"0.422 -66.375\" h1=\"-175.490 -66.375\" h2=\"176.334 -66.375\" />\n      <p c=\"451.004 -66.334\" h1=\"275.091 -66.334\" h2=\"626.916 -66.334\" />\n    </curve>\n    <curve channel=\"RotZ\" interpolation=\"bezier\" extend=\"cyclic\">\n      <p c=\"0.762 0.023\" h1=\"-142.680 0.023\" h2=\"144.205 0.023\" />\n      <p c=\"368.177 0.065\" h1=\"224.734 0.065\" h2=\"511.620 0.065\" />\n    </curve>\n    <curve channel=\"RotY\" interpolation=\"linear\" extend=\"cyclic\">\n      <p c=\"0.013 90.084\" />\n      <p c=\"679.984 -269.997\" />\n    </curve>\n  </object>\n  "
+    },
+    {
+      "name": "SR_OriginalObject_1_0",
+      "model": "iceCube.spm",
+      "matrix": [
+        [
+          0.20000000298023224,
+          0.0,
+          0.0,
+          12.079999923706055
+        ],
+        [
+          0.0,
+          0.20000000298023224,
+          0.0,
+          8.100000381469727
+        ],
+        [
+          0.0,
+          0.0,
+          0.20000000298023224,
+          29.309999465942383
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sourceXml": "<object type=\"movable\" id=\"Ice.005\" xyz=\"12.08 29.31 8.10\" hpr=\"0.0 -0.0 0.0\" scale=\"0.20 0.20 0.20\" shape=\"box\" mass=\"11.0\" model=\"iceCube.spm\" friction=\"0.1\" skeletal-animation=\"false\" />\n  "
+    },
+    {
+      "name": "SR_OriginalObject_2_0",
+      "model": "iceCube.spm",
+      "matrix": [
+        [
+          0.20000000298023224,
+          0.0,
+          0.0,
+          8.680000305175781
+        ],
+        [
+          0.0,
+          0.20000000298023224,
+          0.0,
+          8.130000114440918
+        ],
+        [
+          0.0,
+          0.0,
+          0.20000000298023224,
+          29.309999465942383
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sourceXml": "<object type=\"movable\" id=\"Ice.006\" xyz=\"8.68 29.31 8.13\" hpr=\"0.0 -0.0 0.0\" scale=\"0.20 0.20 0.20\" shape=\"box\" mass=\"11.0\" model=\"iceCube.spm\" friction=\"0.1\" skeletal-animation=\"false\" />\n  "
+    },
+    {
+      "name": "SR_OriginalObject_3_0",
+      "model": "iceCube.spm",
+      "matrix": [
+        [
+          0.20000000298023224,
+          0.0,
+          0.0,
+          5.420000076293945
+        ],
+        [
+          0.0,
+          0.20000000298023224,
+          0.0,
+          7.989999771118164
+        ],
+        [
+          0.0,
+          0.0,
+          0.20000000298023224,
+          29.309999465942383
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sourceXml": "<object type=\"movable\" id=\"Ice.007\" xyz=\"5.42 29.31 7.99\" hpr=\"0.0 -0.0 0.0\" scale=\"0.20 0.20 0.20\" shape=\"box\" mass=\"11.0\" model=\"iceCube.spm\" friction=\"0.1\" skeletal-animation=\"false\" />\n  "
+    },
+    {
+      "name": "SR_OriginalObject_4_0",
+      "model": "fallRock.spm",
+      "matrix": [
+        [
+          2.0,
+          0.0,
+          0.0,
+          -43.189998626708984
+        ],
+        [
+          0.0,
+          2.0,
+          0.0,
+          -121.73999786376953
+        ],
+        [
+          0.0,
+          0.0,
+          2.0,
+          45.060001373291016
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sourceXml": "<object id=\"Icosphere\" type=\"animation\" xyz=\"-43.19 45.06 -121.74\" hpr=\"0.0 -0.0 0.0\" scale=\"2.00 2.00 2.00\" interaction=\"explode\" shape=\"sphere\" model=\"fallRock.spm\" explode=\"y\" skeletal-animation=\"false\">\n    <curve channel=\"LocX\" interpolation=\"bezier\" extend=\"const\">\n      <p c=\"1.000 -43.190\" h1=\"-96.212 -43.190\" h2=\"98.212 -43.190\" />\n      <p c=\"250.000 -43.190\" h1=\"191.438 -43.190\" h2=\"261.712 -43.190\" />\n      <p c=\"280.000 -45.899\" h1=\"268.288 -44.805\" h2=\"291.712 -46.994\" />\n      <p c=\"310.000 -48.796\" h1=\"298.288 -47.819\" h2=\"325.226 -50.067\" />\n      <p c=\"349.000 -51.539\" h1=\"333.774 -50.535\" h2=\"364.616 -52.568\" />\n      <p c=\"389.000 -53.999\" h1=\"373.384 -52.714\" h2=\"401.103 -54.996\" />\n      <p c=\"420.000 -57.198\" h1=\"407.897 -55.595\" h2=\"431.712 -58.749\" />\n      <p c=\"450.000 -62.049\" h1=\"438.288 -59.890\" h2=\"461.712 -64.208\" />\n      <p c=\"480.000 -68.257\" h1=\"468.288 -65.313\" h2=\"491.712 -71.201\" />\n      <p c=\"510.000 -77.132\" h1=\"498.288 -72.434\" h2=\"521.712 -81.830\" />\n      <p c=\"540.000 -92.323\" h1=\"528.288 -86.616\" h2=\"551.712 -98.030\" />\n      <p c=\"570.000 -106.368\" h1=\"558.288 -101.772\" h2=\"581.712 -110.965\" />\n      <p c=\"600.000 -115.872\" h1=\"588.288 -112.984\" h2=\"611.712 -118.759\" />\n      <p c=\"630.000 -121.161\" h1=\"618.288 -119.422\" h2=\"641.712 -122.900\" />\n      <p c=\"660.000 -124.780\" h1=\"648.288 -123.757\" h2=\"671.712 -125.804\" />\n      <p c=\"690.000 -126.405\" h1=\"678.288 -126.405\" h2=\"701.712 -126.405\" />\n    </curve>\n    <curve channel=\"LocZ\" interpolation=\"bezier\" extend=\"const\">\n      <p c=\"1.000 -121.735\" h1=\"-96.212 -121.735\" h2=\"98.212 -121.735\" />\n      <p c=\"250.000 -121.735\" h1=\"191.438 -121.735\" h2=\"261.712 -121.735\" />\n      <p c=\"280.000 -126.591\" h1=\"268.288 -124.857\" h2=\"291.712 -128.324\" />\n      <p c=\"310.000 -130.615\" h1=\"298.288 -129.243\" h2=\"325.226 -132.397\" />\n      <p c=\"349.000 -134.516\" h1=\"333.774 -132.600\" h2=\"364.616 -136.482\" />\n      <p c=\"389.000 -140.585\" h1=\"373.384 -137.894\" h2=\"401.103 -142.671\" />\n      <p c=\"420.000 -146.565\" h1=\"407.897 -144.929\" h2=\"431.712 -148.149\" />\n      <p c=\"450.000 -148.890\" h1=\"438.288 -147.876\" h2=\"461.712 -149.904\" />\n      <p c=\"480.000 -151.760\" h1=\"468.288 -150.528\" h2=\"491.712 -152.992\" />\n      <p c=\"510.000 -155.202\" h1=\"498.288 -153.443\" h2=\"521.712 -156.960\" />\n      <p c=\"540.000 -160.769\" h1=\"528.288 -159.326\" h2=\"551.712 -162.212\" />\n      <p c=\"570.000 -162.593\" h1=\"558.288 -161.895\" h2=\"581.712 -163.291\" />\n      <p c=\"600.000 -164.344\" h1=\"588.288 -163.311\" h2=\"611.712 -165.378\" />\n      <p c=\"630.000 -167.888\" h1=\"618.288 -166.423\" h2=\"641.712 -169.353\" />\n      <p c=\"660.000 -171.848\" h1=\"648.288 -169.640\" h2=\"671.712 -174.057\" />\n      <p c=\"690.000 -179.201\" h1=\"678.288 -179.201\" h2=\"701.712 -179.201\" />\n    </curve>\n    <curve channel=\"LocY\" interpolation=\"bezier\" extend=\"const\">\n      <p c=\"1.000 45.061\" h1=\"-96.212 45.061\" h2=\"98.212 45.061\" />\n      <p c=\"250.000 45.061\" h1=\"191.438 45.061\" h2=\"261.712 45.061\" />\n      <p c=\"280.000 44.369\" h1=\"268.288 44.883\" h2=\"291.712 43.855\" />\n      <p c=\"310.000 42.429\" h1=\"298.288 43.291\" h2=\"325.226 41.309\" />\n      <p c=\"349.000 39.214\" h1=\"333.774 41.708\" h2=\"364.616 36.656\" />\n      <p c=\"389.000 29.409\" h1=\"373.384 34.286\" h2=\"401.103 25.630\" />\n      <p c=\"420.000 17.648\" h1=\"407.897 17.809\" h2=\"431.712 17.492\" />\n      <p c=\"450.000 17.492\" h1=\"438.288 17.648\" h2=\"461.712 17.336\" />\n      <p c=\"480.000 13.997\" h1=\"468.288 15.268\" h2=\"491.712 12.726\" />\n      <p c=\"510.000 10.980\" h1=\"498.288 12.234\" h2=\"521.712 9.726\" />\n      <p c=\"540.000 7.572\" h1=\"528.288 8.474\" h2=\"551.712 6.670\" />\n      <p c=\"570.000 6.359\" h1=\"558.288 6.359\" h2=\"581.712 6.359\" />\n      <p c=\"600.000 6.359\" h1=\"588.288 6.359\" h2=\"611.712 6.359\" />\n      <p c=\"630.000 3.713\" h1=\"618.288 6.359\" h2=\"641.712 1.067\" />\n      <p c=\"660.000 -9.928\" h1=\"648.288 -6.621\" h2=\"671.712 -13.235\" />\n      <p c=\"690.000 -13.235\" h1=\"678.288 -13.235\" h2=\"701.712 -13.235\" />\n    </curve>\n    <curve channel=\"RotX\" interpolation=\"bezier\" extend=\"const\">\n      <p c=\"1.000 -0.000\" h1=\"-96.212 -0.000\" h2=\"98.212 -0.000\" />\n      <p c=\"250.000 -0.000\" h1=\"191.438 -0.000\" h2=\"261.712 -0.000\" />\n      <p c=\"280.000 -62.129\" h1=\"268.288 -35.753\" h2=\"291.712 -88.505\" />\n      <p c=\"310.000 -135.119\" h1=\"298.288 -113.887\" h2=\"325.226 -162.720\" />\n      <p c=\"349.000 -181.629\" h1=\"333.774 -168.523\" h2=\"364.616 -195.072\" />\n      <p c=\"389.000 -202.789\" h1=\"373.384 -189.839\" h2=\"401.103 -212.826\" />\n      <p c=\"420.000 -237.805\" h1=\"407.897 -224.257\" h2=\"431.712 -250.916\" />\n      <p c=\"450.000 -271.085\" h1=\"438.288 -256.773\" h2=\"461.712 -285.396\" />\n      <p c=\"480.000 -311.119\" h1=\"468.288 -284.982\" h2=\"491.712 -337.256\" />\n      <p c=\"510.000 -404.979\" h1=\"498.288 -357.901\" h2=\"521.712 -452.056\" />\n      <p c=\"540.000 -552.289\" h1=\"528.288 -501.932\" h2=\"551.712 -602.646\" />\n      <p c=\"570.000 -662.947\" h1=\"558.288 -618.093\" h2=\"581.712 -707.801\" />\n      <p c=\"600.000 -782.066\" h1=\"588.288 -749.518\" h2=\"611.712 -814.613\" />\n      <p c=\"630.000 -829.681\" h1=\"618.288 -829.681\" h2=\"641.712 -829.681\" />\n      <p c=\"660.000 -829.681\" h1=\"648.288 -829.681\" h2=\"671.712 -829.681\" />\n      <p c=\"690.000 -859.236\" h1=\"678.288 -859.236\" h2=\"701.712 -859.236\" />\n    </curve>\n    <curve channel=\"RotZ\" interpolation=\"bezier\" extend=\"const\">\n      <p c=\"1.000 -0.000\" h1=\"-96.212 -0.000\" h2=\"98.212 -0.000\" />\n      <p c=\"250.000 -0.000\" h1=\"191.438 -0.000\" h2=\"261.712 -0.000\" />\n      <p c=\"280.000 35.556\" h1=\"268.288 35.556\" h2=\"291.712 35.556\" />\n      <p c=\"310.000 32.869\" h1=\"298.288 34.449\" h2=\"325.226 30.815\" />\n      <p c=\"349.000 25.841\" h1=\"333.774 29.738\" h2=\"364.616 21.844\" />\n      <p c=\"389.000 12.573\" h1=\"373.384 18.048\" h2=\"401.103 8.329\" />\n      <p c=\"420.000 1.116\" h1=\"407.897 2.568\" h2=\"431.712 -0.289\" />\n      <p c=\"450.000 -0.289\" h1=\"438.288 -0.289\" h2=\"461.712 -0.289\" />\n      <p c=\"480.000 5.646\" h1=\"468.288 -0.289\" h2=\"491.712 11.581\" />\n      <p c=\"510.000 35.844\" h1=\"498.288 25.567\" h2=\"521.712 46.122\" />\n      <p c=\"540.000 58.295\" h1=\"528.288 58.295\" h2=\"551.712 58.295\" />\n      <p c=\"570.000 -25.479\" h1=\"558.288 -2.470\" h2=\"581.712 -48.489\" />\n      <p c=\"600.000 -59.579\" h1=\"588.288 -59.579\" h2=\"611.712 -59.579\" />\n      <p c=\"630.000 -28.761\" h1=\"618.288 -28.761\" h2=\"641.712 -28.761\" />\n      <p c=\"660.000 -28.761\" h1=\"648.288 -28.761\" h2=\"671.712 -28.761\" />\n      <p c=\"690.000 -25.861\" h1=\"678.288 -25.861\" h2=\"701.712 -25.861\" />\n    </curve>\n    <curve channel=\"RotY\" interpolation=\"bezier\" extend=\"const\">\n      <p c=\"1.000 -0.000\" h1=\"-96.212 -0.000\" h2=\"98.212 -0.000\" />\n      <p c=\"250.000 -0.000\" h1=\"191.438 -0.000\" h2=\"261.712 -0.000\" />\n      <p c=\"280.000 -0.000\" h1=\"268.288 -0.000\" h2=\"291.712 -0.000\" />\n      <p c=\"310.000 35.637\" h1=\"298.288 26.217\" h2=\"325.226 47.883\" />\n      <p c=\"349.000 52.043\" h1=\"333.774 52.043\" h2=\"364.616 52.043\" />\n      <p c=\"389.000 49.339\" h1=\"373.384 50.169\" h2=\"401.103 48.695\" />\n      <p c=\"420.000 48.137\" h1=\"407.897 48.137\" h2=\"431.712 48.137\" />\n      <p c=\"450.000 53.481\" h1=\"438.288 53.481\" h2=\"461.712 53.481\" />\n      <p c=\"480.000 48.582\" h1=\"468.288 53.481\" h2=\"491.712 43.684\" />\n      <p c=\"510.000 8.841\" h1=\"498.288 8.841\" h2=\"521.712 8.841\" />\n      <p c=\"540.000 109.251\" h1=\"528.288 109.251\" h2=\"551.712 109.251\" />\n      <p c=\"570.000 106.908\" h1=\"558.288 109.251\" h2=\"581.712 104.565\" />\n      <p c=\"600.000 43.990\" h1=\"588.288 64.714\" h2=\"611.712 23.265\" />\n      <p c=\"630.000 0.741\" h1=\"618.288 0.741\" h2=\"641.712 0.741\" />\n      <p c=\"660.000 0.741\" h1=\"648.288 0.741\" h2=\"671.712 0.741\" />\n      <p c=\"690.000 -13.066\" h1=\"678.288 -13.066\" h2=\"701.712 -13.066\" />\n    </curve>\n  </object>\n  "
+    }
+  ]
+}

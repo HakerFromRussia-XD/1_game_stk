@@ -1,0 +1,81 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/final-campaign-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/final-campaign-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-summit-run",
+    "--mode=0",
+    "--laps=3",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--fluxara-event=main-normal-ancient-summits",
+    "--seed=9"
+  ],
+  "screenshots": [
+    {
+      "seconds": 12,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-campaign-12s.png"
+    },
+    {
+      "seconds": 25,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-campaign-25s.png"
+    },
+    {
+      "seconds": 40,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-campaign-40s.png"
+    },
+    {
+      "seconds": 60,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-campaign-60s.png"
+    },
+    {
+      "seconds": 80,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-campaign-80s.png"
+    },
+    {
+      "seconds": 120,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-campaign-120s.png"
+    },
+    {
+      "seconds": 160,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-campaign-160s.png"
+    },
+    {
+      "seconds": 200,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-campaign-200s.png"
+    },
+    {
+      "seconds": 240,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-campaign-240s.png"
+    },
+    {
+      "seconds": 280,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-campaign-280s.png"
+    },
+    {
+      "seconds": 320,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-campaign-320s.png"
+    },
+    {
+      "seconds": 360,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-campaign-360s.png"
+    },
+    {
+      "seconds": 400,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-campaign-400s.png"
+    },
+    {
+      "seconds": 440,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/final-campaign-440s.png"
+    }
+  ]
+}

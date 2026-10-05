@@ -1,0 +1,135 @@
+{
+  "physicalPackUsedAssetsVerified": 73,
+  "finalRuntimeManifestExact": true,
+  "oneFinalBlend": true,
+  "blender": {
+    "finalBlendOpens": true,
+    "sharedInstancesMatch": 151,
+    "maxTransformError": 1.0728836059570312e-06,
+    "missingTextures": [],
+    "xmlTextsExact": true,
+    "protectedQuads": 131,
+    "meshObjects": 255
+  },
+  "live": {
+    "sourceBuildInstalledTrackExact": true,
+    "newSharedLibrariesExact": [
+      "fluxara_driftlib_summit_snow_fir_v1",
+      "fluxara_driftlib_alpine_snow_column_v1",
+      "fluxara_driftlib_circuit_turn_left_v2",
+      "fluxara_driftlib_circuit_turn_right_v2",
+      "fluxara_driftlib_circuit_pennants_v2",
+      "fluxara_driftlib_alpine_coral_barrier_v1",
+      "fluxara_driftlib_summit_cascade_v1"
+    ],
+    "deduplicatedAssets": [
+      {
+        "file": "dp_sky_right.jpg",
+        "sharedMatches": [
+          "data/textures/dp_sky_right.jpg"
+        ]
+      },
+      {
+        "file": "dp_sky_right.jpg",
+        "sharedMatches": [
+          "data/textures/dp_sky_right.jpg"
+        ]
+      },
+      {
+        "file": "dp_sky_front.jpg",
+        "sharedMatches": [
+          "data/textures/dp_sky_front.jpg"
+        ]
+      },
+      {
+        "file": "dp_sky_front.jpg",
+        "sharedMatches": [
+          "data/textures/dp_sky_front.jpg"
+        ]
+      },
+      {
+        "file": "dp_sky_bottom.jpg",
+        "sharedMatches": [
+          "data/textures/dp_sky_bottom.jpg"
+        ]
+      },
+      {
+        "file": "dp_sky_bottom.jpg",
+        "sharedMatches": [
+          "data/textures/dp_sky_bottom.jpg"
+        ]
+      },
+      {
+        "file": "dp_sky_back.jpg",
+        "sharedMatches": [
+          "data/textures/dp_sky_back.jpg"
+        ]
+      },
+      {
+        "file": "dp_sky_back.jpg",
+        "sharedMatches": [
+          "data/textures/dp_sky_back.jpg"
+        ]
+      },
+      {
+        "file": "dp_sky_top.jpg",
+        "sharedMatches": [
+          "data/textures/dp_sky_top.jpg"
+        ]
+      },
+      {
+        "file": "dp_sky_top.jpg",
+        "sharedMatches": [
+          "data/textures/dp_sky_top.jpg"
+        ]
+      },
+      {
+        "file": "dp_sky_left.jpg",
+        "sharedMatches": [
+          "data/textures/dp_sky_left.jpg"
+        ]
+      },
+      {
+        "file": "dp_sky_left.jpg",
+        "sharedMatches": [
+          "data/textures/dp_sky_left.jpg"
+        ]
+      }
+    ],
+    "appBytes": 319583161,
+    "scope": "Unpacked Debug iOS Simulator app"
+  },
+  "preservation": {
+    "originalBytes": 15715327,
+    "trackFolderBytes": 12343449,
+    "newSharedBytes": 222236,
+    "trackAndNewSharedBytes": 12565685,
+    "byteChangePercent": -20.041848317887368,
+    "originalTriangles": 83244,
+    "newTriangles": 99841,
+    "triangleChangePercent": 19.937773292970064,
+    "newSharedPlacementCount": 73,
+    "protectedFilesByteExact": [
+      "iceCube.spm",
+      "fallRock.spm",
+      "treeMod1_LOD80.spm",
+      "treeMod1_LOD170.spm",
+      "track.xml",
+      "quads.xml",
+      "graph.xml",
+      "ansu.music",
+      "horo.ogg",
+      "horoF.ogg"
+    ],
+    "allMainMeshPositionsNormalsIndicesExact": true,
+    "allMainUvExactExceptSnowCliffBuffer9": true,
+    "allOriginalSceneGameplayAndTreeTransformsExact": true,
+    "treeColliderGeometryNormalsIndicesUvExact": true,
+    "animatedBalloonGeometryNormalsUvIndicesExact": true,
+    "originalMaterialDefinitionsExact": true,
+    "weightNotIncreased": true,
+    "triangleBudgetPassed": true,
+    "logicalVisualCountExcludesHiddenOriginalTreeColliders": true,
+    "sourceUnusedTexturesArchived": []
+  }
+}

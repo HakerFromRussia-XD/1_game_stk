@@ -1,0 +1,60 @@
+{
+  "finalBlendOpens": true,
+  "sharedInstancesMatch": 87,
+  "maxTransformError": 1.1920928955078125e-06,
+  "missingTextures": [],
+  "xmlTextsExact": true,
+  "protectedQuads": 180,
+  "meshObjects": 335,
+  "newCliffPrototypes": [
+    {
+      "prototype": "VRV10_Prototype_Cliff_volcano_track",
+      "triangles": 2210,
+      "positionsIndicesUvsMatchSpm": true,
+      "maximumCustomNormalComponentError": 0.004941752318947418,
+      "maximumCustomNormalAngularErrorDegrees": 0.3376904543683975,
+      "nativeNormalAngularToleranceDegrees": 1,
+      "nativeNormalsAreNotBitIdenticalToPackedSpm": true,
+      "zeroAreaCornerNormalsExcluded": 0,
+      "zeroAreaGeometryStillRetained": true,
+      "originalNativeCliffInstancePartsLinkedToPrototype": 1
+    },
+    {
+      "prototype": "VRV10_Prototype_Cliff_vulcan_01",
+      "triangles": 1266,
+      "positionsIndicesUvsMatchSpm": true,
+      "maximumCustomNormalComponentError": 0.003965177025117839,
+      "maximumCustomNormalAngularErrorDegrees": 0.2897131867166486,
+      "nativeNormalAngularToleranceDegrees": 1,
+      "nativeNormalsAreNotBitIdenticalToPackedSpm": true,
+      "zeroAreaCornerNormalsExcluded": 0,
+      "zeroAreaGeometryStillRetained": true,
+      "originalNativeCliffInstancePartsLinkedToPrototype": 1
+    },
+    {
+      "prototype": "VRV10_Prototype_Cliff_vulcan_02",
+      "triangles": 1291,
+      "positionsIndicesUvsMatchSpm": true,
+      "maximumCustomNormalComponentError": 0.003955690601597173,
+      "maximumCustomNormalAngularErrorDegrees": 0.34894467692719433,
+      "nativeNormalAngularToleranceDegrees": 1,
+      "nativeNormalsAreNotBitIdenticalToPackedSpm": true,
+      "zeroAreaCornerNormalsExcluded": 0,
+      "zeroAreaGeometryStillRetained": true,
+      "originalNativeCliffInstancePartsLinkedToPrototype": 1
+    },
+    {
+      "prototype": "VRV10_Prototype_Cliff_vulcan_03",
+      "triangles": 1291,
+      "positionsIndicesUvsMatchSpm": true,
+      "maximumCustomNormalComponentError": 0.003586602964423702,
+      "maximumCustomNormalAngularErrorDegrees": 0.2748657088173708,
+      "nativeNormalAngularToleranceDegrees": 1,
+      "nativeNormalsAreNotBitIdenticalToPackedSpm": true,
+      "zeroAreaCornerNormalsExcluded": 0,
+      "zeroAreaGeometryStillRetained": true,
+      "originalNativeCliffInstancePartsLinkedToPrototype": 1
+    }
+  ],
+  "cliffPalettePixelsMatchExistingSource": true
+}

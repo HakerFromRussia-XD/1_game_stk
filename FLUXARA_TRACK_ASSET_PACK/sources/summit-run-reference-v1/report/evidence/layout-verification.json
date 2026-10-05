@@ -1,0 +1,37 @@
+{
+  "nativeMeshPartsChecked": 151,
+  "verticesWithinDrivingEnvelope": [],
+  "overheadCrownProjection": [
+    {
+      "instance": "SR_OriginalFir_000_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "verticesAbove3_5m": 4
+    },
+    {
+      "instance": "SR_OriginalFir_007_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "verticesAbove3_5m": 39
+    },
+    {
+      "instance": "SR_OriginalFir_007_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "verticesAbove3_5m": 156
+    },
+    {
+      "instance": "SR_OriginalFir_008_fluxara_driftlib_pinetree_b_high.spm_SR_Prot",
+      "verticesAbove3_5m": 13
+    },
+    {
+      "instance": "SR_OriginalFir_008_fluxara_driftlib_pinetree_b_high.spm_SR_Pro",
+      "verticesAbove3_5m": 87
+    },
+    {
+      "instance": "SR_Cascade_001_SummitCascade_SR_Prototype_summit_cascade_main_0",
+      "verticesAbove3_5m": 6
+    }
+  ],
+  "belowElevatedRoadProjection": [
+    {
+      "instance": "SR_Cascade_001_SummitCascade_SR_Prototype_summit_cascade_main_0",
+      "verticesBelowRoad": 3
+    }
+  ],
+  "scope": "Placed runtime mesh vertex check against original drive quads; 13 footprint samples also used for new placements; not a continuous swept collision proof"
+}

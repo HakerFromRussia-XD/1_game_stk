@@ -1,0 +1,126 @@
+{
+  "track": "fluxara-user-spell-lab",
+  "meshes": [
+    {
+      "name": "bouncer2.spm",
+      "allGeometryBytesAndBoundsUnchanged": true,
+      "vertices": 130,
+      "triangles": 128,
+      "bytesBefore": 3042,
+      "bytesAfter": 3042
+    },
+    {
+      "name": "bouncer3.spm",
+      "allGeometryBytesAndBoundsUnchanged": true,
+      "vertices": 130,
+      "triangles": 128,
+      "bytesBefore": 3042,
+      "bytesAfter": 3042
+    },
+    {
+      "name": "bouncer1.spm",
+      "allGeometryBytesAndBoundsUnchanged": true,
+      "vertices": 130,
+      "triangles": 128,
+      "bytesBefore": 3042,
+      "bytesAfter": 3042
+    },
+    {
+      "name": "bouncer4.spm",
+      "allGeometryBytesAndBoundsUnchanged": true,
+      "vertices": 130,
+      "triangles": 128,
+      "bytesBefore": 3042,
+      "bytesAfter": 3042
+    },
+    {
+      "name": "TriWarper.spm",
+      "allGeometryBytesAndBoundsUnchanged": true,
+      "vertices": 142,
+      "triangles": 240,
+      "bytesBefore": 3618,
+      "bytesAfter": 3618
+    },
+    {
+      "name": "SpotGood.spm",
+      "allGeometryBytesAndBoundsUnchanged": true,
+      "vertices": 8,
+      "triangles": 12,
+      "bytesBefore": 255,
+      "bytesAfter": 255
+    },
+    {
+      "name": "spell-lab_track.spm",
+      "allGeometryBytesAndBoundsUnchanged": true,
+      "vertices": 113692,
+      "triangles": 110390,
+      "bytesBefore": 2934139,
+      "bytesAfter": 2934106
+    },
+    {
+      "name": "SpotBad.spm",
+      "allGeometryBytesAndBoundsUnchanged": true,
+      "vertices": 8,
+      "triangles": 12,
+      "bytesBefore": 255,
+      "bytesAfter": 255
+    },
+    {
+      "name": "SpotWarp.spm",
+      "allGeometryBytesAndBoundsUnchanged": true,
+      "vertices": 8,
+      "triangles": 12,
+      "bytesBefore": 255,
+      "bytesAfter": 255
+    },
+    {
+      "name": "Warper.spm",
+      "allGeometryBytesAndBoundsUnchanged": true,
+      "vertices": 145,
+      "triangles": 140,
+      "bytesBefore": 3407,
+      "bytesAfter": 3407
+    },
+    {
+      "name": "FastTriWarper.spm",
+      "allGeometryBytesAndBoundsUnchanged": true,
+      "vertices": 142,
+      "triangles": 240,
+      "bytesBefore": 3618,
+      "bytesAfter": 3618
+    },
+    {
+      "name": "revRamp.spm",
+      "allGeometryBytesAndBoundsUnchanged": true,
+      "vertices": 30,
+      "triangles": 20,
+      "bytesBefore": 725,
+      "bytesAfter": 721
+    },
+    {
+      "name": "revWall.spm",
+      "allGeometryBytesAndBoundsUnchanged": true,
+      "vertices": 26,
+      "triangles": 24,
+      "bytesBefore": 657,
+      "bytesAfter": 653
+    }
+  ],
+  "protectedFiles": {
+    "quads.xml": "af8a992638e5a59aa239cd4a4eb3d23a0b68ae841fb6757c6452868b0874544d",
+    "graph.xml": "3689163160a01e395f961fc9583b572e65e3c17fb8b0bba288cd622fcd82ab79",
+    "scripting.as": "2d642644122a69003e38fd1114da13a216151afb5efb04b0274b73dde2ca4b29",
+    "easter_eggs.xml": "7a6487c270a601df46fc30eddeba26f969d47ffe956769468ea6aa85327fbb55",
+    "track.xml": "ae53e4a067250c3ebedc0d91eb2f004b32d7f9f43ae29d5956d3b5b757f04aa9",
+    "materials.xml": "6a92eb2b6cea5146f19719e2be1c5c1a087ef51619fcdf7d04971553d69d0ec4"
+  },
+  "allOriginalSceneObjectsAndGameplayNodesUnchanged": true,
+  "originalTriangles": 111602,
+  "addedSceneryTriangles": 20340,
+  "totalTriangleChangePercent": 18.225479830110572,
+  "resourceBytesBefore": 34135362,
+  "resourceBytesAfter": 34941838,
+  "resourceChangePercent": 2.3625822394969687,
+  "retainedLegacySkyBytes": 24076353,
+  "note": "Original sky/source textures retained in package; scene uses shared daylight sky. Folder-size budget includes retained files; active texture payload reported separately."
+}

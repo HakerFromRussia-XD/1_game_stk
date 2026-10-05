@@ -1,0 +1,25 @@
+{
+  "track": "fluxara-user-ski-dash",
+  "protectedRouteMeshAndNavmeshByteExact": true,
+  "originalAtmosphereObjectsAndAuroraByteExact": true,
+  "originalHouseLibrariesAndTransformsExact": 16,
+  "originalGameplayNodesStructurallyExact": true,
+  "fir71TransformsExact": true,
+  "firModelVerticesIndicesNormalsUVColorsExact": true,
+  "texturePixelsByteExact": true,
+  "materialParametersExactUnderTextureAliases": true,
+  "retainedSceneryVertexRecordsExactBeforeStringAliasPromotion": true,
+  "newTrees": 18,
+  "newTreeFootprintsOutsideNavmesh": "Conservative expanded whole-mesh AABB test; runtime validation pending",
+  "sourceBytes": 26043936,
+  "candidateTrackBytes": 23088238,
+  "allNewSharedBytes": 2438547,
+  "totalBytes": 25526881,
+  "savedBytesBeforePreview": 50900,
+  "savedBytesIncludingPreviewAndWindowSettings": 517055,
+  "notes": [
+    "Only three baked bunting spans extracted. Differing normals/UVs in other groups retained.",
+    "Seventy-one firs were already coordinate objects: promotion enables cross-track runtime reuse, it does not remove seventy-one baked copies.",
+    "Three bunting surfaces differ by exporter triangulation within sub-millimeter bounds; all source vertex UV/color/material identities retained."
+  ]
+}

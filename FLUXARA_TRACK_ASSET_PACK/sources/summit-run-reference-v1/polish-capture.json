@@ -1,0 +1,45 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/polish-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/polish-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-summit-run",
+    "--mode=0",
+    "--laps=3",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--fluxara-event=main-normal-ancient-summits",
+    "--seed=9"
+  ],
+  "screenshots": [
+    {
+      "seconds": 8,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/polish-8s.png"
+    },
+    {
+      "seconds": 20,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/polish-20s.png"
+    },
+    {
+      "seconds": 35,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/polish-35s.png"
+    },
+    {
+      "seconds": 50,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/polish-50s.png"
+    },
+    {
+      "seconds": 70,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/screenshots/polish-70s.png"
+    }
+  ]
+}

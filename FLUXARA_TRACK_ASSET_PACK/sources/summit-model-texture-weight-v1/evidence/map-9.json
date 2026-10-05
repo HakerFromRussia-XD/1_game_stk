@@ -1,0 +1,893 @@
+{
+  "map": 9,
+  "trackId": "fluxara-summit-run",
+  "scope": "Matching original/current map-local SPM files, including all active diffuse/second-layer and declared support images. Each used file counted once per model; scene instance count is not multiplied. Added/shared replacements require separate correspondence. This is resource measurement, not a runtime test.",
+  "models": [
+    {
+      "model": "Balloon.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/Balloon.spm",
+          "bytes": 29778,
+          "sha256": "bab0f3f50a526bee876ef444ab61052c90bb20ca97d835c439e91deae3d21e3e"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_snow_a.png",
+            "bytes": 7555,
+            "sha256": "b6d7cebf69446e086624f5fc7b2ad96a08d577afc24bff791d8941601d1bc8e3",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/tux_body.png",
+            "bytes": 30367,
+            "sha256": "dfdcff057529159b511d032185d58c3423803858a8236d60e0f07204b0b3e8b9",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/wooden.png",
+            "bytes": 112420,
+            "sha256": "08b6ddafec441f12214567842e8da6100533b7fb28e4f4c7e953492e50afdf42",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 29778,
+        "textureBytes": 150342,
+        "materialBindings": [
+          {
+            "texture": "stk_generic_snow_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_snow_a.png",
+              "slowdown-time": "2.40",
+              "max-speed": "0.65"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/materials.xml"
+          },
+          {
+            "texture": "tux_body.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "wooden.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          }
+        ],
+        "modelPlusUsedTextureBytes": 180120
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/Balloon.spm",
+          "bytes": 29786,
+          "sha256": "328f970e50daf0f72f482313b2860aafb344e66e5f2be8fc0f7fdb23cd382ae1"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/sr_balloon_fabric.png",
+            "bytes": 596,
+            "sha256": "25f963fcea4c9cd9d6a42eaebb42a3a553a154b194c8bed4d7031c3420a69781",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/wooden.png",
+            "bytes": 116272,
+            "sha256": "3dfb61aad4df4e2c1c1fec9da682400cba87ba84d03ca159adec466a205bfcbc",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 29786,
+        "textureBytes": 116868,
+        "materialBindings": [
+          {
+            "texture": "sr_balloon_fabric.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "sr_balloon_fabric.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "wooden.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          }
+        ],
+        "modelPlusUsedTextureBytes": 146654
+      },
+      "changePercent": -18.579835665112142,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "ancient-summits_track.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/ancient-summits_track.spm",
+          "bytes": 1242067,
+          "sha256": "26929cdb434a7574a20e3b22ff232a6baad0c3e3bca32515f633c9266103f6d7"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/Ice_001_COLOR.png",
+            "bytes": 1032716,
+            "sha256": "91fab2a95b0863d11ad341989351c2a471318ac5808cb907b54fffb2dc02fe3f",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/Water_001_COLOR.png",
+            "bytes": 571353,
+            "sha256": "9633a4edcc6a90ac39bbed795fca8aafaf5fcd4db8d8fcc0e6c9e5e50fc90fe2",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/blueZipper.png",
+            "bytes": 99998,
+            "sha256": "0d96d94bbf85be6fae566ecf720ced84fe4e25d0e63890cfd681dd7e07c7ed8a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/grassded.png",
+            "bytes": 1430978,
+            "sha256": "a387847ad553d74372c799cff9869c0db9b9c0a2f5e936c31c57c8bf03db0d3a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/ice.png",
+            "bytes": 39784,
+            "sha256": "3c82b2a40ae48854b2d3d5412ec3eed65a2e5bc4b6c118b01cd1308559a6151c",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/icemap.png",
+            "bytes": 67892,
+            "sha256": "2a0960fccf7737a7741d072b0abdda7fd67bb7b79d725af31ad58341c9a7c445",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/rock.jpg",
+            "bytes": 22744,
+            "sha256": "ec0464eb655918eb216fa6410c660405806e95e6ca1fcee6049d74bb7c206883",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/rock_brown.jpg",
+            "bytes": 13478,
+            "sha256": "cf581dbdd8e173926c55046d285a1ea928030a545e40e75a26a5bd2a479512b9",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/rock_grey.jpg",
+            "bytes": 19173,
+            "sha256": "6d41e2c97c25ed45a9fae60bdfd1c775bee9009547ecfe31e9ec291ef6d416aa",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/snowoodbridge.jpg",
+            "bytes": 69158,
+            "sha256": "1faf56c852d2a61bbb1909abf55fa2f1c0694d2aa04bf7e1cdec80dd5e1c2bf0",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/snowrock.jpg",
+            "bytes": 25803,
+            "sha256": "1ac45fc8433de51df8316598f4973a8da6c6fcdd8e80ad616eff5d6d660fccbf",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/fluxara_drift_generic_ice_alpha_custom.png",
+            "bytes": 858897,
+            "sha256": "58df7c0751a6205dd387aa732996330bff95a217ea194113de066a0173d110fa",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_snow_a.png",
+            "bytes": 7555,
+            "sha256": "b6d7cebf69446e086624f5fc7b2ad96a08d577afc24bff791d8941601d1bc8e3",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/transparence.png",
+            "bytes": 118,
+            "sha256": "b92e8c362050c47993fadf28e742d1765604335264f11136a70ccb55deca594e",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/wooden.png",
+            "bytes": 112420,
+            "sha256": "08b6ddafec441f12214567842e8da6100533b7fb28e4f4c7e953492e50afdf42",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 1242067,
+        "textureBytes": 4372067,
+        "materialBindings": [
+          {
+            "texture": "Ice_001_COLOR.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Ice_001_COLOR.png",
+              "shader": "alphablend"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/materials.xml"
+          },
+          {
+            "texture": "Water_001_COLOR.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Water_001_COLOR.png",
+              "falling-effect": "Y",
+              "shader": "displace"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/materials.xml"
+          },
+          {
+            "texture": "blueZipper.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blueZipper.png",
+              "shader": "alphatest",
+              "mirror-axis": "V",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/materials.xml"
+          },
+          {
+            "texture": "grassded.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "grassded.png",
+              "slowdown-time": "2.00",
+              "max-speed": "0.89"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/materials.xml"
+          },
+          {
+            "texture": "ice.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "ice.png",
+              "gloss-map": "icemap.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/materials.xml"
+          },
+          {
+            "texture": "rock.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "rock.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "rock_brown.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "rock_brown.jpg",
+              "slowdown-time": "1.30",
+              "max-speed": "0.35"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/materials.xml"
+          },
+          {
+            "texture": "rock_grey.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "rock_grey.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/materials.xml"
+          },
+          {
+            "texture": "snowoodbridge.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "snowrock.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "stk_generic_ice_alpha_custom.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_ice_alpha_custom.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/materials.xml"
+          },
+          {
+            "texture": "stk_generic_snow_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_snow_a.png",
+              "slowdown-time": "2.40",
+              "max-speed": "0.65"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/materials.xml"
+          },
+          {
+            "texture": "transparence.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "transparence.png",
+              "shader": "alphatest",
+              "falling-effect": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/materials.xml"
+          },
+          {
+            "texture": "wooden.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          }
+        ],
+        "modelPlusUsedTextureBytes": 5614134
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/ancient-summits_track.spm",
+          "bytes": 1242067,
+          "sha256": "595437eef9df7e08d5835213f8e2de7e9706d9d368bf20283eec0d06bc1c0796"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/Ice_001_COLOR.png",
+            "bytes": 365416,
+            "sha256": "ab35106e16b7367c94c134df75157ab348a5936b98b14a7863dcca73e522a4e0",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/Water_001_COLOR.png",
+            "bytes": 65112,
+            "sha256": "68ac94843ba81a1614769bd070210d2ede0598051719bb5014ce3d7811699a79",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/blueZipper.png",
+            "bytes": 99998,
+            "sha256": "0d96d94bbf85be6fae566ecf720ced84fe4e25d0e63890cfd681dd7e07c7ed8a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/grassded.png",
+            "bytes": 272064,
+            "sha256": "8e168e7390acafe403a454915e005729eb1c7643f888914b7e25298af1fafa0a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/ice.png",
+            "bytes": 365416,
+            "sha256": "ab35106e16b7367c94c134df75157ab348a5936b98b14a7863dcca73e522a4e0",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/icemap.png",
+            "bytes": 67892,
+            "sha256": "2a0960fccf7737a7741d072b0abdda7fd67bb7b79d725af31ad58341c9a7c445",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/rock.jpg",
+            "bytes": 316,
+            "sha256": "65c2766c45b713eaf2fd930318e91b3a491c3ddfb96664a7b5d259a7828e5952",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/rock_brown.jpg",
+            "bytes": 317,
+            "sha256": "b53164f73a5dbe4587ebc6aa5209144b331db604f9ee663be17ed12d9560ec5f",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/rock_grey.jpg",
+            "bytes": 318,
+            "sha256": "5aefcfae1e08bcd49a1e01aff60d9240af289047d36b3b91503f86520cc5274c",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/snowoodbridge.jpg",
+            "bytes": 56517,
+            "sha256": "6a026faa234a8ceb00ff4bd09790248cca4406b0fd223c63d96500b1a76eeb1b",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/snowrock.jpg",
+            "bytes": 511,
+            "sha256": "cb4666afa8d4528781238750c360abe6b8f6b361a2ff299f9fa66cfd6096d979",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/fluxara_drift_generic_ice_alpha_custom.png",
+            "bytes": 365416,
+            "sha256": "ab35106e16b7367c94c134df75157ab348a5936b98b14a7863dcca73e522a4e0",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/fluxara_drift_generic_snow_a.png",
+            "bytes": 272064,
+            "sha256": "8e168e7390acafe403a454915e005729eb1c7643f888914b7e25298af1fafa0a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/transparence.png",
+            "bytes": 118,
+            "sha256": "b92e8c362050c47993fadf28e742d1765604335264f11136a70ccb55deca594e",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/wooden.png",
+            "bytes": 116272,
+            "sha256": "3dfb61aad4df4e2c1c1fec9da682400cba87ba84d03ca159adec466a205bfcbc",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 1242067,
+        "textureBytes": 2047747,
+        "materialBindings": [
+          {
+            "texture": "Ice_001_COLOR.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Ice_001_COLOR.png",
+              "shader": "alphablend"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/materials.xml"
+          },
+          {
+            "texture": "Water_001_COLOR.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Water_001_COLOR.png",
+              "falling-effect": "Y",
+              "shader": "displace"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/materials.xml"
+          },
+          {
+            "texture": "blueZipper.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blueZipper.png",
+              "shader": "alphatest",
+              "mirror-axis": "V",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/materials.xml"
+          },
+          {
+            "texture": "grassded.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "grassded.png",
+              "slowdown-time": "2.00",
+              "max-speed": "0.89"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/materials.xml"
+          },
+          {
+            "texture": "ice.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "ice.png",
+              "gloss-map": "icemap.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/materials.xml"
+          },
+          {
+            "texture": "rock.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "rock.jpg"
+            },
+            "xml": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml"
+          },
+          {
+            "texture": "rock_brown.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "rock_brown.jpg",
+              "slowdown-time": "1.30",
+              "max-speed": "0.35"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/materials.xml"
+          },
+          {
+            "texture": "rock_grey.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "rock_grey.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/materials.xml"
+          },
+          {
+            "texture": "snowoodbridge.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "snowrock.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "stk_generic_ice_alpha_custom.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_ice_alpha_custom.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/materials.xml"
+          },
+          {
+            "texture": "stk_generic_snow_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_snow_a.png",
+              "slowdown-time": "2.40",
+              "max-speed": "0.65"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/materials.xml"
+          },
+          {
+            "texture": "transparence.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "transparence.png",
+              "shader": "alphatest",
+              "falling-effect": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/materials.xml"
+          },
+          {
+            "texture": "wooden.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          }
+        ],
+        "modelPlusUsedTextureBytes": 3289814
+      },
+      "changePercent": -41.40122056224522,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "fallRock.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/fallRock.spm",
+          "bytes": 1534,
+          "sha256": "a2be7c7d0d6a515d0c036cf7d6b68ac18a240c58d7eff10936762893513ac099"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/rock.jpg",
+            "bytes": 22744,
+            "sha256": "ec0464eb655918eb216fa6410c660405806e95e6ca1fcee6049d74bb7c206883",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 1534,
+        "textureBytes": 22744,
+        "materialBindings": [
+          {
+            "texture": "rock.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "rock.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 24278
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/fallRock.spm",
+          "bytes": 1534,
+          "sha256": "a2be7c7d0d6a515d0c036cf7d6b68ac18a240c58d7eff10936762893513ac099"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/rock.jpg",
+            "bytes": 316,
+            "sha256": "65c2766c45b713eaf2fd930318e91b3a491c3ddfb96664a7b5d259a7828e5952",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 1534,
+        "textureBytes": 316,
+        "materialBindings": [
+          {
+            "texture": "rock.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "rock.jpg"
+            },
+            "xml": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 1850
+      },
+      "changePercent": -92.37993244913089,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "iceCube.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/iceCube.spm",
+          "bytes": 53055,
+          "sha256": "c416fb836e18a67dced232183dd5f72185837883689a7abf310ab2c23a62e118"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/Ice_001_COLOR.png",
+            "bytes": 1032716,
+            "sha256": "91fab2a95b0863d11ad341989351c2a471318ac5808cb907b54fffb2dc02fe3f",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 53055,
+        "textureBytes": 1032716,
+        "materialBindings": [
+          {
+            "texture": "Ice_001_COLOR.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Ice_001_COLOR.png",
+              "shader": "alphablend"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 1085771
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/iceCube.spm",
+          "bytes": 53055,
+          "sha256": "c416fb836e18a67dced232183dd5f72185837883689a7abf310ab2c23a62e118"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/Ice_001_COLOR.png",
+            "bytes": 365416,
+            "sha256": "ab35106e16b7367c94c134df75157ab348a5936b98b14a7863dcca73e522a4e0",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 53055,
+        "textureBytes": 365416,
+        "materialBindings": [
+          {
+            "texture": "Ice_001_COLOR.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Ice_001_COLOR.png",
+              "shader": "alphablend"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 418471
+      },
+      "changePercent": -61.45863170042302,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "treeMod1_LOD170.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/treeMod1_LOD170.spm",
+          "bytes": 2394,
+          "sha256": "615bed5a994b7d6f38fe302b611d702520837d770c759d3a028c71676779866d"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/tree_1.png",
+            "bytes": 115373,
+            "sha256": "5898232e55b6f2b604c1f041d98a955f2a7701895a41f3016c9e6e0296d6e3d0",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/wooden.png",
+            "bytes": 112420,
+            "sha256": "08b6ddafec441f12214567842e8da6100533b7fb28e4f4c7e953492e50afdf42",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 2394,
+        "textureBytes": 227793,
+        "materialBindings": [
+          {
+            "texture": "tree_1.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "tree_1.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/materials.xml"
+          },
+          {
+            "texture": "wooden.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          }
+        ],
+        "modelPlusUsedTextureBytes": 230187
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/treeMod1_LOD170.spm",
+          "bytes": 2394,
+          "sha256": "615bed5a994b7d6f38fe302b611d702520837d770c759d3a028c71676779866d"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/tree_1.png",
+            "bytes": 115373,
+            "sha256": "5898232e55b6f2b604c1f041d98a955f2a7701895a41f3016c9e6e0296d6e3d0",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/wooden.png",
+            "bytes": 116272,
+            "sha256": "3dfb61aad4df4e2c1c1fec9da682400cba87ba84d03ca159adec466a205bfcbc",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 2394,
+        "textureBytes": 231645,
+        "materialBindings": [
+          {
+            "texture": "tree_1.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "tree_1.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/materials.xml"
+          },
+          {
+            "texture": "wooden.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          }
+        ],
+        "modelPlusUsedTextureBytes": 234039
+      },
+      "changePercent": 1.6734220438165526,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "treeMod1_LOD80.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/treeMod1_LOD80.spm",
+          "bytes": 3578,
+          "sha256": "6bf50dc0b2d0cdee696cb52c6347d039afd2827a61f0ce11c8e1b7f76d2bcc80"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/tree_1.png",
+            "bytes": 115373,
+            "sha256": "5898232e55b6f2b604c1f041d98a955f2a7701895a41f3016c9e6e0296d6e3d0",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/wooden.png",
+            "bytes": 112420,
+            "sha256": "08b6ddafec441f12214567842e8da6100533b7fb28e4f4c7e953492e50afdf42",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 3578,
+        "textureBytes": 227793,
+        "materialBindings": [
+          {
+            "texture": "tree_1.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "tree_1.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/summit-run-rework/before/materials.xml"
+          },
+          {
+            "texture": "wooden.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          }
+        ],
+        "modelPlusUsedTextureBytes": 231371
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/treeMod1_LOD80.spm",
+          "bytes": 3578,
+          "sha256": "6bf50dc0b2d0cdee696cb52c6347d039afd2827a61f0ce11c8e1b7f76d2bcc80"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/tree_1.png",
+            "bytes": 115373,
+            "sha256": "5898232e55b6f2b604c1f041d98a955f2a7701895a41f3016c9e6e0296d6e3d0",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/wooden.png",
+            "bytes": 116272,
+            "sha256": "3dfb61aad4df4e2c1c1fec9da682400cba87ba84d03ca159adec466a205bfcbc",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 3578,
+        "textureBytes": 231645,
+        "materialBindings": [
+          {
+            "texture": "tree_1.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "tree_1.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-summit-run/materials.xml"
+          },
+          {
+            "texture": "wooden.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          }
+        ],
+        "modelPlusUsedTextureBytes": 235223
+      },
+      "changePercent": 1.6648586037143698,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    }
+  ],
+  "allMatchingModelsResolved": true,
+  "allMatchingModelsWithinLimit": true
+}

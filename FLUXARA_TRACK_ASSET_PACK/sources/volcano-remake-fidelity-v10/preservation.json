@@ -1,0 +1,143 @@
+{
+  "originalRoadPositionsNormalsUvsColoursAndIndicesExact": true,
+  "originalGameplayFilesExact": [
+    "track.xml",
+    "quads.xml",
+    "graph.xml",
+    "scripting.as",
+    "easter_eggs.xml"
+  ],
+  "allScenePlacementsExactV9": true,
+  "allModelVertexPositionsAndIndicesExactV9": true,
+  "allNonCliffUvsAndNormalsExactV9": true,
+  "collisionGeometryExactV9": true,
+  "palettePixelsUnchanged": true,
+  "sampledStoneRgb": [
+    151,
+    133,
+    145
+  ],
+  "perModelWithTexturesWeights": [
+    {
+      "model": "volcano_track.spm",
+      "previousCandidateModelWithUsedTexturesBytes": 2691293,
+      "candidateModelWithUsedTexturesBytes": 2651360,
+      "changePercent": -1.483784931629517,
+      "weightWithin20Percent": true,
+      "oldTextures": [
+        "Battle_for_Wesnoth.png",
+        "Rock13_col.jpg",
+        "acid_lake.jpg",
+        "blackrock_lava.jpg",
+        "castelwall.jpg",
+        "chain.png",
+        "gfxGlow_yellow_a.png",
+        "gfx_distord_AlphaTested.png",
+        "gfx_resetWaterSplash_AlphaTested.png",
+        "halo.png",
+        "lava_2k_diffuse.jpg",
+        "mansion_windows.png",
+        "roof_3.jpg",
+        "stk_generic_gravalSnow_a.png",
+        "stk_generic_gridA.png",
+        "stk_mudpot_a.png",
+        "stkflag_blackBooster_a.png",
+        "stkflag_blackBooster_b.png",
+        "stktex_generic_WoodA.png",
+        "sunFlare2.png",
+        "torch.png",
+        "track01.png",
+        "transparence.png",
+        "vr_arch_stone.png",
+        "vr_moss_palette.jpg"
+      ],
+      "newTextures": [
+        "Battle_for_Wesnoth.png",
+        "acid_lake.jpg",
+        "blackrock_lava.jpg",
+        "castelwall.jpg",
+        "chain.png",
+        "gfxGlow_yellow_a.png",
+        "gfx_distord_AlphaTested.png",
+        "gfx_resetWaterSplash_AlphaTested.png",
+        "halo.png",
+        "lava_2k_diffuse.jpg",
+        "mansion_windows.png",
+        "roof_3.jpg",
+        "stk_generic_gravalSnow_a.png",
+        "stk_generic_gridA.png",
+        "stk_mudpot_a.png",
+        "stkflag_blackBooster_a.png",
+        "stkflag_blackBooster_b.png",
+        "stktex_generic_WoodA.png",
+        "sunFlare2.png",
+        "torch.png",
+        "track01.png",
+        "transparence.png",
+        "vr_arch_stone.png",
+        "vr_moss_palette.jpg"
+      ],
+      "retainedVertexPositionsColoursAndIndicesExact": true
+    },
+    {
+      "model": "vulcan_01.spm",
+      "previousCandidateModelWithUsedTexturesBytes": 166413,
+      "candidateModelWithUsedTexturesBytes": 126480,
+      "changePercent": -23.9963224026969,
+      "weightWithin20Percent": true,
+      "oldTextures": [
+        "Rock13_col.jpg",
+        "gfx_distord_AlphaTested.png",
+        "lava_2k_diffuse.jpg",
+        "vr_moss_palette.jpg"
+      ],
+      "newTextures": [
+        "gfx_distord_AlphaTested.png",
+        "lava_2k_diffuse.jpg",
+        "vr_moss_palette.jpg"
+      ],
+      "retainedVertexPositionsColoursAndIndicesExact": true
+    },
+    {
+      "model": "vulcan_02.spm",
+      "previousCandidateModelWithUsedTexturesBytes": 166353,
+      "candidateModelWithUsedTexturesBytes": 126420,
+      "changePercent": -24.004977367405456,
+      "weightWithin20Percent": true,
+      "oldTextures": [
+        "Rock13_col.jpg",
+        "gfx_distord_AlphaTested.png",
+        "lava_2k_diffuse.jpg",
+        "vr_moss_palette.jpg"
+      ],
+      "newTextures": [
+        "gfx_distord_AlphaTested.png",
+        "lava_2k_diffuse.jpg",
+        "vr_moss_palette.jpg"
+      ],
+      "retainedVertexPositionsColoursAndIndicesExact": true
+    },
+    {
+      "model": "vulcan_03.spm",
+      "previousCandidateModelWithUsedTexturesBytes": 166713,
+      "candidateModelWithUsedTexturesBytes": 126780,
+      "changePercent": -23.953141026794555,
+      "weightWithin20Percent": true,
+      "oldTextures": [
+        "Rock13_col.jpg",
+        "gfx_distord_AlphaTested.png",
+        "lava_2k_diffuse.jpg",
+        "vr_moss_palette.jpg"
+      ],
+      "newTextures": [
+        "gfx_distord_AlphaTested.png",
+        "lava_2k_diffuse.jpg",
+        "vr_moss_palette.jpg"
+      ],
+      "retainedVertexPositionsColoursAndIndicesExact": true
+    }
+  ],
+  "weightMeasurementScope": "SPM plus each uniquely referenced texture file. Compared to preceding candidate V9; individual shared texture may be charged to each model for this per-model check. Map budget separately counts actual files once.",
+  "productionIntegrated": false,
+  "productionSourceUnchanged": true
+}

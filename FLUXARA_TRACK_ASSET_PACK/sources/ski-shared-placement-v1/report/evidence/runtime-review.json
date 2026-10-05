@@ -1,0 +1,34 @@
+{
+  "reviewedAt": "2026-10-01",
+  "build": "build-delivery.log: BUILD SUCCEEDED",
+  "target": "iOS Simulator, 3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+  "houseViews": [
+    "north-village.png",
+    "south-chalets.png",
+    "cottage-street.png"
+  ],
+  "treeView": "relocated-firs.png",
+  "auroraFrames": [
+    "aurora-sky.png",
+    "aurora-sky-12s.png"
+  ],
+  "auroraVisibleAndMoving": true,
+  "auroraAppearance": "Original segmented ribbon silhouette retained; vertex edge fade and reduced gain prevent the strongest clipping.",
+  "snowfallFrames": [
+    "snowfall-16s.png",
+    "snowfall-20s.png"
+  ],
+  "snowfallVisibleWithLocalPlayer": true,
+  "snowfallRequiresLocalPlayerController": "AI validation controller does not initialize sky particles; verified separately with normal local controller.",
+  "drivingDurationSeconds": 90,
+  "normalPlayerCaptureSeconds": 20,
+  "manualInputApplied": false,
+  "allCaptureProcessesTerminated": true,
+  "lightshaft": "Original XML restored, separate rendered lightshaft visibility not verified in the current renderer.",
+  "warningsReport": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/runtime-log-review.json",
+  "scopeLimitations": [
+    "Representative views and 90s movement; not exhaustive every-point or every-mode coverage.",
+    "Simulator only, no device performance benchmark."
+  ],
+  "installedParity": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/installed-parity.json"
+}
