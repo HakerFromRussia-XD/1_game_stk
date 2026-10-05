@@ -1,12 +1,11 @@
-<?xml version="1.0"?>
-<!-- Generated with script from SVN rev Unknown -->
+<?xml version='1.0' encoding='utf-8'?>
 <materials>
- <material name="arrows.png" shader="additive"/>
- <material name="background_building.png" gloss-map="gridgloss.png"/>
- <material name="ball.png" gloss-map="ballgloss.png"/>
- <material name="caution.png" shader="alphatest" gloss-map="cautiongloss.png"/>
- <material name="caution2.png" shader="alphatest" gloss-map="cautiongloss.png"/>
- <material name="grid.png" gloss-map="gridgloss.png"/>
- <material name="gridwall.png" shader="alphablend"/>
- <material name="logoholo.png" shader="alphablend"/>
-</materials>
+ <material name="arrows.png" shader="additive" />
+ <material name="orbital_lunar.jpg" />
+ <material name="ball.png" gloss-map="ballgloss.png" />
+ <material name="caution.png" shader="alphatest" gloss-map="cautiongloss.png" />
+ <material name="caution2.png" shader="alphatest" gloss-map="cautiongloss.png" />
+ <material name="orbital_floor.png" />
+ <material name="orbital_barrier.png" shader="alphablend" />
+ <material name="logoholo.png" shader="alphablend" />
+<material name="fluxara_orbital_lights_pool_v1.png" shader="unlit" /><material name="fluxara_orbital_palette_pool_v1.png" /></materials>

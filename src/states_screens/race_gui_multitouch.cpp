@@ -20,10 +20,12 @@
 using namespace irr;
 
 #include <algorithm>
+#include <cmath>
 
 #include "config/user_config.hpp"
 #include "graphics/camera/camera.hpp"
 #include "graphics/camera/camera_debug.hpp"
+#include "graphics/central_settings.hpp"
 #include "graphics/2dutils.hpp"
 #include "graphics/irr_driver.hpp"
 #include "graphics/material.hpp"
@@ -32,6 +34,7 @@ using namespace irr;
 #include "input/motorica_game_control.hpp"
 #ifdef IOS_FLUXARA_DRIFT
 #include "input/motorica_standalone_training.hpp"
+#include "input/motorica_game_control_ios.hpp"
 #endif
 #include "input/multitouch_device.hpp"
 #include "io/file_manager.hpp"
@@ -50,6 +53,54 @@ using namespace irr;
 #ifdef IOS_FLUXARA_DRIFT
 namespace
 {
+// The transparent Figma exports share a 205 x 185 canvas. Reveal the fill
+// along its arc from the bottom, keeping the casing and the wheel stationary.
+void drawMotoricaGaugeFill(video::ITexture* texture,
+                          const core::recti& bounds, bool open, int level)
+{
+    if (texture == nullptr || level <= 0)
+        return;
+    const float fraction = std::min(level, 255) / 255.0f;
+    const float start = open ? 133.0f : 47.0f;
+    const float sweep = (open ? 94.0f : -94.0f) * fraction;
+    const unsigned int segments = std::max(1, int(std::ceil(48 * fraction)));
+    video::S3DVertex vertices[51];
+    u16 indices[51];
+    const auto vertex = [&](unsigned int index, float x, float y)
+    {
+        vertices[index] = video::S3DVertex(
+            bounds.UpperLeftCorner.X + bounds.getWidth() * x / 205.0f,
+            bounds.UpperLeftCorner.Y + bounds.getHeight() * y / 185.0f,
+            0, 0, 0, 1, video::SColor(255, 255, 255, 255),
+            x / 205.0f, y / 185.0f);
+        indices[index] = (u16)index;
+    };
+    vertex(0, 102.5f, 92.5f);
+    for (unsigned int i = 0; i <= segments; i++)
+    {
+        const float angle = (start + sweep * i / segments) *
+                            3.14159265358979323846f / 180.0f;
+        vertex(i + 1, 102.5f + 104.0f * std::cos(angle),
+                      92.5f + 104.0f * std::sin(angle));
+    }
+    // Reverse the clockwise fan so both channels have the same winding.
+    if (!open)
+        std::reverse(vertices + 1, vertices + segments + 2);
+    video::SMaterial material;
+    material.setTexture(0, texture);
+    material.MaterialType = video::EMT_TRANSPARENT_ALPHA_CHANNEL;
+    irr_driver->getVideoDriver()->setMaterial(material);
+    if (CVS->isGLSL())
+    {
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+    }
+    draw2DVertexPrimitiveList(texture, vertices, segments + 2, indices,
+        segments, video::EVT_STANDARD, scene::EPT_TRIANGLE_FAN);
+    if (CVS->isGLSL())
+        glDisable(GL_BLEND);
+}
+
 bool motoricaUseRussian()
 {
     if (translations == nullptr)
@@ -114,6 +165,10 @@ RaceGUIMultitouch::RaceGUIMultitouch(RaceGUIBase* race_gui)
 #ifdef IOS_FLUXARA_DRIFT
     m_fluxara_halo_idle_tex = NULL;
     m_fluxara_halo_pressed_tex = NULL;
+    m_ms_open_casing_tex = NULL;
+    m_ms_close_casing_tex = NULL;
+    m_ms_open_fill_tex = NULL;
+    m_ms_close_fill_tex = NULL;
 #endif
 
     m_device = input_manager->getDeviceManager()->getMultitouchDevice();
@@ -213,6 +268,10 @@ void RaceGUIMultitouch::init()
     // These two transparent overlays carry the Figma pressed-state treatment.
     m_fluxara_halo_idle_tex = hud("halo-idle.png");
     m_fluxara_halo_pressed_tex = hud("halo-pressed.png");
+    m_ms_open_casing_tex = hud("ms-open-casing.png");
+    m_ms_close_casing_tex = hud("ms-close-casing.png");
+    m_ms_open_fill_tex = hud("ms-open-fill.png");
+    m_ms_close_fill_tex = hud("ms-close-fill.png");
 
     m_fluxara_powerup_tex.assign(PowerupManager::POWERUP_MAX, NULL);
     m_fluxara_powerup_tex[PowerupManager::POWERUP_BUBBLEGUM] =
@@ -336,7 +395,7 @@ void RaceGUIMultitouch::createRaceGUI()
         const auto size = [canvas_scale](int value)
         { return int(value * canvas_scale); };
 
-        m_device->addButton(BUTTON_STEERING, x(21), y(205), size(163), size(163));
+        m_device->addButton(BUTTON_STEERING, x(55), y(205), size(163), size(163));
         m_device->addButton(BUTTON_ESCAPE, x(34), y(89), size(43), size(43));
         m_device->addButton(BUTTON_RESCUE, x(104), y(89), size(43), size(43));
         m_device->addButton(BUTTON_UP, x(750), y(109), size(58), size(58));
@@ -606,7 +665,31 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
             }
 #endif
 
-#ifndef IOS_FLUXARA_DRIFT
+#ifdef IOS_FLUXARA_DRIFT
+            if (isMotoricaGameControlEnabledIOS() && emg_connected &&
+                UserConfigParams::m_motorica_emg_steering)
+            {
+                const float scale = button->width / 163.0f;
+                const int x = button->x - int(21 * scale);
+                const int y = button->y - int(11 * scale);
+                const core::recti gauge_bounds(x, y, x + int(205 * scale),
+                                               y + int(185 * scale));
+                for (video::ITexture* casing :
+                     {m_ms_open_casing_tex, m_ms_close_casing_tex})
+                {
+                    if (casing == nullptr)
+                        continue;
+                    const core::recti source(core::position2di(0, 0),
+                                             casing->getSize());
+                    draw2DImage(casing, gauge_bounds, source, nullptr,
+                                nullptr, true);
+                }
+                drawMotoricaGaugeFill(m_ms_open_fill_tex, gauge_bounds,
+                                      true, emg->getOpenLevel());
+                drawMotoricaGaugeFill(m_ms_close_fill_tex, gauge_bounds,
+                                      false, emg->getCloseLevel());
+            }
+#else
             // The level bars are meaningful only while Motorica input is
             // connected. Hiding their disconnected placeholders prevents two
             // legacy dark rails from framing the approved steering control.

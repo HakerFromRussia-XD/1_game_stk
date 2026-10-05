@@ -68,6 +68,10 @@ private:
     /** Exact transparent exports from Figma HUD node 93:62. */
     video::ITexture* m_fluxara_halo_idle_tex;
     video::ITexture* m_fluxara_halo_pressed_tex;
+    video::ITexture* m_ms_open_casing_tex;
+    video::ITexture* m_ms_close_casing_tex;
+    video::ITexture* m_ms_open_fill_tex;
+    video::ITexture* m_ms_close_fill_tex;
     std::vector<video::ITexture*> m_fluxara_powerup_tex;
 #endif
 

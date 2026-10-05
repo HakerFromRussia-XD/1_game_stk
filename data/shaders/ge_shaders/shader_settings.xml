@@ -66,6 +66,7 @@
     <setting name="grass">
         <shaders>
             <vertex>grass.vert</vertex>
+            <skinning-vertex>grass_skinning.vert</skinning-vertex>
             <fragment>alphatest.frag</fragment>
             <depth>alphatest_depth.frag</depth>
         </shaders>

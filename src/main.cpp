@@ -2959,11 +2959,9 @@ int main(int argc, char *argv[])
                     RaceManager::get()->setKartTeam(0, KART_TEAM_RED);
                     RaceManager::get()->setNumRedAI(ai_karts / 2);
                     RaceManager::get()->setNumBlueAI(ai_karts - ai_karts / 2);
-                    // RaceManager defaults its goal target to zero, which
-                    // makes SoccerWorld declare a 0:0 match over on its
-                    // first tick.  Fluxara's local event is a real
-                    // first-to-three game, not an instantly completed route.
-                    RaceManager::get()->setMaxGoal(3);
+                    // Keep an explicit time limit. SoccerWorld supplies
+                    // three minutes when this launch has no selected limit.
+                    // setMaxGoal() would clear the timer and must not be used.
                 }
                 else if (fluxara_event_mode == "capture_the_flag")
                 {

@@ -238,15 +238,7 @@ public:
  */
 SoccerWorld::SoccerWorld() : WorldWithRank()
 {
-    if (RaceManager::get()->hasTimeTarget())
-    {
-        WorldStatus::setClockMode(WorldStatus::CLOCK_COUNTDOWN,
-            RaceManager::get()->getTimeTarget());
-    }
-    else
-    {
-        WorldStatus::setClockMode(CLOCK_CHRONO);
-    }
+    configureMatchClock();
 
     m_frame_count = 0;
     m_use_highscores = false;
@@ -255,6 +247,16 @@ SoccerWorld::SoccerWorld() : WorldWithRank()
     m_ball_track_sector = NULL;
     m_bgd.reset(new BallGoalData());
 }   // SoccerWorld
+
+//-----------------------------------------------------------------------------
+/** Every soccer match is timed, including launches that bypass race setup. */
+void SoccerWorld::configureMatchClock()
+{
+    if (!RaceManager::get()->hasTimeTarget())
+        RaceManager::get()->setTimeTarget(180.0f);
+    WorldStatus::setClockMode(CLOCK_COUNTDOWN,
+        RaceManager::get()->getTimeTarget());
+}
 
 //-----------------------------------------------------------------------------
 /** The destructor frees all data structures.
@@ -283,7 +285,6 @@ void SoccerWorld::init()
     m_ball_hitter  = -1;
     m_ball         = NULL;
     m_ball_body    = NULL;
-    m_goal_target  = RaceManager::get()->getMaxGoal();
     m_goal_sound   = SFXManager::get()->createSoundSource("goal_scored");
 
     Track *track = Track::getCurrentTrack();
@@ -326,15 +327,7 @@ void SoccerWorld::init()
 void SoccerWorld::reset(bool restart)
 {
     WorldWithRank::reset(restart);
-    if (RaceManager::get()->hasTimeTarget())
-    {
-        WorldStatus::setClockMode(WorldStatus::CLOCK_COUNTDOWN,
-            RaceManager::get()->getTimeTarget());
-    }
-    else
-    {
-        WorldStatus::setClockMode(CLOCK_CHRONO);
-    }
+    configureMatchClock();
 
     m_count_down_reached_zero = false;
     m_red_scorers.clear();
@@ -750,16 +743,7 @@ bool SoccerWorld::isRaceOver()
     if (m_unfair_team)
         return true;
 
-    if (RaceManager::get()->hasTimeTarget())
-    {
-        return m_count_down_reached_zero;
-    }
-    // One team scored the target goals ...
-    else
-    {
-        return (getScore(KART_TEAM_BLUE) >= m_goal_target ||
-            getScore(KART_TEAM_RED) >= m_goal_target);
-    }
+    return m_count_down_reached_zero;
 
 }   // isRaceOver
 
@@ -1001,37 +985,44 @@ void SoccerWorld::enterRaceOverState()
 
     if (UserConfigParams::m_arena_ai_stats)
     {
-        Log::verbose("Soccer AI profiling", "Total frames elapsed for a team"
-            " to win with 30 goals: %d", m_frame_count);
+        Log::verbose("Soccer AI profiling", "Total frames elapsed in timed match: %d", m_frame_count);
 
-        // Goal time statistics
-        std::sort(m_goal_frame.begin(), m_goal_frame.end());
-
-        const int mean = std::accumulate(m_goal_frame.begin(),
-            m_goal_frame.end(), 0) / (int)m_goal_frame.size();
-
-        // Prevent overflow if there is a large frame in vector
-        double squared_sum = 0;
-        for (const int &i : m_goal_frame)
-            squared_sum = squared_sum + (double(i - mean) * double(i - mean));
-
-        // Use sample st. deviation (n-1) as the profiling can't be run forever
-        const int stdev = int(sqrt(squared_sum / (m_goal_frame.size() - 1)));
-
-        int median = 0;
-        if (m_goal_frame.size() % 2 == 0)
-        {
-            median = (m_goal_frame[m_goal_frame.size() / 2 - 1] +
-                m_goal_frame[m_goal_frame.size() / 2]) / 2;
-        }
+        // A timed match can finish with zero or one goal.
+        if (m_goal_frame.empty())
+            Log::verbose("Soccer AI profiling", "No goals scored");
         else
         {
-            median = m_goal_frame[m_goal_frame.size() / 2];
-        }
+            // Goal time statistics
+            std::sort(m_goal_frame.begin(), m_goal_frame.end());
 
-        Log::verbose("Soccer AI profiling", "Frames elapsed for each goal:"
-            " min: %d max: %d mean: %d median: %d standard deviation: %d",
-            m_goal_frame.front(), m_goal_frame.back(), mean, median, stdev);
+            const int mean = std::accumulate(m_goal_frame.begin(),
+                m_goal_frame.end(), 0) / (int)m_goal_frame.size();
+
+            // Prevent overflow if there is a large frame in vector
+            double squared_sum = 0;
+            for (const int &i : m_goal_frame)
+                squared_sum = squared_sum + (double(i - mean) * double(i - mean));
+
+            // Use sample st. deviation (n-1) as the profiling can't be run forever
+            const int stdev = m_goal_frame.size() > 1
+                ? int(sqrt(squared_sum / (m_goal_frame.size() - 1))) : 0;
+
+            int median = 0;
+            if (m_goal_frame.size() % 2 == 0)
+            {
+                median = (m_goal_frame[m_goal_frame.size() / 2 - 1] +
+                    m_goal_frame[m_goal_frame.size() / 2]) / 2;
+            }
+            else
+            {
+                median = m_goal_frame[m_goal_frame.size() / 2];
+            }
+
+            Log::verbose("Soccer AI profiling", "Frames elapsed for each goal:"
+                " min: %d max: %d mean: %d median: %d standard deviation: %d",
+                m_goal_frame.front(), m_goal_frame.back(), mean, median, stdev);
+
+        }
 
         // Goal calculation
         int red_own_goal = 0;
@@ -1058,10 +1049,12 @@ void SoccerWorld::enterRaceOverState()
             "Blue goal: %d, Blue own goal: %d", red_goal, red_own_goal,
             blue_goal, blue_own_goal);
 
-        if (getScore(KART_TEAM_BLUE) >= m_goal_target)
+        if (getScore(KART_TEAM_BLUE) > getScore(KART_TEAM_RED))
             Log::verbose("Soccer AI profiling", "Blue team wins");
-        else
+        else if (getScore(KART_TEAM_RED) > getScore(KART_TEAM_BLUE))
             Log::verbose("Soccer AI profiling", "Red team wins");
+        else
+            Log::verbose("Soccer AI profiling", "Draw");
 
         delete this;
         main_loop->abort();

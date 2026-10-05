@@ -9,6 +9,10 @@ if [ "$#" -ne 1 ]; then
 fi
 
 bundle=$1
+[ "${EFFECTIVE_PLATFORM_NAME:-}" = "-iphonesimulator" ] && {
+    echo "FLUXARA_IOS_SIMULATOR_BUNDLE_NO_RESIGN bundle=$bundle"
+    exit 0
+}
 [ -d "$bundle" ] || {
     echo "missing Fluxara iOS bundle: $bundle" >&2
     exit 66

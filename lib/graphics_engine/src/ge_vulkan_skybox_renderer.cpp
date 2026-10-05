@@ -300,8 +300,21 @@ void GEVulkanSkyBoxRenderer::addSkyBox(irr::scene::ISceneNode* skybox)
 
     if (m_texture_cubemap)
         m_texture_cubemap->drop();
+    // Keep the resolution chosen when the sky faces were loaded. The driver
+    // limit may already have been restored for ordinary track textures.
+    auto& attributes = getVKDriver()->getNonConstDriverAttributes();
+    const core::dimension2du previous_size = attributes
+        .getAttributeAsDimension2d("MAX_TEXTURE_SIZE");
+    core::dimension2du sky_size = previous_size;
+    for (const auto* texture : sky_tex)
+    {
+        sky_size.Width = std::max(sky_size.Width, texture->getSize().Width);
+        sky_size.Height = std::max(sky_size.Height, texture->getSize().Height);
+    }
+    attributes.setAttribute("MAX_TEXTURE_SIZE", sky_size);
     m_texture_cubemap = new GEVulkanArrayTexture(sky_tex,
         VK_IMAGE_VIEW_TYPE_CUBE, real_mani);
+    attributes.setAttribute("MAX_TEXTURE_SIZE", previous_size);
 }   // addSkyBox
 
 // ----------------------------------------------------------------------------

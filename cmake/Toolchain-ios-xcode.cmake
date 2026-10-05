@@ -6,9 +6,17 @@
 # You may need to use another bundle identifier as the current one is already used by FLUXARA_DRIFT team
 # You can also use -DCMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM=xxxxxxxxxx to specify team
 
-# Increase every upload to App store
-SET(IOS_MARKETING_VERSION 1.0)
-SET(IOS_BUILD_VERSION 1)
+# Shared persistent version; track-resource changes advance it automatically.
+execute_process(COMMAND /usr/bin/python3
+    "${CMAKE_CURRENT_LIST_DIR}/UpdateFluxaraIosVersion.py"
+    OUTPUT_VARIABLE FLUXARA_IOS_VERSION_CMAKE
+    RESULT_VARIABLE FLUXARA_IOS_VERSION_RESULT)
+if(NOT FLUXARA_IOS_VERSION_RESULT EQUAL 0)
+    message(FATAL_ERROR "Unable to resolve Fluxara iOS resource version")
+endif()
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/FluxaraIosVersion.cmake"
+    "${FLUXARA_IOS_VERSION_CMAKE}")
+include("${CMAKE_CURRENT_BINARY_DIR}/FluxaraIosVersion.cmake")
 
 # Keep every generated Xcode configuration on the Fluxara Drift application
 # ID and its Apple Developer team.
@@ -19,15 +27,17 @@ set(CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM
 set(CMAKE_XCODE_ATTRIBUTE_FLUXARA_INPUT_BRIDGE_APP_GROUP
     group.io.fluxara.drift.inputbridge CACHE STRING "" FORCE)
 
-# Fluxara Drift is validated and installed only on a connected physical iPhone.
-# Force the device SDK on every configure, including Xcode's ZERO_CHECK pass,
-# so a stale cache can never silently turn a device bundle into a simulator one.
+# Configure once against the device SDK. The generated Xcode project supports
+# both iPhone and Simulator destinations; xcodebuild -sdk selects the slice.
+# The default distribution platform remains iPhoneOS. Explicit simulator
+# validation uses its own cache, headers and libraries without a device SDK.
 set(FLUXARA_IOS_PLATFORM "iphoneos" CACHE STRING
-    "Apple platform for this Fluxara iPhone build" FORCE)
-set_property(CACHE FLUXARA_IOS_PLATFORM PROPERTY STRINGS iphoneos)
-if (NOT FLUXARA_IOS_PLATFORM STREQUAL "iphoneos")
-    message(FATAL_ERROR "Fluxara Drift must be built for iphoneos.")
+    "Apple SDK used while configuring the iOS project")
+set_property(CACHE FLUXARA_IOS_PLATFORM PROPERTY STRINGS iphoneos iphonesimulator)
+if(NOT FLUXARA_IOS_PLATFORM MATCHES "^(iphoneos|iphonesimulator)$")
+    message(FATAL_ERROR "Unsupported Fluxara iOS platform: ${FLUXARA_IOS_PLATFORM}")
 endif()
+list(APPEND CMAKE_TRY_COMPILE_PLATFORM_VARIABLES FLUXARA_IOS_PLATFORM DEPS_PATH IOS_ASSETS)
 set(FLUXARA_IOS_DEPENDENCY_DIR "dependencies-${FLUXARA_IOS_PLATFORM}")
 
 execute_process(COMMAND xcodebuild -version -sdk ${FLUXARA_IOS_PLATFORM} Path
@@ -108,8 +118,8 @@ set(CMAKE_AR ar CACHE FILEPATH "" FORCE)
 set(CMAKE_RANLIB ranlib CACHE FILEPATH "" FORCE)
 set(CMAKE_STRIP strip CACHE FILEPATH "" FORCE)
 
-# Build the physical iPhone arm64 slice.
-set(CMAKE_OSX_ARCHITECTURES "arm64" CACHE STRING "Build architecture for physical iPhone" FORCE)
+# Both current iPhone and Apple Silicon Simulator use arm64.
+set(CMAKE_OSX_ARCHITECTURES "arm64" CACHE STRING "Build architecture for iPhone and Simulator" FORCE)
 set(CMAKE_C_SIZEOF_DATA_PTR 8)
 set(CMAKE_CXX_SIZEOF_DATA_PTR 8)
 set(CMAKE_SYSTEM_PROCESSOR "arm64")
@@ -163,7 +173,9 @@ else()
 endif()
 set(CMAKE_OSX_DEPLOYMENT_TARGET 15.0 CACHE STRING "Set CMake deployment target" FORCE)
 
-set(CMAKE_XCODE_ATTRIBUTE_ARCHS[sdk=${FLUXARA_IOS_PLATFORM}*] "arm64")
-set(CMAKE_XCODE_ATTRIBUTE_VALID_ARCHS[sdk=${FLUXARA_IOS_PLATFORM}*] "arm64")
+set(CMAKE_XCODE_ATTRIBUTE_ARCHS[sdk=iphoneos*] "arm64")
+set(CMAKE_XCODE_ATTRIBUTE_ARCHS[sdk=iphonesimulator*] "arm64")
+set(CMAKE_XCODE_ATTRIBUTE_VALID_ARCHS[sdk=iphoneos*] "arm64")
+set(CMAKE_XCODE_ATTRIBUTE_VALID_ARCHS[sdk=iphonesimulator*] "arm64")
 
 set(CMAKE_XCODE_ATTRIBUTE_DEBUG_INFORMATION_FORMAT "dwarf-with-dsym" CACHE INTERNAL "")

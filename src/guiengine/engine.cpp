@@ -1502,8 +1502,8 @@ namespace GUIEngine
         const bool landscape = !launching;
         ITexture* fluxara_background = irr_driver->getTexture(
             file_manager->getAsset(landscape ?
-                "gui/fluxara/race/background.png" :
-                "gui/fluxara/home/home-background.png"));
+                "gui/fluxara/race/background.jpg" :
+                "gui/fluxara/home/home-background.jpg"));
         if (fluxara_background)
         {
             const core::dimension2du source_size =

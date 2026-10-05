@@ -59,6 +59,9 @@ inline irr::video::ITexture* campaignPreviewTexture(const std::string& path)
 }
 inline irr::video::ITexture* texture(const std::string& path)
 {
+    if (path == "home/home-background" || path == "race/background")
+        return nativeTexture(file_manager->getAsset(
+            "gui/fluxara/" + path + ".jpg"));
     return nativeTexture(file_manager->getAsset(
         "gui/fluxara/" + path + ".png"));
 }

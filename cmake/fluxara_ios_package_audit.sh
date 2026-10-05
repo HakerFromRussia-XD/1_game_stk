@@ -12,6 +12,8 @@ bundle="$1"
 data="$bundle/data"
 hud="$data/gui/fluxara/hud"
 
+/usr/bin/ruby "$(dirname "$0")/AuditFluxaraIosTextureReferences.rb" "$bundle"
+
 [ -d "$data" ] || { echo "missing bundle data: $data" >&2; exit 66; }
 [ -d "$hud" ] || { echo "missing Fluxara HUD: $hud" >&2; exit 66; }
 [ -f "$data/fluxaradrift.git" ] || {
@@ -166,8 +168,12 @@ done
 [ "$karts" = 15 ] || { echo "expected 15 Fluxara karts, found $karts" >&2; exit 65; }
 
 garage="$data/gui/fluxara/home"
-[ -f "$garage/garage-background-figma-outpaint-v1.png" ] || {
+[ -f "$garage/garage-background-figma-outpaint-v1.jpg" ] || {
     echo "missing approved garage background" >&2
+    exit 65
+}
+[ ! -e "$garage/garage-background-figma-outpaint-v1.png" ] || {
+    echo "unoptimized garage PNG remains in iOS bundle" >&2
     exit 65
 }
 for retired_garage_asset in \
@@ -198,12 +204,25 @@ authoring_file=$(find "$data" -type f \( \
 for required_gui_asset in \
     skins/classic/fluxara_driftskin.xml \
     skins/fluxara/fluxara_driftskin.xml \
+    skins/fluxara/background-v2.jpg \
     ttf/Cantarell-Regular.otf \
     ttf/SigmarOne.otf \
     skins/fluxara/data/ttf/Baloo2-ExtraBold-BalooCyrillic.ttf
 do
     [ -f "$data/$required_gui_asset" ] || {
         echo "missing required Fluxara GUI asset: $required_gui_asset" >&2
+        exit 65
+    }
+done
+[ ! -e "$data/skins/fluxara/background-v2.png" ] || {
+    echo "unoptimized skin background PNG remains in iOS bundle" >&2
+    exit 65
+}
+for alternate_skin in cartoon cartoon-coal cartoon-desert cartoon-forest \
+                      cartoon-ocean cartoon-ruby classic-coal classic-desert \
+                      classic-forest classic-ocean classic-ruby; do
+    [ ! -e "$data/skins/$alternate_skin" ] || {
+        echo "unused alternate skin remains in iOS bundle: $alternate_skin" >&2
         exit 65
     }
 done

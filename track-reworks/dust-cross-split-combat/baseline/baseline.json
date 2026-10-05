@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "task": "Visual rework baseline (no gameplay changes)",
+  "createdAt": "2026-09-26T13:02:13.156706+00:00",
+  "campaign": {
+    "file": "iosApp/FluxaraResources/fluxara-campaign.xml",
+    "campaignId": "fluxara-main",
+    "eventId": "main-three_strikes-dust-cross-split-combat",
+    "segment": "rookie (cup 1)",
+    "campaignPosition": 3,
+    "mode": "three_strikes",
+    "trackId": "fluxara-user-dust-cross-split-combat"
+  },
+  "trackIdentity": {
+    "name": "Dust Cross Split Combat",
+    "arena": true,
+    "maxArenaPlayers": 20,
+    "laps": 11,
+    "designer": "skindoormimiz",
+    "sourceOfTruth": "baseline/track.xml (bit-for-bit copy)"
+  },
+  "protectedGameplay": {
+    "drivingSurface": "dust-cross-split-combat_track.spm — DO NOT change geometry, material-slot->surface mapping or UVs",
+    "navmesh": {
+      "file": "navmesh.xml",
+      "note": "polygon navmesh (arena, three_strikes AI); vertices counted; NOT quads/checkpoints"
+    },
+    "itemSpawns": "scene.xml item/start/library elements — do not edit",
+    "surfacePhysics": "materials.xml — grass slowdown/max-speed, sand falling-effect/water-splash, snow gloss/normal, lava, zipper boost: do not edit",
+    "surfacesPresent": [
+      "grass A/B",
+      "sand a/b",
+      "snow",
+      "rock grey/b/rockA",
+      "runway",
+      "lama_road",
+      "lava",
+      "mudwater",
+      "waterLC",
+      "zipper"
+    ]
+  },
+  "files": {
+    "track.xml": {
+      "path": "iosApp/FluxaraResources/tracks/fluxara-user-dust-cross-split-combat/track.xml",
+      "bytes": 330,
+      "sha256": "66c4aa56ba5e7e27b0c35a013e1148d8dc51d8160e0e9c7cb0255139247b9d03",
+      "baselineCopy": "baseline/track.xml"
+    },
+    "scene.xml": {
+      "path": "iosApp/FluxaraResources/tracks/fluxara-user-dust-cross-split-combat/scene.xml",
+      "bytes": 6491,
+      "sha256": "d4b60720b1edb168fecfb7ca216822b299b15895d421d11c9aadd1af4ccc342c",
+      "baselineCopy": "baseline/scene.xml"
+    },
+    "materials.xml": {
+      "path": "iosApp/FluxaraResources/tracks/fluxara-user-dust-cross-split-combat/materials.xml",
+      "bytes": 1626,
+      "sha256": "f1d1ad43baed099f9b9ba6a6895e4066a1b718d295aaf45aa81dd8e16cde7cfc",
+      "baselineCopy": "baseline/materials.xml"
+    },
+    "navmesh.xml": {
+      "path": "iosApp/FluxaraResources/tracks/fluxara-user-dust-cross-split-combat/navmesh.xml",
+      "bytes": 101164,
+      "sha256": "290fe9b52f36bc66bdd5ff300c49265962b0781ea916d40373922058ba9256ac",
+      "baselineCopy": "baseline/navmesh.xml"
+    },
+    "dust-cross-split-combat_track.spm": {
+      "path": "iosApp/FluxaraResources/tracks/fluxara-user-dust-cross-split-combat/dust-cross-split-combat_track.spm",
+      "bytes": 261743,
+      "sha256": "8bdfb7aa6699f346186812f46c5703ab3ea9f855dff9ea7f1f2f38eb0d5ac1df",
+      "baselineCopy": "baseline/dust-cross-split-combat_track.spm"
+    }
+  },
+  "references": {
+    "ref-01.png": {
+      "path": "track-reworks/dust-cross-split-combat/ref-01.png",
+      "bytes": 1857302,
+      "sha256": "6348ba691141ee9bf1cda7fe16cbf4598694110f2e1ed9b8b2f948caf6a7805f"
+    },
+    "ref-02.png": {
+      "path": "track-reworks/dust-cross-split-combat/ref-02.png",
+      "bytes": 1668220,
+      "sha256": "bd9865a8e4af2443806de6461a4b40a06e48254ec8addfdb7ba05286cca39eb9"
+    },
+    "ref-03.png": {
+      "path": "track-reworks/dust-cross-split-combat/ref-03.png",
+      "bytes": 1608460,
+      "sha256": "23f96cee744007ea95178b6aa76f48ac88820a958fc4e060524cb21652144d28"
+    },
+    "ref-04-landscape-catalog.png": {
+      "path": "track-reworks/dust-cross-split-combat/ref-04-landscape-catalog.png",
+      "bytes": 2329060,
+      "sha256": "473fac9e814f0b60dd9eb92c3b78fd3f5084c8e6572c6a100d2fddf9d498be14"
+    }
+  },
+  "blenderWorkfile": {
+    "status": "NOT CREATED YET",
+    "plan": "new dust-cross-winter... correction: canyon/dirt rework workfile will be created from donor fluxara-canyon-working.blend as library; original course SPM must be imported untouched",
+    "donorLibrary": {
+      "path": ".codex-downloads/fluxara-addon-catalog/blender-projects/fluxara-canyon-working.blend",
+      "sha256": "21fc45d2a2d20bfab902df5ccf4d18e36d7d5d03a0bbe5b67abaa5834f5b9793",
+      "bytes": 54434445,
+      "rule": "append-only donor; never saved over"
+    }
+  },
+  "openBlenderInstances": {
+    "codexInstance": {
+      "port": 9876,
+      "file": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-winter-retexture-work.blend",
+      "policy": "read-only for us"
+    },
+    "freebuffInstance": {
+      "port": 9877,
+      "file": ".codex-downloads/fluxara-addon-catalog/blender-projects/fluxara-canyon-working.blend",
+      "policy": "our workspace; never save over donor path — save-as into track-reworks/dust-cross-split-combat/"
+    }
+  },
+  "navmeshStats": {
+    "vertices": 1008,
+    "format": "recast-style <vertices>/<polys>/<edges>"
+  }
+}

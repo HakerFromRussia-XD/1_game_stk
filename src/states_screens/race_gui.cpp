@@ -51,6 +51,7 @@ using namespace irr;
 #include "karts/kart_properties_manager.hpp"
 #include "modes/capture_the_flag.hpp"
 #include "modes/follow_the_leader.hpp"
+#include "modes/free_for_all.hpp"
 #include "modes/linear_world.hpp"
 #include "modes/world.hpp"
 #include "modes/soccer_world.hpp"
@@ -151,22 +152,15 @@ int fluxaraHudValueWidth(const core::stringw& value, int minimum,
 
 void drawFluxaraHudCard(video::ITexture* texture,
                         const core::rect<s32>& rect,
-                        const core::stringw& caption,
                         const core::stringw& value, float scale)
 {
     drawFluxaraRoundedSurface(texture, rect, 18 * scale);
     const int left = rect.UpperLeftCorner.X + int(12 * scale);
     core::rect<s32> value_rect(left, rect.UpperLeftCorner.Y + int(8 * scale),
         rect.LowerRightCorner.X - int(5 * scale),
-        rect.UpperLeftCorner.Y + int(32 * scale));
-    core::rect<s32> caption_rect(left,
-        rect.UpperLeftCorner.Y + int(35 * scale),
-        rect.LowerRightCorner.X - int(5 * scale),
-        rect.LowerRightCorner.Y - int(4 * scale));
+        rect.LowerRightCorner.Y - int(8 * scale));
     drawFluxaraHudText(GUIEngine::getHighresDigitFont(), value, value_rect,
         22 * scale, video::SColor(255, 255, 255, 255));
-    drawFluxaraHudText(GUIEngine::getSmallFont(), caption, caption_rect,
-        9 * scale, video::SColor(255, 224, 245, 255));
 }
 }
 #endif
@@ -631,8 +625,8 @@ void RaceGUI::drawGlobalTimer()
         const int top = int(11 * scale);
         const int width = fluxaraHudValueWidth(fluxara_time, 120, scale);
         const core::rect<s32> card(left, top, left + width,
-                                   top + int(58 * scale));
-        drawFluxaraHudCard(m_fluxara_counter_time, card, L"TIME", fluxara_time,
+                                   top + int(43 * scale));
+        drawFluxaraHudCard(m_fluxara_counter_time, card, fluxara_time,
                            scale);
         return;
     }
@@ -1468,8 +1462,73 @@ void RaceGUI::drawLap(const AbstractKart* kart,
         const float hud_scale = fluxaraHudScale();
         const int left = fluxaraHudOriginX(hud_scale) + int(34 * hud_scale);
         const int top = int(11 * hud_scale);
-        const int height = int(58 * hud_scale);
+        const int height = int(43 * hud_scale);
         const int gap = int(9 * hud_scale);
+
+        // Free-for-all's speedometer digit is a score, not a race rank.
+        // Keep the local score beside the timer and fit every opponent into
+        // one compact row before the minimap, using the event roster's icons.
+        if (RaceManager::get()->getMinorMode() ==
+            RaceManager::MINOR_MODE_FREE_FOR_ALL)
+        {
+            FreeForAll* battle = dynamic_cast<FreeForAll*>(world);
+            if (battle)
+            {
+                const core::stringw own_score(
+                    battle->getKartScore(kart->getWorldKartId()));
+                const int own_width = fluxaraHudValueWidth(own_score, 66,
+                                                           hud_scale);
+                drawFluxaraHudCard(m_fluxara_counter_small,
+                    core::rect<s32>(left, top, left + own_width, top + height),
+                    own_score, hud_scale);
+
+                const unsigned opponents = world->getNumKarts() - 1;
+                if (opponents == 0)
+                    return;
+                const int row_left = fluxaraHudOriginX(hud_scale) +
+                    int(316 * hud_scale);
+                const int row_right = m_map_left - int(10 * hud_scale);
+                const int row_width = std::max(1, row_right - row_left);
+                const int spacing = std::max(1, int(4 * hud_scale));
+                const int card_width = std::max(1, std::min(
+                    int(44 * hud_scale),
+                    (row_width - int(opponents - 1) * spacing) /
+                        int(opponents)));
+                const int card_height = int(38 * hud_scale);
+                const int icon_width = std::max(1, std::min(
+                    int(21 * hud_scale), card_width - int(6 * hud_scale)));
+                unsigned displayed = 0;
+                for (unsigned i = 0; i < world->getNumKarts(); ++i)
+                {
+                    const AbstractKart* opponent = world->getKart(i);
+                    if (opponent->getWorldKartId() == kart->getWorldKartId())
+                        continue;
+                    const int x = row_left + int(displayed) *
+                        (card_width + spacing);
+                    const core::rect<s32> card(x, top, x + card_width,
+                                               top + card_height);
+                    drawFluxaraRoundedSurface(m_fluxara_counter_small, card,
+                                              12 * hud_scale);
+                    video::ITexture* preview = opponent->getKartProperties()
+                        ->getIconMaterial()->getTexture();
+                    const int icon_left = x + (card_width - icon_width) / 2;
+                    drawFluxaraSurface(preview, core::rect<s32>(
+                        icon_left, top + int(3 * hud_scale),
+                        icon_left + icon_width,
+                        top + int(3 * hud_scale) + icon_width));
+                    const core::rect<s32> score_rect(
+                        x + int(3 * hud_scale), top + int(25 * hud_scale),
+                        x + card_width - int(3 * hud_scale),
+                        top + card_height - int(2 * hud_scale));
+                    drawFluxaraHudText(GUIEngine::getHighresDigitFont(),
+                        core::stringw(battle->getKartScore(
+                            opponent->getWorldKartId())), score_rect,
+                        11 * hud_scale, video::SColor(255, 255, 255, 255));
+                    ++displayed;
+                }
+                return;
+            }
+        }
 
         const bool show_rank = world->shouldDrawSpeedometerDigit();
         int rank_width = 0;
@@ -1483,16 +1542,14 @@ void RaceGUI::drawLap(const AbstractKart* kart,
             rank_width = fluxaraHudValueWidth(rank_value, 66, hud_scale);
             drawFluxaraHudCard(m_fluxara_counter_small,
                 core::rect<s32>(left, top, left + rank_width, top + height),
-                L"POS", rank_value, hud_scale);
+                rank_value, hud_scale);
         }
 
-        core::stringw caption = L"LAP";
         core::stringw value = L"--";
         CaptureTheFlag* fluxara_ctf = dynamic_cast<CaptureTheFlag*>(world);
         SoccerWorld* fluxara_soccer = dynamic_cast<SoccerWorld*>(world);
         if (fluxara_ctf || fluxara_soccer)
         {
-            caption = L"SCORE";
             const int red = fluxara_ctf ? fluxara_ctf->getRedScore() :
                 fluxara_soccer->getScore(KART_TEAM_RED);
             const int blue = fluxara_ctf ? fluxara_ctf->getBlueScore() :
@@ -1515,15 +1572,11 @@ void RaceGUI::drawLap(const AbstractKart* kart,
                 value += core::stringw(total_laps);
             }
         }
-        else
-        {
-            caption = L"ROUND";
-        }
         const int second_left = show_rank ? left + rank_width + gap : left;
         const int second_width = fluxaraHudValueWidth(value, 66, hud_scale);
         drawFluxaraHudCard(m_fluxara_counter_small,
             core::rect<s32>(second_left, top, second_left + second_width,
-                            top + height), caption, value, hud_scale);
+                            top + height), value, hud_scale);
         return;
     }
 #endif

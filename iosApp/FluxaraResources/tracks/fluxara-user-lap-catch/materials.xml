@@ -1,27 +1,62 @@
-<?xml version="1.0"?>
-<!-- Generated with script from SVN rev Unknown -->
-<materials>
-  <material name="170.jpg" normal-map="170_norm.jpg"/>
-  <material name="173.jpg" normal-map="173_norm.jpg"/>
-  <material name="173b.jpg" normal-map="173_norm.jpg"/>
-  <material name="bone2-equus_grevyi-01.png" normal-map="bone2-equus_grevyi-01_nm.png"/>
-  <material name="grass.jpg" has-gravity="Y"/>
-  <material name="IscalesPortal.png" has-gravity="Y"/>
-  <material name="mudwater.png" surface="Y" shader="displace"/>
-  <material name="rock_grey.jpg" has-gravity="Y"/>
-  <material name="fluxara_drift_generic_grassA.png" has-gravity="Y" slowdown-time="6.50" max-speed="0.65"/>
-  <material name="fluxara_drift_generic_grassB.png" normal-map="fluxara_drift_generic_grassB_Normal.png" slowdown-time="3.50" max-speed="0.65"/>
-  <material name="fluxara_drift_generic_rock_b.png" has-gravity="Y"/>
-  <material name="fluxara_drift_generic_runway_a.png" has-gravity="Y"/>
-  <material name="fluxara_drift_generic_sand_a.png" has-gravity="Y"/>
-  <material name="fluxara_drift_generic_sand_b.png" falling-effect="Y" water-splash="Y"/>
-  <material name="fluxara_drift_generic_snow_a.png" gloss-map="fluxara_drift_generic_snow_a_gloss.png" normal-map="fluxara_drift_generic_snow_a_Normal.png" has-gravity="Y"/>
-  <material name="fluxara_driftlama_road_a.png" has-gravity="Y"/>
-  <material name="fluxara_drifttex_generic_lavaA.png" gloss-map="fluxara_drifttex_generic_lava_gloss.png" normal-map="fluxara_drifttex_generic_lavaA_Normal.png" falling-effect="Y"/>
-  <material name="fluxara_drifttex_generic_rockA.png" gloss-map="fluxara_drifttex_generic_rockA_gloss.png" normal-map="fluxara_drifttex_generic_rockA_Normal.png" has-gravity="Y"/>
-  <material name="waterlava.png" falling-effect="Y" shader="displace"/>
-  <material name="waterLC.png" surface="Y" shader="displace"/>
-  <material name="zippercom.png" shader="alphatest" has-gravity="Y">
-    <zipper duration="1.5" max-speed-increase="10.0" fade-out-time="0.5" speed-gain="3.0" min-speed="-1.0"/>
+<materials><material name="lc_surface_0.png" />
+  <material name="lc_surface_2.jpg" />
+  <material name="lc_surface_3.jpg" has-gravity="Y" />
+  <material name="lc_surface_7.png" />
+  <material name="lc_surface_12.png">
+    <sfx filename="wooden_bridge.ogg" min_speed="5.00" max_speed="15.00" min_pitch="0.80" max_pitch="1.20" positional="true" rolloff="0.10" />
   </material>
-</materials>
+  <material name="lc_surface_18.png" has-gravity="Y" />
+  <material name="lc_surface_25.png" />
+  <material name="lc_surface_28.png" surface="Y" shader="displace" />
+  <material name="lc_surface_34.png" has-gravity="Y" />
+  <material name="lc_surface_41.png" max-speed="0.4" slowdown-time="0.8">
+    <particles base="smoke.xml" condition="skid drive" />
+  </material>
+  
+  <material name="lc_surface_45.png" has-gravity="Y" slowdown-time="6.50" max-speed="0.65" />
+  <material name="lc_surface_46.png" slowdown-time="3.50" max-speed="0.65" />
+  <material name="lc_surface_50.png" graphical-effect="normal_map" /> 
+  
+  <material name="lc_surface_51.jpg" />
+  <material name="lc_surface_57.png" shader="alphablend" ignore="Y" />
+  <material name="lc_surface_58.png" graphical-effect="normal_map" />
+  <material name="lc_surface_61.png" />
+  
+  <material name="lc_surface_63.png" shader="alphatest" />
+  <material name="lc_surface_64.png" has-gravity="Y">
+      <sfx filename="wooden_bridge.ogg" rolloff="0.60" min_speed="9.00" max_speed="22.00" min_pitch="1.00" max_pitch="1.70" positional="Y" volume="1.00" />
+    </material>
+
+    
+
+
+  <material name="lc_surface_66.png" falling-effect="Y" />
+  <material name="lc_surface_74.png" falling-effect="Y" shader="displace" />
+  <material name="fluxara_drift_generic_sand_b.png" falling-effect="Y" water-splash="Y" />
+  <material name="zippercom.png" shader="alphatest" has-gravity="Y">
+    <zipper duration="1.5" max-speed-increase="10.0" fade-out-time="0.5" speed-gain="3.0" min-speed="-1.0" />
+  </material>
+<material name="lc_unified_0.png" />
+  <material name="lc_unified_1.png" />
+  <material name="lc_unified_2.jpg" />
+  <material has-gravity="Y" name="lc_unified_3.png" />
+  <material has-gravity="Y" name="lc_unified_4.png" />
+  <material max-speed="0.4" slowdown-time="0.8" name="lc_unified_5.jpg">
+    <particles base="smoke.xml" condition="skid drive" />
+  </material>
+  
+  <material max-speed="0.4" slowdown-time="0.8" name="lc_unified_6.png">
+    <particles base="smoke.xml" condition="skid drive" />
+  </material>
+  
+  <material max-speed="0.4" slowdown-time="0.8" name="lc_unified_7.png">
+    <particles base="smoke.xml" condition="skid drive" />
+  </material>
+  
+  <material has-gravity="Y" slowdown-time="6.50" max-speed="0.65" name="lc_unified_8.jpg" />
+  <material has-gravity="Y" slowdown-time="6.50" max-speed="0.65" name="lc_unified_9.png" />
+  <material slowdown-time="3.50" max-speed="0.65" name="lc_unified_10.jpg" />
+  <material slowdown-time="3.50" max-speed="0.65" name="lc_unified_11.png" />
+  <material slowdown-time="3.50" max-speed="0.65" name="lc_unified_12.png" />
+  <material has-gravity="Y" name="lc_unified_13.jpg" />
+  </materials>

@@ -1,230 +1,206 @@
-<?xml version="1.0"?>
-<!-- Generated with script from SVN rev 17016 -->
 <scene>
   <lod>
    <group name="treeMod1">
-    <static-object lod_distance="160" lod_group="treeMod1" model="treeMod1_LOD80.spm" xyz="-194.13 4.32 58.75" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" skeletal-animation="false"/>
-    <static-object lod_distance="300" lod_group="treeMod1" model="treeMod1_LOD170.spm" xyz="-194.13 4.32 48.75" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" skeletal-animation="false"/>
+    <static-object lod_distance="160" lod_group="treeMod1" model="treeMod1_LOD80.spm" xyz="-194.13 4.32 58.75" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" skeletal-animation="false" />
+    <static-object lod_distance="300" lod_group="treeMod1" model="treeMod1_LOD170.spm" xyz="-194.13 4.32 48.75" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" skeletal-animation="false" />
    </group>
   </lod>
   <track model="ancient-summits_track.spm" x="0" y="0" z="0">
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="45.62 28.56 -87.29" hpr="0.0 -43.3 0.0" scale="2.38 2.38 2.38"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="32.64 30.22 -76.22" hpr="0.0 78.4 0.0" scale="1.31 1.31 1.31"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="44.35 31.83 -101.41" hpr="0.0 78.4 -20.9" scale="1.44 1.44 1.44"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="42.28 35.02 -120.20" hpr="0.0 -0.0 0.0" scale="1.30 1.30 1.30"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="36.47 35.37 -133.29" hpr="-0.0 67.4 -0.0" scale="1.00 1.00 1.00"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="46.87 34.90 -131.25" hpr="0.0 169.8 0.0" scale="1.00 1.00 1.00"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="51.37 35.29 -145.60" hpr="0.0 169.8 0.0" scale="1.33 1.33 1.33"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="72.84 35.86 -152.23" hpr="-0.0 -147.4 0.0" scale="1.11 1.11 1.11"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="87.76 35.86 -156.40" hpr="0.0 131.9 0.0" scale="1.63 1.63 1.63"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="99.71 35.72 -155.01" hpr="-0.0 -91.9 0.0" scale="1.05 1.05 1.05"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="116.29 35.72 -157.48" hpr="-0.0 -155.4 0.0" scale="1.14 1.14 1.14"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="140.38 35.72 -155.80" hpr="-0.0 -133.7 0.0" scale="1.38 1.38 1.38"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="154.27 35.72 -159.61" hpr="0.0 -66.4 -0.0" scale="1.11 1.11 1.11"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="172.34 35.72 -156.17" hpr="-0.0 -47.9 -1.6" scale="1.60 1.60 1.60"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="40.19 28.68 -62.52" hpr="-0.0 11.4 -0.0" scale="1.30 1.30 1.30"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="36.88 28.68 -55.13" hpr="-0.0 32.2 -0.0" scale="0.95 0.95 0.95"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="36.97 28.78 -41.77" hpr="-0.0 -136.2 -0.0" scale="1.23 1.23 1.23"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-65.17 -1.71 153.11" hpr="0.0 -43.3 0.0" scale="2.38 2.38 2.38"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-42.17 -0.35 141.54" hpr="0.0 -10.0 0.0" scale="1.80 1.80 1.80"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-16.18 -0.85 146.70" hpr="0.0 -0.4 0.0" scale="2.37 2.37 2.37"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="49.16 -0.85 188.03" hpr="0.0 -0.4 0.0" scale="2.37 2.37 2.37"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="34.14 -0.85 201.54" hpr="-0.0 61.2 -0.0" scale="2.37 2.37 2.37"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="16.09 -0.85 219.59" hpr="-0.0 35.4 -0.0" scale="1.37 1.37 1.37"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="36.22 -0.84 229.55" hpr="-0.0 35.4 -0.0" scale="1.54 1.54 1.54"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="6.63 -0.85 247.97" hpr="-0.0 35.4 -0.0" scale="1.81 1.81 1.81"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-129.97 -0.85 96.68" hpr="-0.0 -173.0 0.0" scale="2.37 2.37 2.37"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-103.53 -0.35 98.47" hpr="0.0 177.3 0.0" scale="1.80 1.80 1.80"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-82.20 -1.71 84.04" hpr="0.0 144.1 0.0" scale="2.38 2.38 2.38"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-205.81 4.18 -103.52" hpr="0.0 144.1 0.0" scale="2.38 2.38 2.38"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-201.14 3.13 -32.48" hpr="0.0 -164.2 -6.9" scale="1.34 1.34 1.34"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-173.35 3.12 -191.83" hpr="-13.2 165.4 -15.6" scale="1.34 1.34 1.34"/>
-    <static-object  lod_instance="true" lod_group="treeMod1" xyz="-163.22 2.61 -198.27" hpr="-13.2 165.4 -15.6" scale="1.57 1.57 1.57"/>
+    <static-object xyz="45.62 28.56 -87.29" hpr="0.0 -43.3 0.0" scale="2.38 2.38 2.38" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="32.64 30.22 -76.22" hpr="0.0 78.4 0.0" scale="1.31 1.31 1.31" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="44.35 31.83 -101.41" hpr="0.0 78.4 -20.9" scale="1.44 1.44 1.44" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="42.28 35.02 -120.20" hpr="0.0 -0.0 0.0" scale="1.30 1.30 1.30" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="36.47 35.37 -133.29" hpr="-0.0 67.4 -0.0" scale="1.00 1.00 1.00" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="46.87 34.90 -131.25" hpr="0.0 169.8 0.0" scale="1.00 1.00 1.00" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="51.37 35.29 -145.60" hpr="0.0 169.8 0.0" scale="1.33 1.33 1.33" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="72.84 35.86 -152.23" hpr="-0.0 -147.4 0.0" scale="1.11 1.11 1.11" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="87.76 35.86 -156.40" hpr="0.0 131.9 0.0" scale="1.63 1.63 1.63" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="99.71 35.72 -155.01" hpr="-0.0 -91.9 0.0" scale="1.05 1.05 1.05" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="116.29 35.72 -157.48" hpr="-0.0 -155.4 0.0" scale="1.14 1.14 1.14" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="140.38 35.72 -155.80" hpr="-0.0 -133.7 0.0" scale="1.38 1.38 1.38" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="154.27 35.72 -159.61" hpr="0.0 -66.4 -0.0" scale="1.11 1.11 1.11" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="172.34 35.72 -156.17" hpr="-0.0 -47.9 -1.6" scale="1.60 1.60 1.60" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="40.19 28.68 -62.52" hpr="-0.0 11.4 -0.0" scale="1.30 1.30 1.30" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="36.88 28.68 -55.13" hpr="-0.0 32.2 -0.0" scale="0.95 0.95 0.95" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="36.97 28.78 -41.77" hpr="-0.0 -136.2 -0.0" scale="1.23 1.23 1.23" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="-65.17 -1.71 153.11" hpr="0.0 -43.3 0.0" scale="2.38 2.38 2.38" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="-42.17 -0.35 141.54" hpr="0.0 -10.0 0.0" scale="1.80 1.80 1.80" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="-16.18 -0.85 146.70" hpr="0.0 -0.4 0.0" scale="2.37 2.37 2.37" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="49.16 -0.85 188.03" hpr="0.0 -0.4 0.0" scale="2.37 2.37 2.37" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="34.14 -0.85 201.54" hpr="-0.0 61.2 -0.0" scale="2.37 2.37 2.37" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="16.09 -0.85 219.59" hpr="-0.0 35.4 -0.0" scale="1.37 1.37 1.37" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="36.22 -0.84 229.55" hpr="-0.0 35.4 -0.0" scale="1.54 1.54 1.54" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="6.63 -0.85 247.97" hpr="-0.0 35.4 -0.0" scale="1.81 1.81 1.81" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="-129.97 -0.85 96.68" hpr="-0.0 -173.0 0.0" scale="2.37 2.37 2.37" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="-103.53 -0.35 98.47" hpr="0.0 177.3 0.0" scale="1.80 1.80 1.80" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="-82.20 -1.71 84.04" hpr="0.0 144.1 0.0" scale="2.38 2.38 2.38" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="-205.81 4.18 -103.52" hpr="0.0 144.1 0.0" scale="2.38 2.38 2.38" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="-201.14 3.13 -32.48" hpr="0.0 -164.2 -6.9" scale="1.34 1.34 1.34" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="-173.35 3.12 -191.83" hpr="-13.2 165.4 -15.6" scale="1.34 1.34 1.34" model="treeMod1_LOD80.spm" interaction="physics-only" />
+    <static-object xyz="-163.22 2.61 -198.27" hpr="-13.2 165.4 -15.6" scale="1.57 1.57 1.57" model="treeMod1_LOD80.spm" interaction="physics-only" />
   </track>
   <object id="Balloon" type="animation" xyz="-39.99 116.20 -180.02" hpr="-63.4 89.6 3.0" scale="7.33 7.33 7.33" interaction="none" model="Balloon.spm" skeletal-animation="false">
     <curve channel="LocX" interpolation="bezier" extend="cyclic">
-      <p c="0.172 -40.000" h1="-51.067 -40.000" h2="51.412 -40.000"/>
-      <p c="169.894 99.158" h1="103.758 99.158" h2="310.133 99.158"/>
-      <p c="529.782 -151.640" h1="389.314 -151.640" h2="588.448 -151.640"/>
-      <p c="680.088 -40.000" h1="632.980 -40.000" h2="727.196 -40.000"/>
+      <p c="0.172 -40.000" h1="-51.067 -40.000" h2="51.412 -40.000" />
+      <p c="169.894 99.158" h1="103.758 99.158" h2="310.133 99.158" />
+      <p c="529.782 -151.640" h1="389.314 -151.640" h2="588.448 -151.640" />
+      <p c="680.088 -40.000" h1="632.980 -40.000" h2="727.196 -40.000" />
     </curve>
     <curve channel="LocZ" interpolation="bezier" extend="cyclic">
-      <p c="0.896 -180.019" h1="-131.535 -180.008" h2="103.519 -180.027"/>
-      <p c="340.106 98.386" h1="207.675 98.386" h2="472.816 98.386"/>
-      <p c="680.029 -179.989" h1="578.468 -179.987" h2="812.522 -179.992"/>
+      <p c="0.896 -180.019" h1="-131.535 -180.008" h2="103.519 -180.027" />
+      <p c="340.106 98.386" h1="207.675 98.386" h2="472.816 98.386" />
+      <p c="680.029 -179.989" h1="578.468 -179.987" h2="812.522 -179.992" />
     </curve>
     <curve channel="RotX" interpolation="bezier" extend="cyclic">
-      <p c="0.422 -66.375" h1="-175.490 -66.375" h2="176.334 -66.375"/>
-      <p c="451.004 -66.334" h1="275.091 -66.334" h2="626.916 -66.334"/>
+      <p c="0.422 -66.375" h1="-175.490 -66.375" h2="176.334 -66.375" />
+      <p c="451.004 -66.334" h1="275.091 -66.334" h2="626.916 -66.334" />
     </curve>
     <curve channel="RotZ" interpolation="bezier" extend="cyclic">
-      <p c="0.762 0.023" h1="-142.680 0.023" h2="144.205 0.023"/>
-      <p c="368.177 0.065" h1="224.734 0.065" h2="511.620 0.065"/>
+      <p c="0.762 0.023" h1="-142.680 0.023" h2="144.205 0.023" />
+      <p c="368.177 0.065" h1="224.734 0.065" h2="511.620 0.065" />
     </curve>
     <curve channel="RotY" interpolation="linear" extend="cyclic">
-      <p c="0.013 90.084"/>
-      <p c="679.984 -269.997"/>
+      <p c="0.013 90.084" />
+      <p c="679.984 -269.997" />
     </curve>
   </object>
-  <object type="movable" id="Ice.005" xyz="12.08 29.31 8.10" hpr="0.0 -0.0 0.0" scale="0.20 0.20 0.20"
-          shape="box" mass="11.0" model="iceCube.spm" friction="0.1" skeletal-animation="false"/>
-  <object type="movable" id="Ice.006" xyz="8.68 29.31 8.13" hpr="0.0 -0.0 0.0" scale="0.20 0.20 0.20"
-          shape="box" mass="11.0" model="iceCube.spm" friction="0.1" skeletal-animation="false"/>
-  <object type="movable" id="Ice.007" xyz="5.42 29.31 7.99" hpr="0.0 -0.0 0.0" scale="0.20 0.20 0.20"
-          shape="box" mass="11.0" model="iceCube.spm" friction="0.1" skeletal-animation="false"/>
+  <object type="movable" id="Ice.005" xyz="12.08 29.31 8.10" hpr="0.0 -0.0 0.0" scale="0.20 0.20 0.20" shape="box" mass="11.0" model="iceCube.spm" friction="0.1" skeletal-animation="false" />
+  <object type="movable" id="Ice.006" xyz="8.68 29.31 8.13" hpr="0.0 -0.0 0.0" scale="0.20 0.20 0.20" shape="box" mass="11.0" model="iceCube.spm" friction="0.1" skeletal-animation="false" />
+  <object type="movable" id="Ice.007" xyz="5.42 29.31 7.99" hpr="0.0 -0.0 0.0" scale="0.20 0.20 0.20" shape="box" mass="11.0" model="iceCube.spm" friction="0.1" skeletal-animation="false" />
   <object id="Icosphere" type="animation" xyz="-43.19 45.06 -121.74" hpr="0.0 -0.0 0.0" scale="2.00 2.00 2.00" interaction="explode" shape="sphere" model="fallRock.spm" explode="y" skeletal-animation="false">
     <curve channel="LocX" interpolation="bezier" extend="const">
-      <p c="1.000 -43.190" h1="-96.212 -43.190" h2="98.212 -43.190"/>
-      <p c="250.000 -43.190" h1="191.438 -43.190" h2="261.712 -43.190"/>
-      <p c="280.000 -45.899" h1="268.288 -44.805" h2="291.712 -46.994"/>
-      <p c="310.000 -48.796" h1="298.288 -47.819" h2="325.226 -50.067"/>
-      <p c="349.000 -51.539" h1="333.774 -50.535" h2="364.616 -52.568"/>
-      <p c="389.000 -53.999" h1="373.384 -52.714" h2="401.103 -54.996"/>
-      <p c="420.000 -57.198" h1="407.897 -55.595" h2="431.712 -58.749"/>
-      <p c="450.000 -62.049" h1="438.288 -59.890" h2="461.712 -64.208"/>
-      <p c="480.000 -68.257" h1="468.288 -65.313" h2="491.712 -71.201"/>
-      <p c="510.000 -77.132" h1="498.288 -72.434" h2="521.712 -81.830"/>
-      <p c="540.000 -92.323" h1="528.288 -86.616" h2="551.712 -98.030"/>
-      <p c="570.000 -106.368" h1="558.288 -101.772" h2="581.712 -110.965"/>
-      <p c="600.000 -115.872" h1="588.288 -112.984" h2="611.712 -118.759"/>
-      <p c="630.000 -121.161" h1="618.288 -119.422" h2="641.712 -122.900"/>
-      <p c="660.000 -124.780" h1="648.288 -123.757" h2="671.712 -125.804"/>
-      <p c="690.000 -126.405" h1="678.288 -126.405" h2="701.712 -126.405"/>
+      <p c="1.000 -43.190" h1="-96.212 -43.190" h2="98.212 -43.190" />
+      <p c="250.000 -43.190" h1="191.438 -43.190" h2="261.712 -43.190" />
+      <p c="280.000 -45.899" h1="268.288 -44.805" h2="291.712 -46.994" />
+      <p c="310.000 -48.796" h1="298.288 -47.819" h2="325.226 -50.067" />
+      <p c="349.000 -51.539" h1="333.774 -50.535" h2="364.616 -52.568" />
+      <p c="389.000 -53.999" h1="373.384 -52.714" h2="401.103 -54.996" />
+      <p c="420.000 -57.198" h1="407.897 -55.595" h2="431.712 -58.749" />
+      <p c="450.000 -62.049" h1="438.288 -59.890" h2="461.712 -64.208" />
+      <p c="480.000 -68.257" h1="468.288 -65.313" h2="491.712 -71.201" />
+      <p c="510.000 -77.132" h1="498.288 -72.434" h2="521.712 -81.830" />
+      <p c="540.000 -92.323" h1="528.288 -86.616" h2="551.712 -98.030" />
+      <p c="570.000 -106.368" h1="558.288 -101.772" h2="581.712 -110.965" />
+      <p c="600.000 -115.872" h1="588.288 -112.984" h2="611.712 -118.759" />
+      <p c="630.000 -121.161" h1="618.288 -119.422" h2="641.712 -122.900" />
+      <p c="660.000 -124.780" h1="648.288 -123.757" h2="671.712 -125.804" />
+      <p c="690.000 -126.405" h1="678.288 -126.405" h2="701.712 -126.405" />
     </curve>
     <curve channel="LocZ" interpolation="bezier" extend="const">
-      <p c="1.000 -121.735" h1="-96.212 -121.735" h2="98.212 -121.735"/>
-      <p c="250.000 -121.735" h1="191.438 -121.735" h2="261.712 -121.735"/>
-      <p c="280.000 -126.591" h1="268.288 -124.857" h2="291.712 -128.324"/>
-      <p c="310.000 -130.615" h1="298.288 -129.243" h2="325.226 -132.397"/>
-      <p c="349.000 -134.516" h1="333.774 -132.600" h2="364.616 -136.482"/>
-      <p c="389.000 -140.585" h1="373.384 -137.894" h2="401.103 -142.671"/>
-      <p c="420.000 -146.565" h1="407.897 -144.929" h2="431.712 -148.149"/>
-      <p c="450.000 -148.890" h1="438.288 -147.876" h2="461.712 -149.904"/>
-      <p c="480.000 -151.760" h1="468.288 -150.528" h2="491.712 -152.992"/>
-      <p c="510.000 -155.202" h1="498.288 -153.443" h2="521.712 -156.960"/>
-      <p c="540.000 -160.769" h1="528.288 -159.326" h2="551.712 -162.212"/>
-      <p c="570.000 -162.593" h1="558.288 -161.895" h2="581.712 -163.291"/>
-      <p c="600.000 -164.344" h1="588.288 -163.311" h2="611.712 -165.378"/>
-      <p c="630.000 -167.888" h1="618.288 -166.423" h2="641.712 -169.353"/>
-      <p c="660.000 -171.848" h1="648.288 -169.640" h2="671.712 -174.057"/>
-      <p c="690.000 -179.201" h1="678.288 -179.201" h2="701.712 -179.201"/>
+      <p c="1.000 -121.735" h1="-96.212 -121.735" h2="98.212 -121.735" />
+      <p c="250.000 -121.735" h1="191.438 -121.735" h2="261.712 -121.735" />
+      <p c="280.000 -126.591" h1="268.288 -124.857" h2="291.712 -128.324" />
+      <p c="310.000 -130.615" h1="298.288 -129.243" h2="325.226 -132.397" />
+      <p c="349.000 -134.516" h1="333.774 -132.600" h2="364.616 -136.482" />
+      <p c="389.000 -140.585" h1="373.384 -137.894" h2="401.103 -142.671" />
+      <p c="420.000 -146.565" h1="407.897 -144.929" h2="431.712 -148.149" />
+      <p c="450.000 -148.890" h1="438.288 -147.876" h2="461.712 -149.904" />
+      <p c="480.000 -151.760" h1="468.288 -150.528" h2="491.712 -152.992" />
+      <p c="510.000 -155.202" h1="498.288 -153.443" h2="521.712 -156.960" />
+      <p c="540.000 -160.769" h1="528.288 -159.326" h2="551.712 -162.212" />
+      <p c="570.000 -162.593" h1="558.288 -161.895" h2="581.712 -163.291" />
+      <p c="600.000 -164.344" h1="588.288 -163.311" h2="611.712 -165.378" />
+      <p c="630.000 -167.888" h1="618.288 -166.423" h2="641.712 -169.353" />
+      <p c="660.000 -171.848" h1="648.288 -169.640" h2="671.712 -174.057" />
+      <p c="690.000 -179.201" h1="678.288 -179.201" h2="701.712 -179.201" />
     </curve>
     <curve channel="LocY" interpolation="bezier" extend="const">
-      <p c="1.000 45.061" h1="-96.212 45.061" h2="98.212 45.061"/>
-      <p c="250.000 45.061" h1="191.438 45.061" h2="261.712 45.061"/>
-      <p c="280.000 44.369" h1="268.288 44.883" h2="291.712 43.855"/>
-      <p c="310.000 42.429" h1="298.288 43.291" h2="325.226 41.309"/>
-      <p c="349.000 39.214" h1="333.774 41.708" h2="364.616 36.656"/>
-      <p c="389.000 29.409" h1="373.384 34.286" h2="401.103 25.630"/>
-      <p c="420.000 17.648" h1="407.897 17.809" h2="431.712 17.492"/>
-      <p c="450.000 17.492" h1="438.288 17.648" h2="461.712 17.336"/>
-      <p c="480.000 13.997" h1="468.288 15.268" h2="491.712 12.726"/>
-      <p c="510.000 10.980" h1="498.288 12.234" h2="521.712 9.726"/>
-      <p c="540.000 7.572" h1="528.288 8.474" h2="551.712 6.670"/>
-      <p c="570.000 6.359" h1="558.288 6.359" h2="581.712 6.359"/>
-      <p c="600.000 6.359" h1="588.288 6.359" h2="611.712 6.359"/>
-      <p c="630.000 3.713" h1="618.288 6.359" h2="641.712 1.067"/>
-      <p c="660.000 -9.928" h1="648.288 -6.621" h2="671.712 -13.235"/>
-      <p c="690.000 -13.235" h1="678.288 -13.235" h2="701.712 -13.235"/>
+      <p c="1.000 45.061" h1="-96.212 45.061" h2="98.212 45.061" />
+      <p c="250.000 45.061" h1="191.438 45.061" h2="261.712 45.061" />
+      <p c="280.000 44.369" h1="268.288 44.883" h2="291.712 43.855" />
+      <p c="310.000 42.429" h1="298.288 43.291" h2="325.226 41.309" />
+      <p c="349.000 39.214" h1="333.774 41.708" h2="364.616 36.656" />
+      <p c="389.000 29.409" h1="373.384 34.286" h2="401.103 25.630" />
+      <p c="420.000 17.648" h1="407.897 17.809" h2="431.712 17.492" />
+      <p c="450.000 17.492" h1="438.288 17.648" h2="461.712 17.336" />
+      <p c="480.000 13.997" h1="468.288 15.268" h2="491.712 12.726" />
+      <p c="510.000 10.980" h1="498.288 12.234" h2="521.712 9.726" />
+      <p c="540.000 7.572" h1="528.288 8.474" h2="551.712 6.670" />
+      <p c="570.000 6.359" h1="558.288 6.359" h2="581.712 6.359" />
+      <p c="600.000 6.359" h1="588.288 6.359" h2="611.712 6.359" />
+      <p c="630.000 3.713" h1="618.288 6.359" h2="641.712 1.067" />
+      <p c="660.000 -9.928" h1="648.288 -6.621" h2="671.712 -13.235" />
+      <p c="690.000 -13.235" h1="678.288 -13.235" h2="701.712 -13.235" />
     </curve>
     <curve channel="RotX" interpolation="bezier" extend="const">
-      <p c="1.000 -0.000" h1="-96.212 -0.000" h2="98.212 -0.000"/>
-      <p c="250.000 -0.000" h1="191.438 -0.000" h2="261.712 -0.000"/>
-      <p c="280.000 -62.129" h1="268.288 -35.753" h2="291.712 -88.505"/>
-      <p c="310.000 -135.119" h1="298.288 -113.887" h2="325.226 -162.720"/>
-      <p c="349.000 -181.629" h1="333.774 -168.523" h2="364.616 -195.072"/>
-      <p c="389.000 -202.789" h1="373.384 -189.839" h2="401.103 -212.826"/>
-      <p c="420.000 -237.805" h1="407.897 -224.257" h2="431.712 -250.916"/>
-      <p c="450.000 -271.085" h1="438.288 -256.773" h2="461.712 -285.396"/>
-      <p c="480.000 -311.119" h1="468.288 -284.982" h2="491.712 -337.256"/>
-      <p c="510.000 -404.979" h1="498.288 -357.901" h2="521.712 -452.056"/>
-      <p c="540.000 -552.289" h1="528.288 -501.932" h2="551.712 -602.646"/>
-      <p c="570.000 -662.947" h1="558.288 -618.093" h2="581.712 -707.801"/>
-      <p c="600.000 -782.066" h1="588.288 -749.518" h2="611.712 -814.613"/>
-      <p c="630.000 -829.681" h1="618.288 -829.681" h2="641.712 -829.681"/>
-      <p c="660.000 -829.681" h1="648.288 -829.681" h2="671.712 -829.681"/>
-      <p c="690.000 -859.236" h1="678.288 -859.236" h2="701.712 -859.236"/>
+      <p c="1.000 -0.000" h1="-96.212 -0.000" h2="98.212 -0.000" />
+      <p c="250.000 -0.000" h1="191.438 -0.000" h2="261.712 -0.000" />
+      <p c="280.000 -62.129" h1="268.288 -35.753" h2="291.712 -88.505" />
+      <p c="310.000 -135.119" h1="298.288 -113.887" h2="325.226 -162.720" />
+      <p c="349.000 -181.629" h1="333.774 -168.523" h2="364.616 -195.072" />
+      <p c="389.000 -202.789" h1="373.384 -189.839" h2="401.103 -212.826" />
+      <p c="420.000 -237.805" h1="407.897 -224.257" h2="431.712 -250.916" />
+      <p c="450.000 -271.085" h1="438.288 -256.773" h2="461.712 -285.396" />
+      <p c="480.000 -311.119" h1="468.288 -284.982" h2="491.712 -337.256" />
+      <p c="510.000 -404.979" h1="498.288 -357.901" h2="521.712 -452.056" />
+      <p c="540.000 -552.289" h1="528.288 -501.932" h2="551.712 -602.646" />
+      <p c="570.000 -662.947" h1="558.288 -618.093" h2="581.712 -707.801" />
+      <p c="600.000 -782.066" h1="588.288 -749.518" h2="611.712 -814.613" />
+      <p c="630.000 -829.681" h1="618.288 -829.681" h2="641.712 -829.681" />
+      <p c="660.000 -829.681" h1="648.288 -829.681" h2="671.712 -829.681" />
+      <p c="690.000 -859.236" h1="678.288 -859.236" h2="701.712 -859.236" />
     </curve>
     <curve channel="RotZ" interpolation="bezier" extend="const">
-      <p c="1.000 -0.000" h1="-96.212 -0.000" h2="98.212 -0.000"/>
-      <p c="250.000 -0.000" h1="191.438 -0.000" h2="261.712 -0.000"/>
-      <p c="280.000 35.556" h1="268.288 35.556" h2="291.712 35.556"/>
-      <p c="310.000 32.869" h1="298.288 34.449" h2="325.226 30.815"/>
-      <p c="349.000 25.841" h1="333.774 29.738" h2="364.616 21.844"/>
-      <p c="389.000 12.573" h1="373.384 18.048" h2="401.103 8.329"/>
-      <p c="420.000 1.116" h1="407.897 2.568" h2="431.712 -0.289"/>
-      <p c="450.000 -0.289" h1="438.288 -0.289" h2="461.712 -0.289"/>
-      <p c="480.000 5.646" h1="468.288 -0.289" h2="491.712 11.581"/>
-      <p c="510.000 35.844" h1="498.288 25.567" h2="521.712 46.122"/>
-      <p c="540.000 58.295" h1="528.288 58.295" h2="551.712 58.295"/>
-      <p c="570.000 -25.479" h1="558.288 -2.470" h2="581.712 -48.489"/>
-      <p c="600.000 -59.579" h1="588.288 -59.579" h2="611.712 -59.579"/>
-      <p c="630.000 -28.761" h1="618.288 -28.761" h2="641.712 -28.761"/>
-      <p c="660.000 -28.761" h1="648.288 -28.761" h2="671.712 -28.761"/>
-      <p c="690.000 -25.861" h1="678.288 -25.861" h2="701.712 -25.861"/>
+      <p c="1.000 -0.000" h1="-96.212 -0.000" h2="98.212 -0.000" />
+      <p c="250.000 -0.000" h1="191.438 -0.000" h2="261.712 -0.000" />
+      <p c="280.000 35.556" h1="268.288 35.556" h2="291.712 35.556" />
+      <p c="310.000 32.869" h1="298.288 34.449" h2="325.226 30.815" />
+      <p c="349.000 25.841" h1="333.774 29.738" h2="364.616 21.844" />
+      <p c="389.000 12.573" h1="373.384 18.048" h2="401.103 8.329" />
+      <p c="420.000 1.116" h1="407.897 2.568" h2="431.712 -0.289" />
+      <p c="450.000 -0.289" h1="438.288 -0.289" h2="461.712 -0.289" />
+      <p c="480.000 5.646" h1="468.288 -0.289" h2="491.712 11.581" />
+      <p c="510.000 35.844" h1="498.288 25.567" h2="521.712 46.122" />
+      <p c="540.000 58.295" h1="528.288 58.295" h2="551.712 58.295" />
+      <p c="570.000 -25.479" h1="558.288 -2.470" h2="581.712 -48.489" />
+      <p c="600.000 -59.579" h1="588.288 -59.579" h2="611.712 -59.579" />
+      <p c="630.000 -28.761" h1="618.288 -28.761" h2="641.712 -28.761" />
+      <p c="660.000 -28.761" h1="648.288 -28.761" h2="671.712 -28.761" />
+      <p c="690.000 -25.861" h1="678.288 -25.861" h2="701.712 -25.861" />
     </curve>
     <curve channel="RotY" interpolation="bezier" extend="const">
-      <p c="1.000 -0.000" h1="-96.212 -0.000" h2="98.212 -0.000"/>
-      <p c="250.000 -0.000" h1="191.438 -0.000" h2="261.712 -0.000"/>
-      <p c="280.000 -0.000" h1="268.288 -0.000" h2="291.712 -0.000"/>
-      <p c="310.000 35.637" h1="298.288 26.217" h2="325.226 47.883"/>
-      <p c="349.000 52.043" h1="333.774 52.043" h2="364.616 52.043"/>
-      <p c="389.000 49.339" h1="373.384 50.169" h2="401.103 48.695"/>
-      <p c="420.000 48.137" h1="407.897 48.137" h2="431.712 48.137"/>
-      <p c="450.000 53.481" h1="438.288 53.481" h2="461.712 53.481"/>
-      <p c="480.000 48.582" h1="468.288 53.481" h2="491.712 43.684"/>
-      <p c="510.000 8.841" h1="498.288 8.841" h2="521.712 8.841"/>
-      <p c="540.000 109.251" h1="528.288 109.251" h2="551.712 109.251"/>
-      <p c="570.000 106.908" h1="558.288 109.251" h2="581.712 104.565"/>
-      <p c="600.000 43.990" h1="588.288 64.714" h2="611.712 23.265"/>
-      <p c="630.000 0.741" h1="618.288 0.741" h2="641.712 0.741"/>
-      <p c="660.000 0.741" h1="648.288 0.741" h2="671.712 0.741"/>
-      <p c="690.000 -13.066" h1="678.288 -13.066" h2="701.712 -13.066"/>
+      <p c="1.000 -0.000" h1="-96.212 -0.000" h2="98.212 -0.000" />
+      <p c="250.000 -0.000" h1="191.438 -0.000" h2="261.712 -0.000" />
+      <p c="280.000 -0.000" h1="268.288 -0.000" h2="291.712 -0.000" />
+      <p c="310.000 35.637" h1="298.288 26.217" h2="325.226 47.883" />
+      <p c="349.000 52.043" h1="333.774 52.043" h2="364.616 52.043" />
+      <p c="389.000 49.339" h1="373.384 50.169" h2="401.103 48.695" />
+      <p c="420.000 48.137" h1="407.897 48.137" h2="431.712 48.137" />
+      <p c="450.000 53.481" h1="438.288 53.481" h2="461.712 53.481" />
+      <p c="480.000 48.582" h1="468.288 53.481" h2="491.712 43.684" />
+      <p c="510.000 8.841" h1="498.288 8.841" h2="521.712 8.841" />
+      <p c="540.000 109.251" h1="528.288 109.251" h2="551.712 109.251" />
+      <p c="570.000 106.908" h1="558.288 109.251" h2="581.712 104.565" />
+      <p c="600.000 43.990" h1="588.288 64.714" h2="611.712 23.265" />
+      <p c="630.000 0.741" h1="618.288 0.741" h2="641.712 0.741" />
+      <p c="660.000 0.741" h1="648.288 0.741" h2="671.712 0.741" />
+      <p c="690.000 -13.066" h1="678.288 -13.066" h2="701.712 -13.066" />
     </curve>
   </object>
-  <sun  fog="true" fog-color="78 78 78" fog-max="1.0" fog-start="50.00" fog-end="300.00" xyz="-10.92 179.92 -37.87" sun-diffuse="110 110 110" ambient="98 105 115"/>
-  <sky-box texture="snowsky_t.jpg snowsky_b.jpg snowsky_e.jpg snowsky_w.jpg snowsky_s.jpg snowsky_n.jpg" sh-texture="snowsky_t.jpg snowsky_b.jpg snowsky_e.jpg snowsky_w.jpg snowsky_s.jpg snowsky_n.jpg"/>
-  <camera far="1000.0"/>
+  <sun fog="true" fog-color="173 213 243" fog-max="0.18" fog-start="280" fog-end="1400" xyz="-10.92 179.92 -37.87" sun-diffuse="125 127 133" ambient="95 107 119" />
+  <sky-box texture="dp_sky_top.jpg dp_sky_bottom.jpg dp_sky_left.jpg dp_sky_right.jpg dp_sky_front.jpg dp_sky_back.jpg" texture-size="512" />
+  <camera far="1000.0" />
   <checks>
     <check-lap kind="lap" same-group="0" other-ids="1 2 3" />
-    <check-line kind="activate" other-ids="4 5 6" p1="-211.10 10.57" p2="-110.99 7.40"
-                min-height="1.48" same-group="1 2 3"/>
-    <check-line kind="activate" other-ids="4 5 6" p1="-211.10 10.57" p2="-110.99 7.40"
-                min-height="5.48" same-group="1 2 3"/>
-    <check-line kind="activate" other-ids="4 5 6" p1="-211.10 10.57" p2="-110.99 7.40"
-                min-height="9.48" same-group="1 2 3"/>
-    <check-line kind="activate" other-ids="7 8 9" p1="-74.14 -225.41" p2="-71.85 -125.29"
-                min-height="9.84" same-group="4 5 6"/>
-    <check-line kind="activate" other-ids="7 8 9" p1="-74.14 -225.41" p2="-71.85 -125.29"
-                min-height="13.84" same-group="4 5 6"/>
-    <check-line kind="activate" other-ids="7 8 9" p1="-74.14 -225.41" p2="-71.85 -125.29"
-                min-height="17.84" same-group="4 5 6"/>
-    <check-line kind="activate" other-ids="10 11 12" p1="-8.74 -115.31" p2="-40.61 -78.66"
-                min-height="37.63" same-group="7 8 9"/>
-    <check-line kind="activate" other-ids="10 11 12" p1="-8.74 -115.31" p2="-40.61 -78.66"
-                min-height="41.63" same-group="7 8 9"/>
-    <check-line kind="activate" other-ids="10 11 12" p1="-8.74 -115.31" p2="-40.61 -78.66"
-                min-height="45.63" same-group="7 8 9"/>
-    <check-line kind="activate" other-ids="13 14 15 16 17 18 19" p1="-58.73 -26.40" p2="-60.92 28.68"
-                min-height="42.39" same-group="10 11 12"/>
-    <check-line kind="activate" other-ids="13 14 15 16 17 18 19" p1="-58.73 -26.40" p2="-60.92 28.68"
-                min-height="46.39" same-group="10 11 12"/>
-    <check-line kind="activate" other-ids="13 14 15 16 17 18 19" p1="-58.73 -26.40" p2="-60.92 28.68"
-                min-height="50.39" same-group="10 11 12"/>
-    <check-line kind="activate" other-ids="0" p1="148.74 -114.23" p2="149.05 -77.08"
-                min-height="21.60" same-group="13 14 15 16 17 18 19"/>
-    <check-line kind="activate" other-ids="0" p1="148.74 -114.23" p2="149.05 -77.08"
-                min-height="25.60" same-group="13 14 15 16 17 18 19"/>
-    <check-line kind="activate" other-ids="0" p1="148.74 -114.23" p2="149.05 -77.08"
-                min-height="29.60" same-group="13 14 15 16 17 18 19"/>
-    <check-line kind="activate" other-ids="0" p1="148.74 -114.23" p2="149.05 -77.08"
-                min-height="33.60" same-group="13 14 15 16 17 18 19"/>
-    <check-line kind="activate" other-ids="0" p1="-41.42 -129.47" p2="-19.62 -99.38"
-                min-height="3.56" same-group="13 14 15 16 17 18 19"/>
-    <check-line kind="activate" other-ids="0" p1="-41.42 -129.47" p2="-19.62 -99.38"
-                min-height="7.56" same-group="13 14 15 16 17 18 19"/>
-    <check-line kind="activate" other-ids="0" p1="-41.42 -129.47" p2="-19.62 -99.38"
-                min-height="11.56" same-group="13 14 15 16 17 18 19"/>
+    <check-line kind="activate" other-ids="4 5 6" p1="-211.10 10.57" p2="-110.99 7.40" min-height="1.48" same-group="1 2 3" />
+    <check-line kind="activate" other-ids="4 5 6" p1="-211.10 10.57" p2="-110.99 7.40" min-height="5.48" same-group="1 2 3" />
+    <check-line kind="activate" other-ids="4 5 6" p1="-211.10 10.57" p2="-110.99 7.40" min-height="9.48" same-group="1 2 3" />
+    <check-line kind="activate" other-ids="7 8 9" p1="-74.14 -225.41" p2="-71.85 -125.29" min-height="9.84" same-group="4 5 6" />
+    <check-line kind="activate" other-ids="7 8 9" p1="-74.14 -225.41" p2="-71.85 -125.29" min-height="13.84" same-group="4 5 6" />
+    <check-line kind="activate" other-ids="7 8 9" p1="-74.14 -225.41" p2="-71.85 -125.29" min-height="17.84" same-group="4 5 6" />
+    <check-line kind="activate" other-ids="10 11 12" p1="-8.74 -115.31" p2="-40.61 -78.66" min-height="37.63" same-group="7 8 9" />
+    <check-line kind="activate" other-ids="10 11 12" p1="-8.74 -115.31" p2="-40.61 -78.66" min-height="41.63" same-group="7 8 9" />
+    <check-line kind="activate" other-ids="10 11 12" p1="-8.74 -115.31" p2="-40.61 -78.66" min-height="45.63" same-group="7 8 9" />
+    <check-line kind="activate" other-ids="13 14 15 16 17 18 19" p1="-58.73 -26.40" p2="-60.92 28.68" min-height="42.39" same-group="10 11 12" />
+    <check-line kind="activate" other-ids="13 14 15 16 17 18 19" p1="-58.73 -26.40" p2="-60.92 28.68" min-height="46.39" same-group="10 11 12" />
+    <check-line kind="activate" other-ids="13 14 15 16 17 18 19" p1="-58.73 -26.40" p2="-60.92 28.68" min-height="50.39" same-group="10 11 12" />
+    <check-line kind="activate" other-ids="0" p1="148.74 -114.23" p2="149.05 -77.08" min-height="21.60" same-group="13 14 15 16 17 18 19" />
+    <check-line kind="activate" other-ids="0" p1="148.74 -114.23" p2="149.05 -77.08" min-height="25.60" same-group="13 14 15 16 17 18 19" />
+    <check-line kind="activate" other-ids="0" p1="148.74 -114.23" p2="149.05 -77.08" min-height="29.60" same-group="13 14 15 16 17 18 19" />
+    <check-line kind="activate" other-ids="0" p1="148.74 -114.23" p2="149.05 -77.08" min-height="33.60" same-group="13 14 15 16 17 18 19" />
+    <check-line kind="activate" other-ids="0" p1="-41.42 -129.47" p2="-19.62 -99.38" min-height="3.56" same-group="13 14 15 16 17 18 19" />
+    <check-line kind="activate" other-ids="0" p1="-41.42 -129.47" p2="-19.62 -99.38" min-height="7.56" same-group="13 14 15 16 17 18 19" />
+    <check-line kind="activate" other-ids="0" p1="-41.42 -129.47" p2="-19.62 -99.38" min-height="11.56" same-group="13 14 15 16 17 18 19" />
   </checks>
   <banana id="Empty" x="-1.05" y="0.90" z="30.08" />
   <item id="Empty.001" x="-44.12" y="9.32" z="29.48" drop="false" />
@@ -276,9 +252,6 @@
   <big-nitro id="Empty.047" x="15.31" y="5.35" z="-149.20" />
   <banana id="Empty.048" x="-39.62" y="4.68" z="-112.06" />
   <banana id="Empty.049" x="-12.45" y="3.99" z="-121.05" />
-  <lightshaft xyz="-315.96 285.13 55.92" id="Sun" opacity="0.60" color="185 185 185"/>
-  <default-start karts-per-row     ="3"
-                 forwards-distance ="1.50"
-                 sidewards-distance="1.80"
-                 upwards-distance  ="1.10"/>
-</scene>
+  <lightshaft xyz="-315.96 285.13 55.92" id="Sun" opacity="0.60" color="185 185 185" />
+  <default-start karts-per-row="3" forwards-distance="1.50" sidewards-distance="1.80" upwards-distance="1.10" />
+<library id="SR_OriginalFir_000" name="fluxara_driftlib_summit_snow_fir_v1" xyz="45.62 28.56 -87.29" hpr="0.0 -43.3 0.0" scale="2.38 2.38 2.38" /><library id="SR_OriginalFir_001" name="fluxara_driftlib_summit_snow_fir_v1" xyz="32.64 30.22 -76.22" hpr="0.0 78.4 0.0" scale="1.31 1.31 1.31" /><library id="SR_OriginalFir_002" name="fluxara_driftlib_summit_snow_fir_v1" xyz="44.35 31.83 -101.41" hpr="0.0 78.4 -20.9" scale="1.44 1.44 1.44" /><library id="SR_OriginalFir_003" name="fluxara_driftlib_summit_snow_fir_v1" xyz="42.28 35.02 -120.20" hpr="0.0 -0.0 0.0" scale="1.30 1.30 1.30" /><library id="SR_OriginalFir_004" name="fluxara_driftlib_summit_snow_fir_v1" xyz="36.47 35.37 -133.29" hpr="-0.0 67.4 -0.0" scale="1.00 1.00 1.00" /><library id="SR_OriginalFir_005" name="fluxara_driftlib_summit_snow_fir_v1" xyz="46.87 34.90 -131.25" hpr="0.0 169.8 0.0" scale="1.00 1.00 1.00" /><library id="SR_OriginalFir_006" name="fluxara_driftlib_summit_snow_fir_v1" xyz="51.37 35.29 -145.60" hpr="0.0 169.8 0.0" scale="1.33 1.33 1.33" /><library id="SR_OriginalFir_007" name="fluxara_driftlib_summit_snow_fir_v1" xyz="72.84 35.86 -152.23" hpr="-0.0 -147.4 0.0" scale="1.11 1.11 1.11" /><library id="SR_OriginalFir_008" name="fluxara_driftlib_summit_snow_fir_v1" xyz="87.76 35.86 -156.40" hpr="0.0 131.9 0.0" scale="1.63 1.63 1.63" /><library id="SR_OriginalFir_009" name="fluxara_driftlib_summit_snow_fir_v1" xyz="99.71 35.72 -155.01" hpr="-0.0 -91.9 0.0" scale="1.05 1.05 1.05" /><library id="SR_OriginalFir_010" name="fluxara_driftlib_summit_snow_fir_v1" xyz="116.29 35.72 -157.48" hpr="-0.0 -155.4 0.0" scale="1.14 1.14 1.14" /><library id="SR_OriginalFir_011" name="fluxara_driftlib_summit_snow_fir_v1" xyz="140.38 35.72 -155.80" hpr="-0.0 -133.7 0.0" scale="1.38 1.38 1.38" /><library id="SR_OriginalFir_012" name="fluxara_driftlib_summit_snow_fir_v1" xyz="154.27 35.72 -159.61" hpr="0.0 -66.4 -0.0" scale="1.11 1.11 1.11" /><library id="SR_OriginalFir_013" name="fluxara_driftlib_summit_snow_fir_v1" xyz="172.34 35.72 -156.17" hpr="-0.0 -47.9 -1.6" scale="1.60 1.60 1.60" /><library id="SR_OriginalFir_014" name="fluxara_driftlib_summit_snow_fir_v1" xyz="40.19 28.68 -62.52" hpr="-0.0 11.4 -0.0" scale="1.30 1.30 1.30" /><library id="SR_OriginalFir_015" name="fluxara_driftlib_summit_snow_fir_v1" xyz="36.88 28.68 -55.13" hpr="-0.0 32.2 -0.0" scale="0.95 0.95 0.95" /><library id="SR_OriginalFir_016" name="fluxara_driftlib_summit_snow_fir_v1" xyz="36.97 28.78 -41.77" hpr="-0.0 -136.2 -0.0" scale="1.23 1.23 1.23" /><library id="SR_OriginalFir_017" name="fluxara_driftlib_summit_snow_fir_v1" xyz="-65.17 -1.71 153.11" hpr="0.0 -43.3 0.0" scale="2.38 2.38 2.38" /><library id="SR_OriginalFir_018" name="fluxara_driftlib_summit_snow_fir_v1" xyz="-42.17 -0.35 141.54" hpr="0.0 -10.0 0.0" scale="1.80 1.80 1.80" /><library id="SR_OriginalFir_019" name="fluxara_driftlib_summit_snow_fir_v1" xyz="-16.18 -0.85 146.70" hpr="0.0 -0.4 0.0" scale="2.37 2.37 2.37" /><library id="SR_OriginalFir_020" name="fluxara_driftlib_summit_snow_fir_v1" xyz="49.16 -0.85 188.03" hpr="0.0 -0.4 0.0" scale="2.37 2.37 2.37" /><library id="SR_OriginalFir_021" name="fluxara_driftlib_summit_snow_fir_v1" xyz="34.14 -0.85 201.54" hpr="-0.0 61.2 -0.0" scale="2.37 2.37 2.37" /><library id="SR_OriginalFir_022" name="fluxara_driftlib_summit_snow_fir_v1" xyz="16.09 -0.85 219.59" hpr="-0.0 35.4 -0.0" scale="1.37 1.37 1.37" /><library id="SR_OriginalFir_023" name="fluxara_driftlib_summit_snow_fir_v1" xyz="36.22 -0.84 229.55" hpr="-0.0 35.4 -0.0" scale="1.54 1.54 1.54" /><library id="SR_OriginalFir_024" name="fluxara_driftlib_summit_snow_fir_v1" xyz="6.63 -0.85 247.97" hpr="-0.0 35.4 -0.0" scale="1.81 1.81 1.81" /><library id="SR_OriginalFir_025" name="fluxara_driftlib_summit_snow_fir_v1" xyz="-129.97 -0.85 96.68" hpr="-0.0 -173.0 0.0" scale="2.37 2.37 2.37" /><library id="SR_OriginalFir_026" name="fluxara_driftlib_summit_snow_fir_v1" xyz="-103.53 -0.35 98.47" hpr="0.0 177.3 0.0" scale="1.80 1.80 1.80" /><library id="SR_OriginalFir_027" name="fluxara_driftlib_summit_snow_fir_v1" xyz="-82.20 -1.71 84.04" hpr="0.0 144.1 0.0" scale="2.38 2.38 2.38" /><library id="SR_OriginalFir_028" name="fluxara_driftlib_summit_snow_fir_v1" xyz="-205.81 4.18 -103.52" hpr="0.0 144.1 0.0" scale="2.38 2.38 2.38" /><library id="SR_OriginalFir_029" name="fluxara_driftlib_summit_snow_fir_v1" xyz="-201.14 3.13 -32.48" hpr="0.0 -164.2 -6.9" scale="1.34 1.34 1.34" /><library id="SR_OriginalFir_030" name="fluxara_driftlib_summit_snow_fir_v1" xyz="-173.35 3.12 -191.83" hpr="-13.2 165.4 -15.6" scale="1.34 1.34 1.34" /><library id="SR_OriginalFir_031" name="fluxara_driftlib_summit_snow_fir_v1" xyz="-163.22 2.61 -198.27" hpr="-13.2 165.4 -15.6" scale="1.57 1.57 1.57" /><library id="SR_snow-column_0032" name="fluxara_driftlib_alpine_snow_column_v1" xyz="69.49800110 2.37428467 -8.02200031" hpr="0.00000000 -138.88462442 0.00000000" scale="2.2587317317417988 3.571342624601263 2.3500907994334916" /><library id="SR_snow-column_0033" name="fluxara_driftlib_alpine_snow_column_v1" xyz="67.89616394 2.71583740 7.06145000" hpr="0.00000000 -348.84472442 0.00000000" scale="2.4558484382310883 3.525832581173468 2.4277051688015567" /><library id="SR_snow-column_0034" name="fluxara_driftlib_alpine_snow_column_v1" xyz="67.38147736 -0.05088623 18.65652466" hpr="0.00000000 -147.53938472 0.00000000" scale="2.1921964977129984 4.1220553694750155 2.232953919517727" /><library id="SR_snow-column_0035" name="fluxara_driftlib_alpine_snow_column_v1" xyz="59.62871170 0.15529053 25.03481865" hpr="0.00000000 -181.37502620 0.00000000" scale="2.391795548515375 4.008628163869142 2.4153152915939806" /><library id="SR_snow-column_0036" name="fluxara_driftlib_alpine_snow_column_v1" xyz="46.84669876 0.27275269 27.63628387" hpr="0.00000000 -127.84014240 0.00000000" scale="2.069826297301835 3.701206990243167 2.0651505606343163" /><library id="SR_snow-column_0037" name="fluxara_driftlib_alpine_snow_column_v1" xyz="31.50189590 0.43425171 28.09101868" hpr="0.00000000 -197.01702157 0.00000000" scale="2.062588603792251 3.127492444600689 2.501351865526514" /><library id="SR_snow-column_0038" name="fluxara_driftlib_alpine_snow_column_v1" xyz="-96.24325562 4.88655273 28.08608437" hpr="0.00000000 -157.01744632 0.00000000" scale="2.3187800661460574 3.575017082266811 2.4276783673674314" /><library id="SR_snow-column_0039" name="fluxara_driftlib_alpine_snow_column_v1" xyz="-110.77715302 4.92000000 27.35402298" hpr="0.00000000 -1.78703871 0.00000000" scale="2.5575805056012086 3.7100623556315306 2.5174692742458293" /><library id="SR_snow-column_0040" name="fluxara_driftlib_alpine_snow_column_v1" xyz="-117.77770996 4.92646973 20.12026596" hpr="0.00000000 -38.39284862 0.00000000" scale="2.3631335766960277 4.11347083161114 2.3862226273132032" /><library id="SR_snow-column_0041" name="fluxara_driftlib_alpine_snow_column_v1" xyz="-125.37050629 4.92000000 12.12405205" hpr="0.00000000 -186.62164875 0.00000000" scale="2.4383382038961887 4.682305146216763 2.4420963337998964" /><library id="SR_snow-column_0042" name="fluxara_driftlib_alpine_snow_column_v1" xyz="-127.52425385 4.92003052 3.95673108" hpr="0.00000000 -345.61845018 0.00000000" scale="2.213651693057609 4.216182231145157 2.259004452722407" /><library id="SR_snow-column_0043" name="fluxara_driftlib_alpine_snow_column_v1" xyz="-134.58500671 4.91996948 -27.42900085" hpr="0.00000000 -343.09144111 0.00000000" scale="2.1910357854925517 3.8984516026764964 2.44035329611136" /><library id="SR_snow-column_0044" name="fluxara_driftlib_alpine_snow_column_v1" xyz="-134.58500671 4.91996948 -75.42900085" hpr="0.00000000 -298.36233761 0.00000000" scale="2.2961160020168654 4.157318091268808 2.460094773934097" /><library id="SR_snow-column_0045" name="fluxara_driftlib_alpine_snow_column_v1" xyz="-126.34100342 4.92143433 -91.42900085" hpr="0.00000000 -74.25215280 0.00000000" scale="2.4280105890006585 4.208298366497351 2.0386620562770954" /><library id="SR_snow-column_0046" name="fluxara_driftlib_alpine_snow_column_v1" xyz="-126.34100342 5.03013794 -107.42900085" hpr="0.00000000 -49.24652541 0.00000000" scale="2.2270533649196795 3.1113684052525477 2.314940934452561" /><library id="SR_snow-column_0047" name="fluxara_driftlib_alpine_snow_column_v1" xyz="-100.06887817 9.85594360 -140.02900696" hpr="0.00000000 -80.79516032 0.00000000" scale="2.329220517731866 4.3068368715666745 2.4870595907673945" /><library id="SR_snow-column_0048" name="fluxara_driftlib_alpine_snow_column_v1" xyz="-84.21890259 7.58876221 -143.78605652" hpr="0.00000000 -224.24407372 0.00000000" scale="2.037240045159253 4.671044598899293 2.161234306937315" /><library id="SR_snow-column_0049" name="fluxara_driftlib_alpine_snow_column_v1" xyz="-68.86782837 12.09730713 -143.78959656" hpr="0.00000000 -263.45270409 0.00000000" scale="2.0263998673082533 4.581999665317113 2.2242898604582284" /><library id="SR_snow-column_0050" name="fluxara_driftlib_alpine_snow_column_v1" xyz="28.16913605 35.02931396 -144.15324402" hpr="0.00000000 -213.78927361 0.00000000" scale="2.3514849198131533 4.327302783980418 2.5870457904318482" /><library id="SR_snow-column_0051" name="fluxara_driftlib_alpine_snow_column_v1" xyz="16.80608368 31.28306763 -120.49757385" hpr="0.00000000 -265.05074568 0.00000000" scale="2.34511554980702 3.932321940019921 2.214354298038875" /><library id="SR_extra-fir_0052" name="fluxara_driftlib_summit_snow_fir_v1" xyz="69.46816254 0.00000000 48.34273529" hpr="0.00000000 -208.45246295 0.00000000" scale="1.05 1.05 1.05" /><library id="SR_extra-fir_0053" name="fluxara_driftlib_summit_snow_fir_v1" xyz="-139.29516602 2.74926758 46.41393280" hpr="0.00000000 -79.45527263 0.00000000" scale="1.05 1.05 1.05" /><library id="SR_extra-fir_0054" name="fluxara_driftlib_summit_snow_fir_v1" xyz="-163.65795898 4.28903198 5.49407530" hpr="0.00000000 -154.47903119 0.00000000" scale="1.05 1.05 1.05" /><library id="SR_turn_0055" name="fluxara_driftlib_circuit_turn_left_v2" xyz="59.51203537 0.48834229 24.75843620" hpr="0.00000000 -36.88296038 0.00000000" scale="2.9 3.0 1" /><library id="SR_turn_0056" name="fluxara_driftlib_circuit_turn_left_v2" xyz="-110.70420837 5.00000000 27.06302452" hpr="0.00000000 -93.06597449 0.00000000" scale="2.9 3.0 1" /><library id="SR_turn_0057" name="fluxara_driftlib_circuit_turn_left_v2" xyz="-128.72778320 5.00000000 -137.56648254" hpr="0.00000000 -178.66993420 0.00000000" scale="2.9 3.0 1" /><library id="SR_turn_0058" name="fluxara_driftlib_circuit_turn_left_v2" xyz="-8.97996807 28.70599365 -143.18112183" hpr="0.00000000 89.17403692 0.00000000" scale="2.9 3.0 1" /><library id="SR_turn_0059" name="fluxara_driftlib_circuit_turn_right_v2" xyz="-58.52741241 43.86737061 -121.55752563" hpr="0.00000000 -107.39560847 0.00000000" scale="2.9 3.0 1" /><library id="SR_turn_0060" name="fluxara_driftlib_circuit_turn_right_v2" xyz="-76.70161438 45.14080811 5.14440393" hpr="0.00000000 43.10832257 0.00000000" scale="2.9 3.0 1" /><library id="SR_turn_0061" name="fluxara_driftlib_circuit_turn_left_v2" xyz="62.30491638 27.64407349 -66.19972229" hpr="0.00000000 173.61428835 0.00000000" scale="2.9 3.0 1" /><library id="SR_turn_0062" name="fluxara_driftlib_circuit_turn_right_v2" xyz="187.23059082 20.46481323 -88.14923859" hpr="0.00000000 91.64650584 0.00000000" scale="2.9 3.0 1" /><library id="SR_pennants_0063" name="fluxara_driftlib_circuit_pennants_v2" xyz="62.49800110 12.19067383 -8.02200031" hpr="0.00000000 -94.70731270 0.00000000" scale="9 3.9 1" /><library id="SR_pennants_0064" name="fluxara_driftlib_circuit_pennants_v2" xyz="60.91061401 9.93981934 6.61190987" hpr="0.00000000 -114.71467655 0.00000000" scale="9 3.9 1" /><library id="SR_pennants_0065" name="fluxara_driftlib_circuit_pennants_v2" xyz="61.35441589 5.97106934 15.09639549" hpr="0.00000000 -139.94384556 0.00000000" scale="9 3.9 1" /><library id="SR_pennants_0066" name="fluxara_driftlib_circuit_pennants_v2" xyz="56.90629959 6.40728760 18.58590508" hpr="0.00000000 -158.41898887 0.00000000" scale="9 3.9 1" /><library id="SR_pennants_0067" name="fluxara_driftlib_circuit_pennants_v2" xyz="46.43706131 7.78137207 20.64827919" hpr="0.00000000 -178.27119243 0.00000000" scale="9 3.9 1" /><library id="SR_coral-barrier_0068" name="fluxara_driftlib_alpine_coral_barrier_v1" xyz="83.05192566 -0.00203052 27.91291046" hpr="0.00000000 -139.94384556 0.00000000" scale="1 0.35 0.8" /><library id="SR_coral-barrier_0069" name="fluxara_driftlib_alpine_coral_barrier_v1" xyz="66.70685577 -0.00200000 41.80169296" hpr="0.00000000 -158.41898887 0.00000000" scale="1 0.35 0.8" /><library id="SR_coral-barrier_0070" name="fluxara_driftlib_alpine_coral_barrier_v1" xyz="48.24770737 -0.28917041 51.53603363" hpr="0.00000000 -178.27119243 0.00000000" scale="1 0.35 0.8" /><library id="SR_coral-barrier_0071" name="fluxara_driftlib_alpine_coral_barrier_v1" xyz="31.59872055 -0.42952075 52.04697418" hpr="0.00000000 -179.96954850 0.00000000" scale="1 0.35 0.8" /><library id="SR_Cascade_001" name="fluxara_driftlib_summit_cascade_v1" xyz="-102.76080322265625 36.0 -64.0" hpr="0 0 0" scale="1 1 1" /></scene>

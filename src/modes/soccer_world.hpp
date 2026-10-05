@@ -85,8 +85,6 @@ private:
     TrackObject* m_ball;
     btRigidBody* m_ball_body;
 
-    /** Number of goals needed to win */
-    int m_goal_target;
     bool m_count_down_reached_zero;
 
     SFXBase *m_goal_sound;
@@ -123,6 +121,7 @@ private:
     int m_ticks_back_to_own_goal;
 
     void resetKartsToSelfGoals();
+    void configureMatchClock();
 
 public:
 

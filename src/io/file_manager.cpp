@@ -946,6 +946,19 @@ std::string FileManager::searchTexture(const std::string& file_name) const
 {
     std::string path;
     findFile(path, file_name, m_texture_search_path);
+    // Older SPM meshes contain texture names embedded in the binary. During
+    // the Fluxara rename the image files were renamed, but those embedded
+    // names were not. Resolve the original name first, then its renamed
+    // counterpart, without duplicating hundreds of images in the bundle.
+    if (path.empty() && file_name.compare(0, 3, "stk") == 0)
+    {
+        std::string renamed = "fluxara_drift" + file_name.substr(3);
+        const std::string old_brand = "stkVertical";
+        const size_t brand_pos = renamed.find(old_brand);
+        if (brand_pos != std::string::npos)
+            renamed.replace(brand_pos, old_brand.size(), "fluxara_driftVertical");
+        findFile(path, renamed, m_texture_search_path);
+    }
     return path;
 }   // searchTexture
 
@@ -955,15 +968,29 @@ bool FileManager::searchTextureContainerId(std::string& container_id,
     const std::string& file_name) const
 {
     std::string full_path;
-    for (std::vector<TextureSearchPath>::const_reverse_iterator
-        i = m_texture_search_path.rbegin();
-        i != m_texture_search_path.rend(); ++i)
+    std::string renamed;
+    if (file_name.compare(0, 3, "stk") == 0)
     {
-        full_path = i->m_texture_search_path + file_name;
-        if (m_file_system->existFile(full_path.c_str()))
+        renamed = "fluxara_drift" + file_name.substr(3);
+        const std::string old_brand = "stkVertical";
+        const size_t brand_pos = renamed.find(old_brand);
+        if (brand_pos != std::string::npos)
+            renamed.replace(brand_pos, old_brand.size(), "fluxara_driftVertical");
+    }
+    for (const std::string& candidate : { file_name, renamed })
+    {
+        if (candidate.empty())
+            continue;
+        for (std::vector<TextureSearchPath>::const_reverse_iterator
+            i = m_texture_search_path.rbegin();
+            i != m_texture_search_path.rend(); ++i)
         {
-            container_id = i->m_container_id;
-            return true;
+            full_path = i->m_texture_search_path + candidate;
+            if (m_file_system->existFile(full_path.c_str()))
+            {
+                container_id = i->m_container_id;
+                return true;
+            }
         }
     }
     full_path = "";

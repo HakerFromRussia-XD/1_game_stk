@@ -501,13 +501,8 @@ void FluxaraKartScreen::startRace()
         RaceManager::get()->setTimeTarget(float(m_laps*60));
     if(m_mode=="free_for_all")
         RaceManager::get()->setHitCaptureTime(0,float(m_laps*60));
-    if(m_mode=="soccer")
-    {
-        // SoccerWorld regards a zero goal target as a completed 0:0 match.
-        // Keep the Garage launch equivalent to the direct campaign route:
-        // a playable first-to-three local game.
-        RaceManager::get()->setMaxGoal(3);
-    }
+    // Soccer keeps the selected minute limit above. setMaxGoal() clears
+    // m_time_target, silently turning a timed match into an endless stopwatch.
     if(m_mode=="capture_the_flag")
     {
         // CTF treats a zero capture limit with no timer as an already-over

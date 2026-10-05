@@ -34,7 +34,7 @@ end
 
 def music_payloads(data)
   payloads = {}
-  Dir.glob(File.join(data, '**', '*.music')).each do |music_file|
+  Dir.glob(File.join(data, 'music', '**', '*.music')).each do |music_file|
     File.binread(music_file).scan(/\b(?:file|fast-filename)\s*=\s*["']([^"']+\.ogg)["']/i) do |match|
       payloads[File.expand_path(File.join(File.dirname(music_file), match.first))] = true
     end
@@ -57,7 +57,11 @@ def resolve_audio_path(reference, document, data, converted)
 end
 
 music = music_payloads(data)
-entries = Dir.glob(File.join(data, '**', '*.ogg')).select { |path| File.file?(path) }.sort.map do |source|
+# Keep track and shared-object payloads byte-for-byte unchanged. This pass is
+# strictly for application-wide music and sound effects.
+audio_roots = %w[music sfx].map { |name| File.join(data, name) }
+entries = audio_roots.flat_map { |root| Dir.glob(File.join(root, '**', '*.ogg')) }
+                     .select { |path| File.file?(path) }.sort.map do |source|
   kind = music[File.expand_path(source)] ? 'music' : 'sfx'
   bitrate = kind == 'music' ? MUSIC_BITRATE : SFX_BITRATE
   digest = Digest::SHA256.file(source).hexdigest
@@ -142,7 +146,7 @@ entries.each do |source, digest, kind, bitrate|
   saved_bytes += original_bytes - opus_bytes
 end
 
-Dir.glob(File.join(data, '**', '*')).each do |document|
+audio_roots.flat_map { |root| Dir.glob(File.join(root, '**', '*')) }.each do |document|
   next unless File.file?(document) && TEXT_EXTENSIONS.include?(File.extname(document).downcase)
 
   contents = File.binread(document)

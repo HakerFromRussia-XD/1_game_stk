@@ -106,9 +106,17 @@ public:
             exit(1);                                                 \
         }                                                            \
     }
+#ifdef FLUXARA_PROTECTED_RELEASE
+    // Inline no-ops let the optimizer discard diagnostic text while keeping
+    // argument side effects. Warnings, errors and fatal termination remain.
+    static void verbose(const char*, const char*, ...) {}
+    static void debug(const char*, const char*, ...) {}
+    static void info(const char*, const char*, ...) {}
+#else
     LOG(verbose, LL_VERBOSE);
     LOG(debug,   LL_DEBUG);
     LOG(info,    LL_INFO);
+#endif
     LOG(warn,    LL_WARN);
     LOG(error,   LL_ERROR);
     LOG(fatal,   LL_FATAL);

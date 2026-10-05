@@ -2577,6 +2577,23 @@ void Track::handleSky(const XMLNode &xml_node, const std::string &filename)
         std::string s;
         xml_node.get("texture", &s);
         std::vector<std::string> v = StringUtils::split(s, ' ');
+#ifndef SERVER_ONLY
+        // A track can reserve a bounded resolution for its full-screen sky.
+        // Restore the user's texture limit before loading other track assets.
+        int sky_texture_size = 0;
+        xml_node.get("texture-size", &sky_texture_size);
+        io::IAttributes& attributes = irr_driver->getVideoDriver()
+            ->getNonConstDriverAttributes();
+        const core::dimension2du previous_size = attributes
+            .getAttributeAsDimension2d("MAX_TEXTURE_SIZE");
+        if (sky_texture_size > 0)
+        {
+            const unsigned size = std::min(1024, sky_texture_size);
+            attributes.setAttribute("MAX_TEXTURE_SIZE",
+                core::dimension2du(std::max(previous_size.Width, size),
+                                  std::max(previous_size.Height, size)));
+        }
+#endif
         for (unsigned int i = 0; i<v.size(); i++)
         {
             void* obj = NULL;
@@ -2627,6 +2644,9 @@ void Track::handleSky(const XMLNode &xml_node, const std::string &filename)
                            v[i].c_str());
             }
         }   // for i<v.size()
+#ifndef SERVER_ONLY
+        attributes.setAttribute("MAX_TEXTURE_SIZE", previous_size);
+#endif
 
         if(m_sky_textures.size()!=6)
         {

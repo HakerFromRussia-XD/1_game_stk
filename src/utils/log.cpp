@@ -40,7 +40,11 @@
 #  include <windows.h>
 #endif
 
+#ifdef FLUXARA_PROTECTED_RELEASE
+Log::LogLevel Log::m_min_log_level = Log::LL_WARN;
+#else
 Log::LogLevel Log::m_min_log_level = Log::LL_VERBOSE;
+#endif
 bool          Log::m_no_colors     = false;
 FILE*         Log::m_file_stdout   = NULL;
 size_t        Log::m_buffer_size = 1;
@@ -336,4 +340,3 @@ void Log::closeOutputFiles()
 {
     fclose(m_file_stdout);
 } // closeOutputFiles
-

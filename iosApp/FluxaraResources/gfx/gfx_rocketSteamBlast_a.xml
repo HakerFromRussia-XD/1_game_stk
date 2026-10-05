@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<particles emitter="sphere" radius="0.1">
+  <spreading angle="8" />
+  <velocity x="0" y="-0.0042" z="0" />
+  <material file="fluxara_rocket_exhaust_puff.png" />
+  <rate min="24" max="32" />
+  <lifetime min="700" max="1000" />
+  <size min="0.45" max="0.7" x-increase-factor="1.15" y-increase-factor="1.15" />
+  <color min="180 230 245" max="240 250 255" />
+  <materials>
+    <material name="fluxara_rocket_exhaust_puff.png" shader="alphablend" ignore="Y" />
+  </materials>
+</particles>

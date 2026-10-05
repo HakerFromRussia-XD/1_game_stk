@@ -1,22 +1,8 @@
-<?xml version="1.0"?>
-<!-- Generated with script from SVN rev 17016 -->
+<?xml version='1.0' encoding='utf-8'?>
 <scene>
-  <track model="ski-dash_track.spm" x="0" y="0" z="0"/>
-  <object id="aurora" type="animation" xyz="-30.88 65.80 -556.61" hpr="0.0 -0.0 0.0" scale="1.07 1.07 1.07" interaction="ghost" model="aurora.spm" skeletal-animation="false">
-    <animated-texture name="aurora.png" dx="0.20000"  dy="-0.10000" />
-    <curve channel="LocX" interpolation="linear" extend="cyclic">
-      <p c="1.000 -30.885"/>
-      <p c="400.000 -30.885"/>
-    </curve>
-    <curve channel="LocZ" interpolation="linear" extend="cyclic">
-      <p c="1.000 -556.609"/>
-      <p c="2196.000 730.597"/>
-    </curve>
-  </object>
-  <sun  fog="true" fog-color="2 3 7" fog-max="0.30000001192092896" fog-start="10.00" fog-end="100.00" xyz="84.27 154.08 -99.81" sun-specular="67 50 141" sun-diffuse="33 50 70" ambient="85 85 85"/>
-  <weather particles="snow.xml"/>
-  <sky-box texture="winter_sky_6.jpg winter_sky_5.jpg winter_sky_2.jpg winter_sky_4.jpg winter_sky_3.jpg winter_sky_1.jpg" sh-texture="winter_sky_6_top.jpg winter_sky_ibl_bot.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg"/>
-  <camera far="1500.0"/>
+  <track model="ski-dash_track.spm" x="0" y="0" z="0" />
+  <object id="SkiDashWinterScenery" type="static" model="ski-dash_winter_scenery.spm" xyz="0 0 0" hpr="0 0 0" scale="1 1 1" interaction="ghost"><animated-texture name="fluxara_water_flow.png" dy="0.18" /></object>
+  <camera far="1500.0" />
   <item id="Empty" x="-128.16" y="49.99" z="108.11" />
   <item id="Empty.001" x="-137.02" y="5.67" z="-38.80" />
   <item id="Empty.002" x="-142.86" y="5.67" z="6.16" />
@@ -52,28 +38,24 @@
   <item id="Empty.174" x="47.00" y="6.46" z="-3.97" />
   <item id="Empty.175" x="25.61" y="6.46" z="-13.09" />
   <big-nitro id="Empty.176" x="57.18" y="5.00" z="-26.25" />
-  <lightshaft xyz="183.55 162.42 -200.57" id="Sun" opacity="0.40" color="60 130 255"/>
-  <default-start karts-per-row     ="8"
-                 forwards-distance ="0.56"
-                 sidewards-distance="1.50"
-                 upwards-distance  ="1.10"/>
-  <start x="-68.52" y="59.68" z="96.15" h="-0.00"/>
-  <start x="-63.69" y="59.77" z="97.14" h="-30.93"/>
-  <start x="-100.89" y="49.69" z="55.14" h="126.63"/>
-  <start x="-95.88" y="49.04" z="59.34" h="151.66"/>
-  <start x="-60.94" y="6.29" z="-72.18" h="-25.42"/>
-  <start x="29.55" y="5.87" z="-42.60" h="23.53"/>
-  <start x="17.49" y="5.87" z="-44.70" h="23.53"/>
-  <start x="36.60" y="5.87" z="-51.81" h="23.53"/>
-  <start x="49.49" y="5.87" z="1.95" h="-158.99"/>
-  <start x="41.23" y="5.87" z="11.51" h="-158.99"/>
-  <start x="61.07" y="5.87" z="5.77" h="-158.99"/>
-  <start x="2.18" y="6.17" z="119.65" h="-285.55"/>
-  <start x="-32.28" y="6.38" z="146.64" h="-333.62"/>
-  <start x="-128.79" y="6.38" z="-7.18" h="-467.34"/>
-  <start x="-125.98" y="6.38" z="-38.16" h="-450.78"/>
-  <start x="-139.60" y="6.17" z="24.96" h="-457.22"/>
-  <library name="fluxara_driftlib_old_house_a" id="fluxara_driftlib_old_house_a_main_proxy" xyz="82.95 5.90 36.06" hpr="0.0 -76.1 0.0" scale="2.25 2.25 2.25">
+  <default-start karts-per-row="8" forwards-distance="0.56" sidewards-distance="1.50" upwards-distance="1.10" />
+  <start x="-68.52" y="59.68" z="96.15" h="-0.00" />
+  <start x="-63.69" y="59.77" z="97.14" h="-30.93" />
+  <start x="-100.89" y="49.69" z="55.14" h="126.63" />
+  <start x="-95.88" y="49.04" z="59.34" h="151.66" />
+  <start x="-60.94" y="6.29" z="-72.18" h="-25.42" />
+  <start x="29.55" y="5.87" z="-42.60" h="23.53" />
+  <start x="17.49" y="5.87" z="-44.70" h="23.53" />
+  <start x="36.60" y="5.87" z="-51.81" h="23.53" />
+  <start x="49.49" y="5.87" z="1.95" h="-158.99" />
+  <start x="41.23" y="5.87" z="11.51" h="-158.99" />
+  <start x="61.07" y="5.87" z="5.77" h="-158.99" />
+  <start x="-4.47" y="6.64" z="118.32" h="-285.55" />
+  <start x="-32.28" y="6.38" z="146.64" h="-333.62" />
+  <start x="-128.79" y="6.38" z="-7.18" h="-467.34" />
+  <start x="-125.98" y="6.38" z="-38.16" h="-450.78" />
+  <start x="-137.81" y="6.52" z="26.40" h="-457.22" />
+  <library id="SkiDash_ClifftopFir_01_0" xyz="141.900000 13.168635 -19.800000" hpr="0 0 0" scale="0.43 0.43 0.43" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_01_1" xyz="147.600000 13.243719 -18.600000" hpr="0 0 0" scale="0.56 0.56 0.56" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_01_2" xyz="144.700000 13.235316 -14.700000" hpr="0 0 0" scale="0.35 0.35 0.35" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_02_0" xyz="142.900000 22.782935 108.200000" hpr="0 0 0" scale="0.43 0.43 0.43" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_02_1" xyz="148.600000 22.877531 109.400000" hpr="0 0 0" scale="0.56 0.56 0.56" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_02_2" xyz="145.700000 22.808760 113.300000" hpr="0 0 0" scale="0.35 0.35 0.35" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_03_0" xyz="141.900000 16.339342 152.200000" hpr="0 0 0" scale="0.43 0.43 0.43" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_03_1" xyz="147.600000 16.417113 153.400000" hpr="0 0 0" scale="0.56 0.56 0.56" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_03_2" xyz="144.700000 16.412222 157.300000" hpr="0 0 0" scale="0.35 0.35 0.35" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_05_0" xyz="38.900000 18.544249 -146.800000" hpr="0 0 0" scale="0.43 0.43 0.43" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_05_1" xyz="44.600000 18.633967 -145.600000" hpr="0 0 0" scale="0.56 0.56 0.56" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_05_2" xyz="41.700000 18.514456 -141.700000" hpr="0 0 0" scale="0.35 0.35 0.35" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_06_0" xyz="77.900000 13.183852 -146.800000" hpr="0 0 0" scale="0.43 0.43 0.43" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_06_1" xyz="83.600000 13.252051 -145.600000" hpr="0 0 0" scale="0.56 0.56 0.56" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_06_2" xyz="80.700000 13.220297 -141.700000" hpr="0 0 0" scale="0.35 0.35 0.35" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_07_0" xyz="6.900000 19.604159 179.200000" hpr="0 0 0" scale="0.43 0.43 0.43" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_07_1" xyz="12.600000 19.684668 180.400000" hpr="0 0 0" scale="0.56 0.56 0.56" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_07_2" xyz="9.700000 19.592863 184.300000" hpr="0 0 0" scale="0.35 0.35 0.35" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_08_0" xyz="57.900000 14.261820 179.200000" hpr="0 0 0" scale="0.43 0.43 0.43" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_08_1" xyz="63.600000 14.345988 180.400000" hpr="0 0 0" scale="0.56 0.56 0.56" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_08_2" xyz="60.700000 14.258944 184.300000" hpr="0 0 0" scale="0.35 0.35 0.35" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_09_0" xyz="100.900000 20.627924 180.200000" hpr="0 0 0" scale="0.43 0.43 0.43" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_09_1" xyz="106.600000 20.709387 181.400000" hpr="0 0 0" scale="0.56 0.56 0.56" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_09_2" xyz="103.700000 20.671465 185.300000" hpr="0 0 0" scale="0.35 0.35 0.35" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_Upper_v32_00" xyz="-46.000004 33.546450 68.000000" hpr="0 0 0" scale="0.65 0.65 0.65" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_Upper_v32_01" xyz="-39.000004 33.724539 69.000000" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_Upper_v32_02" xyz="-44.000000 32.990977 73.000008" hpr="0 0 0" scale="0.55 0.55 0.55" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_Upper_v32_03" xyz="-27.000000 66.753310 70.000000" hpr="0 0 0" scale="0.65 0.65 0.65" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_Upper_v32_04" xyz="-20.000000 66.908598 71.000000" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_Upper_v32_05" xyz="-25.000000 66.874800 75.000000" hpr="0 0 0" scale="0.55 0.55 0.55" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_Upper_v32_06" xyz="-18.000000 65.558981 77.000000" hpr="0 0 0" scale="0.6 0.6 0.6" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_Upper_v32_07" xyz="-29.000002 65.378531 77.000000" hpr="0 0 0" scale="0.7 0.7 0.7" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_Upper_v32_08" xyz="-52.999996 79.665862 43.000000" hpr="0 0 0" scale="0.65 0.65 0.65" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_Upper_v32_09" xyz="-45.999996 79.826750 44.000000" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_Upper_v32_10" xyz="-51.000000 79.769827 48.000004" hpr="0 0 0" scale="0.55 0.55 0.55" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_Upper_v32_11" xyz="-44.000000 79.079337 50.000000" hpr="0 0 0" scale="0.6 0.6 0.6" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_Upper_v32_12" xyz="-55.000000 79.027838 50.000000" hpr="0 0 0" scale="0.7 0.7 0.7" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_00_00" xyz="-181.000000 22.177397 -122.000000" hpr="0 0 0" scale="0.65 0.65 0.65" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_00_01" xyz="-175.000000 22.226458 -120.000000" hpr="0 0 0" scale="0.85 0.85 0.85" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_00_02" xyz="-179.000000 22.200743 -115.000000" hpr="0 0 0" scale="0.55 0.55 0.55" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_01_00" xyz="-184.000000 29.229292 -80.000000" hpr="0 0 0" scale="0.65 0.65 0.65" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_01_01" xyz="-178.000000 29.272482 -78.000008" hpr="0 0 0" scale="0.85 0.85 0.85" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_01_02" xyz="-182.000000 29.228430 -73.000000" hpr="0 0 0" scale="0.55 0.55 0.55" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_02_00" xyz="-184.000000 25.177412 -36.000000" hpr="0 0 0" scale="0.65 0.65 0.65" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_02_01" xyz="-178.000000 25.226423 -34.000000" hpr="0 0 0" scale="0.85 0.85 0.85" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_02_02" xyz="-182.000000 25.200758 -29.000002" hpr="0 0 0" scale="0.55 0.55 0.55" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_03_00" xyz="-184.000000 33.229309 9.000000" hpr="0 0 0" scale="0.65 0.65 0.65" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_03_01" xyz="-178.000000 33.272514 11.000000" hpr="0 0 0" scale="0.85 0.85 0.85" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_03_02" xyz="-182.000000 33.228432 16.000000" hpr="0 0 0" scale="0.55 0.55 0.55" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_04_00" xyz="-181.000000 41.177433 53.000004" hpr="0 0 0" scale="0.65 0.65 0.65" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_04_01" xyz="-175.000000 41.226479 55.000000" hpr="0 0 0" scale="0.85 0.85 0.85" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_04_02" xyz="-179.000000 41.200745 60.000000" hpr="0 0 0" scale="0.55 0.55 0.55" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_05_00" xyz="-183.000015 51.229294 97.000000" hpr="0 0 0" scale="0.65 0.65 0.65" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_05_01" xyz="-177.000000 51.272499 99.000000" hpr="0 0 0" scale="0.85 0.85 0.85" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_ClifftopFir_West_v33_05_02" xyz="-181.000000 51.228451 104.000008" hpr="0 0 0" scale="0.55 0.55 0.55" name="fluxara_driftlib_ski_branchless_fir_v12" /><library name="fluxara_driftlib_old_house_a" id="fluxara_driftlib_old_house_a_main_proxy" xyz="82.95 5.90 36.06" hpr="0.0 -76.1 0.0" scale="2.25 2.25 2.25">
   </library>
   <library name="fluxara_driftlib_old_house_a" id="fluxara_driftlib_old_house_a_main_proxy.001" xyz="82.03 5.90 65.73" hpr="-0.0 -96.2 -0.0" scale="2.25 2.25 2.25">
   </library>
@@ -84,50 +66,6 @@
   <library name="fluxara_driftlib_old_house_a" id="fluxara_driftlib_old_house_a_main_proxy.004" xyz="22.69 5.90 72.63" hpr="0.0 61.2 0.0" scale="2.25 2.25 2.25">
   </library>
   <library name="fluxara_driftlib_old_house_a" id="fluxara_driftlib_old_house_a_main_proxy.005" xyz="24.76 5.90 102.76" hpr="0.0 67.5 0.0" scale="2.25 2.25 2.25">
-  </library>
-  <library name="fluxara_driftlib_pinetree_a" id="fluxara_driftlib_pinetree_a_main_proxy" xyz="16.35 5.66 20.68" hpr="0.0 -0.0 0.0" scale="0.90 0.90 0.90">
-  </library>
-  <library name="fluxara_driftlib_pinetree_a" id="fluxara_driftlib_pinetree_a_main_proxy.001" xyz="-4.05 5.66 -36.88" hpr="-0.0 72.8 -0.0" scale="0.90 0.90 0.90">
-  </library>
-  <library name="fluxara_driftlib_pinetree_a" id="fluxara_driftlib_pinetree_a_main_proxy.002" xyz="29.33 5.66 -65.63" hpr="0.0 -48.9 0.0" scale="0.90 0.90 0.90">
-  </library>
-  <library name="fluxara_driftlib_pinetree_a" id="fluxara_driftlib_pinetree_a_main_proxy.003" xyz="71.14 5.66 -42.11" hpr="-0.0 -158.3 -0.0" scale="0.90 0.90 0.90">
-  </library>
-  <library name="fluxara_driftlib_pinetree_a" id="fluxara_driftlib_pinetree_a_main_proxy.004" xyz="86.05 5.66 6.88" hpr="0.0 -27.3 0.0" scale="0.90 0.90 0.90">
-  </library>
-  <library name="fluxara_driftlib_pinetree_a" id="fluxara_driftlib_pinetree_a_main_proxy.005" xyz="47.31 5.66 71.41" hpr="-0.0 69.7 -0.0" scale="0.90 0.90 0.90">
-  </library>
-  <library name="fluxara_driftlib_pinetree_a" id="fluxara_driftlib_pinetree_a_main_proxy.006" xyz="58.28 5.66 112.60" hpr="0.0 -62.3 0.0" scale="0.90 0.90 0.90">
-  </library>
-  <library name="fluxara_driftlib_pinetree_a" id="fluxara_driftlib_pinetree_a_main_proxy.007" xyz="10.60 5.66 123.90" hpr="-0.0 -174.9 -0.0" scale="0.90 0.90 0.90">
-  </library>
-  <library name="fluxara_driftlib_pinetree_a" id="fluxara_driftlib_pinetree_a_main_proxy.008" xyz="-44.03 5.66 162.81" hpr="0.0 -89.4 0.0" scale="0.90 0.90 0.90">
-  </library>
-  <library name="fluxara_driftlib_pinetree_a" id="fluxara_driftlib_pinetree_a_main_proxy.009" xyz="100.24 5.66 81.73" hpr="0.0 -89.4 0.0" scale="0.90 0.90 0.90">
-  </library>
-  <library name="fluxara_driftlib_pinetree_a" id="fluxara_driftlib_pinetree_a_main_proxy.010" xyz="125.77 5.66 51.51" hpr="-0.0 -130.3 -0.0" scale="0.90 0.90 0.90">
-  </library>
-  <library name="fluxara_driftlib_pinetree_a" id="fluxara_driftlib_pinetree_a_main_proxy.011" xyz="65.61 5.66 -91.91" hpr="0.0 -62.1 0.0" scale="0.90 0.90 0.90">
-  </library>
-  <library name="fluxara_driftlib_pinetree_a" id="fluxara_driftlib_pinetree_a_main_proxy.012" xyz="-29.94 5.66 -116.56" hpr="-0.0 -173.0 -0.0" scale="0.90 0.90 0.90">
-  </library>
-  <library name="fluxara_driftlib_pinetree_b" id="fluxara_driftlib_pinetree_b_main_proxy" xyz="-48.38 49.28 24.10" hpr="0.0 -0.0 0.0" scale="1.80 1.80 1.80">
-  </library>
-  <library name="fluxara_driftlib_pinetree_b" id="fluxara_driftlib_pinetree_b_main_proxy.001" xyz="-59.56 51.31 55.25" hpr="-0.0 70.0 -0.0" scale="1.80 1.80 1.80">
-  </library>
-  <library name="fluxara_driftlib_pinetree_b" id="fluxara_driftlib_pinetree_b_main_proxy.002" xyz="-40.08 51.41 57.96" hpr="-0.0 70.0 -0.0" scale="1.80 1.80 1.80">
-  </library>
-  <library name="fluxara_driftlib_pinetree_b" id="fluxara_driftlib_pinetree_b_main_proxy.003" xyz="-108.28 55.44 89.75" hpr="-0.0 70.0 -0.0" scale="1.80 1.80 1.80">
-  </library>
-  <library name="fluxara_driftlib_pinetree_b" id="fluxara_driftlib_pinetree_b_main_proxy.004" xyz="-54.92 57.63 104.01" hpr="0.0 149.5 0.0" scale="1.80 1.80 1.80">
-  </library>
-  <library name="fluxara_driftlib_pinetree_b" id="fluxara_driftlib_pinetree_b_main_proxy.005" xyz="-108.74 58.45 127.01" hpr="0.0 149.5 0.0" scale="1.80 1.80 1.80">
-  </library>
-  <library name="fluxara_driftlib_pinetree_b" id="fluxara_driftlib_pinetree_b_main_proxy.006" xyz="-89.42 58.82 125.57" hpr="-0.0 38.5 -0.0" scale="1.80 1.80 1.80">
-  </library>
-  <library name="fluxara_driftlib_pinetree_b" id="fluxara_driftlib_pinetree_b_main_proxy.007" xyz="-72.49 60.67 132.60" hpr="0.0 149.5 0.0" scale="1.80 1.80 1.80">
-  </library>
-  <library name="fluxara_driftlib_pinetree_b" id="fluxara_driftlib_pinetree_b_main_proxy.008" xyz="-49.12 52.57 47.46" hpr="-0.0 38.5 -0.0" scale="1.80 1.80 1.80">
   </library>
   <library name="fluxara_driftlib_woodLodge_a" id="fluxara_driftlib_woodLodge_a_main_proxy" xyz="65.58 5.78 -53.19" hpr="-0.0 -157.7 0.0" scale="0.90 0.90 0.90">
   </library>
@@ -149,4 +87,19 @@
   </library>
   <library name="fluxara_driftlib_woodLodge_a" id="fluxara_driftlib_woodLodge_a_main_proxy.009" xyz="71.88 5.78 16.56" hpr="0.0 114.0 0.0" scale="0.90 0.90 0.90">
   </library>
-</scene>
+<library id="SkiDash_RelocatedFir_01" xyz="135.99998474 68.00027649 76.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_RelocatedFir_02" xyz="139.00000000 65.14045898 64.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_RelocatedFir_03" xyz="137.00000000 47.72763626 48.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_RelocatedFir_04" xyz="135.99998474 68.08484070 85.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_RelocatedFir_05" xyz="134.00000000 48.72630493 39.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_RelocatedFir_06" xyz="146.00000000 49.57951157 51.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_RelocatedFir_07" xyz="-48.99999619 77.44373505 34.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_RelocatedFir_08" xyz="126.00000000 50.35622589 117.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_RelocatedFir_09" xyz="135.00000000 52.60217468 117.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_RelocatedFir_10" xyz="123.00000763 52.32782928 126.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_RelocatedFir_11" xyz="107.00000000 32.82901566 167.00001526" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_RelocatedFir_12" xyz="116.00000763 33.54928772 167.00001526" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_RelocatedFir_13" xyz="144.99998474 70.08796112 73.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_RelocatedFir_14" xyz="144.99998474 70.57592957 82.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_RelocatedFir_15" xyz="139.00000000 68.41581146 94.00000763" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><library id="SkiDash_RelocatedFir_16" xyz="134.00000000 46.51047318 30.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" name="fluxara_driftlib_ski_branchless_fir_v12" /><object id="aurora" type="animation" xyz="-30.88 65.80 -556.61" hpr="0.0 -0.0 0.0" scale="1.07 1.07 1.07" interaction="ghost" model="aurora.spm" skeletal-animation="false">
+    <animated-texture name="aurora.png" dx="0.20000" dy="-0.10000" />
+    <curve channel="LocX" interpolation="linear" extend="cyclic">
+      <p c="1.000 -30.885" />
+      <p c="400.000 -30.885" />
+    </curve>
+    <curve channel="LocZ" interpolation="linear" extend="cyclic">
+      <p c="1.000 -556.609" />
+      <p c="2196.000 730.597" />
+    </curve>
+  </object>
+  <sun fog="true" fog-color="2 3 7" fog-max="0.30000001192092896" fog-start="10.00" fog-end="100.00" xyz="84.27 154.08 -99.81" sun-specular="67 50 141" sun-diffuse="33 50 70" ambient="85 85 85" />
+  <weather particles="snow.xml" />
+  <sky-box texture="winter_sky_6.jpg winter_sky_5.jpg winter_sky_2.jpg winter_sky_4.jpg winter_sky_3.jpg winter_sky_1.jpg" sh-texture="winter_sky_6_top.jpg winter_sky_ibl_bot.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg" />
+  <lightshaft xyz="183.55 162.42 -200.57" id="Sun" opacity="0.40" color="60 130 255" />
+  <library name="fluxara_driftlib_ski_reuse_a3fa2c58c247" id="PoolReuse_SkiDash_EdgeBunting_01" xyz="145 13.1138792 -18" hpr="-0 -89.9999957 0" scale="1 1 1" /><library name="fluxara_driftlib_ski_reuse_a3fa2c58c247" id="PoolReuse_SkiDash_EdgeBunting_03" xyz="145 15.9856596 154" hpr="-0 -89.9999957 0" scale="1 1 1" /><library name="fluxara_driftlib_ski_reuse_a3fa2c58c247" id="PoolReuse_SkiDash_EdgeBunting_07" xyz="10 19.3586826 181" hpr="0 -0 0" scale="1 1 1" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_000" xyz="145.35009739 19.23021500 -49.71337687" hpr="0 0 0" scale="0.56750800 0.56750800 0.56750800" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_001" xyz="147.14341191 19.69389908 -56.12054805" hpr="0 0 0" scale="0.43392695 0.43392695 0.43392695" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_002" xyz="146.43434700 12.65614120 -24.28987534" hpr="0 0 0" scale="0.43014003 0.43014003 0.43014003" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_003" xyz="140.65684572 12.76091663 -14.73423140" hpr="0 0 0" scale="0.45777175 0.45777175 0.45777175" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_004" xyz="146.37678067 22.60063736 104.58463308" hpr="0 0 0" scale="0.52276111 0.52276111 0.52276111" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_005" xyz="140.72231463 15.88729851 156.71998169" hpr="0 0 0" scale="0.44605952 0.44605952 0.44605952" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_006" xyz="-3.89177937 13.17359154 -145.00847063" hpr="0 0 0" scale="0.56413686 0.56413686 0.56413686" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_007" xyz="1.43863894 13.30716602 -146.03568697" hpr="0 0 0" scale="0.46247795 0.46247795 0.46247795" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_008" xyz="4.82840860 19.26197617 183.61840777" hpr="0 0 0" scale="0.50858046 0.50858046 0.50858046" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_009" xyz="56.27983360 13.78847210 184.26162110" hpr="0 0 0" scale="0.53207003 0.53207003 0.53207003" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_010" xyz="61.78676270 13.71597378 175.08156156" hpr="0 0 0" scale="0.43541414 0.43541414 0.43541414" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_011" xyz="105.22952127 20.12821953 176.79290455" hpr="0 0 0" scale="0.42202113 0.42202113 0.42202113" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_012" xyz="155.50309840 51.08278839 36.30297135" hpr="0 0 0" scale="0.53831484 0.53831484 0.53831484" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_013" xyz="140.42923161 50.28067581 31.02748610" hpr="0 0 0" scale="0.48560044 0.48560044 0.48560044" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_014" xyz="152.25944095 70.30854218 88.18484911" hpr="0 0 0" scale="0.40390835 0.40390835 0.40390835" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_015" xyz="150.66178864 68.36636536 100.73550093" hpr="0 0 0" scale="0.41734360 0.41734360 0.41734360" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_016" xyz="133.81937982 54.21736328 137.17289183" hpr="0 0 0" scale="0.56629627 0.56629627 0.56629627" /><library name="fluxara_driftlib_ski_branchless_fir_v12" id="SkiDash_SharedEnrichment_017" xyz="130.13805730 52.47826950 142.16170720" hpr="0 0 0" scale="0.42584318 0.42584318 0.42584318" /></scene>

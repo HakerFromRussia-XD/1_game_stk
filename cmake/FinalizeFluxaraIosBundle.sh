@@ -8,6 +8,10 @@ if [ "$#" -ne 1 ]; then
 fi
 
 bundle=$1
+case "$bundle" in
+    *.app) ;;
+    *) echo "refusing to finalize a non-app path: $bundle" >&2; exit 64 ;;
+esac
 data="$bundle/data"
 [ -d "$data" ] || { echo "missing bundle data: $data" >&2; exit 66; }
 
@@ -18,8 +22,18 @@ rm -f \
     "$garage/garage-background-outpaint-v1.png" \
     "$garage/garage-background-outpaint-v2.png" \
     "$garage/garage-floor-extension-v1.png" \
+    "$data/skins/fluxara/background.png" \
     "$data/skins/fluxara/data/ttf/Baloo2-ExtraBold.ttf" \
     "$data/skins/fluxara/data/ttf/Baloo2-ExtraBold-Cyrillic.ttf"
+
+# iOS always resolves its public skin to Fluxara, whose only dependency is
+# Classic. Keep those and Common; remove only these known alternate themes
+# from the generated bundle, never from the source asset library.
+for skin in cartoon cartoon-coal cartoon-desert cartoon-forest cartoon-ocean \
+            cartoon-ruby classic-coal classic-desert classic-forest \
+            classic-ocean classic-ruby; do
+    [ -d "$data/skins/$skin" ] && rm -rf "$data/skins/$skin"
+done
 
 find "$data" -type f \( \
     -name '*.xcf' -o -name '*.pot' -o -name '*.py' -o -name '*.sh' \
@@ -45,5 +59,14 @@ if [ "${FLUXARA_IOS_AUDIO_FORMAT:-none}" = "opus" ]; then
     /usr/bin/ruby "$(dirname "$0")/CompressFluxaraIosAudio.rb" \
         "$bundle" "$FLUXARA_SOX" "$FLUXARA_WAV_TO_OPUS" "$FLUXARA_OPUS_CACHE"
 fi
+
+# Debug symbols remain in the generated .dSYM. They need not occupy the
+# installed app as well; Xcode signs the bundle after this post-build phase.
+# MinSizeRel also retains local symbols by default, adding about 7 MiB.
+case "${CONFIGURATION:-}" in
+    Debug|MinSizeRel)
+        /usr/bin/xcrun strip -S -x "$bundle/Fluxara Drift"
+        ;;
+esac
 
 echo "FLUXARA_IOS_BUNDLE_FINALIZED bundle=$bundle"
