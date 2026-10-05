@@ -1241,8 +1241,13 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
 #ifdef IOS_FLUXARA_DRIFT
     CommandLine::has("--fluxara-event", &g_fluxara_launch_event);
     CommandLine::has("--fluxara-screen", &g_fluxara_launch_screen);
-    // A soak run is enabled only by this private three-part signature.  It
-    // cannot be reached from the public UI or by a normal deep launch.
+    // Distribution builds must never hand the player to validation AI,
+    // advance the campaign automatically, or grant validation wins.
+    FluxaraModes::autoCampaignValidation() = false;
+    FluxaraModes::autoCampaignSmoke() = false;
+    FluxaraModes::forceValidationWins() = false;
+#ifndef NDEBUG
+    // Unattended runs remain an explicitly enabled Debug-only tool.
     int fluxara_validation_ai = 0;
     FluxaraModes::autoCampaignValidation() =
         CommandLine::has("--fluxara-auto-campaign") &&
@@ -1254,9 +1259,10 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
         CommandLine::has("--fluxara-auto-smoke");
     FluxaraModes::forceValidationWins() =
         FluxaraModes::autoCampaignValidation();
-    FluxaraModes::resetValidationCups();
     if (FluxaraModes::autoCampaignSmoke())
         FluxaraModes::autoCampaignValidation() = true;
+#endif
+    FluxaraModes::resetValidationCups();
 #endif
     if (CommandLine::has("--unit-testing"))
         UserConfigParams::m_unit_testing = true;

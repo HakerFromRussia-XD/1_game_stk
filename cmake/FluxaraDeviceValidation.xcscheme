@@ -42,9 +42,9 @@
       allowLocationSimulation = "NO">
       <CommandLineArguments>
          <CommandLineArgument argument = "--fluxara-screen=campaign" isEnabled = "YES"/>
-         <CommandLineArgument argument = "--fluxara-auto-campaign" isEnabled = "YES"/>
-         <CommandLineArgument argument = "--fluxara-validation-force-wins" isEnabled = "YES"/>
-         <CommandLineArgument argument = "--test-ai=-1" isEnabled = "YES"/>
+         <CommandLineArgument argument = "--fluxara-auto-campaign" isEnabled = "NO"/>
+         <CommandLineArgument argument = "--fluxara-validation-force-wins" isEnabled = "NO"/>
+         <CommandLineArgument argument = "--test-ai=-1" isEnabled = "NO"/>
       </CommandLineArguments>
       <BuildableProductRunnable runnableDebuggingMode = "0">
          <BuildableReference

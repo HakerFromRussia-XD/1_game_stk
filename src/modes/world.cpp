@@ -102,6 +102,7 @@ World* World::m_world[PT_COUNT];
 #ifdef IOS_FLUXARA_DRIFT
 namespace
 {
+#ifndef NDEBUG
 /** An internal device-validation controller. It drives with the regular
  *  Skidding AI while remaining a local player for camera, HUD and result
  *  lifecycle setup. It is selected only by --test-ai=-1. */
@@ -248,6 +249,7 @@ public:
     virtual bool isPlayerController() const OVERRIDE { return true; }
     virtual bool isLocalPlayerController() const OVERRIDE { return true; }
 };
+#endif
 
 /** Offline CTF has no upstream controller. This controller uses a
  * flag/base steering objective plus normal AI rescue handling, so maps with
@@ -382,6 +384,7 @@ public:
     }
 };
 
+#ifndef NDEBUG
 class FluxaraValidationCTFAI final : public FluxaraCTFAI
 {
 public:
@@ -389,6 +392,7 @@ public:
     virtual bool isPlayerController() const OVERRIDE { return true; }
     virtual bool isLocalPlayerController() const OVERRIDE { return true; }
 };
+#endif
 }
 #endif
 
@@ -864,8 +868,8 @@ std::shared_ptr<AbstractKart> World::createKart
     {
     case RaceManager::KT_PLAYER:
     {
-#ifdef IOS_FLUXARA_DRIFT
-        // --test-ai=-1 is an iPhone-only validation route. It retains a real
+#if defined(IOS_FLUXARA_DRIFT) && !defined(NDEBUG)
+        // --test-ai=-1 is a Debug-only validation route. It retains a real
         // player slot (so the race HUD and result flow are exercised) while
         // handing that slot to the normal Skidding AI. It is never reachable
         // from the public Fluxara UI.
@@ -2022,8 +2026,8 @@ std::shared_ptr<AbstractKart> World::createKartWithTeam
     switch(kart_type)
     {
     case RaceManager::KT_PLAYER:
-#ifdef IOS_FLUXARA_DRIFT
-        // Test-only controller for the player slot in team modes.  Without
+#if defined(IOS_FLUXARA_DRIFT) && !defined(NDEBUG)
+        // Debug-only controller for the player slot in team modes. Without
         // this, --test-ai=-1 leaves the local Soccer kart stationary and the
         // scoreboard cannot exercise a real goal.  It is unreachable from
         // normal UI launches and does not affect physics or score rules.

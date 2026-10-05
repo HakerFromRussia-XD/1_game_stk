@@ -88,8 +88,24 @@ public:
     virtual bool disableSlipstreamBonus() const OVERRIDE;
     virtual void crashed(const Material *m) OVERRIDE;
     static  void enableDebug() {m_ai_debug = true; }
-    static  void setTestAI(int n) {m_test_ai = n; }
-    static  int  getTestAI() { return m_test_ai; }
+    static void setTestAI(int n)
+    {
+#if defined(IOS_FLUXARA_DRIFT) && defined(NDEBUG)
+        // Test controllers, including the automatic player, are Debug-only
+        // on iOS. Ignore stale Xcode arguments in distribution builds.
+        m_test_ai = 0;
+#else
+        m_test_ai = n;
+#endif
+    }
+    static int getTestAI()
+    {
+#if defined(IOS_FLUXARA_DRIFT) && defined(NDEBUG)
+        return 0;
+#else
+        return m_test_ai;
+#endif
+    }
     virtual void crashed(const AbstractKart *k) OVERRIDE {};
     virtual void handleZipper(bool play_sound) OVERRIDE {};
     virtual void finishedRace(float time) OVERRIDE {};
