@@ -1,0 +1,11 @@
+from pathlib import Path
+import bpy,json,hashlib
+r=Path(__file__).resolve().parent;code=(r/'verify_canonical.py').read_text().replace("'volcano-remake-rework']","'volcano-remake-rework','volcano-remake-rework/fidelity-v4e','volcano-remake-rework/fidelity-v5-alpha','volcano-remake-rework/fidelity-v7b','volcano-remake-rework/fidelity-v8b','volcano-remake-rework/fidelity-v9','volcano-remake-rework/fidelity-v10','volcano-remake-rework/fidelity-v10b','volcano-remake-rework/fidelity-v11','volcano-remake-rework/fidelity-v12','volcano-remake-rework/fidelity-v13','volcano-remake-rework/fidelity-v14','volcano-remake-rework/fidelity-v15']").replace("root/'volcano-remake-rework/canonical-bindings-verification.json'","root/'volcano-remake-rework/fidelity-v15/canonical-bindings-verification.json'");exec(compile(code,str(r/'verify_canonical.py'),'exec'))
+for name in ['fluxara_chalet_window','fluxara_cottage_windows','LCV1_fluxara_chalet_window.png','LCV1_fluxara_cottage_windows.png']:
+ nodes=[n for n in bpy.data.materials[name].node_tree.nodes if n.type=='EMISSION'];assert nodes and all(n.inputs['Strength'].default_value>=1 for n in nodes)
+a=json.loads((r/'fidelity-v13/asset-registration.json').read_text());texture=a['textures']['fluxara_volcano_lava_shared_v13.jpg'];images=[n.image for q in a['newMaterialVariants']for n in bpy.data.materials[q['name']].node_tree.nodes if n.type=='TEX_IMAGE'];assert all(hashlib.sha256(im.packed_file.data).hexdigest()==texture['sha256']for im in images);assert len({im.as_pointer()for im in images})==1
+print('V15_CANONICAL_BINDINGS_AND_PREVIOUS_ASSETS_VERIFIED',flush=True)
+
+a=json.loads((r/"fidelity-v15/asset-registration.json").read_text());images=[n.image for q in a["newMaterialVariants"]for n in bpy.data.materials[q["name"]].node_tree.nodes if n.type=="TEX_IMAGE" and n.image and Path(n.image.filepath).name=="fluxara_castle_brick_v15.jpg"];assert len({im.as_pointer()for im in images})==1;assert all(hashlib.sha256(im.packed_file.data).hexdigest()==a["textures"]["fluxara_castle_brick_v15.jpg"]["sha256"]for im in images);print("V15_SINGLE_SHARED_BRICK_IMAGE_VERIFIED",flush=True)
+
+row=next(q for q in a["newPrototypes"]if q["name"]=="VRV15_Prototype_GateRoof");assert len(bpy.data.objects[row["name"]].data.polygons)==row["triangles"]==160;print("V15_OPTIMIZED_CANONICAL_GATE_GEOMETRY_VERIFIED",flush=True)

@@ -1,0 +1,50 @@
+{
+  "baseCandidate": "V15",
+  "status": "V15 shared gray brick castles, red roofs and dense smoke completed as isolated candidate; original stone retained. Full reference fidelity still unfinished.",
+  "reference": "output/volcano-remake-rework/references/figma-tenth.png",
+  "priorities": [
+    {
+      "role": "Central volcanic mountain",
+      "problem": "Stone image restored; central mountain and broad green flat upper surfaces still lack the reference silhouette and compact terrain detail.",
+      "sourceModel": "output/volcano-remake-rework/fidelity-v15/candidate/volcano_track.spm",
+      "buffer": 2,
+      "triangles": 72,
+      "bounds": [
+        [
+          -79.52127075195312,
+          -18.327571868896484,
+          -34.786128997802734
+        ],
+        [
+          -12.363222122192383,
+          67.23721313476562,
+          57.356178283691406
+        ]
+      ],
+      "action": "Keep Rock13 image and existing cliff UVs. Improve decorative silhouettes and green terrain edges using shared pool models or copied visible meshes; protected course and all original collision kept separately exact.",
+      "sourceTextureToReuse": "output/volcano-remake-rework/fidelity-v13/candidate/Rock13_col.jpg",
+      "doNotChange": "The other 532 triangles in the arch buffer, protected driving surfaces and gameplay controls.",
+      "materialPassCompletedCandidate": "V14",
+      "remaining": "Central mountain silhouette and unchanged large texture scale still differ from erupting reference. Stone image and approved cliff UVs remain retained."
+    },
+    {
+      "role": "Castle composition",
+      "problem": "White cylindrical donor towers and separated towers still differ from the gray stone gate, crenellations, brick roof and torch silhouette in the reference.",
+      "action": "Improve copied tower variants and the gate around protected route, using existing stone texture and roof resource; count all new shared file bytes.",
+      "completedCandidate": "V15",
+      "done": "16 tower placements share one masonry body, one roof or pennant cap. New red gate canopy, all variant weights and gate object weight below +20%.",
+      "remaining": "Reference lighting, castle wall and cliff-top proportions, tree/plant composition around route need review."
+    },
+    {
+      "role": "Volcanic smoke",
+      "problem": "Large widely separated regular spheres still read as a chain. Reference uses a dense irregular continuous plume.",
+      "action": "Reuse existing cloud vertices and bounds to increase overlap and irregular silhouette, then inspect from gameplay views. Original cloud copies and texture bytes preserved.",
+      "completedCandidate": "V15",
+      "done": "Three clouds reshaped into denser overlapping irregular puffs within original bounds; hidden overlap triangles removed. Existing palette pixels retained.",
+      "remaining": "Overall atmosphere and plume silhouette still need reference comparison; no final acceptance claimed."
+    }
+  ],
+  "productionIntegrated": false,
+  "referenceAcceptance": false,
+  "mainSPMBufferIndexNote": "V14 splits old buffer 1 into arch buffer 1 (532 triangles) and central rock buffer 2 (72 triangles); original V13 buffers 2..24 shift to V14 3..25. Match buffers by material/geometry instead of old indices."
+}

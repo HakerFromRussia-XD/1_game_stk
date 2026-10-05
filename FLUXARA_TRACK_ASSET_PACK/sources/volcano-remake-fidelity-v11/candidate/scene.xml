@@ -1,0 +1,739 @@
+<scene>
+  <track model="volcano_track.spm" x="0" y="0" z="0">
+    <static-object model="Lavafield.spm" xyz="174.84 -35.28 -11.15" hpr="-16.1 -43.9 11.3" scale="100.87 87.97 100.87">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.00300" />
+    </static-object>
+    <static-object model="Crater.spm" xyz="107.91 20.21 122.23" hpr="17.1 60.7 17.5" scale="1.17 1.17 1.17">
+    <animated-texture name="lava.png" dy="-0.10000" />
+    </static-object>
+    <static-object model="Crater.spm" xyz="-153.13 18.47 -34.39" hpr="-79.7 98.6 -81.5" scale="1.17 1.17 1.17">
+    <animated-texture name="lava.png" dy="-0.10000" />
+    </static-object>
+    <static-object model="Crater.spm" xyz="-39.35 29.10 208.84" hpr="6.7 30.7 9.9" scale="1.61 1.61 1.61">
+    <animated-texture name="lava.png" dy="-0.10000" />
+    </static-object>
+    <static-object model="Crater.spm" xyz="-66.60 4.48 -50.19" hpr="47.0 105.7 60.2" scale="0.99 0.99 0.59">
+    <animated-texture name="lava.png" dy="-0.10000" />
+    </static-object>
+    <static-object model="Crater.spm" xyz="4.77 35.02 30.98" hpr="0.0 -84.8 0.0" scale="1.00 1.00 1.00">
+    <animated-texture name="lava.png" dy="-0.10000" />
+    </static-object>
+    <static-object model="Crater.spm" xyz="177.71 27.00 112.22" hpr="6.5 29.6 9.8" scale="1.76 1.76 1.76">
+    <animated-texture name="lava.png" dy="-0.10000" />
+    </static-object>
+    <static-object model="vulcan_02.spm" xyz="-152.53 -7.28 -35.39" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.03000" />
+    </static-object>
+    <static-object model="vulcan_01.spm" xyz="110.03 -4.75 119.35" hpr="-0.0 180.0 -0.0" scale="1.00 1.00 1.00">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.03000" />
+    </static-object>
+    <static-object model="vulcan_03.spm" xyz="-37.24 -6.08 207.57" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.03000" />
+    </static-object>
+    <static-object model="vulcan_02.spm" xyz="277.64 -51.25 -59.99" hpr="0.0 -0.0 0.0" scale="2.47 2.47 2.47">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.03000" />
+    </static-object>
+    <static-object model="vulcan_02.spm" xyz="277.64 -31.02 41.89" hpr="0.0 -11.4 0.0" scale="1.90 1.90 1.90">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.03000" />
+    </static-object>
+    <static-object model="vulcan_02.spm" xyz="179.16 -22.88 107.08" hpr="0.0 -65.8 0.0" scale="1.90 1.90 1.90">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.03000" />
+    </static-object>
+    <static-object model="vulcan_02.spm" xyz="-272.50 -16.23 -105.12" hpr="-0.0 163.9 -0.0" scale="1.38 1.38 1.38">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.03000" />
+    </static-object>
+    <static-object model="vulcan_02.spm" xyz="-276.20 -7.88 -168.76" hpr="0.0 150.9 0.0" scale="1.38 1.38 1.38">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.03000" />
+    </static-object>
+    <animated-texture name="fluxara_driftflag_blackBooster_b.png" dy="1.00000" />
+    <animated-texture name="fluxara_driftflag_blackBooster_a.png" dy="1.00000" />
+    <animated-texture name="fluxara_driftflag_blackBooster_b.png" dy="1.00000" />
+  </track>
+  <object id="Cube.003" type="animation" xyz="260.173891126 19.870589691 -95.495243994" hpr="0.000000000 0.000000000 0.000000000" scale="0.069628262 0.358357313 0.059125569" interaction="ghost" model="AshCloud.spm" skeletal-animation="false">
+    </object>
+  <object id="Cube.005" type="animation" xyz="-42.844635473 32.758692062 204.655109119" hpr="0.000000000 0.000000000 0.000000000" scale="0.231998286 0.249476337 0.164005883" interaction="ghost" model="AshColumn.spm" skeletal-animation="false">
+    </object>
+  <object id="Cube.014" type="animation" xyz="-182.39 -9.82 -36.21" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="explode" shape="exact" model="Lavaflow3.spm" explode="y" skeletal-animation="false">
+    <animated-texture name="Lava_004_COLOR.jpg" dy="-0.01000" />
+  </object>
+  <object id="Cube.015" type="animation" xyz="17.83 11.02 -83.42" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="ReverseRamp.spm" driveable="true" skeletal-animation="false" if="isTrackReverse">
+    <animated-texture name="fluxara_driftflag_blackBooster_b.png" dy="1.00000" />
+  </object>
+  <object id="Cube.017" type="animation" xyz="-56.62 -8.94 171.40" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="explode" shape="exact" model="Lavaflow4.spm" explode="y" skeletal-animation="false">
+    <animated-texture name="Lava_004_COLOR.jpg" dy="-0.01000" />
+  </object>
+  <object id="Cube.018" type="animation" xyz="-111.70 -33.53 -129.59" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="MudBubbles.spm" skeletal-animation="false">
+    <curve channel="LocX" interpolation="bezier" extend="cyclic">
+      <p c="23.000 -111.698" h1="11.288 -111.698" h2="34.712 -111.698" />
+      <p c="53.000 -111.698" h1="41.288 -111.698" h2="62.370 -111.698" />
+      <p c="77.000 -111.698" h1="67.630 -111.698" h2="112.137 -111.698" />
+      <p c="167.000 -111.698" h1="131.863 -111.698" h2="179.884 -111.698" />
+      <p c="200.000 -111.698" h1="187.116 -111.698" h2="212.884 -111.698" />
+    </curve>
+    <curve channel="LocZ" interpolation="bezier" extend="cyclic">
+      <p c="23.000 -129.594" h1="11.288 -129.594" h2="34.712 -129.594" />
+      <p c="53.000 -129.594" h1="41.288 -129.594" h2="62.370 -129.594" />
+      <p c="77.000 -129.594" h1="67.630 -129.594" h2="112.137 -129.594" />
+      <p c="167.000 -129.594" h1="131.863 -129.594" h2="179.884 -129.594" />
+      <p c="200.000 -129.594" h1="187.116 -129.594" h2="212.884 -129.594" />
+    </curve>
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="23.000 -32.536" h1="11.288 -32.536" h2="34.712 -32.536" />
+      <p c="53.000 -33.058" h1="41.288 -33.058" h2="62.370 -33.058" />
+      <p c="77.000 -32.232" h1="67.630 -32.232" h2="112.137 -32.232" />
+      <p c="167.000 -33.851" h1="131.863 -33.851" h2="179.884 -33.851" />
+      <p c="200.000 -32.536" h1="187.116 -32.536" h2="212.884 -32.536" />
+    </curve>
+    <curve channel="RotX" interpolation="bezier" extend="cyclic">
+      <p c="23.000 -0.000" h1="11.288 -0.000" h2="34.712 -0.000" />
+      <p c="53.000 -0.000" h1="41.288 -0.000" h2="62.370 -0.000" />
+      <p c="77.000 -0.000" h1="67.630 -0.000" h2="112.137 -0.000" />
+      <p c="167.000 -0.000" h1="131.863 -0.000" h2="179.884 -0.000" />
+      <p c="200.000 -0.000" h1="187.116 -0.000" h2="212.884 -0.000" />
+    </curve>
+    <curve channel="RotZ" interpolation="bezier" extend="cyclic">
+      <p c="23.000 -0.000" h1="11.288 -0.000" h2="34.712 -0.000" />
+      <p c="53.000 -0.000" h1="41.288 -0.000" h2="62.370 -0.000" />
+      <p c="77.000 -0.000" h1="67.630 -0.000" h2="112.137 -0.000" />
+      <p c="167.000 -0.000" h1="131.863 -0.000" h2="179.884 -0.000" />
+      <p c="200.000 -0.000" h1="187.116 -0.000" h2="212.884 -0.000" />
+    </curve>
+    <curve channel="RotY" interpolation="bezier" extend="cyclic">
+      <p c="23.000 -0.000" h1="11.288 -0.000" h2="34.712 -0.000" />
+      <p c="53.000 -0.000" h1="41.288 -0.000" h2="62.370 -0.000" />
+      <p c="77.000 -0.000" h1="67.630 -0.000" h2="112.137 -0.000" />
+      <p c="167.000 -0.000" h1="131.863 -0.000" h2="179.884 -0.000" />
+      <p c="200.000 -0.000" h1="187.116 -0.000" h2="212.884 -0.000" />
+    </curve>
+    <curve channel="ScaleX" interpolation="bezier" extend="cyclic">
+      <p c="23.000 1.000" h1="11.288 1.000" h2="34.712 1.000" />
+      <p c="53.000 1.000" h1="41.288 1.000" h2="62.370 1.000" />
+      <p c="77.000 1.000" h1="67.630 1.000" h2="112.137 1.000" />
+      <p c="167.000 1.000" h1="131.863 1.000" h2="179.884 1.000" />
+      <p c="200.000 1.000" h1="187.116 1.000" h2="212.884 1.000" />
+    </curve>
+    <curve channel="ScaleZ" interpolation="bezier" extend="cyclic">
+      <p c="23.000 1.000" h1="11.288 1.000" h2="34.712 1.000" />
+      <p c="53.000 1.000" h1="41.288 1.000" h2="62.370 1.000" />
+      <p c="77.000 1.000" h1="67.630 1.000" h2="112.137 1.000" />
+      <p c="167.000 1.000" h1="131.863 1.000" h2="179.884 1.000" />
+      <p c="200.000 1.000" h1="187.116 1.000" h2="212.884 1.000" />
+    </curve>
+    <curve channel="ScaleY" interpolation="bezier" extend="cyclic">
+      <p c="23.000 1.000" h1="11.288 1.000" h2="34.712 1.000" />
+      <p c="53.000 1.000" h1="41.288 1.000" h2="62.370 1.000" />
+      <p c="77.000 1.000" h1="67.630 1.000" h2="112.137 1.000" />
+      <p c="167.000 1.000" h1="131.863 1.000" h2="179.884 1.000" />
+      <p c="200.000 1.000" h1="187.116 1.000" h2="212.884 1.000" />
+    </curve>
+  </object>
+  <object id="Cube.027" type="animation" xyz="11.49 27.91 31.20" hpr="-5.8 -0.0 0.0" scale="1.00 1.00 1.00" interaction="explode" shape="exact" model="Lavaflow2.spm" explode="y" skeletal-animation="false">
+    <animated-texture name="Lava_004_COLOR.jpg" />
+  </object>
+  <object id="Cube.029" type="animation" xyz="50.42 -11.74 116.67" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="explode" shape="exact" model="Lavaflow1.spm" explode="y" skeletal-animation="false">
+    <animated-texture name="Lava_004_COLOR.jpg" dy="-0.01000" />
+  </object>
+  <object id="Cube.030" type="animation" xyz="-184.334642286 46.036274840 -39.535929961" hpr="0.000000000 0.000000000 0.000000000" scale="0.451454026 0.303493130 0.168546434" interaction="ghost" model="PyroclasticFlow.spm" skeletal-animation="false">
+    </object>
+  <object id="Cube.031" type="animation" xyz="-75.67 -7.74 174.26" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="explode" shape="exact" model="Lavaflow5.spm" explode="y" skeletal-animation="false">
+    <animated-texture name="Lava_004_COLOR.jpg" dy="-0.01000" />
+  </object>
+  <object id="Cube.034" type="animation" xyz="-75.67 -7.74 174.26" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Lavafall.spm" skeletal-animation="false">
+    <animated-texture name="lava_2k_diffuse.jpg" dy="-0.01000" />
+  </object>
+  <object id="Plane" type="animation" xyz="52.05 -7.77 75.81" hpr="-0.0 -91.8 -0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.002" type="animation" xyz="46.41 -7.77 97.65" hpr="-0.0 -116.5 -0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.004" type="animation" xyz="7.62 40.49 71.16" hpr="-0.0 -105.2 -0.0" scale="0.90 0.90 0.90" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.005" type="animation" xyz="8.06 37.34 67.05" hpr="-0.0 -105.2 -0.0" scale="0.64 0.64 0.64" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.006" type="animation" xyz="12.07 37.53 68.08" hpr="-0.0 -105.2 -0.0" scale="0.74 0.74 0.74" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.007" type="animation" xyz="-140.00 -7.17 106.04" hpr="0.0 -23.8 0.0" scale="0.74 0.74 0.74" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.008" type="animation" xyz="-141.62 -7.35 109.85" hpr="0.0 -23.8 0.0" scale="0.64 0.64 0.64" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.009" type="animation" xyz="-137.62 -4.20 110.90" hpr="0.0 -23.8 0.0" scale="0.90 0.90 0.90" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.010" type="animation" xyz="-202.76 -11.50 -44.05" hpr="0.0 -23.8 0.0" scale="1.54 1.54 1.54" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.011" type="animation" xyz="-201.49 -11.63 -39.00" hpr="0.0 -23.8 0.0" scale="0.90 0.90 0.90" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.012" type="animation" xyz="-200.22 -11.87 -49.65" hpr="0.0 -23.8 0.0" scale="1.41 1.41 1.41" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.013" type="animation" xyz="-193.73 -12.21 -52.38" hpr="0.0 -23.8 0.0" scale="1.04 1.04 1.04" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.015" type="animation" xyz="-196.53 -12.05 -51.70" hpr="0.0 -23.8 0.0" scale="0.93 0.93 0.93" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.016" type="animation" xyz="-190.85 -12.09 -54.69" hpr="0.0 -23.8 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.017" type="animation" xyz="-186.24 -12.51 -57.91" hpr="0.0 -23.8 0.0" scale="0.64 0.64 0.64" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.018" type="animation" xyz="-182.90 -12.36 -63.50" hpr="0.0 -23.8 0.0" scale="1.14 1.14 1.14" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.019" type="animation" xyz="-179.41 -12.00 -63.46" hpr="0.0 -23.8 0.0" scale="1.57 1.57 1.57" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.020" type="animation" xyz="2.70 13.46 -60.49" hpr="15.2 -124.3 1.1" scale="1.19 1.19 1.19" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.021" type="animation" xyz="6.03 9.29 -64.79" hpr="15.2 -124.3 1.1" scale="0.84 0.84 0.84" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.022" type="animation" xyz="10.34 11.04 -61.92" hpr="15.2 -124.3 1.1" scale="0.98 0.98 0.98" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.023" type="animation" xyz="34.08 7.46 -73.24" hpr="1.0 -169.0 1.6" scale="0.98 0.98 0.98" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.024" type="animation" xyz="-60.50 -11.29 141.81" hpr="0.0 -23.8 0.0" scale="1.27 1.27 1.27" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.025" type="animation" xyz="27.72 11.11 -76.77" hpr="1.0 -169.0 1.6" scale="1.19 1.19 1.19" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.026" type="animation" xyz="-54.71 -11.55 141.03" hpr="0.0 -23.8 0.0" scale="0.95 0.95 0.95" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.027" type="animation" xyz="-56.10 -11.01 140.47" hpr="0.0 -23.8 0.0" scale="1.73 1.73 1.73" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.028" type="animation" xyz="-49.97 -11.15 142.86" hpr="0.0 -23.8 0.0" scale="1.33 1.33 1.33" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.029" type="animation" xyz="-64.47 -11.60 144.60" hpr="0.0 -23.8 0.0" scale="0.77 0.77 0.77" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.032" type="animation" xyz="65.24 -9.16 58.94" hpr="-4.6 139.8 -2.6" scale="0.33 0.33 0.33" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.034" type="animation" xyz="64.19 -9.21 89.11" hpr="19.6 84.8 22.6" scale="0.32 0.32 0.32" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.035" type="animation" xyz="64.48 -9.02 92.71" hpr="35.3 -104.9 -37.6" scale="0.23 0.23 0.23" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.036" type="animation" xyz="63.59 -8.69 92.10" hpr="-20.7 -64.3 21.2" scale="0.36 0.36 0.36" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.043" type="animation" xyz="48.47 -11.81 114.41" hpr="0.0 -23.8 0.0" scale="0.75 0.75 0.75" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.044" type="animation" xyz="15.55 27.56 29.96" hpr="0.0 -23.8 0.0" scale="1.41 1.41 1.41" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.045" type="animation" xyz="13.98 28.08 34.60" hpr="0.0 -23.8 0.0" scale="0.88 0.88 0.88" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.046" type="animation" xyz="-73.64 52.20 38.31" hpr="0.0 -57.9 0.0" scale="0.90 0.90 0.90" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.047" type="animation" xyz="-76.37 49.68 35.20" hpr="0.0 -57.9 0.0" scale="0.64 0.64 0.64" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.048" type="animation" xyz="-72.89 49.87 32.95" hpr="0.0 -57.9 0.0" scale="0.74 0.74 0.74" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.049" type="animation" xyz="33.45 -7.62 116.13" hpr="-0.0 -135.0 -0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.050" type="animation" xyz="-98.67 -19.30 168.04" hpr="0.0 -14.7 0.0" scale="1.00 1.00 1.00" interaction="reset" shape="exact" model="Lava.spm" reset="y" skeletal-animation="false">
+    <animated-texture name="lava.png" dy="-0.10000" />
+  </object>
+  <object id="Plane.052" type="animation" xyz="17.51 32.01 99.22" hpr="-0.0 -105.2 -0.0" scale="5.34 5.34 5.34" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.053" type="animation" xyz="42.26 29.52 95.41" hpr="-0.0 -105.2 -0.0" scale="2.93 2.93 2.93" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.055" type="animation" xyz="37.34 25.69 101.91" hpr="-0.0 -105.2 -0.0" scale="5.31 5.31 5.31" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.056" type="animation" xyz="37.16 30.36 114.01" hpr="-0.0 -105.2 -0.0" scale="3.48 3.48 3.48" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.057" type="animation" xyz="14.37 -7.59 129.73" hpr="-0.0 -153.5 -0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.058" type="animation" xyz="-5.78 -7.26 135.24" hpr="-0.0 -178.2 -0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.063" type="animation" xyz="-202.25 -10.39 -59.31" hpr="4.7 122.2 0.0" scale="1.00 1.00 1.00" interaction="static" shape="box" model="Arrows.spm" skeletal-animation="false" if="isTrackNotReverse">
+    <animated-texture name="fluxara_driftflag_blackBooster_a.png" dy="0.50000" />
+  </object>
+  <object id="Plane.064" type="animation" xyz="-213.12 -9.10 -49.07" hpr="-2.9 -173.6 0.0" scale="1.00 1.00 1.00" interaction="static" shape="box" model="ArrowsReverse.spm" skeletal-animation="false" if="isTrackReverse">
+    <animated-texture name="fluxara_driftflag_blackBooster_a.png" dy="0.50000" />
+  </object>
+  <object id="Plane.065" type="animation" xyz="27.53 -7.31 134.87" hpr="0.0 35.6 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.066" type="animation" xyz="33.94 -7.31 130.32" hpr="0.0 35.6 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.067" type="animation" xyz="-81.54 53.05 86.90" hpr="0.0 -0.0 0.0" scale="1.62 1.62 1.62" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.068" type="animation" xyz="-106.85 55.02 54.31" hpr="0.0 -1.8 0.0" scale="0.90 0.90 0.90" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.069" type="animation" xyz="-110.95 51.87 54.83" hpr="0.0 -1.8 0.0" scale="0.64 0.64 0.64" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.070" type="animation" xyz="-110.88 52.05 50.69" hpr="0.0 -1.8 0.0" scale="0.74 0.74 0.74" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.071" type="animation" xyz="-124.71 53.25 15.77" hpr="0.0 -0.0 0.0" scale="1.62 1.62 1.62" interaction="ghost" model="Torch.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_drifttex_animatedFire_a.png" dy="0.06250" animByStep="true" dt="0.050" />
+  </object>
+  <object id="Plane.072" type="animation" xyz="27.15 19.37 -62.69" hpr="-3.2 16.5 7.8" scale="1.00 1.00 1.00" interaction="static" shape="box" model="Arrows.spm" skeletal-animation="false" if="isTrackNotReverse">
+    <animated-texture name="fluxara_driftflag_blackBooster_a.png" dy="0.50000" />
+  </object>
+  <object id="Plane.073" type="animation" xyz="25.47 19.56 -67.87" hpr="12.1 42.8 3.7" scale="1.00 1.00 1.00" interaction="static" shape="box" model="ArrowsReverse.spm" skeletal-animation="false" if="isTrackReverse">
+    <animated-texture name="fluxara_driftflag_blackBooster_a.png" dy="0.50000" />
+  </object>
+  <sun xyz="199.67 253.30 -139.47" sun-specular="255 161 79" sun-diffuse="168 150 143" ambient="110 109 120" fog-color="173 147 169" fog-start="350" fog-end="1500" fog-max=".20" />
+  <sky-box texture="dp_sky_top.jpg dp_sky_bottom.jpg dp_sky_left.jpg dp_sky_right.jpg dp_sky_front.jpg dp_sky_back.jpg" />
+  <camera far="1000.0" />
+  <checks>
+    <check-lap kind="lap" same-group="0" other-ids="1" />
+    <check-line kind="activate" other-ids="2" p1="-51.97 123.53" p2="-48.03 151.35" min-height="-13.81" same-group="1" />
+    <check-line kind="activate" other-ids="3" p1="-207.56 -54.50" p2="-188.56 -46.94" min-height="-13.37" same-group="2" />
+    <check-line kind="activate" other-ids="0" p1="-117.97 -15.01" p2="-101.96 -2.29" min-height="53.95" same-group="3" />
+    <cannon p1="-19.00 15.89 -93.00" p2="-22.00 15.89 -80.00" target-p1="14.53 10.62 -87.93" target-p2="0.77 10.62 -65.09">
+    <curve channel="LocXYZ" speed="50.00" interpolation="bezier" extend="const">
+      <point c="-22.748402 12.783736 -85.553848" h1="-26.928881 10.139997 -86.888283" h2="-18.567924 15.427474 -84.219414" />
+      <point c="8.494653 17.015415 -75.838776" h1="1.689118 18.657862 -78.371628" h2="15.300192 15.372969 -73.305916" />
+    </curve>
+    </cannon>
+    <cannon p1="-19.00 15.89 -93.00" p2="-22.00 15.89 -80.00" target-p1="14.53 15.30 -87.93" target-p2="0.77 15.30 -65.09">
+    <curve channel="LocXYZ" speed="50.00" interpolation="bezier" extend="const">
+      <point c="-22.748402 12.783736 -85.553848" h1="-26.928881 10.139997 -86.888283" h2="-18.567924 15.427474 -84.219414" />
+      <point c="8.494653 17.015415 -75.838776" h1="1.689118 18.657862 -78.371628" h2="15.300192 15.372969 -73.305916" />
+    </curve>
+    </cannon>
+    <cannon p1="-19.00 15.89 -93.00" p2="-22.00 15.89 -80.00" target-p1="14.53 20.96 -87.93" target-p2="0.77 20.96 -65.09">
+    <curve channel="LocXYZ" speed="50.00" interpolation="bezier" extend="const">
+      <point c="-22.748402 12.783736 -85.553848" h1="-26.928881 10.139997 -86.888283" h2="-18.567924 15.427474 -84.219414" />
+      <point c="8.494653 17.015415 -75.838776" h1="1.689118 18.657862 -78.371628" h2="15.300192 15.372969 -73.305916" />
+    </curve>
+    </cannon>
+  </checks>
+  <particle-emitter kind="fire.xml" id="Empty.014" xyz="52.05 -8.45 75.81" h="8.06">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.015" xyz="46.41 -8.45 97.63" h="32.77">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.016" xyz="7.62 40.12 71.13" h="0.00">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.017" xyz="8.03 36.93 67.06" h="0.00">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.018" xyz="12.13 37.16 68.04" h="0.00">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.019" xyz="-140.03 -7.54 105.98" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.020" xyz="-141.61 -7.76 109.88" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.021" xyz="-137.65 -4.58 110.90" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.022" xyz="-202.75 -12.44 -44.03" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.023" xyz="-201.48 -12.51 -38.97" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.024" xyz="-200.21 -12.55 -49.63" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.025" xyz="-193.72 -12.86 -52.36" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.026" xyz="-196.53 -12.70 -51.67" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.027" xyz="-190.84 -12.92 -54.67" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.028" xyz="-186.23 -12.92 -57.89" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.029" xyz="-182.89 -13.21 -63.48" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.030" xyz="-179.40 -13.07 -63.44" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.031" xyz="2.83 12.98 -60.45" h="18.70">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.032" xyz="6.12 8.76 -64.71" h="18.70">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.033" xyz="10.55 10.60 -61.87" h="18.70">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.034" xyz="34.18 6.98 -73.18" h="63.85">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.035" xyz="-60.49 -12.52 141.84" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.036" xyz="27.77 10.62 -76.78" h="63.85">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.037" xyz="-54.70 -12.47 141.06" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.038" xyz="-56.09 -12.69 140.51" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.039" xyz="-49.96 -12.44 142.90" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.040" xyz="-64.47 -12.35 144.62" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.041" xyz="48.48 -12.28 114.44" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.075" xyz="15.55 26.40 29.99" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.076" xyz="13.99 27.47 34.61" h="-81.38">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.077" xyz="-73.66 51.83 38.29" h="-47.25">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.078" xyz="-76.37 48.65 35.22" h="-47.25">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.079" xyz="-72.88 48.87 32.88" h="-47.25">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.080" xyz="33.45 -8.30 116.13" h="51.31">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.081" xyz="17.52 30.63 99.19" h="0.00">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.082" xyz="42.26 28.59 95.39" h="0.00">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.083" xyz="37.35 23.51 101.88" h="0.00">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.084" xyz="37.16 29.15 113.98" h="0.00">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.085" xyz="14.37 -8.27 129.73" h="69.84">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.086" xyz="-5.78 -7.94 135.24" h="94.48">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.087" xyz="27.53 -7.99 134.87" h="-119.28">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.088" xyz="33.94 -7.99 130.32" h="-119.35">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.089" xyz="-81.54 52.01 86.90" h="0.00">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.090" xyz="-106.87 54.64 54.31" h="-103.39">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.091" xyz="-110.93 51.46 54.85" h="-103.39">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.092" xyz="-110.93 51.69 50.64" h="-103.39">
+  </particle-emitter>
+  <particle-emitter kind="fire.xml" id="Empty.094" xyz="-124.71 52.20 15.77" h="0.00">
+  </particle-emitter>
+  <item id="Empty" x="58.54" y="-12.34" z="54.43" />
+  <item id="Empty.001" x="53.29" y="-12.35" z="54.60" />
+  <small-nitro id="Empty.002" x="38.87" y="-12.35" z="121.67" />
+  <small-nitro id="Empty.003" x="34.79" y="-12.35" z="118.35" />
+  <banana id="Empty.004" x="-39.49" y="-12.34" z="134.21" />
+  <banana id="Empty.005" x="-39.23" y="-12.35" z="140.64" />
+  <small-nitro id="Empty.006" x="-39.39" y="-12.35" z="137.53" />
+  <item id="Empty.007" x="-161.13" y="-12.35" z="79.93" />
+  <item id="Empty.008" x="-166.79" y="-11.63" z="80.46" />
+  <banana id="Empty.009" x="-164.30" y="-12.35" z="8.76" />
+  <small-nitro id="Empty.010" x="-163.70" y="-11.63" z="80.07" />
+  <item id="Empty.011" x="-192.75" y="-12.97" z="-61.85" />
+  <item id="Empty.012" x="-190.44" y="-12.98" z="-59.73" />
+  <item id="Empty.013" x="-188.62" y="-12.97" z="-57.64" />
+  <banana id="Empty.042" x="8.67" y="12.79" z="-31.86" />
+  <banana id="Empty.043" x="19.33" y="14.56" z="-32.07" />
+  <small-nitro id="Empty.044" x="20.80" y="14.03" z="-37.39" />
+  <small-nitro id="Empty.045" x="8.68" y="14.00" z="-27.31" />
+  <item id="Empty.046" x="10.56" y="29.60" z="44.78" />
+  <item id="Empty.047" x="15.34" y="29.58" z="46.21" />
+  <small-nitro id="Empty.048" x="-26.56" y="37.50" z="87.83" />
+  <small-nitro id="Empty.049" x="-24.82" y="37.52" z="91.05" />
+  <small-nitro id="Empty.050" x="-23.41" y="37.52" z="94.06" />
+  <item id="Empty.052" x="-86.41" y="46.54" z="86.93" />
+  <small-nitro id="Empty.053" x="-89.28" y="47.41" z="91.57" />
+  <small-nitro id="Empty.054" x="-92.89" y="57.42" z="-24.79" />
+  <small-nitro id="Empty.055" x="-94.85" y="57.38" z="-27.20" />
+  <item id="Empty.056" x="-91.16" y="57.39" z="-22.38" />
+  <banana id="Empty.057" x="-14.86" y="60.10" z="23.39" />
+  <banana id="Empty.058" x="-13.19" y="60.37" z="29.15" />
+  <banana id="Empty.059" x="-12.18" y="60.60" z="35.77" />
+  <small-nitro id="Empty.060" x="-87.97" y="42.99" z="31.82" />
+  <small-nitro id="Empty.061" x="-81.76" y="43.04" z="29.61" />
+  <banana id="Empty.062" x="-169.15" y="-12.35" z="10.84" />
+  <banana id="Empty.063" x="-77.64" y="14.96" z="-23.30" />
+  <banana id="Empty.064" x="-71.65" y="15.41" z="-20.90" />
+  <small-nitro id="Empty.065" x="-79.34" y="-14.58" z="-79.63" />
+  <item id="Empty.066" x="-82.18" y="-14.45" z="-78.78" />
+  <item id="Empty.067" x="-76.19" y="-14.41" z="-79.41" />
+  <small-nitro id="Empty.068" x="-76.26" y="-18.83" z="-110.92" />
+  <small-nitro id="Empty.069" x="-71.84" y="-18.86" z="-116.79" />
+  <small-nitro id="Empty.070" x="-65.20" y="-17.23" z="-121.32" />
+  <small-nitro id="Empty.071" x="-59.21" y="-16.15" z="-121.52" />
+  <item id="Empty.072" x="52.71" y="-12.79" z="-76.39" />
+  <item id="Empty.074" x="57.64" y="-12.79" z="-78.14" />
+  <banana id="Empty.093" x="-102.94" y="47.94" z="71.54" />
+  <light xyz="59.49 -1.27 50.21" id="Point" distance="15.00" energy="1.00" color="254 42 0">
+  </light>
+  <light xyz="50.83 -1.39 50.43" id="Point.001" distance="15.00" energy="1.00" color="254 42 0">
+  </light>
+  <light xyz="52.05 -8.45 75.81" id="Point.002" distance="7.50" energy="1.00" color="254 102 27">
+  </light>
+  <light xyz="46.41 -8.45 97.63" id="Point.003" distance="7.50" energy="1.00" color="254 102 27">
+  </light>
+  <light xyz="7.62 40.12 71.13" id="Point.004" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="8.06 37.02 67.03" id="Point.005" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="12.07 37.13 68.06" id="Point.006" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-140.02 -7.57 106.04" id="Point.007" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-141.64 -7.68 109.85" id="Point.008" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-137.65 -4.58 110.90" id="Point.009" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-202.78 -12.36 -44.06" id="Point.010" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-201.51 -12.18 -39.00" id="Point.011" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-200.24 -12.46 -49.65" id="Point.012" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-193.75 -12.66 -52.38" id="Point.013" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-196.55 -12.61 -51.70" id="Point.014" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-190.87 -12.72 -54.69" id="Point.015" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-186.26 -12.84 -57.92" id="Point.016" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-182.92 -12.93 -63.51" id="Point.017" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-179.43 -12.99 -63.47" id="Point.018" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-22.47 8.94 -85.10" id="Point.019" distance="5.00" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-21.71 10.32 -88.04" id="Point.020" distance="5.00" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-20.94 11.71 -90.99" id="Point.021" distance="5.00" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="2.83 12.98 -60.45" id="Point.022" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="6.14 8.88 -64.75" id="Point.023" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="10.48 10.53 -61.87" id="Point.024" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="34.12 6.93 -73.24" id="Point.025" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="12.99 18.47 -79.57" id="Point.026" distance="5.00" energy="1.00" color="255 51 0" if="isTrackReverse">
+  </light>
+  <light xyz="27.77 10.62 -76.78" id="Point.027" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="10.05 15.20 -76.09" id="Point.028" distance="5.00" energy="1.00" color="255 51 0" if="isTrackReverse">
+  </light>
+  <light xyz="7.69 12.14 -72.75" id="Point.029" distance="5.00" energy="1.00" color="255 51 0" if="isTrackReverse">
+  </light>
+  <light xyz="-60.53 -12.06 141.80" id="Point.030" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-54.73 -12.05 141.03" id="Point.031" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-56.14 -11.99 140.46" id="Point.032" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-50.00 -12.09 142.86" id="Point.033" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-64.49 -12.15 144.59" id="Point.034" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="65.72 -9.09 60.33" id="Point.035" distance="7.00" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="65.25 -9.34 58.93" id="Point.036" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="64.74 -11.41 91.14" id="Point.037" distance="7.00" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="64.20 -9.38 89.11" id="Point.038" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="64.47 -9.15 92.72" id="Point.039" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="63.59 -8.88 92.12" id="Point.040" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-81.46 -13.16 -122.20" id="Point.041" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-79.22 -14.84 -120.72" id="Point.042" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-57.82 -12.00 -128.98" id="Point.043" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-57.54 -10.29 -131.99" id="Point.044" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="64.98 -9.96 91.21" id="Point.045" distance="10.00" energy="1.00" color="254 49 2">
+  </light>
+  <light xyz="65.49 -9.54 59.38" id="Point.046" distance="10.00" energy="1.00" color="254 49 2">
+  </light>
+  <light xyz="33.17 -7.68 -130.55" id="Point.047" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="32.33 -9.21 -127.99" id="Point.048" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="59.05 -10.97 -96.09" id="Point.049" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="56.01 -11.34 -95.86" id="Point.050" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="48.44 -12.15 114.40" id="Point.051" distance="2.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-10.05 -9.73 -127.26" id="Point.052" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-10.69 -8.59 -130.86" id="Point.053" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-67.46 3.66 -50.58" id="Point.054" distance="10.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="5.08 34.20 31.49" id="Point.055" distance="15.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="15.53 26.73 29.96" id="Point.056" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="13.97 27.68 34.59" id="Point.057" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-73.66 51.83 38.29" id="Point.058" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-76.38 48.73 35.18" id="Point.059" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-72.90 48.84 32.93" id="Point.060" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="33.45 -8.30 116.13" id="Point.061" distance="7.50" energy="1.00" color="254 102 27">
+  </light>
+  <light xyz="-130.73 -20.99 154.60" id="Point.062" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-138.46 -20.99 129.93" id="Point.063" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-175.66 -20.99 77.61" id="Point.064" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-177.21 -20.99 26.95" id="Point.065" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-203.46 -20.99 -8.26" id="Point.066" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-114.32 -20.99 153.90" id="Point.067" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-124.11 -20.99 169.10" id="Point.068" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-213.25 -20.99 6.94" id="Point.069" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-186.99 -20.99 42.15" id="Point.070" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-185.45 -20.99 92.81" id="Point.071" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-167.84 -20.99 142.23" id="Point.072" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-195.32 -20.99 23.38" id="Point.073" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-185.79 -20.99 69.87" id="Point.074" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-179.35 -20.99 121.71" id="Point.075" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-147.89 -20.99 160.14" id="Point.076" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-153.03 -20.99 135.14" id="Point.077" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-169.66 -20.99 116.55" id="Point.078" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-176.67 -20.99 99.01" id="Point.079" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-179.89 -20.99 74.88" id="Point.080" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-180.96 -20.99 49.14" id="Point.081" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-185.07 -20.99 23.93" id="Point.082" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-202.41 -20.99 4.99" id="Point.083" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-184.53 -20.99 10.88" id="Point.084" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-175.78 -20.99 49.85" id="Point.085" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-154.36 -20.73 109.11" id="Point.086" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-140.74 -20.99 150.13" id="Point.087" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-222.52 -20.99 -15.05" id="Point.088" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-233.49 -20.99 -1.45" id="Point.089" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-245.56 -20.99 -15.05" id="Point.090" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-263.77 -20.99 -5.40" id="Point.091" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-270.13 -20.99 -14.62" id="Point.092" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-286.36 -20.99 0.96" id="Point.093" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-289.43 -20.99 -12.86" id="Point.094" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-305.67 -20.99 -11.76" id="Point.095" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="-304.79 -20.99 0.74" id="Point.096" distance="25.00" energy="5.00" color="254 105 41">
+  </light>
+  <light xyz="17.52 30.63 99.19" id="Point.097" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="42.26 28.59 95.39" id="Point.098" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="37.35 23.51 101.88" id="Point.099" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="37.16 29.15 113.98" id="Point.100" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="14.37 -8.27 129.73" id="Point.101" distance="7.50" energy="1.00" color="254 102 27">
+  </light>
+  <light xyz="-5.78 -7.94 135.24" id="Point.102" distance="7.50" energy="1.00" color="254 102 27">
+  </light>
+  <light xyz="-203.90 -10.00 -58.11" id="Point.103" distance="3.00" energy="1.00" color="252 84 23" if="isTrackNotReverse">
+  </light>
+  <light xyz="-210.35 -9.50 -53.95" id="Point.104" distance="3.00" energy="1.00" color="252 84 23" if="isTrackNotReverse">
+  </light>
+  <light xyz="-212.18 -9.51 -39.14" id="Point.105" distance="3.00" energy="1.00" color="252 84 23" if="isTrackReverse">
+  </light>
+  <light xyz="-212.93 -9.05 -46.68" id="Point.106" distance="3.00" energy="1.00" color="252 84 23" if="isTrackReverse">
+  </light>
+  <light xyz="27.53 -7.99 134.87" id="Point.107" distance="7.50" energy="1.00" color="254 102 27">
+  </light>
+  <light xyz="33.94 -7.99 130.32" id="Point.108" distance="7.50" energy="1.00" color="254 102 27">
+  </light>
+  <light xyz="-119.17 49.79 59.57" id="Point.109" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-122.21 50.33 61.35" id="Point.110" distance="2.50" energy="1.00" color="255 51 0">
+  </light>
+  <light xyz="-81.54 52.01 86.90" id="Point.111" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-106.87 54.64 54.31" id="Point.112" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-110.97 51.55 54.84" id="Point.113" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-110.90 51.65 50.70" id="Point.114" distance="5.00" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="-124.71 52.20 15.77" id="Point.115" distance="7.50" energy="1.00" color="254 90 34">
+  </light>
+  <light xyz="24.25 18.50 -71.97" id="Point.116" distance="3.00" energy="1.00" color="252 84 23" if="isTrackNotReverse">
+  </light>
+  <light xyz="26.42 19.37 -64.64" id="Point.117" distance="3.00" energy="1.00" color="252 84 23" if="isTrackNotReverse">
+  </light>
+  <light xyz="23.92 20.12 -69.62" id="Point.118" distance="3.00" energy="1.00" color="252 84 23" if="isTrackReverse">
+  </light>
+  <light xyz="18.85 21.31 -75.13" id="Point.119" distance="3.00" energy="1.00" color="252 84 23" if="isTrackReverse">
+  </light>
+  <lightshaft xyz="172.29 170.81 -220.63" id="Sun" opacity="10.00" color="255 21 0" />
+  <default-start karts-per-row="4" forwards-distance="1.50" sidewards-distance="1.80" upwards-distance="1.10" />
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy" xyz="-121.80 -33.40 -115.33" hpr="0.0 -37.7 0.0" scale="3.00 3.00 3.00">
+  </library>
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy.001" xyz="-196.88 -17.69 -152.36" hpr="0.0 47.7 0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy.002" xyz="-135.20 -16.62 -230.42" hpr="0.0 -8.7 0.0" scale="2.00 2.00 2.00">
+  </library>
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy.003" xyz="-169.80 -25.74 -107.53" hpr="-0.0 125.2 -0.0" scale="1.00 1.00 1.00">
+  </library>
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy.004" xyz="-121.80 -33.47 -144.25" hpr="0.0 -37.7 0.0" scale="1.78 1.78 1.78">
+  </library>
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy.005" xyz="-81.40 -33.47 -169.64" hpr="-0.0 -101.6 -0.0" scale="2.63 2.63 2.63">
+  </library>
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy.006" xyz="-191.29 -25.73 -115.71" hpr="0.0 39.3 0.0" scale="1.50 1.50 1.50">
+  </library>
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy.007" xyz="-198.40 -17.69 -176.88" hpr="0.0 -14.5 0.0" scale="1.50 1.50 1.50">
+  </library>
+  <library name="fluxara_driftlib_mudpot_a" id="fluxara_driftlib_mudpot_a_main_proxy.008" xyz="-118.82 -16.94 -250.92" hpr="0.0 -36.1 0.0" scale="1.50 1.50 1.50">
+  </library>
+<library id="VR_moss-crown_0000" name="fluxara_driftlib_round_bush_green_v2" xyz="-131.15153503 -12.36331787 114.97509766" hpr="0.00000000 -78.24672114 0.00000000" scale="7.502709687456779 1.9862389305394417 7.502709687456779" /><library id="VR_moss-crown_0001" name="fluxara_driftlib_round_bush_green_v2" xyz="-70.66781616 -21.86408081 -143.34126282" hpr="0.00000000 -308.02217129 0.00000000" scale="5.441195648732021 2.5932896906526577 5.441195648732021" /><library id="VR_moss-crown_0002" name="fluxara_driftlib_round_bush_green_v2" xyz="73.55903625 -13.81265869 85.30133820" hpr="0.00000000 -108.64660040 0.00000000" scale="8.064479696636955 1.9364010491067276 8.064479696636955" /><library id="VR_moss-crown_0003" name="fluxara_driftlib_round_bush_green_v2" xyz="-208.80123901 -12.60001221 -55.30964661" hpr="0.00000000 -314.91451296 0.00000000" scale="6.138427181103456 2.509226429079628 6.138427181103456" /><library id="VR_moss-crown_0004" name="fluxara_driftlib_round_bush_green_v2" xyz="-152.27035522 -11.36755981 77.03778839" hpr="0.00000000 -73.01843240 0.00000000" scale="4.5099773191262065 1.8883199439430807 4.5099773191262065" /><library id="VR_moss-crown_0005" name="fluxara_driftlib_round_bush_green_v2" xyz="-43.76616669 61.67264709 73.49276733" hpr="0.00000000 -119.63729189 0.00000000" scale="4.916280024300978 2.0752984209481165 4.916280024300978" /><library id="VR_moss-crown_0006" name="fluxara_driftlib_round_bush_green_v2" xyz="-32.14799500 -9.50818481 -103.85503387" hpr="0.00000000 -95.28761134 0.00000000" scale="4.926419744955539 1.321628996512628 4.926419744955539" /><library id="VR_moss-crown_0007" name="fluxara_driftlib_round_bush_green_v2" xyz="-165.17883301 -16.10657349 -89.12981415" hpr="0.00000000 -303.43879687 0.00000000" scale="8.360999714383489 2.052967994496239 8.360999714383489" /><library id="VR_moss-crown_0008" name="fluxara_driftlib_round_bush_green_v2" xyz="70.57800293 -18.49268188 -3.26600003" hpr="0.00000000 -297.84204715 0.00000000" scale="4.717655893373871 1.9264576753790892 4.717655893373871" /><library id="VR_moss-crown_0009" name="fluxara_driftlib_round_bush_green_v2" xyz="-11.91416931 -12.51898804 169.34225464" hpr="0.00000000 -65.11758008 0.00000000" scale="7.583584291987246 2.1174580122433944 7.583584291987246" /><library id="VR_moss-crown_0010" name="fluxara_driftlib_round_bush_green_v2" xyz="-89.59442139 -10.98535767 129.35591125" hpr="0.00000000 -339.11736812 0.00000000" scale="4.98159027479504 1.8110163423593906 4.98159027479504" /><library id="VR_moss-crown_0011" name="fluxara_driftlib_round_bush_green_v2" xyz="66.57032776 -14.72421875 35.43367767" hpr="0.00000000 -350.48274268 0.00000000" scale="4.541552565864578 1.4708452182640437 4.541552565864578" /><library id="VR_moss-crown_0012" name="fluxara_driftlib_round_bush_green_v2" xyz="66.57008362 -17.03037109 -14.89061069" hpr="0.00000000 -108.69857439 0.00000000" scale="5.3529920707763425 1.7130786078729998 5.3529920707763425" /><library id="VR_moss-crown_0013" name="fluxara_driftlib_round_bush_green_v2" xyz="69.79536438 -17.83133545 -66.94489288" hpr="0.00000000 -125.94922369 0.00000000" scale="4.844197335713022 2.3675295675991297 4.844197335713022" /><library id="VR_moss-crown_0014" name="fluxara_driftlib_round_bush_green_v2" xyz="-104.69040680 56.21735535 21.24770355" hpr="0.00000000 -51.15458481 0.00000000" scale="7.070118515246644 2.2602549743978044 7.070118515246644" /><library id="VR_moss-crown_0015" name="fluxara_driftlib_round_bush_green_v2" xyz="-189.81253052 -12.25281372 -28.43064880" hpr="0.00000000 -136.24290191 0.00000000" scale="6.34297981185233 1.8858182129481 6.34297981185233" /><library id="VR_moss-crown_0016" name="fluxara_driftlib_round_bush_green_v2" xyz="-49.66422272 -13.50424805 150.39735413" hpr="0.00000000 -134.38478793 0.00000000" scale="5.150930484078802 1.7868318012463962 5.150930484078802" /><library id="VR_moss-crown_0017" name="fluxara_driftlib_round_bush_green_v2" xyz="-194.72744751 -14.76636353 -73.31733704" hpr="0.00000000 -213.13491002 0.00000000" scale="7.95992226794722 1.4531995334383174 7.95992226794722" /><library id="VR_moss-crown_0018" name="fluxara_driftlib_round_bush_green_v2" xyz="66.57800293 -16.14154663 5.40999985" hpr="0.00000000 -190.36123095 0.00000000" scale="5.444292456498627 1.8162509883033557 5.444292456498627" /><library id="VR_moss-crown_0019" name="fluxara_driftlib_round_bush_green_v2" xyz="66.57800293 -15.10452881 15.12199974" hpr="0.00000000 -278.49422834 0.00000000" scale="4.735415832333846 1.833513470157457 4.735415832333846" /><library id="VR_moss-crown_0020" name="fluxara_driftlib_round_bush_green_v2" xyz="70.57800293 -16.88645020 25.09799957" hpr="0.00000000 -312.56379864 0.00000000" scale="7.465286690638173 2.45631237251708 7.465286690638173" /><library id="VR_moss-crown_0021" name="fluxara_driftlib_round_bush_green_v2" xyz="76.56449127 -19.04590454 35.09202576" hpr="0.00000000 -350.30842856 0.00000000" scale="7.858978067774748 2.1888215828722597 7.858978067774748" /><library id="VR_moss-crown_0022" name="fluxara_driftlib_round_bush_green_v2" xyz="77.26340485 -16.68369141 46.13452530" hpr="0.00000000 -213.93076849 0.00000000" scale="4.341195398692475 2.0528507908780225 4.341195398692475" /><library id="VR_moss-crown_0023" name="fluxara_driftlib_round_bush_green_v2" xyz="72.84196472 -2.08481445 58.09965515" hpr="0.00000000 -84.60068100 0.00000000" scale="5.222377243232328 1.842651829665169 5.222377243232328" /><library id="VR_moss-crown_0024" name="fluxara_driftlib_round_bush_green_v2" xyz="67.14592743 -12.86755981 71.09473419" hpr="0.00000000 -283.97158046 0.00000000" scale="5.276535231466038 2.3820066947399336 5.276535231466038" /><library id="VR_moss-crown_0025" name="fluxara_driftlib_round_bush_green_v2" xyz="85.41708374 -2.08484497 87.14167786" hpr="0.00000000 -0.47285505 0.00000000" scale="6.900785992154662 1.7212651280923148 6.900785992154662" /><library id="VR_moss-crown_0026" name="fluxara_driftlib_round_bush_green_v2" xyz="75.07724762 -13.52191772 102.53794861" hpr="0.00000000 -265.78012295 0.00000000" scale="8.5717587465962 2.1513567397705247 8.5717587465962" /><library id="VR_moss-crown_0027" name="fluxara_driftlib_round_bush_green_v2" xyz="47.20410538 -12.22357788 141.77947998" hpr="0.00000000 -183.52399577 0.00000000" scale="5.158578620714648 2.20045279668936 5.158578620714648" /><library id="VR_moss-crown_0028" name="fluxara_driftlib_round_bush_green_v2" xyz="29.09644127 -12.84210815 142.40641785" hpr="0.00000000 -190.19460551 0.00000000" scale="5.570618816934316 1.3792470795707148 5.570618816934316" /><library id="VR_moss-crown_0029" name="fluxara_driftlib_round_bush_green_v2" xyz="17.05158806 -2.08481445 152.83132935" hpr="0.00000000 -335.51733122 0.00000000" scale="6.570874759873732 1.760434751243285 6.570874759873732" /><library id="VR_moss-crown_0030" name="fluxara_driftlib_round_bush_green_v2" xyz="1.84089231 -2.08481445 152.83235168" hpr="0.00000000 -153.32007646 0.00000000" scale="6.930805383680882 2.1762677959289283 6.930805383680882" /><library id="VR_moss-crown_0031" name="fluxara_driftlib_round_bush_green_v2" xyz="-11.49358463 -2.08478394 157.34962463" hpr="0.00000000 -86.17149562 0.00000000" scale="4.263392013868583 2.01125533067416 4.263392013868583" /><library id="VR_moss-crown_0032" name="fluxara_driftlib_round_bush_green_v2" xyz="-34.20268250 -13.56018677 150.64352417" hpr="0.00000000 -98.99493085 0.00000000" scale="4.793615843506728 2.3597406057250607 4.793615843506728" /><library id="VR_moss-crown_0033" name="fluxara_driftlib_round_bush_green_v2" xyz="-41.93093872 -13.61948242 150.53588867" hpr="0.00000000 -41.22727939 0.00000000" scale="4.706165252010663 1.9816044817765759 4.706165252010663" /><library id="VR_moss-crown_0034" name="fluxara_driftlib_round_bush_green_v2" xyz="-49.40700531 -15.08569946 160.39404297" hpr="0.00000000 -164.01578305 0.00000000" scale="5.976186250472438 2.515667973857708 5.976186250472438" /><library id="VR_moss-crown_0035" name="fluxara_driftlib_round_bush_green_v2" xyz="-65.46652222 -12.49582520 151.75993347" hpr="0.00000000 -264.21344422 0.00000000" scale="8.256168559951544 2.201892357148281 8.256168559951544" /><library id="VR_moss-crown_0036" name="fluxara_driftlib_round_bush_green_v2" xyz="-77.09233093 -12.49579468 153.07487488" hpr="0.00000000 -202.19305973 0.00000000" scale="8.581610611492314 1.7115464270283123 8.581610611492314" /><library id="VR_moss-crown_0037" name="fluxara_driftlib_round_bush_green_v2" xyz="-88.57637024 -17.24835815 158.38162231" hpr="0.00000000 -238.38524372 0.00000000" scale="4.624686249057133 1.3621077844927207 4.624686249057133" /><library id="VR_moss-crown_0038" name="fluxara_driftlib_round_bush_green_v2" xyz="-101.34410858 -11.38278809 129.00164795" hpr="0.00000000 -344.75867705 0.00000000" scale="5.379581749154537 2.342680824334523 5.379581749154537" /><library id="VR_moss-crown_0039" name="fluxara_driftlib_round_bush_green_v2" xyz="-113.42838287 -11.16687622 125.69148254" hpr="0.00000000 -44.80487759 0.00000000" scale="4.42155779174168 1.4379928977499616 4.42155779174168" /><library id="VR_turn_0040" name="fluxara_driftlib_circuit_turn_right_v2" xyz="-157.49778748 -12.34579468 11.57389259" hpr="0.00000000 -175.84974093 0.00000000" scale="2.9 3 1" /><library id="VR_turn_0041" name="fluxara_driftlib_circuit_turn_left_v2" xyz="22.57856369 13.21478271 -77.41517639" hpr="0.00000000 69.20498751 0.00000000" scale="2.9 3 1" /><library id="VR_turn_0042" name="fluxara_driftlib_circuit_turn_left_v2" xyz="23.22883797 26.33740234 30.34917450" hpr="0.00000000 9.20088906 0.00000000" scale="2.9 3 1" /><library id="VR_turn_0043" name="fluxara_driftlib_circuit_turn_left_v2" xyz="-47.28295898 55.86341858 49.90862274" hpr="0.00000000 -68.43895135 0.00000000" scale="2.9 3 1" /><library id="VR_turn_0044" name="fluxara_driftlib_circuit_turn_left_v2" xyz="-74.51973724 -18.62005615 -103.69311523" hpr="0.00000000 -168.23494753 0.00000000" scale="2.9 3 1" /><library id="VR_coral-barrier_0045" name="fluxara_driftlib_alpine_coral_barrier_v1" xyz="-203.07238770 -12.45781494 -58.59233856" hpr="0.00000000 44.12767182 0.00000000" scale="1 0.35 0.8" /><library id="VR_coral-barrier_0046" name="fluxara_driftlib_alpine_coral_barrier_v1" xyz="-212.30899048 -11.92708374 -34.46417999" hpr="0.00000000 98.02618524 0.00000000" scale="1 0.35 0.8" /><library id="VR_coral-barrier_0047" name="fluxara_driftlib_alpine_coral_barrier_v1" xyz="-210.80381775 -11.94249512 -42.23534393" hpr="0.00000000 82.46541276 0.00000000" scale="1 0.35 0.8" /><library id="VR_coral-barrier_0048" name="fluxara_driftlib_alpine_coral_barrier_v1" xyz="-206.71089172 -12.38283325 -54.35025024" hpr="0.00000000 32.26984819 0.00000000" scale="1 0.35 0.8" /><library id="VR_coral-barrier_0049" name="fluxara_driftlib_alpine_coral_barrier_v1" xyz="-203.07238770 -12.45781494 -58.59233856" hpr="0.00000000 44.12767182 0.00000000" scale="1 0.35 0.8" /><library id="VR_wood-rail_0050" name="fluxara_driftlib_wood_rail_v2" xyz="46.33300018 -12.37576416 5.40999985" hpr="0.00000000 -90.00000000 0.00000000" scale="10 0.8 1" /><library id="VR_wood-rail_0051" name="fluxara_driftlib_wood_rail_v2" xyz="-67.24179077 -12.37579468 131.67843628" hpr="0.00000000 -173.57966647 0.00000000" scale="10 0.8 1" /><library id="VR_wood-rail_0052" name="fluxara_driftlib_wood_rail_v2" xyz="-141.79795837 -12.37579468 111.00872803" hpr="0.00000000 125.43937700 0.00000000" scale="10 0.8 1" /><library id="VR_wood-rail_0053" name="fluxara_driftlib_wood_rail_v2" xyz="-175.85311890 -13.13324097 -61.26923752" hpr="0.00000000 30.31493023 0.00000000" scale="10 0.8 1" /><library id="VR_wood-rail_0054" name="fluxara_driftlib_wood_rail_v2" xyz="-117.10372925 -5.81811646 -69.71836853" hpr="0.00000000 8.62702375 0.00000000" scale="10 0.8 1" /><library id="VR_wood-rail_0055" name="fluxara_driftlib_wood_rail_v2" xyz="50.12495041 -12.37576416 -53.28080368" hpr="0.00000000 -95.98915508 0.00000000" scale="10 0.8 1" /><library id="VR_wood-rail_0056" name="fluxara_driftlib_wood_rail_v2" xyz="46.33300018 -12.37579468 -3.26600003" hpr="0.00000000 -90.00000000 0.00000000" scale="10 0.8 1" /><library id="VR_wood-rail_0057" name="fluxara_driftlib_wood_rail_v2" xyz="46.33300018 -12.37579468 15.12199974" hpr="0.00000000 -90.00000000 0.00000000" scale="10 0.8 1" /><library id="VR_wood-rail_0058" name="fluxara_driftlib_wood_rail_v2" xyz="46.33300018 -12.37579468 25.09799957" hpr="0.00000000 -90.00000000 0.00000000" scale="10 0.8 1" /><library id="VR_wood-rail_0059" name="fluxara_driftlib_wood_rail_v2" xyz="46.33786774 -12.37579468 36.12532806" hpr="0.00000000 -86.35722119 0.00000000" scale="10 0.8 1" /><library id="VR_wood-rail_0060" name="fluxara_driftlib_wood_rail_v2" xyz="13.87582302 -12.37579468 144.62435913" hpr="0.00000000 -164.79244685 0.00000000" scale="10 0.8 1" /><library id="VR_wood-rail_0061" name="fluxara_driftlib_wood_rail_v2" xyz="-32.21952820 -12.37579468 130.49639893" hpr="0.00000000 178.76081670 0.00000000" scale="10 0.8 1" /><object id="VRV8_OriginalTowerCollision_0" type="animation" model="vr_v8_tower_original_collision_0.spm" xyz="0 0 0" hpr="0 0 0" scale="1 1 1" interaction="physicsonly" shape="exact" skeletal-animation="false" /><library name="fluxara_driftlib_volcano_castle_tower_v9" id="VRV8_PooledTower_0" xyz="44.799247742 -12.756408691 56.847366333" hpr="0 0 0" scale="20.239522816 21.183793667 20.239522816" /><object id="VRV8_OriginalTowerCollision_1" type="animation" model="vr_v8_tower_original_collision_1.spm" xyz="0 0 0" hpr="0 0 0" scale="1 1 1" interaction="physicsonly" shape="exact" skeletal-animation="false" /><library name="fluxara_driftlib_volcano_castle_tower_v9" id="VRV8_PooledTower_1" xyz="-19.433433056 56.446537018 55.878173828" hpr="0 0 0" scale="28.452866494 21.721325388 28.452864421" /></scene>

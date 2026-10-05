@@ -1,0 +1,27 @@
+from pathlib import Path
+import sys,copy,json,math,struct,shutil,hashlib,collections,xml.etree.ElementTree as E
+r=Path(__file__).resolve().parent;w=r/'fidelity-v17';old=r/'fidelity-v16/candidate';c=w/'candidate';shutil.copytree(old,c,dirs_exist_ok=True);sys.path.insert(0,str(r.parent/'shared-object-redesign'));from spm_io import parse
+code=(r/'fidelity_v2.py').read_text();ns={'math':math,'struct':struct};exec(code[code.index('def encode_buffer'):code.index('new_vertices, new_indices')],ns)
+d=parse(c/'volcano_track.spm');source=d['buffers'][2];assert len(source['indices'])//3==72;crest=[t for t in range(72)if min(source['vertices'][i]['position'][1]for i in source['indices'][3*t:3*t+3])>=62.17];assert len(crest)==8
+stone=source['material'];green=next(i for i,m in enumerate(d['materials'])if m[0]=='vr_moss_palette.jpg')
+def subset(tris,material):
+ indices=[i for t in sorted(tris)for i in source['indices'][3*t:3*t+3]];vv=sorted(set(indices));mapping={v:i for i,v in enumerate(vv)};return {'vertices':[copy.deepcopy(source['vertices'][v])for v in vv],'indices':[mapping[i]for i in indices],'material':material}
+rock=subset(set(range(72))-set(crest),stone);cap=subset(crest,green);
+for v in cap['vertices']:v['uv']=(.75,.5)
+(c/'volcano_track.spm').write_bytes(ns['replace_buffers'](d,{2:[rock,cap]}));new=parse(c/'volcano_track.spm')
+strip=lambda v:{k:q for k,q in v.items()if not k.endswith('offset')}
+def indexed(b):return collections.Counter(tuple(json.dumps(strip(b['vertices'][j]),sort_keys=True)for j in b['indices'][i:i+3])for i in range(0,len(b['indices']),3))
+cap_original=subset(crest,green);assert indexed(source)==indexed(rock)+indexed(cap_original);assert new['bounds']==d['bounds'];assert d['materials']==new['materials'];assert all(indexed(a)==indexed(b)and a['material']==b['material']for a,b in zip(d['buffers'][:2]+d['buffers'][3:],new['buffers'][:2]+new['buffers'][4:]));assert all((c/q.name).read_bytes()==q.read_bytes()for q in old.iterdir()if q.is_file()and q.name!='volcano_track.spm')
+mt=E.parse(c/'materials.xml').getroot();res=Path('/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources');rockentry=next(q for q in mt if q.get('name')=='fluxara_volcano_stone_shared_v16.jpg');greenentry=next(q for q in mt if q.get('name')=='vr_moss_palette.jpg');assert {k:v for k,v in rockentry.attrib.items()if k!='name'}=={k:v for k,v in greenentry.attrib.items()if k!='name'}=={}
+comp=w/'original-component';comp.mkdir(exist_ok=True)
+def export(bufs,path):
+ positions=[v['position']for b in bufs for v in b['vertices']];bounds=[min(v[k]for v in positions)for k in range(3)]+[max(v[k]for v in positions)for k in range(3)];mats=[d['materials'][stone],d['materials'][green]];bb=copy.deepcopy(bufs)
+ for b in bb:b['material']=0 if b['material']==stone else 1
+ raw=bytearray(b'SP'+bytes([10,d['flags']])+struct.pack('<6f',*bounds)+struct.pack('<H',2))
+ for pair in mats:
+  for name in pair:raw+=bytes([len(name.encode())])+name.encode()
+ raw+=struct.pack('<HH',1,len(bb))
+ for b in bb:raw+=ns['encode_buffer'](b,mats)
+ path.write_bytes(raw)
+export([source],comp/'original_central_support.spm');export([rock,cap],comp/'central_support_green_cap.spm');stonebytes=(res/'textures/fluxara_volcano_stone_shared_v16.jpg').stat().st_size;greenbytes=(c/'vr_moss_palette.jpg').stat().st_size;before=(comp/'original_central_support.spm').stat().st_size+stonebytes;after=(comp/'central_support_green_cap.spm').stat().st_size+stonebytes+greenbytes;assert after<=before*1.2
+base=json.loads((r/'fidelity-v16/preservation-verification.json').read_text());mapbytes=sum(q.stat().st_size for q in c.iterdir()if q.is_file());total=mapbytes+base['newSharedLibraryBytesIncludingRetainedHistoricalVariants']+base['newGlobalTextureBytes'];assert total<base['v1Bytes'];p={'baseCandidate':'V16','sourcePoolObjectId':'volcano-fidelity-v14-central-rock','originalModel':str(old/'volcano_track.spm'),'originalBuffer':2,'candidateModel':str(c/'volcano_track.spm'),'stoneBuffer':2,'greenCrestBuffer':3,'originalCrestTriangleIds':crest,'stoneTriangles':64,'greenCrestTriangles':8,'allIndexedPositionsNormalsColorsExact':True,'allRetainedStoneUVsExact':True,'onlyEightCrestFacesUVSetToExistingPaletteGreenCell':True,'allBoundsOriginsAxesExact':True,'allSceneAndControlsAndOtherModelsImagesByteExact':True,'physicsGeometryAndMaterialSettingsExact':True,'stonePixelsRetainedOnCliffsAndSupport':True,'greenTextureReused':'vr_moss_palette.jpg','newTextureFiles':0,'newMeshFilesInRuntime':0,'originalComponentWithTexturesBytes':before,'adaptedComponentWithTexturesBytes':after,'componentWithTextureChangePercent':(after/before-1)*100,'upper20PercentPassed':True,'candidateMapBytes':mapbytes,'newSharedLibraryBytesIncludingRetainedHistoricalVariants':base['newSharedLibraryBytesIncludingRetainedHistoricalVariants'],'newGlobalTextureBytes':base['newGlobalTextureBytes'],'candidateIncludingNewSharedBytes':total,'v1Bytes':base['v1Bytes'],'savingBytesVsV1':base['v1Bytes']-total,'productionIntegrated':False,'referenceAcceptance':False,'roleCorrection':'Central dome is a rounded cliff support, not an erupting volcano. Its source silhouette retained; only upper eight triangles use existing green terrain material and its original green UV cell (0.75,0.5).'};(w/'green-crest-changes.json').write_text(json.dumps(p,indent=2));print('V17_GREEN_CREST_WITH_UNCHANGED_GEOMETRY_READY',total,p['componentWithTextureChangePercent'],flush=True)

@@ -1,0 +1,65 @@
+{
+  "kind": "Final V15 simulator-only one-lap Time Trial validation, with optimized 160-triangle roof",
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v15/drive-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v15/drive-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-volcano-fidelity-v15-drive-probe",
+    "--mode=1",
+    "--laps=1",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--seed=4"
+  ],
+  "screenshots": [
+    {
+      "seconds": 12,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v15/screenshots/drive-12s.png"
+    },
+    {
+      "seconds": 40,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v15/screenshots/drive-40s.png"
+    },
+    {
+      "seconds": 80,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v15/screenshots/drive-80s.png"
+    },
+    {
+      "seconds": 190,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v15/screenshots/drive-190s.png"
+    }
+  ],
+  "visualInspectionCompleted": true,
+  "naturalFinishObserved": true,
+  "result": "#1",
+  "naturalFinishScreenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v15/screenshots/natural-finish.png",
+  "forceWinsUsed": false,
+  "originalPhysicsAndCourseVerified": true,
+  "recordingStoppedAfterNaturalFinish": true,
+  "productionIntegrated": false,
+  "referenceAcceptance": false,
+  "reverseFullCampaignAndPerformanceNotChecked": true,
+  "candidateMainSPMSha256": "6d729995a2117b4a37805dfdf7252a74e70cfb70fd728fba3e4cdcd1bb1d6974",
+  "inspectedGameplayFiles": [
+    "drive-40s.png",
+    "drive-190s.png",
+    "drive-late-inspection.png",
+    "natural-finish.png"
+  ],
+  "staticOverviewInspected": true,
+  "stonePixelsAndOriginalUVsRetained": true,
+  "newCastlesAndSmokeVisibleInEngine": true,
+  "gateRoofFinalModelTriangles": 160,
+  "gateRoofFinalModelSha256": "9c392bd25468e0cf29b64ef693538663f5ae5705496e2e67c56e67f183f448e4",
+  "visualFinding": "Original stone visible. Shared gray masonry towers and red roofs/canopy load and render, caps clear merlons. Denser plum smoke still needs further atmosphere/silhouette reference work. Broad flat green terrain tops, volcanic side details and reference lighting remain unfinished.",
+  "finalProbeCleanupVerified": true
+}

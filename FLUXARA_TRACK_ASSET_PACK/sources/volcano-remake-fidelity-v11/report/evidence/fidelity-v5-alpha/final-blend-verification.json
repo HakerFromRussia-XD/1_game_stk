@@ -1,0 +1,77 @@
+{
+  "finalBlendOpens": true,
+  "sharedInstancesMatch": 85,
+  "maxTransformError": 1.1920928955078125e-06,
+  "missingTextures": [],
+  "xmlTextsExact": true,
+  "protectedQuads": 180,
+  "meshObjects": 334,
+  "newCloudPrototypes": [
+    {
+      "name": "VRV5A_Cloud_AshCloud",
+      "triangles": 864,
+      "positionsUvsIndicesMatchSpm": true
+    },
+    {
+      "name": "VRV5A_Cloud_AshColumn",
+      "triangles": 768,
+      "positionsUvsIndicesMatchSpm": true
+    },
+    {
+      "name": "VRV5A_Cloud_PyroclasticFlow",
+      "triangles": 512,
+      "positionsUvsIndicesMatchSpm": true
+    },
+    {
+      "name": "VRV5A_Cloud_AshCloud2",
+      "triangles": 36,
+      "positionsUvsIndicesMatchSpm": true
+    },
+    {
+      "name": "VRV5A_Cloud_AshCloudEffect",
+      "triangles": 384,
+      "positionsUvsIndicesMatchSpm": true
+    },
+    {
+      "name": "VRV5A_Cloud_AshColumnEffect",
+      "triangles": 288,
+      "positionsUvsIndicesMatchSpm": true
+    },
+    {
+      "name": "VRV5A_Cloud_EruptionAsh",
+      "triangles": 16,
+      "positionsUvsIndicesMatchSpm": true
+    },
+    {
+      "name": "VRV5A_Cloud_PyroclasticFlowAsh",
+      "triangles": 188,
+      "positionsUvsIndicesMatchSpm": true
+    }
+  ],
+  "threeSmokeEffectsAboveRoad": [
+    {
+      "model": "AshCloud.spm",
+      "restMinimumHeight": 181.3798370361328,
+      "roadClearanceCeiling": 67.8966293334961,
+      "nativeStaticRestPoseMatchesXml": true
+    },
+    {
+      "model": "AshColumn.spm",
+      "restMinimumHeight": 133.1876220703125,
+      "roadClearanceCeiling": 67.8966293334961,
+      "nativeStaticRestPoseMatchesXml": true
+    },
+    {
+      "model": "PyroclasticFlow.spm",
+      "restMinimumHeight": 135.84872436523438,
+      "roadClearanceCeiling": 67.8966293334961,
+      "nativeStaticRestPoseMatchesXml": false,
+      "nativeCurrentCyclicAnimatedPoseMatchesXmlCurves": true,
+      "nativeEvaluatedFrame": 1,
+      "animatedPoseMaxMatrixError": 1.52587890625e-05,
+      "allNativeCurveKeysAndHandlesMatchXml": true,
+      "allAnimatedRotationsConservativeMinimumHeight": 107.55146274763457,
+      "basis": "Bezier control convex hull and bounding sphere; no road overlap for these three effects."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "parent": "fidelity-v2",
+  "allGeometryIndicesNormalsUvsAndBoundsEqualParent": true,
+  "allFilesExceptMainEqualParentBeforeSkyConversion": true,
+  "changes": [
+    {
+      "buffer": 21,
+      "texture": "sunFlare2.png",
+      "vertexColorMultiplier": 0.08,
+      "triangles": 24
+    },
+    {
+      "buffer": 11,
+      "texture": "halo.png",
+      "vertexColorMultiplier": 0.12,
+      "triangles": 30
+    }
+  ],
+  "roadBuffer23Exact": true,
+  "allGameplayXmlExact": true,
+  "productionIntegrated": false,
+  "changedRuntimeFiles": [
+    "volcano_track.spm",
+    "dp_sky_right.jpg",
+    "dp_sky_front.jpg",
+    "dp_sky_bottom.jpg",
+    "dp_sky_back.jpg",
+    "dp_sky_top.jpg",
+    "dp_sky_left.jpg"
+  ],
+  "allGameplayXmlByteExact": true,
+  "newMainSha256": "a8e0be50bf730515b62bbd7fa43ed77e53edc87a097c58a5f5ff68762e9aec16",
+  "parentMainSha256": "700799e79bd1b70823089ffb1913fd89cc68ecb4731148c78cc2928c79aa6df0",
+  "reference": "Figma 378:39",
+  "skyProjection": {
+    "sourceWidth": 1774,
+    "sourceHeight": 887,
+    "resolution": 512,
+    "faces": [
+      {
+        "face": "front",
+        "name": "dp_sky_front.jpg",
+        "bytes": 31051
+      },
+      {
+        "face": "left",
+        "name": "dp_sky_left.jpg",
+        "bytes": 32620
+      },
+      {
+        "face": "back",
+        "name": "dp_sky_back.jpg",
+        "bytes": 26208
+      },
+      {
+        "face": "right",
+        "name": "dp_sky_right.jpg",
+        "bytes": 29305
+      },
+      {
+        "face": "top",
+        "name": "dp_sky_top.jpg",
+        "bytes": 29876
+      },
+      {
+        "face": "bottom",
+        "name": "dp_sky_bottom.jpg",
+        "bytes": 28929
+      }
+    ],
+    "totalBytes": 177989,
+    "sideEdgeSamplingVerified": true,
+    "method": "Bilinear equirectangular projection matching Irrlicht cube UVs; JPG compression may differ at edges."
+  }
+}
