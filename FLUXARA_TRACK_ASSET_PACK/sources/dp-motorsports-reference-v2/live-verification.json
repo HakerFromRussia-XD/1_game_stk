@@ -1,0 +1,456 @@
+{
+  "candidateBytes": 19560839,
+  "fileCount": 103,
+  "locations": {
+    "source": {
+      "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii",
+      "deduplicatedSharedAssets": [],
+      "packagedBytes": 19560839
+    },
+    "built": {
+      "path": "/Users/motoricallc/Downloads/fluxara-drift/build-ios-shared-props-simulator/Debug-iphonesimulator/Fluxara Drift.app/data/tracks/fluxara-user-dp-motorsports-land-ii",
+      "deduplicatedSharedAssets": [
+        "dp_palette.png",
+        "dp_sky_back.jpg",
+        "dp_sky_bottom.jpg",
+        "dp_sky_front.jpg",
+        "dp_sky_left.jpg",
+        "dp_sky_right.jpg",
+        "dp_sky_top.jpg",
+        "kerb.ogg",
+        "sand.ogg"
+      ],
+      "packagedBytes": 19413222
+    },
+    "installed": {
+      "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/0CB3A25A-1776-4BF2-953D-61F927CD6D4C/Fluxara Drift.app/data/tracks/fluxara-user-dp-motorsports-land-ii",
+      "deduplicatedSharedAssets": [
+        "dp_palette.png",
+        "dp_sky_back.jpg",
+        "dp_sky_bottom.jpg",
+        "dp_sky_front.jpg",
+        "dp_sky_left.jpg",
+        "dp_sky_right.jpg",
+        "dp_sky_top.jpg",
+        "kerb.ogg",
+        "sand.ogg"
+      ],
+      "packagedBytes": 19413222
+    }
+  },
+  "approvedFifthUnchanged": true,
+  "hashes": {
+    "metals.jpg": {
+      "bytes": 29362,
+      "sha256": "16b67418a14266ef3b9f5f44fed1a48936f1d88aef4083d6c9135e1080ed99ca"
+    },
+    "wc-001.jpg": {
+      "bytes": 88507,
+      "sha256": "d0b9f228e05614e715ae8be37c909133b1533417f955383d53d8ffaa6325d53e"
+    },
+    "dp_turn_right.png": {
+      "bytes": 2156,
+      "sha256": "99bd7234c86263bf4a116f7d2a87244b8b3a52e4e07d1ef78ed9b0b687d51d03"
+    },
+    "msl2_tent01-01-sigin.jpg": {
+      "bytes": 22021,
+      "sha256": "3f8ba17e5d12faee7ed74df031649d1342ccb6fafa6f455acda27a3621335a6d"
+    },
+    "msl2-wall02.jpg": {
+      "bytes": 143788,
+      "sha256": "371a153c776b3da34b3c2915f3ac7170a9f833bb77ef7185d1938b053ed03c02"
+    },
+    "dp-motorsports-land-ii_track.spm": {
+      "bytes": 6163793,
+      "sha256": "c3a5081af7a4a6b66a3e660d900fce083a60345ef438242f6f13f511d1defb08"
+    },
+    "spanishi-obj002.jpg": {
+      "bytes": 76545,
+      "sha256": "430bd48504ca4d429f7312a3dbbf6350629490ed0ab5a84ffda8ef0abd133630"
+    },
+    "FENCE.png": {
+      "bytes": 120614,
+      "sha256": "39ae8f49b187674ee02a60791f777f153335e6132c26fc241fe6388310a9b630"
+    },
+    "kerb.ogg": {
+      "bytes": 5482,
+      "sha256": "564f01010149993ec5ed112db89479af92409f4c5643d1b4ae0b3682971ffaa6"
+    },
+    "curbs_Albedo_B.jpg": {
+      "bytes": 1748,
+      "sha256": "91ebffac8b951f27bc1ad940152e26350d7bf95e7f5926cf8700451d78e7bfed"
+    },
+    "001.jpg": {
+      "bytes": 158672,
+      "sha256": "33ad3a4a10c32b2855dc4d10a38534774b2a706550500b46256eeb14c78e38f9"
+    },
+    "sa_Sign02-01.jpg": {
+      "bytes": 22021,
+      "sha256": "3f8ba17e5d12faee7ed74df031649d1342ccb6fafa6f455acda27a3621335a6d"
+    },
+    "spanishi-obj001.jpg": {
+      "bytes": 29578,
+      "sha256": "44e9dd322be554d8a59ad60e3bf799c777cd614015b62d7563373388890379d4"
+    },
+    "no.jpg": {
+      "bytes": 14207,
+      "sha256": "16f438e1cec0ef1b517e2fa51f3df7dd7c01688f3a8803842343297af4d1001c"
+    },
+    "msl2-sign002.jpg": {
+      "bytes": 22021,
+      "sha256": "3f8ba17e5d12faee7ed74df031649d1342ccb6fafa6f455acda27a3621335a6d"
+    },
+    "flag_8b.jpg": {
+      "bytes": 48850,
+      "sha256": "9963d2e12072505c9036028caa8a95d50009ec84f981f4549592dd07d9a7c32d"
+    },
+    ".DS_Store": {
+      "bytes": 6148,
+      "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3"
+    },
+    "dp_sky_right.jpg": {
+      "bytes": 29288,
+      "sha256": "6071dc843623e05976a491b7425e97a0e2c6aa01fae8188177e4af43770500c7"
+    },
+    "dp_sky_front.jpg": {
+      "bytes": 31981,
+      "sha256": "c5e1e591101430f594809a67cdffc881b5780f5dc28d5a5659f89b6c8dfa50d9"
+    },
+    "door001.jpg": {
+      "bytes": 35881,
+      "sha256": "9617d8dd5b7196c9480af674098d93ca66e5a24cf5827fb29c2fdb924b7cdf19"
+    },
+    "msl2-grass-roop003.jpg": {
+      "bytes": 15365,
+      "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77"
+    },
+    "flag_7.jpg": {
+      "bytes": 64250,
+      "sha256": "5c3a2f3496baadb4d9d2b4ad0280cbe3153ce7a6c071a923a69ea53ab0399717"
+    },
+    "fromTheEastAlternative.music": {
+      "bytes": 216,
+      "sha256": "0e9e922c40a040776281bb9400e0959e326c0671f1b266fdbb537a95e8a0e0aa"
+    },
+    "sa_wood_Fence01.jpg": {
+      "bytes": 28550,
+      "sha256": "85d0bae84d5133078af9f34c8cb9e026e768a82883a115f31241318157406aba"
+    },
+    "msl2-sign001.jpg": {
+      "bytes": 22021,
+      "sha256": "3f8ba17e5d12faee7ed74df031649d1342ccb6fafa6f455acda27a3621335a6d"
+    },
+    "Landscape.png": {
+      "bytes": 211908,
+      "sha256": "3b0f07c004630e07197d3e2dfeb66d8c0940d072cc9069ab22a2996bd67f67dc"
+    },
+    "kusaiwa.jpg": {
+      "bytes": 15365,
+      "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77"
+    },
+    "sazan_house_Frame.png": {
+      "bytes": 70207,
+      "sha256": "270565cce7301b42dfb418358eb58eb7786e30519ce56a345519cf22b2f1874d"
+    },
+    "BidoniRifiuti004_512.jpg": {
+      "bytes": 89713,
+      "sha256": "1b5a8567a99f90b03374274d313892954206933f4382a75d83591399c3a266a4"
+    },
+    "Props_PITLANE.jpg": {
+      "bytes": 108713,
+      "sha256": "736498778649d6e63f39964c194fbd0996284e051a9cbd292343c23548bbb2a4"
+    },
+    "door002.jpg": {
+      "bytes": 62024,
+      "sha256": "a85a36ef67a259d5291ed1a55470010ea9fe29bd697c12f2388939285666d271"
+    },
+    "msl2-grass003B.jpg": {
+      "bytes": 15365,
+      "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77"
+    },
+    "w-pitob001.jpg": {
+      "bytes": 63093,
+      "sha256": "fdb90cfd0ead152cb73c1d0a88f65c119e1cde5c0d0fe89301c1704a5b1864b4"
+    },
+    "dp_turn_left.png": {
+      "bytes": 2147,
+      "sha256": "98b4520f8b05587edbd9260d62710dd3df9642bb4143708d9f5c2542b3d8006e"
+    },
+    "AC_auto1.jpg": {
+      "bytes": 62605,
+      "sha256": "d67230d87763bfd06bc77db7a48a6fd5ff944b475a338712df2124c81fa86bdb"
+    },
+    "otpt_05.png": {
+      "bytes": 512311,
+      "sha256": "b7f56349aa73a57fb074cb682aa80d7baffe7117e2b156487bd51628249bbc2b"
+    },
+    "03.jpg": {
+      "bytes": 811,
+      "sha256": "074f16721f4499bd0560be687311bf5cb211c4bbe78b3dd646dbe8aba6979a20"
+    },
+    "dp_sky_bottom.jpg": {
+      "bytes": 4038,
+      "sha256": "c4413af18b1dc186db4844d7eceadadc0a8d5e41a5998540793e8731d07fbf86"
+    },
+    "msl2-wood-roop01.png": {
+      "bytes": 317610,
+      "sha256": "4c989fa299e2c80aeffde5085a713d2bc005eb032917fb31eec1ff2f815ab5fd"
+    },
+    "sazan_vending.jpg": {
+      "bytes": 75020,
+      "sha256": "edb9a3e255ef5e7cff3cee380ec92a9fc6d11dfde1d4efd643470ffdd04547fe"
+    },
+    "msl2-grass003A.jpg": {
+      "bytes": 15365,
+      "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77"
+    },
+    "02.jpg": {
+      "bytes": 811,
+      "sha256": "0c303140827952ce0838acfae6c891146b285bb35ac6877251b9c28a19147b80"
+    },
+    "msl2-isu001.jpg": {
+      "bytes": 48404,
+      "sha256": "637d31fae87dc8ce5fd6fa3182ed959aa83f8b12a6274fa68d69ea7bf1a964c8"
+    },
+    "screenshot.jpg": {
+      "bytes": 121918,
+      "sha256": "e81c3d5cbe3df7fc988a1dd05b173ef95b3a67930849c20a134213547055e2ba"
+    },
+    "Tunnel_AC_auto1.jpg": {
+      "bytes": 62605,
+      "sha256": "d67230d87763bfd06bc77db7a48a6fd5ff944b475a338712df2124c81fa86bdb"
+    },
+    "Tire.jpg": {
+      "bytes": 36471,
+      "sha256": "531e179292a5356228a2deb297d7021e1a54e2a677d9e201eb2b57ce8169d9ac"
+    },
+    "msl2-grass002A.jpg": {
+      "bytes": 15365,
+      "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77"
+    },
+    "track.xml": {
+      "bytes": 314,
+      "sha256": "e859b16614f5c5f7d88e997d46871d1f871c2d58b5d401fa5bd8d4fa86b1c075"
+    },
+    "sazan_Garage_01.jpg": {
+      "bytes": 72015,
+      "sha256": "3d963de614d16150563f62d5db00d3cdebe1c37fc7ada4f249e8e40e9ee0bd21"
+    },
+    "msl2-road1_r.jpg": {
+      "bytes": 62605,
+      "sha256": "d67230d87763bfd06bc77db7a48a6fd5ff944b475a338712df2124c81fa86bdb"
+    },
+    "msl-Controltower.jpg": {
+      "bytes": 88482,
+      "sha256": "288eec6aa59626895570638d94fc7bdf8f87894e3fd535c5d2cb80b1f97f86eb"
+    },
+    "msl2-grass002B.jpg": {
+      "bytes": 15365,
+      "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77"
+    },
+    "msl2-tree03.png": {
+      "bytes": 408296,
+      "sha256": "082b5b8aea566f605d34a09622c228953636fd79f7556eab7ed64066aefc9205"
+    },
+    "sa_Sign01-04.jpg": {
+      "bytes": 22021,
+      "sha256": "3f8ba17e5d12faee7ed74df031649d1342ccb6fafa6f455acda27a3621335a6d"
+    },
+    "bbgrass.png": {
+      "bytes": 163061,
+      "sha256": "52cbf3511fca9b3969f82561fa0224edfd8e843afe83061e77c6780109f471ba"
+    },
+    "FENCE2.png": {
+      "bytes": 9190,
+      "sha256": "b443b6e7c91c239cacbefb7dbdff6ba8836a0afd9916de8d7524431d3474a51e"
+    },
+    "obj-Speaker.jpg": {
+      "bytes": 79818,
+      "sha256": "7de23b5b11a45a3ed647220b29136eb6da39b039cd6c8c3f1b621352fd7d54f2"
+    },
+    ".fluxara-extracted": {
+      "bytes": 27,
+      "sha256": "4c3fe21349cff6bae72fa8cc69cf141306a26fde86d966e0445ec90de2608b42"
+    },
+    "Aoitori_road3.jpg": {
+      "bytes": 62605,
+      "sha256": "d67230d87763bfd06bc77db7a48a6fd5ff944b475a338712df2124c81fa86bdb"
+    },
+    "dp_palette.png": {
+      "bytes": 2359,
+      "sha256": "ec1efcdc37f6730f5ea304e62bcd912d454385082e6065ba70c84b43886477cb"
+    },
+    "graph.xml": {
+      "bytes": 310,
+      "sha256": "1840e61fc9d5d53cae9b305a2609d2a39ee53fdeef7e881eaac4a7b047467fe6"
+    },
+    "dp_sky_back.jpg": {
+      "bytes": 26813,
+      "sha256": "b3bf24f27578fd2d72ef0a78efbf280da876ea496a910479a188a823a6b8a02e"
+    },
+    "sa_Sign01-05.jpg": {
+      "bytes": 22021,
+      "sha256": "3f8ba17e5d12faee7ed74df031649d1342ccb6fafa6f455acda27a3621335a6d"
+    },
+    "dp_barrier.jpg": {
+      "bytes": 1748,
+      "sha256": "91ebffac8b951f27bc1ad940152e26350d7bf95e7f5926cf8700451d78e7bfed"
+    },
+    "ac_crew.jpg": {
+      "bytes": 68646,
+      "sha256": "82d5bebd4e2f05932ee31ee913428288e02b27ac2dc7b23e27681bf95f851271"
+    },
+    "dp_awning.png": {
+      "bytes": 655,
+      "sha256": "c740f712b471c6df3a80f34e593312fb880c7515ff546806a1b48849242ba6e2"
+    },
+    "BBGRASS_K.png": {
+      "bytes": 160436,
+      "sha256": "eaaf40e1b0ced8cab591c159a1217402af6eeb8e22f67ee298af88cee742e45c"
+    },
+    "door-rails001.jpg": {
+      "bytes": 1714,
+      "sha256": "6b10becfc4e63240a405be44b0028f4dbdb4cea536d9559e5b68683a5e6833ba"
+    },
+    "sa_Sign01-02.jpg": {
+      "bytes": 22021,
+      "sha256": "3f8ba17e5d12faee7ed74df031649d1342ccb6fafa6f455acda27a3621335a6d"
+    },
+    "Tunnel_ConcreteBare0428_1_S.jpg": {
+      "bytes": 98928,
+      "sha256": "a73dfe596559b881bad8ceb06da71a620f02a5d894ac33feee3a0b55128be214"
+    },
+    "sa_Sign01-03.jpg": {
+      "bytes": 22021,
+      "sha256": "3f8ba17e5d12faee7ed74df031649d1342ccb6fafa6f455acda27a3621335a6d"
+    },
+    "sazan_house2.jpg": {
+      "bytes": 87975,
+      "sha256": "f04ba5b17375494d82f48c9f3882f9d185bccb7abcc5389860b05848459a1f44"
+    },
+    "trees2.png": {
+      "bytes": 573757,
+      "sha256": "e0f687199a3997c3960ae06546e7489788dd957017f337e8a536035d948a1066"
+    },
+    "msl2-fences01.png": {
+      "bytes": 427848,
+      "sha256": "fe8883f60486e2fd074c688c5bb178e7f4619f883173d9f57674de8d3876f886"
+    },
+    "rest001.jpg": {
+      "bytes": 39686,
+      "sha256": "d6b92750704c10ceaf3ab1d6bd1442bc34ea5e92b5dd5029c9ad71114e9d8b78"
+    },
+    "sand.ogg": {
+      "bytes": 7884,
+      "sha256": "01bf7fd50ad9d257e8409fd5cf79ce4fc43fd808a62ee4296c9f6f38b658746c"
+    },
+    "msl2_GuardRail01.jpg": {
+      "bytes": 23161,
+      "sha256": "ae88bfc6031c4bcde19a17a139cb63b25e23d9e7d39463eb3acb120550626e7e"
+    },
+    "Decals001.png": {
+      "bytes": 308218,
+      "sha256": "5e069d35a69c7c76f90678f3093d23cd8a8d04f97b2a6de4b9137c47f1decfad"
+    },
+    "msl2-obj01.jpg": {
+      "bytes": 69973,
+      "sha256": "8e70df45e393747a2856eea7f41cab634c0d0652949a4c642b31acf1bc449ef6"
+    },
+    "materials.xml": {
+      "bytes": 3642,
+      "sha256": "1c74c43f786a06c988ab062ace127edce5457c58e3b3bef37d87721d16473806"
+    },
+    "wrecker.jpg": {
+      "bytes": 206045,
+      "sha256": "c01374ae952a93fcd1391a7403c840966e97b04be21dac346f1ddba1b5d18a65"
+    },
+    "fromTheEastAlternative.ogg": {
+      "bytes": 5804569,
+      "sha256": "aea02374a5b2d771411ecf6195734d3f42edc4d433a7345e2121b660d83a6376"
+    },
+    "sa_Beams01.png": {
+      "bytes": 76128,
+      "sha256": "0e963922d490c36656644090c1b71bed6ca5892af6f8a51c33f396be6d4c66b0"
+    },
+    "sa_metalsteps01.jpg": {
+      "bytes": 25004,
+      "sha256": "50e9d18cb37a6ec4a0c8736aef9a913633780b5784ab3c10be7ecdebc8b44fc7"
+    },
+    "license.txt": {
+      "bytes": 86,
+      "sha256": "7a1427f58eb2452cb3792fdc75cfb7141385de86b2687f31057e6f8908bed06e"
+    },
+    "msl2-grass004.jpg": {
+      "bytes": 15365,
+      "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77"
+    },
+    "Nature001.png": {
+      "bytes": 324578,
+      "sha256": "0f123359eb7e6aeedfa864b0d1b5e9e3383cf23ef51cdad36cc8ee4f6d1b9c8f"
+    },
+    "msl2-obj03.jpg": {
+      "bytes": 14928,
+      "sha256": "cb4a3b1397cae3e980462e936d0541360bb7026f5aefcdc64ee0211380236663"
+    },
+    "dp_sky_top.jpg": {
+      "bytes": 11121,
+      "sha256": "0f9b26417f182c1f58660af4de34b9f298deb951fe336a1828eea2b5c4b8fa42"
+    },
+    "msl2-sand001.jpg": {
+      "bytes": 169104,
+      "sha256": "f54d20bd767ff4ccb403fcb0e6396084c1100246f403122b2728825911412965"
+    },
+    "quads.xml": {
+      "bytes": 76159,
+      "sha256": "d37effdd16eb5d9c8dcb94233a47043290e93c92b034ea7372a2a1d75fe9e8e7"
+    },
+    "msl2-grass001.jpg": {
+      "bytes": 15365,
+      "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77"
+    },
+    "wall_cement001.jpg": {
+      "bytes": 15145,
+      "sha256": "491931cf637fdd00c7eecebd911df8b4a3243bebb0a389365be9f453a4be8c9a"
+    },
+    "dp_sky_left.jpg": {
+      "bytes": 28651,
+      "sha256": "4ef85837797d3dbd721d68e04d07e31e8707c0628ee1490825fef822ed1658a3"
+    },
+    "dp_flower.png": {
+      "bytes": 1337,
+      "sha256": "560ae13d4e1784fb09c7fe50b68e90d89a6e5ecf95c8778d9e3c56f75d2e4a16"
+    },
+    "scene.xml": {
+      "bytes": 345003,
+      "sha256": "3bbfe01ac2c533e1330bd8ae67d85c2d6dee99c99bde3a93d7ba83c50e00e16f"
+    },
+    "Plastic_tank.jpg": {
+      "bytes": 8883,
+      "sha256": "e3adf951c8057be7c517f5dbbac43b240bfeaed3bb841ebf66d8efd52c59a181"
+    },
+    "msl2_linemaker01.png": {
+      "bytes": 277776,
+      "sha256": "8374dee80605373a2e6866a76a46549d741a622010fdbd243df974dd20899587"
+    },
+    "msl2-grass002.jpg": {
+      "bytes": 15365,
+      "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77"
+    },
+    "msl2-grass003.jpg": {
+      "bytes": 15365,
+      "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77"
+    },
+    "dp_gantry.png": {
+      "bytes": 12642,
+      "sha256": "f461283960188f2866d4f501bdb77b65dd15b435ace8b8ce76675a42464ab91e"
+    },
+    "msl2-grass001-to-sand01.jpg": {
+      "bytes": 15365,
+      "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77"
+    },
+    "msl2_tent01-01.jpg": {
+      "bytes": 38306,
+      "sha256": "5a689416cbbef0f0d002cc0f5725be30c6f57e8d1cb61bb58f50f60d1fc0eb59"
+    }
+  }
+}

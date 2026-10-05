@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scene>
+  <track model="ski-dash_track.spm" x="0" y="0" z="0" />
+  <object id="SkiDashWinterScenery" type="static" model="ski-dash_winter_scenery.spm" xyz="0 0 0" hpr="0 0 0" scale="1 1 1" interaction="ghost"><animated-texture name="fluxara_water_flow.png" dy="0.18" /></object>
+  <camera far="1500.0" />
+  <item id="Empty" x="-128.16" y="49.99" z="108.11" />
+  <item id="Empty.001" x="-137.02" y="5.67" z="-38.80" />
+  <item id="Empty.002" x="-142.86" y="5.67" z="6.16" />
+  <item id="Empty.003" x="-81.89" y="6.68" z="-104.98" />
+  <item id="Empty.004" x="20.69" y="6.68" z="-95.06" />
+  <item id="Empty.005" x="-0.36" y="6.68" z="73.81" />
+  <item id="Empty.006" x="50.20" y="6.68" z="81.55" />
+  <item id="Empty.007" x="114.08" y="6.68" z="67.28" />
+  <item id="Empty.008" x="97.62" y="6.68" z="-36.03" />
+  <item id="Empty.009" x="-25.76" y="6.91" z="157.76" />
+  <item id="Empty.010" x="32.30" y="6.91" z="137.20" />
+  <item id="Empty.153" x="-43.80" y="55.97" z="106.41" />
+  <item id="Empty.154" x="-64.37" y="61.16" z="119.20" />
+  <item id="Empty.155" x="-69.09" y="55.97" z="74.55" />
+  <small-nitro id="Empty.156" x="-84.60" y="53.27" z="91.75" />
+  <small-nitro id="Empty.157" x="-87.05" y="53.27" z="90.27" />
+  <small-nitro id="Empty.158" x="-89.67" y="53.27" z="88.83" />
+  <small-nitro id="Empty.159" x="-92.25" y="53.27" z="87.47" />
+  <banana id="Empty.160" x="-130.80" y="54.00" z="94.58" />
+  <banana id="Empty.161" x="-132.99" y="54.00" z="82.74" />
+  <banana id="Empty.162" x="-120.71" y="54.00" z="79.85" />
+  <banana id="Empty.163" x="-69.85" y="40.75" z="13.20" />
+  <item id="Empty.164" x="-65.54" y="41.25" z="14.01" />
+  <item id="Empty.165" x="-85.64" y="41.25" z="-6.16" />
+  <banana id="Empty.166" x="-80.24" y="41.25" z="-6.16" />
+  <item id="Empty.167" x="-60.53" y="41.25" z="-26.27" />
+  <banana id="Empty.168" x="-65.93" y="41.25" z="-26.27" />
+  <small-nitro id="Empty.169" x="-35.07" y="53.27" z="-92.82" h="57.15" />
+  <small-nitro id="Empty.170" x="-34.80" y="53.27" z="-89.92" h="57.15" />
+  <small-nitro id="Empty.171" x="-34.59" y="53.27" z="-86.94" h="57.15" />
+  <small-nitro id="Empty.172" x="-34.50" y="53.27" z="-84.07" h="57.15" />
+  <item id="Empty.173" x="31.83" y="6.46" z="-36.95" />
+  <item id="Empty.174" x="47.00" y="6.46" z="-3.97" />
+  <item id="Empty.175" x="25.61" y="6.46" z="-13.09" />
+  <big-nitro id="Empty.176" x="57.18" y="5.00" z="-26.25" />
+  <default-start karts-per-row="8" forwards-distance="0.56" sidewards-distance="1.50" upwards-distance="1.10" />
+  <start x="-68.52" y="59.68" z="96.15" h="-0.00" />
+  <start x="-63.69" y="59.77" z="97.14" h="-30.93" />
+  <start x="-100.89" y="49.69" z="55.14" h="126.63" />
+  <start x="-95.88" y="49.04" z="59.34" h="151.66" />
+  <start x="-60.94" y="6.29" z="-72.18" h="-25.42" />
+  <start x="29.55" y="5.87" z="-42.60" h="23.53" />
+  <start x="17.49" y="5.87" z="-44.70" h="23.53" />
+  <start x="36.60" y="5.87" z="-51.81" h="23.53" />
+  <start x="49.49" y="5.87" z="1.95" h="-158.99" />
+  <start x="41.23" y="5.87" z="11.51" h="-158.99" />
+  <start x="61.07" y="5.87" z="5.77" h="-158.99" />
+  <start x="-4.47" y="6.64" z="118.32" h="-285.55" />
+  <start x="-32.28" y="6.38" z="146.64" h="-333.62" />
+  <start x="-128.79" y="6.38" z="-7.18" h="-467.34" />
+  <start x="-125.98" y="6.38" z="-38.16" h="-450.78" />
+  <start x="-137.81" y="6.52" z="26.40" h="-457.22" />
+  <object id="SkiDash_ClifftopFir_01_0" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="141.900000 13.168635 -19.800000" hpr="0 0 0" scale="0.43 0.43 0.43" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_01_1" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="147.600000 13.243719 -18.600000" hpr="0 0 0" scale="0.56 0.56 0.56" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_01_2" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="144.700000 13.235316 -14.700000" hpr="0 0 0" scale="0.35 0.35 0.35" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_02_0" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="142.900000 22.782935 108.200000" hpr="0 0 0" scale="0.43 0.43 0.43" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_02_1" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="148.600000 22.877531 109.400000" hpr="0 0 0" scale="0.56 0.56 0.56" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_02_2" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="145.700000 22.808760 113.300000" hpr="0 0 0" scale="0.35 0.35 0.35" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_03_0" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="141.900000 16.339342 152.200000" hpr="0 0 0" scale="0.43 0.43 0.43" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_03_1" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="147.600000 16.417113 153.400000" hpr="0 0 0" scale="0.56 0.56 0.56" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_03_2" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="144.700000 16.412222 157.300000" hpr="0 0 0" scale="0.35 0.35 0.35" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_05_0" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="38.900000 18.544249 -146.800000" hpr="0 0 0" scale="0.43 0.43 0.43" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_05_1" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="44.600000 18.633967 -145.600000" hpr="0 0 0" scale="0.56 0.56 0.56" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_05_2" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="41.700000 18.514456 -141.700000" hpr="0 0 0" scale="0.35 0.35 0.35" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_06_0" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="77.900000 13.183852 -146.800000" hpr="0 0 0" scale="0.43 0.43 0.43" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_06_1" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="83.600000 13.252051 -145.600000" hpr="0 0 0" scale="0.56 0.56 0.56" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_06_2" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="80.700000 13.220297 -141.700000" hpr="0 0 0" scale="0.35 0.35 0.35" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_07_0" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="6.900000 19.604159 179.200000" hpr="0 0 0" scale="0.43 0.43 0.43" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_07_1" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="12.600000 19.684668 180.400000" hpr="0 0 0" scale="0.56 0.56 0.56" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_07_2" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="9.700000 19.592863 184.300000" hpr="0 0 0" scale="0.35 0.35 0.35" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_08_0" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="57.900000 14.261820 179.200000" hpr="0 0 0" scale="0.43 0.43 0.43" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_08_1" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="63.600000 14.345988 180.400000" hpr="0 0 0" scale="0.56 0.56 0.56" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_08_2" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="60.700000 14.258944 184.300000" hpr="0 0 0" scale="0.35 0.35 0.35" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_09_0" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="100.900000 20.627924 180.200000" hpr="0 0 0" scale="0.43 0.43 0.43" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_09_1" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="106.600000 20.709387 181.400000" hpr="0 0 0" scale="0.56 0.56 0.56" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_09_2" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="103.700000 20.671465 185.300000" hpr="0 0 0" scale="0.35 0.35 0.35" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_Upper_v32_00" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-46.000004 33.546450 68.000000" hpr="0 0 0" scale="0.65 0.65 0.65" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_Upper_v32_01" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-39.000004 33.724539 69.000000" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_Upper_v32_02" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-44.000000 32.990977 73.000008" hpr="0 0 0" scale="0.55 0.55 0.55" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_Upper_v32_03" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-27.000000 66.753310 70.000000" hpr="0 0 0" scale="0.65 0.65 0.65" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_Upper_v32_04" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-20.000000 66.908598 71.000000" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_Upper_v32_05" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-25.000000 66.874800 75.000000" hpr="0 0 0" scale="0.55 0.55 0.55" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_Upper_v32_06" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-18.000000 65.558981 77.000000" hpr="0 0 0" scale="0.6 0.6 0.6" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_Upper_v32_07" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-29.000002 65.378531 77.000000" hpr="0 0 0" scale="0.7 0.7 0.7" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_Upper_v32_08" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-52.999996 79.665862 43.000000" hpr="0 0 0" scale="0.65 0.65 0.65" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_Upper_v32_09" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-45.999996 79.826750 44.000000" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_Upper_v32_10" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-51.000000 79.769827 48.000004" hpr="0 0 0" scale="0.55 0.55 0.55" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_Upper_v32_11" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-44.000000 79.079337 50.000000" hpr="0 0 0" scale="0.6 0.6 0.6" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_Upper_v32_12" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-55.000000 79.027838 50.000000" hpr="0 0 0" scale="0.7 0.7 0.7" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_00_00" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-181.000000 22.177397 -122.000000" hpr="0 0 0" scale="0.65 0.65 0.65" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_00_01" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-175.000000 22.226458 -120.000000" hpr="0 0 0" scale="0.85 0.85 0.85" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_00_02" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-179.000000 22.200743 -115.000000" hpr="0 0 0" scale="0.55 0.55 0.55" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_01_00" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-184.000000 29.229292 -80.000000" hpr="0 0 0" scale="0.65 0.65 0.65" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_01_01" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-178.000000 29.272482 -78.000008" hpr="0 0 0" scale="0.85 0.85 0.85" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_01_02" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-182.000000 29.228430 -73.000000" hpr="0 0 0" scale="0.55 0.55 0.55" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_02_00" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-184.000000 25.177412 -36.000000" hpr="0 0 0" scale="0.65 0.65 0.65" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_02_01" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-178.000000 25.226423 -34.000000" hpr="0 0 0" scale="0.85 0.85 0.85" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_02_02" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-182.000000 25.200758 -29.000002" hpr="0 0 0" scale="0.55 0.55 0.55" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_03_00" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-184.000000 33.229309 9.000000" hpr="0 0 0" scale="0.65 0.65 0.65" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_03_01" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-178.000000 33.272514 11.000000" hpr="0 0 0" scale="0.85 0.85 0.85" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_03_02" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-182.000000 33.228432 16.000000" hpr="0 0 0" scale="0.55 0.55 0.55" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_04_00" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-181.000000 41.177433 53.000004" hpr="0 0 0" scale="0.65 0.65 0.65" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_04_01" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-175.000000 41.226479 55.000000" hpr="0 0 0" scale="0.85 0.85 0.85" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_04_02" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-179.000000 41.200745 60.000000" hpr="0 0 0" scale="0.55 0.55 0.55" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_05_00" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-183.000015 51.229294 97.000000" hpr="0 0 0" scale="0.65 0.65 0.65" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_05_01" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-177.000000 51.272499 99.000000" hpr="0 0 0" scale="0.85 0.85 0.85" interaction="ghost" />
+  <object id="SkiDash_ClifftopFir_West_v33_05_02" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-181.000000 51.228451 104.000008" hpr="0 0 0" scale="0.55 0.55 0.55" interaction="ghost" />
+<library name="fluxara_driftlib_old_house_a" id="fluxara_driftlib_old_house_a_main_proxy" xyz="82.95 5.90 36.06" hpr="0.0 -76.1 0.0" scale="2.25 2.25 2.25">
+  </library>
+  <library name="fluxara_driftlib_old_house_a" id="fluxara_driftlib_old_house_a_main_proxy.001" xyz="82.03 5.90 65.73" hpr="-0.0 -96.2 -0.0" scale="2.25 2.25 2.25">
+  </library>
+  <library name="fluxara_driftlib_old_house_a" id="fluxara_driftlib_old_house_a_main_proxy.002" xyz="72.37 5.90 96.78" hpr="-0.0 -116.3 -0.0" scale="2.25 2.25 2.25">
+  </library>
+  <library name="fluxara_driftlib_old_house_a" id="fluxara_driftlib_old_house_a_main_proxy.003" xyz="42.70 5.90 46.18" hpr="0.0 85.9 0.0" scale="2.25 2.25 2.25">
+  </library>
+  <library name="fluxara_driftlib_old_house_a" id="fluxara_driftlib_old_house_a_main_proxy.004" xyz="22.69 5.90 72.63" hpr="0.0 61.2 0.0" scale="2.25 2.25 2.25">
+  </library>
+  <library name="fluxara_driftlib_old_house_a" id="fluxara_driftlib_old_house_a_main_proxy.005" xyz="24.76 5.90 102.76" hpr="0.0 67.5 0.0" scale="2.25 2.25 2.25">
+  </library>
+  <library name="fluxara_driftlib_woodLodge_a" id="fluxara_driftlib_woodLodge_a_main_proxy" xyz="65.58 5.78 -53.19" hpr="-0.0 -157.7 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="fluxara_driftlib_woodLodge_a" id="fluxara_driftlib_woodLodge_a_main_proxy.001" xyz="75.35 5.78 -30.38" hpr="-0.0 -157.7 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="fluxara_driftlib_woodLodge_a" id="fluxara_driftlib_woodLodge_a_main_proxy.002" xyz="83.79 5.78 -9.68" hpr="-0.0 -157.7 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="fluxara_driftlib_woodLodge_a" id="fluxara_driftlib_woodLodge_a_main_proxy.003" xyz="-2.33 5.78 -23.48" hpr="-0.0 23.7 -0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="fluxara_driftlib_woodLodge_a" id="fluxara_driftlib_woodLodge_a_main_proxy.004" xyz="10.13 5.78 7.57" hpr="-0.0 23.7 -0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="fluxara_driftlib_woodLodge_a" id="fluxara_driftlib_woodLodge_a_main_proxy.005" xyz="40.93 5.78 -70.59" hpr="0.0 -66.5 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="fluxara_driftlib_woodLodge_a" id="fluxara_driftlib_woodLodge_a_main_proxy.006" xyz="3.59 5.78 -54.79" hpr="0.0 -66.5 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="fluxara_driftlib_woodLodge_a" id="fluxara_driftlib_woodLodge_a_main_proxy.007" xyz="25.56 5.78 33.86" hpr="-0.0 69.5 -0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="fluxara_driftlib_woodLodge_a" id="fluxara_driftlib_woodLodge_a_main_proxy.008" xyz="47.39 5.78 29.73" hpr="0.0 114.0 0.0" scale="0.90 0.90 0.90">
+  </library>
+  <library name="fluxara_driftlib_woodLodge_a" id="fluxara_driftlib_woodLodge_a_main_proxy.009" xyz="71.88 5.78 16.56" hpr="0.0 114.0 0.0" scale="0.90 0.90 0.90">
+  </library>
+<object id="SkiDash_RelocatedFir_01" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="135.99998474 68.00027649 76.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" /><object id="SkiDash_RelocatedFir_02" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="139.00000000 65.14045898 64.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" /><object id="SkiDash_RelocatedFir_03" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="137.00000000 47.72763626 48.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" /><object id="SkiDash_RelocatedFir_04" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="135.99998474 68.08484070 85.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" /><object id="SkiDash_RelocatedFir_05" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="134.00000000 48.72630493 39.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" /><object id="SkiDash_RelocatedFir_06" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="146.00000000 49.57951157 51.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" /><object id="SkiDash_RelocatedFir_07" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="-48.99999619 77.44373505 34.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" /><object id="SkiDash_RelocatedFir_08" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="126.00000000 50.35622589 117.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" /><object id="SkiDash_RelocatedFir_09" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="135.00000000 52.60217468 117.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" /><object id="SkiDash_RelocatedFir_10" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="123.00000763 52.32782928 126.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" /><object id="SkiDash_RelocatedFir_11" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="107.00000000 32.82901566 167.00001526" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" /><object id="SkiDash_RelocatedFir_12" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="116.00000763 33.54928772 167.00001526" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" /><object id="SkiDash_RelocatedFir_13" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="144.99998474 70.08796112 73.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" /><object id="SkiDash_RelocatedFir_14" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="144.99998474 70.57592957 82.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" /><object id="SkiDash_RelocatedFir_15" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="139.00000000 68.41581146 94.00000763" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" /><object id="SkiDash_RelocatedFir_16" type="static" model="ski-dash-branchless-fir-v12.spm" xyz="134.00000000 46.51047318 30.00000000" hpr="0 0 0" scale="0.8 0.8 0.8" interaction="ghost" /><object id="aurora" type="animation" xyz="-30.88 65.80 -556.61" hpr="0.0 -0.0 0.0" scale="1.07 1.07 1.07" interaction="ghost" model="aurora.spm" skeletal-animation="false">
+    <animated-texture name="aurora.png" dx="0.20000" dy="-0.10000" />
+    <curve channel="LocX" interpolation="linear" extend="cyclic">
+      <p c="1.000 -30.885" />
+      <p c="400.000 -30.885" />
+    </curve>
+    <curve channel="LocZ" interpolation="linear" extend="cyclic">
+      <p c="1.000 -556.609" />
+      <p c="2196.000 730.597" />
+    </curve>
+  </object>
+  <sun fog="true" fog-color="2 3 7" fog-max="0.30000001192092896" fog-start="10.00" fog-end="100.00" xyz="84.27 154.08 -99.81" sun-specular="67 50 141" sun-diffuse="33 50 70" ambient="85 85 85" />
+  <weather particles="snow.xml" />
+  <sky-box texture="winter_sky_6.jpg winter_sky_5.jpg winter_sky_2.jpg winter_sky_4.jpg winter_sky_3.jpg winter_sky_1.jpg" sh-texture="winter_sky_6_top.jpg winter_sky_ibl_bot.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg" />
+  <lightshaft xyz="183.55 162.42 -200.57" id="Sun" opacity="0.40" color="60 130 255" />
+  </scene>

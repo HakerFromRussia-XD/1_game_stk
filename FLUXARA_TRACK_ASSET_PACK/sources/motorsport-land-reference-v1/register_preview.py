@@ -1,0 +1,3 @@
+from pathlib import Path
+import json,hashlib,shutil
+r=Path(__file__).resolve().parent;repo=Path('/Users/motoricallc/Downloads/fluxara-drift');pack=repo/'FLUXARA_TRACK_ASSET_PACK';name='screenshot.jpg';p=pack/'textures/motorsport-land-reference-v1'/name;a=json.loads((r/'asset-registration.json').read_text());a['textures'][name]={'source':str(pack/'sources/motorsport-land-reference-v1/screenshots/preview-start.png'),'packPath':str(p),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()};(r/'asset-registration.json').write_text(json.dumps(a,indent=2));print('PREVIEW_SOURCE_REGISTERED')

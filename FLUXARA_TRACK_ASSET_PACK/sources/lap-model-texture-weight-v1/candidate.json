@@ -1,0 +1,67 @@
+{
+  "stage": "Isolated candidate only; not integrated into project, native final or installed app",
+  "scope": "Technical texture-resolution variant for three low-byte original model families. Same tree/bush geometry, shaders, UV and placements. Higher-resolution donor untouched.",
+  "leafTextureResolution": [
+    72,
+    72
+  ],
+  "leafTextureBytes": 11606,
+  "originalLeafTextureBytes": 106765,
+  "models": [
+    {
+      "role": "tree",
+      "library": "fluxara_driftlib_lc_light_tree_v1",
+      "model": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/texture-weight-fix/new-library/fluxara_driftlib_lc_light_tree_v1/fluxara_driftlib_round_tree_green_v2_main.spm",
+      "geometryVertexRecordsNormalsColorsUVAndIndicesExact": true,
+      "originalModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_round_tree_green_v2/fluxara_driftlib_round_tree_green_v2_main.spm",
+      "originalSha256": "5c9c532d5a5d9bceec0670225e9541b504365863e8d5bd0cb2a795cdec36c528",
+      "currentSha256": "9e895b8fe6b467a3c6d059d11b6406e054225efb71c3b05a51c0709ce0b19788"
+    },
+    {
+      "role": "bush",
+      "library": "fluxara_driftlib_lc_light_bush_v1",
+      "model": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/texture-weight-fix/new-library/fluxara_driftlib_lc_light_bush_v1/fluxara_driftlib_round_bush_green_v2_main.spm",
+      "geometryVertexRecordsNormalsColorsUVAndIndicesExact": true,
+      "originalModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_round_bush_green_v2/fluxara_driftlib_round_bush_green_v2_main.spm",
+      "originalSha256": "671bc4c81bd0182b58c78a5724e1f8d55d01e11e5568dd631bc35714d276c546",
+      "currentSha256": "4fce2e9af22e4810067c93e48b7e5a8f1fdec5806587ac39980e2585328628e1"
+    }
+  ],
+  "wrapperLibraryNamesChangedOnly": {
+    "fluxara_driftlib_lc_green_accacia_a_v1": "fluxara_driftlib_lc_light_tree_v1",
+    "fluxara_driftlib_lc_green_agave_a_v1": "fluxara_driftlib_lc_light_bush_v1",
+    "fluxara_driftlib_lc_green_autumnSmallBush_a_v1": "fluxara_driftlib_lc_light_bush_v1"
+  },
+  "weights": [
+    {
+      "originalObjectFamily": "fluxara_driftlib_accacia_a",
+      "wrapper": "fluxara_driftlib_lc_green_accacia_a_v1",
+      "originalModelPlusTexturesBytes": 27169,
+      "candidateModelBytes": 17026,
+      "candidateUsedTextureBytes": 13965,
+      "candidateModelPlusTexturesBytes": 30991,
+      "changePercent": 14.067503404615556,
+      "within20Percent": true
+    },
+    {
+      "originalObjectFamily": "fluxara_driftlib_agave_a",
+      "wrapper": "fluxara_driftlib_lc_green_agave_a_v1",
+      "originalModelPlusTexturesBytes": 30315,
+      "candidateModelBytes": 5888,
+      "candidateUsedTextureBytes": 11606,
+      "candidateModelPlusTexturesBytes": 17494,
+      "changePercent": -42.29259442520205,
+      "within20Percent": true
+    },
+    {
+      "originalObjectFamily": "fluxara_driftlib_autumnSmallBush_a",
+      "wrapper": "fluxara_driftlib_lc_green_autumnSmallBush_a_v1",
+      "originalModelPlusTexturesBytes": 49746,
+      "candidateModelBytes": 5888,
+      "candidateUsedTextureBytes": 11606,
+      "candidateModelPlusTexturesBytes": 17494,
+      "changePercent": -64.8333534354521,
+      "within20Percent": true
+    }
+  ]
+}

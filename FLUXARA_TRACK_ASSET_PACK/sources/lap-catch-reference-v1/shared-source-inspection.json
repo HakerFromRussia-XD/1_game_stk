@@ -1,0 +1,462 @@
+{
+  "fluxara_driftlib_accacia_a": {
+    "visualBounds": [
+      [
+        -1.8105545043945312,
+        1.8383846282958984
+      ],
+      [
+        -0.35451433062553406,
+        4.800000190734863
+      ],
+      [
+        -2.4000000953674316,
+        2.4000000953674316
+      ]
+    ],
+    "triangles": 64,
+    "physics": [],
+    "instances": 7
+  },
+  "fluxara_driftlib_agave_a": {
+    "visualBounds": [
+      [
+        -1.6250380277633667,
+        1.637721061706543
+      ],
+      [
+        -0.04456314817070961,
+        1.5347586870193481
+      ],
+      [
+        -1.5399580001831055,
+        1.6218706369400024
+      ]
+    ],
+    "triangles": 896,
+    "physics": [],
+    "instances": 11
+  },
+  "fluxara_driftlib_autumnSmallBush_a": {
+    "visualBounds": [
+      [
+        -1.8778927326202393,
+        2.004707098007202
+      ],
+      [
+        -0.5417100787162781,
+        3.865607738494873
+      ],
+      [
+        -1.8123759031295776,
+        2.044276475906372
+      ]
+    ],
+    "triangles": 1120,
+    "physics": [],
+    "instances": 14
+  },
+  "fluxara_driftlib_autumnTree_f": {
+    "visualBounds": [
+      [
+        -10.304893493652344,
+        11.684688568115234
+      ],
+      [
+        -2.299349069595337,
+        14.40979290008545
+      ],
+      [
+        -11.373930931091309,
+        10.504716873168945
+      ]
+    ],
+    "triangles": 1534,
+    "physics": [
+      {
+        "id": "fluxara_driftlib_autumnTree_f_physics",
+        "type": "animation",
+        "xyz": "-0.44 0.00 0.09",
+        "hpr": "0.0 -0.0 0.0",
+        "scale": "1.00 1.00 1.00",
+        "interaction": "physicsonly",
+        "shape": "cylinderY",
+        "model": "fluxara_driftlib_autumnTree_f_physics.spm",
+        "shadow-pass": "false",
+        "skeletal-animation": "false"
+      }
+    ],
+    "instances": 6
+  },
+  "fluxara_driftlib_bench_a": {
+    "visualBounds": [
+      [
+        -2.7248799800872803,
+        2.7411468029022217
+      ],
+      [
+        -0.04677063226699829,
+        1.7591745853424072
+      ],
+      [
+        -0.6780939102172852,
+        0.6822571158409119
+      ]
+    ],
+    "triangles": 736,
+    "physics": [],
+    "instances": 2
+  },
+  "fluxara_driftlib_blueRadioTower_a": {
+    "visualBounds": [
+      [
+        -1.957722544670105,
+        1.9577231407165527
+      ],
+      [
+        -2.1225380897521973,
+        58.23448181152344
+      ],
+      [
+        -2.5532331466674805,
+        9.200399398803711
+      ]
+    ],
+    "triangles": 924,
+    "physics": [],
+    "instances": 1
+  },
+  "fluxara_driftlib_cypress_a": {
+    "visualBounds": [
+      [
+        -2.2949061393737793,
+        1.9921925067901611
+      ],
+      [
+        -1.1547272205352783,
+        11.29323959350586
+      ],
+      [
+        -1.8673417568206787,
+        2.2680835723876953
+      ]
+    ],
+    "triangles": 636,
+    "physics": [],
+    "instances": 24
+  },
+  "fluxara_driftlib_greenRadioTower_a": {
+    "visualBounds": [
+      [
+        -1.9577226638793945,
+        1.9577231407165527
+      ],
+      [
+        -2.1225380897521973,
+        58.23448181152344
+      ],
+      [
+        -2.5532326698303223,
+        4.200399875640869
+      ]
+    ],
+    "triangles": 564,
+    "physics": [],
+    "instances": 1
+  },
+  "fluxara_driftlib_modernHousing_a": {
+    "visualBounds": [
+      [
+        -44.8800163269043,
+        44.88002014160156
+      ],
+      [
+        -1.3404231071472168,
+        322.8952941894531
+      ],
+      [
+        -44.880027770996094,
+        44.88002014160156
+      ]
+    ],
+    "triangles": 312,
+    "physics": [],
+    "instances": 4
+  },
+  "fluxara_driftlib_modernHousing_b": {
+    "visualBounds": [
+      [
+        -44.8800163269043,
+        44.88002014160156
+      ],
+      [
+        -3.6090140342712402,
+        387.1521911621094
+      ],
+      [
+        -44.880027770996094,
+        119.88002014160156
+      ]
+    ],
+    "triangles": 180,
+    "physics": [],
+    "instances": 4
+  },
+  "fluxara_driftlib_oldCar_a": {
+    "visualBounds": [
+      [
+        -2.7557530403137207,
+        2.7557530403137207
+      ],
+      [
+        -0.03343495726585388,
+        4.004166603088379
+      ],
+      [
+        -2.2595717906951904,
+        11.844518661499023
+      ]
+    ],
+    "triangles": 1826,
+    "physics": [],
+    "instances": 1
+  },
+  "fluxara_driftlib_old_house_a": {
+    "visualBounds": [
+      [
+        -3.275477409362793,
+        3.275477409362793
+      ],
+      [
+        -0.258150577545166,
+        6.762951374053955
+      ],
+      [
+        -4.785458564758301,
+        5.932672023773193
+      ]
+    ],
+    "triangles": 762,
+    "physics": [
+      {
+        "id": "fluxara_driftlib_old_house_a_mainPhysics",
+        "type": "animation",
+        "xyz": "0.00 0.00 0.00",
+        "hpr": "0.0 -0.0 0.0",
+        "scale": "1.00 1.00 1.00",
+        "interaction": "physicsonly",
+        "shape": "box",
+        "model": "fluxara_driftlib_old_house_a_physics.spm",
+        "skeletal-animation": "false"
+      },
+      {
+        "id": "fluxara_driftlib_old_House_a_stairsPhysics",
+        "type": "animation",
+        "xyz": "0.00 0.00 4.78",
+        "hpr": "0.0 -0.0 0.0",
+        "scale": "1.00 1.00 1.00",
+        "interaction": "physicsonly",
+        "shape": "box",
+        "model": "fluxara_driftlib_old_house_a_physics_stairs.spm",
+        "skeletal-animation": "false"
+      }
+    ],
+    "instances": 6
+  },
+  "fluxara_driftlib_palmTree_a": {
+    "visualBounds": [
+      [
+        -8.354758262634277,
+        11.610795021057129
+      ],
+      [
+        -1.9776544570922852,
+        29.75946807861328
+      ],
+      [
+        -9.110794067382812,
+        8.085955619812012
+      ]
+    ],
+    "triangles": 843,
+    "physics": [],
+    "instances": 22
+  },
+  "fluxara_driftlib_pinetree_a": {
+    "visualBounds": [
+      [
+        -6.732047080993652,
+        6.951214790344238
+      ],
+      [
+        -1.2622498273849487,
+        14.941482543945312
+      ],
+      [
+        -6.949201583862305,
+        6.569428443908691
+      ]
+    ],
+    "triangles": 2808,
+    "physics": [],
+    "instances": 28
+  },
+  "fluxara_driftlib_pinetree_b": {
+    "visualBounds": [
+      [
+        -2.9986047744750977,
+        2.9986047744750977
+      ],
+      [
+        -0.6191329956054688,
+        11.260337829589844
+      ],
+      [
+        -2.752732753753662,
+        2.752732276916504
+      ]
+    ],
+    "triangles": 500,
+    "physics": [
+      {
+        "id": "fluxara_driftlib_pinetree_b_physics",
+        "type": "animation",
+        "xyz": "0.00 0.89 0.00",
+        "hpr": "0.0 -0.0 0.0",
+        "scale": "1.00 1.00 1.00",
+        "interaction": "physicsonly",
+        "shape": "cylinderY",
+        "model": "fluxara_driftlib_pinetree_b_physics.spm",
+        "shadow-pass": "false",
+        "skeletal-animation": "false"
+      }
+    ],
+    "instances": 9
+  },
+  "fluxara_driftlib_silvianHouse_a": {
+    "visualBounds": [
+      [
+        -23.87868881225586,
+        23.87868881225586
+      ],
+      [
+        -0.8591556549072266,
+        25.08506202697754
+      ],
+      [
+        -11.52145004272461,
+        11.113157272338867
+      ]
+    ],
+    "triangles": 1612,
+    "physics": [],
+    "instances": 2
+  },
+  "fluxara_driftlib_silvianHouse_b": {
+    "visualBounds": [
+      [
+        -13.457133293151855,
+        12.9931001663208
+      ],
+      [
+        -0.8591561317443848,
+        32.01225280761719
+      ],
+      [
+        -11.52145004272461,
+        11.113157272338867
+      ]
+    ],
+    "triangles": 1296,
+    "physics": [],
+    "instances": 2
+  },
+  "fluxara_driftlib_silvianHouse_c": {
+    "visualBounds": [
+      [
+        -13.457133293151855,
+        26.292299270629883
+      ],
+      [
+        -0.8591561317443848,
+        36.424495697021484
+      ],
+      [
+        -11.52145004272461,
+        11.113157272338867
+      ]
+    ],
+    "triangles": 2058,
+    "physics": [],
+    "instances": 2
+  },
+  "fluxara_driftlib_umbrellaBeach_a": {
+    "visualBounds": [
+      [
+        -2.6364049911499023,
+        2.6364049911499023
+      ],
+      [
+        -0.0955510139465332,
+        4.600996017456055
+      ],
+      [
+        -2.6364052295684814,
+        2.6364049911499023
+      ]
+    ],
+    "triangles": 256,
+    "physics": [],
+    "instances": 10
+  },
+  "fluxara_driftlib_woodLodge_a": {
+    "visualBounds": [
+      [
+        -4.694357395172119,
+        4.997678756713867
+      ],
+      [
+        -0.4922645092010498,
+        8.468815803527832
+      ],
+      [
+        -5.980669975280762,
+        5.95073938369751
+      ]
+    ],
+    "triangles": 1432,
+    "physics": [
+      {
+        "id": "Cube",
+        "type": "animation",
+        "xyz": "0.00 0.00 0.00",
+        "hpr": "0.0 -0.0 0.0",
+        "scale": "1.00 1.00 1.00",
+        "interaction": "physicsonly",
+        "shape": "box",
+        "model": "fluxara_driftlib_woodLodge_a_main_limit.spm",
+        "skeletal-animation": "false"
+      }
+    ],
+    "instances": 10
+  },
+  "gfx_fireworkTube_a": {
+    "visualBounds": [
+      [
+        -0.17235423624515533,
+        0.17235417664051056
+      ],
+      [
+        -0.1671667993068695,
+        2.0
+      ],
+      [
+        -0.18122395873069763,
+        0.18122397363185883
+      ]
+    ],
+    "triangles": 160,
+    "physics": [],
+    "instances": 4
+  }
+}

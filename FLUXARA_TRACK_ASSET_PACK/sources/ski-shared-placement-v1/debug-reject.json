@@ -1,0 +1,178 @@
+[
+  {
+    "first": "SkiDash_SnowCliff_01_Rock",
+    "other": "SkiDash_SnowCliff_04_Rock",
+    "n": 4,
+    "positionError": 1.1246181657043053e-06,
+    "normalError": 0.27199334244843776,
+    "uvDifferent": 466,
+    "colorDifferent": 0,
+    "materialsDifferent": 0,
+    "check": {
+      "rejected": "No matching vertex",
+      "position": [
+        -0.36543989181518555,
+        0.05388830602169037,
+        -0.481751024723053
+      ]
+    }
+  },
+  {
+    "first": "SkiDash_SnowCliff_02_Rock",
+    "other": "SkiDash_SnowCliff_05_Rock",
+    "n": 2,
+    "positionError": 8.683682608534582e-07,
+    "normalError": 0.14549089819891936,
+    "uvDifferent": 463,
+    "colorDifferent": 0,
+    "materialsDifferent": 0,
+    "check": {
+      "rejected": "No matching vertex",
+      "position": [
+        -0.3908987045288086,
+        0.01353570818901062,
+        -0.45078277587890625
+      ]
+    }
+  },
+  {
+    "first": "SkiDash_SnowCliff_03_Rock",
+    "other": "SkiDash_SnowCliff_06_Rock",
+    "n": 2,
+    "positionError": 6.447228315664688e-07,
+    "normalError": 0.15453608672250332,
+    "uvDifferent": 449,
+    "colorDifferent": 0,
+    "materialsDifferent": 0,
+    "check": {
+      "rejected": "No matching vertex",
+      "position": [
+        -0.36730289459228516,
+        0.012549251317977905,
+        -0.48479533195495605
+      ]
+    }
+  },
+  {
+    "first": "SkiDash_SnowCliff_01_Cap",
+    "other": "SkiDash_SnowCliff_04_Cap",
+    "n": 4,
+    "positionError": 1.1261965937592322e-06,
+    "normalError": 0.31177757772900383,
+    "uvDifferent": 0,
+    "colorDifferent": 0,
+    "materialsDifferent": 0,
+    "check": {
+      "rejected": "No matching vertex",
+      "position": [
+        0.2794499397277832,
+        1.062000036239624,
+        0.0
+      ]
+    }
+  },
+  {
+    "first": "SkiDash_SnowCliff_02_Cap",
+    "other": "SkiDash_SnowCliff_05_Cap",
+    "n": 2,
+    "positionError": 8.780312441558635e-07,
+    "normalError": 0.2057840953135549,
+    "uvDifferent": 0,
+    "colorDifferent": 0,
+    "materialsDifferent": 0,
+    "check": {
+      "rejected": "No matching vertex",
+      "position": [
+        0.4451727867126465,
+        1.034999966621399,
+        0.058608174324035645
+      ]
+    }
+  },
+  {
+    "first": "SkiDash_SnowCliff_03_Cap",
+    "other": "SkiDash_SnowCliff_06_Cap",
+    "n": 2,
+    "positionError": 6.447228315664688e-07,
+    "normalError": 0.19180133973652905,
+    "uvDifferent": 0,
+    "colorDifferent": 0,
+    "materialsDifferent": 0,
+    "check": {
+      "rejected": "No matching vertex",
+      "position": [
+        0.4246819019317627,
+        1.034999966621399,
+        0.055910587310791016
+      ]
+    }
+  },
+  {
+    "first": "SkiDash_EdgeBunting_01",
+    "other": "SkiDash_EdgeBunting_03",
+    "n": 5,
+    "positionError": 1.535204501124099e-05,
+    "normalError": 0.0033798646977973735,
+    "uvDifferent": 0,
+    "colorDifferent": 0,
+    "materialsDifferent": 0,
+    "check": {
+      "rejected": "Triangle topology differs",
+      "worldError": 1.52587890625e-05
+    }
+  },
+  {
+    "first": "SkiDash_Icicles_SnowCliff_01",
+    "other": "SkiDash_Icicles_SnowCliff_04",
+    "n": 8,
+    "positionError": 1.0202671774095506e-06,
+    "normalError": 0.5151143109840155,
+    "uvDifferent": 1020,
+    "colorDifferent": 0,
+    "materialsDifferent": 0,
+    "check": {
+      "rejected": "No matching vertex",
+      "position": [
+        0.47521066665649414,
+        0.9469999074935913,
+        -0.019745349884033203
+      ]
+    }
+  },
+  {
+    "first": "SkiDash_Icicles_SnowCliff_02",
+    "other": "SkiDash_Icicles_SnowCliff_05",
+    "n": 5,
+    "positionError": 9.610960205463925e-07,
+    "normalError": 0.3757520475956779,
+    "uvDifferent": 974,
+    "colorDifferent": 0,
+    "materialsDifferent": 0,
+    "check": {
+      "rejected": "No matching vertex",
+      "position": [
+        0.5272994041442871,
+        0.9402681589126587,
+        0.0
+      ]
+    }
+  },
+  {
+    "first": "SkiDash_Icicles_SnowCliff_03",
+    "other": "SkiDash_Icicles_SnowCliff_06",
+    "n": 5,
+    "positionError": 5.960464477539062e-07,
+    "normalError": 0.40751190287335887,
+    "uvDifferent": 978,
+    "colorDifferent": 0,
+    "materialsDifferent": 0,
+    "check": {
+      "rejected": "No matching vertex",
+      "position": [
+        0.485065221786499,
+        0.9397256970405579,
+        -0.0197451114654541
+      ]
+    }
+  }
+]

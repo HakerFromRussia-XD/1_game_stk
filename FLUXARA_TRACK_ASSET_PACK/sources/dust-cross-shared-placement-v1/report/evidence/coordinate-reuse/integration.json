@@ -1,0 +1,216 @@
+{
+  "trackId": "fluxara-user-dust-cross-split-combat",
+  "sourceTrack": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dust-cross-split-combat",
+  "installedTrack": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/tracks/fluxara-user-dust-cross-split-combat",
+  "installedApp": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app",
+  "sourceNative": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-dust-cross-final/Dust Cross Split Combat.blend",
+  "native": {
+    "path": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-dust-cross-final/Dust Cross Split Combat.blend",
+    "bytes": 8876103,
+    "sha256": "5296f42fc579d4403f571fa8059455679b5f775d0e295d5011d3eb908ed011e2"
+  },
+  "sourceCopies": 31,
+  "sharedLibrariesCopied": 6,
+  "sharedTextureAliasesCopied": 2,
+  "boundary": {
+    "trackId": "fluxara-user-dust-cross-split-combat",
+    "sourceFenceInnerSegments": 28,
+    "sourceFenceCompleteSegments": 25,
+    "sourceFenceMissingSegments": 3,
+    "closedSegments": [
+      {
+        "segment": 1,
+        "start": [
+          -139.58998107910156,
+          9.021985054016113,
+          -38.28587341308594
+        ],
+        "end": [
+          -140.27267456054688,
+          9.021985054016113,
+          -70.21670532226562
+        ],
+        "outerStart": [
+          -141.8369598388672,
+          16.72918701171875,
+          -39.06072998046875
+        ],
+        "outerEnd": [
+          -142.53076171875,
+          16.72918701171875,
+          -71.51051330566406
+        ],
+        "lengthMeters": 31.93812883237643,
+        "midpoint": [
+          -139.93133544921875,
+          9.021985054016113,
+          -54.25128936767578
+        ],
+        "outwardNormal": [
+          -0.9997714757919312,
+          0.0,
+          0.021375499665737152
+        ],
+        "triangles": 12
+      },
+      {
+        "segment": 17,
+        "start": [
+          105.33168029785156,
+          9.021985054016113,
+          138.09463500976562
+        ],
+        "end": [
+          81.94889831542969,
+          9.021985054016113,
+          149.27398681640625
+        ],
+        "outerStart": [
+          107.06523132324219,
+          16.72918701171875,
+          140.18634033203125
+        ],
+        "outerEnd": [
+          83.30241394042969,
+          16.72918701171875,
+          151.54737854003906
+        ],
+        "lengthMeters": 25.917801254639638,
+        "midpoint": [
+          93.64028930664062,
+          9.021985054016113,
+          143.68431091308594
+        ],
+        "outwardNormal": [
+          0.43133875727653503,
+          0.0,
+          0.9021900296211243
+        ],
+        "triangles": 12
+      },
+      {
+        "segment": 26,
+        "start": [
+          -120.303466796875,
+          9.021985054016113,
+          50.9639892578125
+        ],
+        "end": [
+          -128.79464721679688,
+          9.021985054016113,
+          22.44670867919922
+        ],
+        "outerStart": [
+          -122.23699951171875,
+          16.72918701171875,
+          51.63963317871094
+        ],
+        "outerEnd": [
+          -130.86618041992188,
+          16.72918701171875,
+          22.65887451171875
+        ],
+        "lengthMeters": 29.754586771789672,
+        "midpoint": [
+          -124.54905700683594,
+          9.021985054016113,
+          36.70534896850586
+        ],
+        "outwardNormal": [
+          -0.958416223526001,
+          0.0,
+          0.2853738069534302
+        ],
+        "triangles": 12
+      }
+    ],
+    "completedInnerPerimeterSegments": 28,
+    "closedPerimeterTopologicallyVerified": true,
+    "closedAddedSolidsWatertight": true,
+    "newTriangles": 36,
+    "newModelBytes": 1607,
+    "newTextures": 0,
+    "texture": "metalgrid.png (same existing fence texture)",
+    "physicalSceneInteraction": "static",
+    "physicalShape": "exact",
+    "protectedCourseSpmByteExact": true,
+    "protectedNavmeshByteExact": true,
+    "existingVisualMeshesAndTransformsUnchanged": true,
+    "existingArtUserApproved": true,
+    "runtimeTestPending": false,
+    "allPreviousMeshGeometryExactAfterReopen": 1012,
+    "allPreviousMatricesExactAfterReopen": 1094,
+    "finalBlendSha256": "5296f42fc579d4403f571fa8059455679b5f775d0e295d5011d3eb908ed011e2",
+    "runtimeValidationOwner": "user",
+    "assistantRuntimeCollisionTestCancelledByUser": true,
+    "runtimeCollisionClaimed": false,
+    "mapSpecificNativePackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/Dust Cross Boundary Closures.blend"
+  },
+  "scriptedContactTestsCancelledByUser": true,
+  "productionScriptingAsAdded": false,
+  "newBuildPerformed": false,
+  "installedPackagingGlobalMusicAndTextureLayoutRetained": true,
+  "weight": {
+    "originalBytes": 13639338,
+    "candidateOwnBytes": 9768123,
+    "newSharedGameBytes": 659158,
+    "candidateTotalBytes": 10480186,
+    "savingBytes": 3159152,
+    "existingCoordinateParts": 572,
+    "additionalTrees": 18,
+    "newCoordinateParts": 108,
+    "totalNewPoolPlacements": 680,
+    "uniqueExportedModels": 6,
+    "boundaryNewModelBytes": 1607,
+    "boundaryNewTriangles": 36,
+    "newRasterPixels": false,
+    "previewCampaignThumbnailPending": false,
+    "campaignThumbnailBytesChargedInFull": 52905,
+    "savingPercent": 23.162062557581606,
+    "sourcePreview": {
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/delivery-v1/candidate/screenshot.jpg",
+      "bytes": 124187,
+      "sha256": "bed68d8244f46ef1f4cf8ca87d2b58898d020faba2455bf0d0020704b594d50c"
+    },
+    "campaignPreview": {
+      "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/gui/fluxara/campaign-previews/fluxara-user-dust-cross-split-combat.jpg",
+      "bytes": 52905,
+      "sha256": "2949f3fa5ba03343b5f9fdc32aefc1f86af39cdae2cbdf8769bf3d94d9d205b9"
+    }
+  },
+  "staticScreenshots": {
+    "screenshots": [
+      {
+        "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/delivery-v1/screenshots/closed-boundary/overview.jpg",
+        "kind": "Screenshot from game engine with static camera. No driving or collision checks.",
+        "camera": [
+          0,
+          90,
+          -135
+        ],
+        "target": [
+          0,
+          20,
+          100
+        ]
+      },
+      {
+        "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/delivery-v1/screenshots/closed-boundary/west-wall.jpg",
+        "kind": "Screenshot from game engine with static camera. No driving or collision checks.",
+        "camera": [
+          -78,
+          43,
+          -8
+        ],
+        "target": [
+          -143,
+          20,
+          -8
+        ]
+      }
+    ],
+    "drivingTestPerformed": false,
+    "collisionChecksCancelledByUser": true,
+    "productionTrackUnchangedByCamera": true
+  }
+}

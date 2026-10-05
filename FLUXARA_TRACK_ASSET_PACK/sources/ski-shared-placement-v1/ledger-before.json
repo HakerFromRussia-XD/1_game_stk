@@ -1,0 +1,1744 @@
+{
+  "trackId": "fluxara-user-ski-dash",
+  "biome": "winter",
+  "objects": [
+    {
+      "id": "ski-dash-rockmountain-mesh",
+      "displayName": "Original Ski Dash mountain mesh",
+      "kind": "mesh",
+      "source": "iosApp/FluxaraResources/tracks/fluxara-user-ski-dash/ski-dash_track.spm",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Original Ski Dash SPM geometry kept in place with its existing material assignment.",
+      "evidence": [
+        "SPM material slot rockmountain.png",
+        "SHA-256 0fc2863d121b97242ea4159594fe2ab8266220ce7da86e80bebe3d67f16b8d07"
+      ],
+      "poolId": "ski-dash-rockmountain-mesh"
+    },
+    {
+      "id": "ski-dash-snow-surface-mesh",
+      "displayName": "Original Ski Dash snow mesh",
+      "kind": "mesh",
+      "source": "iosApp/FluxaraResources/tracks/fluxara-user-ski-dash/ski-dash_track.spm",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Original snow mesh and texture assignment preserved without geometry edits.",
+      "evidence": [
+        "SPM material slots snow.png and stk_generic_snow_a.png"
+      ],
+      "poolId": "ski-dash-snow-surface-mesh"
+    },
+    {
+      "id": "ski-dash-snowrock-mesh",
+      "displayName": "Original Ski Dash snow-covered rock mesh",
+      "kind": "mesh",
+      "source": "iosApp/FluxaraResources/tracks/fluxara-user-ski-dash/ski-dash_track.spm",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Original mesh remains at its source transform and keeps its snowrock material.",
+      "evidence": [
+        "SPM material slot snowrock.jpg"
+      ],
+      "poolId": "ski-dash-snowrock-mesh"
+    },
+    {
+      "id": "ski-dash-ice-mesh",
+      "displayName": "Original Ski Dash ice surface mesh",
+      "kind": "mesh",
+      "source": "iosApp/FluxaraResources/tracks/fluxara-user-ski-dash/ski-dash_track.spm",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Ice stays assigned to its original mesh; it was not recoloured or replaced.",
+      "evidence": [
+        "SPM material slot stk_generic_ice_a.png"
+      ],
+      "poolId": "ski-dash-ice-mesh"
+    },
+    {
+      "id": "ski-dash-other-original-spm-meshes",
+      "displayName": "Original Ski Dash water, terrain, transparent and zipper meshes",
+      "kind": "mesh",
+      "source": "iosApp/FluxaraResources/tracks/fluxara-user-ski-dash/ski-dash_track.spm",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "The remaining SPM meshes retain their source transforms, topology counts and material slots.",
+      "evidence": [
+        "SPM slots stk_generic_sand_b.png, transparence.png, waterLC.png, zippercom.png"
+      ],
+      "poolId": "ski-dash-other-original-spm-meshes"
+    },
+    {
+      "id": "ski-dash-pinetree-a",
+      "displayName": "Ski Dash conifer A",
+      "kind": "prop",
+      "source": "build-ios-assets/assets/data/library/fluxara_driftlib_pinetree_a/fluxara_driftlib_pinetree_a_lod_high.spm",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Replaced in the modified Ski Dash package by the shared branchless reference-style fir; donor assets remain in the cross-track pool.",
+      "evidence": [
+        "The 22 original A/B placements are absent from target scene.xml and represented in ski-dash_winter_scenery.spm."
+      ],
+      "poolId": "ski-dash-pinetree-a"
+    },
+    {
+      "id": "ski-dash-pinetree-b",
+      "displayName": "Ski Dash conifer B",
+      "kind": "prop",
+      "source": "build-ios-assets/assets/data/library/fluxara_driftlib_pinetree_b/fluxara_driftlib_pinetree_b_high.spm",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Replaced in the modified Ski Dash package by the shared branchless reference-style fir; donor assets remain in the cross-track pool.",
+      "evidence": [
+        "The 22 original A/B placements are absent from target scene.xml and represented in ski-dash_winter_scenery.spm."
+      ],
+      "poolId": "ski-dash-pinetree-b"
+    },
+    {
+      "id": "ski-dash-wood-lodge",
+      "displayName": "Ski Dash wooden lodge",
+      "kind": "prop",
+      "source": "build-ios-assets/assets/data/library/fluxara_driftlib_woodLodge_a/fluxara_driftlib_woodLodge_a_main.spm",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Instanced at the positions already authored for this map in scene.xml.",
+      "evidence": [
+        "scene.xml library fluxara_driftlib_old_house_a_main_proxy and numbered instances"
+      ],
+      "poolId": "ski-dash-wood-lodge"
+    },
+    {
+      "id": "canyon-bridge-pennants",
+      "displayName": "Fluxara Canyon flag poles and pennants",
+      "kind": "flag",
+      "source": ".codex-downloads/fluxara-addon-catalog/blender-projects/fluxara-canyon-working.blend#FD_FlagPole,FD_BridgeClothFlag",
+      "reuseTier": "adapt",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Copied geometry reused around the course perimeter; copied materials were adapted to the winter palette.",
+      "evidence": [
+        "Blender deliverable SkiDash_Reused_FlagPole_00-06 and SkiDash_Reused_Pennant_00-06"
+      ],
+      "poolId": "canyon-bridge-pennants"
+    },
+    {
+      "id": "ski-dash-snowcap-pine-overlay",
+      "poolId": "ski-dash-snowcap-pine-overlay",
+      "displayName": "Ski Dash low-poly conifer snow-cap overlays",
+      "kind": "prop",
+      "source": "../stk-code-master/ski-dash-winter-snowcap-draft.blend#SkiDash_PineSnowCaps_A_Mesh,SkiDash_PineSnowCaps_B_Mesh",
+      "reuseTier": "adapt",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Superseded in the target scene by integrated snow patches on the branchless reference-style fir mesh.",
+      "evidence": [
+        "Prior overlay geometry is not assigned to current Ski Dash trees."
+      ]
+    },
+    {
+      "id": "ski-dash-winter-scenery-export",
+      "poolId": "ski-dash-winter-scenery-export",
+      "displayName": "Ski Dash winter scenery export",
+      "kind": "static scenery package",
+      "source": "output/fluxara-user-ski-dash-final/ski-dash_winter_scenery.spm",
+      "reuseTier": "adapt",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Exports 283 scenery meshes; original course SPM remains separate and unchanged.",
+      "evidence": [
+        "Single modified map package references this scenery SPM.",
+        "Current SPM SHA-256 15edacf76c3316722a90789695553c13c5413fb84f45d9cbfa0b972c29c3889c (3321573 bytes).",
+        "Runtime capture: output/ski-dash-game-screenshots/branchless-fir-v5-race.png.",
+        "Full match against all four references remains open."
+      ]
+    },
+    {
+      "id": "ski-dash-red-white-concrete-barrier",
+      "poolId": "ski-dash-red-white-concrete-barrier",
+      "displayName": "Ski Dash red-white concrete ice barrier",
+      "kind": "prop",
+      "source": "iosApp/FluxaraResources/tracks/fluxara-user-canyon-42/library/fluxara_driftlib_concreteBarrier_a/fluxara_driftlib_concreteBarrier_a_main.spm",
+      "reuseTier": "adapt",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Reuses Canyon barrier geometry and texture with red-white vertex colors along the original ice perimeter.",
+      "evidence": [
+        "Visible perimeter barrier in simulator race captures.",
+        "Gameplay surface SPM and arena collision geometry remain unchanged."
+      ]
+    },
+    {
+      "id": "ski-dash-branchless-fir-winter-v1",
+      "poolId": "ski-dash-branchless-fir-winter-v1",
+      "displayName": "Ski Dash branchless tiered winter fir",
+      "kind": "prop",
+      "source": "output/ski-dash-winter-retexture-work.blend#Fluxara_StylizedBranchlessFir_Mesh",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Superseded by reference-style v3 after rejecting the regular banded snow silhouette.",
+      "dependencies": [
+        "ski-dash-tree-evergreen-v1",
+        "ski-dash-tree-snowcap-v1",
+        "ski-dash-tree-bark-winter-v1"
+      ],
+      "evidence": [
+        "The target scene now shares Fluxara_BranchlessFir_ReferenceStyle_v3 across 38 foliage placements."
+      ]
+    },
+    {
+      "id": "ski-dash-branchless-fir-reference-v3",
+      "poolId": "ski-dash-branchless-fir-reference-v3",
+      "displayName": "Ski Dash branchless scalloped winter fir",
+      "kind": "prop",
+      "source": "output/ski-dash-winter-retexture-work.blend#Fluxara_BranchlessFir_ReferenceStyle_v3",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "One shared tapered, scalloped foliage mesh with no branch geometry; visible snow deposits are limited to short irregular patches.",
+      "dependencies": [
+        "ski-dash-tree-evergreen-v1",
+        "ski-dash-tree-snowcap-v1",
+        "ski-dash-tree-bark-winter-v1"
+      ],
+      "evidence": [
+        "38 foliage placements in static scenery SPM.",
+        "140 of 2400 mesh triangles use snow material.",
+        "Runtime capture: output/ski-dash-game-screenshots/branchless-fir-v5-race.png."
+      ],
+      "sourceFile": {
+        "path": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-winter-retexture-work.blend",
+        "verified": true,
+        "bytes": 38424888,
+        "sha256": "0b7d34536d4a8e1d6f753207ac641a0094610f06a2ac036e48bf12324d1de9f7"
+      }
+    },
+    {
+      "id": "ski-dash-canyon-mesa-0-rock",
+      "poolId": "ski-dash-canyon-mesa-0-rock",
+      "packSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/SkiDash_SnowCliff_01_Rock",
+      "reuseTier": "adapt",
+      "status": "integrated draft"
+    },
+    {
+      "id": "ski-dash-canyon-mesa-0-cap",
+      "poolId": "ski-dash-canyon-mesa-0-cap",
+      "packSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/SkiDash_SnowCliff_01_Cap",
+      "reuseTier": "authored",
+      "status": "integrated draft"
+    },
+    {
+      "id": "ski-dash-canyon-mesa-1-rock",
+      "poolId": "ski-dash-canyon-mesa-1-rock",
+      "packSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/SkiDash_SnowCliff_02_Rock",
+      "reuseTier": "adapt",
+      "status": "integrated draft"
+    },
+    {
+      "id": "ski-dash-canyon-mesa-1-cap",
+      "poolId": "ski-dash-canyon-mesa-1-cap",
+      "packSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/SkiDash_SnowCliff_02_Cap",
+      "reuseTier": "authored",
+      "status": "integrated draft"
+    },
+    {
+      "id": "ski-dash-canyon-mesa-2-rock",
+      "poolId": "ski-dash-canyon-mesa-2-rock",
+      "packSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/SkiDash_SnowCliff_03_Rock",
+      "reuseTier": "adapt",
+      "status": "integrated draft"
+    },
+    {
+      "id": "ski-dash-canyon-mesa-2-cap",
+      "poolId": "ski-dash-canyon-mesa-2-cap",
+      "packSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/SkiDash_SnowCliff_03_Cap",
+      "reuseTier": "authored",
+      "status": "integrated draft"
+    },
+    {
+      "id": "ski-dash-background-snow-mantle-v1",
+      "kind": "mesh",
+      "sourceMap": "ski-dash",
+      "source": "rockmountain.png__ nonplayable background faces",
+      "reuseTier": "adapt",
+      "categories": [
+        "winter",
+        "background",
+        "snow"
+      ],
+      "packSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/SkiDash_BackgroundSnowMantle",
+      "alternateSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/ski-dash-background-snow-mantle-v1.obj",
+      "adaptation": "Snow overlay above variable altitude 36-60 on faces wholly outside the original course bounds; original mesh unchanged",
+      "dependencies": [
+        "ski_dash_tree_snowcap.png"
+      ],
+      "uses": [
+        {
+          "trackId": "fluxara-user-ski-dash",
+          "status": "integrated draft"
+        }
+      ],
+      "poolId": "ski-dash-background-snow-mantle-v1"
+    },
+    {
+      "id": "ski-dash-cascade-flow-v2-00",
+      "kind": "mesh",
+      "sourceMap": "fluxara-canyon",
+      "reuseTier": "adapt",
+      "packSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/SkiDash_CascadeFlow_v2_00",
+      "alternateSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/ski-dash-cascade-flow-v2.obj",
+      "dependencies": [
+        "fluxara_water_flow.png"
+      ],
+      "adaptation": "Removed 224 coplanar reversed faces per waterfall mesh, recalculated normals, added 0.08 thickness; original donor retained",
+      "uses": [
+        {
+          "trackId": "fluxara-user-ski-dash",
+          "status": "exported draft; game rendering verification pending"
+        }
+      ],
+      "poolId": "ski-dash-cascade-flow-v2-00"
+    },
+    {
+      "id": "ski-dash-cascade-flow-v2-01",
+      "kind": "mesh",
+      "sourceMap": "fluxara-canyon",
+      "reuseTier": "adapt",
+      "packSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/SkiDash_CascadeFlow_v2_01",
+      "alternateSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/ski-dash-cascade-flow-v2.obj",
+      "dependencies": [
+        "fluxara_water_flow.png"
+      ],
+      "adaptation": "Removed 224 coplanar reversed faces per waterfall mesh, recalculated normals, added 0.08 thickness; original donor retained",
+      "uses": [
+        {
+          "trackId": "fluxara-user-ski-dash",
+          "status": "exported draft; game rendering verification pending"
+        }
+      ],
+      "poolId": "ski-dash-cascade-flow-v2-01"
+    },
+    {
+      "id": "ski-dash-cascade-flow-v2-02",
+      "kind": "mesh",
+      "sourceMap": "fluxara-canyon",
+      "reuseTier": "adapt",
+      "packSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/SkiDash_CascadeFlow_v2_02",
+      "alternateSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/ski-dash-cascade-flow-v2.obj",
+      "dependencies": [
+        "fluxara_water_flow.png"
+      ],
+      "adaptation": "Removed 224 coplanar reversed faces per waterfall mesh, recalculated normals, added 0.08 thickness; original donor retained",
+      "uses": [
+        {
+          "trackId": "fluxara-user-ski-dash",
+          "status": "exported draft; game rendering verification pending"
+        }
+      ],
+      "poolId": "ski-dash-cascade-flow-v2-02"
+    },
+    {
+      "id": "ski-dash-cascade-flow-v2-03",
+      "kind": "mesh",
+      "sourceMap": "fluxara-canyon",
+      "reuseTier": "adapt",
+      "packSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/SkiDash_CascadeFlow_v2_03",
+      "alternateSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/ski-dash-cascade-flow-v2.obj",
+      "dependencies": [
+        "fluxara_water_flow.png"
+      ],
+      "adaptation": "Removed 224 coplanar reversed faces per waterfall mesh, recalculated normals, added 0.08 thickness; original donor retained",
+      "uses": [
+        {
+          "trackId": "fluxara-user-ski-dash",
+          "status": "exported draft; game rendering verification pending"
+        }
+      ],
+      "poolId": "ski-dash-cascade-flow-v2-03"
+    },
+    {
+      "id": "ski-dash-cascade-flow-v2-04",
+      "kind": "mesh",
+      "sourceMap": "fluxara-canyon",
+      "reuseTier": "adapt",
+      "packSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/SkiDash_CascadeFlow_v2_04",
+      "alternateSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/ski-dash-cascade-flow-v2.obj",
+      "dependencies": [
+        "fluxara_water_flow.png"
+      ],
+      "adaptation": "Removed 224 coplanar reversed faces per waterfall mesh, recalculated normals, added 0.08 thickness; original donor retained",
+      "uses": [
+        {
+          "trackId": "fluxara-user-ski-dash",
+          "status": "exported draft; game rendering verification pending"
+        }
+      ],
+      "poolId": "ski-dash-cascade-flow-v2-04"
+    },
+    {
+      "id": "ski-dash-cascade-flow-v2-05",
+      "kind": "mesh",
+      "sourceMap": "fluxara-canyon",
+      "reuseTier": "adapt",
+      "packSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/SkiDash_CascadeFlow_v2_05",
+      "alternateSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/ski-dash-cascade-flow-v2.obj",
+      "dependencies": [
+        "fluxara_water_flow.png"
+      ],
+      "adaptation": "Removed 224 coplanar reversed faces per waterfall mesh, recalculated normals, added 0.08 thickness; original donor retained",
+      "uses": [
+        {
+          "trackId": "fluxara-user-ski-dash",
+          "status": "exported draft; game rendering verification pending"
+        }
+      ],
+      "poolId": "ski-dash-cascade-flow-v2-05"
+    },
+    {
+      "id": "ski-dash-branchless-fir-v12",
+      "kind": "mesh",
+      "sourceMap": "fluxara-user-ski-dash",
+      "reuseTier": "authored",
+      "packSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/SkiDash_BranchlessFir_v12",
+      "alternateSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/ski-dash-branchless-fir-v12.obj",
+      "dependencies": [
+        "ski_dash_tree_evergreen.png",
+        "ski_dash_tree_snowcap.png"
+      ],
+      "usedInstances": 38,
+      "adaptation": "Branchless broad scalloped foliage tiers; curved broad snow patches follow tier shoulders; retains short trunk v1",
+      "status": "draft; in-game verification pending",
+      "poolId": "ski-dash-branchless-fir-v12"
+    },
+    {
+      "id": "ski-dash-eastern-arched-bridge-v2",
+      "kind": "object-group",
+      "sourceMap": "fluxara-canyon",
+      "source": "First map Canyon bridge and 20 flags",
+      "reuseTier": "adapt",
+      "categories": [
+        "winter",
+        "trackside"
+      ],
+      "packSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Collection/SkiDash_EasternBridge_v2",
+      "alternateFile": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/ski-dash-eastern-bridge-v2.obj",
+        "bytes": 346628,
+        "sha256": "3d65eb11be065525ad430d06266ba3988fe71ca10ffb0f48b0cdc17c9e416389"
+      },
+      "dependencies": [
+        "fluxara_canyon_atlas.png"
+      ],
+      "adaptation": "67 parts placed between eastern cliffs 04/05 outside driving bounds; warm wood and bright flags from existing palette; coplanar flag faces corrected",
+      "status": "exported draft; runtime comparison pending",
+      "poolId": "ski-dash-eastern-arched-bridge-v2"
+    },
+    {
+      "id": "ski-dash-chevron-board-v1",
+      "kind": "mesh",
+      "sourceMap": "green-hill_1",
+      "source": "Green Hill Sign.spm metal board mesh",
+      "reuseTier": "adapt",
+      "categories": [
+        "winter",
+        "trackside"
+      ],
+      "packSource": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/SkiDash_ChevronBoard_v1",
+      "alternateFile": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/ski-dash-chevron-board-v1.obj",
+        "bytes": 3905,
+        "sha256": "6641267f9583722af561a3fe327b022989807120dd5ca26c06fad1c473077913"
+      },
+      "dependencies": [
+        "fluxara_canyon_atlas.png"
+      ],
+      "adaptation": "Stretched donor metal board, authored geometric chevrons and posts; one shared 69-vertex mesh used by ten barrier-mounted signs; existing palette image",
+      "status": "exported draft; runtime comparison pending",
+      "poolId": "ski-dash-chevron-board-v1"
+    },
+    {
+      "id": "ski-dash-use-shared-timber-cottage-v1",
+      "poolId": "shared-timber-cottage-v1",
+      "reuseTier": "direct",
+      "kind": "placed-library-asset",
+      "evidence": [
+        "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/restoration.json"
+      ]
+    },
+    {
+      "id": "ski-dash-use-shared-snowy-wood-chalet-approved-v1",
+      "poolId": "shared-snowy-wood-chalet-approved-v1",
+      "reuseTier": "direct",
+      "kind": "placed-library-asset",
+      "evidence": [
+        "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/restoration.json"
+      ]
+    },
+    {
+      "id": "ski-dash-use-ski-dash-original-aurora-mesh",
+      "poolId": "ski-dash-original-aurora-mesh",
+      "reuseTier": "direct",
+      "kind": "placed-library-asset",
+      "evidence": [
+        "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/atmosphere-restoration.json"
+      ]
+    },
+    {
+      "id": "ski-dash-use-ski-dash-aurora-soft-edge-v1",
+      "poolId": "ski-dash-aurora-soft-edge-v1",
+      "reuseTier": "adapt",
+      "kind": "animated-atmosphere",
+      "evidence": [
+        "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/aurora-soft-edge-validation.json"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "id": "ski-dash-rockmountain",
+      "displayName": "Ski Dash rockmountain",
+      "kind": "texture",
+      "source": "iosApp/FluxaraResources/tracks/fluxara-user-ski-dash/rockmountain.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Original SPM texture assignment retained.",
+      "evidence": [
+        "SPM mesh rockmountain.png__"
+      ],
+      "poolId": "ski-dash-rockmountain"
+    },
+    {
+      "id": "stk-snow",
+      "displayName": "Shared snow",
+      "kind": "texture",
+      "source": "reference-runtime/extracted/SuperTuxKart.app/Contents/Resources/data/textures/snow.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Original Ski Dash SPM snow material; also used by the lodge snow detail.",
+      "evidence": [
+        "SPM mesh snow.png__",
+        "Ski Dash lodge material"
+      ],
+      "poolId": "stk-snow"
+    },
+    {
+      "id": "stk-snowrock",
+      "displayName": "Shared snow-covered rock",
+      "kind": "texture",
+      "source": "reference-runtime/extracted/SuperTuxKart.app/Contents/Resources/data/textures/snowrock.jpg",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Original SPM material retained.",
+      "evidence": [
+        "SPM mesh snowrock.jpg__"
+      ],
+      "poolId": "stk-snowrock"
+    },
+    {
+      "id": "stk-generic-ice-a",
+      "displayName": "Shared generic ice A",
+      "kind": "texture",
+      "source": "reference-runtime/extracted/SuperTuxKart.app/Contents/Resources/data/textures/stk_generic_ice_a.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Original ice surface assignment retained.",
+      "evidence": [
+        "SPM mesh stk_generic_ice_a.png__"
+      ],
+      "poolId": "stk-generic-ice-a"
+    },
+    {
+      "id": "stk-generic-sand-b",
+      "displayName": "Shared generic sand B source material",
+      "kind": "texture",
+      "source": "reference-runtime/extracted/SuperTuxKart.app/Contents/Resources/data/textures/stk_generic_sand_b.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Kept on its original non-road SPM mesh; not used to replace ice or snow surfaces.",
+      "evidence": [
+        "SPM mesh stk_generic_sand_b.png__"
+      ],
+      "poolId": "stk-generic-sand-b"
+    },
+    {
+      "id": "stk-generic-snow-a",
+      "displayName": "Shared generic snow A",
+      "kind": "texture",
+      "source": "reference-runtime/extracted/SuperTuxKart.app/Contents/Resources/data/textures/stk_generic_snow_a.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Original Ski Dash snow material retained.",
+      "evidence": [
+        "SPM mesh stk_generic_snow_a.png__"
+      ],
+      "poolId": "stk-generic-snow-a"
+    },
+    {
+      "id": "stk-transparence",
+      "displayName": "Shared transparency mask",
+      "kind": "texture",
+      "source": "reference-runtime/extracted/SuperTuxKart.app/Contents/Resources/data/textures/transparence.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Original SPM texture assignment retained.",
+      "evidence": [
+        "SPM mesh transparence.png__"
+      ],
+      "poolId": "stk-transparence"
+    },
+    {
+      "id": "ski-dash-waterlc",
+      "displayName": "Ski Dash water LC",
+      "kind": "texture",
+      "source": "iosApp/FluxaraResources/tracks/fluxara-user-ski-dash/waterLC.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Original SPM water material retained.",
+      "evidence": [
+        "SPM mesh waterLC.png__"
+      ],
+      "poolId": "ski-dash-waterlc"
+    },
+    {
+      "id": "ski-dash-zippercom",
+      "displayName": "Ski Dash zipper decal",
+      "kind": "texture",
+      "source": "iosApp/FluxaraResources/tracks/fluxara-user-ski-dash/zippercom.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Original gameplay object texture retained.",
+      "evidence": [
+        "SPM mesh zippercom.png__"
+      ],
+      "poolId": "ski-dash-zippercom"
+    },
+    {
+      "id": "stk-pine-branch-a",
+      "displayName": "Conifer A branches",
+      "kind": "texture",
+      "source": "reference-runtime/extracted/SuperTuxKart.app/Contents/Resources/data/textures/stk_pineBranch_a.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Alpha-aware branch texture used by the Ski Dash library tree.",
+      "evidence": [
+        "fluxara_driftlib_pinetree_a_lod_high.spm"
+      ],
+      "poolId": "stk-pine-branch-a"
+    },
+    {
+      "id": "stk-tree-bark-a",
+      "displayName": "Conifer A bark",
+      "kind": "texture",
+      "source": "reference-runtime/extracted/SuperTuxKart.app/Contents/Resources/data/textures/stktex_treeBark_a.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Bark texture used by the Ski Dash library tree.",
+      "evidence": [
+        "fluxara_driftlib_pinetree_a_lod_high.spm"
+      ],
+      "poolId": "stk-tree-bark-a"
+    },
+    {
+      "id": "fir-bark",
+      "displayName": "Conifer B bark",
+      "kind": "texture",
+      "source": "build-ios-assets/assets/data/library/fluxara_driftlib_pinetree_b/fir_bark.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Library source bark texture used by Ski Dash scene instances.",
+      "evidence": [
+        "fluxara_driftlib_pinetree_b_high.spm"
+      ],
+      "poolId": "fir-bark"
+    },
+    {
+      "id": "fir-branch",
+      "displayName": "Conifer B branches",
+      "kind": "texture",
+      "source": "build-ios-assets/assets/data/library/fluxara_driftlib_pinetree_b/fir_branch.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Library source cutout branch texture used by Ski Dash scene instances.",
+      "evidence": [
+        "fluxara_driftlib_pinetree_b_high.spm"
+      ],
+      "poolId": "fir-branch"
+    },
+    {
+      "id": "stk-generic-wallrock-a",
+      "displayName": "Shared lodge wall rock",
+      "kind": "texture",
+      "source": "reference-runtime/extracted/SuperTuxKart.app/Contents/Resources/data/textures/stk_generic_wallRock_a.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Existing Ski Dash lodge library material.",
+      "evidence": [
+        "fluxara_driftlib_woodLodge_a_main.spm"
+      ],
+      "poolId": "stk-generic-wallrock-a"
+    },
+    {
+      "id": "stk-asian-paper-lantern",
+      "displayName": "Lodge lantern detail",
+      "kind": "texture",
+      "source": "reference-runtime/extracted/SuperTuxKart.app/Contents/Resources/data/textures/stkflag_asianPaperLantern_a.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Existing Ski Dash lodge library material.",
+      "evidence": [
+        "fluxara_driftlib_woodLodge_a_main.spm"
+      ],
+      "poolId": "stk-asian-paper-lantern"
+    },
+    {
+      "id": "stk-generic-wood-a",
+      "displayName": "Shared generic wood A",
+      "kind": "texture",
+      "source": "reference-runtime/extracted/SuperTuxKart.app/Contents/Resources/data/textures/stktex_generic_WoodA.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Existing Ski Dash lodge library material.",
+      "evidence": [
+        "fluxara_driftlib_woodLodge_a_main.spm"
+      ],
+      "poolId": "stk-generic-wood-a"
+    },
+    {
+      "id": "stk-generic-wood-b",
+      "displayName": "Shared generic wood B",
+      "kind": "texture",
+      "source": "reference-runtime/extracted/SuperTuxKart.app/Contents/Resources/data/textures/stktex_generic_WoodB.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Existing Ski Dash lodge library material.",
+      "evidence": [
+        "fluxara_driftlib_woodLodge_a_main.spm"
+      ],
+      "poolId": "stk-generic-wood-b"
+    },
+    {
+      "id": "stk-generic-concrete-a",
+      "displayName": "Shared generic concrete A",
+      "kind": "texture",
+      "source": "reference-runtime/extracted/SuperTuxKart.app/Contents/Resources/data/textures/stktex_generic_concreteA.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Existing Ski Dash lodge library material.",
+      "evidence": [
+        "fluxara_driftlib_woodLodge_a_main.spm"
+      ],
+      "poolId": "stk-generic-concrete-a"
+    },
+    {
+      "id": "ski-dash-ice-surface-v2",
+      "poolId": "ski-dash-ice-surface-v2",
+      "displayName": "Ski Dash icy road texture",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_ice_v2.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Superseded by the darker v3 tile in the current Blender/game draft; retained in the cross-map pool.",
+      "evidence": [
+        "Earlier version remains available for future maps but is not applied in current track folder."
+      ],
+      "bytes": 2690033,
+      "sha256": "1a857e67dae4e9a563b3fbd9bd48cda474cffe78ebb64c1d19e7cb610e8afadd"
+    },
+    {
+      "id": "ski-dash-snow-surface-v1",
+      "poolId": "ski-dash-snow-surface-v1",
+      "displayName": "Ski Dash powder snow texture",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_snow_v1.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Authored powder-snow image remains assigned to the separate snow.png material; driveable generic-snow slot now uses v2.",
+      "evidence": [
+        "3x3 repeat inspected; package and target iOS copy verified by matching SHA-256.",
+        "Runtime comparison is pending."
+      ],
+      "bytes": 1839513,
+      "sha256": "8dc423ba970951ab5cdbd2c697ef13afb210a0c22588337a68f3af9d9bda97c7"
+    },
+    {
+      "id": "ski-dash-water-surface-v2",
+      "poolId": "ski-dash-water-surface-v2",
+      "displayName": "Ski Dash turquoise water texture",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_water_v2.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Generated texture applied through the existing material slot waterLC.png.",
+      "evidence": [
+        "3x3 repeat inspected; package and target iOS copy verified by matching SHA-256.",
+        "Runtime comparison is pending."
+      ],
+      "bytes": 2312894,
+      "sha256": "a9f2afbd8e931a20f4a8ec88ddc3e915096a076c7f29a16cfcbbe819e6bf8a61"
+    },
+    {
+      "id": "ski-dash-cliff-surface-v1",
+      "poolId": "ski-dash-cliff-surface-v1",
+      "displayName": "Ski Dash faceted cliff texture",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_cliff_v1.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Generated texture applied through the existing material slot rockmountain.png.",
+      "evidence": [
+        "3x3 repeat inspected; package and target iOS copy verified by matching SHA-256.",
+        "Runtime comparison is pending."
+      ],
+      "bytes": 1629549,
+      "sha256": "8ac9d8935aeed216f4e0c6569a463993ff4e02be4b41b6a2187cc0a8b6f5d76e"
+    },
+    {
+      "id": "ski-dash-ice-surface-v3",
+      "poolId": "ski-dash-ice-surface-v3",
+      "displayName": "Ski Dash slate-blue ice road texture",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_ice_v3.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Superseded by the v4 seamless cracked-ice variant; retained in the shared pool as a prior authored version.",
+      "evidence": [
+        "3x3 tile preview inspected before application.",
+        "Blender image node points to the track package alias stk_generic_ice_a.png.",
+        "Package/iOS resource SHA-256 0dd1fb9b0794d9a6a86b6104161416c890ec1ccd520441601d16a67d2b2d7df7."
+      ],
+      "bytes": 3268054,
+      "sha256": "0dd1fb9b0794d9a6a86b6104161416c890ec1ccd520441601d16a67d2b2d7df7"
+    },
+    {
+      "id": "shared-genericskybox-top",
+      "poolId": "shared-genericskybox-top",
+      "displayName": "Shared daytime skybox genericskybox_top.jpg",
+      "kind": "texture",
+      "source": "build-ios-assets/assets/data/textures/skybox/genericskybox_top.jpg",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Reuses the existing common daylight skybox texture, referenced by Ski Dash scene.xml without copying it into the track folder.",
+      "evidence": [
+        "Copied from shared iOS runtime tree; file SHA-256 68c67784ba2453a6adca4b6f42849976c2fdf2bbc07fe9df09e8e803153c5471."
+      ],
+      "bytes": 9337,
+      "sha256": "68c67784ba2453a6adca4b6f42849976c2fdf2bbc07fe9df09e8e803153c5471"
+    },
+    {
+      "id": "shared-genericskybox-bottom",
+      "poolId": "shared-genericskybox-bottom",
+      "displayName": "Shared daytime skybox genericskybox_bottom.jpg",
+      "kind": "texture",
+      "source": "build-ios-assets/assets/data/textures/skybox/genericskybox_bottom.jpg",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Reuses the existing common daylight skybox texture, referenced by Ski Dash scene.xml without copying it into the track folder.",
+      "evidence": [
+        "Copied from shared iOS runtime tree; file SHA-256 f504a45878ebe94484f739eea569fe831929c634effde310e6db0f06961b5223."
+      ],
+      "bytes": 489,
+      "sha256": "f504a45878ebe94484f739eea569fe831929c634effde310e6db0f06961b5223"
+    },
+    {
+      "id": "shared-genericskybox-east",
+      "poolId": "shared-genericskybox-east",
+      "displayName": "Shared daytime skybox genericskybox_east.jpg",
+      "kind": "texture",
+      "source": "build-ios-assets/assets/data/textures/skybox/genericskybox_east.jpg",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Reuses the existing common daylight skybox texture, referenced by Ski Dash scene.xml without copying it into the track folder.",
+      "evidence": [
+        "Copied from shared iOS runtime tree; file SHA-256 83fa8b1203a1e08d7baca13dcbb7561d648d191a5f28d1bb4bc743019189438a."
+      ],
+      "bytes": 7903,
+      "sha256": "83fa8b1203a1e08d7baca13dcbb7561d648d191a5f28d1bb4bc743019189438a"
+    },
+    {
+      "id": "shared-genericskybox-west",
+      "poolId": "shared-genericskybox-west",
+      "displayName": "Shared daytime skybox genericskybox_west.jpg",
+      "kind": "texture",
+      "source": "build-ios-assets/assets/data/textures/skybox/genericskybox_west.jpg",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Reuses the existing common daylight skybox texture, referenced by Ski Dash scene.xml without copying it into the track folder.",
+      "evidence": [
+        "Copied from shared iOS runtime tree; file SHA-256 3cb93a2f74be32f3e5a381053958ad0452503750597255dda8e3f850f1794c54."
+      ],
+      "bytes": 5958,
+      "sha256": "3cb93a2f74be32f3e5a381053958ad0452503750597255dda8e3f850f1794c54"
+    },
+    {
+      "id": "shared-genericskybox-south",
+      "poolId": "shared-genericskybox-south",
+      "displayName": "Shared daytime skybox genericskybox_south.jpg",
+      "kind": "texture",
+      "source": "build-ios-assets/assets/data/textures/skybox/genericskybox_south.jpg",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Reuses the existing common daylight skybox texture, referenced by Ski Dash scene.xml without copying it into the track folder.",
+      "evidence": [
+        "Copied from shared iOS runtime tree; file SHA-256 24b3e397db2d5fb1b49a8148adebcd1a8bb8bad74e535e621ee1562c28137135."
+      ],
+      "bytes": 6990,
+      "sha256": "24b3e397db2d5fb1b49a8148adebcd1a8bb8bad74e535e621ee1562c28137135"
+    },
+    {
+      "id": "shared-genericskybox-north",
+      "poolId": "shared-genericskybox-north",
+      "displayName": "Shared daytime skybox genericskybox_north.jpg",
+      "kind": "texture",
+      "source": "build-ios-assets/assets/data/textures/skybox/genericskybox_north.jpg",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Reuses the existing common daylight skybox texture, referenced by Ski Dash scene.xml without copying it into the track folder.",
+      "evidence": [
+        "Copied from shared iOS runtime tree; file SHA-256 eaee5578a47e9b9a2379ef1d6a7c30b2689193e5e47142daeb9965dac335924b."
+      ],
+      "bytes": 7441,
+      "sha256": "eaee5578a47e9b9a2379ef1d6a7c30b2689193e5e47142daeb9965dac335924b"
+    },
+    {
+      "id": "canyon-concrete-barrier-diffuse",
+      "poolId": "canyon-concrete-barrier-diffuse",
+      "displayName": "Canyon reusable concrete barrier diffuse",
+      "kind": "texture",
+      "source": "iosApp/FluxaraResources/tracks/fluxara-user-canyon-42/library/fluxara_driftlib_concreteBarrier_a/concrete_barrier_diffuse.png",
+      "reuseTier": "direct",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Reuses the Canyon concrete barrier diffuse map without altering its pixels.",
+      "evidence": [
+        "Byte-identical target library copy: 605181 bytes; SHA-256 2bfc8d0e18bae3a11ecc1f4a077f7b604e65af8c2c8127a44d395232ca370f99"
+      ]
+    },
+    {
+      "id": "ski-dash-ice-surface-v4",
+      "poolId": "ski-dash-ice-surface-v4",
+      "displayName": "Ski Dash seamless cracked cyan ice texture v4",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_ice_v4.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Superseded by the finer v5 seamless ice variant; retained in the shared pool as a prior authored version.",
+      "evidence": [
+        "Generated as a seamless repeat and inspected in a 3x3 mosaic before application.",
+        "Output package, iOS resource and simulator app bundle contain matching SHA-256."
+      ],
+      "bytes": 3038704,
+      "sha256": "f09b2d4dadf3fc1a6be386cc806c75716a811385909c644a9d82b71927a16122"
+    },
+    {
+      "id": "ski-dash-ice-surface-v5",
+      "poolId": "ski-dash-ice-surface-v5",
+      "displayName": "Ski Dash fine cracked cyan ice texture v5",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_ice_v5.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Superseded by the darker v6 test variant; retained in the shared pool as a prior authored version.",
+      "evidence": [
+        "Seamless requirements specified in the generation prompt; 3x3 repeat inspected before application.",
+        "Output package, iOS resource and simulator app bundle contain matching SHA-256.",
+        "Runtime screenshot: ../stk-code-master/output/ski-dash-game-screenshots/view-v5-02.png; further visual iteration required."
+      ],
+      "bytes": 2823116,
+      "sha256": "21d0fe45545415d2600272d1844c5beb02a141ad8e628ae7afdab5c283579b1a"
+    },
+    {
+      "id": "ski-dash-ice-surface-v6",
+      "poolId": "ski-dash-ice-surface-v6",
+      "displayName": "Ski Dash dark glacier-blue cracked ice texture v6",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_ice_v6.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Dark seamless glacier-blue ice test variant; original floor geometry and ice identity are unchanged.",
+      "evidence": [
+        "Seamless requirements specified in the generation prompt; 3x3 repeat inspected before application.",
+        "Output package, iOS resource and simulator app bundle contain matching SHA-256.",
+        "Runtime screenshot: ../stk-code-master/output/ski-dash-game-screenshots/view-v6-01.png; visible ground is still nearly white."
+      ],
+      "bytes": 3495563,
+      "sha256": "56503e93d5223f7a3b27ee16440da62b68115a6261de958526b160fcc51b150e"
+    },
+    {
+      "id": "ski-dash-snow-surface-v2",
+      "poolId": "ski-dash-snow-surface-v2",
+      "displayName": "Ski Dash compacted slate-blue snow course texture v2",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_snow_v2.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Dense gray-blue packed snow visual for the SPM's driveable stk_generic_snow_a.png surface; snow physics and course geometry stay original.",
+      "evidence": [
+        "Prompt specified seamless repetition on both axes; a 3x3 mosaic was visually inspected with no visible joins.",
+        "Output package, iOS resource and simulator app bundle contain identical SHA-256.",
+        "Runtime screenshot: ../stk-code-master/output/ski-dash-game-screenshots/view-snow-v2-01.png; material is visibly gray-blue, captured during motion."
+      ],
+      "bytes": 3025813,
+      "sha256": "45d8a7d4484c85bad94e5062bf3242a11e396925efa1e7e2f94e1aaddfbbdc42"
+    },
+    {
+      "id": "ski-dash-snow-surface-v3",
+      "poolId": "ski-dash-snow-surface-v3",
+      "displayName": "Ski Dash cool slate snow surface v3",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_snow_v3.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Compacted cool gray snow; separate from the ice SPM slot.",
+      "evidence": [
+        "Seamless-repeat prompt used and texture visually inspected.",
+        "Runtime screenshot output/ski-dash-game-screenshots/view-snow-v3-01.png shows the loaded SPM surface during motion."
+      ],
+      "bytes": 3070194,
+      "sha256": "8296993121ee52b26cf2f39425da61d428664fe1661ad4c1fdcb0e4d4a568c1a"
+    },
+    {
+      "id": "ski-dash-snow-surface-v4",
+      "poolId": "ski-dash-snow-surface-v4",
+      "displayName": "Ski Dash neutral silver snow surface v4",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_snow_v4.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Neutral packed snow texture, generated for the original snow SPM slot.",
+      "evidence": [
+        "Texture generated as a seamless packed-snow candidate; not selected for the final runtime alias."
+      ],
+      "bytes": 3129490,
+      "sha256": "8dcbdc152bcce3776d2237bc318b46fa5a920bb260d45ecde9acc5243968fb27"
+    },
+    {
+      "id": "ski-dash-snow-surface-v5",
+      "poolId": "ski-dash-snow-surface-v5",
+      "displayName": "Ski Dash neutral granular snow surface v5",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_snow_v5.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Fine, low-directional packed snow; saved as an authoring candidate.",
+      "evidence": [
+        "3x3 mosaic visually inspected; no visible joins.",
+        "Was included in a simulator build, but the captured moving frame did not isolate the snow slot."
+      ],
+      "bytes": 3028960,
+      "sha256": "db51680c4f6e53cfea43040f8353e4b39d95e91a257397aa089be7cda049546f"
+    },
+    {
+      "id": "ski-dash-snow-surface-v6",
+      "poolId": "ski-dash-snow-surface-v6",
+      "displayName": "Ski Dash warm-neutral packed snow surface v6",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_snow_v6.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Uniform packed snow candidate with reduced blue cast.",
+      "evidence": [
+        "Generated as a seamless full-bleed snow candidate; superseded before runtime acceptance."
+      ],
+      "bytes": 2847683,
+      "sha256": "6a15ef67dc841aa4eb9e9e7673960ec00c3d736304c56d726debb41903508d13"
+    },
+    {
+      "id": "ski-dash-snow-surface-v7",
+      "poolId": "ski-dash-snow-surface-v7",
+      "displayName": "Ski Dash dark neutral packed snow surface v7",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_snow_v7.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Superseded by v10; retained in the pool as legacy art.",
+      "evidence": [
+        "3x3 repeat mosaic visually inspected with no visible joins.",
+        "Package, iOS resource and simulator app bundle have identical SHA-256 974da5ddd86b828371841f167abea831e06fdb9439f35984f8c92a76642591bf.",
+        "Current game capture is output/ski-dash-game-screenshots/view-snow-v7-01.png; camera may already be on the separate ice surface.",
+        "Superseded by authored v10. The final map package and Simulator alias use v10; runtime screenshot comparison remains open."
+      ],
+      "bytes": 2600010,
+      "sha256": "974da5ddd86b828371841f167abea831e06fdb9439f35984f8c92a76642591bf"
+    },
+    {
+      "id": "ski-dash-ice-surface-v7",
+      "poolId": "ski-dash-ice-surface-v7",
+      "displayName": "Ski Dash pale cyan cracked rink ice v7",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_ice_v7.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Superseded by v11; retained in the pool as legacy art.",
+      "evidence": [
+        "3x3 repeat mosaic visually inspected.",
+        "Package, iOS resource and simulator app bundle have identical SHA-256 d068ba15d1975fe12c0a82e17860e8a9925e777295803ef190126ce04c556869.",
+        "Simulator screenshots are in output/ski-dash-game-screenshots/view-ice-v7-*.png; most captures were splash/results screens, so in-race visual confirmation still needs a clean capture.",
+        "Superseded by authored v11. The final map package and Simulator alias use v11; runtime screenshot comparison remains open."
+      ],
+      "bytes": 2188076,
+      "sha256": "d068ba15d1975fe12c0a82e17860e8a9925e777295803ef190126ce04c556869"
+    },
+    {
+      "id": "ski-dash-pine-branch-winter-v1",
+      "poolId": "ski-dash-pine-branch-winter-v1",
+      "displayName": "Ski Dash snow-dusted pine branch atlas v1",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/stk_pineBranch_winter_v1.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Superseded by v2 for the remaining original library pines; never assigned to the new branchless tree meshes.",
+      "evidence": [
+        "Preserved 256x512 source atlas dimensions and transparency.",
+        "Output package and iOS resource SHA-256 f540c822830a3fb01f33d1f1a23761166f73cef3358188f481b6cb25359385f8."
+      ],
+      "bytes": 210770,
+      "sha256": "f540c822830a3fb01f33d1f1a23761166f73cef3358188f481b6cb25359385f8"
+    },
+    {
+      "id": "ski-dash-tree-bark-winter-v1",
+      "poolId": "ski-dash-tree-bark-winter-v1",
+      "displayName": "Ski Dash snow-patched pine bark v1",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/stktex_treeBark_winter_v1.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Seamless winter pine bark texture with snow tucked into vertical bark ridges.",
+      "evidence": [
+        "Generated as tileable bark; full runtime review pending.",
+        "Output package and iOS resource SHA-256 39f25fc1f2cfb39d45fc77a5517630dc29c42569317764d8c5dbacf669611dab."
+      ],
+      "bytes": 2108218,
+      "sha256": "39f25fc1f2cfb39d45fc77a5517630dc29c42569317764d8c5dbacf669611dab"
+    },
+    {
+      "id": "ski-dash-alpine-timber-winter-v1",
+      "poolId": "ski-dash-alpine-timber-winter-v1",
+      "displayName": "Ski Dash weathered alpine timber atlas v1",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/stktex_generic_WoodA_winter_v1.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Re-authored the source plank atlas as pale weathered winter timber while retaining the atlas panel layout.",
+      "evidence": [
+        "Preserved square atlas layout and UV panel seams.",
+        "Output package and iOS resource SHA-256 873a62bccc23f607851470f834a0118bd2cf5c298cf8a7a1fe2ba908fd5d938d."
+      ],
+      "bytes": 1919507,
+      "sha256": "873a62bccc23f607851470f834a0118bd2cf5c298cf8a7a1fe2ba908fd5d938d"
+    },
+    {
+      "id": "ski-dash-slush-grit-v1",
+      "poolId": "ski-dash-slush-grit-v1",
+      "displayName": "Ski Dash compacted slush and grit v1",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/stk_generic_sand_b_winter_v1.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Re-authored the source splash-capable gritty surface as desaturated winter slush.",
+      "evidence": [
+        "Generated as a seamless repeat texture.",
+        "Output package and iOS resource SHA-256 f4fc883bff9319d0639e6026f0950b7456906ad1aa4bfde312eefb67f0e89d9d."
+      ],
+      "bytes": 130198,
+      "sha256": "f4fc883bff9319d0639e6026f0950b7456906ad1aa4bfde312eefb67f0e89d9d"
+    },
+    {
+      "id": "ski-dash-zipper-speed-chevron-winter-v1",
+      "poolId": "ski-dash-zipper-speed-chevron-winter-v1",
+      "displayName": "Ski Dash winter speed-chevron decal v1",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/zippercom_winter_v1.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Re-authored the boost decal as an icy cyan, white and coral upward chevron while preserving its transparent silhouette and gameplay material.",
+      "evidence": [
+        "Preserved the 512x512 RGBA atlas and centered chevron composition.",
+        "Output package and iOS resource SHA-256 154b1274e5e1765ca51e1f78bb05e36cccd7951a467683deca2ee840f2432473."
+      ],
+      "bytes": 112606,
+      "sha256": "154b1274e5e1765ca51e1f78bb05e36cccd7951a467683deca2ee840f2432473"
+    },
+    {
+      "id": "ski-dash-transparent-mask-winter-v1",
+      "poolId": "ski-dash-transparent-mask-winter-v1",
+      "displayName": "Ski Dash transparent mask v1",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/transparence_winter_v1.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Recreated the original 2x2 black mask in a new target texture so transparent behavior remains unchanged.",
+      "evidence": [
+        "New target file is 2x2 1-bit grayscale, all mask values zero.",
+        "Output package and iOS resource SHA-256 11cd1105e792e6cf1bee1dfd82be9da746a34921ecaa0dcf7060ecf8f5eb255d."
+      ],
+      "bytes": 69,
+      "sha256": "11cd1105e792e6cf1bee1dfd82be9da746a34921ecaa0dcf7060ecf8f5eb255d"
+    },
+    {
+      "id": "ski-dash-aurora-winter-v1",
+      "poolId": "ski-dash-aurora-winter-v1",
+      "displayName": "Ski Dash teal-violet animated aurora v1",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/aurora_winter_v1.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Re-authored the additive aurora sheet as a teal/cyan/violet translucent loop while preserving the 256x256 UV canvas.",
+      "evidence": [
+        "Generated as an animated, tileable aurora texture; visual runtime check pending."
+      ],
+      "bytes": 117497,
+      "sha256": "e73989a7dc84dd3bb22edb141c4666939a6249f4037edda749b857df502d10cf"
+    },
+    {
+      "id": "ski-dash-pine-branch-winter-v2",
+      "poolId": "ski-dash-pine-branch-winter-v2",
+      "displayName": "Ski Dash snow-dusted legacy pine atlas v2",
+      "kind": "texture",
+      "source": "output/fluxara-user-ski-dash-final/stk_pineBranch_a.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Used only by remaining original library pine cards. New replacement trees have branchless geometry and do not reference this texture.",
+      "evidence": [
+        "Final package SHA-256 ce97a1295078392215b94ec34b7c20fa8d6ae998eef297f123d51250f004a694."
+      ],
+      "bytes": 206579,
+      "sha256": "ce97a1295078392215b94ec34b7c20fa8d6ae998eef297f123d51250f004a694"
+    },
+    {
+      "id": "ski-dash-tree-evergreen-v1",
+      "poolId": "ski-dash-tree-evergreen-v1",
+      "displayName": "Ski Dash seamless evergreen surface v1",
+      "kind": "texture",
+      "source": "output/fluxara-user-ski-dash-final/ski_dash_tree_evergreen.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Seamless 64x64 periodic evergreen surface for the 16 new branchless tiered fir instances.",
+      "evidence": [
+        "Final package SHA-256 2438389de21b6b67d6ba7ba66c6ce1037408851d7474b9f3bbcae45cac14a1b4."
+      ],
+      "bytes": 3655,
+      "sha256": "2438389de21b6b67d6ba7ba66c6ce1037408851d7474b9f3bbcae45cac14a1b4"
+    },
+    {
+      "id": "ski-dash-tree-snowcap-v1",
+      "poolId": "ski-dash-tree-snowcap-v1",
+      "displayName": "Ski Dash seamless snowcap surface v1",
+      "kind": "texture",
+      "source": "output/fluxara-user-ski-dash-final/ski_dash_tree_snowcap.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter"
+      ],
+      "reason": "Seamless 64x64 pale snow used on the upper surfaces of every tier in the 16 new branchless fir instances.",
+      "evidence": [
+        "Final package SHA-256 daa38ed6eaa73c7bde3d549d5a472d444de73d9eae1bb39f994ceb1181ce8b6e."
+      ],
+      "bytes": 2881,
+      "sha256": "daa38ed6eaa73c7bde3d549d5a472d444de73d9eae1bb39f994ceb1181ce8b6e"
+    },
+    {
+      "id": "ski-dash-ice-surface-v11",
+      "poolId": "ski-dash-ice-surface-v11",
+      "displayName": "Ski Dash pale silver-blue cracked ice v11",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_ice_v11.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter",
+        "alpine"
+      ],
+      "reason": "New final candidate for the original driveable ice surface; ice assignment and geometry unchanged.",
+      "evidence": [
+        "3x3 repeat inspected; no hard seams. Blender material alias updated. Runtime visual acceptance pending."
+      ],
+      "bytes": 2091201,
+      "sha256": "33ea22e6feac764d587eaac721859c1b4b8c718a7e053e1a7e0473a8702f4710"
+    },
+    {
+      "id": "ski-dash-snow-surface-v10",
+      "poolId": "ski-dash-snow-surface-v10",
+      "displayName": "Ski Dash clean white packed snow v10",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_snow_v10.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter",
+        "alpine"
+      ],
+      "reason": "New final candidate for the original driveable snow surface; snow assignment and geometry unchanged.",
+      "evidence": [
+        "3x3 repeat inspected; no hard seams. Blender material alias updated. Runtime visual acceptance pending."
+      ],
+      "bytes": 1444255,
+      "sha256": "334021e8f44cb79c16017c44e29ef1fc7c9b6a0b2b7f6cc6697ce9bab031e787"
+    },
+    {
+      "id": "ski-dash-cliff-rock-v2",
+      "poolId": "ski-dash-cliff-rock-v2",
+      "displayName": "Ski Dash pastel peach and lavender cliff rock v2",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_cliff_rock_v2.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter",
+        "alpine"
+      ],
+      "reason": "Recreated original rockmountain texture in warm lavender-peach reference palette.",
+      "evidence": [
+        "3x3 repeat inspected; no hard seams. Blender target material alias updated; runtime visual acceptance pending."
+      ],
+      "bytes": 2150868,
+      "sha256": "15a378082475d532552da15822e56ea0ec85f2715e9e660fce0b766e8931c7a1"
+    },
+    {
+      "id": "ski-dash-snowrock-v3",
+      "poolId": "ski-dash-snowrock-v3",
+      "displayName": "Ski Dash snow-capped lavender rock v3",
+      "kind": "texture",
+      "source": "output/track-textures/ski-dash/ski_dash_snowrock_v3.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter",
+        "alpine"
+      ],
+      "reason": "Recreated original snowrock texture with irregular white snow deposits and pale ice on lavender stone.",
+      "evidence": [
+        "3x3 repeat inspected; no hard seams. Blender target material aliases updated; runtime visual acceptance pending."
+      ],
+      "bytes": 2063716,
+      "sha256": "613b2bf800ebee8d6f208ee36d74e3b7081d209b35fc296d92324e157046f878"
+    },
+    {
+      "id": "ski-dash-cliff-palette-atlas-v1",
+      "poolId": "ski-dash-cliff-palette-atlas-v1",
+      "displayName": "Ski Dash pastel winter cliff palette atlas v1",
+      "kind": "texture",
+      "source": "output/fluxara-user-ski-dash-final/fluxara_canyon_atlas.png",
+      "reuseTier": "authored",
+      "categories": [
+        "winter",
+        "cliff",
+        "water"
+      ],
+      "reason": "Re-authored the target map 4x4 solid-color atlas into the Ski Dash reference palette while preserving cell order, 512x512 dimensions and UV compatibility.",
+      "evidence": [
+        "Generated from a 4x4 color-atlas edit with the four Ski Dash references used for palette guidance.",
+        "Blender Fluxara_Rock1 material images updated; 96 target-scene image datablocks point at this variant.",
+        "Packaged alias equals source SHA-256 98a9a21bb82714e2b7123fa37729eb40165e3aeb026f571e1855967a0444034a."
+      ],
+      "file": {
+        "path": "output/fluxara-user-ski-dash-final/fluxara_canyon_atlas.png",
+        "verified": true,
+        "bytes": 218457,
+        "sha256": "98a9a21bb82714e2b7123fa37729eb40165e3aeb026f571e1855967a0444034a"
+      }
+    },
+    {
+      "id": "alpine-stone-lavender-v2",
+      "poolId": "alpine-stone-lavender-v2",
+      "packFile": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/8c52f40769d2be36/alpine_stone_lavender_v2.png",
+        "bytes": 2253376,
+        "sha256": "8c52f40769d2be368e2587d4c75ac09dfb4a0ff07fd15ed410d8c3a1672760e3"
+      },
+      "status": "Draft accepted after visual 3x3 repeat inspection; runtime alias rockmountain.png"
+    },
+    {
+      "id": "alpine-stone-lavender-v2-jpeg",
+      "poolId": "alpine-stone-lavender-v2-jpeg",
+      "packFile": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/27eb4ba00ccebb14/snowrock.jpg",
+        "bytes": 319565,
+        "sha256": "27eb4ba00ccebb144dd1390095010df1c03c615f957b1ef5f55a852eda7dcb41"
+      },
+      "status": "JPEG runtime encoding of alpine-stone-lavender-v2; core cliff and new mesa surfaces"
+    },
+    {
+      "id": "shared-savanna-blue_sky_top",
+      "poolId": "shared-savanna-blue_sky_top",
+      "packFile": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/773dcef951e49728/blue_sky_top.jpg",
+        "bytes": 28941,
+        "sha256": "773dcef951e497289563429dfcb9dfaff60fb7f97ab3390420ec997e621441a3"
+      },
+      "status": "reused blue daytime sky; packaged"
+    },
+    {
+      "id": "shared-savanna-blue_sky_east",
+      "poolId": "shared-savanna-blue_sky_east",
+      "packFile": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/484a3f46dbb8ab5e/blue_sky_east.jpg",
+        "bytes": 120105,
+        "sha256": "484a3f46dbb8ab5e750999270a2fe20cfe7d9de6e793b0abf878880656d9b3f2"
+      },
+      "status": "reused blue daytime sky; packaged"
+    },
+    {
+      "id": "shared-savanna-blue_sky_west",
+      "poolId": "shared-savanna-blue_sky_west",
+      "packFile": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/89a0eb9ae09b99d4/blue_sky_west.jpg",
+        "bytes": 144299,
+        "sha256": "89a0eb9ae09b99d412cec64ab97d2c5f1a9ce83e04ed3f2d9fd55fc36ed83639"
+      },
+      "status": "reused blue daytime sky; packaged"
+    },
+    {
+      "id": "shared-savanna-blue_sky_south",
+      "poolId": "shared-savanna-blue_sky_south",
+      "packFile": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/c91aec080b714be0/blue_sky_south.jpg",
+        "bytes": 147626,
+        "sha256": "c91aec080b714be0e26ae7e9e26764b12bae9c30886cefca32449c3daa2d2636"
+      },
+      "status": "reused blue daytime sky; packaged"
+    },
+    {
+      "id": "shared-savanna-blue_sky_north",
+      "poolId": "shared-savanna-blue_sky_north",
+      "packFile": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/aa7a8de5cdf3177f/blue_sky_north.jpg",
+        "bytes": 124817,
+        "sha256": "aa7a8de5cdf3177f150ed50e3df55120ac648df8e6272fc23a3f05eb22df00c9"
+      },
+      "status": "reused blue daytime sky; packaged"
+    },
+    {
+      "id": "shared-savanna-blue_sky_ibl",
+      "poolId": "shared-savanna-blue_sky_ibl",
+      "packFile": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/673eae11a09fbafd/blue_sky_ibl.jpg",
+        "bytes": 170461,
+        "sha256": "673eae11a09fbafd33a69ab85cfd3bcc55f4278360f16d6768d60546fbf987b5"
+      },
+      "status": "reused blue daytime sky; packaged"
+    },
+    {
+      "id": "ski-dash-use-ski-dash-original-atmosphere-aurora",
+      "poolId": "ski-dash-original-atmosphere-aurora",
+      "reuseTier": "direct",
+      "evidence": [
+        "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/atmosphere-restoration.json"
+      ]
+    },
+    {
+      "id": "ski-dash-use-ski-dash-original-atmosphere-winter_sky_1",
+      "poolId": "ski-dash-original-atmosphere-winter_sky_1",
+      "reuseTier": "direct",
+      "evidence": [
+        "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/atmosphere-restoration.json"
+      ]
+    },
+    {
+      "id": "ski-dash-use-ski-dash-original-atmosphere-winter_sky_2",
+      "poolId": "ski-dash-original-atmosphere-winter_sky_2",
+      "reuseTier": "direct",
+      "evidence": [
+        "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/atmosphere-restoration.json"
+      ]
+    },
+    {
+      "id": "ski-dash-use-ski-dash-original-atmosphere-winter_sky_3",
+      "poolId": "ski-dash-original-atmosphere-winter_sky_3",
+      "reuseTier": "direct",
+      "evidence": [
+        "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/atmosphere-restoration.json"
+      ]
+    },
+    {
+      "id": "ski-dash-use-ski-dash-original-atmosphere-winter_sky_4",
+      "poolId": "ski-dash-original-atmosphere-winter_sky_4",
+      "reuseTier": "direct",
+      "evidence": [
+        "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/atmosphere-restoration.json"
+      ]
+    },
+    {
+      "id": "ski-dash-use-ski-dash-original-atmosphere-winter_sky_5",
+      "poolId": "ski-dash-original-atmosphere-winter_sky_5",
+      "reuseTier": "direct",
+      "evidence": [
+        "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/atmosphere-restoration.json"
+      ]
+    },
+    {
+      "id": "ski-dash-use-ski-dash-original-atmosphere-winter_sky_6",
+      "poolId": "ski-dash-original-atmosphere-winter_sky_6",
+      "reuseTier": "direct",
+      "evidence": [
+        "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/atmosphere-restoration.json"
+      ]
+    },
+    {
+      "id": "ski-dash-use-ski-dash-original-atmosphere-winter_sky_6_top",
+      "poolId": "ski-dash-original-atmosphere-winter_sky_6_top",
+      "reuseTier": "direct",
+      "evidence": [
+        "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/atmosphere-restoration.json"
+      ]
+    },
+    {
+      "id": "ski-dash-use-ski-dash-original-atmosphere-winter_sky_ibl_bot",
+      "poolId": "ski-dash-original-atmosphere-winter_sky_ibl_bot",
+      "reuseTier": "direct",
+      "evidence": [
+        "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/atmosphere-restoration.json"
+      ]
+    },
+    {
+      "id": "ski-dash-use-ski-dash-original-atmosphere-winter_sky_ibl_side",
+      "poolId": "ski-dash-original-atmosphere-winter_sky_ibl_side",
+      "reuseTier": "direct",
+      "evidence": [
+        "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/atmosphere-restoration.json"
+      ]
+    }
+  ],
+  "evidence": [
+    "track.xml display name is Ski Dash; no campaign identity or source package files were edited.",
+    "scene.xml instances for pine trees and lodges were used as placement evidence.",
+    "Original Ski Dash SPM SHA-256: 0fc2863d121b97242ea4159594fe2ab8266220ce7da86e80bebe3d67f16b8d07.",
+    "materials.xml declares Fluxara-prefixed snow/rock/grass/runway resources, while the SPM importer reports legacy stk-prefixed material strings. The Blender scene retains the SPM assignments; this ledger does not assert a game-runtime alias mapping.",
+    "Single staged map folder references the authored ice, snow, water and cliff textures and one static scenery SPM.",
+    "The original SPM start location raycasts onto stk_generic_snow_a.png__ at z=49.93; its material used a mismatched snow.png filename. Snow v2 is now assigned to the exact stk_generic_snow_a.png resource and runtime-loaded; view-snow-v2-01.png confirms the gray-blue surface, full reference acceptance remains pending.",
+    "Updated Blender scene shares reference-style branchless fir foliage across 38 placements; no branch atlas is assigned to the new crown mesh.",
+    "Current exported winter scenery SPM SHA-256 15edacf76c3316722a90789695553c13c5413fb84f45d9cbfa0b972c29c3889c; original course SPM SHA-256 remains 0fc2863d121b97242ea4159594fe2ab8266220ce7da86e80bebe3d67f16b8d07.",
+    "Simulator runtime capture: output/ski-dash-game-screenshots/branchless-fir-v5-race.png; overall four-reference environment match remains in progress.",
+    "Latest Blender save: output/ski-dash-winter-retexture-work.blend; generated cliff rock v2 and snowrock v3 are assigned. Game runtime capture still required after resource staging."
+  ],
+  "assetPoolRef": {
+    "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_POOL.json",
+    "schemaVersion": 1
+  },
+  "currentAudit": {
+    "revision": 34,
+    "report": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/final-static-audit.json",
+    "houses": 16,
+    "trees": 93,
+    "relocatedTrees": 16,
+    "atmosphere": "original night sky, aurora, snowfall, fog and lightshaft restored",
+    "assetIds": [
+      "alpine-stone-warm-v1",
+      "canyon-flow-texture",
+      "shared-snowy-wood-chalet-approved-v1",
+      "shared-timber-cottage-v1",
+      "ski-dash-background-snow-mantle-v4",
+      "ski-dash-branchless-fir-v12",
+      "ski-dash-bunting-span-v1",
+      "ski-dash-canyon-mesa-0-cap",
+      "ski-dash-canyon-mesa-0-rock",
+      "ski-dash-canyon-mesa-1-cap",
+      "ski-dash-canyon-mesa-1-rock",
+      "ski-dash-canyon-mesa-2-cap",
+      "ski-dash-canyon-mesa-2-rock",
+      "ski-dash-cascade-flow-v2-00",
+      "ski-dash-cascade-flow-v2-01",
+      "ski-dash-cascade-flow-v2-02",
+      "ski-dash-cascade-flow-v2-03",
+      "ski-dash-cascade-flow-v2-04",
+      "ski-dash-cascade-flow-v2-05",
+      "ski-dash-chevron-board-v2",
+      "ski-dash-distant-water-v22",
+      "ski-dash-ice-surface-v27",
+      "ski-dash-icicle-crown-v1-0",
+      "ski-dash-icicle-crown-v1-1",
+      "ski-dash-icicle-crown-v1-2",
+      "ski-dash-original-atmosphere-aurora",
+      "ski-dash-original-atmosphere-winter_sky_1",
+      "ski-dash-original-atmosphere-winter_sky_2",
+      "ski-dash-original-atmosphere-winter_sky_3",
+      "ski-dash-original-atmosphere-winter_sky_4",
+      "ski-dash-original-atmosphere-winter_sky_5",
+      "ski-dash-original-atmosphere-winter_sky_6",
+      "ski-dash-original-atmosphere-winter_sky_6_top",
+      "ski-dash-original-atmosphere-winter_sky_ibl_bot",
+      "ski-dash-original-atmosphere-winter_sky_ibl_side",
+      "ski-dash-original-aurora-mesh",
+      "ski-dash-packed-FD_CascadeLandingFoam",
+      "ski-dash-packed-FD_CascadeLandingFoam.001",
+      "ski-dash-packed-FD_CascadeLandingFoam.002",
+      "ski-dash-packed-FD_CascadeLandingFoam.003",
+      "ski-dash-packed-FD_CascadeLandingFoam.004",
+      "ski-dash-packed-FD_CascadeLandingFoam.005",
+      "ski-dash-packed-FD_CascadeLandingFoam.006",
+      "ski-dash-packed-FD_CascadeLandingFoam.007",
+      "ski-dash-packed-FD_CascadeLandingFoam.008",
+      "ski-dash-packed-FD_CascadeLandingFoam.009",
+      "ski-dash-packed-FD_CascadeLandingPool",
+      "ski-dash-packed-FD_CascadeLandingPool.001",
+      "ski-dash-packed-FD_CascadeLipFoam",
+      "ski-dash-packed-FD_CascadeLipFoam.001",
+      "ski-dash-packed-FD_CascadeLipFoam.002",
+      "ski-dash-packed-FD_CascadeLipFoam.003",
+      "ski-dash-packed-FD_CascadeLipFoam.004",
+      "ski-dash-packed-FD_CascadeLipFoam.005",
+      "ski-dash-packed-FD_CascadeLipFoam.006",
+      "ski-dash-packed-FD_CascadeLipFoam.007",
+      "ski-dash-packed-FD_CascadeLipFoam.008",
+      "ski-dash-packed-FD_CascadeLipFoam.009",
+      "ski-dash-packed-FD_CascadeRockShelf",
+      "ski-dash-packed-FD_CascadeRockShelf.001",
+      "ski-dash-packed-FD_LowerCascadeFlow",
+      "ski-dash-packed-FD_LowerCascadeFlow.001",
+      "ski-dash-packed-FD_UpperCascadeFlow",
+      "ski-dash-packed-FD_UpperCascadeFlow.001",
+      "ski-dash-packed-SkiDash_Reused_FlagPole_00",
+      "ski-dash-packed-SkiDash_Reused_FlagPole_01",
+      "ski-dash-packed-SkiDash_Reused_FlagPole_02",
+      "ski-dash-packed-SkiDash_Reused_FlagPole_03",
+      "ski-dash-packed-SkiDash_Reused_FlagPole_04",
+      "ski-dash-packed-SkiDash_Reused_FlagPole_05",
+      "ski-dash-packed-SkiDash_Reused_FlagPole_06",
+      "ski-dash-packed-SkiDash_Reused_Pennant_00",
+      "ski-dash-packed-SkiDash_Reused_Pennant_01",
+      "ski-dash-packed-SkiDash_Reused_Pennant_02",
+      "ski-dash-packed-SkiDash_Reused_Pennant_03",
+      "ski-dash-packed-SkiDash_Reused_Pennant_04",
+      "ski-dash-packed-SkiDash_Reused_Pennant_05",
+      "ski-dash-packed-SkiDash_Reused_Pennant_06",
+      "ski-dash-rink-ice-v27",
+      "ski-dash-short-branchless-trunk-v1",
+      "ski-dash-snow-tint-v18",
+      "ski-dash-south-cascade-facing-arena-v29",
+      "ski-dash-valley-bridge-v28",
+      "ski-dash-warm-alpine-stone-v1",
+      "ski-dash-warm-cliff-v1-0",
+      "ski-dash-warm-cliff-v1-1",
+      "ski-dash-warm-cliff-v1-2",
+      "ski-dash-water-flow-v29",
+      "ski-dash-aurora-soft-edge-v1"
+    ],
+    "physicalPackLibrary": {
+      "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend",
+      "bytes": 401886503,
+      "sha256": "a3e34e4c0404c14340fcd3bee4923c53346b678f3b1d99d2e137f5b80f3029f8"
+    },
+    "runtimeEvidence": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-house-restoration/runtime-review.json",
+    "reportHtml": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-ski-dash-final/report/index.html",
+    "status": "requested corrections implemented; representative simulator validation complete",
+    "finalBlend": {
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-ski-dash-final/Ski Dash.blend",
+      "bytes": 48548444,
+      "sha256": "275d8734b75b1670ac80381e097082fbdce4edb6e9d4af400f4a367ef9e0a022"
+    }
+  }
+}

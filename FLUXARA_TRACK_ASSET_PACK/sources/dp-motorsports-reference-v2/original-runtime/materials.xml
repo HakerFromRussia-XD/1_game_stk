@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<materials>
+  <material name="bbgrass.png" shader="alphatest" ignore="Y"/>
+  <material name="BBGRASS_K.png" shader="alphatest" ignore="Y"/>
+  <material name="Decals001.png" shader="alphatest"/>
+  <material name="FENCE.png" shader="alphatest"/>
+  <material name="FENCE2.png" shader="alphatest"/>
+  <material name="Landscape.png" shader="alphatest"/>
+  <material name="msl2-linemaker01.png" shader="alphatest"/>
+  <material name="msl2-fences01.png" shader="alphatest"/>
+  <material name="msl2-tree03.png" shader="alphatest"/>
+  <material name="msl2-wood-roop01.png" shader="alphatest"/>
+  <material name="Nature001.png" shader="alphatest"/>
+  <material name="otpt_05.png" shader="alphatest"/>
+  <material name="sa_Beams01.png" shader="alphatest"/>
+  <material name="sazan_house_Frame.png" shader="alphatest"/>
+  <material name="trees2.png" shader="alphatest"/>
+  <material name="msl2-grass001.jpg" shader="alphatest" slowdown-time="0.8" max-speed="0.66">
+    <particles base="smoke_brown.xml" condition="skid"/>
+  </material>
+  <material name="msl2-grass001-to-sand01.jpg" shader="alphatest" slowdown-time="0.8" max-speed="0.66">
+    <particles base="smoke_brown.xml" condition="skid"/>
+  </material>
+  <material name="msl2-grass002.jpg" shader="alphatest" slowdown-time="0.8" max-speed="0.66">
+    <particles base="smoke_brown.xml" condition="skid"/>
+  </material>
+  <material name="msl2-grass002A.jpg" shader="alphatest" slowdown-time="0.8" max-speed="0.66">
+    <particles base="smoke_brown.xml" condition="skid"/>
+  </material>
+  <material name="msl2-grass002b.jpg" shader="alphatest" slowdown-time="0.8" max-speed="0.66">
+    <particles base="smoke_brown.xml" condition="skid"/>
+  </material>
+  <material name="msl2-grass003.jpg" shader="alphatest" slowdown-time="0.8" max-speed="0.66">
+    <particles base="smoke_brown.xml" condition="skid"/>
+  </material>
+  <material name="msl2-grass003A.jpg" shader="alphatest" slowdown-time="0.8" max-speed="0.66">
+    <particles base="smoke_brown.xml" condition="skid"/>
+  </material>
+  <material name="msl2-grass003B.jpg" shader="alphatest" slowdown-time="0.8" max-speed="0.66">
+    <particles base="smoke_brown.xml" condition="skid"/>
+  </material>
+  <material name="msl2-grass004.jpg" shader="alphatest" slowdown-time="0.8" max-speed="0.66">
+    <particles base="smoke_brown.xml" condition="skid"/>
+  </material>
+  <material name="msl2-grass-roop003.jpg" shader="alphatest" slowdown-time="0.8" max-speed="0.66">
+    <particles base="smoke_brown.xml" condition="skid"/>
+  </material>
+  <material name="msl2-sand001.jpg" slowdown-time="0.33" max-speed="0.33">
+    <sfx filename="sand.ogg" min_speed="1.00" max_speed="25.00" min_pitch="0.80" max_pitch="0.85" positional="true" rolloff="0.10"/>
+    <particles base="smoke_yellow.xml" condition="skid drive"/>
+  </material>
+  <material name="curbs_Albedo_B.jpg">
+    <sfx filename="kerb.ogg" min_speed="1.00" max_speed="25.00" min_pitch="0.80" max_pitch="0.85" positional="true" rolloff="0.10"/>
+    <particles base="smoke.xml" condition="skid"/>
+  </material>
+  <material name="AC_auto1.jpg" gloss-map="ROADgloss.jpg">
+    <particles base="smoke.xml" condition="skid"/>
+  </material>
+  <material name="mAooitori_road3.jpg" gloss-map="ROADgloss.jpg">
+    <particles base="smoke.xml" condition="skid"/>
+  </material>
+  <material name="msl2.road1_r.jpg" gloss-map="ROADgloss.jpg">
+    <particles base="smoke.xml" condition="skid"/>
+  </material>
+</materials>

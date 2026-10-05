@@ -1,0 +1,474 @@
+{
+  "assets": [
+    {
+      "id": "dust-shared-v1-model-61ecb64ed305",
+      "displayName": "fluxara_driftlib_dust_reuse_61ecb64ed305_main.spm",
+      "kind": "shared-runtime-model",
+      "sourceMap": "fluxara-user-dust-cross-split-combat",
+      "reuseTier": "direct",
+      "categories": [
+        "canyon"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_61ecb64ed305/fluxara_driftlib_dust_reuse_61ecb64ed305_main.spm",
+      "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/new-library/fluxara_driftlib_dust_reuse_61ecb64ed305/fluxara_driftlib_dust_reuse_61ecb64ed305_main.spm",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_61ecb64ed305/fluxara_driftlib_dust_reuse_61ecb64ed305_main.spm",
+        "bytes": 2274,
+        "sha256": "2f706252c29de569798ef275b2c3e26f40f69abda32ebdb84b12b43fd1b536c1"
+      },
+      "dependencies": [
+        "dust-cross-visual-7d94b24cbf587d8d",
+        "dust-shared-v1-texture-3aa565f923a4",
+        "dust-shared-v1-texture-9f8d36974e14"
+      ],
+      "canonicalNativePrototype": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/DustCross_Asset_7d94b24cbf587d8d",
+      "runtimeLibraryPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "runtimeLibraryFiles": [
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_61ecb64ed305/fluxara_driftlib_dust_reuse_61ecb64ed305_main.spm",
+          "bytes": 2274,
+          "sha256": "2f706252c29de569798ef275b2c3e26f40f69abda32ebdb84b12b43fd1b536c1"
+        },
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_61ecb64ed305/materials.xml",
+          "bytes": 72,
+          "sha256": "3ecf772a02544d50635982c6fe3c03225a6567990c5d288990b9e463944a7738"
+        },
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_61ecb64ed305/node.xml",
+          "bytes": 236,
+          "sha256": "4639791a450510296a3f1ea8487aa75efa63c42856affd0fff5b07e1af17906b"
+        }
+      ],
+      "instances": 70,
+      "localBounds": [
+        -0.30496978759765625,
+        -1.8767852783203125,
+        -0.3049812316894531,
+        0.30498504638671875,
+        1.8767852783203125,
+        0.3049774169921875
+      ],
+      "localGeometryPreserved": true,
+      "uses": [
+        {
+          "trackId": "fluxara-user-dust-cross-split-combat",
+          "status": "Integrated coordinate scenery; appearance approved by user; collision traversal checks cancelled by user"
+        }
+      ]
+    },
+    {
+      "id": "dust-shared-v1-model-d3c85d22f3af",
+      "displayName": "fluxara_driftlib_dust_reuse_d3c85d22f3af_main.spm",
+      "kind": "shared-runtime-model",
+      "sourceMap": "fluxara-user-dust-cross-split-combat",
+      "reuseTier": "direct",
+      "categories": [
+        "canyon"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_d3c85d22f3af/fluxara_driftlib_dust_reuse_d3c85d22f3af_main.spm",
+      "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/new-library/fluxara_driftlib_dust_reuse_d3c85d22f3af/fluxara_driftlib_dust_reuse_d3c85d22f3af_main.spm",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_d3c85d22f3af/fluxara_driftlib_dust_reuse_d3c85d22f3af_main.spm",
+        "bytes": 1665,
+        "sha256": "17f1af107398d13660c413ab01b9413bc10df0058f702398172bcce2fec6157c"
+      },
+      "dependencies": [
+        "dust-cross-visual-42d2286bf56651d1",
+        "dust-shared-v1-texture-3aa565f923a4",
+        "dust-shared-v1-texture-9f8d36974e14"
+      ],
+      "canonicalNativePrototype": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/DustCross_Asset_42d2286bf56651d1",
+      "runtimeLibraryPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "runtimeLibraryFiles": [
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_d3c85d22f3af/fluxara_driftlib_dust_reuse_d3c85d22f3af_main.spm",
+          "bytes": 1665,
+          "sha256": "17f1af107398d13660c413ab01b9413bc10df0058f702398172bcce2fec6157c"
+        },
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_d3c85d22f3af/materials.xml",
+          "bytes": 72,
+          "sha256": "3ecf772a02544d50635982c6fe3c03225a6567990c5d288990b9e463944a7738"
+        },
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_d3c85d22f3af/node.xml",
+          "bytes": 236,
+          "sha256": "ea0bac9216b82dbab823b139eb2f34d69e27bd683798872e63e41ea85c493a47"
+        }
+      ],
+      "instances": 482,
+      "localBounds": [
+        -0.9510574340820312,
+        -1.0,
+        -1.0000019073486328,
+        0.9510574340820312,
+        1.0,
+        1.0
+      ],
+      "localGeometryPreserved": true,
+      "uses": [
+        {
+          "trackId": "fluxara-user-dust-cross-split-combat",
+          "status": "Integrated coordinate scenery; appearance approved by user; collision traversal checks cancelled by user"
+        }
+      ]
+    },
+    {
+      "id": "dust-shared-v1-model-fc1e7082e802",
+      "displayName": "fluxara_driftlib_dust_reuse_fc1e7082e802_main.spm",
+      "kind": "shared-runtime-model",
+      "sourceMap": "fluxara-user-dust-cross-split-combat",
+      "reuseTier": "direct",
+      "categories": [
+        "canyon"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_fc1e7082e802/fluxara_driftlib_dust_reuse_fc1e7082e802_main.spm",
+      "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/new-library/fluxara_driftlib_dust_reuse_fc1e7082e802/fluxara_driftlib_dust_reuse_fc1e7082e802_main.spm",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_fc1e7082e802/fluxara_driftlib_dust_reuse_fc1e7082e802_main.spm",
+        "bytes": 461,
+        "sha256": "cd777d2da6beea31a7dc5806de20250c187d8d529c5d9417d110fc1d200e850f"
+      },
+      "dependencies": [
+        "dust-cross-visual-d95ef417d66c11a0",
+        "dust-shared-v1-texture-3aa565f923a4",
+        "dust-shared-v1-texture-9f8d36974e14"
+      ],
+      "canonicalNativePrototype": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/DustCross_Asset_d95ef417d66c11a0",
+      "runtimeLibraryPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_fc1e7082e802",
+      "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_dust_reuse_fc1e7082e802",
+      "runtimeLibraryFiles": [
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_fc1e7082e802/fluxara_driftlib_dust_reuse_fc1e7082e802_main.spm",
+          "bytes": 461,
+          "sha256": "cd777d2da6beea31a7dc5806de20250c187d8d529c5d9417d110fc1d200e850f"
+        },
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_fc1e7082e802/materials.xml",
+          "bytes": 72,
+          "sha256": "3ecf772a02544d50635982c6fe3c03225a6567990c5d288990b9e463944a7738"
+        },
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_fc1e7082e802/node.xml",
+          "bytes": 236,
+          "sha256": "19da2d4f858ab37cf0bb2ded28625e466711624a22498a018981f7b91e0489e9"
+        }
+      ],
+      "instances": 32,
+      "localBounds": [
+        -0.500030517578125,
+        -0.5,
+        -0.5,
+        0.4999847412109375,
+        0.5,
+        0.5
+      ],
+      "localGeometryPreserved": true,
+      "uses": [
+        {
+          "trackId": "fluxara-user-dust-cross-split-combat",
+          "status": "Integrated coordinate scenery; appearance approved by user; collision traversal checks cancelled by user"
+        }
+      ]
+    },
+    {
+      "id": "dust-shared-v1-model-52a6db19e34f",
+      "displayName": "fluxara_driftlib_dust_reuse_52a6db19e34f_main.spm",
+      "kind": "shared-runtime-model",
+      "sourceMap": "fluxara-user-dust-cross-split-combat",
+      "reuseTier": "direct",
+      "categories": [
+        "canyon"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_52a6db19e34f/fluxara_driftlib_dust_reuse_52a6db19e34f_main.spm",
+      "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/new-library/fluxara_driftlib_dust_reuse_52a6db19e34f/fluxara_driftlib_dust_reuse_52a6db19e34f_main.spm",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_52a6db19e34f/fluxara_driftlib_dust_reuse_52a6db19e34f_main.spm",
+        "bytes": 461,
+        "sha256": "cc1c91f4468ef840c99cd06339946386bf60678b98d7486383906558732e3d52"
+      },
+      "dependencies": [
+        "dust-cross-visual-11674e2c2ab17bbd",
+        "dust-shared-v1-texture-3aa565f923a4",
+        "dust-shared-v1-texture-9f8d36974e14"
+      ],
+      "canonicalNativePrototype": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/DustCross_Asset_11674e2c2ab17bbd",
+      "runtimeLibraryPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_52a6db19e34f",
+      "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_dust_reuse_52a6db19e34f",
+      "runtimeLibraryFiles": [
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_52a6db19e34f/fluxara_driftlib_dust_reuse_52a6db19e34f_main.spm",
+          "bytes": 461,
+          "sha256": "cc1c91f4468ef840c99cd06339946386bf60678b98d7486383906558732e3d52"
+        },
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_52a6db19e34f/materials.xml",
+          "bytes": 72,
+          "sha256": "3ecf772a02544d50635982c6fe3c03225a6567990c5d288990b9e463944a7738"
+        },
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_52a6db19e34f/node.xml",
+          "bytes": 236,
+          "sha256": "def62bfd6b74fc9f0cdacb18aefcba7d5b6ea9c0963fba942b3a6e07177558a7"
+        }
+      ],
+      "instances": 48,
+      "localBounds": [
+        -0.4999847412109375,
+        -0.5000038146972656,
+        -0.49993896484375,
+        0.5000076293945312,
+        0.4999980926513672,
+        0.500030517578125
+      ],
+      "localGeometryPreserved": true,
+      "uses": [
+        {
+          "trackId": "fluxara-user-dust-cross-split-combat",
+          "status": "Integrated coordinate scenery; appearance approved by user; collision traversal checks cancelled by user"
+        }
+      ]
+    },
+    {
+      "id": "dust-shared-v1-model-dd6a7e8ee0b3",
+      "displayName": "fluxara_driftlib_dust_reuse_dd6a7e8ee0b3_main.spm",
+      "kind": "shared-runtime-model",
+      "sourceMap": "fluxara-user-dust-cross-split-combat",
+      "reuseTier": "direct",
+      "categories": [
+        "canyon"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_dd6a7e8ee0b3/fluxara_driftlib_dust_reuse_dd6a7e8ee0b3_main.spm",
+      "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/new-library/fluxara_driftlib_dust_reuse_dd6a7e8ee0b3/fluxara_driftlib_dust_reuse_dd6a7e8ee0b3_main.spm",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_dd6a7e8ee0b3/fluxara_driftlib_dust_reuse_dd6a7e8ee0b3_main.spm",
+        "bytes": 461,
+        "sha256": "7b3f621c814b6ce5e92b6b2f05c9c59fe999491f25616d3dde527e967d0af4a9"
+      },
+      "dependencies": [
+        "dust-cross-visual-2be630f3d92e23b8",
+        "dust-shared-v1-texture-3aa565f923a4",
+        "dust-shared-v1-texture-9f8d36974e14"
+      ],
+      "canonicalNativePrototype": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/DustCross_Asset_2be630f3d92e23b8",
+      "runtimeLibraryPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_dd6a7e8ee0b3",
+      "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_dust_reuse_dd6a7e8ee0b3",
+      "runtimeLibraryFiles": [
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_dd6a7e8ee0b3/fluxara_driftlib_dust_reuse_dd6a7e8ee0b3_main.spm",
+          "bytes": 461,
+          "sha256": "7b3f621c814b6ce5e92b6b2f05c9c59fe999491f25616d3dde527e967d0af4a9"
+        },
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_dd6a7e8ee0b3/materials.xml",
+          "bytes": 72,
+          "sha256": "3ecf772a02544d50635982c6fe3c03225a6567990c5d288990b9e463944a7738"
+        },
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_dd6a7e8ee0b3/node.xml",
+          "bytes": 236,
+          "sha256": "c3ad97084678ffac39cb6d2c0b4fd889017e82a00dd5bb36533da785bfc4a2cd"
+        }
+      ],
+      "instances": 40,
+      "localBounds": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "localGeometryPreserved": true,
+      "uses": [
+        {
+          "trackId": "fluxara-user-dust-cross-split-combat",
+          "status": "Integrated coordinate scenery; appearance approved by user; collision traversal checks cancelled by user"
+        }
+      ]
+    },
+    {
+      "id": "dust-shared-v1-model-2c99f097eaad",
+      "displayName": "fluxara_driftlib_dust_reuse_2c99f097eaad_main.spm",
+      "kind": "shared-runtime-model",
+      "sourceMap": "fluxara-user-dust-cross-split-combat",
+      "reuseTier": "direct",
+      "categories": [
+        "canyon"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_2c99f097eaad/fluxara_driftlib_dust_reuse_2c99f097eaad_main.spm",
+      "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/new-library/fluxara_driftlib_dust_reuse_2c99f097eaad/fluxara_driftlib_dust_reuse_2c99f097eaad_main.spm",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_2c99f097eaad/fluxara_driftlib_dust_reuse_2c99f097eaad_main.spm",
+        "bytes": 1329,
+        "sha256": "236c3ea137d838aa349e14b6f59d7444e72a91210e4f23d4624acfaf1e932d1f"
+      },
+      "dependencies": [
+        "dust-cross-garden-mesa-light-v1",
+        "dust-shared-v1-texture-3aa565f923a4",
+        "dust-shared-v1-texture-9f8d36974e14"
+      ],
+      "canonicalNativePrototype": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/DustCross_GardenMesa_Light",
+      "runtimeLibraryPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_2c99f097eaad",
+      "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_dust_reuse_2c99f097eaad",
+      "runtimeLibraryFiles": [
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_2c99f097eaad/fluxara_driftlib_dust_reuse_2c99f097eaad_main.spm",
+          "bytes": 1329,
+          "sha256": "236c3ea137d838aa349e14b6f59d7444e72a91210e4f23d4624acfaf1e932d1f"
+        },
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_2c99f097eaad/materials.xml",
+          "bytes": 72,
+          "sha256": "13f5b5badcce509d73d5c12114d95fd97567c5e12bfa892130549a6bc3bde857"
+        },
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/fluxara_driftlib_dust_reuse_2c99f097eaad/node.xml",
+          "bytes": 236,
+          "sha256": "6f063d3de210fea090880af368d1e105a4d48728b5f58794d02076511936c027"
+        }
+      ],
+      "instances": 8,
+      "localBounds": [
+        -0.5000004768371582,
+        0.0,
+        -0.4999997615814209,
+        0.5,
+        1.0,
+        0.5
+      ],
+      "localGeometryPreserved": true,
+      "uses": [
+        {
+          "trackId": "fluxara-user-dust-cross-split-combat",
+          "status": "Integrated coordinate scenery; appearance approved by user; collision traversal checks cancelled by user"
+        }
+      ]
+    },
+    {
+      "id": "dust-shared-v1-baked-remainder",
+      "kind": "runtime-assembly",
+      "sourceMap": "fluxara-user-dust-cross-split-combat",
+      "reuseTier": "adapt",
+      "categories": [
+        "canyon"
+      ],
+      "displayName": "Dust Cross retained unique scenery",
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/dust-cross_scenery.spm",
+      "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/delivery-v1/candidate/dust-cross_scenery.spm",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/dust-cross_scenery.spm",
+        "bytes": 1410683,
+        "sha256": "f63ccd0ccd1be7b6729463cd35b5359e2fcea060070c72edcdb3d97f0adcf67a"
+      },
+      "dependencies": [
+        "dust-cross-runtime-scenery-v1",
+        "dust-shared-v1-texture-3aa565f923a4",
+        "dust-shared-v1-texture-9f8d36974e14"
+      ],
+      "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dust-cross-split-combat/dust-cross_scenery.spm",
+      "adaptation": "Removed only repeated geometry extracted into six coordinate libraries; all retained vertex records unchanged.",
+      "uses": [
+        {
+          "trackId": "fluxara-user-dust-cross-split-combat",
+          "status": "Integrated coordinate scenery; appearance approved by user; collision traversal checks cancelled by user"
+        }
+      ]
+    },
+    {
+      "id": "dust-cross-boundary-closures-v1",
+      "kind": "map-boundary-collision",
+      "sourceMap": "fluxara-user-dust-cross-split-combat",
+      "reuseTier": "authored",
+      "categories": [
+        "canyon"
+      ],
+      "displayName": "Three missing arena boundary sections",
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/dust-cross_boundary_closures_v1.spm",
+      "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/delivery-v1/candidate/dust-cross_boundary_closures_v1.spm",
+      "nativePackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/Dust Cross Boundary Closures.blend#Object/DustCross_BoundaryClosures",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/dust-cross_boundary_closures_v1.spm",
+        "bytes": 1607,
+        "sha256": "14abebe1af90dc857246613b7b8d613b374de46854de54fa58831025b073f447"
+      },
+      "dependencies": [
+        "dust-cross-texture-metalgrid",
+        "dust-cross-surface-fddc2d81dfd9"
+      ],
+      "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dust-cross-split-combat/dust-cross_boundary_closures_v1.spm",
+      "interaction": "static",
+      "shape": "exact",
+      "mapSpecificGameplayBoundary": true,
+      "triangles": 36,
+      "newTextures": false,
+      "uses": [
+        {
+          "trackId": "fluxara-user-dust-cross-split-combat",
+          "status": "Integrated coordinate scenery; appearance approved by user; collision traversal checks cancelled by user"
+        }
+      ]
+    },
+    {
+      "id": "dust-shared-v1-texture-3aa565f923a4",
+      "displayName": "fluxara_pool_3aa565f923a4.png",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-dust-cross-split-combat",
+      "reuseTier": "direct",
+      "categories": [
+        "canyon"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/dust-cross-shared-v1/fluxara_pool_3aa565f923a4.png",
+      "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/before/dust_cross_cliffs.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/dust-cross-shared-v1/fluxara_pool_3aa565f923a4.png",
+        "bytes": 358468,
+        "sha256": "3aa565f923a43d0c9efe55afadcc3d41990d512a987e6d7fc44658d768668502"
+      },
+      "dependencies": [
+        "dust-cross-texture-dust-cross-cliffs"
+      ],
+      "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/textures/fluxara_pool_3aa565f923a4.png",
+      "newImagePixels": false,
+      "uses": [
+        {
+          "trackId": "fluxara-user-dust-cross-split-combat",
+          "status": "Integrated coordinate scenery; appearance approved by user; collision traversal checks cancelled by user"
+        }
+      ]
+    },
+    {
+      "id": "dust-shared-v1-texture-9f8d36974e14",
+      "displayName": "fluxara_pool_9f8d36974e14.png",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-dust-cross-split-combat",
+      "reuseTier": "direct",
+      "categories": [
+        "canyon"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/dust-cross-shared-v1/fluxara_pool_9f8d36974e14.png",
+      "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/before/dust_cross_palette.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/dust-cross-shared-v1/fluxara_pool_9f8d36974e14.png",
+        "bytes": 292191,
+        "sha256": "9f8d36974e149643988d8080242f16611f6c1c5be9f9664b8acd5f4897cfa27f"
+      },
+      "dependencies": [
+        "dust-cross-texture-dust-cross-palette"
+      ],
+      "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/textures/fluxara_pool_9f8d36974e14.png",
+      "newImagePixels": false,
+      "uses": [
+        {
+          "trackId": "fluxara-user-dust-cross-split-combat",
+          "status": "Integrated coordinate scenery; appearance approved by user; collision traversal checks cancelled by user"
+        }
+      ]
+    }
+  ],
+  "mapSpecificBoundaryNative": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/Dust Cross Boundary Closures.blend",
+  "canonicalNativeLibraryUnchanged": true
+}

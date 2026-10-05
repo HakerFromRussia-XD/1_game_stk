@@ -1,0 +1,121 @@
+{
+  "appBytes": 294531218,
+  "installedAppBytes": 294531218,
+  "trackSourceBytes": 19560839,
+  "newSharedLibraryBytes": 82795,
+  "newGlobalTextureBytes": 106765,
+  "trackAndNewSharedBytes": 19750399,
+  "originalTrackBytes": 26273861,
+  "sharedInstances": 1841,
+  "sharedFilesMatchSourceBuildInstalled": true,
+  "runtimeLibraries": [
+    {
+      "name": "fluxara_driftlib_wood_rail_v2",
+      "files": {
+        "node.xml": "478bb704f2914a5770e0f1485052633630f31550e56d6acd7c5e1b230d1e0646",
+        "dp_palette.png": "ec1efcdc37f6730f5ea304e62bcd912d454385082e6065ba70c84b43886477cb",
+        "fluxara_driftlib_wood_rail_v2_main.spm": "19cb8f2a76435906c8128bc4a1a335cb11bcfcfc1b101b339ef66cfaeaf67774",
+        "materials.xml": "99c2a73cf1ce2743b68c31160f1d098b6e63a9f8ae65a59d8211a0432075138c"
+      },
+      "bytes": 3602
+    },
+    {
+      "name": "fluxara_driftlib_circuit_turn_right_v2",
+      "files": {
+        "dp_turn_right.png": "99bd7234c86263bf4a116f7d2a87244b8b3a52e4e07d1ef78ed9b0b687d51d03",
+        "fluxara_driftlib_circuit_turn_right_v2_main.spm": "ebec34a1d1f2f760df3856d33916f7231c778a169cea8469431bd36c729df0e4",
+        "node.xml": "3c463abd90af3a258bf5ceccc40fb8a9c390714ede03a7cdda7c31877826363e",
+        "dp_palette.png": "ec1efcdc37f6730f5ea304e62bcd912d454385082e6065ba70c84b43886477cb",
+        "materials.xml": "cdd6ce85e59355663c399ab10baad5dcc0d44194eda24ce115595b437e3a8a9e"
+      },
+      "bytes": 5710
+    },
+    {
+      "name": "fluxara_driftlib_circuit_turn_left_v2",
+      "files": {
+        "fluxara_driftlib_circuit_turn_left_v2_main.spm": "ae5b8db108c520508544ea09eb5b87fea4a0f61e42b186effdbd914893c92cad",
+        "dp_turn_left.png": "98b4520f8b05587edbd9260d62710dd3df9642bb4143708d9f5c2542b3d8006e",
+        "node.xml": "c10137337a83debce53683377a41204fcefffc9e0ecf03cc2dc8c251abd0e1e2",
+        "dp_palette.png": "ec1efcdc37f6730f5ea304e62bcd912d454385082e6065ba70c84b43886477cb",
+        "materials.xml": "fcb72225675a71c3a8de000bf1e2d5f1b97f56bab976099b6d8355d5e66f91f5"
+      },
+      "bytes": 5697
+    },
+    {
+      "name": "fluxara_driftlib_round_tree_green_v2",
+      "files": {
+        "node.xml": "fa09846d680b53deb0124671e0ac5505458c7171db4429eabddb54a93eb60bdf",
+        "dp_palette.png": "ec1efcdc37f6730f5ea304e62bcd912d454385082e6065ba70c84b43886477cb",
+        "materials.xml": "01d6f6a88bc844143a673f8d6ca9db1b5b60f238d758e236bbd19993e05eedc8",
+        "fluxara_driftlib_round_tree_green_v2_main.spm": "5c9c532d5a5d9bceec0670225e9541b504365863e8d5bd0cb2a795cdec36c528"
+      },
+      "bytes": 19722
+    },
+    {
+      "name": "fluxara_driftlib_grassy_hill_v2",
+      "files": {
+        "node.xml": "1c137aeb26e16997fe5f47428acca867e12a80004f12d1e51ceb5132753d652a",
+        "dp_palette.png": "ec1efcdc37f6730f5ea304e62bcd912d454385082e6065ba70c84b43886477cb",
+        "fluxara_driftlib_grassy_hill_v2_main.spm": "04496140faa326fbb1b629405c4f7faf05d4367f85cadeb93b471f47b13a831e",
+        "materials.xml": "99c2a73cf1ce2743b68c31160f1d098b6e63a9f8ae65a59d8211a0432075138c"
+      },
+      "bytes": 9102
+    },
+    {
+      "name": "fluxara_driftlib_round_bush_green_v2",
+      "files": {
+        "fluxara_driftlib_round_bush_green_v2_main.spm": "671bc4c81bd0182b58c78a5724e1f8d55d01e11e5568dd631bc35714d276c546",
+        "node.xml": "bee7c76103890d7427d3691a748cb3ac707ed3f5ee50dee1f3cb2ddd171ec674",
+        "dp_palette.png": "ec1efcdc37f6730f5ea304e62bcd912d454385082e6065ba70c84b43886477cb",
+        "materials.xml": "317f05fe071487dfa9e2de7b730e56ade831e9149ff7ebb55b380ca4ce23a85e"
+      },
+      "bytes": 8550
+    },
+    {
+      "name": "fluxara_driftlib_grass_tuft_v2",
+      "files": {
+        "node.xml": "b6cc6c30146896b16f4d1e9b663ebfd62ac72170159fc155edba7c1b500d68c0",
+        "dp_palette.png": "ec1efcdc37f6730f5ea304e62bcd912d454385082e6065ba70c84b43886477cb",
+        "materials.xml": "99c2a73cf1ce2743b68c31160f1d098b6e63a9f8ae65a59d8211a0432075138c",
+        "fluxara_driftlib_grass_tuft_v2_main.spm": "3dfaeb5527d0535a65ca7aeff2a23181af05e027dd8bedb8b347983d76e993cd"
+      },
+      "bytes": 3367
+    },
+    {
+      "name": "fluxara_driftlib_circuit_fir_v2",
+      "files": {
+        "node.xml": "0b92e4c987c23686085f712270ca8562672a7132c65ac5fc4b69906456bc8527",
+        "dp_palette.png": "ec1efcdc37f6730f5ea304e62bcd912d454385082e6065ba70c84b43886477cb",
+        "materials.xml": "01d6f6a88bc844143a673f8d6ca9db1b5b60f238d758e236bbd19993e05eedc8",
+        "fluxara_driftlib_circuit_fir_v2_main.spm": "4671715520b1397db6f007d856c79079146a2e276d407ab7d6fca1a4c39a213f"
+      },
+      "bytes": 21078
+    },
+    {
+      "name": "fluxara_driftlib_white_daisy_v2",
+      "files": {
+        "fluxara_driftlib_white_daisy_v2_main.spm": "561f644b8292a9e1b573de0e237b850204f5f1ffa41f75d4fe2d6ea815033aac",
+        "node.xml": "af35bb681a609d32d85e6465111d32ae2c20e9f7d7ce7e471098a6b2022c9392",
+        "materials.xml": "eaf2dd16d1fe338c530f4f71ba2fcd9a8e7a78d88744be8104d4275d4d2c882a",
+        "dp_flower.png": "560ae13d4e1784fb09c7fe50b68e90d89a6e5ecf95c8778d9e3c56f75d2e4a16"
+      },
+      "bytes": 1904
+    },
+    {
+      "name": "fluxara_driftlib_circuit_pennants_v2",
+      "files": {
+        "node.xml": "6a0438aa4c038641ef143b1620991805ea73e3039b47e884c4698c1c3587ba17",
+        "dp_palette.png": "ec1efcdc37f6730f5ea304e62bcd912d454385082e6065ba70c84b43886477cb",
+        "materials.xml": "99c2a73cf1ce2743b68c31160f1d098b6e63a9f8ae65a59d8211a0432075138c",
+        "fluxara_driftlib_circuit_pennants_v2_main.spm": "b9cef8c1d756553f2951ba46397c73d11d67883c5d61b346c76b6f248337bf96"
+      },
+      "bytes": 4063
+    }
+  ],
+  "finalBlend": {
+    "path": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-dp-motorsports-land-ii-final/DP Motorsports Land II.blend",
+    "bytes": 25351194,
+    "sha256": "b2e36e1f36c830d424d1f7b005bf7aed25b494fa830459a5dbfd3be7bc69d22d"
+  },
+  "usedAssetsVerified": 199
+}

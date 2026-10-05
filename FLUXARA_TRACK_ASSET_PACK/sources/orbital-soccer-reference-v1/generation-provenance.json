@@ -1,0 +1,12 @@
+{
+  "mode": "generate",
+  "tool": "image_gen.imagegen",
+  "prompt": "Create a game skybox source texture: a single seamless horizontally wrapping 2:1 equirectangular space panorama, 2048x1024. Stylized polished family-friendly colorful 3D kart racing game, Fluxara Drift. Deep midnight navy space, scattered small white stars, soft violet magenta nebula sweeping diagonally near the center, one beautiful large blue Earth-like planet occupying about 18 percent of panorama width on the right quarter, turquoise oceans white cloud bands vivid cyan atmospheric rim. Empty space below and above, sparse stars at poles, no horizon no ground no roads no buildings no asteroids no text no logos. Seamless horizontal left-right edges, matching dark navy edges, no framing, no vignette. Suitable for mapping onto sky cube faces, not a picture of a racing track.",
+  "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v1/orbital-space-panorama.png",
+  "outputFaces": 6,
+  "faceResolution": 512,
+  "projection": "Equirectangular to cubemap; spherical 30 degree rotation; JPEG quality 82",
+  "postProcessing": "Geometric projection and size conversion only",
+  "reference": "Figma Pws4Hw0fwwTmTMf6OJvil8 378:83",
+  "approval": "User authorized work without intermediate approvals; final output not yet user-reviewed"
+}

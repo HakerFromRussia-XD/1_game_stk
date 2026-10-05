@@ -1,0 +1,139 @@
+{
+  "flags": 1,
+  "materials": [
+    [
+      "CR1.png",
+      ""
+    ],
+    [
+      "CR2.png",
+      ""
+    ],
+    [
+      "GRASS.png",
+      ""
+    ],
+    [
+      "HOR.png",
+      ""
+    ],
+    [
+      "KERB.png",
+      ""
+    ],
+    [
+      "OBJ.dds",
+      ""
+    ],
+    [
+      "OBJ.png",
+      ""
+    ],
+    [
+      "OBJALPHA.png",
+      ""
+    ],
+    [
+      "ROAD.png",
+      ""
+    ],
+    [
+      "SAND.png",
+      ""
+    ],
+    [
+      "SZK.dds",
+      ""
+    ],
+    [
+      "stktex_directionSign_a.png",
+      ""
+    ]
+  ],
+  "buffers": [
+    {
+      "buffer": 0,
+      "texture": "CR1.png",
+      "vertexCount": 672,
+      "triangles": 336
+    },
+    {
+      "buffer": 1,
+      "texture": "CR2.png",
+      "vertexCount": 168,
+      "triangles": 84
+    },
+    {
+      "buffer": 2,
+      "texture": "GRASS.png",
+      "vertexCount": 5168,
+      "triangles": 4607
+    },
+    {
+      "buffer": 3,
+      "texture": "HOR.png",
+      "vertexCount": 3235,
+      "triangles": 2920
+    },
+    {
+      "buffer": 4,
+      "texture": "KERB.png",
+      "vertexCount": 3692,
+      "triangles": 2526
+    },
+    {
+      "buffer": 5,
+      "texture": "OBJ.dds",
+      "vertexCount": 1344,
+      "triangles": 448
+    },
+    {
+      "buffer": 6,
+      "texture": "OBJ.png",
+      "vertexCount": 65535,
+      "triangles": 76347
+    },
+    {
+      "buffer": 7,
+      "texture": "OBJ.png",
+      "vertexCount": 65533,
+      "triangles": 93509
+    },
+    {
+      "buffer": 8,
+      "texture": "OBJ.png",
+      "vertexCount": 34702,
+      "triangles": 41495
+    },
+    {
+      "buffer": 9,
+      "texture": "OBJALPHA.png",
+      "vertexCount": 7080,
+      "triangles": 4716
+    },
+    {
+      "buffer": 10,
+      "texture": "ROAD.png",
+      "vertexCount": 3004,
+      "triangles": 3200
+    },
+    {
+      "buffer": 11,
+      "texture": "SAND.png",
+      "vertexCount": 241,
+      "triangles": 122
+    },
+    {
+      "buffer": 12,
+      "texture": "SZK.dds",
+      "vertexCount": 448,
+      "triangles": 224
+    },
+    {
+      "buffer": 13,
+      "texture": "stktex_directionSign_a.png",
+      "vertexCount": 80,
+      "triangles": 40
+    }
+  ]
+}

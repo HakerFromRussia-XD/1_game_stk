@@ -1,0 +1,1224 @@
+{
+  "prototypes": [
+    {
+      "id": "lap-weight-v1-proto-c6712b1c51dc6a32",
+      "name": "LCW1_LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_0",
+      "sourcePrototype": "LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_0",
+      "shapeUVExact": true,
+      "shapeHash": "1917a150e60dfdc8d56a8a53aa089b206b5d73b85a512bdabd1425f80d96f156",
+      "runtimeLibrary": "fluxara_driftlib_lc_light_tree_v1",
+      "materials": [
+        "LCW1_LCV1_dp_palette.png.001"
+      ]
+    },
+    {
+      "id": "lap-weight-v1-proto-736f934414ac1f78",
+      "name": "LCW1_LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_1",
+      "sourcePrototype": "LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_1",
+      "shapeUVExact": true,
+      "shapeHash": "5af768fe270c4c755c65b4569b59fe0a274da2d3b6f91e961628de6fcec95dd2",
+      "runtimeLibrary": "fluxara_driftlib_lc_light_tree_v1",
+      "materials": [
+        "LCW1_LCV1_fluxara_circuit_leaf_v2.png"
+      ]
+    },
+    {
+      "id": "lap-weight-v1-proto-c8c7e0f837c598d5",
+      "name": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "sourcePrototype": "LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "shapeUVExact": true,
+      "shapeHash": "0099e34ec25a49dc15af45a2049a8de7b431fbde82d10132b5d6ede3faad9dab",
+      "runtimeLibrary": "fluxara_driftlib_lc_light_bush_v1",
+      "materials": [
+        "LCW1_LCV1_fluxara_circuit_leaf_v2.png.001"
+      ]
+    }
+  ],
+  "changedNativeParts": 39,
+  "placements": [
+    {
+      "object": "fluxara_driftlib_accacia_a_main_proxy_fluxara_driftlib_lc_green",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_0",
+      "worldMatrix": [
+        [
+          2.2187957763671875,
+          -9.145550727844238,
+          0.0,
+          -377.53155517578125
+        ],
+        [
+          6.9524078369140625,
+          2.9187166690826416,
+          0.0,
+          -187.68348693847656
+        ],
+        [
+          0.0,
+          0.0,
+          10.309028625488281,
+          -10.209028244018555
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_accacia_a_main_proxy_fluxara_driftlib_lc_gree",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_1",
+      "worldMatrix": [
+        [
+          2.2187957763671875,
+          -9.145550727844238,
+          0.0,
+          -377.53155517578125
+        ],
+        [
+          6.9524078369140625,
+          2.9187166690826416,
+          0.0,
+          -187.68348693847656
+        ],
+        [
+          0.0,
+          0.0,
+          10.309028625488281,
+          -10.209028244018555
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_accacia_a_main_proxy.001_fluxara_driftlib_lc_g",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_0",
+      "worldMatrix": [
+        [
+          2.2187957763671875,
+          -9.145550727844238,
+          0.0,
+          -464.40155029296875
+        ],
+        [
+          6.9524078369140625,
+          2.9187166690826416,
+          0.0,
+          -142.33348083496094
+        ],
+        [
+          0.0,
+          0.0,
+          10.309028625488281,
+          -9.509028434753418
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_accacia_a_main_proxy.001_fluxara_driftlib_lc_",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_1",
+      "worldMatrix": [
+        [
+          2.2187957763671875,
+          -9.145550727844238,
+          0.0,
+          -464.40155029296875
+        ],
+        [
+          6.9524078369140625,
+          2.9187166690826416,
+          0.0,
+          -142.33348083496094
+        ],
+        [
+          0.0,
+          0.0,
+          10.309028625488281,
+          -9.509028434753418
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_accacia_a_main_proxy.002_fluxara_driftlib_lc_g",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_0",
+      "worldMatrix": [
+        [
+          -4.0385847091674805,
+          -7.996043682098389,
+          0.0,
+          -480.22540283203125
+        ],
+        [
+          6.07855749130249,
+          -5.312560081481934,
+          0.0,
+          -56.40681838989258
+        ],
+        [
+          0.0,
+          0.0,
+          10.309028625488281,
+          -0.8490286469459534
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_accacia_a_main_proxy.002_fluxara_driftlib_lc_",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_1",
+      "worldMatrix": [
+        [
+          -4.0385847091674805,
+          -7.996043682098389,
+          0.0,
+          -480.22540283203125
+        ],
+        [
+          6.07855749130249,
+          -5.312560081481934,
+          0.0,
+          -56.40681838989258
+        ],
+        [
+          0.0,
+          0.0,
+          10.309028625488281,
+          -0.8490286469459534
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_accacia_a_main_proxy.003_fluxara_driftlib_lc_g",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_0",
+      "worldMatrix": [
+        [
+          7.297878265380859,
+          0.0,
+          0.0,
+          -479.9421691894531
+        ],
+        [
+          0.0,
+          9.600000381469727,
+          0.0,
+          16.8700008392334
+        ],
+        [
+          0.0,
+          0.0,
+          10.309028625488281,
+          -4.029028415679932
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_accacia_a_main_proxy.003_fluxara_driftlib_lc_",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_1",
+      "worldMatrix": [
+        [
+          7.297878265380859,
+          0.0,
+          0.0,
+          -479.9421691894531
+        ],
+        [
+          0.0,
+          9.600000381469727,
+          0.0,
+          16.8700008392334
+        ],
+        [
+          0.0,
+          0.0,
+          10.309028625488281,
+          -4.029028415679932
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_accacia_a_main_proxy.004_fluxara_driftlib_lc_g",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_0",
+      "worldMatrix": [
+        [
+          -6.803985595703125,
+          -3.4715960025787354,
+          0.0,
+          -476.41595458984375
+        ],
+        [
+          2.639091968536377,
+          -8.950308799743652,
+          0.0,
+          62.150062561035156
+        ],
+        [
+          0.0,
+          0.0,
+          10.309028625488281,
+          -8.729028701782227
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_accacia_a_main_proxy.004_fluxara_driftlib_lc_",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_1",
+      "worldMatrix": [
+        [
+          -6.803985595703125,
+          -3.4715960025787354,
+          0.0,
+          -476.41595458984375
+        ],
+        [
+          2.639091968536377,
+          -8.950308799743652,
+          0.0,
+          62.150062561035156
+        ],
+        [
+          0.0,
+          0.0,
+          10.309028625488281,
+          -8.729028701782227
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_accacia_a_main_proxy.005_fluxara_driftlib_lc_g",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_0",
+      "worldMatrix": [
+        [
+          -4.72990083694458,
+          -7.310767650604248,
+          0.0,
+          -373.16802978515625
+        ],
+        [
+          5.557613372802734,
+          -6.221951961517334,
+          0.0,
+          64.27119445800781
+        ],
+        [
+          0.0,
+          0.0,
+          10.309028625488281,
+          -10.799028396606445
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_accacia_a_main_proxy.005_fluxara_driftlib_lc_",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_1",
+      "worldMatrix": [
+        [
+          -4.72990083694458,
+          -7.310767650604248,
+          0.0,
+          -373.16802978515625
+        ],
+        [
+          5.557613372802734,
+          -6.221951961517334,
+          0.0,
+          64.27119445800781
+        ],
+        [
+          0.0,
+          0.0,
+          10.309028625488281,
+          -10.799028396606445
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_accacia_a_main_proxy.006_fluxara_driftlib_lc_g",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_0",
+      "worldMatrix": [
+        [
+          -3.821779251098633,
+          -8.178363800048828,
+          -0.0011025728890672326,
+          -256.6244812011719
+        ],
+        [
+          5.881566524505615,
+          -4.7556047439575195,
+          -3.341823101043701,
+          -10.057729721069336
+        ],
+        [
+          2.01499605178833,
+          -1.6305209398269653,
+          9.752347946166992,
+          -5.733057498931885
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_accacia_a_main_proxy.006_fluxara_driftlib_lc_",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_tree_green_v2_main_1",
+      "worldMatrix": [
+        [
+          -3.821779251098633,
+          -8.178363800048828,
+          -0.0011025728890672326,
+          -256.6244812011719
+        ],
+        [
+          5.881566524505615,
+          -4.7556047439575195,
+          -3.341823101043701,
+          -10.057729721069336
+        ],
+        [
+          2.01499605178833,
+          -1.6305209398269653,
+          9.752347946166992,
+          -5.733057498931885
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_agave_a_main_proxy_fluxara_driftlib_lc_green_a",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          3.262759208679199,
+          0.0,
+          0.0,
+          -371.8836669921875
+        ],
+        [
+          0.0,
+          2.9913594722747803,
+          -0.5115698575973511,
+          -184.5468292236328
+        ],
+        [
+          0.0,
+          1.0241713523864746,
+          1.494173288345337,
+          -8.348894119262695
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_agave_a_main_proxy.001_fluxara_driftlib_lc_gre",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          3.262759208679199,
+          0.0,
+          0.0,
+          -376.6536560058594
+        ],
+        [
+          0.0,
+          2.9913594722747803,
+          -0.5115698575973511,
+          -178.30682373046875
+        ],
+        [
+          0.0,
+          1.0241713523864746,
+          1.494173288345337,
+          -5.17889404296875
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_agave_a_main_proxy.002_fluxara_driftlib_lc_gre",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          3.262759208679199,
+          0.0,
+          0.0,
+          -459.003662109375
+        ],
+        [
+          0.0,
+          3.1618285179138184,
+          0.0,
+          -132.16905212402344
+        ],
+        [
+          0.0,
+          0.0,
+          1.5793218612670898,
+          -10.02456283569336
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_agave_a_main_proxy.003_fluxara_driftlib_lc_gre",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          3.262759208679199,
+          0.0,
+          0.0,
+          -482.4136657714844
+        ],
+        [
+          0.0,
+          2.8884739875793457,
+          0.6423680782318115,
+          -51.37070846557617
+        ],
+        [
+          0.0,
+          -1.2860314846038818,
+          1.4427822828292847,
+          -2.397368907928467
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_agave_a_main_proxy.004_fluxara_driftlib_lc_gre",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          3.262759208679199,
+          0.0,
+          0.0,
+          -476.8636474609375
+        ],
+        [
+          0.0,
+          3.1618285179138184,
+          0.0,
+          -66.06904602050781
+        ],
+        [
+          0.0,
+          0.0,
+          1.5793218612670898,
+          2.6154370307922363
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_agave_a_main_proxy.005_fluxara_driftlib_lc_gre",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          3.262759208679199,
+          0.0,
+          0.0,
+          -497.2236633300781
+        ],
+        [
+          0.0,
+          3.1618285179138184,
+          0.0,
+          12.720956802368164
+        ],
+        [
+          0.0,
+          0.0,
+          1.5793218612670898,
+          -0.3245631456375122
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_agave_a_main_proxy.006_fluxara_driftlib_lc_gre",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          3.262759208679199,
+          0.0,
+          0.0,
+          -481.74365234375
+        ],
+        [
+          0.0,
+          3.1618285179138184,
+          0.0,
+          63.260955810546875
+        ],
+        [
+          0.0,
+          0.0,
+          1.5793218612670898,
+          -7.564563274383545
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_agave_a_main_proxy.007_fluxara_driftlib_lc_gre",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          3.262759208679199,
+          0.0,
+          0.0,
+          -473.483642578125
+        ],
+        [
+          0.0,
+          3.1618285179138184,
+          0.0,
+          53.88095474243164
+        ],
+        [
+          0.0,
+          0.0,
+          1.5793218612670898,
+          -6.884563446044922
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_agave_a_main_proxy.008_fluxara_driftlib_lc_gre",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          3.262759208679199,
+          0.0,
+          0.0,
+          -393.81365966796875
+        ],
+        [
+          0.0,
+          3.1618285179138184,
+          0.0,
+          57.600955963134766
+        ],
+        [
+          0.0,
+          0.0,
+          1.5793218612670898,
+          -10.814563751220703
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_agave_a_main_proxy.009_fluxara_driftlib_lc_gre",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          3.262759208679199,
+          0.0,
+          0.0,
+          -261.0236511230469
+        ],
+        [
+          0.0,
+          2.666659116744995,
+          -0.8485689759254456,
+          -3.8315141201019287
+        ],
+        [
+          0.0,
+          1.698849081993103,
+          1.3319865465164185,
+          0.36442163586616516
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_agave_a_main_proxy.010_fluxara_driftlib_lc_gre",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          3.262759208679199,
+          0.0,
+          0.0,
+          -256.5236511230469
+        ],
+        [
+          0.0,
+          3.1618285179138184,
+          0.0,
+          -36.02904510498047
+        ],
+        [
+          0.0,
+          0.0,
+          1.5793218612670898,
+          -13.064563751220703
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_autumnSmallBush_a_main_proxy_fluxara_driftlib_",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          7.765199661254883,
+          0.0,
+          0.0,
+          360.6068115234375
+        ],
+        [
+          0.0,
+          7.71330451965332,
+          0.0,
+          86.76190185546875
+        ],
+        [
+          0.0,
+          0.0,
+          8.814635276794434,
+          -1.743420124053955
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_autumnSmallBush_a_main_proxy.001_fluxara_drift",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          7.765199661254883,
+          0.0,
+          0.0,
+          471.3168029785156
+        ],
+        [
+          0.0,
+          7.71330451965332,
+          0.0,
+          114.9719009399414
+        ],
+        [
+          0.0,
+          0.0,
+          8.814635276794434,
+          0.2565798759460449
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_autumnSmallBush_a_main_proxy.002_fluxara_drift",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          -4.137889862060547,
+          -6.526946067810059,
+          0.0,
+          427.67620849609375
+        ],
+        [
+          6.570859432220459,
+          -4.110236167907715,
+          0.0,
+          109.51373291015625
+        ],
+        [
+          0.0,
+          0.0,
+          8.814635276794434,
+          -0.3834201693534851
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_autumnSmallBush_a_main_proxy.003_fluxara_drift",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          2.1012654304504395,
+          7.425534248352051,
+          0.0,
+          424.2275695800781
+        ],
+        [
+          -7.475493907928467,
+          2.0872225761413574,
+          0.0,
+          152.75067138671875
+        ],
+        [
+          0.0,
+          0.0,
+          8.814635276794434,
+          -0.08342015743255615
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_autumnSmallBush_a_main_proxy.004_fluxara_drift",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          7.765199661254883,
+          0.0,
+          0.0,
+          430.716796875
+        ],
+        [
+          0.0,
+          7.71330451965332,
+          0.0,
+          202.94190979003906
+        ],
+        [
+          0.0,
+          0.0,
+          8.814635276794434,
+          -1.243420124053955
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_autumnSmallBush_a_main_proxy.005_fluxara_drift",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          2.1273481845855713,
+          -7.418204307556152,
+          0.0,
+          370.42169189453125
+        ],
+        [
+          7.468113422393799,
+          2.113131284713745,
+          0.0,
+          209.885498046875
+        ],
+        [
+          0.0,
+          0.0,
+          8.814635276794434,
+          -1.743420124053955
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_autumnSmallBush_a_main_proxy.006_fluxara_drift",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          -6.11906099319458,
+          -4.748784065246582,
+          0.0,
+          337.2472839355469
+        ],
+        [
+          4.780734062194824,
+          -6.078166961669922,
+          0.0,
+          125.32533264160156
+        ],
+        [
+          0.0,
+          0.0,
+          8.814635276794434,
+          -1.743420124053955
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_autumnSmallBush_a_main_proxy.007_fluxara_drift",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          1.6144745349884033,
+          7.544751167297363,
+          0.0,
+          320.0732116699219
+        ],
+        [
+          -7.595511436462402,
+          1.6036851406097412,
+          0.0,
+          86.34416961669922
+        ],
+        [
+          0.0,
+          0.0,
+          8.814635276794434,
+          -1.743420124053955
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_autumnSmallBush_a_main_proxy.008_fluxara_drift",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          -1.7335821390151978,
+          7.518630027770996,
+          0.0,
+          484.4477233886719
+        ],
+        [
+          -7.569215297698975,
+          -1.721996545791626,
+          0.0,
+          74.02461242675781
+        ],
+        [
+          0.0,
+          0.0,
+          8.814635276794434,
+          1.0565799474716187
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_autumnSmallBush_a_main_proxy.009_fluxara_drift",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          -1.7335821390151978,
+          7.518630027770996,
+          0.0,
+          520.937744140625
+        ],
+        [
+          -7.569215297698975,
+          -1.721996545791626,
+          0.0,
+          72.18461608886719
+        ],
+        [
+          0.0,
+          0.0,
+          8.814635276794434,
+          2.0965800285339355
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_autumnSmallBush_a_main_proxy.010_fluxara_drift",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          7.7137370109558105,
+          0.8865453600883484,
+          0.0,
+          517.70263671875
+        ],
+        [
+          -0.8925099968910217,
+          7.662186622619629,
+          0.0,
+          135.40579223632812
+        ],
+        [
+          0.0,
+          0.0,
+          8.814635276794434,
+          0.7665798664093018
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_autumnSmallBush_a_main_proxy.011_fluxara_drift",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          -7.534540176391602,
+          -1.8660171031951904,
+          0.0,
+          555.8208618164062
+        ],
+        [
+          1.8785715103149414,
+          -7.48418664932251,
+          0.0,
+          155.99566650390625
+        ],
+        [
+          0.0,
+          0.0,
+          8.814635276794434,
+          1.6165798902511597
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_autumnSmallBush_a_main_proxy.012_fluxara_drift",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          -1.361757755279541,
+          7.593771934509277,
+          0.0,
+          584.1160278320312
+        ],
+        [
+          -7.644863605499268,
+          -1.3526569604873657,
+          0.0,
+          126.58448028564453
+        ],
+        [
+          0.0,
+          0.0,
+          8.814635276794434,
+          2.8565797805786133
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "object": "fluxara_driftlib_autumnSmallBush_a_main_proxy.013_fluxara_drift",
+      "prototype": "LCW1_LC_Prototype_fluxara_driftlib_round_bush_green_v2_main_0",
+      "worldMatrix": [
+        [
+          -2.7827987670898438,
+          -7.200990200042725,
+          0.0,
+          552.72802734375
+        ],
+        [
+          7.249439239501953,
+          -2.7642011642456055,
+          0.0,
+          34.52528762817383
+        ],
+        [
+          0.0,
+          0.0,
+          8.814635276794434,
+          2.3465800285339355
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "originalObjectTransformsNotEdited": true,
+  "originalGeometryNotEdited": true,
+  "originalHighResolutionLeafImageUnchanged": true,
+  "newModelGeometry": false,
+  "newRuntimeTestsPerformed": false,
+  "finalNative": {
+    "path": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-lap-catch-final/Lap Catch.blend",
+    "bytes": 30643664,
+    "sha256": "1bad3cf13bbba056cdc375d77c7ec9f1ca993a7215af47854b20e8297145b13d"
+  },
+  "variantVisualLibrary": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/lap-texture-weight-v1/Lap Catch Lightweight Export Library.blend",
+  "canonicalBeforeSHA256": "ff8b3526a0f70cbd553b4c361f8096e09ffd3721701367110450039eb02d0e89",
+  "canonicalAfterSHA256": "e5ab2a2d234a90c5b308a13953eaf8c51fa8affdd6a755256fd3caf90261f100",
+  "canonicalPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend"
+}

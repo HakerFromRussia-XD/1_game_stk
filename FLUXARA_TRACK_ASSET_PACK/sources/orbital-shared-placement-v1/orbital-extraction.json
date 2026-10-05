@@ -1,0 +1,400 @@
+{
+  "trackId": "fluxara-user-orbital-simulation---soccer",
+  "stage": "Candidate; not integrated or runtime validated",
+  "sourceBytes": 5914626,
+  "candidateTrackBytes": 5912449,
+  "allNewSharedBytes": 2017,
+  "totalCandidateBytes": 5914466,
+  "weightNotIncreased": true,
+  "coordinateInstances": 6,
+  "uniqueModels": 2,
+  "extractedTriangles": 168,
+  "remainderVertexRecordsAndTriangleOrderExact": true,
+  "routeMeshesUnchanged": true,
+  "originalSceneNodesUnchanged": true,
+  "rejectedNativeSourceObjects": [
+    "Orbital_V5_ModuleBottom"
+  ],
+  "prototypes": [
+    {
+      "library": "fluxara_driftlib_orbital_reuse_22a0c424573d",
+      "sourceObject": "Orbital_V5_ModuleLeft",
+      "instances": 2,
+      "triangles": 44,
+      "localBounds": [
+        -14.49999713897705,
+        -12.0,
+        -2.000000476837158,
+        14.500008583068848,
+        12.000003814697266,
+        2.0000061988830566
+      ],
+      "model": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/new-library/fluxara_driftlib_orbital_reuse_22a0c424573d/fluxara_driftlib_orbital_reuse_22a0c424573d_main.spm",
+      "nativeMesh": "Cube.002"
+    },
+    {
+      "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+      "sourceObject": "Orbital_V5_WarmLamp_0",
+      "instances": 4,
+      "triangles": 20,
+      "localBounds": [
+        -0.8944244384765625,
+        -1.0,
+        -0.8506393432617188,
+        0.8944244384765625,
+        1.0000001192092896,
+        0.8506393432617188
+      ],
+      "model": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/new-library/fluxara_driftlib_orbital_reuse_e7154c1d184f/fluxara_driftlib_orbital_reuse_e7154c1d184f_main.spm",
+      "nativeMesh": "Icosphere.001"
+    }
+  ],
+  "textures": [
+    {
+      "original": "orbital_lights.png",
+      "alias": "fluxara_orbital_lights_pool_v1.png",
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/before/orbital_lights.png",
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/new-textures/fluxara_orbital_lights_pool_v1.png",
+      "bytes": 158,
+      "sha256": "458122eee2420f71b8c295589402ccc145f4216c860104b328579ff0581bf487",
+      "previouslyPackaged": false,
+      "previouslyPackagedPath": null
+    },
+    {
+      "original": "orbital_palette.png",
+      "alias": "fluxara_orbital_palette_pool_v1.png",
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/before/orbital_palette.png",
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/new-textures/fluxara_orbital_palette_pool_v1.png",
+      "bytes": 158,
+      "sha256": "458122eee2420f71b8c295589402ccc145f4216c860104b328579ff0581bf487",
+      "previouslyPackaged": false,
+      "previouslyPackagedPath": null
+    }
+  ],
+  "placements": [
+    {
+      "id": "PoolReuse_Orbital_V5_ModuleLeft",
+      "sourceObject": "Orbital_V5_ModuleLeft",
+      "library": "fluxara_driftlib_orbital_reuse_22a0c424573d",
+      "xyz": [
+        135.0,
+        56.002952575683594,
+        -75.80300903320312
+      ],
+      "hpr": [
+        8.913830583878935,
+        1.2475118537880263,
+        -7.902756827268302
+      ],
+      "scale": [
+        0.9999998807907104,
+        0.9999999403953552,
+        0.9999998807907104
+      ],
+      "sourceMatrix": [
+        [
+          0.9902679920196533,
+          -3.7044798339991303e-09,
+          0.13917303085327148,
+          135.0
+        ],
+        [
+          -0.021771464496850967,
+          0.9876882433891296,
+          0.1549120992422104,
+          -75.80300903320312
+        ],
+        [
+          -0.13745959103107452,
+          -0.15643450617790222,
+          0.978076159954071,
+          56.002952575683594
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldGeometryMatchesOriginalScenery": {
+        "localPositionError": 0,
+        "worldPositionError": 0,
+        "localNormalError": 0,
+        "triangleTopologyAndUVColorExact": true
+      }
+    },
+    {
+      "id": "PoolReuse_Orbital_V5_ModuleRight",
+      "sourceObject": "Orbital_V5_ModuleRight",
+      "library": "fluxara_driftlib_orbital_reuse_22a0c424573d",
+      "xyz": [
+        135.0,
+        50.997047424316406,
+        -44.19698715209961
+      ],
+      "hpr": [
+        8.913830583878935,
+        1.2475118537880263,
+        -7.902756827268302
+      ],
+      "scale": [
+        0.9999998807907104,
+        0.9999999403953552,
+        0.9999998807907104
+      ],
+      "sourceMatrix": [
+        [
+          0.9902679920196533,
+          -3.7044798339991303e-09,
+          0.13917303085327148,
+          135.0
+        ],
+        [
+          -0.021771464496850967,
+          0.9876882433891296,
+          0.1549120992422104,
+          -44.19698715209961
+        ],
+        [
+          -0.13745959103107452,
+          -0.15643450617790222,
+          0.978076159954071,
+          50.997047424316406
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldGeometryMatchesOriginalScenery": {
+        "localPositionError": 8.84401197254192e-06,
+        "worldPositionError": 8.529922399520072e-06,
+        "localNormalError": 0,
+        "triangleTopologyAndUVColorExact": false,
+        "uvAndColorPerVertexExact": true,
+        "bidirectionalSurfaceDistance": 0.00046970954281277955,
+        "sameSurfaceWithAlternativeTriangulation": true
+      }
+    },
+    {
+      "id": "PoolReuse_Orbital_V5_WarmLamp_0",
+      "sourceObject": "Orbital_V5_WarmLamp_0",
+      "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+      "xyz": [
+        96.0,
+        2.0,
+        -65.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.2000000476837158,
+        1.0
+      ],
+      "sourceMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          96.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -65.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.2000000476837158,
+          2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldGeometryMatchesOriginalScenery": {
+        "localPositionError": 0,
+        "worldPositionError": 0,
+        "localNormalError": 0,
+        "triangleTopologyAndUVColorExact": true
+      }
+    },
+    {
+      "id": "PoolReuse_Orbital_V5_WarmLamp_1",
+      "sourceObject": "Orbital_V5_WarmLamp_1",
+      "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+      "xyz": [
+        96.0,
+        2.0,
+        65.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.2000000476837158,
+        1.0
+      ],
+      "sourceMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          96.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          65.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.2000000476837158,
+          2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldGeometryMatchesOriginalScenery": {
+        "localPositionError": 0,
+        "worldPositionError": 0,
+        "localNormalError": 0,
+        "triangleTopologyAndUVColorExact": true,
+        "uvAndColorPerVertexExact": true,
+        "bidirectionalSurfaceDistance": 0,
+        "sameSurfaceWithAlternativeTriangulation": false
+      }
+    },
+    {
+      "id": "PoolReuse_Orbital_V5_WarmLamp_2",
+      "sourceObject": "Orbital_V5_WarmLamp_2",
+      "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+      "xyz": [
+        -96.0,
+        2.0,
+        -65.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.2000000476837158,
+        1.0
+      ],
+      "sourceMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -96.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -65.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.2000000476837158,
+          2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldGeometryMatchesOriginalScenery": {
+        "localPositionError": 0,
+        "worldPositionError": 0,
+        "localNormalError": 0,
+        "triangleTopologyAndUVColorExact": true,
+        "uvAndColorPerVertexExact": true,
+        "bidirectionalSurfaceDistance": 0,
+        "sameSurfaceWithAlternativeTriangulation": false
+      }
+    },
+    {
+      "id": "PoolReuse_Orbital_V5_WarmLamp_3",
+      "sourceObject": "Orbital_V5_WarmLamp_3",
+      "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+      "xyz": [
+        -96.0,
+        2.0,
+        65.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.2000000476837158,
+        1.0
+      ],
+      "sourceMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -96.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          65.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.2000000476837158,
+          2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldGeometryMatchesOriginalScenery": {
+        "localPositionError": 0,
+        "worldPositionError": 0,
+        "localNormalError": 0,
+        "triangleTopologyAndUVColorExact": true,
+        "uvAndColorPerVertexExact": true,
+        "bidirectionalSurfaceDistance": 0,
+        "sameSurfaceWithAlternativeTriangulation": false
+      }
+    }
+  ]
+}

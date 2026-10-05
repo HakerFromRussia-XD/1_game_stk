@@ -1,0 +1,345 @@
+{
+  "map": 8,
+  "trackId": "fluxara-user-motorsport-land",
+  "scope": "Matching original/current map-local SPM files, including all active diffuse/second-layer and declared support images. Each used file counted once per model; scene instance count is not multiplied. Added/shared replacements require separate correspondence. This is resource measurement, not a runtime test.",
+  "models": [
+    {
+      "model": "motorsport-land_track.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/motorsport-land_track.spm",
+          "bytes": 5201057,
+          "sha256": "015c4c99c84f9229c14c5a7a6e8c4c33884b6c242505d891982e366c4bcb1e01"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/CR1.png",
+            "bytes": 211190,
+            "sha256": "52e99d04e9e99752fd91d5acd2a37d55d931f174b55c6f5dcee9dfab3cecf9be",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/CR2.png",
+            "bytes": 986149,
+            "sha256": "949cb5e4a74305c6f13439e7b227e3c2bcfacb0d89ece2ccd764c1a6e5f1df5f",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/GRASS.png",
+            "bytes": 379332,
+            "sha256": "44b63bb37f7d97b8a1e7c47b82a5949024ea5a6e56d76533cec2d405963ba822",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/HOR.png",
+            "bytes": 515126,
+            "sha256": "a9b9c9a333c558907059a3d931d558bb1e5078c253a69830187e1556d66d302f",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/KERB.png",
+            "bytes": 270313,
+            "sha256": "ca27a1b1a6a8da43ed48035a74393140f9ab3cb8b4684d88b991764dd7b6a6c0",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/OBJ.dds",
+            "bytes": 366123,
+            "sha256": "80c8bb24aaf0b2528ed5a946d3f56dfa7e31b66675973309a31f542806b8c90a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/OBJ.png",
+            "bytes": 321928,
+            "sha256": "5b5ec447636f2b064fb905731ac2c162acead6323811c323cd711df3da200488",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/OBJemissive.png",
+            "bytes": 5616,
+            "sha256": "cffa516e919a110b73ba0d230d1b191e92219ac1133606f52ae2783423d6a65e",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/OBJALPHA.png",
+            "bytes": 397601,
+            "sha256": "2bc8bbf4806ba8ad809f5566ecf1157264cfa01b870916a83538de2fe29645d1",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/ROAD.png",
+            "bytes": 1909062,
+            "sha256": "9d190b2ef25f6ab61f714f7221e8a0cefc405d434b0d9b5873d5876c6416c78a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/ROADgloss.png",
+            "bytes": 1006373,
+            "sha256": "1d5245e6af20e8ee41dbc5370cdfe5db240b0d157d703450179f5c8b35772c9c",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/SAND.png",
+            "bytes": 577759,
+            "sha256": "bb4911cf5eabc1f5603ec55b0e14f5a7e0096b6c039a7894dad199b47e982b33",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drifttex_directionSign_a.png",
+            "bytes": 2446,
+            "sha256": "fd91161bc7cdfaf8d9018d5155092ab856a2c80f9b031dca441bf8449b836561",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [
+          {
+            "name": "SZK.dds",
+            "role": "spm-layer1"
+          }
+        ],
+        "modelBytes": 5201057,
+        "textureBytes": 6949018,
+        "materialBindings": [
+          {
+            "texture": "CR1.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "CR1.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/materials.xml"
+          },
+          {
+            "texture": "CR2.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "CR2.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/materials.xml"
+          },
+          {
+            "texture": "GRASS.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "GRASS.png",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/materials.xml"
+          },
+          {
+            "texture": "HOR.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "HOR.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/materials.xml"
+          },
+          {
+            "texture": "KERB.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "KERB.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/materials.xml"
+          },
+          {
+            "texture": "OBJ.dds",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "OBJ.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "OBJ.png",
+              "gloss-map": "OBJemissive.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/materials.xml"
+          },
+          {
+            "texture": "OBJALPHA.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "OBJALPHA.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/materials.xml"
+          },
+          {
+            "texture": "ROAD.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "ROAD.png",
+              "gloss-map": "ROADgloss.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/materials.xml"
+          },
+          {
+            "texture": "SAND.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "SAND.png",
+              "slowdown-time": "0.33",
+              "max-speed": "0.33"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/materials.xml"
+          },
+          {
+            "texture": "SZK.dds",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "stktex_directionSign_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drifttex_directionSign_a.png",
+              "mirror-axis": "U"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 12150075
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-motorsport-land/motorsport-land_track.spm",
+          "bytes": 4947149,
+          "sha256": "d8ce1af6b34edc2389f191d7854d10e70359d9ed08a9efd0100ebe9f36bd85fe"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-motorsport-land/CR1.png",
+            "bytes": 59720,
+            "sha256": "c84fe9d35ff97fa5f6ba887678fe2a06aeb71e1dae5cce114391156821db663e",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-motorsport-land/CR2.png",
+            "bytes": 88777,
+            "sha256": "bb8057258fc71bdfcf3a964c4bf17ea76e08bcb4c6ef70d7983162e14fdc214f",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-motorsport-land/ml_grass.jpg",
+            "bytes": 15365,
+            "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-motorsport-land/KERB.png",
+            "bytes": 90151,
+            "sha256": "3ef66b68c1659b496581c1cdbcf308adecb334a66dd9bf20c4d23ff02f098aec",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-motorsport-land/OBJ.png",
+            "bytes": 33320,
+            "sha256": "db2ac9417b4b5aeb7272c3ba613f1838555fe2ff3f9486b382146832d67352ab",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-motorsport-land/ROAD.png",
+            "bytes": 422727,
+            "sha256": "a7d61f405024756eae70dcb0fa1f5e70e59930beb817a7b1815dec88901c2da7",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-motorsport-land/ROADgloss.png",
+            "bytes": 187822,
+            "sha256": "3c86d294159d8e656e3adc3c5024047cbf5f6d4fa0f7dc594460d5c586951cb4",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-motorsport-land/SAND.png",
+            "bytes": 143145,
+            "sha256": "410f614b855ba6cc4b6edcbdd7a0212717850de69558054f8f03fe8d96dd2e9f",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 4947149,
+        "textureBytes": 1041027,
+        "materialBindings": [
+          {
+            "texture": "CR1.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "CR1.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-motorsport-land/materials.xml"
+          },
+          {
+            "texture": "CR2.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "CR2.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-motorsport-land/materials.xml"
+          },
+          {
+            "texture": "ml_grass.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "ml_grass.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-motorsport-land/materials.xml"
+          },
+          {
+            "texture": "KERB.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "KERB.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-motorsport-land/materials.xml"
+          },
+          {
+            "texture": "OBJ.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "OBJ.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-motorsport-land/materials.xml"
+          },
+          {
+            "texture": "ROAD.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "ROAD.png",
+              "gloss-map": "ROADgloss.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-motorsport-land/materials.xml"
+          },
+          {
+            "texture": "SAND.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "SAND.png",
+              "slowdown-time": "0.33",
+              "max-speed": "0.33"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-motorsport-land/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 5988176
+      },
+      "changePercent": -50.714905052026424,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": false
+    }
+  ],
+  "allMatchingModelsResolved": false,
+  "allMatchingModelsWithinLimit": true
+}

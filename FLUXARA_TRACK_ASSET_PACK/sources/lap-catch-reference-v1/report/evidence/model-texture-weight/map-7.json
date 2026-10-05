@@ -1,0 +1,2107 @@
+{
+  "map": 7,
+  "trackId": "fluxara-user-lap-catch",
+  "scope": "Matching original/current map-local SPM files, including all active diffuse/second-layer and declared support images. Each used file counted once per model; scene instance count is not multiplied. Added/shared replacements require separate correspondence. This is resource measurement, not a runtime test.",
+  "models": [
+    {
+      "model": "box.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/box.spm",
+          "bytes": 498,
+          "sha256": "de4336f83fc8b2a57f4aaef4ae707ba63f3b0f3aa8d19fe9dbb36e453a0006af"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/transparence.png",
+            "bytes": 118,
+            "sha256": "b92e8c362050c47993fadf28e742d1765604335264f11136a70ccb55deca594e",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 498,
+        "textureBytes": 118,
+        "materialBindings": [
+          {
+            "texture": "transparence.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "transparence.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 616
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/box.spm",
+          "bytes": 498,
+          "sha256": "de4336f83fc8b2a57f4aaef4ae707ba63f3b0f3aa8d19fe9dbb36e453a0006af"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/transparence.png",
+            "bytes": 118,
+            "sha256": "b92e8c362050c47993fadf28e742d1765604335264f11136a70ccb55deca594e",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 498,
+        "textureBytes": 118,
+        "materialBindings": [
+          {
+            "texture": "transparence.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "transparence.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 616
+      },
+      "changePercent": 0.0,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "bumper.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/bumper.spm",
+          "bytes": 584,
+          "sha256": "9cd3f222a924caa1fda30e1973fa76dd0d780a1b37c5498f63af03b7a775b765"
+        },
+        "textures": [],
+        "missingTextureFiles": [],
+        "modelBytes": 584,
+        "textureBytes": 0,
+        "materialBindings": [
+          {
+            "texture": "",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          }
+        ],
+        "modelPlusUsedTextureBytes": 584
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/bumper.spm",
+          "bytes": 584,
+          "sha256": "9cd3f222a924caa1fda30e1973fa76dd0d780a1b37c5498f63af03b7a775b765"
+        },
+        "textures": [],
+        "missingTextureFiles": [],
+        "modelBytes": 584,
+        "textureBytes": 0,
+        "materialBindings": [
+          {
+            "texture": "",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          }
+        ],
+        "modelPlusUsedTextureBytes": 584
+      },
+      "changePercent": 0.0,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "lap-catch_track.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/lap-catch_track.spm",
+          "bytes": 3688493,
+          "sha256": "0937a09c591b64f2812d421582eeff5bda2784710563c5aa561edd167546a568"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/170.jpg",
+            "bytes": 466216,
+            "sha256": "33818006bfefb3667357e310c8c274d1d5df0b37d00aa0221f7df1aff440a230",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/170_norm.jpg",
+            "bytes": 575467,
+            "sha256": "7830fa70409d1e9c55d3911ff262ffe15741fbf1f40148a4a639b2c35dd06ce5",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/173.jpg",
+            "bytes": 239412,
+            "sha256": "da733ef7a963da7bb02db38a7c78d9bfac1ee91a5b1cd3ff7c5721d2de67c0af",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/173_norm.jpg",
+            "bytes": 442982,
+            "sha256": "cc1104280d02ea03d0c144b9c803604b5b7518de39ef5dc0b4dd7a90dee77299",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/173b.jpg",
+            "bytes": 458071,
+            "sha256": "76537329fd5c6fe4078b97101cc9ef424deb3285d6a7e94f55c01142021def42",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/IscalesPortal.png",
+            "bytes": 54307,
+            "sha256": "1387ae532efa6ba0ac163a742c442b35cbe5e571c786ca14d49fc66ca229f9aa",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/Stucco_neo.png",
+            "bytes": 291832,
+            "sha256": "da2d6ee483090ceacb7ad7c93ab78268f2de94360c24d9c0daf5d38cd6e9ed6c",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/beachportal.png",
+            "bytes": 1442,
+            "sha256": "36c5e05ce1a5e6fcd709f37c400a0d8a29c4fa12507fc17284c2bc5fe08814b1",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/blackrock.jpg",
+            "bytes": 15570,
+            "sha256": "25bc97924d624e9900f69b51f605c25ced08ea5a3caf75969cf0b3a18326b500",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/bone2-equus_grevyi-01.png",
+            "bytes": 128824,
+            "sha256": "4f88f25585edf70f3db2bdaaa741e0a606d1495bef1057070db25281332e7a6f",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/bone2-equus_grevyi-01_nm.png",
+            "bytes": 177595,
+            "sha256": "de1e34b72acc415cc26c73305401efa106e2b5ba77698540723494b1f9c91d6c",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/city_concrete.png",
+            "bytes": 21033,
+            "sha256": "9ea37f85023f8f52cd211cc7154c60f677944cdc09054dc1378b1698c8538556",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/city_ground.jpg",
+            "bytes": 13916,
+            "sha256": "faae8b637a7fc306589c5e958185e9c0832074c6930af8adb4a029452552d208",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/city_rock.jpg",
+            "bytes": 20224,
+            "sha256": "58245f51f3e823ce894661180094e23aadf6bb80ec696dbd296e11832ae8ea4c",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/cityportal.png",
+            "bytes": 1193,
+            "sha256": "ed9bd48fc3cee1b26a6a5869bc26b279a81aa5ce20132bc6d865f514e31d586b",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/dark-wall-wood.png",
+            "bytes": 34748,
+            "sha256": "26fac5b25a133f1fd1a3af12a14e84348dc24cd62171ed1e9b9cd5b9d16caddf",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/dark-wall-wood_nm.jpg",
+            "bytes": 46603,
+            "sha256": "af060fc22b0b0f1847b7d17aa55acbf88a7fbcd381da0d02d84a566f6e661908",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/desertportal.png",
+            "bytes": 930,
+            "sha256": "7f34761b2f1f37eecfba5e5ee943e630bffc9a379c26300a73a8f606bf1931ad",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/deprecated/dirt.png",
+            "bytes": 27212,
+            "sha256": "c97369ff91e7c6f7beda154ee556d20c8d95b827069737ae9fa08540ba584fb6",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/egypt2.jpg",
+            "bytes": 9923,
+            "sha256": "d2fd4772394fa6ad7d9db1374ea9f2679e5a1b33270f28f23cb79f983ebe6de6",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/electricportal.png",
+            "bytes": 1444,
+            "sha256": "2400eb0969140888a0abc85d9b547b4eda645df96807265e0f57d2089607c353",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/gfx_kartDirt_a_Albedo.png",
+            "bytes": 16694,
+            "sha256": "0ac44fd50f7d2f58978f25a50e3d3af2bcbcc65665013f7c8a830825704e7f90",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/deprecated/grass.jpg",
+            "bytes": 14767,
+            "sha256": "42c185a1241a34210087d9197ea64d051be82b526c7c31c933938f0d95f0a5c9",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/deprecated/grass4.png",
+            "bytes": 25186,
+            "sha256": "807b080b565370faeda5252e99336dcbd8b99c50ac5bb65ba2440cf0c706f4c4",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/grass_dark.jpg",
+            "bytes": 15327,
+            "sha256": "cd94ef00fcb76d164238511e9c3c2dac22b78a6188be092cec7329b203a7972b",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/gravelportal.png",
+            "bytes": 1698,
+            "sha256": "b7e1b63cb3fdd737646ca46fb8a2cfb2de4526ee59d3b34128f61db02f125608",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/hd_beach_01_d.png",
+            "bytes": 14695,
+            "sha256": "a725216c0c30ca046a2ab5da757f279e2ecf5fdab078d51e00e9199aa943536a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/hillsportal.png",
+            "bytes": 941,
+            "sha256": "df3cb057ecc69fe6f094d195cc92e1987e4362418853c142665d6dcd08179de8",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/infernoportal.png",
+            "bytes": 1236,
+            "sha256": "baf889dfa2c81f8159f90a4a6376e8eca79969a8753f5264819aaf1e69a9a3b6",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/deprecated/logs.png",
+            "bytes": 38448,
+            "sha256": "f7c42be8108af2891b7bb867819059b72c9fb63035438ca5af3149ca2a8a7f9f",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/deprecated/lscales.png",
+            "bytes": 26239,
+            "sha256": "48fc6640713223e488efae72be1b05f1c264f859e1e8c8a840ab81ae3ed1d3c7",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/deprecated/metalgrid.png",
+            "bytes": 4816,
+            "sha256": "9b723505ff9b070f986f8d8e2f5d07f60b6a8814b7de2f2c33696d183996c480",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/mudwater.png",
+            "bytes": 53658,
+            "sha256": "e856b455854f8701a87e8ea9251d97a6f9bf617290154829be85621101318446",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/neocity_concrete.png",
+            "bytes": 35852,
+            "sha256": "863d440162fae0fdf72ee5637580ccf364dbadc11d158ed9b88fad730ed1d89b",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/noise.png",
+            "bytes": 62485,
+            "sha256": "690d3bcfb46cfb679ea78bea02c3b0228d1378a34931ad6ca2088ca974288eee",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/plainsportal.png",
+            "bytes": 841,
+            "sha256": "ae6abc5bf32c4323593296b94ea14b0145fe22d2e0dacce63e62540a97220be6",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/pyramidwall.jpg",
+            "bytes": 25880,
+            "sha256": "2f0eb1ce1214e89ed8ba62156c76ed10dab8264d2c51c2ac1044d0d562ebddba",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/pyramidwall_nm.png",
+            "bytes": 45687,
+            "sha256": "2db16bee4d68b35465c21c2bdadfda537e3f76991e34d25cc4bf39b11370c16b",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/retroportal.png",
+            "bytes": 1355,
+            "sha256": "15f9021eb96fc0250e9f26752bf1fcbc328484bcaf43356da17664d0f6a6e197",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/rock_grey.jpg",
+            "bytes": 19173,
+            "sha256": "6d41e2c97c25ed45a9fae60bdfd1c775bee9009547ecfe31e9ec291ef6d416aa",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/rock_mountain.jpg",
+            "bytes": 21962,
+            "sha256": "18a6915035ce094d99f8c7ab27ea79db3f8c65283fda4eab6d23fdc5f8dee612",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/rockportal.png",
+            "bytes": 1082,
+            "sha256": "471f0d22be1d718f7e558af95280308e63dfc8f27b57a686ddaa5d5c4c0b7450",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/rockred.jpg",
+            "bytes": 19716,
+            "sha256": "5fb4a6f91a2b008c9dff8b690ce2af97f06683eb471a8a8ae53d4df0ce03187a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/deprecated/skyscraper1.png",
+            "bytes": 6225,
+            "sha256": "a3b94904097beaf5281f64a3caff58287982c5c5af1d03c053934a4decafd5fa",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/deprecated/skyscraper2.png",
+            "bytes": 10545,
+            "sha256": "828111edf2582c4ea019b19b2e4bbfcd4e8c077eaa4d329b0eca774e6e815a10",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/deprecated/skyscraper3.png",
+            "bytes": 8426,
+            "sha256": "e6a84cea9f8f090a5d312cc081bfc6f4858d73d6a07b40fee9ced556d6df4910",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/snow.png",
+            "bytes": 20330,
+            "sha256": "94471d451dfb95fd86a55b67623fb4c60cdf381376a0e1755da917bcb9b2f134",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/snowportal.png",
+            "bytes": 1391,
+            "sha256": "55889374b5046fc5d37de5e5c534f7408308be787119f88670626075edff2a67",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/snowrock.jpg",
+            "bytes": 25803,
+            "sha256": "1ac45fc8433de51df8316598f4973a8da6c6fcdd8e80ad616eff5d6d660fccbf",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_brownRock_a.png",
+            "bytes": 32252,
+            "sha256": "07ac8c0f6ae962f524b549059e065c595caf2bbb19c5396ec9cd85780e411095",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_grassA.png",
+            "bytes": 6886,
+            "sha256": "4033d5868795abc40efc684f8c88f341e0f96d14c9ceec7199adee12eaacb974",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_grassB.png",
+            "bytes": 19001,
+            "sha256": "813a4cf5d341cff965a5676ead206361f71082e0b1631f6dcc8b1c1f1fdfda41",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_grassB_Normal.png",
+            "bytes": 26803,
+            "sha256": "64c6f576e5469091ae8c74822477f1ad9977eaabf6b8430a0c6f25348adbf72a",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_grassC.png",
+            "bytes": 17953,
+            "sha256": "7abe49d069731cc9256d4a9dd3e0751f47c74e42b125e50f3d7eca2f4867d964",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_greyWall_a.png",
+            "bytes": 19689,
+            "sha256": "7a477e772c21d8c7e9295744d76ad88819947653817122348326fc71cbf5063c",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_ice_a.png",
+            "bytes": 36290,
+            "sha256": "ab7376149f10de1c46cd40889be3870eaeb1c2dff96b815728afcca202631f9c",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_ice_a_gloss.png",
+            "bytes": 16385,
+            "sha256": "fd159644854d3ab7b261d21c8ad1c50ac3686e8633c0bcc5aabf5ec726310a27",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_ice_a_Normal.png",
+            "bytes": 34798,
+            "sha256": "5422e870274ea72c25b1a2291f2a706b19c482c5a1b85477eb7948182773be2f",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_pinkcrystal_a.png",
+            "bytes": 12266,
+            "sha256": "aad371b5b6a071bc11bfce231676a74dcac18ae7b66da10878a6cc4dc7fc04b4",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_greyMetal_a_gloss.png",
+            "bytes": 8186,
+            "sha256": "d334981246f7d58673779532f4626f0fd329d4c1e90a2fbb4ae4c9a3c4393477",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_bedRock_a_Normal.png",
+            "bytes": 53112,
+            "sha256": "d3d89b2ce9c27a8dd646795be4b6ff378fca4821827d42822f615ae4bf149382",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_racingPattern_a.png",
+            "bytes": 11452,
+            "sha256": "5b9ac3c86433012a0c04b9222f2b4d59c51a744fd91d1d9b07fbdeee07c456cb",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/gfxGlow_softScreen_a.png",
+            "bytes": 260,
+            "sha256": "8dda437db3f51da2d2043f38afe719f0e797775f25de35ab969ef71c2685ba65",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_rock_b.png",
+            "bytes": 40661,
+            "sha256": "70ba2d1a3929aaebd318cc7708c35ac40f99893ad823a2472829cea667af3260",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_runway_a.png",
+            "bytes": 4242,
+            "sha256": "f04bae09c0955f4d970492c93814db980706863d3ca71f58ddd8585aa2da0751",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_sand_a.png",
+            "bytes": 27417,
+            "sha256": "953fe8ae04dd6f6b454d925c9dc4966bde8186719dd574d562351bf3afdae1fa",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_sand_b.png",
+            "bytes": 34541,
+            "sha256": "65ffab446f040ce7e3d53fe3dc05a49f2a9a4545f5ca24b35f28ac3540d1cd8c",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_snow_a.png",
+            "bytes": 7555,
+            "sha256": "b6d7cebf69446e086624f5fc7b2ad96a08d577afc24bff791d8941601d1bc8e3",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_snow_a_gloss.png",
+            "bytes": 4170,
+            "sha256": "59567be2a532f245c93b31a0e4a07ae30c2a5125fd734950d6d95b8e316f9577",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_generic_snow_a_Normal.png",
+            "bytes": 32073,
+            "sha256": "c81928bba547949be43fb8d8ec803927bb6b15d0e51549582516dd635cf77f32",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_glassPanel_a.png",
+            "bytes": 2025,
+            "sha256": "aa018092ab41eba12e5a4118ebd3964f18ad3a24d76da59b839bfa6723623264",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_greyMetal_a.png",
+            "bytes": 22382,
+            "sha256": "9fd3be80e75eb56d29f82af7d0ddd9808aca78b705e559b3a03bda877c1ffeb9",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_greyMetal_a_Normal.png",
+            "bytes": 3771,
+            "sha256": "acc7c53a17436e3caa818f26713c392a34e5962b2f2087c4dbb7c31953494b17",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_metalRustedBlue_a.png",
+            "bytes": 8157,
+            "sha256": "ccc095c2b3edfc88127ad9878588ea5b277d43826fa3c84f4decadc7ea839cef",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drift_metaloverlap_a.png",
+            "bytes": 31491,
+            "sha256": "834decf79dd1d153121c3bf3dd9c8476ca541d596894f530a77ffce89ae08da2",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_driftlama_gravelSide_a.png",
+            "bytes": 64526,
+            "sha256": "41836bb806e865d970d9a515619308978a4102c88aad0d4ba3c507f83ee1a96b",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_driftlama_gravelSide_a_nm.jpg",
+            "bytes": 60910,
+            "sha256": "f52434625cb1ceb70bbb51a155a5528a367428964b10f3b1de5437cab561c24c",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_driftlama_road_a.png",
+            "bytes": 41984,
+            "sha256": "ffe5345e59a83787621ad97120602ca5486f5ea11507f1df71d0d6804b0f9c13",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drifttex_boxGrid_a.png",
+            "bytes": 23562,
+            "sha256": "6cc455b1b6a24b06ee295b62af8ab760adde8e3bd894dc6479a03053b25241f0",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drifttex_generic_WoodA.png",
+            "bytes": 27950,
+            "sha256": "5575f3e9a1ca7b2b616223aa15337f07ff64e9659775f008dcce0b9a1f6f27b7",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drifttex_generic_gravelA.png",
+            "bytes": 67172,
+            "sha256": "1f7a49b6db357ce2d44cf67a46aebd86b12cdcbc4af95a0218cb7c7db29835fe",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drifttex_generic_lavaA.png",
+            "bytes": 40542,
+            "sha256": "141b530167fe2490df860f9f484c9a80455ef3d04b79e5a63be5c19954f6b34a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drifttex_generic_lava_gloss.png",
+            "bytes": 6652,
+            "sha256": "1522654a7d9e88182eebd546c95f59c18e0ebfea6dd933412c5a73352b91f317",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drifttex_generic_lavaA_Normal.png",
+            "bytes": 40817,
+            "sha256": "583f43403121dd5cd713da88a433ad26da781525c0b871bc307aed4598234670",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drifttex_generic_rockA.png",
+            "bytes": 59830,
+            "sha256": "389ff08aa23a042bd39d763cd936cdc68644ce99f80d740b5f7697aceb1b77c7",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drifttex_generic_rockA_gloss.png",
+            "bytes": 6478,
+            "sha256": "2a89c4f5aa8b4405beaa5b294d4c262f787451164b86f6e9f11c012328ce8d25",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drifttex_generic_rockA_Normal.png",
+            "bytes": 63540,
+            "sha256": "489905924b60ef65951e76f5c6e6cd623791aa84fdaca83c95c84054eb1e5e1b",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/fluxara_drifttex_roadTrail_a.png",
+            "bytes": 13930,
+            "sha256": "0c1c27d4cde2e0d521a7ae671e132998c3e4d7e4acecd040513b3c5285126449",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/deprecated/stonewall.png",
+            "bytes": 50267,
+            "sha256": "5fcb10d701f4983ba337295b0496f35c574be7bc223af5df76016c5c3540e431",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/tarmac.jpg",
+            "bytes": 21936,
+            "sha256": "e01f0f31f46d6f0ef50fb1d6bb1f595ca0ea6cbc9bdc92ec71f3f5fcb61b98b9",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/track_01.jpg",
+            "bytes": 56217,
+            "sha256": "2afa5a3eb39662403346c25805de1bc7d0bee434a045be1b0ad49b5154c281b4",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/transparence.png",
+            "bytes": 118,
+            "sha256": "b92e8c362050c47993fadf28e742d1765604335264f11136a70ccb55deca594e",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/waterLC.png",
+            "bytes": 381039,
+            "sha256": "a662633dd8c0dbb900b0b64cd22e5e922452efe0dce2a80b6b49a458ea74c5a8",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/waterlava.png",
+            "bytes": 397860,
+            "sha256": "357c7a5fb5044d73c89d79e180b962ceac61c9c0cd3f14266ff8b243e6e336b3",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/zippercom.png",
+            "bytes": 86669,
+            "sha256": "d56aaa4e9234075187caaa31a5d1323676f093a77877f3f3992a13aefbb83f3b",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 3688493,
+        "textureBytes": 5575219,
+        "materialBindings": [
+          {
+            "texture": "170.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "170.jpg",
+              "normal-map": "170_norm.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "173.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "173.jpg",
+              "normal-map": "173_norm.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "173b.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "173b.jpg",
+              "normal-map": "173_norm.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "IscalesPortal.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "IscalesPortal.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "Stucco_neo.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "beachportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "blackrock.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "bone2-equus_grevyi-01.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "bone2-equus_grevyi-01.png",
+              "normal-map": "bone2-equus_grevyi-01_nm.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "city_concrete.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "city_ground.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "city_rock.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "cityportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "dark-wall-wood.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dark-wall-wood.png",
+              "normal-map": "dark-wall-wood_nm.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "desertportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "dirt.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "egypt2.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "electricportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "gfx_kartDirt_a_Albedo.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "grass.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "grass.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "grass4.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "grass_dark.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "gravelportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "hd_beach_01_d.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "hillsportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "infernoportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "logs.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "logs.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "lscales.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "metalgrid.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "mudwater.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "mudwater.png",
+              "surface": "Y",
+              "shader": "displace"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "neocity_concrete.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "noise.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "plainsportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "pyramidwall.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "pyramidwall.jpg",
+              "normal-map": "pyramidwall_nm.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "retroportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "rock_grey.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "rock_grey.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "rock_mountain.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "rockportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "rockred.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "skyscraper1.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "skyscraper2.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "skyscraper3.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "snow.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "snow.png",
+              "max-speed": "0.4",
+              "slowdown-time": "0.8"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "snowportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "snowrock.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "stk_generic_brownRock_a.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "stk_generic_grassA.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_grassA.png",
+              "has-gravity": "Y",
+              "slowdown-time": "6.50",
+              "max-speed": "0.65"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "stk_generic_grassB.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_grassB.png",
+              "normal-map": "fluxara_drift_generic_grassB_Normal.png",
+              "slowdown-time": "3.50",
+              "max-speed": "0.65"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "stk_generic_grassC.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "stk_generic_greyWall_a.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "stk_generic_ice_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_ice_a.png",
+              "graphical-effect": "normal_map",
+              "normal-map": "fluxara_drift_generic_ice_a_Normal.png",
+              "gloss-map": "fluxara_drift_generic_ice_a_gloss.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "stk_generic_pinkcrystal_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_pinkcrystal_a.png",
+              "graphical-effect": "normal_map",
+              "normal-map": "fluxara_drift_generic_bedRock_a_Normal.png",
+              "gloss-map": "fluxara_drift_greyMetal_a_gloss.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "stk_generic_racingPattern_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_racingPattern_a.png",
+              "gloss-map": "gfxGlow_softScreen_a.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "stk_generic_rock_b.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_rock_b.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "stk_generic_runway_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_runway_a.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "stk_generic_sand_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_sand_a.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "stk_generic_sand_b.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_sand_b.png",
+              "falling-effect": "Y",
+              "water-splash": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "stk_generic_snow_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_snow_a.png",
+              "gloss-map": "fluxara_drift_generic_snow_a_gloss.png",
+              "normal-map": "fluxara_drift_generic_snow_a_Normal.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "stk_glassPanel_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_glassPanel_a.png",
+              "shader": "alphablend",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "stk_greyMetal_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_greyMetal_a.png",
+              "graphical-effect": "normal_map",
+              "normal-map": "fluxara_drift_greyMetal_a_Normal.png",
+              "gloss-map": "fluxara_drift_greyMetal_a_gloss.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "stk_metalRustedBlue_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_metalRustedBlue_a.png",
+              "graphical-effect": "normal_map",
+              "normal-map": "fluxara_drift_greyMetal_a_Normal.png",
+              "gloss-map": "fluxara_drift_greyMetal_a_gloss.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "stk_metaloverlap_a.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "stklama_gravelSide_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_driftlama_gravelSide_a.png",
+              "normal-map": "fluxara_driftlama_gravelSide_a_nm.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "stklama_road_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_driftlama_road_a.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "stktex_boxGrid_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drifttex_boxGrid_a.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "stktex_generic_WoodA.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drifttex_generic_WoodA.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "stktex_generic_gravelA.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "stktex_generic_lavaA.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drifttex_generic_lavaA.png",
+              "gloss-map": "fluxara_drifttex_generic_lava_gloss.png",
+              "normal-map": "fluxara_drifttex_generic_lavaA_Normal.png",
+              "falling-effect": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "stktex_generic_rockA.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drifttex_generic_rockA.png",
+              "gloss-map": "fluxara_drifttex_generic_rockA_gloss.png",
+              "normal-map": "fluxara_drifttex_generic_rockA_Normal.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "stktex_roadTrail_a.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "stonewall.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "tarmac.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "track_01.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "transparence.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "transparence.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "waterLC.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "waterLC.png",
+              "surface": "Y",
+              "shader": "displace"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "waterlava.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "waterlava.png",
+              "falling-effect": "Y",
+              "shader": "displace"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          },
+          {
+            "texture": "zippercom.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "zippercom.png",
+              "shader": "alphatest",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 9263712
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lap-catch_track.spm",
+          "bytes": 4465575,
+          "sha256": "58945bb318c82083ad93711143fe460b7f4ee4863f69a7027c97cbf61ac5a10b"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_surface_0.png",
+            "bytes": 23969,
+            "sha256": "10b424713df78b7a9d123c141b41f1f2add0cdfac66e7029c5c8bc7800b17a34",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_surface_3.jpg",
+            "bytes": 62605,
+            "sha256": "d67230d87763bfd06bc77db7a48a6fd5ff944b475a338712df2124c81fa86bdb",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_ivory.png",
+            "bytes": 18249,
+            "sha256": "7567353decc6e3b186bae7df1b0875de2ed5c8db3d33d870110cfd8f932990d1",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/beachportal.png",
+            "bytes": 716,
+            "sha256": "5d53249a5ec94af3fbe30aff820d1971916c6845815cece1a07ab3d0fdd9a257",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_surface_7.png",
+            "bytes": 18249,
+            "sha256": "7567353decc6e3b186bae7df1b0875de2ed5c8db3d33d870110cfd8f932990d1",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_stone.png",
+            "bytes": 23969,
+            "sha256": "10b424713df78b7a9d123c141b41f1f2add0cdfac66e7029c5c8bc7800b17a34",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/cityportal.png",
+            "bytes": 716,
+            "sha256": "5d53249a5ec94af3fbe30aff820d1971916c6845815cece1a07ab3d0fdd9a257",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_surface_12.png",
+            "bytes": 26139,
+            "sha256": "cf87d0dbcfa88a0dd7188cfb4394aa66b7d199b752770b3b2cb49da4b534da49",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/desertportal.png",
+            "bytes": 716,
+            "sha256": "5d53249a5ec94af3fbe30aff820d1971916c6845815cece1a07ab3d0fdd9a257",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/electricportal.png",
+            "bytes": 716,
+            "sha256": "5d53249a5ec94af3fbe30aff820d1971916c6845815cece1a07ab3d0fdd9a257",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/gravelportal.png",
+            "bytes": 716,
+            "sha256": "5d53249a5ec94af3fbe30aff820d1971916c6845815cece1a07ab3d0fdd9a257",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/hillsportal.png",
+            "bytes": 716,
+            "sha256": "5d53249a5ec94af3fbe30aff820d1971916c6845815cece1a07ab3d0fdd9a257",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/infernoportal.png",
+            "bytes": 716,
+            "sha256": "5d53249a5ec94af3fbe30aff820d1971916c6845815cece1a07ab3d0fdd9a257",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_surface_25.png",
+            "bytes": 26139,
+            "sha256": "cf87d0dbcfa88a0dd7188cfb4394aa66b7d199b752770b3b2cb49da4b534da49",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/dp_palette.png",
+            "bytes": 2359,
+            "sha256": "ec1efcdc37f6730f5ea304e62bcd912d454385082e6065ba70c84b43886477cb",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_surface_28.png",
+            "bytes": 27543,
+            "sha256": "8d2f8358c8d18d116dee26f43ebeb88ef4c33ae1ad81c0c3b6ae73ce84f14bc7",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/noise.png",
+            "bytes": 2901,
+            "sha256": "fa205747cbfc33a11d3e6fa4717791f5a18b5f718c85f021eaace624f5650140",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/plainsportal.png",
+            "bytes": 716,
+            "sha256": "5d53249a5ec94af3fbe30aff820d1971916c6845815cece1a07ab3d0fdd9a257",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/retroportal.png",
+            "bytes": 716,
+            "sha256": "5d53249a5ec94af3fbe30aff820d1971916c6845815cece1a07ab3d0fdd9a257",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/rockportal.png",
+            "bytes": 716,
+            "sha256": "5d53249a5ec94af3fbe30aff820d1971916c6845815cece1a07ab3d0fdd9a257",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/snowportal.png",
+            "bytes": 716,
+            "sha256": "5d53249a5ec94af3fbe30aff820d1971916c6845815cece1a07ab3d0fdd9a257",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_drift_generic_ice_a.png",
+            "bytes": 36290,
+            "sha256": "ab7376149f10de1c46cd40889be3870eaeb1c2dff96b815728afcca202631f9c",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_drift_generic_ice_a_gloss.png",
+            "bytes": 16385,
+            "sha256": "fd159644854d3ab7b261d21c8ad1c50ac3686e8633c0bcc5aabf5ec726310a27",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_drift_generic_ice_a_Normal.png",
+            "bytes": 34798,
+            "sha256": "5422e870274ea72c25b1a2291f2a706b19c482c5a1b85477eb7948182773be2f",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_surface_51.jpg",
+            "bytes": 1748,
+            "sha256": "91ebffac8b951f27bc1ad940152e26350d7bf95e7f5926cf8700451d78e7bfed",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_surface_57.png",
+            "bytes": 2359,
+            "sha256": "ec1efcdc37f6730f5ea304e62bcd912d454385082e6065ba70c84b43886477cb",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_surface_58.png",
+            "bytes": 2359,
+            "sha256": "ec1efcdc37f6730f5ea304e62bcd912d454385082e6065ba70c84b43886477cb",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_surface_63.png",
+            "bytes": 26139,
+            "sha256": "cf87d0dbcfa88a0dd7188cfb4394aa66b7d199b752770b3b2cb49da4b534da49",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_surface_64.png",
+            "bytes": 26139,
+            "sha256": "cf87d0dbcfa88a0dd7188cfb4394aa66b7d199b752770b3b2cb49da4b534da49",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_surface_66.png",
+            "bytes": 27543,
+            "sha256": "8d2f8358c8d18d116dee26f43ebeb88ef4c33ae1ad81c0c3b6ae73ce84f14bc7",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/transparence.png",
+            "bytes": 118,
+            "sha256": "b92e8c362050c47993fadf28e742d1765604335264f11136a70ccb55deca594e",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_surface_74.png",
+            "bytes": 27543,
+            "sha256": "8d2f8358c8d18d116dee26f43ebeb88ef4c33ae1ad81c0c3b6ae73ce84f14bc7",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/zippercom.png",
+            "bytes": 86669,
+            "sha256": "d56aaa4e9234075187caaa31a5d1323676f093a77877f3f3992a13aefbb83f3b",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_unified_0.png",
+            "bytes": 5398,
+            "sha256": "4cc4d20a3939533b012dcb4ea804c6ac4ff2aebaf08c624cfab81dce8ad4d4ef",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_unified_1.png",
+            "bytes": 108702,
+            "sha256": "8106d7d6ffeee2e4282bf8a2b35c04e1b376eab18f735f0c47ca9d1cb43b56a1",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_unified_2.jpg",
+            "bytes": 62605,
+            "sha256": "d67230d87763bfd06bc77db7a48a6fd5ff944b475a338712df2124c81fa86bdb",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_unified_3.png",
+            "bytes": 5398,
+            "sha256": "4cc4d20a3939533b012dcb4ea804c6ac4ff2aebaf08c624cfab81dce8ad4d4ef",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_unified_4.png",
+            "bytes": 108702,
+            "sha256": "8106d7d6ffeee2e4282bf8a2b35c04e1b376eab18f735f0c47ca9d1cb43b56a1",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_unified_5.jpg",
+            "bytes": 62605,
+            "sha256": "d67230d87763bfd06bc77db7a48a6fd5ff944b475a338712df2124c81fa86bdb",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_unified_6.png",
+            "bytes": 5398,
+            "sha256": "4cc4d20a3939533b012dcb4ea804c6ac4ff2aebaf08c624cfab81dce8ad4d4ef",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_unified_7.png",
+            "bytes": 108702,
+            "sha256": "8106d7d6ffeee2e4282bf8a2b35c04e1b376eab18f735f0c47ca9d1cb43b56a1",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_unified_8.jpg",
+            "bytes": 62605,
+            "sha256": "d67230d87763bfd06bc77db7a48a6fd5ff944b475a338712df2124c81fa86bdb",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_unified_9.png",
+            "bytes": 5398,
+            "sha256": "4cc4d20a3939533b012dcb4ea804c6ac4ff2aebaf08c624cfab81dce8ad4d4ef",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_unified_10.jpg",
+            "bytes": 62605,
+            "sha256": "d67230d87763bfd06bc77db7a48a6fd5ff944b475a338712df2124c81fa86bdb",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_unified_11.png",
+            "bytes": 5398,
+            "sha256": "4cc4d20a3939533b012dcb4ea804c6ac4ff2aebaf08c624cfab81dce8ad4d4ef",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_unified_12.png",
+            "bytes": 108702,
+            "sha256": "8106d7d6ffeee2e4282bf8a2b35c04e1b376eab18f735f0c47ca9d1cb43b56a1",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/lc_unified_13.jpg",
+            "bytes": 62605,
+            "sha256": "d67230d87763bfd06bc77db7a48a6fd5ff944b475a338712df2124c81fa86bdb",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 4465575,
+        "textureBytes": 1302911,
+        "materialBindings": [
+          {
+            "texture": "lc_surface_0.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_surface_0.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_surface_3.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_surface_3.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_ivory.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "beachportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "lc_surface_7.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_surface_7.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_stone.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "cityportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "lc_surface_12.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_surface_12.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "desertportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "lc_stone.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "electricportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "gravelportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "hillsportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "infernoportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "lc_surface_25.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_surface_25.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_stone.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "lc_surface_28.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_surface_28.png",
+              "surface": "Y",
+              "shader": "displace"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_ivory.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "noise.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "plainsportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "retroportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "rockportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "lc_ivory.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "lc_ivory.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "lc_ivory.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "snowportal.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "lc_stone.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "stk_generic_ice_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_ice_a.png",
+              "graphical-effect": "normal_map",
+              "normal-map": "fluxara_drift_generic_ice_a_Normal.png",
+              "gloss-map": "fluxara_drift_generic_ice_a_gloss.png"
+            },
+            "xml": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml"
+          },
+          {
+            "texture": "lc_surface_51.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_surface_51.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_surface_57.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_surface_57.png",
+              "shader": "alphablend",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_surface_58.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_surface_58.png",
+              "graphical-effect": "normal_map"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_surface_58.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_surface_58.png",
+              "graphical-effect": "normal_map"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_stone.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "lc_surface_63.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_surface_63.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_surface_64.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_surface_64.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_surface_66.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_surface_66.png",
+              "falling-effect": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_stone.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "transparence.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "transparence.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml"
+          },
+          {
+            "texture": "lc_surface_28.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_surface_28.png",
+              "surface": "Y",
+              "shader": "displace"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_surface_74.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_surface_74.png",
+              "falling-effect": "Y",
+              "shader": "displace"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "zippercom.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "zippercom.png",
+              "shader": "alphatest",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_unified_0.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_unified_0.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_unified_1.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_unified_1.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_unified_2.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lc_unified_2.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_unified_3.png",
+            "uvTwo": "",
+            "attributes": {
+              "has-gravity": "Y",
+              "name": "lc_unified_3.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_unified_4.png",
+            "uvTwo": "",
+            "attributes": {
+              "has-gravity": "Y",
+              "name": "lc_unified_4.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_unified_5.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "max-speed": "0.4",
+              "slowdown-time": "0.8",
+              "name": "lc_unified_5.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_unified_6.png",
+            "uvTwo": "",
+            "attributes": {
+              "max-speed": "0.4",
+              "slowdown-time": "0.8",
+              "name": "lc_unified_6.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_unified_7.png",
+            "uvTwo": "",
+            "attributes": {
+              "max-speed": "0.4",
+              "slowdown-time": "0.8",
+              "name": "lc_unified_7.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_unified_8.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "has-gravity": "Y",
+              "slowdown-time": "6.50",
+              "max-speed": "0.65",
+              "name": "lc_unified_8.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_unified_9.png",
+            "uvTwo": "",
+            "attributes": {
+              "has-gravity": "Y",
+              "slowdown-time": "6.50",
+              "max-speed": "0.65",
+              "name": "lc_unified_9.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_unified_10.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "slowdown-time": "3.50",
+              "max-speed": "0.65",
+              "name": "lc_unified_10.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_unified_11.png",
+            "uvTwo": "",
+            "attributes": {
+              "slowdown-time": "3.50",
+              "max-speed": "0.65",
+              "name": "lc_unified_11.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_unified_12.png",
+            "uvTwo": "",
+            "attributes": {
+              "slowdown-time": "3.50",
+              "max-speed": "0.65",
+              "name": "lc_unified_12.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          },
+          {
+            "texture": "lc_unified_13.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "has-gravity": "Y",
+              "name": "lc_unified_13.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 5768486
+      },
+      "changePercent": -37.730296451357724,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "zap.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/before/zap.spm",
+          "bytes": 755,
+          "sha256": "026e0f460cc3361aef433e95555bf261062a71bcd7941bca5d235d94e3154c4a"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/gfx_electricArc_a.png",
+            "bytes": 6193,
+            "sha256": "c92a7fc049637b6586a8187ddea78bca816dca1ff9d34c9341d01e514d0d78bc",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 755,
+        "textureBytes": 6193,
+        "materialBindings": [
+          {
+            "texture": "gfx_electricArc_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_electricArc_a.png",
+              "shader": "additive",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 6948
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-lap-catch/zap.spm",
+          "bytes": 755,
+          "sha256": "026e0f460cc3361aef433e95555bf261062a71bcd7941bca5d235d94e3154c4a"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/gfx_electricArc_a.png",
+            "bytes": 6193,
+            "sha256": "c92a7fc049637b6586a8187ddea78bca816dca1ff9d34c9341d01e514d0d78bc",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 755,
+        "textureBytes": 6193,
+        "materialBindings": [
+          {
+            "texture": "gfx_electricArc_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_electricArc_a.png",
+              "shader": "additive",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 6948
+      },
+      "changePercent": 0.0,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    }
+  ],
+  "allMatchingModelsResolved": true,
+  "allMatchingModelsWithinLimit": true
+}

@@ -1,0 +1,144 @@
+{
+  "greenSupportTriangles": 25423,
+  "newCoordinateInstances": 5,
+  "newRuntimeMeshBytes": 0,
+  "newTextureBytes": 0,
+  "placements": [
+    {
+      "id": "Canyon_SharedEnrichment_000",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "Small green roadside shrub",
+      "xyz": [
+        -35.95616912841797,
+        2.171174240112305,
+        74.16603088378906
+      ],
+      "hpr": [
+        0,
+        -20.466576682752105,
+        0
+      ],
+      "scale": [
+        2.2,
+        1.3,
+        2.2
+      ],
+      "quadIndex": 3,
+      "groundHeightRange": [
+        2.2211742401123047,
+        3.038249969482422
+      ],
+      "footprintSamples": 13,
+      "radius": 1.1
+    },
+    {
+      "id": "Canyon_SharedEnrichment_001",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "Small green roadside shrub",
+      "xyz": [
+        110.00112915039062,
+        1.8636486053466796,
+        228.84103393554688
+      ],
+      "hpr": [
+        0,
+        -16.86470465834509,
+        0
+      ],
+      "scale": [
+        2.2,
+        1.3,
+        2.2
+      ],
+      "quadIndex": 43,
+      "groundHeightRange": [
+        1.9136486053466797,
+        2.3665695190429688
+      ],
+      "footprintSamples": 13,
+      "radius": 1.1
+    },
+    {
+      "id": "Canyon_SharedEnrichment_002",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "Small green roadside shrub",
+      "xyz": [
+        109.59757232666016,
+        1.7437641143798828,
+        -56.59049987792969
+      ],
+      "hpr": [
+        0,
+        -176.7248156964668,
+        0
+      ],
+      "scale": [
+        2.2,
+        1.3,
+        2.2
+      ],
+      "quadIndex": 67,
+      "groundHeightRange": [
+        1.7937641143798828,
+        2.296133041381836
+      ],
+      "footprintSamples": 13,
+      "radius": 1.1
+    },
+    {
+      "id": "Canyon_SharedEnrichment_003",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "Small green roadside shrub",
+      "xyz": [
+        -35.23146057128906,
+        4.133395385742188,
+        35.19193649291992
+      ],
+      "hpr": [
+        0,
+        97.95435392349412,
+        0
+      ],
+      "scale": [
+        2.2,
+        1.3,
+        2.2
+      ],
+      "quadIndex": 107,
+      "groundHeightRange": [
+        4.1833953857421875,
+        4.823068618774414
+      ],
+      "footprintSamples": 13,
+      "radius": 1.1
+    },
+    {
+      "id": "Canyon_SharedEnrichment_004",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "Small green roadside shrub",
+      "xyz": [
+        109.9119873046875,
+        1.9158946990966796,
+        -34.551856994628906
+      ],
+      "hpr": [
+        0,
+        -105.52278115408902,
+        0
+      ],
+      "scale": [
+        2.2,
+        1.3,
+        2.2
+      ],
+      "quadIndex": 159,
+      "groundHeightRange": [
+        1.9658946990966797,
+        2.3021774291992188
+      ],
+      "footprintSamples": 13,
+      "radius": 1.1
+    }
+  ],
+  "scope": "Thirteen footprint samples on original green upward-facing surfaces; not continuous collision proof"
+}

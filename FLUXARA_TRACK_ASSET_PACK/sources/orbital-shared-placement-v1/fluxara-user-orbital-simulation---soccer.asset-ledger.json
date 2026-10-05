@@ -1,0 +1,5668 @@
+{
+  "trackId": "fluxara-user-orbital-simulation---soccer",
+  "displayName": "ORBITAL Simulation - Soccer",
+  "campaignPosition": 5,
+  "biome": "laboratory",
+  "finalBlend": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final/ORBITAL Simulation - Soccer.blend",
+  "reference": {
+    "fileKey": "Pws4Hw0fwwTmTMf6OJvil8",
+    "nodeId": "378:83",
+    "local": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/references/figma-orbital.png"
+  },
+  "assets": [
+    {
+      "id": "orbital-v5-visual-9a51bef3d5a47a27",
+      "name": "OrbitalV5_Asset_9a51bef3d5a47a27",
+      "kind": "visual-object",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_9a51bef3d5a47a27",
+      "prototype": "OrbitalV5_Asset_9a51bef3d5a47a27",
+      "sourceObject": "orbital_lunar.jpg__",
+      "triangles": 560,
+      "instances": 1,
+      "dependencies": [
+        "orbital-v5-material-0f2862156951"
+      ],
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend",
+        "bytes": 927291,
+        "sha256": "81adf50c76a03f7d75c594ab155266aa6f2617dc7e82f880084efa972bee5eaf"
+      },
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "instances": 1,
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v1/Orbital Soccer Visual Library.blend",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Reused original v1 asteroid geometry; reshaped and placed as low lunar boulders or warm lamps",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-visual-d4f794c597851448",
+      "name": "OrbitalV5_Asset_d4f794c597851448",
+      "kind": "visual-object",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_d4f794c597851448",
+      "prototype": "OrbitalV5_Asset_d4f794c597851448",
+      "sourceObject": "orbital_lunar.jpg__.001",
+      "triangles": 8,
+      "instances": 1,
+      "dependencies": [
+        "orbital-v5-material-203d7caab6eb"
+      ],
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend",
+        "bytes": 927291,
+        "sha256": "81adf50c76a03f7d75c594ab155266aa6f2617dc7e82f880084efa972bee5eaf"
+      },
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "instances": 1,
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/background_v5.py",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Four ground rectangles strictly outside protected soccer surface",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-visual-884bfc6525b3c7d1",
+      "name": "OrbitalV5_Asset_884bfc6525b3c7d1",
+      "kind": "visual-object",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_884bfc6525b3c7d1",
+      "prototype": "OrbitalV5_Asset_884bfc6525b3c7d1",
+      "sourceObject": "columngreen.png___ball.png__",
+      "triangles": 1260,
+      "instances": 1,
+      "dependencies": [
+        "orbital-v5-material-b7f5099b905a"
+      ],
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend",
+        "bytes": 927291,
+        "sha256": "81adf50c76a03f7d75c594ab155266aa6f2617dc7e82f880084efa972bee5eaf"
+      },
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "instances": 1,
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-visual-d1b04ad9f6573175",
+      "name": "OrbitalV5_Asset_d1b04ad9f6573175",
+      "kind": "visual-object",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_d1b04ad9f6573175",
+      "prototype": "OrbitalV5_Asset_d1b04ad9f6573175",
+      "sourceObject": "Plane.002_logoholo.png__",
+      "triangles": 276,
+      "instances": 1,
+      "dependencies": [
+        "orbital-v5-material-7ed4f6df6981"
+      ],
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend",
+        "bytes": 927291,
+        "sha256": "81adf50c76a03f7d75c594ab155266aa6f2617dc7e82f880084efa972bee5eaf"
+      },
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "instances": 1,
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-visual-8e7d8d7be16df9d3",
+      "name": "OrbitalV5_Asset_8e7d8d7be16df9d3",
+      "kind": "visual-object",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_8e7d8d7be16df9d3",
+      "prototype": "OrbitalV5_Asset_8e7d8d7be16df9d3",
+      "sourceObject": "Orbital_V5_RingFrame_0",
+      "triangles": 128,
+      "instances": 1,
+      "dependencies": [
+        "orbital-v5-material-1c9ea5820a69"
+      ],
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend",
+        "bytes": 927291,
+        "sha256": "81adf50c76a03f7d75c594ab155266aa6f2617dc7e82f880084efa972bee5eaf"
+      },
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "instances": 1,
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-visual-f98184ae6bcbbc26",
+      "name": "OrbitalV5_Asset_f98184ae6bcbbc26",
+      "kind": "visual-object",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_f98184ae6bcbbc26",
+      "prototype": "OrbitalV5_Asset_f98184ae6bcbbc26",
+      "sourceObject": "Orbital_V5_RingPanels_0",
+      "triangles": 32,
+      "instances": 1,
+      "dependencies": [
+        "orbital-v5-material-02986d9cfe41"
+      ],
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend",
+        "bytes": 927291,
+        "sha256": "81adf50c76a03f7d75c594ab155266aa6f2617dc7e82f880084efa972bee5eaf"
+      },
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "instances": 1,
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-visual-8f24a55fb2364247",
+      "name": "OrbitalV5_Asset_8f24a55fb2364247",
+      "kind": "visual-object",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_8f24a55fb2364247",
+      "prototype": "OrbitalV5_Asset_8f24a55fb2364247",
+      "sourceObject": "Orbital_V5_RingFrame_1",
+      "triangles": 96,
+      "instances": 1,
+      "dependencies": [
+        "orbital-v5-material-1c9ea5820a69"
+      ],
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend",
+        "bytes": 927291,
+        "sha256": "81adf50c76a03f7d75c594ab155266aa6f2617dc7e82f880084efa972bee5eaf"
+      },
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "instances": 1,
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-visual-32f22ccd5d5f1e69",
+      "name": "OrbitalV5_Asset_32f22ccd5d5f1e69",
+      "kind": "visual-object",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_32f22ccd5d5f1e69",
+      "prototype": "OrbitalV5_Asset_32f22ccd5d5f1e69",
+      "sourceObject": "Orbital_V5_RingPanels_1",
+      "triangles": 24,
+      "instances": 1,
+      "dependencies": [
+        "orbital-v5-material-02986d9cfe41"
+      ],
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend",
+        "bytes": 927291,
+        "sha256": "81adf50c76a03f7d75c594ab155266aa6f2617dc7e82f880084efa972bee5eaf"
+      },
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "instances": 1,
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-visual-0271b02db6464eee",
+      "name": "OrbitalV5_Asset_0271b02db6464eee",
+      "kind": "visual-object",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_0271b02db6464eee",
+      "prototype": "OrbitalV5_Asset_0271b02db6464eee",
+      "sourceObject": "Orbital_V5_RingFrame_2",
+      "triangles": 64,
+      "instances": 1,
+      "dependencies": [
+        "orbital-v5-material-1c9ea5820a69"
+      ],
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend",
+        "bytes": 927291,
+        "sha256": "81adf50c76a03f7d75c594ab155266aa6f2617dc7e82f880084efa972bee5eaf"
+      },
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "instances": 1,
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-visual-0beb53213d89d0ec",
+      "name": "OrbitalV5_Asset_0beb53213d89d0ec",
+      "kind": "visual-object",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_0beb53213d89d0ec",
+      "prototype": "OrbitalV5_Asset_0beb53213d89d0ec",
+      "sourceObject": "Orbital_V5_RingPanels_2",
+      "triangles": 16,
+      "instances": 1,
+      "dependencies": [
+        "orbital-v5-material-02986d9cfe41"
+      ],
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend",
+        "bytes": 927291,
+        "sha256": "81adf50c76a03f7d75c594ab155266aa6f2617dc7e82f880084efa972bee5eaf"
+      },
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "instances": 1,
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-visual-3c77fd35adca6bfd",
+      "name": "OrbitalV5_Asset_3c77fd35adca6bfd",
+      "kind": "visual-object",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_3c77fd35adca6bfd",
+      "prototype": "OrbitalV5_Asset_3c77fd35adca6bfd",
+      "sourceObject": "Orbital_V5_ModuleTop",
+      "triangles": 44,
+      "instances": 2,
+      "dependencies": [
+        "orbital-v5-material-1c9ea5820a69"
+      ],
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend",
+        "bytes": 927291,
+        "sha256": "81adf50c76a03f7d75c594ab155266aa6f2617dc7e82f880084efa972bee5eaf"
+      },
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "instances": 2,
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-visual-3fe8294ec72b4577",
+      "name": "OrbitalV5_Asset_3fe8294ec72b4577",
+      "kind": "visual-object",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_3fe8294ec72b4577",
+      "prototype": "OrbitalV5_Asset_3fe8294ec72b4577",
+      "sourceObject": "Orbital_V5_ModuleLeft",
+      "triangles": 44,
+      "instances": 2,
+      "dependencies": [
+        "orbital-v5-material-1c9ea5820a69"
+      ],
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend",
+        "bytes": 927291,
+        "sha256": "81adf50c76a03f7d75c594ab155266aa6f2617dc7e82f880084efa972bee5eaf"
+      },
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "instances": 2,
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-visual-c5f7ef880dac7d36",
+      "name": "OrbitalV5_Asset_c5f7ef880dac7d36",
+      "kind": "visual-object",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_c5f7ef880dac7d36",
+      "prototype": "OrbitalV5_Asset_c5f7ef880dac7d36",
+      "sourceObject": "Orbital_V5_ModuleRecess",
+      "triangles": 2,
+      "instances": 1,
+      "dependencies": [
+        "orbital-v5-material-1c9ea5820a69"
+      ],
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend",
+        "bytes": 927291,
+        "sha256": "81adf50c76a03f7d75c594ab155266aa6f2617dc7e82f880084efa972bee5eaf"
+      },
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "instances": 1,
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-visual-746374bcb73236c6",
+      "name": "OrbitalV5_Asset_746374bcb73236c6",
+      "kind": "visual-object",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_746374bcb73236c6",
+      "prototype": "OrbitalV5_Asset_746374bcb73236c6",
+      "sourceObject": "Orbital_V5_ModuleLights",
+      "triangles": 4,
+      "instances": 1,
+      "dependencies": [
+        "orbital-v5-material-02986d9cfe41"
+      ],
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend",
+        "bytes": 927291,
+        "sha256": "81adf50c76a03f7d75c594ab155266aa6f2617dc7e82f880084efa972bee5eaf"
+      },
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "instances": 1,
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-visual-3dc5641b90b35e2f",
+      "name": "OrbitalV5_Asset_3dc5641b90b35e2f",
+      "kind": "visual-object",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_3dc5641b90b35e2f",
+      "prototype": "OrbitalV5_Asset_3dc5641b90b35e2f",
+      "sourceObject": "Orbital_V5_Curb_0",
+      "triangles": 6,
+      "instances": 1,
+      "dependencies": [
+        "orbital-v5-material-e6bab0f8aee5"
+      ],
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend",
+        "bytes": 927291,
+        "sha256": "81adf50c76a03f7d75c594ab155266aa6f2617dc7e82f880084efa972bee5eaf"
+      },
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "instances": 1,
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-visual-1a89fe81c073d745",
+      "name": "OrbitalV5_Asset_1a89fe81c073d745",
+      "kind": "visual-object",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_1a89fe81c073d745",
+      "prototype": "OrbitalV5_Asset_1a89fe81c073d745",
+      "sourceObject": "Orbital_V5_Curb_1",
+      "triangles": 6,
+      "instances": 1,
+      "dependencies": [
+        "orbital-v5-material-e6bab0f8aee5"
+      ],
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend",
+        "bytes": 927291,
+        "sha256": "81adf50c76a03f7d75c594ab155266aa6f2617dc7e82f880084efa972bee5eaf"
+      },
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "instances": 1,
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-visual-233127a8b89e44ab",
+      "name": "OrbitalV5_Asset_233127a8b89e44ab",
+      "kind": "visual-object",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_233127a8b89e44ab",
+      "prototype": "OrbitalV5_Asset_233127a8b89e44ab",
+      "sourceObject": "Orbital_V5_WarmLamp_0",
+      "triangles": 20,
+      "instances": 4,
+      "dependencies": [
+        "orbital-v5-material-02986d9cfe41"
+      ],
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend",
+        "bytes": 927291,
+        "sha256": "81adf50c76a03f7d75c594ab155266aa6f2617dc7e82f880084efa972bee5eaf"
+      },
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "instances": 4,
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v1/Orbital Soccer Visual Library.blend",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Reused original v1 asteroid geometry; reshaped and placed as low lunar boulders or warm lamps",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-material-09a10adaba21",
+      "name": "OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.004",
+      "kind": "material",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend#Material/OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.004",
+      "dependencies": [
+        "orbital-v5-texture-caution2"
+      ],
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-material-b7f5099b905a",
+      "name": "OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.003",
+      "kind": "material",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend#Material/OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.003",
+      "dependencies": [
+        "orbital-v5-texture-ball"
+      ],
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-material-02986d9cfe41",
+      "name": "OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_O",
+      "kind": "material",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend#Material/OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_O",
+      "dependencies": [
+        "orbital-v5-texture-orbital-lights"
+      ],
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-material-a8363ab29ea1",
+      "name": "OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.008",
+      "kind": "material",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend#Material/OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.008",
+      "dependencies": [
+        "orbital-v5-texture-orbital-floor"
+      ],
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-material-203d7caab6eb",
+      "name": "OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_",
+      "kind": "material",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend#Material/OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_",
+      "dependencies": [
+        "orbital-v5-texture-orbital-lunar"
+      ],
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-material-047ecca5c61a",
+      "name": "OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.005",
+      "kind": "material",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend#Material/OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.005",
+      "dependencies": [
+        "orbital-v5-texture-caution"
+      ],
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-material-3db7107e3c8e",
+      "name": "OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.001",
+      "kind": "material",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend#Material/OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.001",
+      "dependencies": [],
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-material-258c7c9c90c5",
+      "name": "OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.002",
+      "kind": "material",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend#Material/OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.002",
+      "dependencies": [
+        "orbital-v5-texture-arrows"
+      ],
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-material-cbf992383dff",
+      "name": "OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.010",
+      "kind": "material",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend#Material/OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.010",
+      "dependencies": [
+        "orbital-v5-texture-orbital-barrier"
+      ],
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-material-3a868676e8bc",
+      "name": "OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.006",
+      "kind": "material",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend#Material/OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.006",
+      "dependencies": [
+        "orbital-v5-texture-goals"
+      ],
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-material-1c9ea5820a69",
+      "name": "OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_Orb",
+      "kind": "material",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend#Material/OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_Orb",
+      "dependencies": [
+        "orbital-v5-texture-orbital-palette"
+      ],
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-material-e6bab0f8aee5",
+      "name": "OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_Or",
+      "kind": "material",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend#Material/OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_Or",
+      "dependencies": [
+        "orbital-v5-texture-orbital-curb"
+      ],
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-material-4b47839faad3",
+      "name": "OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.009",
+      "kind": "material",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend#Material/OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.009",
+      "dependencies": [
+        "orbital-v5-texture-orbital-barrier"
+      ],
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-material-0f2862156951",
+      "name": "OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5",
+      "kind": "material",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend#Material/OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5",
+      "dependencies": [
+        "orbital-v5-texture-orbital-lunar"
+      ],
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-material-7ed4f6df6981",
+      "name": "OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.007",
+      "kind": "material",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Soccer Visual Library.blend#Material/OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5_OrbitalV5.007",
+      "dependencies": [
+        "orbital-v5-texture-logoholo"
+      ],
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-background-grass",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/background_grass.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/background_grass.png",
+        "bytes": 346,
+        "sha256": "c2b22d70839ad8362e05f49a8377e7ba09a19de752834a8829992450c1b44a0a"
+      },
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/before/background_grass.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Preserved original texture, including archived unused legacy assets",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-gridgloss",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/gridgloss.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/gridgloss.png",
+        "bytes": 276,
+        "sha256": "01f68189c11597fc502f0eba19ab78a05f8b2713ab5ff60d08f38720a7f2aad3"
+      },
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/before/gridgloss.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Preserved original texture, including archived unused legacy assets",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-caution",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/caution.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/caution.png",
+        "bytes": 3890,
+        "sha256": "a3ebc7e82ea096f1f0f10f3eb6bd0eca88c695122e8e723da3d684c905aefa8f"
+      },
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/before/caution.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Preserved original texture, including archived unused legacy assets",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-ball",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/ball.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/ball.png",
+        "bytes": 150,
+        "sha256": "50a8339bec1cd13552df0d9d376b37c806f625c7525a96a00e9eda85953e9ac6"
+      },
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/before/ball.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Preserved original texture, including archived unused legacy assets",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-orbital-floor",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_floor.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_floor.png",
+        "bytes": 9843,
+        "sha256": "9d3be9e8403814fdb89d3f43efbc6ff75f3c353b95cae17786a2b3d4375f0a27"
+      },
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/orbital-lunar-v2-source.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Generated seamless lunar diffuse, 128px; JPEG for rocks and indexed PNG for surface",
+      "approval": "Approved as used in Orbital v5",
+      "provenance": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/generation-v2-provenance.json"
+    },
+    {
+      "id": "orbital-v5-texture-goals",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/goals.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/goals.png",
+        "bytes": 146,
+        "sha256": "ef9ac9142fc409195d66a509af0911c8a321aaab0fc28c45d4b5419024e72606"
+      },
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/before/goals.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Preserved original texture, including archived unused legacy assets",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-orbital-sky-back",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_sky_back.jpg",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_sky_back.jpg",
+        "bytes": 37589,
+        "sha256": "3cea793127000aee1fabd646f499ddf4a582d19fc77e3be6070de06f16087ced"
+      },
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/orbital-space-panorama.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "512px cubemap projection from shared generated panorama",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-orbital-sky-bottom",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_sky_bottom.jpg",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_sky_bottom.jpg",
+        "bytes": 21108,
+        "sha256": "1d73042f3648314180c52f61eba5a84ff0b20675c5ffe2a7b1dd69d12217d44b"
+      },
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/orbital-space-panorama.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "512px cubemap projection from shared generated panorama",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-orbital-lights",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_lights.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_lights.png",
+        "bytes": 158,
+        "sha256": "458122eee2420f71b8c295589402ccc145f4216c860104b328579ff0581bf487"
+      },
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/orbital_palette_v5.svg",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Source-native SVG palette, rendered PNG",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-background-building",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/background_building.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/background_building.png",
+        "bytes": 346,
+        "sha256": "eb7dfe2474ee1c2c5a23a06ba8c7458f31b19fbf933a9d672341216956127094"
+      },
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/before/background_building.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Preserved original texture, including archived unused legacy assets",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-logoholo",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/logoholo.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/logoholo.png",
+        "bytes": 2253,
+        "sha256": "d82cac789b71ac962d6cacef306cf24e430cc588f303313d49445357f5e87e5e"
+      },
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/before/logoholo.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Preserved original texture, including archived unused legacy assets",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-orbital-sky-left",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_sky_left.jpg",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_sky_left.jpg",
+        "bytes": 42627,
+        "sha256": "5ff0de6bbeb68aea2dfc18cc75faed45b86a47eaf9e154ff96435cb0a35bc2b6"
+      },
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/orbital-space-panorama.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "512px cubemap projection from shared generated panorama",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-screenshot",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/screenshot.jpg",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/screenshot.jpg",
+        "bytes": 721676,
+        "sha256": "e53dc264bb2b75e2f6fe52a858ae97a412c8741f0e07bca8194465f0fd49be7b"
+      },
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/before/screenshot.jpg",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Preserved original texture, including archived unused legacy assets",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-orbital-curb",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_curb.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_curb.png",
+        "bytes": 273,
+        "sha256": "023cb15799989064242eb5aca3633fafbf5e6f357fa7129b4d1adba04ef4db61"
+      },
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/orbital_curb.svg",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Source-native seamless coral/ivory curb stripe",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-skybottom",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/skybottom.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/skybottom.png",
+        "bytes": 43658,
+        "sha256": "c548879d99211f78846ecbb999388f289c657fe496130cdd94db423d40e0f262"
+      },
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/before/skybottom.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Preserved original texture, including archived unused legacy assets",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-orbital-lunar",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_lunar.jpg",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_lunar.jpg",
+        "bytes": 1857,
+        "sha256": "7a52975431082dc19add0d33090cbb0349fc424b18ddcf240ac16afff7285963"
+      },
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/orbital-lunar-v2-source.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Generated seamless lunar diffuse, 128px; JPEG for rocks and indexed PNG for surface",
+      "approval": "Approved as used in Orbital v5",
+      "provenance": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/generation-v2-provenance.json"
+    },
+    {
+      "id": "orbital-v5-texture-grid",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/grid.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/grid.png",
+        "bytes": 276,
+        "sha256": "6e0904a6a9114c6f0b6ac7e8b64671d8785d3fb960324afcb754ae1cd24f7e82"
+      },
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/before/grid.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Preserved original texture, including archived unused legacy assets",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-ballgloss",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/ballgloss.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/ballgloss.png",
+        "bytes": 150,
+        "sha256": "35769052dd3443e6aaf01d3b5e26853fd1e0554c507ad66db6d27b6d24655253"
+      },
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/before/ballgloss.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Preserved original texture, including archived unused legacy assets",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-arrows",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/arrows.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/arrows.png",
+        "bytes": 10577,
+        "sha256": "044cc8fe1db1a03c7da18c77a7c7fedb6d4bdeb847daaac624a41d831e006c10"
+      },
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/before/arrows.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Preserved original texture, including archived unused legacy assets",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-caution2",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/caution2.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/caution2.png",
+        "bytes": 2507,
+        "sha256": "7402b4410092eafc595da00f2da0bcd0317e3ede7147bc6c164039c9f247d9f9"
+      },
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/before/caution2.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Preserved original texture, including archived unused legacy assets",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-sky",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/sky.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/sky.png",
+        "bytes": 1014,
+        "sha256": "6079787f70d71ccf2495de30920f48c9fd3910266e58d83b13354fd4d1bb8f50"
+      },
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/before/sky.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Preserved original texture, including archived unused legacy assets",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-orbital-palette",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_palette.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_palette.png",
+        "bytes": 158,
+        "sha256": "458122eee2420f71b8c295589402ccc145f4216c860104b328579ff0581bf487"
+      },
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/orbital_palette_v5.svg",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Source-native SVG palette, rendered PNG",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-orbital-barrier",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_barrier.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_barrier.png",
+        "bytes": 757,
+        "sha256": "78271df9a1a613b8bfecb53edbf0a58c83e5c060771ed0231339567838e30f71"
+      },
+      "source": "New vector technical palette/tile",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-orbital-sky-front",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_sky_front.jpg",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_sky_front.jpg",
+        "bytes": 38911,
+        "sha256": "24bde9001a8185176ab3e7e9d7359f059860567a8fecefeff4de1c92c27cf659"
+      },
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/orbital-space-panorama.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "512px cubemap projection from shared generated panorama",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-orbital-sky-right",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_sky_right.jpg",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_sky_right.jpg",
+        "bytes": 28813,
+        "sha256": "7cfffb48ab9749571e8876539051c5703bd2b5325baf84cb40020eb01edaca5a"
+      },
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/orbital-space-panorama.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "512px cubemap projection from shared generated panorama",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-icon-nitro-big",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/icon-nitro-big.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/icon-nitro-big.png",
+        "bytes": 14014,
+        "sha256": "e6f8ef2aca52bd8ad2f00425fed7ab3a91b2002c3b49c8f8b9f13ec3eab73660"
+      },
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/before/icon-nitro-big.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Preserved original texture, including archived unused legacy assets",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-gridwall",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/gridwall.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/gridwall.png",
+        "bytes": 943,
+        "sha256": "b7a56464aad1357632b0ee3d1cecdea450a6d8095ab7588ed33084c4dac9ea89"
+      },
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/before/gridwall.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Preserved original texture, including archived unused legacy assets",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-orbital-sky-top",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_sky_top.jpg",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_sky_top.jpg",
+        "bytes": 42471,
+        "sha256": "df32a55b4c832017464557f2f24e6622cf7431ba480878ae537c73064e747b8c"
+      },
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/orbital-space-panorama.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "512px cubemap projection from shared generated panorama",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-v5-texture-cautiongloss",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/cautiongloss.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/cautiongloss.png",
+        "bytes": 1222,
+        "sha256": "6ee67d78195c0519b68fccb55953ff8ab5063be113e700600dfbd991af0790ea"
+      },
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/before/cautiongloss.png",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "integrated"
+        }
+      ],
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Preserved original texture, including archived unused legacy assets",
+      "approval": "Approved as used in Orbital v5"
+    },
+    {
+      "id": "orbital-soccer-runtime-v5",
+      "kind": "runtime-assembly",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/orbital_scenery.spm",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/orbital_scenery.spm",
+        "bytes": 19390,
+        "sha256": "59314814cea5c7bf5bc7cf71ec520a6c8a6bd428c2d7817f920917aef9af2447"
+      },
+      "dependencies": [
+        "orbital-v5-visual-8e7d8d7be16df9d3",
+        "orbital-v5-visual-f98184ae6bcbbc26",
+        "orbital-v5-visual-8f24a55fb2364247",
+        "orbital-v5-visual-32f22ccd5d5f1e69",
+        "orbital-v5-visual-0271b02db6464eee",
+        "orbital-v5-visual-0beb53213d89d0ec",
+        "orbital-v5-visual-3c77fd35adca6bfd",
+        "orbital-v5-visual-3fe8294ec72b4577",
+        "orbital-v5-visual-c5f7ef880dac7d36",
+        "orbital-v5-visual-746374bcb73236c6",
+        "orbital-v5-visual-3dc5641b90b35e2f",
+        "orbital-v5-visual-1a89fe81c073d745",
+        "orbital-v5-visual-233127a8b89e44ab"
+      ],
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "Historical V5 assembly; replaced by current baked remainder and shared placements.",
+          "runtimePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-orbital-simulation---soccer/orbital_scenery.spm"
+        }
+      ],
+      "source": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final",
+      "reason": "Reference 378:83 lunar soccer arena; decorative layout v5",
+      "evidence": [
+        "v5-preservation.json",
+        "surface-visual-audit.json",
+        "delivery-verification.json"
+      ],
+      "adaptation": "Visual remake or preserved gameplay asset; dependency IDs identify exact textures and materials",
+      "approval": "Approved as used in Orbital v5",
+      "status": "Historical approved V5 baked assembly; current resources use coordinate extraction.",
+      "currentRemainderAssetId": "orbital-shared-v1-baked-remainder"
+    },
+    {
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "reason": "Reusable environment for lunar arena preview",
+      "evidence": [
+        "v5-gameplay-captures.json"
+      ],
+      "approval": "Approved as used in Orbital v5",
+      "id": "orbital-v5-panorama-source",
+      "kind": "texture",
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/orbital-space-panorama.png",
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/orbital-space-panorama.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/orbital-space-panorama.png",
+        "bytes": 1920166,
+        "sha256": "ece2e68f663960b92518a05c7f67dd82e20250575a84bd1cbbb9358c542b5509"
+      }
+    },
+    {
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "reason": "Reusable environment for lunar arena preview",
+      "evidence": [
+        "v5-gameplay-captures.json"
+      ],
+      "approval": "Approved as used in Orbital v5",
+      "id": "orbital-v5-world-space",
+      "kind": "environment",
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital World.blend",
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital World.blend#World/Orbital_V5_Space_World",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital World.blend",
+        "bytes": 2064574,
+        "sha256": "6bc43418dc2445e0976e18c8bc38430624e6d38ff3e873e47656c33e280dc10d"
+      },
+      "dependencies": [
+        "orbital-v5-panorama-source"
+      ]
+    },
+    {
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "reason": "Yellow chevron signs in Figma reference 378:83",
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/orbital_chevron.svg",
+      "evidence": [
+        "v5-preservation.json"
+      ],
+      "approval": "Approved as used in Orbital v5",
+      "id": "orbital-v5-texture-chevron",
+      "kind": "texture",
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_chevron.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-soccer-reference-v5/orbital_chevron.png",
+        "bytes": 967,
+        "sha256": "59a779592384ebc3a320feb58020e059d7ab53565a8d50956d74e6fad404d0b4"
+      }
+    },
+    {
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "reason": "Yellow chevron signs in Figma reference 378:83",
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/orbital_chevron.svg",
+      "evidence": [
+        "v5-preservation.json"
+      ],
+      "approval": "Approved as used in Orbital v5",
+      "id": "orbital-v5-material-chevron",
+      "kind": "material",
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Chevrons.blend#Material/OrbitalV5_Chevron",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Chevrons.blend",
+        "bytes": 222340,
+        "sha256": "9c869d65e779a88009655d4b27d2375d08a719b73936c7af09049f17da7e8beb"
+      },
+      "dependencies": [
+        "orbital-v5-texture-chevron"
+      ]
+    },
+    {
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "authored",
+      "categories": [
+        "laboratory"
+      ],
+      "reason": "Yellow chevron signs in Figma reference 378:83",
+      "source": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/sources/orbital-soccer-reference-v5/orbital_chevron.svg",
+      "evidence": [
+        "v5-preservation.json"
+      ],
+      "approval": "Approved as used in Orbital v5",
+      "id": "orbital-v5-object-chevron",
+      "kind": "visual-object",
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Chevrons.blend#Object/Orbital_V5_Chevron_0",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-soccer-reference-v5/Orbital Chevrons.blend",
+        "bytes": 222340,
+        "sha256": "9c869d65e779a88009655d4b27d2375d08a719b73936c7af09049f17da7e8beb"
+      },
+      "dependencies": [
+        "orbital-v5-material-chevron"
+      ],
+      "instances": 4,
+      "trianglesPerInstance": 6
+    },
+    {
+      "id": "orbital-shared-v1-model-22a0c424573d",
+      "displayName": "fluxara_driftlib_orbital_reuse_22a0c424573d_main.spm",
+      "kind": "shared-runtime-model",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_22a0c424573d/fluxara_driftlib_orbital_reuse_22a0c424573d_main.spm",
+      "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/new-library/fluxara_driftlib_orbital_reuse_22a0c424573d/fluxara_driftlib_orbital_reuse_22a0c424573d_main.spm",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_22a0c424573d/fluxara_driftlib_orbital_reuse_22a0c424573d_main.spm",
+        "bytes": 789,
+        "sha256": "6d1cacd242eaf847166495857e7210648d3f03f3984e648f7e95fbdbe34fa2c3"
+      },
+      "dependencies": [
+        "orbital-v5-visual-3fe8294ec72b4577",
+        "orbital-shared-v1-texture-palette"
+      ],
+      "canonicalNativePrototype": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_3fe8294ec72b4577",
+      "runtimeLibraryPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_22a0c424573d",
+      "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_orbital_reuse_22a0c424573d",
+      "runtimeLibraryFiles": [
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_22a0c424573d/fluxara_driftlib_orbital_reuse_22a0c424573d_main.spm",
+          "bytes": 789,
+          "sha256": "6d1cacd242eaf847166495857e7210648d3f03f3984e648f7e95fbdbe34fa2c3"
+        },
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_22a0c424573d/materials.xml",
+          "bytes": 117,
+          "sha256": "16b487941fab0fbb549947d22804ba2029bd73691c125d1aa51d49a625e05abc"
+        },
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_22a0c424573d/node.xml",
+          "bytes": 242,
+          "sha256": "a40a2afa753b5033f1e3cd4dd25ae64313f83add6f238b1301ec04a4db638d64"
+        }
+      ],
+      "instances": 2,
+      "localBounds": [
+        -14.49999713897705,
+        -12.0,
+        -2.000000476837158,
+        14.500008583068848,
+        12.000003814697266,
+        2.0000061988830566
+      ],
+      "localGeometryPreserved": true,
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "Integrated coordinate scenery and fourteen copies of the approved lamp on existing curbs; art review pending"
+        }
+      ]
+    },
+    {
+      "id": "orbital-shared-v1-model-e7154c1d184f",
+      "displayName": "fluxara_driftlib_orbital_reuse_e7154c1d184f_main.spm",
+      "kind": "shared-runtime-model",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_e7154c1d184f/fluxara_driftlib_orbital_reuse_e7154c1d184f_main.spm",
+      "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/new-library/fluxara_driftlib_orbital_reuse_e7154c1d184f/fluxara_driftlib_orbital_reuse_e7154c1d184f_main.spm",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_e7154c1d184f/fluxara_driftlib_orbital_reuse_e7154c1d184f_main.spm",
+        "bytes": 428,
+        "sha256": "be14db2ffc51062e958b0895b46c6642789a5a41e76157667c830efe1af5a0e5"
+      },
+      "dependencies": [
+        "orbital-v5-visual-233127a8b89e44ab",
+        "orbital-shared-v1-texture-lights"
+      ],
+      "canonicalNativePrototype": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_233127a8b89e44ab",
+      "runtimeLibraryPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_e7154c1d184f",
+      "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_orbital_reuse_e7154c1d184f",
+      "runtimeLibraryFiles": [
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_e7154c1d184f/fluxara_driftlib_orbital_reuse_e7154c1d184f_main.spm",
+          "bytes": 428,
+          "sha256": "be14db2ffc51062e958b0895b46c6642789a5a41e76157667c830efe1af5a0e5"
+        },
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_e7154c1d184f/materials.xml",
+          "bytes": 131,
+          "sha256": "65a3175f8308f881e4fc4e51dc64d8b15fb1f42fe8fe46d072f291abb22c47f9"
+        },
+        {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_e7154c1d184f/node.xml",
+          "bytes": 242,
+          "sha256": "4a016ca756e05197eae007737e40f16fba69d97fcdb2c93cf04179c3b5e6f37f"
+        }
+      ],
+      "instances": 18,
+      "localBounds": [
+        -0.8944244384765625,
+        -1.0,
+        -0.8506393432617188,
+        0.8944244384765625,
+        1.0000001192092896,
+        0.8506393432617188
+      ],
+      "localGeometryPreserved": true,
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "Integrated coordinate scenery and fourteen copies of the approved lamp on existing curbs; art review pending"
+        }
+      ]
+    },
+    {
+      "id": "orbital-shared-v1-baked-remainder",
+      "kind": "runtime-assembly",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "adapt",
+      "categories": [
+        "laboratory"
+      ],
+      "displayName": "Orbital retained approved unique scenery",
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/orbital_scenery.spm",
+      "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/orbital_scenery.spm",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/orbital_scenery.spm",
+        "bytes": 16350,
+        "sha256": "a116a63844eb6ed8fb6a810a2b900a89ce921c518006e96a87f22d1af5870908"
+      },
+      "dependencies": [
+        "orbital-soccer-runtime-v5",
+        "orbital-shared-v1-texture-lights",
+        "orbital-shared-v1-texture-palette"
+      ],
+      "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-orbital-simulation---soccer/orbital_scenery.spm",
+      "adaptation": "Extracted only six repeated lamp and module-side placements (168 triangles); approved rings, other module surfaces and curbs retained.",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "Integrated coordinate scenery and fourteen copies of the approved lamp on existing curbs; art review pending"
+        }
+      ]
+    },
+    {
+      "id": "orbital-shared-v1-texture-lights",
+      "displayName": "fluxara_orbital_lights_pool_v1.png",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-shared-v1/fluxara_orbital_lights_pool_v1.png",
+      "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/before/orbital_lights.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-shared-v1/fluxara_orbital_lights_pool_v1.png",
+        "bytes": 158,
+        "sha256": "458122eee2420f71b8c295589402ccc145f4216c860104b328579ff0581bf487"
+      },
+      "dependencies": [
+        "orbital-v5-texture-orbital-lights"
+      ],
+      "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/textures/fluxara_orbital_lights_pool_v1.png",
+      "newImagePixels": false,
+      "materialRole": "unlit",
+      "reason": "Exact original pixels; separate role aliases retain solid architectural panels and unlit lamps.",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "Integrated coordinate scenery and fourteen copies of the approved lamp on existing curbs; art review pending"
+        }
+      ]
+    },
+    {
+      "id": "orbital-shared-v1-texture-palette",
+      "displayName": "fluxara_orbital_palette_pool_v1.png",
+      "kind": "texture",
+      "sourceMap": "fluxara-user-orbital-simulation---soccer",
+      "reuseTier": "direct",
+      "categories": [
+        "laboratory"
+      ],
+      "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-shared-v1/fluxara_orbital_palette_pool_v1.png",
+      "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/before/orbital_palette.png",
+      "file": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-shared-v1/fluxara_orbital_palette_pool_v1.png",
+        "bytes": 158,
+        "sha256": "458122eee2420f71b8c295589402ccc145f4216c860104b328579ff0581bf487"
+      },
+      "dependencies": [
+        "orbital-v5-texture-orbital-palette"
+      ],
+      "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/textures/fluxara_orbital_palette_pool_v1.png",
+      "newImagePixels": false,
+      "materialRole": "solid",
+      "reason": "Exact original pixels; separate role aliases retain solid architectural panels and unlit lamps.",
+      "uses": [
+        {
+          "trackId": "fluxara-user-orbital-simulation---soccer",
+          "status": "Integrated coordinate scenery and fourteen copies of the approved lamp on existing curbs; art review pending"
+        }
+      ]
+    }
+  ],
+  "placements": [
+    {
+      "assetId": "orbital-v5-visual-9a51bef3d5a47a27",
+      "object": "orbital_lunar.jpg__",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-d4f794c597851448",
+      "object": "orbital_lunar.jpg__.001",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-884bfc6525b3c7d1",
+      "object": "columngreen.png___ball.png__",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-d1b04ad9f6573175",
+      "object": "Plane.002_logoholo.png__",
+      "matrixWorld": [
+        [
+          10.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          10.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          10.0,
+          35.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-8e7d8d7be16df9d3",
+      "object": "Orbital_V5_RingFrame_0",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-f98184ae6bcbbc26",
+      "object": "Orbital_V5_RingPanels_0",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-8f24a55fb2364247",
+      "object": "Orbital_V5_RingFrame_1",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-32f22ccd5d5f1e69",
+      "object": "Orbital_V5_RingPanels_1",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-0271b02db6464eee",
+      "object": "Orbital_V5_RingFrame_2",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-0beb53213d89d0ec",
+      "object": "Orbital_V5_RingPanels_2",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-3c77fd35adca6bfd",
+      "object": "Orbital_V5_ModuleTop",
+      "matrixWorld": [
+        [
+          0.9902679920196533,
+          -3.7044798339991303e-09,
+          0.13917303085327148,
+          137.01800537109375
+        ],
+        [
+          -0.021771464496850967,
+          0.9876882433891296,
+          0.1549120992422104,
+          -57.75377655029297
+        ],
+        [
+          -0.13745959103107452,
+          -0.15643450617790222,
+          0.978076159954071,
+          67.68209838867188
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-3c77fd35adca6bfd",
+      "object": "Orbital_V5_ModuleBottom",
+      "matrixWorld": [
+        [
+          0.9902679920196533,
+          -3.7044798339991303e-09,
+          0.13917303085327148,
+          132.98199462890625
+        ],
+        [
+          -0.021771464496850967,
+          0.9876882433891296,
+          0.1549120992422104,
+          -62.24622344970703
+        ],
+        [
+          -0.13745959103107452,
+          -0.15643450617790222,
+          0.978076159954071,
+          39.317893981933594
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-3fe8294ec72b4577",
+      "object": "Orbital_V5_ModuleLeft",
+      "matrixWorld": [
+        [
+          0.9902679920196533,
+          -3.7044798339991303e-09,
+          0.13917303085327148,
+          135.0
+        ],
+        [
+          -0.021771464496850967,
+          0.9876882433891296,
+          0.1549120992422104,
+          -75.80300903320312
+        ],
+        [
+          -0.13745959103107452,
+          -0.15643450617790222,
+          0.978076159954071,
+          56.002952575683594
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-3fe8294ec72b4577",
+      "object": "Orbital_V5_ModuleRight",
+      "matrixWorld": [
+        [
+          0.9902679920196533,
+          -3.7044798339991303e-09,
+          0.13917303085327148,
+          135.0
+        ],
+        [
+          -0.021771464496850967,
+          0.9876882433891296,
+          0.1549120992422104,
+          -44.19698715209961
+        ],
+        [
+          -0.13745959103107452,
+          -0.15643450617790222,
+          0.978076159954071,
+          50.997047424316406
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-c5f7ef880dac7d36",
+      "object": "Orbital_V5_ModuleRecess",
+      "matrixWorld": [
+        [
+          0.9902679920196533,
+          -3.7044798339991303e-09,
+          0.13917303085327148,
+          -6.13194465637207
+        ],
+        [
+          -0.021771464496850967,
+          0.9876882433891296,
+          0.1549120992422104,
+          -6.087350845336914
+        ],
+        [
+          -0.13745959103107452,
+          -0.15643450617790222,
+          0.978076159954071,
+          10.34389591217041
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-746374bcb73236c6",
+      "object": "Orbital_V5_ModuleLights",
+      "matrixWorld": [
+        [
+          0.9902679920196533,
+          -3.7044798339991303e-09,
+          0.13917303085327148,
+          -6.13194465637207
+        ],
+        [
+          -0.021771464496850967,
+          0.9876882433891296,
+          0.1549120992422104,
+          -6.087350845336914
+        ],
+        [
+          -0.13745959103107452,
+          -0.15643450617790222,
+          0.978076159954071,
+          10.34389591217041
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-3dc5641b90b35e2f",
+      "object": "Orbital_V5_Curb_0",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-1a89fe81c073d745",
+      "object": "Orbital_V5_Curb_1",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-233127a8b89e44ab",
+      "object": "Orbital_V5_WarmLamp_0",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          96.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -65.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.2000000476837158,
+          2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-233127a8b89e44ab",
+      "object": "Orbital_V5_WarmLamp_1",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          96.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          65.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.2000000476837158,
+          2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-233127a8b89e44ab",
+      "object": "Orbital_V5_WarmLamp_2",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -96.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -65.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.2000000476837158,
+          2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "assetId": "orbital-v5-visual-233127a8b89e44ab",
+      "object": "Orbital_V5_WarmLamp_3",
+      "matrixWorld": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -96.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          65.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.2000000476837158,
+          2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "protectedEvidence": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/v5-preservation.json",
+  "report": null,
+  "approval": "User approved v5: вот это оставляй",
+  "screenshots": [
+    "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/screenshots/v5-game-22s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/screenshots/v5-game-40s.png"
+  ],
+  "resourceBudget": {
+    "status": "User-approved v5; integrated and frozen",
+    "originalBytes": 6677960,
+    "draftBytes": 5914626,
+    "byteDelta": -763334,
+    "originalTriangles": 3506,
+    "draftTriangles": 4204,
+    "triangleChangePercent": 19.90872789503708,
+    "perModel": [
+      {
+        "model": "reset.spm",
+        "trianglesBefore": 2,
+        "trianglesAfter": 2,
+        "bytesAndTexturesBefore": 140,
+        "bytesAndTexturesAfter": 140,
+        "protectedGeometryUnchanged": true
+      },
+      {
+        "model": "ball.spm",
+        "trianglesBefore": 1260,
+        "trianglesAfter": 1260,
+        "bytesAndTexturesBefore": 61764,
+        "bytesAndTexturesAfter": 61764,
+        "protectedGeometryUnchanged": true
+      },
+      {
+        "model": "orbitallogo.spm",
+        "trianglesBefore": 276,
+        "trianglesAfter": 276,
+        "bytesAndTexturesBefore": 10867,
+        "bytesAndTexturesAfter": 10867,
+        "protectedGeometryUnchanged": true
+      },
+      {
+        "model": "barrier.spm",
+        "trianglesBefore": 204,
+        "trianglesAfter": 204,
+        "bytesAndTexturesBefore": 4259,
+        "bytesAndTexturesAfter": 4080,
+        "protectedGeometryUnchanged": true
+      },
+      {
+        "model": "orbital-simulation---soccer_track.spm",
+        "trianglesBefore": 1764,
+        "trianglesAfter": 1804,
+        "bytesAndTexturesBefore": 99204,
+        "bytesAndTexturesAfter": 104978,
+        "protectedGeometryUnchanged": true
+      }
+    ],
+    "protectedSceneAndGameplayUnchanged": true,
+    "decorativeLayoutChangedWithUserPermission": true,
+    "draftRuntimeOnly": false
+  },
+  "deliveryVerification": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/delivery-verification.json",
+  "approvalScreenshots": [
+    {
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/screenshots/v5-game-22s.png",
+      "sha256": "327d7c0923e6885f15271e3a422177d923f5b0ebd66bf92ff8b8a56329582383",
+      "kind": "Actual soccer gameplay, iOS Simulator",
+      "approvedCopy": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/approved-v5/screenshots/v5-game-22s.png"
+    },
+    {
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/screenshots/v5-game-40s.png",
+      "sha256": "6cf9379e9bbac3416aa9e864a5269a0ee42bd7c3572feb86ff45a19e84ba79ff",
+      "kind": "Actual soccer gameplay, iOS Simulator",
+      "approvedCopy": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/approved-v5/screenshots/v5-game-40s.png"
+    }
+  ],
+  "approvedVersion": {
+    "revision": "v5",
+    "status": "user-approved",
+    "userMessage": "вот это оставляй",
+    "recordedAt": "2026-10-01T00:08:03.316140+00:00",
+    "snapshot": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/approved-v5",
+    "runtimeBytes": 5914626,
+    "files": [
+      {
+        "name": ".fluxara-extracted",
+        "bytes": 32,
+        "sha256": "527ff8562a70fc1c88c3c06bd10bce5cc06e77d74125dd9d40849ebf4a2f4bb4"
+      },
+      {
+        "name": "ORBITAL Simulation - Soccer.blend",
+        "bytes": 3674993,
+        "sha256": "ff87421dd9826bfa0bb2b88a7f7637fdd9e1716dd0adc017387ab2ff20222dc4"
+      },
+      {
+        "name": "arrows.png",
+        "bytes": 10577,
+        "sha256": "044cc8fe1db1a03c7da18c77a7c7fedb6d4bdeb847daaac624a41d831e006c10"
+      },
+      {
+        "name": "background_building.png",
+        "bytes": 346,
+        "sha256": "eb7dfe2474ee1c2c5a23a06ba8c7458f31b19fbf933a9d672341216956127094"
+      },
+      {
+        "name": "background_grass.png",
+        "bytes": 346,
+        "sha256": "c2b22d70839ad8362e05f49a8377e7ba09a19de752834a8829992450c1b44a0a"
+      },
+      {
+        "name": "ball.png",
+        "bytes": 150,
+        "sha256": "50a8339bec1cd13552df0d9d376b37c806f625c7525a96a00e9eda85953e9ac6"
+      },
+      {
+        "name": "ball.spm",
+        "bytes": 61614,
+        "sha256": "9ba8ca5c3f71f011565da8f2886efec226403575dfd9f0afa534aa432f09b3f7"
+      },
+      {
+        "name": "ballgloss.png",
+        "bytes": 150,
+        "sha256": "35769052dd3443e6aaf01d3b5e26853fd1e0554c507ad66db6d27b6d24655253"
+      },
+      {
+        "name": "barrier.spm",
+        "bytes": 3323,
+        "sha256": "8d6409332217b2bfd70ce97f49f589a7c5106459c399cb52c04de12498622192"
+      },
+      {
+        "name": "caution.png",
+        "bytes": 3890,
+        "sha256": "a3ebc7e82ea096f1f0f10f3eb6bd0eca88c695122e8e723da3d684c905aefa8f"
+      },
+      {
+        "name": "caution2.png",
+        "bytes": 2507,
+        "sha256": "7402b4410092eafc595da00f2da0bcd0317e3ede7147bc6c164039c9f247d9f9"
+      },
+      {
+        "name": "cautiongloss.png",
+        "bytes": 1222,
+        "sha256": "6ee67d78195c0519b68fccb55953ff8ab5063be113e700600dfbd991af0790ea"
+      },
+      {
+        "name": "goals.png",
+        "bytes": 146,
+        "sha256": "ef9ac9142fc409195d66a509af0911c8a321aaab0fc28c45d4b5419024e72606"
+      },
+      {
+        "name": "grid.png",
+        "bytes": 276,
+        "sha256": "6e0904a6a9114c6f0b6ac7e8b64671d8785d3fb960324afcb754ae1cd24f7e82"
+      },
+      {
+        "name": "gridgloss.png",
+        "bytes": 276,
+        "sha256": "01f68189c11597fc502f0eba19ab78a05f8b2713ab5ff60d08f38720a7f2aad3"
+      },
+      {
+        "name": "gridwall.png",
+        "bytes": 943,
+        "sha256": "b7a56464aad1357632b0ee3d1cecdea450a6d8095ab7588ed33084c4dac9ea89"
+      },
+      {
+        "name": "icon-nitro-big.png",
+        "bytes": 14014,
+        "sha256": "e6f8ef2aca52bd8ad2f00425fed7ab3a91b2002c3b49c8f8b9f13ec3eab73660"
+      },
+      {
+        "name": "license.txt",
+        "bytes": 119,
+        "sha256": "7b523d2b896902a3c1e7ac02b798eb03c240b4649a30406f2164c1b0ef0a9d1e"
+      },
+      {
+        "name": "logoholo.png",
+        "bytes": 2253,
+        "sha256": "d82cac789b71ac962d6cacef306cf24e430cc588f303313d49445357f5e87e5e"
+      },
+      {
+        "name": "materials.xml",
+        "bytes": 539,
+        "sha256": "9e0e48d4a8c1307572e2ffb3e81121581958ab973aea206666f5d73f23bf7b3f"
+      },
+      {
+        "name": "navmesh.xml",
+        "bytes": 55110,
+        "sha256": "261f126c8e156becdd355013620a6368c37cfcfb2943ac1efc0309f1c2fffa4d"
+      },
+      {
+        "name": "orbital-simulation---soccer_track.spm",
+        "bytes": 75401,
+        "sha256": "26ca46cd137254198305c18cc06d79eeabbdb2bc5f803698caa45bf410f1d08b"
+      },
+      {
+        "name": "orbital.music",
+        "bytes": 150,
+        "sha256": "7cffd31eb407fb690a67e9264fae89e0912b55c4905d1f82975aa836b32a9b41"
+      },
+      {
+        "name": "orbital.ogg",
+        "bytes": 4654841,
+        "sha256": "0070a5911ba0cbf763275ac46c6ac336da7c6f31d4a40735847055adb2cf3296"
+      },
+      {
+        "name": "orbital_barrier.png",
+        "bytes": 757,
+        "sha256": "78271df9a1a613b8bfecb53edbf0a58c83e5c060771ed0231339567838e30f71"
+      },
+      {
+        "name": "orbital_chevron.png",
+        "bytes": 967,
+        "sha256": "59a779592384ebc3a320feb58020e059d7ab53565a8d50956d74e6fad404d0b4"
+      },
+      {
+        "name": "orbital_curb.png",
+        "bytes": 273,
+        "sha256": "023cb15799989064242eb5aca3633fafbf5e6f357fa7129b4d1adba04ef4db61"
+      },
+      {
+        "name": "orbital_floor.png",
+        "bytes": 9843,
+        "sha256": "9d3be9e8403814fdb89d3f43efbc6ff75f3c353b95cae17786a2b3d4375f0a27"
+      },
+      {
+        "name": "orbital_lights.png",
+        "bytes": 158,
+        "sha256": "458122eee2420f71b8c295589402ccc145f4216c860104b328579ff0581bf487"
+      },
+      {
+        "name": "orbital_lunar.jpg",
+        "bytes": 1857,
+        "sha256": "7a52975431082dc19add0d33090cbb0349fc424b18ddcf240ac16afff7285963"
+      },
+      {
+        "name": "orbital_palette.png",
+        "bytes": 158,
+        "sha256": "458122eee2420f71b8c295589402ccc145f4216c860104b328579ff0581bf487"
+      },
+      {
+        "name": "orbital_scenery.spm",
+        "bytes": 19390,
+        "sha256": "59314814cea5c7bf5bc7cf71ec520a6c8a6bd428c2d7817f920917aef9af2447"
+      },
+      {
+        "name": "orbital_sky_back.jpg",
+        "bytes": 37589,
+        "sha256": "3cea793127000aee1fabd646f499ddf4a582d19fc77e3be6070de06f16087ced"
+      },
+      {
+        "name": "orbital_sky_bottom.jpg",
+        "bytes": 21108,
+        "sha256": "1d73042f3648314180c52f61eba5a84ff0b20675c5ffe2a7b1dd69d12217d44b"
+      },
+      {
+        "name": "orbital_sky_front.jpg",
+        "bytes": 38911,
+        "sha256": "24bde9001a8185176ab3e7e9d7359f059860567a8fecefeff4de1c92c27cf659"
+      },
+      {
+        "name": "orbital_sky_left.jpg",
+        "bytes": 42627,
+        "sha256": "5ff0de6bbeb68aea2dfc18cc75faed45b86a47eaf9e154ff96435cb0a35bc2b6"
+      },
+      {
+        "name": "orbital_sky_right.jpg",
+        "bytes": 28813,
+        "sha256": "7cfffb48ab9749571e8876539051c5703bd2b5325baf84cb40020eb01edaca5a"
+      },
+      {
+        "name": "orbital_sky_top.jpg",
+        "bytes": 42471,
+        "sha256": "df32a55b4c832017464557f2f24e6622cf7431ba480878ae537c73064e747b8c"
+      },
+      {
+        "name": "orbitallogo.spm",
+        "bytes": 8614,
+        "sha256": "7303aa25379cd4a667d03d29ed7489ab3b27d899fe39759fee5dcd9e427d9ae0"
+      },
+      {
+        "name": "reset.spm",
+        "bytes": 140,
+        "sha256": "9d3266042e42c40f9a0f217b3e4bdc27ed4280fb436c5e2be840d493140ba664"
+      },
+      {
+        "name": "scene.xml",
+        "bytes": 6062,
+        "sha256": "3a2c2b1b0c6447bdf747568311962413f8e699ad92b8ee89ba52b42c7e24aeba"
+      },
+      {
+        "name": "screenshot.jpg",
+        "bytes": 721676,
+        "sha256": "e53dc264bb2b75e2f6fe52a858ae97a412c8741f0e07bca8194465f0fd49be7b"
+      },
+      {
+        "name": "sky.png",
+        "bytes": 1014,
+        "sha256": "6079787f70d71ccf2495de30920f48c9fd3910266e58d83b13354fd4d1bb8f50"
+      },
+      {
+        "name": "skybottom.png",
+        "bytes": 43658,
+        "sha256": "c548879d99211f78846ecbb999388f289c657fe496130cdd94db423d40e0f262"
+      },
+      {
+        "name": "track.xml",
+        "bytes": 315,
+        "sha256": "1a61261ae7318c06c0030ca61a0cf8befc8396822374ade2c084c34b4a4d7b3c"
+      }
+    ],
+    "screenshots": [
+      {
+        "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/screenshots/v5-game-22s.png",
+        "sha256": "327d7c0923e6885f15271e3a422177d923f5b0ebd66bf92ff8b8a56329582383",
+        "kind": "Actual soccer gameplay, iOS Simulator",
+        "approvedCopy": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/approved-v5/screenshots/v5-game-22s.png"
+      },
+      {
+        "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/screenshots/v5-game-40s.png",
+        "sha256": "6cf9379e9bbac3416aa9e864a5269a0ee42bd7c3572feb86ff45a19e84ba79ff",
+        "kind": "Actual soccer gameplay, iOS Simulator",
+        "approvedCopy": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-soccer-rework/approved-v5/screenshots/v5-game-40s.png"
+      }
+    ],
+    "preservation": "Surface geometry and program points/lines unchanged",
+    "frozen": true
+  },
+  "coordinateReusePhase": {
+    "assets": [
+      {
+        "id": "orbital-shared-v1-model-22a0c424573d",
+        "displayName": "fluxara_driftlib_orbital_reuse_22a0c424573d_main.spm",
+        "kind": "shared-runtime-model",
+        "sourceMap": "fluxara-user-orbital-simulation---soccer",
+        "reuseTier": "direct",
+        "categories": [
+          "laboratory"
+        ],
+        "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_22a0c424573d/fluxara_driftlib_orbital_reuse_22a0c424573d_main.spm",
+        "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/new-library/fluxara_driftlib_orbital_reuse_22a0c424573d/fluxara_driftlib_orbital_reuse_22a0c424573d_main.spm",
+        "file": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_22a0c424573d/fluxara_driftlib_orbital_reuse_22a0c424573d_main.spm",
+          "bytes": 789,
+          "sha256": "6d1cacd242eaf847166495857e7210648d3f03f3984e648f7e95fbdbe34fa2c3"
+        },
+        "dependencies": [
+          "orbital-v5-visual-3fe8294ec72b4577",
+          "orbital-shared-v1-texture-palette"
+        ],
+        "canonicalNativePrototype": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_3fe8294ec72b4577",
+        "runtimeLibraryPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_22a0c424573d",
+        "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_orbital_reuse_22a0c424573d",
+        "runtimeLibraryFiles": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_22a0c424573d/fluxara_driftlib_orbital_reuse_22a0c424573d_main.spm",
+            "bytes": 789,
+            "sha256": "6d1cacd242eaf847166495857e7210648d3f03f3984e648f7e95fbdbe34fa2c3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_22a0c424573d/materials.xml",
+            "bytes": 117,
+            "sha256": "16b487941fab0fbb549947d22804ba2029bd73691c125d1aa51d49a625e05abc"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_22a0c424573d/node.xml",
+            "bytes": 242,
+            "sha256": "a40a2afa753b5033f1e3cd4dd25ae64313f83add6f238b1301ec04a4db638d64"
+          }
+        ],
+        "instances": 2,
+        "localBounds": [
+          -14.49999713897705,
+          -12.0,
+          -2.000000476837158,
+          14.500008583068848,
+          12.000003814697266,
+          2.0000061988830566
+        ],
+        "localGeometryPreserved": true,
+        "uses": [
+          {
+            "trackId": "fluxara-user-orbital-simulation---soccer",
+            "status": "Integrated coordinate scenery and fourteen copies of the approved lamp on existing curbs; art review pending"
+          }
+        ]
+      },
+      {
+        "id": "orbital-shared-v1-model-e7154c1d184f",
+        "displayName": "fluxara_driftlib_orbital_reuse_e7154c1d184f_main.spm",
+        "kind": "shared-runtime-model",
+        "sourceMap": "fluxara-user-orbital-simulation---soccer",
+        "reuseTier": "direct",
+        "categories": [
+          "laboratory"
+        ],
+        "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_e7154c1d184f/fluxara_driftlib_orbital_reuse_e7154c1d184f_main.spm",
+        "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/new-library/fluxara_driftlib_orbital_reuse_e7154c1d184f/fluxara_driftlib_orbital_reuse_e7154c1d184f_main.spm",
+        "file": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_e7154c1d184f/fluxara_driftlib_orbital_reuse_e7154c1d184f_main.spm",
+          "bytes": 428,
+          "sha256": "be14db2ffc51062e958b0895b46c6642789a5a41e76157667c830efe1af5a0e5"
+        },
+        "dependencies": [
+          "orbital-v5-visual-233127a8b89e44ab",
+          "orbital-shared-v1-texture-lights"
+        ],
+        "canonicalNativePrototype": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend#Object/OrbitalV5_Asset_233127a8b89e44ab",
+        "runtimeLibraryPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "runtimeLibraryFiles": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_e7154c1d184f/fluxara_driftlib_orbital_reuse_e7154c1d184f_main.spm",
+            "bytes": 428,
+            "sha256": "be14db2ffc51062e958b0895b46c6642789a5a41e76157667c830efe1af5a0e5"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_e7154c1d184f/materials.xml",
+            "bytes": 131,
+            "sha256": "65a3175f8308f881e4fc4e51dc64d8b15fb1f42fe8fe46d072f291abb22c47f9"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/fluxara_driftlib_orbital_reuse_e7154c1d184f/node.xml",
+            "bytes": 242,
+            "sha256": "4a016ca756e05197eae007737e40f16fba69d97fcdb2c93cf04179c3b5e6f37f"
+          }
+        ],
+        "instances": 18,
+        "localBounds": [
+          -0.8944244384765625,
+          -1.0,
+          -0.8506393432617188,
+          0.8944244384765625,
+          1.0000001192092896,
+          0.8506393432617188
+        ],
+        "localGeometryPreserved": true,
+        "uses": [
+          {
+            "trackId": "fluxara-user-orbital-simulation---soccer",
+            "status": "Integrated coordinate scenery and fourteen copies of the approved lamp on existing curbs; art review pending"
+          }
+        ]
+      },
+      {
+        "id": "orbital-shared-v1-baked-remainder",
+        "kind": "runtime-assembly",
+        "sourceMap": "fluxara-user-orbital-simulation---soccer",
+        "reuseTier": "adapt",
+        "categories": [
+          "laboratory"
+        ],
+        "displayName": "Orbital retained approved unique scenery",
+        "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/orbital_scenery.spm",
+        "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/orbital_scenery.spm",
+        "file": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/orbital-shared-v1/orbital_scenery.spm",
+          "bytes": 16350,
+          "sha256": "a116a63844eb6ed8fb6a810a2b900a89ce921c518006e96a87f22d1af5870908"
+        },
+        "dependencies": [
+          "orbital-soccer-runtime-v5",
+          "orbital-shared-v1-texture-lights",
+          "orbital-shared-v1-texture-palette"
+        ],
+        "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-orbital-simulation---soccer/orbital_scenery.spm",
+        "adaptation": "Extracted only six repeated lamp and module-side placements (168 triangles); approved rings, other module surfaces and curbs retained.",
+        "uses": [
+          {
+            "trackId": "fluxara-user-orbital-simulation---soccer",
+            "status": "Integrated coordinate scenery and fourteen copies of the approved lamp on existing curbs; art review pending"
+          }
+        ]
+      },
+      {
+        "id": "orbital-shared-v1-texture-lights",
+        "displayName": "fluxara_orbital_lights_pool_v1.png",
+        "kind": "texture",
+        "sourceMap": "fluxara-user-orbital-simulation---soccer",
+        "reuseTier": "direct",
+        "categories": [
+          "laboratory"
+        ],
+        "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-shared-v1/fluxara_orbital_lights_pool_v1.png",
+        "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/before/orbital_lights.png",
+        "file": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-shared-v1/fluxara_orbital_lights_pool_v1.png",
+          "bytes": 158,
+          "sha256": "458122eee2420f71b8c295589402ccc145f4216c860104b328579ff0581bf487"
+        },
+        "dependencies": [
+          "orbital-v5-texture-orbital-lights"
+        ],
+        "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/textures/fluxara_orbital_lights_pool_v1.png",
+        "newImagePixels": false,
+        "materialRole": "unlit",
+        "reason": "Exact original pixels; separate role aliases retain solid architectural panels and unlit lamps.",
+        "uses": [
+          {
+            "trackId": "fluxara-user-orbital-simulation---soccer",
+            "status": "Integrated coordinate scenery and fourteen copies of the approved lamp on existing curbs; art review pending"
+          }
+        ]
+      },
+      {
+        "id": "orbital-shared-v1-texture-palette",
+        "displayName": "fluxara_orbital_palette_pool_v1.png",
+        "kind": "texture",
+        "sourceMap": "fluxara-user-orbital-simulation---soccer",
+        "reuseTier": "direct",
+        "categories": [
+          "laboratory"
+        ],
+        "canonicalPackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-shared-v1/fluxara_orbital_palette_pool_v1.png",
+        "physicalSourcePath": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/before/orbital_palette.png",
+        "file": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/orbital-shared-v1/fluxara_orbital_palette_pool_v1.png",
+          "bytes": 158,
+          "sha256": "458122eee2420f71b8c295589402ccc145f4216c860104b328579ff0581bf487"
+        },
+        "dependencies": [
+          "orbital-v5-texture-orbital-palette"
+        ],
+        "runtimeResourceSourcePath": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/textures/fluxara_orbital_palette_pool_v1.png",
+        "newImagePixels": false,
+        "materialRole": "solid",
+        "reason": "Exact original pixels; separate role aliases retain solid architectural panels and unlit lamps.",
+        "uses": [
+          {
+            "trackId": "fluxara-user-orbital-simulation---soccer",
+            "status": "Integrated coordinate scenery and fourteen copies of the approved lamp on existing curbs; art review pending"
+          }
+        ]
+      }
+    ],
+    "existingCoordinateParts": 6,
+    "additionalLights": 14,
+    "newLightCoordinateParts": 14,
+    "totalCoordinateParts": 20,
+    "placements": [
+      {
+        "id": "PoolReuse_Orbital_V5_ModuleLeft",
+        "sourceObject": "Orbital_V5_ModuleLeft",
+        "library": "fluxara_driftlib_orbital_reuse_22a0c424573d",
+        "xyz": [
+          135.0,
+          56.002952575683594,
+          -75.80300903320312
+        ],
+        "hpr": [
+          8.913830583878935,
+          1.2475118537880263,
+          -7.902756827268302
+        ],
+        "scale": [
+          0.9999998807907104,
+          0.9999999403953552,
+          0.9999998807907104
+        ],
+        "sourceMatrix": [
+          [
+            0.9902679920196533,
+            -3.7044798339991303e-09,
+            0.13917303085327148,
+            135.0
+          ],
+          [
+            -0.021771464496850967,
+            0.9876882433891296,
+            0.1549120992422104,
+            -75.80300903320312
+          ],
+          [
+            -0.13745959103107452,
+            -0.15643450617790222,
+            0.978076159954071,
+            56.002952575683594
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "worldGeometryMatchesOriginalScenery": {
+          "localPositionError": 0,
+          "worldPositionError": 0,
+          "localNormalError": 0,
+          "triangleTopologyAndUVColorExact": true
+        }
+      },
+      {
+        "id": "PoolReuse_Orbital_V5_ModuleRight",
+        "sourceObject": "Orbital_V5_ModuleRight",
+        "library": "fluxara_driftlib_orbital_reuse_22a0c424573d",
+        "xyz": [
+          135.0,
+          50.997047424316406,
+          -44.19698715209961
+        ],
+        "hpr": [
+          8.913830583878935,
+          1.2475118537880263,
+          -7.902756827268302
+        ],
+        "scale": [
+          0.9999998807907104,
+          0.9999999403953552,
+          0.9999998807907104
+        ],
+        "sourceMatrix": [
+          [
+            0.9902679920196533,
+            -3.7044798339991303e-09,
+            0.13917303085327148,
+            135.0
+          ],
+          [
+            -0.021771464496850967,
+            0.9876882433891296,
+            0.1549120992422104,
+            -44.19698715209961
+          ],
+          [
+            -0.13745959103107452,
+            -0.15643450617790222,
+            0.978076159954071,
+            50.997047424316406
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "worldGeometryMatchesOriginalScenery": {
+          "localPositionError": 8.84401197254192e-06,
+          "worldPositionError": 8.529922399520072e-06,
+          "localNormalError": 0,
+          "triangleTopologyAndUVColorExact": false,
+          "uvAndColorPerVertexExact": true,
+          "bidirectionalSurfaceDistance": 0.00046970954281277955,
+          "sameSurfaceWithAlternativeTriangulation": true
+        }
+      },
+      {
+        "id": "PoolReuse_Orbital_V5_WarmLamp_0",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          96.0,
+          2.0,
+          -65.0
+        ],
+        "hpr": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.2000000476837158,
+          1.0
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -65.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "worldGeometryMatchesOriginalScenery": {
+          "localPositionError": 0,
+          "worldPositionError": 0,
+          "localNormalError": 0,
+          "triangleTopologyAndUVColorExact": true
+        }
+      },
+      {
+        "id": "PoolReuse_Orbital_V5_WarmLamp_1",
+        "sourceObject": "Orbital_V5_WarmLamp_1",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          96.0,
+          2.0,
+          65.0
+        ],
+        "hpr": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.2000000476837158,
+          1.0
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            65.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "worldGeometryMatchesOriginalScenery": {
+          "localPositionError": 0,
+          "worldPositionError": 0,
+          "localNormalError": 0,
+          "triangleTopologyAndUVColorExact": true,
+          "uvAndColorPerVertexExact": true,
+          "bidirectionalSurfaceDistance": 0,
+          "sameSurfaceWithAlternativeTriangulation": false
+        }
+      },
+      {
+        "id": "PoolReuse_Orbital_V5_WarmLamp_2",
+        "sourceObject": "Orbital_V5_WarmLamp_2",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          -96.0,
+          2.0,
+          -65.0
+        ],
+        "hpr": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.2000000476837158,
+          1.0
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -65.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "worldGeometryMatchesOriginalScenery": {
+          "localPositionError": 0,
+          "worldPositionError": 0,
+          "localNormalError": 0,
+          "triangleTopologyAndUVColorExact": true,
+          "uvAndColorPerVertexExact": true,
+          "bidirectionalSurfaceDistance": 0,
+          "sameSurfaceWithAlternativeTriangulation": false
+        }
+      },
+      {
+        "id": "PoolReuse_Orbital_V5_WarmLamp_3",
+        "sourceObject": "Orbital_V5_WarmLamp_3",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          -96.0,
+          2.0,
+          65.0
+        ],
+        "hpr": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.2000000476837158,
+          1.0
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            65.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "worldGeometryMatchesOriginalScenery": {
+          "localPositionError": 0,
+          "worldPositionError": 0,
+          "localNormalError": 0,
+          "triangleTopologyAndUVColorExact": true,
+          "uvAndColorPerVertexExact": true,
+          "bidirectionalSurfaceDistance": 0,
+          "sameSurfaceWithAlternativeTriangulation": false
+        }
+      },
+      {
+        "id": "Orbital_PoolLamp_-1_0",
+        "nativeObject": "Orbital_PoolLamp_-1_0",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          -96,
+          2.16,
+          -78
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -78.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_0",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_-1_1",
+        "nativeObject": "Orbital_PoolLamp_-1_1",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          -96,
+          2.16,
+          -52
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -52.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_0",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_-1_2",
+        "nativeObject": "Orbital_PoolLamp_-1_2",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          -96,
+          2.16,
+          -26
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -26.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_0",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_-1_3",
+        "nativeObject": "Orbital_PoolLamp_-1_3",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          -96,
+          2.16,
+          0
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_0",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_-1_4",
+        "nativeObject": "Orbital_PoolLamp_-1_4",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          -96,
+          2.16,
+          26
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            26.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_0",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_-1_5",
+        "nativeObject": "Orbital_PoolLamp_-1_5",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          -96,
+          2.16,
+          52
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            52.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_0",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_-1_6",
+        "nativeObject": "Orbital_PoolLamp_-1_6",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          -96,
+          2.16,
+          78
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            78.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_0",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_1_0",
+        "nativeObject": "Orbital_PoolLamp_1_0",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          96,
+          2.16,
+          -78
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -78.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_1",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_1_1",
+        "nativeObject": "Orbital_PoolLamp_1_1",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          96,
+          2.16,
+          -52
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -52.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_1",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_1_2",
+        "nativeObject": "Orbital_PoolLamp_1_2",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          96,
+          2.16,
+          -26
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -26.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_1",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_1_3",
+        "nativeObject": "Orbital_PoolLamp_1_3",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          96,
+          2.16,
+          0
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_1",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_1_4",
+        "nativeObject": "Orbital_PoolLamp_1_4",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          96,
+          2.16,
+          26
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            26.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_1",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_1_5",
+        "nativeObject": "Orbital_PoolLamp_1_5",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          96,
+          2.16,
+          52
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            52.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_1",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_1_6",
+        "nativeObject": "Orbital_PoolLamp_1_6",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          96,
+          2.16,
+          78
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            78.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_1",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      }
+    ],
+    "grounding": [
+      {
+        "id": "Orbital_PoolLamp_-1_0",
+        "nativeObject": "Orbital_PoolLamp_-1_0",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          -96,
+          2.16,
+          -78
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -78.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_0",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_-1_1",
+        "nativeObject": "Orbital_PoolLamp_-1_1",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          -96,
+          2.16,
+          -52
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -52.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_0",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_-1_2",
+        "nativeObject": "Orbital_PoolLamp_-1_2",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          -96,
+          2.16,
+          -26
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -26.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_0",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_-1_3",
+        "nativeObject": "Orbital_PoolLamp_-1_3",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          -96,
+          2.16,
+          0
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_0",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_-1_4",
+        "nativeObject": "Orbital_PoolLamp_-1_4",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          -96,
+          2.16,
+          26
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            26.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_0",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_-1_5",
+        "nativeObject": "Orbital_PoolLamp_-1_5",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          -96,
+          2.16,
+          52
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            52.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_0",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_-1_6",
+        "nativeObject": "Orbital_PoolLamp_-1_6",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          -96,
+          2.16,
+          78
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            78.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_0",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_1_0",
+        "nativeObject": "Orbital_PoolLamp_1_0",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          96,
+          2.16,
+          -78
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -78.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_1",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_1_1",
+        "nativeObject": "Orbital_PoolLamp_1_1",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          96,
+          2.16,
+          -52
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -52.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_1",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_1_2",
+        "nativeObject": "Orbital_PoolLamp_1_2",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          96,
+          2.16,
+          -26
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -26.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_1",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_1_3",
+        "nativeObject": "Orbital_PoolLamp_1_3",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          96,
+          2.16,
+          0
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_1",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_1_4",
+        "nativeObject": "Orbital_PoolLamp_1_4",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          96,
+          2.16,
+          26
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            26.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_1",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_1_5",
+        "nativeObject": "Orbital_PoolLamp_1_5",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          96,
+          2.16,
+          52
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            52.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_1",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      },
+      {
+        "id": "Orbital_PoolLamp_1_6",
+        "nativeObject": "Orbital_PoolLamp_1_6",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "xyz": [
+          96,
+          2.16,
+          78
+        ],
+        "hpr": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1.2,
+          1
+        ],
+        "sourceMatrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            96.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            78.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2000000476837158,
+            2.1600000858306885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "support": "Orbital_V5_Curb_1",
+        "curbTopBlenderZ": 1,
+        "bottomBlenderZ": 0.96,
+        "rootEmbedMeters": 0.04,
+        "newDecorativePlacement": true
+      }
+    ],
+    "canonicalNativeReused": [
+      {
+        "library": "fluxara_driftlib_orbital_reuse_22a0c424573d",
+        "sourceObject": "Orbital_V5_ModuleLeft",
+        "instances": 2,
+        "triangles": 44,
+        "localBounds": [
+          -14.49999713897705,
+          -12.0,
+          -2.000000476837158,
+          14.500008583068848,
+          12.000003814697266,
+          2.0000061988830566
+        ],
+        "model": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/new-library/fluxara_driftlib_orbital_reuse_22a0c424573d/fluxara_driftlib_orbital_reuse_22a0c424573d_main.spm",
+        "nativeMesh": "Cube.002",
+        "nativePrototype": "OrbitalShared_22a0c424573d",
+        "sourcePoolObjectId": "orbital-v5-visual-3fe8294ec72b4577",
+        "canonicalNativePrototype": "OrbitalV5_Asset_3fe8294ec72b4577"
+      },
+      {
+        "library": "fluxara_driftlib_orbital_reuse_e7154c1d184f",
+        "sourceObject": "Orbital_V5_WarmLamp_0",
+        "instances": 4,
+        "triangles": 20,
+        "localBounds": [
+          -0.8944244384765625,
+          -1.0,
+          -0.8506393432617188,
+          0.8944244384765625,
+          1.0000001192092896,
+          0.8506393432617188
+        ],
+        "model": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/new-library/fluxara_driftlib_orbital_reuse_e7154c1d184f/fluxara_driftlib_orbital_reuse_e7154c1d184f_main.spm",
+        "nativeMesh": "Icosphere.001",
+        "nativePrototype": "OrbitalShared_e7154c1d184f",
+        "sourcePoolObjectId": "orbital-v5-visual-233127a8b89e44ab",
+        "canonicalNativePrototype": "OrbitalV5_Asset_233127a8b89e44ab"
+      }
+    ],
+    "finalBlend": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final/ORBITAL Simulation - Soccer.blend",
+    "nativeFile": {
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final/ORBITAL Simulation - Soccer.blend",
+      "bytes": 3834610,
+      "sha256": "5667da4c0ddcae0c8de1c91ff0b1688e9436e844f53250382fd39f2c58a5f44d"
+    },
+    "weights": {
+      "originalBytes": 5914626,
+      "candidateOwnBytes": 5298414,
+      "newSharedGameBytes": 2265,
+      "newTextureBytes": 316,
+      "newImagePixels": false,
+      "campaignThumbnailBytesChargedInFull": 47466,
+      "candidateTotalBytes": 5348145,
+      "savingBytes": 566481,
+      "sourcePreview": {
+        "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/screenshot.jpg",
+        "bytes": 105761,
+        "sha256": "bba45e461edea803cc594edde59c3efecfe4ffbc3034747c2d24db235cce0857"
+      },
+      "campaignPreview": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/gui/fluxara/campaign-previews/fluxara-user-orbital-simulation---soccer.jpg",
+        "bytes": 47466,
+        "sha256": "b38fd4860ddfb87dcf48772869a7bec2515cd24a8dfdd7ba7c5f9d10c46425cb"
+      },
+      "existingCoordinateParts": 6,
+      "additionalLights": 14,
+      "newLightCoordinateParts": 14,
+      "totalCoordinateParts": 20,
+      "uniqueExportedModels": 2,
+      "savingPercent": 9.577630098674033
+    },
+    "preservation": {
+      "protectedResourceFiles": {
+        "background_grass.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/background_grass.png",
+          "bytes": 346,
+          "sha256": "c2b22d70839ad8362e05f49a8377e7ba09a19de752834a8829992450c1b44a0a"
+        },
+        "reset.spm": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/reset.spm",
+          "bytes": 140,
+          "sha256": "9d3266042e42c40f9a0f217b3e4bdc27ed4280fb436c5e2be840d493140ba664"
+        },
+        "gridgloss.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/gridgloss.png",
+          "bytes": 276,
+          "sha256": "01f68189c11597fc502f0eba19ab78a05f8b2713ab5ff60d08f38720a7f2aad3"
+        },
+        "orbital.ogg": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/orbital.ogg",
+          "bytes": 4654841,
+          "sha256": "0070a5911ba0cbf763275ac46c6ac336da7c6f31d4a40735847055adb2cf3296"
+        },
+        "caution.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/caution.png",
+          "bytes": 3890,
+          "sha256": "a3ebc7e82ea096f1f0f10f3eb6bd0eca88c695122e8e723da3d684c905aefa8f"
+        },
+        "ball.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/ball.png",
+          "bytes": 150,
+          "sha256": "50a8339bec1cd13552df0d9d376b37c806f625c7525a96a00e9eda85953e9ac6"
+        },
+        "orbital_floor.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/orbital_floor.png",
+          "bytes": 9843,
+          "sha256": "9d3be9e8403814fdb89d3f43efbc6ff75f3c353b95cae17786a2b3d4375f0a27"
+        },
+        "orbital.music": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/orbital.music",
+          "bytes": 150,
+          "sha256": "7cffd31eb407fb690a67e9264fae89e0912b55c4905d1f82975aa836b32a9b41"
+        },
+        "goals.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/goals.png",
+          "bytes": 146,
+          "sha256": "ef9ac9142fc409195d66a509af0911c8a321aaab0fc28c45d4b5419024e72606"
+        },
+        "orbital_sky_back.jpg": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/orbital_sky_back.jpg",
+          "bytes": 37589,
+          "sha256": "3cea793127000aee1fabd646f499ddf4a582d19fc77e3be6070de06f16087ced"
+        },
+        "ball.spm": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/ball.spm",
+          "bytes": 61614,
+          "sha256": "9ba8ca5c3f71f011565da8f2886efec226403575dfd9f0afa534aa432f09b3f7"
+        },
+        "orbital_sky_bottom.jpg": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/orbital_sky_bottom.jpg",
+          "bytes": 21108,
+          "sha256": "1d73042f3648314180c52f61eba5a84ff0b20675c5ffe2a7b1dd69d12217d44b"
+        },
+        "background_building.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/background_building.png",
+          "bytes": 346,
+          "sha256": "eb7dfe2474ee1c2c5a23a06ba8c7458f31b19fbf933a9d672341216956127094"
+        },
+        "logoholo.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/logoholo.png",
+          "bytes": 2253,
+          "sha256": "d82cac789b71ac962d6cacef306cf24e430cc588f303313d49445357f5e87e5e"
+        },
+        "orbital_sky_left.jpg": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/orbital_sky_left.jpg",
+          "bytes": 42627,
+          "sha256": "5ff0de6bbeb68aea2dfc18cc75faed45b86a47eaf9e154ff96435cb0a35bc2b6"
+        },
+        "orbitallogo.spm": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/orbitallogo.spm",
+          "bytes": 8614,
+          "sha256": "7303aa25379cd4a667d03d29ed7489ab3b27d899fe39759fee5dcd9e427d9ae0"
+        },
+        "barrier.spm": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/barrier.spm",
+          "bytes": 3323,
+          "sha256": "8d6409332217b2bfd70ce97f49f589a7c5106459c399cb52c04de12498622192"
+        },
+        "orbital_curb.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/orbital_curb.png",
+          "bytes": 273,
+          "sha256": "023cb15799989064242eb5aca3633fafbf5e6f357fa7129b4d1adba04ef4db61"
+        },
+        "skybottom.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/skybottom.png",
+          "bytes": 43658,
+          "sha256": "c548879d99211f78846ecbb999388f289c657fe496130cdd94db423d40e0f262"
+        },
+        "orbital-simulation---soccer_track.spm": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/orbital-simulation---soccer_track.spm",
+          "bytes": 75401,
+          "sha256": "26ca46cd137254198305c18cc06d79eeabbdb2bc5f803698caa45bf410f1d08b"
+        },
+        "orbital_lunar.jpg": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/orbital_lunar.jpg",
+          "bytes": 1857,
+          "sha256": "7a52975431082dc19add0d33090cbb0349fc424b18ddcf240ac16afff7285963"
+        },
+        "grid.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/grid.png",
+          "bytes": 276,
+          "sha256": "6e0904a6a9114c6f0b6ac7e8b64671d8785d3fb960324afcb754ae1cd24f7e82"
+        },
+        "ballgloss.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/ballgloss.png",
+          "bytes": 150,
+          "sha256": "35769052dd3443e6aaf01d3b5e26853fd1e0554c507ad66db6d27b6d24655253"
+        },
+        "arrows.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/arrows.png",
+          "bytes": 10577,
+          "sha256": "044cc8fe1db1a03c7da18c77a7c7fedb6d4bdeb847daaac624a41d831e006c10"
+        },
+        ".fluxara-extracted": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/.fluxara-extracted",
+          "bytes": 32,
+          "sha256": "527ff8562a70fc1c88c3c06bd10bce5cc06e77d74125dd9d40849ebf4a2f4bb4"
+        },
+        "caution2.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/caution2.png",
+          "bytes": 2507,
+          "sha256": "7402b4410092eafc595da00f2da0bcd0317e3ede7147bc6c164039c9f247d9f9"
+        },
+        "sky.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/sky.png",
+          "bytes": 1014,
+          "sha256": "6079787f70d71ccf2495de30920f48c9fd3910266e58d83b13354fd4d1bb8f50"
+        },
+        "orbital_barrier.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/orbital_barrier.png",
+          "bytes": 757,
+          "sha256": "78271df9a1a613b8bfecb53edbf0a58c83e5c060771ed0231339567838e30f71"
+        },
+        "orbital_sky_front.jpg": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/orbital_sky_front.jpg",
+          "bytes": 38911,
+          "sha256": "24bde9001a8185176ab3e7e9d7359f059860567a8fecefeff4de1c92c27cf659"
+        },
+        "orbital_sky_right.jpg": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/orbital_sky_right.jpg",
+          "bytes": 28813,
+          "sha256": "7cfffb48ab9749571e8876539051c5703bd2b5325baf84cb40020eb01edaca5a"
+        },
+        "navmesh.xml": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/navmesh.xml",
+          "bytes": 55110,
+          "sha256": "261f126c8e156becdd355013620a6368c37cfcfb2943ac1efc0309f1c2fffa4d"
+        },
+        "icon-nitro-big.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/icon-nitro-big.png",
+          "bytes": 14014,
+          "sha256": "e6f8ef2aca52bd8ad2f00425fed7ab3a91b2002c3b49c8f8b9f13ec3eab73660"
+        },
+        "license.txt": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/license.txt",
+          "bytes": 119,
+          "sha256": "7b523d2b896902a3c1e7ac02b798eb03c240b4649a30406f2164c1b0ef0a9d1e"
+        },
+        "orbital_chevron.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/orbital_chevron.png",
+          "bytes": 967,
+          "sha256": "59a779592384ebc3a320feb58020e059d7ab53565a8d50956d74e6fad404d0b4"
+        },
+        "gridwall.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/gridwall.png",
+          "bytes": 943,
+          "sha256": "b7a56464aad1357632b0ee3d1cecdea450a6d8095ab7588ed33084c4dac9ea89"
+        },
+        "orbital_sky_top.jpg": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/orbital_sky_top.jpg",
+          "bytes": 42471,
+          "sha256": "df32a55b4c832017464557f2f24e6622cf7431ba480878ae537c73064e747b8c"
+        },
+        "cautiongloss.png": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/candidate/cautiongloss.png",
+          "bytes": 1222,
+          "sha256": "6ee67d78195c0519b68fccb55953ff8ab5063be113e700600dfbd991af0790ea"
+        }
+      },
+      "allProtectedResourceFilesByteExact": true,
+      "originalSceneNodesKept": true,
+      "originalRuntimeMeshesAndTransformsUnchanged": true,
+      "localModelGeometryUnchanged": true,
+      "canonicalNativeLibraryUnchanged": true,
+      "onlyPreviewAttributeChangesInTrackXML": true
+    },
+    "runtimeValidation": "Static engine screenshots captured. No new driving/collision test and no new application build.",
+    "approvedStyleVersionPreserved": "V5; original geometry and placements unchanged",
+    "newLightPlacementsIndividuallyApproved": false,
+    "report": "/Users/motoricallc/Downloads/stk-code-master/output/fluxara-user-orbital-soccer-final/report/index.html",
+    "screenshots": {
+      "screenshots": [
+        {
+          "view": "ring",
+          "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/screenshots/candidate/ring.jpg",
+          "camera": [
+            0,
+            16,
+            -30
+          ],
+          "target": [
+            125,
+            36,
+            0
+          ],
+          "kind": "Static game-engine photograph, not driving test",
+          "command": [
+            "xcrun",
+            "simctl",
+            "launch",
+            "--terminate-running-process",
+            "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/ring-stdout.log",
+            "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/ring-stderr.log",
+            "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+            "io.fluxara.drift",
+            "--no-sound",
+            "--cutscene=fluxara-orbital-shared-picture-ring"
+          ]
+        },
+        {
+          "view": "overview",
+          "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/screenshots/candidate/overview.jpg",
+          "camera": [
+            130,
+            105,
+            -150
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "kind": "Static game-engine photograph, not driving test",
+          "command": [
+            "xcrun",
+            "simctl",
+            "launch",
+            "--terminate-running-process",
+            "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/overview-stdout.log",
+            "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/overview-stderr.log",
+            "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+            "io.fluxara.drift",
+            "--no-sound",
+            "--cutscene=fluxara-orbital-shared-picture-overview"
+          ]
+        }
+      ],
+      "newDrivingTestPerformed": false,
+      "temporaryProbeResourcesRemoved": true,
+      "existingProductionResourcesPreserved": true,
+      "newBuildPerformed": false
+    }
+  }
+}

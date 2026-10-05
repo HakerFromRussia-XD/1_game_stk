@@ -1,0 +1,41 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/current-game-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/current-game-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-user-lap-catch",
+    "--mode=1",
+    "--laps=1",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--fluxara-event=main-ghost_geometry-lap-catch",
+    "--seed=4"
+  ],
+  "screenshots": [
+    {
+      "seconds": 8,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/current-game-8s.png"
+    },
+    {
+      "seconds": 20,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/current-game-20s.png"
+    },
+    {
+      "seconds": 35,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/current-game-35s.png"
+    },
+    {
+      "seconds": 50,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/current-game-50s.png"
+    }
+  ]
+}

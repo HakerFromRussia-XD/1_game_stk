@@ -1,0 +1,62 @@
+{
+  "screenshots": [
+    {
+      "view": "ring",
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/screenshots/candidate/ring.jpg",
+      "camera": [
+        0,
+        16,
+        -30
+      ],
+      "target": [
+        125,
+        36,
+        0
+      ],
+      "kind": "Static game-engine photograph, not driving test",
+      "command": [
+        "xcrun",
+        "simctl",
+        "launch",
+        "--terminate-running-process",
+        "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/ring-stdout.log",
+        "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/ring-stderr.log",
+        "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+        "io.fluxara.drift",
+        "--no-sound",
+        "--cutscene=fluxara-orbital-shared-picture-ring"
+      ]
+    },
+    {
+      "view": "overview",
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/screenshots/candidate/overview.jpg",
+      "camera": [
+        130,
+        105,
+        -150
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "kind": "Static game-engine photograph, not driving test",
+      "command": [
+        "xcrun",
+        "simctl",
+        "launch",
+        "--terminate-running-process",
+        "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/overview-stdout.log",
+        "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/orbital-shared-placement/delivery-v1/overview-stderr.log",
+        "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+        "io.fluxara.drift",
+        "--no-sound",
+        "--cutscene=fluxara-orbital-shared-picture-overview"
+      ]
+    }
+  ],
+  "newDrivingTestPerformed": false,
+  "temporaryProbeResourcesRemoved": true,
+  "existingProductionResourcesPreserved": true,
+  "newBuildPerformed": false
+}

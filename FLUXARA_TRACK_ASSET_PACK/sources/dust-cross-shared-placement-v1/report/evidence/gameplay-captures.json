@@ -1,0 +1,44 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-completion/driving-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-completion/driving-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-user-dust-cross-split-combat",
+    "--mode=2",
+    "--battle-mode=0",
+    "--numkarts=6",
+    "--kart=fluxara-ace",
+    "--seed=9"
+  ],
+  "pid": 49044,
+  "screenshots": [
+    {
+      "seconds": 10,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-completion/screenshots/driving-10s.png"
+    },
+    {
+      "seconds": 25,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-completion/screenshots/driving-25s.png"
+    },
+    {
+      "seconds": 45,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-completion/screenshots/driving-45s.png"
+    },
+    {
+      "seconds": 70,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-completion/screenshots/driving-70s.png"
+    }
+  ],
+  "terminated": true,
+  "video": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-completion/screenshots/dust-cross-gameplay.mp4",
+  "scope": "70 seconds of actual battle map with AI player; not exhaustive navigation or all modes"
+}

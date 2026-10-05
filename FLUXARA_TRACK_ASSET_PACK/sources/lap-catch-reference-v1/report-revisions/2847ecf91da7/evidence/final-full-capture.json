@@ -1,0 +1,89 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/final-full-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/final-full-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-user-lap-catch",
+    "--mode=1",
+    "--laps=11",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--fluxara-event=main-ghost_geometry-lap-catch",
+    "--seed=9"
+  ],
+  "screenshots": [
+    {
+      "seconds": 8,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/final-full-8s.png"
+    },
+    {
+      "seconds": 20,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/final-full-20s.png"
+    },
+    {
+      "seconds": 35,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/final-full-35s.png"
+    },
+    {
+      "seconds": 50,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/final-full-50s.png"
+    },
+    {
+      "seconds": 70,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/final-full-70s.png"
+    },
+    {
+      "seconds": 90,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/final-full-90s.png"
+    },
+    {
+      "seconds": 115,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/final-full-115s.png"
+    },
+    {
+      "seconds": 145,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/final-full-145s.png"
+    },
+    {
+      "seconds": 175,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/final-full-175s.png"
+    },
+    {
+      "seconds": 205,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/final-full-205s.png"
+    },
+    {
+      "seconds": 235,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/final-full-235s.png"
+    },
+    {
+      "seconds": 265,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/final-full-265s.png"
+    },
+    {
+      "seconds": 295,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/final-full-295s.png"
+    },
+    {
+      "seconds": 325,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/final-full-325s.png"
+    },
+    {
+      "seconds": 360,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/final-full-360s.png"
+    },
+    {
+      "seconds": 400,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/lap-catch-rework/screenshots/final-full-400s.png"
+    }
+  ]
+}

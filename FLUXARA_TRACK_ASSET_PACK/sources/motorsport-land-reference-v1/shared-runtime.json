@@ -1,0 +1,7698 @@
+{
+  "libraries": [
+    {
+      "library": "fluxara_driftlib_grassy_hill_v2",
+      "folder": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_grassy_hill_v2",
+      "triangles": 360
+    },
+    {
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "folder": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_round_tree_green_v2",
+      "triangles": 588
+    },
+    {
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "folder": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_round_bush_green_v2",
+      "triangles": 180
+    },
+    {
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "folder": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_grass_tuft_v2",
+      "triangles": 9
+    },
+    {
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "folder": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_white_daisy_v2",
+      "triangles": 4
+    },
+    {
+      "library": "fluxara_driftlib_circuit_pennants_v2",
+      "folder": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_circuit_pennants_v2",
+      "triangles": 45
+    },
+    {
+      "library": "fluxara_driftlib_festival_balloon_v1",
+      "folder": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_festival_balloon_v1",
+      "triangles": 348
+    },
+    {
+      "library": "fluxara_driftlib_circuit_turn_left_v2",
+      "folder": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_circuit_turn_left_v2",
+      "triangles": 36
+    },
+    {
+      "library": "fluxara_driftlib_circuit_turn_right_v2",
+      "folder": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_circuit_turn_right_v2",
+      "triangles": 36
+    }
+  ],
+  "newExports": [
+    {
+      "library": "fluxara_driftlib_festival_balloon_v1",
+      "folder": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/motorsport-land-reference-v1/runtime-library/fluxara_driftlib_festival_balloon_v1",
+      "model": "festival_balloon_main.spm",
+      "triangles": 348,
+      "bytes": 9063
+    }
+  ],
+  "placements": [
+    {
+      "name": "ML_hill_0000",
+      "library": "fluxara_driftlib_grassy_hill_v2",
+      "role": "hill",
+      "xyz": [
+        -145,
+        -3,
+        -55
+      ],
+      "scale": [
+        33,
+        23,
+        28
+      ],
+      "rotationZRadians": 0
+    },
+    {
+      "name": "ML_hill_0001",
+      "library": "fluxara_driftlib_grassy_hill_v2",
+      "role": "hill",
+      "xyz": [
+        -137,
+        -3,
+        65
+      ],
+      "scale": [
+        33,
+        23,
+        28
+      ],
+      "rotationZRadians": 0
+    },
+    {
+      "name": "ML_hill_0002",
+      "library": "fluxara_driftlib_grassy_hill_v2",
+      "role": "hill",
+      "xyz": [
+        0,
+        -3,
+        117
+      ],
+      "scale": [
+        33,
+        23,
+        28
+      ],
+      "rotationZRadians": 0
+    },
+    {
+      "name": "ML_hill_0003",
+      "library": "fluxara_driftlib_grassy_hill_v2",
+      "role": "hill",
+      "xyz": [
+        147,
+        -3,
+        60
+      ],
+      "scale": [
+        33,
+        23,
+        28
+      ],
+      "rotationZRadians": 0
+    },
+    {
+      "name": "ML_hill_0004",
+      "library": "fluxara_driftlib_grassy_hill_v2",
+      "role": "hill",
+      "xyz": [
+        136,
+        -3,
+        -74
+      ],
+      "scale": [
+        33,
+        23,
+        28
+      ],
+      "rotationZRadians": 0
+    },
+    {
+      "name": "ML_hill_0005",
+      "library": "fluxara_driftlib_grassy_hill_v2",
+      "role": "hill",
+      "xyz": [
+        0,
+        -3,
+        -112
+      ],
+      "scale": [
+        33,
+        23,
+        28
+      ],
+      "rotationZRadians": 0
+    },
+    {
+      "name": "ML_tree_0006",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        49.84598967328955,
+        0.35007659912109373,
+        -58.874717633987174
+      ],
+      "scale": [
+        9.917178495095946,
+        8.061683573365555,
+        9.12380421548827
+      ],
+      "rotationZRadians": 1.4405477098226342
+    },
+    {
+      "name": "ML_tree_0007",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        89.26063149919008,
+        -0.3023358154296875,
+        -44.21922550867367
+      ],
+      "scale": [
+        7.845836608581378,
+        6.984275712294213,
+        7.218169679894869
+      ],
+      "rotationZRadians": 0.006640231968048552
+    },
+    {
+      "name": "ML_tree_0008",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        80.20664098164156,
+        0.22491638183593748,
+        -51.9659248211663
+      ],
+      "scale": [
+        8.62176219478063,
+        7.670041097663864,
+        7.932021219198179
+      ],
+      "rotationZRadians": 0.9672879595841182
+    },
+    {
+      "name": "ML_tree_0009",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        84.93483157275105,
+        0.5335940551757813,
+        -59.66938910117628
+      ],
+      "scale": [
+        9.030340285174939,
+        7.14548304419071,
+        8.307913062360944
+      ],
+      "rotationZRadians": 4.210613812559035
+    },
+    {
+      "name": "ML_tree_0010",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -74.39762909667687,
+        -0.0779705810546875,
+        44.54888412723041
+      ],
+      "scale": [
+        8.296192807243987,
+        6.869271317427357,
+        7.632497382664468
+      ],
+      "rotationZRadians": 4.959976850412565
+    },
+    {
+      "name": "ML_tree_0011",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -7.175389051953886,
+        0.8475665283203125,
+        -15.836520446424288
+      ],
+      "scale": [
+        9.79383332350036,
+        7.869908596171043,
+        9.010326657620332
+      ],
+      "rotationZRadians": 0.2746022619385656
+    },
+    {
+      "name": "ML_tree_0012",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -96.57642541955728,
+        -0.07597930908203125,
+        -12.619517031793343
+      ],
+      "scale": [
+        7.565917935578275,
+        7.081251367878263,
+        6.9606445007320135
+      ],
+      "rotationZRadians": 4.684911739906205
+    },
+    {
+      "name": "ML_tree_0013",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        98.26178412518615,
+        0.15310852050781248,
+        -18.602184553485316
+      ],
+      "scale": [
+        8.059185593435286,
+        6.822523424961583,
+        7.414450745960464
+      ],
+      "rotationZRadians": 1.5441164788870054
+    },
+    {
+      "name": "ML_tree_0014",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        34.02275644382428,
+        0.21445648193359373,
+        57.68229327593396
+      ],
+      "scale": [
+        8.43123719678972,
+        6.938157134839064,
+        7.756738221046542
+      ],
+      "rotationZRadians": 2.4388236406207318
+    },
+    {
+      "name": "ML_tree_0015",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        64.46780214846319,
+        0.3822650146484375,
+        -57.119046051706974
+      ],
+      "scale": [
+        8.801464145132746,
+        8.413900196178371,
+        8.097347013522127
+      ],
+      "rotationZRadians": 0.031469947649669795
+    },
+    {
+      "name": "ML_tree_0016",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -100.11611664994852,
+        1.2059420776367187,
+        -50.04769653553788
+      ],
+      "scale": [
+        8.323277861294025,
+        7.682070803634701,
+        7.657415632390504
+      ],
+      "rotationZRadians": 2.3530072604812142
+    },
+    {
+      "name": "ML_tree_0017",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -59.65378512690927,
+        0.2674273681640625,
+        61.959654234506004
+      ],
+      "scale": [
+        8.004083764077551,
+        6.772882534768535,
+        7.363757062951347
+      ],
+      "rotationZRadians": 0.1139178441314178
+    },
+    {
+      "name": "ML_tree_0018",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -105.45393597665453,
+        1.2300814819335937,
+        -42.32412624730712
+      ],
+      "scale": [
+        8.931494453250375,
+        6.780080984284041,
+        8.216974896990346
+      ],
+      "rotationZRadians": 0.13550753553921152
+    },
+    {
+      "name": "ML_tree_0019",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        44.309308282679666,
+        -0.07668121337890625,
+        18.093083828615846
+      ],
+      "scale": [
+        8.24675859770483,
+        8.318013751251016,
+        7.587017909888443
+      ],
+      "rotationZRadians": 2.367972662247757
+    },
+    {
+      "name": "ML_tree_0020",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        40.641156526586855,
+        0.30193511962890623,
+        -59.674254632104805
+      ],
+      "scale": [
+        9.530199407597438,
+        6.843024784449592,
+        8.767783454989644
+      ],
+      "rotationZRadians": 5.51904378652116
+    },
+    {
+      "name": "ML_tree_0021",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        94.56723231707127,
+        0.21400634765624998,
+        14.491538665610875
+      ],
+      "scale": [
+        9.94825839331876,
+        7.3776115032756895,
+        9.152397721853259
+      ],
+      "rotationZRadians": 0.5614687302316204
+    },
+    {
+      "name": "ML_tree_0022",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        75.29479631291963,
+        0.3595294189453125,
+        -59.34558703549012
+      ],
+      "scale": [
+        7.531047858775206,
+        8.236417045675669,
+        6.92856403007319
+      ],
+      "rotationZRadians": 0.7891276210912038
+    },
+    {
+      "name": "ML_tree_0023",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -72.28888771446046,
+        0.06589691162109375,
+        61.30010395513192
+      ],
+      "scale": [
+        9.958599902669985,
+        7.53903728126268,
+        9.161911910456386
+      ],
+      "rotationZRadians": 1.1990870239078129
+    },
+    {
+      "name": "ML_tree_0024",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        98.51815734833593,
+        -0.17246826171875002,
+        -33.48402614972747
+      ],
+      "scale": [
+        9.783530443548395,
+        7.106898463996859,
+        9.000848008064525
+      ],
+      "rotationZRadians": 3.4234574397666653
+    },
+    {
+      "name": "ML_tree_0025",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -40.43827787271272,
+        2.4831561279296874,
+        -59.40120661894285
+      ],
+      "scale": [
+        8.043142839641813,
+        7.666962974022779,
+        7.399691412470468
+      ],
+      "rotationZRadians": 2.9855239322833085
+    },
+    {
+      "name": "ML_tree_0026",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -31.553129421602833,
+        2.85408203125,
+        -53.41668418820514
+      ],
+      "scale": [
+        7.6783235944612205,
+        6.723419566907682,
+        7.0640577069043236
+      ],
+      "rotationZRadians": 3.9128383893084013
+    },
+    {
+      "name": "ML_tree_0027",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -34.54799366682548,
+        2.932542724609375,
+        -40.4922427439335
+      ],
+      "scale": [
+        8.37943024537922,
+        7.800945077348616,
+        7.709075825748883
+      ],
+      "rotationZRadians": 5.952355385776876
+    },
+    {
+      "name": "ML_tree_0028",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -56.55270097343982,
+        0.8633059692382813,
+        -57.92201197137362
+      ],
+      "scale": [
+        9.795857600337792,
+        7.438313742446421,
+        9.012188992310769
+      ],
+      "rotationZRadians": 5.788210471709148
+    },
+    {
+      "name": "ML_tree_0029",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -95.76086447699973,
+        0.674730224609375,
+        -35.56328385742954
+      ],
+      "scale": [
+        9.241185722579873,
+        7.091744552252845,
+        8.501890864773484
+      ],
+      "rotationZRadians": 1.8024921474298456
+    },
+    {
+      "name": "ML_tree_0030",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        26.703712155029223,
+        0.12606231689453123,
+        -54.902833544593385
+      ],
+      "scale": [
+        7.550366630998779,
+        8.095273361718597,
+        6.946337300518877
+      ],
+      "rotationZRadians": 5.234466854507872
+    },
+    {
+      "name": "ML_tree_0031",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -101.33621762423898,
+        -0.07596405029296875,
+        1.030646878389902
+      ],
+      "scale": [
+        9.112296291303732,
+        8.304391625730865,
+        8.383312587999434
+      ],
+      "rotationZRadians": 3.3137198371877634
+    },
+    {
+      "name": "ML_tree_0032",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -7.3344052098029096,
+        -0.0327740478515625,
+        -5.730476250452092
+      ],
+      "scale": [
+        8.47538348948612,
+        7.911602363178607,
+        7.797352810327231
+      ],
+      "rotationZRadians": 1.4780559646554225
+    },
+    {
+      "name": "ML_tree_0033",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -87.97230946916875,
+        0.738450927734375,
+        -49.81981124617517
+      ],
+      "scale": [
+        7.324484090970338,
+        7.0225458636978555,
+        6.738525363692712
+      ],
+      "rotationZRadians": 5.386211588520796
+    },
+    {
+      "name": "ML_tree_0034",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -36.90294912159514,
+        0.0269488525390625,
+        55.05694629516786
+      ],
+      "scale": [
+        7.730144709131718,
+        7.064413993159155,
+        7.111733132401181
+      ],
+      "rotationZRadians": 3.1277686621396263
+    },
+    {
+      "name": "ML_tree_0035",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        98.0097733498263,
+        0.08541290283203125,
+        -42.67263651047183
+      ],
+      "scale": [
+        9.350720287525078,
+        7.594462983660298,
+        8.602662664523072
+      ],
+      "rotationZRadians": 5.41381923942434
+    },
+    {
+      "name": "ML_tree_0036",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        101.41587497173805,
+        0.30195037841796873,
+        -9.283467873638614
+      ],
+      "scale": [
+        9.672783087142479,
+        7.043112119942583,
+        8.89896044017108
+      ],
+      "rotationZRadians": 4.706199412527543
+    },
+    {
+      "name": "ML_tree_0037",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -62.389453401109776,
+        2.895807189941406,
+        71.58543153814097
+      ],
+      "scale": [
+        9.90668204854092,
+        7.995865583821297,
+        9.114147484657648
+      ],
+      "rotationZRadians": 3.605693033731035
+    },
+    {
+      "name": "ML_tree_0038",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -71.57067086703266,
+        0.8555316162109375,
+        -65.28090894543342
+      ],
+      "scale": [
+        7.899551218950259,
+        7.952528091457234,
+        7.2675871214342385
+      ],
+      "rotationZRadians": 5.728427739248809
+    },
+    {
+      "name": "ML_tree_0039",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -14.339839894202726,
+        0.44019500732421873,
+        -52.19413778783774
+      ],
+      "scale": [
+        9.09573036281674,
+        7.502911182223395,
+        8.3680719337914
+      ],
+      "rotationZRadians": 1.000762029096656
+    },
+    {
+      "name": "ML_tree_0040",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -50.56257111438758,
+        -0.0799847412109375,
+        56.94585015038517
+      ],
+      "scale": [
+        8.95929993801762,
+        8.328493394215238,
+        8.242555942976212
+      ],
+      "rotationZRadians": 5.747158803294756
+    },
+    {
+      "name": "ML_tree_0041",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        94.06302503530304,
+        0.23048583984374998,
+        5.143014701905557
+      ],
+      "scale": [
+        9.221858659370264,
+        7.340994678377767,
+        8.484109966620643
+      ],
+      "rotationZRadians": 3.0297904402088425
+    },
+    {
+      "name": "ML_tree_0042",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        12.025060339467629,
+        0.5107363891601563,
+        -64.39372530893341
+      ],
+      "scale": [
+        9.526026051231266,
+        8.207719367864055,
+        8.763943967132766
+      ],
+      "rotationZRadians": 4.721403785950787
+    },
+    {
+      "name": "ML_tree_0043",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -85.6754524373093,
+        -0.07596405029296875,
+        52.322304143919425
+      ],
+      "scale": [
+        8.053798153291348,
+        7.109216090492961,
+        7.40949430102804
+      ],
+      "rotationZRadians": 3.477122380630451
+    },
+    {
+      "name": "ML_tree_0044",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        37.59651730636028,
+        -0.07999237060546875,
+        -6.7052019941643906
+      ],
+      "scale": [
+        7.7092091668903295,
+        7.34722012816136,
+        7.092472433539103
+      ],
+      "rotationZRadians": 0.46027829235035506
+    },
+    {
+      "name": "ML_tree_0045",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -65.57773002402749,
+        -0.0767498779296875,
+        7.78910888414336
+      ],
+      "scale": [
+        7.443658283731604,
+        7.877049738348535,
+        6.8481656210330755
+      ],
+      "rotationZRadians": 3.6134710725520782
+    },
+    {
+      "name": "ML_tree_0046",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -30.123869706880058,
+        2.839990539550781,
+        -65.01633760147081
+      ],
+      "scale": [
+        8.003420409844905,
+        7.676676087424268,
+        7.363146777057313
+      ],
+      "rotationZRadians": 1.8620795136273836
+    },
+    {
+      "name": "ML_tree_0047",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        85.68275017152183,
+        0.24839202880859373,
+        -0.3242765855336387
+      ],
+      "scale": [
+        8.741965082750465,
+        7.858122785631538,
+        8.042607876130427
+      ],
+      "rotationZRadians": 5.527379982136336
+    },
+    {
+      "name": "ML_tree_0048",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -90.30447777169384,
+        -0.07596405029296875,
+        43.75378333605586
+      ],
+      "scale": [
+        9.94540152561892,
+        7.4108654075892915,
+        9.149769403569406
+      ],
+      "rotationZRadians": 1.6450110550455872
+    },
+    {
+      "name": "ML_tree_0049",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -67.78691379515331,
+        -0.07658203125,
+        -16.08677688415041
+      ],
+      "scale": [
+        9.903122061663215,
+        7.269783103231152,
+        9.110872296730157
+      ],
+      "rotationZRadians": 5.509819481176107
+    },
+    {
+      "name": "ML_tree_0050",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -105.73472349694488,
+        -0.0759564208984375,
+        16.600798051946825
+      ],
+      "scale": [
+        7.504589490669888,
+        7.854710303875399,
+        6.904222331416297
+      ],
+      "rotationZRadians": 1.6400155595557302
+    },
+    {
+      "name": "ML_tree_0051",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -99.06664711171739,
+        0.04609100341796875,
+        -21.403412606195822
+      ],
+      "scale": [
+        9.068132206067007,
+        7.254589674404751,
+        8.342681629581648
+      ],
+      "rotationZRadians": 3.5296921264214927
+    },
+    {
+      "name": "ML_tree_0052",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -62.54667907859418,
+        -0.07609375,
+        53.59917266054151
+      ],
+      "scale": [
+        8.142410046698783,
+        7.092314846988676,
+        7.491017242962881
+      ],
+      "rotationZRadians": 1.9512411933978067
+    },
+    {
+      "name": "ML_tree_0053",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -35.01453532220732,
+        1.4573611450195312,
+        -26.190031902409714
+      ],
+      "scale": [
+        9.298352798158136,
+        7.600945727569503,
+        8.554484574305485
+      ],
+      "rotationZRadians": 4.624094377806391
+    },
+    {
+      "name": "ML_tree_0054",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        65.02006620958443,
+        -0.06769378662109375,
+        29.74795700069842
+      ],
+      "scale": [
+        7.534136576171074,
+        6.981634698518217,
+        6.931405650077388
+      ],
+      "rotationZRadians": 2.2695609263070438
+    },
+    {
+      "name": "ML_tree_0055",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -69.6056287977538,
+        -0.076734619140625,
+        -0.4612715344797209
+      ],
+      "scale": [
+        7.372744154619203,
+        8.070259550266266,
+        6.782924622249666
+      ],
+      "rotationZRadians": 1.9183504632234085
+    },
+    {
+      "name": "ML_tree_0056",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -57.903624803472084,
+        -0.07658966064453125,
+        -8.664653808875116
+      ],
+      "scale": [
+        8.164189568910341,
+        7.097498801137185,
+        7.511054403397514
+      ],
+      "rotationZRadians": 0.10116643828730715
+    },
+    {
+      "name": "ML_tree_0057",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -86.21474737367488,
+        -0.07703216552734375,
+        32.47593783097496
+      ],
+      "scale": [
+        7.885577835716513,
+        8.472194036088135,
+        7.254731608859193
+      ],
+      "rotationZRadians": 3.243030618463704
+    },
+    {
+      "name": "ML_tree_0058",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -47.16912634681994,
+        0.5584353637695313,
+        -50.361540966163055
+      ],
+      "scale": [
+        7.839057093988897,
+        7.382998067813362,
+        7.211932526469786
+      ],
+      "rotationZRadians": 4.16317657331551
+    },
+    {
+      "name": "ML_tree_0059",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -94.7426936909872,
+        -0.07596405029296875,
+        35.14711530601056
+      ],
+      "scale": [
+        7.597455694688618,
+        7.899814704422646,
+        6.989659239113529
+      ],
+      "rotationZRadians": 4.363104077778535
+    },
+    {
+      "name": "ML_tree_0060",
+      "library": "fluxara_driftlib_round_tree_green_v2",
+      "role": "tree",
+      "xyz": [
+        -49.67971484977781,
+        1.3784503173828124,
+        -64.251793863195
+      ],
+      "scale": [
+        9.235288292085787,
+        6.980602531582452,
+        8.496465228718925
+      ],
+      "rotationZRadians": 5.169101177425719
+    },
+    {
+      "name": "ML_bush_0061",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -101.36975449131333,
+        0.2408782958984375,
+        -22.86831409832415
+      ],
+      "scale": [
+        1.6424492043599488,
+        1.2318369032699616,
+        1.478204283923954
+      ],
+      "rotationZRadians": 0.19496521523549834
+    },
+    {
+      "name": "ML_bush_0062",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -9.861154290991877,
+        0.7204238891601562,
+        -10.702344717266833
+      ],
+      "scale": [
+        2.1432585714649077,
+        1.6074439285986808,
+        1.928932714318417
+      ],
+      "rotationZRadians": 2.4806931486892334
+    },
+    {
+      "name": "ML_bush_0063",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -93.05352300381227,
+        0.2668182373046875,
+        -32.82678013176076
+      ],
+      "scale": [
+        2.2047620188079162,
+        1.6535715141059373,
+        1.9842858169271247
+      ],
+      "rotationZRadians": 4.814029359741443
+    },
+    {
+      "name": "ML_bush_0064",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        21.035303867219938,
+        -0.05,
+        3.461568852452558
+      ],
+      "scale": [
+        1.7966838083160197,
+        1.3475128562370147,
+        1.6170154274844177
+      ],
+      "rotationZRadians": 2.0243109943533417
+    },
+    {
+      "name": "ML_bush_0065",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -69.81860962298953,
+        -0.0469024658203125,
+        -13.689078579204896
+      ],
+      "scale": [
+        1.8668603975408105,
+        1.400145298155608,
+        1.6801743577867294
+      ],
+      "rotationZRadians": 1.7792840579477114
+    },
+    {
+      "name": "ML_bush_0066",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        72.80353462795355,
+        0.5318557739257812,
+        -63.05126880342598
+      ],
+      "scale": [
+        2.126547893728926,
+        1.5949109202966945,
+        1.9138931043560334
+      ],
+      "rotationZRadians": 2.3628546010763
+    },
+    {
+      "name": "ML_bush_0067",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        91.55390654934422,
+        0.6448013305664062,
+        -57.345380577921375
+      ],
+      "scale": [
+        2.2783282912977825,
+        1.7087462184733369,
+        2.0504954621680045
+      ],
+      "rotationZRadians": 5.803193674795713
+    },
+    {
+      "name": "ML_bush_0068",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -66.54549148697592,
+        0.1803009033203125,
+        63.405722319871046
+      ],
+      "scale": [
+        1.9371245663281282,
+        1.4528434247460962,
+        1.7434121096953155
+      ],
+      "rotationZRadians": 3.1645293983884066
+    },
+    {
+      "name": "ML_bush_0069",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        68.09801582782052,
+        0.256488037109375,
+        -56.249912566198326
+      ],
+      "scale": [
+        1.7650769926986687,
+        1.3238077445240015,
+        1.5885692934288018
+      ],
+      "rotationZRadians": 3.7979889983978024
+    },
+    {
+      "name": "ML_bush_0070",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -29.462135357234914,
+        2.6569091796875,
+        -42.07363957842974
+      ],
+      "scale": [
+        1.9107239521172148,
+        1.4330429640879112,
+        1.7196515569054933
+      ],
+      "rotationZRadians": 4.725767803330991
+    },
+    {
+      "name": "ML_bush_0071",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -14.820871625811037,
+        0.8856918334960937,
+        -60.436402331989434
+      ],
+      "scale": [
+        1.8336714062582256,
+        1.375253554693669,
+        1.650304265632403
+      ],
+      "rotationZRadians": 0.6294986631085367
+    },
+    {
+      "name": "ML_bush_0072",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        37.447865863966086,
+        -0.04982452392578125,
+        -50.019608838324295
+      ],
+      "scale": [
+        2.3420641036271617,
+        1.7565480777203712,
+        2.1078576932644455
+      ],
+      "rotationZRadians": 3.8631685476411226
+    },
+    {
+      "name": "ML_bush_0073",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        41.60624217996019,
+        -0.046826171875,
+        17.371620297407276
+      ],
+      "scale": [
+        2.167005170240948,
+        1.625253877680711,
+        1.9503046532168533
+      ],
+      "rotationZRadians": 0.5638972285521158
+    },
+    {
+      "name": "ML_bush_0074",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -85.61160912497748,
+        -0.04594879150390625,
+        51.01972022470571
+      ],
+      "scale": [
+        2.2721057818631016,
+        1.7040793363973261,
+        2.0448952036767913
+      ],
+      "rotationZRadians": 6.0756873259064825
+    },
+    {
+      "name": "ML_bush_0075",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -55.981273859520094,
+        4.782489013671875,
+        75.40871614760914
+      ],
+      "scale": [
+        1.6849064125193245,
+        1.2636798093894934,
+        1.516415771267392
+      ],
+      "rotationZRadians": 1.058579672164531
+    },
+    {
+      "name": "ML_bush_0076",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -80.78663473314461,
+        1.042498779296875,
+        -61.05721137429279
+      ],
+      "scale": [
+        1.586542787686377,
+        1.1899070907647826,
+        1.4278885089177393
+      ],
+      "rotationZRadians": 1.1543015988099423
+    },
+    {
+      "name": "ML_bush_0077",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -59.567129222940345,
+        -0.04999237060546875,
+        7.434611894418964
+      ],
+      "scale": [
+        1.5489720387250359,
+        1.161729029043777,
+        1.3940748348525323
+      ],
+      "rotationZRadians": 5.742088118446029
+    },
+    {
+      "name": "ML_bush_0078",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        15.05566767307441,
+        0.28255767822265626,
+        -27.677411436527166
+      ],
+      "scale": [
+        2.1212859670867386,
+        1.590964475315054,
+        1.9091573703780647
+      ],
+      "rotationZRadians": 4.904571225960598
+    },
+    {
+      "name": "ML_bush_0079",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -1.2285800611779223,
+        0.07300872802734375,
+        -35.31299790898171
+      ],
+      "scale": [
+        1.7917979222628173,
+        1.343848441697113,
+        1.6126181300365356
+      ],
+      "rotationZRadians": 2.1394195669419327
+    },
+    {
+      "name": "ML_bush_0080",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        64.18235731948914,
+        0.6003448486328125,
+        -63.2812224379729
+      ],
+      "scale": [
+        2.0593286748902178,
+        1.5444965061676634,
+        1.853395807401196
+      ],
+      "rotationZRadians": 2.32150385166078
+    },
+    {
+      "name": "ML_bush_0081",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -9.683969475200513,
+        0.4502899169921875,
+        -20.391776246544808
+      ],
+      "scale": [
+        1.9838159648166591,
+        1.4878619736124943,
+        1.7854343683349931
+      ],
+      "rotationZRadians": 1.5421533094045075
+    },
+    {
+      "name": "ML_bush_0082",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        11.593555426748424,
+        0.8274642944335937,
+        -30.18013403544738
+      ],
+      "scale": [
+        1.8977643854331192,
+        1.4233232890748395,
+        1.7079879468898074
+      ],
+      "rotationZRadians": 5.816935621059708
+    },
+    {
+      "name": "ML_bush_0083",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        62.14796657567166,
+        -0.05,
+        1.5759479014314905
+      ],
+      "scale": [
+        2.3507614622123603,
+        1.7630710966592702,
+        2.1156853159911244
+      ],
+      "rotationZRadians": 0.391948468707293
+    },
+    {
+      "name": "ML_bush_0084",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        35.39251374360322,
+        -0.0500152587890625,
+        -34.6542307887152
+      ],
+      "scale": [
+        1.9474214839629005,
+        1.4605661129721754,
+        1.7526793355666104
+      ],
+      "rotationZRadians": 1.780015096994573
+    },
+    {
+      "name": "ML_bush_0085",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -100.25203350412616,
+        -0.04597930908203125,
+        -14.05286491895751
+      ],
+      "scale": [
+        2.285006736568481,
+        1.7137550524263607,
+        2.056506062911633
+      ],
+      "rotationZRadians": 2.849120547598416
+    },
+    {
+      "name": "ML_bush_0086",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -82.23181372861151,
+        -0.04597930908203125,
+        47.9143699177413
+      ],
+      "scale": [
+        1.8103373845481379,
+        1.3577530384111034,
+        1.6293036460933241
+      ],
+      "rotationZRadians": 0.8273514101653994
+    },
+    {
+      "name": "ML_bush_0087",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -18.242140013889696,
+        -0.05,
+        22.071061517793993
+      ],
+      "scale": [
+        2.2924978529877,
+        1.719373389740775,
+        2.06324806768893
+      ],
+      "rotationZRadians": 5.1783189940353385
+    },
+    {
+      "name": "ML_bush_0088",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -104.04276997232175,
+        -0.0459716796875,
+        18.638122226179703
+      ],
+      "scale": [
+        2.294330238439075,
+        1.7207476788293063,
+        2.0648972145951676
+      ],
+      "rotationZRadians": 5.997272245676458
+    },
+    {
+      "name": "ML_bush_0089",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -90.71717136821677,
+        -0.04925994873046875,
+        15.490573844192554
+      ],
+      "scale": [
+        1.9259785821451467,
+        1.44448393660886,
+        1.733380723930632
+      ],
+      "rotationZRadians": 1.6655524979193401
+    },
+    {
+      "name": "ML_bush_0090",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -24.91865374461129,
+        0.6613571166992187,
+        -40.88908335309682
+      ],
+      "scale": [
+        1.6329219587365715,
+        1.2246914690524286,
+        1.4696297628629145
+      ],
+      "rotationZRadians": 3.805346864818891
+    },
+    {
+      "name": "ML_bush_0091",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -68.37854368496818,
+        0.026354980468749997,
+        56.32802331603641
+      ],
+      "scale": [
+        2.265916759521901,
+        1.699437569641426,
+        2.039325083569711
+      ],
+      "rotationZRadians": 5.275515499479123
+    },
+    {
+      "name": "ML_bush_0092",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -99.20313056231947,
+        -0.0459716796875,
+        -0.4580173907457521
+      ],
+      "scale": [
+        2.023768720516377,
+        1.5178265403872826,
+        1.8213918484647391
+      ],
+      "rotationZRadians": 5.281371741715724
+    },
+    {
+      "name": "ML_bush_0093",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -30.370888033039108,
+        -0.04999237060546875,
+        17.50325766013843
+      ],
+      "scale": [
+        1.9353568608214995,
+        1.4515176456161245,
+        1.7418211747393495
+      ],
+      "rotationZRadians": 4.433293906519935
+    },
+    {
+      "name": "ML_bush_0094",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        45.473245129394314,
+        -0.05000762939453125,
+        -30.344966802905496
+      ],
+      "scale": [
+        2.3788846650421673,
+        1.7841634987816255,
+        2.140996198537951
+      ],
+      "rotationZRadians": 3.68304674413054
+    },
+    {
+      "name": "ML_bush_0095",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        58.36243903143887,
+        -0.05000762939453125,
+        -32.32800584160963
+      ],
+      "scale": [
+        1.9331155831188422,
+        1.4498366873391317,
+        1.739804024806958
+      ],
+      "rotationZRadians": 4.562616206380658
+    },
+    {
+      "name": "ML_bush_0096",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        6.503178775883356,
+        -0.04956512451171875,
+        -9.11483514931254
+      ],
+      "scale": [
+        2.1170795638389936,
+        1.5878096728792452,
+        1.9053716074550944
+      ],
+      "rotationZRadians": 4.3563166045214405
+    },
+    {
+      "name": "ML_bush_0097",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -96.62090807757532,
+        -0.04597930908203125,
+        -5.419494389286633
+      ],
+      "scale": [
+        1.818195845330276,
+        1.363646883997707,
+        1.6363762607972485
+      ],
+      "rotationZRadians": 3.214469750452336
+    },
+    {
+      "name": "ML_bush_0098",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -91.57084906635274,
+        0.8118621826171875,
+        -43.03383505663936
+      ],
+      "scale": [
+        2.09593458498124,
+        1.57195093873593,
+        1.886341126483116
+      ],
+      "rotationZRadians": 2.759506185748438
+    },
+    {
+      "name": "ML_bush_0099",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        45.80093536737297,
+        -0.0499847412109375,
+        50.458483640543236
+      ],
+      "scale": [
+        1.8493243178276009,
+        1.3869932383707007,
+        1.6643918860448408
+      ],
+      "rotationZRadians": 3.2510285168144684
+    },
+    {
+      "name": "ML_bush_0100",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        58.463021674802945,
+        -0.04933624267578125,
+        -22.351722222443954
+      ],
+      "scale": [
+        2.2791515823427404,
+        1.7093636867570554,
+        2.0512364241084664
+      ],
+      "rotationZRadians": 4.618221132105516
+    },
+    {
+      "name": "ML_bush_0101",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        82.72115047692395,
+        0.41373748779296876,
+        -55.932009424868326
+      ],
+      "scale": [
+        1.7999837743561846,
+        1.3499878307671385,
+        1.6199853969205662
+      ],
+      "rotationZRadians": 4.267159848752764
+    },
+    {
+      "name": "ML_bush_0102",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -3.405253057471242,
+        0.3189422607421875,
+        -59.856085876552804
+      ],
+      "scale": [
+        1.9491242959975987,
+        1.461843221998199,
+        1.754211866397839
+      ],
+      "rotationZRadians": 0.622307755018084
+    },
+    {
+      "name": "ML_bush_0103",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -38.911877851375394,
+        -0.05000762939453125,
+        -29.73352987959605
+      ],
+      "scale": [
+        1.7428407958552001,
+        1.3071305968914002,
+        1.56855671626968
+      ],
+      "rotationZRadians": 4.33396855156718
+    },
+    {
+      "name": "ML_bush_0104",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -77.35197896888972,
+        0.025714111328124997,
+        60.832659404545794
+      ],
+      "scale": [
+        2.1021187848707266,
+        1.576589088653045,
+        1.891906906383654
+      ],
+      "rotationZRadians": 4.40755326376399
+    },
+    {
+      "name": "ML_bush_0105",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -71.78846845593048,
+        0.11553497314453125,
+        61.89385598504765
+      ],
+      "scale": [
+        1.5814046125972399,
+        1.18605345944793,
+        1.423264151337516
+      ],
+      "rotationZRadians": 1.3788574264291218
+    },
+    {
+      "name": "ML_bush_0106",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -101.15963520125183,
+        -0.0459564208984375,
+        23.466964779273624
+      ],
+      "scale": [
+        1.6772757205240265,
+        1.25795679039302,
+        1.509548148471624
+      ],
+      "rotationZRadians": 5.158624805604122
+    },
+    {
+      "name": "ML_bush_0107",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -102.39120991277895,
+        0.6321975708007812,
+        -28.54770636291667
+      ],
+      "scale": [
+        1.9794225935405811,
+        1.4845669451554357,
+        1.781480334186523
+      ],
+      "rotationZRadians": 5.3361333909239805
+    },
+    {
+      "name": "ML_bush_0108",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        32.856924914229324,
+        -0.0500152587890625,
+        -34.39749606592625
+      ],
+      "scale": [
+        1.5878578294634607,
+        1.1908933720975954,
+        1.4290720465171147
+      ],
+      "rotationZRadians": 4.512035557440863
+    },
+    {
+      "name": "ML_bush_0109",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        -96.66071180460338,
+        -0.0459564208984375,
+        45.938870503946845
+      ],
+      "scale": [
+        1.5408900793275548,
+        1.155667559495666,
+        1.3868010713947994
+      ],
+      "rotationZRadians": 1.111156540943064
+    },
+    {
+      "name": "ML_bush_0110",
+      "library": "fluxara_driftlib_round_bush_green_v2",
+      "role": "bush",
+      "xyz": [
+        93.5276071050076,
+        -0.35651092529296874,
+        -32.9007140114525
+      ],
+      "scale": [
+        1.6407366525953846,
+        1.2305524894465385,
+        1.4766629873358461
+      ],
+      "rotationZRadians": 1.6220557743147899
+    },
+    {
+      "name": "ML_detail_0111",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -85.83090670616626,
+        0.02403594970703125,
+        49.659681652949
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.3859050563277482
+    },
+    {
+      "name": "ML_detail_0112",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -54.73797683991821,
+        4.945247192382812,
+        75.46469919617734
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.484053084050147
+    },
+    {
+      "name": "ML_detail_0113",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        60.31245864809773,
+        0.02,
+        3.0982113890756566
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.2775963577828016
+    },
+    {
+      "name": "ML_detail_0114",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -65.01680533477816,
+        0.7725863647460938,
+        64.69885655995066
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.7717404345189132
+    },
+    {
+      "name": "ML_detail_0115",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        5.576587438578894,
+        0.02018310546875,
+        -10.30697364339986
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.07140696080393366
+    },
+    {
+      "name": "ML_detail_0116",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        63.67490347349098,
+        0.6805072021484375,
+        -63.701919604012325
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.45982357316608297
+    },
+    {
+      "name": "ML_detail_0117",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -97.17662443984297,
+        0.02403594970703125,
+        45.742644355916966
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.3324340919510242
+    },
+    {
+      "name": "ML_detail_0118",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -70.88891660423405,
+        0.19058563232421874,
+        61.65698521085572
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.614425772318245
+    },
+    {
+      "name": "ML_detail_0119",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -95.69284599650581,
+        0.0240435791015625,
+        47.32440079241119
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.029143651734395898
+    },
+    {
+      "name": "ML_detail_0120",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -25.87942232422801,
+        1.382396240234375,
+        -39.66179463640242
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.941852721723947
+    },
+    {
+      "name": "ML_detail_0121",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        12.94436210151299,
+        0.8335223388671875,
+        -31.444879015597603
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.5854817573447586
+    },
+    {
+      "name": "ML_detail_0122",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        94.67969485793608,
+        -0.40458343505859373,
+        -34.22091179496919
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.5577018613787152
+    },
+    {
+      "name": "ML_detail_0123",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        20.808588661440577,
+        0.02,
+        3.698307452665989
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.0726946008657197
+    },
+    {
+      "name": "ML_detail_0124",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -95.38881379036661,
+        0.02403594970703125,
+        46.854587877877115
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.6123452180297337
+    },
+    {
+      "name": "ML_detail_0125",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -0.7552217974898983,
+        0.01999237060546875,
+        -37.02537692170062
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.4812892937958755
+    },
+    {
+      "name": "ML_detail_0126",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -78.47642656165725,
+        0.074840087890625,
+        60.50115122221506
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.4596789753450676
+    },
+    {
+      "name": "ML_detail_0127",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -5.313182870972456,
+        0.3991351318359375,
+        -59.75142301339751
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.329450850633711
+    },
+    {
+      "name": "ML_detail_0128",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -57.785805923389965,
+        0.02,
+        7.268791645150485
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.1796001606668562
+    },
+    {
+      "name": "ML_detail_0129",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -102.93123667282218,
+        0.0240435791015625,
+        17.227647967548474
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.023777559429158
+    },
+    {
+      "name": "ML_detail_0130",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        16.443358021200197,
+        0.34186126708984377,
+        -28.162056120692842
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.9835670181100644
+    },
+    {
+      "name": "ML_detail_0131",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -67.76374112266306,
+        0.35824920654296877,
+        65.04899850644115
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.4529149753146107
+    },
+    {
+      "name": "ML_detail_0132",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -105.77151904406885,
+        0.0240435791015625,
+        19.99214383070398
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 6.151315320114256
+    },
+    {
+      "name": "ML_detail_0133",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -99.23749086111165,
+        0.02405120849609375,
+        24.104537600565422
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.18954744893338715
+    },
+    {
+      "name": "ML_detail_0134",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -99.29184672933121,
+        0.02403594970703125,
+        -0.08582229487035242
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.1865945348715217
+    },
+    {
+      "name": "ML_detail_0135",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -29.899559381900026,
+        0.02,
+        17.60592393128027
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.061013219607573166
+    },
+    {
+      "name": "ML_detail_0136",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -99.4131043643267,
+        0.02403594970703125,
+        23.50971731909612
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.8686634709087608
+    },
+    {
+      "name": "ML_detail_0137",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -67.45184217138548,
+        0.22531463623046874,
+        64.09114908301729
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.6467610029094475
+    },
+    {
+      "name": "ML_detail_0138",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        44.95591686760058,
+        0.02000762939453125,
+        48.96387419949843
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.316115514398904
+    },
+    {
+      "name": "ML_detail_0139",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        41.93377503363827,
+        0.0232806396484375,
+        17.50166474934633
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.9127278435387756
+    },
+    {
+      "name": "ML_detail_0140",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        56.745439638634416,
+        0.02109100341796875,
+        -22.249296029846327
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.5501139644059196
+    },
+    {
+      "name": "ML_detail_0141",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        63.42089570707774,
+        0.7122607421875,
+        -64.92668459530411
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.7696559982045885
+    },
+    {
+      "name": "ML_detail_0142",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -37.32363792713113,
+        1.1310153198242188,
+        -30.79705092312951
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.25014326106045753
+    },
+    {
+      "name": "ML_detail_0143",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -104.05785593616035,
+        0.7687411499023438,
+        -29.700886821970677
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.4556784118262964
+    },
+    {
+      "name": "ML_detail_0144",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -67.72912274253557,
+        0.16111328125,
+        63.84283798076748
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.0590218716032316
+    },
+    {
+      "name": "ML_detail_0145",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        63.218463972566454,
+        0.7174029541015625,
+        -65.13710136309452
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.6164060969024225
+    },
+    {
+      "name": "ML_detail_0146",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -82.75664458259868,
+        0.02405120849609375,
+        49.74820356262825
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.101622020269241
+    },
+    {
+      "name": "ML_detail_0147",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        92.46500395703147,
+        0.7861209106445313,
+        -58.68882792285471
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.248747781698702
+    },
+    {
+      "name": "ML_detail_0148",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        22.71750879957553,
+        0.02,
+        4.401069985302301
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 6.258705699100337
+    },
+    {
+      "name": "ML_detail_0149",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -3.095063568576108,
+        0.31553985595703127,
+        -58.3478204822972
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.2413003243355196
+    },
+    {
+      "name": "ML_detail_0150",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -56.51460016582353,
+        5.106578369140625,
+        76.10589894631843
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.658020695230999
+    },
+    {
+      "name": "ML_detail_0151",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -100.21428489160631,
+        0.32864715576171877,
+        -23.291017292165122
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.2581208938589326
+    },
+    {
+      "name": "ML_detail_0152",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -28.187379051946184,
+        2.4651675415039063,
+        -43.673390047264874
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.403371905004754
+    },
+    {
+      "name": "ML_detail_0153",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        43.41936412308229,
+        0.02183868408203125,
+        16.432921983581835
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.7173951466497224
+    },
+    {
+      "name": "ML_detail_0154",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -68.18606179576183,
+        0.02341033935546875,
+        -12.164059178272577
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 6.102554302885068
+    },
+    {
+      "name": "ML_detail_0155",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        16.330122262734346,
+        0.09686614990234375,
+        -25.7359393832099
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.628891259607281
+    },
+    {
+      "name": "ML_detail_0156",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        81.82854920333814,
+        0.4179949951171875,
+        -54.294889236888196
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 6.122875956421751
+    },
+    {
+      "name": "ML_detail_0157",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -100.83545119055319,
+        0.0240283203125,
+        -12.545417211373785
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.0888328726435885
+    },
+    {
+      "name": "ML_detail_0158",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        41.85723032337637,
+        0.02165557861328125,
+        16.066758039611493
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.654304785768408
+    },
+    {
+      "name": "ML_detail_0159",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        33.09356550553469,
+        0.02,
+        -33.766028154958434
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.6271822343339846
+    },
+    {
+      "name": "ML_detail_0160",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        58.325208185045355,
+        0.0200152587890625,
+        -33.261375703159906
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.6973354367585105
+    },
+    {
+      "name": "ML_detail_0161",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        58.01745331828404,
+        0.01999237060546875,
+        -21.111822296024037
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.397603039589264
+    },
+    {
+      "name": "ML_detail_0162",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -54.771173125747794,
+        5.68107177734375,
+        77.34757179160951
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.888816263935226
+    },
+    {
+      "name": "ML_detail_0163",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        34.142909363649416,
+        0.02,
+        -32.78233367557945
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.935738710623132
+    },
+    {
+      "name": "ML_detail_0164",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        7.362528210943401,
+        0.02025177001953125,
+        -7.420945596590492
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.9786691035032162
+    },
+    {
+      "name": "ML_detail_0165",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        56.870449045747016,
+        0.01999237060546875,
+        -20.975130387795453
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.9281979295717229
+    },
+    {
+      "name": "ML_detail_0166",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        47.28082882577829,
+        0.02,
+        52.319791510149464
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.674325082210537
+    },
+    {
+      "name": "ML_detail_0167",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -98.31341631631177,
+        0.02402069091796875,
+        -13.456573918062281
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.793904696832462
+    },
+    {
+      "name": "ML_detail_0168",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        5.8356829558528585,
+        0.02043487548828125,
+        -9.291076551218714
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.0927242148978404
+    },
+    {
+      "name": "ML_detail_0169",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -79.58382357310397,
+        1.111766357421875,
+        -61.503907913213936
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.363541401868436
+    },
+    {
+      "name": "ML_detail_0170",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -75.57417928139348,
+        0.0704302978515625,
+        58.84545571464495
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.227077955984514
+    },
+    {
+      "name": "ML_detail_0171",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -57.730311320532685,
+        4.560077209472656,
+        75.2974941438743
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.8999149657595185
+    },
+    {
+      "name": "ML_detail_0172",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -71.74681932067023,
+        0.22146942138671874,
+        63.42138981583125
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.2242004879002977
+    },
+    {
+      "name": "ML_detail_0173",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -103.65685605208606,
+        0.02403594970703125,
+        18.888744114267457
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.5966886259054998
+    },
+    {
+      "name": "ML_detail_0174",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -95.21209838631897,
+        0.0238299560546875,
+        -6.227091767055311
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.796335707944248
+    },
+    {
+      "name": "ML_detail_0175",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -70.25415405748286,
+        0.21370269775390624,
+        62.33264015777756
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.7332799922821462
+    },
+    {
+      "name": "ML_detail_0176",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        46.72907727772444,
+        0.02000762939453125,
+        -31.9808687456398
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.22420171295391486
+    },
+    {
+      "name": "ML_detail_0177",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -13.250491146252669,
+        0.7918582153320313,
+        -59.17400484429658
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.252473698028003
+    },
+    {
+      "name": "ML_detail_0178",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -67.5025320937747,
+        0.069896240234375,
+        54.74505076176542
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.436857745848826
+    },
+    {
+      "name": "ML_detail_0179",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -76.2724978730343,
+        0.074901123046875,
+        59.39049619044854
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.34752987473648
+    },
+    {
+      "name": "ML_detail_0180",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        74.26179232774497,
+        0.5319705200195313,
+        -61.169843571335065
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.653462964523956
+    },
+    {
+      "name": "ML_detail_0181",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -14.863600233790505,
+        0.948497314453125,
+        -59.84528824190896
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.3099605167078647
+    },
+    {
+      "name": "ML_detail_0182",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -8.343952151167016,
+        0.6711077880859375,
+        -21.457971472639436
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.415679838431174
+    },
+    {
+      "name": "ML_detail_0183",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        81.889322959044,
+        0.4351763916015625,
+        -54.7174754562935
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.185791363364664
+    },
+    {
+      "name": "ML_detail_0184",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        7.27755986591547,
+        0.0203204345703125,
+        -8.550930120936322
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.12073741647793912
+    },
+    {
+      "name": "ML_detail_0185",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        66.72656644088306,
+        0.14709808349609374,
+        -54.44455660283125
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.6075588174863269
+    },
+    {
+      "name": "ML_detail_0186",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -93.42344413270051,
+        0.37042572021484377,
+        -32.12119146949276
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.419809472489587
+    },
+    {
+      "name": "ML_detail_0187",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -2.739643647523692,
+        0.2617144775390625,
+        -33.91696774691518
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.5386431316750486
+    },
+    {
+      "name": "ML_detail_0188",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -2.7887091417550347,
+        0.32806732177734377,
+        -58.665972701875475
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.324463959884986
+    },
+    {
+      "name": "ML_detail_0189",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -65.35639393009461,
+        0.13042022705078124,
+        61.727677929115
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.9910543434546499
+    },
+    {
+      "name": "ML_detail_0190",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        19.195246906183744,
+        0.02,
+        3.5385893525327337
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.118863423207241
+    },
+    {
+      "name": "ML_detail_0191",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        92.27697397254882,
+        0.7639117431640625,
+        -58.200965772990926
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.273025711085056
+    },
+    {
+      "name": "ML_detail_0192",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        11.680600686172369,
+        0.7397952270507813,
+        -29.086491058966725
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.638595177397202
+    },
+    {
+      "name": "ML_detail_0193",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -93.6338484694605,
+        0.5888705444335938,
+        -34.6047965502062
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.289188043438903
+    },
+    {
+      "name": "ML_detail_0194",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -79.4962836562976,
+        1.063914794921875,
+        -60.16163073422498
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.597566939072039
+    },
+    {
+      "name": "ML_detail_0195",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        93.71182473950104,
+        -0.32857940673828123,
+        -33.92982604655616
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 6.120077341630581
+    },
+    {
+      "name": "ML_detail_0196",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -87.53663491924388,
+        0.02403594970703125,
+        52.16302681024893
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.729464515953291
+    },
+    {
+      "name": "ML_detail_0197",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        69.51243800426622,
+        0.36886932373046877,
+        -57.73748152545014
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.2062958086798738
+    },
+    {
+      "name": "ML_detail_0198",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        7.120792836165824,
+        0.0204425048828125,
+        -11.069406206297797
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.523322518121442
+    },
+    {
+      "name": "ML_detail_0199",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        0.028259191056026367,
+        0.01999237060546875,
+        -37.06364616722194
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.429878490530809
+    },
+    {
+      "name": "ML_detail_0200",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -78.15036046757653,
+        0.055850524902343754,
+        59.518316972402715
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.9090817982225206
+    },
+    {
+      "name": "ML_detail_0201",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        73.94969385976309,
+        0.5917010498046875,
+        -62.53297282340047
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.0356338535585856
+    },
+    {
+      "name": "ML_detail_0202",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -98.37508239485533,
+        0.02402069091796875,
+        -1.6336533649813978
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.5936828614971255
+    },
+    {
+      "name": "ML_detail_0203",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -14.34852677849658,
+        0.942943115234375,
+        -62.01891385638089
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 6.142289730111936
+    },
+    {
+      "name": "ML_detail_0204",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -3.830229260211262,
+        0.38309051513671877,
+        -59.66007953011585
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.4025172013655414
+    },
+    {
+      "name": "ML_detail_0205",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -100.27089926853229,
+        0.02405120849609375,
+        22.429755292851173
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.100668920868705
+    },
+    {
+      "name": "ML_detail_0206",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -80.73300996221309,
+        0.02402069091796875,
+        48.03136970162591
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.761925200526505
+    },
+    {
+      "name": "ML_detail_0207",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        56.79830700107419,
+        0.02095367431640625,
+        -24.25527079736763
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.431559899842581
+    },
+    {
+      "name": "ML_detail_0208",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -69.44964063957269,
+        0.02336456298828125,
+        -15.108168069762353
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.210639954316218
+    },
+    {
+      "name": "ML_detail_0209",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -100.96192464962375,
+        0.02403594970703125,
+        -0.3707017971010784
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.8279211185649515
+    },
+    {
+      "name": "ML_detail_0210",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -60.72281975126933,
+        0.02,
+        6.615465461430766
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.415153374276107
+    },
+    {
+      "name": "ML_detail_0211",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -103.81396527607696,
+        0.0240283203125,
+        19.933245727253937
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.475910564519654
+    },
+    {
+      "name": "ML_detail_0212",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        31.118741449377996,
+        0.02000762939453125,
+        -36.27476837512967
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.14538962857849
+    },
+    {
+      "name": "ML_detail_0213",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -103.65068281587665,
+        0.0240283203125,
+        18.824758274669303
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.229658487303552
+    },
+    {
+      "name": "ML_detail_0214",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        19.63238202312038,
+        0.02,
+        2.866864370376404
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.6715855019009185
+    },
+    {
+      "name": "ML_detail_0215",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -75.88681333344833,
+        0.1429248046875,
+        62.127581671252074
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.343081423239728
+    },
+    {
+      "name": "ML_detail_0216",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -83.84590182416753,
+        0.02403594970703125,
+        47.599080495192894
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.5201107654173059
+    },
+    {
+      "name": "ML_detail_0217",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        61.2436876582641,
+        0.02000762939453125,
+        0.937064486229751
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.3188943890192904
+    },
+    {
+      "name": "ML_detail_0218",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -4.279188052294156,
+        0.47223236083984377,
+        -61.478945819467256
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.792890257678134
+    },
+    {
+      "name": "ML_detail_0219",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -77.9155412118939,
+        0.052424926757812504,
+        59.25177787947727
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.254957595503015
+    },
+    {
+      "name": "ML_detail_0220",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        38.4813352108126,
+        0.02014495849609375,
+        -49.985542212533446
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.8643054348290615
+    },
+    {
+      "name": "ML_detail_0221",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        60.457060967363596,
+        0.022532958984375,
+        -22.78130510831968
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.9179256963473796
+    },
+    {
+      "name": "ML_detail_0222",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -29.01757244931271,
+        2.6585269165039063,
+        -40.793030148078586
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.6681234473478834
+    },
+    {
+      "name": "ML_detail_0223",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        22.80181939711472,
+        0.01999237060546875,
+        1.7463644872912196
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.7015124616343222
+    },
+    {
+      "name": "ML_detail_0224",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -57.47569685851073,
+        4.519732971191406,
+        75.02234163482711
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.909506114602798
+    },
+    {
+      "name": "ML_detail_0225",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -86.60245050597581,
+        0.02403594970703125,
+        49.55533550005303
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.7811739157558727
+    },
+    {
+      "name": "ML_detail_0226",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        12.324552385389607,
+        0.8655581665039063,
+        -32.01935053833601
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.470004011811894
+    },
+    {
+      "name": "ML_detail_0227",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        16.812324382575724,
+        0.1983294677734375,
+        -27.1404688272602
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.360683602784539
+    },
+    {
+      "name": "ML_detail_0228",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -69.77595142135704,
+        0.023143310546875,
+        -13.531632476818313
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.4652158556624015
+    },
+    {
+      "name": "ML_detail_0229",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        82.15077240590956,
+        0.4985919189453125,
+        -56.27789774035032
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.5660235496593307
+    },
+    {
+      "name": "ML_detail_0230",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        7.664355445588669,
+        0.020274658203125,
+        -8.59289539710691
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.9535874104775774
+    },
+    {
+      "name": "ML_detail_0231",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        57.277752902400394,
+        0.02092315673828125,
+        -21.944309090936684
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.8038057551194795
+    },
+    {
+      "name": "ML_detail_0232",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -71.3424697840784,
+        0.0220599365234375,
+        -13.279151656420531
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.7286232568584162
+    },
+    {
+      "name": "ML_detail_0233",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -69.13400586822048,
+        0.046313781738281254,
+        54.55273559928647
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.861327622821023
+    },
+    {
+      "name": "ML_detail_0234",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -84.14701393985506,
+        0.02403594970703125,
+        48.42411594585734
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.689396707730744
+    },
+    {
+      "name": "ML_detail_0235",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -101.4327554011447,
+        0.6673312377929688,
+        -27.245489570646548
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.660824310134903
+    },
+    {
+      "name": "ML_detail_0236",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        62.91556566899472,
+        0.01999237060546875,
+        0.9901032396892648
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.0118401022671428
+    },
+    {
+      "name": "ML_detail_0237",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -8.066065860149525,
+        0.6559329223632813,
+        -10.566717337787312
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.3385855116510012
+    },
+    {
+      "name": "ML_detail_0238",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -66.60359483061127,
+        0.082286376953125,
+        55.85901097698085
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.308984229443102
+    },
+    {
+      "name": "ML_detail_0239",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        69.10619916590801,
+        0.29678680419921877,
+        -55.98363441540398
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.535689663814308
+    },
+    {
+      "name": "ML_detail_0240",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -103.22068917949444,
+        0.4105181884765625,
+        -23.59346975688551
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.9638134396137583
+    },
+    {
+      "name": "ML_detail_0241",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        81.27936183947588,
+        0.45216705322265627,
+        -55.11458923403673
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.3253697848217225
+    },
+    {
+      "name": "ML_detail_0242",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -101.25240913992624,
+        0.46812774658203127,
+        -24.499864433717477
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.181026608636027
+    },
+    {
+      "name": "ML_detail_0243",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -99.38799920902275,
+        0.23657562255859374,
+        -22.51117249931136
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.389758270942233
+    },
+    {
+      "name": "ML_detail_0244",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        84.17911371250811,
+        0.42427398681640627,
+        -54.52062094126647
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.055501119625509
+    },
+    {
+      "name": "ML_detail_0245",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -82.2216071640377,
+        0.02403594970703125,
+        47.548197251325014
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.873344598524605
+    },
+    {
+      "name": "ML_detail_0246",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -80.5116348748444,
+        1.0796237182617188,
+        -60.21848482138189
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.258855947165879
+    },
+    {
+      "name": "ML_detail_0247",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -87.24895331704718,
+        0.02403594970703125,
+        49.16650056286657
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.09870247182489704
+    },
+    {
+      "name": "ML_detail_0248",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -57.77059450246925,
+        0.02,
+        5.726114211994842
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.856432395273987
+    },
+    {
+      "name": "ML_detail_0249",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        36.176312659520235,
+        0.02093841552734375,
+        -51.918770813468825
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.230745593697692
+    },
+    {
+      "name": "ML_detail_0250",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        60.40076883471044,
+        0.02131988525390625,
+        -21.842590326385412
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.1629185851271859
+    },
+    {
+      "name": "ML_detail_0251",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -72.37524778457673,
+        0.14642669677734374,
+        60.504759913866415
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.625354865129819
+    },
+    {
+      "name": "ML_detail_0252",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -56.43548982256993,
+        4.144610900878906,
+        73.46652274657383
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.0605014157191293
+    },
+    {
+      "name": "ML_detail_0253",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        31.630173281548828,
+        0.02,
+        -32.88327756219588
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.2524850770961876
+    },
+    {
+      "name": "ML_detail_0254",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -96.83484945663095,
+        0.02403594970703125,
+        -3.549838031167608
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.687169226885759
+    },
+    {
+      "name": "ML_detail_0255",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -102.25883427613016,
+        0.02403594970703125,
+        20.22559793188525
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.07212002871763
+    },
+    {
+      "name": "ML_detail_0256",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -80.87617591254815,
+        1.1672244262695313,
+        -62.59709764545954
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.2172999591269702
+    },
+    {
+      "name": "ML_detail_0257",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -10.102249539301862,
+        0.8244967651367188,
+        -10.848366987995076
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.9435270958158346
+    },
+    {
+      "name": "ML_detail_0258",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -75.57598045775369,
+        0.09965850830078125,
+        60.10551125491305
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.051407399136547
+    },
+    {
+      "name": "ML_detail_0259",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        90.54221426879771,
+        0.746104736328125,
+        -58.957647177286624
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.897281240998899
+    },
+    {
+      "name": "ML_detail_0260",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        14.483606509027277,
+        0.5073275756835938,
+        -28.933196042861454
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.142103310237287
+    },
+    {
+      "name": "ML_detail_0261",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        68.65066431884748,
+        0.16940643310546874,
+        -54.52389802277665
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.849707261174402
+    },
+    {
+      "name": "ML_detail_0262",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        63.927265933282875,
+        0.6415057373046875,
+        -62.20211851857502
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.496605788827614
+    },
+    {
+      "name": "ML_detail_0263",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -60.5395252692341,
+        0.0200152587890625,
+        7.311175287287208
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.8747420291175843
+    },
+    {
+      "name": "ML_detail_0264",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        35.369067962791306,
+        0.02,
+        -32.70693928173379
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.4213875944629555
+    },
+    {
+      "name": "ML_detail_0265",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        80.82195684973568,
+        0.4775653076171875,
+        -56.3125313047884
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.20068762057996903
+    },
+    {
+      "name": "ML_detail_0266",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -55.467880804154355,
+        4.489276428222656,
+        74.41219491714175
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.27558486348484157
+    },
+    {
+      "name": "ML_detail_0267",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -68.91282739051066,
+        0.053691406250000004,
+        54.75888703198129
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.8905627867049748
+    },
+    {
+      "name": "ML_detail_0268",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        90.73354249225922,
+        0.7537265014648438,
+        -59.033469245821586
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.041175878742013
+    },
+    {
+      "name": "ML_detail_0269",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -102.98363706945746,
+        0.0240435791015625,
+        23.357322737309087
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.800535917484145
+    },
+    {
+      "name": "ML_detail_0270",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -66.2502296159323,
+        0.681895751953125,
+        65.34249742630759
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.4011901429345717
+    },
+    {
+      "name": "ML_detail_0271",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -1.7231635488729276,
+        0.3492999267578125,
+        -59.28234225362279
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.5147565121089097
+    },
+    {
+      "name": "ML_detail_0272",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        34.71473251530079,
+        0.01999237060546875,
+        -35.41265142387747
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.577149134430139
+    },
+    {
+      "name": "ML_detail_0273",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -104.80582875108186,
+        0.0240435791015625,
+        17.621096486421973
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.623039414650634
+    },
+    {
+      "name": "ML_detail_0274",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -98.48396543022224,
+        0.0240283203125,
+        -1.2891823677628547
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.935677980067419
+    },
+    {
+      "name": "ML_detail_0275",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -90.07492768040856,
+        0.0205340576171875,
+        15.671253918336912
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.2322601717871
+    },
+    {
+      "name": "ML_detail_0276",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -100.30992328783218,
+        0.0240435791015625,
+        25.085513527692537
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.6365999008581147
+    },
+    {
+      "name": "ML_detail_0277",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -70.31086782448521,
+        0.02276947021484375,
+        -14.603719390756277
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.5084437656632312
+    },
+    {
+      "name": "ML_detail_0278",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -39.06645861105354,
+        0.01999237060546875,
+        -30.77858422015857
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.345827670130605
+    },
+    {
+      "name": "ML_detail_0279",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -102.6625887246397,
+        0.44273712158203127,
+        -24.07537827102389
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.4131773897733435
+    },
+    {
+      "name": "ML_detail_0280",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -11.18637722628452,
+        0.8367343139648438,
+        -10.54997023093746
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.2969554205519396
+    },
+    {
+      "name": "ML_detail_0281",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        21.148588854124565,
+        0.02000762939453125,
+        1.735744527928469
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.802670564481889
+    },
+    {
+      "name": "ML_detail_0282",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -11.529927353526688,
+        0.35066558837890627,
+        -19.97304433501358
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.568174545961418
+    },
+    {
+      "name": "ML_detail_0283",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -11.832569908087704,
+        0.9549365234375,
+        -12.28018988006395
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.52513458707883
+    },
+    {
+      "name": "ML_detail_0284",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        44.76885623227199,
+        0.01999237060546875,
+        -28.90990614961135
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.1265185231471837
+    },
+    {
+      "name": "ML_detail_0285",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -31.339155861236385,
+        0.02000762939453125,
+        16.174428044338654
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.3041745462557572
+    },
+    {
+      "name": "ML_detail_0286",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        16.0931456981145,
+        0.31195404052734377,
+        -27.557027387867638
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.1772264812375444
+    },
+    {
+      "name": "ML_detail_0287",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -102.78441859248157,
+        0.02403594970703125,
+        25.11736907488358
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.13301186187500194
+    },
+    {
+      "name": "ML_detail_0288",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -38.55884002018392,
+        0.01999237060546875,
+        -30.204611205420516
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.7797045413088295
+    },
+    {
+      "name": "ML_detail_0289",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -16.635734529439407,
+        0.02,
+        22.116412604692304
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.336754730219226
+    },
+    {
+      "name": "ML_detail_0290",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        58.67490240816055,
+        0.0203662109375,
+        -22.15354308577412
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.089786706203654
+    },
+    {
+      "name": "ML_detail_0291",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -72.91078378051054,
+        0.136973876953125,
+        60.3680345934456
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.042538848680955
+    },
+    {
+      "name": "ML_detail_0292",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        67.86098521996078,
+        0.3692279052734375,
+        -57.03327656388187
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 6.15236944354337
+    },
+    {
+      "name": "ML_detail_0293",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -30.620414049120654,
+        2.88785888671875,
+        -41.0840308357536
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.5253168392309795
+    },
+    {
+      "name": "ML_detail_0294",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        62.8844489585932,
+        0.02,
+        3.173367694260709
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.479236013048331
+    },
+    {
+      "name": "ML_detail_0295",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -100.90313873124647,
+        0.02403594970703125,
+        0.6529561242221704
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.5793134239944575
+    },
+    {
+      "name": "ML_detail_0296",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -57.51686670900513,
+        3.98014404296875,
+        73.55362485185036
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.3486341177901915
+    },
+    {
+      "name": "ML_detail_0297",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -102.54552081700844,
+        0.451427001953125,
+        -24.173767037210485
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.165418096026107
+    },
+    {
+      "name": "ML_detail_0298",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        60.028244112419436,
+        0.02283050537109375,
+        -23.485928121578834
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.877284584512898
+    },
+    {
+      "name": "ML_detail_0299",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -13.747960616486646,
+        0.8418765258789063,
+        -59.47268102677846
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.232356988251278
+    },
+    {
+      "name": "ML_detail_0300",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        34.418663961056716,
+        0.01999237060546875,
+        -33.38457467427016
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.001684959743247
+    },
+    {
+      "name": "ML_detail_0301",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        34.76938955952752,
+        0.0199847412109375,
+        -35.57970730839933
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.08613680994372992
+    },
+    {
+      "name": "ML_detail_0302",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        14.124422242080554,
+        0.3054156494140625,
+        -27.361385284268582
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.037362060380988715
+    },
+    {
+      "name": "ML_detail_0303",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        81.28797402003049,
+        0.43082763671875,
+        -54.59228801174149
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.599584467011868
+    },
+    {
+      "name": "ML_detail_0304",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -85.36531375726138,
+        0.02405120849609375,
+        51.672475777514734
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.666828785072446
+    },
+    {
+      "name": "ML_detail_0305",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        57.70439706578909,
+        0.02,
+        -33.22894366081884
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.2076569286558616
+    },
+    {
+      "name": "ML_detail_0306",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        60.33922437785654,
+        0.02,
+        2.823143250470607
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.5843368528160687
+    },
+    {
+      "name": "ML_detail_0307",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -91.86454266695569,
+        0.02176239013671875,
+        17.279220573496232
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.2660005276954938
+    },
+    {
+      "name": "ML_detail_0308",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -66.96803960463912,
+        0.08955718994140625,
+        55.32244714945092
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.2103352618227599
+    },
+    {
+      "name": "ML_detail_0309",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -103.32413007647996,
+        0.27154876708984377,
+        -21.64254474545755
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.393650075516715
+    },
+    {
+      "name": "ML_detail_0310",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        0.3303492308192246,
+        0.27429534912109377,
+        -34.90459385522054
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.2765370293337677
+    },
+    {
+      "name": "ML_detail_0311",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -37.502179691164045,
+        0.76761962890625,
+        -29.4867017407189
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.6680635025621966
+    },
+    {
+      "name": "ML_detail_0312",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -13.464104808595554,
+        0.818065185546875,
+        -59.55579149185305
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.7776128482023341
+    },
+    {
+      "name": "ML_detail_0313",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -91.67060502866991,
+        0.9367327880859375,
+        -44.771643026224055
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.391358707694977
+    },
+    {
+      "name": "ML_detail_0314",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -76.89811887604722,
+        0.09967376708984375,
+        60.774080783361605
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.384183519197978
+    },
+    {
+      "name": "ML_detail_0315",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        45.2179129578309,
+        0.01999237060546875,
+        -29.1811370343791
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.192554426419835
+    },
+    {
+      "name": "ML_detail_0316",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        56.3702274486242,
+        0.02,
+        -32.961525474939144
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.2078565172413205
+    },
+    {
+      "name": "ML_detail_0317",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -95.26100144400067,
+        0.02386810302734375,
+        -7.096734075948475
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.5479509420777117
+    },
+    {
+      "name": "ML_detail_0318",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -81.10412995375279,
+        0.02402069091796875,
+        49.253801328857016
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.5862339290636023
+    },
+    {
+      "name": "ML_detail_0319",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -19.68125746375411,
+        0.02000762939453125,
+        23.72911346630974
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.1407467098220843
+    },
+    {
+      "name": "ML_detail_0320",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -100.55943469474376,
+        0.0240283203125,
+        23.057369959235814
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.230113360258089
+    },
+    {
+      "name": "ML_detail_0321",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -85.36493757417574,
+        0.02405120849609375,
+        52.76057320511978
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 6.1406419711655875
+    },
+    {
+      "name": "ML_detail_0322",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        43.973754311909,
+        0.02000762939453125,
+        49.22097792152435
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.255672533497737
+    },
+    {
+      "name": "ML_detail_0323",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        81.21253598148776,
+        0.5112948608398438,
+        -57.28415346808541
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.0813007887104535
+    },
+    {
+      "name": "ML_detail_0324",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -100.73554259276715,
+        0.42152740478515627,
+        -24.117882598362804
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.32226173967574817
+    },
+    {
+      "name": "ML_detail_0325",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -70.53962493186144,
+        0.1879229736328125,
+        61.365985648584186
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.767217524369289
+    },
+    {
+      "name": "ML_detail_0326",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -90.98510383984168,
+        0.8887286376953125,
+        -43.91938718763757
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.1840775730388238
+    },
+    {
+      "name": "ML_detail_0327",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        62.19258454738828,
+        0.02000762939453125,
+        1.2273765364281708
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.111195733645389
+    },
+    {
+      "name": "ML_detail_0328",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -80.76047971702367,
+        1.1098513793945313,
+        -60.991187736895505
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.999857351790114
+    },
+    {
+      "name": "ML_detail_0329",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -93.6362323514221,
+        0.393321533203125,
+        -31.608207539073387
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.9151053001786082
+    },
+    {
+      "name": "ML_detail_0330",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -92.89919164374653,
+        0.9611849975585938,
+        -44.17521670474288
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.0772190365527479
+    },
+    {
+      "name": "ML_detail_0331",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        36.144775949012995,
+        0.0203814697265625,
+        -50.53711374138168
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.8945576830178728
+    },
+    {
+      "name": "ML_detail_0332",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        74.0857311311533,
+        0.589976806640625,
+        -62.46035629362114
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.761588406367901
+    },
+    {
+      "name": "ML_detail_0333",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -81.13259011247908,
+        1.1392474365234375,
+        -61.69217874564783
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.940488567915164
+    },
+    {
+      "name": "ML_detail_0334",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -96.92119981355447,
+        0.02403594970703125,
+        44.91183289208541
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.698426830076491
+    },
+    {
+      "name": "ML_detail_0335",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -16.01912584686035,
+        1.0155291748046875,
+        -60.083447757325935
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.38367573600538385
+    },
+    {
+      "name": "ML_detail_0336",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        63.7852437205666,
+        0.6543994140625,
+        -62.701848346810266
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.40471473907292904
+    },
+    {
+      "name": "ML_detail_0337",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -80.82554920623244,
+        1.0888095092773438,
+        -60.36088810886238
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.818794550210581
+    },
+    {
+      "name": "ML_detail_0338",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -105.36529284110674,
+        0.02403594970703125,
+        18.58395645220713
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.539587377956445
+    },
+    {
+      "name": "ML_detail_0339",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -94.09164751235103,
+        0.5626559448242188,
+        -33.32825942337737
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.7021569500997314
+    },
+    {
+      "name": "ML_detail_0340",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -99.95442922928349,
+        0.02402069091796875,
+        -14.745101409466766
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.3232251886715338
+    },
+    {
+      "name": "ML_detail_0341",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        19.289986579378557,
+        0.02000762939453125,
+        2.592524369104679
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.4568716497982863
+    },
+    {
+      "name": "ML_detail_0342",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        67.31454593799015,
+        0.39451171875,
+        -57.20473712819524
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.4386256753657721
+    },
+    {
+      "name": "ML_detail_0343",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -2.522059163374145,
+        0.34611083984375,
+        -59.09442607363079
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.996857381034324
+    },
+    {
+      "name": "ML_detail_0344",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -68.4068909515669,
+        0.02341796875,
+        -13.258501488482697
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.3234942456997254
+    },
+    {
+      "name": "ML_detail_0345",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -80.16122931374632,
+        1.0478854370117188,
+        -59.44166927172707
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.244113268136825
+    },
+    {
+      "name": "ML_detail_0346",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -67.63699209129041,
+        0.152049560546875,
+        62.61477321129152
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.3980939814686861
+    },
+    {
+      "name": "ML_detail_0347",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        13.46768273908307,
+        0.327708740234375,
+        -27.468350855934293
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.821720259204387
+    },
+    {
+      "name": "ML_detail_0348",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -30.381640753651176,
+        0.02,
+        18.119046764920544
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.6266993511440295
+    },
+    {
+      "name": "ML_detail_0349",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -105.48782043205371,
+        0.0240283203125,
+        17.81449966971205
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.2097797949768485
+    },
+    {
+      "name": "ML_detail_0350",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -9.225910616818137,
+        0.5357928466796875,
+        -9.506467599242393
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.634681865836487
+    },
+    {
+      "name": "ML_detail_0351",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -24.42280016280117,
+        0.1496234130859375,
+        -39.59400554696826
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.151787178398795
+    },
+    {
+      "name": "ML_detail_0352",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -13.965401477063413,
+        0.87198974609375,
+        -60.04657339320952
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.04306833236141578
+    },
+    {
+      "name": "ML_detail_0353",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -91.74111465506061,
+        0.0820574951171875,
+        -32.400902230859955
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.837048041675617
+    },
+    {
+      "name": "ML_detail_0354",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        66.79125791899618,
+        0.418284912109375,
+        -57.35941102953226
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.489898252808218
+    },
+    {
+      "name": "ML_detail_0355",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        93.22075858815855,
+        0.7571749877929688,
+        -57.3277438595364
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.6385343750947903
+    },
+    {
+      "name": "ML_detail_0356",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -100.7158573207248,
+        0.17291595458984374,
+        -21.196162757679627
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.811753250988926
+    },
+    {
+      "name": "ML_detail_0357",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        63.80682091671805,
+        0.6768374633789063,
+        -63.553854226084226
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.30295745050578
+    },
+    {
+      "name": "ML_detail_0358",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -8.950017941255279,
+        0.6322665405273438,
+        -19.48711589677086
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.412074505547935
+    },
+    {
+      "name": "ML_detail_0359",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -72.3820891777305,
+        0.14348175048828124,
+        60.38104571862176
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.0798854687328565
+    },
+    {
+      "name": "ML_detail_0360",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        16.483463998705915,
+        0.33511688232421877,
+        -28.134994935394516
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 6.230279727920327
+    },
+    {
+      "name": "ML_detail_0361",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        58.86095838204751,
+        0.02,
+        -21.319078406067245
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.026927481136003
+    },
+    {
+      "name": "ML_detail_0362",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -68.32231460165387,
+        0.1839404296875,
+        63.934002756027034
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.196379973055613
+    },
+    {
+      "name": "ML_detail_0363",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -11.114607105484197,
+        0.35331298828125,
+        -21.224731614796486
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.556652847346903
+    },
+    {
+      "name": "ML_detail_0364",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -9.20105341445316,
+        0.47624542236328127,
+        -9.222521843120953
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.55946350818534
+    },
+    {
+      "name": "ML_detail_0365",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        13.293072049803982,
+        0.809459228515625,
+        -31.246923627714377
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.354596228490606
+    },
+    {
+      "name": "ML_detail_0366",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        57.38672562542522,
+        0.0199847412109375,
+        -33.810996177572136
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.313613536725895
+    },
+    {
+      "name": "ML_detail_0367",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        93.65185171951431,
+        -0.28327606201171873,
+        -32.4800588883648
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.9903627380024966
+    },
+    {
+      "name": "ML_detail_0368",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -37.79135215729336,
+        0.44108154296875,
+        -28.979275329242547
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.5414050145845106
+    },
+    {
+      "name": "ML_detail_0369",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        59.637962387513774,
+        0.0215716552734375,
+        -22.525289709027774
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.7292636997746005
+    },
+    {
+      "name": "ML_detail_0370",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        58.92374893350776,
+        0.0199847412109375,
+        -33.70297428498997
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.1752328688704217
+    },
+    {
+      "name": "ML_detail_0371",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -59.946578114962634,
+        0.02000762939453125,
+        8.221730394299737
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 6.036025813206126
+    },
+    {
+      "name": "ML_detail_0372",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        59.102111805693454,
+        0.0210223388671875,
+        -30.816117996649705
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 6.117981263747639
+    },
+    {
+      "name": "ML_detail_0373",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        16.301353991809542,
+        0.281810302734375,
+        -27.46246872361767
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 6.168483779026651
+    },
+    {
+      "name": "ML_detail_0374",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        20.84404903122979,
+        0.02,
+        2.4006970854884258
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.5168068097459986
+    },
+    {
+      "name": "ML_detail_0375",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -97.76525423870068,
+        0.0240283203125,
+        0.6938918959648155
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.55254379820338
+    },
+    {
+      "name": "ML_detail_0376",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        47.7749928056822,
+        0.02,
+        51.88870676459481
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.009524484245822
+    },
+    {
+      "name": "ML_detail_0377",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        34.48349397351572,
+        0.01999237060546875,
+        -35.17753583352288
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.746642184571087
+    },
+    {
+      "name": "ML_detail_0378",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        36.54243465904545,
+        0.01999237060546875,
+        -34.04241875758243
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.885117544662408
+    },
+    {
+      "name": "ML_detail_0379",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -82.60295743458072,
+        0.02405120849609375,
+        49.239869631941446
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.0762420322345094
+    },
+    {
+      "name": "ML_detail_0380",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -28.56532866608222,
+        2.5171084594726563,
+        -43.63066255432316
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.291471207425565
+    },
+    {
+      "name": "ML_detail_0381",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -84.48407519604929,
+        0.02403594970703125,
+        50.39541148510425
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.9713503153577205
+    },
+    {
+      "name": "ML_detail_0382",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        90.95869834122678,
+        0.6628298950195313,
+        -56.31610925938491
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.72315618941172
+    },
+    {
+      "name": "ML_detail_0383",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        58.357104516104656,
+        0.02191497802734375,
+        -23.866592678403425
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.269076479517384
+    },
+    {
+      "name": "ML_detail_0384",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -85.90254027444374,
+        0.02405120849609375,
+        50.20838207338805
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.2160395132356068
+    },
+    {
+      "name": "ML_detail_0385",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        92.15542539786432,
+        0.662242431640625,
+        -55.43283520521978
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.7155194253644533
+    },
+    {
+      "name": "ML_detail_0386",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -92.34925578470983,
+        0.23755218505859374,
+        -33.33529315617777
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.112864468104448
+    },
+    {
+      "name": "ML_detail_0387",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -66.94461893934368,
+        0.1213946533203125,
+        61.627524050200506
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.09856089922354143
+    },
+    {
+      "name": "ML_detail_0388",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        59.46553270548746,
+        0.0223193359375,
+        -23.1548249009315
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 6.200832533050287
+    },
+    {
+      "name": "ML_detail_0389",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        59.016224970386865,
+        0.01999237060546875,
+        -33.695970294979354
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 6.1118046604619085
+    },
+    {
+      "name": "ML_detail_0390",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -84.20662062753004,
+        0.0240435791015625,
+        49.55731220113136
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.648312632799807
+    },
+    {
+      "name": "ML_detail_0391",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -16.501856362280815,
+        0.02,
+        20.760881101991586
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.3349679924866863
+    },
+    {
+      "name": "ML_detail_0392",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        33.90364067771761,
+        0.01999237060546875,
+        -34.916712161252455
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.216957721614916
+    },
+    {
+      "name": "ML_detail_0393",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -104.41008951356766,
+        0.02403594970703125,
+        19.249073538129288
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.601813370673913
+    },
+    {
+      "name": "ML_detail_0394",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -79.40700144851377,
+        1.1142611694335938,
+        -61.644431724295934
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.4031588362723415
+    },
+    {
+      "name": "ML_detail_0395",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -10.185291618816038,
+        0.45970489501953127,
+        -20.91157329864916
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.535540564490408
+    },
+    {
+      "name": "ML_detail_0396",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -2.1302469776244584,
+        0.3250689697265625,
+        -58.713070925828646
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.801040761606757
+    },
+    {
+      "name": "ML_detail_0397",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        11.874573833679596,
+        0.6741290283203125,
+        -28.68500857759765
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.8594786564340615
+    },
+    {
+      "name": "ML_detail_0398",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -99.20790521694644,
+        0.02403594970703125,
+        -1.4319590014082126
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.6700146537405138
+    },
+    {
+      "name": "ML_detail_0399",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        11.835525751109902,
+        0.7159304809570313,
+        -29.067618116349824
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.076438769732435
+    },
+    {
+      "name": "ML_detail_0400",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -87.32243505116075,
+        0.02405120849609375,
+        49.77692880823458
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.49628804246789
+    },
+    {
+      "name": "ML_detail_0401",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -102.70101368563242,
+        0.6810336303710938,
+        -26.757711700342995
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.6465099595859489
+    },
+    {
+      "name": "ML_detail_0402",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        43.89473326368698,
+        0.01999237060546875,
+        -32.04916753208041
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.8109735336798602
+    },
+    {
+      "name": "ML_detail_0403",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -99.499254590654,
+        0.0240283203125,
+        1.3661726747224532
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.2555743671872152
+    },
+    {
+      "name": "ML_detail_0404",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        91.57610084251615,
+        0.6629519653320313,
+        -55.872228688270056
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.300056858539562
+    },
+    {
+      "name": "ML_detail_0405",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -69.38932362318133,
+        0.130137939453125,
+        58.294591218157976
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 6.015398823276055
+    },
+    {
+      "name": "ML_detail_0406",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        42.0675262105829,
+        0.0213580322265625,
+        15.832609087453264
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.193317497235091
+    },
+    {
+      "name": "ML_detail_0407",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        90.6090745413991,
+        0.743724365234375,
+        -58.8426359830862
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.4385834515903866
+    },
+    {
+      "name": "ML_detail_0408",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        56.805174169525365,
+        0.01997711181640625,
+        -20.972875190543604
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.8222034886275841
+    },
+    {
+      "name": "ML_detail_0409",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        90.58982088823575,
+        0.6906619262695313,
+        -57.36579196006603
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.716830043915575
+    },
+    {
+      "name": "ML_detail_0410",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        36.34103273843185,
+        0.02022125244140625,
+        -50.124480798662454
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.548234522353171
+    },
+    {
+      "name": "ML_detail_0411",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -3.198083887060385,
+        0.01999237060546875,
+        -35.79909582775906
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 6.061129020043432
+    },
+    {
+      "name": "ML_detail_0412",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        42.68748092175515,
+        0.0213580322265625,
+        15.89210753206024
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.040233367027113415
+    },
+    {
+      "name": "ML_detail_0413",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -83.40548170010807,
+        0.02405120849609375,
+        49.11059881369732
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.025533732130376
+    },
+    {
+      "name": "ML_detail_0414",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -31.19409058191384,
+        0.0200152587890625,
+        15.97374180510093
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 6.1306106226388515
+    },
+    {
+      "name": "ML_detail_0415",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -84.76957487795883,
+        0.02403594970703125,
+        49.131565885460375
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.5647898893642176
+    },
+    {
+      "name": "ML_detail_0416",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        95.09595069191941,
+        -0.3565106201171875,
+        -31.498279144424046
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.597089252631408
+    },
+    {
+      "name": "ML_detail_0417",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -0.07162931122756167,
+        0.11966278076171875,
+        -35.74686168906561
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.631644969697065
+    },
+    {
+      "name": "ML_detail_0418",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -56.68532014963104,
+        4.728602905273437,
+        75.0940874609983
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.497430195316697
+    },
+    {
+      "name": "ML_detail_0419",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -66.58083227183955,
+        0.082286376953125,
+        56.04988365400732
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.2024171231076926
+    },
+    {
+      "name": "ML_detail_0420",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        0.1892731128743672,
+        0.48186065673828127,
+        -33.623931289204094
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.0445744690603995
+    },
+    {
+      "name": "ML_detail_0421",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -29.33141382579486,
+        0.02000762939453125,
+        17.325238685023592
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.2761000585727267
+    },
+    {
+      "name": "ML_detail_0422",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -100.84637372079374,
+        0.02403594970703125,
+        -2.385515266504661
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.11944081482364241
+    },
+    {
+      "name": "ML_detail_0423",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -97.84204122369817,
+        0.0240283203125,
+        1.318648848483278
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.8686904312902137
+    },
+    {
+      "name": "ML_detail_0424",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        44.41063827834271,
+        0.02,
+        50.67216466666431
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.035719789409457
+    },
+    {
+      "name": "ML_detail_0425",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        56.47537804668962,
+        0.02081634521484375,
+        -23.58445222093522
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.272963568896562
+    },
+    {
+      "name": "ML_detail_0426",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -2.8065929674585024,
+        0.13293792724609374,
+        -34.73271204462046
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.6256255176964802
+    },
+    {
+      "name": "ML_detail_0427",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -91.09071585683395,
+        0.021617431640625,
+        14.217847373252022
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.757730248797294
+    },
+    {
+      "name": "ML_detail_0428",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -104.08704203446351,
+        0.0240435791015625,
+        17.6780420979261
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.57989548049084
+    },
+    {
+      "name": "ML_detail_0429",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -79.78955121530086,
+        1.1568637084960938,
+        -63.051924332391515
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.7807460289255983
+    },
+    {
+      "name": "ML_detail_0430",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -76.16096320201156,
+        0.13653900146484374,
+        61.99075311868989
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.7620458335418085
+    },
+    {
+      "name": "ML_detail_0431",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -16.34426943866044,
+        1.0080218505859375,
+        -59.604204327254465
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.824035472131649
+    },
+    {
+      "name": "ML_detail_0432",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -76.87360886008373,
+        0.055896301269531254,
+        58.87517600713187
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.0228978985917285
+    },
+    {
+      "name": "ML_detail_0433",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -82.75036972206208,
+        1.127177734375,
+        -60.27513100783982
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.5222902787385975
+    },
+    {
+      "name": "ML_detail_0434",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -82.63565316465879,
+        0.02403594970703125,
+        48.123439785385145
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.3331116194761463
+    },
+    {
+      "name": "ML_detail_0435",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -91.59780709042278,
+        0.9060321044921875,
+        -43.806098315118234
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.6532078661433693
+    },
+    {
+      "name": "ML_detail_0436",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        82.64940795760297,
+        0.4430194091796875,
+        -54.93321045087613
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.404960551063938
+    },
+    {
+      "name": "ML_detail_0437",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -79.31295326087123,
+        0.066844482421875,
+        60.57956979114364
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.8083645552949628
+    },
+    {
+      "name": "ML_detail_0438",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -98.52280423194948,
+        0.0240435791015625,
+        -13.887086548810997
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.5548118654058777
+    },
+    {
+      "name": "ML_detail_0439",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -10.759926514139707,
+        0.9820285034179688,
+        -12.442268492445852
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.9024683882571779
+    },
+    {
+      "name": "ML_detail_0440",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -90.18209548624706,
+        0.8607974243164063,
+        -43.89411595141158
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.904859861632455
+    },
+    {
+      "name": "ML_detail_0441",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        45.85392569579746,
+        0.02000762939453125,
+        49.639954692648935
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 1.3414442669866957
+    },
+    {
+      "name": "ML_detail_0442",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -96.9927190715333,
+        0.0240283203125,
+        45.839362669633935
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 3.1935169622927386
+    },
+    {
+      "name": "ML_detail_0443",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -16.455681384034737,
+        1.0513949584960938,
+        -61.007365870265545
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.0533244424947155
+    },
+    {
+      "name": "ML_detail_0444",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -94.37286595931839,
+        0.6351962280273438,
+        -33.49788992459107
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.6519254219052675
+    },
+    {
+      "name": "ML_detail_0445",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        32.0043072503688,
+        0.02,
+        -35.29236724329234
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 0.7199205685242511
+    },
+    {
+      "name": "ML_detail_0446",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        93.6816705140463,
+        -0.30843017578125,
+        -33.29317361957712
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.280416410854199
+    },
+    {
+      "name": "ML_detail_0447",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        89.5824725084846,
+        0.666087646484375,
+        -57.405100248177725
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.310691313912619
+    },
+    {
+      "name": "ML_detail_0448",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        83.72891751506945,
+        0.5205645751953125,
+        -56.8646983345064
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.2348155079960357
+    },
+    {
+      "name": "ML_detail_0449",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -12.899905454699615,
+        0.7927279663085938,
+        -60.90310447081356
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.586643751298364
+    },
+    {
+      "name": "ML_detail_0450",
+      "library": "fluxara_driftlib_grass_tuft_v2",
+      "role": "detail",
+      "xyz": [
+        -71.99062979240296,
+        0.2033953857421875,
+        62.76493198834259
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 4.620054038501049
+    },
+    {
+      "name": "ML_detail_0451",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -58.49333782695134,
+        0.02000762939453125,
+        6.376180516399655
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 2.7366742868849028
+    },
+    {
+      "name": "ML_detail_0452",
+      "library": "fluxara_driftlib_white_daisy_v2",
+      "role": "detail",
+      "xyz": [
+        -39.21615481489618,
+        0.01999237060546875,
+        -29.0226633219262
+      ],
+      "scale": [
+        0.45,
+        0.46,
+        0.45
+      ],
+      "rotationZRadians": 5.9952177758971175
+    },
+    {
+      "name": "ML_pennants_0453",
+      "library": "fluxara_driftlib_circuit_pennants_v2",
+      "role": "pennants",
+      "xyz": [
+        -48,
+        5.933891296386719,
+        77
+      ],
+      "scale": [
+        23,
+        5.5,
+        1
+      ],
+      "rotationZRadians": 0
+    },
+    {
+      "name": "ML_pennants_0454",
+      "library": "fluxara_driftlib_circuit_pennants_v2",
+      "role": "pennants",
+      "xyz": [
+        -20,
+        5.943359375,
+        77
+      ],
+      "scale": [
+        23,
+        5.5,
+        1
+      ],
+      "rotationZRadians": 0
+    },
+    {
+      "name": "ML_pennants_0455",
+      "library": "fluxara_driftlib_circuit_pennants_v2",
+      "role": "pennants",
+      "xyz": [
+        8,
+        6.0026092529296875,
+        77
+      ],
+      "scale": [
+        23,
+        5.5,
+        1
+      ],
+      "rotationZRadians": 0
+    },
+    {
+      "name": "ML_pennants_0456",
+      "library": "fluxara_driftlib_circuit_pennants_v2",
+      "role": "pennants",
+      "xyz": [
+        37,
+        6.034111022949219,
+        77
+      ],
+      "scale": [
+        23,
+        5.5,
+        1
+      ],
+      "rotationZRadians": 0
+    },
+    {
+      "name": "ML_pennants_0457",
+      "library": "fluxara_driftlib_circuit_pennants_v2",
+      "role": "pennants",
+      "xyz": [
+        66,
+        4.707450866699219,
+        77
+      ],
+      "scale": [
+        23,
+        5.5,
+        1
+      ],
+      "rotationZRadians": 0
+    },
+    {
+      "name": "ML_pennants_0458",
+      "library": "fluxara_driftlib_circuit_pennants_v2",
+      "role": "pennants",
+      "xyz": [
+        109,
+        -0.15,
+        31
+      ],
+      "scale": [
+        22,
+        5.5,
+        1
+      ],
+      "rotationZRadians": 1.5707963267948966
+    },
+    {
+      "name": "ML_pennants_0459",
+      "library": "fluxara_driftlib_circuit_pennants_v2",
+      "role": "pennants",
+      "xyz": [
+        111,
+        -0.15,
+        9
+      ],
+      "scale": [
+        22,
+        5.5,
+        1
+      ],
+      "rotationZRadians": 1.5707963267948966
+    },
+    {
+      "name": "ML_pennants_0460",
+      "library": "fluxara_driftlib_circuit_pennants_v2",
+      "role": "pennants",
+      "xyz": [
+        111,
+        -0.15,
+        -14
+      ],
+      "scale": [
+        22,
+        5.5,
+        1
+      ],
+      "rotationZRadians": 1.5707963267948966
+    },
+    {
+      "name": "ML_pennants_0461",
+      "library": "fluxara_driftlib_circuit_pennants_v2",
+      "role": "pennants",
+      "xyz": [
+        75,
+        0.5596923828125,
+        -62
+      ],
+      "scale": [
+        22,
+        5.5,
+        1
+      ],
+      "rotationZRadians": 0
+    },
+    {
+      "name": "ML_pennants_0462",
+      "library": "fluxara_driftlib_circuit_pennants_v2",
+      "role": "pennants",
+      "xyz": [
+        46,
+        0.5264434814453125,
+        -63
+      ],
+      "scale": [
+        22,
+        5.5,
+        1
+      ],
+      "rotationZRadians": 0
+    },
+    {
+      "name": "ML_balloon_0463",
+      "library": "fluxara_driftlib_festival_balloon_v1",
+      "role": "balloon",
+      "xyz": [
+        -140,
+        52,
+        55
+      ],
+      "scale": [
+        11,
+        11,
+        11
+      ],
+      "rotationZRadians": 0.16003092431512983
+    },
+    {
+      "name": "ML_balloon_0464",
+      "library": "fluxara_driftlib_festival_balloon_v1",
+      "role": "balloon",
+      "xyz": [
+        30,
+        78,
+        132
+      ],
+      "scale": [
+        13,
+        13,
+        13
+      ],
+      "rotationZRadians": 0.09188963284165984
+    },
+    {
+      "name": "ML_balloon_0465",
+      "library": "fluxara_driftlib_festival_balloon_v1",
+      "role": "balloon",
+      "xyz": [
+        149,
+        64,
+        -85
+      ],
+      "scale": [
+        10,
+        10,
+        10
+      ],
+      "rotationZRadians": 5.796879757073546
+    },
+    {
+      "name": "ML_turn_0466",
+      "library": "fluxara_driftlib_circuit_turn_left_v2",
+      "role": "turn",
+      "xyz": [
+        -89.05518341064453,
+        0.0,
+        -28.68563461303711
+      ],
+      "scale": [
+        2.5,
+        2.7,
+        1
+      ],
+      "rotationZRadians": -3.1346672720592244,
+      "quadIndex": 56,
+      "turnRadians": 0.4399227260930451
+    },
+    {
+      "name": "ML_turn_0467",
+      "library": "fluxara_driftlib_circuit_turn_left_v2",
+      "role": "turn",
+      "xyz": [
+        -50.156532287597656,
+        -7.62939453125e-06,
+        -44.903709411621094
+      ],
+      "scale": [
+        2.5,
+        2.7,
+        1
+      ],
+      "rotationZRadians": -1.2369124987208195,
+      "quadIndex": 75,
+      "turnRadians": 0.6728511314441938
+    },
+    {
+      "name": "ML_turn_0468",
+      "library": "fluxara_driftlib_circuit_turn_right_v2",
+      "role": "turn",
+      "xyz": [
+        -39.784000396728516,
+        1.52587890625e-05,
+        -5.5164337158203125
+      ],
+      "scale": [
+        2.5,
+        2.7,
+        1
+      ],
+      "rotationZRadians": -0.9437719264140876,
+      "quadIndex": 94,
+      "turnRadians": -0.709188361696969
+    },
+    {
+      "name": "ML_turn_0469",
+      "library": "fluxara_driftlib_circuit_turn_left_v2",
+      "role": "turn",
+      "xyz": [
+        -18.562110900878906,
+        -7.62939453125e-06,
+        -40.9707145690918
+      ],
+      "scale": [
+        2.5,
+        2.7,
+        1
+      ],
+      "rotationZRadians": -2.6565934516535257,
+      "quadIndex": 113,
+      "turnRadians": 0.5649091396748135
+    },
+    {
+      "name": "ML_turn_0470",
+      "library": "fluxara_driftlib_circuit_turn_left_v2",
+      "role": "turn",
+      "xyz": [
+        67.69412231445312,
+        0.00032806396484375,
+        -49.98957443237305
+      ],
+      "scale": [
+        2.5,
+        2.7,
+        1
+      ],
+      "rotationZRadians": -1.5487210573742154,
+      "quadIndex": 148,
+      "turnRadians": 0.43691871719087116
+    },
+    {
+      "name": "ML_turn_0471",
+      "library": "fluxara_driftlib_circuit_turn_left_v2",
+      "role": "turn",
+      "xyz": [
+        85.65391540527344,
+        -7.62939453125e-06,
+        -18.31966209411621
+      ],
+      "scale": [
+        2.5,
+        2.7,
+        1
+      ],
+      "rotationZRadians": 0.08007454364517819,
+      "quadIndex": 167,
+      "turnRadians": 0.5500977579683848
+    },
+    {
+      "name": "ML_turn_0472",
+      "library": "fluxara_driftlib_circuit_turn_right_v2",
+      "role": "turn",
+      "xyz": [
+        38.57681655883789,
+        -1.52587890625e-05,
+        -30.38055419921875
+      ],
+      "scale": [
+        2.5,
+        2.7,
+        1
+      ],
+      "rotationZRadians": 2.10010463211077,
+      "quadIndex": 196,
+      "turnRadians": -0.42513406025895395
+    },
+    {
+      "name": "ML_turn_0473",
+      "library": "fluxara_driftlib_circuit_turn_left_v2",
+      "role": "turn",
+      "xyz": [
+        21.750350952148438,
+        -7.62939453125e-06,
+        -1.6911475658416748
+      ],
+      "scale": [
+        2.5,
+        2.7,
+        1
+      ],
+      "rotationZRadians": 0.21099339698020414,
+      "quadIndex": 220,
+      "turnRadians": 0.4946893939879094
+    },
+    {
+      "name": "ML_turn_0474",
+      "library": "fluxara_driftlib_circuit_turn_right_v2",
+      "role": "turn",
+      "xyz": [
+        -44.555023193359375,
+        -7.62939453125e-06,
+        -1.8452601432800293
+      ],
+      "scale": [
+        2.5,
+        2.7,
+        1
+      ],
+      "rotationZRadians": 1.5810072277607385,
+      "quadIndex": 249,
+      "turnRadians": -0.40118228231012293
+    },
+    {
+      "name": "ML_turn_0475",
+      "library": "fluxara_driftlib_circuit_turn_right_v2",
+      "role": "turn",
+      "xyz": [
+        -60.49857711791992,
+        1.52587890625e-05,
+        24.854167938232422
+      ],
+      "scale": [
+        2.5,
+        2.7,
+        1
+      ],
+      "rotationZRadians": -0.094689267821491,
+      "quadIndex": 268,
+      "turnRadians": -0.5907441328815145
+    }
+  ],
+  "instances": 476,
+  "newLibraryBytes": 9063
+}

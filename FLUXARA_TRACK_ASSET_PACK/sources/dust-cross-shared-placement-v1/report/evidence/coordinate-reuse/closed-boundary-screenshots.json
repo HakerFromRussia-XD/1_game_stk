@@ -1,0 +1,35 @@
+{
+  "screenshots": [
+    {
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/delivery-v1/screenshots/closed-boundary/overview.jpg",
+      "kind": "Screenshot from game engine with static camera. No driving or collision checks.",
+      "camera": [
+        0,
+        90,
+        -135
+      ],
+      "target": [
+        0,
+        20,
+        100
+      ]
+    },
+    {
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/delivery-v1/screenshots/closed-boundary/west-wall.jpg",
+      "kind": "Screenshot from game engine with static camera. No driving or collision checks.",
+      "camera": [
+        -78,
+        43,
+        -8
+      ],
+      "target": [
+        -143,
+        20,
+        -8
+      ]
+    }
+  ],
+  "drivingTestPerformed": false,
+  "collisionChecksCancelledByUser": true,
+  "productionTrackUnchangedByCamera": true
+}

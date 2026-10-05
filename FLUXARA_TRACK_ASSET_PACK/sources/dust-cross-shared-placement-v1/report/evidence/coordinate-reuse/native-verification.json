@@ -1,0 +1,5771 @@
+{
+  "finalBlend": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/delivery-v1/native/Dust Cross Split Combat.blend",
+  "allOriginalMeshAttributesExact": 898,
+  "allOriginalMatricesExact": 980,
+  "allOriginalObjectsRetained": true,
+  "existingNativeSceneryConvertedToSharedPointers": 572,
+  "reusedCanonicalPrototypes": [
+    {
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "instances": 52,
+      "triangles": 108,
+      "localBounds": [
+        -0.30496978759765625,
+        -1.8767852783203125,
+        -0.3049812316894531,
+        0.30498504638671875,
+        1.8767852783203125,
+        0.3049774169921875
+      ],
+      "model": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/new-library/fluxara_driftlib_dust_reuse_61ecb64ed305/fluxara_driftlib_dust_reuse_61ecb64ed305_main.spm",
+      "nativeMesh": "Cube.292",
+      "nativePrototype": "DCShared_61ecb64ed305",
+      "sourcePoolObjectId": "dust-cross-visual-7d94b24cbf587d8d",
+      "canonicalNativePrototype": "DustCross_Asset_7d94b24cbf587d8d"
+    },
+    {
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "instances": 392,
+      "triangles": 80,
+      "localBounds": [
+        -0.9510574340820312,
+        -1.0,
+        -1.0000019073486328,
+        0.9510574340820312,
+        1.0,
+        1.0
+      ],
+      "model": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/new-library/fluxara_driftlib_dust_reuse_d3c85d22f3af/fluxara_driftlib_dust_reuse_d3c85d22f3af_main.spm",
+      "nativeMesh": "Icosphere.449",
+      "nativePrototype": "DCShared_d3c85d22f3af",
+      "sourcePoolObjectId": "dust-cross-visual-42d2286bf56651d1",
+      "canonicalNativePrototype": "DustCross_Asset_42d2286bf56651d1"
+    },
+    {
+      "library": "fluxara_driftlib_dust_reuse_fc1e7082e802",
+      "sourceObject": "DC_CanopyPole_-1_0_-15",
+      "instances": 32,
+      "triangles": 12,
+      "localBounds": [
+        -0.500030517578125,
+        -0.5,
+        -0.5,
+        0.4999847412109375,
+        0.5,
+        0.5
+      ],
+      "model": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/new-library/fluxara_driftlib_dust_reuse_fc1e7082e802/fluxara_driftlib_dust_reuse_fc1e7082e802_main.spm",
+      "nativeMesh": "Cube.335",
+      "nativePrototype": "DCShared_fc1e7082e802",
+      "sourcePoolObjectId": "dust-cross-visual-d95ef417d66c11a0",
+      "canonicalNativePrototype": "DustCross_Asset_d95ef417d66c11a0"
+    },
+    {
+      "library": "fluxara_driftlib_dust_reuse_52a6db19e34f",
+      "sourceObject": "DC_Lamp_0_-2.7_50.5",
+      "instances": 48,
+      "triangles": 12,
+      "localBounds": [
+        -0.4999847412109375,
+        -0.5000038146972656,
+        -0.49993896484375,
+        0.5000076293945312,
+        0.4999980926513672,
+        0.500030517578125
+      ],
+      "model": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/new-library/fluxara_driftlib_dust_reuse_52a6db19e34f/fluxara_driftlib_dust_reuse_52a6db19e34f_main.spm",
+      "nativeMesh": "Cube.423",
+      "nativePrototype": "DCShared_52a6db19e34f",
+      "sourcePoolObjectId": "dust-cross-visual-11674e2c2ab17bbd",
+      "canonicalNativePrototype": "DustCross_Asset_11674e2c2ab17bbd"
+    },
+    {
+      "library": "fluxara_driftlib_dust_reuse_dd6a7e8ee0b3",
+      "sourceObject": "DC_Rim_-1_1",
+      "instances": 40,
+      "triangles": 12,
+      "localBounds": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "model": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/new-library/fluxara_driftlib_dust_reuse_dd6a7e8ee0b3/fluxara_driftlib_dust_reuse_dd6a7e8ee0b3_main.spm",
+      "nativeMesh": "Cube.549",
+      "nativePrototype": "DCShared_dd6a7e8ee0b3",
+      "sourcePoolObjectId": "dust-cross-visual-2be630f3d92e23b8",
+      "canonicalNativePrototype": "DustCross_Asset_2be630f3d92e23b8"
+    },
+    {
+      "library": "fluxara_driftlib_dust_reuse_2c99f097eaad",
+      "sourceObject": "DC_GardenRock_-1_0",
+      "instances": 8,
+      "triangles": 68,
+      "localBounds": [
+        -0.5000004768371582,
+        0.0,
+        -0.4999997615814209,
+        0.5,
+        1.0,
+        0.5
+      ],
+      "model": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/new-library/fluxara_driftlib_dust_reuse_2c99f097eaad/fluxara_driftlib_dust_reuse_2c99f097eaad_main.spm",
+      "nativeMesh": "DustCross_GardenMesa_Light",
+      "nativePrototype": "DCShared_2c99f097eaad",
+      "sourcePoolObjectId": "dust-cross-garden-mesa-light-v1",
+      "canonicalNativePrototype": "DustCross_GardenMesa_Light"
+    }
+  ],
+  "additionalTrees": 18,
+  "newCoordinateParts": 108,
+  "grounding": [
+    {
+      "support": "DC_GardenRock_-1_0",
+      "positionBlender": [
+        -188.0,
+        -135.0,
+        26.920000076293945
+      ],
+      "supportHeights": [
+        27.0,
+        27.0,
+        27.0,
+        27.0,
+        27.0
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 0.0,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 188.0
+    },
+    {
+      "support": "DC_GardenRock_-1_1",
+      "positionBlender": [
+        -188.0,
+        -65.0,
+        26.920000076293945
+      ],
+      "supportHeights": [
+        27.0,
+        27.0,
+        27.0,
+        27.0,
+        27.0
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 0.0,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 188.0
+    },
+    {
+      "support": "DC_GardenRock_-1_2",
+      "positionBlender": [
+        -188.0,
+        5.0,
+        26.920000076293945
+      ],
+      "supportHeights": [
+        27.0,
+        26.999999999999996,
+        27.0,
+        27.000000000000004,
+        27.0
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 7.105427357601002e-15,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 188.0
+    },
+    {
+      "support": "DC_GardenRock_-1_3",
+      "positionBlender": [
+        -188.0,
+        75.0,
+        26.920000076293945
+      ],
+      "supportHeights": [
+        27.0,
+        27.0,
+        27.0,
+        27.000000000000004,
+        27.0
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 3.552713678800501e-15,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 188.0
+    },
+    {
+      "support": "DC_GardenRock_-1_4",
+      "positionBlender": [
+        -188.0,
+        145.0,
+        26.920000076293945
+      ],
+      "supportHeights": [
+        27.0,
+        27.0,
+        27.0,
+        27.0,
+        27.0
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 0.0,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 188.0
+    },
+    {
+      "support": "DC_GardenRock_1_0",
+      "positionBlender": [
+        188.0,
+        -135.0,
+        26.920000076293945
+      ],
+      "supportHeights": [
+        27.0,
+        27.0,
+        27.0,
+        27.0,
+        27.0
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 0.0,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 188.0
+    },
+    {
+      "support": "DC_GardenRock_1_1",
+      "positionBlender": [
+        188.0,
+        -65.0,
+        26.920000076293945
+      ],
+      "supportHeights": [
+        27.0,
+        27.0,
+        27.0,
+        27.0,
+        27.0
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 0.0,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 188.0
+    },
+    {
+      "support": "DC_GardenRock_1_2",
+      "positionBlender": [
+        188.0,
+        5.0,
+        26.920000076293945
+      ],
+      "supportHeights": [
+        27.0,
+        26.999999999999996,
+        27.0,
+        27.000000000000004,
+        27.0
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 7.105427357601002e-15,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 188.0
+    },
+    {
+      "support": "DC_GardenRock_1_3",
+      "positionBlender": [
+        188.0,
+        75.0,
+        26.91321563720703
+      ],
+      "supportHeights": [
+        26.997242168573173,
+        26.993215897600763,
+        26.99782297383419,
+        26.997373096510668,
+        26.994443296020812
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 0.00460707623342671,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 188.0
+    },
+    {
+      "support": "DC_GardenRock_1_4",
+      "positionBlender": [
+        188.0,
+        145.0,
+        26.915206909179688
+      ],
+      "supportHeights": [
+        26.99880729162296,
+        26.996909764504956,
+        26.995207627404163,
+        26.998289371897016,
+        26.996269929439496
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 0.003599664218796761,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 188.0
+    },
+    {
+      "support": "DC_Mesa_00",
+      "positionBlender": [
+        -224.0,
+        155.0,
+        83.91079711914062
+      ],
+      "supportHeights": [
+        83.99387160316397,
+        83.99079814594015,
+        83.99526986741594,
+        83.99370140996767,
+        83.99334910792578
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 0.004471721475795221,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 224.0
+    },
+    {
+      "support": "DC_Mesa_01",
+      "positionBlender": [
+        224.0,
+        200.0,
+        103.91423797607422
+      ],
+      "supportHeights": [
+        103.99681934204426,
+        103.99698481701759,
+        103.99462913856982,
+        103.99704487816473,
+        103.99423603176716
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 0.002808846397570619,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 224.0
+    },
+    {
+      "support": "DC_Mesa_02",
+      "positionBlender": [
+        250.0,
+        -180.0,
+        79.90969848632812
+      ],
+      "supportHeights": [
+        79.99083619189832,
+        79.99205621275036,
+        79.99031975093958,
+        79.9919714654719,
+        79.98970091832476
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 0.002355294425598231,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 250.0
+    },
+    {
+      "support": "DC_Mesa_03",
+      "positionBlender": [
+        -240.0,
+        -180.0,
+        95.91012573242188
+      ],
+      "supportHeights": [
+        95.99313610302863,
+        95.99012399548845,
+        95.99482691542289,
+        95.99273834951087,
+        95.99291429627951
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 0.004702919934445049,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 240.0
+    },
+    {
+      "support": "DC_Mesa_04",
+      "positionBlender": [
+        -230.0,
+        -60.0,
+        57.91614532470703
+      ],
+      "supportHeights": [
+        57.998038784426825,
+        57.99849400217348,
+        57.99621973041747,
+        57.99825826731758,
+        57.9961459323507
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 0.002348069822780019,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 230.0
+    },
+    {
+      "support": "DC_Mesa_05",
+      "positionBlender": [
+        -230.0,
+        55.0,
+        71.91046142578125
+      ],
+      "supportHeights": [
+        71.99159991732496,
+        71.99277152866381,
+        71.99115525788466,
+        71.99273517266772,
+        71.9904646619822
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 0.002306866681607289,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 230.0
+    },
+    {
+      "support": "DC_Mesa_06",
+      "positionBlender": [
+        210.0,
+        -65.0,
+        55.91276168823242
+      ],
+      "supportHeights": [
+        55.99558756438735,
+        55.99276195492017,
+        55.99639376495777,
+        55.995637925122395,
+        55.994907621542076
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 0.0036318100376036,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 210.0
+    },
+    {
+      "support": "DC_Mesa_07",
+      "positionBlender": [
+        220.0,
+        65.0,
+        86.91482543945312
+      ],
+      "supportHeights": [
+        86.99726993066095,
+        86.99759895900787,
+        86.99513392207902,
+        86.99752539634898,
+        86.99482213384634
+      ],
+      "rootEmbedMeters": 0.08,
+      "maximumGroundHeightVariation": 0.00277682516153277,
+      "treeScaleRelativeToSource": 0.65,
+      "minHorizontalDistanceFromArenaCenter": 220.0
+    }
+  ],
+  "newPlacements": [
+    {
+      "id": "DC_PoolTree_000_Trunk",
+      "nativeObject": "DC_PoolTree_000_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        -188.0,
+        30.5886173248291,
+        -135.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          -135.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          30.5886173248291
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_0",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_000_Crown0",
+      "nativeObject": "DC_PoolTree_000_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -188.0,
+        36.603187561035156,
+        -135.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          -135.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          36.603187561035156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_0",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_000_Crown1",
+      "nativeObject": "DC_PoolTree_000_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -190.85691833496094,
+        34.79881286621094,
+        -135.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          -190.85691833496094
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          -135.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          34.79881286621094
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_0",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_000_Crown2",
+      "nativeObject": "DC_PoolTree_000_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -185.29344177246094,
+        35.249908447265625,
+        -134.39854431152344
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          -185.29344177246094
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          -134.39854431152344
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          35.249908447265625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_0",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_000_Crown3",
+      "nativeObject": "DC_PoolTree_000_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -188.0,
+        35.70099639892578,
+        -132.44381713867188
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          -132.44381713867188
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          35.70099639892578
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_0",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_000_Crown4",
+      "nativeObject": "DC_PoolTree_000_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -188.0,
+        36.302452087402344,
+        -137.40582275390625
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          -137.40582275390625
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          36.302452087402344
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_0",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_001_Trunk",
+      "nativeObject": "DC_PoolTree_001_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        -188.0,
+        30.5886173248291,
+        -65.00000762939453
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          -65.00000762939453
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          30.5886173248291
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_1",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_001_Crown0",
+      "nativeObject": "DC_PoolTree_001_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -188.0,
+        36.603187561035156,
+        -65.00000762939453
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          -65.00000762939453
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          36.603187561035156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_1",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_001_Crown1",
+      "nativeObject": "DC_PoolTree_001_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -190.85691833496094,
+        34.79881286621094,
+        -65.00000762939453
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          -190.85691833496094
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          -65.00000762939453
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          34.79881286621094
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_1",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_001_Crown2",
+      "nativeObject": "DC_PoolTree_001_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -185.29344177246094,
+        35.249908447265625,
+        -64.39854431152344
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          -185.29344177246094
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          -64.39854431152344
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          35.249908447265625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_1",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_001_Crown3",
+      "nativeObject": "DC_PoolTree_001_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -188.0,
+        35.70099639892578,
+        -62.443809509277344
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          -62.443809509277344
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          35.70099639892578
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_1",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_001_Crown4",
+      "nativeObject": "DC_PoolTree_001_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -188.0,
+        36.302452087402344,
+        -67.40582275390625
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          -67.40582275390625
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          36.302452087402344
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_1",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_002_Trunk",
+      "nativeObject": "DC_PoolTree_002_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        -188.0,
+        30.5886173248291,
+        5.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          30.5886173248291
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_2",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_002_Crown0",
+      "nativeObject": "DC_PoolTree_002_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -188.0,
+        36.603187561035156,
+        5.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          36.603187561035156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_2",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_002_Crown1",
+      "nativeObject": "DC_PoolTree_002_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -190.85691833496094,
+        34.79881286621094,
+        5.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          -190.85691833496094
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          34.79881286621094
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_2",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_002_Crown2",
+      "nativeObject": "DC_PoolTree_002_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -185.29344177246094,
+        35.249908447265625,
+        5.601463317871094
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          -185.29344177246094
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          5.601463317871094
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          35.249908447265625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_2",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_002_Crown3",
+      "nativeObject": "DC_PoolTree_002_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -188.0,
+        35.70099639892578,
+        7.5561981201171875
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          7.5561981201171875
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          35.70099639892578
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_2",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_002_Crown4",
+      "nativeObject": "DC_PoolTree_002_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -188.0,
+        36.302452087402344,
+        2.5941848754882812
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          2.5941848754882812
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          36.302452087402344
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_2",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_003_Trunk",
+      "nativeObject": "DC_PoolTree_003_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        -188.0,
+        30.5886173248291,
+        75.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          75.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          30.5886173248291
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_3",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_003_Crown0",
+      "nativeObject": "DC_PoolTree_003_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -188.0,
+        36.603187561035156,
+        75.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          75.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          36.603187561035156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_3",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_003_Crown1",
+      "nativeObject": "DC_PoolTree_003_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -190.85691833496094,
+        34.79881286621094,
+        75.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          -190.85691833496094
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          75.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          34.79881286621094
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_3",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_003_Crown2",
+      "nativeObject": "DC_PoolTree_003_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -185.29344177246094,
+        35.249908447265625,
+        75.6014633178711
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          -185.29344177246094
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          75.6014633178711
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          35.249908447265625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_3",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_003_Crown3",
+      "nativeObject": "DC_PoolTree_003_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -188.0,
+        35.70099639892578,
+        77.55619812011719
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          77.55619812011719
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          35.70099639892578
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_3",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_003_Crown4",
+      "nativeObject": "DC_PoolTree_003_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -188.0,
+        36.302452087402344,
+        72.59418487548828
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          72.59418487548828
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          36.302452087402344
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_3",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_004_Trunk",
+      "nativeObject": "DC_PoolTree_004_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        -188.0,
+        30.5886173248291,
+        145.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          145.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          30.5886173248291
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_4",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_004_Crown0",
+      "nativeObject": "DC_PoolTree_004_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -188.0,
+        36.603187561035156,
+        145.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          145.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          36.603187561035156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_4",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_004_Crown1",
+      "nativeObject": "DC_PoolTree_004_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -190.85691833496094,
+        34.79881286621094,
+        145.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          -190.85691833496094
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          145.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          34.79881286621094
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_4",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_004_Crown2",
+      "nativeObject": "DC_PoolTree_004_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -185.29344177246094,
+        35.249908447265625,
+        145.60147094726562
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          -185.29344177246094
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          145.60147094726562
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          35.249908447265625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_4",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_004_Crown3",
+      "nativeObject": "DC_PoolTree_004_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -188.0,
+        35.70099639892578,
+        147.5561981201172
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          147.5561981201172
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          35.70099639892578
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_4",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_004_Crown4",
+      "nativeObject": "DC_PoolTree_004_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -188.0,
+        36.302452087402344,
+        142.59417724609375
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          -188.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          142.59417724609375
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          36.302452087402344
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_-1_4",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_005_Trunk",
+      "nativeObject": "DC_PoolTree_005_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        188.0,
+        30.5886173248291,
+        -135.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          -135.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          30.5886173248291
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_0",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_005_Crown0",
+      "nativeObject": "DC_PoolTree_005_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        188.0,
+        36.603187561035156,
+        -135.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          -135.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          36.603187561035156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_0",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_005_Crown1",
+      "nativeObject": "DC_PoolTree_005_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        185.14308166503906,
+        34.79881286621094,
+        -135.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          185.14308166503906
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          -135.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          34.79881286621094
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_0",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_005_Crown2",
+      "nativeObject": "DC_PoolTree_005_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        190.70655822753906,
+        35.249908447265625,
+        -134.39854431152344
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          190.70655822753906
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          -134.39854431152344
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          35.249908447265625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_0",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_005_Crown3",
+      "nativeObject": "DC_PoolTree_005_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        188.0,
+        35.70099639892578,
+        -132.44381713867188
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          -132.44381713867188
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          35.70099639892578
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_0",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_005_Crown4",
+      "nativeObject": "DC_PoolTree_005_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        188.0,
+        36.302452087402344,
+        -137.40582275390625
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          -137.40582275390625
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          36.302452087402344
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_0",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_006_Trunk",
+      "nativeObject": "DC_PoolTree_006_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        188.0,
+        30.5886173248291,
+        -65.00000762939453
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          -65.00000762939453
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          30.5886173248291
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_1",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_006_Crown0",
+      "nativeObject": "DC_PoolTree_006_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        188.0,
+        36.603187561035156,
+        -65.00000762939453
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          -65.00000762939453
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          36.603187561035156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_1",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_006_Crown1",
+      "nativeObject": "DC_PoolTree_006_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        185.14308166503906,
+        34.79881286621094,
+        -65.00000762939453
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          185.14308166503906
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          -65.00000762939453
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          34.79881286621094
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_1",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_006_Crown2",
+      "nativeObject": "DC_PoolTree_006_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        190.70655822753906,
+        35.249908447265625,
+        -64.39854431152344
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          190.70655822753906
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          -64.39854431152344
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          35.249908447265625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_1",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_006_Crown3",
+      "nativeObject": "DC_PoolTree_006_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        188.0,
+        35.70099639892578,
+        -62.443809509277344
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          -62.443809509277344
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          35.70099639892578
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_1",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_006_Crown4",
+      "nativeObject": "DC_PoolTree_006_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        188.0,
+        36.302452087402344,
+        -67.40582275390625
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          -67.40582275390625
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          36.302452087402344
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_1",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_007_Trunk",
+      "nativeObject": "DC_PoolTree_007_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        188.0,
+        30.5886173248291,
+        5.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          30.5886173248291
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_2",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_007_Crown0",
+      "nativeObject": "DC_PoolTree_007_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        188.0,
+        36.603187561035156,
+        5.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          36.603187561035156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_2",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_007_Crown1",
+      "nativeObject": "DC_PoolTree_007_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        185.14308166503906,
+        34.79881286621094,
+        5.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          185.14308166503906
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          34.79881286621094
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_2",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_007_Crown2",
+      "nativeObject": "DC_PoolTree_007_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        190.70655822753906,
+        35.249908447265625,
+        5.601463317871094
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          190.70655822753906
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          5.601463317871094
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          35.249908447265625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_2",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_007_Crown3",
+      "nativeObject": "DC_PoolTree_007_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        188.0,
+        35.70099639892578,
+        7.5561981201171875
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          7.5561981201171875
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          35.70099639892578
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_2",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_007_Crown4",
+      "nativeObject": "DC_PoolTree_007_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        188.0,
+        36.302452087402344,
+        2.5941848754882812
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          2.5941848754882812
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          36.302452087402344
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_2",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_008_Trunk",
+      "nativeObject": "DC_PoolTree_008_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        188.0,
+        30.581832885742188,
+        75.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          75.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          30.581832885742188
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_3",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_008_Crown0",
+      "nativeObject": "DC_PoolTree_008_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        188.0,
+        36.59640121459961,
+        75.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          75.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          36.59640121459961
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_3",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_008_Crown1",
+      "nativeObject": "DC_PoolTree_008_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        185.14308166503906,
+        34.792030334472656,
+        75.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          185.14308166503906
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          75.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          34.792030334472656
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_3",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_008_Crown2",
+      "nativeObject": "DC_PoolTree_008_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        190.70655822753906,
+        35.24312210083008,
+        75.6014633178711
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          190.70655822753906
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          75.6014633178711
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          35.24312210083008
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_3",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_008_Crown3",
+      "nativeObject": "DC_PoolTree_008_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        188.0,
+        35.6942138671875,
+        77.55619812011719
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          77.55619812011719
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          35.6942138671875
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_3",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_008_Crown4",
+      "nativeObject": "DC_PoolTree_008_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        188.0,
+        36.29566955566406,
+        72.59418487548828
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          72.59418487548828
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          36.29566955566406
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_3",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_009_Trunk",
+      "nativeObject": "DC_PoolTree_009_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        188.0,
+        30.583824157714844,
+        145.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          145.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          30.583824157714844
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_4",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_009_Crown0",
+      "nativeObject": "DC_PoolTree_009_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        188.0,
+        36.598392486572266,
+        145.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          145.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          36.598392486572266
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_4",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_009_Crown1",
+      "nativeObject": "DC_PoolTree_009_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        185.14308166503906,
+        34.79402160644531,
+        145.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          185.14308166503906
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          145.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          34.79402160644531
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_4",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_009_Crown2",
+      "nativeObject": "DC_PoolTree_009_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        190.70655822753906,
+        35.245113372802734,
+        145.60147094726562
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          190.70655822753906
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          145.60147094726562
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          35.245113372802734
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_4",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_009_Crown3",
+      "nativeObject": "DC_PoolTree_009_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        188.0,
+        35.696205139160156,
+        147.5561981201172
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          147.5561981201172
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          35.696205139160156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_4",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_009_Crown4",
+      "nativeObject": "DC_PoolTree_009_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        188.0,
+        36.29766082763672,
+        142.59417724609375
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          188.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          142.59417724609375
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          36.29766082763672
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_GardenRock_1_4",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_010_Trunk",
+      "nativeObject": "DC_PoolTree_010_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        -224.0,
+        87.57941436767578,
+        155.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          -224.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          155.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          87.57941436767578
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_00",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_010_Crown0",
+      "nativeObject": "DC_PoolTree_010_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -224.0,
+        93.59397888183594,
+        155.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          -224.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          155.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          93.59397888183594
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_00",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_010_Crown1",
+      "nativeObject": "DC_PoolTree_010_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -226.85691833496094,
+        91.78961181640625,
+        155.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          -226.85691833496094
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          155.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          91.78961181640625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_00",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_010_Crown2",
+      "nativeObject": "DC_PoolTree_010_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -221.29344177246094,
+        92.24070739746094,
+        155.60147094726562
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          -221.29344177246094
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          155.60147094726562
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          92.24070739746094
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_00",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_010_Crown3",
+      "nativeObject": "DC_PoolTree_010_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -224.0,
+        92.6917953491211,
+        157.5561981201172
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          -224.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          157.5561981201172
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          92.6917953491211
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_00",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_010_Crown4",
+      "nativeObject": "DC_PoolTree_010_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -224.0,
+        93.29325103759766,
+        152.59417724609375
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          -224.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          152.59417724609375
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          93.29325103759766
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_00",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_011_Trunk",
+      "nativeObject": "DC_PoolTree_011_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        224.0,
+        107.58285522460938,
+        200.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          224.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          200.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          107.58285522460938
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_01",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_011_Crown0",
+      "nativeObject": "DC_PoolTree_011_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        224.0,
+        113.59742736816406,
+        200.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          224.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          200.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          113.59742736816406
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_01",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_011_Crown1",
+      "nativeObject": "DC_PoolTree_011_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        221.14308166503906,
+        111.79305267333984,
+        200.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          221.14308166503906
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          200.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          111.79305267333984
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_01",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_011_Crown2",
+      "nativeObject": "DC_PoolTree_011_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        226.70655822753906,
+        112.244140625,
+        200.60147094726562
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          226.70655822753906
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          200.60147094726562
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          112.244140625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_01",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_011_Crown3",
+      "nativeObject": "DC_PoolTree_011_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        224.0,
+        112.69523620605469,
+        202.5561981201172
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          224.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          202.5561981201172
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          112.69523620605469
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_01",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_011_Crown4",
+      "nativeObject": "DC_PoolTree_011_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        224.0,
+        113.29669189453125,
+        197.59417724609375
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          224.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          197.59417724609375
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          113.29669189453125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_01",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_012_Trunk",
+      "nativeObject": "DC_PoolTree_012_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        250.0,
+        83.57831573486328,
+        -180.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          250.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          -180.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          83.57831573486328
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_02",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_012_Crown0",
+      "nativeObject": "DC_PoolTree_012_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        250.0,
+        89.59288024902344,
+        -180.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          250.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          -180.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          89.59288024902344
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_02",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_012_Crown1",
+      "nativeObject": "DC_PoolTree_012_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        247.14308166503906,
+        87.78851318359375,
+        -180.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          247.14308166503906
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          -180.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          87.78851318359375
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_02",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_012_Crown2",
+      "nativeObject": "DC_PoolTree_012_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        252.70655822753906,
+        88.23960876464844,
+        -179.39854431152344
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          252.70655822753906
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          -179.39854431152344
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          88.23960876464844
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_02",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_012_Crown3",
+      "nativeObject": "DC_PoolTree_012_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        250.0,
+        88.6906967163086,
+        -177.44381713867188
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          250.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          -177.44381713867188
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          88.6906967163086
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_02",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_012_Crown4",
+      "nativeObject": "DC_PoolTree_012_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        250.0,
+        89.29215240478516,
+        -182.40582275390625
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          250.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          -182.40582275390625
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          89.29215240478516
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_02",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_013_Trunk",
+      "nativeObject": "DC_PoolTree_013_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        -240.0,
+        99.57874298095703,
+        -180.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          -240.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          -180.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          99.57874298095703
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_03",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_013_Crown0",
+      "nativeObject": "DC_PoolTree_013_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -240.0,
+        105.59330749511719,
+        -180.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          -240.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          -180.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          105.59330749511719
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_03",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_013_Crown1",
+      "nativeObject": "DC_PoolTree_013_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -242.85691833496094,
+        103.7889404296875,
+        -180.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          -242.85691833496094
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          -180.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          103.7889404296875
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_03",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_013_Crown2",
+      "nativeObject": "DC_PoolTree_013_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -237.29344177246094,
+        104.24003601074219,
+        -179.39854431152344
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          -237.29344177246094
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          -179.39854431152344
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          104.24003601074219
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_03",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_013_Crown3",
+      "nativeObject": "DC_PoolTree_013_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -240.0,
+        104.69112396240234,
+        -177.44381713867188
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          -240.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          -177.44381713867188
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          104.69112396240234
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_03",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_013_Crown4",
+      "nativeObject": "DC_PoolTree_013_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -240.0,
+        105.2925796508789,
+        -182.40582275390625
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          -240.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          -182.40582275390625
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          105.2925796508789
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_03",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_014_Trunk",
+      "nativeObject": "DC_PoolTree_014_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        -230.0,
+        61.58476257324219,
+        -60.00000762939453
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          -230.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          -60.00000762939453
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          61.58476257324219
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_04",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_014_Crown0",
+      "nativeObject": "DC_PoolTree_014_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -230.0,
+        67.59933471679688,
+        -60.00000762939453
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          -230.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          -60.00000762939453
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          67.59933471679688
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_04",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_014_Crown1",
+      "nativeObject": "DC_PoolTree_014_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -232.85691833496094,
+        65.79496002197266,
+        -60.00000762939453
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          -232.85691833496094
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          -60.00000762939453
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          65.79496002197266
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_04",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_014_Crown2",
+      "nativeObject": "DC_PoolTree_014_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -227.29344177246094,
+        66.24604797363281,
+        -59.39854431152344
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          -227.29344177246094
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          -59.39854431152344
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          66.24604797363281
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_04",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_014_Crown3",
+      "nativeObject": "DC_PoolTree_014_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -230.0,
+        66.6971435546875,
+        -57.443809509277344
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          -230.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          -57.443809509277344
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          66.6971435546875
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_04",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_014_Crown4",
+      "nativeObject": "DC_PoolTree_014_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -230.0,
+        67.29859924316406,
+        -62.40582275390625
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          -230.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          -62.40582275390625
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          67.29859924316406
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_04",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_015_Trunk",
+      "nativeObject": "DC_PoolTree_015_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        -230.0,
+        75.5790786743164,
+        55.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          -230.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          55.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          75.5790786743164
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_05",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_015_Crown0",
+      "nativeObject": "DC_PoolTree_015_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -230.0,
+        81.59364318847656,
+        55.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          -230.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          55.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          81.59364318847656
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_05",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_015_Crown1",
+      "nativeObject": "DC_PoolTree_015_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -232.85691833496094,
+        79.78927612304688,
+        55.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          -232.85691833496094
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          55.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          79.78927612304688
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_05",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_015_Crown2",
+      "nativeObject": "DC_PoolTree_015_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -227.29344177246094,
+        80.24037170410156,
+        55.601463317871094
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          -227.29344177246094
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          55.601463317871094
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          80.24037170410156
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_05",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_015_Crown3",
+      "nativeObject": "DC_PoolTree_015_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -230.0,
+        80.69145965576172,
+        57.55619812011719
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          -230.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          57.55619812011719
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          80.69145965576172
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_05",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_015_Crown4",
+      "nativeObject": "DC_PoolTree_015_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        -230.0,
+        81.29291534423828,
+        52.59418487548828
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          -230.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          52.59418487548828
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          81.29291534423828
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_05",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_016_Trunk",
+      "nativeObject": "DC_PoolTree_016_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        210.0,
+        59.58137893676758,
+        -65.00000762939453
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          210.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          -65.00000762939453
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          59.58137893676758
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_06",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_016_Crown0",
+      "nativeObject": "DC_PoolTree_016_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        210.0,
+        65.595947265625,
+        -65.00000762939453
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          210.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          -65.00000762939453
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          65.595947265625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_06",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_016_Crown1",
+      "nativeObject": "DC_PoolTree_016_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        207.14308166503906,
+        63.79157638549805,
+        -65.00000762939453
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          207.14308166503906
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          -65.00000762939453
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          63.79157638549805
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_06",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_016_Crown2",
+      "nativeObject": "DC_PoolTree_016_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        212.70655822753906,
+        64.24266815185547,
+        -64.39854431152344
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          212.70655822753906
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          -64.39854431152344
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          64.24266815185547
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_06",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_016_Crown3",
+      "nativeObject": "DC_PoolTree_016_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        210.0,
+        64.69375610351562,
+        -62.443809509277344
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          210.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          -62.443809509277344
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          64.69375610351562
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_06",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_016_Crown4",
+      "nativeObject": "DC_PoolTree_016_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        210.0,
+        65.29521179199219,
+        -67.40582275390625
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          210.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          -67.40582275390625
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          65.29521179199219
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_06",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_017_Trunk",
+      "nativeObject": "DC_PoolTree_017_Trunk",
+      "sourceObject": "DC_Tree_0_0_Trunk",
+      "library": "fluxara_driftlib_dust_reuse_61ecb64ed305",
+      "xyz": [
+        220.0,
+        90.58344268798828,
+        65.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.5036420822143555,
+        1.9547346830368042,
+        1.5036420822143555
+      ],
+      "sourceMatrix": [
+        [
+          1.5036420822143555,
+          0.0,
+          0.0,
+          220.0
+        ],
+        [
+          0.0,
+          1.5036420822143555,
+          0.0,
+          65.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.9547346830368042,
+          90.58344268798828
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_07",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_017_Crown0",
+      "nativeObject": "DC_PoolTree_017_Crown0",
+      "sourceObject": "DC_Tree_0_0_Crown0",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        220.0,
+        96.59800720214844,
+        65.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        4.210197925567627,
+        3.49446439743042,
+        4.210197925567627
+      ],
+      "sourceMatrix": [
+        [
+          4.210197925567627,
+          0.0,
+          0.0,
+          220.0
+        ],
+        [
+          0.0,
+          4.210197925567627,
+          0.0,
+          65.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.49446439743042,
+          96.59800720214844
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_07",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_017_Crown1",
+      "nativeObject": "DC_PoolTree_017_Crown1",
+      "sourceObject": "DC_Tree_0_0_Crown1",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        217.14308166503906,
+        94.79364013671875,
+        65.0
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.3080124855041504,
+        2.745650291442871,
+        3.3080124855041504
+      ],
+      "sourceMatrix": [
+        [
+          3.3080124855041504,
+          0.0,
+          0.0,
+          217.14308166503906
+        ],
+        [
+          0.0,
+          3.3080124855041504,
+          0.0,
+          65.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.745650291442871,
+          94.79364013671875
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_07",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_017_Crown2",
+      "nativeObject": "DC_PoolTree_017_Crown2",
+      "sourceObject": "DC_Tree_0_0_Crown2",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        222.70655822753906,
+        95.24473571777344,
+        65.6014633178711
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.608741044998169,
+        2.9952549934387207,
+        3.608741044998169
+      ],
+      "sourceMatrix": [
+        [
+          3.608741044998169,
+          0.0,
+          0.0,
+          222.70655822753906
+        ],
+        [
+          0.0,
+          3.608741044998169,
+          0.0,
+          65.6014633178711
+        ],
+        [
+          0.0,
+          0.0,
+          2.9952549934387207,
+          95.24473571777344
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_07",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_017_Crown3",
+      "nativeObject": "DC_PoolTree_017_Crown3",
+      "sourceObject": "DC_Tree_0_0_Crown3",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        220.0,
+        95.6958236694336,
+        67.55619812011719
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.458376884460449,
+        2.870452880859375,
+        3.458376884460449
+      ],
+      "sourceMatrix": [
+        [
+          3.458376884460449,
+          0.0,
+          0.0,
+          220.0
+        ],
+        [
+          0.0,
+          3.458376884460449,
+          0.0,
+          67.55619812011719
+        ],
+        [
+          0.0,
+          0.0,
+          2.870452880859375,
+          95.6958236694336
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_07",
+      "newDecorativePlacement": true
+    },
+    {
+      "id": "DC_PoolTree_017_Crown4",
+      "nativeObject": "DC_PoolTree_017_Crown4",
+      "sourceObject": "DC_Tree_0_0_Crown4",
+      "library": "fluxara_driftlib_dust_reuse_d3c85d22f3af",
+      "xyz": [
+        220.0,
+        96.29727935791016,
+        62.59418487548828
+      ],
+      "hpr": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        3.7591052055358887,
+        3.1200573444366455,
+        3.7591052055358887
+      ],
+      "sourceMatrix": [
+        [
+          3.7591052055358887,
+          0.0,
+          0.0,
+          220.0
+        ],
+        [
+          0.0,
+          3.7591052055358887,
+          0.0,
+          62.59418487548828
+        ],
+        [
+          0.0,
+          0.0,
+          3.1200573444366455,
+          96.29727935791016
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "support": "DC_Mesa_07",
+      "newDecorativePlacement": true
+    }
+  ],
+  "nativeLocalGeometryUnchanged": true,
+  "canonicalLibraryNotModified": true,
+  "newRasterPixels": false,
+  "sourceTexturesPreserved": true,
+  "reopenedAndSharedPointersVerified": true,
+  "sourceSceneAndPreviewMetadataEmbedded": true,
+  "allMeshAttributesAndMatricesRetainedAfterMetadataUpdate": true,
+  "finalBlendSha256": "5b6365b44a0427b597681d83788ccbe01f65b34c34dacc5eaeb952c875cf7584"
+}

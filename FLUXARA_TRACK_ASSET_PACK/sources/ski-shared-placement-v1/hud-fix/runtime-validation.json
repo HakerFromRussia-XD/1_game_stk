@@ -1,0 +1,34 @@
+{
+  "sourceFile": "/Users/motoricallc/Downloads/fluxara-drift/src/states_screens/race_gui.cpp",
+  "sourceSha256": "3312a6b4957eb33492305ffa78c64e487fa607a235bf397df58ea44805996377",
+  "buildLog": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/hud-fix/build-numeric.log",
+  "buildSucceeded": true,
+  "simulatorUDID": "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+  "sharedWindowCorrectionRetained": true,
+  "FFA": {
+    "totalKarts": 7,
+    "opponentCards": 6,
+    "oneTopRowVisuallyInspected": true,
+    "portraitImagesFromExistingKartIconMaterial": true,
+    "scoresChanged12sTo40s": true,
+    "mainCounterLabelsRemoved": true,
+    "naturalTimerEndAt130sResultsVisuallyInspected": true,
+    "commandEvidence": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/hud-fix/compact-numeric-row-capture.json"
+  },
+  "normalRace": {
+    "event": "main-normal-fluxara-canyon",
+    "positionLapTimerNumericOnlyVisuallyInspected": true,
+    "allThreePanelsTranslucent": true,
+    "captureSeconds": [
+      12,
+      30
+    ],
+    "scope": "HUD appearance probe, not a new finish check"
+  },
+  "sourceBuiltInstalledAssetEvidence": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/hud-fix/asset-verification.json",
+  "figmaEvidence": "/Users/motoricallc/Downloads/stk-code-master/output/ski-dash-shared-placement/hud-fix/figma-panel-update.json",
+  "limitations": [
+    "Only the actual seven-kart FFA event row has been visually verified; larger rosters are not runtime validated.",
+    "HUD portrait artwork reuses current kart icon materials; no new character art was created."
+  ]
+}

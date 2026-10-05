@@ -1,0 +1,6 @@
+from pathlib import Path
+import bpy,json
+r=Path(__file__).resolve().parent;w=r/'delivery-v1';file=w/'native/Dust Cross Split Combat.blend';bpy.ops.wm.open_mainfile(filepath=str(file));bpy.context.preferences.filepaths.save_version=0
+p=w/'boundary-verification.json';q=json.loads(p.read_text());q['runtimeTestPending']=False;q['runtimeValidationOwner']='user';q['assistantRuntimeCollisionTestCancelledByUser']=True;q['runtimeCollisionClaimed']=False
+text=bpy.data.texts.get('DustCross_BoundaryClosures.json');text.clear();text.write(json.dumps(q,indent=2));bpy.context.scene['arena_style_approval']='Approved by user; only three existing perimeter gaps are closed.';bpy.context.scene['boundary_runtime_validation']='User requested no checks; no collision test claimed.'
+pack=Path('/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1');path=pack/'Dust Cross Boundary Closures.blend';bpy.data.libraries.write(str(path),{bpy.data.objects['DustCross_BoundaryClosures']},path_remap='ABSOLUTE',fake_user=True,compress=True);q['mapSpecificNativePackPath']=str(path);p.write_text(json.dumps(q,indent=2));bpy.ops.wm.save_as_mainfile(filepath=str(file));print('DUST_BOUNDARY_AND_FINAL_NATIVE_SAVED',flush=True)

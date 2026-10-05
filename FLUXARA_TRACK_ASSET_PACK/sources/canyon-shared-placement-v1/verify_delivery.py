@@ -1,0 +1,8 @@
+from pathlib import Path
+import json,hashlib
+r=Path(__file__).resolve().parent;p=Path('/Users/motoricallc/Downloads/fluxara-drift');pool=json.load(open(p/'FLUXARA_TRACK_ASSET_POOL.json'));lp=r.parent.parent/'fluxara-canyon.asset-ledger.json';ledger=json.load(open(lp));idx={q['id']:q for k in ['objects','materials','textures'] for q in pool[k]};sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+for q in ledger['assets']:
+ assert q['id'] in idx;assert Path(q['canonicalPackPath'].split('#')[0]).is_file();f=Path(q['file']['path']) if q.get('file') else None
+ if f:assert f.stat().st_size==q['file']['bytes'] and sha(f)==q['file']['sha256'],q['id']
+ assert all(n in idx for n in q.get('dependencies',[]))
+f=r.parent/'fluxara-canyon-final';manifest=lambda folder:{q.name:sha(q) for q in folder.iterdir() if q.is_file() and q.suffix!='.blend'};assert manifest(f)==manifest(r/'candidate/fluxara-canyon');result={'usedPhysicalAssetsVerified':len(ledger['assets']),'finalRuntimeManifestExact':True,'oneFinalBlend':len(list(f.glob('*.blend')))==1,'blender':json.load(open(r/'final-blend-verification.json')),'live':json.load(open(r/'live-verification.json')),'preservation':json.load(open(r/'canyon-extraction.json')),'newPlacementCheck':json.load(open(r/'enrichment-layout-verification.json')),'runtimeValidation':json.load(open(r/'runtime-validation.json'))};(r/'delivery-verification.json').write_text(json.dumps(result,indent=2));ledger['preservation']=result['preservation'];ledger['runtimeValidation']=result['runtimeValidation'];ledger['previewUpdate']=json.load(open(r/'preview-update.json'));ledger['report']=str(f/'report/index.html');lp.write_text(json.dumps(ledger,ensure_ascii=False,indent=2)+'\n');print('DELIVERY_VERIFIED',len(ledger['assets']))

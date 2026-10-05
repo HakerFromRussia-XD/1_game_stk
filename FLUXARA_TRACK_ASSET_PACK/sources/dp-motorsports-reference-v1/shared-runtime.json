@@ -1,0 +1,4683 @@
+{
+  "libraries": [
+    {
+      "prototype": "DP_RoundedTree_Prototype",
+      "library": "fluxara_driftlib_round_tree_green_v1",
+      "folder": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dp-motorsports-reference-v1/runtime-library/fluxara_driftlib_round_tree_green_v1",
+      "bytes": 8508,
+      "model": "fluxara_driftlib_round_tree_green_v1_main.spm"
+    },
+    {
+      "prototype": "DP_RoundedHill_Prototype",
+      "library": "fluxara_driftlib_grassy_hill_v1",
+      "folder": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dp-motorsports-reference-v1/runtime-library/fluxara_driftlib_grassy_hill_v1",
+      "bytes": 7414,
+      "model": "fluxara_driftlib_grassy_hill_v1_main.spm"
+    },
+    {
+      "prototype": "DP_RoundedBush_Prototype",
+      "library": "fluxara_driftlib_round_bush_green_v1",
+      "folder": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dp-motorsports-reference-v1/runtime-library/fluxara_driftlib_round_bush_green_v1",
+      "bytes": 5360,
+      "model": "fluxara_driftlib_round_bush_green_v1_main.spm"
+    },
+    {
+      "prototype": "DP_Fir_Prototype",
+      "library": "fluxara_driftlib_circuit_fir_v1",
+      "folder": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dp-motorsports-reference-v1/runtime-library/fluxara_driftlib_circuit_fir_v1",
+      "bytes": 18254,
+      "model": "fluxara_driftlib_circuit_fir_v1_main.spm"
+    },
+    {
+      "prototype": "DP_Daisy_Prototype",
+      "library": "fluxara_driftlib_white_daisy_v1",
+      "folder": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dp-motorsports-reference-v1/runtime-library/fluxara_driftlib_white_daisy_v1",
+      "bytes": 1872,
+      "model": "fluxara_driftlib_white_daisy_v1_main.spm"
+    }
+  ],
+  "instances": 290,
+  "libraryBytes": 41408,
+  "placements": [
+    {
+      "name": "DP_Tree_000",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        166.20990753173828,
+        30.728570556640626,
+        -156.76158905029297
+      ],
+      "dimensions": [
+        6.832249843589406,
+        12.915979021191431,
+        6.149024859230466
+      ],
+      "rotationZRadians": 2.8095970153808594,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_001",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        54.584922790527344,
+        28.26807556152344,
+        -84.88829803466797
+      ],
+      "dimensions": [
+        9.324399275407567,
+        13.310871943332884,
+        8.39195934786681
+      ],
+      "rotationZRadians": 3.295205593109131,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_002",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        173.45734405517578,
+        30.13135681152344,
+        -103.68696212768555
+      ],
+      "dimensions": [
+        8.101894979665747,
+        12.286904200811408,
+        7.291705481699172
+      ],
+      "rotationZRadians": 1.341868281364441,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_003",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        113.70696640014648,
+        30.42310485839844,
+        -130.87937545776367
+      ],
+      "dimensions": [
+        8.953098253026736,
+        12.861441611464587,
+        8.057788427724063
+      ],
+      "rotationZRadians": 2.756687879562378,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_004",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        21.79008674621582,
+        36.641717529296876,
+        -158.2297821044922
+      ],
+      "dimensions": [
+        10.36718437243225,
+        13.50788627950774,
+        9.330465935189025
+      ],
+      "rotationZRadians": 1.6725150346755981,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_005",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -137.80984497070312,
+        19.0443359375,
+        -19.04856300354004
+      ],
+      "dimensions": [
+        6.937657238308072,
+        13.412115943803265,
+        6.243891514477265
+      ],
+      "rotationZRadians": 4.416714191436768,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_006",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -123.5033073425293,
+        28.99939880371094,
+        -111.90337371826172
+      ],
+      "dimensions": [
+        9.86005249697668,
+        11.379063005120361,
+        8.874047247279012
+      ],
+      "rotationZRadians": 3.214836597442627,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_007",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        7.39139461517334,
+        32.55091247558594,
+        -129.00698852539062
+      ],
+      "dimensions": [
+        10.720477485364327,
+        14.951335158257788,
+        9.648429736827895
+      ],
+      "rotationZRadians": 6.0011773109436035,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_008",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        145.32705688476562,
+        29.4154296875,
+        -104.31929779052734
+      ],
+      "dimensions": [
+        8.542652303490224,
+        11.83247455512475,
+        7.688387073141201
+      ],
+      "rotationZRadians": 3.472071647644043,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_009",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        78.45114135742188,
+        28.617471313476564,
+        -102.2201156616211
+      ],
+      "dimensions": [
+        9.905535975077225,
+        13.072659992097837,
+        8.914982377569503
+      ],
+      "rotationZRadians": 0.018183154985308647,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_010",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -32.3012809753418,
+        37.606591796875,
+        -185.122314453125
+      ],
+      "dimensions": [
+        8.064452197836031,
+        14.751619970795193,
+        7.258006978052428
+      ],
+      "rotationZRadians": 1.510217547416687,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_011",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -21.902581214904785,
+        21.2343994140625,
+        -11.04304027557373
+      ],
+      "dimensions": [
+        11.957665073321529,
+        11.890011904711827,
+        10.761898565989377
+      ],
+      "rotationZRadians": 2.840770721435547,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_012",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -66.22308540344238,
+        18.661065673828126,
+        112.68403244018555
+      ],
+      "dimensions": [
+        8.838303856173393,
+        12.101854445718203,
+        7.954473470556054
+      ],
+      "rotationZRadians": 4.396162986755371,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_013",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -44.167945861816406,
+        18.47077331542969,
+        114.24311447143555
+      ],
+      "dimensions": [
+        11.576824301144647,
+        14.34754390542764,
+        10.419141871030183
+      ],
+      "rotationZRadians": 3.390822649002075,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_014",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -7.946755409240723,
+        20.786721801757814,
+        -0.2545912265777588
+      ],
+      "dimensions": [
+        9.04829729076637,
+        11.911045089034769,
+        8.143467561689734
+      ],
+      "rotationZRadians": 0.628125786781311,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_015",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        82.69301986694336,
+        34.74805603027344,
+        -162.72489166259766
+      ],
+      "dimensions": [
+        6.217762441898912,
+        14.059164735656779,
+        5.595986197709021
+      ],
+      "rotationZRadians": 5.131265163421631,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_016",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -33.82227897644043,
+        30.889382934570314,
+        -116.10759353637695
+      ],
+      "dimensions": [
+        9.1487165890212,
+        13.307439134907444,
+        8.23384493011908
+      ],
+      "rotationZRadians": 0.2098134309053421,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_017",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        84.23614883422852,
+        27.093560791015626,
+        -48.93310356140137
+      ],
+      "dimensions": [
+        11.957685324994888,
+        14.39035361855535,
+        10.761916792495398
+      ],
+      "rotationZRadians": 2.108718156814575,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_018",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -184.61944580078125,
+        17.007974243164064,
+        137.39501953125
+      ],
+      "dimensions": [
+        10.225089001579972,
+        11.914278588160627,
+        9.202580101421976
+      ],
+      "rotationZRadians": 4.619159698486328,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_019",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -19.06475257873535,
+        37.769082641601564,
+        -192.25848388671875
+      ],
+      "dimensions": [
+        9.562134968050824,
+        11.134014501969869,
+        8.605921471245741
+      ],
+      "rotationZRadians": 6.010750770568848,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_020",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        46.88764190673828,
+        15.802041625976562,
+        181.77196502685547
+      ],
+      "dimensions": [
+        6.469496361199595,
+        10.524079055341073,
+        5.822546725079635
+      ],
+      "rotationZRadians": 4.568251132965088,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_021",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        107.65126419067383,
+        24.201806640625,
+        -32.14040946960449
+      ],
+      "dimensions": [
+        10.150783721613458,
+        13.306592823471053,
+        9.135705349452111
+      ],
+      "rotationZRadians": 4.261150360107422,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_022",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -60.306819915771484,
+        26.033990478515626,
+        -63.00918960571289
+      ],
+      "dimensions": [
+        8.044801704056546,
+        14.878770459549145,
+        7.240321533650891
+      ],
+      "rotationZRadians": 3.8890323638916016,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_023",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        132.98839950561523,
+        25.918206787109376,
+        -46.9508113861084
+      ],
+      "dimensions": [
+        9.734376184043699,
+        11.778072006916021,
+        8.760938565639329
+      ],
+      "rotationZRadians": 5.999823570251465,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_024",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        6.120126724243164,
+        37.709085083007814,
+        -191.35789489746094
+      ],
+      "dimensions": [
+        10.965158660400585,
+        14.715027761415692,
+        9.868642794360527
+      ],
+      "rotationZRadians": 0.7553541660308838,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_025",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -168.01204681396484,
+        17.131982421875,
+        107.55078125
+      ],
+      "dimensions": [
+        6.245696693525035,
+        13.054265616525072,
+        5.621127024172532
+      ],
+      "rotationZRadians": 6.166489124298096,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_026",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        35.519954681396484,
+        30.259805297851564,
+        -103.39423370361328
+      ],
+      "dimensions": [
+        11.910513856463412,
+        13.1254742997776,
+        10.71946247081707
+      ],
+      "rotationZRadians": 3.8847239017486572,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_027",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        132.76360321044922,
+        31.892190551757814,
+        -149.89127349853516
+      ],
+      "dimensions": [
+        11.779662138296285,
+        10.230378610350055,
+        10.601695924466657
+      ],
+      "rotationZRadians": 0.7736766934394836,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_028",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -202.00165557861328,
+        28.02840576171875,
+        -112.54535293579102
+      ],
+      "dimensions": [
+        11.505978055897293,
+        12.609003584506528,
+        10.355380250307563
+      ],
+      "rotationZRadians": 2.73140549659729,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_029",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        53.69501304626465,
+        29.588739013671876,
+        -109.37392807006836
+      ],
+      "dimensions": [
+        10.877169339217177,
+        11.64046007757484,
+        9.78945240529546
+      ],
+      "rotationZRadians": 0.368579238653183,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_030",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        127.77852630615234,
+        29.317971801757814,
+        -104.18840789794922
+      ],
+      "dimensions": [
+        7.398178208251577,
+        12.09136901526862,
+        6.658360387426419
+      ],
+      "rotationZRadians": 3.788743734359741,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_031",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -75.38643264770508,
+        31.440240478515626,
+        -123.68763732910156
+      ],
+      "dimensions": [
+        8.277023438523928,
+        13.143014005718888,
+        7.449321094671536
+      ],
+      "rotationZRadians": 5.393310546875,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_032",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -37.852474212646484,
+        21.16785583496094,
+        2.1167643070220947
+      ],
+      "dimensions": [
+        9.311863346555876,
+        13.509784826704735,
+        8.38067701190029
+      ],
+      "rotationZRadians": 1.3835995197296143,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_033",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -146.7517852783203,
+        19.69765625,
+        68.20983505249023
+      ],
+      "dimensions": [
+        10.25175379771426,
+        10.646489891258732,
+        9.226578417942834
+      ],
+      "rotationZRadians": 0.1187862679362297,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_034",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        135.51224517822266,
+        34.568399047851564,
+        -163.26563262939453
+      ],
+      "dimensions": [
+        9.58729460394322,
+        14.767750999767717,
+        8.628565143548899
+      ],
+      "rotationZRadians": 3.169201374053955,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_035",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        43.740570068359375,
+        18.7619873046875,
+        154.823486328125
+      ],
+      "dimensions": [
+        6.882233703048831,
+        12.757017224445164,
+        6.194010332743948
+      ],
+      "rotationZRadians": 3.288052797317505,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_036",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        24.743136405944824,
+        26.830911254882814,
+        -65.96064186096191
+      ],
+      "dimensions": [
+        11.808191630713246,
+        14.23825987309947,
+        10.627372467641921
+      ],
+      "rotationZRadians": 5.466964244842529,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_037",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        93.17718887329102,
+        29.420205688476564,
+        -119.03771209716797
+      ],
+      "dimensions": [
+        8.492189592506822,
+        12.41088148918315,
+        7.64297063325614
+      ],
+      "rotationZRadians": 2.3914151191711426,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_038",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        211.98778533935547,
+        32.047769165039064,
+        -106.04678726196289
+      ],
+      "dimensions": [
+        8.560523869705863,
+        14.69812408199447,
+        7.7044714827352765
+      ],
+      "rotationZRadians": 2.830947160720825,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_039",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        219.8362045288086,
+        32.01099548339844,
+        -125.07261657714844
+      ],
+      "dimensions": [
+        10.71731139389329,
+        12.893549013176102,
+        9.645580254503962
+      ],
+      "rotationZRadians": 2.8156869411468506,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_040",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -176.8956298828125,
+        17.509255981445314,
+        125.39123916625977
+      ],
+      "dimensions": [
+        7.467522221682787,
+        10.628594089722379,
+        6.720769999514508
+      ],
+      "rotationZRadians": 3.821377992630005,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_041",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -30.21397590637207,
+        28.12684020996094,
+        -71.5864372253418
+      ],
+      "dimensions": [
+        8.55826140980393,
+        11.554374574325397,
+        7.702435268823536
+      ],
+      "rotationZRadians": 1.5857149362564087,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_042",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -99.95479583740234,
+        22.835626220703126,
+        -17.39105796813965
+      ],
+      "dimensions": [
+        11.710480527545913,
+        13.070043130882446,
+        10.539432474791322
+      ],
+      "rotationZRadians": 5.191361427307129,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_043",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -74.51399612426758,
+        36.68232116699219,
+        -151.37539672851562
+      ],
+      "dimensions": [
+        9.013910677598775,
+        14.231932944910785,
+        8.112519609838897
+      ],
+      "rotationZRadians": 0.8673520684242249,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_044",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        38.330570220947266,
+        27.64557800292969,
+        -72.90152359008789
+      ],
+      "dimensions": [
+        10.879486155701393,
+        12.231932471347147,
+        9.791537540131253
+      ],
+      "rotationZRadians": 3.9025213718414307,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_045",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -87.93670654296875,
+        24.00545654296875,
+        -21.21141815185547
+      ],
+      "dimensions": [
+        5.932326802967396,
+        10.461503321646713,
+        5.339094122670657
+      ],
+      "rotationZRadians": 5.142520904541016,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_046",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        8.862613677978516,
+        18.62020263671875,
+        128.58505249023438
+      ],
+      "dimensions": [
+        9.588144608803828,
+        12.650814613201451,
+        8.629330147923445
+      ],
+      "rotationZRadians": 6.240710258483887,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_047",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -31.853660583496094,
+        17.75692138671875,
+        112.0110092163086
+      ],
+      "dimensions": [
+        9.359453295780941,
+        11.586640685716397,
+        8.423507966202848
+      ],
+      "rotationZRadians": 2.2670950889587402,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_048",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        36.67219161987305,
+        18.6733642578125,
+        140.36691284179688
+      ],
+      "dimensions": [
+        9.444670632266346,
+        11.063050195580225,
+        8.500203569039712
+      ],
+      "rotationZRadians": 5.73474645614624,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_049",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -0.2727370262145996,
+        36.92896423339844,
+        -156.61371612548828
+      ],
+      "dimensions": [
+        11.060685509786575,
+        10.150664706339585,
+        9.954616958807918
+      ],
+      "rotationZRadians": 4.368981838226318,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_050",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        120.94625473022461,
+        29.63599548339844,
+        -120.9170036315918
+      ],
+      "dimensions": [
+        8.657927989673917,
+        14.018832333671224,
+        7.792135190706525
+      ],
+      "rotationZRadians": 5.6834917068481445,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_051",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        126.25398254394531,
+        35.028237915039064,
+        -178.6547622680664
+      ],
+      "dimensions": [
+        8.697854380394539,
+        14.733519625178817,
+        7.828068942355085
+      ],
+      "rotationZRadians": 0.7831195592880249,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_052",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        57.57904243469238,
+        18.6997314453125,
+        138.1284637451172
+      ],
+      "dimensions": [
+        10.68421602461577,
+        10.444162643088362,
+        9.615794422154194
+      ],
+      "rotationZRadians": 0.41774463653564453,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_053",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        13.47595739364624,
+        37.337701416015626,
+        -177.2313461303711
+      ],
+      "dimensions": [
+        11.939299762711432,
+        13.708651168526394,
+        10.745369786440289
+      ],
+      "rotationZRadians": 5.482431888580322,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_054",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -91.32439422607422,
+        18.547906494140626,
+        108.0206527709961
+      ],
+      "dimensions": [
+        8.055260099221623,
+        14.093661077954671,
+        7.249734089299461
+      ],
+      "rotationZRadians": 1.3259289264678955,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_055",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        200.25514221191406,
+        31.122003173828126,
+        -121.1583251953125
+      ],
+      "dimensions": [
+        7.640930527053332,
+        14.64965630269823,
+        6.876837474347998
+      ],
+      "rotationZRadians": 0.342663049697876,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_056",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        7.558615684509277,
+        30.27814636230469,
+        -90.11423873901367
+      ],
+      "dimensions": [
+        8.481354079666474,
+        11.241066960573395,
+        7.633218671699827
+      ],
+      "rotationZRadians": 2.749796152114868,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_057",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -132.47605895996094,
+        22.78754577636719,
+        -33.91081142425537
+      ],
+      "dimensions": [
+        11.349363743951589,
+        13.7528599119717,
+        10.21442736955643
+      ],
+      "rotationZRadians": 4.908749580383301,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_058",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -73.32719039916992,
+        22.702310180664064,
+        -9.87112283706665
+      ],
+      "dimensions": [
+        11.589501168305285,
+        12.457039811644654,
+        10.430551051474756
+      ],
+      "rotationZRadians": 2.9121668338775635,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_059",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        4.486961364746094,
+        24.838372802734376,
+        -49.04195022583008
+      ],
+      "dimensions": [
+        8.647898477645164,
+        11.013748604919835,
+        7.7831086298806476
+      ],
+      "rotationZRadians": 4.054855823516846,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_060",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -16.818664073944092,
+        18.566552734375,
+        124.38434600830078
+      ],
+      "dimensions": [
+        8.453726102594558,
+        13.315589670703806,
+        7.608353492335103
+      ],
+      "rotationZRadians": 0.038925766944885254,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_061",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        36.48422050476074,
+        37.03974304199219,
+        -182.55559539794922
+      ],
+      "dimensions": [
+        10.107468717280684,
+        12.751492688345262,
+        9.096721845552615
+      ],
+      "rotationZRadians": 1.519625186920166,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_062",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        121.5208854675293,
+        34.05292663574219,
+        -158.9583740234375
+      ],
+      "dimensions": [
+        9.313688430156157,
+        12.33222728031701,
+        8.382319587140541
+      ],
+      "rotationZRadians": 3.7605128288269043,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_063",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        44.181447982788086,
+        17.142510986328126,
+        169.5439910888672
+      ],
+      "dimensions": [
+        11.869514825736488,
+        13.350725705725043,
+        10.682563343162839
+      ],
+      "rotationZRadians": 1.692607045173645,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_064",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -92.40731048583984,
+        26.61396179199219,
+        -75.04308319091797
+      ],
+      "dimensions": [
+        11.038027680498484,
+        12.422679767167569,
+        9.934224912448636
+      ],
+      "rotationZRadians": 5.120461463928223,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_065",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        181.9691162109375,
+        30.35279235839844,
+        -147.57849884033203
+      ],
+      "dimensions": [
+        6.520963650197276,
+        11.717410834191043,
+        5.868867285177548
+      ],
+      "rotationZRadians": 2.754821538925171,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_066",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        27.210594177246094,
+        18.431268310546876,
+        127.92627334594727
+      ],
+      "dimensions": [
+        9.63806218075601,
+        14.851014612018028,
+        8.67425596268041
+      ],
+      "rotationZRadians": 2.0807862281799316,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_067",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        38.91184425354004,
+        30.840921020507814,
+        -128.7452735900879
+      ],
+      "dimensions": [
+        9.992716196510951,
+        10.46150124896144,
+        8.993444576859856
+      ],
+      "rotationZRadians": 3.7218575477600098,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_068",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -16.913588523864746,
+        30.285333251953126,
+        -83.54081344604492
+      ],
+      "dimensions": [
+        10.976575791324912,
+        14.887487684467565,
+        9.87891821219242
+      ],
+      "rotationZRadians": 3.7600347995758057,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_069",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -143.70958709716797,
+        18.90210876464844,
+        108.12899780273438
+      ],
+      "dimensions": [
+        9.530317555132488,
+        11.867751728494195,
+        8.57728579961924
+      ],
+      "rotationZRadians": 0.9716861248016357,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_070",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        99.06233978271484,
+        28.899880981445314,
+        -105.83945846557617
+      ],
+      "dimensions": [
+        6.159072256773384,
+        12.718170882725667,
+        5.543165031096046
+      ],
+      "rotationZRadians": 3.995887041091919,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_071",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -87.75047302246094,
+        36.267938232421876,
+        -144.23927307128906
+      ],
+      "dimensions": [
+        11.187469613932238,
+        11.164593186019252,
+        10.068722652539014
+      ],
+      "rotationZRadians": 0.2373620569705963,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_072",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        180.34563446044922,
+        30.547280883789064,
+        -189.24099731445312
+      ],
+      "dimensions": [
+        9.941086751394222,
+        13.915316702627656,
+        8.9469780762548
+      ],
+      "rotationZRadians": 5.012056350708008,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_073",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        164.82210540771484,
+        26.2566162109375,
+        -45.84398078918457
+      ],
+      "dimensions": [
+        9.582025038528672,
+        10.511101250767286,
+        8.623822534675805
+      ],
+      "rotationZRadians": 0.4788673222064972,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_074",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        171.630126953125,
+        30.024453735351564,
+        -125.74682998657227
+      ],
+      "dimensions": [
+        8.32978973158635,
+        13.972071005404286,
+        7.496810758427715
+      ],
+      "rotationZRadians": 1.580074667930603,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_075",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -125.00059509277344,
+        18.112603759765626,
+        99.58429718017578
+      ],
+      "dimensions": [
+        7.164246937670981,
+        12.103402263185497,
+        6.447822243903883
+      ],
+      "rotationZRadians": 4.707818508148193,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_076",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -51.992652893066406,
+        22.245355224609376,
+        -4.842334985733032
+      ],
+      "dimensions": [
+        9.745085403453647,
+        13.87776175494182,
+        8.770576863108282
+      ],
+      "rotationZRadians": 4.872742652893066,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_077",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -46.48148727416992,
+        37.348321533203126,
+        -176.4444122314453
+      ],
+      "dimensions": [
+        9.407286351151372,
+        12.256689458882999,
+        8.466557716036235
+      ],
+      "rotationZRadians": 3.4080276489257812,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_078",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -140.2477569580078,
+        19.09810791015625,
+        -3.383103847503662
+      ],
+      "dimensions": [
+        9.089246507403935,
+        10.88859297695356,
+        8.180321856663541
+      ],
+      "rotationZRadians": 2.5143942832946777,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_079",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        155.68142700195312,
+        30.156838989257814,
+        -125.7143783569336
+      ],
+      "dimensions": [
+        10.432244242066082,
+        10.860179879019588,
+        9.389019817859474
+      ],
+      "rotationZRadians": 3.9088103771209717,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_080",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        44.34359931945801,
+        36.14765319824219,
+        -164.9297866821289
+      ],
+      "dimensions": [
+        6.10904747967962,
+        14.511753105554654,
+        5.498142731711658
+      ],
+      "rotationZRadians": 5.6356635093688965,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_081",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        189.3058319091797,
+        30.625604248046876,
+        -115.86792755126953
+      ],
+      "dimensions": [
+        10.568364073033186,
+        11.359392662179769,
+        9.511527665729867
+      ],
+      "rotationZRadians": 1.678158164024353,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_082",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -10.587569236755371,
+        35.319268798828126,
+        -133.33763885498047
+      ],
+      "dimensions": [
+        10.427934713370014,
+        12.420897969513437,
+        9.385141242033013
+      ],
+      "rotationZRadians": 5.955428123474121,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_083",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -47.273338317871094,
+        30.61702880859375,
+        -101.33781433105469
+      ],
+      "dimensions": [
+        8.813383057103175,
+        10.838845876828064,
+        7.9320447513928585
+      ],
+      "rotationZRadians": 4.077793598175049,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_084",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        195.51771545410156,
+        30.245828247070314,
+        -176.7659454345703
+      ],
+      "dimensions": [
+        11.796897975560364,
+        13.447186909891279,
+        10.617208178004327
+      ],
+      "rotationZRadians": 2.979428291320801,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_085",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -115.39389038085938,
+        18.743218994140626,
+        108.9334945678711
+      ],
+      "dimensions": [
+        8.457754999182248,
+        10.08248697494263,
+        7.611979499264023
+      ],
+      "rotationZRadians": 2.265948534011841,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_086",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -10.531909942626953,
+        25.59302673339844,
+        -67.88991355895996
+      ],
+      "dimensions": [
+        10.363430675207896,
+        12.63703171944698,
+        9.327087607687107
+      ],
+      "rotationZRadians": 0.22534315288066864,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_087",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -80.16429138183594,
+        18.75875244140625,
+        114.16353988647461
+      ],
+      "dimensions": [
+        8.552221930975719,
+        12.162980046317976,
+        7.696999737878147
+      ],
+      "rotationZRadians": 3.4725427627563477,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_088",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -49.32907485961914,
+        36.80573425292969,
+        -150.47476959228516
+      ],
+      "dimensions": [
+        10.518158178884512,
+        14.475244804944625,
+        9.46634236099606
+      ],
+      "rotationZRadians": 0.24025753140449524,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_089",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        77.20454788208008,
+        24.69465026855469,
+        -26.545305252075195
+      ],
+      "dimensions": [
+        8.785997942533825,
+        10.180853122503336,
+        7.907398148280443
+      ],
+      "rotationZRadians": 0.11013936251401901,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_090",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        10.396807193756104,
+        25.58008728027344,
+        -61.50957489013672
+      ],
+      "dimensions": [
+        7.833905282564029,
+        14.870704471505517,
+        7.050514754307626
+      ],
+      "rotationZRadians": 3.4452133178710938,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_091",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        117.38045501708984,
+        25.00533447265625,
+        -40.01819610595703
+      ],
+      "dimensions": [
+        8.248089075897997,
+        11.98268083867118,
+        7.423280168308198
+      ],
+      "rotationZRadians": 3.9530246257781982,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_092",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -64.84623336791992,
+        36.53107604980469,
+        -138.07099151611328
+      ],
+      "dimensions": [
+        11.678937875108863,
+        13.191774923111392,
+        10.511044087597977
+      ],
+      "rotationZRadians": 3.562854051589966,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_093",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        10.982645034790039,
+        30.571160888671876,
+        -106.52136993408203
+      ],
+      "dimensions": [
+        8.180252291787284,
+        12.408514497653394,
+        7.3622270626085555
+      ],
+      "rotationZRadians": 4.126190185546875,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_094",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        151.3169937133789,
+        27.860513305664064,
+        -52.664939880371094
+      ],
+      "dimensions": [
+        10.959938255874327,
+        13.87090145996078,
+        9.863944430286894
+      ],
+      "rotationZRadians": 4.142187118530273,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_095",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -100.95333480834961,
+        26.9447265625,
+        -86.14162063598633
+      ],
+      "dimensions": [
+        8.208476670734788,
+        12.899587905208284,
+        7.387629003661309
+      ],
+      "rotationZRadians": 6.107265472412109,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_096",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        22.201163291931152,
+        26.775384521484376,
+        -79.13037109375
+      ],
+      "dimensions": [
+        8.215451838121094,
+        13.942959655542458,
+        7.393906654308985
+      ],
+      "rotationZRadians": 0.22607651352882385,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_097",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        50.66446876525879,
+        36.728662109375,
+        -191.23348999023438
+      ],
+      "dimensions": [
+        10.897778195671549,
+        14.428660118624986,
+        9.808000376104394
+      ],
+      "rotationZRadians": 2.000988006591797,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_098",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        51.204620361328125,
+        30.77510986328125,
+        -130.88919830322266
+      ],
+      "dimensions": [
+        8.440162906914528,
+        10.415881485070495,
+        7.596146616223075
+      ],
+      "rotationZRadians": 4.253498077392578,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_099",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        113.05369186401367,
+        29.11422119140625,
+        -110.14662551879883
+      ],
+      "dimensions": [
+        10.788987971093205,
+        12.218058482736692,
+        9.710089173983885
+      ],
+      "rotationZRadians": 1.9009284973144531,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_100",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        132.56552505493164,
+        30.38778076171875,
+        -130.2049560546875
+      ],
+      "dimensions": [
+        6.8117022745924105,
+        10.884159810870283,
+        6.13053204713317
+      ],
+      "rotationZRadians": 1.5072500705718994,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_101",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -63.54132080078125,
+        21.16785583496094,
+        -0.45460009574890137
+      ],
+      "dimensions": [
+        10.202310934381591,
+        11.712089228411358,
+        9.182079840943432
+      ],
+      "rotationZRadians": 2.547624111175537,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_102",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        98.92794418334961,
+        26.644158935546876,
+        -45.645408630371094
+      ],
+      "dimensions": [
+        10.423600316409459,
+        14.399814489101693,
+        9.381240284768513
+      ],
+      "rotationZRadians": 2.4899377822875977,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_103",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        200.19129943847656,
+        30.418191528320314,
+        -135.7014617919922
+      ],
+      "dimensions": [
+        10.929807265325012,
+        13.193475183343075,
+        9.836826538792511
+      ],
+      "rotationZRadians": 6.215677738189697,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_104",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -33.22569465637207,
+        30.3933349609375,
+        -88.47753143310547
+      ],
+      "dimensions": [
+        10.034353328695062,
+        10.085710769419126,
+        9.030917995825556
+      ],
+      "rotationZRadians": 6.119458198547363,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_105",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        322.9936682044726,
+        7.073782348632813,
+        15.0
+      ],
+      "dimensions": [
+        9.498549523386007,
+        14.325042168728384,
+        8.073767094878106
+      ],
+      "rotationZRadians": 0.4431377351284027,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_106",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        342.92378197683803,
+        4.67618408203125,
+        25.422441996264684
+      ],
+      "dimensions": [
+        11.444196218073426,
+        14.984115440241222,
+        9.727566785362411
+      ],
+      "rotationZRadians": 3.2451047897338867,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_107",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        311.09178552570086,
+        8.635671997070313,
+        40.4578665281618
+      ],
+      "dimensions": [
+        10.87574760880766,
+        15.249164277764127,
+        9.244385467486511
+      ],
+      "rotationZRadians": 1.5049937963485718,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_108",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        296.70914685090077,
+        10.259527587890625,
+        55.482500178981695
+      ],
+      "dimensions": [
+        14.618827185920882,
+        15.830697954622451,
+        12.426003108032749
+      ],
+      "rotationZRadians": 1.824467420578003,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_109",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        312.090932569311,
+        8.104376220703125,
+        67.7468725381539
+      ],
+      "dimensions": [
+        9.798025465894382,
+        17.10215906254504,
+        8.328321646010224
+      ],
+      "rotationZRadians": 0.9789481163024902,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_110",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        317.5230239679101,
+        6.88297119140625,
+        86.21796779194197
+      ],
+      "dimensions": [
+        12.724159287039154,
+        16.09184278868559,
+        10.81553539398328
+      ],
+      "rotationZRadians": 5.431140422821045,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_111",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        282.29094309682966,
+        9.524801635742188,
+        114.98991995158465
+      ],
+      "dimensions": [
+        10.78305789816871,
+        15.75712995451558,
+        9.165599213443404
+      ],
+      "rotationZRadians": 6.087444305419922,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_112",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        263.7098969393967,
+        27.989202880859374,
+        105.13660054449983
+      ],
+      "dimensions": [
+        11.7073867745576,
+        13.97154453739179,
+        9.95127875837396
+      ],
+      "rotationZRadians": 2.6226658821105957,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_113",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        256.97103054138796,
+        9.974539184570313,
+        144.6611350067888
+      ],
+      "dimensions": [
+        14.979397561889206,
+        17.538047398544315,
+        12.732487927605824
+      ],
+      "rotationZRadians": 1.9183236360549927,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_114",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        233.46525267839033,
+        22.91763916015625,
+        146.8624041806418
+      ],
+      "dimensions": [
+        14.530219179375482,
+        15.645700500416309,
+        12.35068630246916
+      ],
+      "rotationZRadians": 4.90957498550415,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_115",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        217.0993002920874,
+        20.615667724609374,
+        148.9360591967649
+      ],
+      "dimensions": [
+        9.821177912279925,
+        14.874967786959942,
+        8.348001225437937
+      ],
+      "rotationZRadians": 0.37146618962287903,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_116",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        198.1880376259971,
+        11.953878784179688,
+        171.26308568471154
+      ],
+      "dimensions": [
+        14.805459111404204,
+        15.94818909010285,
+        12.584640244693572
+      ],
+      "rotationZRadians": 2.015864133834839,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_117",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        180.18391672024651,
+        11.643209838867188,
+        184.22891654240198
+      ],
+      "dimensions": [
+        10.842594859606116,
+        14.184372711312742,
+        9.216205630665199
+      ],
+      "rotationZRadians": 2.4424057006835938,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_118",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        168.12800646040847,
+        12.656668090820313,
+        160.15099098760825
+      ],
+      "dimensions": [
+        10.79596952528198,
+        14.77040209618772,
+        9.176574096489682
+      ],
+      "rotationZRadians": 5.5523905754089355,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_119",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        144.47386773407572,
+        12.134619140625,
+        193.9818094188402
+      ],
+      "dimensions": [
+        13.570468450016513,
+        14.982067061431783,
+        11.534898182514036
+      ],
+      "rotationZRadians": 3.242220640182495,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_120",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        116.36121912150034,
+        11.331106567382813,
+        209.72386895153124
+      ],
+      "dimensions": [
+        14.728275552762373,
+        15.996211125621201,
+        12.519034219848017
+      ],
+      "rotationZRadians": 1.490912914276123,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_121",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        104.81820902198228,
+        12.659368896484375,
+        158.85231876215047
+      ],
+      "dimensions": [
+        9.828104820611587,
+        14.296280114549354,
+        8.353889097519849
+      ],
+      "rotationZRadians": 5.178258419036865,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_122",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        83.86407065856213,
+        12.6572021484375,
+        182.09810979347722
+      ],
+      "dimensions": [
+        11.115418080333757,
+        17.318653461151015,
+        9.448105368283693
+      ],
+      "rotationZRadians": 1.1622623205184937,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_123",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        67.4569237760601,
+        12.6548828125,
+        203.11286194783176
+      ],
+      "dimensions": [
+        9.885973132390987,
+        17.870500378682816,
+        8.40307716253234
+      ],
+      "rotationZRadians": 1.1509130001068115,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_124",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        31.14596604284027,
+        12.659017944335938,
+        171.63123327528788
+      ],
+      "dimensions": [
+        13.986453547216835,
+        14.133461963492877,
+        11.88848551513431
+      ],
+      "rotationZRadians": 5.649416446685791,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_125",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        13.485511593178604,
+        12.660452270507813,
+        159.42846121501344
+      ],
+      "dimensions": [
+        13.650218889173134,
+        15.989258440427005,
+        11.602686055797163
+      ],
+      "rotationZRadians": 1.2822266817092896,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_126",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -5.699527568382777,
+        12.659506225585938,
+        164.94819189817693
+      ],
+      "dimensions": [
+        14.104417119075944,
+        17.216711563712295,
+        11.988754551214551
+      ],
+      "rotationZRadians": 4.819013595581055,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_127",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -21.429524421657106,
+        12.657598876953125,
+        177.9609636334591
+      ],
+      "dimensions": [
+        13.885762425879005,
+        15.842167011226778,
+        11.802898061997153
+      ],
+      "rotationZRadians": 3.380496025085449,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_128",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -40.02291086142213,
+        12.656637573242188,
+        181.951002258208
+      ],
+      "dimensions": [
+        12.170438458609933,
+        15.95735676175456,
+        10.344872689818443
+      ],
+      "rotationZRadians": 4.049885272979736,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_129",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -63.42693858231853,
+        12.658529663085938,
+        159.99075987357614
+      ],
+      "dimensions": [
+        13.470468259774167,
+        15.325222598088871,
+        11.44989802080804
+      ],
+      "rotationZRadians": 4.740573883056641,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_130",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -73.31587257185497,
+        12.354071044921875,
+        192.14855050634756
+      ],
+      "dimensions": [
+        10.175722919670793,
+        16.078347969565943,
+        8.649364481720173
+      ],
+      "rotationZRadians": 4.2613115310668945,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_131",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -92.10434669938292,
+        12.658712768554688,
+        147.537204015724
+      ],
+      "dimensions": [
+        12.143938623225365,
+        15.00175754137549,
+        10.32234782974156
+      ],
+      "rotationZRadians": 2.7810513973236084,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_132",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -107.66593672931617,
+        11.774542236328125,
+        185.6101417040478
+      ],
+      "dimensions": [
+        10.261923935771941,
+        15.493015012419479,
+        8.72263534540615
+      ],
+      "rotationZRadians": 4.586346626281738,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_133",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -119.99711523557696,
+        12.6548828125,
+        169.79766131219247
+      ],
+      "dimensions": [
+        11.67936392077845,
+        15.25288429787168,
+        9.927459332661682
+      ],
+      "rotationZRadians": 4.716082572937012,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_134",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -151.11927397210988,
+        11.52640380859375,
+        166.57374767750548
+      ],
+      "dimensions": [
+        12.368102303877913,
+        13.95443514949465,
+        10.512886958296226
+      ],
+      "rotationZRadians": 2.458859443664551,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_135",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -143.50504412732687,
+        12.656439208984375,
+        141.2938901687585
+      ],
+      "dimensions": [
+        12.567521599642017,
+        13.45603297462582,
+        10.682393359695714
+      ],
+      "rotationZRadians": 0.9252710342407227,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_136",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -158.992435736162,
+        12.65482177734375,
+        148.2237190818738
+      ],
+      "dimensions": [
+        13.073287023247428,
+        13.536125020773113,
+        11.112293969760314
+      ],
+      "rotationZRadians": 3.291621685028076,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_137",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -237.1068198238578,
+        11.290060424804688,
+        88.77706438068955
+      ],
+      "dimensions": [
+        10.944427462807244,
+        13.675036631028238,
+        9.302763343386157
+      ],
+      "rotationZRadians": 4.154836177825928,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_138",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -251.02942090392725,
+        10.878057861328125,
+        70.4164323164564
+      ],
+      "dimensions": [
+        9.629737958248919,
+        16.047460752766,
+        8.185277264511582
+      ],
+      "rotationZRadians": 2.063908338546753,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_139",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -216.96632840345808,
+        12.656698608398438,
+        58.17032134029004
+      ],
+      "dimensions": [
+        12.563246116058554,
+        16.91080309734834,
+        10.678759198649772
+      ],
+      "rotationZRadians": 0.5456974506378174,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_140",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -264.6169026469004,
+        10.632269287109375,
+        39.49027202673453
+      ],
+      "dimensions": [
+        14.209520729828094,
+        15.814568296131581,
+        12.07809262035388
+      ],
+      "rotationZRadians": 0.6965378522872925,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_141",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -237.93648032472993,
+        12.655889892578125,
+        24.428817935383403
+      ],
+      "dimensions": [
+        10.774701236738428,
+        15.030786405270337,
+        9.158496051227663
+      ],
+      "rotationZRadians": 0.6498506665229797,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_142",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -266.1629877949847,
+        11.095648193359375,
+        2.998277107061668
+      ],
+      "dimensions": [
+        9.870707531155531,
+        14.724264765101033,
+        8.390101401482202
+      ],
+      "rotationZRadians": 3.781139612197876,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_143",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -239.7542916716364,
+        12.655905151367188,
+        -5.105488822840368
+      ],
+      "dimensions": [
+        10.805746456667816,
+        15.024638213405154,
+        9.184884488167643
+      ],
+      "rotationZRadians": 2.6433565616607666,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_144",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -259.59396539775753,
+        11.6769775390625,
+        -24.175663945036916
+      ],
+      "dimensions": [
+        13.667212089422677,
+        14.912067531072637,
+        11.617130276009275
+      ],
+      "rotationZRadians": 1.5002025365829468,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_145",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -246.88302268325702,
+        12.654867553710938,
+        -37.00770466907681
+      ],
+      "dimensions": [
+        12.697454372447678,
+        13.36940390133385,
+        10.792836216580527
+      ],
+      "rotationZRadians": 0.7017698287963867,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_146",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -231.04865807932805,
+        26.629278564453124,
+        -72.69329992706135
+      ],
+      "dimensions": [
+        11.303224639797007,
+        17.191340822747723,
+        9.607740943827455
+      ],
+      "rotationZRadians": 5.113574504852295,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_147",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -185.25245675076656,
+        25.158056640625,
+        -75.14201836399978
+      ],
+      "dimensions": [
+        12.801154207910084,
+        14.18500900986878,
+        10.880981076723572
+      ],
+      "rotationZRadians": 3.781320095062256,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_148",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -136.69063886545743,
+        26.639013671875,
+        -107.39254594424278
+      ],
+      "dimensions": [
+        11.66261447157498,
+        16.83341478875451,
+        9.913222300838733
+      ],
+      "rotationZRadians": 1.8310822248458862,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_149",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -108.71295314476001,
+        35.811849975585936,
+        -159.29411539899175
+      ],
+      "dimensions": [
+        13.868126037533639,
+        16.951015544649294,
+        11.787907131903593
+      ],
+      "rotationZRadians": 1.8631659746170044,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_150",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -22.88515362804487,
+        36.710653686523436,
+        -142.70313890050903
+      ],
+      "dimensions": [
+        12.091791039422683,
+        13.035005979969654,
+        10.27802238350928
+      ],
+      "rotationZRadians": 5.581227779388428,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_151",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        49.306923782073724,
+        35.033834838867186,
+        -148.33963092288246
+      ],
+      "dimensions": [
+        12.142832889716221,
+        14.063275199181994,
+        10.321407956258788
+      ],
+      "rotationZRadians": 0.6925621628761292,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_152",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        68.96884035087253,
+        35.290182495117186,
+        -166.17527205821384
+      ],
+      "dimensions": [
+        12.087278764588351,
+        16.124259224735248,
+        10.274186949900098
+      ],
+      "rotationZRadians": 4.9119954109191895,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_153",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        86.85926341093034,
+        30.613409423828124,
+        -133.12040874249632
+      ],
+      "dimensions": [
+        14.922123196528151,
+        17.10737138276892,
+        12.683804717048929
+      ],
+      "rotationZRadians": 5.054198265075684,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_154",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        100.45503767944052,
+        30.51274719238281,
+        -131.20833702200525
+      ],
+      "dimensions": [
+        13.57714969046591,
+        16.04537166321524,
+        11.540577236896024
+      ],
+      "rotationZRadians": 2.0854432582855225,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_155",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        150.4057288083713,
+        31.130743408203124,
+        -145.42987258974014
+      ],
+      "dimensions": [
+        13.103903197329528,
+        17.89938026020772,
+        11.138317717730098
+      ],
+      "rotationZRadians": 0.9197514057159424,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_156",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        239.88929839243494,
+        33.893377685546874,
+        -124.46995419246758
+      ],
+      "dimensions": [
+        14.837472591476933,
+        14.907712229672251,
+        12.611851702755393
+      ],
+      "rotationZRadians": 1.2615821361541748,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_157",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        262.6282230388194,
+        32.119512939453124,
+        -80.25878585920981
+      ],
+      "dimensions": [
+        9.730525899388313,
+        16.899637580710223,
+        8.270947014480067
+      ],
+      "rotationZRadians": 1.434225082397461,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_158",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        275.39890994675847,
+        32.014425659179686,
+        -87.10806690105143
+      ],
+      "dimensions": [
+        9.77350442233976,
+        16.44164283100143,
+        8.307478758988797
+      ],
+      "rotationZRadians": 0.6310995817184448,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_159",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        286.0423873208574,
+        32.03702392578125,
+        -79.48827516282928
+      ],
+      "dimensions": [
+        10.94442996257272,
+        16.208344372312535,
+        9.302765468186811
+      ],
+      "rotationZRadians": 6.040430545806885,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_160",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        290.8259520262976,
+        32.011480712890624,
+        -60.476824914073035
+      ],
+      "dimensions": [
+        14.069109391566435,
+        15.890822679668654,
+        11.95874298283147
+      ],
+      "rotationZRadians": 4.068539142608643,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_161",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        323.0572912626122,
+        5.306204223632813,
+        -45.391768734522735
+      ],
+      "dimensions": [
+        14.327424893709448,
+        15.024275260446823,
+        12.178311159653031
+      ],
+      "rotationZRadians": 2.487504005432129,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Tree_162",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        334.2970819065555,
+        4.517874145507813,
+        -33.748759158182466
+      ],
+      "dimensions": [
+        9.815280254487362,
+        15.127432301994304,
+        8.342988216314257
+      ],
+      "rotationZRadians": 4.704077243804932,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_163",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        327.6851031221078,
+        5.784765625,
+        -18.029757588635817
+      ],
+      "dimensions": [
+        14.004100650198025,
+        15.084071017149421,
+        11.90348555266832
+      ],
+      "rotationZRadians": 5.253328800201416,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Tree_164",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        331.8823918028632,
+        5.83646240234375,
+        5.4525359209076285
+      ],
+      "dimensions": [
+        14.17157993811275,
+        15.080909013649382,
+        12.045842947395837
+      ],
+      "rotationZRadians": 1.9726115465164185,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_Bush_000",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        57.6058292388916,
+        17.366258544921877,
+        47.06370544433594
+      ],
+      "dimensions": [
+        2.2885331245074045,
+        1.601973187155183,
+        1.9452531558312938
+      ],
+      "rotationZRadians": 3.1247146129608154,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_001",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        249.88533782958984,
+        27.465303344726564,
+        126.5256233215332
+      ],
+      "dimensions": [
+        2.4144903667313775,
+        1.690143256711964,
+        2.052316811721671
+      ],
+      "rotationZRadians": 2.470754384994507,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_002",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        93.06660079956055,
+        17.68200866699219,
+        94.04204940795898
+      ],
+      "dimensions": [
+        1.8432988551370748,
+        1.2903091985959523,
+        1.5668040268665135
+      ],
+      "rotationZRadians": 1.2082473039627075,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_003",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        95.85444641113281,
+        21.497713012695314,
+        121.3016242980957
+      ],
+      "dimensions": [
+        2.173520991002567,
+        1.5214646937017968,
+        1.847492842352182
+      ],
+      "rotationZRadians": 3.7957470417022705,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_004",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        107.52063369750977,
+        27.505723876953127,
+        -86.09096908569336
+      ],
+      "dimensions": [
+        2.0994128680239244,
+        1.469589007616747,
+        1.7845009378203356
+      ],
+      "rotationZRadians": 3.756251811981201,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_005",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        125.27782821655273,
+        29.70605651855469,
+        -94.25231170654297
+      ],
+      "dimensions": [
+        2.3198793135733085,
+        1.6239155195013157,
+        1.9718974165373122
+      ],
+      "rotationZRadians": 0.6185774803161621,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_006",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        154.82656860351562,
+        20.735200805664064,
+        58.83693313598633
+      ],
+      "dimensions": [
+        1.7362357716648318,
+        1.2153650401653822,
+        1.475800405915107
+      ],
+      "rotationZRadians": 3.914079427719116,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_007",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        237.82665252685547,
+        25.3991259765625,
+        133.87894439697266
+      ],
+      "dimensions": [
+        1.924486507368146,
+        1.3471405551577023,
+        1.635813531262924
+      ],
+      "rotationZRadians": 2.6928722858428955,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_008",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        59.639326095581055,
+        17.354280395507814,
+        75.69357299804688
+      ],
+      "dimensions": [
+        2.0654728196975394,
+        1.4458309737882775,
+        1.7556518967429084
+      ],
+      "rotationZRadians": 5.041191101074219,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_009",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        45.66254997253418,
+        17.465852661132814,
+        78.13110733032227
+      ],
+      "dimensions": [
+        2.266811361159979,
+        1.5867679528119851,
+        1.9267896569859821
+      ],
+      "rotationZRadians": 2.2447826862335205,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_010",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        75.18809127807617,
+        17.50270263671875,
+        93.4062614440918
+      ],
+      "dimensions": [
+        2.042934646609746,
+        1.430054252626822,
+        1.7364944496182841
+      ],
+      "rotationZRadians": 3.7603228092193604,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_011",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        59.69351768493652,
+        19.721849365234377,
+        127.5032958984375
+      ],
+      "dimensions": [
+        2.25788405474861,
+        1.5805188383240267,
+        1.9192014465363183
+      ],
+      "rotationZRadians": 4.497374057769775,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_012",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        242.92115020751953,
+        26.76429931640625,
+        134.0762176513672
+      ],
+      "dimensions": [
+        1.5583047007419917,
+        1.0908132905193941,
+        1.324558995630693
+      ],
+      "rotationZRadians": 2.1420676708221436,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_013",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        74.03622055053711,
+        17.440477294921877,
+        79.07818984985352
+      ],
+      "dimensions": [
+        2.2051595899039063,
+        1.5436117129327342,
+        1.8743856514183204
+      ],
+      "rotationZRadians": 3.395636558532715,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_014",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        228.02471160888672,
+        24.159212036132814,
+        0.2564878463745117
+      ],
+      "dimensions": [
+        1.9202090291368528,
+        1.3441463203957968,
+        1.6321776747663248
+      ],
+      "rotationZRadians": 0.27946990728378296,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_015",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        5.8749144077301025,
+        20.119783325195314,
+        18.768999099731445
+      ],
+      "dimensions": [
+        1.7488341804664296,
+        1.2241839263265006,
+        1.486509053396465
+      ],
+      "rotationZRadians": 4.530982494354248,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_016",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        -98.96564483642578,
+        19.571123046875,
+        1.7259044647216797
+      ],
+      "dimensions": [
+        2.328840116845063,
+        1.630188081791544,
+        1.9795140993183036
+      ],
+      "rotationZRadians": 4.207111835479736,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_017",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        166.6536865234375,
+        22.370393676757814,
+        69.84825134277344
+      ],
+      "dimensions": [
+        1.5480447611047126,
+        1.0836313327732987,
+        1.3158380469390056
+      ],
+      "rotationZRadians": 2.4048235416412354,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_018",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        53.48397254943848,
+        17.374315185546877,
+        81.33302688598633
+      ],
+      "dimensions": [
+        2.0363172694541283,
+        1.4254220886178897,
+        1.730869679036009
+      ],
+      "rotationZRadians": 5.719915866851807,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_019",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        130.7659912109375,
+        18.662156982421877,
+        87.92776489257812
+      ],
+      "dimensions": [
+        2.006474762590786,
+        1.40453233381355,
+        1.705503548202168
+      ],
+      "rotationZRadians": 1.3921480178833008,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_020",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        257.7117919921875,
+        28.59637634277344,
+        106.01446151733398
+      ],
+      "dimensions": [
+        1.9806766435940322,
+        1.3864736505158224,
+        1.6835751470549274
+      ],
+      "rotationZRadians": 2.3877439498901367,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_021",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        97.71427154541016,
+        26.140306396484377,
+        -83.05805969238281
+      ],
+      "dimensions": [
+        1.8963607118073398,
+        1.3274524982651377,
+        1.6119066050362387
+      ],
+      "rotationZRadians": 1.1759493350982666,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_022",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        133.25473022460938,
+        26.36024658203125,
+        -64.68529891967773
+      ],
+      "dimensions": [
+        1.7249099029718438,
+        1.2074369320802905,
+        1.4661734175260672
+      ],
+      "rotationZRadians": 0.5898807048797607,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_023",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        88.6488037109375,
+        17.51373474121094,
+        87.13724517822266
+      ],
+      "dimensions": [
+        2.1683330658307796,
+        1.5178331460815455,
+        1.8430831059561625
+      ],
+      "rotationZRadians": 4.803929805755615,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_024",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        86.52837371826172,
+        30.407060546875,
+        -113.57999038696289
+      ],
+      "dimensions": [
+        2.279820402016778,
+        1.5958742814117446,
+        1.9378473417142612
+      ],
+      "rotationZRadians": 4.206023216247559,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_025",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        140.71636199951172,
+        26.22448913574219,
+        -46.20563888549805
+      ],
+      "dimensions": [
+        1.9821804575216109,
+        1.3875263202651276,
+        1.6848533888933692
+      ],
+      "rotationZRadians": 5.008110046386719,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_026",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        200.47913360595703,
+        23.621980590820314,
+        119.47525405883789
+      ],
+      "dimensions": [
+        2.424025163065576,
+        1.696817614145903,
+        2.0604213886057394
+      ],
+      "rotationZRadians": 3.295842409133911,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_027",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        189.6720428466797,
+        26.400300903320314,
+        -52.81255340576172
+      ],
+      "dimensions": [
+        1.5529461981964667,
+        1.0870623387375267,
+        1.3200042684669966
+      ],
+      "rotationZRadians": 5.973274230957031,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_028",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        -77.66374969482422,
+        20.91029541015625,
+        1.8743500709533691
+      ],
+      "dimensions": [
+        2.365602851001341,
+        1.6559219957009386,
+        2.0107624233511396
+      ],
+      "rotationZRadians": 4.034322738647461,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_029",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        -110.99980545043945,
+        17.35499755859375,
+        40.8659782409668
+      ],
+      "dimensions": [
+        2.177433165959272,
+        1.5242032161714902,
+        1.850818191065381
+      ],
+      "rotationZRadians": 1.8345019817352295,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_030",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        56.68803787231445,
+        18.17883483886719,
+        92.8727798461914
+      ],
+      "dimensions": [
+        1.828200928175539,
+        1.2797406497228772,
+        1.553970788949208
+      ],
+      "rotationZRadians": 4.300957679748535,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_031",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        130.23308563232422,
+        26.444078369140627,
+        -85.20447540283203
+      ],
+      "dimensions": [
+        2.1821432679468415,
+        1.527500287562789,
+        1.8548217777548153
+      ],
+      "rotationZRadians": 4.9542388916015625,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_032",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        -114.19351196289062,
+        19.41688720703125,
+        -11.308695316314697
+      ],
+      "dimensions": [
+        2.496064240574062,
+        1.7472449684018434,
+        2.1216546044879525
+      ],
+      "rotationZRadians": 5.624610900878906,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_033",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        249.09251403808594,
+        26.615877075195314,
+        138.99813842773438
+      ],
+      "dimensions": [
+        1.685283462444458,
+        1.1796984237111205,
+        1.4324909430777892
+      ],
+      "rotationZRadians": 0.21985919773578644,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_034",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        66.24616622924805,
+        20.442720336914064,
+        108.87223052978516
+      ],
+      "dimensions": [
+        2.2832066412037517,
+        1.598244648842626,
+        1.940725645023189
+      ],
+      "rotationZRadians": 4.934396266937256,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_035",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        72.82206726074219,
+        27.15405456542969,
+        -47.18217658996582
+      ],
+      "dimensions": [
+        2.3284116800542694,
+        1.6298881760379884,
+        1.9791499280461289
+      ],
+      "rotationZRadians": 4.929401397705078,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_036",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        196.2080307006836,
+        26.241609497070314,
+        -49.20381546020508
+      ],
+      "dimensions": [
+        2.3460035531682704,
+        1.6422024872177892,
+        1.9941030201930297
+      ],
+      "rotationZRadians": 3.843851327896118,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_037",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        29.798091888427734,
+        17.464937133789064,
+        85.36832427978516
+      ],
+      "dimensions": [
+        1.6164024013659808,
+        1.1314816809561865,
+        1.3739420411610836
+      ],
+      "rotationZRadians": 5.480545520782471,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_038",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        67.71340560913086,
+        17.34417907714844,
+        76.329833984375
+      ],
+      "dimensions": [
+        1.7775940633594032,
+        1.244315844351582,
+        1.5109549538554927
+      ],
+      "rotationZRadians": 3.313166856765747,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_039",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        152.04075622558594,
+        23.03344909667969,
+        73.70687103271484
+      ],
+      "dimensions": [
+        2.1040009546310876,
+        1.4728006682417611,
+        1.7884008114364245
+      ],
+      "rotationZRadians": 2.5732004642486572,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_040",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        20.40561294555664,
+        23.79139892578125,
+        -46.6451473236084
+      ],
+      "dimensions": [
+        1.654805930572773,
+        1.158364151400941,
+        1.406585040986857
+      ],
+      "rotationZRadians": 5.805564880371094,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_041",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        55.739227294921875,
+        17.336641235351564,
+        72.41741180419922
+      ],
+      "dimensions": [
+        1.9152809882818231,
+        1.340696691797276,
+        1.6279888400395497
+      ],
+      "rotationZRadians": 5.690751552581787,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_042",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        89.52976989746094,
+        27.604844970703127,
+        -48.97243309020996
+      ],
+      "dimensions": [
+        2.304792841675999,
+        1.6133549891731993,
+        1.959073915424599
+      ],
+      "rotationZRadians": 4.526612758636475,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_043",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        -115.71146011352539,
+        17.318101806640627,
+        40.35920715332031
+      ],
+      "dimensions": [
+        1.5089410725102506,
+        1.0562587507571752,
+        1.282599911633713
+      ],
+      "rotationZRadians": 2.6176278591156006,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_044",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        117.41064453125,
+        26.134263916015627,
+        -62.89459419250488
+      ],
+      "dimensions": [
+        1.8897234503205949,
+        1.3228064152244163,
+        1.6062649327725056
+      ],
+      "rotationZRadians": 2.282291889190674,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_045",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        251.2136459350586,
+        28.04957763671875,
+        116.40415954589844
+      ],
+      "dimensions": [
+        1.6160092517277878,
+        1.1312064762094514,
+        1.3736078639686196
+      ],
+      "rotationZRadians": 3.8743669986724854,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_046",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        60.300010681152344,
+        17.419588012695314,
+        87.18938064575195
+      ],
+      "dimensions": [
+        2.145219245076068,
+        1.5016534715532475,
+        1.8234363583146576
+      ],
+      "rotationZRadians": 3.508315324783325,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_047",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        -75.76045227050781,
+        18.87562744140625,
+        15.052656650543213
+      ],
+      "dimensions": [
+        1.9423275821950001,
+        1.3596293075365,
+        1.65097844486575
+      ],
+      "rotationZRadians": 1.0785306692123413,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_048",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        253.85194396972656,
+        28.26611511230469,
+        123.7733039855957
+      ],
+      "dimensions": [
+        1.7028165954807117,
+        1.1919716168364982,
+        1.4473941061586049
+      ],
+      "rotationZRadians": 1.4147419929504395,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_049",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        30.63796329498291,
+        20.54945556640625,
+        33.821956634521484
+      ],
+      "dimensions": [
+        1.988038734574421,
+        1.3916271142020946,
+        1.689832924388258
+      ],
+      "rotationZRadians": 4.599458694458008,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_050",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        80.43860244750977,
+        17.288545532226564,
+        81.69140625
+      ],
+      "dimensions": [
+        2.003996148783849,
+        1.4027973041486943,
+        1.7033967264662717
+      ],
+      "rotationZRadians": 1.1674026250839233,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_051",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        155.88761138916016,
+        22.242113037109377,
+        68.19730377197266
+      ],
+      "dimensions": [
+        2.1795623405375633,
+        1.5256936383762942,
+        1.8526279894569286
+      ],
+      "rotationZRadians": 6.0077080726623535,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_052",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        101.52728271484375,
+        21.05011169433594,
+        122.26203918457031
+      ],
+      "dimensions": [
+        2.1812774057437183,
+        1.5268941840206027,
+        1.8540857948821605
+      ],
+      "rotationZRadians": 3.8311166763305664,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_053",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        22.14547061920166,
+        17.440584106445314,
+        41.360557556152344
+      ],
+      "dimensions": [
+        2.2005094892326147,
+        1.54035664246283,
+        1.8704330658477224
+      ],
+      "rotationZRadians": 2.2612111568450928,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_054",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        98.2947998046875,
+        17.785966796875,
+        93.74616241455078
+      ],
+      "dimensions": [
+        1.7742086089013158,
+        1.241946026230921,
+        1.5080773175661184
+      ],
+      "rotationZRadians": 5.34112548828125,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_055",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        99.74993133544922,
+        18.37465087890625,
+        107.85343170166016
+      ],
+      "dimensions": [
+        2.2609876133482594,
+        1.5826913293437814,
+        1.9218394713460205
+      ],
+      "rotationZRadians": 5.358068466186523,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_056",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        104.13718795776367,
+        30.0490283203125,
+        -112.72127914428711
+      ],
+      "dimensions": [
+        1.8189505408839637,
+        1.2732653786187744,
+        1.5461079597513692
+      ],
+      "rotationZRadians": 3.743474245071411,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_057",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        182.72178649902344,
+        22.390108032226564,
+        117.4317741394043
+      ],
+      "dimensions": [
+        2.4325225685445124,
+        1.7027657979811586,
+        2.0676441832628356
+      ],
+      "rotationZRadians": 3.461897373199463,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_058",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        82.11763381958008,
+        17.475130004882814,
+        93.5682373046875
+      ],
+      "dimensions": [
+        2.2132692178183655,
+        1.5492884524728558,
+        1.8812788351456107
+      ],
+      "rotationZRadians": 0.6895021796226501,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Bush_059",
+      "prototype": "DP_RoundedBush_Prototype",
+      "xyz": [
+        -83.93693923950195,
+        20.67749206542969,
+        2.8557581901550293
+      ],
+      "dimensions": [
+        2.4945445655893903,
+        1.746181195912573,
+        2.1203628807509816
+      ],
+      "rotationZRadians": 3.9282941818237305,
+      "library": "fluxara_driftlib_round_bush_green_v1"
+    },
+    {
+      "name": "DP_Hill_0",
+      "prototype": "DP_RoundedHill_Prototype",
+      "xyz": [
+        -120,
+        4.4956207275390625,
+        205
+      ],
+      "dimensions": [
+        50.0,
+        28.08,
+        42.5
+      ],
+      "rotationZRadians": 0.0,
+      "library": "fluxara_driftlib_grassy_hill_v1"
+    },
+    {
+      "name": "DP_HillTree_0_0",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -130.87364467090777,
+        29.883739526138122,
+        190.5367776397394
+      ],
+      "dimensions": [
+        10,
+        12.922687812005297,
+        9
+      ],
+      "rotationZRadians": 2.8526501655578613,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_HillTree_0_1",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -98.75680500626379,
+        26.492654804858237,
+        186.52500809741412
+      ],
+      "dimensions": [
+        10,
+        11.019199750916355,
+        9
+      ],
+      "rotationZRadians": 1.9446303844451904,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_HillTree_0_2",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -125.29825406612616,
+        31.18909553406742,
+        215.80720905229734
+      ],
+      "dimensions": [
+        10,
+        14.326169002209443,
+        9
+      ],
+      "rotationZRadians": 5.894545078277588,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_HillTree_0_3",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -100.40809965983982,
+        28.939081593712906,
+        193.7564083930094
+      ],
+      "dimensions": [
+        10,
+        11.088632399162615,
+        9
+      ],
+      "rotationZRadians": 2.496093273162842,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Hill_1",
+      "prototype": "DP_RoundedHill_Prototype",
+      "xyz": [
+        20,
+        7.754730224609375,
+        205
+      ],
+      "dimensions": [
+        62.5,
+        33.12,
+        50.0
+      ],
+      "rotationZRadians": 0.0,
+      "library": "fluxara_driftlib_grassy_hill_v1"
+    },
+    {
+      "name": "DP_HillTree_1_0",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        31.946189012524826,
+        38.82727082182694,
+        217.86516741516056
+      ],
+      "dimensions": [
+        10,
+        11.373704993946216,
+        9
+      ],
+      "rotationZRadians": 3.953636884689331,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_HillTree_1_1",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -3.58893260268443,
+        37.24755019454814,
+        215.99735533912423
+      ],
+      "dimensions": [
+        10,
+        11.138769461608668,
+        9
+      ],
+      "rotationZRadians": 2.66094970703125,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_HillTree_1_2",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        18.73355730302465,
+        37.82599679713896,
+        224.9178224900079
+      ],
+      "dimensions": [
+        10,
+        11.88874009717982,
+        9
+      ],
+      "rotationZRadians": 4.675779819488525,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_HillTree_1_3",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        45.91723508993689,
+        35.234018970760125,
+        222.6456853987823
+      ],
+      "dimensions": [
+        10,
+        11.966081714191247,
+        9
+      ],
+      "rotationZRadians": 4.75803279876709,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Hill_2",
+      "prototype": "DP_RoundedHill_Prototype",
+      "xyz": [
+        160,
+        7.062164306640625,
+        190
+      ],
+      "dimensions": [
+        45.0,
+        25.919999999999998,
+        50.0
+      ],
+      "rotationZRadians": 0.0,
+      "library": "fluxara_driftlib_grassy_hill_v1"
+    },
+    {
+      "name": "DP_HillTree_2_0",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        179.88909734604343,
+        29.06925250192929,
+        202.649016438546
+      ],
+      "dimensions": [
+        10,
+        11.094548741033707,
+        9
+      ],
+      "rotationZRadians": 5.7826313972473145,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_HillTree_2_1",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        179.26058040199257,
+        28.667062321774537,
+        173.9830497689718
+      ],
+      "dimensions": [
+        10,
+        13.675206523020384,
+        9
+      ],
+      "rotationZRadians": 0.5635428428649902,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_HillTree_2_2",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        152.58125640843036,
+        32.27853878579951,
+        186.9494593969951
+      ],
+      "dimensions": [
+        10,
+        11.20033729257933,
+        9
+      ],
+      "rotationZRadians": 3.669928550720215,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_HillTree_2_3",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        141.286018962823,
+        27.88511797524794,
+        210.1833080168861
+      ],
+      "dimensions": [
+        10,
+        10.035562118180868,
+        9
+      ],
+      "rotationZRadians": 3.8548357486724854,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Hill_3",
+      "prototype": "DP_RoundedHill_Prototype",
+      "xyz": [
+        320,
+        2.3998260498046875,
+        60
+      ],
+      "dimensions": [
+        50.0,
+        25.2,
+        80.0
+      ],
+      "rotationZRadians": 0.0,
+      "library": "fluxara_driftlib_grassy_hill_v1"
+    },
+    {
+      "name": "DP_HillTree_3_0",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        336.5074462638625,
+        25.420067447540074,
+        45.11383496955713
+      ],
+      "dimensions": [
+        10,
+        12.24796220068242,
+        9
+      ],
+      "rotationZRadians": 4.920421123504639,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_HillTree_3_1",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        325.4179591083571,
+        24.931725348948614,
+        92.72889892987548
+      ],
+      "dimensions": [
+        10,
+        12.38449212204905,
+        9
+      ],
+      "rotationZRadians": 1.6220362186431885,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_HillTree_3_2",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        321.35298584846356,
+        26.86627071141995,
+        74.61635863612639
+      ],
+      "dimensions": [
+        10,
+        13.806698372765933,
+        9
+      ],
+      "rotationZRadians": 2.938183307647705,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_HillTree_3_3",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        304.1653229854235,
+        25.7229453601894,
+        48.42378210821758
+      ],
+      "dimensions": [
+        10,
+        13.310284640049648,
+        9
+      ],
+      "rotationZRadians": 1.9539127349853516,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Hill_4",
+      "prototype": "DP_RoundedHill_Prototype",
+      "xyz": [
+        295,
+        -2.2277374267578125,
+        -135
+      ],
+      "dimensions": [
+        50.0,
+        28.08,
+        50.0
+      ],
+      "rotationZRadians": 0.0,
+      "library": "fluxara_driftlib_grassy_hill_v1"
+    },
+    {
+      "name": "DP_HillTree_4_0",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        279.8586161041256,
+        23.941231324557318,
+        -142.02665681185377
+      ],
+      "dimensions": [
+        10,
+        12.61183107365243,
+        9
+      ],
+      "rotationZRadians": 1.0467606782913208,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_HillTree_4_1",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        316.5396975861674,
+        22.681374807085344,
+        -130.40575837489067
+      ],
+      "dimensions": [
+        10,
+        10.454358793226602,
+        9
+      ],
+      "rotationZRadians": 4.232741832733154,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_HillTree_4_2",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        281.962971989368,
+        24.10451320986974,
+        -125.98998033272576
+      ],
+      "dimensions": [
+        10,
+        11.481635943087918,
+        9
+      ],
+      "rotationZRadians": 0.5632373094558716,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_HillTree_4_3",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        289.6839040461562,
+        24.961966316997344,
+        -143.70310579424117
+      ],
+      "dimensions": [
+        10,
+        13.909958271822967,
+        9
+      ],
+      "rotationZRadians": 5.913666725158691,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Hill_5",
+      "prototype": "DP_RoundedHill_Prototype",
+      "xyz": [
+        85,
+        31.419296264648438,
+        -200
+      ],
+      "dimensions": [
+        95.0,
+        23.04,
+        60.0
+      ],
+      "rotationZRadians": 0.0,
+      "library": "fluxara_driftlib_grassy_hill_v1"
+    },
+    {
+      "name": "DP_HillTree_5_0",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        36.206017110115695,
+        50.835390122503725,
+        -203.75382396347706
+      ],
+      "dimensions": [
+        10,
+        11.561723286166506,
+        9
+      ],
+      "rotationZRadians": 1.272002935409546,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_HillTree_5_1",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        81.79267146137605,
+        54.13493814002934,
+        -198.1279674163113
+      ],
+      "dimensions": [
+        10,
+        10.093609253365507,
+        9
+      ],
+      "rotationZRadians": 3.6245782375335693,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_HillTree_5_2",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        103.88608276982916,
+        53.698728152035855,
+        -200.45886057964145
+      ],
+      "dimensions": [
+        10,
+        13.79522246473952,
+        9
+      ],
+      "rotationZRadians": 3.015397071838379,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_HillTree_5_3",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        100.19226932270803,
+        53.168106764722,
+        -185.4735507049436
+      ],
+      "dimensions": [
+        10,
+        14.360570862078138,
+        9
+      ],
+      "rotationZRadians": 3.264845132827759,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Hill_7",
+      "prototype": "DP_RoundedHill_Prototype",
+      "xyz": [
+        -320,
+        -0.6194305419921875,
+        -20
+      ],
+      "dimensions": [
+        55.0,
+        24.48,
+        90.0
+      ],
+      "rotationZRadians": 0.0,
+      "library": "fluxara_driftlib_grassy_hill_v1"
+    },
+    {
+      "name": "DP_HillTree_7_0",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -301.8087499304144,
+        20.82913136527996,
+        -48.64650866084685
+      ],
+      "dimensions": [
+        10,
+        14.124411562362924,
+        9
+      ],
+      "rotationZRadians": 1.9691919088363647,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_HillTree_7_1",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -324.64235014429664,
+        23.302846183144677,
+        -30.580475761270716
+      ],
+      "dimensions": [
+        10,
+        11.551043260035655,
+        9
+      ],
+      "rotationZRadians": 4.255243301391602,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_HillTree_7_2",
+      "prototype": "DP_RoundedTree_Prototype",
+      "xyz": [
+        -335.8305817369693,
+        22.15111272924639,
+        -35.32415413247888
+      ],
+      "dimensions": [
+        10,
+        14.246526242088997,
+        9
+      ],
+      "rotationZRadians": 0.4274211525917053,
+      "library": "fluxara_driftlib_round_tree_green_v1"
+    },
+    {
+      "name": "DP_HillTree_7_3",
+      "prototype": "DP_Fir_Prototype",
+      "xyz": [
+        -329.8972518056456,
+        23.15919112624013,
+        -18.929421571509913
+      ],
+      "dimensions": [
+        10,
+        14.96866334534219,
+        9
+      ],
+      "rotationZRadians": 0.4898723065853119,
+      "library": "fluxara_driftlib_circuit_fir_v1"
+    },
+    {
+      "name": "DP_Daisy_0",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        57.9058292388916,
+        18.096258544921874,
+        46.713705444335936
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 3.048389196395874,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_1",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        93.36660079956054,
+        18.412008666992186,
+        93.69204940795899
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 2.833517074584961,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_2",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        107.82063369750976,
+        28.235723876953124,
+        -86.44096908569335
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 1.4203760623931885,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_3",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        155.12656860351564,
+        21.46520080566406,
+        58.48693313598633
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 6.069685459136963,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_4",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        59.93932609558105,
+        18.08428039550781,
+        75.34357299804688
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 5.106639862060547,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_5",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        75.48809127807617,
+        18.23270263671875,
+        93.0562614440918
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 2.4834036827087402,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_6",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        243.22115020751954,
+        27.49429931640625,
+        133.7262176513672
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 3.449528217315674,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_7",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        228.32471160888673,
+        24.88921203613281,
+        -0.09351215362548826
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 5.5391459465026855,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_8",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        -98.66564483642578,
+        20.301123046875,
+        1.3759044647216796
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 4.484574317932129,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_9",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        53.783972549438474,
+        18.104315185546874,
+        80.98302688598633
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 0.46901822090148926,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_10",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        258.0117919921875,
+        29.326376342773436,
+        105.66446151733399
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 0.7965301871299744,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_11",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        133.5547302246094,
+        27.09024658203125,
+        -65.03529891967773
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 1.499448299407959,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_12",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        86.82837371826172,
+        31.137060546875,
+        -113.92999038696288
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 3.1974804401397705,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_13",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        200.77913360595704,
+        24.35198059082031,
+        119.1252540588379
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 5.5465898513793945,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_14",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        -77.36374969482422,
+        21.64029541015625,
+        1.524350070953369
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 5.299838542938232,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_15",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        56.98803787231445,
+        18.908834838867186,
+        92.52277984619141
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 0.022206945344805717,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_16",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        -113.89351196289063,
+        20.14688720703125,
+        -11.658695316314697
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 4.548767566680908,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_17",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        66.54616622924804,
+        21.17272033691406,
+        108.52223052978516
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 1.010990858078003,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_18",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        196.5080307006836,
+        26.97160949707031,
+        -49.55381546020508
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 1.6463007926940918,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_19",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        68.01340560913086,
+        18.074179077148436,
+        75.979833984375
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 4.5042619705200195,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_20",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        20.70561294555664,
+        24.52139892578125,
+        -46.9951473236084
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 4.638289451599121,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_21",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        89.82976989746093,
+        28.334844970703124,
+        -49.32243309020996
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 3.1962618827819824,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_22",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        117.71064453125,
+        26.864263916015624,
+        -63.244594192504884
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 1.8852876424789429,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_23",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        60.60001068115234,
+        18.14958801269531,
+        86.83938064575196
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 5.573672771453857,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_24",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        254.15194396972657,
+        28.996115112304686,
+        123.42330398559571
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 5.194811820983887,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_25",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        80.73860244750976,
+        18.01854553222656,
+        81.34140625
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 2.993137836456299,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_26",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        101.82728271484375,
+        21.780111694335936,
+        121.91203918457032
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 3.8135933876037598,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_27",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        98.5947998046875,
+        18.515966796875,
+        93.39616241455079
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 1.3650057315826416,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_28",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        104.43718795776367,
+        30.7790283203125,
+        -113.0712791442871
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 1.9927812814712524,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    },
+    {
+      "name": "DP_Daisy_29",
+      "prototype": "DP_Daisy_Prototype",
+      "xyz": [
+        82.41763381958008,
+        18.20513000488281,
+        93.2182373046875
+      ],
+      "dimensions": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotationZRadians": 0.00598688330501318,
+      "library": "fluxara_driftlib_white_daisy_v1"
+    }
+  ]
+}

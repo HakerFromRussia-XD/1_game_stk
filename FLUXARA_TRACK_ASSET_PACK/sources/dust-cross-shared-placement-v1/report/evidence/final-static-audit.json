@@ -1,0 +1,138 @@
+{
+  "trackId": "fluxara-user-dust-cross-split-combat",
+  "campaignPosition": 3,
+  "protectedFilesByteExact": {
+    "dust-cross-split-combat_track.spm": true,
+    "navmesh.xml": true,
+    "materials.xml": true,
+    "track.xml": true
+  },
+  "protectedSceneElementsExact": {
+    "track": true,
+    "item": true,
+    "banana": true,
+    "small-nitro": true,
+    "big-nitro": true,
+    "start": true,
+    "default-start": true,
+    "library": true,
+    "sky-box": true,
+    "lightshaft": true,
+    "camera": true
+  },
+  "newSceneryGhost": true,
+  "newSceneryCourseRectangleOverlaps": [],
+  "sourceFinalParity": {
+    "stk_generic_sand_b.png": true,
+    "zippercom.png": true,
+    "skid2.xml": true,
+    "46b.ogg": true,
+    "explosion_cake.xml": true,
+    "zipper_fire.xml": true,
+    "skid0.xml": true,
+    "skid1.xml": true,
+    "nitro.xml": true,
+    "stba.music": true,
+    "dust_cross_water.png": true,
+    "concrete_barrier_diffuse.png": true,
+    "dust_cross_cliffs.png": true,
+    "screenshot.png": true,
+    "track.xml": true,
+    "fluxara_canyon_atlas.png": true,
+    "dust_cross_palette.png": true,
+    "stktex_generic_gravelA.png": true,
+    "dust-cross-split-combat_track.spm": true,
+    "nitro-smoke.xml": true,
+    "waterLC.png": true,
+    "mudwater.png": true,
+    "navmesh.xml": true,
+    "fluxara_sandstone_cliffs.png": true,
+    "materials.xml": true,
+    "sky2.jpg": true,
+    "stklama_road_a.png": true,
+    "license.txt": true,
+    "fluxara_water_flow.png": true,
+    "dust-cross_scenery.spm": true,
+    "stklama_gravelSide_a.png": true,
+    "scene.xml": true
+  },
+  "meshStats": {
+    "dust-cross-split-combat_track.spm": {
+      "bytes": 261743,
+      "sha256": "8bdfb7aa6699f346186812f46c5703ab3ea9f855dff9ea7f1f2f38eb0d5ac1df",
+      "vertices": 9798,
+      "triangles": 11112,
+      "textures": [
+        [
+          "metalgrid.png",
+          ""
+        ],
+        [
+          "mudwater.png",
+          ""
+        ],
+        [
+          "stk_generic_sand_b.png",
+          ""
+        ],
+        [
+          "stklama_gravelSide_a.png",
+          ""
+        ],
+        [
+          "stklama_road_a.png",
+          ""
+        ],
+        [
+          "stktex_generic_gravelA.png",
+          ""
+        ],
+        [
+          "waterLC.png",
+          ""
+        ],
+        [
+          "zippercom.png",
+          ""
+        ]
+      ]
+    },
+    "dust-cross_scenery.spm": {
+      "bytes": 2321528,
+      "sha256": "70bed2d62ede2cd841c1ca01d0a637f05098a97e873583c07accd56a9051488f",
+      "vertices": 69691,
+      "triangles": 96520,
+      "textures": [
+        [
+          "dust_cross_cliffs.png",
+          ""
+        ],
+        [
+          "dust_cross_palette.png",
+          ""
+        ],
+        [
+          "dust_cross_water.png",
+          ""
+        ]
+      ]
+    }
+  },
+  "sceneryObjects": 871,
+  "trees": 52,
+  "beforePackagedTrackBytes": 12227691,
+  "afterPackagedTrackBytes": 13639338,
+  "trackByteDelta": 1411647,
+  "beforeDraftSceneryTriangles": 85064,
+  "newGameplayGeometry": false,
+  "imageGeneration": {
+    "mode": "built-in image_gen",
+    "asset": "dust_cross_dirt.png",
+    "technicalResize": [
+      256,
+      256
+    ],
+    "repeatInspection": "dirt-repeat-3x3.png",
+    "result": "No obvious straight seams, no border or directional lighting; subtle repeated mottling remains."
+  }
+}

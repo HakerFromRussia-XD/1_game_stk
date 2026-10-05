@@ -1,0 +1,48 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/final-normal-lap-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/final-normal-lap-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-user-motorsport-land",
+    "--mode=0",
+    "--laps=1",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--seed=4"
+  ],
+  "screenshots": [
+    {
+      "seconds": 8,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/screenshots/final-normal-lap-8s.png"
+    },
+    {
+      "seconds": 20,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/screenshots/final-normal-lap-20s.png"
+    },
+    {
+      "seconds": 35,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/screenshots/final-normal-lap-35s.png"
+    },
+    {
+      "seconds": 50,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/screenshots/final-normal-lap-50s.png"
+    },
+    {
+      "seconds": 70,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/screenshots/final-normal-lap-70s.png"
+    },
+    {
+      "seconds": 95,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/screenshots/final-normal-lap-95s.png"
+    }
+  ]
+}

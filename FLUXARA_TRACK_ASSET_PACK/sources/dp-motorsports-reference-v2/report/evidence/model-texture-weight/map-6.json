@@ -1,0 +1,1620 @@
+{
+  "map": 6,
+  "trackId": "fluxara-user-dp-motorsports-land-ii",
+  "scope": "Matching original/current map-local SPM files, including all active diffuse/second-layer and declared support images. Each used file counted once per model; scene instance count is not multiplied. Added/shared replacements require separate correspondence. This is resource measurement, not a runtime test.",
+  "models": [
+    {
+      "model": "dp-motorsports-land-ii_track.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/dp-motorsports-land-ii_track.spm",
+          "bytes": 9381765,
+          "sha256": "747d6af1c5e7b39504da18a19e87a15b47e3cd6673fdea46cca37d1b942efe7e"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/03.jpg",
+            "bytes": 811,
+            "sha256": "074f16721f4499bd0560be687311bf5cb211c4bbe78b3dd646dbe8aba6979a20",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/AC_auto1.jpg",
+            "bytes": 152981,
+            "sha256": "581f1a9c0d7f204cdcd0d0d4ec2dc31ffde853f2c86aa55d4bccaf1d3dda85e7",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/Aoitori_road3.jpg",
+            "bytes": 90730,
+            "sha256": "5b6a4363b16abaefd1d059c67ff4920701fb7c364f4f99d7429d5a25e0b79a8d",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/BBGRASS_K.png",
+            "bytes": 160436,
+            "sha256": "eaaf40e1b0ced8cab591c159a1217402af6eeb8e22f67ee298af88cee742e45c",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/BidoniRifiuti004_512.jpg",
+            "bytes": 89713,
+            "sha256": "1b5a8567a99f90b03374274d313892954206933f4382a75d83591399c3a266a4",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/ConcreteBare0428_1_S.jpg",
+            "bytes": 171610,
+            "sha256": "fd1597a4561daa6789b9551b8efb25d2b1e795171520343baa2b71bbcf518efb",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/Cover01.jpg",
+            "bytes": 215593,
+            "sha256": "c471dc7d33e7a3a6914c78750f0ca4b8813d3199b6c9a965768b0383aaff335e",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/FENCE.png",
+            "bytes": 120614,
+            "sha256": "39ae8f49b187674ee02a60791f777f153335e6132c26fc241fe6388310a9b630",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/FENCE2.png",
+            "bytes": 9190,
+            "sha256": "b443b6e7c91c239cacbefb7dbdff6ba8836a0afd9916de8d7524431d3474a51e",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/Landscape.png",
+            "bytes": 211908,
+            "sha256": "3b0f07c004630e07197d3e2dfeb66d8c0940d072cc9069ab22a2996bd67f67dc",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/Nature001.png",
+            "bytes": 324578,
+            "sha256": "0f123359eb7e6aeedfa864b0d1b5e9e3383cf23ef51cdad36cc8ee4f6d1b9c8f",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/Tire.jpg",
+            "bytes": 36471,
+            "sha256": "531e179292a5356228a2deb297d7021e1a54e2a677d9e201eb2b57ce8169d9ac",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/Tunnel_AC_auto1.jpg",
+            "bytes": 100840,
+            "sha256": "c8ad9b0b42f204ef54053c5b4e76db1e4a5f214577612e62de7e8ead154e51bb",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/Tunnel_ConcreteBare0428_1_S.jpg",
+            "bytes": 98928,
+            "sha256": "a73dfe596559b881bad8ceb06da71a620f02a5d894ac33feee3a0b55128be214",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/curbs_Albedo_B.jpg",
+            "bytes": 169809,
+            "sha256": "59ac0be975680ac818812a72ea3734b3d8b587ab1a264c463043ea4ab74a0049",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/door-rails001.jpg",
+            "bytes": 1714,
+            "sha256": "6b10becfc4e63240a405be44b0028f4dbdb4cea536d9559e5b68683a5e6833ba",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/door001.jpg",
+            "bytes": 35881,
+            "sha256": "9617d8dd5b7196c9480af674098d93ca66e5a24cf5827fb29c2fdb924b7cdf19",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/door002.jpg",
+            "bytes": 62024,
+            "sha256": "a85a36ef67a259d5291ed1a55470010ea9fe29bd697c12f2388939285666d271",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/gstands.jpg",
+            "bytes": 242671,
+            "sha256": "43dbc6d0233e0db6333271c630aa9c8a0532ca2e562546ecd5301126b7d5638e",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/kusaiwa.jpg",
+            "bytes": 97990,
+            "sha256": "419f06cc3be2a704d2acdb27e0869970020821fa990c24ef02242805d42c1320",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/metals.jpg",
+            "bytes": 29362,
+            "sha256": "16b67418a14266ef3b9f5f44fed1a48936f1d88aef4083d6c9135e1080ed99ca",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl-Controltower.jpg",
+            "bytes": 88482,
+            "sha256": "288eec6aa59626895570638d94fc7bdf8f87894e3fd535c5d2cb80b1f97f86eb",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-fences01.png",
+            "bytes": 427848,
+            "sha256": "fe8883f60486e2fd074c688c5bb178e7f4619f883173d9f57674de8d3876f886",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-grass-roop003.jpg",
+            "bytes": 192414,
+            "sha256": "6a5a252c4306754c477841f74b245be5a9ae5c36f062b810ff7e916df9a42790",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-grass001-to-sand01.jpg",
+            "bytes": 177154,
+            "sha256": "fa9bfc68d0a1ca4e68ddaf7dd11d9e9e51dfe9200be87637af6d85b1a3ced6cd",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-grass001.jpg",
+            "bytes": 186076,
+            "sha256": "696908994118ddddc38f41e3c43ebb2986c5de0e149e6f91910632897f571bdf",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-grass002.jpg",
+            "bytes": 180572,
+            "sha256": "2b12f0eef7698f893f3a1681750b06c0dc181c64b31b24b0ae7eacb96dd89985",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-grass002A.jpg",
+            "bytes": 178600,
+            "sha256": "88dd63699da465fd84e8f43cfa96e3bfe406cafa46150b6bd8455da48dee9707",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-grass002B.jpg",
+            "bytes": 179776,
+            "sha256": "aa939071f2c7df53a25480c8a51d49788f928bba0b9da0f234018bb1e6ec03e5",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-grass003.jpg",
+            "bytes": 184131,
+            "sha256": "d42bec1774b6efba17a985964effe9547695fb3c27f419dd298a275e980b5985",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-grass003A.jpg",
+            "bytes": 177701,
+            "sha256": "99c64725d7168fcb03f0902691790e43f45250f3adef50baaf4a7043b9fc0f47",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-grass003B.jpg",
+            "bytes": 178604,
+            "sha256": "eefab750c439c6940b301f0c820b65406627cd52716109bfca43f9d7051e1031",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-grass004.jpg",
+            "bytes": 163070,
+            "sha256": "f6701614ac2d190d74257cf03258a653e2e1060b84d7a25e288b3ec47b2cf8ea",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-isu001.jpg",
+            "bytes": 48404,
+            "sha256": "637d31fae87dc8ce5fd6fa3182ed959aa83f8b12a6274fa68d69ea7bf1a964c8",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-obj01.jpg",
+            "bytes": 69973,
+            "sha256": "8e70df45e393747a2856eea7f41cab634c0d0652949a4c642b31acf1bc449ef6",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-obj03.jpg",
+            "bytes": 14928,
+            "sha256": "cb4a3b1397cae3e980462e936d0541360bb7026f5aefcdc64ee0211380236663",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-road1_r.jpg",
+            "bytes": 97897,
+            "sha256": "281a78e8ab399ba3d320b6c276b9e8d02ea250557bd43ebb371eb8a3e21c34e3",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-sand001.jpg",
+            "bytes": 169104,
+            "sha256": "f54d20bd767ff4ccb403fcb0e6396084c1100246f403122b2728825911412965",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-sign001.jpg",
+            "bytes": 118438,
+            "sha256": "221709b4efea984d00d819f81b15812b55dbdb9e7eae3d577b20c0372de7f3e1",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-sign002.jpg",
+            "bytes": 118438,
+            "sha256": "221709b4efea984d00d819f81b15812b55dbdb9e7eae3d577b20c0372de7f3e1",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-tree03.png",
+            "bytes": 408296,
+            "sha256": "082b5b8aea566f605d34a09622c228953636fd79f7556eab7ed64066aefc9205",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-wal01.jpg",
+            "bytes": 194120,
+            "sha256": "b3586e5c0a1ec9cd86b790b55adb0b24990a08e46022471315e13041a6a03aac",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-wall02.jpg",
+            "bytes": 143788,
+            "sha256": "371a153c776b3da34b3c2915f3ac7170a9f833bb77ef7185d1938b053ed03c02",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2-wood-roop01.png",
+            "bytes": 317610,
+            "sha256": "4c989fa299e2c80aeffde5085a713d2bc005eb032917fb31eec1ff2f815ab5fd",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2_GuardRail01.jpg",
+            "bytes": 23161,
+            "sha256": "ae88bfc6031c4bcde19a17a139cb63b25e23d9e7d39463eb3acb120550626e7e",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2_linemaker01.png",
+            "bytes": 277776,
+            "sha256": "8374dee80605373a2e6866a76a46549d741a622010fdbd243df974dd20899587",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2_tent01-01-sigin.jpg",
+            "bytes": 64110,
+            "sha256": "45cd2c7bdbb212e903d9e1bbb15ff1337d95abf5a15cbe92fa3f4bf9d82a867d",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/msl2_tent01-01.jpg",
+            "bytes": 38306,
+            "sha256": "5a689416cbbef0f0d002cc0f5725be30c6f57e8d1cb61bb58f50f60d1fc0eb59",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/no.jpg",
+            "bytes": 14207,
+            "sha256": "16f438e1cec0ef1b517e2fa51f3df7dd7c01688f3a8803842343297af4d1001c",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/obj-Speaker.jpg",
+            "bytes": 79818,
+            "sha256": "7de23b5b11a45a3ed647220b29136eb6da39b039cd6c8c3f1b621352fd7d54f2",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/objects1.jpg",
+            "bytes": 80307,
+            "sha256": "9a144b21eacc0a64d353f4620553007c4de09e8bcc3f649f24c7186d8903a4c6",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/otpt_05.png",
+            "bytes": 512311,
+            "sha256": "b7f56349aa73a57fb074cb682aa80d7baffe7117e2b156487bd51628249bbc2b",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/rest001.jpg",
+            "bytes": 39686,
+            "sha256": "d6b92750704c10ceaf3ab1d6bd1442bc34ea5e92b5dd5029c9ad71114e9d8b78",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/sa_Beams01.png",
+            "bytes": 76128,
+            "sha256": "0e963922d490c36656644090c1b71bed6ca5892af6f8a51c33f396be6d4c66b0",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/sa_Beams02.jpg",
+            "bytes": 176528,
+            "sha256": "172ca77dabbd3ec2034c64cd9319e68a80e7a03c7cce737c18c4204165e62c07",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/sa_Sign01-02.jpg",
+            "bytes": 90200,
+            "sha256": "ea5f5518690df1c6cd22ad359cb5f6d15b6e2e576fc599be0c036aac06f1c9b9",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/sa_Sign01-03.jpg",
+            "bytes": 96564,
+            "sha256": "cfc109d53c44c1b5bca6050a40dc544197283250ab27bec57329f6ee19d4193e",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/sa_Sign01-04.jpg",
+            "bytes": 108814,
+            "sha256": "2a8afa85d7bb9614fd03853f07501f0dc3ad45003bdab4dd2db801e40d4b99a1",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/sa_Sign01-05.jpg",
+            "bytes": 116970,
+            "sha256": "bf3baf19855b2806a90a2b2dbc8995471e016ef2a7754bd78dd91bbae9faa776",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/sa_Sign02-01.jpg",
+            "bytes": 170246,
+            "sha256": "7edf0d007d08f5dd37ff84bacedda226dafb5706bd898c07eff795c5f4039e6d",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/sa_metalsteps01.jpg",
+            "bytes": 25004,
+            "sha256": "50e9d18cb37a6ec4a0c8736aef9a913633780b5784ab3c10be7ecdebc8b44fc7",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/sa_wood_Fence01.jpg",
+            "bytes": 28550,
+            "sha256": "85d0bae84d5133078af9f34c8cb9e026e768a82883a115f31241318157406aba",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/sazan_Garage_01.jpg",
+            "bytes": 72015,
+            "sha256": "3d963de614d16150563f62d5db00d3cdebe1c37fc7ada4f249e8e40e9ee0bd21",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/sazan_house2.jpg",
+            "bytes": 87975,
+            "sha256": "f04ba5b17375494d82f48c9f3882f9d185bccb7abcc5389860b05848459a1f44",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/sazan_house_Frame.png",
+            "bytes": 70207,
+            "sha256": "270565cce7301b42dfb418358eb58eb7786e30519ce56a345519cf22b2f1874d",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/sazan_vending.jpg",
+            "bytes": 75020,
+            "sha256": "edb9a3e255ef5e7cff3cee380ec92a9fc6d11dfde1d4efd643470ffdd04547fe",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/spanishi-obj001.jpg",
+            "bytes": 29578,
+            "sha256": "44e9dd322be554d8a59ad60e3bf799c777cd614015b62d7563373388890379d4",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/spanishi-obj002.jpg",
+            "bytes": 76545,
+            "sha256": "430bd48504ca4d429f7312a3dbbf6350629490ed0ab5a84ffda8ef0abd133630",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/trees2.png",
+            "bytes": 573757,
+            "sha256": "e0f687199a3997c3960ae06546e7489788dd957017f337e8a536035d948a1066",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/w-pitob001.jpg",
+            "bytes": 63093,
+            "sha256": "fdb90cfd0ead152cb73c1d0a88f65c119e1cde5c0d0fe89301c1704a5b1864b4",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/wall_cement001.jpg",
+            "bytes": 15145,
+            "sha256": "491931cf637fdd00c7eecebd911df8b4a3243bebb0a389365be9f453a4be8c9a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/wc-001.jpg",
+            "bytes": 88507,
+            "sha256": "d0b9f228e05614e715ae8be37c909133b1533417f955383d53d8ffaa6325d53e",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [
+          {
+            "name": "ROADgloss.jpg",
+            "role": "sampler-2"
+          }
+        ],
+        "modelBytes": 9381765,
+        "textureBytes": 9609806,
+        "materialBindings": [
+          {
+            "texture": "03.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "AC_auto1.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "AC_auto1.jpg",
+              "gloss-map": "ROADgloss.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "Aoitori_road3.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "BBGRASS_K.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "BBGRASS_K.png",
+              "shader": "alphatest",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "BidoniRifiuti004_512.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "ConcreteBare0428_1_S.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "Cover01.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "FENCE.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "FENCE.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "FENCE2.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "FENCE2.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "Landscape.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Landscape.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "Nature001.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Nature001.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "Tire.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "Tunnel_AC_auto1.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "Tunnel_ConcreteBare0428_1_S.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "curbs_Albedo_B.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "curbs_Albedo_B.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "door-rails001.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "door001.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "door002.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "gstands.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "kusaiwa.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "metals.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "msl-Controltower.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "msl2-fences01.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-fences01.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "msl2-grass-roop003.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass-roop003.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "msl2-grass001-to-sand01.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass001-to-sand01.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "msl2-grass001.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass001.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "msl2-grass002.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass002.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "msl2-grass002A.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass002A.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "msl2-grass002B.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass002b.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "msl2-grass003.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass003.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "msl2-grass003A.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass003A.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "msl2-grass003B.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass003B.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "msl2-grass004.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass004.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "msl2-isu001.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "msl2-obj01.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "msl2-obj03.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "msl2-road1_r.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "msl2-sand001.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-sand001.jpg",
+              "slowdown-time": "0.33",
+              "max-speed": "0.33"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "msl2-sign001.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "msl2-sign002.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "msl2-tree03.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-tree03.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "msl2-wal01.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "msl2-wall02.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "msl2-wood-roop01.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-wood-roop01.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "msl2_GuardRail01.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "msl2_linemaker01.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "msl2_tent01-01-sigin.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "msl2_tent01-01.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "no.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "obj-Speaker.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "objects1.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "otpt_05.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "otpt_05.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "rest001.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "sa_Beams01.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "sa_Beams01.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "sa_Beams02.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "sa_Sign01-02.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "sa_Sign01-03.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "sa_Sign01-04.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "sa_Sign01-05.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "sa_Sign02-01.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "sa_metalsteps01.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "sa_wood_Fence01.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "sazan_Garage_01.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "sazan_house2.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "sazan_house_Frame.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "sazan_house_Frame.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "sazan_vending.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "spanishi-obj001.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "spanishi-obj002.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "trees2.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "trees2.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/dp-motorsports-rework/before/materials.xml"
+          },
+          {
+            "texture": "w-pitob001.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "wall_cement001.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "wc-001.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          }
+        ],
+        "modelPlusUsedTextureBytes": 18991571
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/dp-motorsports-land-ii_track.spm",
+          "bytes": 6163793,
+          "sha256": "c3a5081af7a4a6b66a3e660d900fce083a60345ef438242f6f13f511d1defb08"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/dp_palette.png",
+            "bytes": 2359,
+            "sha256": "ec1efcdc37f6730f5ea304e62bcd912d454385082e6065ba70c84b43886477cb",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/AC_auto1.jpg",
+            "bytes": 62605,
+            "sha256": "d67230d87763bfd06bc77db7a48a6fd5ff944b475a338712df2124c81fa86bdb",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/Aoitori_road3.jpg",
+            "bytes": 62605,
+            "sha256": "d67230d87763bfd06bc77db7a48a6fd5ff944b475a338712df2124c81fa86bdb",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/Tunnel_AC_auto1.jpg",
+            "bytes": 62605,
+            "sha256": "d67230d87763bfd06bc77db7a48a6fd5ff944b475a338712df2124c81fa86bdb",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/curbs_Albedo_B.jpg",
+            "bytes": 1748,
+            "sha256": "91ebffac8b951f27bc1ad940152e26350d7bf95e7f5926cf8700451d78e7bfed",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/kusaiwa.jpg",
+            "bytes": 15365,
+            "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/msl2-grass-roop003.jpg",
+            "bytes": 15365,
+            "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/msl2-grass001-to-sand01.jpg",
+            "bytes": 15365,
+            "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/msl2-grass001.jpg",
+            "bytes": 15365,
+            "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/msl2-grass002.jpg",
+            "bytes": 15365,
+            "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/msl2-grass002A.jpg",
+            "bytes": 15365,
+            "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/msl2-grass002B.jpg",
+            "bytes": 15365,
+            "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/msl2-grass003.jpg",
+            "bytes": 15365,
+            "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/msl2-grass003A.jpg",
+            "bytes": 15365,
+            "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/msl2-grass003B.jpg",
+            "bytes": 15365,
+            "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/msl2-grass004.jpg",
+            "bytes": 15365,
+            "sha256": "d7260ab4509b9364314a6bfe77a64db1a60f37b9cb1ddab532f4a99c4ae12f77",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/dp_gantry.png",
+            "bytes": 12642,
+            "sha256": "f461283960188f2866d4f501bdb77b65dd15b435ace8b8ce76675a42464ab91e",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/msl2-road1_r.jpg",
+            "bytes": 62605,
+            "sha256": "d67230d87763bfd06bc77db7a48a6fd5ff944b475a338712df2124c81fa86bdb",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/msl2-sand001.jpg",
+            "bytes": 169104,
+            "sha256": "f54d20bd767ff4ccb403fcb0e6396084c1100246f403122b2728825911412965",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/dp_barrier.jpg",
+            "bytes": 1748,
+            "sha256": "91ebffac8b951f27bc1ad940152e26350d7bf95e7f5926cf8700451d78e7bfed",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/msl2_linemaker01.png",
+            "bytes": 277776,
+            "sha256": "8374dee80605373a2e6866a76a46549d741a622010fdbd243df974dd20899587",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/dp_awning.png",
+            "bytes": 655,
+            "sha256": "c740f712b471c6df3a80f34e593312fb880c7515ff546806a1b48849242ba6e2",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/no.jpg",
+            "bytes": 14207,
+            "sha256": "16f438e1cec0ef1b517e2fa51f3df7dd7c01688f3a8803842343297af4d1001c",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/sazan_house_Frame.png",
+            "bytes": 70207,
+            "sha256": "270565cce7301b42dfb418358eb58eb7786e30519ce56a345519cf22b2f1874d",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [
+          {
+            "name": "ROADgloss.jpg",
+            "role": "sampler-2"
+          }
+        ],
+        "modelBytes": 6163793,
+        "textureBytes": 969881,
+        "materialBindings": [
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "AC_auto1.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "AC_auto1.jpg",
+              "gloss-map": "ROADgloss.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "Aoitori_road3.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "Tunnel_AC_auto1.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "curbs_Albedo_B.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "curbs_Albedo_B.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "kusaiwa.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "msl2-grass-roop003.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass-roop003.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "msl2-grass001-to-sand01.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass001-to-sand01.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "msl2-grass001.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass001.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "msl2-grass002.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass002.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "msl2-grass002A.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass002A.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "msl2-grass002B.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass002b.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "msl2-grass003.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass003.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "msl2-grass003A.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass003A.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "msl2-grass003B.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass003B.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "msl2-grass004.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-grass004.jpg",
+              "shader": "alphatest",
+              "slowdown-time": "0.8",
+              "max-speed": "0.66"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_gantry.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "msl2-road1_r.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "msl2-sand001.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "msl2-sand001.jpg",
+              "slowdown-time": "0.33",
+              "max-speed": "0.33"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_barrier.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_barrier.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_barrier.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_barrier.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "msl2_linemaker01.png",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "dp_awning.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_awning.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_awning.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_awning.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "no.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "sazan_house_Frame.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "sazan_house_Frame.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          },
+          {
+            "texture": "dp_palette.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dp_palette.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-dp-motorsports-land-ii/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 7133674
+      },
+      "changePercent": -62.437683538660394,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": false
+    }
+  ],
+  "allMatchingModelsResolved": false,
+  "allMatchingModelsWithinLimit": true
+}

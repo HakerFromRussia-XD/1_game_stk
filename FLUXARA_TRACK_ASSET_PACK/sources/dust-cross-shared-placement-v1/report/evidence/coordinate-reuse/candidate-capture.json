@@ -1,0 +1,42 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/delivery-v1/candidate-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/delivery-v1/candidate-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-dust-shared-probe",
+    "--mode=2",
+    "--time-limit=60",
+    "--capture-limit=999",
+    "--numkarts=6",
+    "--kart=fluxara-ace",
+    "--seed=9"
+  ],
+  "screenshots": [
+    {
+      "seconds": 20,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/delivery-v1/screenshots/candidate/game-20s.png"
+    },
+    {
+      "seconds": 45,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/delivery-v1/screenshots/candidate/game-45s.png"
+    },
+    {
+      "seconds": 85,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/dust-cross-shared-placement/delivery-v1/screenshots/candidate/game-85s.png"
+    }
+  ],
+  "temporaryProbeRemoved": true,
+  "copiedResourcesRemoved": true,
+  "existingInstalledResourcesPreserved": true,
+  "forceWinsUsed": false,
+  "newBuildPerformed": false
+}

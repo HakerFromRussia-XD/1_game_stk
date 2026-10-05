@@ -1,0 +1,21 @@
+{
+  "buildSucceeded": true,
+  "simulator": "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+  "actualGameplaySeconds": 70,
+  "gameplayScreenshots": 4,
+  "staticInspectionScreenshots": 5,
+  "aiPlayerMoved": true,
+  "processTerminated": true,
+  "referenceReview": {
+    "01": "Dirt arena, warm canyon framing, colored canopies, red-white perimeter, lighting masts and flags. Original ramp geometry preserved.",
+    "02": "Layered red sandstone, green crowns and animated cascade. No new serpentine route.",
+    "03": "Cliff silhouettes, vegetation, bunting and distant stone arch. Original bowl remains; no new elevated road or cloud sea.",
+    "04": "Warm palette, mesas, green accents and arch. Original map topology remains; catalogue composition is not a literal reproduction."
+  },
+  "limits": [
+    "Visual result is an adaptation around the unchanged arena, not a 1:1 recreation of the reference roads.",
+    "No physical-device frame-time/memory benchmark and no exhaustive traversal of every route/mode.",
+    "Legacy wire-grid fence and ramps remain part of the protected course.",
+    "Existing translation/benchmark replay and MoltenVK sampler/primitive restart warnings remain in logs. No new missing Dust Cross artwork texture observed."
+  ]
+}

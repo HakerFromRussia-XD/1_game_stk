@@ -1,0 +1,49 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/final-campaign-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/final-campaign-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-user-motorsport-land",
+    "--mode=7",
+    "--laps=6",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--fluxara-event=main-lap_trial-motorsport-land",
+    "--seed=9"
+  ],
+  "screenshots": [
+    {
+      "seconds": 8,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/screenshots/final-campaign-8s.png"
+    },
+    {
+      "seconds": 20,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/screenshots/final-campaign-20s.png"
+    },
+    {
+      "seconds": 35,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/screenshots/final-campaign-35s.png"
+    },
+    {
+      "seconds": 50,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/screenshots/final-campaign-50s.png"
+    },
+    {
+      "seconds": 70,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/screenshots/final-campaign-70s.png"
+    },
+    {
+      "seconds": 90,
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/motorsport-land-rework/screenshots/final-campaign-90s.png"
+    }
+  ]
+}

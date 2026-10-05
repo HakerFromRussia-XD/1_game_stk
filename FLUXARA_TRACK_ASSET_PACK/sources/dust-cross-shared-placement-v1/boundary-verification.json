@@ -1,0 +1,134 @@
+{
+  "trackId": "fluxara-user-dust-cross-split-combat",
+  "sourceFenceInnerSegments": 28,
+  "sourceFenceCompleteSegments": 25,
+  "sourceFenceMissingSegments": 3,
+  "closedSegments": [
+    {
+      "segment": 1,
+      "start": [
+        -139.58998107910156,
+        9.021985054016113,
+        -38.28587341308594
+      ],
+      "end": [
+        -140.27267456054688,
+        9.021985054016113,
+        -70.21670532226562
+      ],
+      "outerStart": [
+        -141.8369598388672,
+        16.72918701171875,
+        -39.06072998046875
+      ],
+      "outerEnd": [
+        -142.53076171875,
+        16.72918701171875,
+        -71.51051330566406
+      ],
+      "lengthMeters": 31.93812883237643,
+      "midpoint": [
+        -139.93133544921875,
+        9.021985054016113,
+        -54.25128936767578
+      ],
+      "outwardNormal": [
+        -0.9997714757919312,
+        0.0,
+        0.021375499665737152
+      ],
+      "triangles": 12
+    },
+    {
+      "segment": 17,
+      "start": [
+        105.33168029785156,
+        9.021985054016113,
+        138.09463500976562
+      ],
+      "end": [
+        81.94889831542969,
+        9.021985054016113,
+        149.27398681640625
+      ],
+      "outerStart": [
+        107.06523132324219,
+        16.72918701171875,
+        140.18634033203125
+      ],
+      "outerEnd": [
+        83.30241394042969,
+        16.72918701171875,
+        151.54737854003906
+      ],
+      "lengthMeters": 25.917801254639638,
+      "midpoint": [
+        93.64028930664062,
+        9.021985054016113,
+        143.68431091308594
+      ],
+      "outwardNormal": [
+        0.43133875727653503,
+        0.0,
+        0.9021900296211243
+      ],
+      "triangles": 12
+    },
+    {
+      "segment": 26,
+      "start": [
+        -120.303466796875,
+        9.021985054016113,
+        50.9639892578125
+      ],
+      "end": [
+        -128.79464721679688,
+        9.021985054016113,
+        22.44670867919922
+      ],
+      "outerStart": [
+        -122.23699951171875,
+        16.72918701171875,
+        51.63963317871094
+      ],
+      "outerEnd": [
+        -130.86618041992188,
+        16.72918701171875,
+        22.65887451171875
+      ],
+      "lengthMeters": 29.754586771789672,
+      "midpoint": [
+        -124.54905700683594,
+        9.021985054016113,
+        36.70534896850586
+      ],
+      "outwardNormal": [
+        -0.958416223526001,
+        0.0,
+        0.2853738069534302
+      ],
+      "triangles": 12
+    }
+  ],
+  "completedInnerPerimeterSegments": 28,
+  "closedPerimeterTopologicallyVerified": true,
+  "closedAddedSolidsWatertight": true,
+  "newTriangles": 36,
+  "newModelBytes": 1607,
+  "newTextures": 0,
+  "texture": "metalgrid.png (same existing fence texture)",
+  "physicalSceneInteraction": "static",
+  "physicalShape": "exact",
+  "protectedCourseSpmByteExact": true,
+  "protectedNavmeshByteExact": true,
+  "existingVisualMeshesAndTransformsUnchanged": true,
+  "existingArtUserApproved": true,
+  "runtimeTestPending": false,
+  "allPreviousMeshGeometryExactAfterReopen": 1012,
+  "allPreviousMatricesExactAfterReopen": 1094,
+  "finalBlendSha256": "5296f42fc579d4403f571fa8059455679b5f775d0e295d5011d3eb908ed011e2",
+  "runtimeValidationOwner": "user",
+  "assistantRuntimeCollisionTestCancelledByUser": true,
+  "runtimeCollisionClaimed": false,
+  "mapSpecificNativePackPath": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/dust-cross-shared-v1/Dust Cross Boundary Closures.blend"
+}
