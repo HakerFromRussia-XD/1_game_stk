@@ -1,0 +1,26 @@
+{
+  "scope": "Isolated current alpha and overhead-layout candidate in existing iOS Simulator build; production and preview unchanged. No fresh application build.",
+  "candidateOneLapTimeTrial": {
+    "naturalFinishObserved": true,
+    "position": 1,
+    "laps": 1,
+    "kartCount": 1,
+    "forceWinsUsed": false,
+    "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v5-alpha/screenshots/drive-150s.png"
+  },
+  "screenshotsInspected": [
+    "drive-40s.png",
+    "drive-80s.png",
+    "drive-150s.png"
+  ],
+  "currentStaticInspection": "Above-volcano view captured separately, not gameplay validation.",
+  "productionIntegrated": false,
+  "campaignEventVerified": false,
+  "reverseDirectionVerified": false,
+  "performanceMeasured": false,
+  "knownVisualDifferences": [
+    "Several sprite effects remain stretched into petals or narrow columns.",
+    "Castle/cliff silhouettes, lava spikes and volcano shapes still differ from reference."
+  ],
+  "opaqueVolumeExperimentRejected": true
+}

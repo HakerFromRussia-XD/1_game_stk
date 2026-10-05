@@ -1,0 +1,2362 @@
+{
+  "baseCandidate": "V27",
+  "parts": [
+    {
+      "part": "grass_cap",
+      "library": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_volcano_grass_cap_v27",
+      "model": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_volcano_grass_cap_v27/vr_v27_grass_cap.spm",
+      "sourceBuffer": 0,
+      "localBounds": [
+        -3.5540590286254883,
+        0.5797613859176636,
+        -2.4634437561035156,
+        3.5540590286254883,
+        0.8198510408401489,
+        2.4634437561035156
+      ],
+      "triangles": 280,
+      "nativePrototype": "VRV22_Prototype_GrassLip"
+    },
+    {
+      "part": "stone_column",
+      "library": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_volcano_stone_column_v27",
+      "model": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_volcano_stone_column_v27/vr_v27_stone_column.spm",
+      "sourceBuffer": 1,
+      "localBounds": [
+        -3.2293102741241455,
+        -0.6213818788528442,
+        -2.2383487224578857,
+        3.2293105125427246,
+        0.6407270431518555,
+        2.2383487224578857
+      ],
+      "triangles": 152,
+      "nativePrototype": "VRV22_Prototype_StoneBody"
+    }
+  ],
+  "changedGroups": [
+    {
+      "id": "VRV16_RoundedTerrain_000",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_000_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-169.30890826 -8.21805977 -38.12012715",
+          "hpr": "0.00000000 74.26624552 0.00000000",
+          "scale": "1.67306704 7.50696559 2.01172959"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_000_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-169.30890826 -16.87590833 -38.12012715",
+          "hpr": "0.00000000 74.26624552 0.00000000",
+          "scale": "1.50576034 21.01950365 1.81055663"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_000_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-172.29306443 -8.21805977 -39.28336189",
+          "hpr": "0.00000000 74.26624552 0.00000000",
+          "scale": "1.67306704 7.50696559 2.01172959"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_000_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-172.29306443 -16.87590833 -39.28336189",
+          "hpr": "0.00000000 74.26624552 0.00000000",
+          "scale": "1.50576034 21.01950365 1.81055663"
+        }
+      ],
+      "horizontalDisplacementMeters": 3.2028585834002614,
+      "outwardNormal": [
+        -0.9582448758330072,
+        0,
+        -0.28594887294721877
+      ],
+      "originalWallClosestPoint": [
+        -169.23803087150637,
+        -4.223286110528456,
+        -38.37171245137644
+      ],
+      "wallCenterDistanceBeforeMeters": 12.45205291920108,
+      "exactAllPartTriangleRoadMarginMeters": 16.66226245313748
+    },
+    {
+      "id": "VRV16_RoundedTerrain_001",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_001_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "11.01819914 -6.19204238 101.78812569",
+          "hpr": "0.00000000 -139.29356484 0.00000000",
+          "scale": "1.72823695 7.64660830 2.24987325"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_001_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "11.01819914 -15.01094209 101.78812569",
+          "hpr": "0.00000000 -139.29356484 0.00000000",
+          "scale": "1.55541326 21.41050324 2.02488592"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_001_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "13.68048026 -6.19204238 103.79686500",
+          "hpr": "0.00000000 -139.29356484 0.00000000",
+          "scale": "1.72823695 7.64660830 2.24987325"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_001_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "13.68048026 -15.01094209 103.79686500",
+          "hpr": "0.00000000 -139.29356484 0.00000000",
+          "scale": "1.55541326 21.41050324 2.02488592"
+        }
+      ],
+      "horizontalDisplacementMeters": 3.33508236702263,
+      "outwardNormal": [
+        0.6730653760705325,
+        0,
+        0.7395829902959049
+      ],
+      "originalWallClosestPoint": [
+        11.486078153822417,
+        -2.7970393728236513,
+        101.3855948182626
+      ],
+      "wallCenterDistanceBeforeMeters": 12.02266097828253,
+      "exactAllPartTriangleRoadMarginMeters": 16.670910820476532
+    },
+    {
+      "id": "VRV16_RoundedTerrain_002",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_002_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "29.42230525 -7.45306215 82.91403695",
+          "hpr": "0.00000000 -175.66488489 0.00000000",
+          "scale": "2.33758837 6.13292104 3.04626751"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_002_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "29.42230525 -14.52621320 82.91403695",
+          "hpr": "0.00000000 -175.66488489 0.00000000",
+          "scale": "2.10382953 17.17217891 2.74164076"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_002_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "33.35688623 -7.45306215 86.61554332",
+          "hpr": "0.00000000 -175.66488489 0.00000000",
+          "scale": "2.33758837 6.13292104 3.04626751"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_002_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "33.35688623 -14.52621320 86.61554332",
+          "hpr": "0.00000000 -175.66488489 0.00000000",
+          "scale": "2.10382953 17.17217891 2.74164076"
+        }
+      ],
+      "horizontalDisplacementMeters": 5.402043773299548,
+      "outwardNormal": [
+        0.25733203746295574,
+        0,
+        0.9663230425148538
+      ],
+      "originalWallClosestPoint": [
+        32.3128223841144,
+        -6.368855637443818,
+        82.69491625504305
+      ],
+      "wallCenterDistanceBeforeMeters": 8.500783000497528,
+      "exactAllPartTriangleRoadMarginMeters": 8.707493953422606
+    },
+    {
+      "id": "VRV16_RoundedTerrain_003",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_003_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-237.50118668 -5.32287041 -46.08129558",
+          "hpr": "0.00000000 11.58985158 0.00000000",
+          "scale": "3.19544376 10.78357858 2.07111789"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_003_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-237.50118668 -17.75966516 -46.08129558",
+          "hpr": "0.00000000 11.58985158 0.00000000",
+          "scale": "2.87589938 30.19402002 1.86400610"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_003_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-226.96375160 -5.32287041 -36.79113136",
+          "hpr": "0.00000000 11.58985158 0.00000000",
+          "scale": "3.19544376 10.78357858 2.07111789"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_003_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-226.96375160 -17.75966516 -36.79113136",
+          "hpr": "0.00000000 11.58985158 0.00000000",
+          "scale": "2.87589938 30.19402002 1.86400610"
+        }
+      ],
+      "horizontalDisplacementMeters": 14.047942528916565,
+      "outwardNormal": [
+        0.7501052244329088,
+        0,
+        0.6613184953397686
+      ],
+      "originalWallClosestPoint": [
+        -230.84871704611118,
+        -6.463892998542342,
+        -40.21625016333478
+      ],
+      "wallCenterDistanceBeforeMeters": 14.132795911837036,
+      "exactAllPartTriangleRoadMarginMeters": 8.121403169728849
+    },
+    {
+      "id": "VRV16_RoundedTerrain_005",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_005_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-221.81657527 -15.56520670 -74.42697749",
+          "hpr": "0.00000000 150.82953533 0.00000000",
+          "scale": "1.70806051 9.74356243 2.66984606"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_005_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-221.81657527 -26.80254180 -74.42697749",
+          "hpr": "0.00000000 150.82953533 0.00000000",
+          "scale": "1.53725446 27.28197480 2.40286145"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_005_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-217.27279239 -15.56520670 -86.73157370",
+          "hpr": "0.00000000 150.82953533 0.00000000",
+          "scale": "1.70806051 9.74356243 2.66984606"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_005_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-217.27279239 -26.80254180 -86.73157370",
+          "hpr": "0.00000000 150.82953533 0.00000000",
+          "scale": "1.53725446 27.28197480 2.40286145"
+        }
+      ],
+      "horizontalDisplacementMeters": 13.116746962371918,
+      "outwardNormal": [
+        0.3464108057806661,
+        0,
+        -0.938082914053118
+      ],
+      "originalWallClosestPoint": [
+        -218.45762086118856,
+        -13.71606712659198,
+        -83.52304980474318
+      ],
+      "wallCenterDistanceBeforeMeters": 16.07606473190797,
+      "exactAllPartTriangleRoadMarginMeters": 25.283114404322326
+    },
+    {
+      "id": "VRV16_RoundedTerrain_007",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_007_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-162.02883147 -6.90028495 -17.17592250",
+          "hpr": "0.00000000 128.03417060 0.00000000",
+          "scale": "1.66018576 6.97523463 2.02865397"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_007_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-162.02883147 -14.94488358 -17.17592250",
+          "hpr": "0.00000000 128.03417060 0.00000000",
+          "scale": "1.49416718 19.53065696 1.82578857"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_007_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-164.78023852 -6.90028495 -11.71241168",
+          "hpr": "0.00000000 128.03417060 0.00000000",
+          "scale": "1.66018576 6.97523463 2.02865397"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_007_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-164.78023852 -14.94488358 -11.71241168",
+          "hpr": "0.00000000 128.03417060 0.00000000",
+          "scale": "1.49416718 19.53065696 1.82578857"
+        }
+      ],
+      "horizontalDisplacementMeters": 6.1172045242526645,
+      "outwardNormal": [
+        -0.9953281664331638,
+        0,
+        -0.09654968205435152
+      ],
+      "originalWallClosestPoint": [
+        -161.6237460219001,
+        -6.45169304692111,
+        -11.406222873282784
+      ],
+      "wallCenterDistanceBeforeMeters": 10.1200084924052,
+      "exactAllPartTriangleRoadMarginMeters": 5.0530913152907955
+    },
+    {
+      "id": "VRV16_RoundedTerrain_008",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_008_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "21.71530068 -7.00749933 88.58775542",
+          "hpr": "0.00000000 -125.31563989 0.00000000",
+          "scale": "2.41242217 6.78429604 3.04527241"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_008_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "21.71530068 -14.83188682 88.58775542",
+          "hpr": "0.00000000 -125.31563989 0.00000000",
+          "scale": "2.17117995 18.99602891 2.74074517"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_008_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "25.10580554 -7.00749933 90.98976175",
+          "hpr": "0.00000000 -125.31563989 0.00000000",
+          "scale": "2.41242217 6.78429604 3.04527241"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_008_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "25.10580554 -14.83188682 90.98976175",
+          "hpr": "0.00000000 -125.31563989 0.00000000",
+          "scale": "2.17117995 18.99602891 2.74074517"
+        }
+      ],
+      "horizontalDisplacementMeters": 4.155136289607117,
+      "outwardNormal": [
+        0.8159797216785701,
+        0,
+        0.5780805253676716
+      ],
+      "originalWallClosestPoint": [
+        21.715298584901127,
+        -3.5092632132755623,
+        88.58775837618721
+      ],
+      "wallCenterDistanceBeforeMeters": 11.13888295657867,
+      "exactAllPartTriangleRoadMarginMeters": 14.652742118664342
+    },
+    {
+      "id": "VRV16_RoundedTerrain_009",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_009_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-212.54377772 -15.02453227 -69.25085736",
+          "hpr": "0.00000000 150.82953533 0.00000000",
+          "scale": "2.09250967 8.30903530 2.35698479"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_009_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-212.54377772 -24.60741478 -69.25085736",
+          "hpr": "0.00000000 150.82953533 0.00000000",
+          "scale": "1.88325870 23.26529884 2.12128631"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_009_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-208.04262074 -15.02453227 -81.44002232",
+          "hpr": "0.00000000 150.82953533 0.00000000",
+          "scale": "2.09250967 8.30903530 2.35698479"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_009_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-208.04262074 -24.60741478 -81.44002232",
+          "hpr": "0.00000000 150.82953533 0.00000000",
+          "scale": "1.88325870 23.26529884 2.12128631"
+        }
+      ],
+      "horizontalDisplacementMeters": 12.993696798201862,
+      "outwardNormal": [
+        0.3464108057806661,
+        0,
+        -0.938082914053118
+      ],
+      "originalWallClosestPoint": [
+        -209.33706512049187,
+        -12.140964828571175,
+        -77.93465777753691
+      ],
+      "wallCenterDistanceBeforeMeters": 15.347430495360383,
+      "exactAllPartTriangleRoadMarginMeters": 14.270672153700831
+    },
+    {
+      "id": "VRV16_RoundedTerrain_015",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_015_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-226.17632234 -11.43220102 -48.40386603",
+          "hpr": "0.00000000 11.58985158 0.00000000",
+          "scale": "2.05536282 11.04865683 2.62322682"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_015_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-226.17632234 -24.17471282 -48.40386603",
+          "hpr": "0.00000000 11.58985158 0.00000000",
+          "scale": "1.84982654 30.93623912 2.36090414"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_015_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-217.94488205 -11.43220102 -42.83018499",
+          "hpr": "0.00000000 11.58985158 0.00000000",
+          "scale": "2.05536282 11.04865683 2.62322682"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_015_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-217.94488205 -24.17471282 -42.83018499",
+          "hpr": "0.00000000 11.58985158 0.00000000",
+          "scale": "1.84982654 30.93623912 2.36090414"
+        }
+      ],
+      "horizontalDisplacementMeters": 9.94095214486621,
+      "outwardNormal": [
+        0.7501052244329088,
+        0,
+        0.6613184953397686
+      ],
+      "originalWallClosestPoint": [
+        -220.71138175746506,
+        -9.89931202274382,
+        -45.26922602964101
+      ],
+      "wallCenterDistanceBeforeMeters": 15.330518615316,
+      "exactAllPartTriangleRoadMarginMeters": 3.6194968890005583
+    },
+    {
+      "id": "VRV16_RoundedTerrain_016",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_016_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "5.62293202 -5.45927168 106.42984191",
+          "hpr": "0.00000000 -139.29356484 0.00000000",
+          "scale": "1.96745294 7.14650406 1.58527196"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_016_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "5.62293202 -13.70139683 106.42984191",
+          "hpr": "0.00000000 -139.29356484 0.00000000",
+          "scale": "1.77070765 20.01021137 1.42674476"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_016_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "8.45964062 -5.45927168 108.70107092",
+          "hpr": "0.00000000 -139.29356484 0.00000000",
+          "scale": "1.96745294 7.14650406 1.58527196"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_016_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "8.45964062 -13.70139683 108.70107092",
+          "hpr": "0.00000000 -139.29356484 0.00000000",
+          "scale": "1.77070765 20.01021137 1.42674476"
+        }
+      ],
+      "horizontalDisplacementMeters": 3.6339230716330877,
+      "outwardNormal": [
+        0.6730653760705325,
+        0,
+        0.7395829902959049
+      ],
+      "originalWallClosestPoint": [
+        6.054660861684349,
+        -2.428731705098258,
+        106.05841215381271
+      ],
+      "wallCenterDistanceBeforeMeters": 11.093742950385874,
+      "exactAllPartTriangleRoadMarginMeters": 10.30636092940392
+    },
+    {
+      "id": "VRV16_RoundedTerrain_017",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_017_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-200.40353648 12.84383987 92.63478116",
+          "hpr": "0.00000000 85.15889700 0.00000000",
+          "scale": "2.94629870 9.58509535 3.04093376"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_017_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-200.40353648 1.78926623 92.63478116",
+          "hpr": "0.00000000 85.15889700 0.00000000",
+          "scale": "2.65166883 26.83826698 2.73684038"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_017_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-189.82657220 12.84383987 93.42397885",
+          "hpr": "0.00000000 85.15889700 0.00000000",
+          "scale": "2.94629870 9.58509535 3.04093376"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_017_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-189.82657220 1.78926623 93.42397885",
+          "hpr": "0.00000000 85.15889700 0.00000000",
+          "scale": "2.65166883 26.83826698 2.73684038"
+        }
+      ],
+      "horizontalDisplacementMeters": 10.606366308715822,
+      "outwardNormal": [
+        0.9972278881835864,
+        0,
+        0.07440792315946142
+      ],
+      "originalWallClosestPoint": [
+        -194.66649586936924,
+        4.315487457564113,
+        93.06284908908296
+      ],
+      "wallCenterDistanceBeforeMeters": 6.183402786858276,
+      "exactAllPartTriangleRoadMarginMeters": 16.648462599078485
+    },
+    {
+      "id": "VRV16_RoundedTerrain_020",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_020_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-229.95781177 -15.93165551 -78.97145481",
+          "hpr": "0.00000000 150.82953533 0.00000000",
+          "scale": "1.97961356 10.34445842 1.73386529"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_020_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-229.95781177 -27.86200917 -78.97145481",
+          "hpr": "0.00000000 150.82953533 0.00000000",
+          "scale": "1.78165220 28.96448358 1.56047876"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_020_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-225.36354735 -15.93165551 -91.41275537",
+          "hpr": "0.00000000 150.82953533 0.00000000",
+          "scale": "1.97961356 10.34445842 1.73386529"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_020_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-225.36354735 -27.86200917 -91.41275537",
+          "hpr": "0.00000000 150.82953533 0.00000000",
+          "scale": "1.78165220 28.96448358 1.56047876"
+        }
+      ],
+      "horizontalDisplacementMeters": 13.262474319544971,
+      "outwardNormal": [
+        0.3464108057806661,
+        0,
+        -0.938082914053118
+      ],
+      "originalWallClosestPoint": [
+        -226.60684295897642,
+        -14.789744786527605,
+        -88.04590206940928
+      ],
+      "wallCenterDistanceBeforeMeters": 16.03784540192139,
+      "exactAllPartTriangleRoadMarginMeters": 33.4950574289632
+    },
+    {
+      "id": "VRV16_RoundedTerrain_023",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_023_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-249.16667874 -17.08728317 2.07269952",
+          "hpr": "0.00000000 -154.66663641 0.00000000",
+          "scale": "2.24720770 9.89167616 1.74242449"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_023_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-249.16667874 -28.49543912 2.07269952",
+          "hpr": "0.00000000 -154.66663641 0.00000000",
+          "scale": "2.02248693 27.69669325 1.56818204"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_023_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-248.69831188 -17.08728317 -2.57253502",
+          "hpr": "0.00000000 -154.66663641 0.00000000",
+          "scale": "2.24720770 9.89167616 1.74242449"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_023_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-248.69831188 -28.49543912 -2.57253502",
+          "hpr": "0.00000000 -154.66663641 0.00000000",
+          "scale": "2.02248693 27.69669325 1.56818204"
+        }
+      ],
+      "horizontalDisplacementMeters": 4.668786935712433,
+      "outwardNormal": [
+        0.1003187488622245,
+        0,
+        -0.9949553500668852
+      ],
+      "originalWallClosestPoint": [
+        -249.09347315873734,
+        -28.08657822804428,
+        1.3466509442540082
+      ],
+      "wallCenterDistanceBeforeMeters": 0.7432200050683457,
+      "exactAllPartTriangleRoadMarginMeters": 37.12347451701497
+    },
+    {
+      "id": "VRV16_RoundedTerrain_024",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_024_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-201.61760058 25.34293910 75.74278433",
+          "hpr": "0.00000000 119.47270545 0.00000000",
+          "scale": "1.98913661 6.29751244 2.40156078"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_024_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-201.61760058 18.07996336 75.74278433",
+          "hpr": "0.00000000 119.47270545 0.00000000",
+          "scale": "1.79022295 17.63303483 2.16140470"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_024_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-196.82087955 25.34293910 73.57096920",
+          "hpr": "0.00000000 119.47270545 0.00000000",
+          "scale": "1.98913661 6.29751244 2.40156078"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_024_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-196.82087955 18.07996336 73.57096920",
+          "hpr": "0.00000000 119.47270545 0.00000000",
+          "scale": "1.79022295 17.63303483 2.16140470"
+        }
+      ],
+      "horizontalDisplacementMeters": 5.265483226492188,
+      "outwardNormal": [
+        0.9109745154459696,
+        0,
+        -0.41246264340904953
+      ],
+      "originalWallClosestPoint": [
+        -200.1017847937189,
+        18.52345161069873,
+        75.05646723162917
+      ],
+      "wallCenterDistanceBeforeMeters": 1.686185083881879,
+      "exactAllPartTriangleRoadMarginMeters": 30.369940853667238
+    },
+    {
+      "id": "VRV16_RoundedTerrain_025",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_025_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-206.30357401 11.28712524 112.12436184",
+          "hpr": "0.00000000 26.33739444 0.00000000",
+          "scale": "2.22099686 5.85831838 2.96017269"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_025_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-206.30357401 4.53067582 112.12436184",
+          "hpr": "0.00000000 26.33739444 0.00000000",
+          "scale": "1.99889717 16.40329146 2.66415542"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_025_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-201.81812358 11.28712524 119.25573879",
+          "hpr": "0.00000000 26.33739444 0.00000000",
+          "scale": "2.22099686 5.85831838 2.96017269"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_025_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-201.81812358 4.53067582 119.25573879",
+          "hpr": "0.00000000 26.33739444 0.00000000",
+          "scale": "1.99889717 16.40329146 2.66415542"
+        }
+      ],
+      "horizontalDisplacementMeters": 8.424713811961484,
+      "outwardNormal": [
+        0.5324157630889969,
+        0,
+        0.846482991686402
+      ],
+      "originalWallClosestPoint": [
+        -203.8970882608992,
+        9.970336530221962,
+        115.9504117009787
+      ],
+      "wallCenterDistanceBeforeMeters": 6.951170882052353,
+      "exactAllPartTriangleRoadMarginMeters": 37.22658061059381
+    },
+    {
+      "id": "VRV16_RoundedTerrain_026",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_026_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-197.34384502 11.07230989 124.59625543",
+          "hpr": "0.00000000 116.02981779 0.00000000",
+          "scale": "2.83511030 7.19723388 3.06161103"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_026_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-197.34384502 2.77167760 124.59625543",
+          "hpr": "0.00000000 116.02981779 0.00000000",
+          "scale": "2.55159927 20.15225486 2.75544993"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_026_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-193.40081501 11.07230989 117.20197129",
+          "hpr": "0.00000000 116.02981779 0.00000000",
+          "scale": "2.83511030 7.19723388 3.06161103"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_026_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-193.40081501 2.77167760 117.20197129",
+          "hpr": "0.00000000 116.02981779 0.00000000",
+          "scale": "2.55159927 20.15225486 2.75544993"
+        }
+      ],
+      "horizontalDisplacementMeters": 8.37991190592364,
+      "outwardNormal": [
+        0.43649431675121236,
+        0,
+        -0.8997070142240151
+      ],
+      "originalWallClosestPoint": [
+        -195.45581180277347,
+        4.3220638680755314,
+        121.43775387333467
+      ],
+      "wallCenterDistanceBeforeMeters": 3.9214893279925414,
+      "exactAllPartTriangleRoadMarginMeters": 28.540078977540084
+    },
+    {
+      "id": "VRV16_RoundedTerrain_027",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_027_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-205.26850232 21.95625046 44.02095532",
+          "hpr": "0.00000000 59.44325474 0.00000000",
+          "scale": "2.83952675 7.17254851 2.69050753"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_027_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-205.26850232 13.68408802 44.02095532",
+          "hpr": "0.00000000 59.44325474 0.00000000",
+          "scale": "2.55557408 20.08313583 2.42145678"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_027_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-198.52459992 21.95625046 48.24365049",
+          "hpr": "0.00000000 59.44325474 0.00000000",
+          "scale": "2.83952675 7.17254851 2.69050753"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_027_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-198.52459992 13.68408802 48.24365049",
+          "hpr": "0.00000000 59.44325474 0.00000000",
+          "scale": "2.55557408 20.08313583 2.42145678"
+        }
+      ],
+      "horizontalDisplacementMeters": 7.956844483156908,
+      "outwardNormal": [
+        0.5534384996312608,
+        0,
+        0.8328900450394993
+      ],
+      "originalWallClosestPoint": [
+        -201.13336172030657,
+        16.45074741415906,
+        44.31762847680551
+      ],
+      "wallCenterDistanceBeforeMeters": 4.879002263731737,
+      "exactAllPartTriangleRoadMarginMeters": 29.904900913238166
+    },
+    {
+      "id": "VRV16_RoundedTerrain_028",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_028_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-201.33629202 29.69925507 57.34495417",
+          "hpr": "0.00000000 85.15889700 0.00000000",
+          "scale": "2.05641040 10.15888033 2.08566938"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_028_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-201.33629202 17.98293023 57.34495417",
+          "hpr": "0.00000000 85.15889700 0.00000000",
+          "scale": "1.85076936 28.44486492 1.87710244"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_028_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-192.97029559 29.69925507 57.77004386",
+          "hpr": "0.00000000 85.15889700 0.00000000",
+          "scale": "2.05641040 10.15888033 2.08566938"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_028_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-192.97029559 17.98293023 57.77004386",
+          "hpr": "0.00000000 85.15889700 0.00000000",
+          "scale": "1.85076936 28.44486492 1.87710244"
+        }
+      ],
+      "horizontalDisplacementMeters": 8.37678920968785,
+      "outwardNormal": [
+        0.9987115847801529,
+        0,
+        0.05074613705412087
+      ],
+      "originalWallClosestPoint": [
+        -196.655060889142,
+        19.638949856505228,
+        57.582815030100896
+      ],
+      "wallCenterDistanceBeforeMeters": 4.886444948294501,
+      "exactAllPartTriangleRoadMarginMeters": 24.75416184201473
+    },
+    {
+      "id": "VRV16_RoundedTerrain_029",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_029_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-222.02537579 9.84322388 31.52948107",
+          "hpr": "0.00000000 -144.07125712 0.00000000",
+          "scale": "2.74180839 9.45324870 2.21014601"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_029_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-222.02537579 -1.05928988 31.52948107",
+          "hpr": "0.00000000 -144.07125712 0.00000000",
+          "scale": "2.46762755 26.46909636 1.98913141"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_029_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-223.05204513 9.84322388 19.42358838",
+          "hpr": "0.00000000 -144.07125712 0.00000000",
+          "scale": "2.74180839 9.45324870 2.21014601"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_029_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-223.05204513 -1.05928988 19.42358838",
+          "hpr": "0.00000000 -144.07125712 0.00000000",
+          "scale": "2.46762755 26.46909636 1.98913141"
+        }
+      ],
+      "horizontalDisplacementMeters": 12.149349271696508,
+      "outwardNormal": [
+        -0.20488706651568225,
+        0,
+        -0.9787856200285119
+      ],
+      "originalWallClosestPoint": [
+        -222.11244720037092,
+        1.7726373805732978,
+        23.912231582980574
+      ],
+      "wallCenterDistanceBeforeMeters": 8.041476615879912,
+      "exactAllPartTriangleRoadMarginMeters": 31.22945173592095
+    },
+    {
+      "id": "VRV16_RoundedTerrain_030",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_030_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-96.17590430 2.53006324 198.16432376",
+          "hpr": "0.00000000 -164.40100119 0.00000000",
+          "scale": "2.25726700 9.49687779 3.05765958"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_030_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-96.17590430 -8.42276833 198.16432376",
+          "hpr": "0.00000000 -164.40100119 0.00000000",
+          "scale": "2.03154030 26.59125781 2.75189362"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_030_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-84.35202844 2.53006324 197.27714130",
+          "hpr": "0.00000000 -164.40100119 0.00000000",
+          "scale": "2.25726700 9.49687779 3.05765958"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_030_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-84.35202844 -8.42276833 197.27714130",
+          "hpr": "0.00000000 -164.40100119 0.00000000",
+          "scale": "2.03154030 26.59125781 2.75189362"
+        }
+      ],
+      "horizontalDisplacementMeters": 11.857113181697848,
+      "outwardNormal": [
+        0.9992959220022264,
+        0,
+        -0.03751879888429593
+      ],
+      "originalWallClosestPoint": [
+        -88.30145916852398,
+        -2.4127430032579635,
+        197.4254236015839
+      ],
+      "wallCenterDistanceBeforeMeters": 9.779968728654719,
+      "exactAllPartTriangleRoadMarginMeters": 42.99830869966083
+    },
+    {
+      "id": "VRV16_RoundedTerrain_031",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_031_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-202.58440959 23.75658559 83.42186266",
+          "hpr": "0.00000000 9.84970348 0.00000000",
+          "scale": "1.96957829 6.54685863 2.56627340"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_031_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-202.58440959 16.20603672 83.42186266",
+          "hpr": "0.00000000 9.84970348 0.00000000",
+          "scale": "1.77262046 18.33120416 2.30964606"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_031_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-194.03598437 23.75658559 87.02702020",
+          "hpr": "0.00000000 9.84970348 0.00000000",
+          "scale": "1.96957829 6.54685863 2.56627340"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_031_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-194.03598437 16.20603672 87.02702020",
+          "hpr": "0.00000000 9.84970348 0.00000000",
+          "scale": "1.77262046 18.33120416 2.30964606"
+        }
+      ],
+      "horizontalDisplacementMeters": 9.277539253675517,
+      "outwardNormal": [
+        0.9214108378993817,
+        0,
+        0.38858984521157963
+      ],
+      "originalWallClosestPoint": [
+        -197.3309069171228,
+        17.729820697381285,
+        85.63744088689177
+      ],
+      "wallCenterDistanceBeforeMeters": 5.858418658200437,
+      "exactAllPartTriangleRoadMarginMeters": 27.13596505846995
+    },
+    {
+      "id": "VRV16_RoundedTerrain_032",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_032_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-249.32559842 -11.35355290 -82.93369764",
+          "hpr": "0.00000000 -171.94830566 0.00000000",
+          "scale": "2.72665722 11.14042157 2.84101233"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_032_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-249.32559842 -24.20189777 -82.93369764",
+          "hpr": "0.00000000 -171.94830566 0.00000000",
+          "scale": "2.45399150 31.19318040 2.55691110"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_032_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-243.68488846 -11.35355290 -94.50335763",
+          "hpr": "0.00000000 -171.94830566 0.00000000",
+          "scale": "2.72665722 11.14042157 2.84101233"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_032_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-243.68488846 -24.20189777 -94.50335763",
+          "hpr": "0.00000000 -171.94830566 0.00000000",
+          "scale": "2.45399150 31.19318040 2.55691110"
+        }
+      ],
+      "horizontalDisplacementMeters": 12.871466156429037,
+      "outwardNormal": [
+        0.3707146853636165,
+        0,
+        -0.9287468019087628
+      ],
+      "originalWallClosestPoint": [
+        -245.3776143908192,
+        -11.260790385663684,
+        -90.26259281557782
+      ],
+      "wallCenterDistanceBeforeMeters": 15.134511265079517,
+      "exactAllPartTriangleRoadMarginMeters": 48.34918167979852
+    },
+    {
+      "id": "VRV16_RoundedTerrain_033",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_033_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-213.06840079 23.85367464 85.24212989",
+          "hpr": "0.00000000 9.84970348 0.00000000",
+          "scale": "2.44202032 8.06343245 2.11993122"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_033_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-213.06840079 14.55404802 85.24212989",
+          "hpr": "0.00000000 9.84970348 0.00000000",
+          "scale": "2.19781829 22.57761086 1.90793810"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_033_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-210.95884687 23.85367464 92.75664823",
+          "hpr": "0.00000000 9.84970348 0.00000000",
+          "scale": "2.44202032 8.06343245 2.11993122"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_033_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-210.95884687 14.55404802 92.75664823",
+          "hpr": "0.00000000 9.84970348 0.00000000",
+          "scale": "2.19781829 22.57761086 1.90793810"
+        }
+      ],
+      "horizontalDisplacementMeters": 7.805011443999247,
+      "outwardNormal": [
+        0.3346894357742944,
+        0,
+        0.9423284892122729
+      ],
+      "originalWallClosestPoint": [
+        -212.36248310777478,
+        22.949609057056715,
+        88.8046668645358
+      ],
+      "wallCenterDistanceBeforeMeters": 8.947413989763694,
+      "exactAllPartTriangleRoadMarginMeters": 39.640384915811644
+    },
+    {
+      "id": "VRV16_RoundedTerrain_034",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_034_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-214.36203730 9.51153724 116.11364867",
+          "hpr": "0.00000000 26.33739444 0.00000000",
+          "scale": "1.89767974 8.50216342 2.73868503"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_034_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-214.36203730 -0.29408161 116.11364867",
+          "hpr": "0.00000000 26.33739444 0.00000000",
+          "scale": "1.70791177 23.80605758 2.46481653"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_034_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-210.26077257 9.51153724 115.44920548",
+          "hpr": "0.00000000 26.33739444 0.00000000",
+          "scale": "1.89767974 8.50216342 2.73868503"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_034_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-210.26077257 -0.29408161 115.44920548",
+          "hpr": "0.00000000 26.33739444 0.00000000",
+          "scale": "1.70791177 23.80605758 2.46481653"
+        }
+      ],
+      "horizontalDisplacementMeters": 4.154739116672123,
+      "outwardNormal": [
+        0.11114252581077452,
+        0,
+        -0.9938044772269853
+      ],
+      "originalWallClosestPoint": [
+        -210.64784903729887,
+        10.902131452622132,
+        118.91033182844893
+      ],
+      "wallCenterDistanceBeforeMeters": 11.910861642880684,
+      "exactAllPartTriangleRoadMarginMeters": 42.32810522425019
+    },
+    {
+      "id": "VRV16_RoundedTerrain_035",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_035_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-193.39392527 21.05689842 140.69707211",
+          "hpr": "0.00000000 78.32282917 0.00000000",
+          "scale": "2.43089905 5.85835873 1.90149683"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_035_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-193.39392527 14.30040246 140.69707211",
+          "hpr": "0.00000000 78.32282917 0.00000000",
+          "scale": "2.18780915 16.40340444 1.71134715"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_035_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-189.99404598 21.05689842 137.16590214",
+          "hpr": "0.00000000 78.32282917 0.00000000",
+          "scale": "2.43089905 5.85835873 1.90149683"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_035_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-189.99404598 14.30040246 137.16590214",
+          "hpr": "0.00000000 78.32282917 0.00000000",
+          "scale": "2.18780915 16.40340444 1.71134715"
+        }
+      ],
+      "horizontalDisplacementMeters": 4.901871121720372,
+      "outwardNormal": [
+        0.4690132453715504,
+        0,
+        -0.8831911320127971
+      ],
+      "originalWallClosestPoint": [
+        -191.9541938253071,
+        14.71577272175723,
+        140.8570243172216
+      ],
+      "wallCenterDistanceBeforeMeters": 1.4711593446895261,
+      "exactAllPartTriangleRoadMarginMeters": 40.08826627384132
+    },
+    {
+      "id": "VRV16_RoundedTerrain_036",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_036_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-260.05248140 7.26707500 -41.45634209",
+          "hpr": "0.00000000 11.58985158 0.00000000",
+          "scale": "3.18506863 8.23221815 2.28509852"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_036_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-260.05248140 -2.22721363 -41.45634209",
+          "hpr": "0.00000000 11.58985158 0.00000000",
+          "scale": "2.86656177 23.05021082 2.05658867"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_036_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-258.71527252 7.26707500 -28.36309961",
+          "hpr": "0.00000000 11.58985158 0.00000000",
+          "scale": "3.18506863 8.23221815 2.28509852"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_036_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-258.71527252 -2.22721363 -28.36309961",
+          "hpr": "0.00000000 11.58985158 0.00000000",
+          "scale": "2.86656177 23.05021082 2.05658867"
+        }
+      ],
+      "horizontalDisplacementMeters": 13.161349709045195,
+      "outwardNormal": [
+        0.10160119633194921,
+        0,
+        0.9948252092221612
+      ],
+      "originalWallClosestPoint": [
+        -259.24010955408045,
+        1.3528581626518275,
+        -33.50202638546174
+      ],
+      "wallCenterDistanceBeforeMeters": 8.671869412962057,
+      "exactAllPartTriangleRoadMarginMeters": 40.38576699224234
+    },
+    {
+      "id": "VRV16_RoundedTerrain_037",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_037_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-211.71971655 16.31610482 93.69303027",
+          "hpr": "0.00000000 -172.03263691 0.00000000",
+          "scale": "2.35652077 6.61467448 2.54352974"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_037_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-211.71971655 8.68734334 93.69303027",
+          "hpr": "0.00000000 -172.03263691 0.00000000",
+          "scale": "2.12086869 18.52108854 2.28917677"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_037_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-195.26151187 16.31610482 97.21552308",
+          "hpr": "0.00000000 -172.03263691 0.00000000",
+          "scale": "2.35652077 6.61467448 2.54352974"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_037_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-195.26151187 8.68734334 97.21552308",
+          "hpr": "0.00000000 -172.03263691 0.00000000",
+          "scale": "2.12086869 18.52108854 2.28917677"
+        }
+      ],
+      "horizontalDisplacementMeters": 16.830937495687316,
+      "outwardNormal": [
+        0.9778543046821542,
+        0,
+        0.20928678604866785
+      ],
+      "originalWallClosestPoint": [
+        -199.2531370840267,
+        14.09665470913248,
+        96.36120929928998
+      ],
+      "wallCenterDistanceBeforeMeters": 13.78003646050315,
+      "exactAllPartTriangleRoadMarginMeters": 25.339399417135258
+    },
+    {
+      "id": "VRV16_RoundedTerrain_038",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_038_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-208.34767206 32.12332003 57.03034414",
+          "hpr": "0.00000000 -171.39959410 0.00000000",
+          "scale": "1.71542204 5.99666096 2.45367328"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_038_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-208.34767206 25.20731891 57.03034414",
+          "hpr": "0.00000000 -171.39959410 0.00000000",
+          "scale": "1.54387984 16.79065069 2.20830595"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_038_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-209.69375759 32.12332003 51.00119080",
+          "hpr": "0.00000000 -171.39959410 0.00000000",
+          "scale": "1.71542204 5.99666096 2.45367328"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_038_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-209.69375759 25.20731891 51.00119080",
+          "hpr": "0.00000000 -171.39959410 0.00000000",
+          "scale": "1.54387984 16.79065069 2.20830595"
+        }
+      ],
+      "horizontalDisplacementMeters": 6.1775914625540285,
+      "outwardNormal": [
+        -0.2015205040583438,
+        0,
+        -0.9794842961702199
+      ],
+      "originalWallClosestPoint": [
+        -209.0401157067514,
+        29.994340582124092,
+        54.17819732697025
+      ],
+      "wallCenterDistanceBeforeMeters": 5.477340823229181,
+      "exactAllPartTriangleRoadMarginMeters": 46.246075637665776
+    },
+    {
+      "id": "VRV16_RoundedTerrain_039",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_039_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-250.68747683 -2.49278145 17.56740436",
+          "hpr": "0.00000000 -167.44651311 0.00000000",
+          "scale": "1.79925014 11.15203915 2.62725400"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_039_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-250.68747683 -15.35452498 17.56740436",
+          "hpr": "0.00000000 -167.44651311 0.00000000",
+          "scale": "1.61932513 31.22570962 2.36452860"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_039_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-251.09268309 -2.49278145 6.84792449",
+          "hpr": "0.00000000 -167.44651311 0.00000000",
+          "scale": "1.79925014 11.15203915 2.62725400"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_039_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-251.09268309 -15.35452498 6.84792449",
+          "hpr": "0.00000000 -167.44651311 0.00000000",
+          "scale": "1.61932513 31.22570962 2.36452860"
+        }
+      ],
+      "horizontalDisplacementMeters": 10.727135717482806,
+      "outwardNormal": [
+        -0.3928190781406866,
+        0,
+        -0.9196157740321232
+      ],
+      "originalWallClosestPoint": [
+        -249.76429160500214,
+        -5.386353198166504,
+        9.957777944644972
+      ],
+      "wallCenterDistanceBeforeMeters": 12.336649440683106,
+      "exactAllPartTriangleRoadMarginMeters": 46.47902118537053
+    },
+    {
+      "id": "VRV16_RoundedTerrain_040",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_040_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-244.43701670 3.17323099 25.84475357",
+          "hpr": "0.00000000 40.46795287 0.00000000",
+          "scale": "2.64785976 9.64477070 1.85178646"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_040_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-244.43701670 -7.95016675 25.84475357",
+          "hpr": "0.00000000 40.46795287 0.00000000",
+          "scale": "2.38307378 27.00535796 1.66660781"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_040_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-239.66676227 3.17323099 12.37653292",
+          "hpr": "0.00000000 40.46795287 0.00000000",
+          "scale": "2.64785976 9.64477070 1.85178646"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_040_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-239.66676227 -7.95016675 12.37653292",
+          "hpr": "0.00000000 40.46795287 0.00000000",
+          "scale": "2.38307378 27.00535796 1.66660781"
+        }
+      ],
+      "horizontalDisplacementMeters": 14.288047272654595,
+      "outwardNormal": [
+        0.3338632871355458,
+        0,
+        -0.9426215070233906
+      ],
+      "originalWallClosestPoint": [
+        -241.15681355768334,
+        0.1609594876128959,
+        16.58350757951752
+      ],
+      "wallCenterDistanceBeforeMeters": 12.575832801782012,
+      "exactAllPartTriangleRoadMarginMeters": 38.208565406709816
+    },
+    {
+      "id": "VRV16_RoundedTerrain_041",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_041_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-202.17544810 28.07719034 67.25295062",
+          "hpr": "0.00000000 85.15889700 0.00000000",
+          "scale": "2.15320532 7.39106942 2.96034224"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_041_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-202.17544810 19.55300584 67.25295062",
+          "hpr": "0.00000000 85.15889700 0.00000000",
+          "scale": "1.93788479 20.69499438 2.66430802"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_041_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-195.04563946 28.07719034 68.54768255",
+          "hpr": "0.00000000 85.15889700 0.00000000",
+          "scale": "2.15320532 7.39106942 2.96034224"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_041_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-195.04563946 19.55300584 68.54768255",
+          "hpr": "0.00000000 85.15889700 0.00000000",
+          "scale": "1.93788479 20.69499438 2.66430802"
+        }
+      ],
+      "horizontalDisplacementMeters": 7.24641304280728,
+      "outwardNormal": [
+        0.9839086725305585,
+        0,
+        0.17867211343450956
+      ],
+      "originalWallClosestPoint": [
+        -198.80034729168364,
+        20.81407037195616,
+        67.86584936895139
+      ],
+      "wallCenterDistanceBeforeMeters": 3.590604265727981,
+      "exactAllPartTriangleRoadMarginMeters": 28.91410254364899
+    },
+    {
+      "id": "VRV16_RoundedTerrain_042",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_042_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-263.30917635 -7.58280135 7.91191278",
+          "hpr": "0.00000000 174.63351730 0.00000000",
+          "scale": "3.25789056 6.62495710 2.64711878"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_042_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-263.30917635 -15.22342186 7.91191278",
+          "hpr": "0.00000000 174.63351730 0.00000000",
+          "scale": "2.93210150 18.54987988 2.38240690"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_042_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-270.23692884 -7.58280135 3.31228538",
+          "hpr": "0.00000000 174.63351730 0.00000000",
+          "scale": "3.25789056 6.62495710 2.64711878"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_042_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-270.23692884 -15.22342186 3.31228538",
+          "hpr": "0.00000000 174.63351730 0.00000000",
+          "scale": "2.93210150 18.54987988 2.38240690"
+        }
+      ],
+      "horizontalDisplacementMeters": 8.315667547444184,
+      "outwardNormal": [
+        -0.8330963744890589,
+        0,
+        -0.5531278611796603
+      ],
+      "originalWallClosestPoint": [
+        -265.8540924254983,
+        -13.589597754590557,
+        6.222235536373217
+      ],
+      "wallCenterDistanceBeforeMeters": 3.383324265775121,
+      "exactAllPartTriangleRoadMarginMeters": 57.68790488606295
+    },
+    {
+      "id": "VRV16_RoundedTerrain_043",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_043_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-220.47026640 19.77921633 44.04209215",
+          "hpr": "0.00000000 -167.04672083 0.00000000",
+          "scale": "3.01641298 8.05517304 2.81336848"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_043_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-220.47026640 10.48911536 44.04209215",
+          "hpr": "0.00000000 -167.04672083 0.00000000",
+          "scale": "2.71477168 22.55448451 2.53203163"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_043_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-220.71589159 19.77921633 33.64192248",
+          "hpr": "0.00000000 -167.04672083 0.00000000",
+          "scale": "3.01641298 8.05517304 2.81336848"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_043_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-220.71589159 10.48911536 33.64192248",
+          "hpr": "0.00000000 -167.04672083 0.00000000",
+          "scale": "2.71477168 22.55448451 2.53203163"
+        }
+      ],
+      "horizontalDisplacementMeters": 10.403069783157072,
+      "outwardNormal": [
+        -0.023610837761688083,
+        0,
+        -0.9997212253124325
+      ],
+      "originalWallClosestPoint": [
+        -220.5991341542282,
+        18.76820578635419,
+        38.585622097534696
+      ],
+      "wallCenterDistanceBeforeMeters": 9.734899588036035,
+      "exactAllPartTriangleRoadMarginMeters": 43.80268686364647
+    },
+    {
+      "id": "VRV16_RoundedTerrain_044",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_044_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-213.34317094 12.18740697 123.99256251",
+          "hpr": "0.00000000 178.63910922 0.00000000",
+          "scale": "1.81597409 6.80737214 1.76521910"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_044_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-213.34317094 4.33640561 123.99256251",
+          "hpr": "0.00000000 178.63910922 0.00000000",
+          "scale": "1.63437668 19.06064199 1.58869719"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_044_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-212.21150832 12.18740697 116.03930882",
+          "hpr": "0.00000000 178.63910922 0.00000000",
+          "scale": "1.81597409 6.80737214 1.76521910"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_044_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-212.21150832 4.33640561 116.03930882",
+          "hpr": "0.00000000 178.63910922 0.00000000",
+          "scale": "1.63437668 19.06064199 1.58869719"
+        }
+      ],
+      "horizontalDisplacementMeters": 8.03336197235549,
+      "outwardNormal": [
+        0.11114252581077452,
+        0,
+        -0.9938044772269853
+      ],
+      "originalWallClosestPoint": [
+        -212.58662093843827,
+        11.435584089062726,
+        119.39345788044827
+      ],
+      "wallCenterDistanceBeforeMeters": 8.33899083214691,
+      "exactAllPartTriangleRoadMarginMeters": 45.94282593153254
+    },
+    {
+      "id": "VRV16_RoundedTerrain_045",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_045_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-220.97165525 10.15266418 119.38569457",
+          "hpr": "0.00000000 26.33739444 0.00000000",
+          "scale": "2.04398243 9.72903293 2.90839354"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_045_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-220.97165525 -1.06791392 119.38569457",
+          "hpr": "0.00000000 26.33739444 0.00000000",
+          "scale": "1.83958419 27.24129220 2.61755419"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_045_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-216.58621175 10.15266418 116.84135017",
+          "hpr": "0.00000000 26.33739444 0.00000000",
+          "scale": "2.04398243 9.72903293 2.90839354"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_045_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-216.58621175 -1.06791392 116.84135017",
+          "hpr": "0.00000000 26.33739444 0.00000000",
+          "scale": "1.83958419 27.24129220 2.61755419"
+        }
+      ],
+      "horizontalDisplacementMeters": 5.070089062180736,
+      "outwardNormal": [
+        0.11114252581077452,
+        0,
+        -0.9938044772269853
+      ],
+      "originalWallClosestPoint": [
+        -216.99446767723074,
+        12.648402091249068,
+        120.49185712559898
+      ],
+      "wallCenterDistanceBeforeMeters": 14.071959580334147,
+      "exactAllPartTriangleRoadMarginMeters": 48.14946808041876
+    },
+    {
+      "id": "VRV16_RoundedTerrain_046",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_046_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-220.16094590 13.75933829 94.87446480",
+          "hpr": "0.00000000 -172.03263691 0.00000000",
+          "scale": "2.31456016 10.88478125 3.06532360"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_046_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-220.16094590 1.20582562 94.87446480",
+          "hpr": "0.00000000 -172.03263691 0.00000000",
+          "scale": "2.08310414 30.47738750 2.75879124"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_046_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-221.51762219 13.75933829 97.07221663",
+          "hpr": "0.00000000 -172.03263691 0.00000000",
+          "scale": "2.31456016 10.88478125 3.06532360"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_046_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-221.51762219 1.20582562 97.07221663",
+          "hpr": "0.00000000 -172.03263691 0.00000000",
+          "scale": "2.08310414 30.47738750 2.75879124"
+        }
+      ],
+      "horizontalDisplacementMeters": 2.5827666709725037,
+      "outwardNormal": [
+        0.3346894357742944,
+        0,
+        0.9423284892122729
+      ],
+      "originalWallClosestPoint": [
+        -222.86546522007322,
+        21.907713917124255,
+        93.2773227637191
+      ],
+      "wallCenterDistanceBeforeMeters": 20.64739070377835,
+      "exactAllPartTriangleRoadMarginMeters": 47.09545747822628
+    },
+    {
+      "id": "VRV16_RoundedTerrain_047",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_047_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-194.08834405 26.68333151 154.29082331",
+          "hpr": "0.00000000 116.02981779 0.00000000",
+          "scale": "3.20284752 10.38987325 1.93549366"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_047_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-194.08834405 14.70060053 154.29082331",
+          "hpr": "0.00000000 116.02981779 0.00000000",
+          "scale": "2.88256277 29.09164510 1.74194429"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_047_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-183.66610208 26.68333151 146.15204712",
+          "hpr": "0.00000000 116.02981779 0.00000000",
+          "scale": "3.20284752 10.38987325 1.93549366"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_047_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-183.66610208 14.70060053 146.15204712",
+          "hpr": "0.00000000 116.02981779 0.00000000",
+          "scale": "2.88256277 29.09164510 1.74194429"
+        }
+      ],
+      "horizontalDisplacementMeters": 13.22357007590997,
+      "outwardNormal": [
+        0.7163541333741467,
+        0,
+        -0.697736881351255
+      ],
+      "originalWallClosestPoint": [
+        -187.3831995355019,
+        20.35836561099454,
+        149.7725413233203
+      ],
+      "wallCenterDistanceBeforeMeters": 9.709749214737155,
+      "exactAllPartTriangleRoadMarginMeters": 39.18407338249697
+    },
+    {
+      "id": "VRV16_RoundedTerrain_048",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_048_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-216.21806487 29.51373475 58.22068618",
+          "hpr": "0.00000000 -171.39959410 0.00000000",
+          "scale": "2.65171350 8.07457831 2.41356024"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_048_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-216.21806487 20.20125352 58.22068618",
+          "hpr": "0.00000000 -171.39959410 0.00000000",
+          "scale": "2.38654215 22.60881927 2.17220422"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_048_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-218.04280968 29.51373475 51.06221247",
+          "hpr": "0.00000000 -171.39959410 0.00000000",
+          "scale": "2.65171350 8.07457831 2.41356024"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_048_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-218.04280968 20.20125352 51.06221247",
+          "hpr": "0.00000000 -171.39959410 0.00000000",
+          "scale": "2.38654215 22.60881927 2.17220422"
+        }
+      ],
+      "horizontalDisplacementMeters": 7.38738380107284,
+      "outwardNormal": [
+        -0.2015205040583438,
+        0,
+        -0.9794842961702199
+      ],
+      "originalWallClosestPoint": [
+        -217.142396237481,
+        29.558543722833566,
+        55.438644706723565
+      ],
+      "wallCenterDistanceBeforeMeters": 9.597303589826952,
+      "exactAllPartTriangleRoadMarginMeters": 47.54342019048164
+    },
+    {
+      "id": "VRV16_RoundedTerrain_049",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_049_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-215.19649898 15.85763784 137.53198934",
+          "hpr": "0.00000000 -23.46759482 0.00000000",
+          "scale": "3.42520452 6.80630344 2.02208652"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_049_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-215.19649898 8.00786902 137.53198934",
+          "hpr": "0.00000000 -23.46759482 0.00000000",
+          "scale": "3.08268407 19.05764963 1.81987787"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_049_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-217.91324805 15.85763784 130.83118005",
+          "hpr": "0.00000000 -23.46759482 0.00000000",
+          "scale": "3.42520452 6.80630344 2.02208652"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_049_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-217.91324805 8.00786902 130.83118005",
+          "hpr": "0.00000000 -23.46759482 0.00000000",
+          "scale": "3.08268407 19.05764963 1.81987787"
+        }
+      ],
+      "horizontalDisplacementMeters": 7.230599604265522,
+      "outwardNormal": [
+        0.01786909667007419,
+        0,
+        -0.9998403349456331
+      ],
+      "originalWallClosestPoint": [
+        -218.01116577723892,
+        18.002690708612505,
+        136.31002979737087
+      ],
+      "wallCenterDistanceBeforeMeters": 10.279160976250635,
+      "exactAllPartTriangleRoadMarginMeters": 56.35105055458526
+    },
+    {
+      "id": "VRV16_RoundedTerrain_050",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_050_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-101.71844503 4.85231000 210.63306956",
+          "hpr": "0.00000000 -66.92263135 0.00000000",
+          "scale": "2.46964817 9.90474832 1.91194140"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_050_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-101.71844503 -6.57092219 210.63306956",
+          "hpr": "0.00000000 -66.92263135 0.00000000",
+          "scale": "2.22268335 27.73329530 1.72074726"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_050_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-85.36853349 4.85231000 206.13825538",
+          "hpr": "0.00000000 -66.92263135 0.00000000",
+          "scale": "2.46964817 9.90474832 1.91194140"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_050_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-85.36853349 -6.57092219 206.13825538",
+          "hpr": "0.00000000 -66.92263135 0.00000000",
+          "scale": "2.22268335 27.73329530 1.72074726"
+        }
+      ],
+      "horizontalDisplacementMeters": 16.95650205619422,
+      "outwardNormal": [
+        0.964226671773891,
+        0,
+        -0.26507909280032804
+      ],
+      "originalWallClosestPoint": [
+        -89.44719350609137,
+        2.7849957464783692,
+        207.25953477123704
+      ],
+      "wallCenterDistanceBeforeMeters": 15.63809491653929,
+      "exactAllPartTriangleRoadMarginMeters": 51.221891905751924
+    },
+    {
+      "id": "VRV16_RoundedTerrain_051",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_051_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-227.85278437 26.16665795 88.72774099",
+          "hpr": "0.00000000 40.79191201 0.00000000",
+          "scale": "2.74125834 10.88848973 2.59008128"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_051_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-227.85278437 13.60886826 88.72774099",
+          "hpr": "0.00000000 40.79191201 0.00000000",
+          "scale": "2.46713251 30.48777124 2.33107315"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_051_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-224.55778611 26.16665795 98.97227976",
+          "hpr": "0.00000000 40.79191201 0.00000000",
+          "scale": "2.74125834 10.88848973 2.59008128"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_051_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-224.55778611 13.60886826 98.97227976",
+          "hpr": "0.00000000 40.79191201 0.00000000",
+          "scale": "2.46713251 30.48777124 2.33107315"
+        }
+      ],
+      "horizontalDisplacementMeters": 10.761393408407521,
+      "outwardNormal": [
+        0.3346894357742944,
+        0,
+        0.9423284892122729
+      ],
+      "originalWallClosestPoint": [
+        -226.09240795976538,
+        21.58760140799328,
+        94.65150433678971
+      ],
+      "wallCenterDistanceBeforeMeters": 9.860591195634585,
+      "exactAllPartTriangleRoadMarginMeters": 52.093651991430335
+    },
+    {
+      "id": "VRV16_RoundedTerrain_052",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_052_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-228.35563380 9.68052042 123.04108237",
+          "hpr": "0.00000000 26.33739444 0.00000000",
+          "scale": "1.68117503 10.27297605 1.66898817"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_052_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-228.35563380 -2.16739200 123.04108237",
+          "hpr": "0.00000000 26.33739444 0.00000000",
+          "scale": "1.51305753 28.76433294 1.50208935"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_052_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-223.66687683 9.68052042 119.06421738",
+          "hpr": "0.00000000 26.33739444 0.00000000",
+          "scale": "1.68117503 10.27297605 1.66898817"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_052_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-223.66687683 -2.16739200 119.06421738",
+          "hpr": "0.00000000 26.33739444 0.00000000",
+          "scale": "1.51305753 28.76433294 1.50208935"
+        }
+      ],
+      "horizontalDisplacementMeters": 6.148162088301473,
+      "outwardNormal": [
+        0.11114252581077452,
+        0,
+        -0.9938044772269853
+      ],
+      "originalWallClosestPoint": [
+        -224.02239505454799,
+        14.582134670073632,
+        122.24315897062051
+      ],
+      "wallCenterDistanceBeforeMeters": 17.05043712589835,
+      "exactAllPartTriangleRoadMarginMeters": 56.39331406577558
+    },
+    {
+      "id": "VRV16_RoundedTerrain_053",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_053_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-268.70473804 -1.72992547 -80.19230500",
+          "hpr": "0.00000000 -171.94830566 0.00000000",
+          "scale": "2.93460723 8.54078979 2.40539334"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_053_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-268.70473804 -11.58009245 -80.19230500",
+          "hpr": "0.00000000 -171.94830566 0.00000000",
+          "scale": "2.64114651 23.91421141 2.16485401"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_053_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-263.23201324 -1.72992547 -88.50410544",
+          "hpr": "0.00000000 -171.94830566 0.00000000",
+          "scale": "2.93460723 8.54078979 2.40539334"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_053_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-263.23201324 -11.58009245 -88.50410544",
+          "hpr": "0.00000000 -171.94830566 0.00000000",
+          "scale": "2.64114651 23.91421141 2.16485401"
+        }
+      ],
+      "horizontalDisplacementMeters": 9.951720620497424,
+      "outwardNormal": [
+        0.3707146853636165,
+        0,
+        -0.9287468019087628
+      ],
+      "originalWallClosestPoint": [
+        -265.02556307755543,
+        -1.498537888170734,
+        -84.0107477545781
+      ],
+      "wallCenterDistanceBeforeMeters": 11.186782762050084,
+      "exactAllPartTriangleRoadMarginMeters": 61.508042389383995
+    },
+    {
+      "id": "VRV16_RoundedTerrain_054",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_054_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-260.07597504 2.30754748 19.65798133",
+          "hpr": "0.00000000 -167.44651311 0.00000000",
+          "scale": "2.71115795 9.21906234 1.61125798"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_054_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-260.07597504 -8.32487712 19.65798133",
+          "hpr": "0.00000000 -167.44651311 0.00000000",
+          "scale": "2.44004215 25.81337455 1.45013218"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_054_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-257.42178953 2.30754748 9.37626310",
+          "hpr": "0.00000000 -167.44651311 0.00000000",
+          "scale": "2.71115795 9.21906234 1.61125798"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_054_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-257.42178953 -8.32487712 9.37626310",
+          "hpr": "0.00000000 -167.44651311 0.00000000",
+          "scale": "2.44004215 25.81337455 1.45013218"
+        }
+      ],
+      "horizontalDisplacementMeters": 10.618777263739906,
+      "outwardNormal": [
+        0.2227744523751348,
+        0,
+        -0.974870013575635
+      ],
+      "originalWallClosestPoint": [
+        -258.4344874521717,
+        -1.2224867571669715,
+        13.807870159557645
+      ],
+      "wallCenterDistanceBeforeMeters": 9.158487555647083,
+      "exactAllPartTriangleRoadMarginMeters": 50.88444444803783
+    },
+    {
+      "id": "VRV16_RoundedTerrain_055",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_055_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-89.98431147 0.76432768 208.57792832",
+          "hpr": "0.00000000 117.42956113 0.00000000",
+          "scale": "1.95007444 7.30873663 1.91884494"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_055_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-89.98431147 -7.66490170 208.57792832",
+          "hpr": "0.00000000 117.42956113 0.00000000",
+          "scale": "1.75506700 20.46446256 1.72696045"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_055_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-81.33198097 0.76432768 206.19928439",
+          "hpr": "0.00000000 117.42956113 0.00000000",
+          "scale": "1.95007444 7.30873663 1.91884494"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_055_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-81.33198097 -7.66490170 206.19928439",
+          "hpr": "0.00000000 117.42956113 0.00000000",
+          "scale": "1.75506700 20.46446256 1.72696045"
+        }
+      ],
+      "horizontalDisplacementMeters": 8.973336617791563,
+      "outwardNormal": [
+        0.964226671773891,
+        0,
+        -0.26507909280032804
+      ],
+      "originalWallClosestPoint": [
+        -84.75541497199933,
+        -3.594617223863473,
+        207.14043319503435
+      ],
+      "wallCenterDistanceBeforeMeters": 6.663540355698701,
+      "exactAllPartTriangleRoadMarginMeters": 52.98826307174405
+    },
+    {
+      "id": "VRV16_RoundedTerrain_056",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_056_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-232.93131932 14.93791796 39.43240851",
+          "hpr": "0.00000000 -144.07125712 0.00000000",
+          "scale": "2.58590338 9.75282829 2.82862133"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_056_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-232.93131932 3.68989646 39.43240851",
+          "hpr": "0.00000000 -144.07125712 0.00000000",
+          "scale": "2.32731304 27.30791921 2.54575920"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_056_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-232.82216658 14.93791796 27.59506987",
+          "hpr": "0.00000000 -144.07125712 0.00000000",
+          "scale": "2.58590338 9.75282829 2.82862133"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_056_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-232.82216658 3.68989646 27.59506987",
+          "hpr": "0.00000000 -144.07125712 0.00000000",
+          "scale": "2.32731304 27.30791921 2.54575920"
+        }
+      ],
+      "horizontalDisplacementMeters": 11.837841881779656,
+      "outwardNormal": [
+        0.009220661707115864,
+        0,
+        -0.9999574887952403
+      ],
+      "originalWallClosestPoint": [
+        -232.86257177585097,
+        14.383977792216202,
+        31.976910868756917
+      ],
+      "wallCenterDistanceBeforeMeters": 12.820799011754982,
+      "exactAllPartTriangleRoadMarginMeters": 44.717959436234665
+    },
+    {
+      "id": "VRV16_RoundedTerrain_057",
+      "before": [
+        {
+          "id": "VRV16_RoundedTerrain_057_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-85.71899513 -1.55674942 216.79617704",
+          "hpr": "0.00000000 117.42956113 0.00000000",
+          "scale": "2.05193594 7.34908098 1.52102227"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_057_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-85.71899513 -10.03250829 216.79617704",
+          "hpr": "0.00000000 117.42956113 0.00000000",
+          "scale": "1.84674235 20.57742674 1.36892004"
+        }
+      ],
+      "after": [
+        {
+          "id": "VRV16_RoundedTerrain_057_Grass",
+          "name": "fluxara_driftlib_volcano_grass_cap_v27",
+          "xyz": "-77.09427190 -1.55674942 214.42512273",
+          "hpr": "0.00000000 117.42956113 0.00000000",
+          "scale": "2.05193594 7.34908098 1.52102227"
+        },
+        {
+          "id": "VRV16_RoundedTerrain_057_Stone",
+          "name": "fluxara_driftlib_volcano_stone_column_v27",
+          "xyz": "-77.09427190 -10.03250829 214.42512273",
+          "hpr": "0.00000000 117.42956113 0.00000000",
+          "scale": "1.84674235 20.57742674 1.36892004"
+        }
+      ],
+      "horizontalDisplacementMeters": 8.944705099669822,
+      "outwardNormal": [
+        0.964226671773891,
+        0,
+        -0.26507909280032804
+      ],
+      "originalWallClosestPoint": [
+        -80.64616179507263,
+        -6.076706150897664,
+        215.40158581190636
+      ],
+      "wallCenterDistanceBeforeMeters": 6.46465839550412,
+      "exactAllPartTriangleRoadMarginMeters": 61.167581743187526
+    }
+  ],
+  "skippedGroups": [
+    {
+      "id": "VRV16_RoundedTerrain_004",
+      "reason": "Move too large or unnecessary",
+      "distance": 38.53864006704082
+    },
+    {
+      "id": "VRV16_RoundedTerrain_006",
+      "reason": "Protected road clearance",
+      "candidateClearanceMeters": 0.0
+    },
+    {
+      "id": "VRV16_RoundedTerrain_010",
+      "reason": "Protected road clearance",
+      "candidateClearanceMeters": 0.0
+    },
+    {
+      "id": "VRV16_RoundedTerrain_011",
+      "reason": "Protected road clearance",
+      "candidateClearanceMeters": 0.0
+    },
+    {
+      "id": "VRV16_RoundedTerrain_012",
+      "reason": "Protected road clearance",
+      "candidateClearanceMeters": 0.0
+    },
+    {
+      "id": "VRV16_RoundedTerrain_013",
+      "reason": "Move too large or unnecessary",
+      "distance": 30.70427681411423
+    },
+    {
+      "id": "VRV16_RoundedTerrain_014",
+      "reason": "Protected road clearance",
+      "candidateClearanceMeters": 0.0
+    },
+    {
+      "id": "VRV16_RoundedTerrain_018",
+      "reason": "Protected road clearance",
+      "candidateClearanceMeters": 0.0
+    },
+    {
+      "id": "VRV16_RoundedTerrain_019",
+      "reason": "Move too large or unnecessary",
+      "distance": 39.80998226537887
+    },
+    {
+      "id": "VRV16_RoundedTerrain_021",
+      "reason": "Protected road clearance",
+      "candidateClearanceMeters": 0.0
+    },
+    {
+      "id": "VRV16_RoundedTerrain_022",
+      "reason": "Protected road clearance",
+      "candidateClearanceMeters": 0.0
+    }
+  ],
+  "newSharedModels": 0,
+  "newTextures": 0,
+  "newMaterials": 0,
+  "newGeometry": false,
+  "minimumChangedGroupRoadMarginMeters": 3.6194968890005583,
+  "sourceLocalGeometryBoundsOriginsAxesUnchanged": true,
+  "changedAddedInstanceXZPositions": true,
+  "sourceSceneObjectsAndGameplayControlsUnchanged": true,
+  "productionIntegrated": false,
+  "referenceAcceptance": false
+}

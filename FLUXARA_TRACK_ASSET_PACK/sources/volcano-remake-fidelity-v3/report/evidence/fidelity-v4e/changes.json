@@ -1,0 +1,67 @@
+{
+  "parent": "V4C",
+  "models": [
+    {
+      "model": "AshCloud2.spm",
+      "cards": 9,
+      "triangles": 36,
+      "boundsExactOriginal": true,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "shape": "Overlapping two-sided smoke billow cards with full-sprite UVs; source geometry replaced only for ghost effects"
+    },
+    {
+      "model": "AshCloudEffect.spm",
+      "cards": 96,
+      "triangles": 384,
+      "boundsExactOriginal": true,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "shape": "Overlapping two-sided smoke billow cards with full-sprite UVs; source geometry replaced only for ghost effects"
+    },
+    {
+      "model": "AshColumnEffect.spm",
+      "cards": 72,
+      "triangles": 288,
+      "boundsExactOriginal": true,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "shape": "Overlapping two-sided smoke billow cards with full-sprite UVs; source geometry replaced only for ghost effects"
+    },
+    {
+      "model": "EruptionAsh.spm",
+      "cards": 4,
+      "triangles": 16,
+      "boundsExactOriginal": true,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "shape": "Overlapping two-sided smoke billow cards with full-sprite UVs; source geometry replaced only for ghost effects"
+    },
+    {
+      "model": "PyroclasticFlowAsh.spm",
+      "cards": 47,
+      "triangles": 188,
+      "boundsExactOriginal": true,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "shape": "Overlapping two-sided smoke billow cards with full-sprite UVs; source geometry replaced only for ghost effects"
+    }
+  ],
+  "roadAndGameplayDataEqualV3": true,
+  "productionIntegrated": false
+}

@@ -1,0 +1,40 @@
+{
+  "sourceWidth": 1774,
+  "sourceHeight": 887,
+  "resolution": 512,
+  "faces": [
+    {
+      "face": "front",
+      "name": "dp_sky_front.jpg",
+      "bytes": 31051
+    },
+    {
+      "face": "left",
+      "name": "dp_sky_left.jpg",
+      "bytes": 32620
+    },
+    {
+      "face": "back",
+      "name": "dp_sky_back.jpg",
+      "bytes": 26208
+    },
+    {
+      "face": "right",
+      "name": "dp_sky_right.jpg",
+      "bytes": 29305
+    },
+    {
+      "face": "top",
+      "name": "dp_sky_top.jpg",
+      "bytes": 29876
+    },
+    {
+      "face": "bottom",
+      "name": "dp_sky_bottom.jpg",
+      "bytes": 28929
+    }
+  ],
+  "totalBytes": 177989,
+  "sideEdgeSamplingVerified": true,
+  "method": "Bilinear equirectangular projection matching Irrlicht cube UVs; JPG compression may differ at edges."
+}

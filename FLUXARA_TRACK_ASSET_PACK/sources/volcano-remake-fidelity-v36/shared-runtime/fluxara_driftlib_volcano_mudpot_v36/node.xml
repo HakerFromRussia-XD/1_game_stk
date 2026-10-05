@@ -1,0 +1,9 @@
+<scene>
+  <object id="Sphere" type="animation" xyz="0.00 0.00 0.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" looped="y" interaction="ghost" model="animated_bubble.spm" skeletal-animation="true">
+  </object>
+  <object id="fluxara_driftlib_mudpot_a_main" type="animation" xyz="0.00 0.00 0.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="fluxara_driftlib_mudpot_a_main.spm" skeletal-animation="false">
+    <animated-texture name="fluxara_volcano_bubbling_lava_v36.jpg" dx="0.100" />
+  </object>
+  <particle-emitter kind="gfx_mudPot_a.xml" id="Empty" xyz="0.00 -0.24 0.00" h="0.00">
+  </particle-emitter>
+</scene>

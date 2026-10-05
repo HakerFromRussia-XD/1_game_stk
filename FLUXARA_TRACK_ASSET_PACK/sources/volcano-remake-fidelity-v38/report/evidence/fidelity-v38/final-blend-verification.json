@@ -1,0 +1,67 @@
+{
+  "finalBlendOpens": true,
+  "allPreviousNativeObjectsRetained": 810,
+  "allOtherNativeMeshGeometryUVNormalsColorsMaterialsExactV37": 727,
+  "allOtherNativeMatricesExactV37": 483,
+  "changedExistingSharedMatrices": 327,
+  "changedSharedMeshUsers": 83,
+  "newCloudSharedInstances": 8,
+  "newSourcePrototypes": [
+    {
+      "id": "volcano-fidelity-v38-grass",
+      "name": "VRV38_Prototype_Grass",
+      "sourceModel": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v38/shared-runtime/fluxara_driftlib_volcano_grass_roll_v38/vr_v38_grass_roll.spm",
+      "sourceBuffer": 0,
+      "triangles": 312,
+      "materials": [
+        "VRV16_GrassLipVertexColor"
+      ],
+      "sourcePoolObjectId": "volcano-fidelity-v32-sealed-grasscap"
+    },
+    {
+      "id": "volcano-fidelity-v38-terrain",
+      "name": "VRV38_Prototype_Terrain",
+      "sourceModel": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v38/shared-runtime/fluxara_driftlib_volcano_rolling_terrain_v38/vr_v38_rolling_terrain.spm",
+      "sourceBuffer": 0,
+      "triangles": 2710,
+      "materials": [
+        "VRV4E_vr_moss_palette.jpg"
+      ],
+      "sourcePoolObjectId": "volcano-fidelity-v23-rounded-backdrop-terrain"
+    },
+    {
+      "id": "volcano-fidelity-v38-cloud",
+      "name": "VRV38_Prototype_Cloud",
+      "sourceModel": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v38/shared-runtime/fluxara_driftlib_volcano_sky_cloud_v38/vr_v38_sky_cloud.spm",
+      "sourceBuffer": 0,
+      "triangles": 960,
+      "materials": [
+        "VRV16_GrassLipVertexColor"
+      ],
+      "sourcePoolObjectId": "volcano-fidelity-v24-cloud-ashcloud"
+    }
+  ],
+  "meshObjects": 821,
+  "nativePrototypeCount": 49,
+  "nativeMaterialDefinitionCount": 99,
+  "nativeSharedParts": 522,
+  "sharedMeshPointersExactAfterReopen": true,
+  "maxTransformError": 4.5299530029296875e-06,
+  "stonePackedPixelsExact": true,
+  "canonicalPending": false,
+  "newMaterialsAndTextures": 0,
+  "runtimeAndReferenceAcceptanceSeparate": true,
+  "canonical": {
+    "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend",
+    "bytes": 435599746,
+    "sha256": "8cee230bd02b7de3211b056e45d025f8212af37c6b090df3ee5403eddf5099ce",
+    "allPreviousNativeMeshGeometryNormalsUVColorsMaterialsExactAfterReopen": 1458,
+    "allPreviousImagePackedBytesExact": 381,
+    "previousMaterialsRetained": 1747,
+    "newPrototypes": 3,
+    "newMaterialVariants": 0,
+    "newNativeImagePixels": false,
+    "previousHouseWindowEmissionPreserved": true,
+    "newPrototypeTriangleAndMaterialBindingsVerified": true
+  }
+}

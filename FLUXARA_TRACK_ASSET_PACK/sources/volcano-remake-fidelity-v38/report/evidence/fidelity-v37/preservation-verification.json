@@ -1,0 +1,2311 @@
+{
+  "baseCandidate": "V36",
+  "allOtherCandidateModelsMaterialXMLPixelsAndControlsByteExactV36": true,
+  "protectedControlsExactV1": true,
+  "protectedRoadTriangles": 2032,
+  "sourceStonePixelsRetained": true,
+  "newSPMTextureMaterialPayloadBytes": 0,
+  "thickerGrassCaps": 82,
+  "linkedExistingVegetationTransforms": 160,
+  "newBackgroundCoordinateInstances": 84,
+  "grassStoneBoundaryPointsPerGroup": 16,
+  "maximumWorldRimXZErrorMeters": 2.6354967961612605e-06,
+  "maximum0p08mInterfaceOverlapErrorMeters": 1.745478599157746e-08,
+  "verifiedRoadChecks": [
+    {
+      "id": "VRV16_RoundedTerrain_000_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_001_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_002_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_003_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_004_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_005_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_006_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_007_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_008_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_009_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_010_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_011_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_012_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_013_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_014_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_015_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_016_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_017_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_018_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_019_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_020_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_021_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_022_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_023_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_024_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_025_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_026_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_027_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_028_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_029_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_030_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_031_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_032_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_033_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_034_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_035_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_036_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_037_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_038_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_039_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_040_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_041_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_042_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_043_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_044_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_045_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_046_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_047_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_048_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_049_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_050_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_051_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_052_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_053_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_054_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_055_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_056_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV16_RoundedTerrain_057_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_000_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 5,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_001_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_002_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_003_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_004_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_005_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 53,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_006_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_007_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_008_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_009_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_010_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_011_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_012_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_013_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_014_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_015_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_016_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_017_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_018_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_019_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_020_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_021_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_022_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_023_Grass",
+      "allRenderedTrianglesChecked": 280,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0015",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_012",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0023",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0031",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0002",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0008",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_003",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_019",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_023",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_024",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0025",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0028",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_004",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_005",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_021",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_007",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0011",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0012",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0018",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0019",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0017",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0024",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0006",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0013",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0014",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_006",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0021",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0022",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0027",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0001",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0003",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_001",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0009",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0004",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0005",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_002",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_021",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0026",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_016",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_018",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_022",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0007",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_001",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_050",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_043",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_028",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0000",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_025",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_053",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0010",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0016",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0032",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0033",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_025",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_026",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_027",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_031",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_041",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_054",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_022",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_039",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_040",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_044",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_045",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_037",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_056",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_000",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_052",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_062",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_003",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_055",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_048",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_047",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_051",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_018",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_020",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_059",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_005",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_060",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_007",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_002",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_030",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_034",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_036",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0034",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_010",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_030",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_000_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_024",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_027",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_001_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_013",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_015",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_002_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_031",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_003_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_014",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_016",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_004_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0020",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0029",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0030",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_008",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_005_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_011",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_006_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_004",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_007_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_008_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_009_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_042",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_046",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_058",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_061",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_010_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_017",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_019",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_011_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_009",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_011",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_013",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_014",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_015",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_017",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_020",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_012_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_000",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_009",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_013_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_006",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_008",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_014_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_057",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_023",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_015_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_026",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_029",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_016_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_017_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_063",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_018_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_019_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_028",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_029",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_032",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_033",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_035",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_038",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_020_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0035",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0036",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0037",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0038",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VR_moss-crown_0039",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_021_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV12_CrestBush_049",
+      "allRenderedTrianglesChecked": 180,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_022_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_010",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV18_RoundedHill_012",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV30_CliffFacade_023_Tree",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 0.25,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_000",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_001",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_002",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_003",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_004",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_005",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_006",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_007",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_008",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_009",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_010",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_011",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_012",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_013",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_014",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_015",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_016",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_017",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_018",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundMound_019",
+      "allRenderedTrianglesChecked": 360,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_000",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_001",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_002",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_003",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_004",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_005",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_006",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_007",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_008",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_009",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_010",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_011",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_012",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_013",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_014",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_015",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_016",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_017",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_018",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_019",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_020",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_021",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_022",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_023",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_024",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_025",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_026",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_027",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_028",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_029",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_030",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_031",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_032",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_033",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_034",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_035",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_036",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_037",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_038",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_039",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_040",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_041",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_042",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_043",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_044",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_045",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_046",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_047",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_048",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_049",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_050",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_051",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_052",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_053",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_054",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_055",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_056",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_057",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_058",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_059",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_060",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_061",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_062",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    },
+    {
+      "id": "VRV37_BackgroundTree_063",
+      "allRenderedTrianglesChecked": 588,
+      "roadClearanceLowerBoundMeters": 2.0,
+      "exactCloseTrianglePairs": 0,
+      "allExcludedPairsUseAABBLowerBound": true
+    }
+  ],
+  "existingTreeRootsOnActualCapsMaxErrorMeters": 5.051270891738095e-09,
+  "newTreeRootsOnBackgroundOrMoundMaxErrorMeters": 5.7934357115558266e-09,
+  "allSourceLibraryHashesExact": true,
+  "removedCandidateImagePreservedInV36": true,
+  "candidateAllFilesBytes": 5914649,
+  "acceptedAllSharedHistoryIncludingV36Bytes": 358635,
+  "allCandidateAndAcceptedHistoryBytes": 6273284,
+  "v1Bytes": 7693535,
+  "savingVsV1Bytes": 1420251,
+  "savingVsV36Bytes": 26470,
+  "productionIntegrated": false,
+  "referenceAcceptance": false,
+  "nativeRuntimeAndFullVisualAcceptanceSeparate": true
+}

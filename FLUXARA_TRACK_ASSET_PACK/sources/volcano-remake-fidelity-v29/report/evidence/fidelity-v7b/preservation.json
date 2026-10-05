@@ -1,0 +1,148 @@
+{
+  "originalRoadPositionsNormalsUvsColoursAndIndicesExact": true,
+  "originalGameplayFilesExact": [
+    "track.xml",
+    "quads.xml",
+    "graph.xml",
+    "scripting.as",
+    "easter_eggs.xml"
+  ],
+  "allOtherModelsTexturesAndMaterialsExactV5Alpha": true,
+  "allOtherSceneNodesExactV5Alpha": true,
+  "coreEffectsOriginalLocalBoundsOriginsAxesRetained": true,
+  "coreMeshBytesAndTrianglesWithinTwentyPercent": true,
+  "scope": "Mesh bytes only; existing 64x32 palette textures reused, not original large smoke textures. Decorative transforms and animation explicitly changed.",
+  "threeCloudMinimumHeightAboveRoadCeiling": 67.8966293334961,
+  "modifiedGhostInstances": 3,
+  "consolidatedSpriteInstances": 8,
+  "productionIntegrated": false,
+  "productionSourceUnchanged": true,
+  "models": [
+    {
+      "model": "AshCloud.spm",
+      "billows": 11,
+      "originalTriangles": 864,
+      "triangles": 880,
+      "localBoundsMaxError": 7.62939453125e-06,
+      "sourceSpm": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/AshCloud.spm",
+      "paletteReused": "smoke_huricane_transp.png",
+      "worldBoundsTarget": [
+        [
+          -260,
+          80,
+          -160
+        ],
+        [
+          -155,
+          155,
+          -50
+        ]
+      ],
+      "instanceScaleGame": [
+        0.1547294706106186,
+        0.7963495850563049,
+        0.13139015436172485
+      ],
+      "instanceXyz": [
+        -207.49999974854472,
+        96.01622347654973,
+        -105.0000003880541
+      ],
+      "instanceHpr": [
+        0,
+        0,
+        0
+      ],
+      "construction": "Near-spherical puffs in world space; inverse per-map scaling stored in local mesh, local bounds/origin/axes retained.",
+      "originalBytes": 14435,
+      "verticesAfterWeld": 517,
+      "candidateBytes": 15691,
+      "vertexWeld": "Coincident vertices with identical UVs share one packed normal; indexed positions and triangle order unchanged.",
+      "modelByteChangePercent": 8.701073779009349
+    },
+    {
+      "model": "AshColumn.spm",
+      "billows": 10,
+      "originalTriangles": 768,
+      "triangles": 800,
+      "localBoundsMaxError": 1.9073486328125e-05,
+      "sourceSpm": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/AshColumn.spm",
+      "paletteReused": "smoke_huricane_transp.png",
+      "worldBoundsTarget": [
+        [
+          -95,
+          75,
+          -70
+        ],
+        [
+          5,
+          175,
+          25
+        ]
+      ],
+      "instanceScaleGame": [
+        0.515551745891571,
+        0.5543918609619141,
+        0.36445751786231995
+      ],
+      "instanceXyz": [
+        -45.000004212919976,
+        83.6475092235687,
+        11.310213084077532
+      ],
+      "instanceHpr": [
+        0,
+        0,
+        0
+      ],
+      "construction": "Near-spherical puffs in world space; inverse per-map scaling stored in local mesh, local bounds/origin/axes retained.",
+      "originalBytes": 13859,
+      "verticesAfterWeld": 455,
+      "candidateBytes": 13971,
+      "vertexWeld": "Coincident vertices with identical UVs share one packed normal; indexed positions and triangle order unchanged.",
+      "modelByteChangePercent": 0.808139115376294
+    },
+    {
+      "model": "PyroclasticFlow.spm",
+      "billows": 6,
+      "originalTriangles": 512,
+      "triangles": 480,
+      "localBoundsMaxError": 6.67572021484375e-06,
+      "sourceSpm": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/PyroclasticFlow.spm",
+      "paletteReused": "smoke_huricane.png",
+      "worldBoundsTarget": [
+        [
+          145,
+          90,
+          -135
+        ],
+        [
+          245,
+          160,
+          -25
+        ]
+      ],
+      "instanceScaleGame": [
+        1.003231167793274,
+        0.674429178237915,
+        0.3745476305484772
+      ],
+      "instanceXyz": [
+        161.25118035509354,
+        153.62385043041832,
+        -32.0676175494591
+      ],
+      "instanceHpr": [
+        0,
+        0,
+        0
+      ],
+      "construction": "Near-spherical puffs in world space; inverse per-map scaling stored in local mesh, local bounds/origin/axes retained.",
+      "originalBytes": 8836,
+      "verticesAfterWeld": 292,
+      "candidateBytes": 8784,
+      "vertexWeld": "Coincident vertices with identical UVs share one packed normal; indexed positions and triangle order unchanged.",
+      "modelByteChangePercent": -0.5885015844273478
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "baseline": "Unmodified integrated V1",
+  "candidateCompared": "V21",
+  "sameSimulatorAppModeSeedKart": true,
+  "baselineSourceFilesByteExactBeforeProbe": true,
+  "inspectedScreenshots": [
+    "v1-40s.png",
+    "v1-80s.png",
+    "v1-140s.png",
+    "v1-190s.png"
+  ],
+  "baselineNaturalFinishObserved": true,
+  "baselineFrame80Finding": "Kart visibly airborne beneath/outside the elevated roadway near the lava ramp and masonry barrier.",
+  "candidateFrame80Finding": "V21 kart in contact with masonry barrier after ramp; later at140 visibly on lava off roadway.",
+  "bothReachNaturalFinishBy190s": true,
+  "inheritedUnsafeAIRampTraversalObserved": true,
+  "regressionFullyExcluded": false,
+  "limits": "One run of each, sampled wall-clock times rather than exact positions, same seed does not prove deterministic trajectory. Shows unsafe ramp traversal already in V1; cannot prove all V21 departures have identical cause or equal severity. Source course/control data and source collision triangles retained; no route edits authorized."
+}

@@ -1,0 +1,13 @@
+{
+  "status": "Rejected for visual gap at grass/stone seam; not integrated, not registered as accepted candidate.",
+  "sourceStonePixelsPreserved": true,
+  "protectedRoadAndGameplayVerified": true,
+  "issue": "Increasing cap vertical scale exposed an existing mismatch between uneven open grass and stone boundaries, visible in drive-40s.png. A thicker cap alone is not an accepted visual improvement.",
+  "preservedEvidence": [
+    "preservation-verification.json",
+    "cap-changes.json",
+    "screenshots/drive-40s.png",
+    "screenshots/smoke-diagnostic-all.png"
+  ],
+  "nextFix": "Use copied stone component with planar upper boundary while preserving all local bounds/UV/RGB/topology. Anchor copied grass cap by its highest open-boundary point, with slight overlap. Original pooled assets and stone pixels unchanged."
+}

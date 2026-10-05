@@ -1,0 +1,38 @@
+<materials>
+  <material name="Battle_for_Wesnoth.png" shader="alphatest" />
+  <material name="blackrock.jpg" has-gravity="Y" />
+  <material name="blackrock_lava.jpg" has-gravity="Y" />
+  <material name="fluxara_castle_brick_v15.jpg" />
+  <material name="chain.png" shader="alphatest" />
+  <material name="dynamiclight.png" ignore="Y" shader="displace" />
+  <material name="vr_volcanic_smoke.png" shader="alphablend" />
+  <material name="halo.png" shader="additive" ignore="Y" />
+  <material name="lava.png" />
+  <material name="Lava_004_COLOR.jpg" />
+  <material name="lava_1.png" gloss-map="lava_1-gloss.png" />
+  <material name="fluxara_volcano_lava_shared_v13.jpg" />
+  <material name="mansion_windows.png" shader="alphablend" />
+  <material name="fluxara_volcano_stone_shared_v16.jpg" />
+  <material name="smoke_huricane.png" shader="solid" />
+  <material name="smoke_huricane_transp.png" shader="solid" />
+  <material name="fluxara_drift_generic_gravalSnow_a.png" collision-detect="Y" collision-reaction="reset" />
+  <material name="fluxara_drift_generic_gridA.png" shader="alphatest" has-gravity="Y" />
+  <material name="fluxara_drift_generic_gridA.png" shader="alphatest" has-gravity="Y" />
+  <material name="fluxara_drift_mudpot_a.png" gloss-map="fluxara_drift_mudpot_a_gloss.png" />
+  <material name="fluxara_driftflag_blackBooster_a.png" shader="alphatest" gloss-map="fluxara_driftflag_blackBooster_a-gloss.png" mirror-axis="V">
+    <zipper duration="3.5" max-speed-increase="15.0" fade-out-time="3.0" speed-gain="10.0" min-speed="-1.0" />
+  </material>
+  <material name="fluxara_driftflag_blackBooster_b.png" shader="alphatest" gloss-map="fluxara_driftflag_blackBooster_a-gloss.png" mirror-axis="V" has-gravity="Y">
+    <zipper duration="3.5" max-speed-increase="15.0" fade-out-time="3.0" speed-gain="2.0" min-speed="-1.0" />
+  </material>
+  <material name="fluxara_driftflag_orangeBooster_a.png" shader="alphatest" gloss-map="fluxara_driftflag_orangeBooster_a-gloss.png">
+    <zipper duration="3.5" max-speed-increase="15.0" fade-out-time="3.0" speed-gain="10.0" min-speed="-1.0" />
+  </material>
+  <material name="fluxara_drifttex_animatedFire_a.png" shader="additive" />
+  <material name="fluxara_drifttex_generic_lavaA.png" />
+  <material name="sunFlare2.png" shader="additive" ignore="Y" />
+  <material name="torch.png" shader="alphatest" />
+  <material name="track01.png" has-gravity="Y" />
+  <material name="transparence.png" shader="alphatest" collision-detect="Y" falling-effect="Y" collision-reaction="reset" />
+<material name="vr_arch_stone.png" /><material name="fluxara_volcano_moss_shared_v20.jpg" />
+  </materials>

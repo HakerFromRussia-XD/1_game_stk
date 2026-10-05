@@ -1,0 +1,66 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v19/drive-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v19/drive-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-volcano-fidelity-v19-drive-probe",
+    "--mode=1",
+    "--laps=1",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--seed=4"
+  ],
+  "screenshots": [
+    {
+      "seconds": 40,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v19/screenshots/drive-40s.png"
+    },
+    {
+      "seconds": 80,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v19/screenshots/drive-80s.png"
+    },
+    {
+      "seconds": 140,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v19/screenshots/drive-140s.png"
+    },
+    {
+      "seconds": 190,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v19/screenshots/drive-190s.png"
+    }
+  ],
+  "kind": "Candidate gameplay in a temporary simulator-only track. Production source and final Blender project not yet replaced.",
+  "forceWinsUsed": false,
+  "visualInspectionCompleted": true,
+  "naturalFinishObserved": true,
+  "result": "#1",
+  "fullRouteCompleted": true,
+  "originalPhysicsAndCourseVerified": true,
+  "productionIntegrated": false,
+  "referenceAcceptance": false,
+  "staticOverviewInspected": true,
+  "naturalFinishScreenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v19/screenshots/natural-finish.png",
+  "inspectedGameplayFiles": [
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v19/screenshots/drive-40s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v19/screenshots/drive-80s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v19/screenshots/drive-140s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v19/screenshots/drive-190s.png"
+  ],
+  "candidateMainSPMSha256": "5255d7e10b1469ffcfd456e3cf690fe9d885ecc8e288b468ff5c84ee5285410c",
+  "smokeModelSha256": {
+    "AshCloud.spm": "8dd431d40f314be95d3e63bdcf00c86bc51b6f49aeb974a6df1e6300853efbf0",
+    "AshColumn.spm": "254046859c8acd3073e86280d6ba13704f5ad316d405872bf605cb9465c4803d",
+    "PyroclasticFlow.spm": "b689091c53ea579680f8feeaf1b1848fb44ec73fd5d54b635ad8483e620a8feb"
+  },
+  "finalProbeTrackCleanupVerified": true,
+  "existingInstalledDonorLibraryUnchanged": true,
+  "visualFinding": "Continuous irregular smoke billows replace separate sphere chain; silhouette improved on diagnostic engine view. Earlier smooth tube variant and invalid intermediate grids rejected. Stone texture and all previous UVs retained. Broad planar green terrain, disconnected cliff caps, castle proportions, lighting and eruption glow still differ from reference. Screenshots are unretouched. No fresh app build, performance, reverse mode or full-campaign claim."
+}

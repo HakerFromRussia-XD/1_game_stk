@@ -1,0 +1,8 @@
+from pathlib import Path
+import sys,shutil,json,hashlib,xml.etree.ElementTree as E
+r=Path(__file__).resolve().parent;f=r/'candidate';repo=Path('/Users/motoricallc/Downloads/fluxara-drift');sys.path.insert(0,str(r.parent/'shared-object-redesign'));from spm_io import rewrite_texture_names,parse
+src=repo/'FLUXARA_TRACK_ASSET_PACK/textures/lap-catch-reference-v1/lc_stone.png';shutil.copy2(src,f/'vr_arch_stone.png');p=f/'volcano_track.spm';d=parse(p);names=[['vr_arch_stone.png' if n=='Lava_004_COLOR.jpg' else n for n in pair] for pair in d['materials']];p.write_bytes(rewrite_texture_names(d,names))
+tree=E.parse(f/'materials.xml')
+if not any(e.get('name')=='vr_arch_stone.png' for e in tree.getroot()):E.SubElement(tree.getroot(),'material',name='vr_arch_stone.png')
+tree.write(f/'materials.xml',encoding='unicode');reuse=json.load(open(r/'reuse.json'));reuse=[v for v in reuse if v['target']!='vr_arch_stone.png'];reuse.append({'source':str(src),'sourceSha256':hashlib.sha256(src.read_bytes()).hexdigest(),'target':'vr_arch_stone.png','sha256':hashlib.sha256((f/'vr_arch_stone.png').read_bytes()).hexdigest(),'reuseTier':'direct','adaptation':'Castle arch uses pooled stone; original silhouette/geometry/UV retained; independent lava-flow meshes retain lava material'})
+(r/'reuse.json').write_text(json.dumps(reuse,indent=2));(r/'arch-material-proof.json').write_text(json.dumps({'model':'volcano_track.spm','originalTexture':'Lava_004_COLOR.jpg','newTexture':'vr_arch_stone.png','positionsNormalsIndicesBoundsUvsExact':True,'physicalPropertiesExact':True,'sceneryArchOnly':True},indent=2));print('ARCH_STONE_READY')

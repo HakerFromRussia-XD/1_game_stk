@@ -1,0 +1,24 @@
+{
+  "priority": "Major visible silhouettes: lava-column appearance and castle gate/walls; no more scenery-only iterations before those improvements.",
+  "candidate": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v12",
+  "currentExperimentIntegrated": false,
+  "stoneTextureMustRemain": true,
+  "knownVisualIssues": [
+    "Stone wall and terrain pattern still repeats too much; user rejected a flat stone palette.",
+    "Smoke lacks dense connected billows of reference although oversized foreground puffs have been reduced.",
+    "Main buffer 12 contains static lava geometry up to game Y106.54; giant lava column is not one of the dynamic Lavaflow models. Preserve original collision if replacing visual geometry."
+  ],
+  "nextTargets": [
+    "Inspect static lava column: main buffer 12 component 0, 72 triangles, bounds game X -53.86..-29.92, Y42.56..106.54, Z-28.42..-.04. Preserve exact physics geometry if replacing its visible silhouette.",
+    "Rework decorative castle gate/walls toward gray stone and red roof reference; keep protected road and structural driving surfaces.",
+    "Review greenery after large-form changes; then integrate map 10 and replace preview only when reference and preservation gates pass."
+  ],
+  "remainingGoal": [
+    "Finish visual/runtime verification for maps 6-10",
+    "Resolve map 7 full-eleven-lap traversal concern",
+    "Complete coordinate placement and enrichment work for maps 1-5 after all 6-10 are ready",
+    "Integrate final art and replace corresponding previews"
+  ],
+  "completedThisIteration": "64 coordinate shrubs; one shared mesh and existing common leaf texture; road and navigation clearance verified, natural one-lap finish.",
+  "lavaColumnDiagnostic": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v12/lava-column-components.json"
+}

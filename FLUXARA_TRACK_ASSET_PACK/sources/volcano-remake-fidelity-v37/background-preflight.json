@@ -1,0 +1,2554 @@
+{
+  "newDecorativeCoordinateInstances": 84,
+  "newTrees": 64,
+  "newMounds": 20,
+  "placements": [
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_000",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "21.48408856 21.65576426 413.90430427",
+        "hpr": "0 -158.51502328 0",
+        "scale": "8.21826752 9.25616981 8.21826752"
+      },
+      "backgroundSampledGroundHeights": [
+        26.225184267400543,
+        28.92934229698465,
+        25.77557745597808,
+        23.383709594409456,
+        21.835764257176578,
+        22.890972055860274,
+        26.034108420061536,
+        27.92792956500609,
+        29.186024829771288
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_001",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "300.31525197 14.83052209 345.34662469",
+        "hpr": "0 -127.49162641 0",
+        "scale": "11.16838407 8.12884361 11.16838407"
+      },
+      "backgroundSampledGroundHeights": [
+        21.02348180359529,
+        27.60542945694223,
+        24.969778347941297,
+        19.466104904582004,
+        15.449594762671792,
+        15.010522088176756,
+        16.886386784339912,
+        21.725899511559717,
+        26.16543497143556
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_002",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "-0.05938731 0.93294208 434.40123171",
+        "hpr": "0 126.27612463 0",
+        "scale": "12.72176660 9.73680648 12.72176660"
+      },
+      "backgroundSampledGroundHeights": [
+        9.04365582735087,
+        14.188192855818398,
+        8.499277682858326,
+        3.302954555524109,
+        1.1129420800026244,
+        2.3301311787320453,
+        8.216934739247368,
+        14.719388573986794,
+        16.80971981041891
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_003",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "456.53899147 14.38824117 -513.38975909",
+        "hpr": "0 22.72417614 0",
+        "scale": "9.15413639 7.38598154 9.15413639"
+      },
+      "backgroundSampledGroundHeights": [
+        17.53808767681645,
+        14.568241172216005,
+        15.151935826298752,
+        17.964539498583406,
+        21.355877212466368,
+        22.64649045298846,
+        20.815492615499593,
+        17.440833891416254,
+        15.16910854762821
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_004",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "145.11127618 7.09636301 267.21045320",
+        "hpr": "0 -97.52392197 0",
+        "scale": "9.07753807 7.26348239 9.07753807"
+      },
+      "backgroundSampledGroundHeights": [
+        12.65449512196753,
+        9.590643048517272,
+        13.262492988159048,
+        16.682229917513478,
+        17.911450925510678,
+        15.80033534645706,
+        11.841027963311578,
+        8.221538461989258,
+        7.2763630066028995
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_005",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "0.43221285 16.52558809 312.25048272",
+        "hpr": "0 -11.72310210 0",
+        "scale": "10.01243608 8.51843988 10.01243608"
+      },
+      "backgroundSampledGroundHeights": [
+        21.623350315078824,
+        26.5839540199794,
+        26.332948251190363,
+        23.74167472077366,
+        19.643848847809725,
+        16.705588087634585,
+        17.08121139679334,
+        20.546486353479423,
+        24.52756183094867
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_006",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "-260.45797129 41.08718963 -455.54021942",
+        "hpr": "0 131.96889544 0",
+        "scale": "13.34543304 6.28478114 13.34543304"
+      },
+      "backgroundSampledGroundHeights": [
+        43.05634699370077,
+        42.326838217358734,
+        41.58614896442225,
+        41.43802179816426,
+        41.26718962802068,
+        41.44231797892154,
+        41.90808841543243,
+        42.88707037981058,
+        43.94725006955352
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_007",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "-200.23445003 17.67586656 -474.04258485",
+        "hpr": "0 175.50135226 0",
+        "scale": "11.04825818 6.85227890 11.04825818"
+      },
+      "backgroundSampledGroundHeights": [
+        28.16802483554831,
+        19.51615310717384,
+        17.855866557699954,
+        22.44732123592673,
+        28.863974983027376,
+        36.057498263688146,
+        35.383143097796726,
+        33.06646889774838,
+        26.398140764100017
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_008",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "71.12461306 25.97478695 279.32029322",
+        "hpr": "0 14.08452799 0",
+        "scale": "10.95946859 8.82381887 10.95946859"
+      },
+      "backgroundSampledGroundHeights": [
+        29.03776678863845,
+        30.366917255945896,
+        31.64099999429299,
+        31.433349381748478,
+        29.60958485825753,
+        27.818621307399127,
+        26.154786950093104,
+        26.41060009169043,
+        28.268977826724697
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_009",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "477.23219845 8.42312707 -456.10359055",
+        "hpr": "0 27.14113468 0",
+        "scale": "11.46762734 9.15847200 11.46762734"
+      },
+      "backgroundSampledGroundHeights": [
+        10.128418345922569,
+        8.839341876605367,
+        8.603127065916159,
+        10.096862601801593,
+        13.882259927357454,
+        14.90886539401018,
+        13.071689716581393,
+        10.360992654369538,
+        9.074996225980673
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_010",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "449.65368617 16.59771467 -459.42564524",
+        "hpr": "0 -100.46019088 0",
+        "scale": "12.29286623 6.26080520 12.29286623"
+      },
+      "backgroundSampledGroundHeights": [
+        22.938363291968127,
+        16.777714671214497,
+        19.268304520783488,
+        23.573054418616575,
+        25.89521518828983,
+        26.971438024427968,
+        26.404983655145887,
+        22.933955941325216,
+        18.521485392028993
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_011",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "-32.99895944 12.79135130 -718.09357415",
+        "hpr": "0 -81.77702710 0",
+        "scale": "10.09520078 9.32037009 10.09520078"
+      },
+      "backgroundSampledGroundHeights": [
+        19.02227565379488,
+        12.971351297448217,
+        16.522858808221372,
+        21.53849080910772,
+        23.254803490738514,
+        22.486264178908275,
+        19.71563699151502,
+        17.60617664627086,
+        13.88755373843073
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_012",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "129.13533556 18.69999975 283.86848321",
+        "hpr": "0 141.64574168 0",
+        "scale": "12.50907057 7.23443476 12.50907057"
+      },
+      "backgroundSampledGroundHeights": [
+        25.280774529845537,
+        21.96949392749415,
+        27.506322666247,
+        30.5666296393037,
+        30.218724421920996,
+        27.71352424322078,
+        23.69946290339365,
+        20.094306582885114,
+        18.879999753559506
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_013",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "475.52259240 7.68351035 -376.05016413",
+        "hpr": "0 30.94312360 0",
+        "scale": "11.89606595 8.47660638 11.89606595"
+      },
+      "backgroundSampledGroundHeights": [
+        13.770133908506564,
+        8.334640365052307,
+        7.863510350723575,
+        11.620258486981008,
+        14.582116933084693,
+        18.88027648362907,
+        17.761460160515256,
+        14.301920075087274,
+        10.251749297097982
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_014",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "421.96998212 30.48162636 -531.02308715",
+        "hpr": "0 -172.82943118 0",
+        "scale": "8.87322049 7.29998435 8.87322049"
+      },
+      "backgroundSampledGroundHeights": [
+        33.707156222538785,
+        30.661626359630645,
+        32.45641122591647,
+        34.467825337053284,
+        34.35799127601241,
+        34.345900463842256,
+        35.161810517633405,
+        33.110818637858976,
+        31.04271540538297
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_015",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "-349.49790846 15.38502318 -309.00974352",
+        "hpr": "0 117.60324249 0",
+        "scale": "12.54162500 6.21499101 12.54162500"
+      },
+      "backgroundSampledGroundHeights": [
+        20.32712378494357,
+        19.494069633425386,
+        15.950200796009794,
+        15.565023175863086,
+        18.53318048766342,
+        21.983830446829806,
+        22.671266352998188,
+        23.19166078855183,
+        23.731356636724136
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_016",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "365.67286147 9.48546810 -535.90237623",
+        "hpr": "0 157.11236315 0",
+        "scale": "9.63506413 7.15354089 9.63506413"
+      },
+      "backgroundSampledGroundHeights": [
+        16.793159363284722,
+        22.922899319493368,
+        20.265306058402672,
+        13.905356461730364,
+        9.710793993008995,
+        9.665468101635952,
+        13.831302892218416,
+        19.732153033749032,
+        22.59947981533954
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_017",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "326.71568836 -10.36095033 -576.87976299",
+        "hpr": "0 -61.21596476 0",
+        "scale": "8.70775878 8.28796386 8.70775878"
+      },
+      "backgroundSampledGroundHeights": [
+        -3.096106949206953,
+        4.869001743193795,
+        2.2145841581780528,
+        -2.9621650578834418,
+        -7.934731624451169,
+        -10.180950325404208,
+        -8.385016709780299,
+        -2.6414496464442885,
+        2.857566681976979
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_018",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "-207.78317503 9.46050734 -448.08784886",
+        "hpr": "0 123.44868571 0",
+        "scale": "12.74991705 6.06937038 12.74991705"
+      },
+      "backgroundSampledGroundHeights": [
+        20.34850928849079,
+        11.331494341939235,
+        9.6405073377938,
+        14.768863947764682,
+        23.099129199337312,
+        30.097927489936396,
+        31.769269885521982,
+        27.139692281925527,
+        18.166155557553424
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Mound",
+      "attrs": {
+        "id": "VRV37_BackgroundMound_019",
+        "name": "fluxara_driftlib_volcano_green_mound_v18",
+        "xyz": "112.66492522 4.25413912 246.71161403",
+        "hpr": "0 34.39321182 0",
+        "scale": "8.34969102 8.85035439 8.34969102"
+      },
+      "backgroundSampledGroundHeights": [
+        10.275960205976624,
+        8.108844496447782,
+        12.509559827028756,
+        15.330199720298047,
+        15.217212715395643,
+        11.896671566106393,
+        7.532226819231456,
+        4.434139117879214,
+        4.645851135585835
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 360,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Base buried0.18m below min9background footprint heights"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_000",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-75.97936532 5.41165064 -598.31408445",
+        "hpr": "0 79.97994777 0",
+        "scale": "13.42136215 13.42136215 13.42136215"
+      },
+      "backgroundSampledGroundHeights": [
+        5.411650636124,
+        0.7620329608600723,
+        -0.8211897739885616,
+        0.5418730155125115,
+        4.305731104332457,
+        10.433172826876978,
+        13.619074953835865,
+        11.989674517741717,
+        6.503961966799211
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_001",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-57.43622455 21.12374069 -640.11801711",
+        "hpr": "0 43.75195930 0",
+        "scale": "10.06085875 10.06085875 10.06085875"
+      },
+      "backgroundSampledGroundHeights": [
+        21.12374068991269,
+        18.17792737475108,
+        17.335696908304236,
+        18.702200087071454,
+        21.483062887444234,
+        24.054654019925092,
+        24.910570275985155,
+        23.535030265564853,
+        20.74577532900034
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_002",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-77.52344623 20.54636127 -616.49076073",
+        "hpr": "0 -66.37205558 0",
+        "scale": "12.14503692 12.14503692 12.14503692"
+      },
+      "backgroundSampledGroundHeights": [
+        20.546361267618376,
+        16.156921681458567,
+        13.642335830035936,
+        15.271673734741402,
+        20.229996619950295,
+        24.024535942165606,
+        25.2817226123209,
+        23.788073345625243,
+        20.402815343620897
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_003",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "451.66415738 22.24865346 -439.69541314",
+        "hpr": "0 127.25737226 0",
+        "scale": "11.49072791 11.49072791 11.49072791"
+      },
+      "backgroundSampledGroundHeights": [
+        22.24865346354619,
+        19.466396979474222,
+        20.293398654312924,
+        22.025403907118495,
+        23.87969251356589,
+        24.706706740539488,
+        24.380539237537512,
+        22.67328473755026,
+        20.406534503704034
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_004",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "421.85425754 23.67037323 -575.11653117",
+        "hpr": "0 52.39933354 0",
+        "scale": "10.31627037 10.31627037 10.31627037"
+      },
+      "backgroundSampledGroundHeights": [
+        23.67037323468071,
+        20.851270633149497,
+        23.390963424414156,
+        26.086183092979432,
+        27.422119695051414,
+        26.593035993292357,
+        24.051896085781344,
+        21.287265266450856,
+        19.95482231204716
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_005",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "403.60580165 11.60318445 -426.89251114",
+        "hpr": "0 -39.17670979 0",
+        "scale": "13.49167121 13.49167121 13.49167121"
+      },
+      "backgroundSampledGroundHeights": [
+        11.60318444976775,
+        18.58714331727077,
+        14.594213465556768,
+        9.7583031864342,
+        5.303527179511571,
+        4.474181615045205,
+        7.71604305928756,
+        11.512058409438659,
+        15.976937746567298
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_006",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-98.08815642 36.46661376 -641.10404661",
+        "hpr": "0 9.23711284 0",
+        "scale": "9.15291968 9.15291968 9.15291968"
+      },
+      "backgroundSampledGroundHeights": [
+        36.46661376312265,
+        34.7579344802698,
+        34.866424200044506,
+        35.9133477244981,
+        37.28410714177044,
+        38.17573017597403,
+        38.06855110895847,
+        37.02341600082277,
+        35.652113693402036
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_007",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "313.03347253 22.63107417 281.14369077",
+        "hpr": "0 19.22599575 0",
+        "scale": "9.73443277 9.73443277 9.73443277"
+      },
+      "backgroundSampledGroundHeights": [
+        22.631074172745066,
+        25.779408274865915,
+        26.11988547560407,
+        24.039586299673257,
+        20.926385339001286,
+        19.203174760272027,
+        19.05782943848233,
+        20.58422851442665,
+        23.368397629016663
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_008",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-130.36694649 44.12595370 -661.30905750",
+        "hpr": "0 -31.21294124 0",
+        "scale": "12.18379376 12.18379376 12.18379376"
+      },
+      "backgroundSampledGroundHeights": [
+        44.12595369727123,
+        43.54040425275911,
+        45.11944220692704,
+        46.116508066200446,
+        45.86621501910369,
+        44.49760426499952,
+        42.955115961795116,
+        42.13539932834202,
+        42.30437322174635
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_009",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "465.91891937 16.28837106 -431.68234823",
+        "hpr": "0 112.87780158 0",
+        "scale": "11.32687468 11.32687468 11.32687468"
+      },
+      "backgroundSampledGroundHeights": [
+        16.288371055285666,
+        12.644064826084444,
+        14.008742166259285,
+        16.760216583357984,
+        19.027538932964994,
+        19.743276417044257,
+        18.533408631814936,
+        15.950026144136167,
+        13.546397208853179
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_010",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "315.83490559 30.91645688 324.57239743",
+        "hpr": "0 -113.26687203 0",
+        "scale": "10.27095830 10.27095830 10.27095830"
+      },
+      "backgroundSampledGroundHeights": [
+        30.91645688135881,
+        34.49089976535171,
+        33.30459416570444,
+        30.781189363345106,
+        28.423586184183183,
+        27.34201399736591,
+        28.354301974063702,
+        30.88054375871015,
+        33.56712125582101
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_011",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "123.42869722 21.55973733 270.93876874",
+        "hpr": "0 -107.12623153 0",
+        "scale": "13.58944912 13.58944912 13.58944912"
+      },
+      "backgroundSampledGroundHeights": [
+        21.55973733233963,
+        19.164483495738214,
+        22.563576046748278,
+        24.59595257059864,
+        24.84417636654797,
+        23.172365283646208,
+        20.09126401733267,
+        17.35729549265377,
+        17.13259585730776
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_012",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-437.77994225 8.78969714 -136.72898927",
+        "hpr": "0 0.93239335 0",
+        "scale": "12.24563376 12.24563376 12.24563376"
+      },
+      "backgroundSampledGroundHeights": [
+        8.789697136594619,
+        5.657607885289235,
+        4.290049342348938,
+        5.537423725840301,
+        8.689935764806158,
+        11.242443509540648,
+        12.150845069307145,
+        11.26787512054011,
+        8.864741478505021
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_013",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-43.33819491 4.37319738 358.82162874",
+        "hpr": "0 -46.71268539 0",
+        "scale": "13.55832277 13.55832277 13.55832277"
+      },
+      "backgroundSampledGroundHeights": [
+        4.373197379630418,
+        9.689667319592596,
+        8.832829250578213,
+        5.4334937952859255,
+        1.3909136361338044,
+        -1.6444335788150821,
+        -0.8954522437351358,
+        2.9605463117812603,
+        7.34203592569577
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_014",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-267.03651070 40.47425656 -431.69362789",
+        "hpr": "0 -17.48087384 0",
+        "scale": "13.61994181 13.61994181 13.61994181"
+      },
+      "backgroundSampledGroundHeights": [
+        40.47425656184007,
+        40.103391222147174,
+        39.59262138409441,
+        39.991606932710624,
+        40.268862518711295,
+        40.32277354211526,
+        41.15730726860655,
+        41.322440056910196,
+        40.72358187956655
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_015",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "368.94305662 11.25193839 -508.76965555",
+        "hpr": "0 126.85036431 0",
+        "scale": "12.70578469 12.70578469 12.70578469"
+      },
+      "backgroundSampledGroundHeights": [
+        11.251938392173754,
+        16.612094573722487,
+        13.407821695897713,
+        8.25350690440786,
+        4.40462833868547,
+        4.5314443284301555,
+        8.588743581069348,
+        14.047856307485722,
+        17.072187090633722
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_016",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-88.83338312 26.52319847 -705.65738832",
+        "hpr": "0 114.93985376 0",
+        "scale": "10.51345884 10.51345884 10.51345884"
+      },
+      "backgroundSampledGroundHeights": [
+        26.52319846552948,
+        27.35149286493464,
+        29.62247828252542,
+        30.05524107068772,
+        28.340827238615393,
+        25.616934321265877,
+        23.42391864853353,
+        23.04641905900818,
+        24.645289058845798
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_017",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "390.81021604 17.51537662 -624.30694196",
+        "hpr": "0 -11.49592859 0",
+        "scale": "10.31103808 10.31103808 10.31103808"
+      },
+      "backgroundSampledGroundHeights": [
+        17.51537662131873,
+        15.008900251286171,
+        17.504944372934578,
+        20.18312739944046,
+        21.26971460100743,
+        20.174234985705546,
+        17.5860945197805,
+        14.956528468039126,
+        14.395990792622172
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_018",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "385.16388343 11.71956276 -473.01121302",
+        "hpr": "0 -8.42679948 0",
+        "scale": "9.97252996 9.97252996 9.97252996"
+      },
+      "backgroundSampledGroundHeights": [
+        11.719562759133574,
+        16.608391930980858,
+        13.523870679933312,
+        9.119979152556562,
+        6.044782331586258,
+        6.22863066040026,
+        9.562544242541865,
+        14.155091832952575,
+        17.115018343572032
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_019",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-312.64533216 32.06285147 -363.23453026",
+        "hpr": "0 -83.25497128 0",
+        "scale": "13.94969386 13.94969386 13.94969386"
+      },
+      "backgroundSampledGroundHeights": [
+        32.062851469496344,
+        34.3324958206762,
+        33.49936445521635,
+        32.360237564847054,
+        30.526893276990176,
+        29.57512278043617,
+        29.957105386783454,
+        31.57260548946994,
+        33.33487589678844
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_020",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "325.10922214 11.29967144 33.86953552",
+        "hpr": "0 99.95717999 0",
+        "scale": "10.03260307 10.03260307 10.03260307"
+      },
+      "backgroundSampledGroundHeights": [
+        11.29967144334912,
+        14.363945957229305,
+        12.779910663619713,
+        10.328771310332195,
+        8.374679031831338,
+        8.235396929468937,
+        9.550393354534126,
+        11.490343694681481,
+        13.883932342411473
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_021",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-342.10864435 24.53087821 -339.41606859",
+        "hpr": "0 -104.26171411 0",
+        "scale": "13.16047963 13.16047963 13.16047963"
+      },
+      "backgroundSampledGroundHeights": [
+        24.53087821165207,
+        26.469404690087458,
+        26.251914370128258,
+        25.25486666873408,
+        23.59928212714112,
+        23.988915297020014,
+        25.03383867911675,
+        25.848567721991337,
+        26.256206819066268
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_022",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-131.58887764 25.99967958 -696.13827885",
+        "hpr": "0 -30.50647314 0",
+        "scale": "10.08967020 10.08967020 10.08967020"
+      },
+      "backgroundSampledGroundHeights": [
+        25.99967957799594,
+        26.505335213057233,
+        28.921688611607202,
+        29.20825344275612,
+        27.17604396623079,
+        25.572973245053248,
+        24.64190153840302,
+        24.162077930535258,
+        24.75869644551082
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_023",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-408.69546000 5.64613655 -158.12517552",
+        "hpr": "0 99.81089570 0",
+        "scale": "9.83401719 9.83401719 9.83401719"
+      },
+      "backgroundSampledGroundHeights": [
+        5.646136548641406,
+        3.056441444969379,
+        1.9607014799963096,
+        3.0209705976454106,
+        5.617982207246022,
+        8.232482227987157,
+        9.216966871766077,
+        8.271302499637404,
+        5.673268199016257
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_024",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-250.76506823 40.06861106 -435.86708125",
+        "hpr": "0 -38.80297360 0",
+        "scale": "9.20625436 9.20625436 9.20625436"
+      },
+      "backgroundSampledGroundHeights": [
+        40.0686110581083,
+        38.152664353907774,
+        37.726291728052914,
+        38.88401968637037,
+        39.928568265553935,
+        40.28010655319433,
+        40.834369407009554,
+        40.90905416457365,
+        39.92925334591075
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_025",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-417.24813766 17.18881849 -240.61125892",
+        "hpr": "0 -139.88230719 0",
+        "scale": "9.18330656 9.18330656 9.18330656"
+      },
+      "backgroundSampledGroundHeights": [
+        17.18881849479431,
+        15.121714174347911,
+        15.623833037054027,
+        16.95613341242732,
+        18.40994693116211,
+        18.822688828599365,
+        18.756252157979606,
+        17.391734061830352,
+        15.737709396251006
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_026",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "478.76386052 0.24210389 230.21761965",
+        "hpr": "0 176.80516102 0",
+        "scale": "11.29864004 11.29864004 11.29864004"
+      },
+      "backgroundSampledGroundHeights": [
+        0.2421038850112711,
+        -1.277780273232117,
+        0.4002176447418012,
+        1.985594666663381,
+        2.5496584345656164,
+        1.7619880432546573,
+        0.0839901252807409,
+        -1.5013868966408397,
+        -2.0654506645430755
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_027",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "390.12358593 9.32137882 213.09697151",
+        "hpr": "0 -44.99321988 0",
+        "scale": "10.76353389 10.76353389 10.76353389"
+      },
+      "backgroundSampledGroundHeights": [
+        9.321378824891559,
+        8.286845398470446,
+        11.128291495386865,
+        12.905727482839593,
+        12.764043991153066,
+        10.61587479910244,
+        7.720584701469841,
+        5.7644890298069935,
+        5.989497515846477
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_028",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-289.32558767 36.51773167 -464.04035118",
+        "hpr": "0 -71.23004661 0",
+        "scale": "12.66569214 12.66569214 12.66569214"
+      },
+      "backgroundSampledGroundHeights": [
+        36.51773166513095,
+        38.763023521283515,
+        38.17664231624008,
+        36.510902854520474,
+        34.7713108829533,
+        34.52054207805679,
+        35.43969984663801,
+        36.54655488944438,
+        38.193643024665214
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_029",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-113.06719714 21.10393235 -588.15492573",
+        "hpr": "0 49.64876299 0",
+        "scale": "12.79418608 12.79418608 12.79418608"
+      },
+      "backgroundSampledGroundHeights": [
+        21.10393235484336,
+        16.04001692175911,
+        12.75920355343626,
+        15.190309582970894,
+        21.571075959539108,
+        27.631119279231918,
+        29.394838592711093,
+        27.660119822642837,
+        22.157477379300694
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_030",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "321.51210835 30.53955016 370.54357937",
+        "hpr": "0 5.19080388 0",
+        "scale": "11.62690904 11.62690904 11.62690904"
+      },
+      "backgroundSampledGroundHeights": [
+        30.53955015579139,
+        34.01485062809509,
+        30.449025440995705,
+        27.14550719902264,
+        25.299973661126348,
+        25.97196813844323,
+        28.43823781148795,
+        32.342795239910885,
+        34.81197332667532
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_031",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "335.77706257 36.10397706 291.95305263",
+        "hpr": "0 27.83127173 0",
+        "scale": "13.52698413 13.52698413 13.52698413"
+      },
+      "backgroundSampledGroundHeights": [
+        36.1039770575288,
+        37.9619017952072,
+        38.58018475321778,
+        37.9696715496448,
+        35.90398966638084,
+        33.39017149333862,
+        32.328198717079076,
+        33.868302658683845,
+        36.212428772957296
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_032",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "339.00290012 16.77028684 414.50675895",
+        "hpr": "0 111.98643499 0",
+        "scale": "11.67730980 11.67730980 11.67730980"
+      },
+      "backgroundSampledGroundHeights": [
+        16.77028684384411,
+        19.13961952100174,
+        16.038520300954428,
+        14.332787997710959,
+        14.092525937665172,
+        15.194822347654014,
+        17.50205338673379,
+        20.174493690447207,
+        20.852795792543873
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_033",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-422.64672620 13.36340163 -271.55690072",
+        "hpr": "0 -141.33648326 0",
+        "scale": "12.94451005 12.94451005 12.94451005"
+      },
+      "backgroundSampledGroundHeights": [
+        13.363401628884969,
+        10.695192810023896,
+        13.312554973036377,
+        15.804436505225166,
+        16.725378645361598,
+        15.662861048113417,
+        13.570747457992788,
+        11.165448788801605,
+        9.824450124572216
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_034",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-158.78803827 5.62184769 -489.38406117",
+        "hpr": "0 86.12439986 0",
+        "scale": "13.70983440 13.70983440 13.70983440"
+      },
+      "backgroundSampledGroundHeights": [
+        5.621847691188339,
+        1.0785774450763754,
+        0.43916126500402464,
+        2.8322619343429203,
+        6.847864992287129,
+        10.165117937300305,
+        10.858699472929109,
+        8.48460425895188,
+        4.433545073351415
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_035",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "384.49070466 2.63707780 -452.36405659",
+        "hpr": "0 -178.16773930 0",
+        "scale": "11.87983513 11.87983513 11.87983513"
+      },
+      "backgroundSampledGroundHeights": [
+        2.637077798238869,
+        7.762889173933219,
+        4.249980661806069,
+        -0.060479462985958854,
+        -1.931627090860954,
+        -2.488733577455484,
+        -0.33058433205393944,
+        4.895653344215166,
+        8.114407385500385
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_036",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-136.18121389 43.64502384 -607.97457130",
+        "hpr": "0 69.41955000 0",
+        "scale": "11.93469023 11.93469023 11.93469023"
+      },
+      "backgroundSampledGroundHeights": [
+        43.64502383667601,
+        41.316597885833154,
+        40.634203705283134,
+        42.653844376916226,
+        44.27851160587152,
+        45.488747029025824,
+        45.59022899829863,
+        44.52307688840648,
+        42.91565960791833
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_037",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-55.22263388 27.12592432 -682.76104515",
+        "hpr": "0 60.12621411 0",
+        "scale": "13.45292540 13.45292540 13.45292540"
+      },
+      "backgroundSampledGroundHeights": [
+        27.12592432046776,
+        24.55099243845077,
+        24.754072396752417,
+        26.33207101363806,
+        28.368629205068537,
+        29.67500182794268,
+        29.48827115555815,
+        27.919299196425982,
+        25.86266412944727
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_038",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "397.28113098 26.47448851 -492.28994581",
+        "hpr": "0 42.15539278 0",
+        "scale": "13.46962426 13.46962426 13.46962426"
+      },
+      "backgroundSampledGroundHeights": [
+        26.474488514543104,
+        29.051592683933524,
+        27.24890107049124,
+        24.060816715854504,
+        21.893945893804045,
+        21.661115862758002,
+        24.616074679515272,
+        27.3474034223929,
+        28.82548197399976
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_039",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "481.26079183 9.62511055 -417.12767940",
+        "hpr": "0 157.09107782 0",
+        "scale": "13.74177438 13.74177438 13.74177438"
+      },
+      "backgroundSampledGroundHeights": [
+        9.625110553642605,
+        6.380963275605976,
+        7.13398620047163,
+        9.875481568918563,
+        12.74193136879613,
+        13.65329190471801,
+        12.00804391369033,
+        9.085882444543744,
+        7.31731023121458
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_040",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "464.26035845 16.10334249 -449.73215508",
+        "hpr": "0 52.59991653 0",
+        "scale": "13.76397665 13.76397665 13.76397665"
+      },
+      "backgroundSampledGroundHeights": [
+        16.10334249031645,
+        12.114771489365797,
+        13.691357382142641,
+        16.70992383900121,
+        19.528378062030477,
+        20.495273224885395,
+        18.95508403141524,
+        15.579786888538814,
+        12.937638188077944
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_041",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "46.09485951 10.80740672 248.31596838",
+        "hpr": "0 -139.76430108 0",
+        "scale": "9.18821660 9.18821660 9.18821660"
+      },
+      "backgroundSampledGroundHeights": [
+        10.8074067240928,
+        12.633585863279936,
+        14.125623348258781,
+        13.728784340103465,
+        11.728429903279796,
+        8.981227584905659,
+        7.489190099926817,
+        7.940918910492533,
+        10.071797405888091
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_042",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-345.87468848 24.29343034 -326.19463449",
+        "hpr": "0 -80.62934559 0",
+        "scale": "12.42124964 12.42124964 12.42124964"
+      },
+      "backgroundSampledGroundHeights": [
+        24.29343034123081,
+        26.161682593334277,
+        25.16551913239173,
+        23.982846385814465,
+        22.774633352582935,
+        22.80017076541169,
+        23.116326241645677,
+        24.057369330676522,
+        25.61995895301235
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_043",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-278.14577063 39.05585107 -417.87493070",
+        "hpr": "0 -161.66523785 0",
+        "scale": "13.14771926 13.14771926 13.14771926"
+      },
+      "backgroundSampledGroundHeights": [
+        39.05585106675572,
+        39.509865259338845,
+        38.86609458853772,
+        38.383337030400305,
+        38.461648464391146,
+        37.46044577690495,
+        37.62889412801067,
+        39.08416879056645,
+        40.076404226244264
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_044",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "348.58040820 6.99272037 -658.64253327",
+        "hpr": "0 -5.89998395 0",
+        "scale": "12.92083882 12.92083882 12.92083882"
+      },
+      "backgroundSampledGroundHeights": [
+        6.992720366401672,
+        9.681237134158394,
+        12.408282372213243,
+        7.985218514676291,
+        3.0488433792827374,
+        1.1452536311816877,
+        2.853843660049663,
+        5.965356446300529,
+        7.7865749586097905
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_045",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "318.88449463 17.99131874 260.64721232",
+        "hpr": "0 -178.20915367 0",
+        "scale": "10.56340328 10.56340328 10.56340328"
+      },
+      "backgroundSampledGroundHeights": [
+        17.991318743136084,
+        20.67692972347808,
+        21.761557257219255,
+        20.50451082409334,
+        17.558615823166136,
+        15.88263231274946,
+        14.18486433498626,
+        14.610714580510782,
+        17.17584109095702
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_046",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-213.85305343 12.31824799 -418.29128635",
+        "hpr": "0 -84.97155492 0",
+        "scale": "12.22860244 12.22860244 12.22860244"
+      },
+      "backgroundSampledGroundHeights": [
+        12.318247991683752,
+        7.881233091545984,
+        7.484365745497147,
+        9.579291359256768,
+        13.5630307121402,
+        16.755262891821516,
+        17.35270208493864,
+        14.259810996034805,
+        10.196877038028633
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_047",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-514.04873744 10.97515722 -319.30357849",
+        "hpr": "0 -1.67609915 0",
+        "scale": "12.23365918 12.23365918 12.23365918"
+      },
+      "backgroundSampledGroundHeights": [
+        10.975157215102527,
+        11.588682789113777,
+        13.57468686914093,
+        14.00178273035322,
+        12.286031806961256,
+        9.847986174345365,
+        8.013045849929663,
+        7.670489640681811,
+        8.950240099924615
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_048",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-289.71040364 36.22632334 -371.99454571",
+        "hpr": "0 145.91646570 0",
+        "scale": "9.80557496 9.80557496 9.80557496"
+      },
+      "backgroundSampledGroundHeights": [
+        36.226323341824965,
+        35.18556585966951,
+        35.379211749409414,
+        35.56363057202779,
+        35.717496143925686,
+        35.3617934399857,
+        35.3770658856612,
+        36.37776311134761,
+        36.42216458607933
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_049",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-270.49738717 34.99626576 -515.33429553",
+        "hpr": "0 -178.23960267 0",
+        "scale": "11.39088647 11.39088647 11.39088647"
+      },
+      "backgroundSampledGroundHeights": [
+        34.996265762682,
+        37.05074320895352,
+        36.773570047912614,
+        35.76611896734868,
+        34.3076983205274,
+        33.42686508387945,
+        33.11276036339708,
+        33.7775646113553,
+        35.89135272077547
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_050",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "339.11972925 8.70078281 -26.46191887",
+        "hpr": "0 41.05167413 0",
+        "scale": "13.57327699 13.57327699 13.57327699"
+      },
+      "backgroundSampledGroundHeights": [
+        8.70078280920186,
+        12.361846194709699,
+        12.319758661633571,
+        10.321043087858007,
+        6.885123795334891,
+        4.173193250438641,
+        4.47027352677331,
+        7.011472183060647,
+        10.530127886203914
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_051",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-466.53177555 14.66670352 -312.59373078",
+        "hpr": "0 -161.89520540 0",
+        "scale": "10.71346804 10.71346804 10.71346804"
+      },
+      "backgroundSampledGroundHeights": [
+        14.66670351898766,
+        13.623108062515769,
+        15.459803304397221,
+        17.169630947478723,
+        16.818382721891616,
+        14.975695365588667,
+        12.894321489194985,
+        11.879723109594703,
+        12.5150243160837
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_052",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "389.48437337 28.35552556 -596.56539588",
+        "hpr": "0 92.35024480 0",
+        "scale": "11.07202928 11.07202928 11.07202928"
+      },
+      "backgroundSampledGroundHeights": [
+        28.355525557473754,
+        27.04714063151436,
+        28.53201713624727,
+        29.727304388017373,
+        30.06850436504635,
+        29.26268955293846,
+        27.942693282696723,
+        26.933973694039654,
+        25.97406978385876
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_053",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-148.36740532 48.03479654 -620.08045637",
+        "hpr": "0 -8.53436837 0",
+        "scale": "11.10950147 11.10950147 11.10950147"
+      },
+      "backgroundSampledGroundHeights": [
+        48.03479653914704,
+        46.56381564244703,
+        46.46379254565602,
+        47.36918643601689,
+        48.558721193496226,
+        49.436638885409224,
+        49.534334066650835,
+        48.762613140021855,
+        47.529361079170734
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_054",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-239.04919957 43.48120954 -518.32527008",
+        "hpr": "0 -34.29694504 0",
+        "scale": "11.03522935 11.03522935 11.03522935"
+      },
+      "backgroundSampledGroundHeights": [
+        43.481209541692365,
+        44.93626023272117,
+        45.86123177914052,
+        45.489561869661216,
+        43.7604710625305,
+        42.06588825724766,
+        42.503712020295495,
+        44.03498758833508,
+        45.095092170622365
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_055",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-188.27036788 39.49289860 -628.74424004",
+        "hpr": "0 150.05818391 0",
+        "scale": "13.65954821 13.65954821 13.65954821"
+      },
+      "backgroundSampledGroundHeights": [
+        39.49289859816391,
+        44.23262210236588,
+        44.58051855936502,
+        42.67623414543501,
+        38.49104879386746,
+        34.93060975922326,
+        35.3469032459684,
+        36.38666458968856,
+        40.86722316565147
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_056",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-320.08736372 30.39852361 -343.49287134",
+        "hpr": "0 -171.62027318 0",
+        "scale": "12.11830822 12.11830822 12.11830822"
+      },
+      "backgroundSampledGroundHeights": [
+        30.39852361216606,
+        32.58791445416405,
+        32.21265099386513,
+        30.876571821963285,
+        29.18842163200326,
+        28.209132770168065,
+        28.675821379277686,
+        30.198470829945087,
+        31.80576214797561
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_057",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "-325.50623422 28.05524093 -366.39320795",
+        "hpr": "0 -86.09311789 0",
+        "scale": "10.45685309 10.45685309 10.45685309"
+      },
+      "backgroundSampledGroundHeights": [
+        28.05524093052547,
+        29.9200713490803,
+        29.633732735545884,
+        28.389782914545556,
+        26.99646426609975,
+        26.593665924739078,
+        27.238063849063515,
+        28.32523399068635,
+        29.21832682525202
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_058",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "72.63039401 13.62717214 240.23754592",
+        "hpr": "0 -142.65149615 0",
+        "scale": "11.48916281 11.48916281 11.48916281"
+      },
+      "backgroundSampledGroundHeights": [
+        13.627172136234645,
+        13.691996482939073,
+        17.063498477314788,
+        17.35384891311612,
+        15.149521776217876,
+        11.959386140023863,
+        9.579510627837053,
+        9.663673879267026,
+        10.828332124945517
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_059",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "337.17129364 16.56190428 23.42679627",
+        "hpr": "0 -12.51105672 0",
+        "scale": "10.54908178 10.54908178 10.54908178"
+      },
+      "backgroundSampledGroundHeights": [
+        16.561904275662112,
+        17.96760420017778,
+        18.1047605606512,
+        17.395717541867647,
+        15.359003729798063,
+        13.839514997606102,
+        13.982403816720254,
+        15.457248303617114,
+        17.28544111033584
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_060",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "318.07012473 23.16706989 382.05289247",
+        "hpr": "0 51.04854266 0",
+        "scale": "13.25120493 13.25120493 13.25120493"
+      },
+      "backgroundSampledGroundHeights": [
+        23.167069894484598,
+        26.93268904308897,
+        23.474821275008487,
+        19.00454170552023,
+        16.324793190791297,
+        17.65826433086933,
+        22.169772567200948,
+        26.83289371797787,
+        28.705392599424115
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_061",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "427.09552607 18.67557746 -377.07673420",
+        "hpr": "0 80.63300155 0",
+        "scale": "11.64593867 11.64593867 11.64593867"
+      },
+      "backgroundSampledGroundHeights": [
+        18.675577455034194,
+        20.572403156132435,
+        19.668526738755787,
+        17.9217187955773,
+        15.557355324454006,
+        15.097873809389714,
+        17.326239968373358,
+        19.090659924518693,
+        20.586411237357723
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_062",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "50.56153378 22.77890081 269.41235503",
+        "hpr": "0 122.12501473 0",
+        "scale": "12.69552014 12.69552014 12.69552014"
+      },
+      "backgroundSampledGroundHeights": [
+        22.778900805397445,
+        24.16860895426614,
+        26.001031619250057,
+        25.836176602972863,
+        23.988744207900933,
+        21.058005865219066,
+        18.932013617648742,
+        19.11508666510884,
+        21.17086503772745
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    },
+    {
+      "role": "Tree",
+      "attrs": {
+        "id": "VRV37_BackgroundTree_063",
+        "name": "fluxara_driftlib_round_tree_green_v2",
+        "xyz": "63.96165737 22.64389181 263.12987843",
+        "hpr": "0 -2.09256418 0",
+        "scale": "9.98390118 9.98390118 9.98390118"
+      },
+      "backgroundSampledGroundHeights": [
+        22.643891809373795,
+        24.158298578045127,
+        25.41275566575696,
+        25.083116403307663,
+        23.466428950510362,
+        21.12948504070247,
+        19.87502795299063,
+        20.21202812082534,
+        22.01672254419524
+      ],
+      "clearanceProof": {
+        "requiredMeters": 2.0,
+        "exactNearTrianglePairChecks": 0,
+        "nearRoadTriangleCount": 0,
+        "geometryTriangles": 588,
+        "minimumNearPairDistance": null,
+        "allOtherTrianglePairsAABBLowerBoundGreaterThanRequired": true
+      },
+      "grounding": "Trunk base at highest actual background or newly placed mound triangle at its XZ"
+    }
+  ],
+  "sourceModels": [
+    {
+      "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_volcano_backdrop_terrain_v23/vr_v23_rounded_backdrop_terrain.spm",
+      "bytes": 58857,
+      "sha256": "78d3281c6e08a8dc93020122072826a99a59844d8f0875da76819a073251a1a1"
+    },
+    {
+      "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_volcano_green_mound_v18/vr_v18_green_mound.spm",
+      "bytes": 5566,
+      "sha256": "20e91c8dd25e838a8efb59d9c4a6fffdbddfb0daab3ce6369299cabad3e86391"
+    },
+    {
+      "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_round_tree_green_v2/fluxara_driftlib_round_tree_green_v2_main.spm",
+      "bytes": 17031,
+      "sha256": "5c9c532d5a5d9bceec0670225e9541b504365863e8d5bd0cb2a795cdec36c528"
+    }
+  ],
+  "originalFarTerrainGeometryAndAllSourceFilesUnchanged": true,
+  "newMeshTextureMaterialBytes": 0,
+  "clearanceLowerBoundMeters": 2.0,
+  "rejectedRoadCloseCandidates": 0,
+  "candidateAllFilesBytes": 5914649,
+  "allCandidateAndAcceptedHistoryBytes": 6273284,
+  "savingVsV36Bytes": 26470,
+  "v1Bytes": 7693535,
+  "productionIntegrated": false,
+  "referenceAcceptance": false
+}

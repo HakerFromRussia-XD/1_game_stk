@@ -1,0 +1,86 @@
+{
+  "baseline": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v2/baseline",
+  "candidate": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v2/candidate",
+  "mainBeforeSha256": "5e890ebcbded4c11168e48483b3124fe534b1289d7d7c0a70100adb3de675231",
+  "mainAfterSha256": "700799e79bd1b70823089ffb1913fd89cc68ecb4731148c78cc2928c79aa6df0",
+  "reference": "Figma 378:39",
+  "arch": {
+    "originalTriangles": 294,
+    "newTriangles": 300,
+    "componentBounds": [
+      [
+        45.221282958984375,
+        -15.200916290283203,
+        46.177913665771484
+      ],
+      [
+        65.71817016601562,
+        4.206973075866699,
+        57.16401290893555
+      ]
+    ],
+    "center": [
+      55.4697265625,
+      -5.496971607208252,
+      51.670963287353516
+    ],
+    "newOpeningWidth": 15.8,
+    "newSpringHeight": -6.041470527648926,
+    "originalNonTargetComponentsRetained": 3,
+    "shape": "Stone semicircular portal replacing the decorative tooth-shaped entrance"
+  },
+  "castleUvMultiplier": 3,
+  "mossFaceNormalThreshold": 0.85,
+  "cliffShading": [
+    {
+      "model": "volcano_track.spm",
+      "mossTriangles": 427,
+      "stoneTriangles": 2210
+    },
+    {
+      "model": "vulcan_01.spm",
+      "mossTriangles": 332,
+      "stoneTriangles": 1266
+    },
+    {
+      "model": "vulcan_02.spm",
+      "mossTriangles": 269,
+      "stoneTriangles": 1291
+    },
+    {
+      "model": "vulcan_03.spm",
+      "mossTriangles": 269,
+      "stoneTriangles": 1291
+    }
+  ],
+  "unchangedMainBuffers": [
+    0,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "newTextures": 1,
+  "newSharedRuntimeBytes": 0,
+  "unusedSupportingMapsArchivedBytes": 800010,
+  "previousTrackBytes": 7693535,
+  "candidateTrackBytes": 7075994,
+  "sourceCourseAndGameplayFilesUntouched": true,
+  "note": "Candidate only; opening clearance and game rendering must pass before integration."
+}

@@ -1,0 +1,40 @@
+from pathlib import Path
+import bpy,json,hashlib
+r=Path(__file__).resolve().parent;code=(r/'verify_canonical.py').read_text().replace("'volcano-remake-rework']","'volcano-remake-rework','volcano-remake-rework/fidelity-v4e','volcano-remake-rework/fidelity-v5-alpha','volcano-remake-rework/fidelity-v7b','volcano-remake-rework/fidelity-v8b','volcano-remake-rework/fidelity-v9','volcano-remake-rework/fidelity-v10','volcano-remake-rework/fidelity-v10b','volcano-remake-rework/fidelity-v11','volcano-remake-rework/fidelity-v12','volcano-remake-rework/fidelity-v13','volcano-remake-rework/fidelity-v14','volcano-remake-rework/fidelity-v15','volcano-remake-rework/fidelity-v16','volcano-remake-rework/fidelity-v17','volcano-remake-rework/fidelity-v18','volcano-remake-rework/fidelity-v19','volcano-remake-rework/fidelity-v20','volcano-remake-rework/fidelity-v21','volcano-remake-rework/fidelity-v22','volcano-remake-rework/fidelity-v23','volcano-remake-rework/fidelity-v24','volcano-remake-rework/fidelity-v26','volcano-remake-rework/fidelity-v29','volcano-remake-rework/fidelity-v30','volcano-remake-rework/fidelity-v32']").replace("root/'volcano-remake-rework/canonical-bindings-verification.json'","root/'volcano-remake-rework/fidelity-v32/canonical-bindings-verification.json'");exec(compile(code,str(r/'verify_canonical.py'),'exec'))
+for name in ['fluxara_chalet_window','fluxara_cottage_windows','LCV1_fluxara_chalet_window.png','LCV1_fluxara_cottage_windows.png']:
+ nodes=[n for n in bpy.data.materials[name].node_tree.nodes if n.type=='EMISSION'];assert nodes and all(n.inputs['Strength'].default_value>=1 for n in nodes)
+a=json.loads((r/'fidelity-v13/asset-registration.json').read_text());texture=a['textures']['fluxara_volcano_lava_shared_v13.jpg'];images=[n.image for q in a['newMaterialVariants']for n in bpy.data.materials[q['name']].node_tree.nodes if n.type=='TEX_IMAGE'];assert all(hashlib.sha256(im.packed_file.data).hexdigest()==texture['sha256']for im in images);assert len({im.as_pointer()for im in images})==1
+print('V15_CANONICAL_BINDINGS_AND_PREVIOUS_ASSETS_VERIFIED',flush=True)
+
+a=json.loads((r/"fidelity-v15/asset-registration.json").read_text());images=[n.image for q in a["newMaterialVariants"]for n in bpy.data.materials[q["name"]].node_tree.nodes if n.type=="TEX_IMAGE" and n.image and Path(n.image.filepath).name=="fluxara_castle_brick_v15.jpg"];assert len({im.as_pointer()for im in images})==1;assert all(hashlib.sha256(im.packed_file.data).hexdigest()==a["textures"]["fluxara_castle_brick_v15.jpg"]["sha256"]for im in images);print("V15_SINGLE_SHARED_BRICK_IMAGE_VERIFIED",flush=True)
+
+row=next(q for q in a["newPrototypes"]if q["name"]=="VRV15_Prototype_GateRoof");assert len(bpy.data.objects[row["name"]].data.polygons)==row["triangles"]==160;print("V15_OPTIMIZED_CANONICAL_GATE_GEOMETRY_VERIFIED",flush=True)
+
+a=json.loads((r/"fidelity-v16/asset-registration.json").read_text());stone=bpy.data.objects["VRV16_Prototype_StoneBody"].data.materials[0];assert stone==bpy.data.materials["VRV4E_Rock13_col.jpg"];alias=a["runtimeTextureAliases"]["fluxara_volcano_stone_shared_v16.jpg"];assert all(hashlib.sha256(n.image.packed_file.data).hexdigest()==alias["sha256"]for n in stone.node_tree.nodes if n.type=="TEX_IMAGE");grass=bpy.data.materials["VRV16_GrassLipVertexColor"];assert not any(n.type=="TEX_IMAGE"for n in grass.node_tree.nodes);assert sum(len(bpy.data.objects[q["name"]].data.polygons)for q in a["newPrototypes"])==432;print("V16_CANONICAL_SHARED_STONE_AND_VERTEX_GRASS_VERIFIED",flush=True)
+
+a=json.loads((r/"fidelity-v17/asset-registration.json").read_text());assert sum(len(bpy.data.objects[q["name"]].data.polygons)for q in a["newPrototypes"])==72;assert bpy.data.objects["VRV17_Prototype_CentralGreenCrest"].data.materials[0]==bpy.data.materials["VRV4E_vr_moss_palette.jpg"];print("V17_CANONICAL_GREEN_CREST_BINDINGS_VERIFIED",flush=True)
+
+a=json.loads((r/"fidelity-v18/asset-registration.json").read_text());assert len(bpy.data.objects["VRV18_Prototype_GreenMound"].data.polygons)==360;assert bpy.data.objects["VRV18_Prototype_GreenMound"].data.materials[0]==bpy.data.materials["VRV16_GrassLipVertexColor"];print("V18_CANONICAL_EXISTING_GRASS_MATERIAL_REUSED",flush=True)
+
+a=json.loads((r/'fidelity-v19/asset-registration.json').read_text());assert all(len(bpy.data.objects[q['name']].data.polygons)==q['triangles']for q in a['newPrototypes']);print('V19_CANONICAL_BILLOWS_BINDINGS_VERIFIED',flush=True)
+
+a=json.loads((r/'fidelity-v20/asset-registration.json').read_text()); proof=json.loads((r/'fidelity-v20/terrain-changes.json').read_text()); obj=bpy.data.objects['VRV20_Prototype_RoundedGreenTerrain']; assert len(obj.data.polygons)==proof['visualTriangles']==1800; assert obj.data.materials[0]==bpy.data.materials['VRV4E_vr_moss_palette.jpg']; assert all(hashlib.sha256(n.image.packed_file.data).hexdigest()==proof['existingGreenPaletteSha256'] for n in obj.data.materials[0].node_tree.nodes if n.type=='TEX_IMAGE'); print('V20_CANONICAL_EXISTING_MOSS_AND_ROUNDED_TERRAIN_VERIFIED',flush=True)
+
+a=json.loads((r/'fidelity-v21/asset-registration.json').read_text()); obj=bpy.data.objects['VRV21_Prototype_RoundedCentralCrest']; assert len(obj.data.polygons)==544; assert [m.name for m in obj.data.materials]==['VRV4E_vr_moss_palette.jpg','VRV4E_Rock13_col.jpg']; print('V21_CANONICAL_CREST_AND_EXISTING_MATERIALS_VERIFIED',flush=True)
+
+a=json.loads((r/'fidelity-v22/asset-registration.json').read_text()); assert sum(len(bpy.data.objects[q['name']].data.polygons)for q in a['newPrototypes'])==432; print('V22_CANONICAL_ORGANIC_CLIFFS_VERIFIED',flush=True)
+
+a=json.loads((r/"fidelity-v23/asset-registration.json").read_text());obj=bpy.data.objects["VRV23_Prototype_RoundedBackdropTerrain"];assert len(obj.data.polygons)==2710;assert obj.data.materials[0]==bpy.data.materials["VRV4E_vr_moss_palette.jpg"];print("V23_CANONICAL_ROUNDED_BACKDROP_VERIFIED",flush=True)
+
+a=json.loads((r/"fidelity-v24/asset-registration.json").read_text());assert all(bpy.data.objects[q["name"]].data.materials[0]==bpy.data.materials["VRV16_GrassLipVertexColor"]for q in a["newPrototypes"]);assert sum(len(bpy.data.objects[q["name"]].data.polygons)for q in a["newPrototypes"])==2660;assert bpy.data.objects["Fluxara_Bronze_Wall_Torch"];print("V24_CANONICAL_WARM_SMOKE_AND_REUSED_TORCH_BINDINGS_VERIFIED",flush=True)
+
+a=json.loads((r/'fidelity-v26/asset-registration.json').read_text());row=a['newPrototypes'][0];obj=bpy.data.objects[row['name']];assert len(obj.data.polygons)==1024 and obj.data.materials[0]==bpy.data.materials['VRV4E_Rock13_col.jpg'];print('V26_CANONICAL_ROUNDED_CENTRAL_STONE_BINDINGS_VERIFIED',flush=True)
+
+a=json.loads((r/'fidelity-v29/asset-registration.json').read_text());row=a['newPrototypes'][0];obj=bpy.data.objects[row['name']];assert len(obj.data.polygons)==152 and obj.data.materials[0]==bpy.data.materials['VRV4E_Rock13_col.jpg'];print('V29_CANONICAL_GROUNDED_STONE_BODY_BINDINGS_VERIFIED',flush=True)
+
+a=json.loads((r/'fidelity-v30/asset-registration.json').read_text());row=a['reusedPrototypes'][0];obj=bpy.data.objects[row['name']];obj.data.calc_loop_triangles();assert len(obj.data.loop_triangles)==588 and [m.name for m in obj.data.materials]==row['materials'];print('V30_CANONICAL_DIRECT_TREE_AND_ALL_PREVIOUS_BINDINGS_VERIFIED',flush=True)
+
+a=json.loads((r/'fidelity-v32/asset-registration.json').read_text())
+for row in a['newPrototypes']:
+ o=bpy.data.objects[row['name']];assert len(o.data.polygons)==row['triangles']and[m.name for m in o.data.materials]==row['materials']
+print('V32_CANONICAL_MATCHED_SEAMS_AND_PREVIOUS_BINDINGS_VERIFIED',flush=True)

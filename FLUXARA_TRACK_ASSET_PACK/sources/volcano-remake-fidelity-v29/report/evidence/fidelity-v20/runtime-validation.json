@@ -1,0 +1,71 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v20/drive-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v20/drive-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-volcano-fidelity-v20-drive-probe",
+    "--mode=1",
+    "--laps=1",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--seed=4"
+  ],
+  "screenshots": [
+    {
+      "seconds": 40,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v20/screenshots/drive-40s.png"
+    },
+    {
+      "seconds": 80,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v20/screenshots/drive-80s.png"
+    },
+    {
+      "seconds": 140,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v20/screenshots/drive-140s.png"
+    },
+    {
+      "seconds": 190,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v20/screenshots/drive-190s.png"
+    }
+  ],
+  "kind": "Candidate gameplay in a temporary simulator-only track. Production source and final Blender project not yet replaced.",
+  "forceWinsUsed": false,
+  "visualInspectionCompleted": true,
+  "naturalFinishObserved": true,
+  "result": "#1",
+  "fullRouteCompleted": true,
+  "originalPhysicsAndCourseVerified": true,
+  "productionIntegrated": false,
+  "referenceAcceptance": false,
+  "staticOverviewInspected": true,
+  "naturalFinishScreenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v20/screenshots/natural-finish.png",
+  "inspectedGameplayFiles": [
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v20/screenshots/drive-40s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v20/screenshots/drive-80s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v20/screenshots/drive-140s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v20/screenshots/drive-190s.png"
+  ],
+  "candidateMainSPMSha256": "9c0ed7783755e5815351577be13a04c1da03c293fe5444cb16ac534bf8743935",
+  "terrainModelSha256": "2d603f413e39bdd5c21ad31f7a2a110de3e9ddbe726e3a3b2ff02f41f38fabae",
+  "originalTerrainCollisionSha256": "b3cbfede4c879033558c097d96e77d37827094197cd05fb03b1b51f32ba4f5ad",
+  "currentStoneTextureBytes": 39938,
+  "currentStoneTextureSha256": "6c765884a7846501355a429f3548d2df78698798a97a0318aefe358d0bdafdfd",
+  "globalMossAliasPixelHash": "a88393c638eb83032cd902251fe5d11d581d2a64565ec658e116e2c8dd282554",
+  "finalProbeTrackCleanupVerified": true,
+  "existingInstalledDonorLibraryUnchanged": true,
+  "materialWarningsExactV19": [
+    "Cannot determine texture full path: fluxara_driftflag_orangeBooster_a-gloss.png",
+    "Cannot determine texture full path: lava_1-gloss.png",
+    "Cannot determine texture full path: lava_1.png"
+  ],
+  "visualFinding": "Stone texture pixels and UVs retained. Sixteen distant/side green terrain components have upward rounding. Central 8-face crest and near-road components 12/13/15 remain planar; 58 disc-capped cliffs and castle proportions/lighting still differ from reference. All 40/80/140/190 second frames and the diagnostic overview inspected, unretouched. Natural finish #1 at final capture. No new app build, performance, reverse mode or full-campaign claim."
+}

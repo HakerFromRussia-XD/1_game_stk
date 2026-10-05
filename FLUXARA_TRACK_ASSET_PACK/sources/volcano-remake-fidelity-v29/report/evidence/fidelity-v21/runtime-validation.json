@@ -1,0 +1,72 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v21/drive-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v21/drive-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-volcano-fidelity-v21-drive-probe",
+    "--mode=1",
+    "--laps=1",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--seed=4"
+  ],
+  "screenshots": [
+    {
+      "seconds": 40,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v21/screenshots/drive-40s.png"
+    },
+    {
+      "seconds": 80,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v21/screenshots/drive-80s.png"
+    },
+    {
+      "seconds": 140,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v21/screenshots/drive-140s.png"
+    },
+    {
+      "seconds": 190,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v21/screenshots/drive-190s.png"
+    }
+  ],
+  "kind": "Candidate gameplay in a temporary simulator-only track. Production source and final Blender project not yet replaced.",
+  "forceWinsUsed": false,
+  "visualInspectionCompleted": true,
+  "naturalFinishObserved": true,
+  "result": "#1",
+  "fullRouteCompleted": true,
+  "originalPhysicsGeometryAndCourseVerified": true,
+  "productionIntegrated": false,
+  "referenceAcceptance": false,
+  "staticOverviewInspected": true,
+  "naturalFinishScreenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v21/screenshots/natural-finish.png",
+  "inspectedGameplayFiles": [
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v21/screenshots/drive-40s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v21/screenshots/drive-80s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v21/screenshots/drive-140s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v21/screenshots/drive-190s.png"
+  ],
+  "candidateMainSPMSha256": "71fdc22538988eba5b8301969b6a6ddc851e0b9ef4c6211016b37ccd445047da",
+  "crestModelSha256": "0db4d9021026c433aa10e361cf0559593a1af85bfb1ef949c1a16cc1e1ec0317",
+  "originalCrestCollisionSha256": "fb7dab8a6276babf9599cc1414b5f3bf2928f188173cad1f60a71e21548603e0",
+  "currentStoneTextureBytes": 39938,
+  "currentStoneTextureSha256": "6c765884a7846501355a429f3548d2df78698798a97a0318aefe358d0bdafdfd",
+  "currentGreenPaletteHash": "a88393c638eb83032cd902251fe5d11d581d2a64565ec658e116e2c8dd282554",
+  "finalProbeTrackCleanupVerified": true,
+  "existingInstalledDonorLibraryUnchanged": true,
+  "materialWarningsExactV20": [
+    "Cannot determine texture full path: fluxara_driftflag_orangeBooster_a-gloss.png",
+    "Cannot determine texture full path: lava_1-gloss.png",
+    "Cannot determine texture full path: lava_1.png"
+  ],
+  "AITraversalWithoutOffRoadVerified": false,
+  "visualFinding": "Central green crest now follows a smoothed inscribed original rim with a stone transition, replacing broad eight-face sheet. First oversized ellipse rejected after diagnostic view and 40s drive interrupted with cleanup; not accepted or registered. Current stone pixels and original 64 stone faces/UVs retained, object bounds exact. Full current 40/80/140/190 frames inspected: wall contact at80 and off-road lava at140; natural #1 finish at190. This confirms reaching finish, not perfect AI traversal or absence of inherited route issues. Remaining near-road terrain components 12/13/15, repeated caps, lighting and castle proportions differ from reference. No retouching, new app build, performance, reverse or whole-campaign claim."
+}
