@@ -1,0 +1,62 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v18/drive-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v18/drive-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-volcano-fidelity-v18-drive-probe",
+    "--mode=1",
+    "--laps=1",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--seed=4"
+  ],
+  "screenshots": [
+    {
+      "seconds": 40,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v18/screenshots/drive-40s.png"
+    },
+    {
+      "seconds": 80,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v18/screenshots/drive-80s.png"
+    },
+    {
+      "seconds": 140,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v18/screenshots/drive-140s.png"
+    },
+    {
+      "seconds": 190,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v18/screenshots/drive-190s.png"
+    }
+  ],
+  "kind": "Candidate gameplay in a temporary simulator-only track. Production source and final Blender project not yet replaced.",
+  "forceWinsUsed": false,
+  "visualInspectionCompleted": true,
+  "naturalFinishObserved": true,
+  "naturalFinishScreenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v18/screenshots/natural-finish.png",
+  "result": "#1",
+  "fullRouteCompleted": true,
+  "originalPhysicsAndCourseVerified": true,
+  "productionIntegrated": false,
+  "referenceAcceptance": false,
+  "staticOverviewInspected": true,
+  "inspectedGameplayFiles": [
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v18/screenshots/drive-40s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v18/screenshots/drive-80s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v18/screenshots/drive-140s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v18/screenshots/drive-190s.png"
+  ],
+  "candidateMainSPMSha256": "5255d7e10b1469ffcfd456e3cf690fe9d885ecc8e288b468ff5c84ee5285410c",
+  "newGreenMoundSPMSha256": "20e91c8dd25e838a8efb59d9c4a6fffdbddfb0daab3ce6369299cabad3e86391",
+  "finalProbeTrackCleanupVerified": true,
+  "existingInstalledDonorLibraryUnchanged": true,
+  "visualFinding": "Stone texture and all previous UVs preserved. Added 32 small green mounds by coordinates, one copied pooled model recolored through vertex RGB derived from existing green palette; source brown hill unchanged. Broad planar terrain, regular smoke chain, castle proportions and atmosphere still differ from reference. Earlier brown-sided hills rejected and archived. Black rounded simulator display inset retained in unedited screenshots. No performance/reverse/full-campaign or fresh application build claim."
+}

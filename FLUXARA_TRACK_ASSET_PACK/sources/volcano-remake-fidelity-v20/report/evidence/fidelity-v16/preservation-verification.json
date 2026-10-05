@@ -1,0 +1,41 @@
+{
+  "baseCandidate": "V15",
+  "allPriorIndexedGeometryUVsNormalsColorsExact": true,
+  "allPriorCollisionAndPlacementGeometryExact": true,
+  "protectedControlBytesExact": [
+    "track.xml",
+    "quads.xml",
+    "graph.xml",
+    "scripting.as",
+    "easter_eggs.xml"
+  ],
+  "onlySceneAdditionsAndStoneRuntimeTextureAlias": true,
+  "stoneImagePixelsAndOldModelUVsRetained": true,
+  "allRetainedPriorModelsAndImagesByteExact": true,
+  "unusedLegacySkyCopiesRemovedAndArchived": [
+    "magma_sky_n.png",
+    "magma_sky_s.png",
+    "magma_sky_e.png",
+    "magma_sky_w.png",
+    "magma_sky_t.png",
+    "magma_sky_bottom.png"
+  ],
+  "activeSkyIBLAndEffectsRetained": true,
+  "newCliffPlacements": 58,
+  "newCliffBoundingOriginAxesRetainedFromPooledDonor": true,
+  "minimumRoadSphereMarginMeters": 3.877367353823022,
+  "minimumOriginalNavigationQuadSphereMarginMeters": 4.02053459364539,
+  "roadAndNavMeshNotCovered": true,
+  "modelWithTextureUpper20PercentPassed": true,
+  "sourceModelWithTextureBytes": 99488,
+  "adaptedModelWithTextureBytes": 46303,
+  "modelWithTextureWeightChangePercent": -53.45870858797041,
+  "candidateMapBytes": 6315373,
+  "newSharedLibraryBytesIncludingRetainedHistoricalVariants": 46956,
+  "newGlobalTextureBytes": 96041,
+  "candidateIncludingNewSharedBytes": 6458370,
+  "v1Bytes": 7693535,
+  "savingBytesVsV1": 1235165,
+  "productionStillExactV1": true,
+  "referenceAcceptance": false
+}

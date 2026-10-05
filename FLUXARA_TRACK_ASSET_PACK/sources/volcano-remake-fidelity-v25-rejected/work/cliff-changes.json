@@ -1,0 +1,70 @@
+{
+  "baseCandidate": "V24",
+  "sourceModel": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v24/candidate/volcano_track.spm",
+  "sourceModelSha256": "71fdc22538988eba5b8301969b6a6ddc851e0b9ef4c6211016b37ccd445047da",
+  "sourceBuffer": 3,
+  "newSharedLibrary": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_volcano_rounded_walls_v25",
+  "newSharedModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_volcano_rounded_walls_v25/vr_v25_rounded_stone_walls.spm",
+  "originalCollider": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v25/candidate/vr_v25_original_stone_walls_collision.spm",
+  "components": [
+    {
+      "component": 8,
+      "sourceTriangles": 1045,
+      "newTriangles": 16720,
+      "changedTriangles": 3264,
+      "minimumChangedTriangleCertifiedRoadMarginMeters": 4.999999999999988,
+      "maximumVertexShiftMeters": 4.209833864892556,
+      "componentActiveBounds": [
+        -381.6612243652344,
+        -50.311241149902344,
+        -207.19908142089844,
+        123.86666870117188,
+        64.3168716430664,
+        201.6991424560547
+      ],
+      "originalComponentBounds": [
+        -381.6612243652344,
+        -50.311241149902344,
+        -207.19908142089844,
+        123.86666870117188,
+        64.3168716430664,
+        201.6991424560547
+      ]
+    },
+    {
+      "component": 9,
+      "sourceTriangles": 463,
+      "newTriangles": 7408,
+      "changedTriangles": 6516,
+      "minimumChangedTriangleCertifiedRoadMarginMeters": 15.052288599399441,
+      "maximumVertexShiftMeters": 5.063821372819487,
+      "componentActiveBounds": [
+        -340.8935241699219,
+        -35.158443450927734,
+        -3.774442672729492,
+        -60.50602722167969,
+        72.55210876464844,
+        288.144287109375
+      ],
+      "originalComponentBounds": [
+        -340.8935241699219,
+        -35.158443450927734,
+        -3.774442672729492,
+        -60.50602722167969,
+        72.55210876464844,
+        288.144287109375
+      ]
+    }
+  ],
+  "retainedSourceTriangles": 702,
+  "targetTriangles": 24830,
+  "protectedDrivingTriangles": 2032,
+  "newImagePixels": false,
+  "newMaterials": 0,
+  "sourceTexturePixelsRetained": true,
+  "sourceUVsRetainedAndNewUVsInterpolated": true,
+  "wholeOriginalStoneModelBoundsRetained": true,
+  "originalStoneCollisionGeometryRetained": true,
+  "productionIntegrated": false,
+  "referenceAcceptance": false
+}

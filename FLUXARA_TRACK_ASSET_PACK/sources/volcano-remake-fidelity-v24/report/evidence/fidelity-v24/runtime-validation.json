@@ -1,0 +1,77 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v24/drive-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v24/drive-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-volcano-fidelity-v24-drive-probe",
+    "--mode=1",
+    "--laps=1",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--seed=4"
+  ],
+  "screenshots": [
+    {
+      "seconds": 40,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v24/screenshots/drive-40s.png"
+    },
+    {
+      "seconds": 80,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v24/screenshots/drive-80s.png"
+    },
+    {
+      "seconds": 140,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v24/screenshots/drive-140s.png"
+    },
+    {
+      "seconds": 190,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v24/screenshots/drive-190s.png"
+    }
+  ],
+  "kind": "Candidate gameplay in a temporary simulator-only track. Production source and final Blender project not yet replaced.",
+  "forceWinsUsed": false,
+  "visualInspectionCompleted": true,
+  "staticOverviewInspected": true,
+  "naturalFinishObserved": true,
+  "result": "#1",
+  "fullRouteCompleted": true,
+  "naturalFinishScreenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v24/screenshots/natural-finish.png",
+  "inspectedGameplayFiles": [
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v24/screenshots/drive-40s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v24/screenshots/drive-80s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v24/screenshots/drive-140s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v24/screenshots/drive-190s.png"
+  ],
+  "originalPhysicsGeometryAndCourseVerified": true,
+  "AITraversalWithoutOffRoadVerified": false,
+  "preexistingUnsafeRampTraversalObservedInV1": true,
+  "allTraversalRegressionsExcluded": false,
+  "candidateMainSPMSha256": "71fdc22538988eba5b8301969b6a6ddc851e0b9ef4c6211016b37ccd445047da",
+  "sourcePooledTorchModelSha256": "d95d3a868d35cdb808a30226d8473a0d2353fec7d7345edf1104660a54d28fe6",
+  "smokeModelHashes": {
+    "AshCloud.spm": "a2ef2319f9670bc72a21666170ecb3351e2e32bab6a1b10a96252c4d9507e166",
+    "AshColumn.spm": "989d049cd198cea1278da803c580a08c2355021dcd58db9f9d23bda35c012d7d",
+    "PyroclasticFlow.spm": "51d48b55d1b37f70e56fef714b10e24dac3f043329a2348e6475d51ed5de494f"
+  },
+  "sixExistingTorchPlacementsVerified": true,
+  "existingInstalledTorchAndEmitterUnchanged": true,
+  "newTorchRuntimeBytesAddedToInstalledApp": 0,
+  "currentStoneTextureBytes": 39938,
+  "currentStoneTextureSha256": "6c765884a7846501355a429f3548d2df78698798a97a0318aefe358d0bdafdfd",
+  "finalProbeTrackCleanupVerified": true,
+  "temporaryCopiedResourcesCleanupVerified": true,
+  "existingInstalledDonorLibraryUnchanged": true,
+  "materialWarningsExactV23": [],
+  "productionIntegrated": false,
+  "referenceAcceptance": false,
+  "visualFinding": "Stone image pixels and UVs retained. Smoke now has baked warm underside vertex colors and cooler gray tops; geometry, normals, poses retained, not dynamic illumination. Six existing pooled bronze torches placed on battlements; source models, textures, emitters untouched. All four gameplay frames inspected: kart on road at40, airborne beneath ramp edge at80, on road below arch at140, natural #1 at190. Original V1 also showed unsafe ramp traversal; cause not fixed and all regressions not excluded. Overall composition remains far from reference. No retouched images, new app build, performance, reverse or whole-campaign claim."
+}

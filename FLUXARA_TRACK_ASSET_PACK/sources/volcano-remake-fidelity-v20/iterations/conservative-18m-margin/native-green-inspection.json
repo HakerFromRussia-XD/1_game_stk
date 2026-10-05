@@ -1,0 +1,37 @@
+[
+  {
+    "name": "VR_OriginalSurface_011",
+    "mesh": "vr_arch_stone.png__",
+    "sourceModel": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v17/candidate/volcano_track.spm",
+    "polygons": 604,
+    "materialPolygonCounts": {
+      "VRV4E_Rock13_col.jpg": 64,
+      "VRV4E_vr_moss_palette.jpg": 8,
+      "VRV4E_vr_arch_stone.png": 532
+    },
+    "hideRender": false,
+    "hidden": false
+  },
+  {
+    "name": "VR_OriginalSurface_012",
+    "mesh": "vr_moss_palette.jpg__",
+    "sourceModel": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v17/candidate/volcano_track.spm",
+    "polygons": 427,
+    "materialPolygonCounts": {
+      "VRV4E_vr_moss_palette.jpg": 427
+    },
+    "hideRender": false,
+    "hidden": false
+  },
+  {
+    "name": "VRV17_Prototype_CentralGreenCrest",
+    "mesh": "VRV17_CentralGreenCrestMesh",
+    "sourceModel": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v17/candidate/volcano_track.spm",
+    "polygons": 8,
+    "materialPolygonCounts": {
+      "VRV4E_vr_moss_palette.jpg": 8
+    },
+    "hideRender": true,
+    "hidden": true
+  }
+]

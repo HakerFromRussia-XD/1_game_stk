@@ -1,0 +1,1950 @@
+{
+  "baseCandidate": "V15",
+  "sourcePoolObjectId": "shared-grassy-island-v1",
+  "sourcePooledModel": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/shared/fluxara_grassy_island_v1/library/fluxara_driftlib_cliffGrassEarth_a/fluxara_driftlib_cliffGrassEarth_a.spm",
+  "sourceBounds": [
+    -3.5540590286254883,
+    -0.6213818788528442,
+    -2.4634437561035156,
+    3.5540590286254883,
+    0.8198510408401489,
+    2.4634437561035156
+  ],
+  "adaptedSharedModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_volcano_grass_stone_cliff_v16/vr_v16_grass_stone_cliff.spm",
+  "adaptedSharedLibrary": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_volcano_grass_stone_cliff_v16",
+  "globalStoneAlias": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/textures/fluxara_volcano_stone_shared_v16.jpg",
+  "stonePixelsByteIdenticalOriginal": true,
+  "existingStoneModelsAliasOnly": [
+    "volcano_track.spm",
+    "vulcan_03.spm",
+    "vulcan_02.spm",
+    "vulcan_01.spm"
+  ],
+  "sourceModelWithTextureBytes": 99488,
+  "adaptedModelWithTextureBytes": 46303,
+  "modelWithTextureWeightChangePercent": -53.45870858797041,
+  "upper20PercentPassed": true,
+  "newMeshTriangles": 432,
+  "newMeshVertices": 244,
+  "geometryAdaptation": "Source oval shelf copied; green lip compressed, existing earth side extended within same original local overall bounds, original horizontal coordinates retained; old stone image applied. New vertex colors on green lip, cylindrical UVs on copied stone side. All original map stone UVs retained. Ghost instances, original track unchanged.",
+  "placements": [
+    {
+      "kind": "cliff",
+      "xyz": [
+        -169.30890826357268,
+        -9.47863917025307,
+        -38.12012714828555
+      ],
+      "hpr": [
+        0,
+        74.26624551916525,
+        0
+      ],
+      "scale": [
+        1.0793980905797511,
+        9.044536856641633,
+        1.2978900584750455
+      ],
+      "groundHeight": -4.2177983547930245,
+      "topRaiseMeters": 2.154332140374686,
+      "horizontalRadius": 3.8362445293060783,
+      "boundingSphereCentre": [
+        -169.30890826357268,
+        -8.581108345002592,
+        -38.12012714828555
+      ],
+      "boundingSphereRadius": 6.917583315648981,
+      "minimumProtectedRoadDistance3D": 23.946287042293562,
+      "roadClearanceBeyondBoundingSphere": 17.02870372664458,
+      "score": 3.576856517399805,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_000"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        11.018199144093899,
+        -7.476070765325241,
+        101.78812569188267
+      ],
+      "hpr": [
+        0,
+        -139.29356483616422,
+        0
+      ],
+      "scale": [
+        1.114991577754561,
+        9.212781092065681,
+        1.4515311327852114
+      ],
+      "groundHeight": -2.7653122162488444,
+      "topRaiseMeters": 2.8423496182860952,
+      "horizontalRadius": 3.9627458837599767,
+      "boundingSphereCentre": [
+        11.018199144093899,
+        -6.5618442938678605,
+        101.78812569188267
+      ],
+      "boundingSphereRadius": 7.066897841573702,
+      "minimumProtectedRoadDistance3D": 22.773961291279498,
+      "roadClearanceBeyondBoundingSphere": 15.707063449705796,
+      "score": 3.7818391727381258,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_001"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        29.422305251829258,
+        -8.48291020863919,
+        82.9140369514829
+      ],
+      "hpr": [
+        0,
+        -175.66488488817657,
+        0
+      ],
+      "scale": [
+        1.5081215336483011,
+        7.389061495226378,
+        1.9653338812116308
+      ],
+      "groundHeight": -5.317318706426566,
+      "topRaiseMeters": 2.892338255480589,
+      "horizontalRadius": 5.359952952927265,
+      "boundingSphereCentre": [
+        29.422305251829258,
+        -7.74965978722407,
+        82.9140369514829
+      ],
+      "boundingSphereRadius": 6.933462220105506,
+      "minimumProtectedRoadDistance3D": 20.57272071727396,
+      "roadClearanceBeyondBoundingSphere": 13.639258497168454,
+      "score": 4.274054920393771,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_002"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -237.50118668281533,
+        -7.133662924078383,
+        -46.081295577609694
+      ],
+      "hpr": [
+        0,
+        11.589851578969867,
+        0
+      ],
+      "scale": [
+        2.0615766166885043,
+        12.992263347614138,
+        1.3362050878397953
+      ],
+      "groundHeight": 0.684064611242178,
+      "topRaiseMeters": 2.8339930930902066,
+      "horizontalRadius": 7.326964987744967,
+      "boundingSphereCentre": [
+        -237.50118668281533,
+        -5.844381114618707,
+        -46.081295577609694
+      ],
+      "boundingSphereRadius": 10.823738025091927,
+      "minimumProtectedRoadDistance3D": 29.65140589020711,
+      "roadClearanceBeyondBoundingSphere": 18.82766786511518,
+      "score": 7.146218935931117,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_003"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        73.09772497250636,
+        -12.72197917001383,
+        131.56832748517417
+      ],
+      "hpr": [
+        0,
+        158.51212225378146,
+        0
+      ],
+      "scale": [
+        1.3733183344661917,
+        7.706384055306861,
+        1.6368132462715141
+      ],
+      "groundHeight": -9.424898077139218,
+      "topRaiseMeters": 3.021005895982647,
+      "horizontalRadius": 4.880854425786488,
+      "boundingSphereCentre": [
+        73.09772497250636,
+        -11.95723937730929,
+        131.56832748517417
+      ],
+      "boundingSphereRadius": 6.750237584087045,
+      "minimumProtectedRoadDistance3D": 28.242441733774534,
+      "roadClearanceBeyondBoundingSphere": 21.49220414968749,
+      "score": 8.164519922649623,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_004"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -221.81657527386022,
+        -17.20135835217009,
+        -74.42697749461934
+      ],
+      "hpr": [
+        0,
+        150.8295353296375,
+        0
+      ],
+      "scale": [
+        1.1019745153398486,
+        11.739231837400538,
+        1.722481326759909
+      ],
+      "groundHeight": -10.206652189514168,
+      "topRaiseMeters": 2.6297152779007247,
+      "horizontalRadius": 4.24323586941161,
+      "boundingSphereCentre": [
+        -221.81657527386022,
+        -16.036420599598305,
+        -74.42697749461934
+      ],
+      "boundingSphereRadius": 8.721242942698492,
+      "minimumProtectedRoadDistance3D": 26.380668067421514,
+      "roadClearanceBeyondBoundingSphere": 17.659425124723022,
+      "score": 9.847732259662045,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_005"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -35.31783048094716,
+        -12.351941395961017,
+        -97.87332327681656
+      ],
+      "hpr": [
+        0,
+        -146.7043213475782,
+        0
+      ],
+      "scale": [
+        1.5136594908136032,
+        10.514876317154604,
+        1.2516136584248736
+      ],
+      "groundHeight": -5.548295715169258,
+      "topRaiseMeters": 1.816986612132875,
+      "horizontalRadius": 5.379635179590746,
+      "boundingSphereCentre": [
+        -35.31783048094716,
+        -11.308502050428102,
+        -97.87332327681656
+      ],
+      "boundingSphereRadius": 8.441137021247748,
+      "minimumProtectedRoadDistance3D": 15.995077503653292,
+      "roadClearanceBeyondBoundingSphere": 7.553940482405544,
+      "score": 10.196988943533215,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_006"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -162.02883146659454,
+        -8.071575396673772,
+        -17.17592250114944
+      ],
+      "hpr": [
+        0,
+        128.03417059531608,
+        0
+      ],
+      "scale": [
+        1.071087586693772,
+        8.40389713743107,
+        1.3088090085049768
+      ],
+      "groundHeight": -4.146902711230293,
+      "topRaiseMeters": 2.9652711297929315,
+      "horizontalRadius": 3.806708507937687,
+      "boundingSphereCentre": [
+        -162.02883146659454,
+        -7.237618185527046,
+        -17.17592250114944
+      ],
+      "boundingSphereRadius": 6.520128046736781,
+      "minimumProtectedRoadDistance3D": 15.839603297131138,
+      "roadClearanceBeyondBoundingSphere": 9.319475250394357,
+      "score": 10.59410242051921,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_007"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        21.715300677770987,
+        -8.146727119734088,
+        88.5877554220313
+      ],
+      "hpr": [
+        0,
+        -125.31563988882064,
+        0
+      ],
+      "scale": [
+        1.5564014009883649,
+        8.173850651215552,
+        1.9646918783868537
+      ],
+      "groundHeight": -3.5092632132743846,
+      "topRaiseMeters": 2.0638760576112967,
+      "horizontalRadius": 5.531542451348059,
+      "boundingSphereCentre": [
+        21.715300677770987,
+        -7.33559847525602,
+        88.5877554220313
+      ],
+      "boundingSphereRadius": 7.38964901698521,
+      "minimumProtectedRoadDistance3D": 25.306351775154422,
+      "roadClearanceBeyondBoundingSphere": 17.91670275816921,
+      "score": 12.302199254960932,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_008"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -212.54377772007064,
+        -16.419796262594097,
+        -69.25085735630519
+      ],
+      "hpr": [
+        0,
+        150.8295353296375,
+        0
+      ],
+      "scale": [
+        1.3500062410437872,
+        10.010885899589343,
+        1.5206353501036747
+      ],
+      "groundHeight": -10.964454399269586,
+      "topRaiseMeters": 2.7520933611857794,
+      "horizontalRadius": 4.798001869682431,
+      "boundingSphereCentre": [
+        -212.54377772007064,
+        -15.426370194973087,
+        -69.25085735630519
+      ],
+      "boundingSphereRadius": 7.872375157612146,
+      "minimumProtectedRoadDistance3D": 15.808694706980384,
+      "roadClearanceBeyondBoundingSphere": 7.936319549368238,
+      "score": 12.786741955223293,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_009"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        54.88882058066262,
+        -15.08899997303016,
+        128.6976665765992
+      ],
+      "hpr": [
+        0,
+        -44.90260001640552,
+        0
+      ],
+      "scale": [
+        1.1036232910229578,
+        6.705783710103669,
+        0.9730627068646349
+      ],
+      "groundHeight": -11.40876972422268,
+      "topRaiseMeters": 1.817513505569927,
+      "horizontalRadius": 3.9223423216615187,
+      "boundingSphereCentre": [
+        54.88882058066262,
+        -14.423554336323964,
+        128.6976665765992
+      ],
+      "boundingSphereRadius": 5.671311942185514,
+      "minimumProtectedRoadDistance3D": 12.046991034282941,
+      "roadClearanceBeyondBoundingSphere": 6.375679092097427,
+      "score": 12.86073244459318,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_010"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -28.571858535019064,
+        -9.885393305814281,
+        -102.55561380369298
+      ],
+      "hpr": [
+        0,
+        22.341226342025678,
+        0
+      ],
+      "scale": [
+        1.2225599746559512,
+        9.284163210104799,
+        1.4090304885777793
+      ],
+      "groundHeight": -5.647554859915346,
+      "topRaiseMeters": 3.373792425235302,
+      "horizontalRadius": 4.3450503159621325,
+      "boundingSphereCentre": [
+        -28.571858535019064,
+        -8.96408325978285,
+        -102.55561380369298
+      ],
+      "boundingSphereRadius": 7.258472234953932,
+      "minimumProtectedRoadDistance3D": 11.89915624064646,
+      "roadClearanceBeyondBoundingSphere": 4.6406840056925285,
+      "score": 12.872287078180548,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_011"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -101.24415303184749,
+        54.07801205522899,
+        22.50892173838293
+      ],
+      "hpr": [
+        0,
+        114.55946234965899,
+        0
+      ],
+      "scale": [
+        2.1117242514054846,
+        8.1686922677953,
+        1.0480176470998446
+      ],
+      "groundHeight": 58.7518995685463,
+      "topRaiseMeters": 2.023223344737542,
+      "horizontalRadius": 7.505192641675063,
+      "boundingSphereCentre": [
+        -101.24415303184749,
+        54.88862880968974,
+        22.50892173838293
+      ],
+      "boundingSphereRadius": 8.92987695041693,
+      "minimumProtectedRoadDistance3D": 14.023077168419386,
+      "roadClearanceBeyondBoundingSphere": 5.0932002180024565,
+      "score": 14.796541379063527,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_012"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        65.37402876425843,
+        -17.593335504075174,
+        128.52777016857942
+      ],
+      "hpr": [
+        0,
+        158.51212225378146,
+        0
+      ],
+      "scale": [
+        1.487863767159245,
+        11.215885304854917,
+        1.847521255092081
+      ],
+      "groundHeight": -10.31531620018049,
+      "topRaiseMeters": 1.9173359372343506,
+      "horizontalRadius": 5.287955655037048,
+      "boundingSphereCentre": [
+        65.37402876425843,
+        -16.480331825375035,
+        128.52777016857942
+      ],
+      "boundingSphereRadius": 8.784365287586882,
+      "minimumProtectedRoadDistance3D": 20.599733376503096,
+      "roadClearanceBeyondBoundingSphere": 11.815368088916214,
+      "score": 14.965953220177258,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_013"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -44.092301338183645,
+        -12.219539281520362,
+        -98.60510584643842
+      ],
+      "hpr": [
+        0,
+        -165.19955019597674,
+        0
+      ],
+      "scale": [
+        1.5738989116767212,
+        13.324376336672934,
+        1.4114339881791764
+      ],
+      "groundHeight": -3.500602520282017,
+      "topRaiseMeters": 2.2050670469288103,
+      "horizontalRadius": 5.593729637188482,
+      "boundingSphereCentre": [
+        -44.092301338183645,
+        -10.897300378748888,
+        -98.60510584643842
+      ],
+      "boundingSphereRadius": 10.169529651356655,
+      "minimumProtectedRoadDistance3D": 14.046897005179677,
+      "roadClearanceBeyondBoundingSphere": 3.877367353823022,
+      "score": 15.227020876129181,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_014"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -226.17632233866536,
+        -13.287505808678322,
+        -48.40386603117104
+      ],
+      "hpr": [
+        0,
+        11.589851578969867,
+        0
+      ],
+      "scale": [
+        1.3260405250045395,
+        13.311634736241405,
+        1.6924043994336062
+      ],
+      "groundHeight": -4.924615549249527,
+      "topRaiseMeters": 2.550667334362603,
+      "horizontalRadius": 4.712826300215668,
+      "boundingSphereCentre": [
+        -226.17632233866536,
+        -11.966531313286858,
+        -48.40386603117104
+      ],
+      "boundingSphereRadius": 9.857435061358924,
+      "minimumProtectedRoadDistance3D": 18.428121584263913,
+      "roadClearanceBeyondBoundingSphere": 8.570686522904989,
+      "score": 15.885131239986752,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_015"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        5.62293202269357,
+        -6.659321913013355,
+        106.42984191046448
+      ],
+      "hpr": [
+        0,
+        -139.29356483616422,
+        0
+      ],
+      "scale": [
+        1.2693244772852146,
+        8.610245854175206,
+        1.0227560986413415
+      ],
+      "groundHeight": -2.3994559133065554,
+      "topRaiseMeters": 2.79925302572832,
+      "horizontalRadius": 4.511254118750847,
+      "boundingSphereCentre": [
+        5.62293202269357,
+        -5.804887773421946,
+        106.42984191046448
+      ],
+      "boundingSphereRadius": 6.972148376730502,
+      "minimumProtectedRoadDistance3D": 15.721832044882053,
+      "roadClearanceBeyondBoundingSphere": 8.749683668151551,
+      "score": 16.059541249652654,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_016"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -200.40353648229365,
+        11.234298216671792,
+        92.63478115925383
+      ],
+      "hpr": [
+        0,
+        85.15889700454376,
+        0
+      ],
+      "scale": [
+        1.900837867007445,
+        11.548307650729077,
+        1.961892748391143
+      ],
+      "groundHeight": 18.73978254616699,
+      "topRaiseMeters": 1.9624077178972923,
+      "horizontalRadius": 6.755689983191027,
+      "boundingSphereCentre": [
+        -200.40353648229365,
+        12.380289687577681,
+        92.63478115925383
+      ],
+      "boundingSphereRadius": 9.767326219993496,
+      "minimumProtectedRoadDistance3D": 39.907761641531714,
+      "roadClearanceBeyondBoundingSphere": 30.140435421538218,
+      "score": 16.117482247878474,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_017"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -97.96970412753664,
+        55.48310430707481,
+        34.48393343606686
+      ],
+      "hpr": [
+        0,
+        105.5306178983857,
+        0
+      ],
+      "scale": [
+        1.7003959144187006,
+        8.54004182006986,
+        1.992193553678359
+      ],
+      "groundHeight": 59.381056243328096,
+      "topRaiseMeters": 3.1036102387493925,
+      "horizontalRadius": 6.043307451877678,
+      "boundingSphereCentre": [
+        -97.96970412753664,
+        56.330571778757715,
+        34.48393343606686
+      ],
+      "boundingSphereRadius": 7.89815193772534,
+      "minimumProtectedRoadDistance3D": 14.826408056499641,
+      "roadClearanceBeyondBoundingSphere": 6.928256118774301,
+      "score": 17.52847891637929,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_018"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        70.43875479635096,
+        -11.513025808915977,
+        144.19482222844928
+      ],
+      "hpr": [
+        0,
+        -44.90260001640552,
+        0
+      ],
+      "scale": [
+        1.460649807345481,
+        6.655816556093559,
+        1.294429128981852
+      ],
+      "groundHeight": -9.364521614925433,
+      "topRaiseMeters": 3.308273937163856,
+      "horizontalRadius": 5.191235635456287,
+      "boundingSphereCentre": [
+        70.43875479635096,
+        -10.852538641801418,
+        144.19482222844928
+      ],
+      "boundingSphereRadius": 6.527271675294281,
+      "minimumProtectedRoadDistance3D": 33.85243012611074,
+      "roadClearanceBeyondBoundingSphere": 27.32515845081646,
+      "score": 17.92154619786485,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_019"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -229.95781176768938,
+        -17.668710385481827,
+        -78.97145481357745
+      ],
+      "hpr": [
+        0,
+        150.8295353296375,
+        0
+      ],
+      "scale": [
+        1.2771700391632017,
+        12.463202924191279,
+        1.1186227738534715
+      ],
+      "groundHeight": -9.541324712085972,
+      "topRaiseMeters": 2.090584216204351,
+      "horizontalRadius": 4.539137708777947,
+      "boundingSphereCentre": [
+        -229.95781176768938,
+        -16.431929665460842,
+        -78.97145481357745
+      ],
+      "boundingSphereRadius": 9.27029915522875,
+      "minimumProtectedRoadDistance3D": 35.66483916883885,
+      "roadClearanceBeyondBoundingSphere": 26.394540013610104,
+      "score": 18.990631646128517,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_020"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -164.00724556810118,
+        -6.891075204138812,
+        -57.7781780780043
+      ],
+      "hpr": [
+        0,
+        -153.34068618835585,
+        0
+      ],
+      "scale": [
+        1.6432379411810456,
+        6.759971799229561,
+        1.3579388630760059
+      ],
+      "groundHeight": -4.824171300923231,
+      "topRaiseMeters": 3.4752660124328285,
+      "horizontalRadius": 5.840164641034455,
+      "boundingSphereCentre": [
+        -164.00724556810118,
+        -6.220252235113361,
+        -57.7781780780043
+      ],
+      "boundingSphereRadius": 7.08451875286835,
+      "minimumProtectedRoadDistance3D": 11.817030203924691,
+      "roadClearanceBeyondBoundingSphere": 4.732511451056341,
+      "score": 19.184588845903026,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_021"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -106.78039259133335,
+        56.72681351293292,
+        30.54438245988164
+      ],
+      "hpr": [
+        0,
+        -75.87345692504455,
+        0
+      ],
+      "scale": [
+        1.3348405968522448,
+        8.161380045385203,
+        1.1809061017115345
+      ],
+      "groundHeight": 60.3457875084287,
+      "topRaiseMeters": 3.072141929405298,
+      "horizontalRadius": 4.744102275018557,
+      "boundingSphereCentre": [
+        -106.78039259133335,
+        57.536704642066674,
+        30.54438245988164
+      ],
+      "boundingSphereRadius": 6.884328369591123,
+      "minimumProtectedRoadDistance3D": 12.004015602156562,
+      "roadClearanceBeyondBoundingSphere": 5.119687232565439,
+      "score": 21.39707010353681,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_022"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -249.1666787417088,
+        -18.748306268466102,
+        2.072699521824735
+      ],
+      "hpr": [
+        0,
+        -154.66663640610034,
+        0
+      ],
+      "scale": [
+        1.4498114230006962,
+        11.917682121020627,
+        1.1241448270229182
+      ],
+      "groundHeight": -11.488712851156516,
+      "topRaiseMeters": 2.511130674011212,
+      "horizontalRadius": 5.152715377719992,
+      "boundingSphereCentre": [
+        -249.1666787417088,
+        -17.565660076771078,
+        2.072699521824735
+      ],
+      "boundingSphereRadius": 9.151751409087037,
+      "minimumProtectedRoadDistance3D": 47.71616321413995,
+      "roadClearanceBeyondBoundingSphere": 38.56441180505291,
+      "score": 25.06851954579099,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_023"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -201.61760058345143,
+        24.285452640928774,
+        75.74278433470685
+      ],
+      "hpr": [
+        0,
+        119.47270544650324,
+        0
+      ],
+      "scale": [
+        1.2833139417435202,
+        7.587364380308047,
+        1.5493940477575978
+      ],
+      "groundHeight": 28.667868693849446,
+      "topRaiseMeters": 1.8380925315083523,
+      "horizontalRadius": 4.560973501214524,
+      "boundingSphereCentre": [
+        -201.61760058345143,
+        25.038381566054806,
+        75.74278433470685
+      ],
+      "boundingSphereRadius": 6.4924208026337755,
+      "minimumProtectedRoadDistance3D": 48.08409306114223,
+      "roadClearanceBeyondBoundingSphere": 41.59167225850845,
+      "score": 25.579669187117,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_024"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -206.30357401393903,
+        10.303388816044283,
+        112.12436184142379
+      ],
+      "hpr": [
+        0,
+        26.33739444097757,
+        0
+      ],
+      "scale": [
+        1.4329012005578592,
+        7.058214905325686,
+        1.9097888299708945
+      ],
+      "groundHeight": 13.83889114211311,
+      "topRaiseMeters": 2.2511825105358882,
+      "horizontalRadius": 5.092615448970963,
+      "boundingSphereCentre": [
+        -206.30357401393903,
+        11.003807814737428,
+        112.12436184142379
+      ],
+      "boundingSphereRadius": 6.602124677417989,
+      "minimumProtectedRoadDistance3D": 48.10342334917001,
+      "roadClearanceBeyondBoundingSphere": 41.50129867175202,
+      "score": 26.757777437177864,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_025"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -197.34384502137613,
+        9.86374103882772,
+        124.59625543230251
+      ],
+      "hpr": [
+        0,
+        116.02981779222118,
+        0
+      ],
+      "scale": [
+        1.8291034242579869,
+        8.671366123430136,
+        1.975232919310704
+      ],
+      "groundHeight": 14.066035947459996,
+      "topRaiseMeters": 2.906933633167931,
+      "horizontalRadius": 6.500741539273897,
+      "boundingSphereCentre": [
+        -197.34384502137613,
+        10.724240422728862,
+        124.59625543230251
+      ],
+      "boundingSphereRadius": 8.2988645042038,
+      "minimumProtectedRoadDistance3D": 45.65279410303447,
+      "roadClearanceBeyondBoundingSphere": 37.353929598830675,
+      "score": 27.01708806724809,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_026"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -205.26850232309968,
+        20.751826805157098,
+        44.020955320488014
+      ],
+      "hpr": [
+        0,
+        59.44325473512678,
+        0
+      ],
+      "scale": [
+        1.8319527352961837,
+        8.64162470547986,
+        1.7358113134688318
+      ],
+      "groundHeight": 24.39213776515168,
+      "topRaiseMeters": 3.444534049343026,
+      "horizontalRadius": 6.510868158894562,
+      "boundingSphereCentre": [
+        -205.26850232309968,
+        21.609374811909785,
+        44.020955320488014
+      ],
+      "boundingSphereRadius": 8.29555236323037,
+      "minimumProtectedRoadDistance3D": 49.82569684075365,
+      "roadClearanceBeyondBoundingSphere": 41.53014447752328,
+      "score": 27.81116188176456,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_027"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -201.33629201542448,
+        27.993362696369545,
+        57.34495416930692
+      ],
+      "hpr": [
+        0,
+        85.15889700454376,
+        0
+      ],
+      "scale": [
+        1.3267163907567672,
+        12.239614858569812,
+        1.345593151706848
+      ],
+      "groundHeight": 34.960028518051885,
+      "topRaiseMeters": 3.0679951595986745,
+      "horizontalRadius": 4.715228366994511,
+      "boundingSphereCentre": [
+        -201.33629201542448,
+        29.2079557483834,
+        57.34495416930692
+      ],
+      "boundingSphereRadius": 9.190641741757897,
+      "minimumProtectedRoadDistance3D": 51.696929735372436,
+      "roadClearanceBeyondBoundingSphere": 42.506287993614535,
+      "score": 28.550666567207315,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_028"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -222.025375788659,
+        8.255822090617748,
+        31.5294810709756
+      ],
+      "hpr": [
+        0,
+        -144.07125711574014,
+        0
+      ],
+      "scale": [
+        1.7689086419537707,
+        11.389456261536555,
+        1.4259006515193182
+      ],
+      "groundHeight": 15.831003956394007,
+      "topRaiseMeters": 1.762475704847836,
+      "horizontalRadius": 6.286805729749451,
+      "boundingSphereCentre": [
+        -222.025375788659,
+        9.386050010476858,
+        31.5294810709756
+      ],
+      "boundingSphereRadius": 9.407709527355424,
+      "minimumProtectedRoadDistance3D": 51.68083460246058,
+      "roadClearanceBeyondBoundingSphere": 42.273125075105156,
+      "score": 28.694295744397973,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_029"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -96.17590429508681,
+        0.9353352042957415,
+        198.16432375770495
+      ],
+      "hpr": [
+        0,
+        -164.4010011863691,
+        0
+      ],
+      "scale": [
+        1.4563012900059167,
+        11.442021431036158,
+        1.9726836025885037
+      ],
+      "groundHeight": 7.919038023390538,
+      "topRaiseMeters": 2.3970503604554887,
+      "horizontalRadius": 5.175780748144476,
+      "boundingSphereCentre": [
+        -96.17590429508681,
+        2.0707794067250047,
+        198.16432375770495
+      ],
+      "boundingSphereRadius": 8.874461582690012,
+      "minimumProtectedRoadDistance3D": 51.79703611098996,
+      "roadClearanceBeyondBoundingSphere": 42.92257452829995,
+      "score": 29.62455365217349,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_030"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -202.58440958571035,
+        22.657228588411638,
+        83.42186266357734
+      ],
+      "hpr": [
+        0,
+        9.849703479976867,
+        0
+      ],
+      "scale": [
+        1.270695667990505,
+        7.887781480960871,
+        1.6556602560578095
+      ],
+      "groundHeight": 25.630413364785813,
+      "topRaiseMeters": 3.4936210807112458,
+      "horizontalRadius": 4.516127411456952,
+      "boundingSphereCentre": [
+        -202.58440958571035,
+        23.43996927864428,
+        83.42186266357734
+      ],
+      "boundingSphereRadius": 6.6118733257591025,
+      "minimumProtectedRoadDistance3D": 47.621501913690786,
+      "roadClearanceBeyondBoundingSphere": 41.00962858793169,
+      "score": 30.309657397673824,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_031"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -249.32559842295126,
+        -13.224266936442111,
+        -82.93369764116954
+      ],
+      "hpr": [
+        0,
+        -171.9483056586015,
+        0
+      ],
+      "scale": [
+        1.7591336916522082,
+        13.422194655166951,
+        1.8329111779416345
+      ],
+      "groundHeight": -5.0930754324409095,
+      "topRaiseMeters": 2.8730087543965075,
+      "horizontalRadius": 6.2520649793758185,
+      "boundingSphereCentre": [
+        -249.32559842295126,
+        -11.892321073821378,
+        -82.93369764116954
+      ],
+      "boundingSphereRadius": 10.481761567730617,
+      "minimumProtectedRoadDistance3D": 53.80676196571522,
+      "roadClearanceBeyondBoundingSphere": 43.3250003979846,
+      "score": 32.04079561086314,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_032"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -213.06840078766209,
+        22.499652604333473,
+        85.24212989271588
+      ],
+      "hpr": [
+        0,
+        9.849703479976867,
+        0
+      ],
+      "scale": [
+        1.5754969801125525,
+        9.714978854240373,
+        1.3676975610816482
+      ],
+      "groundHeight": 28.302041491243887,
+      "topRaiseMeters": 2.1624466384785905,
+      "horizontalRadius": 5.599409266741209,
+      "boundingSphereCentre": [
+        -213.06840078766209,
+        23.46371446029621,
+        85.24212989271588
+      ],
+      "boundingSphereRadius": 8.16589179860817,
+      "minimumProtectedRoadDistance3D": 55.23615889354523,
+      "roadClearanceBeyondBoundingSphere": 47.07026709493706,
+      "score": 32.28376011895186,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_033"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -214.36203730436895,
+        8.083842930092244,
+        116.11364866830267
+      ],
+      "hpr": [
+        0,
+        26.33739444097757,
+        0
+      ],
+      "scale": [
+        1.2243095140440814,
+        10.243570391938645,
+        1.7668935724433394
+      ],
+      "groundHeight": 14.620820305379464,
+      "topRaiseMeters": 1.8612244724630094,
+      "horizontalRadius": 4.352642938734994,
+      "boundingSphereCentre": [
+        -214.36203730436895,
+        9.100359345815258,
+        116.11364866830267
+      ],
+      "boundingSphereRadius": 7.837561894583625,
+      "minimumProtectedRoadDistance3D": 55.345330132123905,
+      "roadClearanceBeyondBoundingSphere": 47.50776823754028,
+      "score": 32.38356063754714,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_034"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -193.39392527113577,
+        20.07315521538581,
+        140.69707210564476
+      ],
+      "hpr": [
+        0,
+        78.32282917337429,
+        0
+      ],
+      "scale": [
+        1.5683219730604607,
+        7.058263527158303,
+        1.2267721543082353
+      ],
+      "groundHeight": 22.936637288290008,
+      "topRaiseMeters": 2.923242626360597,
+      "horizontalRadius": 5.573908868147271,
+      "boundingSphereCentre": [
+        -193.39392527113577,
+        20.773579039046144,
+        140.69707210564476
+      ],
+      "boundingSphereRadius": 6.976192032372826,
+      "minimumProtectedRoadDistance3D": 55.486238817649266,
+      "roadClearanceBeyondBoundingSphere": 48.51004678527644,
+      "score": 33.95821104249588,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_035"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -260.0524813987825,
+        5.884710253333813,
+        -41.45634209426702
+      ],
+      "hpr": [
+        0,
+        11.589851578969867,
+        0
+      ],
+      "scale": [
+        2.0548829866883134,
+        9.918335124704281,
+        1.4742571119599734
+      ],
+      "groundHeight": 11.852675150244629,
+      "topRaiseMeters": 2.1635924784793974,
+      "horizontalRadius": 7.30317543160851,
+      "boundingSphereCentre": [
+        -260.0524813987825,
+        6.868952083588467,
+        -41.45634209426702
+      ],
+      "boundingSphereRadius": 9.390028876709094,
+      "minimumProtectedRoadDistance3D": 53.582815962410805,
+      "roadClearanceBeyondBoundingSphere": 44.19278708570171,
+      "score": 34.42044312611383,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_036"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -211.719716546766,
+        15.205360100168587,
+        93.6930302695082
+      ],
+      "hpr": [
+        0,
+        -172.03263690895983,
+        0
+      ],
+      "scale": [
+        1.520335983784151,
+        7.969487332702849,
+        1.6409869342602947
+      ],
+      "groundHeight": 19.799132432671318,
+      "topRaiseMeters": 1.9400201521760827,
+      "horizontalRadius": 5.403363829712277,
+      "boundingSphereCentre": [
+        -211.719716546766,
+        15.996208836363575,
+        93.6930302695082
+      ],
+      "boundingSphereRadius": 7.211570461276956,
+      "minimumProtectedRoadDistance3D": 51.14162063860106,
+      "roadClearanceBeyondBoundingSphere": 43.930050177324105,
+      "score": 34.92770491700517,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_037"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -208.34767205845273,
+        31.116352936854735,
+        57.03034414416754
+      ],
+      "hpr": [
+        0,
+        -171.3995941004995,
+        0
+      ],
+      "scale": [
+        1.1067239018474817,
+        7.224892717429343,
+        1.5830150170532122
+      ],
+      "groundHeight": 34.541809731479745,
+      "topRaiseMeters": 2.4978790197178515,
+      "horizontalRadius": 3.9333620755566727,
+      "boundingSphereCentre": [
+        -208.34767205845273,
+        31.833312138392927,
+        57.03034414416754
+      ],
+      "boundingSphereRadius": 5.935722215269374,
+      "minimumProtectedRoadDistance3D": 58.10734962698956,
+      "roadClearanceBeyondBoundingSphere": 52.17162741172019,
+      "score": 37.146042746020875,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_038"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -250.68747682695053,
+        -4.365446326341884,
+        17.56740435709413
+      ],
+      "hpr": [
+        0,
+        -167.44651311125546,
+        0
+      ],
+      "scale": [
+        1.160806542676843,
+        13.436191748682337,
+        1.6950025774543849
+      ],
+      "groundHeight": 4.387048632794345,
+      "topRaiseMeters": 2.263180830948805,
+      "horizontalRadius": 4.175543516009384,
+      "boundingSphereCentre": [
+        -250.68747682695053,
+        -3.0321114680110233,
+        17.56740435709413
+      ],
+      "boundingSphereRadius": 9.878696816287697,
+      "minimumProtectedRoadDistance3D": 58.08468882248417,
+      "roadClearanceBeyondBoundingSphere": 48.20599200619647,
+      "score": 37.213466284241306,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_039"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -244.43701669784144,
+        1.5536685768856913,
+        25.84475356558272
+      ],
+      "hpr": [
+        0,
+        40.46795286947644,
+        0
+      ],
+      "scale": [
+        1.708296616146122,
+        11.620205661981865,
+        1.1947009377747126
+      ],
+      "groundHeight": 7.688700927182754,
+      "topRaiseMeters": 3.39180535645536,
+      "horizontalRadius": 6.071387012184496,
+      "boundingSphereCentre": [
+        -244.43701669784144,
+        2.706794816812528,
+        25.84475356558272
+      ],
+      "boundingSphereRadius": 9.399835144870305,
+      "minimumProtectedRoadDistance3D": 60.01902903079078,
+      "roadClearanceBeyondBoundingSphere": 50.61919388592048,
+      "score": 38.24078430848334,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_040"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -202.1754480998727,
+        26.836072365179213,
+        67.25295062137432
+      ],
+      "hpr": [
+        0,
+        85.15889700454376,
+        0
+      ],
+      "scale": [
+        1.3891647194604753,
+        8.90490290730429,
+        1.9098982176184656
+      ],
+      "groundHeight": 31.905648961410574,
+      "topRaiseMeters": 2.2311173209025315,
+      "horizontalRadius": 4.937173413446497,
+      "boundingSphereCentre": [
+        -202.1754480998727,
+        27.71974667397471,
+        67.25295062137432
+      ],
+      "boundingSphereRadius": 7.368318073216737,
+      "minimumProtectedRoadDistance3D": 50.70137298334915,
+      "roadClearanceBeyondBoundingSphere": 43.33305491013242,
+      "score": 38.59273907336642,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_041"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -263.30917635285164,
+        -8.695272741363873,
+        7.911912781701748
+      ],
+      "hpr": [
+        0,
+        174.63351729979647,
+        0
+      ],
+      "scale": [
+        2.1018648814639764,
+        7.98187602555526,
+        1.7078185711487042
+      ],
+      "groundHeight": -3.856032821807899,
+      "topRaiseMeters": 1.7047094478525373,
+      "horizontalRadius": 7.470151858917888,
+      "boundingSphereCentre": [
+        -263.30917635285164,
+        -7.903194618424617,
+        7.911912781701748
+      ],
+      "boundingSphereRadius": 8.839550024605964,
+      "minimumProtectedRoadDistance3D": 62.85136612501874,
+      "roadClearanceBeyondBoundingSphere": 54.01181610041278,
+      "score": 38.92095890734939,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_042"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -220.4702664037608,
+        18.426581222656417,
+        44.042092149271724
+      ],
+      "hpr": [
+        0,
+        -167.04672082809304,
+        0
+      ],
+      "scale": [
+        1.9460728921821056,
+        9.70502775855532,
+        1.8150764405786561
+      ],
+      "groundHeight": 23.837887053831647,
+      "topRaiseMeters": 2.5453712780588833,
+      "horizontalRadius": 6.916457932823129,
+      "boundingSphereCentre": [
+        -220.4702664037608,
+        19.38965558580842,
+        44.042092149271724
+      ],
+      "boundingSphereRadius": 9.012537102814068,
+      "minimumProtectedRoadDistance3D": 60.511333696389194,
+      "roadClearanceBeyondBoundingSphere": 51.49879659357512,
+      "score": 39.09712687640966,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_043"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -213.3431709445463,
+        11.044304205809391,
+        123.99256251365313
+      ],
+      "hpr": [
+        0,
+        178.6391092175596,
+        0
+      ],
+      "scale": [
+        1.171596194127215,
+        8.201653183895125,
+        1.1388510273099197
+      ],
+      "groundHeight": 15.005184198831463,
+      "topRaiseMeters": 2.763253906404268,
+      "horizontalRadius": 4.16392203164109,
+      "boundingSphereCentre": [
+        -213.3431709445463,
+        11.858191822968479,
+        123.99256251365313
+      ],
+      "boundingSphereRadius": 6.566081364278204,
+      "minimumProtectedRoadDistance3D": 58.708125791539814,
+      "roadClearanceBeyondBoundingSphere": 52.14204442726161,
+      "score": 39.11776178656968,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_044"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -220.97165525239387,
+        8.518952352560305,
+        119.38569457339128
+      ],
+      "hpr": [
+        0,
+        26.33739444097757,
+        0
+      ],
+      "scale": [
+        1.3186983423846788,
+        11.721726418235631,
+        1.8763829284927565
+      ],
+      "groundHeight": 15.262165043866654,
+      "topRaiseMeters": 2.8668569131276045,
+      "horizontalRadius": 4.686731749785735,
+      "boundingSphereCentre": [
+        -220.97165525239387,
+        9.682152962196144,
+        119.38569457339128
+      ],
+      "boundingSphereRadius": 8.861554524654725,
+      "minimumProtectedRoadDistance3D": 62.39805211276575,
+      "roadClearanceBeyondBoundingSphere": 53.53649758811102,
+      "score": 40.8323633876097,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_045"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -220.16094589649356,
+        11.931551700212854,
+        94.87446480197791
+      ],
+      "hpr": [
+        0,
+        -172.03263690895983,
+        0
+      ],
+      "scale": [
+        1.49326462419653,
+        13.114194275656704,
+        1.977628128912055
+      ],
+      "groundHeight": 20.46439346249868,
+      "topRaiseMeters": 2.2188440643912455,
+      "horizontalRadius": 5.307150619752726,
+      "boundingSphereCentre": [
+        -220.16094589649356,
+        13.232933274227001,
+        94.87446480197791
+      ],
+      "boundingSphereRadius": 9.936958844061072,
+      "minimumProtectedRoadDistance3D": 57.10043421926054,
+      "roadClearanceBeyondBoundingSphere": 47.16347537519947,
+      "score": 42.06218322280674,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_046"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -194.08834404785318,
+        24.93865050748083,
+        154.29082331400465
+      ],
+      "hpr": [
+        0,
+        116.02981779222118,
+        0
+      ],
+      "scale": [
+        2.0663532440214043,
+        12.517919580541395,
+        1.248705592872927
+      ],
+      "groundHeight": 33.240147962005075,
+      "topRaiseMeters": 1.961331942735899,
+      "horizontalRadius": 7.343941403243839,
+      "boundingSphereCentre": [
+        -194.08834404785318,
+        26.18086101196809,
+        154.29082331400465
+      ],
+      "boundingSphereRadius": 10.60023257349948,
+      "minimumProtectedRoadDistance3D": 65.6110912427785,
+      "roadClearanceBeyondBoundingSphere": 55.01085866927902,
+      "score": 42.958467211533225,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_047"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -216.2180648673076,
+        28.157841078312124,
+        58.22068617830932
+      ],
+      "hpr": [
+        0,
+        -171.3995941004995,
+        0
+      ],
+      "scale": [
+        1.7107829013259575,
+        9.728407597131149,
+        1.5571356385417303
+      ],
+      "groundHeight": 33.60610130188226,
+      "topRaiseMeters": 2.5275848706550486,
+      "horizontalRadius": 6.0802234164756275,
+      "boundingSphereCentre": [
+        -216.2180648673076,
+        29.123235529948897,
+        58.22068617830932
+      ],
+      "boundingSphereRadius": 8.469790162403752,
+      "minimumProtectedRoadDistance3D": 61.52511568861569,
+      "roadClearanceBeyondBoundingSphere": 53.05532552621194,
+      "score": 43.0366137530263,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_048"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -215.19649897768193,
+        14.714714542199978,
+        137.53198933753768
+      ],
+      "hpr": [
+        0,
+        -23.46759481593349,
+        0
+      ],
+      "scale": [
+        2.2098093726946506,
+        8.200365592959036,
+        1.3045719537207472
+      ],
+      "groundHeight": 18.96243268876016,
+      "topRaiseMeters": 2.4753601200970303,
+      "horizontalRadius": 7.853792952566651,
+      "boundingSphereCentre": [
+        -215.19649897768193,
+        15.528474385812032,
+        137.53198933753768
+      ],
+      "boundingSphereRadius": 9.231810570486081,
+      "minimumProtectedRoadDistance3D": 67.23491764935612,
+      "roadClearanceBeyondBoundingSphere": 58.00310707887004,
+      "score": 43.737281101775544,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_049"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -101.71844503423121,
+        3.1890918131509185,
+        210.63306956412683
+      ],
+      "hpr": [
+        0,
+        -66.92263135148077,
+        0
+      ],
+      "scale": [
+        1.593321398642871,
+        11.933431710763218,
+        1.233510583885083
+      ],
+      "groundHeight": 10.785291236993816,
+      "topRaiseMeters": 2.1874369850211677,
+      "horizontalRadius": 5.662758302348887,
+      "boundingSphereCentre": [
+        -101.71844503423121,
+        4.37330090878487,
+        210.63306956412683
+      ],
+      "boundingSphereRadius": 9.361134406364616,
+      "minimumProtectedRoadDistance3D": 64.61626347002561,
+      "roadClearanceBeyondBoundingSphere": 55.255129063661,
+      "score": 43.77478068748682,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_050"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -227.8527843688864,
+        24.338248626303187,
+        88.72774099222264
+      ],
+      "hpr": [
+        0,
+        40.79191200531813,
+        0
+      ],
+      "scale": [
+        1.7685537669442348,
+        13.118662315759924,
+        1.6710201799615039
+      ],
+      "groundHeight": 31.73990445474818,
+      "topRaiseMeters": 3.3536931255612203,
+      "horizontalRadius": 6.285544483017777,
+      "boundingSphereCentre": [
+        -227.8527843688864,
+        25.64007358440484,
+        88.72774099222264
+      ],
+      "boundingSphereRadius": 10.315476439819948,
+      "minimumProtectedRoadDistance3D": 68.66934460280642,
+      "roadClearanceBeyondBoundingSphere": 58.35386816298647,
+      "score": 46.12330829229378,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_051"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -228.3556337984118,
+        7.955468954281303,
+        123.04108236656617
+      ],
+      "hpr": [
+        0,
+        26.33739444097757,
+        0
+      ],
+      "scale": [
+        1.0846290527898317,
+        12.377079584645358,
+        1.0767665598657414
+      ],
+      "groundHeight": 15.978647573844956,
+      "topRaiseMeters": 2.1241829604692013,
+      "horizontalRadius": 3.8548356777772135,
+      "boundingSphereCentre": [
+        -228.3556337984118,
+        9.183703260788674,
+        123.04108236656617
+      ],
+      "boundingSphereRadius": 9.090358317141218,
+      "minimumProtectedRoadDistance3D": 69.99928509019504,
+      "roadClearanceBeyondBoundingSphere": 60.90892677305383,
+      "score": 47.4523757941023,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_052"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -268.70473804065233,
+        -3.164105972085558,
+        -80.19230500077099
+      ],
+      "hpr": [
+        0,
+        -171.9483056586015,
+        0
+      ],
+      "scale": [
+        1.8932949901358467,
+        10.290108181324838,
+        1.5518666713136757
+      ],
+      "groundHeight": 2.163409868003127,
+      "topRaiseMeters": 3.108840062728216,
+      "horizontalRadius": 6.7288821535437116,
+      "boundingSphereCentre": [
+        -268.70473804065233,
+        -2.142971398332434,
+        -80.19230500077099
+      ],
+      "boundingSphereRadius": 9.14936454561207,
+      "minimumProtectedRoadDistance3D": 69.7228391388147,
+      "roadClearanceBeyondBoundingSphere": 60.57347459320263,
+      "score": 48.444545746250924,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_053"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -260.07597503560805,
+        0.7594705719096915,
+        19.65798133480366
+      ],
+      "hpr": [
+        0,
+        -167.44651311125546,
+        0
+      ],
+      "scale": [
+        1.7491341617473843,
+        11.10730402681548,
+        1.039521283674837
+      ],
+      "groundHeight": 7.977391090231952,
+      "topRaiseMeters": 1.8884142489903897,
+      "horizontalRadius": 6.216526059835568,
+      "boundingSphereCentre": [
+        -260.07597503560805,
+        1.8616992329798332,
+        19.65798133480366
+      ],
+      "boundingSphereRadius": 9.225179218219878,
+      "minimumProtectedRoadDistance3D": 67.51651152969805,
+      "roadClearanceBeyondBoundingSphere": 58.29133231147817,
+      "score": 49.056832656252325,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_054"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -89.98431146980167,
+        -0.4629648581832333,
+        208.57792832281814
+      ],
+      "hpr": [
+        0,
+        117.4295611271918,
+        0
+      ],
+      "scale": [
+        1.2581125440732783,
+        8.805706781168402,
+        1.2379644829871834
+      ],
+      "groundHeight": 3.999692338579978,
+      "topRaiseMeters": 2.7567106731108604,
+      "horizontalRadius": 4.471406246290618,
+      "boundingSphereCentre": [
+        -89.98431146980167,
+        0.41086576459897617,
+        208.57792832281814
+      ],
+      "boundingSphereRadius": 7.050127536716405,
+      "minimumProtectedRoadDistance3D": 61.281035490874984,
+      "roadClearanceBeyondBoundingSphere": 54.23090795415858,
+      "score": 49.117619750674564,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_055"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -232.93131932366455,
+        13.300210382205409,
+        39.43240850989217
+      ],
+      "hpr": [
+        0,
+        -144.07125711574014,
+        0
+      ],
+      "scale": [
+        1.6683247605730462,
+        11.75039552810064,
+        1.824916992066611
+      ],
+      "groundHeight": 20.444553424745568,
+      "topRaiseMeters": 2.4892309614565797,
+      "horizontalRadius": 5.929324677994093,
+      "boundingSphereCentre": [
+        -232.93131932366455,
+        14.466255958946162,
+        39.43240850989217
+      ],
+      "boundingSphereRadius": 9.38691078803373,
+      "minimumProtectedRoadDistance3D": 65.49627167718366,
+      "roadClearanceBeyondBoundingSphere": 56.109360889149926,
+      "score": 49.17582769725641,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_056"
+    },
+    {
+      "kind": "cliff",
+      "xyz": [
+        -85.71899513191917,
+        -2.7908166291047998,
+        216.796177042309
+      ],
+      "hpr": [
+        0,
+        117.4295611271918,
+        0
+      ],
+      "scale": [
+        1.3238296444734132,
+        8.854314426575842,
+        0.9813046855713067
+      ],
+      "groundHeight": 1.2909414460542656,
+      "topRaiseMeters": 3.1774608233950845,
+      "horizontalRadius": 4.704968700302805,
+      "boundingSphereCentre": [
+        -85.71899513191917,
+        -1.912162446997495,
+        216.796177042309
+      ],
+      "boundingSphereRadius": 7.207480435146845,
+      "minimumProtectedRoadDistance3D": 69.01562666863882,
+      "roadClearanceBeyondBoundingSphere": 61.80814623349197,
+      "score": 50.63894227586865,
+      "library": "fluxara_driftlib_volcano_grass_stone_cliff_v16",
+      "id": "VRV16_RoundedTerrain_057"
+    }
+  ],
+  "newCliffPlacements": 58,
+  "directSharedHillPlacements": 0,
+  "hillSourceModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_grassy_hill_v2/fluxara_driftlib_grassy_hill_v2_main.spm",
+  "hillSourcePoolObjectId": "lap-v1-5e6c75bde5183e13",
+  "newMeshFiles": 1,
+  "newTexturePixels": false,
+  "minimumRoadSphereMarginMeters": 3.877367353823022,
+  "protectedTriangleCount": 1712,
+  "candidateMapBytes": 6315373,
+  "newSharedRuntimeLibraryBytes": 6631,
+  "newSharedLibraryBytesIncludingRetainedHistoricalVariants": 46956,
+  "newGlobalTextureBytes": 96041,
+  "candidateIncludingNewSharedBytes": 6458370,
+  "v1Bytes": 7693535,
+  "savingBytesVsV1": 1235165,
+  "productionIntegrated": false,
+  "referenceAcceptance": false,
+  "removedUnusedSkyImages": [
+    {
+      "name": "magma_sky_n.png",
+      "bytes": 186186,
+      "sha256": "eb4d5964681e6302e3e7c16682913557433706a1a8097988cf328a6300dfff33",
+      "preservedOutsideCandidate": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/removed-unused-images/magma_sky_n.png",
+      "previousCandidateSource": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v15/candidate/magma_sky_n.png"
+    },
+    {
+      "name": "magma_sky_s.png",
+      "bytes": 178558,
+      "sha256": "6a0497e11791acb56f5b68ed6faaf8b3434e282907bcd415cba5ad5219a6b2f6",
+      "preservedOutsideCandidate": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/removed-unused-images/magma_sky_s.png",
+      "previousCandidateSource": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v15/candidate/magma_sky_s.png"
+    },
+    {
+      "name": "magma_sky_e.png",
+      "bytes": 174641,
+      "sha256": "0bd8053bbb025d85e736e22457ea221f4ec722fad54d28418a04b91cf75b46d1",
+      "preservedOutsideCandidate": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/removed-unused-images/magma_sky_e.png",
+      "previousCandidateSource": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v15/candidate/magma_sky_e.png"
+    },
+    {
+      "name": "magma_sky_w.png",
+      "bytes": 162613,
+      "sha256": "14076cdcf66cb487ef043b04e11f34b65b7f98bcd7c98e0d38755eab6cb06e45",
+      "preservedOutsideCandidate": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/removed-unused-images/magma_sky_w.png",
+      "previousCandidateSource": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v15/candidate/magma_sky_w.png"
+    },
+    {
+      "name": "magma_sky_t.png",
+      "bytes": 45540,
+      "sha256": "166a1f87e5b4f1f2a5250f92743c75d8c45eaf4b8558f0996d7314b1df907d3e",
+      "preservedOutsideCandidate": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/removed-unused-images/magma_sky_t.png",
+      "previousCandidateSource": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v15/candidate/magma_sky_t.png"
+    },
+    {
+      "name": "magma_sky_bottom.png",
+      "bytes": 702,
+      "sha256": "776e88812db47e1ab29bde524fe54d447febc147098bce10ff8bcf239cbd8a7e",
+      "preservedOutsideCandidate": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/removed-unused-images/magma_sky_bottom.png",
+      "previousCandidateSource": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v15/candidate/magma_sky_bottom.png"
+    }
+  ],
+  "unusedSkyBytesSaved": 748240
+}

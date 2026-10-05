@@ -1,0 +1,31 @@
+from pathlib import Path
+import sys,copy,json,math,struct,shutil,hashlib,collections,xml.etree.ElementTree as E
+r=Path(__file__).resolve().parent;w=r/'fidelity-v17';w.mkdir(exist_ok=True);old=r/'fidelity-v16/candidate';c=w/'candidate';assert not c.exists();shutil.copytree(old,c)
+repo=Path('/Users/motoricallc/Downloads/fluxara-drift');res=repo/'iosApp/FluxaraResources';sys.path.insert(0,str(r.parent/'shared-object-redesign'));from spm_io import parse
+code=(r/'fidelity_v2.py').read_text();ns={'math':math,'struct':struct};exec(code[code.index('def encode_buffer'):code.index('new_vertices, new_indices')],ns)
+d=parse(c/'volcano_track.spm');source=copy.deepcopy(d['buffers'][2]);assert len(source['indices'])//3==72 and d['materials'][source['material']][0]=='fluxara_volcano_stone_shared_v16.jpg';changed=copy.deepcopy(source)
+positions=[v['position']for v in source['vertices']];lo=[min(v[k]for v in positions)for k in range(3)];hi=[max(v[k]for v in positions)for k in range(3)];apex=max(positions,key=lambda p:p[1]);cx,cz=apex[0],apex[2]
+for v in changed['vertices']:
+ x,y,z=v['position'];t=(y-lo[1])/(hi[1]-lo[1]);factor=(1-t)**1.45 if t else 1
+ v['position']=(cx+(x-cx)*factor,y,cz+(z-cz)*factor)
+# Recalculate smooth normals after the visible-only silhouette change; original collider keeps exact old normals/UVs/geometry.
+normals=[[0.,0.,0.]for v in changed['vertices']]
+for i in range(0,len(changed['indices']),3):
+ a,b,cc=changed['indices'][i:i+3];pa,pb,pc=[changed['vertices'][j]['position']for j in [a,b,cc]];u=[pb[k]-pa[k]for k in range(3)];v=[pc[k]-pa[k]for k in range(3)];n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]]
+ for j in [a,b,cc]:normals[j]=[normals[j][k]+n[k]for k in range(3)]
+for v,n in zip(changed['vertices'],normals):
+ l=math.sqrt(sum(q*q for q in n));v['normal']=ns['packed_normal']([q/l for q in n])
+def export(buffer,path):
+ b=copy.deepcopy(buffer);b['material']=0;mats=[d['materials'][source['material']]];raw=bytearray(b'SP'+bytes([10,d['flags']])+struct.pack('<6f',*(lo+hi))+struct.pack('<H',1))
+ for name in mats[0]:raw+=bytes([len(name.encode())])+name.encode()
+ raw+=struct.pack('<HH',1,1)+ns['encode_buffer'](b,mats);path.write_bytes(raw)
+collider=c/'vr_v17_original_central_mountain_collision.spm';export(source,collider)
+lib=res/'library/fluxara_driftlib_volcano_peak_v17';assert not lib.exists();lib.mkdir();model=lib/'vr_v17_volcano_peak.spm';export(changed,model);(lib/'node.xml').write_text('<scene><object id="VolcanoPeak" type="animation" model="vr_v17_volcano_peak.spm" xyz="0 0 0" hpr="0 0 0" scale="1 1 1" interaction="ghost" skeletal-animation="false" /></scene>');(lib/'materials.xml').write_text('<materials><material name="fluxara_volcano_stone_shared_v16.jpg" /></materials>')
+(c/'volcano_track.spm').write_bytes(ns['replace_buffers'](d,{2:[]}));scene=E.parse(c/'scene.xml');E.SubElement(scene.getroot(),'object',id='VRV17_CentralMountainOriginalCollision',type='animation',model=collider.name,xyz='0 0 0',hpr='0 0 0',scale='1 1 1',interaction='physicsonly',shape='exact',**{'skeletal-animation':'false'});E.SubElement(scene.getroot(),'library',id='VRV17_CentralVolcanoPeak',name=lib.name,xyz='0 0 0',hpr='0 0 0',scale='1 1 1');scene.write(c/'scene.xml',encoding='unicode')
+strip=lambda v:{k:q for k,q in v.items()if not k.endswith('offset')}
+def indexed(b):return collections.Counter(tuple(json.dumps(strip(b['vertices'][j]),sort_keys=True)for j in b['indices'][i:i+3])for i in range(0,len(b['indices']),3))
+new=parse(c/'volcano_track.spm');assert len(new['buffers'])==len(d['buffers'])-1 and new['bounds']==d['bounds'];assert all(indexed(a)==indexed(b)and a['material']==b['material']for a,b in zip(d['buffers'][:2]+d['buffers'][3:],new['buffers']));assert indexed(source)==indexed(parse(collider)['buffers'][0]);assert [v.get('uv')for v in changed['vertices']]==[v.get('uv')for v in source['vertices']];assert parse(model)['bounds']==tuple(lo+hi)
+for k in range(3):assert min(v['position'][k]for v in changed['vertices'])==lo[k]and max(v['position'][k]for v in changed['vertices'])==hi[k]
+base=json.loads((r/'fidelity-v16/preservation-verification.json').read_text());tex=res/'textures/fluxara_volcano_stone_shared_v16.jpg';before=collider.stat().st_size+tex.stat().st_size;after=collider.stat().st_size+model.stat().st_size+tex.stat().st_size;assert after<=before*1.2
+for name in ['track.xml','quads.xml','graph.xml','scripting.as','easter_eggs.xml']:assert(c/name).read_bytes()==(old/name).read_bytes()
+mapbytes=sum(p.stat().st_size for p in c.iterdir()if p.is_file());libbytes=sum(p.stat().st_size for p in lib.iterdir()if p.is_file());total=mapbytes+base['newSharedLibraryBytesIncludingRetainedHistoricalVariants']+libbytes+base['newGlobalTextureBytes'];assert total<base['v1Bytes'];proof={'baseCandidate':'V16','sourcePoolObjectId':'volcano-fidelity-v14-central-rock','originalModel':str(old/'volcano_track.spm'),'originalBuffer':2,'visibleModel':str(model),'visibleLibrary':str(lib),'collisionModel':str(collider),'originalLocalBounds':lo+hi,'originAxesAndExtremeBoundsRetained':True,'originalCollisionIndexedAttrsExact':True,'allOtherMainBuffersIndexedAttrsExact':True,'allSourceControlsExact':True,'stoneTexturePixelsAndUVsRetained':True,'newTextureFiles':0,'newVisibleTriangles':72,'preservedCollisionTriangles':72,'modelWithTextureBefore':before,'modelWithTextureAfterIncludingCollider':after,'modelWithTextureChangePercent':(after/before-1)*100,'upper20PercentPassed':True,'candidateMapBytes':mapbytes,'newSharedLibraryBytesIncludingRetainedHistoricalVariants':base['newSharedLibraryBytesIncludingRetainedHistoricalVariants']+libbytes,'newGlobalTextureBytes':base['newGlobalTextureBytes'],'candidateIncludingNewSharedBytes':total,'v1Bytes':base['v1Bytes'],'savingBytesVsV1':base['v1Bytes']-total,'productionIntegrated':False,'referenceAcceptance':False,'description':'Visible central dome reshaped to a narrow peak within original extreme bounds. Original 72 triangles kept exactly in a separate map-only collision model. Existing stone pixels and UVs retained. Other course and main buffers unchanged.'};(w/'volcano-changes.json').write_text(json.dumps(proof,indent=2));print('V17_VISIBLE_VOLCANO_AND_ORIGINAL_COLLISION_READY',total,proof['modelWithTextureChangePercent'],flush=True)

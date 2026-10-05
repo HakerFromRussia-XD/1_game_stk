@@ -1,0 +1,120 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/drive-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/drive-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-volcano-fidelity-v16-drive-probe",
+    "--mode=1",
+    "--laps=1",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--seed=4"
+  ],
+  "screenshots": [
+    {
+      "seconds": 12,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/screenshots/drive-12s.png"
+    },
+    {
+      "seconds": 40,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/screenshots/drive-40s.png"
+    },
+    {
+      "seconds": 80,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/screenshots/drive-80s.png"
+    },
+    {
+      "seconds": 190,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/screenshots/drive-190s.png"
+    },
+    {
+      "seconds": 240,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/screenshots/drive-240s.png"
+    },
+    {
+      "seconds": 360,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/screenshots/drive-360s.png"
+    }
+  ],
+  "kind": "V16 simulator-only Time Trial one full lap, one kart, seed 4; resource-only unused sky cleanup checked afterward",
+  "forceWinsUsed": false,
+  "visualInspectionCompleted": true,
+  "naturalFinishObserved": true,
+  "result": "#1",
+  "naturalFinishScreenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/screenshots/natural-finish.png",
+  "originalPhysicsAndCourseVerified": true,
+  "productionIntegrated": false,
+  "referenceAcceptance": false,
+  "reverseFullCampaignAndPerformanceNotChecked": true,
+  "candidateMainSPMSha256": "9a20fcdc553383a56d20959a2e8666ae8ae96df1c6d7875de61d4389a3641dc5",
+  "inspectedGameplayFiles": [
+    "drive-40s.png",
+    "drive-80s.png",
+    "drive-190s.png",
+    "drive-240s.png",
+    "drive-360s.png",
+    "after-resource-cleanup/drive-40s.png",
+    "after-resource-cleanup/drive-80s.png"
+  ],
+  "stonePixelsAndOriginalMapUVsRetained": true,
+  "newRoundedTerrainVisibleInEngine": true,
+  "staticOverviewInspected": true,
+  "resourceCleanupRuntimeVerified": true,
+  "afterResourceCleanupProbe": {
+    "command": [
+      "xcrun",
+      "simctl",
+      "launch",
+      "--terminate-running-process",
+      "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/after-cleanup-stdout.log",
+      "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/after-cleanup-stderr.log",
+      "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+      "io.fluxara.drift",
+      "--no-sound",
+      "--no-high-scores",
+      "--race-now",
+      "--test-ai=-1",
+      "--track=fluxara-volcano-fidelity-v16-drive-probe",
+      "--mode=1",
+      "--laps=1",
+      "--numkarts=1",
+      "--kart=fluxara-ace",
+      "--seed=4"
+    ],
+    "screenshots": [
+      {
+        "seconds": 12,
+        "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/screenshots/after-resource-cleanup/drive-12s.png"
+      },
+      {
+        "seconds": 40,
+        "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/screenshots/after-resource-cleanup/drive-40s.png"
+      },
+      {
+        "seconds": 80,
+        "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v16/screenshots/after-resource-cleanup/drive-80s.png"
+      }
+    ],
+    "kind": "Candidate gameplay in a temporary simulator-only track. Production source and final Blender project not yet replaced.",
+    "forceWinsUsed": false
+  },
+  "fullLapBeforeRemovalOfUnreferencedSkyCopies": true,
+  "geometryPhysicsActiveSkyAndEffectResourcesUnchangedByCleanup": true,
+  "finalProbeCleanupVerified": true,
+  "existingWarnings": [
+    "Replay benchmark missing",
+    "Historical unused lava_1 / lava_1-gloss material declarations",
+    "Historical orangeBooster gloss material declaration"
+  ],
+  "newAssetOrRemovedSkyLookupErrorsObserved": false,
+  "visualFinding": "Existing stone pixels render on original cliffs and new copied pooled rounded grass-topped shelves. New shelves visible along route. Large flat green plateaus, exposed central dome, separate dark smoke puffs and lighting still differ from reference. One 80-second post-cleanup screenshot has a black UI strip; no claim of artifact-free final HUD."
+}

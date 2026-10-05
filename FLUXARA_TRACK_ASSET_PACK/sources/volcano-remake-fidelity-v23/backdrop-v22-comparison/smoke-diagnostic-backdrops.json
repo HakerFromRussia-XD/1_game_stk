@@ -1,0 +1,26 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/backdrop-v22-comparison/probe-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/backdrop-v22-comparison/probe-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--cutscene=fluxara-volcano-v22-backdrop-comparison"
+  ],
+  "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/backdrop-v22-comparison/screenshots/smoke-diagnostic-backdrops.png",
+  "camera": [
+    100,
+    175,
+    -100
+  ],
+  "target": [
+    50,
+    5,
+    -500
+  ],
+  "kind": "Candidate static inspection in the game engine; not gameplay validation."
+}

@@ -1,0 +1,4 @@
+{
+  "finalAccepted": false,
+  "reason": "AABB-only clearance still prevents changes to foreground green components 12,13,15 despite their triangles being separated from road. Refine certificate using exact triangle distances, retaining at least 4.5m clearance. No canonical/pool registration."
+}

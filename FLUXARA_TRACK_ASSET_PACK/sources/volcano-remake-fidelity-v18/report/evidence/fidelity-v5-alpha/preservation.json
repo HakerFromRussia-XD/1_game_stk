@@ -1,0 +1,203 @@
+{
+  "threeCoreEffectsOriginalPositionsNormalsUvsIndicesAndBoundsRestored": true,
+  "fiveOtherEffectsGeometryExactV4E": true,
+  "originalRoadGeometryUvsNormalsColoursAndIndicesExact": true,
+  "originalGameplayFilesExact": [
+    "track.xml",
+    "quads.xml",
+    "graph.xml",
+    "scripting.as",
+    "easter_eggs.xml"
+  ],
+  "allOtherSceneNodesExactV4E": true,
+  "onlySceneChanges": [
+    {
+      "id": "Cube.003",
+      "model": "AshCloud.spm",
+      "oldAttributes": {
+        "id": "Cube.003",
+        "type": "animation",
+        "xyz": "-42.84 141.39 -390.40",
+        "hpr": "0.0 -1.5 0.0",
+        "scale": "0.35000000 0.35000000 0.35000000",
+        "interaction": "ghost",
+        "model": "AshCloud.spm",
+        "skeletal-animation": "false"
+      },
+      "newAttributes": {
+        "id": "Cube.003",
+        "type": "animation",
+        "xyz": "-42.84000000 185.00000000 -390.40000000",
+        "hpr": "0.0 -1.5 0.0",
+        "scale": "0.18000000 0.18000000 0.18000000",
+        "interaction": "ghost",
+        "model": "AshCloud.spm",
+        "skeletal-animation": "false"
+      },
+      "heightOffset": 43.61,
+      "animatedScaleFactor": null,
+      "scope": "Decorative ghost effects only; model geometry/origins/axes retained, per-map placements adjusted."
+    },
+    {
+      "id": "Cube.005",
+      "model": "AshColumn.spm",
+      "oldAttributes": {
+        "id": "Cube.005",
+        "type": "animation",
+        "xyz": "-43.00 56.40 -10.91",
+        "hpr": "-19.9 -0.0 0.0",
+        "scale": "0.31500000 0.34650000 0.31850000",
+        "interaction": "ghost",
+        "model": "AshColumn.spm",
+        "skeletal-animation": "false"
+      },
+      "newAttributes": {
+        "id": "Cube.005",
+        "type": "animation",
+        "xyz": "-43.00000000 140.00000000 -10.91000000",
+        "hpr": "-19.9 -0.0 0.0",
+        "scale": "0.31500000 0.34650000 0.31850000",
+        "interaction": "ghost",
+        "model": "AshColumn.spm",
+        "skeletal-animation": "false"
+      },
+      "heightOffset": 83.6,
+      "animatedScaleFactor": null,
+      "scope": "Decorative ghost effects only; model geometry/origins/axes retained, per-map placements adjusted."
+    },
+    {
+      "id": "Cube.030",
+      "model": "PyroclasticFlow.spm",
+      "oldAttributes": {
+        "id": "Cube.030",
+        "type": "animation",
+        "xyz": "-42.01 20.05 -19.11",
+        "hpr": "-5.1 -20.6 -0.0",
+        "scale": "0.35000000 0.35000000 0.35000000",
+        "interaction": "ghost",
+        "model": "PyroclasticFlow.spm",
+        "skeletal-animation": "false"
+      },
+      "newAttributes": {
+        "id": "Cube.030",
+        "type": "animation",
+        "xyz": "-42.01000000 150.05000000 -19.11000000",
+        "hpr": "-5.1 -20.6 -0.0",
+        "scale": "0.12000000 0.12000000 0.12000000",
+        "interaction": "ghost",
+        "model": "PyroclasticFlow.spm",
+        "skeletal-animation": "false"
+      },
+      "heightOffset": 130,
+      "animatedScaleFactor": 0.12,
+      "scope": "Decorative ghost effects only; model geometry/origins/axes retained, per-map placements adjusted."
+    }
+  ],
+  "uniformVertexColourRgb": [
+    145,
+    119,
+    159
+  ],
+  "onlyMaterialChange": "Alpha blending, all physical parameters unchanged",
+  "allOtherModelsAndTexturesExactV4E": true,
+  "productionSourceUnchanged": true,
+  "productionIntegrated": false,
+  "models": [
+    {
+      "model": "AshCloud.spm",
+      "vertexColourRgb": [
+        145,
+        119,
+        159
+      ],
+      "triangles": 864,
+      "positionsNormalsUvsIndicesBoundsUnchangedBeforeTint": true,
+      "originalMeshBytes": 14435,
+      "candidateMeshBytes": 16267
+    },
+    {
+      "model": "AshColumn.spm",
+      "vertexColourRgb": [
+        145,
+        119,
+        159
+      ],
+      "triangles": 768,
+      "positionsNormalsUvsIndicesBoundsUnchangedBeforeTint": true,
+      "originalMeshBytes": 13859,
+      "candidateMeshBytes": 15691
+    },
+    {
+      "model": "PyroclasticFlow.spm",
+      "vertexColourRgb": [
+        145,
+        119,
+        159
+      ],
+      "triangles": 512,
+      "positionsNormalsUvsIndicesBoundsUnchangedBeforeTint": true,
+      "originalMeshBytes": 8836,
+      "candidateMeshBytes": 9979
+    },
+    {
+      "model": "AshCloud2.spm",
+      "vertexColourRgb": [
+        145,
+        119,
+        159
+      ],
+      "triangles": 36,
+      "positionsNormalsUvsIndicesBoundsUnchangedBeforeTint": true,
+      "originalMeshBytes": 757,
+      "candidateMeshBytes": 1039
+    },
+    {
+      "model": "AshCloudEffect.spm",
+      "vertexColourRgb": [
+        145,
+        119,
+        159
+      ],
+      "triangles": 384,
+      "positionsNormalsUvsIndicesBoundsUnchangedBeforeTint": true,
+      "originalMeshBytes": 6985,
+      "candidateMeshBytes": 11587
+    },
+    {
+      "model": "AshColumnEffect.spm",
+      "vertexColourRgb": [
+        145,
+        119,
+        159
+      ],
+      "triangles": 288,
+      "positionsNormalsUvsIndicesBoundsUnchangedBeforeTint": true,
+      "originalMeshBytes": 6985,
+      "candidateMeshBytes": 8707
+    },
+    {
+      "model": "EruptionAsh.spm",
+      "vertexColourRgb": [
+        145,
+        119,
+        159
+      ],
+      "triangles": 16,
+      "positionsNormalsUvsIndicesBoundsUnchangedBeforeTint": true,
+      "originalMeshBytes": 889,
+      "candidateMeshBytes": 499
+    },
+    {
+      "model": "PyroclasticFlowAsh.spm",
+      "vertexColourRgb": [
+        145,
+        119,
+        159
+      ],
+      "triangles": 188,
+      "positionsNormalsUvsIndicesBoundsUnchangedBeforeTint": true,
+      "originalMeshBytes": 4525,
+      "candidateMeshBytes": 5143
+    }
+  ]
+}

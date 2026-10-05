@@ -1,0 +1,101 @@
+[
+  {
+    "id": "Cube.003",
+    "model": "AshCloud.spm",
+    "volcanoModel": "vulcan_02.spm",
+    "originalVolcanoPlacementGame": [
+      277.64,
+      -51.25,
+      -59.99
+    ],
+    "volcanoScale": 2.47,
+    "ventWorld": [
+      277.3863914339244,
+      14.663289127349856,
+      -77.15774314880372
+    ],
+    "baseAnchoredTwoMetresInsideVent": true,
+    "uniformWorldScaleMultiplier": 0.45,
+    "worldBounds": [
+      [
+        236.54889095342625,
+        12.663289127349856,
+        -120.24524375138594
+      ],
+      [
+        283.79889129864205,
+        46.41329009145674,
+        -70.74524423691105
+      ]
+    ],
+    "originalXml": "<object id=\"Cube.003\" type=\"animation\" xyz=\"-207.499999749 96.016223477 -105.000000388\" hpr=\"0.000000000 0.000000000 0.000000000\" scale=\"0.154729471 0.796349585 0.131390154\" interaction=\"ghost\" model=\"AshCloud.spm\" skeletal-animation=\"false\">\n    </object>\n  ",
+    "candidateXml": "<object id=\"Cube.003\" type=\"animation\" xyz=\"260.173891126 19.870589691 -95.495243994\" hpr=\"0.000000000 0.000000000 0.000000000\" scale=\"0.069628262 0.358357313 0.059125569\" interaction=\"ghost\" model=\"AshCloud.spm\" skeletal-animation=\"false\">\n    </object>\n  ",
+    "modelBytesAndLocalBoundsAndOriginAxesUnchanged": true
+  },
+  {
+    "id": "Cube.005",
+    "model": "AshColumn.spm",
+    "volcanoModel": "vulcan_03.spm",
+    "originalVolcanoPlacementGame": [
+      -37.24,
+      -6.08,
+      207.57
+    ],
+    "volcanoScale": 1,
+    "ventWorld": [
+      -28.467135022481287,
+      30.867312672932947,
+      202.69301190694173
+    ],
+    "baseAnchoredTwoMetresInsideVent": true,
+    "uniformWorldScaleMultiplier": 0.45,
+    "worldBounds": [
+      [
+        -65.34463358149415,
+        28.867312672932943,
+        168.06551321697742
+      ],
+      [
+        -20.344633823644983,
+        73.86731128123641,
+        210.81551315986945
+      ]
+    ],
+    "originalXml": "<object id=\"Cube.005\" type=\"animation\" xyz=\"-45.000004213 83.647509224 11.310213084\" hpr=\"0.000000000 0.000000000 0.000000000\" scale=\"0.515551746 0.554391861 0.364457518\" interaction=\"ghost\" model=\"AshColumn.spm\" skeletal-animation=\"false\">\n    </object>\n  ",
+    "candidateXml": "<object id=\"Cube.005\" type=\"animation\" xyz=\"-42.844635473 32.758692062 204.655109119\" hpr=\"0.000000000 0.000000000 0.000000000\" scale=\"0.231998286 0.249476337 0.164005883\" interaction=\"ghost\" model=\"AshColumn.spm\" skeletal-animation=\"false\">\n    </object>\n  ",
+    "modelBytesAndLocalBoundsAndOriginAxesUnchanged": true
+  },
+  {
+    "id": "Cube.030",
+    "model": "PyroclasticFlow.spm",
+    "volcanoModel": "vulcan_02.spm",
+    "originalVolcanoPlacementGame": [
+      -152.53,
+      -7.28,
+      -35.39
+    ],
+    "volcanoScale": 1,
+    "ventWorld": [
+      -152.63267553282412,
+      19.405542156821802,
+      -42.340503299110814
+    ],
+    "baseAnchoredTwoMetresInsideVent": true,
+    "uniformWorldScaleMultiplier": 0.45,
+    "worldBounds": [
+      [
+        -191.64767344738587,
+        17.405542156821802,
+        -85.8555021198086
+      ],
+      [
+        -146.64767203200256,
+        48.9055421615415,
+        -36.35550201050936
+      ]
+    ],
+    "originalXml": "<object id=\"Cube.030\" type=\"animation\" xyz=\"161.251180355 153.623850430 -32.067617549\" hpr=\"0.000000000 0.000000000 0.000000000\" scale=\"1.003231168 0.674429178 0.374547631\" interaction=\"ghost\" model=\"PyroclasticFlow.spm\" skeletal-animation=\"false\">\n    </object>\n  ",
+    "candidateXml": "<object id=\"Cube.030\" type=\"animation\" xyz=\"-184.334642286 46.036274840 -39.535929961\" hpr=\"0.000000000 0.000000000 0.000000000\" scale=\"0.451454026 0.303493130 0.168546434\" interaction=\"ghost\" model=\"PyroclasticFlow.spm\" skeletal-animation=\"false\">\n    </object>\n  ",
+    "modelBytesAndLocalBoundsAndOriginAxesUnchanged": true
+  }
+]

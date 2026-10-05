@@ -1,0 +1,4 @@
+{
+  "finalAccepted": false,
+  "reason": "Engine overview: distant fields rounded but foreground still flat because fixed full-height road exclusion was overly conservative. Retain geometry/physics checkpoint, refine face-specific lift and foreground subdivision. Native save also stopped on missing texture metadata id; no pool/canonical registration."
+}
