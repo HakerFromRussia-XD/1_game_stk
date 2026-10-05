@@ -1,0 +1,53 @@
+{
+  "finalBlendOpens": true,
+  "removedDecorativeInstances": 329,
+  "allRetainedNativeGeometryExactV42ExceptRestoredTerrain": 497,
+  "allOtherNativeMatricesExactV42": 394,
+  "restoredBushMatricesExactV14": 104,
+  "newSourcePrototypes": [
+    {
+      "id": "volcano-fidelity-v43-continuous-terrain",
+      "name": "VRV43_Prototype_ContinuousTerrain",
+      "sourceModel": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v43/shared-runtime/fluxara_driftlib_volcano_continuous_terrain_v43/vr_v43_continuous_terrain.spm",
+      "sourceBuffers": [
+        0,
+        1,
+        2
+      ],
+      "triangles": 2007,
+      "materials": [
+        "VRV4E_Rock13_col.jpg",
+        "VRV4E_vr_moss_palette.jpg"
+      ],
+      "sourcePoolObjectId": "volcano-fidelity-v14-central-rock",
+      "role": "Original V14 continuous cliff and grass surfaces restored as one shared ghost mesh; existing V42 main-cliff triangles excluded. Original local coordinates, dimensions, normals and material boundaries retained."
+    }
+  ],
+  "meshObjects": 499,
+  "nativePrototypeCount": 56,
+  "nativeMaterialDefinitionCount": 100,
+  "nativeSharedParts": 193,
+  "sharedMeshPointersExactAfterReopen": true,
+  "stonePackedPixelsExact": true,
+  "canonicalPending": false,
+  "newMaterials": 0,
+  "newRasterPixels": false,
+  "triangleMaterialCounts": [
+    1508,
+    427,
+    72
+  ],
+  "canonical": {
+    "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend",
+    "bytes": 434169616,
+    "sha256": "ff8b3526a0f70cbd553b4c361f8096e09ffd3721701367110450039eb02d0e89",
+    "allPreviousNativeMeshGeometryNormalsUVColorsMaterialsExactAfterReopen": 1467,
+    "allPreviousImagePackedBytesExact": 381,
+    "previousMaterialsRetained": 1748,
+    "newPrototypes": 1,
+    "newMaterialVariants": 0,
+    "newNativeImagePixels": false,
+    "previousHouseWindowEmissionPreserved": true,
+    "newPrototypeTriangleAndMaterialBindingsVerified": true
+  }
+}

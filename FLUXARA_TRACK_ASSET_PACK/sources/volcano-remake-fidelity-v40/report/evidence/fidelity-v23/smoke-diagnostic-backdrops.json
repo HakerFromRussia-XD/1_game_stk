@@ -1,0 +1,26 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v23/probe-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v23/probe-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--cutscene=fluxara-volcano-fidelity-v23-inspection"
+  ],
+  "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v23/screenshots/smoke-diagnostic-backdrops.png",
+  "camera": [
+    100,
+    175,
+    -100
+  ],
+  "target": [
+    50,
+    5,
+    -500
+  ],
+  "kind": "Candidate static inspection in the game engine; not gameplay validation."
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "id": "Cube.003",
+    "model": "AshCloud.spm",
+    "oldAttributes": {
+      "id": "Cube.003",
+      "type": "animation",
+      "xyz": "-42.84 141.39 -390.40",
+      "hpr": "0.0 -1.5 0.0",
+      "scale": "0.35000000 0.35000000 0.35000000",
+      "interaction": "ghost",
+      "model": "AshCloud.spm",
+      "skeletal-animation": "false"
+    },
+    "newAttributes": {
+      "id": "Cube.003",
+      "type": "animation",
+      "xyz": "-42.84000000 185.00000000 -390.40000000",
+      "hpr": "0.0 -1.5 0.0",
+      "scale": "0.18000000 0.18000000 0.18000000",
+      "interaction": "ghost",
+      "model": "AshCloud.spm",
+      "skeletal-animation": "false"
+    },
+    "heightOffset": 43.61,
+    "animatedScaleFactor": null,
+    "scope": "Decorative ghost effects only; model geometry/origins/axes retained, per-map placements adjusted."
+  },
+  {
+    "id": "Cube.005",
+    "model": "AshColumn.spm",
+    "oldAttributes": {
+      "id": "Cube.005",
+      "type": "animation",
+      "xyz": "-43.00 56.40 -10.91",
+      "hpr": "-19.9 -0.0 0.0",
+      "scale": "0.31500000 0.34650000 0.31850000",
+      "interaction": "ghost",
+      "model": "AshColumn.spm",
+      "skeletal-animation": "false"
+    },
+    "newAttributes": {
+      "id": "Cube.005",
+      "type": "animation",
+      "xyz": "-43.00000000 140.00000000 -10.91000000",
+      "hpr": "-19.9 -0.0 0.0",
+      "scale": "0.31500000 0.34650000 0.31850000",
+      "interaction": "ghost",
+      "model": "AshColumn.spm",
+      "skeletal-animation": "false"
+    },
+    "heightOffset": 83.6,
+    "animatedScaleFactor": null,
+    "scope": "Decorative ghost effects only; model geometry/origins/axes retained, per-map placements adjusted."
+  },
+  {
+    "id": "Cube.030",
+    "model": "PyroclasticFlow.spm",
+    "oldAttributes": {
+      "id": "Cube.030",
+      "type": "animation",
+      "xyz": "-42.01 20.05 -19.11",
+      "hpr": "-5.1 -20.6 -0.0",
+      "scale": "0.35000000 0.35000000 0.35000000",
+      "interaction": "ghost",
+      "model": "PyroclasticFlow.spm",
+      "skeletal-animation": "false"
+    },
+    "newAttributes": {
+      "id": "Cube.030",
+      "type": "animation",
+      "xyz": "-42.01000000 150.05000000 -19.11000000",
+      "hpr": "-5.1 -20.6 -0.0",
+      "scale": "0.12000000 0.12000000 0.12000000",
+      "interaction": "ghost",
+      "model": "PyroclasticFlow.spm",
+      "skeletal-animation": "false"
+    },
+    "heightOffset": 130,
+    "animatedScaleFactor": 0.12,
+    "scope": "Decorative ghost effects only; model geometry/origins/axes retained, per-map placements adjusted."
+  }
+]

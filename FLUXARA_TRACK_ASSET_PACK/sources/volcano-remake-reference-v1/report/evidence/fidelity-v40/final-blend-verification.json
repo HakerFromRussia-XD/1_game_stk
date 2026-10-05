@@ -1,0 +1,53 @@
+{
+  "finalBlendOpens": true,
+  "allPreviousNativeObjectsRetained": 822,
+  "allOtherNativeMeshGeometryUVNormalsColorsMaterialsExactV39": 821,
+  "allOtherNativeMatricesExactV39": 496,
+  "changedExistingSharedMatrices": 326,
+  "changedSharedMeshUsers": [
+    "VR_OriginalSurface_012"
+  ],
+  "newSourcePrototypes": [
+    {
+      "id": "volcano-fidelity-v40-terrain",
+      "name": "VRV40_Prototype_Terrain",
+      "sourceModel": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v40/shared-runtime/fluxara_driftlib_volcano_closed_terrain_v40/vr_v40_closed_terrain.spm",
+      "sourceBuffers": [
+        0,
+        1
+      ],
+      "triangles": 999,
+      "materials": [
+        "VRV4E_vr_moss_palette.jpg",
+        "VRV4E_Rock13_col.jpg"
+      ],
+      "sourcePoolObjectId": "volcano-fidelity-v38-terrain"
+    }
+  ],
+  "meshObjects": 823,
+  "nativePrototypeCount": 51,
+  "nativeMaterialDefinitionCount": 99,
+  "nativeSharedParts": 522,
+  "greenAndStoneTriangleMaterialCounts": [
+    711,
+    288
+  ],
+  "sharedMeshPointersExactAfterReopen": true,
+  "stonePackedPixelsExact": true,
+  "canonicalPending": false,
+  "newMaterialsAndTextures": 0,
+  "runtimeAndReferenceAcceptanceSeparate": true,
+  "canonical": {
+    "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend",
+    "bytes": 435387895,
+    "sha256": "d49566c6b72357a63dc8c43917d1ba73f8d8a3b5ed35aaf34be03cc27841bbdf",
+    "allPreviousNativeMeshGeometryNormalsUVColorsMaterialsExactAfterReopen": 1462,
+    "allPreviousImagePackedBytesExact": 381,
+    "previousMaterialsRetained": 1747,
+    "newPrototypes": 1,
+    "newMaterialVariants": 0,
+    "newNativeImagePixels": false,
+    "previousHouseWindowEmissionPreserved": true,
+    "newPrototypeTriangleAndMaterialBindingsVerified": true
+  }
+}

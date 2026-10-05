@@ -1,0 +1,55 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v17/drive-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v17/drive-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-volcano-fidelity-v17-drive-probe",
+    "--mode=1",
+    "--laps=1",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--seed=4"
+  ],
+  "screenshots": [
+    {
+      "seconds": 40,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v17/screenshots/drive-40s.png"
+    },
+    {
+      "seconds": 80,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v17/screenshots/drive-80s.png"
+    },
+    {
+      "seconds": 190,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v17/screenshots/drive-190s.png"
+    }
+  ],
+  "kind": "Candidate gameplay in a temporary simulator-only track. Production source and final Blender project not yet replaced.",
+  "forceWinsUsed": false,
+  "visualInspectionCompleted": true,
+  "naturalFinishObserved": true,
+  "naturalFinishScreenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v17/screenshots/natural-finish.png",
+  "result": "#1",
+  "originalPhysicsAndCourseVerified": true,
+  "fullRouteCompleted": true,
+  "productionIntegrated": false,
+  "referenceAcceptance": false,
+  "inspectedGameplayFiles": [
+    "drive-40s.png",
+    "drive-80s.png",
+    "drive-190s.png"
+  ],
+  "staticOverviewInspected": true,
+  "candidateMainSPMSha256": "5255d7e10b1469ffcfd456e3cf690fe9d885ecc8e288b468ff5c84ee5285410c",
+  "visualFinding": "Central rounded stone support original shape retained. Green crest uses existing palette green cell. Stone texture visible on route and cliff body. Wide planar terrain, puffy smoke chain, castle proportions and atmosphere still differ from reference. Static screenshot includes black simulator screen overlay. Earlier sharp-support draft rejected and archived.",
+  "finalProbeTrackCleanupVerified": true
+}

@@ -1,0 +1,45 @@
+from pathlib import Path
+from collections import Counter
+import sys,json,xml.etree.ElementTree as E,hashlib
+r=Path(__file__).resolve().parent;w=r/'fidelity-v8b';c=w/'candidate';base=r/'fidelity-v7b/candidate';sys.path.insert(0,str(r.parent/'shared-object-redesign'));from spm_io import parse
+changes=json.loads((w/'castle-changes.json').read_text());a=parse(base/'volcano_track.spm');b=parse(c/'volcano_track.spm');assert a['bounds']==b['bounds'];assert a['materials']==b['materials'];assert len(a['buffers'])==len(b['buffers'])
+def triangles(buf,attrs=False):
+    return Counter(tuple(tuple((v[k]for k in ['position','normal','uv','color']))if attrs else v['position']for v in [buf['vertices'][i]for i in buf['indices'][t:t+3]])for t in range(0,len(buf['indices']),3))
+changed={6,20};remove={6:set(t for q in changes for t in q['removedWallTriangleIds']),20:set(t for q in changes for t in q['originalWoodRoofTriangleIds'])}
+for i,(old,new)in enumerate(zip(a['buffers'],b['buffers'])):
+    if i not in changed:assert old['indices']==new['indices'];assert all(all(v.get(k)==u.get(k)for k in ['position','normal','uv','color'])for v,u in zip(old['vertices'],new['vertices']))
+    else:
+        expected={'vertices':old['vertices'],'indices':[v for t in range(len(old['indices'])//3)if t not in remove[i]for v in old['indices'][t*3:t*3+3]]};assert triangles(expected,True)==triangles(new,True)
+original_collision=sum((triangles(q)for q in a['buffers']),Counter());new_collision=sum((triangles(q)for q in b['buffers']),Counter())
+for q in changes:
+    collider=parse(c/q['collider']);assert collider['geometry_end']==len(collider['raw']);assert collider['materials']==[['','']];assert all(0<=v<len(buf['vertices'])for buf in collider['buffers']for v in buf['indices']);new_collision+=sum((triangles(buf)for buf in collider['buffers']),Counter())
+    source=parse(q['pooledSource']);lo=source['bounds'][:3];hi=source['bounds'][3:];bounds=[[end[k]*q['scale'][k]+q['xyz'][k]for k in range(3)]for end in [lo,hi]];assert max(abs(x-y)for v,u in zip(bounds,q['originalVisualBounds'])for x,y in zip(v,u))<1e-6
+    assert hashlib.sha256(Path(q['originalPoolModel']).read_bytes()).hexdigest()==q['sourceLibraryUnchangedSha256']
+assert original_collision==new_collision
+old=E.parse(base/'scene.xml').getroot();new=E.parse(c/'scene.xml').getroot()
+for q in changes:
+    obj=next(e for e in new.findall('object')if e.get('model')==q['collider']);assert obj.get('interaction')=='physicsonly'and obj.get('shape')=='exact'and obj.get('xyz')=='0 0 0'and obj.get('hpr')=='0 0 0'and obj.get('scale')=='1 1 1';new.remove(obj)
+    lib=next(e for e in new.findall('library')if e.get('id')==q['id']);assert lib.get('name')=='fluxara_driftlib_volcano_castle_tower_v8b';assert all(abs(v-u)<1e-7 for v,u in zip(map(float,lib.get('xyz').split()),q['xyz']));assert all(abs(v-u)<1e-7 for v,u in zip(map(float,lib.get('scale').split()),q['scale']));new.remove(lib)
+assert E.tostring(old)==E.tostring(new)
+for p in base.iterdir():
+    if p.name not in ['scene.xml','volcano_track.spm']:assert p.read_bytes()==(c/p.name).read_bytes()
+road=lambda d:next(q for q in d['buffers']if d['materials'][q['material']][0]=='track01.png');oldroad=road(parse(r/'before/volcano_track.spm'));newroad=road(b);assert oldroad['indices']==newroad['indices'];assert all(all(v.get(k)==u.get(k)for k in ['position','normal','uv','color'])for v,u in zip(oldroad['vertices'],newroad['vertices']))
+names=['track.xml','quads.xml','graph.xml','scripting.as','easter_eggs.xml']
+for name in names:assert(c/name).read_bytes()==(r/'before'/name).read_bytes()
+prod=Path('/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake');assert all(p.read_bytes()==(prod/p.name).read_bytes()for p in(r/'fidelity-v2/baseline').iterdir()if p.is_file())
+(w/'preservation.json').write_text(json.dumps({'originalRoadPositionsNormalsUvsColoursAndIndicesExact':True,'originalGameplayFilesExact':names,'allExistingSceneEntriesExactV7B':True,'allOtherModelBuffersExactV7B':True,'remainingCastleAndRoofRenderTriangleAttributesExactV7B':True,'mainMeshPlusTwoPhysicsOnlyTriangleCollisionGeometryExactV7B':True,'collisionTriangleCount':sum(original_collision.values()),'visualPoolGeometryUnchanged':True,'paletteFilePixelsUnchanged':True,'UVsAdaptedToGrayBodyRedRoof':True,'pooledTowerBoundsFitOriginalDecorativeBounds':True,'physicsMaterialScope':'Replaced triangles used opaque wall/roof materials with default physical properties; two exact hidden colliders have default physical properties. Runtime gameplay is checked separately.','productionIntegrated':False,'productionSourceUnchanged':True,'changes':changes},indent=2));print('V8B_COURSE_AND_COLLISION_PRESERVATION_VERIFIED')
+
+skin=json.loads((w/'skin-changes.json').read_text());original=parse(skin['sourceModel']);adapted=parse(skin['adaptedModel'])
+assert original['bounds']==adapted['bounds']
+assert len(original['buffers'])==len(adapted['buffers'])==1
+old,new=original['buffers'][0],adapted['buffers'][0];assert old['indices']==new['indices'];assert len(old['vertices'])==len(new['vertices'])
+for v,u in zip(old['vertices'],new['vertices']):
+    assert all(v.get(k)==u.get(k)for k in ['position','normal','color'])
+    uv=v['uv'];target=(.875,.625)if uv in[(.125,.125),(.375,.125)]else(.375,.125)if uv==(.875,.375)else uv
+    assert u['uv']==target
+source=Path(skin['paletteSource']);alias=Path(skin['library'])/skin['runtimeTextureAlias'];assert source.read_bytes()==alias.read_bytes()
+model_before=Path(skin['sourceModel']).stat().st_size+source.stat().st_size
+model_after=Path(skin['adaptedModel']).stat().st_size+alias.stat().st_size
+assert model_after <= 1.2*model_before
+skin.update({'modelWithTextureBeforeBytes':model_before,'modelWithTextureAfterBytes':model_after,'weightChangePercent':100*(model_after/model_before-1),'weightWithin20Percent':True,'geometryPositionsNormalsIndicesExact':True,'verifiedFromActualFiles':True})
+(w/'skin-changes.json').write_text(json.dumps(skin,indent=2));print('V8B_MODEL_AND_TEXTURE_WEIGHT',model_before,model_after)

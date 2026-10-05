@@ -1,0 +1,3606 @@
+{
+  "map": 10,
+  "trackId": "fluxara-user-volcano-remake",
+  "scope": "Matching original/current map-local SPM files, including all active diffuse/second-layer and declared support images. Each used file counted once per model; scene instance count is not multiplied. Added/shared replacements require separate correspondence. This is resource measurement, not a runtime test.",
+  "models": [
+    {
+      "model": "Arrows.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Arrows.spm",
+          "bytes": 1745,
+          "sha256": "8467acbb371e63ee9f2132fb140a895e734b61f683022fdd8f395560b83ee220"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock.jpg",
+            "bytes": 84537,
+            "sha256": "74ac8e69d1f35dc1f76b9ad4661c7650fc1a628aad5cf4c54b766b546a7bd0f4",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock-nm.png",
+            "bytes": 741783,
+            "sha256": "495f8f080e8ae8e614d7712f1550545afd4180c107e2ac0ba882a678e4cee9a2",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock_lava.jpg",
+            "bytes": 88478,
+            "sha256": "a5c1c69119e457b5914b1fc1845e452f283c580031a7db833916228752b6df63",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock_lava_glossy.jpg",
+            "bytes": 65713,
+            "sha256": "f882ba182442d58f8d91622bb82fc2eaa5f434461d3802610cd4e322316d97ea",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/fluxara_driftflag_blackBooster_a.png",
+            "bytes": 2641,
+            "sha256": "875ea843daf94559b86bbbee0d1163c58ff4e5cc718e115dab2f39b1b0e5deba",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/fluxara_driftflag_blackBooster_a-gloss.png",
+            "bytes": 4944,
+            "sha256": "b8da005fcab15f57e4c5c37d6e3a6e17dafa4da76de0236a8acc14ec46d22089",
+            "role": "sampler-2"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 1745,
+        "textureBytes": 988096,
+        "materialBindings": [
+          {
+            "texture": "blackrock.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock.jpg",
+              "normal-map": "blackrock-nm.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "blackrock_lava.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock_lava.jpg",
+              "gloss-map": "blackrock_lava_glossy.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "stkflag_blackBooster_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_driftflag_blackBooster_a.png",
+              "shader": "alphatest",
+              "gloss-map": "fluxara_driftflag_blackBooster_a-gloss.png",
+              "mirror-axis": "V"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 989841
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Arrows.spm",
+          "bytes": 1745,
+          "sha256": "8467acbb371e63ee9f2132fb140a895e734b61f683022fdd8f395560b83ee220"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/blackrock.jpg",
+            "bytes": 294,
+            "sha256": "c5619b13f1089e0985f910f0561140feb349f7cb317f37a2498e37b5df272d66",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/blackrock_lava.jpg",
+            "bytes": 19530,
+            "sha256": "886c39082a1f45f4b6d5bb665fdc2573641bed8b763cadd27b06bf3b73b28130",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_driftflag_blackBooster_a.png",
+            "bytes": 1828,
+            "sha256": "14718695fef18916e247762eae380f6d9810b1c071c2d39e121fad0f5bd6efa3",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_driftflag_blackBooster_a-gloss.png",
+            "bytes": 3052,
+            "sha256": "20671413ac15d7032d43b1cb64b2905d9584bde2cb81aeaf1c99997d49a257f4",
+            "role": "sampler-2"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 1745,
+        "textureBytes": 24704,
+        "materialBindings": [
+          {
+            "texture": "blackrock.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "blackrock_lava.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock_lava.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "stkflag_blackBooster_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_driftflag_blackBooster_a.png",
+              "shader": "alphatest",
+              "gloss-map": "fluxara_driftflag_blackBooster_a-gloss.png",
+              "mirror-axis": "V"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 26449
+      },
+      "changePercent": -97.32795469171312,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "ArrowsReverse.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/ArrowsReverse.spm",
+          "bytes": 1745,
+          "sha256": "8467acbb371e63ee9f2132fb140a895e734b61f683022fdd8f395560b83ee220"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock.jpg",
+            "bytes": 84537,
+            "sha256": "74ac8e69d1f35dc1f76b9ad4661c7650fc1a628aad5cf4c54b766b546a7bd0f4",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock-nm.png",
+            "bytes": 741783,
+            "sha256": "495f8f080e8ae8e614d7712f1550545afd4180c107e2ac0ba882a678e4cee9a2",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock_lava.jpg",
+            "bytes": 88478,
+            "sha256": "a5c1c69119e457b5914b1fc1845e452f283c580031a7db833916228752b6df63",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock_lava_glossy.jpg",
+            "bytes": 65713,
+            "sha256": "f882ba182442d58f8d91622bb82fc2eaa5f434461d3802610cd4e322316d97ea",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/fluxara_driftflag_blackBooster_a.png",
+            "bytes": 2641,
+            "sha256": "875ea843daf94559b86bbbee0d1163c58ff4e5cc718e115dab2f39b1b0e5deba",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/fluxara_driftflag_blackBooster_a-gloss.png",
+            "bytes": 4944,
+            "sha256": "b8da005fcab15f57e4c5c37d6e3a6e17dafa4da76de0236a8acc14ec46d22089",
+            "role": "sampler-2"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 1745,
+        "textureBytes": 988096,
+        "materialBindings": [
+          {
+            "texture": "blackrock.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock.jpg",
+              "normal-map": "blackrock-nm.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "blackrock_lava.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock_lava.jpg",
+              "gloss-map": "blackrock_lava_glossy.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "stkflag_blackBooster_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_driftflag_blackBooster_a.png",
+              "shader": "alphatest",
+              "gloss-map": "fluxara_driftflag_blackBooster_a-gloss.png",
+              "mirror-axis": "V"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 989841
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/ArrowsReverse.spm",
+          "bytes": 1745,
+          "sha256": "8467acbb371e63ee9f2132fb140a895e734b61f683022fdd8f395560b83ee220"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/blackrock.jpg",
+            "bytes": 294,
+            "sha256": "c5619b13f1089e0985f910f0561140feb349f7cb317f37a2498e37b5df272d66",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/blackrock_lava.jpg",
+            "bytes": 19530,
+            "sha256": "886c39082a1f45f4b6d5bb665fdc2573641bed8b763cadd27b06bf3b73b28130",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_driftflag_blackBooster_a.png",
+            "bytes": 1828,
+            "sha256": "14718695fef18916e247762eae380f6d9810b1c071c2d39e121fad0f5bd6efa3",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_driftflag_blackBooster_a-gloss.png",
+            "bytes": 3052,
+            "sha256": "20671413ac15d7032d43b1cb64b2905d9584bde2cb81aeaf1c99997d49a257f4",
+            "role": "sampler-2"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 1745,
+        "textureBytes": 24704,
+        "materialBindings": [
+          {
+            "texture": "blackrock.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "blackrock_lava.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock_lava.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "stkflag_blackBooster_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_driftflag_blackBooster_a.png",
+              "shader": "alphatest",
+              "gloss-map": "fluxara_driftflag_blackBooster_a-gloss.png",
+              "mirror-axis": "V"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 26449
+      },
+      "changePercent": -97.32795469171312,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "AshCloud.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/AshCloud.spm",
+          "bytes": 14435,
+          "sha256": "946be4e5c807a5f388ad5486e61e427476572f693306487b94dcd4e30bdea619"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/smoke_huricane_transp.png",
+            "bytes": 503731,
+            "sha256": "e1e3ca485e9cfe04ac17afe4cf6c81afc2f7f4236c96813dd5bf33a487477039",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 14435,
+        "textureBytes": 503731,
+        "materialBindings": [
+          {
+            "texture": "smoke_huricane_transp.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "smoke_huricane_transp.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 518166
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/AshCloud.spm",
+          "bytes": 17411,
+          "sha256": "768708ae1f975b876625d4554dbb6f21de9e3437eb0bcb4681c7c6cddff147f1"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_volcano_smoke_palette_v41.png",
+            "bytes": 158,
+            "sha256": "458122eee2420f71b8c295589402ccc145f4216c860104b328579ff0581bf487",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 17411,
+        "textureBytes": 158,
+        "materialBindings": [
+          {
+            "texture": "fluxara_volcano_smoke_palette_v41.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_smoke_palette_v41.png",
+              "shader": "unlit"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 17569
+      },
+      "changePercent": -96.60938772516916,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "AshCloud2.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/AshCloud2.spm",
+          "bytes": 757,
+          "sha256": "7c5c675f6fc9dc21e1a24cc5760b7b9946c2bc25db8796d883ab5f03ab472e37"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/gfx_snowStormAnimated_a.png",
+            "bytes": 519116,
+            "sha256": "2c3ee8140fc1be70e73352db2bfb2faac36458a41e2f1391da25d2491e83f444",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 757,
+        "textureBytes": 519116,
+        "materialBindings": [
+          {
+            "texture": "gfx_snowStormAnimated_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_snowStormAnimated_a.png",
+              "shader": "alphablend"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 519873
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/AshCloud2.spm",
+          "bytes": 1039,
+          "sha256": "92a2c4b7f9bd5f1c294afe86e84fa1e4efa351f286c3f1a6d300259cbfe845db"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/vr_volcanic_smoke.png",
+            "bytes": 103372,
+            "sha256": "9bd88a8e657fe678d5ddb49d6b9baa0254756438317499e5d9892ad74f9b5c94",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 1039,
+        "textureBytes": 103372,
+        "materialBindings": [
+          {
+            "texture": "vr_volcanic_smoke.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "vr_volcanic_smoke.png",
+              "shader": "alphablend"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 104411
+      },
+      "changePercent": -79.91605642147218,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "AshCloudEffect.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/AshCloudEffect.spm",
+          "bytes": 6985,
+          "sha256": "9d6e07374c472445966ad6c19b9e835ccfcaebf24d9611e630cae28ecc9cd5f1"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/gfx_snowStormAnimated_a.png",
+            "bytes": 519116,
+            "sha256": "2c3ee8140fc1be70e73352db2bfb2faac36458a41e2f1391da25d2491e83f444",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 6985,
+        "textureBytes": 519116,
+        "materialBindings": [
+          {
+            "texture": "gfx_snowStormAnimated_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_snowStormAnimated_a.png",
+              "shader": "alphablend"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 526101
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/AshCloudEffect.spm",
+          "bytes": 11587,
+          "sha256": "9371358b3103a58f344555bd6ddfa87b6be5bb28302e3532ec359190ac23a8b5"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/vr_volcanic_smoke.png",
+            "bytes": 103372,
+            "sha256": "9bd88a8e657fe678d5ddb49d6b9baa0254756438317499e5d9892ad74f9b5c94",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 11587,
+        "textureBytes": 103372,
+        "materialBindings": [
+          {
+            "texture": "vr_volcanic_smoke.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "vr_volcanic_smoke.png",
+              "shader": "alphablend"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 114959
+      },
+      "changePercent": -78.14887255488965,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "AshColumn.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/AshColumn.spm",
+          "bytes": 13859,
+          "sha256": "55a96727587a164e30f612517175a5915d5526ab72ad18d9862c6c64098d4f48"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/smoke_huricane_transp.png",
+            "bytes": 503731,
+            "sha256": "e1e3ca485e9cfe04ac17afe4cf6c81afc2f7f4236c96813dd5bf33a487477039",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 13859,
+        "textureBytes": 503731,
+        "materialBindings": [
+          {
+            "texture": "smoke_huricane_transp.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "smoke_huricane_transp.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 517590
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/AshColumn.spm",
+          "bytes": 19031,
+          "sha256": "09b3b258a6b3922e0771a79516f5d257be78aadc3b0726a7b46c1e3e97153a5e"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_volcano_smoke_palette_v41.png",
+            "bytes": 158,
+            "sha256": "458122eee2420f71b8c295589402ccc145f4216c860104b328579ff0581bf487",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 19031,
+        "textureBytes": 158,
+        "materialBindings": [
+          {
+            "texture": "fluxara_volcano_smoke_palette_v41.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_smoke_palette_v41.png",
+              "shader": "unlit"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 19189
+      },
+      "changePercent": -96.29262543712204,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "AshColumnEffect.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/AshColumnEffect.spm",
+          "bytes": 6985,
+          "sha256": "201def9839d3124634b39461363f600cbbe53b26c719dfc83bf8f98927301726"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/gfx_snowStormAnimated_a.png",
+            "bytes": 519116,
+            "sha256": "2c3ee8140fc1be70e73352db2bfb2faac36458a41e2f1391da25d2491e83f444",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 6985,
+        "textureBytes": 519116,
+        "materialBindings": [
+          {
+            "texture": "gfx_snowStormAnimated_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_snowStormAnimated_a.png",
+              "shader": "alphablend"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 526101
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/AshColumnEffect.spm",
+          "bytes": 8707,
+          "sha256": "4449d183bd9af80c68b01a6b342c7fd44b9cdfc3f114f2891804096a4bcd61c2"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/vr_volcanic_smoke.png",
+            "bytes": 103372,
+            "sha256": "9bd88a8e657fe678d5ddb49d6b9baa0254756438317499e5d9892ad74f9b5c94",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 8707,
+        "textureBytes": 103372,
+        "materialBindings": [
+          {
+            "texture": "vr_volcanic_smoke.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "vr_volcanic_smoke.png",
+              "shader": "alphablend"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 112079
+      },
+      "changePercent": -78.69629595838062,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "Crater.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Crater.spm",
+          "bytes": 3248,
+          "sha256": "8ccc091654b92f4cf6786ba35aac1fb5ecc5e22d0786c0467fd9d43ab8f45f3c"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock.jpg",
+            "bytes": 84537,
+            "sha256": "74ac8e69d1f35dc1f76b9ad4661c7650fc1a628aad5cf4c54b766b546a7bd0f4",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock-nm.png",
+            "bytes": 741783,
+            "sha256": "495f8f080e8ae8e614d7712f1550545afd4180c107e2ac0ba882a678e4cee9a2",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock_lava.jpg",
+            "bytes": 88478,
+            "sha256": "a5c1c69119e457b5914b1fc1845e452f283c580031a7db833916228752b6df63",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock_lava_glossy.jpg",
+            "bytes": 65713,
+            "sha256": "f882ba182442d58f8d91622bb82fc2eaa5f434461d3802610cd4e322316d97ea",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/dynamiclight.png",
+            "bytes": 18343,
+            "sha256": "b57fd8b1821735d6a8349396bc4b5dba5875cfb871750a2ee52d11c4073cf5b8",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/gfx_distord_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava.png",
+            "bytes": 122587,
+            "sha256": "b01f1e3ede7d0e1ae9df173a0c72c4f25b9849c1d77524e718eee259243dbbc5",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_glossy.png",
+            "bytes": 163226,
+            "sha256": "884c862bb9838367cf80e8f23cef01305607e858c5ea0b5e2db77ffcc6e821db",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_normal.png",
+            "bytes": 140975,
+            "sha256": "1ebd99e9ad6b0274a73445868a7a1130bc0e4160c9d9b63773de159db4d68bb0",
+            "role": "sampler-3"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 3248,
+        "textureBytes": 1425760,
+        "materialBindings": [
+          {
+            "texture": "blackrock.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock.jpg",
+              "normal-map": "blackrock-nm.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "blackrock_lava.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock_lava.jpg",
+              "gloss-map": "blackrock_lava_glossy.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "dynamiclight.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dynamiclight.png",
+              "ignore": "Y",
+              "shader": "displace"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "gfx_distord_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_distord_AlphaTested.png",
+              "shader": "displace",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "lava.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lava.png",
+              "gloss-map": "lava_glossy.png",
+              "normal-map": "lava_normal.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 1429008
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Crater.spm",
+          "bytes": 3248,
+          "sha256": "8ccc091654b92f4cf6786ba35aac1fb5ecc5e22d0786c0467fd9d43ab8f45f3c"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/blackrock.jpg",
+            "bytes": 294,
+            "sha256": "c5619b13f1089e0985f910f0561140feb349f7cb317f37a2498e37b5df272d66",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/blackrock_lava.jpg",
+            "bytes": 19530,
+            "sha256": "886c39082a1f45f4b6d5bb665fdc2573641bed8b763cadd27b06bf3b73b28130",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/dynamiclight.png",
+            "bytes": 17922,
+            "sha256": "c543ab22db854d17c491efe18bded73d5371bde9a9173a95310c9a39661bb401",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/gfx_distord_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/lava.png",
+            "bytes": 283993,
+            "sha256": "85996b54e0fa94f78369e2a8ac5a96e7c307783e50b31adcc50cad3264885b24",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 3248,
+        "textureBytes": 321857,
+        "materialBindings": [
+          {
+            "texture": "blackrock.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "blackrock_lava.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock_lava.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "dynamiclight.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "dynamiclight.png",
+              "ignore": "Y",
+              "shader": "displace"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "gfx_distord_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_distord_AlphaTested.png",
+              "shader": "displace",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml"
+          },
+          {
+            "texture": "lava.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lava.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 325105
+      },
+      "changePercent": -77.24960252146944,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "EruptionAsh.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/EruptionAsh.spm",
+          "bytes": 889,
+          "sha256": "67bccea770ee380bb34e852c4693781ebb5d354b1d5be828939baa8202722f8e"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/gfx_snowStormAnimated_a.png",
+            "bytes": 519116,
+            "sha256": "2c3ee8140fc1be70e73352db2bfb2faac36458a41e2f1391da25d2491e83f444",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 889,
+        "textureBytes": 519116,
+        "materialBindings": [
+          {
+            "texture": "gfx_snowStormAnimated_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_snowStormAnimated_a.png",
+              "shader": "alphablend"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 520005
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/EruptionAsh.spm",
+          "bytes": 499,
+          "sha256": "c7846e8f8bab4c1ea3e218495f3d139250b1e07a5e9c02b89d9dcafe2bd5e0fd"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/vr_volcanic_smoke.png",
+            "bytes": 103372,
+            "sha256": "9bd88a8e657fe678d5ddb49d6b9baa0254756438317499e5d9892ad74f9b5c94",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 499,
+        "textureBytes": 103372,
+        "materialBindings": [
+          {
+            "texture": "vr_volcanic_smoke.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "vr_volcanic_smoke.png",
+              "shader": "alphablend"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 103871
+      },
+      "changePercent": -80.0249997596177,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "Lava.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava.spm",
+          "bytes": 1369,
+          "sha256": "1975a4ee55b5442338bfaa9fcad1c94ac1e161728d4a39fc88eb4469e85ea7bc"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/gfx_distord_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava.png",
+            "bytes": 122587,
+            "sha256": "b01f1e3ede7d0e1ae9df173a0c72c4f25b9849c1d77524e718eee259243dbbc5",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_glossy.png",
+            "bytes": 163226,
+            "sha256": "884c862bb9838367cf80e8f23cef01305607e858c5ea0b5e2db77ffcc6e821db",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_normal.png",
+            "bytes": 140975,
+            "sha256": "1ebd99e9ad6b0274a73445868a7a1130bc0e4160c9d9b63773de159db4d68bb0",
+            "role": "sampler-3"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 1369,
+        "textureBytes": 426906,
+        "materialBindings": [
+          {
+            "texture": "gfx_distord_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_distord_AlphaTested.png",
+              "shader": "displace",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "lava.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lava.png",
+              "gloss-map": "lava_glossy.png",
+              "normal-map": "lava_normal.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 428275
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Lava.spm",
+          "bytes": 1369,
+          "sha256": "1975a4ee55b5442338bfaa9fcad1c94ac1e161728d4a39fc88eb4469e85ea7bc"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/gfx_distord_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/lava.png",
+            "bytes": 283993,
+            "sha256": "85996b54e0fa94f78369e2a8ac5a96e7c307783e50b31adcc50cad3264885b24",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 1369,
+        "textureBytes": 284111,
+        "materialBindings": [
+          {
+            "texture": "gfx_distord_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_distord_AlphaTested.png",
+              "shader": "displace",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml"
+          },
+          {
+            "texture": "lava.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lava.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 285480
+      },
+      "changePercent": -33.34189481057731,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "Lavafall.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lavafall.spm",
+          "bytes": 1088,
+          "sha256": "d1125d54d5951fbe629aa5ad2acb7ed7b58db6d27d90ac4d5b0c7d6cb34555df"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/gfx_distord_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_diffuse.jpg",
+            "bytes": 1958211,
+            "sha256": "8e7e73e385e2e903e1dcf25137cfd345c444c3b461f7da11c841e2bce260a6f1",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_glossy.jpg",
+            "bytes": 2438079,
+            "sha256": "124af23551633e155e26abad2dd199a725623a1bf6eec5f23c79e7fb994ff1d6",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_nm.jpg",
+            "bytes": 3284768,
+            "sha256": "f109f82b0495e08f7706d46dfe77cb564dcdb3f24315caca92d5a7ab65f3ff2f",
+            "role": "sampler-3"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 1088,
+        "textureBytes": 7681176,
+        "materialBindings": [
+          {
+            "texture": "gfx_distord_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_distord_AlphaTested.png",
+              "shader": "displace",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "lava_2k_diffuse.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lava_2k_diffuse.jpg",
+              "gloss-map": "lava_2k_glossy.jpg",
+              "normal-map": "lava_2k_nm.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 7682264
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Lavafall.spm",
+          "bytes": 1104,
+          "sha256": "9a46042ac935e8addfb6466864d7db7a0990a473d46bf7d73531d07bdd8e4364"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/gfx_distord_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_volcano_lava_shared_v13.jpg",
+            "bytes": 51031,
+            "sha256": "81dc6ef68e047fdd5c118f8832c305a63397cff08eabd1af4c0c5e51c8f7600d",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 1104,
+        "textureBytes": 51149,
+        "materialBindings": [
+          {
+            "texture": "gfx_distord_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_distord_AlphaTested.png",
+              "shader": "displace",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml"
+          },
+          {
+            "texture": "fluxara_volcano_lava_shared_v13.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_lava_shared_v13.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 52253
+      },
+      "changePercent": -99.3198229063724,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "Lavafield.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lavafield.spm",
+          "bytes": 28398,
+          "sha256": "3d51e7805cad66c40660a5cf04f48bb49cd896e1a1b1025e5d61f0852c23608d"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_COLOR.jpg",
+            "bytes": 94980,
+            "sha256": "0897fd37bada5f07b2338c5ef16719419a3884979d63627deacde247c1b3ad45",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_glossy.jpg",
+            "bytes": 155641,
+            "sha256": "80510651ba9ffddd68ee99d1c3d4949a98832c3685048d42898ac1a0cf407d11",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_NORM.jpg",
+            "bytes": 760594,
+            "sha256": "494f1e26dec56cb91a670eadb1aaa384b07d08d8403b2aa7f3874c026cef4cda",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/gfx_distord_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_diffuse.jpg",
+            "bytes": 1958211,
+            "sha256": "8e7e73e385e2e903e1dcf25137cfd345c444c3b461f7da11c841e2bce260a6f1",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_glossy.jpg",
+            "bytes": 2438079,
+            "sha256": "124af23551633e155e26abad2dd199a725623a1bf6eec5f23c79e7fb994ff1d6",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_nm.jpg",
+            "bytes": 3284768,
+            "sha256": "f109f82b0495e08f7706d46dfe77cb564dcdb3f24315caca92d5a7ab65f3ff2f",
+            "role": "sampler-3"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 28398,
+        "textureBytes": 8692391,
+        "materialBindings": [
+          {
+            "texture": "Lava_004_COLOR.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Lava_004_COLOR.jpg",
+              "gloss-map": "Lava_004_glossy.jpg",
+              "normal-map": "Lava_004_NORM.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "gfx_distord_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_distord_AlphaTested.png",
+              "shader": "displace",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "lava_2k_diffuse.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lava_2k_diffuse.jpg",
+              "gloss-map": "lava_2k_glossy.jpg",
+              "normal-map": "lava_2k_nm.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 8720789
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Lavafield.spm",
+          "bytes": 28414,
+          "sha256": "a670c92a5eec9a93a2793b919ccec72a55a08652cb0e3f81d8bb0597f5b6149e"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Lava_004_COLOR.jpg",
+            "bytes": 51031,
+            "sha256": "81dc6ef68e047fdd5c118f8832c305a63397cff08eabd1af4c0c5e51c8f7600d",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/gfx_distord_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_volcano_lava_shared_v13.jpg",
+            "bytes": 51031,
+            "sha256": "81dc6ef68e047fdd5c118f8832c305a63397cff08eabd1af4c0c5e51c8f7600d",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 28414,
+        "textureBytes": 102180,
+        "materialBindings": [
+          {
+            "texture": "Lava_004_COLOR.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Lava_004_COLOR.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "gfx_distord_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_distord_AlphaTested.png",
+              "shader": "displace",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml"
+          },
+          {
+            "texture": "fluxara_volcano_lava_shared_v13.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_lava_shared_v13.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 130594
+      },
+      "changePercent": -98.5024978817857,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "Lavaflow1.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lavaflow1.spm",
+          "bytes": 516,
+          "sha256": "84d0fbc287b29e57a44dea6971eaf534bb95ed35a1f37bbdf75ac7c5eb7c9f33"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_COLOR.jpg",
+            "bytes": 94980,
+            "sha256": "0897fd37bada5f07b2338c5ef16719419a3884979d63627deacde247c1b3ad45",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_glossy.jpg",
+            "bytes": 155641,
+            "sha256": "80510651ba9ffddd68ee99d1c3d4949a98832c3685048d42898ac1a0cf407d11",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_NORM.jpg",
+            "bytes": 760594,
+            "sha256": "494f1e26dec56cb91a670eadb1aaa384b07d08d8403b2aa7f3874c026cef4cda",
+            "role": "sampler-3"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 516,
+        "textureBytes": 1011215,
+        "materialBindings": [
+          {
+            "texture": "Lava_004_COLOR.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Lava_004_COLOR.jpg",
+              "gloss-map": "Lava_004_glossy.jpg",
+              "normal-map": "Lava_004_NORM.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 1011731
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Lavaflow1.spm",
+          "bytes": 516,
+          "sha256": "84d0fbc287b29e57a44dea6971eaf534bb95ed35a1f37bbdf75ac7c5eb7c9f33"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Lava_004_COLOR.jpg",
+            "bytes": 51031,
+            "sha256": "81dc6ef68e047fdd5c118f8832c305a63397cff08eabd1af4c0c5e51c8f7600d",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 516,
+        "textureBytes": 51031,
+        "materialBindings": [
+          {
+            "texture": "Lava_004_COLOR.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Lava_004_COLOR.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 51547
+      },
+      "changePercent": -94.90506863978666,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "Lavaflow2.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lavaflow2.spm",
+          "bytes": 868,
+          "sha256": "aa51aa2209d9bd19bc2e79a94233984a917b13aa7cb61a549075caab32dfff82"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_COLOR.jpg",
+            "bytes": 94980,
+            "sha256": "0897fd37bada5f07b2338c5ef16719419a3884979d63627deacde247c1b3ad45",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_glossy.jpg",
+            "bytes": 155641,
+            "sha256": "80510651ba9ffddd68ee99d1c3d4949a98832c3685048d42898ac1a0cf407d11",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_NORM.jpg",
+            "bytes": 760594,
+            "sha256": "494f1e26dec56cb91a670eadb1aaa384b07d08d8403b2aa7f3874c026cef4cda",
+            "role": "sampler-3"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 868,
+        "textureBytes": 1011215,
+        "materialBindings": [
+          {
+            "texture": "Lava_004_COLOR.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Lava_004_COLOR.jpg",
+              "gloss-map": "Lava_004_glossy.jpg",
+              "normal-map": "Lava_004_NORM.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 1012083
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Lavaflow2.spm",
+          "bytes": 868,
+          "sha256": "aa51aa2209d9bd19bc2e79a94233984a917b13aa7cb61a549075caab32dfff82"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Lava_004_COLOR.jpg",
+            "bytes": 51031,
+            "sha256": "81dc6ef68e047fdd5c118f8832c305a63397cff08eabd1af4c0c5e51c8f7600d",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 868,
+        "textureBytes": 51031,
+        "materialBindings": [
+          {
+            "texture": "Lava_004_COLOR.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Lava_004_COLOR.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 51899
+      },
+      "changePercent": -94.87206088828684,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "Lavaflow3.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lavaflow3.spm",
+          "bytes": 2476,
+          "sha256": "aebf3a0e67607256b1252bc975d122db705681e46b0ab2886e30a21648437538"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_COLOR.jpg",
+            "bytes": 94980,
+            "sha256": "0897fd37bada5f07b2338c5ef16719419a3884979d63627deacde247c1b3ad45",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_glossy.jpg",
+            "bytes": 155641,
+            "sha256": "80510651ba9ffddd68ee99d1c3d4949a98832c3685048d42898ac1a0cf407d11",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_NORM.jpg",
+            "bytes": 760594,
+            "sha256": "494f1e26dec56cb91a670eadb1aaa384b07d08d8403b2aa7f3874c026cef4cda",
+            "role": "sampler-3"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 2476,
+        "textureBytes": 1011215,
+        "materialBindings": [
+          {
+            "texture": "Lava_004_COLOR.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Lava_004_COLOR.jpg",
+              "gloss-map": "Lava_004_glossy.jpg",
+              "normal-map": "Lava_004_NORM.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 1013691
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Lavaflow3.spm",
+          "bytes": 2476,
+          "sha256": "aebf3a0e67607256b1252bc975d122db705681e46b0ab2886e30a21648437538"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Lava_004_COLOR.jpg",
+            "bytes": 51031,
+            "sha256": "81dc6ef68e047fdd5c118f8832c305a63397cff08eabd1af4c0c5e51c8f7600d",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 2476,
+        "textureBytes": 51031,
+        "materialBindings": [
+          {
+            "texture": "Lava_004_COLOR.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Lava_004_COLOR.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 53507
+      },
+      "changePercent": -94.7215670258491,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "Lavaflow4.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lavaflow4.spm",
+          "bytes": 2476,
+          "sha256": "9ad51fd50b34d59934145eb29e793d1573c95fb4c2ba0ca9427df81fddc2e1b6"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_COLOR.jpg",
+            "bytes": 94980,
+            "sha256": "0897fd37bada5f07b2338c5ef16719419a3884979d63627deacde247c1b3ad45",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_glossy.jpg",
+            "bytes": 155641,
+            "sha256": "80510651ba9ffddd68ee99d1c3d4949a98832c3685048d42898ac1a0cf407d11",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_NORM.jpg",
+            "bytes": 760594,
+            "sha256": "494f1e26dec56cb91a670eadb1aaa384b07d08d8403b2aa7f3874c026cef4cda",
+            "role": "sampler-3"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 2476,
+        "textureBytes": 1011215,
+        "materialBindings": [
+          {
+            "texture": "Lava_004_COLOR.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Lava_004_COLOR.jpg",
+              "gloss-map": "Lava_004_glossy.jpg",
+              "normal-map": "Lava_004_NORM.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 1013691
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Lavaflow4.spm",
+          "bytes": 2476,
+          "sha256": "9ad51fd50b34d59934145eb29e793d1573c95fb4c2ba0ca9427df81fddc2e1b6"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Lava_004_COLOR.jpg",
+            "bytes": 51031,
+            "sha256": "81dc6ef68e047fdd5c118f8832c305a63397cff08eabd1af4c0c5e51c8f7600d",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 2476,
+        "textureBytes": 51031,
+        "materialBindings": [
+          {
+            "texture": "Lava_004_COLOR.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Lava_004_COLOR.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 53507
+      },
+      "changePercent": -94.7215670258491,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "Lavaflow5.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lavaflow5.spm",
+          "bytes": 1220,
+          "sha256": "10172ebaf001fc062b593e00dda9660e832242d8487f5a3664d07ae99e095456"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_COLOR.jpg",
+            "bytes": 94980,
+            "sha256": "0897fd37bada5f07b2338c5ef16719419a3884979d63627deacde247c1b3ad45",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_glossy.jpg",
+            "bytes": 155641,
+            "sha256": "80510651ba9ffddd68ee99d1c3d4949a98832c3685048d42898ac1a0cf407d11",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_NORM.jpg",
+            "bytes": 760594,
+            "sha256": "494f1e26dec56cb91a670eadb1aaa384b07d08d8403b2aa7f3874c026cef4cda",
+            "role": "sampler-3"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 1220,
+        "textureBytes": 1011215,
+        "materialBindings": [
+          {
+            "texture": "Lava_004_COLOR.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Lava_004_COLOR.jpg",
+              "gloss-map": "Lava_004_glossy.jpg",
+              "normal-map": "Lava_004_NORM.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 1012435
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Lavaflow5.spm",
+          "bytes": 1220,
+          "sha256": "10172ebaf001fc062b593e00dda9660e832242d8487f5a3664d07ae99e095456"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Lava_004_COLOR.jpg",
+            "bytes": 51031,
+            "sha256": "81dc6ef68e047fdd5c118f8832c305a63397cff08eabd1af4c0c5e51c8f7600d",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 1220,
+        "textureBytes": 51031,
+        "materialBindings": [
+          {
+            "texture": "Lava_004_COLOR.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Lava_004_COLOR.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 52251
+      },
+      "changePercent": -94.83907608883533,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "MudBubbles.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/MudBubbles.spm",
+          "bytes": 10422,
+          "sha256": "70997a61a26556755439f47bf65c47e769d20ca6412ca87cb4683af5dca72d9b"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/fluxara_drift_mudpot_a.png",
+            "bytes": 921199,
+            "sha256": "92146e7a8d869650d1725f6666da5553e50e698795aefb18a7876f46700501d6",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/fluxara_drift_mudpot_a_gloss.png",
+            "bytes": 100484,
+            "sha256": "344ef5213e7de028176a920fe50b83c6c523658d4a41a34406a3fe19de37b940",
+            "role": "sampler-2"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 10422,
+        "textureBytes": 1021683,
+        "materialBindings": [
+          {
+            "texture": "stk_mudpot_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_mudpot_a.png",
+              "gloss-map": "fluxara_drift_mudpot_a_gloss.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 1032105
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/MudBubbles.spm",
+          "bytes": 10443,
+          "sha256": "8f8355120b04295771ccdf12fa7308bcb4c3aa107d6689d9016f31a539fc4c5c"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_volcano_bubbling_lava_v36.jpg",
+            "bytes": 19530,
+            "sha256": "886c39082a1f45f4b6d5bb665fdc2573641bed8b763cadd27b06bf3b73b28130",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_drift_mudpot_a_gloss.png",
+            "bytes": 19976,
+            "sha256": "825403bf65149f49769336f2c6156bd3c391cae6c91ce44e6209011e7223a0a2",
+            "role": "sampler-2"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 10443,
+        "textureBytes": 39506,
+        "materialBindings": [
+          {
+            "texture": "fluxara_volcano_bubbling_lava_v36.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_bubbling_lava_v36.jpg",
+              "gloss-map": "fluxara_drift_mudpot_a_gloss.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 49949
+      },
+      "changePercent": -95.16047301388909,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "PyroclasticFlow.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/PyroclasticFlow.spm",
+          "bytes": 8836,
+          "sha256": "2b92717aa3dbada7f0e2aa4fbbbd9f99b32bc368e144f53a2f9ed0e8381a6116"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/smoke_huricane.png",
+            "bytes": 467083,
+            "sha256": "e5577b033886f0c586bf4cf6e5358b1faae0bde960454907711f0f8ed7019aaf",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/smoke_huricane-nm.png",
+            "bytes": 2839968,
+            "sha256": "d3e38c917c400c3af1b145b65429956071bd572b75f0418b28be87b93992b45a",
+            "role": "sampler-3"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 8836,
+        "textureBytes": 3307051,
+        "materialBindings": [
+          {
+            "texture": "smoke_huricane.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "smoke_huricane.png",
+              "normal-map": "smoke_huricane-nm.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 3315887
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/PyroclasticFlow.spm",
+          "bytes": 11831,
+          "sha256": "e39f182ff8d0eff00a38e179ce03e63d7a309c71190b96a3f76182ec6a969f22"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_volcano_smoke_palette_v41.png",
+            "bytes": 158,
+            "sha256": "458122eee2420f71b8c295589402ccc145f4216c860104b328579ff0581bf487",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 11831,
+        "textureBytes": 158,
+        "materialBindings": [
+          {
+            "texture": "fluxara_volcano_smoke_palette_v41.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_smoke_palette_v41.png",
+              "shader": "unlit"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 11989
+      },
+      "changePercent": -99.63843761865226,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "PyroclasticFlowAsh.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/PyroclasticFlowAsh.spm",
+          "bytes": 4525,
+          "sha256": "126af658f37ac6e399074fbeae447c9e06dccc16bbb07215dee15714dbff7cde"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/gfx_snowStormAnimated_a.png",
+            "bytes": 519116,
+            "sha256": "2c3ee8140fc1be70e73352db2bfb2faac36458a41e2f1391da25d2491e83f444",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 4525,
+        "textureBytes": 519116,
+        "materialBindings": [
+          {
+            "texture": "gfx_snowStormAnimated_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_snowStormAnimated_a.png",
+              "shader": "alphablend"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 523641
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/PyroclasticFlowAsh.spm",
+          "bytes": 5143,
+          "sha256": "7cb8e34e658077e6c36a30176b9593e37c9ee0d8b82d5bc1d45126d91b21948c"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/vr_volcanic_smoke.png",
+            "bytes": 103372,
+            "sha256": "9bd88a8e657fe678d5ddb49d6b9baa0254756438317499e5d9892ad74f9b5c94",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 5143,
+        "textureBytes": 103372,
+        "materialBindings": [
+          {
+            "texture": "vr_volcanic_smoke.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "vr_volcanic_smoke.png",
+              "shader": "alphablend"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 108515
+      },
+      "changePercent": -79.27683279193187,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "ReverseRamp.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/ReverseRamp.spm",
+          "bytes": 4435,
+          "sha256": "46f6f50a57024fb5d560bb6c4e3c96ef9b2196f7962818f87978d7f2fd91a28a"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock.jpg",
+            "bytes": 84537,
+            "sha256": "74ac8e69d1f35dc1f76b9ad4661c7650fc1a628aad5cf4c54b766b546a7bd0f4",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock-nm.png",
+            "bytes": 741783,
+            "sha256": "495f8f080e8ae8e614d7712f1550545afd4180c107e2ac0ba882a678e4cee9a2",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock_lava.jpg",
+            "bytes": 88478,
+            "sha256": "a5c1c69119e457b5914b1fc1845e452f283c580031a7db833916228752b6df63",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock_lava_glossy.jpg",
+            "bytes": 65713,
+            "sha256": "f882ba182442d58f8d91622bb82fc2eaa5f434461d3802610cd4e322316d97ea",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/castelwall.jpg",
+            "bytes": 58573,
+            "sha256": "4c964c78884782c7d5e6d40fa74e976abedc4e472c79fcf135ade4d854961cd0",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/castlewall_nm.jpg",
+            "bytes": 151637,
+            "sha256": "8937047707891f108119d9928ce32e959d482c610fc36a5b3ac54c40b6d6b6e9",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/chain.png",
+            "bytes": 15472,
+            "sha256": "223058ae5fef403cccf7762d2618b49d634398053bdb23145defd964be6fd1ba",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/fluxara_driftflag_blackBooster_b.png",
+            "bytes": 2641,
+            "sha256": "875ea843daf94559b86bbbee0d1163c58ff4e5cc718e115dab2f39b1b0e5deba",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/fluxara_driftflag_blackBooster_a-gloss.png",
+            "bytes": 4944,
+            "sha256": "b8da005fcab15f57e4c5c37d6e3a6e17dafa4da76de0236a8acc14ec46d22089",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/track01.png",
+            "bytes": 396355,
+            "sha256": "4b274b97fcef52bbedebac4b35ddf3b3fea8d379863b81ef9b88853b62655dbc",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 4435,
+        "textureBytes": 1610133,
+        "materialBindings": [
+          {
+            "texture": "blackrock.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock.jpg",
+              "normal-map": "blackrock-nm.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "blackrock_lava.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock_lava.jpg",
+              "gloss-map": "blackrock_lava_glossy.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "castelwall.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "castelwall.jpg",
+              "normal-map": "castlewall_nm.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "chain.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "chain.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "stkflag_blackBooster_b.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_driftflag_blackBooster_b.png",
+              "shader": "alphatest",
+              "gloss-map": "fluxara_driftflag_blackBooster_a-gloss.png",
+              "mirror-axis": "V",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "track01.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "track01.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 1614568
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/ReverseRamp.spm",
+          "bytes": 4449,
+          "sha256": "de5030371fa322193ff3c30d3da0c20f1296c6cb41907bd1f527147c5c6837dd"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/blackrock.jpg",
+            "bytes": 294,
+            "sha256": "c5619b13f1089e0985f910f0561140feb349f7cb317f37a2498e37b5df272d66",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/blackrock_lava.jpg",
+            "bytes": 19530,
+            "sha256": "886c39082a1f45f4b6d5bb665fdc2573641bed8b763cadd27b06bf3b73b28130",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_castle_brick_v15.jpg",
+            "bytes": 5072,
+            "sha256": "fd794ccd72cae9f894e933fe749a3a86b16c0fc3192a21c426d3da5aa2b847ed",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/chain.png",
+            "bytes": 15328,
+            "sha256": "7ce479e094ef91027acb2c3d4ccb16e1ae5e844d545ea7de0e3ea9747a1d7a62",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_driftflag_blackBooster_b.png",
+            "bytes": 1828,
+            "sha256": "14718695fef18916e247762eae380f6d9810b1c071c2d39e121fad0f5bd6efa3",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_driftflag_blackBooster_a-gloss.png",
+            "bytes": 3052,
+            "sha256": "20671413ac15d7032d43b1cb64b2905d9584bde2cb81aeaf1c99997d49a257f4",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/track01.png",
+            "bytes": 405736,
+            "sha256": "994d0888393541284edd96f2b54a58f849230c383832d261cdb68ada7d3f6618",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 4449,
+        "textureBytes": 450840,
+        "materialBindings": [
+          {
+            "texture": "blackrock.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "blackrock_lava.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock_lava.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "fluxara_castle_brick_v15.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_castle_brick_v15.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "chain.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "chain.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "stkflag_blackBooster_b.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_driftflag_blackBooster_b.png",
+              "shader": "alphatest",
+              "gloss-map": "fluxara_driftflag_blackBooster_a-gloss.png",
+              "mirror-axis": "V",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "track01.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "track01.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 455289
+      },
+      "changePercent": -71.8011876861179,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "Torch.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Torch.spm",
+          "bytes": 243,
+          "sha256": "0f4b4e0827d4ee10c1cda526bfa5461106613dac62149f9e5657b7ef55c84832"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/fluxara_drifttex_animatedFire_a.png",
+            "bytes": 195377,
+            "sha256": "73179dea1e782944028a99991d96a550cf78362c7412e6435d5d56d3ddeb643a",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 243,
+        "textureBytes": 195377,
+        "materialBindings": [
+          {
+            "texture": "stktex_animatedFire_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drifttex_animatedFire_a.png",
+              "shader": "additive"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 195620
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Torch.spm",
+          "bytes": 243,
+          "sha256": "0f4b4e0827d4ee10c1cda526bfa5461106613dac62149f9e5657b7ef55c84832"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_drifttex_animatedFire_a.png",
+            "bytes": 20075,
+            "sha256": "9f3e68ea9fc2d3fdf9b84eae5dfbbf5cc905b821728b3fc282f119d53613f979",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 243,
+        "textureBytes": 20075,
+        "materialBindings": [
+          {
+            "texture": "stktex_animatedFire_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drifttex_animatedFire_a.png",
+              "shader": "additive"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 20318
+      },
+      "changePercent": -89.61353644821592,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "volcano_track.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/volcano_track.spm",
+          "bytes": 692907,
+          "sha256": "8ca14cb56dd5ff43214a06d1117101e5ce952f3c0026978f6d5b61d8012ce61f"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Battle_for_Wesnoth.png",
+            "bytes": 263000,
+            "sha256": "9ad1fa087b4feadec198f000266ab63ef9928e77824bd6d880c0856fa0ba6e0a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_COLOR.jpg",
+            "bytes": 94980,
+            "sha256": "0897fd37bada5f07b2338c5ef16719419a3884979d63627deacde247c1b3ad45",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_glossy.jpg",
+            "bytes": 155641,
+            "sha256": "80510651ba9ffddd68ee99d1c3d4949a98832c3685048d42898ac1a0cf407d11",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Lava_004_NORM.jpg",
+            "bytes": 760594,
+            "sha256": "494f1e26dec56cb91a670eadb1aaa384b07d08d8403b2aa7f3874c026cef4cda",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Rock13_col.jpg",
+            "bytes": 1065543,
+            "sha256": "519d097582c072c2d03444c26e200538e221c1d0bd832162b90c369da08a66c8",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Rock13_glossy.jpg",
+            "bytes": 195846,
+            "sha256": "072a339cc82aa0d82d83ffaab695a1f113f6b22351fe20fed72438d67d319ad4",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Rock13_nrm.jpg",
+            "bytes": 2045664,
+            "sha256": "9a25dd821e2c1060f842235fd86bc81cd6c7b6478ced429f92fe2b777337abb6",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/acid_lake.jpg",
+            "bytes": 5497,
+            "sha256": "f31a019831fbc3724395d9a8691ea0443eb957eed5ad8adc02ab58c7618c4320",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock_lava.jpg",
+            "bytes": 88478,
+            "sha256": "a5c1c69119e457b5914b1fc1845e452f283c580031a7db833916228752b6df63",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/blackrock_lava_glossy.jpg",
+            "bytes": 65713,
+            "sha256": "f882ba182442d58f8d91622bb82fc2eaa5f434461d3802610cd4e322316d97ea",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/castelwall.jpg",
+            "bytes": 58573,
+            "sha256": "4c964c78884782c7d5e6d40fa74e976abedc4e472c79fcf135ade4d854961cd0",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/castlewall_nm.jpg",
+            "bytes": 151637,
+            "sha256": "8937047707891f108119d9928ce32e959d482c610fc36a5b3ac54c40b6d6b6e9",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/chain.png",
+            "bytes": 15472,
+            "sha256": "223058ae5fef403cccf7762d2618b49d634398053bdb23145defd964be6fd1ba",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/gfxGlow_yellow_a.png",
+            "bytes": 1166,
+            "sha256": "7f8713b97b987755739bf7e67a056c3f13a9fef448cbc40abd2e69514022b834",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/gfxGlow_generic_a_gloss.png",
+            "bytes": 982,
+            "sha256": "0a859c28d200f85fc2d4ec6462817644ce0a2a92faae76681227d9ffe6c043f6",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/gfx_distord_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/gfx_resetWaterSplash_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/halo.png",
+            "bytes": 44667,
+            "sha256": "d3cd07cc814be6b317ab0ac2d03cee042e7cca12ef60d274712b260b02233130",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_diffuse.jpg",
+            "bytes": 1958211,
+            "sha256": "8e7e73e385e2e903e1dcf25137cfd345c444c3b461f7da11c841e2bce260a6f1",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_glossy.jpg",
+            "bytes": 2438079,
+            "sha256": "124af23551633e155e26abad2dd199a725623a1bf6eec5f23c79e7fb994ff1d6",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_nm.jpg",
+            "bytes": 3284768,
+            "sha256": "f109f82b0495e08f7706d46dfe77cb564dcdb3f24315caca92d5a7ab65f3ff2f",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/mansion_windows.png",
+            "bytes": 83281,
+            "sha256": "9638c59bb8901ffaa16cacca88288e6a4956f532a51e9044457ac98827a43776",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/roof_3.jpg",
+            "bytes": 14227,
+            "sha256": "63e4d1937ff792dcfb565ffb70e9939ec020ca024e13d40d1a532766780c403e",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/fluxara_drift_generic_gravalSnow_a.png",
+            "bytes": 2056301,
+            "sha256": "e070e46d527d6acc01e61c872596423ef8c056e2eb640ce6c65766e81d009061",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/fluxara_drift_generic_gridA.png",
+            "bytes": 488614,
+            "sha256": "b40c2b88d9c7af837f626d9decbb8fedbb3e085f90359d1dc03472d0f54961f5",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/fluxara_drift_mudpot_a.png",
+            "bytes": 921199,
+            "sha256": "92146e7a8d869650d1725f6666da5553e50e698795aefb18a7876f46700501d6",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/fluxara_drift_mudpot_a_gloss.png",
+            "bytes": 100484,
+            "sha256": "344ef5213e7de028176a920fe50b83c6c523658d4a41a34406a3fe19de37b940",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/fluxara_driftflag_blackBooster_a.png",
+            "bytes": 2641,
+            "sha256": "875ea843daf94559b86bbbee0d1163c58ff4e5cc718e115dab2f39b1b0e5deba",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/fluxara_driftflag_blackBooster_a-gloss.png",
+            "bytes": 4944,
+            "sha256": "b8da005fcab15f57e4c5c37d6e3a6e17dafa4da76de0236a8acc14ec46d22089",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/fluxara_driftflag_blackBooster_b.png",
+            "bytes": 2641,
+            "sha256": "875ea843daf94559b86bbbee0d1163c58ff4e5cc718e115dab2f39b1b0e5deba",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/fluxara_drifttex_generic_WoodA.png",
+            "bytes": 1428900,
+            "sha256": "d26483ecc9a766461567ecf9b5dd82afd3621b180408ffc265975a5d3be1a6ea",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/sunFlare2.png",
+            "bytes": 50434,
+            "sha256": "af4b23bd5f69de5f87c59649d080e96b2f3a93a99be6c4a2fee9d3cbe92fe68a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/torch.png",
+            "bytes": 36953,
+            "sha256": "e469a2a5d5717f5c52bdaac8a521ecea094b35036f65e997dcb23d4ce70551fd",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/track01.png",
+            "bytes": 396355,
+            "sha256": "4b274b97fcef52bbedebac4b35ddf3b3fea8d379863b81ef9b88853b62655dbc",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/transparence.png",
+            "bytes": 128,
+            "sha256": "67b29bb88879be0110bf092b968523464e598a8cbad4a0ea2eef87188454fbe8",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 692907,
+        "textureBytes": 18281849,
+        "materialBindings": [
+          {
+            "texture": "Battle_for_Wesnoth.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Battle_for_Wesnoth.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "Lava_004_COLOR.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Lava_004_COLOR.jpg",
+              "gloss-map": "Lava_004_glossy.jpg",
+              "normal-map": "Lava_004_NORM.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "Rock13_col.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Rock13_col.jpg",
+              "gloss-map": "Rock13_glossy.jpg",
+              "normal-map": "Rock13_nrm.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "acid_lake.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "blackrock_lava.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock_lava.jpg",
+              "gloss-map": "blackrock_lava_glossy.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "castelwall.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "castelwall.jpg",
+              "normal-map": "castlewall_nm.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "chain.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "chain.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "gfxGlow_yellow_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfxGlow_yellow_a.png",
+              "gloss-map": "gfxGlow_generic_a_gloss.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "gfx_distord_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_distord_AlphaTested.png",
+              "shader": "displace",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "gfx_resetWaterSplash_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_resetWaterSplash_AlphaTested.png",
+              "falling-effect": "Y",
+              "reset": "Y",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "halo.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "halo.png",
+              "shader": "additive",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "lava_2k_diffuse.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lava_2k_diffuse.jpg",
+              "gloss-map": "lava_2k_glossy.jpg",
+              "normal-map": "lava_2k_nm.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "mansion_windows.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "mansion_windows.png",
+              "shader": "alphablend"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "roof_3.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "stk_generic_gravalSnow_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_gravalSnow_a.png",
+              "collision-detect": "Y",
+              "collision-reaction": "reset"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "stk_generic_gridA.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_gridA.png",
+              "shader": "alphatest",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "stk_mudpot_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_mudpot_a.png",
+              "gloss-map": "fluxara_drift_mudpot_a_gloss.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "stkflag_blackBooster_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_driftflag_blackBooster_a.png",
+              "shader": "alphatest",
+              "gloss-map": "fluxara_driftflag_blackBooster_a-gloss.png",
+              "mirror-axis": "V"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "stkflag_blackBooster_b.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_driftflag_blackBooster_b.png",
+              "shader": "alphatest",
+              "gloss-map": "fluxara_driftflag_blackBooster_a-gloss.png",
+              "mirror-axis": "V",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "stktex_generic_WoodA.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drifttex_generic_WoodA.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "sunFlare2.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "sunFlare2.png",
+              "shader": "additive",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "torch.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "torch.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "track01.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "track01.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "transparence.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "transparence.png",
+              "shader": "alphatest",
+              "collision-detect": "Y",
+              "falling-effect": "Y",
+              "collision-reaction": "reset"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 18974756
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/volcano_track.spm",
+          "bytes": 518208,
+          "sha256": "5bb1194049529e01f62b4f8a713f34cad95e48a8ae90adf7e40f294da0a02383"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/Battle_for_Wesnoth.png",
+            "bytes": 50163,
+            "sha256": "76bebf23449cf5834bb6131a89c6a77ffb304d3d5c36ec5a0792217f8712b048",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/vr_arch_stone.png",
+            "bytes": 23969,
+            "sha256": "10b424713df78b7a9d123c141b41f1f2add0cdfac66e7029c5c8bc7800b17a34",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_volcano_stone_shared_v16.jpg",
+            "bytes": 39938,
+            "sha256": "6c765884a7846501355a429f3548d2df78698798a97a0318aefe358d0bdafdfd",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/blackrock_lava.jpg",
+            "bytes": 19530,
+            "sha256": "886c39082a1f45f4b6d5bb665fdc2573641bed8b763cadd27b06bf3b73b28130",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_castle_brick_v15.jpg",
+            "bytes": 5072,
+            "sha256": "fd794ccd72cae9f894e933fe749a3a86b16c0fc3192a21c426d3da5aa2b847ed",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/chain.png",
+            "bytes": 15328,
+            "sha256": "7ce479e094ef91027acb2c3d4ccb16e1ae5e844d545ea7de0e3ea9747a1d7a62",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/gfxGlow_yellow_a.png",
+            "bytes": 1166,
+            "sha256": "7f8713b97b987755739bf7e67a056c3f13a9fef448cbc40abd2e69514022b834",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/gfxGlow_generic_a_gloss.png",
+            "bytes": 982,
+            "sha256": "0a859c28d200f85fc2d4ec6462817644ce0a2a92faae76681227d9ffe6c043f6",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/gfx_distord_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/gfx_resetWaterSplash_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/halo.png",
+            "bytes": 44488,
+            "sha256": "f38598c7d02433b29842bcd10acf8a059f41189ac7c258cb8a916d41355944b2",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_volcano_lava_shared_v13.jpg",
+            "bytes": 51031,
+            "sha256": "81dc6ef68e047fdd5c118f8832c305a63397cff08eabd1af4c0c5e51c8f7600d",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/mansion_windows.png",
+            "bytes": 83238,
+            "sha256": "768ac25ecedd9cb1ac91c413635b69855c8bfc7ffc64d1b03f8c1327999491ba",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/roof_3.jpg",
+            "bytes": 43948,
+            "sha256": "9254504a1f5488230ab1d8d54298d028d3bfa5d26d42486a39d532f7899e0c21",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_drift_generic_gravalSnow_a.png",
+            "bytes": 551288,
+            "sha256": "9625b3d09cf43e2fde4d5cd748b956bca919b3ad12b89c6967c3731659b3440f",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_drift_generic_gridA.png",
+            "bytes": 258506,
+            "sha256": "b4464d09402346738d6be882531701d8000774afbb26fad055ea7d9a3a853f94",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_volcano_bubbling_lava_v36.jpg",
+            "bytes": 19530,
+            "sha256": "886c39082a1f45f4b6d5bb665fdc2573641bed8b763cadd27b06bf3b73b28130",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_drift_mudpot_a_gloss.png",
+            "bytes": 19976,
+            "sha256": "825403bf65149f49769336f2c6156bd3c391cae6c91ce44e6209011e7223a0a2",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_driftflag_blackBooster_a.png",
+            "bytes": 1828,
+            "sha256": "14718695fef18916e247762eae380f6d9810b1c071c2d39e121fad0f5bd6efa3",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_driftflag_blackBooster_a-gloss.png",
+            "bytes": 3052,
+            "sha256": "20671413ac15d7032d43b1cb64b2905d9584bde2cb81aeaf1c99997d49a257f4",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_driftflag_blackBooster_b.png",
+            "bytes": 1828,
+            "sha256": "14718695fef18916e247762eae380f6d9810b1c071c2d39e121fad0f5bd6efa3",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/fluxara_drifttex_generic_WoodA.png",
+            "bytes": 13633,
+            "sha256": "c75a5953b359ae146f6d6365b8d0b83de5e9fc9e9958d9b6aac092193595478f",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/sunFlare2.png",
+            "bytes": 50247,
+            "sha256": "e9559e4be8f9056ee46525c074f52c3800774c925672a4aacc6f98f2048ec5f5",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/torch.png",
+            "bytes": 36609,
+            "sha256": "9cd1f1b139c1607ae77a90983dd6b1187d30df320086e9bfff81d179a95d5a50",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/track01.png",
+            "bytes": 405736,
+            "sha256": "994d0888393541284edd96f2b54a58f849230c383832d261cdb68ada7d3f6618",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/transparence.png",
+            "bytes": 75,
+            "sha256": "655f63b1ab6aa9959c2ac9e47d82a6da00ee2b38d44b0fe6acfcc2e450a221ff",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 518208,
+        "textureBytes": 1741397,
+        "materialBindings": [
+          {
+            "texture": "Battle_for_Wesnoth.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Battle_for_Wesnoth.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "vr_arch_stone.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "vr_arch_stone.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "fluxara_volcano_stone_shared_v16.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_stone_shared_v16.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "blackrock_lava.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "blackrock_lava.jpg",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "fluxara_castle_brick_v15.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_castle_brick_v15.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "chain.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "chain.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "gfxGlow_yellow_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfxGlow_yellow_a.png",
+              "gloss-map": "gfxGlow_generic_a_gloss.png"
+            },
+            "xml": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml"
+          },
+          {
+            "texture": "gfx_distord_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_distord_AlphaTested.png",
+              "shader": "displace",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml"
+          },
+          {
+            "texture": "gfx_resetWaterSplash_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_resetWaterSplash_AlphaTested.png",
+              "falling-effect": "Y",
+              "reset": "Y",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml"
+          },
+          {
+            "texture": "halo.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "halo.png",
+              "shader": "additive",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "fluxara_volcano_lava_shared_v13.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_lava_shared_v13.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "mansion_windows.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "mansion_windows.png",
+              "shader": "alphablend"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "roof_3.jpg",
+            "uvTwo": "",
+            "attributes": {},
+            "xml": null
+          },
+          {
+            "texture": "stk_generic_gravalSnow_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_gravalSnow_a.png",
+              "collision-detect": "Y",
+              "collision-reaction": "reset"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "stk_generic_gridA.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drift_generic_gridA.png",
+              "shader": "alphatest",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "fluxara_volcano_bubbling_lava_v36.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_bubbling_lava_v36.jpg",
+              "gloss-map": "fluxara_drift_mudpot_a_gloss.png"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "stkflag_blackBooster_a.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_driftflag_blackBooster_a.png",
+              "shader": "alphatest",
+              "gloss-map": "fluxara_driftflag_blackBooster_a-gloss.png",
+              "mirror-axis": "V"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "stkflag_blackBooster_b.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_driftflag_blackBooster_b.png",
+              "shader": "alphatest",
+              "gloss-map": "fluxara_driftflag_blackBooster_a-gloss.png",
+              "mirror-axis": "V",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "stktex_generic_WoodA.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_drifttex_generic_WoodA.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml"
+          },
+          {
+            "texture": "sunFlare2.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "sunFlare2.png",
+              "shader": "additive",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "torch.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "torch.png",
+              "shader": "alphatest"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "track01.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "track01.png",
+              "has-gravity": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "transparence.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "transparence.png",
+              "shader": "alphatest",
+              "collision-detect": "Y",
+              "falling-effect": "Y",
+              "collision-reaction": "reset"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 2259605
+      },
+      "changePercent": -88.0915201228411,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "vulcan_01.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/vulcan_01.spm",
+          "bytes": 52480,
+          "sha256": "684cf4050181c9b9fcdb8cee1554db7ae0aff9dcc8d89ed7d5ded9149360ae71"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Rock13_col.jpg",
+            "bytes": 1065543,
+            "sha256": "519d097582c072c2d03444c26e200538e221c1d0bd832162b90c369da08a66c8",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Rock13_glossy.jpg",
+            "bytes": 195846,
+            "sha256": "072a339cc82aa0d82d83ffaab695a1f113f6b22351fe20fed72438d67d319ad4",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Rock13_nrm.jpg",
+            "bytes": 2045664,
+            "sha256": "9a25dd821e2c1060f842235fd86bc81cd6c7b6478ced429f92fe2b777337abb6",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/gfx_distord_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_diffuse.jpg",
+            "bytes": 1958211,
+            "sha256": "8e7e73e385e2e903e1dcf25137cfd345c444c3b461f7da11c841e2bce260a6f1",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_glossy.jpg",
+            "bytes": 2438079,
+            "sha256": "124af23551633e155e26abad2dd199a725623a1bf6eec5f23c79e7fb994ff1d6",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_nm.jpg",
+            "bytes": 3284768,
+            "sha256": "f109f82b0495e08f7706d46dfe77cb564dcdb3f24315caca92d5a7ab65f3ff2f",
+            "role": "sampler-3"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 52480,
+        "textureBytes": 10988229,
+        "materialBindings": [
+          {
+            "texture": "Rock13_col.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Rock13_col.jpg",
+              "gloss-map": "Rock13_glossy.jpg",
+              "normal-map": "Rock13_nrm.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "gfx_distord_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_distord_AlphaTested.png",
+              "shader": "displace",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "lava_2k_diffuse.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lava_2k_diffuse.jpg",
+              "gloss-map": "lava_2k_glossy.jpg",
+              "normal-map": "lava_2k_nm.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 11040709
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/vulcan_01.spm",
+          "bytes": 75059,
+          "sha256": "900501aa802d1205033b4b4d4aeac2bccbff41e56d449af58a39b33fc50d18dc"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_volcano_stone_shared_v16.jpg",
+            "bytes": 39938,
+            "sha256": "6c765884a7846501355a429f3548d2df78698798a97a0318aefe358d0bdafdfd",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/gfx_distord_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_volcano_lava_shared_v13.jpg",
+            "bytes": 51031,
+            "sha256": "81dc6ef68e047fdd5c118f8832c305a63397cff08eabd1af4c0c5e51c8f7600d",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_volcano_moss_shared_v20.jpg",
+            "bytes": 321,
+            "sha256": "a88393c638eb83032cd902251fe5d11d581d2a64565ec658e116e2c8dd282554",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 75059,
+        "textureBytes": 91408,
+        "materialBindings": [
+          {
+            "texture": "fluxara_volcano_stone_shared_v16.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_stone_shared_v16.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "gfx_distord_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_distord_AlphaTested.png",
+              "shader": "displace",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml"
+          },
+          {
+            "texture": "fluxara_volcano_lava_shared_v13.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_lava_shared_v13.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "fluxara_volcano_moss_shared_v20.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_moss_shared_v20.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 166467
+      },
+      "changePercent": -98.49224356877806,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "vulcan_02.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/vulcan_02.spm",
+          "bytes": 51331,
+          "sha256": "e2dd885db9fd8af7aac397a6a9fa6bac844af8038ce951f3f0e660db499e73ca"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Rock13_col.jpg",
+            "bytes": 1065543,
+            "sha256": "519d097582c072c2d03444c26e200538e221c1d0bd832162b90c369da08a66c8",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Rock13_glossy.jpg",
+            "bytes": 195846,
+            "sha256": "072a339cc82aa0d82d83ffaab695a1f113f6b22351fe20fed72438d67d319ad4",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Rock13_nrm.jpg",
+            "bytes": 2045664,
+            "sha256": "9a25dd821e2c1060f842235fd86bc81cd6c7b6478ced429f92fe2b777337abb6",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/gfx_distord_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_diffuse.jpg",
+            "bytes": 1958211,
+            "sha256": "8e7e73e385e2e903e1dcf25137cfd345c444c3b461f7da11c841e2bce260a6f1",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_glossy.jpg",
+            "bytes": 2438079,
+            "sha256": "124af23551633e155e26abad2dd199a725623a1bf6eec5f23c79e7fb994ff1d6",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_nm.jpg",
+            "bytes": 3284768,
+            "sha256": "f109f82b0495e08f7706d46dfe77cb564dcdb3f24315caca92d5a7ab65f3ff2f",
+            "role": "sampler-3"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 51331,
+        "textureBytes": 10988229,
+        "materialBindings": [
+          {
+            "texture": "Rock13_col.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Rock13_col.jpg",
+              "gloss-map": "Rock13_glossy.jpg",
+              "normal-map": "Rock13_nrm.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "gfx_distord_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_distord_AlphaTested.png",
+              "shader": "displace",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "lava_2k_diffuse.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lava_2k_diffuse.jpg",
+              "gloss-map": "lava_2k_glossy.jpg",
+              "normal-map": "lava_2k_nm.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 11039560
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/vulcan_02.spm",
+          "bytes": 74999,
+          "sha256": "fa33726cc78fad136a79ecb63aba23479f495c8b9dd53ec7f243e5ef30b7de54"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_volcano_stone_shared_v16.jpg",
+            "bytes": 39938,
+            "sha256": "6c765884a7846501355a429f3548d2df78698798a97a0318aefe358d0bdafdfd",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/gfx_distord_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_volcano_lava_shared_v13.jpg",
+            "bytes": 51031,
+            "sha256": "81dc6ef68e047fdd5c118f8832c305a63397cff08eabd1af4c0c5e51c8f7600d",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_volcano_moss_shared_v20.jpg",
+            "bytes": 321,
+            "sha256": "a88393c638eb83032cd902251fe5d11d581d2a64565ec658e116e2c8dd282554",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 74999,
+        "textureBytes": 91408,
+        "materialBindings": [
+          {
+            "texture": "fluxara_volcano_stone_shared_v16.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_stone_shared_v16.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "gfx_distord_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_distord_AlphaTested.png",
+              "shader": "displace",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml"
+          },
+          {
+            "texture": "fluxara_volcano_lava_shared_v13.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_lava_shared_v13.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "fluxara_volcano_moss_shared_v20.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_moss_shared_v20.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 166407
+      },
+      "changePercent": -98.49263014105635,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    },
+    {
+      "model": "vulcan_03.spm",
+      "before": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/vulcan_03.spm",
+          "bytes": 51331,
+          "sha256": "25d14b1080fb49cee5ba2ab54098d73669ad77db7fbcb06927602e1e2cada012"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Rock13_col.jpg",
+            "bytes": 1065543,
+            "sha256": "519d097582c072c2d03444c26e200538e221c1d0bd832162b90c369da08a66c8",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Rock13_glossy.jpg",
+            "bytes": 195846,
+            "sha256": "072a339cc82aa0d82d83ffaab695a1f113f6b22351fe20fed72438d67d319ad4",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/Rock13_nrm.jpg",
+            "bytes": 2045664,
+            "sha256": "9a25dd821e2c1060f842235fd86bc81cd6c7b6478ced429f92fe2b777337abb6",
+            "role": "sampler-3"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/gfx_distord_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_diffuse.jpg",
+            "bytes": 1958211,
+            "sha256": "8e7e73e385e2e903e1dcf25137cfd345c444c3b461f7da11c841e2bce260a6f1",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_glossy.jpg",
+            "bytes": 2438079,
+            "sha256": "124af23551633e155e26abad2dd199a725623a1bf6eec5f23c79e7fb994ff1d6",
+            "role": "sampler-2"
+          },
+          {
+            "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/lava_2k_nm.jpg",
+            "bytes": 3284768,
+            "sha256": "f109f82b0495e08f7706d46dfe77cb564dcdb3f24315caca92d5a7ab65f3ff2f",
+            "role": "sampler-3"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 51331,
+        "textureBytes": 10988229,
+        "materialBindings": [
+          {
+            "texture": "Rock13_col.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "Rock13_col.jpg",
+              "gloss-map": "Rock13_glossy.jpg",
+              "normal-map": "Rock13_nrm.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          },
+          {
+            "texture": "gfx_distord_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_distord_AlphaTested.png",
+              "shader": "displace",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/build-motorica-ios-assets/assets/data/textures/materials.xml"
+          },
+          {
+            "texture": "lava_2k_diffuse.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "lava_2k_diffuse.jpg",
+              "gloss-map": "lava_2k_glossy.jpg",
+              "normal-map": "lava_2k_nm.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 11039560
+      },
+      "current": {
+        "model": {
+          "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/vulcan_03.spm",
+          "bytes": 75359,
+          "sha256": "62ad03f308dd0e6ee07ab4a6cfa25bb143a92356a4a8f5e3059e088a66b4fac2"
+        },
+        "textures": [
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_volcano_stone_shared_v16.jpg",
+            "bytes": 39938,
+            "sha256": "6c765884a7846501355a429f3548d2df78698798a97a0318aefe358d0bdafdfd",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/gfx_distord_AlphaTested.png",
+            "bytes": 118,
+            "sha256": "d4fa16800816202748f45df5bb483143f7b4be256d1f7186f7b40c8a212f2d7a",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_volcano_lava_shared_v13.jpg",
+            "bytes": 51031,
+            "sha256": "81dc6ef68e047fdd5c118f8832c305a63397cff08eabd1af4c0c5e51c8f7600d",
+            "role": "spm-layer1"
+          },
+          {
+            "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/fluxara_volcano_moss_shared_v20.jpg",
+            "bytes": 321,
+            "sha256": "a88393c638eb83032cd902251fe5d11d581d2a64565ec658e116e2c8dd282554",
+            "role": "spm-layer1"
+          }
+        ],
+        "missingTextureFiles": [],
+        "modelBytes": 75359,
+        "textureBytes": 91408,
+        "materialBindings": [
+          {
+            "texture": "fluxara_volcano_stone_shared_v16.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_stone_shared_v16.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "gfx_distord_AlphaTested.png",
+            "uvTwo": "",
+            "attributes": {
+              "name": "gfx_distord_AlphaTested.png",
+              "shader": "displace",
+              "ignore": "Y"
+            },
+            "xml": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml"
+          },
+          {
+            "texture": "fluxara_volcano_lava_shared_v13.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_lava_shared_v13.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          },
+          {
+            "texture": "fluxara_volcano_moss_shared_v20.jpg",
+            "uvTwo": "",
+            "attributes": {
+              "name": "fluxara_volcano_moss_shared_v20.jpg"
+            },
+            "xml": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/tracks/fluxara-user-volcano-remake/materials.xml"
+          }
+        ],
+        "modelPlusUsedTextureBytes": 166767
+      },
+      "changePercent": -98.48936914152375,
+      "maximumAllowedPercent": 20,
+      "withinLimit": true,
+      "resolved": true
+    }
+  ],
+  "allMatchingModelsResolved": true,
+  "allMatchingModelsWithinLimit": true
+}

@@ -1,0 +1,52 @@
+{
+  "originalRoadPositionsNormalsUvsColoursAndIndicesExact": true,
+  "originalGameplayFilesExact": [
+    "track.xml",
+    "quads.xml",
+    "graph.xml",
+    "scripting.as",
+    "easter_eggs.xml"
+  ],
+  "allScenePlacementsExactV9": true,
+  "allModelVertexPositionsIndicesColoursUvsAndMaterialBindingsExactV9": true,
+  "onlyDecorativeCliffNormalsChanged": true,
+  "collisionGeometryExactV9": true,
+  "stoneTexturePixelsExactV9": true,
+  "perModelWeights": [
+    {
+      "model": "volcano_track.spm",
+      "spmBytes": 739617,
+      "modelBytesExactPreviousV9": true,
+      "textureTableAndUvsExactV9": true,
+      "modelPlusTexturesWeightChangePercentAgainstV9": 0,
+      "weightWithin20Percent": true
+    },
+    {
+      "model": "vulcan_01.spm",
+      "spmBytes": 75005,
+      "modelBytesExactPreviousV9": true,
+      "textureTableAndUvsExactV9": true,
+      "modelPlusTexturesWeightChangePercentAgainstV9": 0,
+      "weightWithin20Percent": true
+    },
+    {
+      "model": "vulcan_02.spm",
+      "spmBytes": 74945,
+      "modelBytesExactPreviousV9": true,
+      "textureTableAndUvsExactV9": true,
+      "modelPlusTexturesWeightChangePercentAgainstV9": 0,
+      "weightWithin20Percent": true
+    },
+    {
+      "model": "vulcan_03.spm",
+      "spmBytes": 75305,
+      "modelBytesExactPreviousV9": true,
+      "textureTableAndUvsExactV9": true,
+      "modelPlusTexturesWeightChangePercentAgainstV9": 0,
+      "weightWithin20Percent": true
+    }
+  ],
+  "weightMeasurementScope": "Same SPM byte size, same texture references, all texture file bytes exact V9: model plus texture weight therefore unchanged from V9. This does not assume missing global textures have zero size.",
+  "productionIntegrated": false,
+  "productionSourceUnchanged": true
+}

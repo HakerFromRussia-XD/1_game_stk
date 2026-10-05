@@ -1,0 +1,76 @@
+{
+  "baseCandidate": "V22",
+  "newSharedTerrainLibrary": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_volcano_backdrop_terrain_v23",
+  "newSharedTerrainModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_volcano_backdrop_terrain_v23/vr_v23_rounded_backdrop_terrain.spm",
+  "sourcePooledModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_volcano_rounded_terrain_v20/vr_v20_rounded_green_terrain.spm",
+  "sourcePooledModelSha256": "2d603f413e39bdd5c21ad31f7a2a110de3e9ddbe726e3a3b2ff02f41f38fabae",
+  "sourceAndTargetLocalBounds": [
+    -567.3221435546875,
+    -29.884780883789062,
+    -788.20556640625,
+    525.6283569335938,
+    65.64964294433594,
+    548.4970703125
+  ],
+  "removedSourceTriangleIds": [
+    1313,
+    1314,
+    1315,
+    1316,
+    1317,
+    1318,
+    1319,
+    1320,
+    1321,
+    1322
+  ],
+  "keptSourceTriangleCount": 2710,
+  "newTerrainTriangles": 2710,
+  "newTerrainVertices": 1836,
+  "components": [
+    {
+      "component": 8,
+      "sourceTriangles": 6,
+      "newTriangles": 528,
+      "newVertices": 295,
+      "edgeSplits": 287,
+      "raisedVertices": 235,
+      "maximumLiftMeters": 35.624875350414804,
+      "originalBoundaryPositionsExact": true,
+      "sourceComponentBounds": [
+        -371.70147705078125,
+        -25.67218589782715,
+        -788.20556640625,
+        39.288482666015625,
+        35.18592071533203,
+        -277.3360900878906
+      ]
+    },
+    {
+      "component": 9,
+      "sourceTriangles": 4,
+      "newTriangles": 392,
+      "newVertices": 221,
+      "edgeSplits": 215,
+      "raisedVertices": 173,
+      "maximumLiftMeters": 32.17076394428442,
+      "originalBoundaryPositionsExact": true,
+      "sourceComponentBounds": [
+        289.73114013671875,
+        -29.884780883789062,
+        -718.1483764648438,
+        525.6283569335938,
+        18.120113372802734,
+        -279.48419189453125
+      ]
+    }
+  ],
+  "protectedDrivingTriangles": 2032,
+  "minimumChangedFaceRoadTriangleMarginMeters": 218.176961035699,
+  "allOtherV20VerticesAndIndexedAttributesRetained": true,
+  "newMaterialCount": 0,
+  "newTextureFiles": 0,
+  "newImagePixels": false,
+  "productionIntegrated": false,
+  "referenceAcceptance": false
+}

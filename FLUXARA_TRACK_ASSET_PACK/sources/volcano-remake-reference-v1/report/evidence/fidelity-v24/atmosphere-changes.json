@@ -1,0 +1,216 @@
+{
+  "baseCandidate": "V23",
+  "smoke": [
+    {
+      "model": "AshCloud.spm",
+      "sourceModel": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v23/candidate/AshCloud.spm",
+      "sourcePoolObjectId": "volcano-fidelity-v19-cloud-ashcloud",
+      "sourceBounds": [
+        -339.3018798828125,
+        -20.112051010131836,
+        -418.6006164550781,
+        339.3018798828125,
+        74.06769561767578,
+        418.6006164550781
+      ],
+      "vertices": 482,
+      "triangles": 960,
+      "originalModelWithTextureBytes": 21401,
+      "adaptedModelWithTextureBytes": 15446,
+      "previousV23ModelWithTextureBytes": 15661,
+      "modelWithTextureChangePercent": -27.825802532591936,
+      "heatMinimum": 0.0,
+      "heatMaximum": 1,
+      "geometryNormalsIndicesAndPlacementRetained": true,
+      "originalPaletteFilesRetained": true,
+      "existingVertexColorMaterialReused": true
+    },
+    {
+      "model": "AshColumn.spm",
+      "sourceModel": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v23/candidate/AshColumn.spm",
+      "sourcePoolObjectId": "volcano-fidelity-v19-cloud-ashcolumn",
+      "sourceBounds": [
+        -96.98346710205078,
+        -15.598190307617188,
+        -223.0992889404297,
+        96.98348236083984,
+        164.77963256835938,
+        37.56209182739258
+      ],
+      "vertices": 527,
+      "triangles": 1050,
+      "originalModelWithTextureBytes": 18901,
+      "adaptedModelWithTextureBytes": 16886,
+      "previousV23ModelWithTextureBytes": 17101,
+      "modelWithTextureChangePercent": -10.660811597269982,
+      "heatMinimum": 0.0,
+      "heatMaximum": 1,
+      "geometryNormalsIndicesAndPlacementRetained": true,
+      "originalPaletteFilesRetained": true,
+      "existingVertexColorMaterialReused": true
+    },
+    {
+      "model": "PyroclasticFlow.spm",
+      "sourceModel": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v23/candidate/PyroclasticFlow.spm",
+      "sourcePoolObjectId": "volcano-fidelity-v19-cloud-pyroclasticflow",
+      "sourceBounds": [
+        -16.19883918762207,
+        -94.33733367919922,
+        -274.81787109375,
+        83.47908782958984,
+        9.454142570495605,
+        18.86974334716797
+      ],
+      "vertices": 327,
+      "triangles": 650,
+      "originalModelWithTextureBytes": 11434,
+      "adaptedModelWithTextureBytes": 10486,
+      "previousV23ModelWithTextureBytes": 10694,
+      "modelWithTextureChangePercent": -8.291061745670802,
+      "heatMinimum": 0.0,
+      "heatMaximum": 1,
+      "geometryNormalsIndicesAndPlacementRetained": true,
+      "originalPaletteFilesRetained": true,
+      "existingVertexColorMaterialReused": true
+    }
+  ],
+  "newTorchPlacements": [
+    {
+      "id": "VRV24_BattlementTorch_00",
+      "towerId": "VRV15_PooledTower_01",
+      "xyz": [
+        67.104637146,
+        10.922001015553343,
+        52.1161336027424
+      ],
+      "hpr": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1.2103234643968002,
+        1.2103234643968002,
+        1.2103234643968002
+      ],
+      "wholeModelProtectedRoadSphereMarginMeters": 21.323587031623997,
+      "sourceLibraryUnmodified": true
+    },
+    {
+      "id": "VRV24_BattlementTorch_01",
+      "towerId": "VRV15_PooledTower_04",
+      "xyz": [
+        -23.643121719,
+        9.059845101553345,
+        163.8051251487424
+      ],
+      "hpr": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1.2103234643968002,
+        1.2103234643968002,
+        1.2103234643968002
+      ],
+      "wholeModelProtectedRoadSphereMarginMeters": 25.004019555395505,
+      "sourceLibraryUnmodified": true
+    },
+    {
+      "id": "VRV24_BattlementTorch_02",
+      "towerId": "VRV15_PooledTower_05",
+      "xyz": [
+        24.140035629,
+        28.596101882872983,
+        -21.752872821113602
+      ],
+      "hpr": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1.2134238976548002,
+        1.2134238976548002,
+        1.2134238976548002
+      ],
+      "wholeModelProtectedRoadSphereMarginMeters": 9.63336827106129,
+      "sourceLibraryUnmodified": true
+    },
+    {
+      "id": "VRV24_BattlementTorch_03",
+      "towerId": "VRV15_PooledTower_07",
+      "xyz": [
+        91.865783691,
+        6.354311120553346,
+        52.1161336027424
+      ],
+      "hpr": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1.2103234643968002,
+        1.2103234643968002,
+        1.2103234643968002
+      ],
+      "wholeModelProtectedRoadSphereMarginMeters": 32.143909897007084,
+      "sourceLibraryUnmodified": true
+    },
+    {
+      "id": "VRV24_BattlementTorch_04",
+      "towerId": "VRV15_PooledTower_11",
+      "xyz": [
+        5.381030798,
+        51.538656155816,
+        79.2048897968144
+      ],
+      "hpr": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1.65,
+        1.65,
+        1.65
+      ],
+      "wholeModelProtectedRoadSphereMarginMeters": 14.136141843076405,
+      "sourceLibraryUnmodified": true
+    },
+    {
+      "id": "VRV24_BattlementTorch_05",
+      "towerId": "VRV15_PooledTower_12",
+      "xyz": [
+        -99.922428131,
+        72.93800264497601,
+        43.609783835952
+      ],
+      "hpr": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1.65,
+        1.65,
+        1.65
+      ],
+      "wholeModelProtectedRoadSphereMarginMeters": 8.24622493374396,
+      "sourceLibraryUnmodified": true
+    }
+  ],
+  "existingTorchLibrary": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_aztekTorch_a",
+  "existingTorchPack": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/models/shared/fluxara_bronze_wall_torch_v1",
+  "torchSourceModelSha256": "d95d3a868d35cdb808a30226d8473a0d2353fec7d7345edf1104660a54d28fe6",
+  "torchPoolObjectId": "shared-bronze-wall-torch-reference-v1",
+  "protectedDrivingTriangles": 2032,
+  "newTextureFiles": 0,
+  "newImagePixels": false,
+  "originalStonePixelsAndUVsUnchanged": true,
+  "sourceCourseAndGameplayControlsUnchanged": true,
+  "productionIntegrated": false,
+  "referenceAcceptance": false
+}

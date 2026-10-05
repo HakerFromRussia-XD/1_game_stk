@@ -1,0 +1,25 @@
+from pathlib import Path
+import sys,json,struct,math,shutil,copy,xml.etree.ElementTree as E,hashlib
+r=Path(__file__).resolve().parent;w=r/'fidelity-v8b';w.mkdir(exist_ok=True);c=w/'candidate';shutil.copytree(r/'fidelity-v8/candidate',c,dirs_exist_ok=True)
+sys.path.insert(0,str(r.parent/'shared-object-redesign'));from spm_io import parse,rewrite_texture_names
+s=(r/'fidelity_v2.py').read_text();ns={'struct':struct,'math':math};exec(s[s.index('def encode_buffer'):s.index('new_vertices, new_indices')],ns)
+repo=Path('/Users/motoricallc/Downloads/fluxara-drift');source=repo/'iosApp/FluxaraResources/library/fluxara_driftlib_castle_tower_v1';libname='fluxara_driftlib_volcano_castle_tower_v8b';folder=repo/'iosApp/FluxaraResources/library'/libname;folder.mkdir(exist_ok=True);model='vr_v8b_castle_tower.spm';texture='vr_v8b_castle_palette.png';d=parse(source/'fluxara_driftlib_castle_tower_v1_main.spm');raw=d['raw'];changed=0
+for b in d['buffers']:
+    for v in b['vertices']:
+        uv=v['uv'];target=(.875,.625)if uv in[(.125,.125),(.375,.125)]else(.375,.125)if uv==(.875,.375)else uv
+        if target!=uv:struct.pack_into('<2e',raw,v['uv_offset'],*target);changed+=1
+d['raw']=raw;(folder/model).write_bytes(rewrite_texture_names(d,[[texture,'']]));shutil.copy2(source/'dp_palette.png',folder/texture)
+(folder/'node.xml').write_text(f'<scene><object id="VRV8B_CastleTower" type="animation" model="{model}" xyz="0 0 0" hpr="0 0 0" scale="1 1 1" interaction="ghost" skeletal-animation="false" /></scene>')
+(folder/'materials.xml').write_text(f'<materials><material name="{texture}" shader="solid" /></materials>')
+main=parse(c/'volcano_track.spm');wood=main['buffers'][20];groups=ns['component_triangles'](wood);rooftris=set(groups[16]);ps=[wood['vertices'][i]['position']for t in rooftris for i in wood['indices'][t*3:t*3+3]];assert len(rooftris)==16 and min(v[1]for v in ps)>67.89663
+remaining=[i for t in range(len(wood['indices'])//3)if t not in rooftris for i in wood['indices'][t*3:t*3+3]];used=sorted(set(remaining));mapping={v:i for i,v in enumerate(used)};replacement={'vertices':[wood['vertices'][i]for i in used],'indices':[mapping[i]for i in remaining],'material':wood['material']};(c/'volcano_track.spm').write_bytes(ns['replace_buffers'](main,{20:replacement}))
+changes=json.loads((r/'fidelity-v8/castle-changes.json').read_text());scene=E.parse(c/'scene.xml');second=changes[1];collider=parse(c/second['collider']);vertices=collider['buffers'][0]['vertices'];indices=list(collider['buffers'][0]['indices']);selected=sorted(set(i for t in rooftris for i in wood['indices'][t*3:t*3+3]));offset=len(vertices);lookup={old:offset+n for n,old in enumerate(selected)};vertices=vertices+[copy.deepcopy(wood['vertices'][i])for i in selected];indices += [lookup[i]for t in sorted(rooftris)for i in wood['indices'][t*3:t*3+3]]
+lo=[min(v['position'][k]for v in vertices)for k in range(3)];hi=[max(v['position'][k]for v in vertices)for k in range(3)];raw=bytearray(b'SP'+bytes([10,1])+struct.pack('<6f',*(lo+hi))+struct.pack('<H',1)+b'\0\0'+struct.pack('<HHIIH',1,1,len(vertices),len(indices),0))
+for v in vertices:raw+=struct.pack('<3fI',*v['position'],v['normal'])
+raw+=struct.pack('<'+str(len(indices))+('H'if len(vertices)>255 else'B'),*indices);(c/second['collider']).write_bytes(raw)
+for q in changes:
+    old=q['originalVisualBounds'];q['originalVisualBounds']=[lo,hi] if q is second else old;q['originalWoodRoofTriangleIds']=sorted(rooftris) if q is second else [];q['originalCollisionTriangles']+=16 if q is second else 0;q['colliderBytes']=(c/q['collider']).stat().st_size
+    bounds=q['originalVisualBounds'];a,b=d['bounds'][:3],d['bounds'][3:];q['scale']=[(bounds[1][k]-bounds[0][k])/(b[k]-a[k])for k in range(3)];q['xyz']=[bounds[0][k]-a[k]*q['scale'][k]for k in range(3)];q['pooledSource']=str(folder/model);q['originalPoolModel']=str(source/'fluxara_driftlib_castle_tower_v1_main.spm');q['poolPrototypeId']='volcano-fidelity-v8b-castle-tower';q['scope']='Adapted pooled tower: grey wall/trim and red pole UVs; source geometry/bounds/origin/axes exact. Includes original upper wood roof bounds; original collision triangles retained. Cone roof not yet implemented.'
+    instance=next(e for e in scene.getroot().findall('library')if e.get('id')==q['id']);instance.set('name',libname)
+    for key in ['xyz','scale']:instance.set(key,' '.join(f'{v:.9f}'for v in q[key]))
+scene.write(c/'scene.xml',encoding='unicode');(w/'castle-changes.json').write_text(json.dumps(changes,indent=2));(w/'skin-changes.json').write_text(json.dumps({'sourceModel':str(source/'fluxara_driftlib_castle_tower_v1_main.spm'),'adaptedModel':str(folder/model),'library':str(folder),'runtimeTextureAlias':texture,'paletteSource':str(source/'dp_palette.png'),'palettePixelsUnchangedSha256':hashlib.sha256((folder/texture).read_bytes()).hexdigest(),'verticesUvChanged':changed,'triangles':429,'geometryUnchanged':True,'sourceLocalBoundsUnchanged':True,'woodRoofTriangleIds':sorted(rooftris),'newSharedRuntimeBytes':sum(p.stat().st_size for p in folder.iterdir()if p.is_file())},indent=2));print('V8B_GREY_RED_TOWER_SKIN_READY',changed,flush=True)

@@ -1,0 +1,698 @@
+{
+  "baseCandidate": "V35",
+  "stage": "Early coherent visual batch. Bush and mound grounding is the next source step; independent/native/runtime gates separate.",
+  "mudSourceLibrary": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_mudpot_a",
+  "newMudLibrary": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/shared-runtime/fluxara_driftlib_volcano_mudpot_v36",
+  "mudSourceModels": [
+    {
+      "before": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_mudpot_a/animated_bubble.spm",
+        "bytes": 9099,
+        "sha256": "45057384759e6d11c01b2a0daceb18ede68e377229aad7ff77771e4b5e76b449"
+      },
+      "after": {
+        "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/shared-runtime/fluxara_driftlib_volcano_mudpot_v36/animated_bubble.spm",
+        "bytes": 9110,
+        "sha256": "09257873dc4fdfe10f96f4c7fba50b8302144f72b06515d373a145c304a21e58"
+      }
+    },
+    {
+      "before": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_mudpot_a/fluxara_driftlib_mudpot_a_main.spm",
+        "bytes": 2744,
+        "sha256": "bd8925c44c03b9bd46816b5730067e5b553b2f191ff0549d4ff74f6c5ce30106"
+      },
+      "after": {
+        "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/shared-runtime/fluxara_driftlib_volcano_mudpot_v36/fluxara_driftlib_mudpot_a_main.spm",
+        "bytes": 2755,
+        "sha256": "36ff860b0bb182a647d4bf06fb5b8677761d1b4c768472cdd652ddc758227017"
+      }
+    }
+  ],
+  "newMudTextureAlias": {
+    "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/shared-textures/fluxara_volcano_bubbling_lava_v36.jpg",
+    "bytes": 19530,
+    "sha256": "886c39082a1f45f4b6d5bb665fdc2573641bed8b763cadd27b06bf3b73b28130"
+  },
+  "newMudGlossAlias": {
+    "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/shared-runtime/fluxara_driftlib_volcano_mudpot_v36/vr_v36_mudpot_gloss.png",
+    "bytes": 4565,
+    "sha256": "b2c7a37dabb8e57f50bd9d1020899295bf7b6d2a257bce8d167981eaa06eaa27"
+  },
+  "mudModelsAndUsedTexturesBytesBefore": 35473,
+  "mudModelsAndUsedTexturesBytesAfter": 35960,
+  "mudOriginalPoseChangesNameOnly": [
+    {
+      "before": {
+        "name": "fluxara_driftlib_mudpot_a",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy",
+        "xyz": "-121.80 -33.40 -115.33",
+        "hpr": "0.0 -37.7 0.0",
+        "scale": "3.00 3.00 3.00"
+      },
+      "after": {
+        "name": "fluxara_driftlib_volcano_mudpot_v36",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy",
+        "xyz": "-121.80 -33.40 -115.33",
+        "hpr": "0.0 -37.7 0.0",
+        "scale": "3.00 3.00 3.00"
+      }
+    },
+    {
+      "before": {
+        "name": "fluxara_driftlib_mudpot_a",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy.001",
+        "xyz": "-196.88 -17.69 -152.36",
+        "hpr": "0.0 47.7 0.0",
+        "scale": "1.00 1.00 1.00"
+      },
+      "after": {
+        "name": "fluxara_driftlib_volcano_mudpot_v36",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy.001",
+        "xyz": "-196.88 -17.69 -152.36",
+        "hpr": "0.0 47.7 0.0",
+        "scale": "1.00 1.00 1.00"
+      }
+    },
+    {
+      "before": {
+        "name": "fluxara_driftlib_mudpot_a",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy.002",
+        "xyz": "-135.20 -16.62 -230.42",
+        "hpr": "0.0 -8.7 0.0",
+        "scale": "2.00 2.00 2.00"
+      },
+      "after": {
+        "name": "fluxara_driftlib_volcano_mudpot_v36",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy.002",
+        "xyz": "-135.20 -16.62 -230.42",
+        "hpr": "0.0 -8.7 0.0",
+        "scale": "2.00 2.00 2.00"
+      }
+    },
+    {
+      "before": {
+        "name": "fluxara_driftlib_mudpot_a",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy.003",
+        "xyz": "-169.80 -25.74 -107.53",
+        "hpr": "-0.0 125.2 -0.0",
+        "scale": "1.00 1.00 1.00"
+      },
+      "after": {
+        "name": "fluxara_driftlib_volcano_mudpot_v36",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy.003",
+        "xyz": "-169.80 -25.74 -107.53",
+        "hpr": "-0.0 125.2 -0.0",
+        "scale": "1.00 1.00 1.00"
+      }
+    },
+    {
+      "before": {
+        "name": "fluxara_driftlib_mudpot_a",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy.004",
+        "xyz": "-121.80 -33.47 -144.25",
+        "hpr": "0.0 -37.7 0.0",
+        "scale": "1.78 1.78 1.78"
+      },
+      "after": {
+        "name": "fluxara_driftlib_volcano_mudpot_v36",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy.004",
+        "xyz": "-121.80 -33.47 -144.25",
+        "hpr": "0.0 -37.7 0.0",
+        "scale": "1.78 1.78 1.78"
+      }
+    },
+    {
+      "before": {
+        "name": "fluxara_driftlib_mudpot_a",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy.005",
+        "xyz": "-81.40 -33.47 -169.64",
+        "hpr": "-0.0 -101.6 -0.0",
+        "scale": "2.63 2.63 2.63"
+      },
+      "after": {
+        "name": "fluxara_driftlib_volcano_mudpot_v36",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy.005",
+        "xyz": "-81.40 -33.47 -169.64",
+        "hpr": "-0.0 -101.6 -0.0",
+        "scale": "2.63 2.63 2.63"
+      }
+    },
+    {
+      "before": {
+        "name": "fluxara_driftlib_mudpot_a",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy.006",
+        "xyz": "-191.29 -25.73 -115.71",
+        "hpr": "0.0 39.3 0.0",
+        "scale": "1.50 1.50 1.50"
+      },
+      "after": {
+        "name": "fluxara_driftlib_volcano_mudpot_v36",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy.006",
+        "xyz": "-191.29 -25.73 -115.71",
+        "hpr": "0.0 39.3 0.0",
+        "scale": "1.50 1.50 1.50"
+      }
+    },
+    {
+      "before": {
+        "name": "fluxara_driftlib_mudpot_a",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy.007",
+        "xyz": "-198.40 -17.69 -176.88",
+        "hpr": "0.0 -14.5 0.0",
+        "scale": "1.50 1.50 1.50"
+      },
+      "after": {
+        "name": "fluxara_driftlib_volcano_mudpot_v36",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy.007",
+        "xyz": "-198.40 -17.69 -176.88",
+        "hpr": "0.0 -14.5 0.0",
+        "scale": "1.50 1.50 1.50"
+      }
+    },
+    {
+      "before": {
+        "name": "fluxara_driftlib_mudpot_a",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy.008",
+        "xyz": "-118.82 -16.94 -250.92",
+        "hpr": "0.0 -36.1 0.0",
+        "scale": "1.50 1.50 1.50"
+      },
+      "after": {
+        "name": "fluxara_driftlib_volcano_mudpot_v36",
+        "id": "fluxara_driftlib_mudpot_a_main_proxy.008",
+        "xyz": "-118.82 -16.94 -250.92",
+        "hpr": "0.0 -36.1 0.0",
+        "scale": "1.50 1.50 1.50"
+      }
+    }
+  ],
+  "mapMudModelAliasChanges": [
+    {
+      "name": "MudBubbles.spm",
+      "oldSha256": "70997a61a26556755439f47bf65c47e769d20ca6412ca87cb4683af5dca72d9b",
+      "newSha256": "8f8355120b04295771ccdf12fa7308bcb4c3aa107d6689d9016f31a539fc4c5c",
+      "materialAliasOnly": true
+    },
+    {
+      "name": "volcano_track.spm",
+      "oldSha256": "1233589e1228e82ee8b35c9fbf07b00a3961947bdefdcb051ea6b0e6408f7ade",
+      "newSha256": "eed7cc379fa505994a025cb4cbe6040699ed944a787bd736de9b594f042b4bc1",
+      "materialAliasOnly": true
+    }
+  ],
+  "oldMapMudMaterial": {
+    "name": "fluxara_drift_mudpot_a.png",
+    "gloss-map": "fluxara_drift_mudpot_a_gloss.png"
+  },
+  "newMapMudMaterial": {
+    "name": "fluxara_volcano_bubbling_lava_v36.jpg",
+    "gloss-map": "fluxara_drift_mudpot_a_gloss.png"
+  },
+  "newRoofModel": {
+    "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/shared-runtime/fluxara_driftlib_volcano_tile_roof_v36/vr_v36_tiled_roof.spm",
+    "bytes": 821,
+    "sha256": "17cd019add605a055d5c05c50ac53ae865ab239e100efc898085747c14783b90"
+  },
+  "sourceRoofModel": {
+    "path": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_volcano_castle_roof_v15/fluxara_castle_v15_roof.spm",
+    "bytes": 865,
+    "sha256": "6b5882d9112c86b7304c52e52f1c3415606d274a948b77527c9cd5114ef0498f"
+  },
+  "roofTrianglesBefore": 33,
+  "roofTrianglesAfter": 25,
+  "roofHeaderAndActiveBoundsRetained": true,
+  "roofOriginalCone16FacesAndFlagRetained": true,
+  "roofVertexColoursAndUVAuthored": true,
+  "roofOriginalPoseChangesNameOnly": [
+    {
+      "before": {
+        "name": "fluxara_driftlib_volcano_castle_roof_v15",
+        "id": "VRV8_PooledTower_0",
+        "xyz": "44.799247742 -12.756408691 56.847366333",
+        "hpr": "0 0 0",
+        "scale": "20.239522816 21.183793667 20.239522816"
+      },
+      "after": {
+        "name": "fluxara_driftlib_volcano_tile_roof_v36",
+        "id": "VRV8_PooledTower_0",
+        "xyz": "44.799247742 -12.756408691 56.847366333",
+        "hpr": "0 0 0",
+        "scale": "20.239522816 21.183793667 20.239522816"
+      }
+    },
+    {
+      "before": {
+        "name": "fluxara_driftlib_volcano_castle_roof_v15",
+        "id": "VRV8_PooledTower_1",
+        "xyz": "-19.433433056 56.446537018 55.878173828",
+        "hpr": "0 0 0",
+        "scale": "28.452866494 21.721325388 28.452864421"
+      },
+      "after": {
+        "name": "fluxara_driftlib_volcano_tile_roof_v36",
+        "id": "VRV8_PooledTower_1",
+        "xyz": "-19.433433056 56.446537018 55.878173828",
+        "hpr": "0 0 0",
+        "scale": "28.452866494 21.721325388 28.452864421"
+      }
+    },
+    {
+      "before": {
+        "id": "VRV15_PooledTower_00",
+        "name": "fluxara_driftlib_volcano_castle_roof_v15",
+        "xyz": "46.538829803 -16.043777466 -3.633896708",
+        "hpr": "0 0 0",
+        "scale": "13.712376885 16.127307074 13.712377403"
+      },
+      "after": {
+        "id": "VRV15_PooledTower_00",
+        "name": "fluxara_driftlib_volcano_tile_roof_v36",
+        "xyz": "46.538829803 -16.043777466 -3.633896708",
+        "hpr": "0 0 0",
+        "scale": "13.712376885 16.127307074 13.712377403"
+      }
+    },
+    {
+      "before": {
+        "id": "VRV15_PooledTower_02",
+        "name": "fluxara_driftlib_volcano_castle_roof_v15",
+        "xyz": "-22.606731415 -14.171863556 148.880630493",
+        "hpr": "0 0 0",
+        "scale": "13.712376885 16.127308210 13.787841547"
+      },
+      "after": {
+        "id": "VRV15_PooledTower_02",
+        "name": "fluxara_driftlib_volcano_tile_roof_v36",
+        "xyz": "-22.606731415 -14.171863556 148.880630493",
+        "hpr": "0 0 0",
+        "scale": "13.712376885 16.127308210 13.787841547"
+      }
+    },
+    {
+      "before": {
+        "id": "VRV15_PooledTower_03",
+        "name": "fluxara_driftlib_volcano_castle_roof_v15",
+        "xyz": "-21.497238159 -14.171863556 129.784336090",
+        "hpr": "0 0 0",
+        "scale": "13.712376885 16.127308210 13.712393470"
+      },
+      "after": {
+        "id": "VRV15_PooledTower_03",
+        "name": "fluxara_driftlib_volcano_tile_roof_v36",
+        "xyz": "-21.497238159 -14.171863556 129.784336090",
+        "hpr": "0 0 0",
+        "scale": "13.712376885 16.127308210 13.712393470"
+      }
+    },
+    {
+      "before": {
+        "id": "VRV15_PooledTower_06",
+        "name": "fluxara_driftlib_volcano_castle_roof_v15",
+        "xyz": "24.495954514 17.263107300 18.870832443",
+        "hpr": "0 0 0",
+        "scale": "18.941290139 22.277105422 18.941290139"
+      },
+      "after": {
+        "id": "VRV15_PooledTower_06",
+        "name": "fluxara_driftlib_volcano_tile_roof_v36",
+        "xyz": "24.495954514 17.263107300 18.870832443",
+        "hpr": "0 0 0",
+        "scale": "18.941290139 22.277105422 18.941290139"
+      }
+    },
+    {
+      "before": {
+        "id": "VRV15_PooledTower_08",
+        "name": "fluxara_driftlib_volcano_castle_roof_v15",
+        "xyz": "77.940887451 -2.054884911 67.431930542",
+        "hpr": "0 0 0",
+        "scale": "25.801848897 30.345897826 25.801848897"
+      },
+      "after": {
+        "id": "VRV15_PooledTower_08",
+        "name": "fluxara_driftlib_volcano_tile_roof_v36",
+        "xyz": "77.940887451 -2.054884911 67.431930542",
+        "hpr": "0 0 0",
+        "scale": "25.801848897 30.345897826 25.801848897"
+      }
+    },
+    {
+      "before": {
+        "id": "VRV15_PooledTower_09",
+        "name": "fluxara_driftlib_volcano_castle_roof_v15",
+        "xyz": "84.210578918 -2.054884911 139.723617554",
+        "hpr": "0 0 0",
+        "scale": "25.801848897 30.345897826 25.801882068"
+      },
+      "after": {
+        "id": "VRV15_PooledTower_09",
+        "name": "fluxara_driftlib_volcano_tile_roof_v36",
+        "xyz": "84.210578918 -2.054884911 139.723617554",
+        "hpr": "0 0 0",
+        "scale": "25.801848897 30.345897826 25.801882068"
+      }
+    },
+    {
+      "before": {
+        "id": "VRV15_PooledTower_10",
+        "name": "fluxara_driftlib_volcano_castle_roof_v15",
+        "xyz": "-8.850556612 -2.054884911 146.671569824",
+        "hpr": "0 0 0",
+        "scale": "25.801852007 30.345897826 25.801882068"
+      },
+      "after": {
+        "id": "VRV15_PooledTower_10",
+        "name": "fluxara_driftlib_volcano_tile_roof_v36",
+        "xyz": "-8.850556612 -2.054884911 146.671569824",
+        "hpr": "0 0 0",
+        "scale": "25.801852007 30.345897826 25.801882068"
+      }
+    },
+    {
+      "before": {
+        "id": "VRV15_PooledTower_13",
+        "name": "fluxara_driftlib_volcano_castle_roof_v15",
+        "xyz": "61.536314011 -16.043777466 -3.633896708",
+        "hpr": "0 0 0",
+        "scale": "13.712385178 16.127307074 13.712377403"
+      },
+      "after": {
+        "id": "VRV15_PooledTower_13",
+        "name": "fluxara_driftlib_volcano_tile_roof_v36",
+        "xyz": "61.536314011 -16.043777466 -3.633896708",
+        "hpr": "0 0 0",
+        "scale": "13.712385178 16.127307074 13.712377403"
+      }
+    }
+  ],
+  "woodBuffer": 19,
+  "woodRoofVertexColorIndices": [
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258,
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272,
+    273,
+    274,
+    275,
+    276
+  ],
+  "woodPositionsNormalsIndicesUVPhysicalMaterialRetained": true,
+  "skyBefore": {
+    "texture": "dp_sky_top.jpg dp_sky_bottom.jpg dp_sky_left.jpg dp_sky_right.jpg dp_sky_front.jpg dp_sky_back.jpg"
+  },
+  "skyAfter": {
+    "texture": "vr_v36_lava_sky_top.jpg vr_v36_lava_sky_bottom.jpg vr_v36_lava_sky_east.jpg vr_v36_lava_sky_west.jpg vr_v36_lava_sky_south.jpg vr_v36_lava_sky_north.jpg"
+  },
+  "reusedSkyTextureSources": [
+    {
+      "side": "top",
+      "source": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/canyon-shared-placement-v1/genericskybox_top.jpg",
+        "bytes": 3118,
+        "sha256": "d330decd5802f163962cbb809b68a310051ce5c6e43f953b3de3b81f23ac9774"
+      },
+      "alias": {
+        "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/shared-textures/vr_v36_lava_sky_top.jpg",
+        "bytes": 3118,
+        "sha256": "d330decd5802f163962cbb809b68a310051ce5c6e43f953b3de3b81f23ac9774"
+      }
+    },
+    {
+      "side": "bottom",
+      "source": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/canyon-shared-placement-v1/genericskybox_bottom.jpg",
+        "bytes": 1668,
+        "sha256": "1f4d0bcffa81961fc39391d6e450e77aef137e033cba0d9ac65a8b0bd3448fb7"
+      },
+      "alias": {
+        "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/shared-textures/vr_v36_lava_sky_bottom.jpg",
+        "bytes": 1668,
+        "sha256": "1f4d0bcffa81961fc39391d6e450e77aef137e033cba0d9ac65a8b0bd3448fb7"
+      }
+    },
+    {
+      "side": "east",
+      "source": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/canyon-shared-placement-v1/genericskybox_east.jpg",
+        "bytes": 2811,
+        "sha256": "39cb0ba72cd0cd7dba636711c053f4e24583684ab4f5404c597eb9d359d4e37b"
+      },
+      "alias": {
+        "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/shared-textures/vr_v36_lava_sky_east.jpg",
+        "bytes": 2811,
+        "sha256": "39cb0ba72cd0cd7dba636711c053f4e24583684ab4f5404c597eb9d359d4e37b"
+      }
+    },
+    {
+      "side": "west",
+      "source": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/canyon-shared-placement-v1/genericskybox_west.jpg",
+        "bytes": 2811,
+        "sha256": "39cb0ba72cd0cd7dba636711c053f4e24583684ab4f5404c597eb9d359d4e37b"
+      },
+      "alias": {
+        "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/shared-textures/vr_v36_lava_sky_west.jpg",
+        "bytes": 2811,
+        "sha256": "39cb0ba72cd0cd7dba636711c053f4e24583684ab4f5404c597eb9d359d4e37b"
+      }
+    },
+    {
+      "side": "south",
+      "source": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/canyon-shared-placement-v1/genericskybox_south.jpg",
+        "bytes": 2811,
+        "sha256": "39cb0ba72cd0cd7dba636711c053f4e24583684ab4f5404c597eb9d359d4e37b"
+      },
+      "alias": {
+        "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/shared-textures/vr_v36_lava_sky_south.jpg",
+        "bytes": 2811,
+        "sha256": "39cb0ba72cd0cd7dba636711c053f4e24583684ab4f5404c597eb9d359d4e37b"
+      }
+    },
+    {
+      "side": "north",
+      "source": {
+        "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/textures/canyon-shared-placement-v1/genericskybox_north.jpg",
+        "bytes": 2811,
+        "sha256": "39cb0ba72cd0cd7dba636711c053f4e24583684ab4f5404c597eb9d359d4e37b"
+      },
+      "alias": {
+        "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/shared-textures/vr_v36_lava_sky_north.jpg",
+        "bytes": 2811,
+        "sha256": "39cb0ba72cd0cd7dba636711c053f4e24583684ab4f5404c597eb9d359d4e37b"
+      }
+    }
+  ],
+  "sunBefore": {
+    "xyz": "199.67 253.30 -139.47",
+    "sun-specular": "255 161 79",
+    "sun-diffuse": "168 150 143",
+    "ambient": "110 109 120",
+    "fog-color": "173 147 169",
+    "fog-start": "350",
+    "fog-end": "1500",
+    "fog-max": ".20"
+  },
+  "sunAfter": {
+    "xyz": "199.67 253.30 -139.47",
+    "sun-specular": "255 190 95",
+    "sun-diffuse": "225 172 125",
+    "ambient": "85 88 112",
+    "fog-color": "173 147 169",
+    "fog-start": "350",
+    "fog-end": "1500",
+    "fog-max": ".14"
+  },
+  "smokeBefore": {
+    "id": "Cube.005",
+    "type": "animation",
+    "xyz": "-55.125015778 71.421574426 -15.538346744",
+    "hpr": "0.000000000 0.000000000 0.000000000",
+    "scale": "0.231998286 0.249476337 0.164005883",
+    "interaction": "ghost",
+    "model": "AshColumn.spm",
+    "skeletal-animation": "false"
+  },
+  "smokeAfter": {
+    "id": "Cube.005",
+    "type": "animation",
+    "xyz": "-50.308872367 78.375977196 -15.538346744",
+    "hpr": "0 0 -50",
+    "scale": "0.231998286 0.249476337 0.164005883",
+    "interaction": "ghost",
+    "model": "AshColumn.spm",
+    "skeletal-animation": "false"
+  },
+  "smokeLocalPivot": [
+    42.52166819572449,
+    -6.76186396041885,
+    2.264633420854807
+  ],
+  "smokeSourceLocalModelUnchanged": true,
+  "removedCandidateOwnedUnreferencedImages": [
+    {
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/candidate/fluxara_drift_mudpot_a.png",
+      "bytes": 246945,
+      "sha256": "08e485aeb39ceaae5a957086442aa93880eda01a3d77e355e3a0e3e32bc58fb9"
+    },
+    {
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/candidate/dp_sky_top.jpg",
+      "bytes": 29876,
+      "sha256": "5d5ea8d6df2b74a667d7094ce76a787947f38395c8dbb04f7f9ce77e68b252de"
+    },
+    {
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/candidate/dp_sky_bottom.jpg",
+      "bytes": 28929,
+      "sha256": "2d246356e73fccc7d71457ef5a5f29d248f9914c02f3de4bf383f34a122a8658"
+    },
+    {
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/candidate/dp_sky_left.jpg",
+      "bytes": 32620,
+      "sha256": "638d02f6b304ed083a679bea1a4f1b18302799b7b6adc068ee440864ab3565a7"
+    },
+    {
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/candidate/dp_sky_right.jpg",
+      "bytes": 29305,
+      "sha256": "e3bdff924ca0bf9f1d853c9e3b75e5a2b31b9a9a9897a910563c66570000172a"
+    },
+    {
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/candidate/dp_sky_front.jpg",
+      "bytes": 31051,
+      "sha256": "5641f80c3bd7919e726833119801c48caf59389c092f98a5fda62b8ceca6a38f"
+    },
+    {
+      "path": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v36/candidate/dp_sky_back.jpg",
+      "bytes": 26208,
+      "sha256": "764d25da5940da72bdee14077732e6258b06662950dc5764c3294e1da359e2d8"
+    }
+  ],
+  "originalSourceImagesAndDonorsPreserved": true,
+  "newPixels": false,
+  "productionIntegrated": false,
+  "referenceAcceptance": false
+}

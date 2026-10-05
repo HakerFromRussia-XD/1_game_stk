@@ -1,0 +1,71 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v23/drive-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v23/drive-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-volcano-fidelity-v23-drive-probe",
+    "--mode=1",
+    "--laps=1",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--seed=4"
+  ],
+  "screenshots": [
+    {
+      "seconds": 40,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v23/screenshots/drive-40s.png"
+    },
+    {
+      "seconds": 80,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v23/screenshots/drive-80s.png"
+    },
+    {
+      "seconds": 140,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v23/screenshots/drive-140s.png"
+    },
+    {
+      "seconds": 190,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v23/screenshots/drive-190s.png"
+    }
+  ],
+  "kind": "Candidate gameplay in a temporary simulator-only track. Production source and final Blender project not yet replaced.",
+  "forceWinsUsed": false,
+  "visualInspectionCompleted": true,
+  "staticOverviewInspected": true,
+  "naturalFinishObserved": true,
+  "result": "#1",
+  "fullRouteCompleted": true,
+  "naturalFinishScreenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v23/screenshots/natural-finish.png",
+  "inspectedGameplayFiles": [
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v23/screenshots/drive-40s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v23/screenshots/drive-80s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v23/screenshots/drive-140s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v23/screenshots/drive-190s.png"
+  ],
+  "originalPhysicsGeometryAndCourseVerified": true,
+  "AITraversalWithoutOffRoadVerified": false,
+  "preexistingUnsafeRampTraversalObservedInV1": true,
+  "allTraversalRegressionsExcluded": false,
+  "candidateMainSPMSha256": "71fdc22538988eba5b8301969b6a6ddc851e0b9ef4c6211016b37ccd445047da",
+  "sharedBackdropTerrainModelSha256": "78d3281c6e08a8dc93020122072826a99a59844d8f0875da76819a073251a1a1",
+  "currentStoneTextureBytes": 39938,
+  "currentStoneTextureSha256": "6c765884a7846501355a429f3548d2df78698798a97a0318aefe358d0bdafdfd",
+  "finalProbeTrackCleanupVerified": true,
+  "temporaryCopiedResourcesCleanupVerified": true,
+  "existingInstalledDonorLibraryUnchanged": true,
+  "materialWarningsExactV22": [],
+  "productionIntegrated": false,
+  "referenceAcceptance": false,
+  "sameCameraBackdropComparisonInspected": true,
+  "backdropComparisonFinding": "Compared V22 and V23 from camera100,175,-100 looking50,5,-500. Former flat green caps now show a curved silhouette and gradual normal shading. Surrounding stone geometry/texture unchanged. V23 diagnostic has black system/UI overlay at left, left unretouched. Overall composition remains far from reference.",
+  "visualFinding": "Two broad distant green caps have raised rounded interiors. Stone image pixels/UVs, narrow roadside strips, original collision and all other source geometry unchanged. All four drive frames inspected: kart on road at40 and80, road below arch at140, natural #1 result at190. Frame140 has a black system/UI overlay at left, retained unretouched. No claim that AI stayed on road between samples; prior V1 ramp issue remains unresolved. Diagnostic views do not prove reference acceptance. Repeated stone walls, castle proportions and lighting still unlike the reference. No retouched images, new app build, performance, reverse or whole-campaign claim."
+}

@@ -1,0 +1,95 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v41/drive-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v41/drive-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-volcano-fidelity-v41-drive-probe",
+    "--mode=1",
+    "--laps=1",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--seed=4"
+  ],
+  "screenshots": [
+    {
+      "seconds": 40,
+      "actualElapsedSeconds": 41.21471016700025,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v41/screenshots/drive-40s.png"
+    },
+    {
+      "seconds": 80,
+      "actualElapsedSeconds": 80.93817579200004,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v41/screenshots/drive-80s.png"
+    },
+    {
+      "seconds": 140,
+      "actualElapsedSeconds": 141.05308800000012,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v41/screenshots/drive-140s.png"
+    }
+  ],
+  "kind": "Candidate gameplay in a temporary simulator-only track. Production source and final Blender project not yet replaced.",
+  "forceWinsUsed": false,
+  "visualInspectionCompleted": true,
+  "staticOverviewInspected": true,
+  "postFinishProcessTerminatedBefore190Seconds": true,
+  "postFinishStabilityUnverified": true,
+  "naturalFinishObserved": true,
+  "result": "#1",
+  "fullRouteCompleted": true,
+  "naturalFinishScreenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v41/screenshots/natural-finish.png",
+  "inspectedGameplayFiles": [
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v41/screenshots/drive-40s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v41/screenshots/drive-80s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v41/screenshots/drive-140s.png"
+  ],
+  "originalPhysicsGeometryAndCourseVerified": true,
+  "AITraversalWithoutOffRoadVerified": false,
+  "preexistingUnsafeRampTraversalObservedInV1": true,
+  "allTraversalRegressionsExcluded": false,
+  "candidateMainSPMSha256": "ec1fbe67e2a7b33f2ec38df32e03a50111c0b6d5c4c227882dabf30cc67c0bf6",
+  "sourcePooledTorchModelSha256": "d95d3a868d35cdb808a30226d8473a0d2353fec7d7345edf1104660a54d28fe6",
+  "smokeModelHashes": {
+    "AshCloud.spm": "768708ae1f975b876625d4554dbb6f21de9e3437eb0bcb4681c7c6cddff147f1",
+    "AshColumn.spm": "09b3b258a6b3922e0771a79516f5d257be78aadc3b0726a7b46c1e3e97153a5e",
+    "PyroclasticFlow.spm": "e39f182ff8d0eff00a38e179ce03e63d7a309c71190b96a3f76182ec6a969f22"
+  },
+  "sixExistingTorchPlacementsVerified": true,
+  "existingInstalledTorchAndEmitterUnchanged": true,
+  "newTorchRuntimeBytesAddedToInstalledApp": 0,
+  "currentStoneTextureBytes": 39938,
+  "currentStoneTextureSha256": "6c765884a7846501355a429f3548d2df78698798a97a0318aefe358d0bdafdfd",
+  "finalProbeTrackCleanupVerified": true,
+  "temporaryCopiedResourcesCleanupVerified": true,
+  "existingInstalledDonorLibraryUnchanged": true,
+  "materialWarningsExactV24": [],
+  "productionIntegrated": false,
+  "referenceAcceptance": false,
+  "centralSupportAndPartPlacementPreservationProofs": [
+    "V26",
+    "V27",
+    "V28",
+    "V29",
+    "V30",
+    "V32",
+    "V33",
+    "V34",
+    "V35",
+    "V36",
+    "V37",
+    "V38",
+    "V39",
+    "V41"
+  ],
+  "sameCameraOverviewWithV24Inspected": true,
+  "screenshotsRetainedUnretouched": true,
+  "visualFinding": "V41 retains stone texture39938B exact pixels.128 low source roadside blocks alternate red/white colors, preserving all source geometry/UV/normals/materials.Three source smoke meshes retain all geometry/normals/indices/world poses and use scoped unlit baked vertex lighting with exact reused158BOrbitalpalette.Individual smoke logicalmodel+usedimage increases13.64to14.34percent, within20percent. Allmapfiles plus acceptedshared history5828925B vs7693535BV1. Natural TT and saved frames verified separately. Production integration, fullreference similarity, performance, reverse and campaign validation pending."
+}

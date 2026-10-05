@@ -1,0 +1,22 @@
+{
+  "version": "V3",
+  "parent": "V2",
+  "reference": "Figma 378:39",
+  "changes": [
+    {
+      "buffer": 21,
+      "texture": "sunFlare2.png",
+      "vertexColorMultiplier": 0.08,
+      "triangles": 24
+    },
+    {
+      "buffer": 11,
+      "texture": "halo.png",
+      "vertexColorMultiplier": 0.12,
+      "triangles": 30
+    }
+  ],
+  "sky": "New builtin-imagegen panorama projected into six 512px JPEG cube faces. Main mesh only vertex colors changed in two ignored additive glow buffers.",
+  "allGeometryEqualV2": true,
+  "candidateOnly": true
+}

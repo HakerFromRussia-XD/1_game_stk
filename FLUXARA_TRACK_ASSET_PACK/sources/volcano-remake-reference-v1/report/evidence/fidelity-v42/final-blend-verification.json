@@ -1,0 +1,54 @@
+{
+  "finalBlendOpens": true,
+  "allPreviousNativeObjectsRetained": 826,
+  "allOtherNativeMeshGeometryUVNormalsColorsMaterialsExactV41": 824,
+  "allPreviousNativeMatricesExactV41": 826,
+  "changedExistingSharedMatrices": 0,
+  "changedNativeMeshUsers": [
+    "VR_OriginalSurface_012",
+    "VR_OriginalSurface_022"
+  ],
+  "onlyStoneUVChanged": true,
+  "newSourcePrototypes": [
+    {
+      "id": "volcano-fidelity-v42-terrain",
+      "name": "VRV42_Prototype_Terrain",
+      "sourceModel": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v42/shared-runtime/fluxara_driftlib_volcano_closed_terrain_v42/vr_v42_closed_terrain.spm",
+      "sourceBuffers": [
+        0,
+        1
+      ],
+      "triangles": 999,
+      "materials": [
+        "VRV4E_vr_moss_palette.jpg",
+        "VRV4E_Rock13_col.jpg"
+      ],
+      "sourcePoolObjectId": "volcano-fidelity-v40-terrain",
+      "role": "Same closed terrain mesh. Only stone UV frequency divided by three to match user-selected larger near-cliff texture appearance."
+    }
+  ],
+  "meshObjects": 827,
+  "nativePrototypeCount": 55,
+  "nativeMaterialDefinitionCount": 100,
+  "nativeSharedParts": 522,
+  "sharedMeshPointersExactAfterReopen": true,
+  "stonePackedPixelsExact": true,
+  "canonicalPending": false,
+  "newMaterials": 0,
+  "newRasterPixels": false,
+  "referenceNearCliffsUnchanged": true,
+  "canonical": {
+    "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend",
+    "bytes": 434288148,
+    "sha256": "2689c65fe6e5e6321c7654280eb79eece8893ca433f1e6af530b8d841690247f",
+    "allPreviousNativeMeshGeometryNormalsUVColorsMaterialsExactAfterReopen": 1466,
+    "allPreviousImagePackedBytesExact": 381,
+    "previousMaterialsRetained": 1748,
+    "newPrototypes": 1,
+    "newMaterialVariants": 0,
+    "newNativeImagePixels": false,
+    "previousHouseWindowEmissionPreserved": true,
+    "newPrototypeTriangleAndMaterialBindingsVerified": true
+  },
+  "mainUVCorrectionDoesNotAlterCanonicalTerrainPrototype": true
+}

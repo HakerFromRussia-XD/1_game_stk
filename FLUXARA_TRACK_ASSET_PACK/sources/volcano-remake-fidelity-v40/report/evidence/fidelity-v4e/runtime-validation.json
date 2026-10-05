@@ -1,0 +1,27 @@
+{
+  "scope": "Temporary candidate in existing iOS Simulator build; no production source or preview change and no fresh application build.",
+  "candidateOneLapTimeTrial": {
+    "naturalFinishObserved": true,
+    "position": 1,
+    "laps": 1,
+    "kartCount": 1,
+    "forceWinsUsed": false,
+    "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v4e/screenshots/drive-150s.png"
+  },
+  "screenshotsInspected": [
+    "drive-12s.png",
+    "drive-40s.png",
+    "drive-80s.png",
+    "drive-150s.png"
+  ],
+  "productionIntegration": false,
+  "campaignEventVerified": false,
+  "reverseDirectionVerified": false,
+  "performanceMeasured": false,
+  "knownVisualDifferences": [
+    "Three core smoke volumes still appear as large flat/angular slabs above the upper course.",
+    "New billows remain elongated in some original thin effect envelopes.",
+    "Castle forms and bright lava spikes still differ from reference."
+  ],
+  "smokeChanges": "Five card models replaced with overlapping full-sprite cards; original bounds and triangle counts preserved; eight decorative ghost texture animations removed, motion curves retained."
+}

@@ -1,0 +1,57 @@
+{
+  "info" : {
+    "arguments" : [
+      "devicectl",
+      "device",
+      "process",
+      "launch",
+      "--device",
+      "40219EA0-BBD0-5926-A926-835ECB975FE4",
+      "--terminate-existing",
+      "io.fluxara.drift",
+      "--json-output",
+      "output/volcano-remake-rework/device-final/launch-normal.json"
+    ],
+    "commandType" : "devicectl.device.process.launch",
+    "environment" : {
+      "TERM" : "dumb"
+    },
+    "jsonVersion" : 5,
+    "outcome" : "success",
+    "version" : "642.0.1"
+  },
+  "result" : {
+    "deviceIdentifier" : "40219EA0-BBD0-5926-A926-835ECB975FE4",
+    "launchOptions" : {
+      "activatedWhenStarted" : true,
+      "arguments" : [
+
+      ],
+      "environmentVariables" : {
+        "TERM" : "dumb"
+      },
+      "platformSpecificOptions" : {
+
+      },
+      "startStopped" : false,
+      "terminateExistingInstances" : true,
+      "user" : {
+        "active" : true
+      }
+    },
+    "process" : {
+      "auditToken" : [
+        4294967295,
+        501,
+        501,
+        501,
+        501,
+        75752,
+        0,
+        218513
+      ],
+      "executable" : "file:///private/var/containers/Bundle/Application/278BDB2D-F547-4DD3-A3A3-BE88B9B0F321/Fluxara%20Drift.app/Fluxara%20Drift",
+      "processIdentifier" : 75752
+    }
+  }
+}

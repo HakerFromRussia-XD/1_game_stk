@@ -1,0 +1,30 @@
+{
+  "scope": "Isolated candidate in existing iOS Simulator build; production and campaign preview unchanged.",
+  "candidateOneLapTimeTrial": {
+    "naturalFinishObserved": true,
+    "position": 1,
+    "laps": 1,
+    "kartCount": 1,
+    "forceWinsUsed": false,
+    "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v5/screenshots/drive-150s.png"
+  },
+  "screenshotsInspected": [
+    "drive-40s.png",
+    "drive-80s.png",
+    "drive-150s.png",
+    "iterations/large-billows/screenshots/smoke-diagnostic-all.png",
+    "smoke-diagnostic-volumes.png"
+  ],
+  "staticInspection": "Disabling the three volumes removes large gray forms. Opaque replacement failed visual preservation; alpha restoration is being tested separately.",
+  "productionIntegration": false,
+  "campaignEventVerified": false,
+  "reverseDirectionVerified": false,
+  "performanceMeasured": false,
+  "knownVisualDifferences": [
+    "Opaque volumes cover original road in current drive-40s/80s frames.",
+    "Large opaque angular shapes near the main volcano still visible in engine inspection.",
+    "Thin bounds elongate some sprite smoke effects.",
+    "Castle, cliff silhouettes and lava spikes differ from reference."
+  ],
+  "status": "Rejected opaque candidate; natural finish does not satisfy visual preservation"
+}

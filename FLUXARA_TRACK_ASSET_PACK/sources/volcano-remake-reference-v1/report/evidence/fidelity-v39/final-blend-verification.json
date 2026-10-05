@@ -1,0 +1,55 @@
+{
+  "finalBlendOpens": true,
+  "allPreviousNativeObjectsRetained": 821,
+  "allOtherNativeMeshGeometryUVNormalsColorsMaterialsExactV38": 811,
+  "allPreviousNativeMatricesExactV38": 821,
+  "changedMeshUsers": [
+    "VR_OriginalSurface_013",
+    "VR_OriginalSurface_016",
+    "VRV38_SkyCloud_000",
+    "VRV38_SkyCloud_001",
+    "VRV38_SkyCloud_002",
+    "VRV38_SkyCloud_003",
+    "VRV38_SkyCloud_004",
+    "VRV38_SkyCloud_005",
+    "VRV38_SkyCloud_006",
+    "VRV38_SkyCloud_007"
+  ],
+  "trueDrivingSurfaceAttributesExactV38": true,
+  "fourRoofNativePositionsNormalsAndPolygonsExactV38": true,
+  "newSourcePrototypes": [
+    {
+      "id": "volcano-fidelity-v39-cloud",
+      "name": "VRV39_Prototype_Cloud",
+      "sourceModel": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v39/shared-runtime/fluxara_driftlib_volcano_sky_cloud_v39/vr_v39_sky_cloud.spm",
+      "sourceBuffer": 0,
+      "triangles": 960,
+      "materials": [
+        "VRV16_GrassLipVertexColor"
+      ],
+      "sourcePoolObjectId": "volcano-fidelity-v38-cloud"
+    }
+  ],
+  "meshObjects": 822,
+  "nativePrototypeCount": 50,
+  "nativeMaterialDefinitionCount": 99,
+  "nativeSharedParts": 522,
+  "sharedMeshPointersExactAfterReopen": true,
+  "stonePackedPixelsExact": true,
+  "canonicalPending": false,
+  "newMaterialsAndTextures": 0,
+  "runtimeAndReferenceAcceptanceSeparate": true,
+  "canonical": {
+    "path": "/Users/motoricallc/Downloads/fluxara-drift/FLUXARA_TRACK_ASSET_PACK/blender/FLUXARA_Track_Asset_Library.blend",
+    "bytes": 435446031,
+    "sha256": "e868f045df3c2ab8e2a28ff1fd9081a273ba6e3173ce07a0e05d0f395fbbd5c5",
+    "allPreviousNativeMeshGeometryNormalsUVColorsMaterialsExactAfterReopen": 1461,
+    "allPreviousImagePackedBytesExact": 381,
+    "previousMaterialsRetained": 1747,
+    "newPrototypes": 1,
+    "newMaterialVariants": 0,
+    "newNativeImagePixels": false,
+    "previousHouseWindowEmissionPreserved": true,
+    "newPrototypeTriangleAndMaterialBindingsVerified": true
+  }
+}

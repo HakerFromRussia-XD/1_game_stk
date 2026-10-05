@@ -1,0 +1,26 @@
+from pathlib import Path
+import collections,copy,hashlib,json,math,struct,sys,xml.etree.ElementTree as E
+r=Path(__file__).resolve().parent;w=r/'fidelity-v41';c=w/'candidate';base=r/'fidelity-v40/candidate';p=json.loads((w/'barrier-smoke-preflight.json').read_text());sys.path.insert(0,str(r.parent/'shared-object-redesign'));from spm_io import parse
+ns={'math':math,'struct':struct};s=(r/'fidelity_v2.py').read_text();exec(s[s.index('def encode_buffer'):s.index('new_vertices, new_indices')],ns);sha=lambda f:hashlib.sha256(Path(f).read_bytes()).hexdigest();old=parse(base/'volcano_track.spm');new=parse(c/'volcano_track.spm');assert old['raw'][:28]==new['raw'][:28]and old['materials']==new['materials']and len(old['buffers'])==len(new['buffers']);assert old['raw'][old['geometry_end']:]==new['raw'][new['geometry_end']:];selected={i for q in p['roadsideBlocks']for i in q['vertexIds']};budgets=[]
+def attrs(v):return(v['position'],v['normal'],v.get('uv'),v.get('uv2'))
+for i,(a,b)in enumerate(zip(old['buffers'],new['buffers'])):
+ assert a['material']==b['material']and a['indices']==b['indices']and len(a['vertices'])==len(b['vertices'])
+ for j,(v,z)in enumerate(zip(a['vertices'],b['vertices'])):
+  assert attrs(v)==attrs(z)
+  if i!=5 or j not in selected:assert v.get('color',(255,255,255))==z.get('color',(255,255,255))
+for q in p['roadsideBlocks']:
+ ids=q['vertexIds'];remap={i:j for j,i in enumerate(ids)};ii=[remap[i]for t in q['triangleIds']for i in old['buffers'][5]['indices'][t*3:t*3+3]];a={'vertices':[old['buffers'][5]['vertices'][i]for i in ids],'indices':ii,'material':old['buffers'][5]['material']};b={'vertices':[new['buffers'][5]['vertices'][i]for i in ids],'indices':ii,'material':a['material']};header=30+sum(2+sum(len(n.encode())for n in pair)for pair in old['materials'])+4;before=header+len(ns['encode_buffer'](a,old['materials']))+5072;after=header+len(ns['encode_buffer'](b,new['materials']))+5072;assert after<=before*1.2;assert all(v['color']==tuple(q['color'])for v in b['vertices']);budgets.append({'sourceTriangleIds':q['triangleIds'],'oldModelPlusUsedTextureBytes':before,'newModelPlusUsedTextureBytes':after,'withinPlus20Percent':True})
+smoke=[]
+for q in p['smoke']:
+ a=parse(base/q['model']);b=parse(c/q['model']);assert a['raw'][:28]==b['raw'][:28]and a['bounds']==b['bounds'];assert a['raw'][a['geometry_end']:]==b['raw'][b['geometry_end']:];assert b['materials']==[[Path(p['paletteAlias']['path']).name,'']]
+ for x,y in zip(a['buffers'],b['buffers']):
+  assert x['indices']==y['indices']and len(x['vertices'])==len(y['vertices']);assert all(v['position']==z['position']and v['normal']==z['normal']and z['uv']==(.125,.75)for v,z in zip(x['vertices'],y['vertices']))
+ assert len(b['raw'])+158<=len(a['raw'])*1.2;smoke.append(q)
+assert (c/'scene.xml').read_bytes()==(base/'scene.xml').read_bytes();controls=['track.xml','quads.xml','graph.xml','scripting.as','easter_eggs.xml'];assert all((c/name).read_bytes()==(r/'candidate'/name).read_bytes()for name in controls);changed={'volcano_track.spm','materials.xml','AshCloud.spm','AshColumn.spm','PyroclasticFlow.spm'};alias=Path(p['paletteAlias']['path']).name
+assert {f.name for f in c.iterdir()if f.is_file()}=={f.name for f in base.iterdir()if f.is_file()}|{alias}
+for f in base.iterdir():
+ if f.is_file()and f.name not in changed:assert f.read_bytes()==(c/f.name).read_bytes(),f.name
+before=E.parse(base/'materials.xml').getroot();after=E.parse(c/'materials.xml').getroot();extra=[n for n in after if n.get('name')==alias];assert len(extra)==1 and extra[0].attrib=={'name':alias,'shader':'unlit'};after.remove(extra[0]);assert E.tostring(before)==E.tostring(after);assert sha(p['paletteSource']['path'])==sha(c/alias)==p['paletteSource']['sha256']
+from PIL import Image
+im=Image.open(c/alias).convert('RGBA');assert im.size==(32,16)and im.getpixel((4,12))==(237,228,223,255);stone=Path('/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/textures/fluxara_volcano_stone_shared_v16.jpg');assert stone.stat().st_size==39938 and sha(stone)=='6c765884a7846501355a429f3548d2df78698798a97a0318aefe358d0bdafdfd'
+size=sum(f.stat().st_size for f in c.rglob('*')if f.is_file());total=size+p['acceptedSharedHistoryIncludingV40Bytes'];assert total==p['allCandidateAndAcceptedHistoryBytes']<p['v1Bytes'];out={'baseCandidate':'V40','mainAllVertexPositionsNormalsUVsIndicesMaterialNamesBoundsAndTailExact':True,'only128RoadsideBlockVertexColorsChanged':True,'barrierObjectBudgets':budgets,'smokeGeometryNormalsIndicesLocalBoundsAndTailExact':True,'allSceneWorldTransformsExactV40':True,'allDrivingMaterialAndPhysicsSettingsExactV40':True,'protectedControlsExactV1':True,'allOtherFilesByteExactV40':True,'sourcePaletteAndStonePixelsRetained':True,'paletteReusePoolId':p['palettePoolId'],'smokeModelPlusUsedTextureBudgets':smoke,'scopedUnlitMaterialOnlyForGhostSmoke':True,'newRasterPixels':False,'candidateAllFilesBytes':size,'acceptedSharedHistoryIncludingV40Bytes':p['acceptedSharedHistoryIncludingV40Bytes'],'allCandidateAndAcceptedHistoryBytes':total,'v1Bytes':p['v1Bytes'],'savingVsV1Bytes':p['v1Bytes']-total,'productionIntegrated':False,'referenceAcceptance':False};(w/'preservation-verification.json').write_text(json.dumps(out,indent=2));print('V41_GEOMETRY_DRIVING_MATERIALS_TRANSFORMS_TEXTURE_PIXELS_AND_WEIGHT_VERIFIED',total,len(budgets),flush=True)

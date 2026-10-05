@@ -1,0 +1,2 @@
+const path=require('path'),sharp=require('/Users/motoricallc/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');
+(async()=>{const r=__dirname,sprite=await sharp(path.join(r,'generated/volcano_smoke_v1.png')).resize(256,256).png().toBuffer();const tiles=Array.from({length:16},(_,i)=>({input:sprite,left:0,top:i*256}));await sharp({create:{width:256,height:4096,channels:4,background:{r:0,g:0,b:0,alpha:0}}}).composite(tiles).png().toFile(path.join(r,'candidate/gfx_snowStormAnimated_a.png'));})();

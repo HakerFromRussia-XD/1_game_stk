@@ -1,0 +1,363 @@
+{
+  "originalBytes": 30661799,
+  "trackFolderBytes": 7693535,
+  "newSharedBytes": 0,
+  "trackAndNewSharedBytes": 7693535,
+  "byteChangePercent": -74.90840312403066,
+  "originalTriangles": 49747,
+  "newTriangles": 59255,
+  "triangleChangePercent": 19.112710314189798,
+  "newSharedPlacementCount": 62,
+  "allOriginalNonSmokeMeshPositionsNormalsIndicesBoundsExact": true,
+  "cloudModelDimensionsCentersOriginsPreserved": true,
+  "originalPhysicalMaterialDefinitionsExact": true,
+  "smokeVolumeModels": [
+    {
+      "model": "AshCloud.spm",
+      "originalTriangles": 864,
+      "newTriangles": 880,
+      "triangleChangePercent": 1.85185185185186,
+      "localBoundsMaxError": 0.0,
+      "localOriginUnchanged": [
+        0,
+        0,
+        0
+      ],
+      "localBoundsCentersPreserved": true,
+      "newGeometry": "Rounded solid smoke billows; source vertex/index geometry replaced only for decorative smoke",
+      "texture": "smoke_huricane_transp.png",
+      "paletteSource": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/volume-palette.svg",
+      "originalSourcePreserved": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/AshCloud.spm",
+      "reference": "Figma 378:39"
+    },
+    {
+      "model": "AshCloud2.spm",
+      "originalTriangles": 36,
+      "newTriangles": 40,
+      "triangleChangePercent": 11.111111111111116,
+      "localBoundsMaxError": 3.814697265625e-06,
+      "localOriginUnchanged": [
+        0,
+        0,
+        0
+      ],
+      "localBoundsCentersPreserved": true,
+      "newGeometry": "Rounded solid smoke billows; source vertex/index geometry replaced only for decorative smoke",
+      "texture": "gfx_snowStormAnimated_a.png",
+      "paletteSource": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/volume-palette.svg",
+      "originalSourcePreserved": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/AshCloud2.spm",
+      "reference": "Figma 378:39"
+    },
+    {
+      "model": "AshCloudEffect.spm",
+      "originalTriangles": 384,
+      "newTriangles": 400,
+      "triangleChangePercent": 4.166666666666674,
+      "localBoundsMaxError": 0.0,
+      "localOriginUnchanged": [
+        0,
+        0,
+        0
+      ],
+      "localBoundsCentersPreserved": true,
+      "newGeometry": "Rounded solid smoke billows; source vertex/index geometry replaced only for decorative smoke",
+      "texture": "gfx_snowStormAnimated_a.png",
+      "paletteSource": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/volume-palette.svg",
+      "originalSourcePreserved": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/AshCloudEffect.spm",
+      "reference": "Figma 378:39"
+    },
+    {
+      "model": "AshColumn.spm",
+      "originalTriangles": 768,
+      "newTriangles": 800,
+      "triangleChangePercent": 4.166666666666674,
+      "localBoundsMaxError": 1.52587890625e-05,
+      "localOriginUnchanged": [
+        0,
+        0,
+        0
+      ],
+      "localBoundsCentersPreserved": true,
+      "newGeometry": "Rounded solid smoke billows; source vertex/index geometry replaced only for decorative smoke",
+      "texture": "smoke_huricane_transp.png",
+      "paletteSource": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/volume-palette.svg",
+      "originalSourcePreserved": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/AshColumn.spm",
+      "reference": "Figma 378:39"
+    },
+    {
+      "model": "AshColumnEffect.spm",
+      "originalTriangles": 288,
+      "newTriangles": 320,
+      "triangleChangePercent": 11.111111111111116,
+      "localBoundsMaxError": 3.814697265625e-06,
+      "localOriginUnchanged": [
+        0,
+        0,
+        0
+      ],
+      "localBoundsCentersPreserved": true,
+      "newGeometry": "Rounded solid smoke billows; source vertex/index geometry replaced only for decorative smoke",
+      "texture": "gfx_snowStormAnimated_a.png",
+      "paletteSource": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/volume-palette.svg",
+      "originalSourcePreserved": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/AshColumnEffect.spm",
+      "reference": "Figma 378:39"
+    },
+    {
+      "model": "EruptionAsh.spm",
+      "originalTriangles": 16,
+      "newTriangles": 16,
+      "triangleChangePercent": 0.0,
+      "localBoundsMaxError": 9.5367431640625e-07,
+      "localOriginUnchanged": [
+        0,
+        0,
+        0
+      ],
+      "localBoundsCentersPreserved": true,
+      "newGeometry": "Rounded solid smoke billows; source vertex/index geometry replaced only for decorative smoke",
+      "texture": "gfx_snowStormAnimated_a.png",
+      "paletteSource": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/volume-palette.svg",
+      "originalSourcePreserved": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/EruptionAsh.spm",
+      "reference": "Figma 378:39"
+    },
+    {
+      "model": "PyroclasticFlow.spm",
+      "originalTriangles": 512,
+      "newTriangles": 480,
+      "triangleChangePercent": -6.25,
+      "localBoundsMaxError": 1.1444091796875e-05,
+      "localOriginUnchanged": [
+        0,
+        0,
+        0
+      ],
+      "localBoundsCentersPreserved": true,
+      "newGeometry": "Rounded solid smoke billows; source vertex/index geometry replaced only for decorative smoke",
+      "texture": "smoke_huricane.png",
+      "paletteSource": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/volume-palette.svg",
+      "originalSourcePreserved": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/PyroclasticFlow.spm",
+      "reference": "Figma 378:39"
+    },
+    {
+      "model": "PyroclasticFlowAsh.spm",
+      "originalTriangles": 188,
+      "newTriangles": 180,
+      "triangleChangePercent": -4.255319148936165,
+      "localBoundsMaxError": 1.52587890625e-05,
+      "localOriginUnchanged": [
+        0,
+        0,
+        0
+      ],
+      "localBoundsCentersPreserved": true,
+      "newGeometry": "Rounded solid smoke billows; source vertex/index geometry replaced only for decorative smoke",
+      "texture": "gfx_snowStormAnimated_a.png",
+      "paletteSource": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/volume-palette.svg",
+      "originalSourcePreserved": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/PyroclasticFlowAsh.spm",
+      "reference": "Figma 378:39"
+    }
+  ],
+  "archMaterial": {
+    "model": "volcano_track.spm",
+    "originalTexture": "Lava_004_COLOR.jpg",
+    "newTexture": "vr_arch_stone.png",
+    "positionsNormalsIndicesBoundsUvsExact": true,
+    "physicalPropertiesExact": true,
+    "sceneryArchOnly": true
+  },
+  "materialVisualChanges": [
+    "Three smoke materials use solid shaded geometry; old photographic normal/gloss maps removed from eight scenery materials; physical definitions unchanged"
+  ],
+  "allOriginalSceneNodesExceptSunSkyAndGhostSmokeScaleExact": true,
+  "decorativeSmokeScaleChanges": [
+    {
+      "id": "Cube.003",
+      "model": "AshCloud.spm",
+      "oldScale": "1.00 1.00 1.00",
+      "newScale": "0.35000000 0.35000000 0.35000000",
+      "ghostDecorationOnly": true,
+      "xyzHprAndAnimationCurvesExact": true,
+      "reason": "Reduce original enormous smoke sheets that filled the road and camera; keep a smaller volcanic plume in the same world position"
+    },
+    {
+      "id": "Cube.005",
+      "model": "AshColumn.spm",
+      "oldScale": "0.90 0.99 0.91",
+      "newScale": "0.31500000 0.34650000 0.31850000",
+      "ghostDecorationOnly": true,
+      "xyzHprAndAnimationCurvesExact": true,
+      "reason": "Reduce original enormous smoke sheets that filled the road and camera; keep a smaller volcanic plume in the same world position"
+    },
+    {
+      "id": "Cube.030",
+      "model": "PyroclasticFlow.spm",
+      "oldScale": "1.00 1.00 1.00",
+      "newScale": "0.35000000 0.35000000 0.35000000",
+      "ghostDecorationOnly": true,
+      "xyzHprAndAnimationCurvesExact": true,
+      "reason": "Reduce original enormous smoke sheets that filled the road and camera; keep a smaller volcanic plume in the same world position"
+    },
+    {
+      "id": "Cube.036",
+      "model": "PyroclasticFlowAsh.spm",
+      "oldScale": "1.00 1.00 1.00",
+      "newScale": "0.35000000 0.35000000 0.35000000",
+      "ghostDecorationOnly": true,
+      "xyzHprAndAnimationCurvesExact": true,
+      "reason": "Reduce original enormous smoke sheets that filled the road and camera; keep a smaller volcanic plume in the same world position"
+    },
+    {
+      "id": "Plane.077",
+      "model": "AshColumnEffect.spm",
+      "oldScale": "2.14 2.14 2.14",
+      "newScale": "0.74900000 0.74900000 0.74900000",
+      "ghostDecorationOnly": true,
+      "xyzHprAndAnimationCurvesExact": true,
+      "reason": "Reduce original enormous smoke sheets that filled the road and camera; keep a smaller volcanic plume in the same world position"
+    }
+  ],
+  "protectedXmlMusicScriptByteExact": true,
+  "meshProof": [
+    {
+      "model": "PyroclasticFlowAsh.spm",
+      "decorativeSmokeRemade": true,
+      "boundsCentersOriginsPreserved": true,
+      "triangleBudgetPassed": true
+    },
+    {
+      "model": "Crater.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": true
+    },
+    {
+      "model": "AshCloud.spm",
+      "decorativeSmokeRemade": true,
+      "boundsCentersOriginsPreserved": true,
+      "triangleBudgetPassed": true
+    },
+    {
+      "model": "Arrows.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": true
+    },
+    {
+      "model": "volcano_track.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": false
+    },
+    {
+      "model": "ArrowsReverse.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": true
+    },
+    {
+      "model": "Torch.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": true
+    },
+    {
+      "model": "AshColumnEffect.spm",
+      "decorativeSmokeRemade": true,
+      "boundsCentersOriginsPreserved": true,
+      "triangleBudgetPassed": true
+    },
+    {
+      "model": "vulcan_03.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": false
+    },
+    {
+      "model": "vulcan_02.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": false
+    },
+    {
+      "model": "Lavafield.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": true
+    },
+    {
+      "model": "Lavafall.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": true
+    },
+    {
+      "model": "PyroclasticFlow.spm",
+      "decorativeSmokeRemade": true,
+      "boundsCentersOriginsPreserved": true,
+      "triangleBudgetPassed": true
+    },
+    {
+      "model": "vulcan_01.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": false
+    },
+    {
+      "model": "Lava.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": true
+    },
+    {
+      "model": "AshColumn.spm",
+      "decorativeSmokeRemade": true,
+      "boundsCentersOriginsPreserved": true,
+      "triangleBudgetPassed": true
+    },
+    {
+      "model": "ReverseRamp.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": true
+    },
+    {
+      "model": "AshCloudEffect.spm",
+      "decorativeSmokeRemade": true,
+      "boundsCentersOriginsPreserved": true,
+      "triangleBudgetPassed": true
+    },
+    {
+      "model": "Lavaflow4.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": true
+    },
+    {
+      "model": "Lavaflow5.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": true
+    },
+    {
+      "model": "Lavaflow1.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": true
+    },
+    {
+      "model": "Lavaflow2.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": true
+    },
+    {
+      "model": "Lavaflow3.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": true
+    },
+    {
+      "model": "MudBubbles.spm",
+      "positionsNormalsIndicesBoundsExact": true,
+      "byteExact": true
+    },
+    {
+      "model": "EruptionAsh.spm",
+      "decorativeSmokeRemade": true,
+      "boundsCentersOriginsPreserved": true,
+      "triangleBudgetPassed": true
+    },
+    {
+      "model": "AshCloud2.spm",
+      "decorativeSmokeRemade": true,
+      "boundsCentersOriginsPreserved": true,
+      "triangleBudgetPassed": true
+    }
+  ],
+  "weightNotIncreased": true,
+  "triangleBudgetPassed": true,
+  "triangleScope": "Highest visual LOD plus all original conditional objects, a conservative logical count; not GPU performance"
+}

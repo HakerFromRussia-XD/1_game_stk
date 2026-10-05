@@ -1,0 +1,77 @@
+{
+  "info" : {
+    "arguments" : [
+      "devicectl",
+      "device",
+      "info",
+      "files",
+      "--device",
+      "40219EA0-BBD0-5926-A926-835ECB975FE4",
+      "--domain-type",
+      "appDataContainer",
+      "--domain-identifier",
+      "io.fluxara.drift",
+      "--subdirectory",
+      "Library/Application Support/FluxaraDrift/Addons",
+      "--no-recurse",
+      "--json-output",
+      "output/volcano-remake-rework/device-final/addons-root-after.json"
+    ],
+    "commandType" : "devicectl.device.info.files",
+    "environment" : {
+      "TERM" : "dumb"
+    },
+    "jsonVersion" : 5,
+    "outcome" : "success",
+    "version" : "642.0.1"
+  },
+  "result" : {
+    "deviceIdentifier" : "40219EA0-BBD0-5926-A926-835ECB975FE4",
+    "domain" : "appDataContainer",
+    "domainIdentifier" : "io.fluxara.drift",
+    "files" : [
+      {
+        "metadata" : {
+          "extendedAttributes" : {
+
+          },
+          "lastModDate" : "2026-10-02T13:50:49.000Z",
+          "ownerGid" : 501,
+          "ownerUid" : 501,
+          "permissions" : 493,
+          "size" : 64
+        },
+        "name" : "icons",
+        "relativePath" : "icons",
+        "resources" : {
+          "isDirectory" : true,
+          "isHidden" : false,
+          "isReadable" : true,
+          "isSymbolicLink" : false,
+          "isWritable" : true
+        }
+      },
+      {
+        "metadata" : {
+          "extendedAttributes" : {
+
+          },
+          "lastModDate" : "2026-10-02T13:50:49.000Z",
+          "ownerGid" : 501,
+          "ownerUid" : 501,
+          "permissions" : 493,
+          "size" : 64
+        },
+        "name" : "tmp",
+        "relativePath" : "tmp",
+        "resources" : {
+          "isDirectory" : true,
+          "isHidden" : false,
+          "isReadable" : true,
+          "isSymbolicLink" : false,
+          "isWritable" : true
+        }
+      }
+    ]
+  }
+}

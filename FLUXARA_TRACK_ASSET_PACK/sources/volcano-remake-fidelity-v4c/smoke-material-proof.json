@@ -1,0 +1,26 @@
+[
+  {
+    "name": "smoke_huricane.png",
+    "before": {
+      "name": "smoke_huricane.png",
+      "normal-map": "smoke_huricane-nm.png"
+    },
+    "after": {
+      "name": "smoke_huricane.png",
+      "shader": "alphablend"
+    },
+    "physicalAttributesUnchanged": true
+  },
+  {
+    "name": "smoke_huricane_transp.png",
+    "before": {
+      "name": "smoke_huricane_transp.png",
+      "shader": "alphatest"
+    },
+    "after": {
+      "name": "smoke_huricane_transp.png",
+      "shader": "alphablend"
+    },
+    "physicalAttributesUnchanged": true
+  }
+]

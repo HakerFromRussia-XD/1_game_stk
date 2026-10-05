@@ -1,0 +1,98 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v39/drive-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v39/drive-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-volcano-fidelity-v39-drive-probe",
+    "--mode=1",
+    "--laps=1",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--seed=4"
+  ],
+  "screenshots": [
+    {
+      "seconds": 40,
+      "actualElapsedSeconds": 41.092303667013766,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v39/screenshots/drive-40s.png"
+    },
+    {
+      "seconds": 80,
+      "actualElapsedSeconds": 81.62549662502715,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v39/screenshots/drive-80s.png"
+    },
+    {
+      "seconds": 140,
+      "actualElapsedSeconds": 141.46803187500336,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v39/screenshots/drive-140s.png"
+    },
+    {
+      "seconds": 190,
+      "actualElapsedSeconds": 191.67984954200801,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v39/screenshots/drive-190s.png"
+    }
+  ],
+  "kind": "Candidate gameplay in a temporary simulator-only track. Production source and final Blender project not yet replaced.",
+  "forceWinsUsed": false,
+  "visualInspectionCompleted": true,
+  "staticOverviewInspected": true,
+  "naturalFinishObserved": true,
+  "result": "#1",
+  "fullRouteCompleted": true,
+  "naturalFinishScreenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v39/screenshots/natural-finish.png",
+  "inspectedGameplayFiles": [
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v39/screenshots/drive-40s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v39/screenshots/drive-80s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v39/screenshots/drive-140s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v39/screenshots/drive-190s.png"
+  ],
+  "originalPhysicsGeometryAndCourseVerified": true,
+  "AITraversalWithoutOffRoadVerified": false,
+  "preexistingUnsafeRampTraversalObservedInV1": true,
+  "allTraversalRegressionsExcluded": false,
+  "candidateMainSPMSha256": "b0fafa8e1e64ffdd351b66e505a57aeedae88bc86da271487d6abf9d1ea918bf",
+  "sourcePooledTorchModelSha256": "d95d3a868d35cdb808a30226d8473a0d2353fec7d7345edf1104660a54d28fe6",
+  "smokeModelHashes": {
+    "AshCloud.spm": "a2ef2319f9670bc72a21666170ecb3351e2e32bab6a1b10a96252c4d9507e166",
+    "AshColumn.spm": "989d049cd198cea1278da803c580a08c2355021dcd58db9f9d23bda35c012d7d",
+    "PyroclasticFlow.spm": "51d48b55d1b37f70e56fef714b10e24dac3f043329a2348e6475d51ed5de494f"
+  },
+  "sixExistingTorchPlacementsVerified": true,
+  "existingInstalledTorchAndEmitterUnchanged": true,
+  "newTorchRuntimeBytesAddedToInstalledApp": 0,
+  "currentStoneTextureBytes": 39938,
+  "currentStoneTextureSha256": "6c765884a7846501355a429f3548d2df78698798a97a0318aefe358d0bdafdfd",
+  "finalProbeTrackCleanupVerified": true,
+  "temporaryCopiedResourcesCleanupVerified": true,
+  "existingInstalledDonorLibraryUnchanged": true,
+  "materialWarningsExactV24": [],
+  "productionIntegrated": false,
+  "referenceAcceptance": false,
+  "centralSupportAndPartPlacementPreservationProofs": [
+    "V26",
+    "V27",
+    "V28",
+    "V29",
+    "V30",
+    "V32",
+    "V33",
+    "V34",
+    "V35",
+    "V36",
+    "V37",
+    "V38",
+    "V39"
+  ],
+  "sameCameraOverviewWithV24Inspected": true,
+  "screenshotsRetainedUnretouched": true,
+  "visualFinding": "V39 same stone pixels, warm light/ambient and brighter8cloudRGBvariant, four originalcone roofs use existing5072Btile-brick pixels with authoredUV/tint; allsourcepositions/normals/indices/worldtransforms unchanged. Source lowergreenAcid2tri floor uses warmvertexcolors/no newraster; initialyellowtintdiagnostic visuallyrejected andarchived. OriginalSourceQuad geometry/defaultphysics preserved. Source road1968 actualdriving triangles plus64decorativeroofs=2032 previousconservativecount. Unreferenced283993Blegacyalias removedonlycandidate, sourcepreserved. NaturalTT#1. No fullreference/perf/reverse/allcampaign/newbuild/integration claim."
+}

@@ -1,0 +1,1014 @@
+{
+  "PyroclasticFlowAsh.spm": {
+    "bytes": 4525,
+    "triangles": 188,
+    "bounds": [
+      -17.82805633544922,
+      -94.48355102539062,
+      -326.64178466796875,
+      86.99357604980469,
+      17.14757537841797,
+      19.381942749023438
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "gfx_snowStormAnimated_a.png",
+          ""
+        ],
+        "triangles": 188,
+        "vertices": 162
+      }
+    ]
+  },
+  "Crater.spm": {
+    "bytes": 3248,
+    "triangles": 120,
+    "bounds": [
+      -13.08635139465332,
+      -17.84185028076172,
+      -13.388670921325684,
+      12.565515518188477,
+      24.86821746826172,
+      14.256924629211426
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "blackrock.jpg",
+          ""
+        ],
+        "triangles": 72,
+        "vertices": 52
+      },
+      {
+        "id": 1,
+        "materials": [
+          "blackrock_lava.jpg",
+          ""
+        ],
+        "triangles": 28,
+        "vertices": 46
+      },
+      {
+        "id": 2,
+        "materials": [
+          "dynamiclight.png",
+          ""
+        ],
+        "triangles": 16,
+        "vertices": 19
+      },
+      {
+        "id": 3,
+        "materials": [
+          "gfx_distord_AlphaTested.png",
+          ""
+        ],
+        "triangles": 2,
+        "vertices": 4
+      },
+      {
+        "id": 4,
+        "materials": [
+          "lava.png",
+          ""
+        ],
+        "triangles": 2,
+        "vertices": 4
+      }
+    ]
+  },
+  "AshCloud.spm": {
+    "bytes": 14435,
+    "triangles": 864,
+    "bounds": [
+      -339.3018798828125,
+      -20.112051010131836,
+      -418.6006164550781,
+      339.3018798828125,
+      74.06768798828125,
+      418.6006164550781
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "smoke_huricane_transp.png",
+          ""
+        ],
+        "triangles": 864,
+        "vertices": 459
+      }
+    ]
+  },
+  "Arrows.spm": {
+    "bytes": 1745,
+    "triangles": 86,
+    "bounds": [
+      -0.17745715379714966,
+      -2.6706418991088867,
+      -15.110971450805664,
+      0.9439224600791931,
+      2.976991891860962,
+      2.984081745147705
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "blackrock.jpg",
+          ""
+        ],
+        "triangles": 82,
+        "vertices": 60
+      },
+      {
+        "id": 1,
+        "materials": [
+          "blackrock_lava.jpg",
+          ""
+        ],
+        "triangles": 2,
+        "vertices": 4
+      },
+      {
+        "id": 2,
+        "materials": [
+          "stkflag_blackBooster_a.png",
+          ""
+        ],
+        "triangles": 2,
+        "vertices": 4
+      }
+    ]
+  },
+  "volcano_track.spm": {
+    "bytes": 692907,
+    "triangles": 20009,
+    "bounds": [
+      -638.984375,
+      -147.69992065429688,
+      -797.7543334960938,
+      646.824951171875,
+      125.92326354980469,
+      598.5476684570312
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "Battle_for_Wesnoth.png",
+          ""
+        ],
+        "triangles": 8,
+        "vertices": 9
+      },
+      {
+        "id": 1,
+        "materials": [
+          "Lava_004_COLOR.jpg",
+          ""
+        ],
+        "triangles": 598,
+        "vertices": 471
+      },
+      {
+        "id": 2,
+        "materials": [
+          "Rock13_col.jpg",
+          ""
+        ],
+        "triangles": 2637,
+        "vertices": 2707
+      },
+      {
+        "id": 3,
+        "materials": [
+          "acid_lake.jpg",
+          ""
+        ],
+        "triangles": 2,
+        "vertices": 4
+      },
+      {
+        "id": 4,
+        "materials": [
+          "blackrock_lava.jpg",
+          ""
+        ],
+        "triangles": 1661,
+        "vertices": 1487
+      },
+      {
+        "id": 5,
+        "materials": [
+          "castelwall.jpg",
+          ""
+        ],
+        "triangles": 11524,
+        "vertices": 17172
+      },
+      {
+        "id": 6,
+        "materials": [
+          "chain.png",
+          ""
+        ],
+        "triangles": 16,
+        "vertices": 32
+      },
+      {
+        "id": 7,
+        "materials": [
+          "gfxGlow_yellow_a.png",
+          ""
+        ],
+        "triangles": 161,
+        "vertices": 259
+      },
+      {
+        "id": 8,
+        "materials": [
+          "gfx_distord_AlphaTested.png",
+          ""
+        ],
+        "triangles": 162,
+        "vertices": 152
+      },
+      {
+        "id": 9,
+        "materials": [
+          "gfx_resetWaterSplash_AlphaTested.png",
+          ""
+        ],
+        "triangles": 2,
+        "vertices": 4
+      },
+      {
+        "id": 10,
+        "materials": [
+          "halo.png",
+          ""
+        ],
+        "triangles": 30,
+        "vertices": 28
+      },
+      {
+        "id": 11,
+        "materials": [
+          "lava_2k_diffuse.jpg",
+          ""
+        ],
+        "triangles": 80,
+        "vertices": 57
+      },
+      {
+        "id": 12,
+        "materials": [
+          "mansion_windows.png",
+          ""
+        ],
+        "triangles": 16,
+        "vertices": 20
+      },
+      {
+        "id": 13,
+        "materials": [
+          "roof_3.jpg",
+          ""
+        ],
+        "triangles": 170,
+        "vertices": 183
+      },
+      {
+        "id": 14,
+        "materials": [
+          "stk_generic_gravalSnow_a.png",
+          ""
+        ],
+        "triangles": 16,
+        "vertices": 18
+      },
+      {
+        "id": 15,
+        "materials": [
+          "stk_generic_gridA.png",
+          ""
+        ],
+        "triangles": 304,
+        "vertices": 230
+      },
+      {
+        "id": 16,
+        "materials": [
+          "stk_mudpot_a.png",
+          ""
+        ],
+        "triangles": 8,
+        "vertices": 16
+      },
+      {
+        "id": 17,
+        "materials": [
+          "stkflag_blackBooster_a.png",
+          ""
+        ],
+        "triangles": 6,
+        "vertices": 12
+      },
+      {
+        "id": 18,
+        "materials": [
+          "stkflag_blackBooster_b.png",
+          ""
+        ],
+        "triangles": 24,
+        "vertices": 48
+      },
+      {
+        "id": 19,
+        "materials": [
+          "stktex_generic_WoodA.png",
+          ""
+        ],
+        "triangles": 303,
+        "vertices": 574
+      },
+      {
+        "id": 20,
+        "materials": [
+          "sunFlare2.png",
+          ""
+        ],
+        "triangles": 24,
+        "vertices": 29
+      },
+      {
+        "id": 21,
+        "materials": [
+          "torch.png",
+          ""
+        ],
+        "triangles": 749,
+        "vertices": 763
+      },
+      {
+        "id": 22,
+        "materials": [
+          "track01.png",
+          ""
+        ],
+        "triangles": 1417,
+        "vertices": 2782
+      },
+      {
+        "id": 23,
+        "materials": [
+          "transparence.png",
+          ""
+        ],
+        "triangles": 91,
+        "vertices": 146
+      }
+    ]
+  },
+  "ArrowsReverse.spm": {
+    "bytes": 1745,
+    "triangles": 86,
+    "bounds": [
+      -0.17745715379714966,
+      -2.6706418991088867,
+      -15.110971450805664,
+      0.9439224600791931,
+      2.976991891860962,
+      2.984081745147705
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "blackrock.jpg",
+          ""
+        ],
+        "triangles": 82,
+        "vertices": 60
+      },
+      {
+        "id": 1,
+        "materials": [
+          "blackrock_lava.jpg",
+          ""
+        ],
+        "triangles": 2,
+        "vertices": 4
+      },
+      {
+        "id": 2,
+        "materials": [
+          "stkflag_blackBooster_a.png",
+          ""
+        ],
+        "triangles": 2,
+        "vertices": 4
+      }
+    ]
+  },
+  "Torch.spm": {
+    "bytes": 243,
+    "triangles": 4,
+    "bounds": [
+      -0.9999999403953552,
+      -1.0,
+      -0.9999999403953552,
+      0.9999999403953552,
+      1.0,
+      0.9999999403953552
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "stktex_animatedFire_a.png",
+          ""
+        ],
+        "triangles": 4,
+        "vertices": 8
+      }
+    ]
+  },
+  "AshColumnEffect.spm": {
+    "bytes": 6985,
+    "triangles": 288,
+    "bounds": [
+      -65.3022689819336,
+      -7.056632995605469,
+      -141.10797119140625,
+      37.22735595703125,
+      51.235443115234375,
+      18.822887420654297
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "gfx_snowStormAnimated_a.png",
+          ""
+        ],
+        "triangles": 288,
+        "vertices": 252
+      }
+    ]
+  },
+  "vulcan_03.spm": {
+    "bytes": 51331,
+    "triangles": 2230,
+    "bounds": [
+      -53.701499938964844,
+      -8.96272087097168,
+      -55.220733642578125,
+      36.960784912109375,
+      37.506568908691406,
+      18.050373077392578
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "Rock13_col.jpg",
+          ""
+        ],
+        "triangles": 1560,
+        "vertices": 1040
+      },
+      {
+        "id": 1,
+        "materials": [
+          "gfx_distord_AlphaTested.png",
+          ""
+        ],
+        "triangles": 335,
+        "vertices": 325
+      },
+      {
+        "id": 2,
+        "materials": [
+          "lava_2k_diffuse.jpg",
+          ""
+        ],
+        "triangles": 335,
+        "vertices": 319
+      }
+    ]
+  },
+  "vulcan_02.spm": {
+    "bytes": 51331,
+    "triangles": 2230,
+    "bounds": [
+      -43.85403823852539,
+      -6.524718761444092,
+      -34.28392028808594,
+      1.927175521850586,
+      27.30418586730957,
+      38.755531311035156
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "Rock13_col.jpg",
+          ""
+        ],
+        "triangles": 1560,
+        "vertices": 1040
+      },
+      {
+        "id": 1,
+        "materials": [
+          "gfx_distord_AlphaTested.png",
+          ""
+        ],
+        "triangles": 335,
+        "vertices": 325
+      },
+      {
+        "id": 2,
+        "materials": [
+          "lava_2k_diffuse.jpg",
+          ""
+        ],
+        "triangles": 335,
+        "vertices": 319
+      }
+    ]
+  },
+  "Lavafield.spm": {
+    "bytes": 28398,
+    "triangles": 1686,
+    "bounds": [
+      -1.0053123235702515,
+      -0.023884031921625137,
+      -1.005312442779541,
+      1.0025590658187866,
+      0.03873372822999954,
+      1.002558946609497
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "Lava_004_COLOR.jpg",
+          ""
+        ],
+        "triangles": 1682,
+        "vertices": 900
+      },
+      {
+        "id": 1,
+        "materials": [
+          "gfx_distord_AlphaTested.png",
+          ""
+        ],
+        "triangles": 2,
+        "vertices": 4
+      },
+      {
+        "id": 2,
+        "materials": [
+          "lava_2k_diffuse.jpg",
+          ""
+        ],
+        "triangles": 2,
+        "vertices": 4
+      }
+    ]
+  },
+  "Lavafall.spm": {
+    "bytes": 1088,
+    "triangles": 48,
+    "bounds": [
+      -26.583293914794922,
+      -19.680980682373047,
+      -18.73533058166504,
+      7.805202960968018,
+      -6.925450801849365,
+      22.524505615234375
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "gfx_distord_AlphaTested.png",
+          ""
+        ],
+        "triangles": 24,
+        "vertices": 21
+      },
+      {
+        "id": 1,
+        "materials": [
+          "lava_2k_diffuse.jpg",
+          ""
+        ],
+        "triangles": 24,
+        "vertices": 21
+      }
+    ]
+  },
+  "PyroclasticFlow.spm": {
+    "bytes": 8836,
+    "triangles": 512,
+    "bounds": [
+      -16.19883918762207,
+      -94.33733367919922,
+      -274.81787109375,
+      83.47908782958984,
+      9.45413589477539,
+      18.869739532470703
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "smoke_huricane.png",
+          ""
+        ],
+        "triangles": 512,
+        "vertices": 285
+      }
+    ]
+  },
+  "vulcan_01.spm": {
+    "bytes": 52480,
+    "triangles": 2268,
+    "bounds": [
+      -24.998355865478516,
+      -26.84531021118164,
+      -24.46515464782715,
+      82.36531066894531,
+      27.33852767944336,
+      72.91351318359375
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "Rock13_col.jpg",
+          ""
+        ],
+        "triangles": 1598,
+        "vertices": 1079
+      },
+      {
+        "id": 1,
+        "materials": [
+          "gfx_distord_AlphaTested.png",
+          ""
+        ],
+        "triangles": 335,
+        "vertices": 325
+      },
+      {
+        "id": 2,
+        "materials": [
+          "lava_2k_diffuse.jpg",
+          ""
+        ],
+        "triangles": 335,
+        "vertices": 319
+      }
+    ]
+  },
+  "Lava.spm": {
+    "bytes": 1369,
+    "triangles": 52,
+    "bounds": [
+      -302.65838623046875,
+      -0.0027496032416820526,
+      -162.69264221191406,
+      20.54104995727539,
+      0.17410823702812195,
+      17.650787353515625
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "gfx_distord_AlphaTested.png",
+          ""
+        ],
+        "triangles": 26,
+        "vertices": 28
+      },
+      {
+        "id": 1,
+        "materials": [
+          "lava.png",
+          ""
+        ],
+        "triangles": 26,
+        "vertices": 28
+      }
+    ]
+  },
+  "AshColumn.spm": {
+    "bytes": 13859,
+    "triangles": 768,
+    "bounds": [
+      -96.98346710205078,
+      -15.598189353942871,
+      -223.0992889404297,
+      96.98348999023438,
+      164.77964782714844,
+      37.56207275390625
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "smoke_huricane_transp.png",
+          ""
+        ],
+        "triangles": 768,
+        "vertices": 459
+      }
+    ]
+  },
+  "ReverseRamp.spm": {
+    "bytes": 4435,
+    "triangles": 106,
+    "bounds": [
+      -14.179302215576172,
+      -8.614861488342285,
+      -0.596893310546875,
+      11.984530448913574,
+      16.067764282226562,
+      33.61514663696289
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "blackrock.jpg",
+          ""
+        ],
+        "triangles": 2,
+        "vertices": 4
+      },
+      {
+        "id": 1,
+        "materials": [
+          "blackrock_lava.jpg",
+          ""
+        ],
+        "triangles": 12,
+        "vertices": 16
+      },
+      {
+        "id": 2,
+        "materials": [
+          "castelwall.jpg",
+          ""
+        ],
+        "triangles": 61,
+        "vertices": 117
+      },
+      {
+        "id": 3,
+        "materials": [
+          "chain.png",
+          ""
+        ],
+        "triangles": 16,
+        "vertices": 32
+      },
+      {
+        "id": 4,
+        "materials": [
+          "stkflag_blackBooster_b.png",
+          ""
+        ],
+        "triangles": 6,
+        "vertices": 12
+      },
+      {
+        "id": 5,
+        "materials": [
+          "track01.png",
+          ""
+        ],
+        "triangles": 9,
+        "vertices": 15
+      }
+    ]
+  },
+  "AshCloudEffect.spm": {
+    "bytes": 6985,
+    "triangles": 384,
+    "bounds": [
+      -530.3789672851562,
+      -18.098905563354492,
+      -617.9198608398438,
+      530.3789672851562,
+      -18.0965518951416,
+      617.9198608398438
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "gfx_snowStormAnimated_a.png",
+          ""
+        ],
+        "triangles": 384,
+        "vertices": 240
+      }
+    ]
+  },
+  "Lavaflow4.spm": {
+    "bytes": 2476,
+    "triangles": 144,
+    "bounds": [
+      -19.84235382080078,
+      -5.14346170425415,
+      -32.716590881347656,
+      35.54940414428711,
+      4.669467926025391,
+      9.820947647094727
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "Lava_004_COLOR.jpg",
+          ""
+        ],
+        "triangles": 144,
+        "vertices": 99
+      }
+    ]
+  },
+  "Lavaflow5.spm": {
+    "bytes": 1220,
+    "triangles": 72,
+    "bounds": [
+      -21.379852294921875,
+      -10.262577056884766,
+      -20.17479133605957,
+      22.196041107177734,
+      5.407157897949219,
+      24.255094528198242
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "Lava_004_COLOR.jpg",
+          ""
+        ],
+        "triangles": 72,
+        "vertices": 47
+      }
+    ]
+  },
+  "Lavaflow1.spm": {
+    "bytes": 516,
+    "triangles": 24,
+    "bounds": [
+      -2.615482807159424,
+      -0.8264737129211426,
+      -2.6154847145080566,
+      1.5863810777664185,
+      1.0,
+      1.5863810777664185
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "Lava_004_COLOR.jpg",
+          ""
+        ],
+        "triangles": 24,
+        "vertices": 19
+      }
+    ]
+  },
+  "Lavaflow2.spm": {
+    "bytes": 868,
+    "triangles": 48,
+    "bounds": [
+      -3.7275681495666504,
+      -1.8373970985412598,
+      -5.4286651611328125,
+      4.8185014724731445,
+      1.7812345027923584,
+      5.4286651611328125
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "Lava_004_COLOR.jpg",
+          ""
+        ],
+        "triangles": 48,
+        "vertices": 33
+      }
+    ]
+  },
+  "Lavaflow3.spm": {
+    "bytes": 2476,
+    "triangles": 144,
+    "bounds": [
+      -21.239185333251953,
+      -3.744358539581299,
+      -27.824735641479492,
+      16.650663375854492,
+      3.399298667907715,
+      13.19438362121582
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "Lava_004_COLOR.jpg",
+          ""
+        ],
+        "triangles": 144,
+        "vertices": 99
+      }
+    ]
+  },
+  "MudBubbles.spm": {
+    "bytes": 10422,
+    "triangles": 560,
+    "bounds": [
+      -97.10304260253906,
+      -1.974259614944458,
+      -119.21923828125,
+      27.019760131835938,
+      17.53670883178711,
+      24.492511749267578
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "stk_mudpot_a.png",
+          ""
+        ],
+        "triangles": 560,
+        "vertices": 350
+      }
+    ]
+  },
+  "EruptionAsh.spm": {
+    "bytes": 889,
+    "triangles": 16,
+    "bounds": [
+      -62.673194885253906,
+      -15.852433204650879,
+      -17.35950469970703,
+      3.4290028452232946e-06,
+      15.637701034545898,
+      11.2372465133667
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "gfx_snowStormAnimated_a.png",
+          ""
+        ],
+        "triangles": 16,
+        "vertices": 32
+      }
+    ]
+  },
+  "AshCloud2.spm": {
+    "bytes": 757,
+    "triangles": 36,
+    "bounds": [
+      -15.674914360046387,
+      -41.10261154174805,
+      -60.099979400634766,
+      15.665313720703125,
+      41.10260772705078,
+      60.09716796875
+    ],
+    "buffers": [
+      {
+        "id": 0,
+        "materials": [
+          "gfx_snowStormAnimated_a.png",
+          ""
+        ],
+        "triangles": 36,
+        "vertices": 24
+      }
+    ]
+  }
+}

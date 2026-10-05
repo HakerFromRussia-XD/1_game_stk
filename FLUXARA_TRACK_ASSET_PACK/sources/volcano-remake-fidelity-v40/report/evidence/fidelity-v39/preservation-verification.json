@@ -1,0 +1,51 @@
+{
+  "baseCandidate": "V38",
+  "protectedControlsExactV1": true,
+  "allOriginalMainVertexPositionsNormalsTrianglesAndBoundsExactV38": true,
+  "previousConservativeRoadTriangles": 2032,
+  "trueProtectedDrivingTriangles": 1968,
+  "decorativeRoofTrianglesSeparatedFromPreviousConservativeRoadCount": 64,
+  "allActualRoadUVColorsMaterialsAndGeometryExactV38": true,
+  "allOtherCandidateFilesAndCollisionFilesExactV38": true,
+  "allOriginalSceneObjectAndLibraryTransformsExactV38": true,
+  "allMaterialPhysicsSettingsUnchanged": true,
+  "globalAcidMaterialOverrideAbsent": {
+    "path": "/Users/motoricallc/Library/Developer/CoreSimulator/Devices/3B2F19DC-4F76-4F61-9F8D-D5E914A6D123/data/Containers/Bundle/Application/30BBBB18-D57B-403B-B7C4-4EAF135EFA7D/Fluxara Drift.app/data/textures/materials.xml",
+    "sha256": "c1675fe8cd6d54503f8d3eda104cb86d02ac8e5c843f28c35155825eebc8e24b"
+  },
+  "sourceStonePixelsRetained": true,
+  "noNewRasterPixels": true,
+  "objectModelPlusUsedTextureBudgets": [
+    {
+      "object": "fourOriginalConeRoofs",
+      "oldUsedTextureBytes": 13633,
+      "newUsedTextureBytes": 5072,
+      "modelGeometryByteBudgetReducedBySplitIndexPacking": true,
+      "withinPlus20Percent": true
+    },
+    {
+      "object": "oldAcidColoredFloor",
+      "oldUsedTextureBytes": 6553,
+      "newUsedTextureBytes": 0,
+      "modelBufferBytesReducedDespiteVertexColors": true,
+      "withinPlus20Percent": true
+    },
+    {
+      "object": "cloud",
+      "oldModelBytes": 15446,
+      "newModelBytes": 15446,
+      "usedTextures": 0,
+      "withinPlus20Percent": true
+    }
+  ],
+  "newCloudGeometryBoundsWeightAndNormalsExactV38": true,
+  "candidateAllFilesBytes": 5347316,
+  "acceptedSharedHistoryIncludingV38Bytes": 437992,
+  "newSharedRuntimeAllFilesBytes": 15699,
+  "allCandidateAndAcceptedHistoryBytes": 5801007,
+  "savingVsV38Bytes": 268832,
+  "v1Bytes": 7693535,
+  "savingVsV1Bytes": 1892528,
+  "productionIntegrated": false,
+  "referenceAcceptance": false
+}

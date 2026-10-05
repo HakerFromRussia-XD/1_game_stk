@@ -1,0 +1,20 @@
+from pathlib import Path
+import hashlib,json,os,shutil,subprocess
+r=Path(__file__).resolve().parent;w=r/'fidelity-v43';repo=Path('/Users/motoricallc/Downloads/fluxara-drift');res=repo/'iosApp/FluxaraResources';c=w/'candidate';dest=res/'tracks/fluxara-user-volcano-remake';p=json.loads((w/'preservation-verification.json').read_text());run=json.loads((w/'runtime-validation.json').read_text());a=json.loads((w/'asset-registration.json').read_text())
+assert run['naturalFinishObserved']and run['temporaryCopiedResourcesCleanupVerified']and p['originalPhysicalObjectsAndProtectedCourseByteExactV42'];assert not json.loads((w/'final-blend-verification.json').read_text())['canonicalPending']
+def files(folder):return {str(f.relative_to(folder)):hashlib.sha256(f.read_bytes()).hexdigest()for f in folder.rglob('*')if f.is_file()}
+assert files(dest)==files(r/'fidelity-v42/candidate')
+device='3B2F19DC-4F76-4F61-9F8D-D5E914A6D123';app=Path(subprocess.check_output(['xcrun','simctl','get_app_container',device,'io.fluxara.drift','app'],text=True).strip());installed=app/'data/tracks'/dest.name;assert files(installed)==files(dest)
+src=Path(p['newField']).parent;target=app/'data/library'/src.name;assert not target.exists();shutil.copytree(src,target);assert files(target)==files(src)==files(res/'library'/src.name)
+for name in ['track.xml','quads.xml','graph.xml','scripting.as','easter_eggs.xml']:assert(c/name).read_bytes()==(r/'candidate'/name).read_bytes()
+for old,new,label in [(dest,c,'production'),(installed,c,'installed')]:
+ stage=w/(label+'-stage');backup=w/(label+'-before-integration');assert not stage.exists()and not backup.exists();shutil.copytree(new,stage);os.rename(old,backup);os.rename(stage,old)
+assert files(dest)==files(c)==files(installed)
+final=r.parent/'fluxara-user-volcano-remake-final/Volcano Remake.blend';subprocess.run(['/bin/cp','-c',str(final),str(w/'user-final-before-integration.blend')],check=True);tmp=final.with_name('Volcano Remake.transfer.blend');subprocess.run(['/bin/cp','-c',a['finalBlend'],str(tmp)],check=True);os.replace(tmp,final);assert final.read_bytes()==Path(a['finalBlend']).read_bytes();assert len(list(final.parent.glob('*.blend')))==1
+thumb=w/'campaign-preview-512.jpg';subprocess.run(['/usr/bin/sips','-s','format','jpeg','-s','formatOptions','92','--resampleHeightWidthMax','512',str(dest/'screenshot.jpg'),'--out',str(thumb)],capture_output=True,check=True)
+targets=[repo/'build-ios-shared-props-simulator/Debug-iphonesimulator/Fluxara Drift.app/data/gui/fluxara/campaign-previews'/f'{dest.name}.jpg',app/'data/gui/fluxara/campaign-previews'/f'{dest.name}.jpg']
+for i,t in enumerate(targets):
+ assert t.is_file();shutil.copy2(t,w/f'campaign-preview-before-{i}.jpg');shutil.copy2(thumb,t);assert t.read_bytes()==thumb.read_bytes()
+p['allCandidateAndAcceptedHistoryBytes']+=thumb.stat().st_size-p['guiThumbnailBytesIncludedFromV42'];p['newCampaignThumbnailBytesConservativelyCounted']=thumb.stat().st_size;p['savingVsV1Bytes']=p['v1Bytes']-p['allCandidateAndAcceptedHistoryBytes'];assert p['savingVsV1Bytes']>0;p['productionIntegrated']=True;(w/'preservation-verification.json').write_text(json.dumps(p,indent=2))
+proof={'workingSourceIntegrated':True,'installedSimulatorResourceFilesMatchSource':True,'allTrackFilesExactCandidate':len(files(c)),'sourceMainModelExactV42':True,'protectedControlsExactV1':True,'newSharedRuntimeLibraryInstalled':str(target),'finalBlend':str(final),'finalBlendSha256':hashlib.sha256(final.read_bytes()).hexdigest(),'singleFinalBlend':True,'productionMap':str(dest),'installedMap':str(installed),'preview':str(dest/'screenshot.jpg'),'previewBytes':(dest/'screenshot.jpg').stat().st_size,'campaignThumbnailBytes':thumb.stat().st_size,'campaignThumbnailTargets':[str(t)for t in targets],'newBuildPerformed':False,'allCandidateAndAcceptedHistoryBytes':p['allCandidateAndAcceptedHistoryBytes'],'v1Bytes':p['v1Bytes'],'savingVsV1Bytes':p['savingVsV1Bytes'],'referenceAcceptance':False,'goalComplete':False}
+(w/'integration-verification.json').write_text(json.dumps(proof,indent=2));print('V43_CONTINUOUS_LANDSCAPE_SOURCE_SIMULATOR_FINAL_PREVIEW_INTEGRATED',proof,flush=True)

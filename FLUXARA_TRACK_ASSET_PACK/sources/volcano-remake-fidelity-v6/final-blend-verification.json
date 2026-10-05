@@ -1,0 +1,163 @@
+{
+  "finalBlendOpens": true,
+  "sharedInstancesMatch": 85,
+  "maxTransformError": 1.1920928955078125e-06,
+  "missingTextures": [],
+  "xmlTextsExact": true,
+  "protectedQuads": 180,
+  "meshObjects": 334,
+  "newCloudPrototypes": [
+    {
+      "name": "VRV5A_Cloud_AshCloud",
+      "triangles": 864,
+      "positionsUvsIndicesMatchSpm": true
+    },
+    {
+      "name": "VRV5A_Cloud_AshColumn",
+      "triangles": 768,
+      "positionsUvsIndicesMatchSpm": true
+    },
+    {
+      "name": "VRV5A_Cloud_PyroclasticFlow",
+      "triangles": 512,
+      "positionsUvsIndicesMatchSpm": true
+    },
+    {
+      "name": "VRV5A_Cloud_AshCloud2",
+      "triangles": 36,
+      "positionsUvsIndicesMatchSpm": true
+    },
+    {
+      "name": "VRV5A_Cloud_AshCloudEffect",
+      "triangles": 384,
+      "positionsUvsIndicesMatchSpm": true
+    },
+    {
+      "name": "VRV5A_Cloud_AshColumnEffect",
+      "triangles": 288,
+      "positionsUvsIndicesMatchSpm": true
+    },
+    {
+      "name": "VRV5A_Cloud_EruptionAsh",
+      "triangles": 16,
+      "positionsUvsIndicesMatchSpm": true
+    },
+    {
+      "name": "VRV5A_Cloud_PyroclasticFlowAsh",
+      "triangles": 188,
+      "positionsUvsIndicesMatchSpm": true
+    }
+  ],
+  "smokePlacementsAboveRoad": [
+    {
+      "id": "Cube.003",
+      "model": "AshCloud.spm",
+      "nativeFrame": 1,
+      "nativePoseMatrixMaxError": 4.656612873077393e-10,
+      "allCurveKeysHandlesAndCyclesMatchXml": true,
+      "minimumHeightConservative": 172.93276977539062,
+      "roadCeilingWithMargin": 67.8966293334961,
+      "scope": "Original local mesh; static transformed bounds or Bezier control hull with per-axis scaled bounding sphere for all animated rotations."
+    },
+    {
+      "id": "Cube.005",
+      "model": "AshColumn.spm",
+      "nativeFrame": 1,
+      "nativePoseMatrixMaxError": 0.0,
+      "allCurveKeysHandlesAndCyclesMatchXml": true,
+      "minimumHeightConservative": 133.1876220703125,
+      "roadCeilingWithMargin": 67.8966293334961,
+      "scope": "Original local mesh; static transformed bounds or Bezier control hull with per-axis scaled bounding sphere for all animated rotations."
+    },
+    {
+      "id": "Cube.030",
+      "model": "PyroclasticFlow.spm",
+      "nativeFrame": 1,
+      "nativePoseMatrixMaxError": 1.52587890625e-05,
+      "allCurveKeysHandlesAndCyclesMatchXml": true,
+      "minimumHeightConservative": 107.55146274763457,
+      "roadCeilingWithMargin": 67.8966293334961,
+      "scope": "Original local mesh; static transformed bounds or Bezier control hull with per-axis scaled bounding sphere for all animated rotations."
+    },
+    {
+      "id": "Cube.036",
+      "model": "PyroclasticFlowAsh.spm",
+      "nativeFrame": 1,
+      "nativePoseMatrixMaxError": 0.0,
+      "allCurveKeysHandlesAndCyclesMatchXml": true,
+      "minimumHeightConservative": 79.39944776633962,
+      "roadCeilingWithMargin": 67.8966293334961,
+      "scope": "Original local mesh; static transformed bounds or Bezier control hull with per-axis scaled bounding sphere for all animated rotations."
+    },
+    {
+      "id": "Plane.039",
+      "model": "AshCloud2.spm",
+      "nativeFrame": 1,
+      "nativePoseMatrixMaxError": 0.0,
+      "allCurveKeysHandlesAndCyclesMatchXml": true,
+      "minimumHeightConservative": 109.7227783203125,
+      "roadCeilingWithMargin": 67.8966293334961,
+      "scope": "Original local mesh; static transformed bounds or Bezier control hull with per-axis scaled bounding sphere for all animated rotations."
+    },
+    {
+      "id": "Plane.051",
+      "model": "AshCloud2.spm",
+      "nativeFrame": 1,
+      "nativePoseMatrixMaxError": 1.1933349242099212e-07,
+      "allCurveKeysHandlesAndCyclesMatchXml": true,
+      "minimumHeightConservative": 103.41278076171875,
+      "roadCeilingWithMargin": 67.8966293334961,
+      "scope": "Original local mesh; static transformed bounds or Bezier control hull with per-axis scaled bounding sphere for all animated rotations."
+    },
+    {
+      "id": "Plane.059",
+      "model": "AshCloud2.spm",
+      "nativeFrame": 1,
+      "nativePoseMatrixMaxError": 1.4901161193847656e-08,
+      "allCurveKeysHandlesAndCyclesMatchXml": true,
+      "minimumHeightConservative": 118.06277465820312,
+      "roadCeilingWithMargin": 67.8966293334961,
+      "scope": "Original local mesh; static transformed bounds or Bezier control hull with per-axis scaled bounding sphere for all animated rotations."
+    },
+    {
+      "id": "Plane.074",
+      "model": "EruptionAsh.spm",
+      "nativeFrame": 1,
+      "nativePoseMatrixMaxError": 1.52587890625e-05,
+      "allCurveKeysHandlesAndCyclesMatchXml": true,
+      "minimumHeightConservative": 92.15310026930914,
+      "roadCeilingWithMargin": 67.8966293334961,
+      "scope": "Original local mesh; static transformed bounds or Bezier control hull with per-axis scaled bounding sphere for all animated rotations."
+    },
+    {
+      "id": "Plane.075",
+      "model": "EruptionAsh.spm",
+      "nativeFrame": 1,
+      "nativePoseMatrixMaxError": 9.5367431640625e-07,
+      "allCurveKeysHandlesAndCyclesMatchXml": true,
+      "minimumHeightConservative": 94.31440150408987,
+      "roadCeilingWithMargin": 67.8966293334961,
+      "scope": "Original local mesh; static transformed bounds or Bezier control hull with per-axis scaled bounding sphere for all animated rotations."
+    },
+    {
+      "id": "Plane.076",
+      "model": "EruptionAsh.spm",
+      "nativeFrame": 1,
+      "nativePoseMatrixMaxError": 1.52587890625e-05,
+      "allCurveKeysHandlesAndCyclesMatchXml": true,
+      "minimumHeightConservative": 121.82164934680752,
+      "roadCeilingWithMargin": 67.8966293334961,
+      "scope": "Original local mesh; static transformed bounds or Bezier control hull with per-axis scaled bounding sphere for all animated rotations."
+    },
+    {
+      "id": "Plane.077",
+      "model": "AshColumnEffect.spm",
+      "nativeFrame": 1,
+      "nativePoseMatrixMaxError": 0.0,
+      "allCurveKeysHandlesAndCyclesMatchXml": true,
+      "minimumHeightConservative": 121.01478576660156,
+      "roadCeilingWithMargin": 67.8966293334961,
+      "scope": "Original local mesh; static transformed bounds or Bezier control hull with per-axis scaled bounding sphere for all animated rotations."
+    }
+  ]
+}

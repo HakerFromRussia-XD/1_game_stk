@@ -1,0 +1,43 @@
+{
+  "signs": [
+    {
+      "instance": "VR_turn_0040",
+      "quadIndex": 36,
+      "turnDegrees": -37.72377326308548,
+      "arrow": "right",
+      "facesApproachingTraffic": true
+    },
+    {
+      "instance": "VR_turn_0041",
+      "quadIndex": 66,
+      "turnDegrees": 48.81314555878002,
+      "arrow": "left",
+      "facesApproachingTraffic": true
+    },
+    {
+      "instance": "VR_turn_0042",
+      "quadIndex": 77,
+      "turnDegrees": 31.668305157523214,
+      "arrow": "left",
+      "facesApproachingTraffic": true
+    },
+    {
+      "instance": "VR_turn_0043",
+      "quadIndex": 128,
+      "turnDegrees": 28.190647351010593,
+      "arrow": "left",
+      "facesApproachingTraffic": true
+    },
+    {
+      "instance": "VR_turn_0044",
+      "quadIndex": 149,
+      "turnDegrees": 35.40492410928638,
+      "arrow": "left",
+      "facesApproachingTraffic": true
+    }
+  ],
+  "onlyOnCurves": true,
+  "noArrowsOnStraightsOrBunting": true,
+  "gameplayZipperMarkingsUnchanged": true,
+  "direction": "Forward driveline; reverse direction not tested"
+}

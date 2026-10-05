@@ -1,0 +1,135 @@
+{
+  "command": [
+    "xcrun",
+    "simctl",
+    "launch",
+    "--terminate-running-process",
+    "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v42/stone-scale-final-stdout.log",
+    "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v42/stone-scale-final-stderr.log",
+    "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+    "io.fluxara.drift",
+    "--no-sound",
+    "--no-high-scores",
+    "--race-now",
+    "--test-ai=-1",
+    "--track=fluxara-volcano-fidelity-v42-drive-probe",
+    "--mode=1",
+    "--laps=1",
+    "--numkarts=1",
+    "--kart=fluxara-ace",
+    "--seed=4"
+  ],
+  "screenshots": [
+    {
+      "seconds": 40,
+      "actualElapsedSeconds": 40.661902458999975,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v42/screenshots/stone-scale-final/drive-40s.png"
+    },
+    {
+      "seconds": 80,
+      "actualElapsedSeconds": 80.62162124999986,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v42/screenshots/stone-scale-final/drive-80s.png"
+    },
+    {
+      "seconds": 140,
+      "actualElapsedSeconds": 140.59697554199965,
+      "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v42/screenshots/stone-scale-final/drive-140s.png"
+    }
+  ],
+  "kind": "Candidate gameplay in a temporary simulator-only track. Production source and final Blender project not yet replaced.",
+  "forceWinsUsed": false,
+  "visualInspectionCompleted": true,
+  "staticOverviewInspected": true,
+  "postFinishStabilityUnverified": true,
+  "naturalFinishObserved": true,
+  "result": "#1",
+  "fullRouteCompleted": true,
+  "naturalFinishScreenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v42/screenshots/natural-finish.png",
+  "inspectedGameplayFiles": [
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v42/screenshots/stone-scale-final/drive-40s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v42/screenshots/stone-scale-final/drive-80s.png",
+    "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v42/screenshots/stone-scale-final/drive-140s.png"
+  ],
+  "originalPhysicsGeometryAndCourseVerified": true,
+  "AITraversalWithoutOffRoadVerified": false,
+  "preexistingUnsafeRampTraversalObservedInV1": true,
+  "allTraversalRegressionsExcluded": false,
+  "candidateMainSPMSha256": "5bb1194049529e01f62b4f8a713f34cad95e48a8ae90adf7e40f294da0a02383",
+  "sourcePooledTorchModelSha256": "d95d3a868d35cdb808a30226d8473a0d2353fec7d7345edf1104660a54d28fe6",
+  "smokeModelHashes": {
+    "AshCloud.spm": "768708ae1f975b876625d4554dbb6f21de9e3437eb0bcb4681c7c6cddff147f1",
+    "AshColumn.spm": "09b3b258a6b3922e0771a79516f5d257be78aadc3b0726a7b46c1e3e97153a5e",
+    "PyroclasticFlow.spm": "e39f182ff8d0eff00a38e179ce03e63d7a309c71190b96a3f76182ec6a969f22"
+  },
+  "sixExistingTorchPlacementsVerified": true,
+  "existingInstalledTorchAndEmitterUnchanged": true,
+  "newTorchRuntimeBytesAddedToInstalledApp": 0,
+  "currentStoneTextureBytes": 39938,
+  "currentStoneTextureSha256": "6c765884a7846501355a429f3548d2df78698798a97a0318aefe358d0bdafdfd",
+  "finalProbeTrackCleanupVerified": true,
+  "temporaryCopiedResourcesCleanupVerified": true,
+  "existingInstalledDonorLibraryUnchanged": true,
+  "materialWarningsExactV24": [],
+  "productionIntegrated": true,
+  "referenceAcceptance": false,
+  "centralSupportAndPartPlacementPreservationProofs": [
+    "V26",
+    "V27",
+    "V28",
+    "V29",
+    "V30",
+    "V32",
+    "V33",
+    "V34",
+    "V35",
+    "V36",
+    "V37",
+    "V38",
+    "V39",
+    "V42"
+  ],
+  "sameCameraOverviewWithV24Inspected": true,
+  "screenshotsRetainedUnretouched": true,
+  "visualFinding": "V42 user-selected near cliff appearance retained. Stone UVs on distant closed masses and mainstone buffer2 divided by3; sourceimage39938B exact. Same model bytes, geometry, normals, indices, materials, bounds and all world poses.97sourcecolumncopies unchanged. NaturalTT#1 at140seconds, two actual gameplay frames inspected. Overallreference acceptance remains separate. No new build/performance/reverse/campaign claim.",
+  "integratedProductionTrackRun": {
+    "command": [
+      "xcrun",
+      "simctl",
+      "launch",
+      "--terminate-running-process",
+      "--stdout=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v42/integrated-stdout.log",
+      "--stderr=/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v42/integrated-stderr.log",
+      "3B2F19DC-4F76-4F61-9F8D-D5E914A6D123",
+      "io.fluxara.drift",
+      "--no-sound",
+      "--no-high-scores",
+      "--race-now",
+      "--test-ai=-1",
+      "--track=fluxara-user-volcano-remake",
+      "--mode=1",
+      "--laps=1",
+      "--numkarts=1",
+      "--kart=fluxara-ace",
+      "--seed=4"
+    ],
+    "screenshots": [
+      {
+        "seconds": 40,
+        "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v42/screenshots/integrated/drive-40s.png"
+      },
+      {
+        "seconds": 80,
+        "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v42/screenshots/integrated/drive-80s.png"
+      },
+      {
+        "seconds": 140,
+        "screenshot": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v42/screenshots/integrated/drive-140s.png"
+      }
+    ],
+    "forceWinsUsed": false,
+    "temporaryTrackUsed": false,
+    "newBuildPerformed": false
+  },
+  "integratedProductionTrackNaturalFinishObserved": true,
+  "integratedProductionGameplayFramesInspected": true
+}

@@ -1,0 +1,75 @@
+{
+  "parent": "V4E",
+  "onlyThreeGhostSmokeModelsChanged": true,
+  "mainMeshEveryOtherSpmAllTexturesAndXmlByteExactV4E": true,
+  "ghostLocalBoundsMaxError": 7.62939453125e-06,
+  "modelBytesAndTrianglesWithin20PercentOriginal": true,
+  "originAxesAndTransformsUnchanged": true,
+  "productionUnchanged": true,
+  "productionIntegrated": false,
+  "models": [
+    {
+      "model": "AshCloud.spm",
+      "originalTriangles": 864,
+      "triangles": 860,
+      "billows": 43,
+      "boundsMaxError": 0.0,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "localBoundsCenterPreserved": true,
+      "newForm": "Overlapping near-spherical billows along the old envelope, without global anisotropic stretch",
+      "sourceSpm": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/AshCloud.spm",
+      "paletteReused": "smoke_huricane_transp.png",
+      "candidateBytes": 15551,
+      "originalBytes": 14435,
+      "verticesAfterWeld": 516,
+      "vertexWeld": "Coincident vertices with identical UVs share one packed normal; indexed positions and triangle order unchanged.",
+      "modelByteChangePercent": 7.731208867336337
+    },
+    {
+      "model": "AshColumn.spm",
+      "originalTriangles": 768,
+      "triangles": 760,
+      "billows": 38,
+      "boundsMaxError": 7.62939453125e-06,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "localBoundsCenterPreserved": true,
+      "newForm": "Overlapping near-spherical billows along the old envelope, without global anisotropic stretch",
+      "sourceSpm": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/AshColumn.spm",
+      "paletteReused": "smoke_huricane_transp.png",
+      "candidateBytes": 13751,
+      "originalBytes": 13859,
+      "verticesAfterWeld": 456,
+      "vertexWeld": "Coincident vertices with identical UVs share one packed normal; indexed positions and triangle order unchanged.",
+      "modelByteChangePercent": -0.7792770041128549
+    },
+    {
+      "model": "PyroclasticFlow.spm",
+      "originalTriangles": 512,
+      "triangles": 520,
+      "billows": 26,
+      "boundsMaxError": 0.0,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "localBoundsCenterPreserved": true,
+      "newForm": "Overlapping near-spherical billows along the old envelope, without global anisotropic stretch",
+      "sourceSpm": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/before/PyroclasticFlow.spm",
+      "paletteReused": "smoke_huricane.png",
+      "candidateBytes": 9424,
+      "originalBytes": 8836,
+      "verticesAfterWeld": 312,
+      "vertexWeld": "Coincident vertices with identical UVs share one packed normal; indexed positions and triangle order unchanged.",
+      "modelByteChangePercent": 6.654594839293804
+    }
+  ]
+}

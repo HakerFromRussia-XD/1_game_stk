@@ -1,0 +1,73 @@
+{
+  "baseCandidate": "V39",
+  "allCandidateFilesExceptSceneByteExactV39": true,
+  "protectedRoadMainSPMAndControlsExactV39": true,
+  "protectedControlsExactV1": true,
+  "protectedDrivingTriangles": 1968,
+  "unchangedSceneElements": 471,
+  "fieldNearOriginalTrianglesAllAttributesExact": 615,
+  "fieldClosedFarComponents": [
+    {
+      "triangles": 64,
+      "weldedVertices": 34,
+      "edges": 96,
+      "closedTwoManifold": true,
+      "componentActiveBoundsExact": true
+    },
+    {
+      "triangles": 64,
+      "weldedVertices": 34,
+      "edges": 96,
+      "closedTwoManifold": true,
+      "componentActiveBoundsExact": true
+    },
+    {
+      "triangles": 64,
+      "weldedVertices": 34,
+      "edges": 96,
+      "closedTwoManifold": true,
+      "componentActiveBoundsExact": true
+    },
+    {
+      "triangles": 64,
+      "weldedVertices": 34,
+      "edges": 96,
+      "closedTwoManifold": true,
+      "componentActiveBoundsExact": true
+    },
+    {
+      "triangles": 64,
+      "weldedVertices": 34,
+      "edges": 96,
+      "closedTwoManifold": true,
+      "componentActiveBoundsExact": true
+    },
+    {
+      "triangles": 64,
+      "weldedVertices": 34,
+      "edges": 96,
+      "closedTwoManifold": true,
+      "componentActiveBoundsExact": true
+    }
+  ],
+  "fieldActiveAndHeaderBoundsOriginAxesRetained": true,
+  "minimumFarFieldRoadAABBLowerBoundMeters": 51.754303639745224,
+  "grassAndLinkedPlantAndBackgroundClearanceChecks": 326,
+  "grassStoneMaximumSeamHeightErrorMeters": 6.188070500456888e-09,
+  "backgroundPlantFootprintsAndRootHeightsIndependentlyVerified": 84,
+  "sourceStonePixelsRetained": true,
+  "noNewRasterPixels": true,
+  "sourceLogicalFieldWeightBytes": 59178,
+  "newLogicalFieldWeightBytes": 66578,
+  "logicalModelPlusUsedTexturesIncreasePercent": 12.504646997194913,
+  "withinPlus20Percent": true,
+  "candidateAllFilesBytes": 5347301,
+  "acceptedSharedHistoryIncludingV39Bytes": 453691,
+  "newSharedRuntimeAllFilesBytes": 26640,
+  "allCandidateAndAcceptedHistoryBytes": 5827632,
+  "v1Bytes": 7693535,
+  "savingVsV1Bytes": 1865903,
+  "deltaVsV39Bytes": 26625,
+  "productionIntegrated": false,
+  "referenceAcceptance": false
+}

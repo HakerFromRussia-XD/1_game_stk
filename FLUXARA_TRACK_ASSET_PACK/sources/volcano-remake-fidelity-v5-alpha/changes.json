@@ -1,0 +1,59 @@
+[
+  {
+    "model": "AshCloud.spm",
+    "geometry": "Original positions, normals, UVs, indices and bounds restored; only texture-table name changed.",
+    "triangles": 864,
+    "originalMaterials": [
+      [
+        "smoke_huricane_transp.png",
+        ""
+      ]
+    ],
+    "newMaterials": [
+      [
+        "vr_volcanic_smoke.png",
+        ""
+      ]
+    ],
+    "originalBytes": 14435,
+    "candidateBytes": 14431
+  },
+  {
+    "model": "AshColumn.spm",
+    "geometry": "Original positions, normals, UVs, indices and bounds restored; only texture-table name changed.",
+    "triangles": 768,
+    "originalMaterials": [
+      [
+        "smoke_huricane_transp.png",
+        ""
+      ]
+    ],
+    "newMaterials": [
+      [
+        "vr_volcanic_smoke.png",
+        ""
+      ]
+    ],
+    "originalBytes": 13859,
+    "candidateBytes": 13855
+  },
+  {
+    "model": "PyroclasticFlow.spm",
+    "geometry": "Original positions, normals, UVs, indices and bounds restored; only texture-table name changed.",
+    "triangles": 512,
+    "originalMaterials": [
+      [
+        "smoke_huricane.png",
+        ""
+      ]
+    ],
+    "newMaterials": [
+      [
+        "vr_volcanic_smoke.png",
+        ""
+      ]
+    ],
+    "originalBytes": 8836,
+    "candidateBytes": 8839
+  }
+]

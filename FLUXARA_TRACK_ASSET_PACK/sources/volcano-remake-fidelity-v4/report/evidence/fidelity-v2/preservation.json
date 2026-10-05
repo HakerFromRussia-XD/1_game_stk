@@ -1,0 +1,18 @@
+{
+  "newArchBoundsMaxError": 0.0,
+  "newArchRoadClearanceSampled": true,
+  "sampledQuadIds": [
+    4,
+    5
+  ],
+  "samples": 3362,
+  "minimumRequiredOverheadMeters": 3.5,
+  "samplesWithArchGeometryInsideDrivingEnvelope": [],
+  "scope": "Dense vertical sample rays over original quads; not a swept kart-collision proof.",
+  "mainTriangleDelta": 6,
+  "allOtherMainGeometryExact": true,
+  "courseGameplaySceneFilesByteExactAgainstPreviousVersion": true,
+  "allExistingMaterialDefinitionsExact": true,
+  "newMossMaterialCopiesOriginalRockPhysics": true,
+  "textureRepeatReview": "3x3 inspected visually; no conspicuous straight boundary or edge vignette."
+}

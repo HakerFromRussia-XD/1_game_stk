@@ -1,0 +1,46 @@
+{
+  "baseCandidate": "V24",
+  "sourceModel": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v24/candidate/volcano_track.spm",
+  "sourceModelSha256": "71fdc22538988eba5b8301969b6a6ddc851e0b9ef4c6211016b37ccd445047da",
+  "sourceBuffer": 2,
+  "newSharedLibrary": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_volcano_central_stone_v26",
+  "newSharedModel": "/Users/motoricallc/Downloads/fluxara-drift/iosApp/FluxaraResources/library/fluxara_driftlib_volcano_central_stone_v26/vr_v26_rounded_central_stone.spm",
+  "originalCollider": "/Users/motoricallc/Downloads/stk-code-master/output/volcano-remake-rework/fidelity-v26/candidate/vr_v26_original_stone_walls_collision.spm",
+  "components": [
+    {
+      "component": 0,
+      "sourceTriangles": 64,
+      "newTriangles": 1024,
+      "changedTriangles": 784,
+      "minimumChangedTriangleCertifiedRoadMarginMeters": 4.9999999999999964,
+      "maximumVertexShiftMeters": 3.1387109517291876,
+      "componentActiveBounds": [
+        -79.52127075195312,
+        -18.327571868896484,
+        -34.786128997802734,
+        -12.363222122192383,
+        64.39010620117188,
+        57.356178283691406
+      ],
+      "originalComponentBounds": [
+        -79.52127075195312,
+        -18.327571868896484,
+        -34.786128997802734,
+        -12.363222122192383,
+        64.39010620117188,
+        57.356178283691406
+      ]
+    }
+  ],
+  "retainedSourceTriangles": 0,
+  "targetTriangles": 1024,
+  "protectedDrivingTriangles": 2032,
+  "newImagePixels": false,
+  "newMaterials": 0,
+  "sourceTexturePixelsRetained": true,
+  "sourceUVsRetainedAndNewUVsInterpolated": true,
+  "wholeOriginalStoneModelBoundsRetained": true,
+  "originalStoneCollisionGeometryRetained": true,
+  "productionIntegrated": false,
+  "referenceAcceptance": false
+}
