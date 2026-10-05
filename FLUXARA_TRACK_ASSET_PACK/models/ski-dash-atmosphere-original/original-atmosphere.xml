@@ -1,0 +1,17 @@
+<scene>
+<object id="aurora" type="animation" xyz="-30.88 65.80 -556.61" hpr="0.0 -0.0 0.0" scale="1.07 1.07 1.07" interaction="ghost" model="aurora.spm" skeletal-animation="false">
+    <animated-texture name="aurora.png" dx="0.20000" dy="-0.10000" />
+    <curve channel="LocX" interpolation="linear" extend="cyclic">
+      <p c="1.000 -30.885" />
+      <p c="400.000 -30.885" />
+    </curve>
+    <curve channel="LocZ" interpolation="linear" extend="cyclic">
+      <p c="1.000 -556.609" />
+      <p c="2196.000 730.597" />
+    </curve>
+  </object>
+  <sun fog="true" fog-color="2 3 7" fog-max="0.30000001192092896" fog-start="10.00" fog-end="100.00" xyz="84.27 154.08 -99.81" sun-specular="67 50 141" sun-diffuse="33 50 70" ambient="85 85 85" />
+  <weather particles="snow.xml" />
+  <sky-box texture="winter_sky_6.jpg winter_sky_5.jpg winter_sky_2.jpg winter_sky_4.jpg winter_sky_3.jpg winter_sky_1.jpg" sh-texture="winter_sky_6_top.jpg winter_sky_ibl_bot.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg winter_sky_ibl_side.jpg" />
+  <lightshaft xyz="183.55 162.42 -200.57" id="Sun" opacity="0.40" color="60 130 255" />
+  </scene>

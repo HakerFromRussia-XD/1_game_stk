@@ -15,6 +15,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake")
 include(CMakeDependentOption)
 
 include(BuildTypeFLUXARA_DRIFTRelease)
+include(BuildTypeReleaseProtected)
 if(NOT CMAKE_BUILD_TYPE)
     message(STATUS "No build type selected, default to FLUXARA_DRIFTRelease")
     set(CMAKE_BUILD_TYPE "FLUXARA_DRIFTRelease")
@@ -923,6 +924,48 @@ else()
                 ${PROJECT_SOURCE_DIR}/cmake/PrepareFluxaraIosRuntimeData.sh
                 "${IOS_ASSETS}"
                 "$<TARGET_BUNDLE_DIR:fluxaradrift>/data"
+            # Grass needs a skinned variant for animated prayer-flag meshes.
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${PROJECT_SOURCE_DIR}/data/shaders/ge_shaders/shader_settings.xml"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/shaders/ge_shaders/shader_settings.xml"
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${PROJECT_SOURCE_DIR}/data/shaders/ge_shaders/grass_skinning.vert"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/shaders/ge_shaders/grass_skinning.vert"
+            # Torch-specific particles leave the shared fire emitter unchanged.
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gfx/fluxara_torch_warm_sparks.xml"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gfx/fluxara_torch_warm_sparks.xml"
+            # Preserve the original cottage chimney emitter in shared placements.
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gfx/fluxara_cottage_chimney_smoke.xml"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gfx/fluxara_cottage_chimney_smoke.xml"
+            # Resolve locomotive smoke for library instances on any track.
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gfx/steamLocomotive.xml"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gfx/steamLocomotive.xml"
+            # Authored rocket exhaust resolves previously absent particle definitions.
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gfx/gfx_rocketSteamBlast_a.xml"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gfx/gfx_rocketSteamBlast_a.xml"
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gfx/gfx_rocketBlast_a.xml"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gfx/gfx_rocketBlast_a.xml"
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/textures/fluxara_rocket_exhaust_puff.png"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/textures/fluxara_rocket_exhaust_puff.png"
+            # One foliage texture is shared by the circuit trees, shrubs and firs.
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/textures/fluxara_circuit_leaf_v2.png"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/textures/fluxara_circuit_leaf_v2.png"
+            # SHA-named runtime textures accompany coordinate-based track libraries.
+            COMMAND /usr/bin/ruby
+                "${PROJECT_SOURCE_DIR}/cmake/CopyFluxaraSharedTrackTextures.rb"
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/textures"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/textures"
+            # Reference-driven shared props override the generated base library.
+            COMMAND /usr/bin/rsync -a
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/library/"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/library/"
             COMMAND /usr/bin/rsync -a
                 "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/gui/screens/"
                 "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/gui/screens/"
@@ -950,6 +993,10 @@ else()
             COMMAND /bin/sh
                 ${PROJECT_SOURCE_DIR}/cmake/OptimizeFluxaraIosGui.sh
                 "$<TARGET_BUNDLE_DIR:fluxaradrift>"
+            # Reference-driven shared gameplay models preserve their original filenames.
+            COMMAND /usr/bin/rsync -a
+                "${PROJECT_SOURCE_DIR}/iosApp/FluxaraResources/models/shared-rework/"
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>/data/models/"
             # Capture the Flag meshes are shared by every CTF track. Overlay
             # their two team textures after the audited base snapshot so no
             # arena can reveal the inherited FLUXARA_DRIFT wordmark.
@@ -1046,17 +1093,17 @@ else()
         # Xcode signs before CMake's post-build resource overlay.  Run a
         # separate final command after that overlay to seal the exact payload
         # which is installed on a physical device.
-        if (FLUXARA_IOS_PLATFORM STREQUAL "iphoneos")
-            add_custom_command(TARGET fluxaradrift POST_BUILD
-                COMMAND /bin/sh ${PROJECT_SOURCE_DIR}/cmake/ResignFluxaraIosBundle.sh
-                    "$<TARGET_BUNDLE_DIR:fluxaradrift>")
-        endif()
+        add_custom_command(TARGET fluxaradrift POST_BUILD
+            COMMAND /usr/bin/python3 ${PROJECT_SOURCE_DIR}/cmake/UpdateFluxaraIosVersion.py
+                --bundle "$<TARGET_BUNDLE_DIR:fluxaradrift>"
+            COMMAND /bin/sh ${PROJECT_SOURCE_DIR}/cmake/ResignFluxaraIosBundle.sh
+                "$<TARGET_BUNDLE_DIR:fluxaradrift>")
         set_target_properties(fluxaradrift PROPERTIES
             OUTPUT_NAME "Fluxara Drift"
             XCODE_GENERATE_SCHEME TRUE
             MACOSX_BUNDLE_INFO_PLIST ${PROJECT_SOURCE_DIR}/data/FluxaraDrift-Info-iOS.plist
             XCODE_ATTRIBUTE_SDKROOT ${FLUXARA_IOS_PLATFORM}
-            XCODE_ATTRIBUTE_SUPPORTED_PLATFORMS ${FLUXARA_IOS_PLATFORM}
+            XCODE_ATTRIBUTE_SUPPORTED_PLATFORMS "${FLUXARA_IOS_PLATFORM}"
             XCODE_ATTRIBUTE_IPHONEOS_DEPLOYMENT_TARGET 15.0
             XCODE_ATTRIBUTE_INSTALL_PATH /Applications
             XCODE_ATTRIBUTE_SKIP_INSTALL No
@@ -1103,6 +1150,11 @@ else()
     if (NOT WIN32)
         target_link_libraries(fluxaradrift ${PTHREAD_LIBRARY})
     endif()
+endif()
+
+if(IOS)
+    include(ProtectFluxaraRelease)
+    fluxara_protect_release(fluxaradrift)
 endif()
 
 # SQLITE
