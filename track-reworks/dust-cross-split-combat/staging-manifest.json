@@ -1,0 +1,24 @@
+{
+  "workfile": "dust-cross-canyon-work.blend",
+  "underlayProtected": [
+    "zippercom.png__",
+    "stk_generic_sand_b.png__",
+    "metalgrid.png__",
+    "stklama_road_a.png__",
+    "mudwater.png__",
+    "stktex_generic_gravelA.png__",
+    "stklama_gravelSide_a.png__",
+    "waterLC.png__"
+  ],
+  "underlayPolicy": "read-only reference; transforms locked; geometry/UVs must not change",
+  "legacyMovedCount": 2017,
+  "legacyPolicy": "donor canyon course hidden (viewport+render); kept for append-copy reuse; excluded from exports",
+  "groups": [
+    "DC_G1_Mesas",
+    "DC_G2_ArenaWalls",
+    "DC_G3_Waterfall",
+    "DC_G4_Bridges",
+    "DC_G5_GrandstandsFlags",
+    "DC_G6_Ramps"
+  ]
+}

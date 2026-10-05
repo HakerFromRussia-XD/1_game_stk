@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<kart name="Tarentula" version="2" model-file="tarentula.b3d" icon-file="spidericon.png" minimap-icon-file="spidericon.png" shadow-file="spidershadow.png" groups="Fluxara" rgb="0.7 0 0" revision="1">
+    <sounds engine="small"/>
+    <animations left="0" straight="20" right="40" start-winning="80" end-winning="304" start-losing="353" start-losing-loop="399" end-losing="404"/>
+    <wheels>
+        <front-left position="-0.486005 0.133701 0.326708" model="wheel-front-left.b3d"/>
+        <front-right position="0.495069 0.133701 0.326708" model="wheel-front-right.b3d"/>
+        <rear-left position="-0.485396 0.134321 -0.353328" model="wheel-rear-left.b3d"/>
+        <rear-right position="0.492728 0.134287 -0.353328" model="wheel-rear-right.b3d"/>
+    </wheels>
+</kart>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev Unknown -->
+<materials>
+ <material name="arrows.png" shader="additive"/>
+ <material name="background_building.png" gloss-map="gridgloss.png"/>
+ <material name="ball.png" gloss-map="ballgloss.png"/>
+ <material name="caution.png" shader="alphatest" gloss-map="cautiongloss.png"/>
+ <material name="caution2.png" shader="alphatest" gloss-map="cautiongloss.png"/>
+ <material name="grid.png" gloss-map="gridgloss.png"/>
+ <material name="gridwall.png" shader="alphablend"/>
+ <material name="logoholo.png" shader="alphablend"/>
+</materials>

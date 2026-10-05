@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<kart name="egg car" version="3" model-file="egg car.spm" icon-file="icon.png" minimap-icon-file="icon.png" shadow-file="genericshadow.png" type="heavy" groups="Fluxara" rgb="1.00 1.00 1.00" revision="1">
+    <sounds engine="large">
+        <skid name="default"/>
+    </sounds>
+    <wheels>
+        <front-right position="0.001635 0.155942 0.458092" model="wheel-front-right.spm"/>
+    </wheels>
+    <exhaust file="kart_exhaust.xml"/>
+</kart>

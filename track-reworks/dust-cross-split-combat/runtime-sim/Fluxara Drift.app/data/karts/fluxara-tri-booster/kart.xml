@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<kart name="Tri-Booster" version="3" model-file="tri-booster.spm" icon-file="icon.png" minimap-icon-file="icon.png" shadow-file="wut.png" type="medium" groups="Fluxara" rgb="0.00 1.00 0.00" revision="1">
+    <sounds engine="custom" file="muscle.ogg" rolloff="0.2" max_dist="30" volume="0.6"/>
+    <wheels>
+        <front-left position="-0.278204 0.104356 0.399750" model="wheel-front-left.spm"/>
+        <front-right position="0.278137 0.104356 0.399750" model="wheel-front-right.spm"/>
+        <rear-left position="-0.312740 0.132655 -0.678463" model="wheel-rear-left.spm"/>
+        <rear-right position="0.312674 0.132655 -0.678463" model="wheel-rear-right.spm"/>
+    </wheels>
+    <nitro-emitter>
+        <nitro-emitter-a position="-0.311356 0.121351 -0.285418"/>
+        <nitro-emitter-b position="0.311356 0.121351 -0.285418"/>
+    </nitro-emitter>
+    <headlights>
+        <object position="0.000427 0.200306 0.968273" rotation="0.000000 -0.000000 0.000000" scale="0.347778 0.347778 1.322622" model="headlight.spm"/>
+        <object position="0.000000 0.247339 -0.832914" rotation="0.000000 -0.000000 0.000000" scale="0.001000 0.001000 0.001000" color="255 0 0" model="Plane.spm"/>
+    </headlights>
+    <lean max="0"/>
+    <exhaust file="kart_exhaust.xml"/>
+</kart>

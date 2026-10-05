@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<scene>
+  <track model="spell-lab_track.spm" x="0" y="0" z="0">
+    <animated-texture name="SL_liquid.png" dx="0.24000" />
+  </track>
+  <object id="Cylinder" type="animation" xyz="74.16 135.00 -37.88" hpr="0.0 -0.0 -0.0" scale="11.00 11.00 11.00" interaction="static" shape="cylinderY" model="bouncer1.spm" skeletal-animation="false">
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="1.000 135.000" h1="-0.562 135.000" h2="2.562 135.000"/>
+      <p c="5.000 134.000" h1="3.438 134.000" h2="6.562 134.000"/>
+      <p c="9.000 135.500" h1="7.438 135.500" h2="10.171 135.500"/>
+      <p c="12.000 135.000" h1="10.829 135.000" h2="13.171 135.000"/>
+    </curve>
+  </object>
+  <object id="Cylinder.001" type="animation" xyz="84.67 130.00 -60.45" hpr="0.0 -0.0 -0.0" scale="11.00 11.00 11.00" interaction="static" shape="cylinderY" model="bouncer2.spm" skeletal-animation="false">
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="1.000 130.000" h1="-0.562 130.000" h2="2.562 130.000"/>
+      <p c="5.000 129.000" h1="3.438 129.000" h2="6.562 129.000"/>
+      <p c="9.000 130.500" h1="7.438 130.500" h2="10.171 130.500"/>
+      <p c="12.000 130.000" h1="10.829 130.000" h2="13.171 130.000"/>
+    </curve>
+  </object>
+  <object id="Cylinder.002" type="animation" xyz="95.63 125.00 -83.12" hpr="0.0 -0.0 -0.0" scale="11.00 11.00 11.00" interaction="static" shape="cylinderY" model="bouncer3.spm" skeletal-animation="false">
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="1.000 125.000" h1="-0.562 125.000" h2="2.562 125.000"/>
+      <p c="5.000 124.000" h1="3.438 124.000" h2="6.562 124.000"/>
+      <p c="9.000 125.500" h1="7.438 125.500" h2="10.171 125.500"/>
+      <p c="12.000 125.000" h1="10.829 125.000" h2="13.171 125.000"/>
+    </curve>
+  </object>
+  <object id="Cylinder.003" type="animation" xyz="107.27 120.00 -105.68" hpr="0.0 -0.0 -0.0" scale="11.00 11.00 11.00" interaction="static" shape="cylinderY" model="bouncer4.spm" skeletal-animation="false">
+    <curve channel="LocY" interpolation="bezier" extend="cyclic">
+      <p c="1.000 120.000" h1="-0.562 120.000" h2="2.562 120.000"/>
+      <p c="5.000 119.000" h1="3.438 119.000" h2="6.562 119.000"/>
+      <p c="9.000 120.500" h1="7.438 120.500" h2="10.171 120.500"/>
+      <p c="12.000 120.000" h1="10.829 120.000" h2="13.171 120.000"/>
+    </curve>
+  </object>
+  <object type="movable" id="Cylinder.004" xyz="231.26 100.03 -405.56" hpr="0.0 -0.0 -0.0" scale="1.00 1.00 1.00"
+          shape="cylinderY" mass="15.0" model="FastTriWarper.spm" on-kart-collision="goodTeleport" reset-when-below="15" friction="-0.5" restitution="0.6" linear-factor="1.0 1.0 1.0" angular-factor="0.0 1.0 0.0" linear-damping="0.0" angular-damping="0.9" skeletal-animation="false"/>
+  <object type="movable" id="Cylinder.005" xyz="263.67 100.03 -420.19" hpr="0.0 -0.0 -0.0" scale="1.00 1.00 1.00"
+          shape="cylinderY" mass="30.0" model="TriWarper.spm" on-kart-collision="badTeleport" reset-when-below="15" friction="-0.4" restitution="0.6" linear-factor="1.0 1.0 1.0" angular-factor="0.0 1.0 0.0" linear-damping="0.0" angular-damping="0.9" skeletal-animation="false"/>
+  <object type="movable" id="Cylinder.006" xyz="130.96 112.65 -161.14" hpr="0.0 -0.0 -0.0" scale="1.00 1.00 1.00"
+          shape="cylinderY" mass="100.0" model="Warper.spm" on-kart-collision="warpKart" reset-when-below="15" friction="-0.3" restitution="0.6" linear-factor="1.0 1.0 1.0" angular-factor="0.0 1.0 0.0" linear-damping="0.0" angular-damping="0.9" if="isForward" skeletal-animation="false"/>
+  <object id="RevRamp" type="animation" xyz="120.54 113.54 -124.09" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="revRamp.spm" skeletal-animation="false" if="isReverse">
+  </object>
+  <object id="RevWall" type="animation" xyz="0.00 0.00 0.00" hpr="0.0 -0.0 -0.0" scale="1.00 1.00 1.00" interaction="static" shape="exact" model="revWall.spm" skeletal-animation="false" if="isReverse">
+  </object>
+  <object id="SpotBad" type="animation" xyz="-33.62 96.27 -426.48" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="SpotBad.spm" skeletal-animation="false">
+  </object>
+  <object id="SpotGood" type="animation" xyz="-141.76 96.65 -398.61" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="SpotGood.spm" skeletal-animation="false">
+  </object>
+  <object id="SpotWarp" type="animation" xyz="120.99 114.50 -123.12" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="ghost" model="SpotWarp.spm" skeletal-animation="false">
+  </object>
+  <sun  fog="true" fog-color="8 12 22" fog-max="0.30000001192092896" fog-start="50.00" fog-end="300.00" xyz="0.00 239.83 0.00" sun-specular="36 40 129" sun-diffuse="30 34 107" ambient="60 68 96"/>
+  <sky-box texture="top.png bot.png left.png right.png front.png back.png" sh-texture="top.png bot.png left.png right.png front.png back.png"/>
+  <camera far="1000.0"/>
+  <checks>
+    <check-lap kind="lap" same-group="0" other-ids="1 2 3" />
+    <check-line kind="activate" other-ids="4 5 6" p1="49.17 -11.36" p2="66.13 -2.55"
+                min-height="141.64" same-group="1 2 3"/>
+    <check-line kind="activate" other-ids="4 5 6" p1="49.17 -11.36" p2="66.13 -2.55"
+                min-height="145.64" same-group="1 2 3"/>
+    <check-line kind="activate" other-ids="4 5 6" p1="49.17 -11.36" p2="66.13 -2.55"
+                min-height="149.64" same-group="1 2 3"/>
+    <check-line kind="activate" other-ids="7 8 9" p1="229.69 -255.59" p2="243.40 -224.70"
+                min-height="116.64" same-group="4 5 6"/>
+    <check-line kind="activate" other-ids="7 8 9" p1="229.69 -255.59" p2="243.40 -224.70"
+                min-height="120.64" same-group="4 5 6"/>
+    <check-line kind="activate" other-ids="7 8 9" p1="229.69 -255.59" p2="243.40 -224.70"
+                min-height="124.64" same-group="4 5 6"/>
+    <check-line kind="activate" other-ids="0" p1="3.65 -6.00" p2="-19.72 -7.35"
+                min-height="158.29" same-group="7 8 9"/>
+    <check-line kind="activate" other-ids="0" p1="3.65 -6.00" p2="-19.72 -7.35"
+                min-height="162.29" same-group="7 8 9"/>
+    <check-line kind="activate" other-ids="0" p1="3.65 -6.00" p2="-19.72 -7.35"
+                min-height="166.29" same-group="7 8 9"/>
+    <cannon p1="248.67 118.67 -359.35" p2="252.55 118.67 -359.50" target-p1="-35.97 1.93 -282.49" target-p2="6.23 1.93 -286.81">
+    <curve channel="LocXYZ" speed="250.00" interpolation="bezier" extend="const">
+      <point c="250.742615 118.799072 -358.927185" h1="251.240143 118.799072 -349.354431" h2="247.647400 118.799072 -418.481079" />
+      <point c="128.385056 201.258942 -443.616028" h1="176.378876 201.258942 -440.492371" h2="47.923569 201.258942 -448.852844" />
+      <point c="-15.923296 3.904099 -282.989288" h1="-24.958443 3.904048 -383.538025" h2="-12.296679 3.904120 -242.630035" />
+    </curve>
+    </cannon>
+    <cannon p1="119.30 112.68 -230.14" p2="136.53 112.68 -226.74" target-p1="124.11 117.55 -238.83" target-p2="135.23 117.55 -236.89">
+    <curve channel="LocXYZ" speed="250.00" interpolation="bezier" extend="const">
+      <point c="128.341904 113.617477 -228.020889" h1="128.139206 113.239426 -227.458755" h2="129.230804 115.275314 -230.485962" />
+      <point c="130.325089 117.975456 -238.379959" h1="128.533020 117.975456 -228.126541" h2="131.145615 117.975456 -243.074615" />
+    </curve>
+    </cannon>
+    <cannon p1="-33.29 95.19 -410.40" p2="-19.73 95.18 -434.49" target-p1="-26.83 0.93 -303.37" target-p2="-5.26 0.93 -304.96">
+    <curve channel="LocXYZ" speed="250.00" interpolation="bezier" extend="const">
+      <point c="-27.557358 95.608810 -424.597168" h1="-35.975933 95.608803 -428.105072" h2="-17.094158 95.608818 -420.237305" />
+      <point c="-21.484859 95.608849 -386.700531" h1="-22.150183 95.608841 -400.106354" h2="-20.668060 95.608856 -370.242584" />
+      <point c="-16.579853 9.784943 -302.661407" h1="-17.245176 9.784927 -316.067230" h2="-15.763054 9.784958 -286.203461" />
+    </curve>
+    </cannon>
+    <cannon p1="-47.34 95.18 -434.50" p2="-19.70 95.18 -434.75" target-p1="-26.83 0.93 -303.37" target-p2="-5.26 0.93 -304.96">
+    <curve channel="LocXYZ" speed="250.00" interpolation="bezier" extend="const">
+      <point c="-39.291183 95.608810 -423.707428" h1="-31.838015 95.608803 -428.963684" h2="-57.796036 95.608818 -410.657135" />
+      <point c="-21.484859 95.608849 -386.700531" h1="-22.150183 95.608841 -400.106354" h2="-20.668060 95.608856 -370.242584" />
+      <point c="-16.579853 9.713104 -302.661407" h1="-17.245176 9.713089 -316.067230" h2="-15.763054 9.713120 -286.203461" />
+    </curve>
+    </cannon>
+    <cannon p1="-47.83 95.18 -434.41" p2="-33.62 95.18 -410.69" target-p1="-26.83 0.93 -303.37" target-p2="-5.26 0.93 -304.96">
+    <curve channel="LocXYZ" speed="250.00" interpolation="bezier" extend="const">
+      <point c="-33.327171 95.608810 -432.369446" h1="-33.128609 95.608810 -423.251434" h2="-34.081997 95.608818 -467.031281" />
+      <point c="-21.484859 95.608849 -386.700531" h1="-22.150183 95.608841 -400.106354" h2="-20.668060 95.608856 -370.242584" />
+      <point c="-16.579853 9.928619 -302.661407" h1="-17.245176 9.928604 -316.067230" h2="-15.763054 9.928635 -286.203461" />
+    </curve>
+    </cannon>
+    <cannon p1="-156.45 95.18 -406.78" p2="-142.25 95.18 -383.06" target-p1="-97.54 104.75 -250.25" target-p2="-92.19 104.75 -251.90">
+    <curve channel="LocXYZ" speed="250.00" interpolation="bezier" extend="const">
+      <point c="-135.837280 95.608810 -395.959351" h1="-143.831787 92.750664 -399.290558" h2="-125.374092 99.349548 -391.599487" />
+      <point c="-131.168152 95.608849 -359.218414" h1="-131.833481 95.608841 -372.624237" h2="-130.351349 95.608856 -342.760468" />
+      <point c="-89.892075 112.338234 -249.789017" h1="-95.219543 112.338219 -263.685577" h2="-83.993484 112.338249 -234.402740" />
+    </curve>
+    </cannon>
+    <cannon p1="-155.96 95.18 -406.87" p2="-128.32 95.18 -407.12" target-p1="-97.54 104.75 -250.25" target-p2="-92.19 104.75 -251.90">
+    <curve channel="LocXYZ" speed="250.00" interpolation="bezier" extend="const">
+      <point c="-148.598495 95.608810 -396.171600" h1="-140.679733 90.748016 -400.696075" h2="-166.790665 106.775757 -385.777252" />
+      <point c="-131.168152 95.608849 -359.218414" h1="-131.833481 95.608841 -372.624237" h2="-130.351349 95.608856 -342.760468" />
+      <point c="-94.069038 112.203094 -248.260208" h1="-99.396515 112.203079 -262.156769" h2="-88.170456 112.203110 -232.873932" />
+    </curve>
+    </cannon>
+    <cannon p1="-141.91 95.19 -382.77" p2="-128.35 95.18 -406.86" target-p1="-97.54 104.75 -250.25" target-p2="-92.19 104.75 -251.90">
+    <curve channel="LocXYZ" speed="250.00" interpolation="bezier" extend="const">
+      <point c="-142.854721 95.608810 -405.335663" h1="-143.440460 93.255447 -396.234283" h2="-140.877396 103.553230 -436.059784" />
+      <point c="-131.168152 95.608849 -359.218414" h1="-131.833481 95.608841 -372.624237" h2="-130.351349 95.608856 -342.760468" />
+      <point c="-93.628075 112.478905 -248.187866" h1="-98.955551 112.478889 -262.084412" h2="-87.729492 112.478920 -232.801590" />
+    </curve>
+    </cannon>
+  </checks>
+  <end-cameras>
+    <camera type="static_follow_kart" xyz="18.607307 165.068161 48.535370" distance="35.0"/> <!-- Camera -->
+    <camera type="static_follow_kart" xyz="85.657219 151.615265 -26.195679" distance="35.0"/> <!-- Camera.001 -->
+    <camera type="static_follow_kart" xyz="98.515274 134.291595 -133.629852" distance="50.0"/> <!-- Camera.002 -->
+    <camera type="static_follow_kart" xyz="136.280960 134.326996 -266.505615" distance="50.0"/> <!-- Camera.003 -->
+    <camera type="static_follow_kart" xyz="198.748199 134.326996 -252.624008" distance="35.0"/> <!-- Camera.004 -->
+    <camera type="static_follow_kart" xyz="251.498306 134.326996 -354.422455" distance="35.0"/> <!-- Camera.005 -->
+    <camera type="static_follow_kart" xyz="-69.550705 118.208870 -230.214401" distance="200.0"/> <!-- Camera.008 -->
+    <camera type="static_follow_kart" xyz="-8.148838 161.503815 -117.656464" distance="150.0"/> <!-- Camera.010 -->
+    <camera type="static_follow_kart" xyz="-27.934738 178.731995 -35.050327" distance="50.0"/> <!-- Camera.009 -->
+    <camera type="static_follow_kart" xyz="-47.692009 161.462997 -0.089516" distance="35.0"/> <!-- Camera.011 -->
+  </end-cameras>
+  <item id="Empty" x="40.93" y="144.27" z="14.73" />
+  <item id="Empty.001" x="43.80" y="144.27" z="16.33" />
+  <item id="Empty.002" x="46.86" y="144.62" z="18.13" />
+  <item id="Empty.003" x="49.44" y="145.16" z="19.64" />
+  <banana id="Empty.004" x="60.84" y="130.87" z="-33.70" />
+  <banana id="Empty.005" x="66.19" y="128.81" z="-33.51" />
+  <banana id="Empty.006" x="73.02" y="128.69" z="-29.84" />
+  <banana id="Empty.007" x="77.95" y="129.58" z="-27.17" />
+  <banana id="Empty.008" x="84.69" y="129.29" z="-28.33" />
+  <banana id="Empty.009" x="92.39" y="126.51" z="-34.59" />
+  <banana id="Empty.010" x="83.64" y="126.42" z="-33.39" />
+  <banana id="Empty.011" x="77.62" y="126.16" z="-34.98" />
+  <banana id="Empty.012" x="72.16" y="126.56" z="-36.13" />
+  <banana id="Empty.013" x="67.38" y="126.09" z="-40.94" />
+  <banana id="Empty.014" x="62.36" y="127.25" z="-42.36" />
+  <banana id="Empty.015" x="58.99" y="126.74" z="-50.41" />
+  <banana id="Empty.016" x="65.58" y="124.34" z="-48.96" />
+  <banana id="Empty.017" x="72.25" y="123.28" z="-46.97" />
+  <banana id="Empty.018" x="80.34" y="123.27" z="-42.90" />
+  <banana id="Empty.019" x="91.53" y="122.96" z="-42.27" />
+  <banana id="Empty.020" x="99.90" y="123.46" z="-43.15" />
+  <banana id="Empty.021" x="108.59" y="121.24" z="-52.24" />
+  <banana id="Empty.022" x="99.28" y="120.13" z="-52.01" />
+  <banana id="Empty.023" x="88.60" y="119.78" z="-53.04" />
+  <banana id="Empty.024" x="78.90" y="119.50" z="-58.33" />
+  <banana id="Empty.025" x="70.84" y="120.01" z="-62.57" />
+  <banana id="Empty.026" x="62.86" y="121.90" z="-64.73" />
+  <banana id="Empty.027" x="119.68" y="117.35" z="-80.42" h="-173.57" />
+  <banana id="Empty.028" x="111.99" y="117.35" z="-83.46" h="-173.57" />
+  <banana id="Empty.029" x="104.47" y="117.35" z="-88.57" h="-173.57" />
+  <banana id="Empty.030" x="95.42" y="117.35" z="-94.92" h="-173.57" />
+  <banana id="Empty.031" x="84.92" y="117.35" z="-97.14" h="-173.57" />
+  <banana id="Empty.032" x="75.64" y="117.35" z="-97.96" h="-173.57" />
+  <banana id="Empty.033" x="85.29" y="117.35" z="-106.02" h="-173.57" />
+  <banana id="Empty.034" x="93.71" y="117.35" z="-105.95" h="-173.57" />
+  <banana id="Empty.035" x="104.76" y="117.35" z="-104.07" h="-173.57" />
+  <banana id="Empty.036" x="112.35" y="117.35" z="-99.12" h="-173.57" />
+  <banana id="Empty.037" x="118.75" y="117.35" z="-96.40" h="-173.57" />
+  <banana id="Empty.038" x="125.14" y="117.35" z="-94.22" h="-173.57" />
+  <banana id="Empty.039" x="122.69" y="117.35" z="-102.60" h="-173.57" />
+  <banana id="Empty.040" x="117.86" y="117.35" z="-104.57" h="-173.57" />
+  <banana id="Empty.041" x="113.65" y="117.35" z="-109.88" h="-173.57" />
+  <banana id="Empty.042" x="108.35" y="117.35" z="-111.64" h="-173.57" />
+  <banana id="Empty.043" x="102.55" y="117.35" z="-113.89" h="-173.57" />
+  <banana id="Empty.044" x="93.72" y="117.35" z="-113.68" h="-173.57" />
+  <banana id="Empty.045" x="102.07" y="117.35" z="-119.04" h="-173.57" />
+  <banana id="Empty.046" x="108.90" y="117.35" z="-119.44" h="-173.57" />
+  <banana id="Empty.047" x="113.50" y="117.35" z="-116.23" h="-173.57" />
+  <banana id="Empty.048" x="119.87" y="117.35" z="-111.82" h="-173.57" />
+  <banana id="Empty.049" x="125.17" y="117.35" z="-111.03" h="-173.57" />
+  <small-nitro id="Empty.050" x="105.84" y="113.99" z="-141.93" />
+  <small-nitro id="Empty.051" x="113.84" y="113.99" z="-135.14" />
+  <small-nitro id="Empty.052" x="119.58" y="113.99" z="-142.41" />
+  <small-nitro id="Empty.053" x="112.15" y="113.99" z="-147.50" />
+  <small-nitro id="Empty.054" x="129.60" y="113.99" z="-139.83" />
+  <small-nitro id="Empty.055" x="137.03" y="113.99" z="-134.74" />
+  <small-nitro id="Empty.056" x="131.29" y="113.99" z="-127.47" />
+  <small-nitro id="Empty.057" x="123.30" y="113.99" z="-134.25" />
+  <small-nitro id="Empty.058" x="137.76" y="113.99" z="-140.72" />
+  <small-nitro id="Empty.059" x="145.76" y="113.99" z="-133.93" />
+  <small-nitro id="Empty.060" x="151.49" y="113.99" z="-141.20" />
+  <small-nitro id="Empty.061" x="144.06" y="113.99" z="-146.29" />
+  <small-nitro id="Empty.062" x="130.15" y="113.99" z="-159.52" />
+  <small-nitro id="Empty.063" x="137.59" y="113.99" z="-154.43" />
+  <small-nitro id="Empty.064" x="131.85" y="113.99" z="-147.16" />
+  <small-nitro id="Empty.065" x="123.85" y="113.99" z="-153.94" />
+  <small-nitro id="Empty.066" x="100.87" y="113.99" z="-160.56" />
+  <small-nitro id="Empty.067" x="108.87" y="113.99" z="-153.77" />
+  <small-nitro id="Empty.068" x="114.61" y="113.99" z="-161.04" />
+  <small-nitro id="Empty.069" x="107.17" y="113.99" z="-166.13" />
+  <small-nitro id="Empty.070" x="121.84" y="113.99" z="-177.83" />
+  <small-nitro id="Empty.071" x="129.28" y="113.99" z="-172.74" />
+  <small-nitro id="Empty.072" x="123.54" y="113.99" z="-165.47" />
+  <small-nitro id="Empty.073" x="115.54" y="113.99" z="-172.26" />
+  <small-nitro id="Empty.074" x="135.55" y="113.99" z="-166.92" />
+  <small-nitro id="Empty.075" x="143.55" y="113.99" z="-160.13" />
+  <small-nitro id="Empty.076" x="149.29" y="113.99" z="-167.40" />
+  <small-nitro id="Empty.077" x="141.85" y="113.99" z="-172.49" />
+  <small-nitro id="Empty.078" x="144.48" y="113.99" z="-165.28" />
+  <small-nitro id="Empty.079" x="151.92" y="113.99" z="-160.19" />
+  <small-nitro id="Empty.080" x="146.18" y="113.99" z="-152.92" />
+  <small-nitro id="Empty.081" x="138.18" y="113.99" z="-159.71" />
+  <small-nitro id="Empty.082" x="96.72" y="113.99" z="-177.09" />
+  <small-nitro id="Empty.083" x="104.72" y="113.99" z="-170.30" />
+  <small-nitro id="Empty.084" x="110.45" y="113.99" z="-177.58" />
+  <small-nitro id="Empty.085" x="103.02" y="113.99" z="-182.67" />
+  <small-nitro id="Empty.086" x="108.19" y="113.99" z="-199.88" />
+  <small-nitro id="Empty.087" x="115.63" y="113.99" z="-194.79" />
+  <small-nitro id="Empty.088" x="109.89" y="113.99" z="-187.52" />
+  <small-nitro id="Empty.089" x="101.89" y="113.99" z="-194.30" />
+  <small-nitro id="Empty.090" x="111.13" y="113.99" z="-208.12" />
+  <small-nitro id="Empty.091" x="119.13" y="113.99" z="-201.34" />
+  <small-nitro id="Empty.092" x="124.87" y="113.99" z="-208.61" />
+  <small-nitro id="Empty.093" x="117.43" y="113.99" z="-213.70" />
+  <small-nitro id="Empty.094" x="129.39" y="113.99" z="-218.62" />
+  <small-nitro id="Empty.095" x="136.82" y="113.99" z="-213.53" />
+  <small-nitro id="Empty.096" x="131.09" y="113.99" z="-206.26" />
+  <small-nitro id="Empty.097" x="123.09" y="113.99" z="-213.04" />
+  <small-nitro id="Empty.098" x="133.35" y="113.99" z="-200.32" />
+  <small-nitro id="Empty.099" x="141.35" y="113.99" z="-193.54" />
+  <small-nitro id="Empty.100" x="147.08" y="113.99" z="-200.81" />
+  <small-nitro id="Empty.101" x="139.65" y="113.99" z="-205.90" />
+  <small-nitro id="Empty.102" x="146.35" y="113.99" z="-187.16" />
+  <small-nitro id="Empty.103" x="153.78" y="113.99" z="-182.07" />
+  <small-nitro id="Empty.104" x="148.04" y="113.99" z="-174.80" />
+  <small-nitro id="Empty.105" x="140.05" y="113.99" z="-181.58" />
+  <small-nitro id="Empty.106" x="120.88" y="113.99" z="-188.88" />
+  <small-nitro id="Empty.107" x="128.88" y="113.99" z="-182.09" />
+  <small-nitro id="Empty.108" x="134.62" y="113.99" z="-189.36" />
+  <small-nitro id="Empty.109" x="127.19" y="113.99" z="-194.45" />
+  <item id="Empty.110" x="130.76" y="119.73" z="-264.87" />
+  <item id="Empty.111" x="134.97" y="119.73" z="-263.76" />
+  <item id="Empty.112" x="139.26" y="119.73" z="-262.78" />
+  <item id="Empty.113" x="249.77" y="114.12" z="-305.05" />
+  <item id="Empty.114" x="253.58" y="114.12" z="-305.31" />
+  <item id="Empty.115" x="257.31" y="114.12" z="-305.56" />
+  <big-nitro id="Empty.116" x="250.50" y="104.59" z="-378.13" />
+  <big-nitro id="Empty.117" x="250.08" y="104.59" z="-408.72" />
+  <big-nitro id="Empty.118" x="276.87" y="104.59" z="-419.48" />
+  <big-nitro id="Empty.119" x="274.34" y="104.59" z="-447.54" />
+  <big-nitro id="Empty.120" x="296.92" y="104.59" z="-473.71" />
+  <big-nitro id="Empty.121" x="280.46" y="104.59" z="-500.29" />
+  <big-nitro id="Empty.122" x="257.88" y="104.59" z="-495.44" />
+  <big-nitro id="Empty.123" x="232.35" y="104.59" z="-485.31" />
+  <big-nitro id="Empty.124" x="249.02" y="104.59" z="-442.06" />
+  <big-nitro id="Empty.125" x="244.38" y="104.59" z="-413.79" />
+  <big-nitro id="Empty.126" x="220.12" y="104.59" z="-402.18" />
+  <big-nitro id="Empty.127" x="230.45" y="104.59" z="-383.19" />
+  <big-nitro id="Empty.128" x="214.63" y="104.59" z="-462.52" />
+  <big-nitro id="Empty.129" x="204.71" y="104.59" z="-438.26" />
+  <big-nitro id="Empty.130" x="222.65" y="104.59" z="-423.70" />
+  <big-nitro id="Empty.131" x="193.53" y="104.59" z="-410.62" />
+  <big-nitro id="Empty.132" x="232.99" y="104.59" z="-450.71" />
+  <big-nitro id="Empty.133" x="262.79" y="104.59" z="-468.81" />
+  <item id="Empty.134" x="-88.88" y="114.09" z="-208.05" />
+  <item id="Empty.135" x="-84.55" y="114.09" z="-209.15" />
+  <item id="Empty.136" x="-79.55" y="114.09" z="-210.25" />
+  <item id="Empty.137" x="-75.74" y="114.09" z="-211.52" />
+  <item id="Empty.138" x="-22.70" y="16.25" z="-237.02" />
+  <item id="Empty.139" x="-16.90" y="16.25" z="-237.63" />
+  <item id="Empty.140" x="-10.89" y="16.25" z="-238.34" />
+  <item id="Empty.141" x="-4.08" y="16.25" z="-239.05" />
+  <item id="Empty.142" x="2.13" y="16.25" z="-239.76" />
+  <item id="Empty.143" x="4.90" y="16.25" z="-244.76" />
+  <item id="Empty.144" x="-1.23" y="16.25" z="-244.24" />
+  <item id="Empty.145" x="-7.54" y="16.25" z="-243.33" />
+  <item id="Empty.146" x="-14.46" y="16.25" z="-242.61" />
+  <item id="Empty.147" x="-20.15" y="16.25" z="-241.80" />
+  <item id="Empty.148" x="-26.16" y="16.25" z="-241.49" />
+  <banana id="Empty.149" x="-52.94" y="144.80" z="-93.21" />
+  <banana id="Empty.150" x="-46.99" y="144.81" z="-94.86" />
+  <banana id="Empty.151" x="-12.83" y="101.16" z="-126.11" />
+  <banana id="Empty.152" x="-5.70" y="101.16" z="-126.32" />
+  <banana id="Empty.153" x="1.72" y="101.16" z="-126.32" />
+  <item id="Empty.154" x="-12.38" y="163.14" z="-21.85" />
+  <item id="Empty.155" x="-5.97" y="163.14" z="-22.05" />
+  <item id="Empty.156" x="-1.08" y="163.14" z="-26.83" />
+  <item id="Empty.157" x="-0.06" y="163.14" z="-34.26" />
+  <item id="Empty.158" x="-4.95" y="163.14" z="-40.57" />
+  <item id="Empty.159" x="-12.48" y="163.14" z="-41.99" />
+  <item id="Empty.160" x="-18.07" y="163.14" z="-37.92" />
+  <item id="Empty.161" x="-20.01" y="163.14" z="-30.39" />
+  <item id="Empty.162" x="-11.97" y="163.14" z="-28.36" />
+  <item id="Empty.163" x="-5.15" y="163.14" z="-32.53" />
+  <item id="Empty.164" x="-11.26" y="163.14" z="-34.87" />
+  <small-nitro id="Empty.165" x="-10.38" y="155.86" z="9.12" />
+  <small-nitro id="Empty.166" x="-11.57" y="155.86" z="20.90" />
+  <item id="Empty.167" x="-11.13" y="154.02" z="17.70" />
+  <item id="Empty.168" x="-10.71" y="154.65" z="13.97" />
+  <item id="Empty.169" x="-51.17" y="146.50" z="-9.62" />
+  <item id="Empty.170" x="-43.47" y="145.56" z="-16.43" />
+  <item id="Empty.171" x="-34.11" y="144.82" z="-20.60" />
+  <item id="Empty.172" x="-23.63" y="144.78" z="-23.65" />
+  <big-nitro id="Empty.173" x="-33.12" y="154.87" z="8.98" />
+  <banana id="Empty.174" x="101.96" y="120.25" z="-125.55" />
+  <banana id="Empty.175" x="100.96" y="120.25" z="-127.55" />
+  <banana id="Empty.176" x="99.90" y="120.25" z="-129.61" />
+  <banana id="Empty.177" x="98.73" y="120.25" z="-131.79" />
+  <banana id="Empty.178" x="97.67" y="120.25" z="-134.20" />
+  <banana id="Empty.179" x="96.96" y="120.25" z="-136.15" />
+  <banana id="Empty.180" x="95.84" y="120.25" z="-138.33" />
+  <banana id="Empty.181" x="94.84" y="120.25" z="-140.45" />
+  <banana id="Empty.182" x="93.72" y="120.25" z="-142.80" />
+  <banana id="Empty.183" x="92.48" y="120.25" z="-145.22" />
+  <banana id="Empty.184" x="91.60" y="120.25" z="-147.57" />
+  <light xyz="-12.15 18.98 -262.24" id="Point" distance="35.00" energy="11.00" color="255 207 85">
+  </light>
+  <light xyz="-6.37 31.28 -219.81" id="Point.001" distance="35.00" energy="11.00" color="255 207 85">
+  </light>
+  <light xyz="-5.14 57.01 -186.45" id="Point.002" distance="35.00" energy="11.00" color="255 207 85">
+  </light>
+  <light xyz="-4.78 79.71 -156.12" id="Point.003" distance="35.00" energy="11.00" color="255 207 85">
+  </light>
+  <default-start karts-per-row     ="4"
+                 forwards-distance ="1.00"
+                 sidewards-distance="1.80"
+                 upwards-distance  ="1.10"/>
+</scene>

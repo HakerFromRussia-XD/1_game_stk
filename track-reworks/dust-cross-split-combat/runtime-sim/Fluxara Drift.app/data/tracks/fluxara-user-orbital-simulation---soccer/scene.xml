@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!-- Generated with script from SVN rev 17016 -->
+<scene>
+  <track model="orbital-simulation---soccer_track.spm" x="0" y="0" z="0">
+    <animated-texture name="arrows.png" dy="0.50000" />
+    <static-object  model="barrier.spm" xyz="0.00 0.00 0.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00" interaction="physics-only"/>
+  </track>
+  <object type="movable" id="columngreen.png__" xyz="0.00 1.50 0.00" hpr="0.0 -0.0 0.0" scale="1.00 1.00 1.00"
+          shape="sphere" mass="20.0" model="ball.spm" glow="210 135 0" soccer_ball="true" restitution="0.6" skeletal-animation="false"/>
+  <object id="Plane.002" type="animation" xyz="0.00 35.00 0.00" hpr="0.0 -0.0 0.0" scale="10.00 10.00 10.00" interaction="static" shape="exact" model="orbitallogo.spm" skeletal-animation="false">
+    <curve channel="RotX" interpolation="linear" extend="cyclic">
+      <p c="1.000 -0.000" h1="0.000 -0.000" h2="2.000 -0.000"/>
+      <p c="300.000 -0.000" h1="183.267 -0.000" h2="416.733 -0.000"/>
+    </curve>
+    <curve channel="RotZ" interpolation="linear" extend="cyclic">
+      <p c="1.000 -0.000" h1="0.000 -0.000" h2="2.000 -0.000"/>
+      <p c="300.000 -0.000" h1="183.267 -0.000" h2="416.733 -0.000"/>
+    </curve>
+    <curve channel="RotY" interpolation="linear" extend="cyclic">
+      <p c="1.000 -0.000" h1="0.000 -0.000" h2="2.000 -0.000"/>
+      <p c="300.000 -360.000" h1="183.267 -360.000" h2="416.733 -360.000"/>
+    </curve>
+  </object>
+  <sun  fog="true" fog-color="150 100 150" fog-max="1.0" fog-start="100.00" fog-end="1000.00" xyz="44.56 138.55 245.95" ambient="200 150 200"/>
+  <sky-box texture="skybottom.png skybottom.png sky.png sky.png sky.png sky.png" sh-texture="ibl.png ibl.png ibl.png ibl.png ibl.png ibl.png"/>
+  <camera far="2000.0"/>
+  <checks>
+    <check-line kind="lap" p1="-1.00 0.00" p2="1.00 0.00"
+                min-height="0.00"  />
+    <goal p1="11.51 0.07 85.89" p2="-11.56 0.07 85.89"  first_goal="true" />
+    <goal p1="11.51 0.07 -85.89" p2="-11.56 0.07 -85.89" />
+  </checks>
+  <small-nitro id="diagonal_3" x="-35.00" y="2.00" z="17.50" h="210.00" />
+  <small-nitro id="diagonal_3.001" x="35.00" y="2.00" z="17.50" h="210.00" />
+  <small-nitro id="diagonal_3.002" x="35.00" y="2.00" z="-17.50" h="210.00" />
+  <small-nitro id="diagonal_3.003" x="-35.00" y="2.00" z="-17.50" h="210.00" />
+  <item id="gift_1" x="0.00" y="2.00" z="-45.00" h="-30.00" />
+  <item id="gift_1.001" x="0.00" y="2.00" z="45.00" h="-210.00" />
+  <big-nitro id="goalie_4" x="-45.00" y="2.00" z="75.00" h="30.00" />
+  <big-nitro id="goalie_4.001" x="45.00" y="2.00" z="75.00" h="30.00" />
+  <big-nitro id="goalie_4.002" x="45.00" y="2.00" z="-75.00" h="30.00" />
+  <big-nitro id="goalie_4.003" x="-45.00" y="2.00" z="-75.00" h="30.00" />
+  <item id="item_2" x="-35.00" y="2.00" z="0.00" h="210.00" />
+  <item id="item_2.001" x="35.00" y="2.00" z="0.00" h="30.00" />
+  <big-nitro id="item_2.002" x="65.00" y="2.00" z="0.00" h="30.00" />
+  <big-nitro id="item_2.003" x="-65.00" y="2.00" z="0.00" h="30.00" />
+  <object type="billboard" id="nitrobillboard" texture="icon-nitro-big.png" xyz="65.00 7.50 0.00" 
+             width="4.000" height="4.000" >
+  </object>
+  <object type="billboard" id="nitrobillboard.001" texture="icon-nitro-big.png" xyz="-65.00 7.50 0.00" 
+             width="4.000" height="4.000" >
+  </object>
+  <object type="billboard" id="nitrobillboard.002" texture="icon-nitro-big.png" xyz="45.00 7.50 75.00" 
+             width="4.000" height="4.000" >
+  </object>
+  <object type="billboard" id="nitrobillboard.003" texture="icon-nitro-big.png" xyz="-45.00 7.50 75.00" 
+             width="4.000" height="4.000" >
+  </object>
+  <object type="billboard" id="nitrobillboard.004" texture="icon-nitro-big.png" xyz="-45.00 7.50 -75.00" 
+             width="4.000" height="4.000" >
+  </object>
+  <object type="billboard" id="nitrobillboard.005" texture="icon-nitro-big.png" xyz="45.00 7.50 -75.00" 
+             width="4.000" height="4.000" >
+  </object>
+  <light xyz="35.00 1.00 0.00" id="Lamp" distance="250.00" energy="5.00" color="128 0 255">
+  </light>
+  <light xyz="0.00 1.20 45.00" id="Lamp.001" distance="250.00" energy="5.00" color="0 0 255">
+  </light>
+  <light xyz="-35.00 1.00 0.00" id="Lamp.002" distance="250.00" energy="5.00" color="128 0 255">
+  </light>
+  <light xyz="0.00 1.00 0.00" id="Lamp.003" distance="250.00" energy="5.00" color="128 0 255">
+  </light>
+  <light xyz="0.00 1.20 -45.00" id="Lamp.004" distance="250.00" energy="5.00" color="255 0 0">
+  </light>
+  <light xyz="-45.00 2.00 75.00" id="Lamp.005" distance="250.00" energy="5.00" color="0 0 255">
+  </light>
+  <light xyz="45.00 2.00 75.00" id="Lamp.006" distance="250.00" energy="5.00" color="0 0 255">
+  </light>
+  <light xyz="45.00 2.00 -75.00" id="Lamp.007" distance="250.00" energy="5.00" color="255 0 0">
+  </light>
+  <light xyz="-45.00 2.00 -75.00" id="Lamp.008" distance="250.00" energy="5.00" color="255 0 0">
+  </light>
+  <light xyz="65.00 2.00 0.00" id="Lamp.009" distance="250.00" energy="5.00" color="128 0 255">
+  </light>
+  <light xyz="-65.00 2.00 0.00" id="Lamp.010" distance="250.00" energy="5.00" color="128 0 255">
+  </light>
+  <default-start karts-per-row     ="3"
+                 forwards-distance ="1.50"
+                 sidewards-distance="1.80"
+                 upwards-distance  ="1.10"/>
+  <start x="0.00" y="0.10" z="12.50" h="180.00"/>
+  <start x="0.00" y="0.10" z="-12.50" h="0.00"/>
+  <start x="0.00" y="0.10" z="35.00" h="180.00"/>
+  <start x="0.00" y="0.10" z="-35.00" h="0.00"/>
+  <start x="0.00" y="0.15" z="55.00" h="180.00"/>
+  <start x="0.00" y="0.15" z="-55.00" h="0.00"/>
+  <start x="0.00" y="2.41" z="85.00" h="180.00"/>
+  <start x="0.00" y="2.41" z="-85.00" h="0.00"/>
+  <start x="-35.00" y="0.15" z="55.00" h="180.00"/>
+  <start x="35.00" y="0.15" z="-55.00" h="0.00"/>
+  <start x="35.00" y="0.15" z="55.00" h="180.00"/>
+  <start x="-35.00" y="0.15" z="-55.00" h="0.00"/>
+  <start x="0.00" y="0.80" z="65.00" h="180.00"/>
+  <start x="0.00" y="0.80" z="-65.00" h="0.00"/>
+</scene>

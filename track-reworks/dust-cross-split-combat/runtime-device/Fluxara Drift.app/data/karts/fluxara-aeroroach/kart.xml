@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<kart name="Aeroroach" version="3" model-file="aeroroach.spm" icon-file="icon.png" minimap-icon-file="icon.png" shadow-file="no" type="medium" groups="Fluxara" rgb="0.00 1.00 1.00" revision="3">
+    <sounds engine="custom" file="electric.ogg" rolloff="0.2" max_dist="300" volume="1.0"/>
+    <wheels>
+        <rear-left position="-0.366173 0.116123 -0.684397" model="wheel-rear-left.spm"/>
+        <rear-right position="0.365508 0.116341 -0.685225" model="wheel-rear-right.spm"/>
+        <front-left position="-0.363617 0.118511 0.480173" model="wheel-front-left.spm"/>
+        <front-right position="0.363892 0.119606 0.479233" model="wheel-front-right.spm"/>
+    </wheels>
+    <nitro-emitter>
+        <nitro-emitter-a position="0.000026 -900.000000 -0.889619"/>
+        <nitro-emitter-b position="0.000026 -900.000000 -0.889619"/>
+    </nitro-emitter>
+    <headlights>
+        <object position="0.000000 0.297343 0.859494" rotation="180.000005 0.000000 0.000000" scale="-0.452606 -0.081006 -1.000000" model="headlight.spm"/>
+        <object position="0.000000 0.344346 -1.000000" rotation="0.000000 -0.000000 0.000000" scale="0.001000 0.001000 0.001000" color="0 255 255" model="Plane.spm"/>
+    </headlights>
+    <lean max="0"/>
+    <exhaust file="kart_exhaust.xml"/>
+</kart>
