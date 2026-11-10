@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015 Joerg Henrichs
 //
@@ -57,7 +58,7 @@ using namespace core;
 
 // -----------------------------------------------------------------------------
 
-RegisterScreen::RegisterScreen() : Screen("online/register.fluxara_driftgui")
+RegisterScreen::RegisterScreen() : Screen(PLATFORM_GAME_LITERAL("online/register.stkgui", "online/register.fluxara_driftgui"))
 {
     m_existing_player = NULL;
     m_account_mode    = ACCOUNT_OFFLINE;

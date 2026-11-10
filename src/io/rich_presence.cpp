@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 #include "utils/time.hpp"
 #include "utils/string_utils.hpp"
 #include "race/race_manager.hpp"
@@ -443,7 +444,7 @@ void RichPresence::update(bool force)
         if (PlayerManager::getCurrentOnlineState() == PlayerProfile::OS_GUEST ||
             PlayerManager::getCurrentOnlineState() == PlayerProfile::OS_SIGNED_IN)
         {
-            playerName = StringUtils::wideToUtf8(player->getLastOnlineName()) + "@fluxara_drift";
+            playerName = StringUtils::wideToUtf8(player->getLastOnlineName()) + PLATFORM_GAME_LITERAL("@stk", "@fluxara_drift");
         }
         else
         {
@@ -579,7 +580,7 @@ void RichPresence::update(bool force)
     }
     else
     {
-        assets.add("large_text", "FluxaraDrift");
+        assets.add("large_text", PLATFORM_GAME_LITERAL("SuperTuxKart", "FluxaraDrift"));
         assets.add("large_image", "logo");
         assets.add("small_text", playerName);
         // std::string filename = std::string(basename(player->getIconFilename().c_str()));

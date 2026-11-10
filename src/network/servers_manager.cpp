@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
@@ -244,7 +245,7 @@ std::shared_ptr<ServerList> ServersManager::getLANRefreshRequest() const
             {
                 Log::info("Server Discovery", "Broadcasting to %s",
                           bcast_addr.toString().c_str());
-                broadcast->sendRawPacket(std::string("fluxara_drift-server"), bcast_addr);
+                broadcast->sendRawPacket(std::string(PLATFORM_GAME_LITERAL("stk-server", "fluxara_drift-server")), bcast_addr);
             }
 
             Log::info("ServersManager", "Sent broadcast message.");

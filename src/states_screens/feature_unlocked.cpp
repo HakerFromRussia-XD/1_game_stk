@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 FluxaraDrift-Team
@@ -170,7 +171,7 @@ FeatureUnlockedCutScene::UnlockedThing::~UnlockedThing()
 #endif
 
 FeatureUnlockedCutScene::FeatureUnlockedCutScene()
-            : CutsceneScreen("cutscene.fluxara_driftgui")
+            : CutsceneScreen(PLATFORM_GAME_LITERAL("cutscene.stkgui", "cutscene.fluxara_driftgui"))
 {
     m_key_angle = 0;
 }  // FeatureUnlockedCutScene
@@ -269,7 +270,7 @@ void FeatureUnlockedCutScene::addTrophy(RaceManager::Difficulty difficulty,
                     CHALLENGE_POINTS[max_unlocked_difficulty]*gp_factor);
             break;
         case RaceManager::DIFFICULTY_BEST:
-            msg = _("You completed the FluxaraDrift challenge! "
+            msg = _(PLATFORM_GAME_LITERAL("You completed the SuperTuxKart challenge! ", "You completed the FluxaraDrift challenge! ")
                     "Points earned on this level: %i/%i",
                     CHALLENGE_POINTS[RaceManager::DIFFICULTY_BEST]*gp_factor,
                 CHALLENGE_POINTS[max_unlocked_difficulty]*gp_factor);

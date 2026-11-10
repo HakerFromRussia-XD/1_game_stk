@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
@@ -42,7 +43,7 @@ static const char ALL_TRACK_GROUPS_ID[] = "all";
 
 // -----------------------------------------------------------------------------
 
-EasterEggScreen::EasterEggScreen() : Screen("easter_egg.fluxara_driftgui")
+EasterEggScreen::EasterEggScreen() : Screen(PLATFORM_GAME_LITERAL("easter_egg.stkgui", "easter_egg.fluxara_driftgui"))
 {
 }
 

@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
@@ -54,7 +55,7 @@ UserInfoDialog::UserInfoDialog(uint32_t showing_id, const core::stringw info,
 // ----------------------------------------------------------------------------
 void UserInfoDialog::load()
 {
-    loadFromFile("online/user_info_dialog.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("online/user_info_dialog.stkgui", "online/user_info_dialog.fluxara_driftgui"));
     if(m_error)
         m_info_widget->setErrorColor();
     //I18N: In the user info dialog

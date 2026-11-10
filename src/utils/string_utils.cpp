@@ -1,3 +1,4 @@
+#include "platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //
 //  Copyright (C) 2004-2015  Steve Baker <sjbaker1@airmail.net>,
@@ -1213,7 +1214,7 @@ namespace StringUtils
     // ------------------------------------------------------------------------
     std::string getUserAgentString()
     {
-        std::string uagent(std::string("FluxaraDrift/") + FLUXARA_DRIFT_VERSION);
+        std::string uagent(std::string(PLATFORM_GAME_LITERAL("SuperTuxKart/", "FluxaraDrift/")) + FLUXARA_DRIFT_VERSION);
 #if defined(__SWITCH__)
         uagent += (std::string)" (Switch)";
 #elif defined(IOS_FLUXARA_DRIFT)

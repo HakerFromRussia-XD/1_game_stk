@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015 FluxaraDrift-Team
 //
@@ -381,12 +382,13 @@ void RaceGUIMultitouch::createRaceGUI()
 
 #ifdef IOS_FLUXARA_DRIFT
     // Exact 844 x 390 layout from Figma node 100:2. The coordinates below
-    // deliberately mirror the approved frame instead of adapting an FLUXARA_DRIFT
-    // three-column touch layout.
+    // fit inside the actual app window, including iPad compatibility mode.
+    // Use the same scale as the race HUD so hit boxes follow the artwork.
     {
         const int screen_width = irr_driver->getActualScreenSize().Width;
         const int screen_height = irr_driver->getActualScreenSize().Height;
-        const float canvas_scale = screen_height / 390.0f;
+        const float canvas_scale = std::min(screen_width / 844.0f,
+                                            screen_height / 390.0f);
         const int origin_x = (screen_width - int(844 * canvas_scale)) / 2;
         const auto x = [origin_x, canvas_scale](int value)
         { return origin_x + int(value * canvas_scale); };
@@ -716,7 +718,7 @@ void RaceGUIMultitouch::draw(const AbstractKart* kart,
             {
                 last_logged_emg_seq = emg_seq;
                 Log::info("MotoricaGameControl",
-                    "[BLE fluxara_drift-game debug] gui seq=%llu open=%d close=%d connected=%d fill=%d/%d",
+                    PLATFORM_GAME_LITERAL("[BLE stk-game debug] gui seq=%llu open=%d close=%d connected=%d fill=%d/%d", "[BLE fluxara_drift-game debug] gui seq=%llu open=%d close=%d connected=%d fill=%d/%d"),
                     (unsigned long long)emg_seq, open_level, close_level,
                     emg_connected ? 1 : 0, left_fill, right_fill);
             }

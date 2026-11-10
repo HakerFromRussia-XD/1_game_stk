@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 FluxaraDrift-Team
@@ -110,7 +111,7 @@ irr::core::stringw DeviceConfig::getMappingIdString (const PlayerAction action) 
                 break;
 
             case Input::IT_STICKMOTION:
-                return_string += "fluxara_driftmo_";
+                return_string += PLATFORM_GAME_LITERAL("stkmo_", "fluxara_driftmo_");
                 return_string += id;
                 return_string += "$";
                 return_string += dir;
@@ -119,7 +120,7 @@ irr::core::stringw DeviceConfig::getMappingIdString (const PlayerAction action) 
                 break;
 
             case Input::IT_STICKBUTTON:
-                return_string += "fluxara_driftbt_";
+                return_string += PLATFORM_GAME_LITERAL("stkbt_", "fluxara_driftbt_");
                 return_string += id;
                 break;
 

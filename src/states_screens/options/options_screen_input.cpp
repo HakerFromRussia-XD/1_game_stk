@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
@@ -36,7 +37,7 @@ using namespace GUIEngine;
 
 // -----------------------------------------------------------------------------
 
-OptionsScreenInput::OptionsScreenInput() : Screen("options/options_input.fluxara_driftgui")
+OptionsScreenInput::OptionsScreenInput() : Screen(PLATFORM_GAME_LITERAL("options/options_input.stkgui", "options/options_input.fluxara_driftgui"))
 {
 }   // OptionsScreenInput
 

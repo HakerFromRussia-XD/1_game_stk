@@ -95,3 +95,12 @@ lib/astc-encoder
 lib/shaderc
 
 .DS_Store
+
+# Permanent platform runtime resources
+!iosApp/BaseResources/
+!iosApp/BaseResources/**
+!android/ResourceSource/
+!android/ResourceSource/**
+
+# Generated App Store archives and exports
+/releases/

@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015 Marc Coll
 //
@@ -39,7 +40,7 @@ using namespace irr::core;
 
 // -----------------------------------------------------------------------------
 GrandPrixEditorScreen::GrandPrixEditorScreen()
-                     : Screen("grand_prix_editor.fluxara_driftgui"), m_selection(NULL),
+                     : Screen(PLATFORM_GAME_LITERAL("grand_prix_editor.stkgui", "grand_prix_editor.fluxara_driftgui")), m_selection(NULL),
                        m_gpgroup(GrandPrixData::GP_NONE)
 {
 }

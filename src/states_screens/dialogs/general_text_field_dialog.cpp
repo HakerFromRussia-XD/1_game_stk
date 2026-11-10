@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2016 FluxaraDrift-Team
 //
@@ -38,7 +39,7 @@ GeneralTextFieldDialog::GeneralTextFieldDialog(const core::stringw& title,
                     GUIEngine::MODAL_DIALOG_LOCATION_BOTTOM),
                     m_dm_cb(dm_cb), m_val_cb(val_cb), m_self_destroy(false)
 {
-    loadFromFile("general_text_field_dialog.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("general_text_field_dialog.stkgui", "general_text_field_dialog.fluxara_driftgui"));
 
     m_text_field = getWidget<TextBoxWidget>("textfield");
     assert(m_text_field != NULL);

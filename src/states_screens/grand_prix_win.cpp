@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 FluxaraDrift-Team
@@ -111,7 +112,7 @@ const float PODIUMS_AND_KARTS_SPEED_Y[3] = { 0.9f, 1.35f, 0.45f };
 
 // -------------------------------------------------------------------------------------
 
-GrandPrixWin::GrandPrixWin() : GrandPrixCutscene("grand_prix_win.fluxara_driftgui")
+GrandPrixWin::GrandPrixWin() : GrandPrixCutscene(PLATFORM_GAME_LITERAL("grand_prix_win.stkgui", "grand_prix_win.fluxara_driftgui"))
 {
     for (int i = 0; i < 3; i++)
     {

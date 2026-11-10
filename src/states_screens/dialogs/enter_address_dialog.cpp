@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
@@ -36,7 +37,7 @@ EnterAddressDialog::EnterAddressDialog(std::shared_ptr<Server>* entered_server)
     : ModalDialog(0.8f, 0.8f, GUIEngine::MODAL_DIALOG_LOCATION_CENTER),
     m_self_destroy(false)
 {
-    loadFromFile("enter_address_dialog.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("enter_address_dialog.stkgui", "enter_address_dialog.fluxara_driftgui"));
     m_text_field = getWidget<GUIEngine::TextBoxWidget>("textfield");
     m_title = getWidget<GUIEngine::LabelWidget>("title");
     m_title->setText(_("Enter the server address optionally followed by : and"

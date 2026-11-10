@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015 FluxaraDrift-Team
 //
@@ -17,7 +18,7 @@
 
 #include "states_screens/offline_kart_selection.hpp"
 
-OfflineKartSelectionScreen::OfflineKartSelectionScreen() : KartSelectionScreen("karts.fluxara_driftgui")
+OfflineKartSelectionScreen::OfflineKartSelectionScreen() : KartSelectionScreen(PLATFORM_GAME_LITERAL("karts.stkgui", "karts.fluxara_driftgui"))
 {
 }
 

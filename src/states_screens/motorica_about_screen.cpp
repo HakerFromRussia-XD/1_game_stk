@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  Motorica Signal LAB product and open-source information
 
 #include "states_screens/motorica_about_screen.hpp"
@@ -15,7 +16,7 @@ using namespace GUIEngine;
 namespace
 {
 const char* MOTORICA_SOURCE_URL =
-    "https://github.com/HakerFromRussia-XD/1_game_fluxara_drift";
+    PLATFORM_GAME_LITERAL("https://github.com/HakerFromRussia-XD/1_game_stk", "https://github.com/HakerFromRussia-XD/1_game_fluxara_drift");
 
 bool useRussian()
 {
@@ -32,7 +33,7 @@ core::stringw localized(const char* russian, const char* english)
 }
 
 MotoricaAboutScreen::MotoricaAboutScreen()
-    : Screen("motorica_about.fluxara_driftgui")
+    : Screen(PLATFORM_GAME_LITERAL("motorica_about.stkgui", "motorica_about.fluxara_driftgui"))
 {
 }
 
@@ -47,10 +48,10 @@ void MotoricaAboutScreen::init()
     getWidget("about_description")->setText(localized(
         "Motorica Signal LAB — самостоятельный тренажёр точности, реакции "
         "и удержания сигнала. Motorica Signal LAB основан на открытом исходном "
-        "коде FluxaraDrift; лицензии и авторство исходного проекта сохранены.",
+        PLATFORM_GAME_LITERAL("коде SuperTuxKart; лицензии и авторство исходного проекта сохранены.", "коде FluxaraDrift; лицензии и авторство исходного проекта сохранены."),
         "Motorica Signal LAB is a standalone trainer for precision, reaction "
         "and signal holding. Motorica Signal LAB is based on the open-source "
-        "FluxaraDrift project; its licenses and attribution are preserved."));
+        PLATFORM_GAME_LITERAL("SuperTuxKart project; its licenses and attribution are preserved.", "FluxaraDrift project; its licenses and attribution are preserved.")));
     getWidget("source")->setText(localized(
         "Открыть исходный код проекта", "Open Project Source Code"));
     getWidget("copy_source")->setText(localized(

@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Marianne Gagnon
 //
@@ -40,7 +41,7 @@ DebugMessageDialog::DebugMessageDialog(irr::core::stringw msg, bool stopGame) :
         World::getWorld()->schedulePause(World::IN_GAME_MENU_PHASE);
     }
 
-    loadFromFile("debug_message_dialog.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("debug_message_dialog.stkgui", "debug_message_dialog.fluxara_driftgui"));
 
     LabelWidget* message = getWidget<LabelWidget>("title");
     message->setText( msg.c_str(), false );

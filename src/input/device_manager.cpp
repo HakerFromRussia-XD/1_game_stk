@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 FluxaraDrift-Team
@@ -495,7 +496,7 @@ bool DeviceManager::load()
         //I18N: shown when config file is too old
         GUIEngine::showMessage(_("Please re-configure your key bindings."));
         GUIEngine::showMessage(_("Your input config file is not compatible "
-                                 "with this version of FLUXARA_DRIFT."));
+                                 PLATFORM_GAME_LITERAL("with this version of STK.", "with this version of FLUXARA_DRIFT.")));
         delete input;
         return false;
     }

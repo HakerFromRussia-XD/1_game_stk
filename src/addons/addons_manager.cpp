@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Lucas Baudin
 //
@@ -110,7 +111,7 @@ void AddonsManager::init(const XMLNode *xml,
         setErrorState();
         NewsManager::get()->addNewsMessage(
             NewsManager::NTYPE_MAINMENU,
-            _("Failed to connect to the FluxaraDrift add-ons server."));
+            _(PLATFORM_GAME_LITERAL("Failed to connect to the SuperTuxKart add-ons server.", "Failed to connect to the FluxaraDrift add-ons server.")));
         return;
     }
 

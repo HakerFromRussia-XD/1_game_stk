@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Marianne Gagnon
 //
@@ -92,7 +93,7 @@ void MessageDialog::doInit(bool from_queue)
     }
 
     if (!from_queue)
-        loadFromFile("confirm_dialog.fluxara_driftgui");
+        loadFromFile(PLATFORM_GAME_LITERAL("confirm_dialog.stkgui", "confirm_dialog.fluxara_driftgui"));
 }   // doInit
 
 // ----------------------------------------------------------------------------

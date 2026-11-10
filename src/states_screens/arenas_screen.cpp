@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
@@ -44,7 +45,7 @@ static const char ALL_ARENA_GROUPS_ID[] = "all";
 
 // -----------------------------------------------------------------------------
 
-ArenasScreen::ArenasScreen() : Screen("arenas.fluxara_driftgui")
+ArenasScreen::ArenasScreen() : Screen(PLATFORM_GAME_LITERAL("arenas.stkgui", "arenas.fluxara_driftgui"))
 {
 }
 

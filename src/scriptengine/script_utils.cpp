@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015  FluxaraDrift Team
@@ -261,7 +262,7 @@ namespace Scripting
                                                mp ? WRAP_FN(versionToInt) : asFUNCTION(versionToInt),
                                                call_conv); assert(r >= 0);
 
-            r = engine->RegisterGlobalFunction("string getFLUXARA_DRIFTVersion()",
+            r = engine->RegisterGlobalFunction(PLATFORM_GAME_LITERAL("string getSTKVersion()", "string getFLUXARA_DRIFTVersion()"),
                                                mp ? WRAP_FN(getFLUXARA_DRIFTVersion) : asFUNCTION(getFLUXARA_DRIFTVersion),
                                                call_conv); assert(r >= 0);
 

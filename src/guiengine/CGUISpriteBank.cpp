@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 // Copyright (C) 2002-2015 Nikolaus Gebhardt, modified by Marianne Gagnon
 // This file is part of the "Irrlicht Engine".
 // For conditions of distribution and use, see copyright notice in irrlicht.h
@@ -24,7 +25,7 @@ FLUXARA_DRIFTModifiedSpriteBank::FLUXARA_DRIFTModifiedSpriteBank(IGUIEnvironment
     m_magic_number = 0xCAFEC001;
 
     #ifdef _DEBUG
-    setDebugName("FLUXARA_DRIFTModifiedSpriteBank");
+    setDebugName(PLATFORM_GAME_LITERAL("STKModifiedSpriteBank", "FLUXARA_DRIFTModifiedSpriteBank"));
     #endif
 
     m_scale = 1.0f;

@@ -1,6 +1,6 @@
 # Usage:
 # cmake .. -DDEPS_PATH=/path/to/dependencies -DIOS_ASSETS=/path/to/generated/assets -DCMAKE_TOOLCHAIN_FILE=../cmake/Toolchain-ios-xcode.cmake -G Xcode
-# Need to use ../android/generate_assets.sh for assets first
+# Runtime resources default to ../iosApp/BaseResources; no Android generation is needed.
 # In Xcode you need to choose Product -> Scheme -> fluxaradrift
 # And then Signing & Capabilities choose a suitable team
 # You may need to use another bundle identifier as the current one is already used by FLUXARA_DRIFT team
@@ -37,6 +37,7 @@ set_property(CACHE FLUXARA_IOS_PLATFORM PROPERTY STRINGS iphoneos iphonesimulato
 if(NOT FLUXARA_IOS_PLATFORM MATCHES "^(iphoneos|iphonesimulator)$")
     message(FATAL_ERROR "Unsupported Fluxara iOS platform: ${FLUXARA_IOS_PLATFORM}")
 endif()
+set(IOS_ASSETS "${CMAKE_CURRENT_LIST_DIR}/../iosApp/BaseResources" CACHE PATH "Permanent iOS runtime base resources")
 list(APPEND CMAKE_TRY_COMPILE_PLATFORM_VARIABLES FLUXARA_IOS_PLATFORM DEPS_PATH IOS_ASSETS)
 set(FLUXARA_IOS_DEPENDENCY_DIR "dependencies-${FLUXARA_IOS_PLATFORM}")
 

@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 // Fluxara Drift - iOS campaign circuit selection
 
 #include "states_screens/fluxara_campaign_screen.hpp"
@@ -190,7 +191,7 @@ static void drawTrackDownloadControl(const FluxaraUI::Canvas& canvas,
 } // namespace
 
 FluxaraCampaignScreen::FluxaraCampaignScreen()
-    : Screen("fluxara_campaign.fluxara_driftgui")
+    : Screen(PLATFORM_GAME_LITERAL("fluxara_campaign.stkgui", "fluxara_campaign.fluxara_driftgui"))
 {
 }
 
@@ -490,8 +491,8 @@ void FluxaraCampaignScreen::onDraw(float)
                    true, true);
         font->setScale(saved);
     };
-    GL32_draw2DRectangle(irr::video::SColor(255,12,31,76),c.rect(0,0,360,780));
-    c.image(m_art[0],0,0,360,780,true,77);
+    GL32_draw2DRectangle(irr::video::SColor(255,12,31,76),FluxaraUI::fullWindowRect());
+    FluxaraUI::transitionBackdrop(m_art[0], 77);
     c.image(m_art[1],21,58,50,50); c.image(m_art[2],32,68,25,31);
     title(_C("fluxara", "CAMPAIGN").c_str());
     ListWidget* list = getWidget<ListWidget>("tracks");

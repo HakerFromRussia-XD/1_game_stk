@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015 FluxaraDrift-Team
 //
@@ -46,7 +47,7 @@ private:
 protected:
     // ------------------------------------------------------------------------
     NetworkKartSelectionScreen()
-                        : KartSelectionScreen("online/network_karts.fluxara_driftgui")
+                        : KartSelectionScreen(PLATFORM_GAME_LITERAL("online/network_karts.stkgui", "online/network_karts.fluxara_driftgui"))
     {
         m_live_join = false;
         m_all_players_done = false;

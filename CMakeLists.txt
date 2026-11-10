@@ -101,8 +101,8 @@ endif()
 if (IOS)
     ADD_DEFINITIONS(-DMOBILE_FLUXARA_DRIFT)
     ADD_DEFINITIONS(-DIOS_FLUXARA_DRIFT)
-    # Fluxara's approved portrait menus and landscape race HUD target iPhone.
-    set(CMAKE_XCODE_ATTRIBUTE_TARGETED_DEVICE_FAMILY "1")
+    # Native iPhone and iPad windows; avoid iPhone compatibility letterboxing.
+    set(CMAKE_XCODE_ATTRIBUTE_TARGETED_DEVICE_FAMILY "1,2")
     option(USE_GLES2 "Use OpenGL ES2 renderer" ON)
 endif()
 
@@ -1104,6 +1104,7 @@ else()
             MACOSX_BUNDLE_INFO_PLIST ${PROJECT_SOURCE_DIR}/data/FluxaraDrift-Info-iOS.plist
             XCODE_ATTRIBUTE_SDKROOT ${FLUXARA_IOS_PLATFORM}
             XCODE_ATTRIBUTE_SUPPORTED_PLATFORMS "${FLUXARA_IOS_PLATFORM}"
+            XCODE_ATTRIBUTE_TARGETED_DEVICE_FAMILY "1,2"
             XCODE_ATTRIBUTE_IPHONEOS_DEPLOYMENT_TARGET 15.0
             XCODE_ATTRIBUTE_INSTALL_PATH /Applications
             XCODE_ATTRIBUTE_SKIP_INSTALL No
@@ -1139,7 +1140,13 @@ else()
             get_all_targets(fluxaradrift_targets ${CMAKE_CURRENT_LIST_DIR})
             foreach(target IN LISTS fluxaradrift_targets)
                 if (NOT target MATCHES "fluxaradrift")
-                    set_target_properties(${target} PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib$(EFFECTIVE_PLATFORM_NAME)/${target})
+                    # Keep static dependency paths stable during Archive as well
+                    # as Build. Xcode otherwise relocates them to UninstalledProducts
+                    # while CMake's application link line keeps the build path.
+                    set_target_properties(${target} PROPERTIES
+                        ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib$(EFFECTIVE_PLATFORM_NAME)/${target}
+                        XCODE_ATTRIBUTE_DEPLOYMENT_LOCATION NO
+                        XCODE_ATTRIBUTE_SKIP_INSTALL YES)
                 endif()
                 configure_xcode_defaults(${target})
             endforeach()

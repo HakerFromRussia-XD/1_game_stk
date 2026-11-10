@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 // Fluxara Drift - iOS settings
 
 #include "states_screens/fluxara_settings_screen.hpp"
@@ -18,7 +19,7 @@
 using namespace GUIEngine;
 
 FluxaraSettingsScreen::FluxaraSettingsScreen()
-    : Screen("fluxara_settings.fluxara_driftgui")
+    : Screen(PLATFORM_GAME_LITERAL("fluxara_settings.stkgui", "fluxara_settings.fluxara_driftgui"))
 {
 }
 
@@ -94,11 +95,11 @@ void FluxaraSettingsScreen::onDraw(float)
         font->draw(text.c_str(),r,color,centered,true);
         font->setScale(saved);
     };
-    GL32_draw2DRectangle(irr::video::SColor(255,16,53,126), c.rect(0,0,360,780));
+    GL32_draw2DRectangle(irr::video::SColor(255,16,53,126), FluxaraUI::fullWindowRect());
     if (m_art[0])
     {
         const auto size = m_art[0]->getSize();
-        draw2DImage(m_art[0], c.rect(0,0,360,780),
+        draw2DImage(m_art[0], FluxaraUI::fullWindowRect(),
             irr::core::recti(0,0,size.Width,size.Height), nullptr,
             irr::video::SColor(77,255,255,255), true);
     }

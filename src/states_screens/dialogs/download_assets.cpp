@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2019 FluxaraDrift-Team
 //
@@ -58,12 +59,12 @@ private:
     }
 public:
     DownloadAssetsRequest()
-    : HTTPRequest("fluxara_drift-assets.zip", /*priority*/5)
+    : HTTPRequest(PLATFORM_GAME_LITERAL("stk-assets.zip", "fluxara_drift-assets.zip"), /*priority*/5)
     {
         m_extraction_error = true;
         std::string download_url = fluxara_drift_config->m_assets_download_url;
         download_url += FLUXARA_DRIFT_VERSION;
-        download_url += "/fluxara_drift-assets.zip";
+        download_url += PLATFORM_GAME_LITERAL("/stk-assets.zip", "/fluxara_drift-assets.zip");
         setURL(download_url);
         setDownloadAssetsRequest(true);
     }
@@ -95,7 +96,7 @@ DownloadAssets::DownloadAssets()
               , m_download_paused(false)
 #endif
 {
-    loadFromFile("addons_loading.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("addons_loading.stkgui", "addons_loading.fluxara_driftgui"));
     m_install_button   = getWidget<IconButtonWidget> ("install" );
     m_progress         = getWidget<ProgressBarWidget>("progress");
 
@@ -121,7 +122,7 @@ DownloadAssets::DownloadAssets()
 #ifdef IOS_FLUXARA_DRIFT
     msg = _("Fluxara Drift includes its selected circuits and karts in the app.");
 #else
-    msg = _("FluxaraDrift will download full assets "
+    msg = _(PLATFORM_GAME_LITERAL("SuperTuxKart will download full assets ", "FluxaraDrift will download full assets ")
         "(including high quality textures and music) for better "
         "gaming experience, this will use your mobile data if you don't have "
         "a wifi connection.");
@@ -130,7 +131,7 @@ DownloadAssets::DownloadAssets()
     if (SDL_IsAndroidTV())
     {
         // I18N: In download assets dialog
-        msg = _("FluxaraDrift will download full assets "
+        msg = _(PLATFORM_GAME_LITERAL("SuperTuxKart will download full assets ", "FluxaraDrift will download full assets ")
             "(including high quality textures and music) for better "
             "gaming experience.");
     }

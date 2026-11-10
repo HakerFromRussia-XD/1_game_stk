@@ -1,3 +1,4 @@
+#include "platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Joerg Henrichs
@@ -266,7 +267,7 @@ void Log::writeLine(const char *line, int level)
             case LL_FATAL:   alp = ANDROID_LOG_FATAL;   break;
             default:         alp = ANDROID_LOG_FATAL;
             }
-            __android_log_print(alp, "FluxaraDrift", "%s", line);
+            __android_log_print(alp, PLATFORM_GAME_LITERAL("SuperTuxKart", "FluxaraDrift"), "%s", line);
 #elif defined(IOS_FLUXARA_DRIFT)
             CIrrDeviceiOS::debugPrint(line);
 #else
@@ -288,7 +289,7 @@ void Log::writeLine(const char *line, int level)
 #ifdef WIN32
     if (level >= LL_FATAL)
     {
-        MessageBoxA(NULL, line, "FluxaraDrift - Fatal error", MB_OK);
+        MessageBoxA(NULL, line, PLATFORM_GAME_LITERAL("SuperTuxKart - Fatal error", "FluxaraDrift - Fatal error"), MB_OK);
     }
 #endif
 }   // _fluhBuffers

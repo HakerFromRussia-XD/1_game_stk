@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2008-2015 Joerg Henrichs
@@ -81,7 +82,7 @@ ChallengeData::ChallengeData(const std::string& filename)
     if(!unlock_manager->isSupportedVersion(*this))
     {
         Log::warn("ChallengeData", "Challenge <%s> is older "
-                  "or newer than this version of FLUXARA_DRIFT, will be ignored.\n",
+                  PLATFORM_GAME_LITERAL("or newer than this version of STK, will be ignored.\n", "or newer than this version of FLUXARA_DRIFT, will be ignored.\n"),
                   filename.c_str());
         return;
     }

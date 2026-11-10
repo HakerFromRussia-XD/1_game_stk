@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
  
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
@@ -40,7 +41,7 @@ bool OptionsScreenDisplay::m_fullscreen_checkbox_focus = false;
 
 // --------------------------------------------------------------------------------------------
 
-OptionsScreenDisplay::OptionsScreenDisplay() : Screen("options/options_display.fluxara_driftgui")
+OptionsScreenDisplay::OptionsScreenDisplay() : Screen(PLATFORM_GAME_LITERAL("options/options_display.stkgui", "options/options_display.fluxara_driftgui"))
 {
     m_inited = false;
 }   // OptionsScreenDisplay

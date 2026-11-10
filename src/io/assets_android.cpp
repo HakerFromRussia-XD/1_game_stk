@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015 FluxaraDrift-Team
 //
@@ -50,13 +51,13 @@ void AssetsAndroid::init()
         return;
 
     bool needs_extract_data = false;
-    const std::string version = std::string("fluxaradrift.") + FLUXARA_DRIFT_VERSION;
+    const std::string version = std::string(PLATFORM_GAME_LITERAL("supertuxkart.", "fluxaradrift.")) + FLUXARA_DRIFT_VERSION;
 
     // Add some paths to check
     std::vector<std::string> paths;
 
-    if (getenv("FLUXARA_DRIFT_DATADIR"))
-        paths.push_back(getenv("FLUXARA_DRIFT_DATADIR"));
+    if (getenv(PLATFORM_GAME_LITERAL("STK_DATADIR", "FLUXARA_DRIFT_DATADIR")))
+        paths.push_back(getenv(PLATFORM_GAME_LITERAL("STK_DATADIR", "FLUXARA_DRIFT_DATADIR")));
 
     if (SDL_AndroidGetExternalStoragePath() != NULL)
     {
@@ -109,10 +110,10 @@ void AssetsAndroid::init()
         }
         
         // FluxaraDrift is an alias of fluxaradrift for compatibility with older version.
-        if (app_dir_name == "fluxaradrift" &&
-            m_file_manager->fileExists(path + "/fluxara_drift/data/" + version))
+        if (app_dir_name == PLATFORM_GAME_LITERAL("supertuxkart", "fluxaradrift") &&
+            m_file_manager->fileExists(path + PLATFORM_GAME_LITERAL("/stk/data/", "/fluxara_drift/data/") + version))
         {
-            m_fluxara_drift_dir = path + "/fluxara_drift";
+            m_fluxara_drift_dir = path + PLATFORM_GAME_LITERAL("/stk", "/fluxara_drift");
             break;
         }
     }
@@ -124,7 +125,7 @@ void AssetsAndroid::init()
     {
         for (std::string path : paths)
         {
-            Log::info("AssetsAndroid", "Check data files for different FLUXARA_DRIFT "
+            Log::info("AssetsAndroid", PLATFORM_GAME_LITERAL("Check data files for different STK ", "Check data files for different FLUXARA_DRIFT ")
                                        "version in: %s", path.c_str());
                                        
             if (!isWritable(path))
@@ -141,10 +142,10 @@ void AssetsAndroid::init()
             }
     
             // FluxaraDrift is an alias of fluxaradrift for compatibility with older version.
-            if (app_dir_name == "fluxaradrift" &&
-                m_file_manager->fileExists(path + "/fluxara_drift/.extracted"))
+            if (app_dir_name == PLATFORM_GAME_LITERAL("supertuxkart", "fluxaradrift") &&
+                m_file_manager->fileExists(path + PLATFORM_GAME_LITERAL("/stk/.extracted", "/fluxara_drift/.extracted")))
             {
-                m_fluxara_drift_dir = path + "/fluxara_drift";
+                m_fluxara_drift_dir = path + PLATFORM_GAME_LITERAL("/stk", "/fluxara_drift");
                 needs_extract_data = true;
                 break;
             }
@@ -196,7 +197,7 @@ void AssetsAndroid::init()
     // We can't continue if FLUXARA_DRIFT dir has not been found
     if (m_fluxara_drift_dir.size() == 0)
     {
-        Log::fatal("AssetsAndroid", "Fatal error: Couldn't find FluxaraDrift "
+        Log::fatal("AssetsAndroid", PLATFORM_GAME_LITERAL("Fatal error: Couldn't find SuperTuxKart ", "Fatal error: Couldn't find FluxaraDrift ")
                    "data directory");
     }
 
@@ -216,7 +217,7 @@ void AssetsAndroid::init()
     }
 
     // Set some useful variables
-    setenv("FLUXARA_DRIFT_DATADIR", m_fluxara_drift_dir.c_str(), 1);
+    setenv(PLATFORM_GAME_LITERAL("STK_DATADIR", "FLUXARA_DRIFT_DATADIR"), m_fluxara_drift_dir.c_str(), 1);
     setenv("HOME", (m_fluxara_drift_dir + "/home").c_str(), 1);
     setenv("XDG_CONFIG_HOME", (m_fluxara_drift_dir + "/home").c_str(), 1);
 
@@ -476,7 +477,7 @@ void AssetsAndroid::removeData()
 
     // Make sure that we are not accidentally removing wrong directory
     if (m_fluxara_drift_dir.find("/" + app_dir_name) == std::string::npos &&
-        m_fluxara_drift_dir.find("/fluxara_drift") == std::string::npos)
+        m_fluxara_drift_dir.find(PLATFORM_GAME_LITERAL("/stk", "/fluxara_drift")) == std::string::npos)
     {
         Log::error("AssetsAndroid", "Invalid data directory: %s",
                    m_fluxara_drift_dir.c_str());

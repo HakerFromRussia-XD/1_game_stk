@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2016 FluxaraDrift-Team
@@ -44,7 +45,7 @@ using namespace GUIEngine;
 // ----------------------------------------------------------------------------
 /** Constructor, which loads the fluxara_driftgui file.
  */
-HighScoreSelection::HighScoreSelection() : Screen("high_score_selection.fluxara_driftgui")
+HighScoreSelection::HighScoreSelection() : Screen(PLATFORM_GAME_LITERAL("high_score_selection.stkgui", "high_score_selection.fluxara_driftgui"))
 {
     m_selected_index = -1;
 }   // HighScoreSelection

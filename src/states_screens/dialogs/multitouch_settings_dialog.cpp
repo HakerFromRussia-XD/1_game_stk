@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015 FluxaraDrift-Team
 //
@@ -57,7 +58,7 @@ namespace
 MultitouchSettingsDialog::MultitouchSettingsDialog(const float w, const float h)
         : ModalDialog(w, h)
 {
-    loadFromFile("android/multitouch_settings.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("android/multitouch_settings.stkgui", "android/multitouch_settings.fluxara_driftgui"));
 }
 
 // -----------------------------------------------------------------------------

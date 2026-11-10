@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006-2015 Joerg Henrichs
@@ -54,9 +55,9 @@ HighscoreManager::~HighscoreManager()
  */
 void HighscoreManager::setFilename()
 {
-    if ( getenv("FLUXARA_DRIFT_HIGHSCOREDIR") != NULL )
+    if ( getenv(PLATFORM_GAME_LITERAL("STK_HIGHSCOREDIR", "FLUXARA_DRIFT_HIGHSCOREDIR")) != NULL )
     {
-        m_filename = getenv("FLUXARA_DRIFT_HIGHSCOREDIR")
+        m_filename = getenv(PLATFORM_GAME_LITERAL("STK_HIGHSCOREDIR", "FLUXARA_DRIFT_HIGHSCOREDIR"))
                    + std::string("/highscore.xml");
     }
     else

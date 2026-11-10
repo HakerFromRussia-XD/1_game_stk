@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 FluxaraDrift-Team
@@ -1744,12 +1745,12 @@ void ClientLobby::handleClientCommand(const std::string& cmd)
             L"/" + core::stringw(addon->getRevision());
         NetworkingLobby::getInstance()->addMoreServerInfo(ret);
     }
-    else if (argv[0] == "listfluxara_driftaddon")
+    else if (argv[0] == PLATFORM_GAME_LITERAL("liststkaddon", "listfluxara_driftaddon"))
     {
         if (argv.size() > 3)
         {
             NetworkingLobby::getInstance()->addMoreServerInfo(
-                L"Usage: /listfluxara_driftaddon [option][addon prefix letter(s) to find]");
+                PLATFORM_GAME_LITERAL(L"Usage: /liststkaddon [option][addon prefix letter(s) to find]", L"Usage: /listfluxara_driftaddon [option][addon prefix letter(s) to find]"));
             NetworkingLobby::getInstance()->addMoreServerInfo(
                 L"available options: -kart, -track, -arena.");
         }
@@ -1791,7 +1792,7 @@ void ClientLobby::handleClientCommand(const std::string& cmd)
                 msg = msg.substr(0, msg.size() - 2);
                 NetworkingLobby::getInstance()->addMoreServerInfo(
                     StringUtils::utf8ToWide
-                    (std::string("FLUXARA_DRIFT addon: ") + msg));
+                    (std::string(PLATFORM_GAME_LITERAL("STK addon: ", "FLUXARA_DRIFT addon: ")) + msg));
             }
         }
     }
@@ -1853,7 +1854,7 @@ void ClientLobby::handleClientCommand(const std::string& cmd)
                 {
                     if (skin == "." || skin == "..")
                         continue;
-                    std::string fluxara_driftskin = skin_folder + skin + "/fluxara_driftskin.xml";
+                    std::string fluxara_driftskin = skin_folder + skin + PLATFORM_GAME_LITERAL("/stkskin.xml", "/fluxara_driftskin.xml");
                     if (file_manager->fileExists(fluxara_driftskin))
                         total_addons.insert(Addon::createAddonId(skin));
                 }
@@ -1987,7 +1988,7 @@ void ClientLobby::doInstallAddonsPack()
             std::string addon_id = Addon::createAddonId(r);
             // We assume the addons pack the user downloaded use the latest
             // revision from the fluxara_drift-addons (if exists)
-            if (file_manager->fileExists(tmp_extract + r + "/fluxara_driftskin.xml"))
+            if (file_manager->fileExists(tmp_extract + r + PLATFORM_GAME_LITERAL("/stkskin.xml", "/fluxara_driftskin.xml")))
             {
                 std::string skins = file_manager->getAddonsFile("skins");
                 file_manager->checkAndCreateDirectoryP(skins);

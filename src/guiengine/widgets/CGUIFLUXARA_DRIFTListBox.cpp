@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 // Copyright (C) 2002-2015 Nikolaus Gebhardt
 //               2013 Glenn De Jonghe
 // This file is part of the "Irrlicht Engine".
@@ -41,7 +42,7 @@ CGUIFLUXARA_DRIFTListBox::CGUIFLUXARA_DRIFTListBox(IGUIEnvironment* environment,
 {
     m_alternating_darkness = false;
     #ifdef _DEBUG
-    setDebugName("CGUIFLUXARA_DRIFTListBox");
+    setDebugName(PLATFORM_GAME_LITERAL("CGUISTKListBox", "CGUIFLUXARA_DRIFTListBox"));
     #endif
 
     IGUISkin* skin = Environment->getSkin();

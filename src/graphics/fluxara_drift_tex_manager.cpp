@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2017 FluxaraDrift-Team
 //
@@ -66,8 +67,8 @@ video::ITexture* FLUXARA_DRIFTTexManager::findTextureInFileSystem(const std::str
     if (relative_path.empty())
     {
         if (!m_texture_error_message.empty())
-            Log::error("FLUXARA_DRIFTTexManager", "%s", m_texture_error_message.c_str());
-        Log::error("FLUXARA_DRIFTTexManager", "Failed to load %s.", filename.c_str());
+            Log::error(PLATFORM_GAME_LITERAL("STKTexManager", "FLUXARA_DRIFTTexManager"), "%s", m_texture_error_message.c_str());
+        Log::error(PLATFORM_GAME_LITERAL("STKTexManager", "FLUXARA_DRIFTTexManager"), "Failed to load %s.", filename.c_str());
         return NULL;
     }
     *full_path =
@@ -89,7 +90,7 @@ video::ITexture* FLUXARA_DRIFTTexManager::getTexture(const std::string& path,
 {
     if (path.empty())
     {
-        Log::error("FLUXARA_DRIFTTexManager", "Texture name is empty.");
+        Log::error(PLATFORM_GAME_LITERAL("STKTexManager", "FLUXARA_DRIFTTexManager"), "Texture name is empty.");
         return NULL;
     }
 
@@ -128,10 +129,10 @@ video::ITexture* FLUXARA_DRIFTTexManager::getTexture(const std::string& path,
         const char* name = new_texture->getName().getPtr();
         if (!m_texture_error_message.empty())
         {
-            Log::error("FLUXARA_DRIFTTexManager", "%s",
+            Log::error(PLATFORM_GAME_LITERAL("STKTexManager", "FLUXARA_DRIFTTexManager"), "%s",
                 m_texture_error_message.c_str());
         }
-        Log::error("FLUXARA_DRIFTTexManager", "Texture %s not found or invalid.",
+        Log::error(PLATFORM_GAME_LITERAL("STKTexManager", "FLUXARA_DRIFTTexManager"), "Texture %s not found or invalid.",
             name);
         m_all_textures[name] = NULL;
         delete new_texture;
@@ -184,7 +185,7 @@ bool FLUXARA_DRIFTTexManager::removeTexture(video::ITexture* texture, bool remov
     if (!remove_all) return ret;
     for (const std::string& s : undeleted_texture)
     {
-        Log::error("FLUXARA_DRIFTTexManager", "%s undeleted!", s.c_str());
+        Log::error(PLATFORM_GAME_LITERAL("STKTexManager", "FLUXARA_DRIFTTexManager"), "%s undeleted!", s.c_str());
     }
 #endif
     if (remove_all)
@@ -220,7 +221,7 @@ int FLUXARA_DRIFTTexManager::dumpTextureUsage()
             continue;
         size += p.second->getTextureSize() / 1024 / 1024;
     }
-    Log::info("FLUXARA_DRIFTTexManager", "Total %dMB", size);
+    Log::info(PLATFORM_GAME_LITERAL("STKTexManager", "FLUXARA_DRIFTTexManager"), "Total %dMB", size);
     return size;
 }   // dumpTextureUsage
 
@@ -229,7 +230,7 @@ bool FLUXARA_DRIFTTexManager::hasTexture(const std::string& path)
 {
     if (path.empty())
     {
-        Log::error("FLUXARA_DRIFTTexManager", "Texture name is empty.");
+        Log::error(PLATFORM_GAME_LITERAL("STKTexManager", "FLUXARA_DRIFTTexManager"), "Texture name is empty.");
         return false;
     }
 
@@ -321,7 +322,7 @@ void FLUXARA_DRIFTTexManager::reloadAllTextures(bool mesh_texture_only)
             {
                 if (StringUtils::startsWith(full_path, mtp))
                 {
-                    Log::info("FLUXARA_DRIFTTexManager","%s reloaded", full_path.c_str());
+                    Log::info(PLATFORM_GAME_LITERAL("STKTexManager", "FLUXARA_DRIFTTexManager"),"%s reloaded", full_path.c_str());
                     p.second->reload();
                     break;
                 }

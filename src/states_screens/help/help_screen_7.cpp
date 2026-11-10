@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2016 C. Michael Murphey
 //
@@ -22,7 +23,7 @@ using namespace GUIEngine;
 
 // -----------------------------------------------------------------------------
 
-HelpScreen7::HelpScreen7() : Screen("help/help7.fluxara_driftgui")
+HelpScreen7::HelpScreen7() : Screen(PLATFORM_GAME_LITERAL("help/help7.stkgui", "help/help7.fluxara_driftgui"))
 {
 }   // HelpScreen7
 

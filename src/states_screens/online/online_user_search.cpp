@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Lucas Baudin, Joerg Henrichs
 //
@@ -40,7 +41,7 @@ using namespace Online;
 
 // ----------------------------------------------------------------------------
 
-OnlineUserSearch::OnlineUserSearch() : Screen("online/user_search.fluxara_driftgui")
+OnlineUserSearch::OnlineUserSearch() : Screen(PLATFORM_GAME_LITERAL("online/user_search.stkgui", "online/user_search.fluxara_driftgui"))
 {
     m_search_string      = "";
     m_last_search_string = "";

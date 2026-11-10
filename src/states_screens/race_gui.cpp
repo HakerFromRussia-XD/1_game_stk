@@ -75,7 +75,10 @@ namespace
 {
 float fluxaraHudScale()
 {
-    return irr_driver->getActualScreenSize().Height / 390.0f;
+    // Fit the approved HUD into the actual app window, including iPhone
+    // compatibility windows on iPad, which can be narrower than 844:390.
+    const auto& screen = irr_driver->getActualScreenSize();
+    return std::min(screen.Width / 844.0f, screen.Height / 390.0f);
 }
 
 int fluxaraHudOriginX(float scale)

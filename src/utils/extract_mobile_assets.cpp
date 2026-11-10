@@ -1,3 +1,4 @@
+#include "platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2019 FluxaraDrift-Team
 //
@@ -48,7 +49,7 @@ bool ExtractMobileAssets::isFullAssetsInstalled()
 #ifdef IOS_FLUXARA_DRIFT
     return false;
 #else
-    return file_manager->fileExists(dir + "fluxara_drift-assets." + FLUXARA_DRIFT_VERSION);
+    return file_manager->fileExists(dir + PLATFORM_GAME_LITERAL("stk-assets.", "fluxara_drift-assets.") + FLUXARA_DRIFT_VERSION);
 #endif
 }   // isFullAssetsInstalled
 
@@ -69,7 +70,7 @@ bool ExtractMobileAssets::extract(const std::string& zip_file,
     file_manager->checkAndCreateDirectory(dst);
     if (extract_zip(zip_file, dst, true/*recursive*/))
     {
-        std::string extract_ok = dst + "fluxara_drift-assets." + FLUXARA_DRIFT_VERSION;
+        std::string extract_ok = dst + PLATFORM_GAME_LITERAL("stk-assets.", "fluxara_drift-assets.") + FLUXARA_DRIFT_VERSION;
         FILE* fp = fopen(extract_ok.c_str(), "wb");
         if (!fp)
         {
@@ -126,7 +127,7 @@ void ExtractMobileAssets::uninstall()
     return;
 #else
     file_manager->removeFile(file_manager->getFLUXARA_DRIFTAssetsDownloadDir() +
-        "fluxara_drift-assets." + FLUXARA_DRIFT_VERSION);
+        PLATFORM_GAME_LITERAL("stk-assets.", "fluxara_drift-assets.") + FLUXARA_DRIFT_VERSION);
 #endif
     file_manager->removeDirectory(file_manager->getFLUXARA_DRIFTAssetsDownloadDir());
     reinit();

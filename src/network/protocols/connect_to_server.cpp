@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 FluxaraDrift-Team
@@ -641,7 +642,7 @@ bool ConnectToServer::detectPort()
     int port_from_dns = 0;
     auto get_port = [](const std::string& txt_record)->int
     {
-        const char* match = "fluxara_drift-server-port=";
+        const char* match = PLATFORM_GAME_LITERAL("stk-server-port=", "fluxara_drift-server-port=");
         size_t len = strlen(match);
         auto it = txt_record.find(match);
         if (it != std::string::npos && it + len < txt_record.size())
@@ -832,7 +833,7 @@ cleanup:
         /*channel_limit*/EVENT_CHANNEL_COUNT,
         /*max_in_bandwidth*/0, /*max_out_bandwidth*/0, &ea,
         true/*change_port_if_bound*/));
-    BareNetworkString s(std::string("fluxara_drift-server-port"));
+    BareNetworkString s(std::string(PLATFORM_GAME_LITERAL("stk-server-port", "fluxara_drift-server-port")));
     SocketAddress address;
     if (m_server->useIPV6Connection())
         address = *m_server->getIPV6Address();

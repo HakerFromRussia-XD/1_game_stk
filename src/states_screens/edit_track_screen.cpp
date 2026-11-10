@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015 Marc Coll
 //
@@ -39,7 +40,7 @@ const char* EditTrackScreen::ALL_TRACKS_GROUP_ID = "all";
 
 // -----------------------------------------------------------------------------
 EditTrackScreen::EditTrackScreen()
-    : Screen("edit_track.fluxara_driftgui"), m_track_group("standard"),
+    : Screen(PLATFORM_GAME_LITERAL("edit_track.stkgui", "edit_track.fluxara_driftgui")), m_track_group("standard"),
     m_track(NULL), m_laps(0), m_reverse(false), m_result(false)
 {
 

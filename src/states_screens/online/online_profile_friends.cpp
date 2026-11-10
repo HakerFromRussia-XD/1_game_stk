@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
@@ -47,7 +48,7 @@ bool OnlineProfileFriends::m_sort_default    = true;
 /** Constructor for a display of all friends.
  */
 OnlineProfileFriends::OnlineProfileFriends()
-                    : OnlineProfileBase("online/profile_friends.fluxara_driftgui")
+                    : OnlineProfileBase(PLATFORM_GAME_LITERAL("online/profile_friends.stkgui", "online/profile_friends.fluxara_driftgui"))
 {
 }   // OnlineProfileFriends
 

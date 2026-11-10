@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2012-2015 Joerg Henrichs
@@ -396,7 +397,7 @@ void ReplayRecorder::save()
     MessageQueue::add(MessageQueue::MT_GENERIC, msg);
 
     fprintf(fd, "version: %d\n", getCurrentReplayVersion());
-    fprintf(fd, "fluxara_drift_version: %s\n", FLUXARA_DRIFT_VERSION);
+    fprintf(fd, PLATFORM_GAME_LITERAL("stk_version: %s\n", "fluxara_drift_version: %s\n"), FLUXARA_DRIFT_VERSION);
 
     unsigned int player_count = 0;
     for (unsigned int real_karts = 0; real_karts < num_karts; real_karts++)

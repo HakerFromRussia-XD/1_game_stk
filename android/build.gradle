@@ -177,8 +177,9 @@ android
         main
         {
             manifest.srcFile 'AndroidManifest.xml'
-            res.srcDirs = ['res']
-            assets.srcDirs = ['assets']
+            res.srcDirs = ['AppResources']
+            assets.srcDirs = ["${buildDir}/stk-assets"]
+            java.srcDirs = ['src/main/java', '../lib/sdl2/android-project/app/src/main/java']
             if (project.getProperty('compile_arch') == 'all' ||
                 project.getProperty('compile_arch') == 'arm' ||
                 project.getProperty('compile_arch') == 'arm64-v8a')
@@ -193,3 +194,21 @@ dependencies
 {
     implementation 'org.minidns:minidns-hla:0.3.3'
 }
+
+// Permanent resource inputs live in this checkout; generated APK data stays in build/.
+tasks.register('prepareStkAssets', Sync) {
+    from 'ResourceSource'
+    into "${buildDir}/stk-assets/data"
+    doLast {
+        file("${buildDir}/stk-assets/has_assets.txt").text = 'has_assets\n'
+        file("${buildDir}/stk-assets/data/supertuxkart.${project.getProperty('version_name')}").text = 'STK Android resources\n'
+        def root = file("${buildDir}/stk-assets")
+        def entries = ['data/']
+        new File(root, 'data').eachFileRecurse { f ->
+            entries.add(root.toPath().relativize(f.toPath()).toString().replace('\\', '/') + (f.isDirectory() ? '/' : ''))
+        }
+        new File(root, 'files.txt').text = entries.sort().join('\n') + '\n'
+        new File(root, '.nomedia').text = ''
+    }
+}
+tasks.named('preBuild').configure { dependsOn tasks.named('prepareStkAssets') }

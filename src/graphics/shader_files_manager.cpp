@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2016 FluxaraDrift-Team
 //
@@ -77,7 +78,7 @@ void ShaderFilesManager::readFile(const std::string& file,
         return;
     }
 
-    const std::string fluxara_drift_include = "#fluxara_drift_include";
+    const std::string fluxara_drift_include = PLATFORM_GAME_LITERAL("#stk_include", "#fluxara_drift_include");
     std::string line;
 
     while (std::getline(stream, line))
@@ -92,7 +93,7 @@ void ShaderFilesManager::readFile(const std::string& file,
             std::size_t pos = line.find("\"");
             if (pos == std::string::npos)
             {
-                Log::error("ShaderFilesManager", "Invalid #fluxara_drift_include"
+                Log::error("ShaderFilesManager", PLATFORM_GAME_LITERAL("Invalid #stk_include", "Invalid #fluxara_drift_include")
                     " line: '%s'.", line.c_str());
                 continue;
             }
@@ -103,7 +104,7 @@ void ShaderFilesManager::readFile(const std::string& file,
             pos = filename.find("\"");
             if (pos == std::string::npos)
             {
-                Log::error("ShaderFilesManager", "Invalid #fluxara_drift_include"
+                Log::error("ShaderFilesManager", PLATFORM_GAME_LITERAL("Invalid #stk_include", "Invalid #fluxara_drift_include")
                     " line: '%s'.", line.c_str());
                 continue;
             }

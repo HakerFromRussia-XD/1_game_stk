@@ -1,3 +1,4 @@
+#include "platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //
 //  Copyright (C) 2013-2015 Lionel Fuentes
@@ -100,15 +101,15 @@
             else
                 getCallStack(callstack);
 
-            std::string msg =   "FluxaraDrift crashed!\n"
+            std::string msg =   PLATFORM_GAME_LITERAL("SuperTuxKart crashed!\n", "FluxaraDrift crashed!\n")
                                 "If you continue to encounter this issue, please hit Ctrl+C to copy this error "
                                 "to the clipboard and report the problem to the developers on our bug tracker:\n"
-                                "https://github.com/fluxaradrift/fluxara_drift-code/issues\n"
+                                PLATFORM_GAME_LITERAL("https://github.com/supertuxkart/stk-code/issues\n", "https://github.com/fluxaradrift/fluxara_drift-code/issues\n")
                                 "\n"
                                 "Call stack:\n";
             msg += callstack;
             Log::error("StackTrace", "%s", msg.c_str());
-            MessageBoxA(NULL, msg.c_str(), "FluxaraDrift crashed!", MB_ICONERROR | MB_OK);
+            MessageBoxA(NULL, msg.c_str(), PLATFORM_GAME_LITERAL("SuperTuxKart crashed!", "FluxaraDrift crashed!"), MB_ICONERROR | MB_OK);
         }   // winCrashHandler
 
         // --------------------------------------------------------------------
@@ -411,11 +412,11 @@
             if (m_fluxara_drift_bfd == NULL)
             {
                 Log::warn("CrashReporting", "Failed loading or missing BFD of "
-                          "FLUXARA_DRIFT binary, no backtrace available when reporting");
+                          PLATFORM_GAME_LITERAL("STK binary, no backtrace available when reporting", "FLUXARA_DRIFT binary, no backtrace available when reporting"));
                 exit(0);
             }
 
-            Log::error("CrashReporting", "FLUXARA_DRIFT has crashed! Backtrace info:");
+            Log::error("CrashReporting", PLATFORM_GAME_LITERAL("STK has crashed! Backtrace info:", "FLUXARA_DRIFT has crashed! Backtrace info:"));
             std::string stack;
             getCallStack(stack);
 

@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  Motorica Signal LAB standalone product screens
 
 #include "states_screens/motorica_hub_screen.hpp"
@@ -113,7 +114,7 @@ StandaloneExerciseID exerciseFromHistoryId(const std::string& id)
 }
 
 MotoricaHubScreen::MotoricaHubScreen()
-    : Screen("motorica_hub.fluxara_driftgui")
+    : Screen(PLATFORM_GAME_LITERAL("motorica_hub.stkgui", "motorica_hub.fluxara_driftgui"))
 {
 }
 
@@ -202,7 +203,7 @@ bool MotoricaHubScreen::onEscapePressed()
 }
 
 MotoricaExerciseScreen::MotoricaExerciseScreen()
-    : Screen("motorica_exercise.fluxara_driftgui")
+    : Screen(PLATFORM_GAME_LITERAL("motorica_exercise.stkgui", "motorica_exercise.fluxara_driftgui"))
 {
 }
 
@@ -315,7 +316,7 @@ void MotoricaExerciseScreen::eventCallback(Widget*, const std::string& name,
 }
 
 MotoricaHistoryScreen::MotoricaHistoryScreen()
-    : Screen("motorica_history.fluxara_driftgui")
+    : Screen(PLATFORM_GAME_LITERAL("motorica_history.stkgui", "motorica_history.fluxara_driftgui"))
 {
 }
 

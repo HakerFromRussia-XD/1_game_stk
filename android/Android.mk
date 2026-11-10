@@ -345,13 +345,14 @@ endif
 include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
-# FLUXARA_DRIFT
+# STK
 LOCAL_MODULE       := main
 LOCAL_PATH         := .
 LOCAL_CPP_FEATURES += rtti exceptions
 LOCAL_SRC_FILES    := $(wildcard ../src/*.cpp)     \
                       $(wildcard ../src/*/*.cpp)   \
                       $(wildcard ../src/*/*/*.cpp)
+LOCAL_SRC_FILES := $(filter-out $(wildcard ../src/states_screens/fluxara_*_screen.cpp),$(LOCAL_SRC_FILES))
 LOCAL_LDLIBS       := -llog -lm -lOpenSLES
 LOCAL_CFLAGS       := -I../lib/angelscript/include      \
                       -I../lib/bullet/src               \
@@ -383,7 +384,7 @@ LOCAL_CFLAGS       := -I../lib/angelscript/include      \
                       -DDISABLE_ICONV  \
                       -DANDROID_PACKAGE_NAME=\"$(PACKAGE_NAME)\"    \
                       -DANDROID_APP_DIR_NAME=\"$(APP_DIR_NAME)\"    \
-                      -DFLUXARA_DRIFT_VERSION=\"$(PROJECT_VERSION)\" \
+                      -DFLUXARA_DRIFT_BUILD_VERSION=\"$(PROJECT_VERSION)\" \
                       -DANDROID_PACKAGE_CLASS_NAME=\"$(PACKAGE_CLASS_NAME)\"
 LOCAL_CPPFLAGS     := -std=gnu++0x
 

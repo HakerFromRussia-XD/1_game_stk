@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006-2015 FluxaraDrift-Team
@@ -468,7 +469,7 @@ namespace UserConfigParams
     PARAM_PREFIX IntUserConfigParam          m_difficulty
             PARAM_DEFAULT(  IntUserConfigParam(0, "difficulty",
                             &m_race_setup_group,
-                        "Default race difficulty. 0=easy, 1=medium, 2=hard, 3=fluxara_drift") );
+                        PLATFORM_GAME_LITERAL("Default race difficulty. 0=easy, 1=medium, 2=hard, 3=stk", "Default race difficulty. 0=easy, 1=medium, 2=hard, 3=fluxara_drift")) );
     PARAM_PREFIX IntUserConfigParam          m_game_mode
             PARAM_DEFAULT(  IntUserConfigParam(0, "game_mode",
                             &m_race_setup_group,
@@ -599,7 +600,7 @@ namespace UserConfigParams
     PARAM_PREFIX IntUserConfigParam         m_screen_keyboard
             PARAM_DEFAULT( IntUserConfigParam(0, "screen_keyboard_status",
             &m_multitouch_group,
-            "FLUXARA_DRIFT screen keyboard status: 0 = disabled, 1 = enabled") );
+            PLATFORM_GAME_LITERAL("STK screen keyboard status: 0 = disabled, 1 = enabled", "FLUXARA_DRIFT screen keyboard status: 0 = disabled, 1 = enabled")) );
 
     // ---- GP start order
     PARAM_PREFIX GroupUserConfigParam        m_gp_start_order
@@ -881,8 +882,8 @@ namespace UserConfigParams
         "(ipv4 only) with port", {{ "stun-server", "address", "ping" }},
             {
                  { "stunv4.linuxreviews.org:3478", 0u },
-                 { "stunv4.7.fluxaradrift.net:3478", 0u },
-                 { "stunv4.8.fluxaradrift.net:3478", 0u }
+                 { PLATFORM_GAME_LITERAL("stunv4.7.supertuxkart.net:3478", "stunv4.7.fluxaradrift.net:3478"), 0u },
+                 { PLATFORM_GAME_LITERAL("stunv4.8.supertuxkart.net:3478", "stunv4.8.fluxaradrift.net:3478"), 0u }
              }
          ));
 
@@ -892,7 +893,7 @@ namespace UserConfigParams
         "(including ipv6) with port", {{ "stun-server", "address", "ping" }},
             {
                  { "stun.linuxreviews.org:3478", 0u },
-                 { "stun.fluxaradrift.net:3478", 0u },
+                 { PLATFORM_GAME_LITERAL("stun.supertuxkart.net:3478", "stun.fluxaradrift.net:3478"), 0u },
                  { "stun.stunprotocol.org:3478", 0u }
              }
          ));
@@ -909,11 +910,11 @@ namespace UserConfigParams
     PARAM_PREFIX BoolUserConfigParam m_random_client_port
         PARAM_DEFAULT(BoolUserConfigParam(true, "random-client-port",
         &m_network_group, "Use random port for client connection "
-        "(check fluxara_drift_config.xml for default value)"));
+        PLATFORM_GAME_LITERAL("(check stk_config.xml for default value)", "(check fluxara_drift_config.xml for default value)")));
     PARAM_PREFIX BoolUserConfigParam m_random_server_port
         PARAM_DEFAULT(BoolUserConfigParam(false, "random-server-port",
         &m_network_group, "Use random port for server connection "
-        "(check fluxara_drift_config.xml for default value)"));
+        PLATFORM_GAME_LITERAL("(check stk_config.xml for default value)", "(check fluxara_drift_config.xml for default value)")));
     PARAM_PREFIX BoolUserConfigParam m_lobby_chat
         PARAM_DEFAULT(BoolUserConfigParam(true, "lobby-chat",
         &m_network_group, "Enable chatting in networking lobby, if off than "

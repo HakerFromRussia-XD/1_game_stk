@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<kart name="Signal Pilot" version="3" model-file="signal_pilot.spm"
+      icon-file="signal_pilot_icon.png"
+      minimap-icon-file="signal_pilot_icon.png"
+      shadow-file="signal_pilot_shadow.png" type="medium"
+      groups="motorica" rgb="0.18 0.88 1.00">
+  <sounds engine="small"/>
+  <animations left="0" straight="0" right="0"/>
+  <nitro-emitter>
+    <nitro-emitter-a position="-0.72 0.28 -1.02"/>
+    <nitro-emitter-b position="0.72 0.28 -1.02"/>
+  </nitro-emitter>
+</kart>

@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
@@ -96,7 +97,7 @@ protected:
     friend class GUIEngine::ScreenSingleton<TabOnlineProfileAchievements>;
 
     TabOnlineProfileAchievements()
-      : BaseOnlineProfileAchievements("online/profile_achievements_tab.fluxara_driftgui")
+      : BaseOnlineProfileAchievements(PLATFORM_GAME_LITERAL("online/profile_achievements_tab.stkgui", "online/profile_achievements_tab.fluxara_driftgui"))
     {}
 
 };   // TabOnlineProfileAchievements
@@ -113,7 +114,7 @@ protected:
     friend class GUIEngine::ScreenSingleton<OnlineProfileAchievements>;
 
     OnlineProfileAchievements()
-        : BaseOnlineProfileAchievements("online/profile_achievements.fluxara_driftgui")
+        : BaseOnlineProfileAchievements(PLATFORM_GAME_LITERAL("online/profile_achievements.stkgui", "online/profile_achievements.fluxara_driftgui"))
     {}
 
 };   // class

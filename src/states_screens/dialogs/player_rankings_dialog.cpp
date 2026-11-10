@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2018 FluxaraDrift-Team
 //
@@ -45,7 +46,7 @@ PlayerRankingsDialog::PlayerRankingsDialog(uint32_t online_id,
                     : ModalDialog(0.8f,0.9f), m_online_id(online_id),
                       m_name(name), m_self_destroy(false)
 {
-    loadFromFile("online/player_rankings_dialog.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("online/player_rankings_dialog.stkgui", "online/player_rankings_dialog.fluxara_driftgui"));
     m_top_ten = getWidget<ListWidget>("top-ten");
     assert(m_top_ten != NULL);
 

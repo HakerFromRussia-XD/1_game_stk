@@ -1,3 +1,4 @@
+#include "../../../../../src/utils/platform_game_identity.hpp"
 // Copyright (C) 2005-2006 Etienne Petitjean
 // Copyright (C) 2007-2012 Christian Stehno
 // This file is part of the "Irrlicht Engine".
@@ -501,7 +502,7 @@ CIrrDeviceMacOSX::CIrrDeviceMacOSX(const SIrrlichtCreationParameters& param)
 			[NSApp setMainMenu:mainMenu];
 			NSMenuItem* menuItem = [mainMenu addItemWithTitle:@"" action:nil keyEquivalent:@""];
 			NSMenu* menu = [[NSMenu alloc] initWithTitle:@""];
-			[menu addItemWithTitle:@"Quit FluxaraDrift" action:@selector(terminate:) keyEquivalent:@"q"];
+			[menu addItemWithTitle:@PLATFORM_GAME_LITERAL("Quit SuperTuxKart", "Quit FluxaraDrift") action:@selector(terminate:) keyEquivalent:@"q"];
 			[menuItem setSubmenu:[menu autorelease]];
 			[NSApp finishLaunching];
 		}

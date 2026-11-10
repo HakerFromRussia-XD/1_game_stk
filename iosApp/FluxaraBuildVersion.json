@@ -1,6 +1,6 @@
 {
   "marketingVersion": "1.0.29",
-  "build": 29,
+  "build": 30,
   "history": [
     {
       "version": "1.0.29",
@@ -61,6 +61,17 @@
         "tracks/fluxara-user-volcano-remake"
       ],
       "timestamp": "2026-10-02T13:43:50.068761+00:00"
+    },
+    {
+      "version": "1.0.29",
+      "build": 30,
+      "changedResources": [],
+      "changes": [
+        "Native iPad support and full-screen menu backgrounds",
+        "Fit race HUD and touch controls to window bounds",
+        "Bind touch controls to local player for immediate race launches"
+      ],
+      "timestamp": "2026-11-10T20:34:38.758829+00:00"
     }
   ],
   "fingerprints": {

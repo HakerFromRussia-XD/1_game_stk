@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 FluxaraDrift-Team
@@ -19,7 +20,7 @@
 #include "states_screens/cutscene_general.hpp"
 #include "modes/cutscene_world.hpp"
 
-CutSceneGeneral::CutSceneGeneral() : CutsceneScreen("cutscene.fluxara_driftgui")
+CutSceneGeneral::CutSceneGeneral() : CutsceneScreen(PLATFORM_GAME_LITERAL("cutscene.stkgui", "cutscene.fluxara_driftgui"))
 {
 }  // CutSceneGeneral
 

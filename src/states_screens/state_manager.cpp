@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
@@ -49,7 +50,7 @@ static StateManager* state_manager_singleton[PT_COUNT];
 #ifdef IOS_FLUXARA_DRIFT
 static bool shouldRouteToFluxaraHome(GUIEngine::Screen* screen)
 {
-    return screen != NULL && screen->getName() == "main_menu.fluxara_driftgui";
+    return screen != NULL && screen->getName() == PLATFORM_GAME_LITERAL("main_menu.stkgui", "main_menu.fluxara_driftgui");
 }
 #endif
 

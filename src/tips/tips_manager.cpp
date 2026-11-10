@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2019 dumaosen
@@ -80,7 +81,7 @@ void TipsManager::addTipSet(const XMLNode *input)
         if(node->get("type", &text) && text == "website_info")
         {
             m_all_tip_sets[id].push_back(
-                _("You can visit %s for more information about the game.", "https://fluxaradrift.net/"));
+                _("You can visit %s for more information about the game.", PLATFORM_GAME_LITERAL("https://supertuxkart.net/", "https://fluxaradrift.net/")));
             continue;
         }
 

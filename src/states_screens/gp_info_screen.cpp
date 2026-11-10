@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015  Marianne Gagnon
 //            (C) 2014-2015  Joerg Henrichs, konstin
@@ -56,7 +57,7 @@ using namespace GUIEngine;
 /** Constructor, initialised some variables which might be used before
  *  loadedFromFile is called.
  */
-GPInfoScreen::GPInfoScreen() : Screen("gp_info.fluxara_driftgui")
+GPInfoScreen::GPInfoScreen() : Screen(PLATFORM_GAME_LITERAL("gp_info.stkgui", "gp_info.fluxara_driftgui"))
 {
     m_curr_time = 0.0f;
     // Necessary to test if loadedFroMFile() was executed (in setGP)

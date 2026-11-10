@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2012-2015 FluxaraDrift-Team
@@ -377,11 +378,11 @@ int WiimoteManager::askUserToConnectWiimotes()
     new MessageDialog(
 #ifdef WIN32
         _("Connect your wiimote to the Bluetooth manager, then click on Ok. "
-                  "Detailed instructions at %s.", "https://fluxaradrift.net/Wiimote"),
+                  "Detailed instructions at %s.", PLATFORM_GAME_LITERAL("https://supertuxkart.net/Wiimote", "https://fluxaradrift.net/Wiimote")),
 #else
         _("Press the buttons 1+2 simultaneously on your wiimote to put "
           "it in discovery mode, then click on Ok. "
-                  "Detailed instructions at %s.", "https://fluxaradrift.net/Wiimote"),
+                  "Detailed instructions at %s.", PLATFORM_GAME_LITERAL("https://supertuxkart.net/Wiimote", "https://fluxaradrift.net/Wiimote")),
 #endif
         MessageDialog::MESSAGE_DIALOG_OK_CANCEL,
         new WiimoteDialogListener(), true);

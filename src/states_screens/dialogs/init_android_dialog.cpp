@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015 FluxaraDrift-Team
 //
@@ -52,7 +53,7 @@ InitAndroidDialog::~InitAndroidDialog()
 
 void InitAndroidDialog::load()
 {
-    loadFromFile("android/init_android.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("android/init_android.stkgui", "android/init_android.fluxara_driftgui"));
 }
 
 // -----------------------------------------------------------------------------

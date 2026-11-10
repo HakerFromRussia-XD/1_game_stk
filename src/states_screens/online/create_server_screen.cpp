@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
@@ -49,7 +50,7 @@ using namespace GUIEngine;
 
 // ----------------------------------------------------------------------------
 
-CreateServerScreen::CreateServerScreen() : Screen("online/create_server.fluxara_driftgui")
+CreateServerScreen::CreateServerScreen() : Screen(PLATFORM_GAME_LITERAL("online/create_server.stkgui", "online/create_server.fluxara_driftgui"))
 {
 }   // CreateServerScreen
 

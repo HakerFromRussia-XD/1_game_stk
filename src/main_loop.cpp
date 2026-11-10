@@ -1,3 +1,4 @@
+#include "utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2004-2015 Ingo Ruhnke <grumbel@gmx.de>
@@ -125,7 +126,7 @@ MainLoop::MainLoop(unsigned parent_pid, bool download_assets)
         wx.lpszClassName = class_name.c_str();
         if (RegisterClassEx(&wx))
         {
-            CreateWindowEx(0, class_name.c_str(), L"fluxara_drift_server_only",
+            CreateWindowEx(0, class_name.c_str(), PLATFORM_GAME_LITERAL(L"stk_server_only", L"fluxara_drift_server_only"),
                 0, 0, 0, 0, 0, HWND_MESSAGE, NULL, NULL, NULL);
         }
     }

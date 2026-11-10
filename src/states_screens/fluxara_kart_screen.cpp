@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 // Fluxara Drift - iOS kart selection
 
 #include "states_screens/fluxara_kart_screen.hpp"
@@ -46,7 +47,7 @@ using namespace GUIEngine;
 using namespace irr;
 
 FluxaraKartScreen::FluxaraKartScreen()
-    : Screen("fluxara_kart.fluxara_driftgui")
+    : Screen(PLATFORM_GAME_LITERAL("fluxara_kart.stkgui", "fluxara_kart.fluxara_driftgui"))
 {
 }
 

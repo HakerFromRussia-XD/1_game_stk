@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
@@ -97,7 +98,7 @@ bool CreditsScreen::getLineAsWide(std::ifstream& file, core::stringw* out)
     std::getline(file, line);
 
     // Replace "FLUXARA_DRIFTVERSION" with the actual version number
-    line = StringUtils::findAndReplace(line, "$FLUXARA_DRIFTVERSION$", FLUXARA_DRIFT_VERSION);
+    line = StringUtils::findAndReplace(line, PLATFORM_GAME_LITERAL("$STKVERSION$", "$FLUXARA_DRIFTVERSION$"), FLUXARA_DRIFT_VERSION);
 
     *out = StringUtils::utf8ToWide(line);
     return file.good();
@@ -111,7 +112,7 @@ bool CreditsScreen::getLineAsWide(std::ifstream& file, core::stringw* out)
 #pragma mark CreditsScreen
 #endif
 
-CreditsScreen::CreditsScreen() : Screen("credits.fluxara_driftgui")
+CreditsScreen::CreditsScreen() : Screen(PLATFORM_GAME_LITERAL("credits.stkgui", "credits.fluxara_driftgui"))
 {
     m_is_victory_music = false;
 }   // CreditsScreen
@@ -219,8 +220,8 @@ void CreditsScreen::init()
 {
     Screen::init();
 
-    GUIEngine::ButtonWidget *link = getWidget<GUIEngine::ButtonWidget>("fluxara_drift-website");
-    link->setText("fluxaradrift.net");
+    GUIEngine::ButtonWidget *link = getWidget<GUIEngine::ButtonWidget>(PLATFORM_GAME_LITERAL("stk-website", "fluxara_drift-website"));
+    link->setText(PLATFORM_GAME_LITERAL("supertuxkart.net", "fluxaradrift.net"));
     onResize(); // Ensure the icon-button is properly sized
 
     reset();
@@ -413,7 +414,7 @@ void CreditsScreen::eventCallback(GUIEngine::Widget* widget,
         // Open donation page
         Online::LinkHelper::openURL(fluxara_drift_config->m_donate_url);
     }
-    if (name == "fluxara_drift-website")
+    if (name == PLATFORM_GAME_LITERAL("stk-website", "fluxara_drift-website"))
     {
         // Open fluxara_drift website main page
         Online::LinkHelper::openURL(fluxara_drift_config->m_fluxara_drift_website_url);

@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2012-2015 Joerg Henrichs
@@ -138,7 +139,7 @@ bool ReplayPlay::addReplayFile(const std::string& fn, bool custom_replay, int ca
     }
     else if (version > getCurrentReplayVersion())
     {
-        Log::warn("Replay", "Replay is version '%d', FLUXARA_DRIFT replay version is '%d', skipped '%s'",
+        Log::warn("Replay", PLATFORM_GAME_LITERAL("Replay is version '%d', STK replay version is '%d', skipped '%s'", "Replay is version '%d', FLUXARA_DRIFT replay version is '%d', skipped '%s'"),
                   version, getCurrentReplayVersion(), fn.c_str());
         return false;
     }
@@ -148,9 +149,9 @@ bool ReplayPlay::addReplayFile(const std::string& fn, bool custom_replay, int ca
     if (version >= 4)
     {
         fgets(s, 1023, fd);
-        if(sscanf(s, "fluxara_drift_version: %1023s", s1) != 1)
+        if(sscanf(s, PLATFORM_GAME_LITERAL("stk_version: %1023s", "fluxara_drift_version: %1023s"), s1) != 1)
         {
-            Log::warn("Replay", "No FLUXARA_DRIFT release version found in replay file, '%s'.", fn.c_str());
+            Log::warn("Replay", PLATFORM_GAME_LITERAL("No STK release version found in replay file, '%s'.", "No FLUXARA_DRIFT release version found in replay file, '%s'."), fn.c_str());
             return false;
         }
         rd.m_fluxara_drift_version = s1;
@@ -278,7 +279,7 @@ bool ReplayPlay::addReplayFile(const std::string& fn, bool custom_replay, int ca
     Track* t = track_manager->getTrack(rd.m_track_name);
     if (t == NULL)
     {
-        Log::warn("Replay", "Track '%s' used in replay '%s' not found in FLUXARA_DRIFT!",
+        Log::warn("Replay", PLATFORM_GAME_LITERAL("Track '%s' used in replay '%s' not found in STK!", "Track '%s' used in replay '%s' not found in FLUXARA_DRIFT!"),
         rd.m_track_name.c_str(), fn.c_str());
         return false;
     }

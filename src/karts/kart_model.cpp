@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2008-2015 Joerg Henrichs
@@ -1568,7 +1569,7 @@ bool KartModel::handleSpotlight(GE::GESPM* spm)
         std::string t;
         if (m.getTexture(0))
             t = m.getTexture(0)->getFullPath().c_str();
-        if (t.find("fluxara_drift_conelight_a.png") != std::string::npos)
+        if (t.find(PLATFORM_GAME_LITERAL("stk_conelight_a.png", "fluxara_drift_conelight_a.png")) != std::string::npos)
         {
             spotlight = true;
             spm->removeMeshBuffer(i);
@@ -1592,7 +1593,7 @@ bool KartModel::handleSPSpotlight(SP::SPMesh* spm)
         for (unsigned i = 0; i < materials.size(); i++)
         {
             Material* m = materials[i];
-            if (m && m->getSamplerPath(0).find("fluxara_drift_conelight_a.png") != std::string::npos)
+            if (m && m->getSamplerPath(0).find(PLATFORM_GAME_LITERAL("stk_conelight_a.png", "fluxara_drift_conelight_a.png")) != std::string::npos)
             {
                 spotlight = true;
                 b->disableForMaterial(i);

@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
@@ -328,8 +329,8 @@ namespace SkinConfig
         {
             std::string skin_file = chain[0].find("addon_") != std::string::npos ?
                 file_manager->getAddonsFile(
-                    std::string("skins/") + chain[0].substr(6) + "/fluxara_driftskin.xml") :
-                file_manager->getAsset(FileManager::SKIN, chain[0] + "/fluxara_driftskin.xml");
+                    std::string("skins/") + chain[0].substr(6) + PLATFORM_GAME_LITERAL("/stkskin.xml", "/fluxara_driftskin.xml")) :
+                file_manager->getAsset(FileManager::SKIN, chain[0] + PLATFORM_GAME_LITERAL("/stkskin.xml", "/fluxara_driftskin.xml"));
 
             XMLNode* root = file_manager->createXMLTree(skin_file);
             if (!root)
@@ -633,7 +634,7 @@ void Skin::chainLoad(std::string skin_id)
             file_manager->getAsset(FileManager::SKIN, skin_id);
         m_skin_paths.push_back(skin_path);
 
-        skin_path += "/fluxara_driftskin.xml";
+        skin_path += PLATFORM_GAME_LITERAL("/stkskin.xml", "/fluxara_driftskin.xml");
 
         Log::info("GUI", "Loading skin data from file: %s", skin_path.c_str());
         SkinConfig::loadFromFile(skin_path, reset, m_skin_paths);
@@ -3104,7 +3105,7 @@ video::SColor Skin::getColor (EGUI_DEFAULT_COLOR color) const
 const wchar_t*  Skin::getDefaultText (EGUI_DEFAULT_TEXT text) const
 {
     // No idea what this is for
-    return L"FluxaraDrift";
+    return PLATFORM_GAME_LITERAL(L"SuperTuxKart", L"FluxaraDrift");
 }   // getDefaultText
 
 // -----------------------------------------------------------------------------

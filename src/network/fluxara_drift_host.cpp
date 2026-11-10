@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 FluxaraDrift-Team
@@ -270,7 +271,7 @@ FLUXARA_DRIFTHost::FLUXARA_DRIFTHost(bool server)
         if (NetworkConfig::get()->getIPType() == NetworkConfig::IP_V4 &&
             ServerConfig::m_ipv6_connection)
         {
-            Log::warn("FLUXARA_DRIFTHost", "Disable IPv6 socket due to missing IPv6.");
+            Log::warn(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Disable IPv6 socket due to missing IPv6.");
             setIPv6Socket(0);
         }
 #endif
@@ -299,11 +300,11 @@ FLUXARA_DRIFTHost::FLUXARA_DRIFTHost(bool server)
 
     if (!m_network)
     {
-        Log::fatal("FLUXARA_DRIFTHost", "An error occurred while trying to create an "
+        Log::fatal(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "An error occurred while trying to create an "
                               "ENet server host.");
     }
     if (server)
-        Log::info("FLUXARA_DRIFTHost", "Server port is %d", getPrivatePort());
+        Log::info(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Server port is %d", getPrivatePort());
 }   // FLUXARA_DRIFTHost
 
 // ----------------------------------------------------------------------------
@@ -326,11 +327,11 @@ void FLUXARA_DRIFTHost::init()
     // ============================
     if (enet_initialize() != 0)
     {
-        Log::error("FLUXARA_DRIFTHost", "Could not initialize enet.");
+        Log::error(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Could not initialize enet.");
         return;
     }
 
-    Log::info("FLUXARA_DRIFTHost", "Host initialized.");
+    Log::info(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Host initialized.");
     Network::openLog();  // Open packet log file
     ProtocolManager::createInstance();
 
@@ -477,7 +478,7 @@ void FLUXARA_DRIFTHost::getIPFromStun(int socket, const std::string& stun_addres
 
     if (len <= 0)
     {
-        Log::error("FLUXARA_DRIFTHost", "STUN response contains no data at all");
+        Log::error(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "STUN response contains no data at all");
         return;
     }
 
@@ -485,13 +486,13 @@ void FLUXARA_DRIFTHost::getIPFromStun(int socket, const std::string& stun_addres
     BareNetworkString response(buffer, len);
     if (response.size() < 20)
     {
-        Log::error("FLUXARA_DRIFTHost", "STUN response should be at least 20 bytes.");
+        Log::error(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "STUN response should be at least 20 bytes.");
         return;
     }
 
     if (response.getUInt16() != 0x0101)
     {
-        Log::error("FLUXARA_DRIFTHost", "STUN has no binding success response.");
+        Log::error(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "STUN has no binding success response.");
         return;
     }
 
@@ -500,7 +501,7 @@ void FLUXARA_DRIFTHost::getIPFromStun(int socket, const std::string& stun_addres
 
     if (response.getUInt32() != magic_cookie)
     {
-        Log::error("FLUXARA_DRIFTHost", "STUN response doesn't contain the magic "
+        Log::error(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "STUN response doesn't contain the magic "
             "cookie");
         return;
     }
@@ -509,7 +510,7 @@ void FLUXARA_DRIFTHost::getIPFromStun(int socket, const std::string& stun_addres
     {
         if (response.getUInt8() != stun_tansaction_id[i + 4])
         {
-            Log::error("FLUXARA_DRIFTHost", "STUN response doesn't contain the "
+            Log::error(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "STUN response doesn't contain the "
                 "transaction ID");
             return;
         }
@@ -547,7 +548,7 @@ void FLUXARA_DRIFTHost::getIPFromStun(int socket, const std::string& stun_addres
         {
             if (response.size() < 2)
             {
-                Log::error("FLUXARA_DRIFTHost", "Invalid STUN mapped address length.");
+                Log::error(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Invalid STUN mapped address length.");
                 return;
             }
             // Ignore the first byte as mentioned in Section 15.1 of RFC 5389.
@@ -558,7 +559,7 @@ void FLUXARA_DRIFTHost::getIPFromStun(int socket, const std::string& stun_addres
                 // Above got 2 bytes
                 if (size != 8 || response.size() < 6)
                 {
-                    Log::error("FLUXARA_DRIFTHost", "Invalid STUN mapped address length.");
+                    Log::error(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Invalid STUN mapped address length.");
                     return;
                 }
                 uint16_t port = response.getUInt16();
@@ -582,7 +583,7 @@ void FLUXARA_DRIFTHost::getIPFromStun(int socket, const std::string& stun_addres
                 // Above got 2 bytes
                 if (size != 20 || response.size() < 18)
                 {
-                    Log::error("FLUXARA_DRIFTHost", "Invalid STUN mapped address length.");
+                    Log::error(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Invalid STUN mapped address length.");
                     return;
                 }
                 uint16_t port = response.getUInt16();
@@ -623,7 +624,7 @@ void FLUXARA_DRIFTHost::getIPFromStun(int socket, const std::string& stun_addres
         }
         else
         {
-            Log::warn("FLUXARA_DRIFTHost", "Only non xor-mapped address returned.");
+            Log::warn(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Only non xor-mapped address returned.");
             *result = non_xor_addr;
         }
     }
@@ -674,7 +675,7 @@ void FLUXARA_DRIFTHost::setPublicAddress(short family)
     }
     else
     {
-        Log::warn("FLUXARA_DRIFTHost", "Failed to get enough stun servers using SRV"
+        Log::warn(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Failed to get enough stun servers using SRV"
             " record.");
     }
 
@@ -683,7 +684,7 @@ void FLUXARA_DRIFTHost::setPublicAddress(short family)
         // Pick last element in untried servers
         std::string server_name = untried_server.back().first.c_str();
         stun_map[server_name] = (uint32_t)-1;
-        Log::debug("FLUXARA_DRIFTHost", "Using STUN server %s", server_name.c_str());
+        Log::debug(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Using STUN server %s", server_name.c_str());
         uint64_t ping = FluxaraDriftTime::getMonoTimeMs();
         SocketAddress result;
         getIPFromStun((int)m_network->getENetHost()->socket, server_name, family,
@@ -692,7 +693,7 @@ void FLUXARA_DRIFTHost::setPublicAddress(short family)
         {
             if (result.getFamily() != family)
             {
-                Log::error("FLUXARA_DRIFTHost",
+                Log::error(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"),
                     "Public address family differ from request");
                 // This happens when you force to use IPv6 connection to detect
                 // public address if there is only IPv4 connection, which it
@@ -706,7 +707,7 @@ void FLUXARA_DRIFTHost::setPublicAddress(short family)
             {
                 if (isIPv6Socket())
                 {
-                    Log::error("FLUXARA_DRIFTHost",
+                    Log::error(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"),
                         "IPv6 has different port than IPv4.");
                 }
                 m_public_ipv6_address.clear();
@@ -755,7 +756,7 @@ void FLUXARA_DRIFTHost::setErrorMessage(const irr::core::stringw &message)
 {
     if (!message.empty())
     {
-        Log::error("FLUXARA_DRIFTHost", "%s", StringUtils::wideToUtf8(message).c_str());
+        Log::error(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "%s", StringUtils::wideToUtf8(message).c_str());
     }
     m_error_message = message;
 }   // setErrorMessage
@@ -792,13 +793,13 @@ void FLUXARA_DRIFTHost::stopListening()
  */
 void FLUXARA_DRIFTHost::mainLoop(ProcessType pt)
 {
-    std::string thread_name = "FLUXARA_DRIFTHost";
+    std::string thread_name = PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost");
     if (pt == PT_CHILD)
         thread_name += "_child";
     VS::setThreadName(thread_name.c_str());
 
     FLUXARA_DRIFTProcess::init(pt);
-    Log::info("FLUXARA_DRIFTHost", "Listening has been started.");
+    Log::info(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Listening has been started.");
     ENetEvent event;
     ENetHost* host = m_network->getENetHost();
     const bool is_server = NetworkConfig::get()->isServer();
@@ -813,7 +814,7 @@ void FLUXARA_DRIFTHost::mainLoop(ProcessType pt)
         direct_socket = new Network(1, 1, 0, 0, &eaddr);
         if (direct_socket->getENetHost() == NULL)
         {
-            Log::warn("FLUXARA_DRIFTHost", "No direct socket available, this "
+            Log::warn(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "No direct socket available, this "
                 "server may not be connected by lan network");
             delete direct_socket;
             direct_socket = NULL;
@@ -855,7 +856,7 @@ void FLUXARA_DRIFTHost::mainLoop(ProcessType pt)
             }
             catch (std::exception& e)
             {
-                Log::warn("FLUXARA_DRIFTHost", "Direct socket error: %s",
+                Log::warn(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Direct socket error: %s",
                     e.what());
             }
         }   // if discovery host
@@ -903,7 +904,7 @@ void FLUXARA_DRIFTHost::mainLoop(ProcessType pt)
                         if (ServerConfig::m_kick_high_ping_players &&
                             !p.second->isDisconnected() && peer_not_in_game)
                         {
-                            Log::info("FLUXARA_DRIFTHost", "%s %s with ping %d is higher"
+                            Log::info(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "%s %s with ping %d is higher"
                                 " than %d ms when not in game, kick.",
                                 p.second->getAddress().toString().c_str(),
                                 player_name.c_str(), ap, max_ping);
@@ -916,7 +917,7 @@ void FLUXARA_DRIFTHost::mainLoop(ProcessType pt)
                         }
                         else if (!p.second->hasWarnedForHighPing())
                         {
-                            Log::info("FLUXARA_DRIFTHost", "%s %s with ping %d is higher"
+                            Log::info(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "%s %s with ping %d is higher"
                                 " than %d ms.",
                                 p.second->getAddress().toString().c_str(),
                                 player_name.c_str(), ap, max_ping);
@@ -978,7 +979,7 @@ void FLUXARA_DRIFTHost::mainLoop(ProcessType pt)
                     !it->second->isValidated() &&
                     it->second->getConnectedTime() > timeout)
                 {
-                    Log::info("FLUXARA_DRIFTHost", "%s has not been validated for more"
+                    Log::info(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "%s has not been validated for more"
                         " than %f seconds, disconnect it by force.",
                         it->second->getAddress().toString().c_str(),
                         timeout);
@@ -1083,7 +1084,7 @@ void FLUXARA_DRIFTHost::mainLoop(ProcessType pt)
                 size_t new_peer_count = m_peers.size();
                 lock.unlock();
                 fluxara_drift_event = new Event(&event, fluxara_drift_peer);
-                Log::info("FLUXARA_DRIFTHost", "%s has just connected. There are "
+                Log::info(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "%s has just connected. There are "
                     "now %u peers.", fluxara_drift_peer->getAddress().toString().c_str(),
                     new_peer_count);
                 // Client always trust the server
@@ -1114,7 +1115,7 @@ void FLUXARA_DRIFTHost::mainLoop(ProcessType pt)
                     m_peers.erase(event.peer);
                     new_peer_count = m_peers.size();
                 }
-                Log::info("FLUXARA_DRIFTHost", "%s has just disconnected. There are "
+                Log::info(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "%s has just disconnected. There are "
                     "now %u peers.", addr.c_str(), new_peer_count);
             }   // ENET_EVENT_TYPE_DISCONNECT
 
@@ -1156,7 +1157,7 @@ void FLUXARA_DRIFTHost::mainLoop(ProcessType pt)
                         catch (std::exception& e)
                         {
                             // For old server
-                            Log::debug("FLUXARA_DRIFTHost", "%s", e.what());
+                            Log::debug(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "%s", e.what());
                         }
                         if (client_ping > 0)
                         {
@@ -1187,7 +1188,7 @@ void FLUXARA_DRIFTHost::mainLoop(ProcessType pt)
                 }
                 catch (std::exception& e)
                 {
-                    Log::warn("FLUXARA_DRIFTHost", "%s", e.what());
+                    Log::warn(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "%s", e.what());
                     enet_packet_destroy(event.packet);
                     continue;
                 }
@@ -1220,7 +1221,7 @@ void FLUXARA_DRIFTHost::mainLoop(ProcessType pt)
         }   // while enet_host_service
     }   // while m_exit_timeout.load() > FluxaraDriftTime::getMonoTimeMs()
     delete direct_socket;
-    Log::info("FLUXARA_DRIFTHost", "Listening has been stopped.");
+    Log::info(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Listening has been stopped.");
 }   // mainLoop
 
 // ----------------------------------------------------------------------------
@@ -1248,9 +1249,9 @@ void FLUXARA_DRIFTHost::handleDirectSocketRequest(Network* direct_socket,
     const std::string connection_cmd = std::string("connection-request") +
         StringUtils::toString(getPrivatePort());
 
-    if (command == "fluxara_drift-server")
+    if (command == PLATFORM_GAME_LITERAL("stk-server", "fluxara_drift-server"))
     {
-        Log::verbose("FLUXARA_DRIFTHost", "Received LAN server query");
+        Log::verbose(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Received LAN server query");
         const std::string& name = sl->getGameSetup()->getServerNameUtf8();
         // Send the answer, consisting of server name, max players,
         // current players
@@ -1278,9 +1279,9 @@ void FLUXARA_DRIFTHost::handleDirectSocketRequest(Network* direct_socket,
         if (!sender.isLAN() && !sender.isPublicAddressLocalhost() &&
             !NetworkConfig::get()->isPublicServer())
         {
-            Log::error("FLUXARA_DRIFTHost", "Client trying to connect from '%s'",
+            Log::error(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Client trying to connect from '%s'",
                 peer_addr.c_str());
-            Log::error("FLUXARA_DRIFTHost", "which is outside of LAN - rejected.");
+            Log::error(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "which is outside of LAN - rejected.");
             return;
         }
         if (ctp.find(peer_addr) == ctp.end())
@@ -1289,14 +1290,14 @@ void FLUXARA_DRIFTHost::handleDirectSocketRequest(Network* direct_socket,
             std::make_shared<ConnectToPeer>(sender)->requestStart();
         }
     }
-    else if (command == "fluxara_drift-server-port")
+    else if (command == PLATFORM_GAME_LITERAL("stk-server-port", "fluxara_drift-server-port"))
     {
         BareNetworkString s;
         s.addUInt16(getPrivatePort());
         direct_socket->sendRawPacket(s, sender);
     }
     else
-        Log::info("FLUXARA_DRIFTHost", "Received unknown command '%s'",
+        Log::info(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Received unknown command '%s'",
                   std::string(buffer, len).c_str());
 
 }   // handleDirectSocketRequest

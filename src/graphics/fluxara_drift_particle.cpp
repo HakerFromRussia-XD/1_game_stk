@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2017 FluxaraDrift-Team
 //
@@ -504,7 +505,7 @@ void FLUXARA_DRIFTParticle::OnRegisterSceneNode()
 {
     if (CVS->isGLSL())
     {
-        Log::warn("FLUXARA_DRIFTParticle", "Don't call OnRegisterSceneNode with GLSL");
+        Log::warn(PLATFORM_GAME_LITERAL("STKParticle", "FLUXARA_DRIFTParticle"), "Don't call OnRegisterSceneNode with GLSL");
         return;
     }
     generate(NULL);

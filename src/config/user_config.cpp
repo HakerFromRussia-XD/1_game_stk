@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006-2016 FluxaraDrift-Team
@@ -670,7 +671,7 @@ bool UserConfig::loadConfig()
 {
     const std::string filename = file_manager->getUserConfigFile(m_filename);
     auto root = std::unique_ptr<XMLNode>(file_manager->createXMLTree(filename));
-    if(!root || root->getName() != "fluxara_driftconfig")
+    if(!root || root->getName() != PLATFORM_GAME_LITERAL("stkconfig", "fluxara_driftconfig"))
     {
         Log::info("UserConfig",
                    "Could not read user config file '%s'.  A new file will be created.", filename.c_str());
@@ -731,13 +732,13 @@ void UserConfig::saveConfig()
     const std::string filename = file_manager->getUserConfigFile(m_filename);
     std::stringstream ss;
     ss << "<?xml version=\"1.0\"?>\n";
-    ss << "<fluxara_driftconfig version=\"" << m_current_config_version
+    ss << PLATFORM_GAME_LITERAL("<stkconfig version=\"", "<fluxara_driftconfig version=\"") << m_current_config_version
         << "\" >\n\n";
     for (unsigned i = 0; i < all_params.size(); i++)
     {
         all_params[i]->write(ss);
     }
-    ss << "</fluxara_driftconfig>\n";
+    ss << PLATFORM_GAME_LITERAL("</stkconfig>\n", "</fluxara_driftconfig>\n");
 
     try
     {

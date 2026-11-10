@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 FluxaraDrift-Team
@@ -177,7 +178,7 @@ ServerLobby::ServerLobby() : LobbyProtocol()
     if (ServerConfig::m_ranked)
     {
         Log::info("ServerLobby", "This server will submit ranking scores to "
-            "the FLUXARA_DRIFT addons server. Don't bother hosting one without the "
+            PLATFORM_GAME_LITERAL("the STK addons server. Don't bother hosting one without the ", "the FLUXARA_DRIFT addons server. Don't bother hosting one without the ")
             "corresponding permissions, as they would be rejected.");
 
         m_ranking = std::make_shared<Ranking>();
@@ -3956,7 +3957,7 @@ void ServerLobby::handleServerConfiguration(Event* event)
         m_game_mode.load() != new_game_mode))
     {
         Log::info("ServerLobby", "Updating server info with new "
-            "difficulty: %d, game mode: %d to fluxara_drift-addons.", new_difficulty,
+            PLATFORM_GAME_LITERAL("difficulty: %d, game mode: %d to stk-addons.", "difficulty: %d, game mode: %d to fluxara_drift-addons."), new_difficulty,
             new_game_mode);
         int priority = Online::RequestManager::HTTP_MAX_PRIORITY;
         auto request = std::make_shared<Online::XMLRequest>(priority);

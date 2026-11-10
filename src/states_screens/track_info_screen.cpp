@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //            (C) 2014-2015 Joerg Henrichs
@@ -58,7 +59,7 @@ using namespace GUIEngine;
 // ----------------------------------------------------------------------------
 /** Constructor, which loads the corresponding track_info.fluxara_driftgui file. */
 TrackInfoScreen::TrackInfoScreen()
-          : Screen("track_info.fluxara_driftgui")
+          : Screen(PLATFORM_GAME_LITERAL("track_info.stkgui", "track_info.fluxara_driftgui"))
 {
 }   // TrackInfoScreen
 

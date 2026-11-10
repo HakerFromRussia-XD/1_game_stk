@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 FluxaraDrift-Team
@@ -63,7 +64,7 @@ void ConnectToPeer::asynchronousUpdate()
                 // the client will use enet intercept to discover if server
                 // address or port is different from fluxara_drift addons database.
                 // (Happens if there is firewall in between)
-                BareNetworkString aloha("aloha-fluxara_drift");
+                BareNetworkString aloha(PLATFORM_GAME_LITERAL("aloha-stk", "aloha-fluxara_drift"));
 
                 // Enet packet will not have 0xFFFF for first 2 bytes
                 // We use the feature to distinguish between the enet packets

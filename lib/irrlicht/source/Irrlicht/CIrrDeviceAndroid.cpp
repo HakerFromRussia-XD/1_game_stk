@@ -1,3 +1,4 @@
+#include "../../../../src/utils/platform_game_identity.hpp"
 // Copyright (C) 2002-2007 Nikolaus Gebhardt
 // Copyright (C) 2007-2011 Christian Stehno
 // Copyright (C) 2016-2017 Dawid Gan
@@ -264,7 +265,7 @@ void Android_fromFLUXARA_DRIFTEditBox(int widget_id, const core::stringw& text, 
         return;
     }
 
-    jmethodID method_id = env->GetMethodID(class_native_activity, "fromFLUXARA_DRIFTEditBox", "(ILjava/lang/String;III)V");
+    jmethodID method_id = env->GetMethodID(class_native_activity, PLATFORM_GAME_LITERAL("fromSTKEditBox", "fromFLUXARA_DRIFTEditBox"), "(ILjava/lang/String;III)V");
     if (method_id == NULL)
     {
         env->DeleteLocalRef(class_native_activity);

@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015 Marc Coll
 //
@@ -34,7 +35,7 @@
 using namespace GUIEngine;
 
 // -----------------------------------------------------------------------------
-EditGPScreen::EditGPScreen() : Screen("edit_gp.fluxara_driftgui"), m_gp(NULL),
+EditGPScreen::EditGPScreen() : Screen(PLATFORM_GAME_LITERAL("edit_gp.stkgui", "edit_gp.fluxara_driftgui")), m_gp(NULL),
               m_list(NULL), m_icon_bank(NULL),
               m_selected(-1), m_modified(false)
 {

@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2015 Joerg Henrichs
@@ -47,9 +48,9 @@ void showHelp()
     std::cout << "Available command:" << std::endl;
     std::cout << "help, Print this." << std::endl;
     std::cout << "quit, Shut down the server." << std::endl;
-    std::cout << "kickall, Kick all players out of FLUXARA_DRIFTHost." << std::endl;
-    std::cout << "kick #, kick # peer of FLUXARA_DRIFTHost." << std::endl;
-    std::cout << "kickban #, kick and ban # peer of FLUXARA_DRIFTHost." << std::endl;
+    std::cout << PLATFORM_GAME_LITERAL("kickall, Kick all players out of STKHost.", "kickall, Kick all players out of FLUXARA_DRIFTHost.") << std::endl;
+    std::cout << PLATFORM_GAME_LITERAL("kick #, kick # peer of STKHost.", "kick #, kick # peer of FLUXARA_DRIFTHost.") << std::endl;
+    std::cout << PLATFORM_GAME_LITERAL("kickban #, kick and ban # peer of STKHost.", "kickban #, kick and ban # peer of FLUXARA_DRIFTHost.") << std::endl;
     std::cout << "listpeers, List all peers with host ID and IP." << std::endl;
     std::cout << "listban, List IP ban list of server." << std::endl;
     std::cout << "speedstats, Show upload and download speed." << std::endl;

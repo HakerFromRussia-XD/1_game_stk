@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Marianne Gagnon
 //
@@ -317,21 +318,21 @@ RacePausedDialog::RacePausedDialog(const float percentWidth,
 
     if (dynamic_cast<OverWorld*>(World::getWorld()) != NULL)
     {
-        loadFromFile("overworld_dialog.fluxara_driftgui");
+        loadFromFile(PLATFORM_GAME_LITERAL("overworld_dialog.stkgui", "overworld_dialog.fluxara_driftgui"));
         m_from_overworld = true;
     }
     else if (!NetworkConfig::get()->isNetworking())
     {
 #ifdef IOS_FLUXARA_DRIFT
         m_fluxara_pause = true;
-        loadFromFile("fluxara_pause_dialog.fluxara_driftgui");
+        loadFromFile(PLATFORM_GAME_LITERAL("fluxara_pause_dialog.stkgui", "fluxara_pause_dialog.fluxara_driftgui"));
 #else
-        loadFromFile("race_paused_dialog.fluxara_driftgui");
+        loadFromFile(PLATFORM_GAME_LITERAL("race_paused_dialog.stkgui", "race_paused_dialog.fluxara_driftgui"));
 #endif
     }
     else
     {
-        loadFromFile("online/network_ingame_dialog.fluxara_driftgui");
+        loadFromFile(PLATFORM_GAME_LITERAL("online/network_ingame_dialog.stkgui", "online/network_ingame_dialog.fluxara_driftgui"));
     }
 
     if (!m_fluxara_pause)
@@ -525,6 +526,7 @@ void RacePausedDialog::onEnterPressedInternal()
 GUIEngine::EventPropagation
            RacePausedDialog::processEvent(const std::string& eventSource)
 {
+#ifdef IOS_FLUXARA_DRIFT
     if (m_fluxara_pause)
     {
         if (eventSource == "continue")
@@ -555,6 +557,8 @@ GUIEngine::EventPropagation
         }
         return GUIEngine::EVENT_BLOCK;
     }
+
+#endif
 
     GUIEngine::RibbonWidget* choice_ribbon =
             getWidget<GUIEngine::RibbonWidget>("choiceribbon");
@@ -868,6 +872,7 @@ void RacePausedDialog::beforeAddingWidgets()
 // ----------------------------------------------------------------------------
 void RacePausedDialog::init()
 {
+#ifdef IOS_FLUXARA_DRIFT
     if (m_fluxara_pause)
     {
         m_irrlicht_window->setDrawBackground(false);
@@ -881,6 +886,7 @@ void RacePausedDialog::init()
 #endif
         return;
     }
+#endif
     m_touch_controls = UserConfigParams::m_multitouch_controls;
     updateTouchDeviceIcon();
 #ifndef SERVER_ONLY

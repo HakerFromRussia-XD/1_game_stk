@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
@@ -45,7 +46,7 @@ using namespace irr::gui;
 CustomVideoSettingsDialog::CustomVideoSettingsDialog(const float w, const float h) :
         ModalDialog(w, h)
 {
-    loadFromFile("custom_video_settings.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("custom_video_settings.stkgui", "custom_video_settings.fluxara_driftgui"));
     updateActivation("");
 }
 

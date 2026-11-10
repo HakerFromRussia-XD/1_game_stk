@@ -11,10 +11,13 @@ resources = File.join(root, "iosApp", "FluxaraResources")
 manifest = File.join(resources, "fluxara-campaign.xml")
 abort "missing campaign manifest: #{manifest}" unless File.file?(manifest)
 ios_assets = ENV.fetch("IOS_ASSETS",
-  File.join(root, "build-motorica-ios-assets", "assets", "data"))
+  File.join(root, "iosApp", "BaseResources"))
 music_root = File.join(ios_assets, "music")
 shared_roots = [
   music_root,
+  File.join(resources, "textures"),
+  File.join(resources, "library"),
+  File.join(resources, "models"),
   File.join(ios_assets, "textures"),
   File.join(ios_assets, "library"),
   File.join(ios_assets, "models")
@@ -92,9 +95,12 @@ def audit_scene_libraries(scene, track_directory, ios_assets, event_id, errors)
     # curated shared data/library snapshot.  Mirror that exact resolution
     # order so an iPhone-only realpath() abort cannot be hidden by the audit.
     local_node = File.join(track_directory, "library", name, "node.xml")
+    overlay_node = File.expand_path("../../library/#{name}/node.xml", track_directory)
     shared_node = File.join(ios_assets, "library", name, "node.xml")
     node_path = if File.file?(local_node)
                   local_node
+                elsif File.file?(overlay_node)
+                  overlay_node
                 elsif File.file?(shared_node)
                   shared_node
                 end

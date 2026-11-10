@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Lucas Baudin, Joerg Henrichs
 //
@@ -47,7 +48,7 @@ bool g_bookmarks_next = false;
 // ----------------------------------------------------------------------------
 /** Constructor, which loads the fluxara_driftgui file.
  */
-ServerSelection::ServerSelection() : Screen("online/server_selection.fluxara_driftgui")
+ServerSelection::ServerSelection() : Screen(PLATFORM_GAME_LITERAL("online/server_selection.stkgui", "online/server_selection.fluxara_driftgui"))
 {
     m_refreshing_server = false;
     m_refresh_timer = 0.0f;

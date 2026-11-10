@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2016 FluxaraDrift-Team
@@ -55,7 +56,7 @@ GhostReplayInfoDialog::GhostReplayInfoDialog(unsigned int replay_id,
 
     m_rd = ReplayPlay::get()->getReplayData(m_replay_id);
 
-    loadFromFile("ghost_replay_info_dialog.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("ghost_replay_info_dialog.stkgui", "ghost_replay_info_dialog.fluxara_driftgui"));
 
     m_info_widget = getWidget<BubbleWidget>("info");
     if (m_rd.m_info == "")

@@ -1,3 +1,4 @@
+#include "utils/platform_game_identity.hpp"
 
 //
 //  FluxaraDrift - a fun racing game with go-kart
@@ -680,6 +681,12 @@ void setupRaceStart()
     // ASSIGN should make sure that only input from assigned devices
     // is read.
     input_manager->getDeviceManager()->setAssignMode(ASSIGN);
+#ifdef IOS_FLUXARA_DRIFT
+    // Immediate launches skip the kart-selection route that normally binds
+    // touch controls. Assign its local player just as the regular route does.
+    input_manager->getDeviceManager()->setSinglePlayer(
+        StateManager::get()->getActivePlayer(0));
+#endif
 }   // setupRaceStart
 
 // ----------------------------------------------------------------------------
@@ -689,7 +696,7 @@ void cmdLineHelp()
 {
     fprintf(stdout,
     "Usage: %s [OPTIONS]\n\n"
-    "Run FluxaraDrift, a go-kart racing game that features "
+    PLATFORM_GAME_LITERAL("Run SuperTuxKart, a go-kart racing game that features ", "Run FluxaraDrift, a go-kart racing game that features ")
     "Tux and friends.\n\n"
     "Options:\n"
     "  -N,  --no-start-screen  Immediately start race without showing a "
@@ -712,8 +719,8 @@ void cmdLineHelp()
     "       --add-gp-dir=DIR   Load Grand Prix files in DIR. Setting will be saved"
                               "in config.xml under additional_gp_directory. Use"
                               "--add-gp-dir=\"\" to unset.\n"
-    "       --fluxara_drift-config=FILE  use ./data/FILE instead of "
-                              "./data/fluxara_drift_config.xml\n"
+    PLATFORM_GAME_LITERAL("       --stk-config=FILE  use ./data/FILE instead of ", "       --fluxara_drift-config=FILE  use ./data/FILE instead of ")
+                              PLATFORM_GAME_LITERAL("./data/stk_config.xml\n", "./data/fluxara_drift_config.xml\n")
     "  -k,  --numkarts=NUM     Set number of karts on the racetrack.\n"
     "       --kart=NAME        Use kart NAME.\n"
     "       --ai=a,b,...       Use the karts a, b, ... for the AI, and additional player kart.\n"
@@ -725,7 +732,7 @@ void cmdLineHelp()
     "                          In configure server use --battle-mode=n\n"
     "                          for battle server and --soccer-timed / goals for soccer server\n"
     "                          to control verbosely, see below:\n"
-    "       --difficulty=N     N=0 Beginner, N=1 Intermediate, N=2 Expert, N=3 FluxaraDrift.\n"
+    PLATFORM_GAME_LITERAL("       --difficulty=N     N=0 Beginner, N=1 Intermediate, N=2 Expert, N=3 SuperTuxKart.\n", "       --difficulty=N     N=0 Beginner, N=1 Intermediate, N=2 Expert, N=3 FluxaraDrift.\n")
     "       --battle-mode=n    Specify battle mode in network, 0 is Free-For-All and\n"
     "                          1 is Capture The Flag.\n"
     "       --soccer-timed     Use time limit mode in network soccer game.\n"
@@ -736,7 +743,7 @@ void cmdLineHelp()
     "  -f,  --fullscreen       Use fullscreen display.\n"
     "  -w,  --windowed         Use windowed display (default).\n"
     "  -s,  --screensize=WxH   Set the display size (e.g. 320x200).\n"
-    "  -v,  --version          Print version of FluxaraDrift.\n"
+    PLATFORM_GAME_LITERAL("  -v,  --version          Print version of SuperTuxKart.\n", "  -v,  --version          Print version of FluxaraDrift.\n")
     "       --trackdir=DIR     A directory from which additional tracks are "
                               "loaded.\n"
     "       --seed=n           Seed for random number generation to provide reproducible behavior.\n"
@@ -765,13 +772,13 @@ void cmdLineHelp()
     "                            one if not found.\n"
     "       --network-console  Enable network console.\n"
     "       --wan-server=name  Start a Wan server (not a playing client).\n"
-    "       --public-server    Allow direct connection to the server (without fluxara_drift server)\n"
+    PLATFORM_GAME_LITERAL("       --public-server    Allow direct connection to the server (without stk server)\n", "       --public-server    Allow direct connection to the server (without fluxara_drift server)\n")
     "       --lan-server=name  Start a LAN server (not a playing client).\n"
     "       --server-password= Sets a password for a server (both client and server).\n"
     "       --connect-now=ip   Connect to a server with IP or domain known now\n"
     "                          (in format x.x.x.x:xxx(optional port)), the port should be its\n"
     "                          public port, you can use [::] to replace x.x.x.x for IPv6 address.\n"
-    "       --server-id=n      Server id in fluxara_drift addons for --connect-now.\n"
+    PLATFORM_GAME_LITERAL("       --server-id=n      Server id in stk addons for --connect-now.\n", "       --server-id=n      Server id in fluxara_drift addons for --connect-now.\n")
     "       --network-ai=n     Numbers of AI for connecting to linear race server, used\n"
     "                          together with --connect-now.\n"
     "       --login=s          Automatically log in (set the login).\n"
@@ -791,8 +798,8 @@ void cmdLineHelp()
     "       --network-gp=n     Specify number of tracks used in network grand prix.\n"
     "       --graphical-server Enable graphical view in server.\n"
     "       --no-validation    Allow non validated and unencrypted connection in wan.\n"
-    "       --ranked           Server will submit ranking to fluxara_drift addons server.\n"
-    "       --no-ranked        Server will not submit ranking to fluxara_drift addons server.\n"
+    PLATFORM_GAME_LITERAL("       --ranked           Server will submit ranking to stk addons server.\n", "       --ranked           Server will submit ranking to fluxara_drift addons server.\n")
+    PLATFORM_GAME_LITERAL("       --no-ranked        Server will not submit ranking to stk addons server.\n", "       --no-ranked        Server will not submit ranking to fluxara_drift addons server.\n")
     "                          You require permission for that.\n"
     "       --owner-less       Race will autostart and no one can kick players in server.\n"
     "       --no-owner-less    Race will not autostart and server owner can kick players in server.\n"
@@ -806,13 +813,13 @@ void cmdLineHelp()
     "       --log=N            Set the verbosity to a value between\n"
     "                          0 (Debug) and 5 (Only Fatal messages)\n"
     "       --logbuffer=N      Buffers up to N lines log lines before writing.\n"
-    "       --root=DIR         Path to add to the list of FLUXARA_DRIFT root directories.\n"
+    PLATFORM_GAME_LITERAL("       --root=DIR         Path to add to the list of STK root directories.\n", "       --root=DIR         Path to add to the list of FLUXARA_DRIFT root directories.\n")
     "                          You can specify more than one by separating them\n"
     "                          with colons (:).\n"
     "       --cutscene=NAME    Launch the specified track as a cutscene.\n"
     "                          This is for internal debugging use only.\n"
     "       --gfx-preset=n     Set the graphics settings to the selected preset.\n"
-    "                          Valid values for this FLUXARA_DRIFT version are between 1 and 7.\n"
+    PLATFORM_GAME_LITERAL("                          Valid values for this STK version are between 1 and 7.\n", "                          Valid values for this FLUXARA_DRIFT version are between 1 and 7.\n")
     "                          Other graphic command-line parameters will override the preset.\n"
     "       --enable-glow      Enable glow effect.\n"
     "       --disable-glow     Disable glow effect.\n"
@@ -855,7 +862,7 @@ void cmdLineHelp()
     "       --render-driver=n   Render driver to use (gl or directx9).\n"
     "       --disable-addon-karts Disable loading of addon karts.\n"
     "       --disable-addon-tracks Disable loading of addon tracks.\n"
-    "       --dump-official-karts Dump official karts for current fluxara_drift-assets.\n"
+    PLATFORM_GAME_LITERAL("       --dump-official-karts Dump official karts for current stk-assets.\n", "       --dump-official-karts Dump official karts for current fluxara_drift-assets.\n")
     "       --apitrace          This will disable buffer storage and\n"
     "                           writing gpu query strings to opengl, which\n"
     "                           can be seen later in apitrace.\n"
@@ -871,8 +878,8 @@ void cmdLineHelp()
     "                                      fullscreen window, eg. HDMI-0\n"
 #endif
     "\n"
-    "You can visit FluxaraDrift's homepage at "
-    "https://fluxaradrift.net\n\n",
+    PLATFORM_GAME_LITERAL("You can visit SuperTuxKart's homepage at ", "You can visit FluxaraDrift's homepage at ")
+    PLATFORM_GAME_LITERAL("https://supertuxkart.net\n\n", "https://fluxaradrift.net\n\n"),
     CommandLine::getExecName().c_str()
     );
 }   // cmdLineHelp
@@ -881,7 +888,7 @@ void cmdDebugHelp()
 {
     fprintf(stdout,
     "Usage: %s [OPTIONS]\n\n"
-    "Run FluxaraDrift, a go-kart racing game that features "
+    PLATFORM_GAME_LITERAL("Run SuperTuxKart, a go-kart racing game that features ", "Run FluxaraDrift, a go-kart racing game that features ")
     "Tux and friends.\n\n"
     "Debug options (some work only if artist debug mode is enabled):\n"
     "       --debug=s                   s=all Log everything, s=addons Log addons management,\n"
@@ -916,8 +923,8 @@ void cmdDebugHelp()
     "                                   debugging client/server item management.\n"
     "       --network-item-debugging    Print item handling debug information.\n"
     "\n"
-    "You can visit FluxaraDrift's homepage at "
-    "https://fluxaradrift.net\n\n",
+    PLATFORM_GAME_LITERAL("You can visit SuperTuxKart's homepage at ", "You can visit FluxaraDrift's homepage at ")
+    PLATFORM_GAME_LITERAL("https://supertuxkart.net\n\n", "https://fluxaradrift.net\n\n"),
     CommandLine::getExecName().c_str()
     );
 }   // cmdDebugHelp
@@ -946,7 +953,7 @@ int handleCmdLineOutputModifier()
     if(CommandLine::has("--version") || CommandLine::has("-v"))
     {
         Log::info("main", "==============================");
-        Log::info("main", "FluxaraDrift, %s.", FLUXARA_DRIFT_VERSION ) ;
+        Log::info("main", PLATFORM_GAME_LITERAL("SuperTuxKart, %s.", "FluxaraDrift, %s."), FLUXARA_DRIFT_VERSION ) ;
         Log::info("main", "==============================");
         cleanUserConfig();
         exit(0);
@@ -1003,10 +1010,10 @@ int handleCmdLinePreliminary()
 #endif
 
     std::string s;
-    if(CommandLine::has("--fluxara_drift-config", &s))
+    if(CommandLine::has(PLATFORM_GAME_LITERAL("--stk-config", "--fluxara_drift-config"), &s))
     {
         fluxara_drift_config->load(file_manager->getAsset(s));
-        Log::info("main", "FLUXARA_DRIFT config will be read from %s.",s.c_str());
+        Log::info("main", PLATFORM_GAME_LITERAL("STK config will be read from %s.", "FLUXARA_DRIFT config will be read from %s."),s.c_str());
     }
     if(CommandLine::has("--render-driver", &s))
         UserConfigParams::m_render_driver = s;
@@ -1213,7 +1220,7 @@ int handleCmdLinePreliminary()
     {
         srand(n);
         RandomGenerator::seed(n);
-        Log::info("main", "FLUXARA_DRIFT using random seed (%d)", n);
+        Log::info("main", PLATFORM_GAME_LITERAL("STK using random seed (%d)", "FLUXARA_DRIFT using random seed (%d)"), n);
     }
 
     if (CommandLine::has("--disable-addon-karts"))
@@ -1356,7 +1363,7 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
     {
         if (!PlayerManager::getCurrentPlayer())
         {
-            Log::error("Main", "Run fluxaradrift with --init-user");
+            Log::error("Main", PLATFORM_GAME_LITERAL("Run supertuxkart with --init-user", "Run fluxaradrift with --init-user"));
             cleanFluxaraDrift();
             return false;
         }
@@ -1371,7 +1378,7 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
             {
                 Log::error("Main",
                     "Timed out trying login, check login info or connection "
-                    "to fluxara_drift addons.");
+                    PLATFORM_GAME_LITERAL("to stk addons.", "to fluxara_drift addons."));
                 cleanFluxaraDrift();
                 return false;
             }
@@ -1628,7 +1635,7 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
                 {
                     Log::error("Main",
                         "Timed out trying to login saved session, check "
-                        "connection to fluxara_drift addons or rerun --init-user.");
+                        PLATFORM_GAME_LITERAL("connection to stk addons or rerun --init-user.", "connection to fluxara_drift addons or rerun --init-user."));
                     cleanFluxaraDrift();
                     return false;
                 }
@@ -2015,7 +2022,7 @@ int handleCmdLine(bool has_server_config, bool has_parent_process)
             }
             if (!found_replay)
                 Log::error("main","The requested benchmark file '%s' "
-                    "isn't registered as a benchmark file in fluxara_drift_config.xml.", s.c_str());
+                    PLATFORM_GAME_LITERAL("isn't registered as a benchmark file in stk_config.xml.", "isn't registered as a benchmark file in fluxara_drift_config.xml."), s.c_str());
         }
         else
         {
@@ -2363,9 +2370,9 @@ void askForInternetPermission()
     };   // ConfirmServer
 
     MessageDialog *dialog =
-    new MessageDialog(_("FluxaraDrift may connect to a server "
+    new MessageDialog(_(PLATFORM_GAME_LITERAL("SuperTuxKart may connect to a server ", "FluxaraDrift may connect to a server ")
         "to download add-ons and notify you of updates.") + L"\n\n"
-        + _("Please read our privacy policy at %s.", "https://fluxaradrift.net/Privacy")
+        + _("Please read our privacy policy at %s.", PLATFORM_GAME_LITERAL("https://supertuxkart.net/Privacy", "https://fluxaradrift.net/Privacy"))
         + L"\n\n" + _("Would you like this feature to be enabled? (To change this setting "
         "at a later time, go to options, select tab "
         "'General', and edit \"Connect to the Internet\")."),
@@ -2551,7 +2558,7 @@ int main(int argc, char *argv[])
 #endif
 
         // ServerConfig will use fluxara_drift_config for server version testing
-        fluxara_drift_config->load(file_manager->getAsset("fluxara_drift_config.xml"));
+        fluxara_drift_config->load(file_manager->getAsset(PLATFORM_GAME_LITERAL("stk_config.xml", "fluxara_drift_config.xml")));
         NetworkConfig::initSystemIP();
         // Client port depends on user config file and fluxara_drift_config
         NetworkConfig::get()->initClientPort();
@@ -2697,7 +2704,7 @@ int main(int argc, char *argv[])
                 {
                     MessageDialog *dialog =
                         new MessageDialog(_("Your screen resolution is too "
-                                            "low to run FLUXARA_DRIFT."),
+                                            PLATFORM_GAME_LITERAL("low to run STK.", "low to run FLUXARA_DRIFT.")),
                                             /*from queue*/ true);
                     GUIEngine::DialogQueue::get()->pushDialog(dialog);
                 }
@@ -2776,7 +2783,7 @@ int main(int argc, char *argv[])
                     #endif
                     MessageDialog *dialog = new MessageDialog(_(
                         "Your graphics driver appears to be very old. Please "
-                        "check if an update is available. FluxaraDrift "
+                        PLATFORM_GAME_LITERAL("check if an update is available. SuperTuxKart ", "check if an update is available. FluxaraDrift ")
                         "recommends a driver supporting %s or better. The game "
                         "will likely still run, but in a reduced-graphics mode.",
                         version),
@@ -3065,7 +3072,7 @@ int main(int argc, char *argv[])
     {
         Log::flushBuffers();
         Log::error("main", "Exception caught : %s.",e.what());
-        Log::error("main", "Aborting FluxaraDrift.");
+        Log::error("main", PLATFORM_GAME_LITERAL("Aborting SuperTuxKart.", "Aborting FluxaraDrift."));
         Log::flushBuffers();
     }
 

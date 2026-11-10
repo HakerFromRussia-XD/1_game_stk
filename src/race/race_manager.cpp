@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006-2015 FluxaraDrift-Team
@@ -1319,7 +1320,7 @@ core::stringw RaceManager::getDifficultyName(Difficulty diff) const
         case RaceManager::DIFFICULTY_EASY:   return _("Novice");   break;
         case RaceManager::DIFFICULTY_MEDIUM: return _("Intermediate"); break;
         case RaceManager::DIFFICULTY_HARD:   return _("Expert");   break;
-        case RaceManager::DIFFICULTY_BEST:   return _("FluxaraDrift");   break;
+        case RaceManager::DIFFICULTY_BEST:   return _(PLATFORM_GAME_LITERAL("SuperTuxKart", "FluxaraDrift"));   break;
         default:    Log::error("RaceManager", "Difficulty level '%u' is unknown.", diff);
                     // Uncomment to generate a crash and backtrace, if the cause of the
                     // incorrect difficulty level is unknown (i.e. not online servers' settings)

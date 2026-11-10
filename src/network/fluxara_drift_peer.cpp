@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 FluxaraDrift-Team
@@ -123,7 +124,7 @@ void FLUXARA_DRIFTPeer::sendPacket(NetworkString *data, bool reliable, bool encr
     {
         if (Network::m_connection_debug)
         {
-            Log::verbose("FLUXARA_DRIFTPeer", "sending packet of size %d to %s at %lf",
+            Log::verbose(PLATFORM_GAME_LITERAL("STKPeer", "FLUXARA_DRIFTPeer"), "sending packet of size %d to %s at %lf",
                 packet->dataLength, getAddress().toString().c_str(),
                 FluxaraDriftTime::getRealTime());
         }
@@ -138,7 +139,7 @@ void FLUXARA_DRIFTPeer::sendPacket(NetworkString *data, bool reliable, bool encr
  */
 bool FLUXARA_DRIFTPeer::isConnected() const
 {
-    Log::debug("FLUXARA_DRIFTPeer", "The peer state is %i", m_enet_peer->state);
+    Log::debug(PLATFORM_GAME_LITERAL("STKPeer", "FLUXARA_DRIFTPeer"), "The peer state is %i", m_enet_peer->state);
     return (m_enet_peer->state == ENET_PEER_STATE_CONNECTED);
 }   // isConnected
 

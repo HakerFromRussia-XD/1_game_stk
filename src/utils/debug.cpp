@@ -1,3 +1,4 @@
+#include "platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Lionel Fuentes
@@ -1056,7 +1057,7 @@ bool handleContextMenuAction(s32 cmd_id)
                     else
                     {
                         for (auto& p : FLUXARA_DRIFTTexManager::getInstance()->getAllTextures())
-                            Log::info("FLUXARA_DRIFTTexManager", "%s", p.first.c_str());
+                            Log::info(PLATFORM_GAME_LITERAL("STKTexManager", "FLUXARA_DRIFTTexManager"), "%s", p.first.c_str());
                         FLUXARA_DRIFTTexManager::getInstance()->dumpTextureUsage();
                     }
                     return false;
@@ -1374,10 +1375,10 @@ bool onEvent(const SEvent &event)
             sub->addItem(L"Start recording (Ctrl + Print Screen)", DEBUG_START_RECORDING);
             sub->addItem(L"Stop recording (Ctrl + Print Screen)", DEBUG_STOP_RECORDING);
 #else
-            sub->addItem(L"Recording unavailable, FLUXARA_DRIFT was compiled without\n"
-                          "recording support.  Please re-compile FLUXARA_DRIFT with\n"
+            sub->addItem(PLATFORM_GAME_LITERAL(L"Recording unavailable, STK was compiled without\n", L"Recording unavailable, FLUXARA_DRIFT was compiled without\n")
+                          PLATFORM_GAME_LITERAL("recording support.  Please re-compile STK with\n", "recording support.  Please re-compile FLUXARA_DRIFT with\n")
                           "libopenglrecorder to enable recording.  If you got\n"
-                          "FluxaraDrift from your distribution's repositories,\n"
+                          PLATFORM_GAME_LITERAL("SuperTuxKart from your distribution's repositories,\n", "FluxaraDrift from your distribution's repositories,\n")
                           "please use the official binaries, or contact your\n"
                           "distributions's package mantainer.");
 #endif

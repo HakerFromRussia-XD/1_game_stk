@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stkgui>
+    <icon-button id="back" x="1%" y="1%" height="9%" icon="gui/icons/back.png"/>
+    <div x="8%" y="5%" width="84%" height="90%" layout="vertical-row">
+        <header id="exercise_title" width="100%" height="fit" align="center"
+                raw_text="Exercise"/>
+        <label id="exercise_description" width="100%" height="fit" align="center"
+               text_align="center" word_wrap="true" raw_text="Description"/>
+        <spacer width="10" height="3%"/>
+        <div width="88%" height="9%" align="center" layout="horizontal-row">
+            <label id="input_label" proportion="1" height="100%" text_align="right"
+                   raw_text="Control source"/>
+            <spinner id="input_source" proportion="2" height="100%" min_value="0"
+                     max_value="1" wrap_around="true"/>
+        </div>
+        <div width="88%" height="9%" align="center" layout="horizontal-row">
+            <label id="demo_label" proportion="1" height="100%" text_align="right"
+                   raw_text="Demonstration mode"/>
+            <spinner id="demo_mode" proportion="2" height="100%" min_value="0"
+                     max_value="1" wrap_around="true"/>
+        </div>
+        <div width="88%" height="8%" align="center" layout="horizontal-row">
+            <label id="open_label" proportion="1" height="100%" text_align="right"
+                   raw_text="Open signal"/>
+            <gauge id="open_level" proportion="2" height="100%" min_value="0"
+                   max_value="255"/>
+        </div>
+        <div width="88%" height="8%" align="center" layout="horizontal-row">
+            <label id="close_label" proportion="1" height="100%" text_align="right"
+                   raw_text="Close signal"/>
+            <gauge id="close_level" proportion="2" height="100%" min_value="0"
+                   max_value="255"/>
+        </div>
+        <div width="88%" height="8%" align="center" layout="horizontal-row">
+            <label id="connected_label" proportion="1" height="100%" text_align="right"
+                   raw_text="Virtual connection"/>
+            <checkbox id="connected" proportion="2" height="100%"/>
+        </div>
+        <spacer width="10" height="3%"/>
+        <button id="start" width="65%" height="13%" align="center"
+                raw_text="Start Training"/>
+    </div>
+</stkgui>

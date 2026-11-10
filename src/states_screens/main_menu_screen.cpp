@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
@@ -81,7 +82,7 @@ using namespace Online;
 
 // ----------------------------------------------------------------------------
 
-MainMenuScreen::MainMenuScreen() : Screen("main_menu.fluxara_driftgui")
+MainMenuScreen::MainMenuScreen() : Screen(PLATFORM_GAME_LITERAL("main_menu.stkgui", "main_menu.fluxara_driftgui"))
 {
 }   // MainMenuScreen
 
@@ -324,7 +325,7 @@ void MainMenuScreen::onUpdate(float delta)
     if(PlayerManager::getCurrentOnlineState() == PlayerProfile::OS_GUEST  ||
        PlayerManager::getCurrentOnlineState() == PlayerProfile::OS_SIGNED_IN)
     {
-        m_user_id->setText(player->getLastOnlineName() + "@fluxara_drift");
+        m_user_id->setText(player->getLastOnlineName() + PLATFORM_GAME_LITERAL("@stk", "@fluxara_drift"));
     }
     else if (PlayerManager::getCurrentOnlineState() == PlayerProfile::OS_SIGNED_OUT)
     {
@@ -690,7 +691,7 @@ void MainMenuScreen::onDisabledItemClicked(const std::string& item)
             new MessageDialog( _("Sorry, an error occurred while contacting "
                                  "the add-ons website. Make sure you are "
                                  "connected to the Internet and that "
-                                 "FluxaraDrift is not blocked by a firewall"));
+                                 PLATFORM_GAME_LITERAL("SuperTuxKart is not blocked by a firewall", "FluxaraDrift is not blocked by a firewall")));
         }
         else if (addons_manager->isLoading())
         {
@@ -715,7 +716,7 @@ bool MainMenuScreen::onEscapePressed()
         }   // onConfirm
     };   // ConfirmClose
 
-    new MessageDialog(_("Are you sure you want to quit FLUXARA_DRIFT?"),
+    new MessageDialog(_(PLATFORM_GAME_LITERAL("Are you sure you want to quit STK?", "Are you sure you want to quit FLUXARA_DRIFT?")),
         MessageDialog::MESSAGE_DIALOG_YESNO, new ConfirmClose(),
         true/*delete_listener*/);
     return false;

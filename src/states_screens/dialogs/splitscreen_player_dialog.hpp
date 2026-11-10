@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2018 FluxaraDrift-Team
 //
@@ -70,7 +71,7 @@ public:
     SplitscreenPlayerDialog(InputDevice* device)
         : ModalDialog(0.8f,0.8f), m_device(device), m_self_destroy(false)
     {
-        loadFromFile("online/splitscreen_player_dialog.fluxara_driftgui");
+        loadFromFile(PLATFORM_GAME_LITERAL("online/splitscreen_player_dialog.stkgui", "online/splitscreen_player_dialog.fluxara_driftgui"));
     }
     // ------------------------------------------------------------------------
     ~SplitscreenPlayerDialog() {}

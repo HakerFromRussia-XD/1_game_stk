@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Joerg Henrichs
 //
@@ -866,8 +867,8 @@ begin:
     // Only change video driver settings if we are showing graphics
     if (!GUIEngine::isNoGraphics())
     {
-        m_device->setWindowClass("FluxaraDrift");
-        m_device->setWindowCaption(L"FluxaraDrift");
+        m_device->setWindowClass(PLATFORM_GAME_LITERAL("SuperTuxKart", "FluxaraDrift"));
+        m_device->setWindowCaption(PLATFORM_GAME_LITERAL(L"SuperTuxKart", L"FluxaraDrift"));
         m_device->getVideoDriver()
             ->setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, true);
         m_device->getVideoDriver()
@@ -2363,9 +2364,9 @@ void IrrDriver::setRecording(bool val)
         ogrStopCapture();
     }
 #else
-    Log::error("Recorder", "Recording unavailable, FLUXARA_DRIFT was compiled without "
-               "recording support.  Please re-compile FLUXARA_DRIFT with libopenglrecorder "
-               "to enable recording.  If you got FluxaraDrift from your distribution's "
+    Log::error("Recorder", PLATFORM_GAME_LITERAL("Recording unavailable, STK was compiled without ", "Recording unavailable, FLUXARA_DRIFT was compiled without ")
+               PLATFORM_GAME_LITERAL("recording support.  Please re-compile STK with libopenglrecorder ", "recording support.  Please re-compile FLUXARA_DRIFT with libopenglrecorder ")
+               PLATFORM_GAME_LITERAL("to enable recording.  If you got SuperTuxKart from your distribution's ", "to enable recording.  If you got FluxaraDrift from your distribution's ")
                "repositories, please use the official binaries, or contact your "
                "distributions's package mantainers.");
 #endif

@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 
 #include "input/motorica_game_control.hpp"
@@ -44,7 +45,7 @@ namespace
         if (event_type == (Uint32)-1)
         {
             Log::error("MotoricaGameControl",
-                "[BLE fluxara_drift-game debug] android recovery event registration failed");
+                PLATFORM_GAME_LITERAL("[BLE stk-game debug] android recovery event registration failed", "[BLE fluxara_drift-game debug] android recovery event registration failed"));
             return;
         }
 
@@ -53,7 +54,7 @@ namespace
         if (SDL_PushEvent(&event) <= 0)
         {
             Log::error("MotoricaGameControl",
-                "[BLE fluxara_drift-game debug] android recovery event enqueue failed: %s",
+                PLATFORM_GAME_LITERAL("[BLE stk-game debug] android recovery event enqueue failed: %s", "[BLE fluxara_drift-game debug] android recovery event enqueue failed: %s"),
                 SDL_GetError());
         }
     }
@@ -123,7 +124,7 @@ void MotoricaGameControl::updateSnapshot(int open_level, int close_level,
         !m_restore_pending.exchange(true))
     {
         Log::info("MotoricaGameControl",
-            "[BLE fluxara_drift-game debug] native recovery pending seq=%llu",
+            PLATFORM_GAME_LITERAL("[BLE stk-game debug] native recovery pending seq=%llu", "[BLE fluxara_drift-game debug] native recovery pending seq=%llu"),
             (unsigned long long)seq);
 #ifdef IOS_FLUXARA_DRIFT
         flushMotoricaConnectionRestoreUiIOS();
@@ -134,7 +135,7 @@ void MotoricaGameControl::updateSnapshot(int open_level, int close_level,
     if (!connected || seq <= 3 || seq % 30 == 0)
     {
         Log::info("MotoricaGameControl",
-            "[BLE fluxara_drift-game debug] native update seq=%llu open=%d close=%d connected=%d",
+            PLATFORM_GAME_LITERAL("[BLE stk-game debug] native update seq=%llu open=%d close=%d connected=%d", "[BLE fluxara_drift-game debug] native update seq=%llu open=%d close=%d connected=%d"),
             (unsigned long long)seq, m_open_level.load(),
             m_close_level.load(), connected ? 1 : 0);
     }
@@ -150,7 +151,7 @@ void MotoricaGameControl::handleConnectionLost(uint64_t seq, uint64_t age_ms,
         return;
 
     Log::info("MotoricaGameControl",
-        "[BLE fluxara_drift-game debug] native connection lost seq=%llu reason=%s ageMs=%llu",
+        PLATFORM_GAME_LITERAL("[BLE stk-game debug] native connection lost seq=%llu reason=%s ageMs=%llu", "[BLE fluxara_drift-game debug] native connection lost seq=%llu reason=%s ageMs=%llu"),
         (unsigned long long)seq, reason, (unsigned long long)age_ms);
 
     m_pause_pending.store(true);
@@ -184,7 +185,7 @@ void MotoricaGameControl::flushConnectionLossUi()
     showMotoricaConnectionLostDialogIOS();
 #endif
     Log::info("MotoricaGameControl",
-        "[BLE fluxara_drift-game debug] native connection loss ui shown seq=%llu",
+        PLATFORM_GAME_LITERAL("[BLE stk-game debug] native connection loss ui shown seq=%llu", "[BLE fluxara_drift-game debug] native connection loss ui shown seq=%llu"),
         (unsigned long long)m_seq.load());
 }
 
@@ -204,7 +205,7 @@ void MotoricaGameControl::flushConnectionRestoreUi()
     m_pause_pending.store(false);
     m_loss_handled.store(false);
     Log::info("MotoricaGameControl",
-        "[BLE fluxara_drift-game debug] native recovery applied seq=%llu",
+        PLATFORM_GAME_LITERAL("[BLE stk-game debug] native recovery applied seq=%llu", "[BLE fluxara_drift-game debug] native recovery applied seq=%llu"),
         (unsigned long long)m_seq.load());
 }
 
@@ -235,7 +236,7 @@ void MotoricaGameControl::apply(Controller* controller)
         if (!logged_disabled)
         {
             Log::info("MotoricaGameControl",
-                "[BLE fluxara_drift-game debug] apply disabled motorica_emg_steering=0");
+                PLATFORM_GAME_LITERAL("[BLE stk-game debug] apply disabled motorica_emg_steering=0", "[BLE fluxara_drift-game debug] apply disabled motorica_emg_steering=0"));
             logged_disabled = true;
         }
         return;
@@ -256,7 +257,7 @@ void MotoricaGameControl::apply(Controller* controller)
         {
             last_logged_apply_seq = seq;
             Log::info("MotoricaGameControl",
-                "[BLE fluxara_drift-game debug] apply inactive seq=%llu connected=%d ageMs=%llu",
+                PLATFORM_GAME_LITERAL("[BLE stk-game debug] apply inactive seq=%llu connected=%d ageMs=%llu", "[BLE fluxara_drift-game debug] apply inactive seq=%llu connected=%d ageMs=%llu"),
                 (unsigned long long)seq, m_connected.load() ? 1 : 0,
                 (unsigned long long)(received > 0 ? now - received : 0));
         }
@@ -281,7 +282,7 @@ void MotoricaGameControl::apply(Controller* controller)
         {
             last_logged_apply_seq = seq;
             Log::info("MotoricaGameControl",
-                "[BLE fluxara_drift-game debug] apply deadzone seq=%llu diff=%d open=%d close=%d",
+                PLATFORM_GAME_LITERAL("[BLE stk-game debug] apply deadzone seq=%llu diff=%d open=%d close=%d", "[BLE fluxara_drift-game debug] apply deadzone seq=%llu diff=%d open=%d close=%d"),
                 (unsigned long long)seq, diff, m_open_level.load(),
                 m_close_level.load());
         }
@@ -297,7 +298,7 @@ void MotoricaGameControl::apply(Controller* controller)
         {
             last_logged_apply_seq = seq;
             Log::info("MotoricaGameControl",
-                "[BLE fluxara_drift-game debug] apply left seq=%llu diff=%d value=%d open=%d close=%d",
+                PLATFORM_GAME_LITERAL("[BLE stk-game debug] apply left seq=%llu diff=%d value=%d open=%d close=%d", "[BLE fluxara_drift-game debug] apply left seq=%llu diff=%d value=%d open=%d close=%d"),
                 (unsigned long long)seq, diff, value, m_open_level.load(),
                 m_close_level.load());
         }
@@ -313,7 +314,7 @@ void MotoricaGameControl::apply(Controller* controller)
         {
             last_logged_apply_seq = seq;
             Log::info("MotoricaGameControl",
-                "[BLE fluxara_drift-game debug] apply right seq=%llu diff=%d value=%d open=%d close=%d",
+                PLATFORM_GAME_LITERAL("[BLE stk-game debug] apply right seq=%llu diff=%d value=%d open=%d close=%d", "[BLE fluxara_drift-game debug] apply right seq=%llu diff=%d value=%d open=%d close=%d"),
                 (unsigned long long)seq, diff, value, m_open_level.load(),
                 m_close_level.load());
         }

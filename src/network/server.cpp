@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
@@ -157,8 +158,8 @@ Server::Server(const XMLNode& server_info) : m_supports_encrytion(true)
     xml.get("official", &m_official);
     if (m_official)
     {
-        m_server_owner_name = L"\u2606\u2605FLUXARA_DRIFT\u2605\u2606";
-        m_server_owner_lower_case_name = "fluxara_drift";
+        m_server_owner_name = PLATFORM_GAME_LITERAL(L"\u2606\u2605STK\u2605\u2606", L"\u2606\u2605FLUXARA_DRIFT\u2605\u2606");
+        m_server_owner_lower_case_name = PLATFORM_GAME_LITERAL("stk", "fluxara_drift");
         return;
     }
 

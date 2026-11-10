@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
@@ -49,7 +50,7 @@ ChangePasswordDialog::ChangePasswordDialog() : ModalDialog(0.8f, 0.7f)
     m_show_success_dialog = false;
     m_success = false;
 
-    loadFromFile("online/change_password.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("online/change_password.stkgui", "online/change_password.fluxara_driftgui"));
 
     m_current_password_widget = getWidget<TextBoxWidget>("current_password");
     assert(m_current_password_widget != NULL);

@@ -1,98 +1,45 @@
-# Building the Motorica iOS application
+# Building Fluxara Drift for iOS
 
-These instructions describe the source layout and configuration used for the
-Motorica App Store build. Xcode, CMake, the game assets, and the iOS dependency
-archives are required.
+Android STK and iOS Fluxara Drift share the engine in this checkout.
+The iOS runtime inputs are `iosApp/BaseResources` and the current
+`iosApp/FluxaraResources` overlay. No previous build or downloaded catalog
+is required. Keep `dependencies-iphoneos` in the repository root.
 
-## Release identity
-
-- App Store version: `1.0`
-- build number: `28`
-- bundle identifier: `com.motorica.games.fluxara_driftttt`
-- Apple Developer team: `R7M384QD5A`
-- App Group build setting:
-  `MOTORICA_GAME_CONTROL_APP_GROUP=group.com.motorica.start.gamecontrolll`
-
-The App Group has a single source of truth in
-`cmake/Toolchain-ios-xcode.cmake`. Do not place a second literal identifier in
-the entitlements or Objective-C++ runtime code.
-
-## Inputs
-
-1. Clone the corresponding release source. For local development, use the
-   current branch until the final build-28 source tag is created:
-
-   ```sh
-   git clone https://github.com/HakerFromRussia-XD/1_game_fluxara_drift.git
-   cd 1_game_fluxara_drift
-   ```
-
-2. Obtain the source-compatible iOS dependencies from the Fluxara Drift
-   dependency project and prepare these directories in the repository root:
-
-   - `dependencies-iphoneos`
-   - `dependencies-iphonesimulator`
-
-   Dependency sources and releases:
-   <https://github.com/fluxaradrift/dependencies>
-
-3. Prepare the compatible upstream assets at
-   `/Users/motoricallc/Downloads/fluxara_drift-assets`, then build the tracked Motorica
-   overlay, the minimal IPA assets, and the data-only full package:
-
-   ```sh
-   python3 tools/motorica_assets/build_assets.py all
-   ```
-
-   The generated minimal source is
-   `build-motorica-ios-assets/assets/data`. Never edit ignored
-   `build-ios-assets` or a generated build directory as the source of truth.
-
-## Generate the Xcode project
-
-Configure with the generated minimal asset directory:
+## Device build
 
 ```sh
-cmake -S . -B build-ios -G Xcode \
+cmake -S . -B build-ios-device -G Xcode \
   -DDEPS_PATH="$PWD" \
-  -DIOS_ASSETS="$PWD/build-motorica-ios-assets/assets/data" \
-  -DCMAKE_TOOLCHAIN_FILE=cmake/Toolchain-ios-xcode.cmake
+  -DCMAKE_TOOLCHAIN_FILE=cmake/Toolchain-ios-xcode.cmake \
+  -DFLUXARA_IOS_PLATFORM=iphoneos -DCHECK_ASSETS=OFF
+xcodebuild -project build-ios-device/FluxaraDrift.xcodeproj \
+  -target fluxaradrift -configuration Release -sdk iphoneos \
+  -destination 'generic/platform=iOS' build
 ```
 
-Open:
+`IOS_ASSETS` defaults to the permanent base resources; override it only to
+use another compatible input tree. The generated project and products may
+be deleted and recreated.
 
-```text
-build-ios/FluxaraDrift.xcodeproj
-```
+The bundle identifier is `io.fluxara.drift`, the developer team is
+`R7M384QD5A`, and the input bridge App Group is
+`group.io.fluxara.drift.inputbridge`. These settings are defined in
+`cmake/Toolchain-ios-xcode.cmake`. The current resource version is maintained
+by `cmake/UpdateFluxaraIosVersion.py`; inspect the resulting Info.plist for
+its marketing and build versions.
 
-Select the `fluxaradrift` scheme and an iOS device. Signing uses MOTORICA
-RESEARCH LLC and requires a provisioning profile that contains both the bundle
-identifier and App Group listed above.
+Signing and provisioning must match the bundle and App Group. A successful
+build verifies compilation and resource packaging. Installation, runtime
+validation, archiving, and App Store publication are separate operations.
 
-Automatic Signing may create a development-signed product for device testing.
-Do not upload a development-signed product directly; the final distribution
-operation must use a compatible App Store distribution identity and profile
-with the same Bundle ID and App Group.
+## iPad support
 
-## Command-line verification
+The application targets both iPhone and iPad (`TARGETED_DEVICE_FAMILY=1,2`).
+The iOS Info.plist requests full-screen presentation, portrait menus and
+landscape races on iPad as well as iPhone. Race HUD artwork and touch bounds
+fit the actual window using the smaller of the width and height scales for
+the 844 x 390 design. The renderer uses the full window; the HUD design frame
+does not constrain the 3D viewport.
 
-```sh
-xcodebuild \
-  -project build-ios/FluxaraDrift.xcodeproj \
-  -scheme fluxaradrift \
-  -configuration Release \
-  -sdk iphoneos \
-  -destination 'generic/platform=iOS' \
-  build
-```
-
-Before submission, inspect the signed product and confirm that its identifier,
-team identifier, and application-groups entitlement match this document.
-Also compare `dwarfdump --uuid` for the application executable and
-`dSYMs/fluxaradrift.app.dSYM/Contents/Resources/DWARF/fluxaradrift` inside the
-archive; the UUIDs must be identical.
-
-Also confirm that the IPA contains only the standalone `motorica_signal_lab`
-track, `motorica_signal_pilot` kart and the three Motorica exercise challenges;
-that all required upstream AngelScript files are under `data/packaged-scripts`;
-and that the remote ZIP contains no executable or script files.
+Regenerate the Xcode project and build a new bundle after changing supported
+device families. An existing installed app or uploaded archive is unchanged.

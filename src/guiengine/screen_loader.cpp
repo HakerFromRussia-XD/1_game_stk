@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
@@ -57,7 +58,7 @@ void Screen::parseScreenFileDiv(irr::io::IXMLReader* xml, PtrVector<Widget>& app
                     Widget* w = new Widget(WTYPE_DIV);
                     append_to.push_back(w);
                 }
-                else if (wcscmp(L"fluxara_driftgui", xml->getNodeName()) == 0)
+                else if (wcscmp(PLATFORM_GAME_LITERAL(L"stkgui", L"fluxara_driftgui"), xml->getNodeName()) == 0)
                 {
                     // outer node that's there only to comply with XML standard (and expat)
                     continue;
@@ -195,7 +196,7 @@ void Screen::parseScreenFileDiv(irr::io::IXMLReader* xml, PtrVector<Widget>& app
                 }
                 else
                 {
-                    Log::warn("Screen::parseScreenFileDiv", "unknown tag found in FLUXARA_DRIFT GUI file '%s'", xml->getNodeName());
+                    Log::warn("Screen::parseScreenFileDiv", PLATFORM_GAME_LITERAL("unknown tag found in STK GUI file '%s'", "unknown tag found in FLUXARA_DRIFT GUI file '%s'"), xml->getNodeName());
                     continue;
                 }
 

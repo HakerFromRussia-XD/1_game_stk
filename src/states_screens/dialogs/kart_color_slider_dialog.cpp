@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Marianne Gagnon
 //
@@ -40,7 +41,7 @@ using namespace GUIEngine;
 KartColorSliderDialog::KartColorSliderDialog(PlayerProfile* pp)
                      : ModalDialog(0.75f, 0.75f, MODAL_DIALOG_LOCATION_CENTER)
 {
-    loadFromFile("kart_color_slider.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("kart_color_slider.stkgui", "kart_color_slider.fluxara_driftgui"));
     m_player_profile = pp;
 
     // I18N: In kart color choosing dialog

@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2014-2015  FluxaraDrift Team
@@ -111,7 +112,7 @@ namespace Scripting
         std::string int_version =
             StringUtils::toString(StringUtils::versionToInt(FLUXARA_DRIFT_VERSION));
         // Preprocessing (atm add fluxara_drift version)
-        std::string cmd2  = "-DFLUXARA_DRIFT_VERSION=";
+        std::string cmd2  = PLATFORM_GAME_LITERAL("-DSTK_VERSION=", "-DFLUXARA_DRIFT_VERSION=");
         cmd2 += int_version;
         // -P Don't output #line lines.
         std::string cmd3 = "-P";

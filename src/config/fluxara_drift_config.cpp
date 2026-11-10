@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006-2015 Joerg Henrichs
@@ -120,8 +121,8 @@ void FLUXARA_DRIFTConfig::load(const std::string &filename)
 
     catch(std::exception& err)
     {
-        Log::error("FluxaraDriftConfig", "FATAL ERROR while reading '%s':", filename.c_str());
-        Log::fatal("FluxaraDriftConfig", "    %s", err.what());
+        Log::error(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), "FATAL ERROR while reading '%s':", filename.c_str());
+        Log::fatal(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), "    %s", err.what());
     }
     delete root;
 
@@ -129,29 +130,29 @@ void FLUXARA_DRIFTConfig::load(const std::string &filename)
     // -----------------------------------------------
 
 #define CHECK_NEG(  a,strA) if(a<=UNDEFINED) {                   \
-        Log::fatal("FluxaraDriftConfig", "Missing default value for '%s' in '%s'.",    \
+        Log::fatal(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), "Missing default value for '%s' in '%s'.",    \
                    strA,filename.c_str());              \
     }
 
     if(m_score_increase.size()==0)
     {
-        Log::fatal("FluxaraDriftConfig", "Not or not enough scores defined in fluxara_drift_config");
+        Log::fatal(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), PLATFORM_GAME_LITERAL("Not or not enough scores defined in stk_config", "Not or not enough scores defined in fluxara_drift_config"));
     }
     if(m_leader_intervals.size()==0)
     {
-        Log::fatal("FluxaraDriftConfig", "No follow leader interval(s) defined in fluxara_drift_config");
+        Log::fatal(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), PLATFORM_GAME_LITERAL("No follow leader interval(s) defined in stk_config", "No follow leader interval(s) defined in fluxara_drift_config"));
     }
 
     if(m_switch_items.size()!=Item::ITEM_LAST-Item::ITEM_FIRST+1)
     {
-        Log::fatal("FluxaraDriftConfig", "Wrong number of item switches defined in fluxara_drift_config");
+        Log::fatal(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), PLATFORM_GAME_LITERAL("Wrong number of item switches defined in stk_config", "Wrong number of item switches defined in fluxara_drift_config"));
     }
 
     if (m_client_port == 0 || m_server_port == 0 || m_server_discovery_port == 0 ||
         m_client_port == m_server_port || m_client_port == m_server_discovery_port ||
         m_server_port == m_server_discovery_port)
     {
-        Log::fatal("FluxaraDriftConfig", "Invalid default port values.");
+        Log::fatal(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), "Invalid default port values.");
     }
     CHECK_NEG(m_max_karts,                 "<karts max=..."             );
     CHECK_NEG(m_item_switch_ticks,         "item switch-time"           );
@@ -328,15 +329,15 @@ void FLUXARA_DRIFTConfig::getAllData(const XMLNode * root)
             pn->get("points", &points);
             if(points<0)
             {
-                Log::error("FluxaraDriftConfig", "Incorrect GP point specification:");
-                Log::fatal("FluxaraDriftConfig", "points: %d",
+                Log::error(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), "Incorrect GP point specification:");
+                Log::fatal(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), "points: %d",
                         points);
             }
             m_score_increase.push_back(points);
         }
         if (m_max_karts > int(gp_node->getNumNodes()))
         {
-            Log::error("FluxaraDriftConfig", "Not enough grand-prix ranking nodes:");
+            Log::error(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), "Not enough grand-prix ranking nodes:");
             m_score_increase.resize(m_max_karts, 0);
         }
     }
@@ -385,7 +386,7 @@ void FLUXARA_DRIFTConfig::getAllData(const XMLNode * root)
             else if (s == "cuda"                                   ) *p |= 512;
             else
             {
-                Log::fatal("FLUXARA_DRIFT-Config",
+                Log::fatal(PLATFORM_GAME_LITERAL("STK-Config", "FLUXARA_DRIFT-Config"),
                            "Unknown option '%s' for solver-mode - ignored.",
                            s.c_str());
             }
@@ -507,7 +508,7 @@ void FLUXARA_DRIFTConfig::getAllData(const XMLNode * root)
             m_same_powerup_mode = POWERUP_MODE_ONLY_IF_SAME;
         else
         {
-            Log::warn("FluxaraDriftConfig", "Invalid item mode '%s' - ignored.",
+            Log::warn(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), "Invalid item mode '%s' - ignored.",
                     s.c_str());
         }
         powerup_node->get("no-explosive-items-timeout",
@@ -555,7 +556,7 @@ void FLUXARA_DRIFTConfig::getAllData(const XMLNode * root)
 
     if (const XMLNode *urls = root->getNode("urls"))
     {
-        urls->get("fluxara_drift-website", &m_fluxara_drift_website_url);
+        urls->get(PLATFORM_GAME_LITERAL("stk-website", "fluxara_drift-website"), &m_fluxara_drift_website_url);
         urls->get("donate", &m_donate_url);
         urls->get("password-reset", &m_password_reset_url);
         urls->get("assets-download", &m_assets_download_url);
@@ -665,7 +666,7 @@ void FLUXARA_DRIFTConfig::validateBenchmarkReplays()
             ->getAsset(FileManager::REPLAY, bench_file), true /*custom_replay */);
         if (!result)
         {
-            Log::error("FluxaraDriftConfig", "Replay %s from the benchmark list is missing or invalid!",
+            Log::error(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), "Replay %s from the benchmark list is missing or invalid!",
                 bench_file.c_str());
             it = m_benchmark_files.erase(it);
             continue;
@@ -687,56 +688,56 @@ void FLUXARA_DRIFTConfig::initMusicFiles()
     m_title_music = MusicInformation::create(m_title_music_file);
     if (!m_title_music)
     {
-        Log::error("FluxaraDriftConfig", "Cannot load title music: %s.",
+        Log::error(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), "Cannot load title music: %s.",
             m_title_music_file.c_str());
     }
 
     m_default_music = MusicInformation::create(m_default_music_file);
     if (!m_default_music)
     {
-        Log::error("FluxaraDriftConfig", "Cannot load default music: %s.",
+        Log::error(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), "Cannot load default music: %s.",
             m_default_music_file.c_str());
     }
 
     m_race_win_music = MusicInformation::create(m_race_win_music_file);
     if (!m_race_win_music)
     {
-        Log::error("FluxaraDriftConfig", "Cannot load race win music: %s.",
+        Log::error(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), "Cannot load race win music: %s.",
             m_race_win_music_file.c_str());
     }
 
     m_race_neutral_music = MusicInformation::create(m_race_neutral_music_file);
     if (!m_race_neutral_music)
     {
-        Log::error("FluxaraDriftConfig", "Cannot load race neutral music: %s.",
+        Log::error(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), "Cannot load race neutral music: %s.",
             m_race_neutral_music_file.c_str());
     }
 
     m_race_lose_music = MusicInformation::create(m_race_lose_music_file);
     if (!m_race_lose_music)
     {
-        Log::error("FluxaraDriftConfig", "Cannot load race lose music: %s.",
+        Log::error(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), "Cannot load race lose music: %s.",
             m_race_lose_music_file.c_str());
     }
 
     m_gp_win_music = MusicInformation::create(m_gp_win_music_file);
     if (!m_gp_win_music)
     {
-        Log::error("FluxaraDriftConfig", "Cannot load grand prix win music: %s.",
+        Log::error(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), "Cannot load grand prix win music: %s.",
             m_gp_win_music_file.c_str());
     }
 
     m_gp_lose_music = MusicInformation::create(m_gp_lose_music_file);
     if (!m_gp_lose_music)
     {
-        Log::error("FluxaraDriftConfig", "Cannot load grand prix lose music: %s.",
+        Log::error(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), "Cannot load grand prix lose music: %s.",
             m_gp_lose_music_file.c_str());
     }
 
     m_unlock_music = MusicInformation::create(m_unlock_music_file);
     if (!m_unlock_music)
     {
-        Log::error("FluxaraDriftConfig", "Cannot load unlock music: %s.",
+        Log::error(PLATFORM_GAME_LITERAL("SuperTuxKartConfig", "FluxaraDriftConfig"), "Cannot load unlock music: %s.",
             m_unlock_music_file.c_str());
     }
 }   // initMusicFiles

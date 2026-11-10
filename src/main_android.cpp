@@ -1,3 +1,4 @@
+#include "utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2016-2017 FluxaraDrift-Team
 //
@@ -58,7 +59,7 @@ void registering_natives()
     };
     JNIEnv* env = (JNIEnv*)SDL_AndroidGetJNIEnv();
     assert(env);
-    const char* fluxara_driftactivity_class = ANDROID_PACKAGE_CLASS_NAME "/FluxaraDriftActivity";
+    const char* fluxara_driftactivity_class = ANDROID_PACKAGE_CLASS_NAME PLATFORM_GAME_LITERAL("/SuperTuxKartActivity", "/FluxaraDriftActivity");
     jclass clazz = env->FindClass(fluxara_driftactivity_class);
     if (clazz == NULL)
     {
@@ -82,17 +83,17 @@ void registering_natives()
         {
             env->ExceptionClear();
             Log::warn("MainAndroid",
-                "Failed to find FluxaraDriftActivity.onMotoricaNativeReady.");
+                PLATFORM_GAME_LITERAL("Failed to find SuperTuxKartActivity.onMotoricaNativeReady.", "Failed to find FluxaraDriftActivity.onMotoricaNativeReady."));
         }
     }
 
     JNINativeMethod fluxara_drifteditbox_tab[] =
     {
-        { "editText2FLUXARA_DRIFTEditbox", "(ILjava/lang/String;IIII)V", (void*)&editText2FLUXARA_DRIFTEditbox },
+        { PLATFORM_GAME_LITERAL("editText2STKEditbox", "editText2FLUXARA_DRIFTEditbox"), "(ILjava/lang/String;IIII)V", (void*)&editText2FLUXARA_DRIFTEditbox },
         { "handleActionNext",    "(I)V", (void*)&handleActionNext },
         { "handleLeftRight",     "(ZI)V", (void*)&handleLeftRight }
     };
-    const char* fluxara_drifteditbox_class = ANDROID_PACKAGE_CLASS_NAME "/FLUXARA_DRIFTEditText";
+    const char* fluxara_drifteditbox_class = ANDROID_PACKAGE_CLASS_NAME PLATFORM_GAME_LITERAL("/STKEditText", "/FLUXARA_DRIFTEditText");
     clazz = env->FindClass(fluxara_drifteditbox_class);
     if (clazz == NULL)
     {
@@ -117,7 +118,7 @@ extern "C" JNIEXPORT void JNICALL onMotoricaGameControlJNI(
     if (connected != JNI_TRUE || seq <= 3 || seq % 30 == 0)
     {
         Log::info("MotoricaGameControl",
-            "[BLE fluxara_drift-game debug] jni seq=%llu open=%d close=%d connected=%d timestamp=%llu",
+            PLATFORM_GAME_LITERAL("[BLE stk-game debug] jni seq=%llu open=%d close=%d connected=%d timestamp=%llu", "[BLE fluxara_drift-game debug] jni seq=%llu open=%d close=%d connected=%d timestamp=%llu"),
             (unsigned long long)seq, (int)open_level, (int)close_level,
             connected == JNI_TRUE ? 1 : 0, (unsigned long long)timestamp_ms);
     }

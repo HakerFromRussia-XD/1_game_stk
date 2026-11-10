@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 FluxaraDrift-Team
@@ -41,7 +42,7 @@ class GrandPrixLose :
 {
     friend class GUIEngine::ScreenSingleton<GrandPrixLose>;
 
-    GrandPrixLose(): GrandPrixCutscene("grand_prix_lose.fluxara_driftgui") {};
+    GrandPrixLose(): GrandPrixCutscene(PLATFORM_GAME_LITERAL("grand_prix_lose.stkgui", "grand_prix_lose.fluxara_driftgui")) {};
 
     /** Global evolution of time */
     float m_global_time;

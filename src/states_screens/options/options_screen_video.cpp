@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
@@ -77,7 +78,7 @@ void OptionsScreenVideo::updateImageQuality(bool force_reload_texture)
 }   // updateImageQuality
 
 // --------------------------------------------------------------------------------------------
-OptionsScreenVideo::OptionsScreenVideo() : Screen("options/options_video.fluxara_driftgui"),
+OptionsScreenVideo::OptionsScreenVideo() : Screen(PLATFORM_GAME_LITERAL("options/options_video.stkgui", "options/options_video.fluxara_driftgui")),
                                            m_prev_adv_pipline(false)
 {
 }   // OptionsScreenVideo

@@ -1,3 +1,4 @@
+#include "platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2006,-2015 2007, 2008 Joerg Henrichs
@@ -75,7 +76,7 @@ extern "C" {
 Translations* translations = NULL;
 
 #ifdef LINUX // m_debug
-#define PACKAGE "fluxaradrift"
+#define PACKAGE PLATFORM_GAME_LITERAL("supertuxkart", "fluxaradrift")
 #endif
 
 #ifndef SERVER_ONLY

@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
@@ -36,7 +37,7 @@ using namespace irr::gui;
 PressAKeyDialog::PressAKeyDialog(const float w, const float h, const bool isKeyboardFlag) :
         ModalDialog(w, h)
 {
-    loadFromFile("press_a_key_dialog.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("press_a_key_dialog.stkgui", "press_a_key_dialog.fluxara_driftgui"));
     Widget* title = getWidget("title");
     if(isKeyboardFlag)
     {

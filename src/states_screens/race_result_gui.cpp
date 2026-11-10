@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Joerg Henrichs
@@ -171,9 +172,9 @@ void resetToMotoricaRoot()
  */
 RaceResultGUI::RaceResultGUI() : Screen(
 #ifdef IOS_FLUXARA_DRIFT
-    "fluxara_race_result.fluxara_driftgui",
+    PLATFORM_GAME_LITERAL("fluxara_race_result.stkgui", "fluxara_race_result.fluxara_driftgui"),
 #else
-    "race_result.fluxara_driftgui",
+    PLATFORM_GAME_LITERAL("race_result.stkgui", "race_result.fluxara_driftgui"),
 #endif
     /*pause race*/ false)
 {
@@ -209,8 +210,12 @@ void RaceResultGUI::init()
     m_animation_state = RR_INIT;
 
     m_timer = 0;
+#ifdef IOS_FLUXARA_DRIFT
     m_fluxara_auto_advance_delay =
         (isFluxaraRace() && FluxaraModes::autoCampaignValidation()) ? 1.0f : -1.0f;
+#else
+    m_fluxara_auto_advance_delay = -1.0f;
+#endif
 
     getWidget("operations")->setActive(false);
     getWidget("left")->setVisible(false);
@@ -469,6 +474,7 @@ void RaceResultGUI::enableAllButtons()
         return;
     }
 
+#ifdef IOS_FLUXARA_DRIFT
     // The permanent standalone product has a deliberately small race loop:
     // repeat the exercise or return to Motorica Hub. Never expose
     // the upstream race setup/menu from this result screen.
@@ -486,6 +492,8 @@ void RaceResultGUI::enableAllButtons()
         operations->select("right", PLAYER_ID_GAME_MASTER);
         return;
     }
+
+#endif
 
     // Keep the Fluxara result loop inside the campaign: repeat the current
     // event or return to its next unlocked campaign card, never to the
@@ -2681,7 +2689,7 @@ int RaceResultGUI::displayChallengeInfo(int x, int y, bool increase_density)
     {
         // The translated string might be too long, implement word wrap
         std::vector<irr::gui::GlyphLayout> best_while_slower_layout;
-        text_string = _("Reached Requirements of FluxaraDrift");
+        text_string = _(PLATFORM_GAME_LITERAL("Reached Requirements of SuperTuxKart", "Reached Requirements of FluxaraDrift"));
         the_font->initGlyphLayouts(text_string,
                                    best_while_slower_layout);
         irr::gui::breakGlyphLayouts(best_while_slower_layout,

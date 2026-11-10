@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Lucas Baudin, Joerg Henrichs
 //
@@ -41,7 +42,7 @@
 using namespace Online;
 // ----------------------------------------------------------------------------
 
-AddonsScreen::AddonsScreen() : Screen("addons_screen.fluxara_driftgui")
+AddonsScreen::AddonsScreen() : Screen(PLATFORM_GAME_LITERAL("addons_screen.stkgui", "addons_screen.fluxara_driftgui"))
 {
     m_selected_index = -1;
 
@@ -537,7 +538,7 @@ void AddonsScreen::onUpdate(float dt)
             new MessageDialog( _("Sorry, an error occurred while contacting "
                                  "the add-ons website. Make sure you are "
                                  "connected to the Internet and that "
-                                 "FluxaraDrift is not blocked by a firewall"));
+                                 PLATFORM_GAME_LITERAL("SuperTuxKart is not blocked by a firewall", "FluxaraDrift is not blocked by a firewall")));
             loadList();
         }
         else if (addons_manager->onlineReady())

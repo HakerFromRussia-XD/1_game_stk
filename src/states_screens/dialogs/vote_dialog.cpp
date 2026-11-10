@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
@@ -45,7 +46,7 @@ VoteDialog::VoteDialog(const std::string & addon_id)
          : ModalDialog(0.8f,0.6f), m_addon_id(addon_id)
 {
     m_self_destroy         = false;
-    loadFromFile("online/vote_dialog.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("online/vote_dialog.stkgui", "online/vote_dialog.fluxara_driftgui"));
 
     m_info_widget = getWidget<LabelWidget>("info");
     assert(m_info_widget != NULL);

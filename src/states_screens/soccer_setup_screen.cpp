@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Lionel Fuentes
 //
@@ -49,7 +50,7 @@ using namespace GUIEngine;
 
 // -----------------------------------------------------------------------------
 
-SoccerSetupScreen::SoccerSetupScreen() : Screen("soccer_setup.fluxara_driftgui")
+SoccerSetupScreen::SoccerSetupScreen() : Screen(PLATFORM_GAME_LITERAL("soccer_setup.stkgui", "soccer_setup.fluxara_driftgui"))
 {
 }
 

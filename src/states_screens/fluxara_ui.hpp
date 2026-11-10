@@ -71,6 +71,12 @@ inline irr::video::ITexture* texture(const std::string& path)
 // landscape target produces a narrow, distorted screen.  A background has no
 // interactive geometry, however, so it can safely fill the old target and
 // avoids exposing Irrlicht's default purple clear colour.
+inline irr::core::recti fullWindowRect()
+{
+    const auto size = irr_driver->getActualScreenSize();
+    return irr::core::recti(0, 0, size.Width, size.Height);
+}
+
 inline void transitionBackdrop(irr::video::ITexture* texture,
                                unsigned alpha = 255)
 {

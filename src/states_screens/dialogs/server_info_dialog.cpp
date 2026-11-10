@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
@@ -65,7 +66,7 @@ ServerInfoDialog::ServerInfoDialog(std::shared_ptr<Server> server)
     m_remove_icon = irr_driver->getTexture
         (file_manager->getAsset(FileManager::GUI_ICON, "remove.png"));
 
-    loadFromFile("online/server_info_dialog.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("online/server_info_dialog.stkgui", "online/server_info_dialog.fluxara_driftgui"));
     LabelWidget* title = getWidget<LabelWidget>("title");
     title->setText(server->getName(), true);
     // Make sure server name is not clickable for URL

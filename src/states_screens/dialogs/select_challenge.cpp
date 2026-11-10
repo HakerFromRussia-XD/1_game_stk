@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2012-2015 Marianne Gagnon
 //
@@ -254,7 +255,7 @@ SelectChallengeDialog::SelectChallengeDialog(const float percentWidth,
                                              std::string challenge_id) :
     ModalDialog(percentWidth, percentHeight)
 {
-    loadFromFile("select_challenge.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("select_challenge.stkgui", "select_challenge.fluxara_driftgui"));
     
     m_challenge_id = challenge_id;
     World::getWorld()->schedulePause(WorldStatus::IN_GAME_MENU_PHASE);
@@ -321,7 +322,7 @@ SelectChallengeDialog::SelectChallengeDialog(const float percentWidth,
     updateSolvedIcon(c, RaceManager::DIFFICULTY_EASY,   "novice",       "cup_bronze.png");
     updateSolvedIcon(c, RaceManager::DIFFICULTY_MEDIUM, "intermediate", "cup_silver.png");
     updateSolvedIcon(c, RaceManager::DIFFICULTY_HARD,   "expert",       "cup_gold.png");
-    updateSolvedIcon(c, RaceManager::DIFFICULTY_BEST,   "fluxara_drift",     "cup_platinum.png");
+    updateSolvedIcon(c, RaceManager::DIFFICULTY_BEST,   PLATFORM_GAME_LITERAL("stk", "fluxara_drift"),     "cup_platinum.png");
     
     if (c->getData()->isGrandPrix())
     {
@@ -338,13 +339,13 @@ SelectChallengeDialog::SelectChallengeDialog(const float percentWidth,
     
     if (PlayerManager::getCurrentPlayer()->isLocked("difficulty_best"))
     {
-        getWidget<IconButtonWidget>("fluxara_drift")->setBadge(LOCKED_BADGE);
-        getWidget<IconButtonWidget>("fluxara_drift")->setActive(false);
+        getWidget<IconButtonWidget>(PLATFORM_GAME_LITERAL("stk", "fluxara_drift"))->setBadge(LOCKED_BADGE);
+        getWidget<IconButtonWidget>(PLATFORM_GAME_LITERAL("stk", "fluxara_drift"))->setActive(false);
     }
     else
     {
-        getWidget<IconButtonWidget>("fluxara_drift")->unsetBadge(LOCKED_BADGE);
-        getWidget<IconButtonWidget>("fluxara_drift")->setActive(true);
+        getWidget<IconButtonWidget>(PLATFORM_GAME_LITERAL("stk", "fluxara_drift"))->unsetBadge(LOCKED_BADGE);
+        getWidget<IconButtonWidget>(PLATFORM_GAME_LITERAL("stk", "fluxara_drift"))->setActive(true);
     }
 
     GUIEngine::RibbonWidget* actions =
@@ -449,7 +450,7 @@ GUIEngine::EventPropagation SelectChallengeDialog::processEvent(const std::strin
             description = getLabel(RaceManager::DIFFICULTY_HARD,   c_stat->getData());
             UserConfigParams::m_difficulty = 2;
         }
-        else if (selected == "fluxara_drift")
+        else if (selected == PLATFORM_GAME_LITERAL("stk", "fluxara_drift"))
         {
             description = getLabel(RaceManager::DIFFICULTY_BEST,   c_stat->getData());
             UserConfigParams::m_difficulty = 3;

@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 FluxaraDrift-Team
@@ -85,7 +86,7 @@ Network::Network(int peer_count, int channel_limit,
         socklen_t len = sizeof(ss);
         if (getsockname(m_host->socket, (struct sockaddr*)&ss, &len) == -1)
         {
-            Log::error("FLUXARA_DRIFTHost", "Error while using getsockname().");
+            Log::error(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Error while using getsockname().");
             m_port = 0;
         }
         else
@@ -230,7 +231,7 @@ void Network::openLog()
             ->getUserConfigFile(FileManager::getStdoutName()+".packet");
         m_log_file.setAtomic(FileUtils::fopenU8Path(s, "w+"));
         if (!m_log_file.getData())
-            Log::warn("FLUXARA_DRIFTHost", "Network packets won't be logged: no file.");
+            Log::warn(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Network packets won't be logged: no file.");
     }
 }   // openLog
 
@@ -263,7 +264,7 @@ void Network::closeLog()
     {
         m_log_file.lock();
         fclose(m_log_file.getData());
-        Log::warn("FLUXARA_DRIFTHost", "Packet logging file has been closed.");
+        Log::warn(PLATFORM_GAME_LITERAL("STKHost", "FLUXARA_DRIFTHost"), "Packet logging file has been closed.");
         m_log_file.getData() = NULL;
         m_log_file.unlock();
     }

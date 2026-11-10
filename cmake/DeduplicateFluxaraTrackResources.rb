@@ -98,6 +98,18 @@ track_dirs.each do |track_dir|
     extension = File.extname(name).downcase
     next unless RESOURCE_EXTENSIONS.include?(extension)
 
+    # MusicInformation resolves payloads relative to its descriptor. A music
+    # descriptor need not have the same stem as its audio (stba.music uses
+    # 46b.ogg), and several descriptors can share one payload. Keep referenced
+    # track music local rather than relocating it as an ordinary sound effect.
+    if SFX_EXTENSIONS.include?(extension)
+      referenced_music = Dir.glob(File.join(track_dir, '*.music')).any? do |descriptor|
+        File.binread(descriptor).match?(
+          /\b(?:file|fast-filename)\s*=\s*["']#{Regexp.escape(name)}["']/)
+      end
+      next if referenced_music
+    end
+
     groups[[File.basename(path), File.size(path), digest(path)]] << path
   end
 end

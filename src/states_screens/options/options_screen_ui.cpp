@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
@@ -37,7 +38,7 @@ using namespace Online;
 
 // -----------------------------------------------------------------------------
 
-OptionsScreenUI::OptionsScreenUI() : Screen("options/options_ui.fluxara_driftgui")
+OptionsScreenUI::OptionsScreenUI() : Screen(PLATFORM_GAME_LITERAL("options/options_ui.stkgui", "options/options_ui.fluxara_driftgui"))
 {
     m_inited = false;
 }   // OptionsScreenVideo
@@ -282,7 +283,7 @@ void OptionsScreenUI::loadSkins(const std::set<std::string>& files, bool addon)
 {
     for (auto& f : files)
     {
-        std::string fluxara_driftskin = f + "/fluxara_driftskin.xml";
+        std::string fluxara_driftskin = f + PLATFORM_GAME_LITERAL("/stkskin.xml", "/fluxara_driftskin.xml");
         if (file_manager->fileExists(fluxara_driftskin))
         {
             XMLNode* root = file_manager->createXMLTree(fluxara_driftskin);

@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2010-2015 Marianne Gagnon
 //
@@ -36,7 +37,7 @@ DebugSliderDialog::DebugSliderDialog() : ModalDialog(0.85f, 0.45f, MODAL_DIALOG_
 {
     m_fade_background = false;
 
-    loadFromFile("debug_slider.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("debug_slider.stkgui", "debug_slider.fluxara_driftgui"));
 }
 
 void DebugSliderDialog::setSliderHook(std::string id, unsigned min, unsigned max, std::function<int()> G, std::function<void(int)> S)

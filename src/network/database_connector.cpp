@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2024 FluxaraDrift-Team
@@ -397,7 +398,7 @@ void DatabaseConnector::initServerStatsTable()
 
     std::ostringstream oss;
     oss << "CREATE TABLE IF NOT EXISTS " << table_name << " (\n"
-        "    host_id INTEGER UNSIGNED NOT NULL PRIMARY KEY, -- Unique host id in FLUXARA_DRIFTHost of each connection session for a FLUXARA_DRIFTPeer\n"
+        PLATFORM_GAME_LITERAL("    host_id INTEGER UNSIGNED NOT NULL PRIMARY KEY, -- Unique host id in STKHost of each connection session for a STKPeer\n", "    host_id INTEGER UNSIGNED NOT NULL PRIMARY KEY, -- Unique host id in FLUXARA_DRIFTHost of each connection session for a FLUXARA_DRIFTPeer\n")
         "    ip INTEGER UNSIGNED NOT NULL, -- IP decimal of host\n";
     if (ServerConfig::m_ipv6_connection)
         oss << "    ipv6 TEXT NOT NULL DEFAULT '', -- IPv6 (if exists) in string of host\n";
@@ -406,7 +407,7 @@ void DatabaseConnector::initServerStatsTable()
         "    username TEXT NOT NULL, -- First player name in the host (if the host has splitscreen player)\n"
         "    player_num INTEGER UNSIGNED NOT NULL, -- Number of player(s) from the host, more than 1 if it has splitscreen player\n"
         "    country_code TEXT NULL DEFAULT NULL, -- 2-letter country code of the host\n"
-        "    version TEXT NOT NULL, -- FluxaraDrift version of the host\n"
+        PLATFORM_GAME_LITERAL("    version TEXT NOT NULL, -- SuperTuxKart version of the host\n", "    version TEXT NOT NULL, -- FluxaraDrift version of the host\n")
         "    os TEXT NOT NULL, -- Operating system of the host\n"
         "    connected_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, -- Time when connected\n"
         "    disconnected_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, -- Time when disconnected (saved when disconnected)\n"

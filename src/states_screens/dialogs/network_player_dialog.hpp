@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2018 FluxaraDrift-Team
 //
@@ -89,7 +90,7 @@ public:
           m_allow_change_team(allow_change_team), m_self_destroy(false),
           m_open_report_textbox(false)
     {
-        loadFromFile("online/user_info_dialog.fluxara_driftgui");
+        loadFromFile(PLATFORM_GAME_LITERAL("online/user_info_dialog.stkgui", "online/user_info_dialog.fluxara_driftgui"));
     }
     // ------------------------------------------------------------------------
     ~NetworkPlayerDialog() {}

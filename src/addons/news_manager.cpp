@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2011-2015 Joerg Henrichs
 //
@@ -350,7 +351,7 @@ void NewsManager::updateNews(const XMLNode *xml, const std::string &filename)
         // a new read on the next start, instead of waiting
         // for some time).
         file_manager->removeFile(filename);
-        NewsMessage n(_("Failed to connect to the FluxaraDrift add-ons server."), -1);
+        NewsMessage n(_(PLATFORM_GAME_LITERAL("Failed to connect to the SuperTuxKart add-ons server.", "Failed to connect to the FluxaraDrift add-ons server.")), -1);
 
         for (int type = 0; type < NTYPE_COUNT; type++)
         {
@@ -567,7 +568,7 @@ bool NewsManager::conditionFulfilled(const std::string &cond)
         }
         // Check for fluxara_driftversion comparisons
         // ================================
-        if(cond[0]=="fluxara_driftversion")
+        if(cond[0]==PLATFORM_GAME_LITERAL("stkversion", "fluxara_driftversion"))
         {
             int news_version = StringUtils::versionToInt(cond[2]);
             int fluxara_drift_version  = StringUtils::versionToInt(FLUXARA_DRIFT_VERSION);

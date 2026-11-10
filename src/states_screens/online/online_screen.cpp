@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
@@ -62,7 +63,7 @@ using namespace Online;
 
 // ----------------------------------------------------------------------------
 
-OnlineScreen::OnlineScreen() : Screen("online/online.fluxara_driftgui")
+OnlineScreen::OnlineScreen() : Screen(PLATFORM_GAME_LITERAL("online/online.stkgui", "online/online.fluxara_driftgui"))
 {
     m_online_string = _("Your profile");
     //I18N: Used as a verb, appears on the main networking menu (login button)
@@ -106,7 +107,7 @@ void OnlineScreen::unloaded()
 void OnlineScreen::beforeAddingWidget()
 {
     m_news_list->clearColumns();
-    m_news_list->addColumn( _("News from FLUXARA_DRIFT Blog"), 4 );
+    m_news_list->addColumn( _(PLATFORM_GAME_LITERAL("News from STK Blog", "News from FLUXARA_DRIFT Blog")), 4 );
     m_news_list->addColumn( _("Date"), 1 );
 } // beforeAddingWidget
 
@@ -218,7 +219,7 @@ void OnlineScreen::onUpdate(float delta)
     {
         m_online->setActive(true);
         m_online->setLabel(m_online_string);
-        m_user_id->setText(player->getLastOnlineName() + "@fluxara_drift");
+        m_user_id->setText(player->getLastOnlineName() + PLATFORM_GAME_LITERAL("@stk", "@fluxara_drift"));
     }
     else if (PlayerManager::getCurrentOnlineState() == PlayerProfile::OS_SIGNED_OUT)
     {

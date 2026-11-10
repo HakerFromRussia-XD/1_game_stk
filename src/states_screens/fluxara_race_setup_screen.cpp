@@ -1,3 +1,4 @@
+#include "../utils/platform_game_identity.hpp"
 // Fluxara Drift - iOS race settings
 
 #include "states_screens/fluxara_race_setup_screen.hpp"
@@ -23,7 +24,7 @@
 using namespace GUIEngine;
 
 FluxaraRaceSetupScreen::FluxaraRaceSetupScreen()
-    : Screen("fluxara_race_setup.fluxara_driftgui")
+    : Screen(PLATFORM_GAME_LITERAL("fluxara_race_setup.stkgui", "fluxara_race_setup.fluxara_driftgui"))
 {
 }
 
@@ -141,8 +142,8 @@ void FluxaraRaceSetupScreen::onDraw(float)
 {
     if (!m_track) return;
     const FluxaraUI::Canvas c;
-    GL32_draw2DRectangle(irr::video::SColor(255,16,47,122),c.rect(0,0,360,780));
-    c.image(m_art[0],0,0,360,780,true,77);
+    GL32_draw2DRectangle(irr::video::SColor(255,16,47,122),FluxaraUI::fullWindowRect());
+    FluxaraUI::transitionBackdrop(m_art[0], 77);
     c.image(m_art[6],21,58,50,50); c.image(m_art[7],32,68,25,31);
     c.label(_C("fluxara", "RACE SETUP"),88,69,190,38,31);
     c.label(FluxaraModes::label(m_mode),24,112,312,22,15);

@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2016 FluxaraDrift-Team
@@ -53,7 +54,7 @@ HighScoreInfoDialog::HighScoreInfoDialog(Highscores* highscore, bool is_linear, 
     m_major_mode = major_mode;
     m_curr_time = 0.0f;
 
-    loadFromFile("high_score_info_dialog.fluxara_driftgui");
+    loadFromFile(PLATFORM_GAME_LITERAL("high_score_info_dialog.stkgui", "high_score_info_dialog.fluxara_driftgui"));
 
     m_track_screenshot_widget = getWidget<IconButtonWidget>("track_screenshot");
     m_track_screenshot_widget->setFocusable(false);

@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2009-2015 Marianne Gagnon
 //
@@ -141,7 +142,7 @@ class UserScreen : public BaseUserScreen,
                    public GUIEngine::ScreenSingleton<UserScreen>
 {
 private:
-    UserScreen() : BaseUserScreen("user_screen.fluxara_driftgui")
+    UserScreen() : BaseUserScreen(PLATFORM_GAME_LITERAL("user_screen.stkgui", "user_screen.fluxara_driftgui"))
     {};
 public:
     friend class GUIEngine::ScreenSingleton<UserScreen>;
@@ -152,7 +153,7 @@ class TabbedUserScreen : public BaseUserScreen,
                          public GUIEngine::ScreenSingleton<TabbedUserScreen>
 {
 private:
-    TabbedUserScreen() : BaseUserScreen("options/user_screen_tab.fluxara_driftgui")
+    TabbedUserScreen() : BaseUserScreen(PLATFORM_GAME_LITERAL("options/user_screen_tab.stkgui", "options/user_screen_tab.fluxara_driftgui"))
     {}
 
 public:

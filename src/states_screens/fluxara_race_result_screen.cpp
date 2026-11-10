@@ -66,7 +66,7 @@ void draw(GUIEngine::Screen* screen)
     }
     GL32_draw2DRectangle(irr::video::SColor(255,12,31,76),
         irr::core::recti(0,0,size.Width,size.Height));
-    c.image(art[0],0,0,360,780,true,77);
+    FluxaraUI::transitionBackdrop(art[0], 77);
     // Figma 19:8 confetti/star has its own compact 28pt frame.  It is not
     // the larger trophy-star layer further down the card.
     c.image(art[5],166,35,28,28);

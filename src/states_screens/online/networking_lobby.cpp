@@ -1,3 +1,4 @@
+#include "../../utils/platform_game_identity.hpp"
 //  FluxaraDrift - a fun racing game with go-kart
 //  Copyright (C) 2013-2015 Glenn De Jonghe
 //
@@ -77,7 +78,7 @@ using namespace GUIEngine;
  *  data structure in LobbyProtocol::loadWorld().
  */
 // ----------------------------------------------------------------------------
-NetworkingLobby::NetworkingLobby() : Screen("online/networking_lobby.fluxara_driftgui")
+NetworkingLobby::NetworkingLobby() : Screen(PLATFORM_GAME_LITERAL("online/networking_lobby.stkgui", "online/networking_lobby.fluxara_driftgui"))
 {
     m_server_info_height = 0;
     m_header_text_width = 0;
